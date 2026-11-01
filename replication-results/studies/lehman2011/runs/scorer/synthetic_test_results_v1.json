@@ -1,0 +1,215 @@
+{
+ "exact_match": {
+  "pass": true,
+  "claims": {
+   "H1A": [
+    "consistent",
+    null
+   ],
+   "H1B": [
+    "consistent",
+    null
+   ],
+   "H2": [
+    "consistent",
+    null
+   ],
+   "H3": [
+    "consistent",
+    null
+   ]
+  },
+  "paper": {
+   "outcome": "consistent",
+   "mapping": "fully reproduced"
+  }
+ },
+ "planted_error_H2": {
+  "pass": true,
+  "claims": {
+   "H1A": [
+    "consistent",
+    null
+   ],
+   "H1B": [
+    "consistent",
+    null
+   ],
+   "H2": [
+    "consistent",
+    null
+   ],
+   "H3": [
+    "consistent",
+    null
+   ]
+  },
+  "paper": {
+   "outcome": "consistent",
+   "mapping": "fully reproduced"
+  }
+ },
+ "planted_error_H2_all_cells": {
+  "pass": true,
+  "claims": {
+   "H1A": [
+    "consistent",
+    null
+   ],
+   "H1B": [
+    "consistent",
+    null
+   ],
+   "H2": [
+    "discrepant_candidate",
+    "pending_adversarial_review"
+   ],
+   "H3": [
+    "consistent",
+    null
+   ]
+  },
+  "paper": {
+   "outcome": "indeterminate",
+   "sub_code": "pending_confirmation",
+   "would_map_to": "not reproduced"
+  }
+ },
+ "planted_error_origin_only_rescued": {
+  "pass": true,
+  "claims": {
+   "H1A": [
+    "consistent",
+    null
+   ],
+   "H1B": [
+    "consistent",
+    null
+   ],
+   "H2": [
+    "indeterminate",
+    "label_sensitive"
+   ],
+   "H3": [
+    "consistent",
+    null
+   ]
+  },
+  "paper": {
+   "outcome": "indeterminate",
+   "driver": {
+    "H2": "indeterminate"
+   }
+  }
+ },
+ "null_data": {
+  "pass": true,
+  "claims": {
+   "H1A": [
+    "discrepant_candidate",
+    "pending_adversarial_review"
+   ],
+   "H1B": [
+    "consistent",
+    null
+   ],
+   "H2": [
+    "discrepant_candidate",
+    "pending_adversarial_review"
+   ],
+   "H3": [
+    "discrepant_candidate",
+    "pending_adversarial_review"
+   ]
+  },
+  "paper": {
+   "outcome": "indeterminate",
+   "sub_code": "pending_confirmation",
+   "would_map_to": "not reproduced"
+  }
+ },
+ "unreachable_target": {
+  "pass": true,
+  "claims": {
+   "H1A": [
+    "consistent",
+    null
+   ],
+   "H1B": [
+    "indeterminate",
+    "unavailable_criterion"
+   ],
+   "H2": [
+    "consistent",
+    null
+   ],
+   "H3": [
+    "consistent",
+    null
+   ]
+  },
+  "paper": {
+   "outcome": "indeterminate",
+   "driver": {
+    "H1B": "indeterminate"
+   }
+  }
+ },
+ "implementation_disagreement": {
+  "pass": true,
+  "claims": {
+   "H1A": [
+    "indeterminate",
+    "implementation_disagreement"
+   ],
+   "H1B": [
+    "indeterminate",
+    "implementation_disagreement"
+   ],
+   "H2": [
+    "indeterminate",
+    "implementation_disagreement"
+   ],
+   "H3": [
+    "indeterminate",
+    "implementation_disagreement"
+   ]
+  },
+  "paper": {
+   "outcome": "indeterminate",
+   "driver": {
+    "H1A": "indeterminate",
+    "H1B": "indeterminate",
+    "H2": "indeterminate",
+    "H3": "indeterminate"
+   }
+  }
+ },
+ "large_N_gap": {
+  "pass": true,
+  "claims": {
+   "H1A": [
+    "consistent",
+    null
+   ],
+   "H1B": [
+    "consistent",
+    null
+   ],
+   "H2": [
+    "consistent",
+    null
+   ],
+   "H3": [
+    "indeterminate",
+    "source_vintage"
+   ]
+  },
+  "paper": {
+   "outcome": "indeterminate",
+   "driver": {
+    "H3": "indeterminate"
+   }
+  }
+ }
+}

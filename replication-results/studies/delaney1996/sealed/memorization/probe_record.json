@@ -1,0 +1,25 @@
+{
+  "record": "memorization_probes",
+  "sealed_from": "both readers, implementers and checkers",
+  "prompt_sha256": "bccda24d139767eee275adc6445f68d366d125468f5d94c88a4c1aa5e0c2e4ea",
+  "inputs": "title and authors only; no tools",
+  "reader_a_fable": {
+    "staging_dir": "/private/var/folders/7q/9m3zdcp550d685wgsq9kvf6r0000gn/T/role_1f35b4a1",
+    "command": "claude -p --safe-mode --model claude-fable-5-1 --effort high --settings '{\"fastMode\":false,\"autoMemoryEnabled\":false}' --no-session-persistence --tools \"\" --output-format json <prompt>",
+    "cli_version": "2.1.270 (Claude Code)",
+    "reported_model": "claude-fable-5-1 (modelUsage.canonicalModel)",
+    "reported_speed": "standard; fast_mode_state off",
+    "effort_observed": "requested high; not echoed in output metadata (verification limit)",
+    "start_utc": "2026-10-28T03:31:22Z", "end_utc": "2026-10-28T03:31:50Z",
+    "answer_sha256": "3ad7cc07e30c0bc69c4fbcae3ccb5e02fc272d3bae4ea271959a52c8f02f613e"
+  },
+  "reader_b_astra": {
+    "staging_dir": "/private/var/folders/7q/9m3zdcp550d685wgsq9kvf6r0000gn/T/role_c4bc88b9",
+    "command": "codex exec --ephemeral --ignore-user-config --skip-git-repo-check -C <staging> -m gpt-6-astra -c model_reasoning_effort=\"high\" -c service_tier=\"default\" -c features.fast_mode=false -s read-only --json -o last_message.txt <prompt>",
+    "cli_version": "codex-cli 0.164.0",
+    "reported_model": "not echoed in exec JSON events; request with -m gpt-6-astra accepted; model listed in CLI model cache with high effort supported (verification limit)",
+    "global_agents_md": "loads despite --ignore-user-config (config check run separately); contains only Python-path, Markdown-math and Gmail rules",
+    "start_utc": "2026-10-28T03:31:56Z", "end_utc": "2026-10-28T03:32:56Z",
+    "answer_sha256": "7d49eb80e9a16dd71ecbdc559e1f6291b6dd9cffdd04c24c6208bee1ee4714a3"
+  }
+}

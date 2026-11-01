@@ -1,0 +1,8 @@
+{
+  "note": "Connectivity checks only; not reader runs and not verification of reader outputs.",
+  "date": "2026-10-27",
+  "checks": [
+    {"role_family": "reader_a", "cli": "claude 2.1.270", "command": "claude -p --safe-mode --model claude-fable-5-1 --effort high --settings '{\"fastMode\":false,\"autoMemoryEnabled\":false}' --no-session-persistence --tools \"\" --output-format json <ping>", "staging": "$TMPDIR/role_conn_pnaw8l", "result": "success", "reported_model": "claude-fable-5-1 (modelUsage.canonicalModel)", "provider": "firstParty", "effort_reported": "not reported in JSON output; requested high", "fast_mode": "requested false via --settings; not reported"},
+    {"role_family": "reader_b", "cli": "codex-cli 0.164.0", "command": "codex exec --ephemeral --ignore-user-config --skip-git-repo-check -C <staging> -m gpt-6-astra -c model_reasoning_effort=\"high\" -c service_tier=\"default\" -c features.fast_mode=false -s read-only <ping>", "staging": "$TMPDIR/role_conn_iRG4Lc", "result": "success", "reported_model": "gpt-6-astra", "reasoning_effort_reported": "high", "service_tier": "requested default; header does not print tier", "user_agents_md_loaded": "yes (model self-report); ~/.codex/AGENTS.md is the user's global file with Python-path, Markdown-math and Gmail rules per instructions/model_access.md; recorded as a disclosed non-study instruction source"}
+  ]
+}

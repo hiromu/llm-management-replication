@@ -1,0 +1,129 @@
+{
+  "study_id": "nagaraj2021",
+  "paper_id": "MNSC_2021_Nagaraj",
+  "citation": "Nagaraj, A. (2021). Information Seeding and Knowledge Production in Online Communities: Evidence from OpenStreetMap. Management Science, 67(8), 4908-4934.",
+  "journal": "Management Science",
+  "doi": "10.1287/mnsc.2020.3764",
+  "paper_path_from_study": "packet/nagaraj2021.pdf",
+  "paper_sha256": "37edb30371dcda769e00f0beab6d68c91a6b4a2f22d753f0e482a01e23af4f41",
+  "paper_acquisition": "copied by the setup session from the user's paper folder; publisher version, 28 pages",
+  "received_by_journal": "2017-09-27",
+  "accepted": "2020-05-08",
+  "status": "complete",
+  "research_authorized": "2026-11-01T04:08Z, by the user in coordinator session 7b25094b-ed7e-4d4a-89a8-a750dd9f7126; see logs/session_record.json",
+  "role_config": "config/roles_nagaraj2021.json",
+  "scope": "Main-text Tables 1-7 and Figures 1-6. Online Appendices A-D are out of scope as targets.",
+  "data_policy": "Empirical inputs are the deposited OSF data files and the Census TIGER/Line 2010 county file. No printed article data. Published results are sealed comparison targets or publication diagnostics only. Author code, Readme and LaTeX results file sealed until the unsealing point in instructions/shared_data.md.",
+  "deposit": {
+    "provider": "OSF",
+    "node": "a47e9",
+    "url": "https://osf.io/a47e9",
+    "receipt": "logs/osf_receipt.json",
+    "acquisition_script": "logs/acquire_osf.py",
+    "files": 60,
+    "bytes": 172485283,
+    "files_in_data_raw": 15,
+    "files_sealed": 45,
+    "osf_modified_range": "2020-06-30 to 2020-09-21",
+    "hash_check": "all 60 files match the sha256 the OSF API reports",
+    "license": "CC-By Attribution 4.0 International, as the OSF API reports"
+  },
+  "other_public_data": {
+    "file": "data/raw/census_tiger2010/tl_2010_us_county10.zip",
+    "source": "https://www2.census.gov/geo/tiger/TIGER2010/COUNTY/2010/tl_2010_us_county10.zip",
+    "receipt": "logs/tiger_receipt.json",
+    "purpose": "county geometry for the county maps (Figures 1 and 2) and any county geometry the methods need"
+  },
+  "online_appendix": {
+    "path_from_study": "data/raw/osf_a47e9/writing/appendix.pdf",
+    "pages": 14,
+    "acquisition": "deposited copy; identity with the journal's supplemental file at the DOI not checked",
+    "contents_seen_at_setup": "Appendix A and B headings and captions of Figures C.1 and D.1 and Table D.6"
+  },
+  "author_code": {
+    "path_from_study": "sealed/author_package/",
+    "contents": "scripts/main.do, 28 project .ado files, 14 bundled SSC files; writing/figures_and_tables.tex; Readme.txt",
+    "language": "Stata, per the deposit Readme",
+    "status": "unsealed after logs/pre_unseal_hashes.json; see logs/unsealed_utc.txt"
+  },
+  "deposit_documentation": {
+    "data_notes": "packet/deposit_data_notes.txt, the Rawdata section of the sealed Readme, extracted by logs/extract_data_notes.py (record in logs/extract_data_notes.json)",
+    "dictionary": "none in the deposit"
+  },
+  "known_deposit_issues": [
+    "No variable dictionary. Column names such as totaltaga, totaltagv2a and totaltagh are documented only by the article and the data notes.",
+    "h12.csv has no header row and five tab-separated columns; column 3 holds OpenStreetMap user names. Pseudonymize it in implementer bundles and never print its values.",
+    "Inputs no outsider can rebuild: timing.xlsx (Census Bureau, personal communication), amenitycheck.csv (proprietary InfoUSA data), distance.csv (2017 Google Maps and OSRM queries)."
+  ],
+  "setup_exposure": {
+    "session": "The setup session was not a fresh protocol session; it held the user's global instructions and memory. It also knew of an earlier replication of this paper, run on 2026-10-03 with the author code readable and archived outside this project.",
+    "seen": [
+      "The earlier run's summary header, per-target score table and its Table 1 comparison rows, which include published Table 1 values",
+      "The earlier run's data-source list, including one author-code detail now held in sealed/setup_exposure_detail.txt",
+      "The deposit Readme in full, including the list of scripts and the tables each produces",
+      "Article first page and abstract, and grep hits for table and figure captions and online-appendix references",
+      "First two pages of the online appendix and its caption list",
+      "Column names of every data file, the first line of each CSV (a data row for headerless h12.csv), and the first 600 bytes of figures_and_tables.tex (LaTeX preamble only)"
+    ],
+    "not_seen": [
+      "Author code",
+      "Article results tables, apart from the earlier run's Table 1 rows",
+      "Data rows beyond the first line of each file"
+    ],
+    "passed_to_roles": "nothing beyond the files listed in this record"
+  },
+  "tools_checked_at_setup": {
+    "machine": "the user's machine (<home> 2026-11-01",
+    "rscript": "/opt/homebrew/opt/r/bin/Rscript, R 4.6.1; sandwich, data.table, haven, readxl, ggplot2, lmtest, tidyverse present; fixest, sf, AER, ivreg missing",
+    "python": "$HOME/.venv/bin/python 3.13.4 with pandas, statsmodels, linearmodels, pyreadstat, matplotlib, openpyxl; pyfixest, geopandas, shapely missing. Its ssl module fails to load because Homebrew openssl@3 is missing, so pip and HTTPS from this interpreter fail; /usr/bin/python3 3.9.6 has working HTTPS",
+    "stata": "not found",
+    "pdftotext": "26.10.0",
+    "clis": "claude 2.1.270 and codex-cli 0.164.0 accept every launch flag in setup_drafts/run_role.py; no model call was made",
+    "reader_models": "not called at setup; fast mode for claude-opus-5-5 and Ultrafast for gpt-6-astra are unverified"
+  },
+  "setup_drafts": {
+    "note": "Unfrozen. Adopt or replace, and record which.",
+    "files": {
+      "setup_drafts/run_role.py": "role launcher with fastMode true for Opus and service_tier ultrafast for Astra; compiles, never run",
+      "setup_drafts/build_reader_packet.py": "ran once on a scratch copy outside the study and produced 20 files; not run in the study",
+      "setup_drafts/reader_prompt_v1.md": "reader assignment for a panel-regression article",
+      "setup_drafts/probe_prompt.txt": "memorization probe"
+    },
+    "adopted": {
+      "code/run_role.py": "Adopted from setup_drafts/run_role.py (draft unchanged, sha256 2df08f37afa7ac54b2780010d3d2a0e92ed96009e771965c3b57c9d2e8b3cbf2) at the user's instruction on 2026-10-31, before research authorization. Changes: Astra roles run with codex --sandbox danger-full-access inside the same sandbox-exec profile as Opus roles; the profile also denies the project root and reads of ~/.codex/AGENTS.md; started_utc is taken before launch. Basis and verification: checks/astra_barrier_test/RESULTS.md and logs/roles/setup_check_astra_launcher.*. Remaining limits: command network is open for both families, so no-browsing is instruction-only; writes outside the denied paths are not blocked; the speed fallback chain is not implemented; Codex events report no model, effort or service_tier.",
+      "code/build_reader_packet.py": "Adopted unchanged from setup_drafts (copied); produced packet/frozen_v1 and packet/publication_packet.json.",
+      "prompts_frozen/probe_prompt.txt": "Adopted unchanged from setup_drafts.",
+      "prompts_frozen/reader_prompt_v1.md": "Replaced: the draft with explicit null handling, a fixed rule for plot readings and county maps, no-network wording, a work-in-directory line, and the workflow reader-stage section appended verbatim."
+    }
+  },
+  "session_scope": "nagaraj2021 only",
+  "human_review": "not planned; reports must say that no human reviewed them",
+  "result": {
+    "paper_level": "indeterminate",
+    "claim_outcomes": {
+      "consistent": 17,
+      "fragile_inference": 1,
+      "indeterminate": 53,
+      "discrepant_not_fully_verified": 8,
+      "not_audited": 5
+    },
+    "paper_focal": "T3(5) consistent; T3(3) fragile inference; T3(4),(6), T4(3)-(6) indeterminate; T6(1) discrepant, not fully verified",
+    "comparison_2": "not run: Stata not installed",
+    "comparison_3": "post_unseal/comparisons_2_and_3.md",
+    "report": "reports/replication_report.md",
+    "supplement": "reports/technical_supplement.md",
+    "figure": "reports/figures/figure_focal_influence.png",
+    "human_review": "none performed",
+    "figure_comparisons": "reports/figures/comparison/ (added after delivery at the user request; post-unsealing presentation diagnostics; no score changed)"
+  },
+  "research_completed_utc": "2026-11-01",
+  "distribution": {
+    "copy": "public scientific record",
+    "protocol": "protocol_as_run/",
+    "role_config": "protocol_as_run/config/roles_nagaraj2021.json",
+    "original_role_config": "config/roles_nagaraj2021.json",
+    "original_paths_and_status_fields": "Historical run metadata, not fresh-run instructions",
+    "human_review": "None performed",
+    "author_code_rerun": "Not performed: Stata unavailable"
+  }
+}

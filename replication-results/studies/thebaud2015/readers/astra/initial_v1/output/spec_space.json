@@ -1,0 +1,1377 @@
+{
+  "origin": {
+    "model_ids": [
+      "M3",
+      "M4",
+      "M5",
+      "M6",
+      "M7",
+      "M8"
+    ],
+    "supporting_model_ids": [
+      "M1",
+      "M2",
+      "A3_M1",
+      "A3_M2",
+      "A3_M3",
+      "D_country"
+    ],
+    "variable_definitions": "manifest.json variables; first levels describe provisional choices only where the article leaves a decision open. Unresolved source construction must be settled before execution.",
+    "locator": [
+      {
+        "doc": "MAIN",
+        "page": 19,
+        "section": "Table 1"
+      },
+      {
+        "doc": "MAIN",
+        "page": 22,
+        "section": "Table 2"
+      },
+      {
+        "doc": "S1",
+        "page": 3,
+        "section": "Table A3"
+      }
+    ]
+  },
+  "axes": [
+    {
+      "axis_id": "S01",
+      "decision": "Age lower-bound inclusion",
+      "priority": 1,
+      "levels": [
+        {
+          "level_id": "S01_1",
+          "description": "GEMAGE > 18 and < 55",
+          "is_origin": true,
+          "label": "uncertain",
+          "rationale": "Literal wording is over 18; codes are not printed.",
+          "basis": [
+            {
+              "doc": "MAIN",
+              "page": 10,
+              "section": "Sample age restriction"
+            },
+            "sources/icpsr20320_gem_aps.md: GEMAGE"
+          ]
+        },
+        {
+          "level_id": "S01_2",
+          "description": "GEMAGE >= 18 and < 55",
+          "is_origin": false,
+          "label": "uncertain",
+          "rationale": "Adult-sample framing can be read inclusively; population changes at the boundary, so not proven equivalent.",
+          "basis": [
+            {
+              "doc": "MAIN",
+              "page": 10,
+              "section": "Sample age restriction"
+            },
+            "sources/icpsr20320_gem_aps.md: GEMAGE"
+          ]
+        }
+      ]
+    },
+    {
+      "axis_id": "S02",
+      "decision": "Employment versus labor-force eligibility",
+      "priority": 1,
+      "levels": [
+        {
+          "level_id": "S02_1",
+          "description": "GEMWORK in {1,2}: employed only",
+          "is_origin": true,
+          "label": "uncertain",
+          "rationale": "Footnote excludes not-employed people, supporting this closest operational reading.",
+          "basis": [
+            {
+              "doc": "MAIN",
+              "page": 10,
+              "section": "Sample and footnote 2"
+            },
+            {
+              "doc": "S1",
+              "page": 3,
+              "section": "Table A3 Model 2"
+            }
+          ]
+        },
+        {
+          "level_id": "S02_2",
+          "description": "Employed plus identifiable unemployed job seekers",
+          "is_origin": false,
+          "label": "uncertain",
+          "rationale": "Literal labor-force wording includes unemployed job seekers; supplied coarse work-status codes cannot establish them.",
+          "basis": [
+            {
+              "doc": "MAIN",
+              "page": 10,
+              "section": "Sample and footnote 2"
+            },
+            {
+              "doc": "S1",
+              "page": 3,
+              "section": "Table A3 Model 2"
+            }
+          ]
+        },
+        {
+          "level_id": "S02_3",
+          "description": "All working-age adults, with not_employed control as A3_M2",
+          "is_origin": false,
+          "label": "non_equivalent",
+          "rationale": "Explicit robustness population includes non-employed respondents; it estimates a different population relationship.",
+          "basis": [
+            {
+              "doc": "MAIN",
+              "page": 10,
+              "section": "Sample and footnote 2"
+            },
+            {
+              "doc": "S1",
+              "page": 3,
+              "section": "Table A3 Model 2"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "axis_id": "S03",
+      "decision": "Eligibility of established business owners",
+      "priority": 1,
+      "levels": [
+        {
+          "level_id": "S03_1",
+          "description": "All current owner-managers meeting OWNMGE screen",
+          "is_origin": true,
+          "label": "uncertain",
+          "rationale": "Matches the quoted article definition; no payment-age cutoff is given.",
+          "basis": [
+            {
+              "doc": "MAIN",
+              "page": 11,
+              "section": "Outcome definition"
+            },
+            {
+              "doc": "MAIN",
+              "page": 14,
+              "section": "Established-owner analysis"
+            },
+            "sources/icpsr20320_gem_aps.md: OWNMGE, OMOWN, OMESTBBT"
+          ]
+        },
+        {
+          "level_id": "S03_2",
+          "description": "Current owners corroborated by OMOWN all/part ownership",
+          "is_origin": false,
+          "label": "uncertain",
+          "rationale": "Ensures respondent personally owns the business, but added consistency exclusion is not explicitly stated.",
+          "basis": [
+            {
+              "doc": "MAIN",
+              "page": 11,
+              "section": "Outcome definition"
+            },
+            {
+              "doc": "MAIN",
+              "page": 14,
+              "section": "Established-owner analysis"
+            },
+            "sources/icpsr20320_gem_aps.md: OWNMGE, OMOWN, OMESTBBT"
+          ]
+        },
+        {
+          "level_id": "S03_3",
+          "description": "OMESTBBT only, requiring more than 42 months of payments",
+          "is_origin": false,
+          "label": "non_equivalent",
+          "rationale": "Established in the GEM harmonizer has a duration restriction absent from the article’s explicit definition and changes the owner population.",
+          "basis": [
+            {
+              "doc": "MAIN",
+              "page": 11,
+              "section": "Outcome definition"
+            },
+            {
+              "doc": "MAIN",
+              "page": 14,
+              "section": "Established-owner analysis"
+            },
+            "sources/icpsr20320_gem_aps.md: OWNMGE, OMOWN, OMESTBBT"
+          ]
+        }
+      ]
+    },
+    {
+      "axis_id": "S04",
+      "decision": "Nascent activity coding in total and nascent outcomes",
+      "priority": 2,
+      "levels": [
+        {
+          "level_id": "S04_1",
+          "description": "SUBOANWT active nascent definition combined with current_owner for total activity",
+          "is_origin": true,
+          "label": "uncertain",
+          "rationale": "Footnote payment-duration criterion favors active harmonized nascent status; exact release and checks unstated.",
+          "basis": [
+            {
+              "doc": "MAIN",
+              "page": 11,
+              "section": "Entrepreneurial activity and footnote 3"
+            },
+            "sources/icpsr20320_gem_aps.md: BSTART, SUBOANWT, TEA"
+          ]
+        },
+        {
+          "level_id": "S04_2",
+          "description": "BSTART=1 screen combined with OWNMGE=1 for total activity",
+          "is_origin": false,
+          "label": "uncertain",
+          "rationale": "Matches the quoted survey question but may include inactive attempts or paid businesses; not known equivalent.",
+          "basis": [
+            {
+              "doc": "MAIN",
+              "page": 11,
+              "section": "Entrepreneurial activity and footnote 3"
+            },
+            "sources/icpsr20320_gem_aps.md: BSTART, SUBOANWT, TEA"
+          ]
+        },
+        {
+          "level_id": "S04_3",
+          "description": "Use TEA alone for total entrepreneurial activity",
+          "is_origin": false,
+          "label": "non_equivalent",
+          "rationale": "TEA contains nascent and new-firm owners, excludes older owners, and is not the inclusive total outcome.",
+          "basis": [
+            {
+              "doc": "MAIN",
+              "page": 11,
+              "section": "Entrepreneurial activity and footnote 3"
+            },
+            "sources/icpsr20320_gem_aps.md: BSTART, SUBOANWT, TEA"
+          ]
+        }
+      ]
+    },
+    {
+      "axis_id": "S05",
+      "decision": "Missing individual values across nested models",
+      "priority": 1,
+      "levels": [
+        {
+          "level_id": "S05_1",
+          "description": "Complete cases for each model’s required variables",
+          "is_origin": true,
+          "label": "uncertain",
+          "rationale": "No individual-level missing-data procedure is stated; avoids inventing unavailable values.",
+          "basis": [
+            {
+              "doc": "MAIN",
+              "page": 11,
+              "section": "Controls"
+            },
+            {
+              "doc": "MAIN",
+              "page": 15,
+              "section": "Analytic Strategy"
+            },
+            {
+              "doc": "MAIN",
+              "page": 19,
+              "section": "Nested Table 1 models"
+            }
+          ]
+        },
+        {
+          "level_id": "S05_2",
+          "description": "Common complete-case sample within each reported outcome/window family",
+          "is_origin": false,
+          "label": "uncertain",
+          "rationale": "Nested-model comparisons motivate a shared sample, but common-case deletion is not documented and may alter population.",
+          "basis": [
+            {
+              "doc": "MAIN",
+              "page": 11,
+              "section": "Controls"
+            },
+            {
+              "doc": "MAIN",
+              "page": 15,
+              "section": "Analytic Strategy"
+            },
+            {
+              "doc": "MAIN",
+              "page": 19,
+              "section": "Nested Table 1 models"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "axis_id": "S06",
+      "decision": "Early-year entrepreneurship-status coverage",
+      "priority": 1,
+      "levels": [
+        {
+          "level_id": "S06_1",
+          "description": "Retain required status control and leave unavailable early-year values unresolved pending sourcing",
+          "is_origin": true,
+          "label": "uncertain",
+          "rationale": "Preserves the described control; a source gap cannot be solved from published averages.",
+          "basis": [
+            {
+              "doc": "MAIN",
+              "page": 13,
+              "section": "Survey-level status"
+            },
+            {
+              "doc": "MAIN",
+              "page": 14,
+              "section": "Status continuation"
+            },
+            "sources/icpsr20320_gem_aps.md: NBSTATUS coverage",
+            "sources/undp_worldbank_gem_sources.md: gem_aps_original"
+          ]
+        },
+        {
+          "level_id": "S06_2",
+          "description": "Restrict status-adjusted models to years with NBSTATUS responses",
+          "is_origin": false,
+          "label": "non_equivalent",
+          "rationale": "Sourced feasibility fallback changes the temporal population and cannot reproduce the stated full window.",
+          "basis": [
+            {
+              "doc": "MAIN",
+              "page": 13,
+              "section": "Survey-level status"
+            },
+            {
+              "doc": "MAIN",
+              "page": 14,
+              "section": "Status continuation"
+            },
+            "sources/icpsr20320_gem_aps.md: NBSTATUS coverage",
+            "sources/undp_worldbank_gem_sources.md: gem_aps_original"
+          ]
+        },
+        {
+          "level_id": "S06_3",
+          "description": "Back-carry first available country status mean to missing earlier years, explicitly as sensitivity only",
+          "is_origin": false,
+          "label": "non_equivalent",
+          "rationale": "Requires temporal stability not stated by the article; later observed survey means provide a source but not validation.",
+          "basis": [
+            {
+              "doc": "MAIN",
+              "page": 13,
+              "section": "Survey-level status"
+            },
+            {
+              "doc": "MAIN",
+              "page": 14,
+              "section": "Status continuation"
+            },
+            "sources/icpsr20320_gem_aps.md: NBSTATUS coverage",
+            "sources/undp_worldbank_gem_sources.md: gem_aps_original"
+          ]
+        }
+      ]
+    },
+    {
+      "axis_id": "S07",
+      "decision": "Which respondents define the survey-level status mean",
+      "priority": 2,
+      "levels": [
+        {
+          "level_id": "S07_1",
+          "description": "Mean over all valid respondents in each eligible country-year before individual analytic restrictions",
+          "is_origin": true,
+          "label": "uncertain",
+          "rationale": "Mean survey-level agreement most naturally names the survey universe, but denominator is unstated.",
+          "basis": [
+            {
+              "doc": "MAIN",
+              "page": 13,
+              "section": "Social status definition"
+            },
+            {
+              "doc": "MAIN",
+              "page": 11,
+              "section": "Footnote 5"
+            },
+            "sources/icpsr20320_gem_aps.md: design/weights"
+          ]
+        },
+        {
+          "level_id": "S07_2",
+          "description": "Mean over age/employment-eligible analytical respondents",
+          "is_origin": false,
+          "label": "uncertain",
+          "rationale": "The variable could have been aggregated after restriction; this changes the context measure.",
+          "basis": [
+            {
+              "doc": "MAIN",
+              "page": 13,
+              "section": "Social status definition"
+            },
+            {
+              "doc": "MAIN",
+              "page": 11,
+              "section": "Footnote 5"
+            },
+            "sources/icpsr20320_gem_aps.md: design/weights"
+          ]
+        },
+        {
+          "level_id": "S07_3",
+          "description": "Design-weighted survey mean with explicit routing adjustment",
+          "is_origin": false,
+          "label": "uncertain",
+          "rationale": "Dictionary recommends weights and documents differential question routing; article supplies neither aggregation weights nor a correction.",
+          "basis": [
+            {
+              "doc": "MAIN",
+              "page": 13,
+              "section": "Social status definition"
+            },
+            {
+              "doc": "MAIN",
+              "page": 11,
+              "section": "Footnote 5"
+            },
+            "sources/icpsr20320_gem_aps.md: design/weights"
+          ]
+        }
+      ]
+    },
+    {
+      "axis_id": "S08",
+      "decision": "Timing of mother-leave policy changes",
+      "priority": 2,
+      "levels": [
+        {
+          "level_id": "S08_1",
+          "description": "One-year lag",
+          "is_origin": true,
+          "label": "equivalent",
+          "rationale": "Explicit main specification.",
+          "basis": [
+            {
+              "doc": "MAIN",
+              "page": 12,
+              "section": "Policy timing and footnote 8"
+            }
+          ]
+        },
+        {
+          "level_id": "S08_2",
+          "description": "No lag",
+          "is_origin": false,
+          "label": "non_equivalent",
+          "rationale": "Explicitly reported robustness check changes exposure timing.",
+          "basis": [
+            {
+              "doc": "MAIN",
+              "page": 12,
+              "section": "Policy timing and footnote 8"
+            }
+          ]
+        },
+        {
+          "level_id": "S08_3",
+          "description": "Two-year lag",
+          "is_origin": false,
+          "label": "non_equivalent",
+          "rationale": "Explicitly reported robustness check changes exposure timing.",
+          "basis": [
+            {
+              "doc": "MAIN",
+              "page": 12,
+              "section": "Policy timing and footnote 8"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "axis_id": "S09",
+      "decision": "Missing-year childcare interpolation",
+      "priority": 2,
+      "levels": [
+        {
+          "level_id": "S09_1",
+          "description": "Reconstruct historical 2005/2007 childcare concept, with imputation algorithm unresolved",
+          "is_origin": true,
+          "label": "uncertain",
+          "rationale": "Article explicitly imputes missing years but supplies no algorithm.",
+          "basis": [
+            {
+              "doc": "MAIN",
+              "page": 12,
+              "section": "Childcare footnote 9"
+            },
+            "sources/oecd_sources.md: oecd_family_database PF3_1"
+          ]
+        },
+        {
+          "level_id": "S09_2",
+          "description": "Linear interpolation between historical observations, endpoints carried only with explicit assumption",
+          "is_origin": false,
+          "label": "uncertain",
+          "rationale": "An operational reading of imputed missing years; no claim of article endorsement. Must record endpoint assumptions.",
+          "basis": [
+            {
+              "doc": "MAIN",
+              "page": 12,
+              "section": "Childcare footnote 9"
+            },
+            "sources/oecd_sources.md: oecd_family_database PF3_1"
+          ]
+        },
+        {
+          "level_id": "S09_3",
+          "description": "Nearest-year historical value for intervening/missing years",
+          "is_origin": false,
+          "label": "uncertain",
+          "rationale": "Another operational reading of sparse-source imputation, supported only by the reported sparse years, not identified as the original method.",
+          "basis": [
+            {
+              "doc": "MAIN",
+              "page": 12,
+              "section": "Childcare footnote 9"
+            },
+            "sources/oecd_sources.md: oecd_family_database PF3_1"
+          ]
+        },
+        {
+          "level_id": "S09_4",
+          "description": "Use current annual ECEC series directly",
+          "is_origin": false,
+          "label": "non_equivalent",
+          "rationale": "Available series broadens childcare to pre-primary spending and changes vintage; a wider-space fallback.",
+          "basis": [
+            {
+              "doc": "MAIN",
+              "page": 12,
+              "section": "Childcare footnote 9"
+            },
+            "sources/oecd_sources.md: oecd_family_database PF3_1"
+          ]
+        }
+      ]
+    },
+    {
+      "axis_id": "S10",
+      "decision": "Part-time concept and denominator",
+      "priority": 2,
+      "levels": [
+        {
+          "level_id": "S10_1",
+          "description": "Female employees, source hours-definition and age group unresolved",
+          "is_origin": true,
+          "label": "uncertain",
+          "rationale": "S1 explicitly names female employees; MAIN says women in paid employment.",
+          "basis": [
+            {
+              "doc": "MAIN",
+              "page": 12,
+              "section": "Part-time work"
+            },
+            {
+              "doc": "S1",
+              "page": 1,
+              "section": "Table A1 note ‡"
+            },
+            "sources/oecd_sources.md: oecd_ftpt"
+          ]
+        },
+        {
+          "level_id": "S10_2",
+          "description": "Common OECD part-time definition for female employees",
+          "is_origin": false,
+          "label": "uncertain",
+          "rationale": "Harmonized hours definition supports comparability but country coverage is incomplete and exact article choice unstated.",
+          "basis": [
+            {
+              "doc": "MAIN",
+              "page": 12,
+              "section": "Part-time work"
+            },
+            {
+              "doc": "S1",
+              "page": 1,
+              "section": "Table A1 note ‡"
+            },
+            "sources/oecd_sources.md: oecd_ftpt"
+          ]
+        },
+        {
+          "level_id": "S10_3",
+          "description": "National definitions for female employees",
+          "is_origin": false,
+          "label": "uncertain",
+          "rationale": "Plausible source-family choice with coverage, but national thresholds differ.",
+          "basis": [
+            {
+              "doc": "MAIN",
+              "page": 12,
+              "section": "Part-time work"
+            },
+            {
+              "doc": "S1",
+              "page": 1,
+              "section": "Table A1 note ‡"
+            },
+            "sources/oecd_sources.md: oecd_ftpt"
+          ]
+        },
+        {
+          "level_id": "S10_4",
+          "description": "Female total employed, including self-employed",
+          "is_origin": false,
+          "label": "non_equivalent",
+          "rationale": "Changes the denominator from the supplement’s employee wording.",
+          "basis": [
+            {
+              "doc": "MAIN",
+              "page": 12,
+              "section": "Part-time work"
+            },
+            {
+              "doc": "S1",
+              "page": 1,
+              "section": "Table A1 note ‡"
+            },
+            "sources/oecd_sources.md: oecd_ftpt"
+          ]
+        }
+      ]
+    },
+    {
+      "axis_id": "S11",
+      "decision": "Meaning of GDP control",
+      "priority": 2,
+      "levels": [
+        {
+          "level_id": "S11_1",
+          "description": "UNDP GDP index",
+          "is_origin": true,
+          "label": "uncertain",
+          "rationale": "Supplement labels the variable GDP index.",
+          "basis": [
+            {
+              "doc": "MAIN",
+              "page": 13,
+              "section": "GDP control"
+            },
+            {
+              "doc": "S1",
+              "page": 1,
+              "section": "GDP index header"
+            },
+            "sources/undp_worldbank_gem_sources.md: undp_hdr, worldbank_wdi_gdppc"
+          ]
+        },
+        {
+          "level_id": "S11_2",
+          "description": "GDP per capita in PPP units from UNDP",
+          "is_origin": false,
+          "label": "uncertain",
+          "rationale": "MAIN calls the measure GDP per capita. This is a competing documented reading, not a numerically chosen correction.",
+          "basis": [
+            {
+              "doc": "MAIN",
+              "page": 13,
+              "section": "GDP control"
+            },
+            {
+              "doc": "S1",
+              "page": 1,
+              "section": "GDP index header"
+            },
+            "sources/undp_worldbank_gem_sources.md: undp_hdr, worldbank_wdi_gdppc"
+          ]
+        },
+        {
+          "level_id": "S11_3",
+          "description": "Current-vintage WDI GDP per capita PPP",
+          "is_origin": false,
+          "label": "non_equivalent",
+          "rationale": "Sourced fallback changes vintage and possibly the transform relative to the index.",
+          "basis": [
+            {
+              "doc": "MAIN",
+              "page": 13,
+              "section": "GDP control"
+            },
+            {
+              "doc": "S1",
+              "page": 1,
+              "section": "GDP index header"
+            },
+            "sources/undp_worldbank_gem_sources.md: undp_hdr, worldbank_wdi_gdppc"
+          ]
+        }
+      ]
+    },
+    {
+      "axis_id": "S12",
+      "decision": "Order of polynomial construction and standardization",
+      "priority": 2,
+      "levels": [
+        {
+          "level_id": "S12_1",
+          "description": "Square raw leave, standardize raw linear and raw squared terms separately; centered age squared",
+          "is_origin": true,
+          "label": "uncertain",
+          "rationale": "All survey-level variables standardized plus inclusion of square supports this reading; operation order unstated.",
+          "basis": [
+            {
+              "doc": "MAIN",
+              "page": 11,
+              "section": "Age and footnote 4"
+            },
+            {
+              "doc": "MAIN",
+              "page": 12,
+              "section": "Paid leave squared"
+            },
+            {
+              "doc": "MAIN",
+              "page": 14,
+              "section": "Standardization"
+            },
+            {
+              "doc": "MAIN",
+              "page": 15,
+              "section": "Footnote 15"
+            }
+          ]
+        },
+        {
+          "level_id": "S12_2",
+          "description": "Square standardized leave; retain linear/squared main effects and both matching female interactions",
+          "is_origin": false,
+          "label": "equivalent",
+          "rationale": "For fixed scaling constants and full lower-order polynomial/interactions, this is an invertible basis change with identical fitted linear predictors. Coefficient targets require algebraic mapping; this does not license selecting by agreement.",
+          "basis": [
+            {
+              "doc": "MAIN",
+              "page": 11,
+              "section": "Age and footnote 4"
+            },
+            {
+              "doc": "MAIN",
+              "page": 12,
+              "section": "Paid leave squared"
+            },
+            {
+              "doc": "MAIN",
+              "page": 14,
+              "section": "Standardization"
+            },
+            {
+              "doc": "MAIN",
+              "page": 15,
+              "section": "Footnote 15"
+            }
+          ]
+        },
+        {
+          "level_id": "S12_3",
+          "description": "Center age-square again after constructing it",
+          "is_origin": false,
+          "label": "equivalent",
+          "rationale": "With an intercept, shifting a squared regressor by a constant changes the intercept only. Interpretations/targets must be transformed consistently.",
+          "basis": [
+            {
+              "doc": "MAIN",
+              "page": 11,
+              "section": "Age and footnote 4"
+            },
+            {
+              "doc": "MAIN",
+              "page": 12,
+              "section": "Paid leave squared"
+            },
+            {
+              "doc": "MAIN",
+              "page": 14,
+              "section": "Standardization"
+            },
+            {
+              "doc": "MAIN",
+              "page": 15,
+              "section": "Footnote 15"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "axis_id": "S13",
+      "decision": "Population used for macro standardization",
+      "priority": 2,
+      "levels": [
+        {
+          "level_id": "S13_1",
+          "description": "Eligible country-year records with each survey counted once",
+          "is_origin": true,
+          "label": "uncertain",
+          "rationale": "Variables are survey-level; no reference distribution or weights specified.",
+          "basis": [
+            {
+              "doc": "MAIN",
+              "page": 14,
+              "section": "All survey-level variables standardized"
+            },
+            {
+              "doc": "MAIN",
+              "page": 15,
+              "section": "Footnote 15"
+            }
+          ]
+        },
+        {
+          "level_id": "S13_2",
+          "description": "Pooled individual rows for calculating scale constants, implicitly weighting country-years by respondent count",
+          "is_origin": false,
+          "label": "equivalent",
+          "rationale": "For an unchanged estimation sample and complete polynomial/interaction basis, different fixed centering/scaling constants are invertible transformations. Fits are unchanged, but coefficient targets must be transformed; this does not imply weighting the likelihood.",
+          "basis": [
+            {
+              "doc": "MAIN",
+              "page": 14,
+              "section": "All survey-level variables standardized"
+            },
+            {
+              "doc": "MAIN",
+              "page": 15,
+              "section": "Footnote 15"
+            }
+          ]
+        },
+        {
+          "level_id": "S13_3",
+          "description": "Calculate scale constants from each outcome-specific country-year subset while retaining that model’s same estimation records",
+          "is_origin": false,
+          "label": "equivalent",
+          "rationale": "Fixed affine recodings preserve fitted predictors with the full lower-order basis. Scaling-source subset changes alone do not authorize changing the model sample; original coefficient scaling remains unidentified.",
+          "basis": [
+            {
+              "doc": "MAIN",
+              "page": 14,
+              "section": "All survey-level variables standardized"
+            },
+            {
+              "doc": "MAIN",
+              "page": 15,
+              "section": "Footnote 15"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "axis_id": "S14",
+      "decision": "Mixed motivation responses",
+      "priority": 2,
+      "levels": [
+        {
+          "level_id": "S14_1",
+          "description": "Only OMREASON=2 is limited_options; mixed substantive code 3 is zero",
+          "is_origin": true,
+          "label": "uncertain",
+          "rationale": "The wording specifies no better choices; mixed classification is not stated.",
+          "basis": [
+            {
+              "doc": "MAIN",
+              "page": 14,
+              "section": "Entrepreneurial motivations"
+            },
+            "sources/icpsr20320_gem_aps.md: OMREASON"
+          ]
+        },
+        {
+          "level_id": "S14_2",
+          "description": "OMREASON in {2,3} counts limited-options motive",
+          "is_origin": false,
+          "label": "uncertain",
+          "rationale": "Mixed code explicitly contains a work-choice component; including it changes the binary construct and is not proven equivalent.",
+          "basis": [
+            {
+              "doc": "MAIN",
+              "page": 14,
+              "section": "Entrepreneurial motivations"
+            },
+            "sources/icpsr20320_gem_aps.md: OMREASON"
+          ]
+        }
+      ]
+    },
+    {
+      "axis_id": "S15",
+      "decision": "High-growth threshold interpretation",
+      "priority": 2,
+      "levels": [
+        {
+          "level_id": "S15_1",
+          "description": "Expected future employees minus current employees >5",
+          "is_origin": true,
+          "label": "equivalent",
+          "rationale": "Explicit method says more than five additional employees.",
+          "basis": [
+            {
+              "doc": "MAIN",
+              "page": 14,
+              "section": "High-growth operational definition"
+            },
+            {
+              "doc": "MAIN",
+              "page": 24,
+              "section": "High-growth results wording"
+            },
+            "sources/icpsr20320_gem_aps.md: OMYR5JOB and OMNOWJOB"
+          ]
+        },
+        {
+          "level_id": "S15_2",
+          "description": "Expected future total employees >5",
+          "is_origin": false,
+          "label": "non_equivalent",
+          "rationale": "Later results omit additional, but this threshold measures future level instead of job growth.",
+          "basis": [
+            {
+              "doc": "MAIN",
+              "page": 14,
+              "section": "High-growth operational definition"
+            },
+            {
+              "doc": "MAIN",
+              "page": 24,
+              "section": "High-growth results wording"
+            },
+            "sources/icpsr20320_gem_aps.md: OMYR5JOB and OMNOWJOB"
+          ]
+        }
+      ]
+    },
+    {
+      "axis_id": "S16",
+      "decision": "Business-age zero and open-ended dates",
+      "priority": 2,
+      "levels": [
+        {
+          "level_id": "S16_1",
+          "description": "log(survey year minus first payment year) for resolved positive durations; unresolved cases left missing",
+          "is_origin": true,
+          "label": "uncertain",
+          "rationale": "Matches log years definition without adding an unreported offset; handling of zero/censored dates is not given.",
+          "basis": [
+            {
+              "doc": "MAIN",
+              "page": 15,
+              "section": "Business age and footnote 15"
+            },
+            "sources/icpsr20320_gem_aps.md: OMWAGEYR"
+          ]
+        },
+        {
+          "level_id": "S16_2",
+          "description": "log(1 + resolved years since first payment)",
+          "is_origin": false,
+          "label": "non_equivalent",
+          "rationale": "Preserves same-year owners but changes the regressor nonlinearly; unlike employee count, the article never states a plus-one offset for business age.",
+          "basis": [
+            {
+              "doc": "MAIN",
+              "page": 15,
+              "section": "Business age and footnote 15"
+            },
+            "sources/icpsr20320_gem_aps.md: OMWAGEYR"
+          ]
+        }
+      ]
+    },
+    {
+      "axis_id": "S17",
+      "decision": "Sole ownership coding",
+      "priority": 2,
+      "levels": [
+        {
+          "level_id": "S17_1",
+          "description": "OMOWN=all versus part",
+          "is_origin": true,
+          "label": "uncertain",
+          "rationale": "Directly matches ownership-share wording.",
+          "basis": [
+            {
+              "doc": "MAIN",
+              "page": 15,
+              "section": "Ownership share"
+            },
+            "sources/icpsr20320_gem_aps.md: OMOWN and OMOWNERS"
+          ]
+        },
+        {
+          "level_id": "S17_2",
+          "description": "OMOWNERS=1 versus more than one owner-manager",
+          "is_origin": false,
+          "label": "uncertain",
+          "rationale": "Counts people both owning and managing; may miss nonmanaging co-owners, so equivalence cannot be assumed.",
+          "basis": [
+            {
+              "doc": "MAIN",
+              "page": 15,
+              "section": "Ownership share"
+            },
+            "sources/icpsr20320_gem_aps.md: OMOWN and OMOWNERS"
+          ]
+        }
+      ]
+    },
+    {
+      "axis_id": "S18",
+      "decision": "Analytic survey weighting",
+      "priority": 3,
+      "levels": [
+        {
+          "level_id": "S18_1",
+          "description": "Unweighted estimation, explicitly a provisional origin",
+          "is_origin": true,
+          "label": "uncertain",
+          "rationale": "Article does not report weighting; absence of a statement does not establish unweighted fitting.",
+          "basis": [
+            {
+              "doc": "MAIN",
+              "page": 15,
+              "section": "Analytic Strategy"
+            },
+            "sources/icpsr20320_gem_aps.md: weights and Notes for use"
+          ]
+        },
+        {
+          "level_id": "S18_2",
+          "description": "Use WEIGHT_A or WEIGHT_L with stated multilevel scaling and the same eligible sample",
+          "is_origin": false,
+          "label": "uncertain",
+          "rationale": "Dictionary recommends weights; weight selection/scaling for restricted-age samples is not given. Select one and document before fitting, not after comparing targets.",
+          "basis": [
+            {
+              "doc": "MAIN",
+              "page": 15,
+              "section": "Analytic Strategy"
+            },
+            "sources/icpsr20320_gem_aps.md: weights and Notes for use"
+          ]
+        }
+      ]
+    },
+    {
+      "axis_id": "S19",
+      "decision": "Random intercept/female-slope covariance",
+      "priority": 3,
+      "levels": [
+        {
+          "level_id": "S19_1",
+          "description": "Keep both random terms at country and survey levels; covariance choice unresolved",
+          "is_origin": true,
+          "label": "uncertain",
+          "rationale": "Both random terms are explicit, their covariance is not.",
+          "basis": [
+            {
+              "doc": "MAIN",
+              "page": 15,
+              "section": "Three-level analytic strategy"
+            },
+            {
+              "doc": "MAIN",
+              "page": 31,
+              "section": "Predominantly cross-sectional limitation"
+            }
+          ]
+        },
+        {
+          "level_id": "S19_2",
+          "description": "Estimate within-level intercept/female covariance at both levels",
+          "is_origin": false,
+          "label": "uncertain",
+          "rationale": "Permits correlation between baseline activity and gender gaps; compatible with described random terms but not documented.",
+          "basis": [
+            {
+              "doc": "MAIN",
+              "page": 15,
+              "section": "Three-level analytic strategy"
+            },
+            {
+              "doc": "MAIN",
+              "page": 31,
+              "section": "Predominantly cross-sectional limitation"
+            }
+          ]
+        },
+        {
+          "level_id": "S19_3",
+          "description": "Constrain both within-level covariances to zero",
+          "is_origin": false,
+          "label": "uncertain",
+          "rationale": "Still fits the described random terms, but imposes independence not stated.",
+          "basis": [
+            {
+              "doc": "MAIN",
+              "page": 15,
+              "section": "Three-level analytic strategy"
+            },
+            {
+              "doc": "MAIN",
+              "page": 31,
+              "section": "Predominantly cross-sectional limitation"
+            }
+          ]
+        },
+        {
+          "level_id": "S19_4",
+          "description": "Country fixed effects in place of country random intercepts",
+          "is_origin": false,
+          "label": "non_equivalent",
+          "rationale": "Changes between-country versus within-country identification; MAIN motivates country-level variation, so this belongs only in wider space.",
+          "basis": [
+            {
+              "doc": "MAIN",
+              "page": 15,
+              "section": "Three-level analytic strategy"
+            },
+            {
+              "doc": "MAIN",
+              "page": 31,
+              "section": "Predominantly cross-sectional limitation"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "axis_id": "S20",
+      "decision": "Native covariance estimator and test reference distribution",
+      "priority": 3,
+      "levels": [
+        {
+          "level_id": "S20_1",
+          "description": "Model-based covariance; exact Hessian/information convention and test distribution unresolved",
+          "is_origin": true,
+          "label": "uncertain",
+          "rationale": "Mixed-model SE reporting supports this as a candidate, not an established software default.",
+          "basis": [
+            {
+              "doc": "MAIN",
+              "page": 15,
+              "section": "Nested models"
+            },
+            {
+              "doc": "MAIN",
+              "page": 18,
+              "section": "Footnote 17"
+            },
+            {
+              "doc": "MAIN",
+              "page": 19,
+              "section": "Table 1 SEs and legend"
+            }
+          ]
+        },
+        {
+          "level_id": "S20_2",
+          "description": "Country-cluster sandwich with explicitly recorded finite-cluster handling",
+          "is_origin": false,
+          "label": "non_equivalent",
+          "rationale": "Observational country-level exposure motivates sensitivity to inference assumptions; it replaces native SEs and requires a separately chosen procedure not provided by the article.",
+          "basis": [
+            {
+              "doc": "MAIN",
+              "page": 15,
+              "section": "Nested models"
+            },
+            {
+              "doc": "MAIN",
+              "page": 18,
+              "section": "Footnote 17"
+            },
+            {
+              "doc": "MAIN",
+              "page": 19,
+              "section": "Table 1 SEs and legend"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "axis_id": "S21",
+      "decision": "Likelihood computation for logistic and linear mixed models",
+      "priority": 4,
+      "levels": [
+        {
+          "level_id": "S21_1",
+          "description": "Logistic mixed model with likelihood integration settings unresolved; linear mixed model ML/REML unresolved",
+          "is_origin": true,
+          "label": "uncertain",
+          "rationale": "The estimator family is explicit but software and numerical integration are absent.",
+          "basis": [
+            {
+              "doc": "MAIN",
+              "page": 15,
+              "section": "Analytic Strategy; references to Raudenbush and Bryk and Rabe-Hesketh and Skrondal"
+            },
+            "MAIN p.39: bibliographic entries for the cited mixed-model methods (not independently consulted)"
+          ]
+        },
+        {
+          "level_id": "S21_2",
+          "description": "Adaptive Gaussian quadrature with convergence and quadrature-stability checks",
+          "is_origin": false,
+          "label": "uncertain",
+          "rationale": "Numerical implementation of the same integrated mixed-logit likelihood described in MAIN; no node count can be attributed to the paper.",
+          "basis": [
+            {
+              "doc": "MAIN",
+              "page": 15,
+              "section": "Analytic Strategy; references to Raudenbush and Bryk and Rabe-Hesketh and Skrondal"
+            },
+            "MAIN p.39: bibliographic entries for the cited mixed-model methods (not independently consulted)"
+          ]
+        },
+        {
+          "level_id": "S21_3",
+          "description": "Laplace approximation to the logistic mixed likelihood",
+          "is_origin": false,
+          "label": "uncertain",
+          "rationale": "Different likelihood approximation; cannot assume coefficient equivalence without precision assessment.",
+          "basis": [
+            {
+              "doc": "MAIN",
+              "page": 15,
+              "section": "Analytic Strategy; references to Raudenbush and Bryk and Rabe-Hesketh and Skrondal"
+            },
+            "MAIN p.39: bibliographic entries for the cited mixed-model methods (not independently consulted)"
+          ]
+        },
+        {
+          "level_id": "S21_4",
+          "description": "REML rather than ML for linear business-size model",
+          "is_origin": false,
+          "label": "uncertain",
+          "rationale": "Both are compatible with linear mixed model wording; fixed-effect comparisons and fit statistics are not automatically comparable.",
+          "basis": [
+            {
+              "doc": "MAIN",
+              "page": 15,
+              "section": "Analytic Strategy; references to Raudenbush and Bryk and Rabe-Hesketh and Skrondal"
+            },
+            "MAIN p.39: bibliographic entries for the cited mixed-model methods (not independently consulted)"
+          ]
+        }
+      ]
+    },
+    {
+      "axis_id": "S22",
+      "decision": "Fertility control in expanded-sample robustness model",
+      "priority": 2,
+      "levels": [
+        {
+          "level_id": "S22_1",
+          "description": "Omit fertility only in A3_M2, following its blank printed cell",
+          "is_origin": true,
+          "label": "uncertain",
+          "rationale": "Closest table-described term list, but blank may be a reporting omission.",
+          "basis": [
+            {
+              "doc": "S1",
+              "page": 3,
+              "section": "Table A3 Model 2 fertility row"
+            },
+            {
+              "doc": "MAIN",
+              "page": 14,
+              "section": "Fertility control"
+            }
+          ]
+        },
+        {
+          "level_id": "S22_2",
+          "description": "Include fertility in A3_M2, following MAIN’s general controls description",
+          "is_origin": false,
+          "label": "uncertain",
+          "rationale": "Competing documented reading; cannot silently resolve the discrepancy.",
+          "basis": [
+            {
+              "doc": "S1",
+              "page": 3,
+              "section": "Table A3 Model 2 fertility row"
+            },
+            {
+              "doc": "MAIN",
+              "page": 14,
+              "section": "Fertility control"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "compatibility": [
+    {
+      "crossing": "S06 response-year restriction × early-year fixed effects/roster",
+      "reason": "Dropping unavailable-status years changes the sample and available time indicators; retain an explicit changed-sample model."
+    },
+    {
+      "crossing": "S03 strict owner duration × business-age zero alternative",
+      "reason": "A duration-qualified owner subset may remove same-year owners by construction; the age-zero question then has a different support."
+    },
+    {
+      "crossing": "S04 nascent definition × entrepreneurial_activity",
+      "reason": "Use one consistent nascent definition in its own outcome and the total-outcome union; never count overlapping statuses twice."
+    },
+    {
+      "crossing": "S12 basis changes × lower-order terms / interaction structure",
+      "reason": "Polynomial equivalence requires the full linear/quadratic basis and corresponding female interactions, identical records/weights and an appropriate parameter transformation. Do not compare raw coefficient values across bases."
+    },
+    {
+      "crossing": "S13 changed centering/scaling × raw coefficient comparisons",
+      "reason": "Changing fixed macro scale constants is an invertible reparameterization with all lower-order terms/interactions retained and unchanged estimation records. It changes fixed-coefficient interpretation and requires mapping before target comparison; it does not itself change the random-effects design."
+    },
+    {
+      "crossing": "S09 historical sparse series imputation × current annual ECEC series",
+      "reason": "These are different source/concept branches; do not apply old-vintage imputation to a different observed annual measure and call it a historical reconstruction."
+    },
+    {
+      "crossing": "S18 weighted estimation × undefined multilevel weight scaling / covariance",
+      "reason": "Weight selection, level scaling and covariance method must form a documented valid estimator combination; not every software procedure accepts arbitrary survey weights."
+    },
+    {
+      "crossing": "S19 fixed-effects branch × time-invariant or nearly invariant macro predictors",
+      "reason": "Country fixed effects absorb time-invariant macro main effects and alter identification; interactions can remain but target a different structure."
+    },
+    {
+      "crossing": "S21 REML × logistic outcomes",
+      "reason": "REML option here applies only to the linear business-size model; it is not a substitute estimator for the binary outcomes."
+    },
+    {
+      "crossing": "S22 fertility ambiguity × M1–M8/A3_M1/A3_M3",
+      "reason": "Only A3_M2 has the blank fertility cell; all other explicitly printed controls must remain as specified."
+    },
+    {
+      "crossing": "Distinct growth outcomes / nascent outcome as if one exchangeable axis",
+      "reason": "These are separate claims and estimands with distinct windows, not interchangeable equivalent specifications."
+    }
+  ],
+  "notes": [
+    "No Cartesian-product specification count is asserted: source-dependent choices and estimator compatibility matter.",
+    "Equivalent means an explicitly described operational choice or an algebraically justified parameterization, not matching published results. Uncertain labels do not assert all choices are equally credible.",
+    "Listed controls are fixed within the equivalent set. Prose-only alternative-control checks are described in wider_space, not silently substituted.",
+    "No direction, numerical target or model fit is used to select a level. The article does not state software defaults, exact p values or tails."
+  ]
+}

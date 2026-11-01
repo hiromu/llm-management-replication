@@ -1,0 +1,177 @@
+{
+ "acs5year.dta": {
+  "nrow": [
+   22545,
+   22545
+  ],
+  "ncol": [
+   14,
+   14
+  ],
+  "col_mismatch": [],
+  "name_mismatch": []
+ },
+ "amenitycheck.csv": {
+  "nrow": [
+   109771,
+   109771
+  ],
+  "ncol": [
+   4,
+   4
+  ],
+  "col_mismatch": [],
+  "name_mismatch": []
+ },
+ "boundary-counties.csv": {
+  "nrow": [
+   3220,
+   3220
+  ],
+  "ncol": [
+   2,
+   2
+  ],
+  "col_mismatch": [
+   " border counties"
+  ],
+  "name_mismatch": [
+   " border counties",
+   "border counties"
+  ]
+ },
+ "county_lookup.csv": {
+  "nrow": [
+   3109,
+   3109
+  ],
+  "ncol": [
+   8,
+   8
+  ],
+  "col_mismatch": [],
+  "name_mismatch": []
+ },
+ "distance.csv": {
+  "nrow": [
+   99403,
+   99403
+  ],
+  "ncol": [
+   7,
+   7
+  ],
+  "col_mismatch": [],
+  "name_mismatch": []
+ },
+ "google_trends.csv": {
+  "nrow": [
+   51,
+   51
+  ],
+  "ncol": [
+   41,
+   41
+  ],
+  "col_mismatch": [],
+  "name_mismatch": []
+ },
+ "h12.csv": {
+  "nrow": [
+   2133235,
+   2133235
+  ],
+  "ncol": [
+   5,
+   5
+  ],
+  "col_mismatch": [],
+  "name_mismatch": []
+ },
+ "land_area.csv": {
+  "nrow": [
+   3198,
+   3198
+  ],
+  "ncol": [
+   3,
+   3
+  ],
+  "col_mismatch": [],
+  "name_mismatch": []
+ },
+ "maptimes.csv": {
+  "nrow": [
+   56,
+   56
+  ],
+  "ncol": [
+   7,
+   7
+  ],
+  "col_mismatch": [],
+  "name_mismatch": []
+ },
+ "osm-events.csv": {
+  "nrow": [
+   226,
+   226
+  ],
+  "ncol": [
+   8,
+   8
+  ],
+  "col_mismatch": [],
+  "name_mismatch": []
+ },
+ "quarterly.csv": {
+  "nrow": [
+   89788,
+   89788
+  ],
+  "ncol": [
+   26,
+   26
+  ],
+  "col_mismatch": [],
+  "name_mismatch": []
+ },
+ "tiger_census_2008q2.csv": {
+  "nrow": [
+   3214,
+   3214
+  ],
+  "ncol": [
+   11,
+   11
+  ],
+  "col_mismatch": [],
+  "name_mismatch": []
+ },
+ "tiger_osm_2018.csv": {
+  "nrow": [
+   3231,
+   3231
+  ],
+  "ncol": [
+   5,
+   5
+  ],
+  "col_mismatch": [],
+  "name_mismatch": []
+ },
+ "timing.xlsx": {
+  "nrow": [
+   3233,
+   3233
+  ],
+  "ncol": [
+   6,
+   6
+  ],
+  "col_mismatch": [
+   "FIPS"
+  ],
+  "name_mismatch": []
+ }
+}

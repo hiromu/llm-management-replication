@@ -1,0 +1,1810 @@
+[
+  {
+    "path": ".claude/settings.json",
+    "reason": "Not required for the distributable scientific record"
+  },
+  {
+    "path": "CLAUDE.md",
+    "reason": "Replaced with public-copy documentation"
+  },
+  {
+    "path": "README.md",
+    "reason": "Replaced with public-copy documentation"
+  },
+  {
+    "path": "audit/adversarial_v1/d01_table2_columns.out",
+    "reason": "Source document, raw transcript, data, or binary runtime output"
+  },
+  {
+    "path": "audit/adversarial_v1/d02_table2_sample.out",
+    "reason": "Source document, raw transcript, data, or binary runtime output"
+  },
+  {
+    "path": "audit/adversarial_v1/d03_table2_alt_samples.out",
+    "reason": "Source document, raw transcript, data, or binary runtime output"
+  },
+  {
+    "path": "audit/adversarial_v1/d04_sample_counts.out",
+    "reason": "Source document, raw transcript, data, or binary runtime output"
+  },
+  {
+    "path": "audit/adversarial_v1/d05_timing_windows.out",
+    "reason": "Source document, raw transcript, data, or binary runtime output"
+  },
+  {
+    "path": "audit/adversarial_v1/d06_table1_controls.out",
+    "reason": "Source document, raw transcript, data, or binary runtime output"
+  },
+  {
+    "path": "audit/adversarial_v1/d07_distance_units.out",
+    "reason": "Source document, raw transcript, data, or binary runtime output"
+  },
+  {
+    "path": "audit/adversarial_v1/d08_table6.out",
+    "reason": "Source document, raw transcript, data, or binary runtime output"
+  },
+  {
+    "path": "audit/adversarial_v1/d09_table5A.out",
+    "reason": "Source document, raw transcript, data, or binary runtime output"
+  },
+  {
+    "path": "audit/adversarial_v1/d10_universe_MA.out",
+    "reason": "Source document, raw transcript, data, or binary runtime output"
+  },
+  {
+    "path": "audit/adversarial_v1/d11_table6_MA.out",
+    "reason": "Source document, raw transcript, data, or binary runtime output"
+  },
+  {
+    "path": "audit/adversarial_v1/d12_table6_distance_constructions.out",
+    "reason": "Source document, raw transcript, data, or binary runtime output"
+  },
+  {
+    "path": "audit/adversarial_v1/d13_table1_yearpairs.out",
+    "reason": "Source document, raw transcript, data, or binary runtime output"
+  },
+  {
+    "path": "audit/adversarial_v1/d14_counts_MA.out",
+    "reason": "Source document, raw transcript, data, or binary runtime output"
+  },
+  {
+    "path": "audit/adversarial_v1/d15_table6_pctmales.out",
+    "reason": "Source document, raw transcript, data, or binary runtime output"
+  },
+  {
+    "path": "chat_log.md",
+    "reason": "Private conversation, local configuration, or cache"
+  },
+  {
+    "path": "checks/astra_barrier_test/RESULTS.md",
+    "reason": "Operational checking record; scientific review retained under audit/"
+  },
+  {
+    "path": "checks/astra_barrier_test/canary_launcher.txt",
+    "reason": "Operational checking record; scientific review retained under audit/"
+  },
+  {
+    "path": "checks/astra_barrier_test/canary_native.txt",
+    "reason": "Operational checking record; scientific review retained under audit/"
+  },
+  {
+    "path": "checks/astra_barrier_test/canary_outer_full.txt",
+    "reason": "Operational checking record; scientific review retained under audit/"
+  },
+  {
+    "path": "checks/astra_barrier_test/canary_outer_full_noagents.txt",
+    "reason": "Operational checking record; scientific review retained under audit/"
+  },
+  {
+    "path": "checks/astra_barrier_test/canary_outer_native.txt",
+    "reason": "Operational checking record; scientific review retained under audit/"
+  },
+  {
+    "path": "checks/astra_barrier_test/chat_log.md",
+    "reason": "Private conversation, local configuration, or cache"
+  },
+  {
+    "path": "checks/astra_barrier_test/native.json",
+    "reason": "Operational checking record; scientific review retained under audit/"
+  },
+  {
+    "path": "checks/astra_barrier_test/native.stderr",
+    "reason": "Source document, raw transcript, data, or binary runtime output"
+  },
+  {
+    "path": "checks/astra_barrier_test/native.stdout.jsonl",
+    "reason": "Source document, raw transcript, data, or binary runtime output"
+  },
+  {
+    "path": "checks/astra_barrier_test/outer_full.json",
+    "reason": "Operational checking record; scientific review retained under audit/"
+  },
+  {
+    "path": "checks/astra_barrier_test/outer_full.stderr",
+    "reason": "Source document, raw transcript, data, or binary runtime output"
+  },
+  {
+    "path": "checks/astra_barrier_test/outer_full.stdout.jsonl",
+    "reason": "Source document, raw transcript, data, or binary runtime output"
+  },
+  {
+    "path": "checks/astra_barrier_test/outer_full_noagents.json",
+    "reason": "Operational checking record; scientific review retained under audit/"
+  },
+  {
+    "path": "checks/astra_barrier_test/outer_full_noagents.stderr",
+    "reason": "Source document, raw transcript, data, or binary runtime output"
+  },
+  {
+    "path": "checks/astra_barrier_test/outer_full_noagents.stdout.jsonl",
+    "reason": "Source document, raw transcript, data, or binary runtime output"
+  },
+  {
+    "path": "checks/astra_barrier_test/outer_native.json",
+    "reason": "Operational checking record; scientific review retained under audit/"
+  },
+  {
+    "path": "checks/astra_barrier_test/outer_native.stderr",
+    "reason": "Source document, raw transcript, data, or binary runtime output"
+  },
+  {
+    "path": "checks/astra_barrier_test/outer_native.stdout.jsonl",
+    "reason": "Source document, raw transcript, data, or binary runtime output"
+  },
+  {
+    "path": "checks/astra_barrier_test/run_test.py",
+    "reason": "Operational checking record; scientific review retained under audit/"
+  },
+  {
+    "path": "checks/pre_execution/A/unmet_items.md",
+    "reason": "Operational checking record; scientific review retained under audit/"
+  },
+  {
+    "path": "checks/pre_execution/B/unmet_items.md",
+    "reason": "Operational checking record; scientific review retained under audit/"
+  },
+  {
+    "path": "checks/pre_execution/C/unmet_items.md",
+    "reason": "Operational checking record; scientific review retained under audit/"
+  },
+  {
+    "path": "checks/pre_execution/disposition_v1.md",
+    "reason": "Operational checking record; scientific review retained under audit/"
+  },
+  {
+    "path": "checks/synthetic_v1/compare_desc_v1.json",
+    "reason": "Operational checking record; scientific review retained under audit/"
+  },
+  {
+    "path": "checks/synthetic_v1/compare_v1.csv",
+    "reason": "Operational checking record; scientific review retained under audit/"
+  },
+  {
+    "path": "checks/synthetic_v1/compare_v1.json",
+    "reason": "Operational checking record; scientific review retained under audit/"
+  },
+  {
+    "path": "code/__pycache__/normalize_desc.cpython-313.pyc",
+    "reason": "Private conversation, local configuration, or cache"
+  },
+  {
+    "path": "code/__pycache__/run_role.cpython-313.pyc",
+    "reason": "Private conversation, local configuration, or cache"
+  },
+  {
+    "path": "code/chat_log.md",
+    "reason": "Private conversation, local configuration, or cache"
+  },
+  {
+    "path": "data/derived/bundle_v0_failed_do_not_use/acs5year.dta",
+    "reason": "Empirical, derived, or synthetic input data"
+  },
+  {
+    "path": "data/derived/bundle_v0_failed_do_not_use/amenitycheck.csv",
+    "reason": "Empirical, derived, or synthetic input data"
+  },
+  {
+    "path": "data/derived/bundle_v0_failed_do_not_use/boundary-counties.csv",
+    "reason": "Empirical, derived, or synthetic input data"
+  },
+  {
+    "path": "data/derived/bundle_v0_failed_do_not_use/county_lookup.csv",
+    "reason": "Empirical, derived, or synthetic input data"
+  },
+  {
+    "path": "data/derived/bundle_v0_failed_do_not_use/distance.csv",
+    "reason": "Empirical, derived, or synthetic input data"
+  },
+  {
+    "path": "data/derived/bundle_v0_failed_do_not_use/google_trends.csv",
+    "reason": "Empirical, derived, or synthetic input data"
+  },
+  {
+    "path": "data/derived/bundle_v0_failed_do_not_use/h12.csv",
+    "reason": "Empirical, derived, or synthetic input data"
+  },
+  {
+    "path": "data/derived/bundle_v0_failed_do_not_use/land_area.csv",
+    "reason": "Empirical, derived, or synthetic input data"
+  },
+  {
+    "path": "data/derived/bundle_v0_failed_do_not_use/maptimes.csv",
+    "reason": "Empirical, derived, or synthetic input data"
+  },
+  {
+    "path": "data/derived/bundle_v0_failed_do_not_use/osm-events.csv",
+    "reason": "Empirical, derived, or synthetic input data"
+  },
+  {
+    "path": "data/derived/bundle_v0_failed_do_not_use/quarterly.csv",
+    "reason": "Empirical, derived, or synthetic input data"
+  },
+  {
+    "path": "data/derived/bundle_v0_failed_do_not_use/tiger_census_2008q2.csv",
+    "reason": "Empirical, derived, or synthetic input data"
+  },
+  {
+    "path": "data/derived/bundle_v0_failed_do_not_use/tiger_osm_2018.csv",
+    "reason": "Empirical, derived, or synthetic input data"
+  },
+  {
+    "path": "data/derived/bundle_v0_failed_do_not_use/timing.xlsx",
+    "reason": "Empirical, derived, or synthetic input data"
+  },
+  {
+    "path": "data/derived/bundle_v0_failed_do_not_use/tl_2010_us_county10.zip",
+    "reason": "Empirical, derived, or synthetic input data"
+  },
+  {
+    "path": "data/derived/bundle_v1/acs5year.dta",
+    "reason": "Empirical, derived, or synthetic input data"
+  },
+  {
+    "path": "data/derived/bundle_v1/amenitycheck.csv",
+    "reason": "Empirical, derived, or synthetic input data"
+  },
+  {
+    "path": "data/derived/bundle_v1/boundary-counties.csv",
+    "reason": "Empirical, derived, or synthetic input data"
+  },
+  {
+    "path": "data/derived/bundle_v1/county_lookup.csv",
+    "reason": "Empirical, derived, or synthetic input data"
+  },
+  {
+    "path": "data/derived/bundle_v1/distance.csv",
+    "reason": "Empirical, derived, or synthetic input data"
+  },
+  {
+    "path": "data/derived/bundle_v1/google_trends.csv",
+    "reason": "Empirical, derived, or synthetic input data"
+  },
+  {
+    "path": "data/derived/bundle_v1/h12.csv",
+    "reason": "Empirical, derived, or synthetic input data"
+  },
+  {
+    "path": "data/derived/bundle_v1/land_area.csv",
+    "reason": "Empirical, derived, or synthetic input data"
+  },
+  {
+    "path": "data/derived/bundle_v1/maptimes.csv",
+    "reason": "Empirical, derived, or synthetic input data"
+  },
+  {
+    "path": "data/derived/bundle_v1/osm-events.csv",
+    "reason": "Empirical, derived, or synthetic input data"
+  },
+  {
+    "path": "data/derived/bundle_v1/quarterly.csv",
+    "reason": "Empirical, derived, or synthetic input data"
+  },
+  {
+    "path": "data/derived/bundle_v1/tiger_census_2008q2.csv",
+    "reason": "Empirical, derived, or synthetic input data"
+  },
+  {
+    "path": "data/derived/bundle_v1/tiger_osm_2018.csv",
+    "reason": "Empirical, derived, or synthetic input data"
+  },
+  {
+    "path": "data/derived/bundle_v1/timing.xlsx",
+    "reason": "Empirical, derived, or synthetic input data"
+  },
+  {
+    "path": "data/derived/bundle_v1/tl_2010_us_county10.zip",
+    "reason": "Empirical, derived, or synthetic input data"
+  },
+  {
+    "path": "data/derived/run_input_v1/acs5year.dta",
+    "reason": "Empirical, derived, or synthetic input data"
+  },
+  {
+    "path": "data/derived/run_input_v1/boundary-counties.csv",
+    "reason": "Empirical, derived, or synthetic input data"
+  },
+  {
+    "path": "data/derived/run_input_v1/county_lookup.csv",
+    "reason": "Empirical, derived, or synthetic input data"
+  },
+  {
+    "path": "data/derived/run_input_v1/distance.csv",
+    "reason": "Empirical, derived, or synthetic input data"
+  },
+  {
+    "path": "data/derived/run_input_v1/placebo_draws.csv",
+    "reason": "Empirical, derived, or synthetic input data"
+  },
+  {
+    "path": "data/derived/run_input_v1/quarterly.csv",
+    "reason": "Empirical, derived, or synthetic input data"
+  },
+  {
+    "path": "data/derived/run_input_v1/timing.xlsx",
+    "reason": "Empirical, derived, or synthetic input data"
+  },
+  {
+    "path": "data/raw/census_tiger2010/tl_2010_us_county10.zip",
+    "reason": "Empirical, derived, or synthetic input data"
+  },
+  {
+    "path": "data/raw/osf_a47e9/rawdata/acs5year.dta",
+    "reason": "Empirical, derived, or synthetic input data"
+  },
+  {
+    "path": "data/raw/osf_a47e9/rawdata/amenitycheck.csv",
+    "reason": "Empirical, derived, or synthetic input data"
+  },
+  {
+    "path": "data/raw/osf_a47e9/rawdata/boundary-counties.csv",
+    "reason": "Empirical, derived, or synthetic input data"
+  },
+  {
+    "path": "data/raw/osf_a47e9/rawdata/county_lookup.csv",
+    "reason": "Empirical, derived, or synthetic input data"
+  },
+  {
+    "path": "data/raw/osf_a47e9/rawdata/distance.csv",
+    "reason": "Empirical, derived, or synthetic input data"
+  },
+  {
+    "path": "data/raw/osf_a47e9/rawdata/google_trends.csv",
+    "reason": "Empirical, derived, or synthetic input data"
+  },
+  {
+    "path": "data/raw/osf_a47e9/rawdata/h12.csv",
+    "reason": "Empirical, derived, or synthetic input data"
+  },
+  {
+    "path": "data/raw/osf_a47e9/rawdata/land_area.csv",
+    "reason": "Empirical, derived, or synthetic input data"
+  },
+  {
+    "path": "data/raw/osf_a47e9/rawdata/maptimes.csv",
+    "reason": "Empirical, derived, or synthetic input data"
+  },
+  {
+    "path": "data/raw/osf_a47e9/rawdata/osm-events.csv",
+    "reason": "Empirical, derived, or synthetic input data"
+  },
+  {
+    "path": "data/raw/osf_a47e9/rawdata/quarterly.csv",
+    "reason": "Empirical, derived, or synthetic input data"
+  },
+  {
+    "path": "data/raw/osf_a47e9/rawdata/tiger_census_2008q2.csv",
+    "reason": "Empirical, derived, or synthetic input data"
+  },
+  {
+    "path": "data/raw/osf_a47e9/rawdata/tiger_osm_2018.csv",
+    "reason": "Empirical, derived, or synthetic input data"
+  },
+  {
+    "path": "data/raw/osf_a47e9/rawdata/timing.xlsx",
+    "reason": "Empirical, derived, or synthetic input data"
+  },
+  {
+    "path": "data/raw/osf_a47e9/writing/appendix.pdf",
+    "reason": "Empirical, derived, or synthetic input data"
+  },
+  {
+    "path": "data/synthetic_v1/acs5year.dta",
+    "reason": "Empirical, derived, or synthetic input data"
+  },
+  {
+    "path": "data/synthetic_v1/boundary-counties.csv",
+    "reason": "Empirical, derived, or synthetic input data"
+  },
+  {
+    "path": "data/synthetic_v1/county_lookup.csv",
+    "reason": "Empirical, derived, or synthetic input data"
+  },
+  {
+    "path": "data/synthetic_v1/distance.csv",
+    "reason": "Empirical, derived, or synthetic input data"
+  },
+  {
+    "path": "data/synthetic_v1/placebo_draws.csv",
+    "reason": "Empirical, derived, or synthetic input data"
+  },
+  {
+    "path": "data/synthetic_v1/quarterly.csv",
+    "reason": "Empirical, derived, or synthetic input data"
+  },
+  {
+    "path": "data/synthetic_v1/timing.xlsx",
+    "reason": "Empirical, derived, or synthetic input data"
+  },
+  {
+    "path": "implementation/A/v1/synthetic_influence/influence_S00008.csv",
+    "reason": "County-level or row-level identifying output; aggregate summaries retained"
+  },
+  {
+    "path": "implementation/A/v1/synthetic_influence/prep_log.json",
+    "reason": "Row-level membership, assignment, or preparation output"
+  },
+  {
+    "path": "implementation/A/v1/synthetic_run/an09_membership.csv",
+    "reason": "Row-level membership, assignment, or preparation output"
+  },
+  {
+    "path": "implementation/A/v1/synthetic_run/placebo_vectors.csv",
+    "reason": "Row-level membership, assignment, or preparation output"
+  },
+  {
+    "path": "implementation/A/v1/synthetic_run/prep_log.json",
+    "reason": "Row-level membership, assignment, or preparation output"
+  },
+  {
+    "path": "implementation/B/v1/synthetic_influence/an09_membership.csv",
+    "reason": "Row-level membership, assignment, or preparation output"
+  },
+  {
+    "path": "implementation/B/v1/synthetic_influence/influence.csv",
+    "reason": "Row-level membership, assignment, or preparation output"
+  },
+  {
+    "path": "implementation/B/v1/synthetic_influence/placebo_vectors.csv",
+    "reason": "Row-level membership, assignment, or preparation output"
+  },
+  {
+    "path": "implementation/B/v1/synthetic_influence/prep_log.json",
+    "reason": "Row-level membership, assignment, or preparation output"
+  },
+  {
+    "path": "implementation/B/v1/synthetic_influence.log",
+    "reason": "Source document, raw transcript, data, or binary runtime output"
+  },
+  {
+    "path": "implementation/B/v1/synthetic_run/an09_membership.csv",
+    "reason": "Row-level membership, assignment, or preparation output"
+  },
+  {
+    "path": "implementation/B/v1/synthetic_run/placebo_vectors.csv",
+    "reason": "Row-level membership, assignment, or preparation output"
+  },
+  {
+    "path": "implementation/B/v1/synthetic_run/prep_log.json",
+    "reason": "Row-level membership, assignment, or preparation output"
+  },
+  {
+    "path": "implementation/B/v1/synthetic_run.log",
+    "reason": "Source document, raw transcript, data, or binary runtime output"
+  },
+  {
+    "path": "implementation/B/v1/validation.log",
+    "reason": "Source document, raw transcript, data, or binary runtime output"
+  },
+  {
+    "path": "implementation/C/v1/synthetic_influence/an09_membership.csv",
+    "reason": "Row-level membership, assignment, or preparation output"
+  },
+  {
+    "path": "implementation/C/v1/synthetic_influence/influence.csv",
+    "reason": "Row-level membership, assignment, or preparation output"
+  },
+  {
+    "path": "implementation/C/v1/synthetic_influence/placebo_vectors.csv",
+    "reason": "Row-level membership, assignment, or preparation output"
+  },
+  {
+    "path": "implementation/C/v1/synthetic_influence/prep_log.json",
+    "reason": "Row-level membership, assignment, or preparation output"
+  },
+  {
+    "path": "implementation/C/v1/synthetic_run/an09_membership.csv",
+    "reason": "Row-level membership, assignment, or preparation output"
+  },
+  {
+    "path": "implementation/C/v1/synthetic_run/placebo_vectors.csv",
+    "reason": "Row-level membership, assignment, or preparation output"
+  },
+  {
+    "path": "implementation/C/v1/synthetic_run/prep_log.json",
+    "reason": "Row-level membership, assignment, or preparation output"
+  },
+  {
+    "path": "logs/acquire_osf.log",
+    "reason": "Source document, raw transcript, data, or binary runtime output"
+  },
+  {
+    "path": "logs/acquire_tiger.log",
+    "reason": "Source document, raw transcript, data, or binary runtime output"
+  },
+  {
+    "path": "logs/checker_staging.txt",
+    "reason": "Operational or private session record"
+  },
+  {
+    "path": "logs/extract_data_notes.json",
+    "reason": "Operational or private session record"
+  },
+  {
+    "path": "logs/extract_data_notes.py",
+    "reason": "Operational or private session record"
+  },
+  {
+    "path": "logs/impl_staging.txt",
+    "reason": "Operational or private session record"
+  },
+  {
+    "path": "logs/leakage_scan_v1.json",
+    "reason": "Operational or private session record"
+  },
+  {
+    "path": "logs/loader_check_python.json",
+    "reason": "Operational or private session record"
+  },
+  {
+    "path": "logs/loader_check_r.json",
+    "reason": "Operational or private session record"
+  },
+  {
+    "path": "logs/reader_staging.txt",
+    "reason": "Operational or private session record"
+  },
+  {
+    "path": "logs/roles/check_A_v1.json",
+    "reason": "Operational or private session record"
+  },
+  {
+    "path": "logs/roles/check_A_v1.launcher.txt",
+    "reason": "Operational or private session record"
+  },
+  {
+    "path": "logs/roles/check_A_v1.stderr",
+    "reason": "Source document, raw transcript, data, or binary runtime output"
+  },
+  {
+    "path": "logs/roles/check_A_v1.stdout",
+    "reason": "Source document, raw transcript, data, or binary runtime output"
+  },
+  {
+    "path": "logs/roles/check_B_v1.json",
+    "reason": "Operational or private session record"
+  },
+  {
+    "path": "logs/roles/check_B_v1.launcher.txt",
+    "reason": "Operational or private session record"
+  },
+  {
+    "path": "logs/roles/check_B_v1.stderr",
+    "reason": "Source document, raw transcript, data, or binary runtime output"
+  },
+  {
+    "path": "logs/roles/check_B_v1.stdout",
+    "reason": "Source document, raw transcript, data, or binary runtime output"
+  },
+  {
+    "path": "logs/roles/check_C_v1.json",
+    "reason": "Operational or private session record"
+  },
+  {
+    "path": "logs/roles/check_C_v1.launcher.txt",
+    "reason": "Operational or private session record"
+  },
+  {
+    "path": "logs/roles/check_C_v1.stderr",
+    "reason": "Source document, raw transcript, data, or binary runtime output"
+  },
+  {
+    "path": "logs/roles/check_C_v1.stdout",
+    "reason": "Source document, raw transcript, data, or binary runtime output"
+  },
+  {
+    "path": "logs/roles/impl_A.json",
+    "reason": "Operational or private session record"
+  },
+  {
+    "path": "logs/roles/impl_A.launcher.txt",
+    "reason": "Operational or private session record"
+  },
+  {
+    "path": "logs/roles/impl_A.stderr",
+    "reason": "Source document, raw transcript, data, or binary runtime output"
+  },
+  {
+    "path": "logs/roles/impl_A.stdout",
+    "reason": "Source document, raw transcript, data, or binary runtime output"
+  },
+  {
+    "path": "logs/roles/impl_B.json",
+    "reason": "Operational or private session record"
+  },
+  {
+    "path": "logs/roles/impl_B.launcher.txt",
+    "reason": "Operational or private session record"
+  },
+  {
+    "path": "logs/roles/impl_B.stderr",
+    "reason": "Source document, raw transcript, data, or binary runtime output"
+  },
+  {
+    "path": "logs/roles/impl_B.stdout",
+    "reason": "Source document, raw transcript, data, or binary runtime output"
+  },
+  {
+    "path": "logs/roles/impl_C.json",
+    "reason": "Operational or private session record"
+  },
+  {
+    "path": "logs/roles/impl_C.launcher.txt",
+    "reason": "Operational or private session record"
+  },
+  {
+    "path": "logs/roles/impl_C.stderr",
+    "reason": "Source document, raw transcript, data, or binary runtime output"
+  },
+  {
+    "path": "logs/roles/impl_C.stdout",
+    "reason": "Source document, raw transcript, data, or binary runtime output"
+  },
+  {
+    "path": "logs/roles/reader_astra.json",
+    "reason": "Operational or private session record"
+  },
+  {
+    "path": "logs/roles/reader_astra.launcher.txt",
+    "reason": "Operational or private session record"
+  },
+  {
+    "path": "logs/roles/reader_astra.stderr",
+    "reason": "Source document, raw transcript, data, or binary runtime output"
+  },
+  {
+    "path": "logs/roles/reader_astra.stdout",
+    "reason": "Source document, raw transcript, data, or binary runtime output"
+  },
+  {
+    "path": "logs/roles/reader_opus.json",
+    "reason": "Operational or private session record"
+  },
+  {
+    "path": "logs/roles/reader_opus.launcher.txt",
+    "reason": "Operational or private session record"
+  },
+  {
+    "path": "logs/roles/reader_opus.stderr",
+    "reason": "Source document, raw transcript, data, or binary runtime output"
+  },
+  {
+    "path": "logs/roles/reader_opus.stdout",
+    "reason": "Source document, raw transcript, data, or binary runtime output"
+  },
+  {
+    "path": "logs/roles/setup_check_astra_launcher.json",
+    "reason": "Operational or private session record"
+  },
+  {
+    "path": "logs/roles/setup_check_astra_launcher.stderr",
+    "reason": "Source document, raw transcript, data, or binary runtime output"
+  },
+  {
+    "path": "logs/roles/setup_check_astra_launcher.stdout",
+    "reason": "Source document, raw transcript, data, or binary runtime output"
+  },
+  {
+    "path": "logs/session_record.json",
+    "reason": "Operational or private session record"
+  },
+  {
+    "path": "packet/deposit_data_notes.txt",
+    "reason": "Article or extracted publication packet"
+  },
+  {
+    "path": "packet/frozen_v1/D01_article.pdf",
+    "reason": "Source document, raw transcript, data, or binary runtime output"
+  },
+  {
+    "path": "packet/frozen_v1/D01_article.txt",
+    "reason": "Article or extracted publication packet"
+  },
+  {
+    "path": "packet/frozen_v1/D02_online_appendix.pdf",
+    "reason": "Source document, raw transcript, data, or binary runtime output"
+  },
+  {
+    "path": "packet/frozen_v1/D02_online_appendix.txt",
+    "reason": "Article or extracted publication packet"
+  },
+  {
+    "path": "packet/frozen_v1/D03_deposit_data_notes.txt",
+    "reason": "Article or extracted publication packet"
+  },
+  {
+    "path": "packet/frozen_v1/D41_columns_acs5year.txt",
+    "reason": "Article or extracted publication packet"
+  },
+  {
+    "path": "packet/frozen_v1/D42_columns_amenitycheck.txt",
+    "reason": "Article or extracted publication packet"
+  },
+  {
+    "path": "packet/frozen_v1/D43_columns_boundary-counties.txt",
+    "reason": "Article or extracted publication packet"
+  },
+  {
+    "path": "packet/frozen_v1/D44_columns_county_lookup.txt",
+    "reason": "Article or extracted publication packet"
+  },
+  {
+    "path": "packet/frozen_v1/D45_columns_distance.txt",
+    "reason": "Article or extracted publication packet"
+  },
+  {
+    "path": "packet/frozen_v1/D46_columns_google_trends.txt",
+    "reason": "Article or extracted publication packet"
+  },
+  {
+    "path": "packet/frozen_v1/D47_columns_h12.txt",
+    "reason": "Article or extracted publication packet"
+  },
+  {
+    "path": "packet/frozen_v1/D48_columns_land_area.txt",
+    "reason": "Article or extracted publication packet"
+  },
+  {
+    "path": "packet/frozen_v1/D49_columns_maptimes.txt",
+    "reason": "Article or extracted publication packet"
+  },
+  {
+    "path": "packet/frozen_v1/D50_columns_osm-events.txt",
+    "reason": "Article or extracted publication packet"
+  },
+  {
+    "path": "packet/frozen_v1/D51_columns_quarterly.txt",
+    "reason": "Article or extracted publication packet"
+  },
+  {
+    "path": "packet/frozen_v1/D52_columns_tiger_census_2008q2.txt",
+    "reason": "Article or extracted publication packet"
+  },
+  {
+    "path": "packet/frozen_v1/D53_columns_tiger_osm_2018.txt",
+    "reason": "Article or extracted publication packet"
+  },
+  {
+    "path": "packet/frozen_v1/D54_columns_timing.txt",
+    "reason": "Article or extracted publication packet"
+  },
+  {
+    "path": "packet/frozen_v1/D60_tiger_fields.txt",
+    "reason": "Article or extracted publication packet"
+  },
+  {
+    "path": "packet/nagaraj2021.pdf",
+    "reason": "Source document, raw transcript, data, or binary runtime output"
+  },
+  {
+    "path": "post_unseal/diagnostics/D01_MA_as_controls/out/an09_membership.csv",
+    "reason": "Row-level membership, assignment, or preparation output"
+  },
+  {
+    "path": "post_unseal/diagnostics/D01_MA_as_controls/out/placebo_vectors.csv",
+    "reason": "Row-level membership, assignment, or preparation output"
+  },
+  {
+    "path": "post_unseal/diagnostics/D01_MA_as_controls/out/prep_log.json",
+    "reason": "Row-level membership, assignment, or preparation output"
+  },
+  {
+    "path": "post_unseal/diagnostics/D01_MA_as_controls/run.log",
+    "reason": "Source document, raw transcript, data, or binary runtime output"
+  },
+  {
+    "path": "post_unseal/diagnostics/D02_drop_Hawaii/out/an09_membership.csv",
+    "reason": "Row-level membership, assignment, or preparation output"
+  },
+  {
+    "path": "post_unseal/diagnostics/D02_drop_Hawaii/out/placebo_vectors.csv",
+    "reason": "Row-level membership, assignment, or preparation output"
+  },
+  {
+    "path": "post_unseal/diagnostics/D02_drop_Hawaii/out/prep_log.json",
+    "reason": "Row-level membership, assignment, or preparation output"
+  },
+  {
+    "path": "post_unseal/diagnostics/D02_drop_Hawaii/run.log",
+    "reason": "Source document, raw transcript, data, or binary runtime output"
+  },
+  {
+    "path": "post_unseal/diagnostics/D03_interpolated_controls/out/an09_membership.csv",
+    "reason": "Row-level membership, assignment, or preparation output"
+  },
+  {
+    "path": "post_unseal/diagnostics/D03_interpolated_controls/out/placebo_vectors.csv",
+    "reason": "Row-level membership, assignment, or preparation output"
+  },
+  {
+    "path": "post_unseal/diagnostics/D03_interpolated_controls/out/prep_log.json",
+    "reason": "Row-level membership, assignment, or preparation output"
+  },
+  {
+    "path": "post_unseal/diagnostics/D03_interpolated_controls/run.log",
+    "reason": "Source document, raw transcript, data, or binary runtime output"
+  },
+  {
+    "path": "post_unseal/diagnostics/D04_interpolated_controls_xs2014/out/an09_membership.csv",
+    "reason": "Row-level membership, assignment, or preparation output"
+  },
+  {
+    "path": "post_unseal/diagnostics/D04_interpolated_controls_xs2014/out/placebo_vectors.csv",
+    "reason": "Row-level membership, assignment, or preparation output"
+  },
+  {
+    "path": "post_unseal/diagnostics/D04_interpolated_controls_xs2014/out/prep_log.json",
+    "reason": "Row-level membership, assignment, or preparation output"
+  },
+  {
+    "path": "post_unseal/diagnostics/D04_interpolated_controls_xs2014/run.log",
+    "reason": "Source document, raw transcript, data, or binary runtime output"
+  },
+  {
+    "path": "post_unseal/diagnostics/D06_signed_log_error/out/an09_membership.csv",
+    "reason": "Row-level membership, assignment, or preparation output"
+  },
+  {
+    "path": "post_unseal/diagnostics/D06_signed_log_error/out/placebo_vectors.csv",
+    "reason": "Row-level membership, assignment, or preparation output"
+  },
+  {
+    "path": "post_unseal/diagnostics/D06_signed_log_error/out/prep_log.json",
+    "reason": "Row-level membership, assignment, or preparation output"
+  },
+  {
+    "path": "post_unseal/diagnostics/D06_signed_log_error/run.log",
+    "reason": "Source document, raw transcript, data, or binary runtime output"
+  },
+  {
+    "path": "post_unseal/diagnostics/D08_timing_window/out/an09_membership.csv",
+    "reason": "Row-level membership, assignment, or preparation output"
+  },
+  {
+    "path": "post_unseal/diagnostics/D08_timing_window/out/placebo_vectors.csv",
+    "reason": "Row-level membership, assignment, or preparation output"
+  },
+  {
+    "path": "post_unseal/diagnostics/D08_timing_window/out/prep_log.json",
+    "reason": "Row-level membership, assignment, or preparation output"
+  },
+  {
+    "path": "post_unseal/diagnostics/D08_timing_window/run.log",
+    "reason": "Source document, raw transcript, data, or binary runtime output"
+  },
+  {
+    "path": "post_unseal/diagnostics/D10_cumulative/out/an09_membership.csv",
+    "reason": "Row-level membership, assignment, or preparation output"
+  },
+  {
+    "path": "post_unseal/diagnostics/D10_cumulative/out/placebo_vectors.csv",
+    "reason": "Row-level membership, assignment, or preparation output"
+  },
+  {
+    "path": "post_unseal/diagnostics/D10_cumulative/out/prep_log.json",
+    "reason": "Row-level membership, assignment, or preparation output"
+  },
+  {
+    "path": "post_unseal/diagnostics/D10_cumulative/run.log",
+    "reason": "Source document, raw transcript, data, or binary runtime output"
+  },
+  {
+    "path": "post_unseal/diagnostics/chat_log.md",
+    "reason": "Private conversation, local configuration, or cache"
+  },
+  {
+    "path": "readers/astra/initial_v1_sha256.txt",
+    "reason": "Raw reader working files or article crops"
+  },
+  {
+    "path": "readers/astra/staging_extras/work/build_outputs.py",
+    "reason": "Raw reader working files or article crops"
+  },
+  {
+    "path": "readers/astra/staging_extras/work/first_complete_outputs.sha256",
+    "reason": "Raw reader working files or article crops"
+  },
+  {
+    "path": "readers/astra/staging_extras/work/page13.png",
+    "reason": "Raw reader working files or article crops"
+  },
+  {
+    "path": "readers/astra/staging_extras/work/page15.png",
+    "reason": "Raw reader working files or article crops"
+  },
+  {
+    "path": "readers/astra/staging_extras/work/page16.png",
+    "reason": "Raw reader working files or article crops"
+  },
+  {
+    "path": "readers/astra/staging_extras/work/page20.png",
+    "reason": "Raw reader working files or article crops"
+  },
+  {
+    "path": "readers/astra/staging_extras/work/page7.png",
+    "reason": "Raw reader working files or article crops"
+  },
+  {
+    "path": "readers/astra/staging_extras/work/page9.png",
+    "reason": "Raw reader working files or article crops"
+  },
+  {
+    "path": "readers/opus/initial_v1_sha256.txt",
+    "reason": "Raw reader working files or article crops"
+  },
+  {
+    "path": "readers/opus/staging_extras/scratch/f4a-15.png",
+    "reason": "Raw reader working files or article crops"
+  },
+  {
+    "path": "readers/opus/staging_extras/scratch/f4b-15.png",
+    "reason": "Raw reader working files or article crops"
+  },
+  {
+    "path": "readers/opus/staging_extras/scratch/f5-16.png",
+    "reason": "Raw reader working files or article crops"
+  },
+  {
+    "path": "readers/opus/staging_extras/scratch/f6a1-20.png",
+    "reason": "Raw reader working files or article crops"
+  },
+  {
+    "path": "readers/opus/staging_extras/scratch/f6a2-20.png",
+    "reason": "Raw reader working files or article crops"
+  },
+  {
+    "path": "readers/opus/staging_extras/scratch/f6b-20.png",
+    "reason": "Raw reader working files or article crops"
+  },
+  {
+    "path": "readers/opus/staging_extras/scratch/p13-13.png",
+    "reason": "Raw reader working files or article crops"
+  },
+  {
+    "path": "readers/opus/staging_extras/scratch/p15-15.png",
+    "reason": "Raw reader working files or article crops"
+  },
+  {
+    "path": "readers/opus/staging_extras/scratch/p16-16.png",
+    "reason": "Raw reader working files or article crops"
+  },
+  {
+    "path": "readers/opus/staging_extras/scratch/p20-20.png",
+    "reason": "Raw reader working files or article crops"
+  },
+  {
+    "path": "readers/opus/staging_extras/scratch/p7-07.png",
+    "reason": "Raw reader working files or article crops"
+  },
+  {
+    "path": "readers/opus/staging_extras/scratch/p9-09.png",
+    "reason": "Raw reader working files or article crops"
+  },
+  {
+    "path": "readers/opus/staging_extras/scripts/build_claims_targets.py",
+    "reason": "Raw reader working files or article crops"
+  },
+  {
+    "path": "readers/opus/staging_extras/scripts/build_manifest.py",
+    "reason": "Raw reader working files or article crops"
+  },
+  {
+    "path": "readers/opus/staging_extras/scripts/build_rest.py",
+    "reason": "Raw reader working files or article crops"
+  },
+  {
+    "path": "reports/chat_log.md",
+    "reason": "Private conversation, local configuration, or cache"
+  },
+  {
+    "path": "reports/data/influence_all_deletions_A.csv",
+    "reason": "County-level or row-level identifying output; aggregate summaries retained"
+  },
+  {
+    "path": "reports/figures/comparison/comparison_plotted_values_maps_fig4.csv",
+    "reason": "Published-panel comparison image or redundant presentation output"
+  },
+  {
+    "path": "reports/figures/comparison/fig1a.png",
+    "reason": "Published-panel comparison image or redundant presentation output"
+  },
+  {
+    "path": "reports/figures/comparison/fig1a.svg",
+    "reason": "Published-panel comparison image or redundant presentation output"
+  },
+  {
+    "path": "reports/figures/comparison/fig2a.png",
+    "reason": "Published-panel comparison image or redundant presentation output"
+  },
+  {
+    "path": "reports/figures/comparison/fig2a.svg",
+    "reason": "Published-panel comparison image or redundant presentation output"
+  },
+  {
+    "path": "reports/figures/comparison/fig2b.png",
+    "reason": "Published-panel comparison image or redundant presentation output"
+  },
+  {
+    "path": "reports/figures/comparison/fig2b.svg",
+    "reason": "Published-panel comparison image or redundant presentation output"
+  },
+  {
+    "path": "reports/figures/comparison/fig3.png",
+    "reason": "Published-panel comparison image or redundant presentation output"
+  },
+  {
+    "path": "reports/figures/comparison/fig3.svg",
+    "reason": "Published-panel comparison image or redundant presentation output"
+  },
+  {
+    "path": "reports/figures/comparison/fig4.png",
+    "reason": "Published-panel comparison image or redundant presentation output"
+  },
+  {
+    "path": "reports/figures/comparison/fig4.svg",
+    "reason": "Published-panel comparison image or redundant presentation output"
+  },
+  {
+    "path": "reports/figures/comparison/fig5.png",
+    "reason": "Published-panel comparison image or redundant presentation output"
+  },
+  {
+    "path": "reports/figures/comparison/fig5.svg",
+    "reason": "Published-panel comparison image or redundant presentation output"
+  },
+  {
+    "path": "reports/figures/comparison/fig6a.png",
+    "reason": "Published-panel comparison image or redundant presentation output"
+  },
+  {
+    "path": "reports/figures/comparison/fig6a.svg",
+    "reason": "Published-panel comparison image or redundant presentation output"
+  },
+  {
+    "path": "reports/figures/comparison/fig6b.png",
+    "reason": "Published-panel comparison image or redundant presentation output"
+  },
+  {
+    "path": "reports/figures/comparison/fig6b.svg",
+    "reason": "Published-panel comparison image or redundant presentation output"
+  },
+  {
+    "path": "reports/figures/comparison/provenance.json",
+    "reason": "Published-panel comparison image or redundant presentation output"
+  },
+  {
+    "path": "reports/figures/comparison/published_pages/page-07.png",
+    "reason": "Published-panel comparison image or redundant presentation output"
+  },
+  {
+    "path": "reports/figures/comparison/published_pages/page-09.png",
+    "reason": "Published-panel comparison image or redundant presentation output"
+  },
+  {
+    "path": "reports/figures/comparison/published_pages/page-13.png",
+    "reason": "Published-panel comparison image or redundant presentation output"
+  },
+  {
+    "path": "reports/figures/comparison/published_pages/page-15.png",
+    "reason": "Published-panel comparison image or redundant presentation output"
+  },
+  {
+    "path": "reports/figures/comparison/published_pages/page-16.png",
+    "reason": "Published-panel comparison image or redundant presentation output"
+  },
+  {
+    "path": "reports/figures/comparison/published_pages/page-20.png",
+    "reason": "Published-panel comparison image or redundant presentation output"
+  },
+  {
+    "path": "reports/figures/comparison/published_panels/fig1a.png",
+    "reason": "Published-panel comparison image or redundant presentation output"
+  },
+  {
+    "path": "reports/figures/comparison/published_panels/fig2a.png",
+    "reason": "Published-panel comparison image or redundant presentation output"
+  },
+  {
+    "path": "reports/figures/comparison/published_panels/fig2b.png",
+    "reason": "Published-panel comparison image or redundant presentation output"
+  },
+  {
+    "path": "reports/figures/comparison/published_panels/fig3.png",
+    "reason": "Published-panel comparison image or redundant presentation output"
+  },
+  {
+    "path": "reports/figures/comparison/published_panels/fig4.png",
+    "reason": "Published-panel comparison image or redundant presentation output"
+  },
+  {
+    "path": "reports/figures/comparison/published_panels/fig5.png",
+    "reason": "Published-panel comparison image or redundant presentation output"
+  },
+  {
+    "path": "reports/figures/comparison/published_panels/fig6a.png",
+    "reason": "Published-panel comparison image or redundant presentation output"
+  },
+  {
+    "path": "reports/figures/comparison/published_panels/fig6b.png",
+    "reason": "Published-panel comparison image or redundant presentation output"
+  },
+  {
+    "path": "reports/figures/comparison_v1/fig1a.png",
+    "reason": "Published-panel comparison image or redundant presentation output"
+  },
+  {
+    "path": "reports/figures/comparison_v1/fig1a.svg",
+    "reason": "Published-panel comparison image or redundant presentation output"
+  },
+  {
+    "path": "reports/figures/comparison_v1/fig2a.png",
+    "reason": "Published-panel comparison image or redundant presentation output"
+  },
+  {
+    "path": "reports/figures/comparison_v1/fig2a.svg",
+    "reason": "Published-panel comparison image or redundant presentation output"
+  },
+  {
+    "path": "reports/figures/comparison_v1/fig2b.png",
+    "reason": "Published-panel comparison image or redundant presentation output"
+  },
+  {
+    "path": "reports/figures/comparison_v1/fig2b.svg",
+    "reason": "Published-panel comparison image or redundant presentation output"
+  },
+  {
+    "path": "reports/figures/comparison_v1/fig3.png",
+    "reason": "Published-panel comparison image or redundant presentation output"
+  },
+  {
+    "path": "reports/figures/comparison_v1/fig3.svg",
+    "reason": "Published-panel comparison image or redundant presentation output"
+  },
+  {
+    "path": "reports/figures/comparison_v1/fig4.png",
+    "reason": "Published-panel comparison image or redundant presentation output"
+  },
+  {
+    "path": "reports/figures/comparison_v1/fig4.svg",
+    "reason": "Published-panel comparison image or redundant presentation output"
+  },
+  {
+    "path": "reports/figures/comparison_v1/fig5.png",
+    "reason": "Published-panel comparison image or redundant presentation output"
+  },
+  {
+    "path": "reports/figures/comparison_v1/fig5.svg",
+    "reason": "Published-panel comparison image or redundant presentation output"
+  },
+  {
+    "path": "reports/figures/comparison_v1/fig6a.png",
+    "reason": "Published-panel comparison image or redundant presentation output"
+  },
+  {
+    "path": "reports/figures/comparison_v1/fig6a.svg",
+    "reason": "Published-panel comparison image or redundant presentation output"
+  },
+  {
+    "path": "reports/figures/comparison_v1/fig6b.png",
+    "reason": "Published-panel comparison image or redundant presentation output"
+  },
+  {
+    "path": "reports/figures/comparison_v1/fig6b.svg",
+    "reason": "Published-panel comparison image or redundant presentation output"
+  },
+  {
+    "path": "reports/figures/make_figure.py",
+    "reason": "Published-panel comparison image or redundant presentation output"
+  },
+  {
+    "path": "runs/run_20261101_v1/chat_log.md",
+    "reason": "Private conversation, local configuration, or cache"
+  },
+  {
+    "path": "runs/run_20261101_v1/influence/A_S00008/influence_S00008.csv",
+    "reason": "County-level or row-level identifying output; aggregate summaries retained"
+  },
+  {
+    "path": "runs/run_20261101_v1/influence/A_S00008/prep_log.json",
+    "reason": "Row-level membership, assignment, or preparation output"
+  },
+  {
+    "path": "runs/run_20261101_v1/influence/A_S00008.log",
+    "reason": "Source document, raw transcript, data, or binary runtime output"
+  },
+  {
+    "path": "runs/run_20261101_v1/influence/A_S00009/influence_S00009.csv",
+    "reason": "County-level or row-level identifying output; aggregate summaries retained"
+  },
+  {
+    "path": "runs/run_20261101_v1/influence/A_S00009/prep_log.json",
+    "reason": "Row-level membership, assignment, or preparation output"
+  },
+  {
+    "path": "runs/run_20261101_v1/influence/A_S00009.log",
+    "reason": "Source document, raw transcript, data, or binary runtime output"
+  },
+  {
+    "path": "runs/run_20261101_v1/influence/A_S00010/influence_S00010.csv",
+    "reason": "County-level or row-level identifying output; aggregate summaries retained"
+  },
+  {
+    "path": "runs/run_20261101_v1/influence/A_S00010/prep_log.json",
+    "reason": "Row-level membership, assignment, or preparation output"
+  },
+  {
+    "path": "runs/run_20261101_v1/influence/A_S00010.log",
+    "reason": "Source document, raw transcript, data, or binary runtime output"
+  },
+  {
+    "path": "runs/run_20261101_v1/influence/A_S00011/influence_S00011.csv",
+    "reason": "County-level or row-level identifying output; aggregate summaries retained"
+  },
+  {
+    "path": "runs/run_20261101_v1/influence/A_S00011/prep_log.json",
+    "reason": "Row-level membership, assignment, or preparation output"
+  },
+  {
+    "path": "runs/run_20261101_v1/influence/A_S00011.log",
+    "reason": "Source document, raw transcript, data, or binary runtime output"
+  },
+  {
+    "path": "runs/run_20261101_v1/influence/A_S00012/influence_S00012.csv",
+    "reason": "County-level or row-level identifying output; aggregate summaries retained"
+  },
+  {
+    "path": "runs/run_20261101_v1/influence/A_S00012/prep_log.json",
+    "reason": "Row-level membership, assignment, or preparation output"
+  },
+  {
+    "path": "runs/run_20261101_v1/influence/A_S00012.log",
+    "reason": "Source document, raw transcript, data, or binary runtime output"
+  },
+  {
+    "path": "runs/run_20261101_v1/influence/A_S00013/influence_S00013.csv",
+    "reason": "County-level or row-level identifying output; aggregate summaries retained"
+  },
+  {
+    "path": "runs/run_20261101_v1/influence/A_S00013/prep_log.json",
+    "reason": "Row-level membership, assignment, or preparation output"
+  },
+  {
+    "path": "runs/run_20261101_v1/influence/A_S00013.log",
+    "reason": "Source document, raw transcript, data, or binary runtime output"
+  },
+  {
+    "path": "runs/run_20261101_v1/influence/A_S00014/influence_S00014.csv",
+    "reason": "County-level or row-level identifying output; aggregate summaries retained"
+  },
+  {
+    "path": "runs/run_20261101_v1/influence/A_S00014/prep_log.json",
+    "reason": "Row-level membership, assignment, or preparation output"
+  },
+  {
+    "path": "runs/run_20261101_v1/influence/A_S00014.log",
+    "reason": "Source document, raw transcript, data, or binary runtime output"
+  },
+  {
+    "path": "runs/run_20261101_v1/influence/A_S00015/influence_S00015.csv",
+    "reason": "County-level or row-level identifying output; aggregate summaries retained"
+  },
+  {
+    "path": "runs/run_20261101_v1/influence/A_S00015/prep_log.json",
+    "reason": "Row-level membership, assignment, or preparation output"
+  },
+  {
+    "path": "runs/run_20261101_v1/influence/A_S00015.log",
+    "reason": "Source document, raw transcript, data, or binary runtime output"
+  },
+  {
+    "path": "runs/run_20261101_v1/influence/A_S00044/influence_S00044.csv",
+    "reason": "County-level or row-level identifying output; aggregate summaries retained"
+  },
+  {
+    "path": "runs/run_20261101_v1/influence/A_S00044/prep_log.json",
+    "reason": "Row-level membership, assignment, or preparation output"
+  },
+  {
+    "path": "runs/run_20261101_v1/influence/A_S00044.log",
+    "reason": "Source document, raw transcript, data, or binary runtime output"
+  },
+  {
+    "path": "runs/run_20261101_v1/influence/C_S00008/an09_membership.csv",
+    "reason": "Row-level membership, assignment, or preparation output"
+  },
+  {
+    "path": "runs/run_20261101_v1/influence/C_S00008/influence.csv",
+    "reason": "Row-level membership, assignment, or preparation output"
+  },
+  {
+    "path": "runs/run_20261101_v1/influence/C_S00008/placebo_vectors.csv",
+    "reason": "Row-level membership, assignment, or preparation output"
+  },
+  {
+    "path": "runs/run_20261101_v1/influence/C_S00008/prep_log.json",
+    "reason": "Row-level membership, assignment, or preparation output"
+  },
+  {
+    "path": "runs/run_20261101_v1/influence/C_S00008.log",
+    "reason": "Source document, raw transcript, data, or binary runtime output"
+  },
+  {
+    "path": "runs/run_20261101_v1/influence/C_S00009/an09_membership.csv",
+    "reason": "Row-level membership, assignment, or preparation output"
+  },
+  {
+    "path": "runs/run_20261101_v1/influence/C_S00009/influence.csv",
+    "reason": "Row-level membership, assignment, or preparation output"
+  },
+  {
+    "path": "runs/run_20261101_v1/influence/C_S00009/placebo_vectors.csv",
+    "reason": "Row-level membership, assignment, or preparation output"
+  },
+  {
+    "path": "runs/run_20261101_v1/influence/C_S00009/prep_log.json",
+    "reason": "Row-level membership, assignment, or preparation output"
+  },
+  {
+    "path": "runs/run_20261101_v1/influence/C_S00009.log",
+    "reason": "Source document, raw transcript, data, or binary runtime output"
+  },
+  {
+    "path": "runs/run_20261101_v1/influence/C_S00010/an09_membership.csv",
+    "reason": "Row-level membership, assignment, or preparation output"
+  },
+  {
+    "path": "runs/run_20261101_v1/influence/C_S00010/influence.csv",
+    "reason": "Row-level membership, assignment, or preparation output"
+  },
+  {
+    "path": "runs/run_20261101_v1/influence/C_S00010/placebo_vectors.csv",
+    "reason": "Row-level membership, assignment, or preparation output"
+  },
+  {
+    "path": "runs/run_20261101_v1/influence/C_S00010/prep_log.json",
+    "reason": "Row-level membership, assignment, or preparation output"
+  },
+  {
+    "path": "runs/run_20261101_v1/influence/C_S00010.log",
+    "reason": "Source document, raw transcript, data, or binary runtime output"
+  },
+  {
+    "path": "runs/run_20261101_v1/influence/C_S00011/an09_membership.csv",
+    "reason": "Row-level membership, assignment, or preparation output"
+  },
+  {
+    "path": "runs/run_20261101_v1/influence/C_S00011/influence.csv",
+    "reason": "Row-level membership, assignment, or preparation output"
+  },
+  {
+    "path": "runs/run_20261101_v1/influence/C_S00011/placebo_vectors.csv",
+    "reason": "Row-level membership, assignment, or preparation output"
+  },
+  {
+    "path": "runs/run_20261101_v1/influence/C_S00011/prep_log.json",
+    "reason": "Row-level membership, assignment, or preparation output"
+  },
+  {
+    "path": "runs/run_20261101_v1/influence/C_S00011.log",
+    "reason": "Source document, raw transcript, data, or binary runtime output"
+  },
+  {
+    "path": "runs/run_20261101_v1/influence/C_S00012/an09_membership.csv",
+    "reason": "Row-level membership, assignment, or preparation output"
+  },
+  {
+    "path": "runs/run_20261101_v1/influence/C_S00012/influence.csv",
+    "reason": "Row-level membership, assignment, or preparation output"
+  },
+  {
+    "path": "runs/run_20261101_v1/influence/C_S00012/placebo_vectors.csv",
+    "reason": "Row-level membership, assignment, or preparation output"
+  },
+  {
+    "path": "runs/run_20261101_v1/influence/C_S00012/prep_log.json",
+    "reason": "Row-level membership, assignment, or preparation output"
+  },
+  {
+    "path": "runs/run_20261101_v1/influence/C_S00012.log",
+    "reason": "Source document, raw transcript, data, or binary runtime output"
+  },
+  {
+    "path": "runs/run_20261101_v1/influence/C_S00013/an09_membership.csv",
+    "reason": "Row-level membership, assignment, or preparation output"
+  },
+  {
+    "path": "runs/run_20261101_v1/influence/C_S00013/influence.csv",
+    "reason": "Row-level membership, assignment, or preparation output"
+  },
+  {
+    "path": "runs/run_20261101_v1/influence/C_S00013/placebo_vectors.csv",
+    "reason": "Row-level membership, assignment, or preparation output"
+  },
+  {
+    "path": "runs/run_20261101_v1/influence/C_S00013/prep_log.json",
+    "reason": "Row-level membership, assignment, or preparation output"
+  },
+  {
+    "path": "runs/run_20261101_v1/influence/C_S00013.log",
+    "reason": "Source document, raw transcript, data, or binary runtime output"
+  },
+  {
+    "path": "runs/run_20261101_v1/influence/C_S00014/an09_membership.csv",
+    "reason": "Row-level membership, assignment, or preparation output"
+  },
+  {
+    "path": "runs/run_20261101_v1/influence/C_S00014/influence.csv",
+    "reason": "Row-level membership, assignment, or preparation output"
+  },
+  {
+    "path": "runs/run_20261101_v1/influence/C_S00014/placebo_vectors.csv",
+    "reason": "Row-level membership, assignment, or preparation output"
+  },
+  {
+    "path": "runs/run_20261101_v1/influence/C_S00014/prep_log.json",
+    "reason": "Row-level membership, assignment, or preparation output"
+  },
+  {
+    "path": "runs/run_20261101_v1/influence/C_S00014.log",
+    "reason": "Source document, raw transcript, data, or binary runtime output"
+  },
+  {
+    "path": "runs/run_20261101_v1/influence/C_S00015/an09_membership.csv",
+    "reason": "Row-level membership, assignment, or preparation output"
+  },
+  {
+    "path": "runs/run_20261101_v1/influence/C_S00015/influence.csv",
+    "reason": "Row-level membership, assignment, or preparation output"
+  },
+  {
+    "path": "runs/run_20261101_v1/influence/C_S00015/placebo_vectors.csv",
+    "reason": "Row-level membership, assignment, or preparation output"
+  },
+  {
+    "path": "runs/run_20261101_v1/influence/C_S00015/prep_log.json",
+    "reason": "Row-level membership, assignment, or preparation output"
+  },
+  {
+    "path": "runs/run_20261101_v1/influence/C_S00015.log",
+    "reason": "Source document, raw transcript, data, or binary runtime output"
+  },
+  {
+    "path": "runs/run_20261101_v1/influence/C_S00044/an09_membership.csv",
+    "reason": "Row-level membership, assignment, or preparation output"
+  },
+  {
+    "path": "runs/run_20261101_v1/influence/C_S00044/influence.csv",
+    "reason": "Row-level membership, assignment, or preparation output"
+  },
+  {
+    "path": "runs/run_20261101_v1/influence/C_S00044/placebo_vectors.csv",
+    "reason": "Row-level membership, assignment, or preparation output"
+  },
+  {
+    "path": "runs/run_20261101_v1/influence/C_S00044/prep_log.json",
+    "reason": "Row-level membership, assignment, or preparation output"
+  },
+  {
+    "path": "runs/run_20261101_v1/influence/C_S00044.log",
+    "reason": "Source document, raw transcript, data, or binary runtime output"
+  },
+  {
+    "path": "runs/run_20261101_v1/influence/rc.txt",
+    "reason": "Not required for the distributable scientific record"
+  },
+  {
+    "path": "runs/run_20261101_v1/out/A/an09_membership.csv",
+    "reason": "Row-level membership, assignment, or preparation output"
+  },
+  {
+    "path": "runs/run_20261101_v1/out/A/placebo_vectors.csv",
+    "reason": "Row-level membership, assignment, or preparation output"
+  },
+  {
+    "path": "runs/run_20261101_v1/out/A/prep_log.json",
+    "reason": "Row-level membership, assignment, or preparation output"
+  },
+  {
+    "path": "runs/run_20261101_v1/out/A.log",
+    "reason": "Source document, raw transcript, data, or binary runtime output"
+  },
+  {
+    "path": "runs/run_20261101_v1/out/B/an09_membership.csv",
+    "reason": "Row-level membership, assignment, or preparation output"
+  },
+  {
+    "path": "runs/run_20261101_v1/out/B/placebo_vectors.csv",
+    "reason": "Row-level membership, assignment, or preparation output"
+  },
+  {
+    "path": "runs/run_20261101_v1/out/B/prep_log.json",
+    "reason": "Row-level membership, assignment, or preparation output"
+  },
+  {
+    "path": "runs/run_20261101_v1/out/B.log",
+    "reason": "Source document, raw transcript, data, or binary runtime output"
+  },
+  {
+    "path": "runs/run_20261101_v1/out/C/an09_membership.csv",
+    "reason": "Row-level membership, assignment, or preparation output"
+  },
+  {
+    "path": "runs/run_20261101_v1/out/C/placebo_vectors.csv",
+    "reason": "Row-level membership, assignment, or preparation output"
+  },
+  {
+    "path": "runs/run_20261101_v1/out/C/prep_log.json",
+    "reason": "Row-level membership, assignment, or preparation output"
+  },
+  {
+    "path": "runs/run_20261101_v1/out/C.log",
+    "reason": "Source document, raw transcript, data, or binary runtime output"
+  },
+  {
+    "path": "runs/run_20261101_v1/out/rc.txt",
+    "reason": "Not required for the distributable scientific record"
+  },
+  {
+    "path": "sealed/author_package/Readme.txt",
+    "reason": "Author package or raw probe record"
+  },
+  {
+    "path": "sealed/author_package/scripts/ado/add_bordertiming.ado",
+    "reason": "Author package or raw probe record"
+  },
+  {
+    "path": "sealed/author_package/scripts/ado/ddchart_cross.ado",
+    "reason": "Author package or raw probe record"
+  },
+  {
+    "path": "sealed/author_package/scripts/ado/ddchart_year.ado",
+    "reason": "Author package or raw probe record"
+  },
+  {
+    "path": "sealed/author_package/scripts/ado/declare_global.ado",
+    "reason": "Author package or raw probe record"
+  },
+  {
+    "path": "sealed/author_package/scripts/ado/est_with_controls.ado",
+    "reason": "Author package or raw probe record"
+  },
+  {
+    "path": "sealed/author_package/scripts/ado/labelvar.ado",
+    "reason": "Author package or raw probe record"
+  },
+  {
+    "path": "sealed/author_package/scripts/ado/make_border.ado",
+    "reason": "Author package or raw probe record"
+  },
+  {
+    "path": "sealed/author_package/scripts/ado/make_directions.ado",
+    "reason": "Author package or raw probe record"
+  },
+  {
+    "path": "sealed/author_package/scripts/ado/make_meanline.ado",
+    "reason": "Author package or raw probe record"
+  },
+  {
+    "path": "sealed/author_package/scripts/ado/make_panel.ado",
+    "reason": "Author package or raw probe record"
+  },
+  {
+    "path": "sealed/author_package/scripts/ado/make_summary.ado",
+    "reason": "Author package or raw probe record"
+  },
+  {
+    "path": "sealed/author_package/scripts/ado/make_timing.ado",
+    "reason": "Author package or raw probe record"
+  },
+  {
+    "path": "sealed/author_package/scripts/ado/make_trendline.ado",
+    "reason": "Author package or raw probe record"
+  },
+  {
+    "path": "sealed/author_package/scripts/ado/mc_make_acs.ado",
+    "reason": "Author package or raw probe record"
+  },
+  {
+    "path": "sealed/author_package/scripts/ado/merge_covar.ado",
+    "reason": "Author package or raw probe record"
+  },
+  {
+    "path": "sealed/author_package/scripts/ado/plot_urban.ado",
+    "reason": "Author package or raw probe record"
+  },
+  {
+    "path": "sealed/author_package/scripts/ado/plot_users.ado",
+    "reason": "Author package or raw probe record"
+  },
+  {
+    "path": "sealed/author_package/scripts/ado/reg_crossec.ado",
+    "reason": "Author package or raw probe record"
+  },
+  {
+    "path": "sealed/author_package/scripts/ado/reg_crossec_robust.ado",
+    "reason": "Author package or raw probe record"
+  },
+  {
+    "path": "sealed/author_package/scripts/ado/reg_dd.ado",
+    "reason": "Author package or raw probe record"
+  },
+  {
+    "path": "sealed/author_package/scripts/ado/reg_governance.ado",
+    "reason": "Author package or raw probe record"
+  },
+  {
+    "path": "sealed/author_package/scripts/ado/reg_iv.ado",
+    "reason": "Author package or raw probe record"
+  },
+  {
+    "path": "sealed/author_package/scripts/ado/reg_morerobust.ado",
+    "reason": "Author package or raw probe record"
+  },
+  {
+    "path": "sealed/author_package/scripts/ado/reg_node_ownership.ado",
+    "reason": "Author package or raw probe record"
+  },
+  {
+    "path": "sealed/author_package/scripts/ado/reg_quality.ado",
+    "reason": "Author package or raw probe record"
+  },
+  {
+    "path": "sealed/author_package/scripts/ado/reg_robust.ado",
+    "reason": "Author package or raw probe record"
+  },
+  {
+    "path": "sealed/author_package/scripts/ado/sample_summary.ado",
+    "reason": "Author package or raw probe record"
+  },
+  {
+    "path": "sealed/author_package/scripts/ado/t_test_table.ado",
+    "reason": "Author package or raw probe record"
+  },
+  {
+    "path": "sealed/author_package/scripts/main.do",
+    "reason": "Author package or raw probe record"
+  },
+  {
+    "path": "sealed/author_package/scripts/ssc/coefplot.ado",
+    "reason": "Author package or raw probe record"
+  },
+  {
+    "path": "sealed/author_package/scripts/ssc/estadd.ado",
+    "reason": "Author package or raw probe record"
+  },
+  {
+    "path": "sealed/author_package/scripts/ssc/estout.ado",
+    "reason": "Author package or raw probe record"
+  },
+  {
+    "path": "sealed/author_package/scripts/ssc/estpost.ado",
+    "reason": "Author package or raw probe record"
+  },
+  {
+    "path": "sealed/author_package/scripts/ssc/eststo.ado",
+    "reason": "Author package or raw probe record"
+  },
+  {
+    "path": "sealed/author_package/scripts/ssc/esttab.ado",
+    "reason": "Author package or raw probe record"
+  },
+  {
+    "path": "sealed/author_package/scripts/ssc/ivreg2.ado",
+    "reason": "Author package or raw probe record"
+  },
+  {
+    "path": "sealed/author_package/scripts/ssc/ivreg2_p.ado",
+    "reason": "Author package or raw probe record"
+  },
+  {
+    "path": "sealed/author_package/scripts/ssc/livreg2.mlib",
+    "reason": "Author package or raw probe record"
+  },
+  {
+    "path": "sealed/author_package/scripts/ssc/parmby.ado",
+    "reason": "Author package or raw probe record"
+  },
+  {
+    "path": "sealed/author_package/scripts/ssc/parmcip.ado",
+    "reason": "Author package or raw probe record"
+  },
+  {
+    "path": "sealed/author_package/scripts/ssc/parmest.ado",
+    "reason": "Author package or raw probe record"
+  },
+  {
+    "path": "sealed/author_package/scripts/ssc/ranktest.ado",
+    "reason": "Author package or raw probe record"
+  },
+  {
+    "path": "sealed/author_package/scripts/ssc/vincenty.ado",
+    "reason": "Author package or raw probe record"
+  },
+  {
+    "path": "sealed/author_package/writing/figures_and_tables.tex",
+    "reason": "Author package or raw probe record"
+  },
+  {
+    "path": "sealed/probes/chat_log.md",
+    "reason": "Private conversation, local configuration, or cache"
+  },
+  {
+    "path": "sealed/probes/probe_astra.json",
+    "reason": "Author package or raw probe record"
+  },
+  {
+    "path": "sealed/probes/probe_astra.launcher.txt",
+    "reason": "Author package or raw probe record"
+  },
+  {
+    "path": "sealed/probes/probe_astra.stderr",
+    "reason": "Source document, raw transcript, data, or binary runtime output"
+  },
+  {
+    "path": "sealed/probes/probe_astra.stdout",
+    "reason": "Source document, raw transcript, data, or binary runtime output"
+  },
+  {
+    "path": "sealed/probes/probe_opus.json",
+    "reason": "Author package or raw probe record"
+  },
+  {
+    "path": "sealed/probes/probe_opus.launcher.txt",
+    "reason": "Author package or raw probe record"
+  },
+  {
+    "path": "sealed/probes/probe_opus.stderr",
+    "reason": "Source document, raw transcript, data, or binary runtime output"
+  },
+  {
+    "path": "sealed/probes/probe_opus.stdout",
+    "reason": "Source document, raw transcript, data, or binary runtime output"
+  },
+  {
+    "path": "sealed/probes_sha256.txt",
+    "reason": "Author package or raw probe record"
+  },
+  {
+    "path": "sealed/setup_exposure_detail.txt",
+    "reason": "Author package or raw probe record"
+  },
+  {
+    "path": "sealed/targets/targets_v1.json",
+    "reason": "Author package or raw probe record"
+  },
+  {
+    "path": "setup_drafts/build_reader_packet.py",
+    "reason": "Unadopted setup draft"
+  },
+  {
+    "path": "setup_drafts/probe_prompt.txt",
+    "reason": "Unadopted setup draft"
+  },
+  {
+    "path": "setup_drafts/reader_prompt_v1.md",
+    "reason": "Unadopted setup draft"
+  },
+  {
+    "path": "setup_drafts/run_role.py",
+    "reason": "Unadopted setup draft"
+  }
+]

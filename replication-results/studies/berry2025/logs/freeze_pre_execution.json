@@ -1,0 +1,36 @@
+{
+ "frozen_utc": "2026-10-31T08:45:12.911117+00:00",
+ "run_dir": "runs/empirical_20261031T084512Z",
+ "sha256": {
+  "manifest/implementer_manifest_v1.md": "e1a8374cf7ca2e462143509edf7d8ed861fcb6de32706fbd39ee231a417468d9",
+  "manifest/frozen_grid_v1.json": "e57fb4c85321961f4ce65be1f68dc8327ceadc6b22ef82c4dd05aff1452da5bf",
+  "scoring/scoring_rules.json": "d3d448a22ad790e86d6e86af8dfca4aa854c42a9fb754cb74215450d82ed9730",
+  "scoring/score.py": "da22980660fb0d2c2c3ddba35c0b4c4b1d81b4a5c37bc6c112c6abbe87015086",
+  "scoring/compare_impl.py": "138b806cf96b59abb2b4716db1db07063875ddc9d2ba3cbfb5721890793f0fdb",
+  "sealed/targets/targets_reconciled.json": "2ddc13c3abcf49b9dddeba16b8c56d9816719a974afee9fe3c006ea476fc143f",
+  "reconciliation/agreement.json": "48f6440dbbb9259803ae92d4ac69f92625935af843f891ceb4d910330b6e02ed",
+  "reconciliation/claims_ledger.csv": "d91fd2f57533fc36713547778e3c50d1b0692ed3fb4054b2f093a58a7d0a935d",
+  "reconciliation/labels_ledger.csv": "fa870ffce0ebe4c4db2fa34df8d7d4a7f2611e6fe329ce50ede841ce10a24818",
+  "reconciliation/transcription_ledger.csv": "324c614adf5709762304ff372c50faf2b4444f6e6a9b08ff01a95eed72cd3ed5",
+  "packet/publication_packet.json": "045d3a31efaea331071ed050d0b71237718d1468d7ee04ef8574e151e76572c3",
+  "implementation/A/v3/analysis.R": "01e8762564ed854bd02890feb90138880022f799c198fcd7531e0e643dbd8079",
+  "implementation/B/v1/analysis.R": "d559090df4a0ac6a180c1c7afb0262152e0259125fc64c5622958b28e3a7e78e",
+  "implementation/C/v2/analysis.py": "d25d306fecd7c21230ce82c138dc78c8583dc1ed3ee80f592dde6c21bc982560",
+  "data/derived/implementer_bundle/dataset_1.csv": "6463fd52a63c30d58c4cc0217081893228598c91aaf6b2a1b7798d06a1681ea1",
+  "data/derived/implementer_bundle/dataset_2.csv": "5b9a1a6aa74913e8fc35d2fa6d599b59ac37f286dc600830cf7c86b2987f92ef",
+  "data/derived/implementer_bundle/dataset_3.csv": "0536c927c245262e5514626c942c0edf78e994e272932274c36364c135685251",
+  "data/derived/implementer_bundle/dataset_4.csv": "1086ffc68812a7f58c57be377bbfba1572344a7d4f4cbc2b73eb63396da042e3"
+ },
+ "network_denial_test": {
+  "returncode": 6,
+  "stderr": "curl: (6) Could not resolve host: osf.io"
+ },
+ "r_version": "Rscript (R) version 4.6.1 (2026-06-24)",
+ "python_version": "Python 3.13.16",
+ "unresolved_checker_item": "Implementer A recheck v3 lists one item: path a under complete cases of the whole mediation model versus its own variables. Recheck v1 had asked the reverse. Recorded, not iterated; differences would show only with missing mediator data and would surface in implementer comparison.",
+ "versions_run": {
+  "A": "implementation/A/v3/analysis.R",
+  "B": "implementation/B/v1/analysis.R",
+  "C": "implementation/C/v2/analysis.py"
+ }
+}

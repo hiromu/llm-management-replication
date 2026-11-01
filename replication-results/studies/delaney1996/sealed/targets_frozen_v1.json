@@ -1,0 +1,1662 @@
+{
+ "version": "v1",
+ "source": "D1 (governs); agreed by both readers except one star resolved from D1 image",
+ "star_rule": {
+  "\u2020": "p<.10 one-tailed",
+  "*": "p<.05 one-tailed",
+  "**": "p<.01 one-tailed",
+  "": "p>=.10 one-tailed"
+ },
+ "sealed_n": {
+  "org": 590,
+  "mkt": 373
+ },
+ "d1_d2_differences": "see readers/*/initial_v1/output/forensic.json and notes.md; D1 used throughout",
+ "cells": [
+  {
+   "model_id": "org_M1",
+   "quantity": "N",
+   "value": 590,
+   "stars": "",
+   "tier": "diagnostic"
+  },
+  {
+   "model_id": "org_M1",
+   "quantity": "coef",
+   "term": "DECENT",
+   "value": 0.049,
+   "se": 0.038,
+   "stars": "\u2020",
+   "tier": "robustness_cell"
+  },
+  {
+   "model_id": "org_M1",
+   "quantity": "coef",
+   "term": "GRIEV",
+   "value": 0.112,
+   "se": 0.081,
+   "stars": "\u2020",
+   "tier": "robustness_cell"
+  },
+  {
+   "model_id": "org_M1",
+   "quantity": "coef",
+   "term": "INCENT",
+   "value": 0.137,
+   "se": 0.048,
+   "stars": "**",
+   "tier": "robustness_cell"
+  },
+  {
+   "model_id": "org_M1",
+   "quantity": "coef",
+   "term": "ILM",
+   "value": -0.058,
+   "se": 0.111,
+   "stars": "",
+   "tier": "robustness_cell"
+  },
+  {
+   "model_id": "org_M1",
+   "quantity": "coef",
+   "term": "STAFF",
+   "value": 0.044,
+   "se": 0.038,
+   "stars": "",
+   "tier": "robustness_cell"
+  },
+  {
+   "model_id": "org_M1",
+   "quantity": "coef",
+   "term": "TRAIN",
+   "value": 0.13,
+   "se": 0.04,
+   "stars": "**",
+   "tier": "robustness_cell"
+  },
+  {
+   "model_id": "org_M1",
+   "quantity": "coef",
+   "term": "VHIER",
+   "value": 0.117,
+   "se": 0.051,
+   "stars": "*",
+   "tier": "robustness_cell"
+  },
+  {
+   "model_id": "org_M2",
+   "quantity": "F",
+   "value": 2.515,
+   "stars": "**",
+   "tier": "diagnostic"
+  },
+  {
+   "model_id": "org_M2",
+   "quantity": "F_deltaR2",
+   "value": 3.582,
+   "stars": "**",
+   "tier": "diagnostic"
+  },
+  {
+   "model_id": "org_M2",
+   "quantity": "N",
+   "value": 590,
+   "stars": "",
+   "tier": "diagnostic"
+  },
+  {
+   "model_id": "org_M2",
+   "quantity": "R2",
+   "value": 0.182,
+   "stars": "",
+   "tier": "diagnostic"
+  },
+  {
+   "model_id": "org_M2",
+   "quantity": "coef",
+   "term": "COMPET",
+   "value": -0.004,
+   "se": 0.059,
+   "stars": "",
+   "tier": "nuisance_control"
+  },
+  {
+   "model_id": "org_M2",
+   "quantity": "coef",
+   "term": "(Intercept)",
+   "value": 3.517,
+   "se": 0.33,
+   "stars": "**",
+   "tier": "nuisance_control"
+  },
+  {
+   "model_id": "org_M2",
+   "quantity": "coef",
+   "term": "DECENT",
+   "value": 0.032,
+   "se": 0.039,
+   "stars": "",
+   "tier": "focal_cell"
+  },
+  {
+   "model_id": "org_M2",
+   "quantity": "deltaR2",
+   "value": 0.032,
+   "stars": "",
+   "tier": "diagnostic"
+  },
+  {
+   "model_id": "org_M2",
+   "quantity": "coef",
+   "term": "GRIEV",
+   "value": 0.078,
+   "se": 0.082,
+   "stars": "",
+   "tier": "focal_cell"
+  },
+  {
+   "model_id": "org_M2",
+   "quantity": "coef",
+   "term": "INCENT",
+   "value": 0.12,
+   "se": 0.048,
+   "stars": "**",
+   "tier": "focal_cell"
+  },
+  {
+   "model_id": "org_M2",
+   "quantity": "coef",
+   "term": "ILM",
+   "value": -0.156,
+   "se": 0.112,
+   "stars": "",
+   "tier": "focal_cell"
+  },
+  {
+   "model_id": "org_M2",
+   "quantity": "coef",
+   "term": "LOGAGE",
+   "value": -0.073,
+   "se": 0.026,
+   "stars": "**",
+   "tier": "nuisance_control"
+  },
+  {
+   "model_id": "org_M2",
+   "quantity": "coef",
+   "term": "LOGEMP",
+   "value": -0.022,
+   "se": 0.024,
+   "stars": "",
+   "tier": "nuisance_control"
+  },
+  {
+   "model_id": "org_M2",
+   "quantity": "coef",
+   "term": "NONPROF",
+   "value": -0.209,
+   "se": 0.092,
+   "stars": "**",
+   "tier": "nuisance_control"
+  },
+  {
+   "model_id": "org_M2",
+   "quantity": "coef",
+   "term": "PCTMGR",
+   "value": -0.203,
+   "se": 0.13,
+   "stars": "\u2020",
+   "tier": "nuisance_control"
+  },
+  {
+   "model_id": "org_M2",
+   "quantity": "coef",
+   "term": "PRODUCT",
+   "value": 0.038,
+   "se": 0.118,
+   "stars": "",
+   "tier": "nuisance_control"
+  },
+  {
+   "model_id": "org_M2",
+   "quantity": "coef",
+   "term": "SERVICE",
+   "value": -0.065,
+   "se": 0.098,
+   "stars": "",
+   "tier": "nuisance_control"
+  },
+  {
+   "model_id": "org_M2",
+   "quantity": "coef",
+   "term": "STAFF",
+   "value": 0.015,
+   "se": 0.038,
+   "stars": "",
+   "tier": "focal_cell"
+  },
+  {
+   "model_id": "org_M2",
+   "quantity": "coef",
+   "term": "SUBSID",
+   "value": 0.1,
+   "se": 0.068,
+   "stars": "\u2020",
+   "tier": "nuisance_control"
+  },
+  {
+   "model_id": "org_M2",
+   "quantity": "coef",
+   "term": "TRAIN",
+   "value": 0.125,
+   "se": 0.041,
+   "stars": "**",
+   "tier": "focal_cell"
+  },
+  {
+   "model_id": "org_M2",
+   "quantity": "coef",
+   "term": "UNION",
+   "value": -0.051,
+   "se": 0.054,
+   "stars": "",
+   "tier": "nuisance_control"
+  },
+  {
+   "model_id": "org_M3",
+   "quantity": "F",
+   "value": 2.57,
+   "stars": "**",
+   "tier": "diagnostic"
+  },
+  {
+   "model_id": "org_M3",
+   "quantity": "F_deltaR2",
+   "value": 3.953,
+   "stars": "*",
+   "tier": "diagnostic"
+  },
+  {
+   "model_id": "org_M3",
+   "quantity": "N",
+   "value": 590,
+   "stars": "",
+   "tier": "diagnostic"
+  },
+  {
+   "model_id": "org_M3",
+   "quantity": "R2",
+   "value": 0.186,
+   "stars": "",
+   "tier": "diagnostic"
+  },
+  {
+   "model_id": "org_M3",
+   "quantity": "coef",
+   "term": "COMPET",
+   "value": -0.001,
+   "se": 0.059,
+   "stars": "",
+   "tier": "nuisance_control"
+  },
+  {
+   "model_id": "org_M3",
+   "quantity": "coef",
+   "term": "(Intercept)",
+   "value": 3.167,
+   "se": 0.288,
+   "stars": "**",
+   "tier": "nuisance_control"
+  },
+  {
+   "model_id": "org_M3",
+   "quantity": "coef",
+   "term": "DECENT",
+   "value": 0.03,
+   "se": 0.039,
+   "stars": "",
+   "tier": "focal_cell"
+  },
+  {
+   "model_id": "org_M3",
+   "quantity": "deltaR2",
+   "value": 0.036,
+   "stars": "",
+   "tier": "diagnostic"
+  },
+  {
+   "model_id": "org_M3",
+   "quantity": "coef",
+   "term": "GRIEV",
+   "value": -0.059,
+   "se": 0.081,
+   "stars": "",
+   "tier": "focal_cell"
+  },
+  {
+   "model_id": "org_M3",
+   "quantity": "coef",
+   "term": "INCENT",
+   "value": 0.117,
+   "se": 0.048,
+   "stars": "**",
+   "tier": "focal_cell"
+  },
+  {
+   "model_id": "org_M3",
+   "quantity": "coef",
+   "term": "LOGAGE",
+   "value": -0.076,
+   "se": 0.026,
+   "stars": "**",
+   "tier": "nuisance_control"
+  },
+  {
+   "model_id": "org_M3",
+   "quantity": "coef",
+   "term": "LOGEMP",
+   "value": -0.044,
+   "se": 0.024,
+   "stars": "*",
+   "tier": "nuisance_control"
+  },
+  {
+   "model_id": "org_M3",
+   "quantity": "coef",
+   "term": "NONPROF",
+   "value": -0.203,
+   "se": 0.092,
+   "stars": "*",
+   "tier": "nuisance_control"
+  },
+  {
+   "model_id": "org_M3",
+   "quantity": "coef",
+   "term": "PCTMGR",
+   "value": -0.159,
+   "se": 0.128,
+   "stars": "",
+   "tier": "nuisance_control"
+  },
+  {
+   "model_id": "org_M3",
+   "quantity": "coef",
+   "term": "PRODUCT",
+   "value": 0.062,
+   "se": 0.116,
+   "stars": "",
+   "tier": "nuisance_control"
+  },
+  {
+   "model_id": "org_M3",
+   "quantity": "coef",
+   "term": "SERVICE",
+   "value": -0.074,
+   "se": 0.098,
+   "stars": "",
+   "tier": "nuisance_control"
+  },
+  {
+   "model_id": "org_M3",
+   "quantity": "coef",
+   "term": "STAFF",
+   "value": 0.011,
+   "se": 0.038,
+   "stars": "",
+   "tier": "focal_cell"
+  },
+  {
+   "model_id": "org_M3",
+   "quantity": "coef",
+   "term": "SUBSID",
+   "value": 0.128,
+   "se": 0.067,
+   "stars": "*",
+   "tier": "nuisance_control"
+  },
+  {
+   "model_id": "org_M3",
+   "quantity": "coef",
+   "term": "TRAIN",
+   "value": 0.111,
+   "se": 0.04,
+   "stars": "**",
+   "tier": "focal_cell"
+  },
+  {
+   "model_id": "org_M3",
+   "quantity": "coef",
+   "term": "UNION",
+   "value": -0.055,
+   "se": 0.053,
+   "stars": "",
+   "tier": "nuisance_control"
+  },
+  {
+   "model_id": "org_M3",
+   "quantity": "coef",
+   "term": "VHIER",
+   "value": 0.103,
+   "se": 0.051,
+   "stars": "*",
+   "tier": "focal_cell"
+  },
+  {
+   "model_id": "org_M4",
+   "quantity": "F",
+   "value": 2.387,
+   "stars": "**",
+   "tier": "diagnostic"
+  },
+  {
+   "model_id": "org_M4",
+   "quantity": "F_deltaR2",
+   "value": 0.445,
+   "stars": "",
+   "tier": "diagnostic"
+  },
+  {
+   "model_id": "org_M4",
+   "quantity": "N",
+   "value": 590,
+   "stars": "",
+   "tier": "diagnostic"
+  },
+  {
+   "model_id": "org_M4",
+   "quantity": "R2",
+   "value": 0.185,
+   "stars": "",
+   "tier": "diagnostic"
+  },
+  {
+   "model_id": "org_M4",
+   "quantity": "coef",
+   "term": "COMPET",
+   "value": -0.004,
+   "se": 0.059,
+   "stars": "",
+   "tier": "nuisance_control"
+  },
+  {
+   "model_id": "org_M4",
+   "quantity": "coef",
+   "term": "(Intercept)",
+   "value": 3.344,
+   "se": 0.732,
+   "stars": "**",
+   "tier": "nuisance_control"
+  },
+  {
+   "model_id": "org_M4",
+   "quantity": "coef",
+   "term": "DECENT",
+   "value": -0.087,
+   "se": 0.192,
+   "stars": "",
+   "tier": "focal_cell"
+  },
+  {
+   "model_id": "org_M4",
+   "quantity": "deltaR2",
+   "value": 0.002,
+   "stars": "",
+   "tier": "diagnostic"
+  },
+  {
+   "model_id": "org_M4",
+   "quantity": "coef",
+   "term": "GRIEV",
+   "value": -0.048,
+   "se": 0.296,
+   "stars": "",
+   "tier": "focal_cell"
+  },
+  {
+   "model_id": "org_M4",
+   "quantity": "coef",
+   "term": "GRIEV_x_INCENT",
+   "value": 0.013,
+   "se": 0.104,
+   "stars": "",
+   "tier": "focal_cell"
+  },
+  {
+   "model_id": "org_M4",
+   "quantity": "coef",
+   "term": "INCENT",
+   "value": 0.11,
+   "se": 0.086,
+   "stars": "\u2020",
+   "tier": "focal_cell"
+  },
+  {
+   "model_id": "org_M4",
+   "quantity": "coef",
+   "term": "ILM",
+   "value": -0.037,
+   "se": 0.369,
+   "stars": "",
+   "tier": "focal_cell"
+  },
+  {
+   "model_id": "org_M4",
+   "quantity": "coef",
+   "term": "ILM_x_DECENT",
+   "value": -0.031,
+   "se": 0.108,
+   "stars": "",
+   "tier": "focal_cell"
+  },
+  {
+   "model_id": "org_M4",
+   "quantity": "coef",
+   "term": "LOGAGE",
+   "value": -0.076,
+   "se": 0.026,
+   "stars": "**",
+   "tier": "nuisance_control"
+  },
+  {
+   "model_id": "org_M4",
+   "quantity": "coef",
+   "term": "LOGEMP",
+   "value": -0.028,
+   "se": 0.025,
+   "stars": "",
+   "tier": "nuisance_control"
+  },
+  {
+   "model_id": "org_M4",
+   "quantity": "coef",
+   "term": "NONPROF",
+   "value": -0.205,
+   "se": 0.092,
+   "stars": "*",
+   "tier": "nuisance_control"
+  },
+  {
+   "model_id": "org_M4",
+   "quantity": "coef",
+   "term": "PCTMGR",
+   "value": -0.244,
+   "se": 0.137,
+   "stars": "\u2020",
+   "tier": "nuisance_control"
+  },
+  {
+   "model_id": "org_M4",
+   "quantity": "coef",
+   "term": "PRODUCT",
+   "value": 0.052,
+   "se": 0.118,
+   "stars": "",
+   "tier": "nuisance_control"
+  },
+  {
+   "model_id": "org_M4",
+   "quantity": "coef",
+   "term": "SERVICE",
+   "value": -0.065,
+   "se": 0.098,
+   "stars": "",
+   "tier": "nuisance_control"
+  },
+  {
+   "model_id": "org_M4",
+   "quantity": "coef",
+   "term": "STAFF",
+   "value": -0.001,
+   "se": 0.041,
+   "stars": "",
+   "tier": "focal_cell"
+  },
+  {
+   "model_id": "org_M4",
+   "quantity": "coef",
+   "term": "SUBSID",
+   "value": 0.089,
+   "se": 0.069,
+   "stars": "\u2020",
+   "tier": "nuisance_control"
+  },
+  {
+   "model_id": "org_M4",
+   "quantity": "coef",
+   "term": "TRAIN",
+   "value": 0.123,
+   "se": 0.041,
+   "stars": "**",
+   "tier": "focal_cell"
+  },
+  {
+   "model_id": "org_M4",
+   "quantity": "coef",
+   "term": "TRAIN_x_STAFF",
+   "value": 0.053,
+   "se": 0.046,
+   "stars": "",
+   "tier": "focal_cell"
+  },
+  {
+   "model_id": "org_M4",
+   "quantity": "coef",
+   "term": "UNION",
+   "value": -0.046,
+   "se": 0.055,
+   "stars": "",
+   "tier": "nuisance_control"
+  },
+  {
+   "model_id": "org_M5",
+   "quantity": "F",
+   "value": 2.468,
+   "stars": "**",
+   "tier": "diagnostic"
+  },
+  {
+   "model_id": "org_M5",
+   "quantity": "F_deltaR2",
+   "value": 0.868,
+   "stars": "",
+   "tier": "diagnostic"
+  },
+  {
+   "model_id": "org_M5",
+   "quantity": "N",
+   "value": 590,
+   "stars": "",
+   "tier": "diagnostic"
+  },
+  {
+   "model_id": "org_M5",
+   "quantity": "R2",
+   "value": 0.19,
+   "stars": "",
+   "tier": "diagnostic"
+  },
+  {
+   "model_id": "org_M5",
+   "quantity": "coef",
+   "term": "COMPET",
+   "value": 0.001,
+   "se": 0.059,
+   "stars": "",
+   "tier": "nuisance_control"
+  },
+  {
+   "model_id": "org_M5",
+   "quantity": "coef",
+   "term": "(Intercept)",
+   "value": 3.134,
+   "se": 0.472,
+   "stars": "**",
+   "tier": "nuisance_control"
+  },
+  {
+   "model_id": "org_M5",
+   "quantity": "coef",
+   "term": "DECENT",
+   "value": 0.057,
+   "se": 0.099,
+   "stars": "",
+   "tier": "focal_cell"
+  },
+  {
+   "model_id": "org_M5",
+   "quantity": "deltaR2",
+   "value": 0.003,
+   "stars": "",
+   "tier": "diagnostic"
+  },
+  {
+   "model_id": "org_M5",
+   "quantity": "coef",
+   "term": "GRIEV",
+   "value": -0.012,
+   "se": 0.295,
+   "stars": "",
+   "tier": "focal_cell"
+  },
+  {
+   "model_id": "org_M5",
+   "quantity": "coef",
+   "term": "GRIEV_x_INCENT",
+   "value": 0.029,
+   "se": 0.103,
+   "stars": "",
+   "tier": "focal_cell"
+  },
+  {
+   "model_id": "org_M5",
+   "quantity": "coef",
+   "term": "INCENT",
+   "value": 0.098,
+   "se": 0.085,
+   "stars": "",
+   "tier": "focal_cell"
+  },
+  {
+   "model_id": "org_M5",
+   "quantity": "coef",
+   "term": "LOGAGE",
+   "value": -0.078,
+   "se": 0.026,
+   "stars": "**",
+   "tier": "nuisance_control"
+  },
+  {
+   "model_id": "org_M5",
+   "quantity": "coef",
+   "term": "LOGEMP",
+   "value": -0.047,
+   "se": 0.024,
+   "stars": "*",
+   "tier": "nuisance_control"
+  },
+  {
+   "model_id": "org_M5",
+   "quantity": "coef",
+   "term": "NONPROF",
+   "value": -0.201,
+   "se": 0.092,
+   "stars": "*",
+   "tier": "nuisance_control"
+  },
+  {
+   "model_id": "org_M5",
+   "quantity": "coef",
+   "term": "PCTMGR",
+   "value": -0.207,
+   "se": 0.135,
+   "stars": "\u2020",
+   "tier": "nuisance_control"
+  },
+  {
+   "model_id": "org_M5",
+   "quantity": "coef",
+   "term": "PRODUCT",
+   "value": 0.06,
+   "se": 0.117,
+   "stars": "",
+   "tier": "nuisance_control"
+  },
+  {
+   "model_id": "org_M5",
+   "quantity": "coef",
+   "term": "SERVICE",
+   "value": -0.079,
+   "se": 0.098,
+   "stars": "",
+   "tier": "nuisance_control"
+  },
+  {
+   "model_id": "org_M5",
+   "quantity": "coef",
+   "term": "STAFF",
+   "value": -0.008,
+   "se": 0.04,
+   "stars": "",
+   "tier": "focal_cell"
+  },
+  {
+   "model_id": "org_M5",
+   "quantity": "coef",
+   "term": "SUBSID",
+   "value": -0.107,
+   "se": 0.068,
+   "stars": "\u2020",
+   "tier": "nuisance_control"
+  },
+  {
+   "model_id": "org_M5",
+   "quantity": "coef",
+   "term": "TRAIN",
+   "value": 0.111,
+   "se": 0.04,
+   "stars": "**",
+   "tier": "focal_cell"
+  },
+  {
+   "model_id": "org_M5",
+   "quantity": "coef",
+   "term": "TRAIN_x_STAFF",
+   "value": 0.072,
+   "se": 0.045,
+   "stars": "\u2020",
+   "tier": "focal_cell"
+  },
+  {
+   "model_id": "org_M5",
+   "quantity": "coef",
+   "term": "UNION",
+   "value": -0.051,
+   "se": 0.055,
+   "stars": "",
+   "tier": "nuisance_control"
+  },
+  {
+   "model_id": "org_M5",
+   "quantity": "coef",
+   "term": "VHIER",
+   "value": 0.164,
+   "se": 0.188,
+   "stars": "",
+   "tier": "focal_cell"
+  },
+  {
+   "model_id": "org_M5",
+   "quantity": "coef",
+   "term": "VHIER_x_DECENT",
+   "value": -0.014,
+   "se": 0.051,
+   "stars": "",
+   "tier": "focal_cell"
+  },
+  {
+   "model_id": "mkt_M10",
+   "quantity": "F",
+   "value": 2.373,
+   "stars": "**",
+   "tier": "diagnostic"
+  },
+  {
+   "model_id": "mkt_M10",
+   "quantity": "F_deltaR2",
+   "value": 0.665,
+   "stars": "",
+   "tier": "diagnostic"
+  },
+  {
+   "model_id": "mkt_M10",
+   "quantity": "N",
+   "value": 373,
+   "stars": "",
+   "tier": "diagnostic"
+  },
+  {
+   "model_id": "mkt_M10",
+   "quantity": "R2",
+   "value": 0.269,
+   "stars": "",
+   "tier": "diagnostic"
+  },
+  {
+   "model_id": "mkt_M10",
+   "quantity": "coef",
+   "term": "COMPET",
+   "value": -0.217,
+   "se": 0.082,
+   "stars": "**",
+   "tier": "nuisance_control"
+  },
+  {
+   "model_id": "mkt_M10",
+   "quantity": "coef",
+   "term": "(Intercept)",
+   "value": 3.96,
+   "se": 0.723,
+   "stars": "**",
+   "tier": "nuisance_control"
+  },
+  {
+   "model_id": "mkt_M10",
+   "quantity": "coef",
+   "term": "DECENT",
+   "value": -0.192,
+   "se": 0.167,
+   "stars": "",
+   "tier": "focal_cell"
+  },
+  {
+   "model_id": "mkt_M10",
+   "quantity": "deltaR2",
+   "value": 0.005,
+   "stars": "",
+   "tier": "diagnostic"
+  },
+  {
+   "model_id": "mkt_M10",
+   "quantity": "coef",
+   "term": "GRIEV",
+   "value": -0.111,
+   "se": 0.458,
+   "stars": "",
+   "tier": "focal_cell"
+  },
+  {
+   "model_id": "mkt_M10",
+   "quantity": "coef",
+   "term": "GRIEV_x_INCENT",
+   "value": -0.029,
+   "se": 0.161,
+   "stars": "",
+   "tier": "focal_cell"
+  },
+  {
+   "model_id": "mkt_M10",
+   "quantity": "coef",
+   "term": "INCENT",
+   "value": 0.146,
+   "se": 0.107,
+   "stars": "\u2020",
+   "tier": "focal_cell"
+  },
+  {
+   "model_id": "mkt_M10",
+   "quantity": "coef",
+   "term": "LOGAGE",
+   "value": -0.13,
+   "se": 0.037,
+   "stars": "**",
+   "tier": "nuisance_control"
+  },
+  {
+   "model_id": "mkt_M10",
+   "quantity": "coef",
+   "term": "LOGEMP",
+   "value": -0.007,
+   "se": 0.04,
+   "stars": "",
+   "tier": "nuisance_control"
+  },
+  {
+   "model_id": "mkt_M10",
+   "quantity": "coef",
+   "term": "PCTMGR",
+   "value": -0.604,
+   "se": 0.186,
+   "stars": "**",
+   "tier": "nuisance_control"
+  },
+  {
+   "model_id": "mkt_M10",
+   "quantity": "coef",
+   "term": "PRODUCT",
+   "value": 0.191,
+   "se": 0.146,
+   "stars": "\u2020",
+   "tier": "nuisance_control"
+  },
+  {
+   "model_id": "mkt_M10",
+   "quantity": "coef",
+   "term": "SERVICE",
+   "value": 0.091,
+   "se": 0.126,
+   "stars": "",
+   "tier": "nuisance_control"
+  },
+  {
+   "model_id": "mkt_M10",
+   "quantity": "coef",
+   "term": "STAFF",
+   "value": 0.139,
+   "se": 0.058,
+   "stars": "*",
+   "tier": "focal_cell"
+  },
+  {
+   "model_id": "mkt_M10",
+   "quantity": "coef",
+   "term": "SUBSID",
+   "value": -0.087,
+   "se": 0.104,
+   "stars": "",
+   "tier": "nuisance_control"
+  },
+  {
+   "model_id": "mkt_M10",
+   "quantity": "coef",
+   "term": "TRAIN",
+   "value": 0.082,
+   "se": 0.059,
+   "stars": "\u2020",
+   "tier": "focal_cell"
+  },
+  {
+   "model_id": "mkt_M10",
+   "quantity": "coef",
+   "term": "TRAIN_x_STAFF",
+   "value": 0.069,
+   "se": 0.066,
+   "stars": "",
+   "tier": "focal_cell"
+  },
+  {
+   "model_id": "mkt_M10",
+   "quantity": "coef",
+   "term": "UNION",
+   "value": -0.051,
+   "se": 0.099,
+   "stars": "",
+   "tier": "nuisance_control"
+  },
+  {
+   "model_id": "mkt_M10",
+   "quantity": "coef",
+   "term": "VHIER",
+   "value": -0.134,
+   "se": 0.32,
+   "stars": "",
+   "tier": "focal_cell"
+  },
+  {
+   "model_id": "mkt_M10",
+   "quantity": "coef",
+   "term": "VHIER_x_DECENT",
+   "value": 0.066,
+   "se": 0.083,
+   "stars": "",
+   "tier": "focal_cell"
+  },
+  {
+   "model_id": "mkt_M6",
+   "quantity": "N",
+   "value": 373,
+   "stars": "",
+   "tier": "diagnostic"
+  },
+  {
+   "model_id": "mkt_M6",
+   "quantity": "coef",
+   "term": "DECENT",
+   "value": -0.047,
+   "se": 0.061,
+   "stars": "",
+   "tier": "robustness_cell"
+  },
+  {
+   "model_id": "mkt_M6",
+   "quantity": "coef",
+   "term": "GRIEV",
+   "value": 0.083,
+   "se": 0.104,
+   "stars": "",
+   "tier": "robustness_cell"
+  },
+  {
+   "model_id": "mkt_M6",
+   "quantity": "coef",
+   "term": "INCENT",
+   "value": 0.149,
+   "se": 0.081,
+   "stars": "*",
+   "tier": "robustness_cell"
+  },
+  {
+   "model_id": "mkt_M6",
+   "quantity": "coef",
+   "term": "ILM",
+   "value": 0.292,
+   "se": 0.161,
+   "stars": "*",
+   "tier": "robustness_cell"
+  },
+  {
+   "model_id": "mkt_M6",
+   "quantity": "coef",
+   "term": "STAFF",
+   "value": 0.169,
+   "se": 0.055,
+   "stars": "**",
+   "tier": "robustness_cell"
+  },
+  {
+   "model_id": "mkt_M6",
+   "quantity": "coef",
+   "term": "TRAIN",
+   "value": 0.114,
+   "se": 0.057,
+   "stars": "*",
+   "tier": "robustness_cell"
+  },
+  {
+   "model_id": "mkt_M6",
+   "quantity": "coef",
+   "term": "VHIER",
+   "value": 0.126,
+   "se": 0.082,
+   "stars": "\u2020",
+   "tier": "robustness_cell"
+  },
+  {
+   "model_id": "mkt_M7",
+   "quantity": "F",
+   "value": 2.466,
+   "stars": "**",
+   "tier": "diagnostic"
+  },
+  {
+   "model_id": "mkt_M7",
+   "quantity": "F_deltaR2",
+   "value": 2.703,
+   "stars": "*",
+   "tier": "diagnostic"
+  },
+  {
+   "model_id": "mkt_M7",
+   "quantity": "N",
+   "value": 373,
+   "stars": "",
+   "tier": "diagnostic"
+  },
+  {
+   "model_id": "mkt_M7",
+   "quantity": "R2",
+   "value": 0.263,
+   "stars": "",
+   "tier": "diagnostic"
+  },
+  {
+   "model_id": "mkt_M7",
+   "quantity": "coef",
+   "term": "COMPET",
+   "value": -0.214,
+   "se": 0.082,
+   "stars": "**",
+   "tier": "nuisance_control"
+  },
+  {
+   "model_id": "mkt_M7",
+   "quantity": "coef",
+   "term": "(Intercept)",
+   "value": 3.429,
+   "se": 0.512,
+   "stars": "**",
+   "tier": "nuisance_control"
+  },
+  {
+   "model_id": "mkt_M7",
+   "quantity": "coef",
+   "term": "DECENT",
+   "value": -0.071,
+   "se": 0.061,
+   "stars": "",
+   "tier": "focal_cell"
+  },
+  {
+   "model_id": "mkt_M7",
+   "quantity": "deltaR2",
+   "value": 0.037,
+   "stars": "",
+   "tier": "diagnostic"
+  },
+  {
+   "model_id": "mkt_M7",
+   "quantity": "coef",
+   "term": "GRIEV",
+   "value": 0.034,
+   "se": 0.105,
+   "stars": "",
+   "tier": "focal_cell"
+  },
+  {
+   "model_id": "mkt_M7",
+   "quantity": "coef",
+   "term": "INCENT",
+   "value": 0.125,
+   "se": 0.081,
+   "stars": "\u2020",
+   "tier": "focal_cell"
+  },
+  {
+   "model_id": "mkt_M7",
+   "quantity": "coef",
+   "term": "ILM",
+   "value": 0.134,
+   "se": 0.167,
+   "stars": "",
+   "tier": "focal_cell"
+  },
+  {
+   "model_id": "mkt_M7",
+   "quantity": "coef",
+   "term": "LOGAGE",
+   "value": -0.132,
+   "se": 0.037,
+   "stars": "**",
+   "tier": "nuisance_control"
+  },
+  {
+   "model_id": "mkt_M7",
+   "quantity": "coef",
+   "term": "LOGEMP",
+   "value": 0.004,
+   "se": 0.038,
+   "stars": "",
+   "tier": "nuisance_control"
+  },
+  {
+   "model_id": "mkt_M7",
+   "quantity": "coef",
+   "term": "PCTMGR",
+   "value": -0.522,
+   "se": 0.179,
+   "stars": "**",
+   "tier": "nuisance_control"
+  },
+  {
+   "model_id": "mkt_M7",
+   "quantity": "coef",
+   "term": "PRODUCT",
+   "value": 0.209,
+   "se": 0.147,
+   "stars": "\u2020",
+   "tier": "nuisance_control"
+  },
+  {
+   "model_id": "mkt_M7",
+   "quantity": "coef",
+   "term": "SERVICE",
+   "value": 0.132,
+   "se": 0.125,
+   "stars": "",
+   "tier": "nuisance_control"
+  },
+  {
+   "model_id": "mkt_M7",
+   "quantity": "coef",
+   "term": "STAFF",
+   "value": 0.145,
+   "se": 0.057,
+   "stars": "**",
+   "tier": "focal_cell"
+  },
+  {
+   "model_id": "mkt_M7",
+   "quantity": "coef",
+   "term": "SUBSID",
+   "value": -0.047,
+   "se": 0.106,
+   "stars": "",
+   "tier": "nuisance_control"
+  },
+  {
+   "model_id": "mkt_M7",
+   "quantity": "coef",
+   "term": "TRAIN",
+   "value": 0.073,
+   "se": 0.06,
+   "stars": "",
+   "tier": "focal_cell"
+  },
+  {
+   "model_id": "mkt_M7",
+   "quantity": "coef",
+   "term": "UNION",
+   "value": -0.05,
+   "se": 0.094,
+   "stars": "",
+   "tier": "nuisance_control"
+  },
+  {
+   "model_id": "mkt_M8",
+   "quantity": "F",
+   "value": 2.489,
+   "stars": "**",
+   "tier": "diagnostic"
+  },
+  {
+   "model_id": "mkt_M8",
+   "quantity": "F_deltaR2",
+   "value": 2.489,
+   "stars": "*",
+   "tier": "diagnostic"
+  },
+  {
+   "model_id": "mkt_M8",
+   "quantity": "N",
+   "value": 373,
+   "stars": "",
+   "tier": "diagnostic"
+  },
+  {
+   "model_id": "mkt_M8",
+   "quantity": "R2",
+   "value": 0.265,
+   "stars": "",
+   "tier": "diagnostic"
+  },
+  {
+   "model_id": "mkt_M8",
+   "quantity": "coef",
+   "term": "COMPET",
+   "value": -0.217,
+   "se": 0.082,
+   "stars": "**",
+   "tier": "nuisance_control"
+  },
+  {
+   "model_id": "mkt_M8",
+   "quantity": "coef",
+   "term": "(Intercept)",
+   "value": 3.517,
+   "se": 0.44,
+   "stars": "**",
+   "tier": "nuisance_control"
+  },
+  {
+   "model_id": "mkt_M8",
+   "quantity": "coef",
+   "term": "DECENT",
+   "value": -0.071,
+   "se": 0.061,
+   "stars": "",
+   "tier": "focal_cell"
+  },
+  {
+   "model_id": "mkt_M8",
+   "quantity": "deltaR2",
+   "value": 0.039,
+   "stars": "",
+   "tier": "diagnostic"
+  },
+  {
+   "model_id": "mkt_M8",
+   "quantity": "coef",
+   "term": "GRIEV",
+   "value": -0.034,
+   "se": 0.104,
+   "stars": "",
+   "tier": "focal_cell"
+  },
+  {
+   "model_id": "mkt_M8",
+   "quantity": "coef",
+   "term": "INCENT",
+   "value": 0.134,
+   "se": 0.081,
+   "stars": "*",
+   "tier": "focal_cell"
+  },
+  {
+   "model_id": "mkt_M8",
+   "quantity": "coef",
+   "term": "LOGAGE",
+   "value": -0.129,
+   "se": 0.037,
+   "stars": "**",
+   "tier": "nuisance_control"
+  },
+  {
+   "model_id": "mkt_M8",
+   "quantity": "coef",
+   "term": "LOGEMP",
+   "value": -0.004,
+   "se": 0.039,
+   "stars": "",
+   "tier": "nuisance_control"
+  },
+  {
+   "model_id": "mkt_M8",
+   "quantity": "coef",
+   "term": "PCTMGR",
+   "value": -0.529,
+   "se": 0.177,
+   "stars": "**",
+   "tier": "nuisance_control"
+  },
+  {
+   "model_id": "mkt_M8",
+   "quantity": "coef",
+   "term": "PRODUCT",
+   "value": 0.193,
+   "se": 0.145,
+   "stars": "\u2020",
+   "tier": "nuisance_control"
+  },
+  {
+   "model_id": "mkt_M8",
+   "quantity": "coef",
+   "term": "SERVICE",
+   "value": 0.111,
+   "se": 0.125,
+   "stars": "",
+   "tier": "nuisance_control"
+  },
+  {
+   "model_id": "mkt_M8",
+   "quantity": "coef",
+   "term": "STAFF",
+   "value": 0.147,
+   "se": 0.057,
+   "stars": "**",
+   "tier": "focal_cell"
+  },
+  {
+   "model_id": "mkt_M8",
+   "quantity": "coef",
+   "term": "SUBSID",
+   "value": -0.063,
+   "se": 0.101,
+   "stars": "",
+   "tier": "nuisance_control"
+  },
+  {
+   "model_id": "mkt_M8",
+   "quantity": "coef",
+   "term": "TRAIN",
+   "value": 0.076,
+   "se": 0.058,
+   "stars": "*",
+   "tier": "focal_cell"
+  },
+  {
+   "model_id": "mkt_M8",
+   "quantity": "coef",
+   "term": "UNION",
+   "value": -0.049,
+   "se": 0.094,
+   "stars": "",
+   "tier": "nuisance_control"
+  },
+  {
+   "model_id": "mkt_M8",
+   "quantity": "coef",
+   "term": "VHIER",
+   "value": 0.099,
+   "se": 0.082,
+   "stars": "",
+   "tier": "focal_cell"
+  },
+  {
+   "model_id": "mkt_M9",
+   "quantity": "F",
+   "value": 2.349,
+   "stars": "**",
+   "tier": "diagnostic"
+  },
+  {
+   "model_id": "mkt_M9",
+   "quantity": "F_deltaR2",
+   "value": 0.64,
+   "stars": "",
+   "tier": "diagnostic"
+  },
+  {
+   "model_id": "mkt_M9",
+   "quantity": "N",
+   "value": 373,
+   "stars": "",
+   "tier": "diagnostic"
+  },
+  {
+   "model_id": "mkt_M9",
+   "quantity": "R2",
+   "value": 0.267,
+   "stars": "",
+   "tier": "diagnostic"
+  },
+  {
+   "model_id": "mkt_M9",
+   "quantity": "coef",
+   "term": "COMPET",
+   "value": -0.209,
+   "se": 0.082,
+   "stars": "**",
+   "tier": "nuisance_control"
+  },
+  {
+   "model_id": "mkt_M9",
+   "quantity": "coef",
+   "term": "(Intercept)",
+   "value": 2.628,
+   "se": 1.098,
+   "stars": "**",
+   "tier": "nuisance_control"
+  },
+  {
+   "model_id": "mkt_M9",
+   "quantity": "coef",
+   "term": "DECENT",
+   "value": 0.162,
+   "se": 0.294,
+   "stars": "",
+   "tier": "focal_cell"
+  },
+  {
+   "model_id": "mkt_M9",
+   "quantity": "deltaR2",
+   "value": 0.004,
+   "stars": "",
+   "tier": "diagnostic"
+  },
+  {
+   "model_id": "mkt_M9",
+   "quantity": "coef",
+   "term": "GRIEV",
+   "value": 0.043,
+   "se": 0.459,
+   "stars": "",
+   "tier": "focal_cell"
+  },
+  {
+   "model_id": "mkt_M9",
+   "quantity": "coef",
+   "term": "GRIEV_x_INCENT",
+   "value": 0.001,
+   "se": 0.162,
+   "stars": "",
+   "tier": "focal_cell"
+  },
+  {
+   "model_id": "mkt_M9",
+   "quantity": "coef",
+   "term": "INCENT",
+   "value": 0.123,
+   "se": 0.108,
+   "stars": "",
+   "tier": "focal_cell"
+  },
+  {
+   "model_id": "mkt_M9",
+   "quantity": "coef",
+   "term": "ILM",
+   "value": 0.588,
+   "se": 0.566,
+   "stars": "\u2020",
+   "tier": "focal_cell"
+  },
+  {
+   "model_id": "mkt_M9",
+   "quantity": "coef",
+   "term": "ILM_x_DECENT",
+   "value": -0.132,
+   "se": 0.164,
+   "stars": "",
+   "tier": "focal_cell"
+  },
+  {
+   "model_id": "mkt_M9",
+   "quantity": "coef",
+   "term": "LOGAGE",
+   "value": -0.136,
+   "se": 0.037,
+   "stars": "**",
+   "tier": "nuisance_control"
+  },
+  {
+   "model_id": "mkt_M9",
+   "quantity": "coef",
+   "term": "LOGEMP",
+   "value": 0.008,
+   "se": 0.039,
+   "stars": "",
+   "tier": "nuisance_control"
+  },
+  {
+   "model_id": "mkt_M9",
+   "quantity": "coef",
+   "term": "PCTMGR",
+   "value": -0.528,
+   "se": 0.19,
+   "stars": "**",
+   "tier": "nuisance_control"
+  },
+  {
+   "model_id": "mkt_M9",
+   "quantity": "coef",
+   "term": "PRODUCT",
+   "value": 0.191,
+   "se": 0.148,
+   "stars": "\u2020",
+   "tier": "nuisance_control"
+  },
+  {
+   "model_id": "mkt_M9",
+   "quantity": "coef",
+   "term": "SERVICE",
+   "value": 0.121,
+   "se": 0.125,
+   "stars": "",
+   "tier": "nuisance_control"
+  },
+  {
+   "model_id": "mkt_M9",
+   "quantity": "coef",
+   "term": "STAFF",
+   "value": 0.131,
+   "se": 0.059,
+   "stars": "*",
+   "tier": "focal_cell"
+  },
+  {
+   "model_id": "mkt_M9",
+   "quantity": "coef",
+   "term": "SUBSID",
+   "value": -0.066,
+   "se": 0.108,
+   "stars": "",
+   "tier": "nuisance_control"
+  },
+  {
+   "model_id": "mkt_M9",
+   "quantity": "coef",
+   "term": "TRAIN",
+   "value": 0.071,
+   "se": 0.06,
+   "stars": "",
+   "tier": "focal_cell"
+  },
+  {
+   "model_id": "mkt_M9",
+   "quantity": "coef",
+   "term": "TRAIN_x_STAFF",
+   "value": 0.08,
+   "se": 0.066,
+   "stars": "",
+   "tier": "focal_cell"
+  },
+  {
+   "model_id": "mkt_M9",
+   "quantity": "coef",
+   "term": "UNION",
+   "value": -0.047,
+   "se": 0.1,
+   "stars": "",
+   "tier": "nuisance_control"
+  }
+ ],
+ "unmapped_rows": []
+}

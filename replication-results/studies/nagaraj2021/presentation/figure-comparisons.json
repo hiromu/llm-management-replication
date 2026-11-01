@@ -1,0 +1,18 @@
+{
+  "renderer": "replication-console/scripts/render-nagaraj-comparisons.py",
+  "new_fits": false,
+  "sources": [
+    {
+      "path": "studies/nagaraj2021/runs/run_20261101_v1/out/A/an10_means.csv",
+      "sha256": "407682af12e7d77ede3de5b8ad65373df4e74a15dcda6009513694b13b806e88"
+    },
+    {
+      "path": "studies/nagaraj2021/runs/run_20261101_v1/out/A/results.csv",
+      "sha256": "98072a894a07dedd81df1097dced489a19b8df3d2587787928d7665a851d2a53"
+    }
+  ],
+  "assets": {
+    "figure3.png": "8e82c83308f354f982c52cb37be0ab41dc60311fb00f56bd1b9aae05b65563cf",
+    "figure4.png": "7f8b5a02a6bb5a763c08fe1744bba0b725ae53f5fb72796633191f1f84675a2e"
+  }
+}

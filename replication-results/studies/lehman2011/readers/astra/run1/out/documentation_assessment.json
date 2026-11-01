@@ -1,0 +1,127 @@
+{
+  "wider_space": [
+    {
+      "choice": "Binary logistic regression for a binary decision outcome; frequency labels below are qualitative reader assessments, not a field census. Wider execution grid is OFF.",
+      "frequency_in_field": "common",
+      "justified_in_paper": "justified",
+      "source": {
+        "doc": "D01",
+        "pdf_page": 9,
+        "where": "Data Analysis Model"
+      }
+    },
+    {
+      "choice": "Separate negative/positive performance splines with below-threshold curvature and an intercept jump.",
+      "frequency_in_field": "common",
+      "justified_in_paper": "justified",
+      "source": {
+        "doc": "D01",
+        "pdf_page": 9,
+        "where": "Performance / cites prior spline applications"
+      }
+    },
+    {
+      "choice": "Team and season fixed effects to account for heterogeneity.",
+      "frequency_in_field": "common",
+      "justified_in_paper": "justified",
+      "source": {
+        "doc": "D01",
+        "pdf_page": 9,
+        "where": "Data Analysis Model"
+      }
+    },
+    {
+      "choice": "Conditional rather than unconditional likelihood and conventional rather than clustered covariance: exact choices are not documented; conventional information-matrix SE is only an inferred software-style default.",
+      "frequency_in_field": "default",
+      "justified_in_paper": "not discussed",
+      "source": {
+        "doc": "D01",
+        "pdf_page": 9,
+        "where": "Data Analysis Model; PDF p. 11, Table 5 note"
+      }
+    },
+    {
+      "choice": "Exclude terminal regulation minutes for a qualitative change in the meaning of risk.",
+      "frequency_in_field": "rare",
+      "justified_in_paper": "justified",
+      "source": {
+        "doc": "D01",
+        "pdf_page": 16,
+        "where": "Endnote 3; context-specific rather than a general modeling default"
+      }
+    },
+    {
+      "choice": "Hold controls at means and vary time/performance for nonlinear marginal effects.",
+      "frequency_in_field": "common",
+      "justified_in_paper": "justified",
+      "source": {
+        "doc": "D01",
+        "pdf_page": 11,
+        "where": "Results / marginal-effects rationale; PDF pp. 12–13, Figures 2–3"
+      }
+    },
+    {
+      "choice": "Quarter-based time measure in an unreported robustness exercise.",
+      "frequency_in_field": "common",
+      "justified_in_paper": "justified",
+      "source": {
+        "doc": "D01",
+        "pdf_page": 9,
+        "where": "Deadline Proximity / halftime discontinuity"
+      }
+    },
+    {
+      "choice": "Recent-spread aspiration and range-restricted choice sets as unreported robustness families.",
+      "frequency_in_field": "rare",
+      "justified_in_paper": "justified",
+      "source": {
+        "doc": "D01",
+        "pdf_page": 16,
+        "where": "Endnote 4; context-specific checks"
+      }
+    }
+  ],
+  "structural_counts": {
+    "n_models_reported": 3,
+    "n_axes_identified": 10,
+    "n_levels_total": 22
+  },
+  "unusualness_rating": "3 (moderately specialized): logit, controls and team/year effects are standard, while the asymmetric performance polynomial, jump, time interactions and terminal-time exclusion are tailored to the theory/context (D01 PDF pp. 9,11,15–16). This is not a replication verdict. Structural model count refers to the three fully tabled models; the quarter, alternative-aspiration, inside-range and outside-range narrative robustness families have no enumerated model tables, so their exact model count is unknown.",
+  "documentation_scores": {
+    "specificity": "4/5: the main formula, controls, main period restrictions and principal evaluation points are specific (D01 PDF pp. 8–12,15–16). Original provider, unusual-play coding and the exact estimation/prediction setup are absent.",
+    "precision": "3/5: aspiration is resolved by a worked example and splines are defined (D01 PDF p. 9). Indicator inclusion, control codes, derivative side and conditional-logit predictions remain ambiguous; inconsistent incremental fit tests are a separate publication diagnostic (D01 PDF pp. 9–13).",
+    "exhaustiveness": "2/5: no record-level construction rules, missingness policy, panel declaration, covariance specification or probability-recovery procedure; endnote robustness material is available only by request and is not supplied (D01 PDF pp. 8–9,11–13,16)."
+  },
+  "unavailable_source_fallbacks": [
+    {
+      "item": "Original empirical provider and vintage are unspecified (D01 PDF p. 8, Data).",
+      "fallback": "Use the independently acquired S1 and S2 described in data_description/source_descriptions.md; record provenance and preserve source gaps, rather than declaring them author-identical.",
+      "vintage_issue": "Later nflverse parse can revise play labels, timing and missingness. Provider model outputs are not used."
+    },
+    {
+      "item": "Games lacking S1 play coverage (data_description/source_descriptions.md, S1; population defined at D01 PDF p. 8).",
+      "fallback": "Acquisition role may obtain independently documented play-by-play; if unavailable, preserve a coverage limitation and do not synthesize rows from schedules. Reader has not acquired or opened data.",
+      "vintage_issue": "The supplied description notes absence across another historical vintage too; original author coverage cannot be inferred."
+    },
+    {
+      "item": "Historical conference membership (D01 PDF p. 9, Control Variables; source_descriptions.md, Not acquired).",
+      "fallback": "Request an independently documented season-specific crosswalk; keep explicit conference control required and flag execution as incomplete until available.",
+      "vintage_issue": "Historical realignment and franchise entry matter; current abbreviations must be harmonized with period-specific schedule codes."
+    },
+    {
+      "item": "Same-division, conference and home venue coding (D01 PDF p. 9, Control Variables).",
+      "fallback": "Use S2.div_game and ordinary affirmative definitions only as declared inferences. Clarify neutral/relocated venues and category semantics; do not swap descriptive labels.",
+      "vintage_issue": "The source schedule codes reflect historical games but its present franchise notation differs from S1."
+    },
+    {
+      "item": "Probability predictions and marginal-effect uncertainty after team fixed effects (D01 PDF pp. 9,11–13).",
+      "fallback": "Obtain methodological prose specifying panel, intercept handling, covariate evaluation and covariance. If unavailable, report multiple clearly labeled interpretations; no unique exact prediction reproduction is licensed.",
+      "vintage_issue": "Software version and command defaults are not supplied."
+    },
+    {
+      "item": "By-request robustness analyses (D01 PDF p. 16, Endnote 4) and possible late supplemental material (packet/publication_packet.json, known_gaps).",
+      "fallback": "Coordinator may seek permitted prose/tables in a versioned packet; no internet or author contact by this reader. Do not construct missing aspiration windows or field-goal cutoffs.",
+      "vintage_issue": "Live publisher tab was inaccessible according to the packet; no local supplement does not prove none exists."
+    }
+  ]
+}

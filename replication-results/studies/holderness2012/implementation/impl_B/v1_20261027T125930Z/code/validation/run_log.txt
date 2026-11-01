@@ -1,0 +1,16 @@
+2026-10-27 22:15:05 P-R7M2 v1 R version 4.6.1 (2026-06-24) 
+2026-10-27 22:15:05 Arguments: --out validation --test-only 
+2026-10-27 22:15:05 Packages: data.table 1.18.6.1; nanoparquet 0.5.2; jsonlite 2.0.0 
+2026-10-27 22:15:06 SYNTHETIC known_probit_coefficients PASS max absolute error 0.00914005; max standardized error 0.76658; n=60000 
+2026-10-27 22:15:06 SYNTHETIC marginal_effects_and_delta_finite_differences PASS ME error 1.62e-12; Jacobian error 2.03e-07; delta SE error 3.12e-08 
+2026-10-27 22:15:06 SYNTHETIC cluster_covariance_direct_sandwich PASS max covariance error 2.78e-17 
+2026-10-27 22:15:06 SYNTHETIC handmade_hierarchy_groups PASS single rank S=0; one member S=0; matching shares M=1; ranks 1,9 S=0.4; empty group missing 
+2026-10-27 22:15:06 SYNTHETIC delong_identical_and_tied_predictors PASS identical z=0, p=1; tied brute-force z error 8.88e-16 
+2026-10-27 22:15:06 SYNTHETIC NUL_safe_Parquet_pages PASS NUL at beginning/middle/end removed; spaces, empty strings and null values preserved 
+2026-10-27 22:15:06 SYNTHETIC duplicate_linkage_and_missing_design PASS duplicate unmatched/first/combine; missing regressor zero replacement and indicator 
+2026-10-27 22:15:06 SYNTHETIC coordinate_selection_and_capital_override PASS lowest entry selected; eligible capital km=1; unknown/no row missing; malformed degree missing; absent degree falls back 
+2026-10-27 22:15:06 cap reference fractions 0.11212,0.12348,0.11212,0.10265,0.10492,0.11136,0.10966,0.1161,0.10758 c 1.319 
+2026-10-27 22:15:06 cap missing: rank 0; height 100; age 0; education 80; dependents 0; officer 0; distance 0; length 0; n_g 0 
+2026-10-27 22:15:06 camp reference fractions 0.11212,0.12348,0.11212,0.10265,0.10492,0.11136,0.10966,0.1161,0.10758 c 1.319 
+2026-10-27 22:15:06 camp missing: rank 0; height 100; age 0; education 80; dependents 0; officer 0; distance 0; length 0; n_g 0 
+2026-10-27 22:15:08 SYNTHETIC all_families_on_synthetic_data PASS 104 synthetic models, 8 paired ROC comparisons, 96 leave-camp-out fits; constant-outcome failure recorded 

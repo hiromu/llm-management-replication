@@ -1,0 +1,58 @@
+{
+ "label": "checker_B_v1",
+ "family": "fable",
+ "started_utc": "2026-10-31T08:22:07.447106+00:00",
+ "cli_version": "2.1.311 (Claude Code)",
+ "cmd": [
+  "~/.local/bin/claude",
+  "-p",
+  "--safe-mode",
+  "--model",
+  "claude-fable-5-1",
+  "--effort",
+  "high",
+  "--settings",
+  "{\"fastMode\":false,\"autoMemoryEnabled\":false}",
+  "--no-session-persistence",
+  "--tools",
+  "Read,Write,Glob,Grep",
+  "--allowed-tools",
+  "Read,Write,Glob,Grep",
+  "--permission-mode",
+  "acceptEdits",
+  "--output-format",
+  "json"
+ ],
+ "outer_read_barrier": [
+  "~/Library/CloudStorage",
+  "~/.claude/projects",
+  "~/.claude-personal/projects",
+  "~/.codex/sessions",
+  "~/.codex/archived_sessions",
+  "/private/tmp/claude-501/-project-studies-berry2025"
+ ],
+ "env_keys": [
+  "CLAUDE_CONFIG_DIR",
+  "HOME",
+  "LOGNAME",
+  "PATH",
+  "PWD",
+  "SHELL",
+  "TMPDIR",
+  "USER"
+ ],
+ "staging": "/private/var/folders/zh/rf2d8w8j2k3g4k48zqzv0t340000gn/T/role_xb58f8vg",
+ "prompt_sha256": "156b75f35e68614dbc89c31156f0816bd29821dff592d019b6b4b30d152ef7d4",
+ "returncode": 0,
+ "timed_out": false,
+ "seconds": 353,
+ "reported": {
+  "modelUsage": [
+   "claude-fable-5-1"
+  ],
+  "is_error": false,
+  "num_turns": 6,
+  "total_cost_usd": 2.517246
+ },
+ "event_log_path_audit_hits": null
+}

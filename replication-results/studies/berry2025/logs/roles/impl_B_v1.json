@@ -1,0 +1,48 @@
+{
+ "label": "impl_B_v1",
+ "family": "astra",
+ "started_utc": "2026-10-31T08:16:14.472511+00:00",
+ "cli_version": "codex-cli 0.164.0",
+ "cmd": [
+  "~/.local/bin/codex",
+  "exec",
+  "--ephemeral",
+  "--ignore-user-config",
+  "--skip-git-repo-check",
+  "-C",
+  "/private/var/folders/zh/rf2d8w8j2k3g4k48zqzv0t340000gn/T/role_4nwfgnzk",
+  "-m",
+  "gpt-6-astra",
+  "-c",
+  "model_reasoning_effort=\"high\"",
+  "-c",
+  "service_tier=\"default\"",
+  "-c",
+  "features.fast_mode=false",
+  "--sandbox",
+  "workspace-write",
+  "--json",
+  "-"
+ ],
+ "outer_read_barrier": null,
+ "env_keys": [
+  "HOME",
+  "LOGNAME",
+  "PATH",
+  "PWD",
+  "SHELL",
+  "TMPDIR",
+  "USER"
+ ],
+ "staging": "/private/var/folders/zh/rf2d8w8j2k3g4k48zqzv0t340000gn/T/role_4nwfgnzk",
+ "prompt_sha256": "dee8a209eb68732fdec6d3cbcc2dde97f795e5f5e203dc2466344ab71fd99cb3",
+ "returncode": 0,
+ "timed_out": false,
+ "seconds": 652,
+ "reported": {
+  "models_in_events": [],
+  "effort_in_events": [],
+  "service_tier_in_events": []
+ },
+ "event_log_path_audit_hits": []
+}

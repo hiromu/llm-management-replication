@@ -1,0 +1,85 @@
+unit,opus_claim,astra_claim,opus_tier,astra_tier,agree,reconciled_tier
+T1|Contributions,C_T1_contrib,T1R1,descriptive,descriptive,True,descriptive
+T1|Follow-on Contributions,C_T1_followon,T1R2,descriptive,descriptive,True,descriptive
+T1|Contributors,C_T1_contributors,T1R3,descriptive,descriptive,True,descriptive
+T1|Error-Score,C_T1_error,T1R4,descriptive,descriptive,True,descriptive
+T1|Owner-Contributions,C_T1_owner,T1R5,descriptive,descriptive,True,descriptive
+T1|D Population,C_T1_balance,T1R6,identification_or_inference_diagnostic,identification_or_inference_diagnostic,True,identification_or_inference_diagnostic
+T1|D Households,C_T1_balance,T1R7,identification_or_inference_diagnostic,identification_or_inference_diagnostic,True,identification_or_inference_diagnostic
+T1|D Unemployed Pop.,C_T1_balance,T1R8,identification_or_inference_diagnostic,identification_or_inference_diagnostic,True,identification_or_inference_diagnostic
+T1|D Educ. Population,C_T1_balance,T1R9,identification_or_inference_diagnostic,identification_or_inference_diagnostic,True,identification_or_inference_diagnostic
+T1|D Male Population (18-45),C_T1_balance,T1R10,identification_or_inference_diagnostic,identification_or_inference_diagnostic,True,identification_or_inference_diagnostic
+T1|D Income per Capita,C_T1_income,T1R11,identification_or_inference_diagnostic,identification_or_inference_diagnostic,True,identification_or_inference_diagnostic
+T2|Total Contributions,C_T2_median,T2R1,descriptive,descriptive,True,descriptive
+T2|Total Follow-on Contributions,C_T2_median,T2R2,descriptive,descriptive,True,descriptive
+T2|Contributors,C_T2_median,T2R3,descriptive,descriptive,True,descriptive
+T2|Distant Follow-on,C_T2_other,T2R4,descriptive,descriptive,True,descriptive
+T2|Incremental Follow-On,C_T2_other,T2R5,descriptive,descriptive,True,descriptive
+T2|New Contributors,C_T2_other,T2R6,descriptive,descriptive,True,descriptive
+T2|Old Contributors,C_T2_other,T2R7,descriptive,descriptive,True,descriptive
+T2|Low Ownership Contributions,C_T2_other,T2R8,descriptive,descriptive,True,descriptive
+T2|High Ownership Contributions,C_T2_other,T2R9,descriptive,descriptive,True,descriptive
+T2|Owner-Contributions,C_T2_owner,T2R10,descriptive,descriptive,True,descriptive
+T2|Treat,C_T2_other,T2R11,descriptive,descriptive,True,descriptive
+T2|Post,C_T2_other,T2R12,descriptive,descriptive,True,descriptive
+T2|Year,C_T2_other,T2R13,descriptive,descriptive,True,descriptive
+T2|Quarter,C_T2_other,T2R14,descriptive,descriptive,True,descriptive
+T2|Population,C_T2_other,T2R15,descriptive,descriptive,True,descriptive
+T2|Households,C_T2_other,T2R16,descriptive,descriptive,True,descriptive
+T2|Population Density,C_T2_other,T2R17,descriptive,descriptive,True,descriptive
+T2|Per-Capita Income,C_T2_other,T2R18,descriptive,descriptive,True,descriptive
+T3|(1),C_T3_1,T3C1,focal,focal,True,focal
+T3|(2),C_T3_2,T3C2,focal,focal,True,focal
+T3|(3),C_T3_3,T3C3,focal,focal,True,focal
+T3|(4),C_T3_4,T3C4,focal,focal,True,focal
+T3|(5),C_T3_5,T3C5,focal,focal,True,focal
+T3|(6),C_T3_6,T3C6,focal,focal,True,focal
+T4|(1),C_T4_1,T4C1,focal,focal,True,focal
+T4|(2),C_T4_2,T4C2,focal,focal,True,focal
+T4|(3),C_T4_3,T4C3,focal,focal,True,focal
+T4|(4),C_T4_4,T4C4,focal,focal,True,focal
+T4|(5),C_T4_5,T4C5,focal,focal,True,focal
+T4|(6),C_T4_6,T4C6,focal,focal,True,focal
+T5A|(1),C_T5A_1,T5AC1,robustness,robustness,True,robustness
+T5A|(2),C_T5A_2,T5AC2,robustness,robustness,True,robustness
+T5A|(3),C_T5A_3,T5AC3,identification_or_inference_diagnostic,identification_or_inference_diagnostic,True,identification_or_inference_diagnostic
+T5A|(4),C_T5A_4,T5AC4,identification_or_inference_diagnostic,identification_or_inference_diagnostic,True,identification_or_inference_diagnostic
+T5A|(5),C_T5A_5,T5AC5,robustness,robustness,True,robustness
+T5A|(6),C_T5A_6,T5AC6,robustness,robustness,True,robustness
+T5A|(7),C_T5A_7,T5AC7,robustness,robustness,True,robustness
+T5A|(8),C_T5A_8,T5AC8,robustness,robustness,True,robustness
+T5B|(1),C_T5B_1,T5BC1,robustness,robustness,True,robustness
+T5B|(2),C_T5B_2,T5BC2,robustness,robustness,True,robustness
+T5B|(3),C_T5B_3,T5BC3,robustness,robustness,True,robustness
+T5B|(4),C_T5B_4,T5BC4,robustness,robustness,True,robustness
+T5B|(5),C_T5B_5,T5BC5,robustness,robustness,True,robustness
+T5B|(6),C_T5B_6,T5BC6,robustness,robustness,True,robustness
+T5B|(7),C_T5B_7,T5BC7,robustness,robustness,True,robustness
+T5B|(8),C_T5B_8,T5BC8,robustness,robustness,True,robustness
+T6|(1) Treat,C_T6_1,T6C1,focal,focal,True,focal
+T6|(2) Treat,C_T6_2,T6C2,robustness,focal,False,uncertain:focal|robustness
+T6|(3) Treat,C_T6_3,T6C3,robustness,focal,False,uncertain:focal|robustness
+T6|(1) Distance,C_T6_dist_1,T6C1D,nuisance,nuisance,True,nuisance
+T6|(2) Distance,C_T6_dist_2,T6C2D,nuisance,nuisance,True,nuisance
+T6|(3) Distance,C_T6_dist_3,T6C3D,nuisance,nuisance,True,nuisance
+T7|(1),C_T7_1,T7C1,focal,focal,True,focal
+T7|(2),C_T7_2,T7C2,focal,focal,True,focal
+T7|(3),C_T7_3,T7C3,focal,focal,True,focal
+T7|(4),C_T7_4,T7C4,focal,focal,True,focal
+T7|(5),C_T7_5,T7C5,focal,focal,True,focal
+T7|(6),C_T7_6,T7C6,focal,focal,True,focal
+T7|(7),C_T7_7,T7C7,focal,focal,True,focal
+F1|a,C_F1_a,F1A,descriptive,identification_or_inference_diagnostic,False,uncertain:descriptive|identification_or_inference_diagnostic
+F1|b,C_F1_b,F1B,descriptive,descriptive,True,descriptive
+F2|a,C_F2_a,F2A,descriptive,identification_or_inference_diagnostic,False,uncertain:descriptive|identification_or_inference_diagnostic
+F2|b,C_F2_b,F2B,descriptive,identification_or_inference_diagnostic,False,uncertain:descriptive|identification_or_inference_diagnostic
+F3|a(i),C_F3_a,F3AI,descriptive,descriptive,True,descriptive
+F3|a(ii),C_F3_a,F3AII,descriptive,descriptive,True,descriptive
+F3|b(i),C_F3_b,F3BI,descriptive,descriptive,True,descriptive
+F3|b(ii),C_F3_b,F3BII,descriptive,descriptive,True,descriptive
+F4|follow-on,C_F4_fo,F4F,identification_or_inference_diagnostic,identification_or_inference_diagnostic,True,identification_or_inference_diagnostic
+F4|contributors,C_F4_users,F4U,identification_or_inference_diagnostic,identification_or_inference_diagnostic,True,identification_or_inference_diagnostic
+F5|follow-on,C_F5,F5,identification_or_inference_diagnostic,identification_or_inference_diagnostic,True,identification_or_inference_diagnostic
+F6|a follow-on,C_F6_a,F6AF,descriptive,robustness,False,uncertain:descriptive|robustness
+F6|a contributors,C_F6_a,F6AU,descriptive,robustness,False,uncertain:descriptive|robustness
+F6|b,C_F6_b,F6B,descriptive,robustness,False,uncertain:descriptive|robustness

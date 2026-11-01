@@ -1,0 +1,8 @@
+source('run.R')
+t0 <- Sys.time()
+p <- prepare_run(read_inputs('synthetic'),'N01')
+s <- model_sample(p,'M3','N01')
+r <- fit_model(s,'N01',p$invalid)
+write.csv(r,'test_rank_results.csv',row.names=FALSE,na='')
+stopifnot(all(r$status[r$term %in% c('(Intercept)',paste0('year',2002:2008))]=='not_estimable'),r$status[r$term=='female:childcare']=='ok')
+writeLines(sprintf('Elapsed seconds: %.3f',as.numeric(difftime(Sys.time(),t0,units='secs'))),'test_rank_timing.txt')

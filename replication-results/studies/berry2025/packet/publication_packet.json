@@ -1,0 +1,201 @@
+{
+ "version": "frozen_v1",
+ "study_id": "berry2025",
+ "order": [
+  "D01_article.pdf",
+  "D02_appendixA_materials.pdf",
+  "D03_online_appendix.pdf",
+  "D11_prereg_study1.pdf",
+  "D12_prereg_study2.pdf",
+  "D13_prereg_study3.pdf",
+  "D14_prereg_study4.pdf",
+  "D22_deviation_report_study2.docx",
+  "D31_dictionary_study1.csv",
+  "D41_columns_study1.txt",
+  "D32_dictionary_study2.csv",
+  "D42_columns_study2.txt",
+  "D33_dictionary_study3.csv",
+  "D43_columns_study3.txt",
+  "D34_dictionary_filed_in_study4_folder.csv",
+  "D44_columns_study4.txt"
+ ],
+ "documents": [
+  {
+   "id": "D01_article.pdf",
+   "source": "packet/berry2025.pdf",
+   "role": "the article",
+   "sha256": "c1946109453c4aa028fe29aa3061dd55d4a5f30e1b6e42d8320816cdc3a4863f",
+   "text_form": "D01_article.txt",
+   "identity_check": "byte copy of the source"
+  },
+  {
+   "id": "D02_appendixA_materials.pdf",
+   "source": "data/raw/osf_3h6vc/AppendixA.pdf",
+   "role": "deposit study materials",
+   "sha256": "c2f34a5704bc5b6247d826a3121f135beded3eaac007dd290d98c5d78973ed6d",
+   "text_form": "D02_appendixA_materials.txt",
+   "identity_check": "byte copy of the source"
+  },
+  {
+   "id": "D03_online_appendix.pdf",
+   "source": "packet/berry2025_online_appendix.pdf",
+   "role": "Online Appendix; Studies S1-S7 out of scope",
+   "sha256": "97c87fd3845cc8f328f76ca0846c7ccc8182eddd0991faf58f38eb2cf8676b1f",
+   "text_form": "D03_online_appendix.txt",
+   "identity_check": "byte copy of the source"
+  },
+  {
+   "id": "D11_prereg_study1.pdf",
+   "source": "data/raw/osf_3h6vc/Study 1/study1_pre-registration_ltran.pdf",
+   "role": "preregistration Study 1",
+   "sha256": "dfabaf1d6c997316b594d23719251d2c27f05994605ad100563f23f50215680d",
+   "text_form": "D11_prereg_study1.txt",
+   "identity_check": "byte copy of the source"
+  },
+  {
+   "id": "D12_prereg_study2.pdf",
+   "source": "data/raw/osf_3h6vc/Study 2/study2_pre-registration_ltran.pdf",
+   "role": "preregistration Study 2",
+   "sha256": "dfd91bf8a28f039c9d37f773d64751e8d8edd571be1b98ef813ad891fdf3e9eb",
+   "text_form": "D12_prereg_study2.txt",
+   "identity_check": "byte copy of the source"
+  },
+  {
+   "id": "D13_prereg_study3.pdf",
+   "source": "data/raw/osf_3h6vc/Study 3/study3_pre-registration_ltran.pdf",
+   "role": "preregistration Study 3",
+   "sha256": "08469ec80eba354b3b34ba4add41659d29b20de55d6d653789ab00d0f81a6e8c",
+   "text_form": "D13_prereg_study3.txt",
+   "identity_check": "byte copy of the source"
+  },
+  {
+   "id": "D14_prereg_study4.pdf",
+   "source": "data/raw/osf_3h6vc/Study 4/study4_pre-registration_ltran.pdf",
+   "role": "preregistration Study 4",
+   "sha256": "3984c33f280fb0f89bec73caee44a2f3642c9f96ac12a5805a9ce5e11081524c",
+   "text_form": "D14_prereg_study4.txt",
+   "identity_check": "byte copy of the source"
+  },
+  {
+   "id": "D22_deviation_report_study2.docx",
+   "source": "data/raw/osf_3h6vc/Study 2/study2_preregistration_deviation_report.docx",
+   "role": "Study 2 deviation report",
+   "sha256": "d23660e6a20cbc6a7a5fb28d5ebcee26930c27eb4471d588061629a868c88ba2",
+   "text_form": "D22_deviation_report_study2.txt",
+   "identity_check": "byte copy of the source"
+  },
+  {
+   "id": "D31_dictionary_study1.csv",
+   "source": "Study 1/study1_datadict_ltran.xlsx",
+   "role": "dictionary filed with Study 1",
+   "sha256": "38182cfc587744a72745ce31e080515eba0c98eb959e2e26438058b97680d7a0",
+   "text_form": null,
+   "identity_check": "byte copy of the source"
+  },
+  {
+   "id": "D41_columns_study1.txt",
+   "source": "Study 1/study1_data_ltran.csv",
+   "role": "column names only, Study 1",
+   "sha256": "53e34a1920d6750c537411999ab53512ecf3715e69bd669425020c57d4a68b06",
+   "text_form": "D41_columns_study1.txt",
+   "identity_check": "byte copy of the source"
+  },
+  {
+   "id": "D32_dictionary_study2.csv",
+   "source": "Study 2/study2_datadict_ltran.xlsx",
+   "role": "dictionary filed with Study 2",
+   "sha256": "dc592c5e2332382ecb17391f1a627f64802d0403790a7cd6bc50e3cfe08d4c34",
+   "text_form": null,
+   "identity_check": "byte copy of the source"
+  },
+  {
+   "id": "D42_columns_study2.txt",
+   "source": "Study 2/study2_data_ltran.csv",
+   "role": "column names only, Study 2",
+   "sha256": "2b8b4a1df29c733eef3474881d152fa7688ec34c6b41d2215d1e30082d9285a5",
+   "text_form": "D42_columns_study2.txt",
+   "identity_check": "byte copy of the source"
+  },
+  {
+   "id": "D33_dictionary_study3.csv",
+   "source": "Study 3/study3_datadict_ltran.xlsx",
+   "role": "dictionary filed with Study 3",
+   "sha256": "91d1062646e1a0ee12bcbd6fa3cbd1d2fcfecea6048095eb3f1d0f1796b516eb",
+   "text_form": null,
+   "identity_check": "byte copy of the source"
+  },
+  {
+   "id": "D43_columns_study3.txt",
+   "source": "Study 3/study3_data_ltran.csv",
+   "role": "column names only, Study 3",
+   "sha256": "896b618498bf908b869272937eed75073943376bbb5d852c3adb55f4344ba891",
+   "text_form": "D43_columns_study3.txt",
+   "identity_check": "byte copy of the source"
+  },
+  {
+   "id": "D34_dictionary_filed_in_study4_folder.csv",
+   "source": "Study 4/studyS4_datadict_ltran.xlsx",
+   "role": "dictionary filed with Study 4",
+   "sha256": "53a1691d7df57ef13c3b2027a9c1aa8adc1e844309f60d7732d0043e056b61d5",
+   "text_form": null,
+   "identity_check": "byte copy of the source"
+  },
+  {
+   "id": "D44_columns_study4.txt",
+   "source": "Study 4/study4_data_ltran.csv",
+   "role": "column names only, Study 4",
+   "sha256": "ac5ad18d54abd147437fed356ba322823b9aef369d23dbf5bd1e37be41cf7b6b",
+   "text_form": "D44_columns_study4.txt",
+   "identity_check": "byte copy of the source"
+  }
+ ],
+ "all_files_sha256": {
+  "D01_article.pdf": "c1946109453c4aa028fe29aa3061dd55d4a5f30e1b6e42d8320816cdc3a4863f",
+  "D01_article.txt": "c7b979a2e54c22568923b2e3f4ac6a4e85fbe46f193e9197253624cf0e9753bf",
+  "D02_appendixA_materials.pdf": "c2f34a5704bc5b6247d826a3121f135beded3eaac007dd290d98c5d78973ed6d",
+  "D02_appendixA_materials.txt": "1900ca5cf1bb10381ff923ace7066ac3fae9f0ff592e5c6adb1e02660c55617c",
+  "D03_online_appendix.pdf": "97c87fd3845cc8f328f76ca0846c7ccc8182eddd0991faf58f38eb2cf8676b1f",
+  "D03_online_appendix.txt": "579eb51a49941b5d08571e239d52436846ea000656b54a1bd4b28194d406ae40",
+  "D11_prereg_study1.pdf": "dfabaf1d6c997316b594d23719251d2c27f05994605ad100563f23f50215680d",
+  "D11_prereg_study1.txt": "946936768a369d54ab26393c109da6fc2adf3b3d1895d9a9950e7237edd8962e",
+  "D12_prereg_study2.pdf": "dfd91bf8a28f039c9d37f773d64751e8d8edd571be1b98ef813ad891fdf3e9eb",
+  "D12_prereg_study2.txt": "df3e5ebcd9c8c50d7d24dc17433888fbd9ad82adeb88c27f660c618683d9e92a",
+  "D13_prereg_study3.pdf": "08469ec80eba354b3b34ba4add41659d29b20de55d6d653789ab00d0f81a6e8c",
+  "D13_prereg_study3.txt": "a4c474da10b052d17d29488522736517a2cceb5b2defd6ebd7b55dbfaa473742",
+  "D14_prereg_study4.pdf": "3984c33f280fb0f89bec73caee44a2f3642c9f96ac12a5805a9ce5e11081524c",
+  "D14_prereg_study4.txt": "5725d4bc443a726b773a7dd621e0884d00a5db2ce39614f18a4b6539399e5bc7",
+  "D22_deviation_report_study2.docx": "d23660e6a20cbc6a7a5fb28d5ebcee26930c27eb4471d588061629a868c88ba2",
+  "D22_deviation_report_study2.txt": "635651bc53d360c75a2dc844ba6e62f6f8a100712036b703cdf358dcb087073a",
+  "D31_dictionary_study1.csv": "38182cfc587744a72745ce31e080515eba0c98eb959e2e26438058b97680d7a0",
+  "D32_dictionary_study2.csv": "dc592c5e2332382ecb17391f1a627f64802d0403790a7cd6bc50e3cfe08d4c34",
+  "D33_dictionary_study3.csv": "91d1062646e1a0ee12bcbd6fa3cbd1d2fcfecea6048095eb3f1d0f1796b516eb",
+  "D34_dictionary_filed_in_study4_folder.csv": "53a1691d7df57ef13c3b2027a9c1aa8adc1e844309f60d7732d0043e056b61d5",
+  "D41_columns_study1.txt": "53e34a1920d6750c537411999ab53512ecf3715e69bd669425020c57d4a68b06",
+  "D42_columns_study2.txt": "2b8b4a1df29c733eef3474881d152fa7688ec34c6b41d2215d1e30082d9285a5",
+  "D43_columns_study3.txt": "896b618498bf908b869272937eed75073943376bbb5d852c3adb55f4344ba891",
+  "D44_columns_study4.txt": "ac5ad18d54abd147437fed356ba322823b9aef369d23dbf5bd1e37be41cf7b6b"
+ },
+ "known_gaps": [
+  "No dictionary for the Study 4 data file: the file in the Study 4 folder is byte-identical to the Study S4 dictionary and shares no variable names with the Study 4 columns.",
+  "Three Study 3 data columns are absent from its dictionary."
+ ],
+ "dictionary_summary_stat_scan": {
+  "D31_dictionary_study1.csv": {
+   "rows": 58,
+   "summary_stat_pattern_hits": []
+  },
+  "D32_dictionary_study2.csv": {
+   "rows": 52,
+   "summary_stat_pattern_hits": []
+  },
+  "D33_dictionary_study3.csv": {
+   "rows": 34,
+   "summary_stat_pattern_hits": []
+  },
+  "D34_dictionary_filed_in_study4_folder.csv": {
+   "rows": 39,
+   "summary_stat_pattern_hits": []
+  }
+ },
+ "note": "Text forms are mechanical conversions; PDF page numbers come from the PDFs."
+}

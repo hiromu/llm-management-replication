@@ -1,0 +1,183 @@
+{
+  "claim_tier": {
+    "pairs": 27,
+    "agree": 21,
+    "raw_agreement": 0.7777777777777778,
+    "gwet_ac1": 0.7287568020092089,
+    "unmatched_A": [
+      "C07",
+      "C08",
+      "C23",
+      "C29"
+    ],
+    "unmatched_B": [
+      "C15",
+      "C20"
+    ],
+    "disagreements": [
+      [
+        "C09",
+        "C04",
+        "robustness",
+        "identification_inference_diagnostic"
+      ],
+      [
+        "C11",
+        "C18",
+        "descriptive",
+        "identification_inference_diagnostic"
+      ],
+      [
+        "C12",
+        "C11",
+        "robustness",
+        "focal"
+      ],
+      [
+        "C19",
+        "C10",
+        "robustness",
+        "identification_inference_diagnostic"
+      ],
+      [
+        "C26",
+        "C22",
+        "robustness",
+        "nuisance_control"
+      ],
+      [
+        "C28",
+        "C21",
+        "robustness",
+        "descriptive"
+      ]
+    ]
+  },
+  "focal_binary": {
+    "pairs": 27,
+    "agree": 26,
+    "raw_agreement": 0.9629629629629629,
+    "gwet_ac1": 0.9451776649746192
+  },
+  "claim_tier_unique_A_claims": {
+    "pairs": 26,
+    "agree": 20,
+    "raw_agreement": 0.7692307692307693,
+    "gwet_ac1": 0.7173913043478263
+  },
+  "level_labels": {
+    "pairs": 11,
+    "agree": 10,
+    "raw_agreement": 0.9090909090909091,
+    "gwet_ac1": 0.8880407124681934,
+    "disagreements": [
+      [
+        "A11L1",
+        "A14L1",
+        "non_equivalent",
+        "uncertain"
+      ]
+    ]
+  },
+  "axes": {
+    "A_axes": 13,
+    "B_axes": 17,
+    "matched_axis_pairs": 7,
+    "origin_agree": 5,
+    "origin_pairs": 7,
+    "origins": {
+      "A03/A08": [
+        [
+          "A03L0"
+        ],
+        [
+          "A08L0"
+        ],
+        false
+      ],
+      "A04/A02": [
+        [
+          "A04L0"
+        ],
+        [
+          "A02L0"
+        ],
+        true
+      ],
+      "A05/A03": [
+        [
+          "A05L0"
+        ],
+        [
+          "A03L0"
+        ],
+        true
+      ],
+      "A06/A09": [
+        [
+          "A06L0"
+        ],
+        [
+          "A09L0"
+        ],
+        false
+      ],
+      "A07/A15": [
+        [
+          "A07L0"
+        ],
+        [
+          "A15L0"
+        ],
+        true
+      ],
+      "A08/A10": [
+        [
+          "A08L0"
+        ],
+        [
+          "A10L0"
+        ],
+        true
+      ],
+      "A11/A14": [
+        [
+          "A11L0"
+        ],
+        [
+          "A14L0"
+        ],
+        true
+      ]
+    },
+    "unmatched_A_axes": [
+      "A01",
+      "A02",
+      "A09",
+      "A10",
+      "A12",
+      "A13"
+    ],
+    "unmatched_B_axes": [
+      "A01",
+      "A04",
+      "A05",
+      "A06",
+      "A07",
+      "A11",
+      "A12",
+      "A13",
+      "A16",
+      "A17"
+    ]
+  },
+  "transcription_tables_4_6": {
+    "A_entries": 248,
+    "B_entries": 248,
+    "matched": 248,
+    "exact_agree": 248,
+    "disagreements": [],
+    "only_A": [],
+    "only_B": []
+  }
+}

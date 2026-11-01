@@ -1,0 +1,374 @@
+Python Library Documentation: class ConditionalLogit in module statsmodels.discrete.conditional_models
+
+class ConditionalLogit(_ConditionalModel)
+ |  ConditionalLogit(endog, exog, missing='none', **kwargs)
+ |
+ |  Fit a conditional logistic regression model to grouped data.
+ |
+ |  Every group is implicitly given an intercept, but the model is fit using
+ |  a conditional likelihood in which the intercepts are not present.  Thus,
+ |  intercept estimates are not given, but the other parameter estimates can
+ |  be interpreted as being adjusted for any group-level confounders.
+ |
+ |  Parameters
+ |  ----------
+ |  endog : array_like
+ |      The response variable, must contain only 0 and 1.
+ |  exog : array_like
+ |      The array of covariates.  Do not include an intercept
+ |      in this array.
+ |  groups : array_like
+ |      Codes defining the groups. This is a required keyword parameter.
+ |
+ |  Method resolution order:
+ |      ConditionalLogit
+ |      _ConditionalModel
+ |      statsmodels.base.model.LikelihoodModel
+ |      statsmodels.base.model.Model
+ |      builtins.object
+ |
+ |  Methods defined here:
+ |
+ |  __init__(self, endog, exog, missing='none', **kwargs)
+ |      Initialize self.  See help(type(self)) for accurate signature.
+ |
+ |  loglike(self, params)
+ |      Log-likelihood of model.
+ |
+ |      Parameters
+ |      ----------
+ |      params : ndarray
+ |          The model parameters used to compute the log-likelihood.
+ |
+ |      Notes
+ |      -----
+ |      Must be overridden by subclasses.
+ |
+ |  loglike_grp(self, grp, params)
+ |
+ |  score(self, params)
+ |      Score vector of model.
+ |
+ |      The gradient of logL with respect to each parameter.
+ |
+ |      Parameters
+ |      ----------
+ |      params : ndarray
+ |          The parameters to use when evaluating the Hessian.
+ |
+ |      Returns
+ |      -------
+ |      ndarray
+ |          The score vector evaluated at the parameters.
+ |
+ |  score_grp(self, grp, params)
+ |
+ |  ----------------------------------------------------------------------
+ |  Methods inherited from _ConditionalModel:
+ |
+ |  fit(
+ |      self,
+ |      start_params=None,
+ |      method='BFGS',
+ |      maxiter=100,
+ |      full_output=True,
+ |      disp=False,
+ |      fargs=(),
+ |      callback=None,
+ |      retall=False,
+ |      skip_hessian=False,
+ |      **kwargs
+ |  )
+ |      Fit method for likelihood based models
+ |
+ |      Parameters
+ |      ----------
+ |      start_params : array_like, optional
+ |          Initial guess of the solution for the loglikelihood maximization.
+ |          The default is an array of zeros.
+ |      method : str, optional
+ |          The `method` determines which solver from `scipy.optimize`
+ |          is used, and it can be chosen from among the following strings:
+ |
+ |          - 'newton' for Newton-Raphson, 'nm' for Nelder-Mead
+ |          - 'bfgs' for Broyden-Fletcher-Goldfarb-Shanno (BFGS)
+ |          - 'lbfgs' for limited-memory BFGS with optional box constraints
+ |          - 'powell' for modified Powell's method
+ |          - 'cg' for conjugate gradient
+ |          - 'ncg' for Newton-conjugate gradient
+ |          - 'basinhopping' for global basin-hopping solver
+ |          - 'minimize' for generic wrapper of scipy minimize (BFGS by default)
+ |
+ |          The explicit arguments in `fit` are passed to the solver,
+ |          with the exception of the basin-hopping solver. Each
+ |          solver has several optional arguments that are not the same across
+ |          solvers. See the notes section below (or scipy.optimize) for the
+ |          available arguments and for the list of explicit arguments that the
+ |          basin-hopping solver supports.
+ |      maxiter : int, optional
+ |          The maximum number of iterations to perform.
+ |      full_output : bool, optional
+ |          Set to True to have all available output in the Results object's
+ |          mle_retvals attribute. The output is dependent on the solver.
+ |          See LikelihoodModelResults notes section for more information.
+ |      disp : bool, optional
+ |          Set to True to print convergence messages.
+ |      fargs : tuple, optional
+ |          Extra arguments passed to the likelihood function, i.e.,
+ |          loglike(x,*args)
+ |      callback : callable callback(xk), optional
+ |          Called after each iteration, as callback(xk), where xk is the
+ |          current parameter vector.
+ |      retall : bool, optional
+ |          Set to True to return list of solutions at each iteration.
+ |          Available in Results object's mle_retvals attribute.
+ |      skip_hessian : bool, optional
+ |          If False (default), then the negative inverse hessian is calculated
+ |          after the optimization. If True, then the hessian will not be
+ |          calculated. However, it will be available in methods that use the
+ |          hessian in the optimization (currently only with `"newton"`).
+ |      kwargs : keywords
+ |          All kwargs are passed to the chosen solver with one exception. The
+ |          following keyword controls what happens after the fit::
+ |
+ |              warn_convergence : bool, optional
+ |                  If True, checks the model for the converged flag. If the
+ |                  converged flag is False, a ConvergenceWarning is issued.
+ |
+ |      Notes
+ |      -----
+ |      The 'basinhopping' solver ignores `maxiter`, `retall`, `full_output`
+ |      explicit arguments.
+ |
+ |      Optional arguments for solvers (see returned Results.mle_settings)::
+ |
+ |          'newton'
+ |              tol : float
+ |                  Relative error in params acceptable for convergence.
+ |          'nm' -- Nelder Mead
+ |              xtol : float
+ |                  Relative error in params acceptable for convergence
+ |              ftol : float
+ |                  Relative error in loglike(params) acceptable for
+ |                  convergence
+ |              maxfun : int
+ |                  Maximum number of function evaluations to make.
+ |          'bfgs'
+ |              gtol : float
+ |                  Stop when norm of gradient is less than gtol.
+ |              norm : float
+ |                  Order of norm (np.inf is max, -np.inf is min)
+ |              epsilon
+ |                  If fprime is approximated, use this value for the step
+ |                  size. Only relevant if LikelihoodModel.score is None.
+ |          'lbfgs'
+ |              m : int
+ |                  This many terms are used for the Hessian approximation.
+ |              factr : float
+ |                  A stop condition that is a variant of relative error.
+ |              pgtol : float
+ |                  A stop condition that uses the projected gradient.
+ |              epsilon
+ |                  If fprime is approximated, use this value for the step
+ |                  size. Only relevant if LikelihoodModel.score is None.
+ |              maxfun : int
+ |                  Maximum number of function evaluations to make.
+ |              bounds : sequence
+ |                  (min, max) pairs for each element in x,
+ |                  defining the bounds on that parameter.
+ |                  Use None for one of min or max when there is no bound
+ |                  in that direction.
+ |          'cg'
+ |              gtol : float
+ |                  Stop when norm of gradient is less than gtol.
+ |              norm : float
+ |                  Order of norm (np.inf is max, -np.inf is min)
+ |              epsilon : float
+ |                  If fprime is approximated, use this value for the step
+ |                  size. Can be scalar or vector.  Only relevant if
+ |                  Likelihoodmodel.score is None.
+ |          'ncg'
+ |              fhess_p : callable f'(x,*args)
+ |                  Function which computes the Hessian of f times an arbitrary
+ |                  vector, p.  Should only be supplied if
+ |                  LikelihoodModel.hessian is None.
+ |              avextol : float
+ |                  Stop when the average relative error in the minimizer
+ |                  falls below this amount.
+ |              epsilon : float or ndarray
+ |                  If fhess is approximated, use this value for the step size.
+ |                  Only relevant if Likelihoodmodel.hessian is None.
+ |          'powell'
+ |              xtol : float
+ |                  Line-search error tolerance
+ |              ftol : float
+ |                  Relative error in loglike(params) for acceptable for
+ |                  convergence.
+ |              maxfun : int
+ |                  Maximum number of function evaluations to make.
+ |              start_direc : ndarray
+ |                  Initial direction set.
+ |          'basinhopping'
+ |              niter : int
+ |                  The number of basin hopping iterations.
+ |              niter_success : int
+ |                  Stop the run if the global minimum candidate remains the
+ |                  same for this number of iterations.
+ |              T : float
+ |                  The "temperature" parameter for the accept or reject
+ |                  criterion. Higher "temperatures" mean that larger jumps
+ |                  in function value will be accepted. For best results
+ |                  `T` should be comparable to the separation (in function
+ |                  value) between local minima.
+ |              stepsize : float
+ |                  Initial step size for use in the random displacement.
+ |              interval : int
+ |                  The interval for how often to update the `stepsize`.
+ |              minimizer : dict
+ |                  Extra keyword arguments to be passed to the minimizer
+ |                  `scipy.optimize.minimize()`, for example 'method' - the
+ |                  minimization method (e.g. 'L-BFGS-B'), or 'tol' - the
+ |                  tolerance for termination. Other arguments are mapped from
+ |                  explicit argument of `fit`:
+ |                    - `args` <- `fargs`
+ |                    - `jac` <- `score`
+ |                    - `hess` <- `hess`
+ |          'minimize'
+ |              min_method : str, optional
+ |                  Name of minimization method to use.
+ |                  Any method specific arguments can be passed directly.
+ |                  For a list of methods and their arguments, see
+ |                  documentation of `scipy.optimize.minimize`.
+ |                  If no method is specified, then BFGS is used.
+ |
+ |  fit_regularized(
+ |      self,
+ |      method='elastic_net',
+ |      alpha=0.0,
+ |      start_params=None,
+ |      refit=False,
+ |      **kwargs
+ |  )
+ |      Return a regularized fit to a linear regression model.
+ |
+ |      Parameters
+ |      ----------
+ |      method : {'elastic_net'}
+ |          Only the `elastic_net` approach is currently implemented.
+ |      alpha : scalar or array_like
+ |          The penalty weight.  If a scalar, the same penalty weight
+ |          applies to all variables in the model.  If a vector, it
+ |          must have the same length as `params`, and contains a
+ |          penalty weight for each coefficient.
+ |      start_params : array_like
+ |          Starting values for `params`.
+ |      refit : bool
+ |          If True, the model is refit using only the variables that
+ |          have non-zero coefficients in the regularized fit.  The
+ |          refitted model is not regularized.
+ |      **kwargs
+ |          Additional keyword argument that are used when fitting the model.
+ |
+ |      Returns
+ |      -------
+ |      Results
+ |          A results instance.
+ |
+ |  hessian(self, params)
+ |      The Hessian matrix of the model.
+ |
+ |      Parameters
+ |      ----------
+ |      params : ndarray
+ |          The parameters to use when evaluating the Hessian.
+ |
+ |      Returns
+ |      -------
+ |      ndarray
+ |          The hessian evaluated at the parameters.
+ |
+ |  ----------------------------------------------------------------------
+ |  Class methods inherited from _ConditionalModel:
+ |
+ |  from_formula(formula, data, subset=None, drop_cols=None, *args, **kwargs)
+ |      Create a Model from a formula and dataframe.
+ |
+ |      Parameters
+ |      ----------
+ |      formula : str or generic Formula object
+ |          The formula specifying the model.
+ |      data : array_like
+ |          The data for the model. See Notes.
+ |      subset : array_like
+ |          An array-like object of booleans, integers, or index values that
+ |          indicate the subset of df to use in the model. Assumes df is a
+ |          `pandas.DataFrame`.
+ |      drop_cols : array_like
+ |          Columns to drop from the design matrix.  Cannot be used to
+ |          drop terms involving categoricals.
+ |      *args
+ |          Additional positional argument that are passed to the model.
+ |      **kwargs
+ |          These are passed to the model with one exception. The
+ |          ``eval_env`` keyword is passed to patsy. It can be either a
+ |          :class:`patsy:patsy.EvalEnvironment` object or an integer
+ |          indicating the depth of the namespace to use. For example, the
+ |          default ``eval_env=0`` uses the calling namespace. If you wish
+ |          to use a "clean" environment set ``eval_env=-1``.
+ |
+ |      Returns
+ |      -------
+ |      model
+ |          The model instance.
+ |
+ |      Notes
+ |      -----
+ |      data must define __getitem__ with the keys in the formula terms
+ |      args and kwargs are passed on to the model instantiation. E.g.,
+ |      a numpy structured or rec array, a dictionary, or a pandas DataFrame.
+ |
+ |  ----------------------------------------------------------------------
+ |  Methods inherited from statsmodels.base.model.LikelihoodModel:
+ |
+ |  information(self, params)
+ |      Fisher information matrix of model.
+ |
+ |      Returns -1 * Hessian of the log-likelihood evaluated at params.
+ |
+ |      Parameters
+ |      ----------
+ |      params : ndarray
+ |          The model parameters.
+ |
+ |  initialize(self)
+ |      Initialize (possibly re-initialize) a Model instance.
+ |
+ |      For example, if the the design matrix of a linear model changes then
+ |      initialized can be used to recompute values using the modified design
+ |      matrix.
+ |
+ |  ----------------------------------------------------------------------
+ |  Methods inherited from statsmodels.base.model.Model:
+ |
+ |  predict(self, params, exog=None, *args, **kwargs)
+ |      After a model has been fit predict returns the fitted values.
+ |
+ |      This is a placeholder intended to be overwritten by individual models.
+ |
+ |  ----------------------------------------------------------------------
+ |  Readonly properties inherited from statsmodels.base.model.Model:
+ |
+ |  endog_names
+ |      Names of endogenous variables.
+ |
+ |  exog_names
+ |      Names of exogenous variables.
+ |
+ |  ----------------------------------------------------------------------
+ |  Data descriptors inherited from statsmodels.base.model.Model:
+ |
+ |  __dict__
+ |      dictionary for instance variables
+ |
+ |  __weakref__
+ |      list of weak references to the object

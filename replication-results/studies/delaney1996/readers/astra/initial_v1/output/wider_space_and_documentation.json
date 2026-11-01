@@ -1,0 +1,134 @@
+{
+  "choices": [
+    {
+      "choice": "Perceptual multi-item outcomes to include nonprofit organizations without comparable financial information.",
+      "commonness": "common",
+      "justified": true,
+      "locator": {
+        "doc_id": "D1",
+        "pdf_page": 7,
+        "where": "Dependent variables"
+      }
+    },
+    {
+      "choice": "Multiple linear regression with organizational controls and industry indicators.",
+      "commonness": "default",
+      "justified": true,
+      "locator": {
+        "doc_id": "D1",
+        "pdf_page": 11,
+        "where": "Regression choice and controls; p12"
+      }
+    },
+    {
+      "choice": "Separate single-practice regressions followed by joint-practice equations.",
+      "commonness": "common",
+      "justified": true,
+      "locator": {
+        "doc_id": "D1",
+        "pdf_page": 12,
+        "where": "Results; p15"
+      }
+    },
+    {
+      "choice": "Internal labor market and vertical hierarchy alternated as advancement/security indicators.",
+      "commonness": "common",
+      "justified": true,
+      "locator": {
+        "doc_id": "D1",
+        "pdf_page": 15,
+        "where": "Results first paragraph"
+      }
+    },
+    {
+      "choice": "Standardized mixed-type training index; table additionally marks all components logged.",
+      "commonness": "rare",
+      "justified": false,
+      "locator": {
+        "doc_id": "D1",
+        "pdf_page": 7,
+        "where": "Training and Table 1 footnote p10"
+      }
+    },
+    {
+      "choice": "One-tailed tests, including exploratory interaction evidence and marks on negative nuisance slopes.",
+      "commonness": "common",
+      "justified": false,
+      "locator": {
+        "doc_id": "D1",
+        "pdf_page": 15,
+        "where": "Table 3 significance footnotes"
+      }
+    },
+    {
+      "choice": "Above-median practice count as a complementarity proxy and exploratory interaction subsets.",
+      "commonness": "rare",
+      "justified": true,
+      "locator": {
+        "doc_id": "D1",
+        "pdf_page": 11,
+        "where": "Measures of complementarity; p17"
+      }
+    },
+    {
+      "choice": "Extensive interaction experimentation with selected examples reported; full search and multiplicity handling absent.",
+      "commonness": "common",
+      "justified": false,
+      "locator": {
+        "doc_id": "D1",
+        "pdf_page": 17,
+        "where": "Interaction results paragraph"
+      }
+    },
+    {
+      "choice": "Avoid factor/cluster reduction because of mixture of item types and nonnormality.",
+      "commonness": "common",
+      "justified": true,
+      "locator": {
+        "doc_id": "D1",
+        "pdf_page": 11,
+        "where": "Regression justification"
+      }
+    },
+    {
+      "choice": "Use union-pressure perceptions in place of union density and rely on controls for omitted organizational factors.",
+      "commonness": "common",
+      "justified": true,
+      "locator": {
+        "doc_id": "D1",
+        "pdf_page": 12,
+        "where": "Control-variable rationale"
+      }
+    }
+  ],
+  "structural_counts": {
+    "n_models_reported": 22,
+    "n_outcomes": 2,
+    "n_hrm_measures": 7,
+    "n_controls": 42,
+    "locator": {
+      "doc_id": "D1",
+      "pdf_page": 15,
+      "where": "Table 3 footnotes and Table 4 p17; control count p12"
+    },
+    "notes": "Ten labeled table columns represent 22 actual fitted equations: seven each in columns 1 and 6, plus eight other equations. Additional narratively described count, indicator, spline, interaction-subset and subgroup regressions are unenumerated, so total including unshown analyses is unknown. Controls count is 9 nonindustry slopes +33 industry indicators for organizational models (42); market models omit nonprofit (41). Intercepts excluded; industry is one construct represented by 33 indicators, not 33 distinct conceptual controls."
+  },
+  "unusualness_rating": "moderate",
+  "rationale": "Conventional association models and substantive controls coexist with mixed-item indexes, unexplained source recodings, threshold complementarity and exploratory model selection. Commonness is a qualitative reader assessment within this supplied record, not an external prevalence survey and not a replication verdict. D1 pp7–12,15,17.",
+  "documentation_scores": {
+    "specificity": 3,
+    "precision": 2,
+    "exhaustiveness": 2,
+    "rationale": "Question wording, HRM families and model inclusion patterns are fairly specific. Source keys, routing, missingness, sample derivation, scale aggregation, industry crosswalk, estimator/software and covariance are absent; some coding statements conflict. Exploratory/subgroup results are unshown. D1 pp7–12,15,17–19.",
+    "locator": {
+      "doc_id": "D1",
+      "pdf_page": 11,
+      "where": "Methods; tables and unshown analyses pp15,17–18"
+    }
+  },
+  "locator": {
+    "doc_id": "D1",
+    "pdf_page": 17,
+    "where": "Exploratory analysis description"
+  }
+}

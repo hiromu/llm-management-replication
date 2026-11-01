@@ -1,0 +1,626 @@
+{
+  "per_table_or_figure": {
+    "Table 1": {
+      "specificity": {
+        "score": 3,
+        "reason": "Rows, contrasts and change endpoints are explicit, but activity averaging window, test unit, variance assumption and p routine are not. Count header is internally inconsistent and ACS endpoints conflict with D03. D01 PDF pp. 6–8, 12; D03/D41."
+      },
+      "precision": {
+        "score": 2,
+        "reason": "Rows, contrasts and change endpoints are explicit, but activity averaging window, test unit, variance assumption and p routine are not. Count header is internally inconsistent and ACS endpoints conflict with D03. D01 PDF pp. 6–8, 12; D03/D41."
+      },
+      "exhaustiveness": {
+        "score": 2,
+        "reason": "Rows, contrasts and change endpoints are explicit, but activity averaging window, test unit, variance assumption and p routine are not. Count header is internally inconsistent and ACS endpoints conflict with D03. D01 PDF pp. 6–8, 12; D03/D41."
+      }
+    },
+    "Table 2": {
+      "specificity": {
+        "score": 4,
+        "reason": "Statistics and balanced-panel period are explicit. Detailed outcome formulas, zero filling and transformations of controls are absent; prose N conflicts with note. D01 PDF pp. 10–12, 25; D51."
+      },
+      "precision": {
+        "score": 3,
+        "reason": "Statistics and balanced-panel period are explicit. Detailed outcome formulas, zero filling and transformations of controls are absent; prose N conflicts with note. D01 PDF pp. 10–12, 25; D51."
+      },
+      "exhaustiveness": {
+        "score": 3,
+        "reason": "Statistics and balanced-panel period are explicit. Detailed outcome formulas, zero filling and transformations of controls are absent; prose N conflicts with note. D01 PDF pp. 10–12, 25; D51."
+      }
+    },
+    "Table 3": {
+      "specificity": {
+        "score": 4,
+        "reason": "DD equation, outcome columns, control toggles and two FE sets explicit. D02 supplies ten control labels, but mappings, transformations and covariance method are missing; zero-log wording ambiguous. D01 PDF pp. 12–14; D02 PDF p. 11; D41/D51."
+      },
+      "precision": {
+        "score": 3,
+        "reason": "DD equation, outcome columns, control toggles and two FE sets explicit. D02 supplies ten control labels, but mappings, transformations and covariance method are missing; zero-log wording ambiguous. D01 PDF pp. 12–14; D02 PDF p. 11; D41/D51."
+      },
+      "exhaustiveness": {
+        "score": 3,
+        "reason": "DD equation, outcome columns, control toggles and two FE sets explicit. D02 supplies ten control labels, but mappings, transformations and covariance method are missing; zero-log wording ambiguous. D01 PDF pp. 12–14; D02 PDF p. 11; D41/D51."
+      }
+    },
+    "Table 4": {
+      "specificity": {
+        "score": 4,
+        "reason": "Cross-sectional equation, periods, covariate-FE dimensions and robust SE stated. Contributor aggregation, ACS reference year, quantile construction, HC variant and control transforms unresolved. D01 PDF pp. 10, 15; D02 PDF p. 12."
+      },
+      "precision": {
+        "score": 3,
+        "reason": "Cross-sectional equation, periods, covariate-FE dimensions and robust SE stated. Contributor aggregation, ACS reference year, quantile construction, HC variant and control transforms unresolved. D01 PDF pp. 10, 15; D02 PDF p. 12."
+      },
+      "exhaustiveness": {
+        "score": 3,
+        "reason": "Cross-sectional equation, periods, covariate-FE dimensions and robust SE stated. Contributor aggregation, ACS reference year, quantile construction, HC variant and control transforms unresolved. D01 PDF pp. 10, 15; D02 PDF p. 12."
+      }
+    },
+    "Table 5": {
+      "specificity": {
+        "score": 3,
+        "reason": "Robustness designs are described, but sample counts conflict across text/panels, randomization algorithm and seed are absent, controls only inherited by reference, and group-time effects are also called trends. D01 PDF pp. 8–9, 16–17."
+      },
+      "precision": {
+        "score": 2,
+        "reason": "Robustness designs are described, but sample counts conflict across text/panels, randomization algorithm and seed are absent, controls only inherited by reference, and group-time effects are also called trends. D01 PDF pp. 8–9, 16–17."
+      },
+      "exhaustiveness": {
+        "score": 2,
+        "reason": "Robustness designs are described, but sample counts conflict across text/panels, randomization algorithm and seed are absent, controls only inherited by reference, and group-time effects are also called trends. D01 PDF pp. 8–9, 16–17."
+      }
+    },
+    "Table 6": {
+      "specificity": {
+        "score": 3,
+        "reason": "Pair-level outcome and distance control explicit in note; earlier county-average definition conflicts. Collection-to-estimation attrition, route units, zero-log handling and SE clustering unspecified. D01 PDF pp. 10–11, 18, 25."
+      },
+      "precision": {
+        "score": 2,
+        "reason": "Pair-level outcome and distance control explicit in note; earlier county-average definition conflicts. Collection-to-estimation attrition, route units, zero-log handling and SE clustering unspecified. D01 PDF pp. 10–11, 18, 25."
+      },
+      "exhaustiveness": {
+        "score": 2,
+        "reason": "Pair-level outcome and distance control explicit in note; earlier county-average definition conflicts. Collection-to-estimation attrition, route units, zero-log handling and SE clustering unspecified. D01 PDF pp. 10–11, 18, 25."
+      }
+    },
+    "Table 7": {
+      "specificity": {
+        "score": 3,
+        "reason": "Four predictions, outcome groups and baseline model specified; most variable formulas lack unique header mappings, ownership timing and spatial rules are incomplete, and distant definition changes. D01 PDF pp. 10, 19, 22–23, 25; D51."
+      },
+      "precision": {
+        "score": 2,
+        "reason": "Four predictions, outcome groups and baseline model specified; most variable formulas lack unique header mappings, ownership timing and spatial rules are incomplete, and distant definition changes. D01 PDF pp. 10, 19, 22–23, 25; D51."
+      },
+      "exhaustiveness": {
+        "score": 2,
+        "reason": "Four predictions, outcome groups and baseline model specified; most variable formulas lack unique header mappings, ownership timing and spatial rules are incomplete, and distant definition changes. D01 PDF pp. 10, 19, 22–23, 25; D51."
+      }
+    },
+    "Figure 1": {
+      "specificity": {
+        "score": 3,
+        "reason": "Treatment categories and example locations described and visible; exact polygons, projection, imagery snapshots and spatial extent rules absent. D01 PDF pp. 6–7; D44/D60."
+      },
+      "precision": {
+        "score": 3,
+        "reason": "Treatment categories and example locations described and visible; exact polygons, projection, imagery snapshots and spatial extent rules absent. D01 PDF pp. 6–7; D44/D60."
+      },
+      "exhaustiveness": {
+        "score": 2,
+        "reason": "Treatment categories and example locations described and visible; exact polygons, projection, imagery snapshots and spatial extent rules absent. D01 PDF pp. 6–7; D44/D60."
+      }
+    },
+    "Figure 2": {
+      "specificity": {
+        "score": 3,
+        "reason": "Verbal sample rules and legend clear. Adjacency convention, schedule encoding and count/label contradictions unresolved. D01 PDF pp. 8–9, 17; D43/D54/D60."
+      },
+      "precision": {
+        "score": 2,
+        "reason": "Verbal sample rules and legend clear. Adjacency convention, schedule encoding and count/label contradictions unresolved. D01 PDF pp. 8–9, 17; D43/D54/D60."
+      },
+      "exhaustiveness": {
+        "score": 2,
+        "reason": "Verbal sample rules and legend clear. Adjacency convention, schedule encoding and count/label contradictions unresolved. D01 PDF pp. 8–9, 17; D43/D54/D60."
+      }
+    },
+    "Figure 3": {
+      "specificity": {
+        "score": 3,
+        "reason": "Outcomes, two transforms and group lines described. Notes refer to quarters but plot has yearly markers, and log/mean/cumulation order unspecified. D01 PDF pp. 11–13."
+      },
+      "precision": {
+        "score": 2,
+        "reason": "Outcomes, two transforms and group lines described. Notes refer to quarters but plot has yearly markers, and log/mean/cumulation order unspecified. D01 PDF pp. 11–13."
+      },
+      "exhaustiveness": {
+        "score": 2,
+        "reason": "Outcomes, two transforms and group lines described. Notes refer to quarters but plot has yearly markers, and log/mean/cumulation order unspecified. D01 PDF pp. 11–13."
+      }
+    },
+    "Figure 4": {
+      "specificity": {
+        "score": 4,
+        "reason": "Event-study equation, county-year unit, county-clustered SE and confidence level stated. Reference year inferred visually, annual aggregation unresolved, text also says quarters, and early plotted intervals qualify prose. D01 PDF pp. 14–15."
+      },
+      "precision": {
+        "score": 3,
+        "reason": "Event-study equation, county-year unit, county-clustered SE and confidence level stated. Reference year inferred visually, annual aggregation unresolved, text also says quarters, and early plotted intervals qualify prose. D01 PDF pp. 14–15."
+      },
+      "exhaustiveness": {
+        "score": 3,
+        "reason": "Event-study equation, county-year unit, county-clustered SE and confidence level stated. Reference year inferred visually, annual aggregation unresolved, text also says quarters, and early plotted intervals qualify prose. D01 PDF pp. 14–15."
+      }
+    },
+    "Figure 5": {
+      "specificity": {
+        "score": 4,
+        "reason": "Separate annual cross-sections, controls, FE and robust SE stated. Quantile and ACS implementation still missing; terminal plot estimate differs from table counterpart. D01 PDF pp. 15–16; D02 PDF p. 12."
+      },
+      "precision": {
+        "score": 3,
+        "reason": "Separate annual cross-sections, controls, FE and robust SE stated. Quantile and ACS implementation still missing; terminal plot estimate differs from table counterpart. D01 PDF pp. 15–16; D02 PDF p. 12."
+      },
+      "exhaustiveness": {
+        "score": 3,
+        "reason": "Separate annual cross-sections, controls, FE and robust SE stated. Quantile and ACS implementation still missing; terminal plot estimate differs from table counterpart. D01 PDF pp. 15–16; D02 PDF p. 12."
+      }
+    },
+    "Figure 6": {
+      "specificity": {
+        "score": 2,
+        "reason": "Grouping dimensions and percentile labels clear. Model family, FE/controls, covariance, bar level, density year and lifetime cohort construction unspecified; text/plot significance descriptions differ. D01 PDF pp. 19–20, 23–24; D51."
+      },
+      "precision": {
+        "score": 2,
+        "reason": "Grouping dimensions and percentile labels clear. Model family, FE/controls, covariance, bar level, density year and lifetime cohort construction unspecified; text/plot significance descriptions differ. D01 PDF pp. 19–20, 23–24; D51."
+      },
+      "exhaustiveness": {
+        "score": 2,
+        "reason": "Grouping dimensions and percentile labels clear. Model family, FE/controls, covariance, bar level, density year and lifetime cohort construction unspecified; text/plot significance descriptions differ. D01 PDF pp. 19–20, 23–24; D51."
+      }
+    }
+  },
+  "choices": [
+    {
+      "choice": "Exclude Massachusetts",
+      "default_common_or_rare": "context-specific; neither general common nor rare can be established",
+      "justified": "Yes: seeded from better state data rather than TIGER",
+      "locator": "D01, PDF p. 5, §2.2.2"
+    },
+    {
+      "choice": "Use higher versus lower seeding, not seeded versus unseeded",
+      "default_common_or_rare": "context-specific",
+      "justified": "Yes: natural experiment; limitation explicitly acknowledged",
+      "locator": "D01, PDF p. 5, 24, §§2.2.3, 5"
+    },
+    {
+      "choice": "Log-transform skewed activity counts",
+      "default_common_or_rare": "common",
+      "justified": "Yes: skewness given as rationale; zero handling not precise",
+      "locator": "D01, PDF p. 11–14, §§2.4.5, 3.2.1; Table 3"
+    },
+    {
+      "choice": "County and quarter FE in DD",
+      "default_common_or_rare": "common",
+      "justified": "Yes: persistent county differences and platform/time trends",
+      "locator": "D01, PDF p. 12–14, §3.2.1"
+    },
+    {
+      "choice": "Ten controls and covariate quartile FE",
+      "default_common_or_rare": "controls common; exact flexible grouping context-specific",
+      "justified": "Partly: balance rationale given; exact transformations and rank construction unstated",
+      "locator": "D01, PDF p. 15, §3.3.1; D02, PDF p. 11–12, Tables D.3–D.4"
+    },
+    {
+      "choice": "Full group-by-quarter effects in robustness",
+      "default_common_or_rare": "less standard than common time FE; prevalence not measured",
+      "justified": "Yes: differential urbanization trends; terminology inconsistent",
+      "locator": "D01, PDF p. 17, §3.4.2"
+    },
+    {
+      "choice": "Random treatment placebo",
+      "default_common_or_rare": "common diagnostic",
+      "justified": "Conceptual rationale yes; algorithm and reproducible seed absent",
+      "locator": "D01, PDF p. 17, §3.4.2"
+    },
+    {
+      "choice": "Quality from shortest-route disagreement",
+      "default_common_or_rare": "bespoke",
+      "justified": "Yes: road information affects routing; Google taken as reliable benchmark; distance control motivated mechanically",
+      "locator": "D01, PDF p. 10–11, 18, 25, §§2.4.3, 3.5; endnotes 26, 30–31"
+    },
+    {
+      "choice": "Geographic concentration as ownership proxy",
+      "default_common_or_rare": "bespoke",
+      "justified": "Conceptually justified; exact box computation and thresholds incompletely motivated",
+      "locator": "D01, PDF p. 10, 22, 25, §2.4.1, Prediction 3, endnote 21"
+    },
+    {
+      "choice": "Classify entrant commitment by future lifetime contributions",
+      "default_common_or_rare": "bespoke and post-entry",
+      "justified": "Exploratory rationale stated, but future-activity dependence and horizon not addressed",
+      "locator": "D01, PDF p. 19–20, 23–24, §3.6 and discussion"
+    },
+    {
+      "choice": "Explicit county clustering in event-study plot",
+      "default_common_or_rare": "common panel covariance choice",
+      "justified": "Clustering stated; no detailed rationale or finite-sample correction",
+      "locator": "D01, PDF p. 15, Figure 4 note"
+    }
+  ],
+  "wider_space": [
+    {
+      "choice": "Population restriction",
+      "alternatives": [
+        "Full eligible county universe",
+        "Opposite-status boundary sample",
+        "Scheduled 2005–2006 sample"
+      ],
+      "default_common_or_rare": "context-specific",
+      "justified": "Each is explicitly motivated; populations differ",
+      "locator": "D01, PDF p. 8–9, 16–17, §2.3.3; Figure 2; Table 5"
+    },
+    {
+      "choice": "Identification design",
+      "alternatives": [
+        "County-quarter DD",
+        "County cross-section with controls and quantile FE"
+      ],
+      "default_common_or_rare": "both common",
+      "justified": "Explicit complementary approaches because the preperiod has little activity",
+      "locator": "D01, PDF p. 2, 12–15, §§3.2–3.3"
+    },
+    {
+      "choice": "Activity unit",
+      "alternatives": [
+        "Individual edits",
+        "Session-level changesets"
+      ],
+      "default_common_or_rare": "both plausible; prevalence not established",
+      "justified": "Session-level aggregation explicitly motivated for repeated rapid edits; appendix-only alternative, not an in-scope target",
+      "locator": "D01, PDF p. 17–18, §3.4.2; D02, PDF p. 13, Table D.5 method note"
+    },
+    {
+      "choice": "Ownership outcome unit",
+      "alternatives": [
+        "County-quarter counts of owner follow-on edits",
+        "Object-level follow-on and owner edits"
+      ],
+      "default_common_or_rare": "bespoke",
+      "justified": "Both described; object-level alternative is appendix-only and not executed here",
+      "locator": "D01, PDF p. 23, §4.4; D02, PDF p. 13, Table D.6 method note"
+    },
+    {
+      "choice": "Quality concept",
+      "alternatives": [
+        "Routing completeness via route disagreement",
+        "Name accuracy conditional on matched amenities"
+      ],
+      "default_common_or_rare": "bespoke",
+      "justified": "Explicit distinction; restaurant-name analysis belongs only to appendix, with generic unresolved input headers",
+      "locator": "D01, PDF p. 18, §3.5; D02, PDF p. 3, 5, Appendix B method text"
+    }
+  ],
+  "structural_counts": {
+    "per_table_or_figure": {
+      "Table 1": {
+        "n_columns": 4,
+        "n_outcomes": 11,
+        "n_regressors_of_interest": 1,
+        "n_controls": 6,
+        "n_fixed_effect_sets": 0,
+        "n_sample_rules": {
+          "base_geography": 2,
+          "control_endpoint_rule": 1,
+          "quality_availability": 1
+        }
+      },
+      "Table 2": {
+        "n_columns": 5,
+        "n_outcomes": 10,
+        "n_regressors_of_interest": 0,
+        "n_controls": 4,
+        "n_fixed_effect_sets": 0,
+        "n_sample_rules": {
+          "base_geography": 2,
+          "period": 1,
+          "upstream_filtering": "not fully enumerated"
+        }
+      },
+      "Table 3": {
+        "n_columns": 6,
+        "n_outcomes": 3,
+        "n_regressors_of_interest": 1,
+        "n_controls": [
+          0,
+          10,
+          0,
+          10,
+          0,
+          10
+        ],
+        "n_fixed_effect_sets": 2,
+        "n_sample_rules": {
+          "base_geography": 2,
+          "period": 1,
+          "other_exclusions": "unstated"
+        }
+      },
+      "Table 4": {
+        "n_columns": 6,
+        "n_outcomes": 3,
+        "n_regressors_of_interest": 1,
+        "n_controls": 10,
+        "n_fixed_effect_sets": 3,
+        "n_sample_rules": {
+          "base_geography": 2,
+          "outcome_windows": 2,
+          "other_exclusions": "unstated"
+        }
+      },
+      "Table 5": {
+        "n_columns": 16,
+        "n_outcomes": 2,
+        "n_regressors_of_interest": 1,
+        "n_controls": {
+          "A": "10 inferred",
+          "B": 10
+        },
+        "n_fixed_effect_sets": {
+          "A": 2,
+          "B": 3
+        },
+        "n_sample_rules": {
+          "base_geography": 2,
+          "boundary_rule": 1,
+          "timing_rule": 1,
+          "period_rules": 3
+        }
+      },
+      "Table 6": {
+        "n_columns": 3,
+        "n_outcomes": 1,
+        "n_regressors_of_interest": 1,
+        "n_controls": 11,
+        "n_fixed_effect_sets": 3,
+        "n_sample_rules": {
+          "base_geography": 2,
+          "address_availability": 1,
+          "pair_sampling": 1,
+          "boundary_rule": 1,
+          "timing_rule": 1,
+          "attrition_rules": "unstated"
+        }
+      },
+      "Table 7": {
+        "n_columns": 7,
+        "n_outcomes": 7,
+        "n_regressors_of_interest": 1,
+        "n_controls": 10,
+        "n_fixed_effect_sets": 2,
+        "n_sample_rules": {
+          "base_geography": 2,
+          "period": 1,
+          "spatial_exclusion_for_ownership": 1,
+          "cohort_rules": "outcome-specific; four predictions"
+        }
+      },
+      "Figure 1": {
+        "n_columns": null,
+        "n_outcomes": 0,
+        "n_regressors_of_interest": 0,
+        "n_controls": 0,
+        "n_fixed_effect_sets": 0,
+        "n_sample_rules": {
+          "base_geography": 2,
+          "illustration_selection": "unstated"
+        }
+      },
+      "Figure 2": {
+        "n_columns": null,
+        "n_outcomes": 0,
+        "n_regressors_of_interest": 0,
+        "n_controls": 0,
+        "n_fixed_effect_sets": 0,
+        "n_sample_rules": {
+          "base_geography": 2,
+          "boundary_rule": 1,
+          "timing_rule": 1
+        }
+      },
+      "Figure 3": {
+        "n_columns": 4,
+        "n_outcomes": 2,
+        "n_regressors_of_interest": 0,
+        "n_controls": 0,
+        "n_fixed_effect_sets": 0,
+        "n_sample_rules": {
+          "base_geography": 2,
+          "period": 1
+        }
+      },
+      "Figure 4": {
+        "n_columns": 2,
+        "n_outcomes": 2,
+        "n_regressors_of_interest": "year-treatment interactions; reference inferred",
+        "n_controls": 0,
+        "n_fixed_effect_sets": 2,
+        "n_sample_rules": {
+          "base_geography": 2,
+          "period": 1
+        }
+      },
+      "Figure 5": {
+        "n_columns": 10,
+        "n_outcomes": 1,
+        "n_regressors_of_interest": 1,
+        "n_controls": 10,
+        "n_fixed_effect_sets": 3,
+        "n_sample_rules": {
+          "base_geography": 2,
+          "separate_year_rule": 1
+        }
+      },
+      "Figure 6": {
+        "n_columns": 26,
+        "n_outcomes": 3,
+        "n_regressors_of_interest": 1,
+        "n_controls": null,
+        "n_fixed_effect_sets": null,
+        "n_sample_rules": {
+          "base_geography": 2,
+          "density_decile_rule": 1,
+          "future_contribution_threshold_rule": 1
+        }
+      }
+    }
+  },
+  "unusualness_overall": {
+    "rating": "mixed; conventional model families with consequential custom preprocessing",
+    "reason": "Log-OLS, fixed effects and robust covariance are familiar designs. The unintentional seeding treatment, hand-coded update map, custom follow-on and ownership measures, route-pair quality measure, and future-activity heterogeneity are unusually bespoke. The packet does not support a frequency estimate of how rare these are. D01 PDF pp. 5, 10–11, 14–20, 22; D03 and D41–D54 (unpaginated)."
+  },
+  "unavailable_or_appendix_only": [
+    {
+      "item": "Raw rows and preprocessing code",
+      "status": "Intentionally not supplied; D41–D54 are headers only. No data or remote code accessed, reconstructed or fitted. Exact tag sums, bot list, identifier coverage and missingness cannot be verified.",
+      "locator": "Assignment; D03; D41–D54"
+    },
+    {
+      "item": "Reader-stage memorization probe",
+      "status": "Workflow calls for a separately administered and sealed pre-reader probe. No probe or sealed result is supplied to this reader; no retrospective probe performed and no other reader contacted.",
+      "locator": "Workflow reader-stage rules supplied in assignment"
+    },
+    {
+      "item": "Appendix availability",
+      "status": "D02 is supplied and reviewed, including Appendices A–D. Appendix tables/figures and their claims/targets are outside scope. Methods in D02 Tables D.3–D.4 clarify in-scope baseline controls; appendix results were not entered into targets. No inference is made that unprovided materials do not exist.",
+      "locator": "D02 PDF pp. 1–14"
+    },
+    {
+      "item": "Out-of-scope analyses",
+      "status": "Case studies, ownership simulations, covariate-trend plot, aggregate descriptive appendix table, IV and first-stage tests, changeset/Google-popularity models, object-level ownership, restaurant-name quality and governance models are appendix-only. No targets or claims extracted from them.",
+      "locator": "D02 PDF pp. 1–14; D01 PDF pp. 16–18, 21, 23–24"
+    },
+    {
+      "item": "Ambiguous appendix cross-reference",
+      "status": "Conclusion refers to Appendix B for discussion of software-community generalization, while supplied Appendix A contains case studies and Appendix B contains restaurant-name quality. Preserved as a reference gap, without importing appendix-only claims.",
+      "locator": "D01 PDF p. 24; D02 PDF pp. 1–5"
+    },
+    {
+      "item": "Missing codebook detail",
+      "status": "D47 has no headers; D42 generic names are not interpretable. D51 tag/ownership/percentile suffixes do not establish formulas. D41 cannot uniquely map both male-age and young-population controls.",
+      "locator": "D41, D42, D47, D51 (unpaginated); D01 PDF pp. 10, 19; D02 PDF pp. 11–12"
+    },
+    {
+      "item": "No published covariance specification for most tables",
+      "status": "Figure 4 alone explicitly says county-clustered; Table 4 and Figure 5 say heteroskedasticity-robust. T1 test and T3/T5(A)/T6/T7 covariance details unavailable. No software, routine, HC/CR correction or degrees of freedom stated.",
+      "locator": "D01 PDF pp. 8, 14–20"
+    },
+    {
+      "item": "No reported r-squared or exact regression p-values",
+      "status": "Main regression tables show coefficient/SE/stars and N, without r2, native test statistics, exact p-values, cluster counts or explicit tail. Missing fields are null. T1 prints p-values at two decimals, including zero, not exact population probabilities.",
+      "locator": "D01 PDF pp. 8, 14–19"
+    },
+    {
+      "item": "Figures and numerical reading policy",
+      "status": "All six main figure images were inspected locally. Only selected coefficient and bar readings were entered with conservative uncertainty intervals; other plotted values are omitted rather than fabricated. Map polygons were not counted or assigned to counties from image pixels.",
+      "locator": "D01 PDF pp. 7, 9, 13, 15, 16, 20"
+    },
+    {
+      "item": "Structural-count conventions",
+      "status": "Table 1 counts eleven displayed measurement rows as outcomes and six balance covariates as controls, not covariate adjustment. Table 2 has ten substantive outcomes, four timing variables and four selected controls. Table 4 has three underlying outcomes with two windows. Figure 3 counts four plotted panels; Figure 4 counts two regressions; Figure 5 counts annual regressions; Figure 6 counts density-outcome regressions plus percentile regressions; its model details are unreported. n_sample_rules uses named rule components because exclusion totals cannot be established.",
+      "locator": "D01 PDF pp. 8, 12–20"
+    }
+  ],
+  "unavailable_source_fallbacks": [
+    {
+      "item": "TIGER treatment-source map and original coding",
+      "why_unavailable": "Only treatment lookup header and source description are supplied",
+      "fallback": "Use deposited treat when data become available; do not recode a missing map",
+      "label": "inferred mapping; original validation unavailable"
+    },
+    {
+      "item": "TIGER/Line county geometries and vintage",
+      "why_unavailable": "D60 provides field names, not geometry; D01 does not identify its polygon vintage",
+      "fallback": "Use GEOID10 as candidate join only; obtain frozen matching geometry before exact map reproduction; no substitute downloaded",
+      "label": "uncertain"
+    },
+    {
+      "item": "ACS dates and codebook",
+      "why_unavailable": "D03 2005–2011 and D01 2009–2014 conflict; transformations and extension rule absent",
+      "fallback": "Retain available values and document uncovered periods; no interpolation, extrapolation or alternate vintage silently selected",
+      "label": "uncertain"
+    },
+    {
+      "item": "OSM raw history and bot list",
+      "why_unavailable": "Only preaggregated header descriptions provided",
+      "fallback": "Use deposited quarterly columns only after resolving definitions; no raw-history reconstruction or unreported bot assumptions",
+      "label": "uncertain"
+    },
+    {
+      "item": "Distinct contributor identifiers across quarters",
+      "why_unavailable": "D51 contains aggregate counts, no IDs",
+      "fallback": "Treat period-unique counts as unrecoverable from headers; explicitly distinguish sum-of-quarter-counts branch",
+      "label": "non_equivalent if replaced by summed counts"
+    },
+    {
+      "item": "Routing API snapshots and pair filters",
+      "why_unavailable": "Original addresses, API settings, versions, units and collection-to-regression exclusion log not supplied",
+      "fallback": "Use deposited route lengths when supplied; preserve missing and zero-error uncertainty; no fresh API requests",
+      "label": "uncertain"
+    },
+    {
+      "item": "Schedule date coding",
+      "why_unavailable": "D54 has column names but no format/value examples",
+      "fallback": "Sch SB Delivery is an inferred scheduling field; exact conversion needs frozen source documentation",
+      "label": "inferred"
+    },
+    {
+      "item": "Adjacency geometry convention",
+      "why_unavailable": "D43 describes preprocessed neighbors, not rook/queen topology or source vintage",
+      "fallback": "Prefer supplied neighbor relation when available; no invented geometric reconstruction",
+      "label": "inferred"
+    },
+    {
+      "item": "Unnamed object and establishment columns",
+      "why_unavailable": "D47 lacks headers and D42 labels are generic",
+      "fallback": "No semantic reconstruction; analyses are outside main scope in any case",
+      "label": "unavailable"
+    },
+    {
+      "item": "Original statistical software and defaults",
+      "why_unavailable": "No named regression software/routine in supplied methods",
+      "fallback": "Do not assume Stata, R, covariance corrections or default degrees of freedom from table formatting",
+      "label": "unavailable"
+    }
+  ],
+  "inference_fields": {
+    "observation_unit": {
+      "Table 1": "County summaries / mean county-quarter activity; exact testing unit unstated (D01 PDF pp. 8, 12)",
+      "Table 2": "County-quarter (D01 PDF p. 12)",
+      "Tables 3, 5A, 7": "County-quarter (D01 PDF pp. 14, 17, 19)",
+      "Tables 4, 5B": "County period aggregate (D01 PDF pp. 15, 17)",
+      "Table 6": "County-address-pair in table; county average of logged errors in earlier text (D01 PDF pp. 11, 18)",
+      "Figures 1–2": "County polygon; Figure 1(b) local image views (D01 PDF pp. 7, 9)",
+      "Figure 3": "County-time group averages; quarterly wording versus annual visible markers (D01 PDF pp. 11–13)",
+      "Figure 4": "County-year (D01 PDF p. 15)",
+      "Figure 5": "County in each separate annual cross-section (D01 PDF p. 16)",
+      "Figure 6": "Panel (a) regression unit unstated; panel (b) county-quarter entrant counts described (D01 PDF pp. 19–20)"
+    },
+    "sampling_unit": "OSM history intended as census of relevant contributions in eligible counties; upstream automated-edit exclusions. Quality uses sampled origin-destination pairs within counties with address coverage; address pairing distribution and seed unstated. D01 PDF pp. 10–11, 25.",
+    "treatment_assignment_unit": "County MTAIP completion in the 2006 TIGER release; not randomized; regional-office planning and neighboring-county scheduling described. Placebo randomly reassigns county status with algorithm unstated. D01 PDF pp. 4–8, 17.",
+    "clusters": {
+      "explicit": "County for Figure 4 only (D01 PDF p. 15)",
+      "other_models": "Native cluster variable and cluster counts unstated. Do not infer from sample dimensions or formatting."
+    },
+    "native_se_method_and_software": {
+      "Figure 4": "County-clustered; software/routine/correction/df unstated (D01 PDF p. 15)",
+      "Table 4 and Figure 5": "Heteroskedasticity robust; HC type/software/routine/df unstated (D01 PDF pp. 15–16)",
+      "Table 5B": "Same specification as Table 4; robust covariance inherited only by reference (D01 PDF p. 17)",
+      "Others": "Unstated, including test underlying Table 1 and covariance for Table 6; tail unreported. D01 PDF pp. 8, 14, 17–19.",
+      "first_stage_strength": "No IV model is in scope; first-stage analysis is appendix-only and is not extracted. D01 PDF p. 16; D02 PDF p. 10."
+    }
+  }
+}

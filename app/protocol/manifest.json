@@ -1,0 +1,28 @@
+{
+  "source": "Repository protocol, copied into the standalone app; no study results or empirical inputs included.",
+  "files": {
+    "CLAUDE.md": "8e0b92f8b4808441c43f3a71697b70804bbde5d9b0e973db7d90cf29ef5b5bee",
+    "comparison/scoring_rules_common_v1.json": "46140f85b98423a6238149553bc6fd294bbc5d473e6a1f8e54d227c879566106",
+    "config/roles.json": "a7be55403b15b8a56feff14941d081def13a7de2a09be8df2524043f2ec71c26",
+    "instructions/model_access.md": "42f12a2ef0425af83223328ae10bedb34a9ee5e3a8024a87028f337f37d7e055",
+    "instructions/new_study.md": "494bf0cdbacbd037c198ecc706c252f0fc5d1437032dd73213fc55278011c753",
+    "instructions/reporting.md": "62272898f22e2752a993d36dae30d68bcddb7eabdfc4d1415b80f66e1713ffba",
+    "instructions/scoring.md": "dcec2fba2a95a14f72bd255881ade64a7f3afbe2ad3ce6aed188ff0c1a9ed902",
+    "instructions/shared_data.md": "069d0a76f256ab3a9d58900ab4f3117a47c0181056bf86c135c99c784b6f4696",
+    "instructions/supplements.md": "bcb38216754f5864b34e275b5b9bf27d51b5a11c25c3bcf161c1c3ea0c7ee1c1",
+    "instructions/supplied_sources.md": "a05469c30ac1f221718b996080f31f027203b5ba21e7dc1154fef1b39294ee01",
+    "instructions/workflow.md": "2404371d03c35198cdf0726d94e91c452739116f076b146fbc65ab0ad7abc30e",
+    "prompts/console-export.md": "d57ac82a0c73923c9d06cf5f85d31719b3fb7d09cee6f0a92e7d379b62f0b51f",
+    "prompts/console-output.md": "b796f5a4576e30decb3e5a9c6d9a96c4395db8269fcd51707b5c534684643241",
+    "prompts/coordinator_start.md": "0576ee1b693bd038b949ae1d05ec5fb950d83e450d6c66afcdf2a7f73f07fe75",
+    "prompts/reader.md": "b4bfea3bfb9adbe406bcd945f5e35eb4a28f7270982d1631bb59a495755592dd",
+    "RESULT_FORMAT.md": "dec646302910512fad28240dab333923893da49c97de66e25c7852c931dfcc9c",
+    "result.example.json": "94667c3b395e407de1cf637028b89661f2f45f6016eba62fd0e0ae87f0a1e105"
+  },
+  "adaptations": [
+    "Added instructions/new_study.md for console authorization, workspace boundaries and output export.",
+    "Removed assumptions about the originating host global Codex instructions from instructions/model_access.md.",
+    "Consolidated console output/export prompts under protocol/prompts and documented figure persistence responsibilities.",
+    "Consolidated the result format and editable example under protocol; application modules now live in backend."
+  ]
+}

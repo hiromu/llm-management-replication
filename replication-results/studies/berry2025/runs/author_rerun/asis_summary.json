@@ -1,0 +1,164 @@
+{
+  "label": "asis",
+  "n_expressions": 164,
+  "n_failed": 31,
+  "failures": [
+    {
+      "i": 33,
+      "expr": "anova_test(data = study1, dv = you_grant, wid = PROLIFIC_PID, between = wrongdoing, within = cond)",
+      "error": "ℹ In index: 2.\nℹ With name: wid.\nCaused by error:\n! Can't select columns that don't exist.\n✖ Column `PROLIFIC_PID` doesn't exist."
+    },
+    {
+      "i": 34,
+      "expr": "anova_test(data = study1, dv = prom_voice, wid = PROLIFIC_PID, between = wrongdoing, within = cond)",
+      "error": "ℹ In index: 2.\nℹ With name: wid.\nCaused by error:\n! Can't select columns that don't exist.\n✖ Column `PROLIFIC_PID` doesn't exist."
+    },
+    {
+      "i": 35,
+      "expr": "anova_test(data = study1, dv = proh_voice, wid = PROLIFIC_PID, between = wrongdoing, within = cond)",
+      "error": "ℹ In index: 2.\nℹ With name: wid.\nCaused by error:\n! Can't select columns that don't exist.\n✖ Column `PROLIFIC_PID` doesn't exist."
+    },
+    {
+      "i": 50,
+      "expr": "fit1 <- sem(model1, data = study2, bootstrap = 5000)",
+      "error": "lavaan->lav_parse_text_tokens():  \n   unexpected character at line 9, pos 12\nindirect1: = a*b\n           ^\n"
+    },
+    {
+      "i": 51,
+      "expr": "summary(fit1, fit.measures = TRUE, standardize = TRUE)",
+      "error": "error in evaluating the argument 'object' in selecting a method for function 'summary': object 'fit1' not found"
+    },
+    {
+      "i": 52,
+      "expr": "boot.cis <- parameterEstimates(fit1, boot.ci.type = \"bca.simple\")",
+      "error": "object 'fit1' not found"
+    },
+    {
+      "i": 54,
+      "expr": "fit1 <- sem(model1, data = study2, bootstrap = 5000)",
+      "error": "lavaan->lav_parse_text_tokens():  \n   unexpected character at line 9, pos 12\nindirect1: = a*b\n           ^\n"
+    },
+    {
+      "i": 55,
+      "expr": "summary(fit1, fit.measures = TRUE, standardize = TRUE)",
+      "error": "error in evaluating the argument 'object' in selecting a method for function 'summary': object 'fit1' not found"
+    },
+    {
+      "i": 56,
+      "expr": "boot.cis <- parameterEstimates(fit1, boot.ci.type = \"bca.simple\")",
+      "error": "object 'fit1' not found"
+    },
+    {
+      "i": 58,
+      "expr": "fit1 <- sem(model1, data = study2, bootstrap = 5000)",
+      "error": "lavaan->lav_parse_text_tokens():  \n   unexpected character at line 9, pos 12\nindirect1: = a*b\n           ^\n"
+    },
+    {
+      "i": 59,
+      "expr": "summary(fit1, fit.measures = TRUE, standardize = TRUE)",
+      "error": "error in evaluating the argument 'object' in selecting a method for function 'summary': object 'fit1' not found"
+    },
+    {
+      "i": 60,
+      "expr": "boot.cis <- parameterEstimates(fit1, boot.ci.type = \"bca.simple\")",
+      "error": "object 'fit1' not found"
+    },
+    {
+      "i": 62,
+      "expr": "fit2 <- lavaan::sem(mod2, data = study2, bootstrap = 5000)",
+      "error": "lavaan->lav_parse_text_tokens():  \n   unexpected character at line 8, pos 7\nind1: = a*b\n      ^\n"
+    },
+    {
+      "i": 63,
+      "expr": "summary(fit2, fit.measures = T, standardize = T)",
+      "error": "error in evaluating the argument 'object' in selecting a method for function 'summary': object 'fit2' not found"
+    },
+    {
+      "i": 64,
+      "expr": "boot.fit <- parameterEstimates(fit2, boot.ci.type = \"bca.simple\")",
+      "error": "object 'fit2' not found"
+    },
+    {
+      "i": 66,
+      "expr": "fit2 <- lavaan::sem(mod2, data = study2, bootstrap = 5000)",
+      "error": "lavaan->lav_parse_text_tokens():  \n   unexpected character at line 9, pos 7\nind1: = a*b\n      ^\n"
+    },
+    {
+      "i": 67,
+      "expr": "summary(fit2, fit.measures = T, standardize = T)",
+      "error": "error in evaluating the argument 'object' in selecting a method for function 'summary': object 'fit2' not found"
+    },
+    {
+      "i": 68,
+      "expr": "boot.fit <- parameterEstimates(fit2, boot.ci.type = \"bca.simple\")",
+      "error": "object 'fit2' not found"
+    },
+    {
+      "i": 130,
+      "expr": "fit1 <- lm(reputation_with_broker ~ cond_rel * broker_hist, data = study3)",
+      "error": "object 'reputation_with_broker' not found"
+    },
+    {
+      "i": 137,
+      "expr": "with(study3, effsize::cohen.d(reputation_with_broker[cond_rel == \"loyal_colleague\" & broker_hist == \"control\"], reputation_with_broker[cond_rel == \"loyal_collea",
+      "error": "object 'reputation_with_broker' not found"
+    },
+    {
+      "i": 138,
+      "expr": "with(study3, effsize::cohen.d(reputation_with_broker[cond_rel == \"loyal_colleague\" & broker_hist == \"control\"], reputation_with_broker[cond_rel == \"control\" & b",
+      "error": "object 'reputation_with_broker' not found"
+    },
+    {
+      "i": 139,
+      "expr": "summarySE(study3, \"reputation_with_broker\", c(\"cond_rel\", \"broker_hist\"), na.rm = T)",
+      "error": "undefined columns selected"
+    },
+    {
+      "i": 144,
+      "expr": "PseudoR2(fit1, c(\"McFadden\", \"CoxSnell\"))",
+      "error": "could not find function \"PseudoR2\""
+    },
+    {
+      "i": 148,
+      "expr": "PseudoR2(fit4, c(\"McFadden\", \"CoxSnell\"))",
+      "error": "could not find function \"PseudoR2\""
+    },
+    {
+      "i": 152,
+      "expr": "PseudoR2(fit5, c(\"McFadden\", \"CoxSnell\"))",
+      "error": "could not find function \"PseudoR2\""
+    },
+    {
+      "i": 154,
+      "expr": "fit1 <- sem(mod1, data = study4)",
+      "error": "lavaan->lav_parse_text_tokens():  \n   unexpected character at line 6, pos 12\nindirect1: = a1*b1\n           ^\n"
+    },
+    {
+      "i": 156,
+      "expr": "boot.fit <- parameterEstimates(fit1, boot.ci.type = \"bca.simple\")",
+      "error": "no applicable method for `@` applied to an object of class \"glm\""
+    },
+    {
+      "i": 158,
+      "expr": "fit1 <- sem(mod1, data = study4, bootstrap = 5000)",
+      "error": "lavaan->lav_parse_text_tokens():  \n   unexpected character at line 5, pos 12\nindirect1: = a1*b1\n           ^\n"
+    },
+    {
+      "i": 160,
+      "expr": "boot.fit <- parameterEstimates(fit1, boot.ci.type = \"bca.simple\")",
+      "error": "no applicable method for `@` applied to an object of class \"glm\""
+    },
+    {
+      "i": 162,
+      "expr": "fit1 <- sem(mod1, data = study4, bootstrap = 5000)",
+      "error": "lavaan->lav_parse_text_tokens():  \n   unexpected character at line 5, pos 12\nindirect1: = a1*b1\n           ^\n"
+    },
+    {
+      "i": 164,
+      "expr": "boot.fit <- parameterEstimates(fit1, boot.ci.type = \"bca.simple\")",
+      "error": "no applicable method for `@` applied to an object of class \"glm\""
+    }
+  ],
+  "r": "R version 4.6.1 (2026-06-24)",
+  "changes": []
+}

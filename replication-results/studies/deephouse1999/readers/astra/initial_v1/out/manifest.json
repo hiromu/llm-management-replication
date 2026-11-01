@@ -1,0 +1,750 @@
+{
+  "paper_id": "P-OPAQUE-01",
+  "status": "Provisional origin is fully specified below; choices explicitly identified as assumptions must be reconciled and frozen before execution. No fitting or raw-data inspection performed by reader.",
+  "source": "DOC01 p9 Research design; DOC01 p10 variables; DOC01 p11 Analysis",
+  "data_sources": [
+    {
+      "file": "data/derived/call_mnwi_core_1983q4_1993q4.csv",
+      "alternative_same_extract": "data/derived/call_mnwi_allitems_1983q4_1993q4.csv.gz",
+      "key": [
+        "quarter",
+        "RSSD9001"
+      ],
+      "columns": [
+        "quarter",
+        "RSSD9999",
+        "DATE",
+        "RSSD9001",
+        "RSSD9050",
+        "RSSD9010",
+        "RSSD9048",
+        "RSSD9331",
+        "CALL8786",
+        "RSSD9210",
+        "RSSD9150",
+        "RSSD9180",
+        "RCFD2170",
+        "RCFD3368",
+        "RCFD1766",
+        "RCFD1600",
+        "RCFD1410",
+        "RCFD1975",
+        "RCFD1590",
+        "RCFD1400",
+        "RCFD2122",
+        "RCFD2125",
+        "RCFD0010",
+        "RCFD1350",
+        "RCFD0390",
+        "RCFD2146",
+        "RCFD2145",
+        "RCFD2160",
+        "RCFD2130",
+        "RCFD2143",
+        "RCFD2150",
+        "RCFD2155",
+        "RCFD2200",
+        "RCON2200",
+        "RCON1420",
+        "RIAD4340",
+        "RIAD4073",
+        "RIAD4093"
+      ],
+      "use": "Primary quarterly balance-sheet, income and contemporaneous entity/location source; load only needed years. All amounts thousands of USD. Same-key duplicate records require resolution, not aggregation.",
+      "source": "DOC01 p9 Sample and data; Independent variable",
+      "dictionary_source": "sources/data_dictionary.md call_mnwi_core_1983q4_1993q4.csv"
+    },
+    {
+      "file": "data/derived/fdic_structure_events_mnwi_1983_1994.csv",
+      "key": [
+        "ID"
+      ],
+      "columns": [
+        "ID",
+        "TRANSNUM",
+        "EFFDATE",
+        "CHANGECODE",
+        "CHANGECODE_DESC",
+        "CERT",
+        "INSTNAME",
+        "ACQ_CERT",
+        "OUT_CERT",
+        "SUR_CERT",
+        "FRM_CERT",
+        "ACQ_INSTNAME",
+        "OUT_INSTNAME",
+        "SUR_INSTNAME",
+        "FRM_INSTNAME"
+      ],
+      "use": "Audit entry/exit, identity continuity and named exclusion. Deduplicate institution-level events by transaction/date/participating certificates; office events are not bank mergers. Link certificates to RSSD9050 at event date.",
+      "source": "DOC01 p9 Sample and data; DOC01 p11 Analysis outlier",
+      "dictionary_source": "sources/data_dictionary.md FDIC structure events"
+    },
+    {
+      "file": "data/derived/fdic_institutions_mnwi_and_linked.csv",
+      "key": [
+        "CERT"
+      ],
+      "columns": [
+        "CERT",
+        "FED_RSSD",
+        "NAME"
+      ],
+      "use": "Identity crosswalk support only; never use latest location/charter attributes to construct historical membership.",
+      "source": "DOC01 p9 Sample and data",
+      "dictionary_source": "sources/data_dictionary.md FDIC institutions"
+    },
+    {
+      "file": "data/derived/msa_minneapolis_stpaul_counties_by_vintage.csv",
+      "key": [
+        "definition_vintage",
+        "county_fips5"
+      ],
+      "columns": [
+        "definition_vintage",
+        "omb_definition_date",
+        "area_code",
+        "county_fips5",
+        "state_fips",
+        "county_fips3"
+      ],
+      "use": "Origin geography: area_code 5120, 1983-06-27 county definition; match zero-padded RSSD9210+RSSD9150. Alternative delineations are in the specification space.",
+      "source": "DOC01 p9 Sample and data",
+      "dictionary_source": "sources/data_dictionary.md MSA counties"
+    },
+    {
+      "file": "data/derived/deflators_long.csv",
+      "key": [
+        "provider",
+        "series_id",
+        "source_file",
+        "date",
+        "bls_period"
+      ],
+      "columns": [
+        "provider",
+        "series_id",
+        "source_file",
+        "vintage",
+        "frequency",
+        "date",
+        "bls_period",
+        "value"
+      ],
+      "use": "Origin real-deposit conversion: national CPI-U NSA CPIAUCNS annual average; select one source/vintage and annual frequency if supplied, otherwise average all monthly values within calendar year. Do not duplicate providers or annual/monthly records.",
+      "source": "DOC01 p10 Market growth of deposits",
+      "dictionary_source": "sources/data_dictionary.md deflators_long.csv"
+    },
+    {
+      "file": "data/derived/fdic_financials_core_mnwi_1984q1_1994q4.csv",
+      "key": [
+        "CERT",
+        "REPDTE"
+      ],
+      "columns": [
+        "CERT",
+        "REPDTE",
+        "NAME",
+        "BKCLASS",
+        "CALLFORM",
+        "ASSET",
+        "ASSET2",
+        "ASSET5",
+        "DEP",
+        "DEPDOM",
+        "NETINC",
+        "EINTEXP",
+        "NONIX"
+      ],
+      "use": "Conditional source fallback only, not mixed silently into origin; derivations may differ.",
+      "source": "DOC01 p9 Dependent variable; DOC01 p10 Control variables",
+      "dictionary_source": "sources/data_dictionary.md FDIC financials"
+    }
+  ],
+  "sample_steps": [
+    {
+      "step_id": "S01",
+      "description": "Read quarterly inputs and retain historical bank entities.",
+      "rule": "Read 1984Q1–1992Q4 for origin. Validate quarter against RSSD9999 or DATE. Keep RSSD9048==200 and CALL8786 in {1,2}; use RSSD9331==1 as a consistency audit, not an extra automatic filter. Exclude office-only and nonbank records. Maintain RSSD9001 identity across name changes; no holding-company aggregation.",
+      "source": "DOC01 p9 Sample and data; DOC01 p4 banking context",
+      "ambiguity": "Exact commercial-bank screening codes are not supplied. Origin uses charter as primary classification; disagreements or reporting level 0 require an explicit unresolved log."
+    },
+    {
+      "step_id": "S02",
+      "description": "Define annual market population before analytic deletions.",
+      "rule": "At Q4 each year, select banks whose zero-padded RSSD9210 and RSSD9150 concatenate to county_fips5 in the 1983-06-27 definition for area_code 5120. Include both MN and WI member counties. Membership is contemporaneous; maintain annual eligible sets U_t.",
+      "source": "DOC01 p9 Sample and data",
+      "ambiguity": "Article says Minneapolis–St. Paul, Minnesota metropolitan area, without counties or boundary vintage. Restricting to MN or using RSSD9180 can change membership."
+    },
+    {
+      "step_id": "S03",
+      "description": "Build annual bank records without imposing survival.",
+      "rule": "For each eligible RSSD9001 and year, use Q4 income flows and Q4 strategy/deposit stocks. Compute annual average assets from the four within-year RCFD3368 observations, requiring all four in origin. Do not sum cumulative income across quarters. Retain entry/exit as observed; do not backfill absorbed institutions or require a balanced panel.",
+      "source": "DOC01 p9 Sample and data; Dependent variable",
+      "ambiguity": "Within-year averaging and handling partial-year banks and merger-year income are not specified. Origin follows as-reported legal-entity amounts."
+    },
+    {
+      "step_id": "S04",
+      "description": "Construct market benchmarks before imposing regression completeness.",
+      "rule": "Compute each annual mean strategy share and sample SD over nonmissing eligible banks in U_t for that strategy. Compute unweighted mean ROA over eligible U_t banks with valid ROA. Market deposits sum deposits for all U_t, but mark the aggregate missing if any included bank deposit is missing. Store coverage counts for audit. Compute these statistics before excluding named bank-year or requiring lagged outcomes.",
+      "source": "DOC01 p9 Dependent and independent variables; DOC01 p10 strategic-deviation equation",
+      "ambiguity": "Article says all Twin Cities banks but does not specify available-case versus joint-complete benchmark populations or whether means are recomputed after deletions."
+    },
+    {
+      "step_id": "S05",
+      "description": "Construct outcome, controls and focal terms.",
+      "rule": "Apply variable definitions below at t. Compute growth using t and t-1 market totals and price indices. Require positive total and average assets and positive price indices; zero strategy amounts are valid observed amounts.",
+      "source": "DOC01 p10 Variables; DOC01 p11 Model 3 equation",
+      "ambiguity": "Zero/invalid denominators and missing category rules are unreported; origin guards against undefined arithmetic rather than imputing."
+    },
+    {
+      "step_id": "S06",
+      "description": "Attach an actual previous-calendar-year outcome.",
+      "rule": "Join relative_ROA_scaled at year t-1 on RSSD9001. Never shift across bank boundaries or skip calendar gaps. Compute lag from the pre-exclusion panel. Do not construct a synthetic predecessor aggregate in origin.",
+      "source": "DOC01 p10 Lagged dependent variable; DOC01 p11 Analysis autocorrelation",
+      "ambiguity": "Merger-chain continuity is unspecified. A bank-year excluded as a regression row can still supply its observed value as a later lag in origin."
+    },
+    {
+      "step_id": "S07",
+      "description": "Apply analytic window and named exclusion.",
+      "rule": "Keep outcome years 1985 through 1992. Exclude Norwest Bank Minneapolis, N.A. at year 1987 after locating its historical RSSD9001 from RSSD9010 and event-name/certificate evidence; preserve the crosswalk audit. Do not use a residual threshold to search for replacement exclusions.",
+      "source": "DOC01 p11 Analysis outlier paragraph; DOC01 p9 Sample and data",
+      "ambiguity": "The numeric bank identifier is unavailable in supplied descriptions. If identity cannot be uniquely established, flag pending resolution rather than deleting a guessed bank."
+    },
+    {
+      "step_id": "S08",
+      "description": "Use a common complete-case estimation sample for nested models.",
+      "rule": "Keep rows with finite outcome, lag, all focal terms, all four controls, and strictly positive market-share precision weight. Use the same rows for M1, M2, M3 and the separately reported M3_SQ diagnostic. Log each loss reason without targeting any published count.",
+      "source": "DOC01 p11 Analysis hierarchical regression; DOC01 p12 Table 2",
+      "ambiguity": "Missingness and order of deletion are not documented. Common rows are necessary for the specified nested SSE comparisons."
+    },
+    {
+      "step_id": "S09",
+      "description": "Estimate only after the independent reader stage and specification freeze.",
+      "rule": "Pass this manifest and reconciled axis levels to an implementer; preserve an immutable configuration and exclusion log. This reader does not fit models.",
+      "source": "DOC01 p11 Analysis",
+      "ambiguity": "Execution governance supplied by rules/reader_rules.md, not an article claim."
+    }
+  ],
+  "variables": [
+    {
+      "name": "bank_id",
+      "role": "id",
+      "definition": "RSSD9001 from Call Report core; RSSD9050 links to FDIC CERT.",
+      "timing": "Contemporaneous quarter/year",
+      "transformations": "Do not merge holding-company affiliates.",
+      "ambiguity": null,
+      "source": "DOC01 p9 Unit of analysis; DOC01 p4 bank versus holding company"
+    },
+    {
+      "name": "year",
+      "role": "id",
+      "definition": "Calendar year parsed from quarter; validate against RSSD9999.",
+      "timing": "1984 baseline inputs, 1985–1992 outcomes",
+      "transformations": "Integer",
+      "ambiguity": null,
+      "source": "DOC01 p9 Sample and data"
+    },
+    {
+      "name": "total_assets",
+      "role": "control",
+      "definition": "RCFD2170",
+      "timing": "Q4 of t",
+      "transformations": "None; auxiliary denominator, not an additional model regressor.",
+      "ambiguity": "Consolidated versus domestic scope not specified; origin consolidated.",
+      "source": "DOC01 p9 Independent variable"
+    },
+    {
+      "name": "average_assets",
+      "role": "control",
+      "definition": "(RCFD3368_Q1+RCFD3368_Q2+RCFD3368_Q3+RCFD3368_Q4)/4 for same RSSD9001 and calendar year; require each.",
+      "timing": "Year t",
+      "transformations": "None; auxiliary denominator only.",
+      "ambiguity": "Annual averaging formula absent; quarterly average is not automatically annual average. Alternatives use quarterly endpoint or beginning/end stocks.",
+      "source": "DOC01 p9 Dependent variable"
+    },
+    {
+      "name": "share_commercial",
+      "role": "focal",
+      "definition": "(RCFD1766) / RCFD2170",
+      "timing": "Q4 of t",
+      "transformations": "Fraction, not percent; intermediate input to strategic_deviation only.",
+      "ambiguity": "Alternative RCFD1600 includes acceptances; choosing either requires matching residual other-loan definition.",
+      "source": "DOC01 p9 Independent variable eleven asset strategies; DOC01 p10 equation"
+    },
+    {
+      "name": "share_real_estate",
+      "role": "focal",
+      "definition": "(RCFD1410) / RCFD2170",
+      "timing": "Q4 of t",
+      "transformations": "Fraction, not percent; intermediate input to strategic_deviation only.",
+      "ambiguity": "Includes farmland-secured lending; if agriculture includes farmland, remove RCON1420 from this category only under a consistent domestic-scope variant.",
+      "source": "DOC01 p9 Independent variable eleven asset strategies; DOC01 p10 equation"
+    },
+    {
+      "name": "share_individual",
+      "role": "focal",
+      "definition": "(RCFD1975) / RCFD2170",
+      "timing": "Q4 of t",
+      "transformations": "Fraction, not percent; intermediate input to strategic_deviation only.",
+      "ambiguity": "Closest total household/personal loan item; scope may differ for foreign-office banks.",
+      "source": "DOC01 p9 Independent variable eleven asset strategies; DOC01 p10 equation"
+    },
+    {
+      "name": "share_agriculture",
+      "role": "focal",
+      "definition": "(RCFD1590) / RCFD2170",
+      "timing": "Q4 of t",
+      "transformations": "Fraction, not percent; intermediate input to strategic_deviation only.",
+      "ambiguity": "Origin production/farmer loans excludes farmland already in real_estate; broad agriculture is defensible but needs reallocation.",
+      "source": "DOC01 p9 Independent variable eleven asset strategies; DOC01 p10 equation"
+    },
+    {
+      "name": "share_other_loans_leases",
+      "role": "focal",
+      "definition": "(RCFD1400 - RCFD1766 - RCFD1410 - RCFD1975 - RCFD1590) / RCFD2170",
+      "timing": "Q4 of t",
+      "transformations": "Fraction, not percent; intermediate input to strategic_deviation only.",
+      "ambiguity": "Residual gross total includes leases and otherwise unlisted loans. RCFD2122 or RCFD2125 gives net alternatives with different treatment of unearned income/allowances; the article gives no item codes.",
+      "source": "DOC01 p9 Independent variable eleven asset strategies; DOC01 p10 equation"
+    },
+    {
+      "name": "share_cash",
+      "role": "focal",
+      "definition": "(RCFD0010) / RCFD2170",
+      "timing": "Q4 of t",
+      "transformations": "Fraction, not percent; intermediate input to strategic_deviation only.",
+      "ambiguity": "Total cash and balances due; if absent, RCFD0081+RCFD0071 only where both reported and definitions agree.",
+      "source": "DOC01 p9 Independent variable eleven asset strategies; DOC01 p10 equation"
+    },
+    {
+      "name": "share_overnight_money",
+      "role": "focal",
+      "definition": "(RCFD1350) / RCFD2170",
+      "timing": "Q4 of t",
+      "transformations": "Fraction, not percent; intermediate input to strategic_deviation only.",
+      "ambiguity": "Combined federal funds sold and reverse repos; pure fed funds sold RCFD0276 is narrower and unavailable for early years.",
+      "source": "DOC01 p9 Independent variable eleven asset strategies; DOC01 p10 equation"
+    },
+    {
+      "name": "share_securities",
+      "role": "focal",
+      "definition": "(RCFD0390) / RCFD2170",
+      "timing": "Q4 of t",
+      "transformations": "Fraction, not percent; intermediate input to strategic_deviation only.",
+      "ambiguity": "Investment securities book value; trading separately represented. Do not use post-period held-to-maturity/available-for-sale fields.",
+      "source": "DOC01 p9 Independent variable eleven asset strategies; DOC01 p10 equation"
+    },
+    {
+      "name": "share_trading",
+      "role": "focal",
+      "definition": "(RCFD2146) / RCFD2170",
+      "timing": "Q4 of t",
+      "transformations": "Fraction, not percent; intermediate input to strategic_deviation only.",
+      "ambiguity": "Trading-account assets. RCFD1000 is a potentially narrower historical/derived securities concept; no silent substitution.",
+      "source": "DOC01 p9 Independent variable eleven asset strategies; DOC01 p10 equation"
+    },
+    {
+      "name": "share_fixed_assets",
+      "role": "focal",
+      "definition": "(RCFD2145) / RCFD2170",
+      "timing": "Q4 of t",
+      "transformations": "Fraction, not percent; intermediate input to strategic_deviation only.",
+      "ambiguity": "Premises/fixed assets including capitalized leases; close literal mapping.",
+      "source": "DOC01 p9 Independent variable eleven asset strategies; DOC01 p10 equation"
+    },
+    {
+      "name": "share_other_assets",
+      "role": "focal",
+      "definition": "(RCFD2160) / RCFD2170",
+      "timing": "Q4 of t",
+      "transformations": "Fraction, not percent; intermediate input to strategic_deviation only.",
+      "ambiguity": "Literal item origin. Defensible broad alternative sums RCFD2160+RCFD2150+RCFD2130+RCFD2155+RCFD2143; residual total_assets less ten categories is another uncertain mapping, affected by gross-loan accounting.",
+      "source": "DOC01 p9 Independent variable eleven asset strategies; DOC01 p10 equation"
+    },
+    {
+      "name": "strategic_deviation",
+      "role": "focal",
+      "definition": "For each of the eleven share_* variables a, calculate mu_a,t=unweighted mean among eligible nonmissing banks in U_t and sd_a,t=sqrt(sum((share_a-mu_a,t)^2)/(count_a,t-1)). D_i,t=sum_a(abs((share_a,i,t-mu_a,t)/sd_a,t)). Require all eleven contributions.",
+      "timing": "Annual cross-section t",
+      "transformations": "Sum absolute z scores, not mean, signed sum, squared Euclidean distance or pairwise distance.",
+      "ambiguity": "SD divisor and benchmark complete-case population not stated. If a strategy SD is zero, origin treats its contribution as 0 for banks equal to the common value and logs the convention; if fewer than two valid banks, benchmark undefined.",
+      "source": "DOC01 p10 Strategic-deviation equation"
+    },
+    {
+      "name": "strategic_deviation_sq",
+      "role": "focal",
+      "definition": "strategic_deviation ** 2",
+      "timing": "t",
+      "transformations": "Square the sum after absolute-value aggregation.",
+      "ambiguity": "Do not sum squared individual z scores; centering is an algebraic alternative only with coefficient back-transformation.",
+      "source": "DOC01 p11 Model 3 equation"
+    },
+    {
+      "name": "ROA",
+      "role": "outcome",
+      "definition": "RIAD4340_Q4 / average_assets",
+      "timing": "Calendar year t",
+      "transformations": "Raw fraction; auxiliary outcome before centering.",
+      "ambiguity": "Annual denominator formula unresolved as above.",
+      "source": "DOC01 p9 Dependent variable"
+    },
+    {
+      "name": "relative_ROA_scaled",
+      "role": "outcome",
+      "definition": "100 * (ROA_i,t - mean_U_t(ROA_t)), with unweighted available-ROA benchmark.",
+      "timing": "t",
+      "transformations": "Multiply relative ROA by 100 for regression; descriptives use raw centered fraction.",
+      "ambiguity": "Benchmark inclusion and weighting unspecified; all-bank arithmetic mean is closest wording.",
+      "source": "DOC01 p9 Dependent variable; DOC01 p11 Results scaling"
+    },
+    {
+      "name": "lag_relative_ROA_scaled",
+      "role": "lag",
+      "definition": "relative_ROA_scaled for same RSSD9001 at calendar year t-1; calculate prior-year market centering using U_(t-1).",
+      "timing": "t-1",
+      "transformations": "Same ×100 transformation as current outcome.",
+      "ambiguity": "Deletion propagation and merger continuity unresolved; origin uses pre-exclusion lag.",
+      "source": "DOC01 p10 Lagged dependent variable; DOC01 p11 Results scaling"
+    },
+    {
+      "name": "deposits",
+      "role": "control",
+      "definition": "RCFD2200",
+      "timing": "Q4 of t",
+      "transformations": "Auxiliary, thousands of USD.",
+      "ambiguity": "Domestic RCON2200 may be more appropriate to local market; branch-local deposits unavailable.",
+      "source": "DOC01 p10 Market share of deposits"
+    },
+    {
+      "name": "market_share",
+      "role": "control",
+      "definition": "deposits_i,t / sum_{j in U_t}(deposits_j,t)",
+      "timing": "t",
+      "transformations": "Fraction, no ×100.",
+      "ambiguity": "Market universe, domestic/consolidated deposits, timing and branches outside headquarters market unspecified.",
+      "source": "DOC01 p10 Market share of deposits"
+    },
+    {
+      "name": "total_expense_ratio",
+      "role": "control",
+      "definition": "(RIAD4073_Q4 + RIAD4093_Q4) / average_assets",
+      "timing": "Calendar year t",
+      "transformations": "Fraction; do not add provisions, taxes or subtract income.",
+      "ambiguity": "Exact Call items not reported; these totals match stated interest plus noninterest expense.",
+      "source": "DOC01 p10 Total expense ratio"
+    },
+    {
+      "name": "price_index",
+      "role": "control",
+      "definition": "deflators_long.csv value for provider FRED, series_id CPIAUCNS, annual-average frequency in year t; if no annual row, mean of all twelve monthly observations from one consistent source_file/vintage.",
+      "timing": "Calendar year t",
+      "transformations": "Arbitrary constant base cancels in growth; auxiliary only.",
+      "ambiguity": "Index, seasonality, period aggregation and vintage unreported. Origin is a disclosed assumption.",
+      "source": "DOC01 p10 Market growth of deposits"
+    },
+    {
+      "name": "real_market_growth",
+      "role": "control",
+      "definition": "100 * ((sum_U_t(deposits_t)/price_index_t)/(sum_U_(t-1)(deposits_(t-1))/price_index_(t-1)) - 1)",
+      "timing": "Year t versus t-1",
+      "transformations": "Annual percentage change, in percentage points.",
+      "ambiguity": "Market composition changes included as reported; no merger-adjusted fixed cohort in origin.",
+      "source": "DOC01 p10 Market growth of deposits"
+    },
+    {
+      "name": "w",
+      "role": "weight",
+      "definition": "market_share",
+      "timing": "t",
+      "transformations": "Precision weight for objective sum(w_i * residual_i**2); equivalent premultiply y and EVERY X column including intercept by sqrt(w_i).",
+      "ambiguity": "Article specifies variance inversely proportional to share but no software syntax or weight normalization.",
+      "source": "DOC01 p11 Analysis heteroscedasticity"
+    }
+  ],
+  "models": [
+    {
+      "model_id": "M1",
+      "outcome": "relative_ROA_scaled",
+      "regressors": [
+        "intercept",
+        "market_share",
+        "total_expense_ratio",
+        "real_market_growth",
+        "lag_relative_ROA_scaled"
+      ],
+      "source": "DOC01 p11 Analysis hierarchical regression; DOC01 p12 Table 2",
+      "status": "reported primary"
+    },
+    {
+      "model_id": "M2",
+      "outcome": "relative_ROA_scaled",
+      "regressors": [
+        "intercept",
+        "strategic_deviation",
+        "market_share",
+        "total_expense_ratio",
+        "real_market_growth",
+        "lag_relative_ROA_scaled"
+      ],
+      "source": "DOC01 p11 Analysis hierarchical regression; DOC01 p12 Table 2",
+      "status": "reported primary"
+    },
+    {
+      "model_id": "M3",
+      "outcome": "relative_ROA_scaled",
+      "regressors": [
+        "intercept",
+        "strategic_deviation_sq",
+        "strategic_deviation",
+        "market_share",
+        "total_expense_ratio",
+        "real_market_growth",
+        "lag_relative_ROA_scaled"
+      ],
+      "source": "DOC01 p11 Model 3 equation; DOC01 p12 Table 2",
+      "status": "reported primary"
+    },
+    {
+      "model_id": "M3_SQ",
+      "outcome": "relative_ROA_scaled",
+      "regressors": [
+        "intercept",
+        "strategic_deviation_sq",
+        "market_share",
+        "total_expense_ratio",
+        "real_market_growth",
+        "lag_relative_ROA_scaled"
+      ],
+      "source": "DOC01 p13 Results collinearity diagnostic",
+      "status": "reported diagnostic; not an equivalent replacement for M3"
+    }
+  ],
+  "estimator": {
+    "value": {
+      "name": "Pooled WLS with intercept",
+      "objective": "min_beta sum_i w_i*(y_i-X_i beta)^2",
+      "weights": "w = market_share; use raw fractional shares in origin",
+      "solve": "QR or SVD on sqrt(w)*X and sqrt(w)*y; transformed intercept is sqrt(w), not an additional untransformed constant",
+      "scope": "Separate fits for listed models; common sample and weights for nested tests"
+    },
+    "source": "DOC01 p11 Analysis heteroscedasticity and hierarchical regression",
+    "ambiguity": "Weight normalization unreported; rescaling all weights changes raw weighted SSE but not coefficients, conventional SEs or nested F."
+  },
+  "fixed_effects": {
+    "value": {
+      "bank": false,
+      "year": false,
+      "reason": "No fixed effects appear in the explicitly printed equation. Relative ROA subtracts annual market mean but is not a full year-FE transformation of all regressors."
+    },
+    "source": "DOC01 p11 Model 3 equation; DOC01 p9 Dependent variable"
+  },
+  "covariance_method": {
+    "value": {
+      "origin": "Conventional model-based WLS covariance",
+      "formula": "s2 * inv(X_transposed W X), s2=sum(w*e^2)/(n-rank(X)); t statistics use residual degrees of freedom",
+      "robust": false,
+      "clustered": false
+    },
+    "source": "DOC01 p11 Analysis WLS; DOC01 p12 Table 2 SE note",
+    "ambiguity": "Exact native covariance and degrees-of-freedom convention are not explicitly named; conventional WLS is inferred, not verified software behavior."
+  },
+  "autocorrelation_handling": {
+    "value": {
+      "origin": "No AR correction; test assumed first-order error correlation using Durbin h.",
+      "ordering": "Sort by bank_id then year; only contiguous within-bank year pairs; insert separators or enforce grouped operations.",
+      "diagnostic_formula": "Conventional h=rho_hat*sqrt(n/(1-n*Var(beta_lag))) when denominator positive; report undefined otherwise. Record whether residuals/covariance come from OLS diagnostic or weighted fit.",
+      "ambiguity": "Article does not specify pooled rho weighting, observation count for gaps, or whether h used pre-WLS versus final residuals. Do not treat a finite negative h as nonsignificant merely because below a positive bound."
+    },
+    "source": "DOC01 p11 Analysis autocorrelation paragraphs"
+  },
+  "outlier_rule": {
+    "value": {
+      "rule": "Exclude the historically identified bank-year specified in S07; calculate studentized deleted residuals only as diagnostics, not as a rule to discover additional exclusions.",
+      "order": "Origin benchmarks and lags built before row exclusion."
+    },
+    "source": "DOC01 p11 Analysis outlier paragraph",
+    "ambiguity": "Timing of recomputation and general residual cutoff unreported."
+  },
+  "missingness_rule": {
+    "value": {
+      "rule": "Provider missing remains missing; no default zero filling. Use S04 available-case benchmark convention and S08 common analytic completeness. Missing annual-average quarters make annual denominator missing. Invalid positive denominators and nonpositive WLS weights cannot enter fits.",
+      "special_case": "Zero across all reported strategy values is handled by the explicit zero-SD convention in strategic_deviation."
+    },
+    "source": "DOC01 p9 Sample and data; DOC01 p10 equation; DOC01 p11 Analysis",
+    "ambiguity": "No imputation or listwise-deletion rule supplied by article; origin operational rules are reader assumptions."
+  },
+  "software_defaults": {
+    "value": {
+      "software": null,
+      "version": null,
+      "precision": "double",
+      "intercept": true,
+      "weight_semantics": "analytic inverse-variance weights, not frequency counts",
+      "SD_divisor": "count-1 in origin",
+      "coefficient_tests": "Two-sided Student t with residual df in provisional implementation; retain directional hypothesis labels separately",
+      "diagnostic_defaults": "Do not rely on package automatic FE, robust covariance, weight normalization, lag generation or complete-case selection."
+    },
+    "source": "DOC01 p11 Analysis; DOC01 p12 Table 2 note",
+    "ambiguity": "Software and tails are not stated; two-sided testing is a disclosed provisional convention."
+  },
+  "model_comparison_tests": {
+    "value": {
+      "comparisons": [
+        {
+          "restricted": "M1",
+          "unrestricted": "M2",
+          "q": 1
+        },
+        {
+          "restricted": "M1",
+          "unrestricted": "M3",
+          "q": 2
+        },
+        {
+          "restricted": "M2",
+          "unrestricted": "M3",
+          "q": 1
+        }
+      ],
+      "formula": "F=((SSE_R-SSE_U)/q)/(SSE_U/(n-rank(X_U))) using weighted SSE and same rows/weights; df=(q,n-rank(X_U)); upper-tail F test",
+      "additional": "For M3 report sign of quadratic, turning point -b_D/(2*b_D2) if b_D2<0, observed D bounds and slopes at bounds. In-range conclusion requires observed support; no extra slope-test criterion is attributed to publication. M3_SQ is a separate reported diagnostic; it is not nested in M2.",
+      "R_squared": "No published R-squared target; article relies on SSE comparisons."
+    },
+    "source": "DOC01 p11 Analysis final paragraph; DOC01 p13 Results"
+  },
+  "inference": {
+    "observation_unit": {
+      "value": "bank-year",
+      "source": "DOC01 p9 Sample and data"
+    },
+    "sampling_unit": {
+      "value": "Commercial bank legal entity in one metropolitan market; intended population study, no random-sampling design stated.",
+      "source": "DOC01 p9 Sample and data"
+    },
+    "assignment_unit": {
+      "value": "Not applicable: observational asset choices, no randomized assignment or instrument.",
+      "source": "DOC01 p9 Research design; DOC01 p11 Model 3 equation"
+    },
+    "clusters": {
+      "value": "No native clustering reported. Repeated observations are nested in banks and common market-year conditions exist; cluster alternatives are not part of reported model.",
+      "source": "DOC01 p11 Analysis pooled cross-sectional time series"
+    },
+    "native_se_method": {
+      "value": "Not explicitly named; conventional WLS covariance inferred from description and SE table note.",
+      "source": "DOC01 p11 Analysis; DOC01 p12 Table 2 note"
+    },
+    "software_if_stated": {
+      "value": null,
+      "source": "DOC01 p11 Analysis"
+    },
+    "first_stage_strength": {
+      "value": "Not applicable; no IV or first stage specified.",
+      "source": "DOC01 p11 Model 3 equation"
+    },
+    "tail_and_direction_by_hypothesis": {
+      "value": {
+        "H1": {
+          "tail": "unstated",
+          "direction": "positive D slope"
+        },
+        "H2": {
+          "tail": "unstated",
+          "direction": "negative D slope"
+        },
+        "H3": {
+          "tail": "unstated",
+          "direction": "concave-down quadratic; in-range peak claimed"
+        },
+        "origin_coefficient_tail": "two-sided provisional assumption",
+        "nested_F_tail": "upper tail by test definition"
+      },
+      "source": "DOC01 p10 Hypotheses; DOC01 p11 Analysis; DOC01 p12 table note"
+    },
+    "alpha": {
+      "value": {
+        "thresholds": [
+          0.05,
+          0.01,
+          0.001
+        ],
+        "preselected_primary_alpha": null,
+        "note": "These are table significance categories, not exact p values or an explicit preregistered decision threshold."
+      },
+      "source": "DOC01 p12 Table 2 note"
+    }
+  },
+  "documentation_scores": {
+    "specificity": {
+      "score": 3,
+      "justification": "Population, named strategies, controls and model progression are explicit; data items, annualization and geography are not.",
+      "source": "DOC01 p9 Research design; DOC01 p10 variables"
+    },
+    "precision": {
+      "score": 3,
+      "justification": "Equations and scaling are precise, but source mappings, SD convention, weights syntax and software remain open.",
+      "source": "DOC01 p10 Deviation equation; DOC01 p11 Analysis and scaling"
+    },
+    "exhaustiveness": {
+      "score": 2,
+      "justification": "No sample-flow reconciliation, source-codebook, fully reported diagnostics or augmented-control estimates.",
+      "source": "DOC01 p9 Sample and data; DOC01 p10–11 omitted strategy-control estimates; DOC01 p13 diagnostics"
+    }
+  },
+  "unavailable_or_vintage_fallbacks": [
+    {
+      "item": "Historical merger/identity records",
+      "fallback": "FDIC event EFFDATE/CHANGECODE_DESC/OUT_CERT/SUR_CERT with Call RSSD9050; institutions CERT/FED_RSSD only for crosswalk support.",
+      "rationale": "NIC bulk was not obtained per source descriptions. Latest institution location/class is not historical evidence. Preserve ambiguous mergers.",
+      "source": "DOC01 p9 Sample and data; DOC01 p11 named exclusion"
+    },
+    {
+      "item": "Annual average assets",
+      "fallback": "If quarterly RCFD3368 is incomplete, do not silently substitute. Separate uncertain variants use mean of Q4(t-1),Q1–Q4(t) RCFD2170 or beginning/end Q4 mean; FDIC ASSET2/ASSET5 require documented derivations before substitution.",
+      "rationale": "Annual average definition absent; endpoint estimates are not identical to reported within-quarter averages.",
+      "source": "DOC01 p9 Dependent variable"
+    },
+    {
+      "item": "Missing small-form strategy components",
+      "fallback": "Use a total or exact component identity only when reporting form and coverage establish equal definitions; otherwise leave missing. No blanket zero fill.",
+      "rationale": "Form-dependent nonreporting can resemble economic zero; source dictionary warns about coverage.",
+      "source": "DOC01 p9 Independent variable"
+    },
+    {
+      "item": "Overnight-money split before separate fields exist",
+      "fallback": "Use RCFD1350 throughout for the combined concept. A fed-funds-only series cannot be completed by treating combined RCFD1350 as pure funds sold.",
+      "rationale": "Separate RCFD0276/0277 unavailable early in the period.",
+      "source": "DOC01 p9 Independent variable"
+    },
+    {
+      "item": "Real-deposit deflator and vintage",
+      "fallback": "Origin CPIAUCNS annual mean; local annual CUUSA211SA0 or GDPDEF vintage are explicit uncertain alternatives. Select by metadata, never fit.",
+      "rationale": "Index unnamed; local monthly coverage incomplete, GDP deflators revised, CPI NSA stable per source descriptions.",
+      "source": "DOC01 p10 Market growth of deposits"
+    },
+    {
+      "item": "Historical metropolitan definition",
+      "fallback": "Use supplied dated county definitions rather than latest FDIC attributes; RSSD9180==5120 is an uncertain alternative with unknown provider vintage.",
+      "rationale": "Publication does not specify county list or OMB vintage.",
+      "source": "DOC01 p9 Sample and data"
+    },
+    {
+      "item": "Call income/assets/deposits unavailable for a bank-year",
+      "fallback": "Potential separate FDIC-source variant uses NETINC, EINTEXP, NONIX, ASSET, DEP or DEPDOM matched on CERT/REPDTE; verify concept and scope first; no silent mixed-source patching.",
+      "rationale": "FDIC processing and included institution types differ from Call archive.",
+      "source": "DOC01 p9 Sample and data; Dependent variable; DOC01 p10 controls"
+    },
+    {
+      "item": "Augmented strategy-control regressions",
+      "fallback": null,
+      "rationale": "Only qualitative statement exists in frozen packet. Do not reconstruct author estimates or treat unavailable results as numerical targets.",
+      "source": "DOC01 p10 Final control paragraph; DOC01 p11 opening"
+    },
+    {
+      "item": "Original Call Report release vintage",
+      "fallback": "Use acquired Chicago Fed archival reports with src_file and source metadata frozen; cannot claim identical author-era revisions.",
+      "rationale": "No original extract date or report revision vintage published.",
+      "source": "DOC01 p9 Sample and data"
+    }
+  ]
+}

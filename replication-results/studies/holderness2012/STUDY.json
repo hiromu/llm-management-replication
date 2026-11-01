@@ -1,0 +1,39 @@
+{
+  "study_id": "holderness2012",
+  "citation": "Holderness & Pontiff (2012). Hierarchies and the Survival of Prisoners of War During World War II. Management Science.",
+  "journal": "Management Science",
+  "paper_path_from_project_root": "papers/journal_collection/MNSC/MNSC_2012_Holderness.pdf",
+  "paper_sha256": "57d70148a9f57247cb0a26f58ef497bc750c3193b7f5f91297bacf272e0fdbb4",
+  "status": "complete",
+  "data_policy": "All empirical inputs must be newly acquired from publicly available source datasets or public primary records and independently constructed. No printed article data or author-provided replication packages. Published results may be extracted only as sealed comparison targets or publication diagnostics.",
+  "reader_runs": 2,
+  "model_fits": {
+    "per_implementation_regular": 266,
+    "roc_comparisons": 8,
+    "influence_refits": {
+      "A": 2016,
+      "B": 160,
+      "C": 160
+    }
+  },
+  "session_scope": "holderness2012 only; other papers require a separate session",
+  "public_source_eligibility": "eligible: NARA RG 389 and RG 64 files acquired 2026-10-27",
+  "author_package_availability": "not_found_after_documented_search_2026-10-27 (logs/eligibility_supplement_search.json)",
+  "paper_id": "MNSC_2012_Holderness",
+  "supplement_catalog_from_project_root": "papers/supplements/catalog.json",
+  "supplements": [],
+  "local_supplement_status": "no_local_match",
+  "external_supplement_availability": "none_found_after_documented_search_2026-10-27",
+  "coordinator_session_id": "fd5c105f-e59a-44db-b474-6f14aa01b1e0",
+  "memorization_probes": 2,
+  "focal_outcome": "4 of 4 focal claims consistent; paper mapping fully reproduced on focal claims, provisional",
+  "pending": null,
+  "reports": [
+    "reports/replication_report.md",
+    "reports/technical_supplement.md",
+    "reports/adversarial_review.md",
+    "reports/figure/"
+  ],
+  "completed_utc": "2026-10-28",
+  "paper_outcome": "partially reproduced (focal consistent; four lower-tier items discrepant, not fully verified)"
+}

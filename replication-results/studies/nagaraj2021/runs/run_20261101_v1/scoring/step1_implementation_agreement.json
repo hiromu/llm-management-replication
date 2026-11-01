@@ -1,0 +1,29 @@
+{
+ "regression_rows": 1389,
+ "all_three_agree": 1377,
+ "pair_agree": {
+  "AB": 1389,
+  "AC": 1377,
+  "BC": 1377
+ },
+ "no_agreeing_pair": 0,
+ "failed_rows": {
+  "A": 0,
+  "B": 0,
+  "C": 0
+ },
+ "descriptive": {
+  "AB": {
+   "compared": 2236,
+   "differ": 0
+  },
+  "AC": {
+   "compared": 2240,
+   "differ": 0
+  },
+  "BC": {
+   "compared": 2560,
+   "differ": 0
+  }
+ }
+}

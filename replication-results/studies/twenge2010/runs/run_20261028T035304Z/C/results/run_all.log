@@ -1,0 +1,76 @@
+S00: Form3_C1_C2 1976
+S00: Form3_C1_C2 1991
+S00: Form3_C1_C2 2006
+S00: Form4_seven_factor 1976
+S00: Form4_seven_factor 1991
+S00: Form4_seven_factor 2006
+S00: Form4_five_factor 1976
+S00: Form4_five_factor 1991
+S00: Form4_five_factor 2006
+S00: M1
+S00: M2
+S00: M3
+S00: M4
+S00: M5
+S00: ok (1.06s) 
+S01: failed (0.02s) FileNotFoundError: [Errno 2] No such file or directory: '<project>/studies/twenge2010/runs/run_20261028T035304Z/C/dictionaries/y1976_f3.dictionary.json'
+S02: M1
+S02: M2
+S02: M3
+S02: M4
+S02: M5
+S02: ok (0.86s) 
+S03: Form3_C1_C2 1976
+S03: Form3_C1_C2 1991
+S03: Form3_C1_C2 2006
+S03: Form4_seven_factor 1976
+S03: Form4_seven_factor 1991
+S03: Form4_seven_factor 2006
+S03: Form4_five_factor 1976
+S03: Form4_five_factor 1991
+S03: Form4_five_factor 2006
+S03: M1
+S03: M2
+S03: M3
+S03: M4
+S03: M5
+S03: ok (1.05s) 
+S04: M1
+S04: M2
+S04: M3
+S04: M4
+S04: M5
+S04: ok (12.76s) 
+S05: M1
+S05: M2
+S05: M3
+S05: M4
+S05: M5
+S05: ok (0.23s) 
+S06: M1
+S06: M2
+S06: M3
+S06: M4
+S06: M5
+S06: ok (3.25s) 
+S07a: Form4_seven_factor 1976
+S07a: Form4_seven_factor 1991
+S07a: Form4_seven_factor 2006
+S07a: ok (0.11s) 
+S07b: Form4_seven_factor 1976
+S07b: Form4_seven_factor 1991
+S07b: Form4_seven_factor 2006
+S07b: ok (0.11s) 
+S08: Form3_one_factor 1976
+S08: Form3_one_factor 1991
+S08: Form3_one_factor 2006
+S08: ok (0.08s) 
+CHK1: M4
+CHK1: ok (0.11s) 
+CHK2: M1
+CHK2: M2
+CHK2: M3
+CHK2: M4
+CHK2: M5
+CHK2: ok (0.55s) 
+exit 1

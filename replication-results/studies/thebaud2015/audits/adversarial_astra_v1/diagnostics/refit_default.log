@@ -1,0 +1,12 @@
+M6_common_U14_default N=27289
+                                label model     n            term    estimate
+female          M6_common_U14_default    M6 27289          female -0.79567528
+female:leave    M6_common_U14_default    M6 27289    female:leave  0.01761507
+female:leave_sq M6_common_U14_default    M6 27289 female:leave_sq  0.02233847
+female:parttime M6_common_U14_default    M6 27289 female:parttime -0.15828815
+                        se            p    loglik singular cpu_seconds warnings
+female          0.06329795 3.074875e-36 -7957.863    FALSE     279.079         
+female:leave    0.14135325 9.008265e-01 -7957.863    FALSE     279.079         
+female:leave_sq 0.13685371 8.703382e-01 -7957.863    FALSE     279.079         
+female:parttime 0.06493410 1.478211e-02 -7957.863    FALSE     279.079         
+completed M6_common_U14_default CPU=279.079

@@ -1,0 +1,34 @@
+{
+  "purpose": "title-and-authors-only memorization probes; sealed from readers and implementers",
+  "prompt_sha256": "d78e45af9959c67e5b835e48a0dcc18cdc5119b20bb1edd9bf27a0206e4e48d3",
+  "runs": [
+    {
+      "reader": "reader_a",
+      "cli": "claude 2.1.270",
+      "command": "claude -p --safe-mode --model claude-fable-5-1 --effort high --settings '{\"fastMode\":false,\"autoMemoryEnabled\":false}' --no-session-persistence --tools \"\" --output-format json <prompt>",
+      "staging": "/var/folders/7q/9m3zdcp550d685wgsq9kvf6r0000gn/T/role_705788f0",
+      "reported_models": [
+        "claude-fable-5-1"
+      ],
+      "is_error": false,
+      "start": "2026-10-27T14:31:46Z",
+      "end": "2026-10-27T14:32:14Z",
+      "output_sha256": "c9dab8c0728f9f7da9a0fbef4a24577d9d52b1149171ace0bfb6af5b504d28de",
+      "effort_verified": "requested high; CLI output does not report effort",
+      "fast_mode": "fastMode false in --settings"
+    },
+    {
+      "reader": "reader_b",
+      "cli": "codex-cli 0.164.0",
+      "command": "codex exec --ephemeral --ignore-user-config --skip-git-repo-check -C <staging> -m gpt-6-astra -c model_reasoning_effort=\"high\" -c service_tier=\"default\" -c features.fast_mode=false -s read-only -o last.txt <prompt> </dev/null",
+      "staging": "/var/folders/7q/9m3zdcp550d685wgsq9kvf6r0000gn/T/role_10f55751",
+      "reported_model": "gpt-6-astra (CLI header)",
+      "reported_effort": "high (CLI header)",
+      "service_tier": "requested default; not shown in CLI output",
+      "agents_md": "~/.codex/AGENTS.md exists; CLI output does not show whether it loaded",
+      "start": "2026-10-27T14:31:46Z",
+      "end": "2026-10-27T14:32:47Z",
+      "output_sha256": "401273ea852fc00c44238f7c95bef69568dc18da2eb29dd6b8c18fab510546d8"
+    }
+  ]
+}

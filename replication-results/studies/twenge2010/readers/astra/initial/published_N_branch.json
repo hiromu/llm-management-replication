@@ -1,0 +1,3008 @@
+{
+  "sealed": true,
+  "rule": "Published Ns per analysis cell, kept out of the implementer-visible manifest; evaluated by code only. Unknown cell Ns are null, not filled from form totals.",
+  "cells": [
+    {
+      "cell": "1976_Form3_reported_sample",
+      "N": 3284,
+      "printed_text": "3,284",
+      "locator": {
+        "doc_id": "P1",
+        "pdf_page": 10,
+        "table": "Method",
+        "row": "Sample sizes",
+        "column": "1976 Form 3"
+      },
+      "notes": "Reported form sample, not guaranteed complete-case/item/model N."
+    },
+    {
+      "cell": "1976_Form4_reported_sample",
+      "N": 3296,
+      "printed_text": "3,296",
+      "locator": {
+        "doc_id": "P1",
+        "pdf_page": 10,
+        "table": "Method",
+        "row": "Sample sizes",
+        "column": "1976 Form 4"
+      },
+      "notes": "Reported form sample, not guaranteed complete-case/item/model N."
+    },
+    {
+      "cell": "1991_Form3_reported_sample",
+      "N": 2563,
+      "printed_text": "2,563",
+      "locator": {
+        "doc_id": "P1",
+        "pdf_page": 10,
+        "table": "Method",
+        "row": "Sample sizes",
+        "column": "1991 Form 3"
+      },
+      "notes": "Reported form sample, not guaranteed complete-case/item/model N."
+    },
+    {
+      "cell": "1991_Form4_reported_sample",
+      "N": 2526,
+      "printed_text": "2,526",
+      "locator": {
+        "doc_id": "P1",
+        "pdf_page": 10,
+        "table": "Method",
+        "row": "Sample sizes",
+        "column": "1991 Form 4"
+      },
+      "notes": "Reported form sample, not guaranteed complete-case/item/model N."
+    },
+    {
+      "cell": "2006_Form3_reported_sample",
+      "N": 2432,
+      "printed_text": "2,432",
+      "locator": {
+        "doc_id": "P1",
+        "pdf_page": 10,
+        "table": "Method",
+        "row": "Sample sizes",
+        "column": "2006 Form 3"
+      },
+      "notes": "Reported form sample, not guaranteed complete-case/item/model N."
+    },
+    {
+      "cell": "2006_Form4_reported_sample",
+      "N": 2406,
+      "printed_text": "2,406",
+      "locator": {
+        "doc_id": "P1",
+        "pdf_page": 10,
+        "table": "Method",
+        "row": "Sample sizes",
+        "column": "2006 Form 4"
+      },
+      "notes": "Reported form sample, not guaranteed complete-case/item/model N."
+    },
+    {
+      "cell": "all_years_both_forms",
+      "N": 16507,
+      "printed_text": "16,507",
+      "locator": {
+        "doc_id": "P1",
+        "pdf_page": 10,
+        "table": "Method",
+        "row": "Sample sizes",
+        "column": "total"
+      }
+    },
+    {
+      "cell": "1976_V4236",
+      "N": null,
+      "printed_text": null,
+      "locator": {
+        "doc_id": "P1",
+        "pdf_page": 11,
+        "table": "Table 1",
+        "row": "More than two weeks vacation",
+        "column": "1976"
+      },
+      "reason": "Item-specific N not printed."
+    },
+    {
+      "cell": "1991_V4236",
+      "N": null,
+      "printed_text": null,
+      "locator": {
+        "doc_id": "P1",
+        "pdf_page": 11,
+        "table": "Table 1",
+        "row": "More than two weeks vacation",
+        "column": "1991"
+      },
+      "reason": "Item-specific N not printed."
+    },
+    {
+      "cell": "2006_V4236",
+      "N": null,
+      "printed_text": null,
+      "locator": {
+        "doc_id": "P1",
+        "pdf_page": 11,
+        "table": "Table 1",
+        "row": "More than two weeks vacation",
+        "column": "2006"
+      },
+      "reason": "Item-specific N not printed."
+    },
+    {
+      "cell": "1976_V4238",
+      "N": null,
+      "printed_text": null,
+      "locator": {
+        "doc_id": "P1",
+        "pdf_page": 11,
+        "table": "Table 1",
+        "row": "Time for other things in life",
+        "column": "1976"
+      },
+      "reason": "Item-specific N not printed."
+    },
+    {
+      "cell": "1991_V4238",
+      "N": null,
+      "printed_text": null,
+      "locator": {
+        "doc_id": "P1",
+        "pdf_page": 11,
+        "table": "Table 1",
+        "row": "Time for other things in life",
+        "column": "1991"
+      },
+      "reason": "Item-specific N not printed."
+    },
+    {
+      "cell": "2006_V4238",
+      "N": null,
+      "printed_text": null,
+      "locator": {
+        "doc_id": "P1",
+        "pdf_page": 11,
+        "table": "Table 1",
+        "row": "Time for other things in life",
+        "column": "2006"
+      },
+      "reason": "Item-specific N not printed."
+    },
+    {
+      "cell": "1976_V4246",
+      "N": null,
+      "printed_text": null,
+      "locator": {
+        "doc_id": "P1",
+        "pdf_page": 11,
+        "table": "Table 1",
+        "row": "Easy pace; work slowly",
+        "column": "1976"
+      },
+      "reason": "Item-specific N not printed."
+    },
+    {
+      "cell": "1991_V4246",
+      "N": null,
+      "printed_text": null,
+      "locator": {
+        "doc_id": "P1",
+        "pdf_page": 11,
+        "table": "Table 1",
+        "row": "Easy pace; work slowly",
+        "column": "1991"
+      },
+      "reason": "Item-specific N not printed."
+    },
+    {
+      "cell": "2006_V4246",
+      "N": null,
+      "printed_text": null,
+      "locator": {
+        "doc_id": "P1",
+        "pdf_page": 11,
+        "table": "Table 1",
+        "row": "Easy pace; work slowly",
+        "column": "2006"
+      },
+      "reason": "Item-specific N not printed."
+    },
+    {
+      "cell": "1976_V4240",
+      "N": null,
+      "printed_text": null,
+      "locator": {
+        "doc_id": "P1",
+        "pdf_page": 11,
+        "table": "Table 1",
+        "row": "Free from supervision",
+        "column": "1976"
+      },
+      "reason": "Item-specific N not printed."
+    },
+    {
+      "cell": "1991_V4240",
+      "N": null,
+      "printed_text": null,
+      "locator": {
+        "doc_id": "P1",
+        "pdf_page": 11,
+        "table": "Table 1",
+        "row": "Free from supervision",
+        "column": "1991"
+      },
+      "reason": "Item-specific N not printed."
+    },
+    {
+      "cell": "2006_V4240",
+      "N": null,
+      "printed_text": null,
+      "locator": {
+        "doc_id": "P1",
+        "pdf_page": 11,
+        "table": "Table 1",
+        "row": "Free from supervision",
+        "column": "2006"
+      },
+      "reason": "Item-specific N not printed."
+    },
+    {
+      "cell": "1976_V4227",
+      "N": null,
+      "printed_text": null,
+      "locator": {
+        "doc_id": "P1",
+        "pdf_page": 11,
+        "table": "Table 1",
+        "row": "Interesting work",
+        "column": "1976"
+      },
+      "reason": "Item-specific N not printed."
+    },
+    {
+      "cell": "1991_V4227",
+      "N": null,
+      "printed_text": null,
+      "locator": {
+        "doc_id": "P1",
+        "pdf_page": 11,
+        "table": "Table 1",
+        "row": "Interesting work",
+        "column": "1991"
+      },
+      "reason": "Item-specific N not printed."
+    },
+    {
+      "cell": "2006_V4227",
+      "N": null,
+      "printed_text": null,
+      "locator": {
+        "doc_id": "P1",
+        "pdf_page": 11,
+        "table": "Table 1",
+        "row": "Interesting work",
+        "column": "2006"
+      },
+      "reason": "Item-specific N not printed."
+    },
+    {
+      "cell": "1976_V4242",
+      "N": null,
+      "printed_text": null,
+      "locator": {
+        "doc_id": "P1",
+        "pdf_page": 11,
+        "table": "Table 1",
+        "row": "Learn new things and skills",
+        "column": "1976"
+      },
+      "reason": "Item-specific N not printed."
+    },
+    {
+      "cell": "1991_V4242",
+      "N": null,
+      "printed_text": null,
+      "locator": {
+        "doc_id": "P1",
+        "pdf_page": 11,
+        "table": "Table 1",
+        "row": "Learn new things and skills",
+        "column": "1991"
+      },
+      "reason": "Item-specific N not printed."
+    },
+    {
+      "cell": "2006_V4242",
+      "N": null,
+      "printed_text": null,
+      "locator": {
+        "doc_id": "P1",
+        "pdf_page": 11,
+        "table": "Table 1",
+        "row": "Learn new things and skills",
+        "column": "2006"
+      },
+      "reason": "Item-specific N not printed."
+    },
+    {
+      "cell": "1976_V4232",
+      "N": null,
+      "printed_text": null,
+      "locator": {
+        "doc_id": "P1",
+        "pdf_page": 11,
+        "table": "Table 1",
+        "row": "Skills will not go out of date",
+        "column": "1976"
+      },
+      "reason": "Item-specific N not printed."
+    },
+    {
+      "cell": "1991_V4232",
+      "N": null,
+      "printed_text": null,
+      "locator": {
+        "doc_id": "P1",
+        "pdf_page": 11,
+        "table": "Table 1",
+        "row": "Skills will not go out of date",
+        "column": "1991"
+      },
+      "reason": "Item-specific N not printed."
+    },
+    {
+      "cell": "2006_V4232",
+      "N": null,
+      "printed_text": null,
+      "locator": {
+        "doc_id": "P1",
+        "pdf_page": 11,
+        "table": "Table 1",
+        "row": "Skills will not go out of date",
+        "column": "2006"
+      },
+      "reason": "Item-specific N not printed."
+    },
+    {
+      "cell": "1976_V4225",
+      "N": null,
+      "printed_text": null,
+      "locator": {
+        "doc_id": "P1",
+        "pdf_page": 11,
+        "table": "Table 1",
+        "row": "See results of work",
+        "column": "1976"
+      },
+      "reason": "Item-specific N not printed."
+    },
+    {
+      "cell": "1991_V4225",
+      "N": null,
+      "printed_text": null,
+      "locator": {
+        "doc_id": "P1",
+        "pdf_page": 11,
+        "table": "Table 1",
+        "row": "See results of work",
+        "column": "1991"
+      },
+      "reason": "Item-specific N not printed."
+    },
+    {
+      "cell": "2006_V4225",
+      "N": null,
+      "printed_text": null,
+      "locator": {
+        "doc_id": "P1",
+        "pdf_page": 11,
+        "table": "Table 1",
+        "row": "See results of work",
+        "column": "2006"
+      },
+      "reason": "Item-specific N not printed."
+    },
+    {
+      "cell": "1976_V4234",
+      "N": null,
+      "printed_text": null,
+      "locator": {
+        "doc_id": "P1",
+        "pdf_page": 11,
+        "table": "Table 1",
+        "row": "Uses skills and abilities",
+        "column": "1976"
+      },
+      "reason": "Item-specific N not printed."
+    },
+    {
+      "cell": "1991_V4234",
+      "N": null,
+      "printed_text": null,
+      "locator": {
+        "doc_id": "P1",
+        "pdf_page": 11,
+        "table": "Table 1",
+        "row": "Uses skills and abilities",
+        "column": "1991"
+      },
+      "reason": "Item-specific N not printed."
+    },
+    {
+      "cell": "2006_V4234",
+      "N": null,
+      "printed_text": null,
+      "locator": {
+        "doc_id": "P1",
+        "pdf_page": 11,
+        "table": "Table 1",
+        "row": "Uses skills and abilities",
+        "column": "2006"
+      },
+      "reason": "Item-specific N not printed."
+    },
+    {
+      "cell": "1976_V4243",
+      "N": null,
+      "printed_text": null,
+      "locator": {
+        "doc_id": "P1",
+        "pdf_page": 11,
+        "table": "Table 1",
+        "row": "No need to pretend to be someone else",
+        "column": "1976"
+      },
+      "reason": "Item-specific N not printed."
+    },
+    {
+      "cell": "1991_V4243",
+      "N": null,
+      "printed_text": null,
+      "locator": {
+        "doc_id": "P1",
+        "pdf_page": 11,
+        "table": "Table 1",
+        "row": "No need to pretend to be someone else",
+        "column": "1991"
+      },
+      "reason": "Item-specific N not printed."
+    },
+    {
+      "cell": "2006_V4243",
+      "N": null,
+      "printed_text": null,
+      "locator": {
+        "doc_id": "P1",
+        "pdf_page": 11,
+        "table": "Table 1",
+        "row": "No need to pretend to be someone else",
+        "column": "2006"
+      },
+      "reason": "Item-specific N not printed."
+    },
+    {
+      "cell": "1976_V4231",
+      "N": null,
+      "printed_text": null,
+      "locator": {
+        "doc_id": "P1",
+        "pdf_page": 11,
+        "table": "Table 1",
+        "row": "Chance to be creative",
+        "column": "1976"
+      },
+      "reason": "Item-specific N not printed."
+    },
+    {
+      "cell": "1991_V4231",
+      "N": null,
+      "printed_text": null,
+      "locator": {
+        "doc_id": "P1",
+        "pdf_page": 11,
+        "table": "Table 1",
+        "row": "Chance to be creative",
+        "column": "1991"
+      },
+      "reason": "Item-specific N not printed."
+    },
+    {
+      "cell": "2006_V4231",
+      "N": null,
+      "printed_text": null,
+      "locator": {
+        "doc_id": "P1",
+        "pdf_page": 11,
+        "table": "Table 1",
+        "row": "Chance to be creative",
+        "column": "2006"
+      },
+      "reason": "Item-specific N not printed."
+    },
+    {
+      "cell": "1976_V4229",
+      "N": null,
+      "printed_text": null,
+      "locator": {
+        "doc_id": "P1",
+        "pdf_page": 12,
+        "table": "Table 1",
+        "row": "Directly helpful to others",
+        "column": "1976"
+      },
+      "reason": "Item-specific N not printed."
+    },
+    {
+      "cell": "1991_V4229",
+      "N": null,
+      "printed_text": null,
+      "locator": {
+        "doc_id": "P1",
+        "pdf_page": 12,
+        "table": "Table 1",
+        "row": "Directly helpful to others",
+        "column": "1991"
+      },
+      "reason": "Item-specific N not printed."
+    },
+    {
+      "cell": "2006_V4229",
+      "N": null,
+      "printed_text": null,
+      "locator": {
+        "doc_id": "P1",
+        "pdf_page": 12,
+        "table": "Table 1",
+        "row": "Directly helpful to others",
+        "column": "2006"
+      },
+      "reason": "Item-specific N not printed."
+    },
+    {
+      "cell": "1976_V4235",
+      "N": null,
+      "printed_text": null,
+      "locator": {
+        "doc_id": "P1",
+        "pdf_page": 12,
+        "table": "Table 1",
+        "row": "Worthwhile to society",
+        "column": "1976"
+      },
+      "reason": "Item-specific N not printed."
+    },
+    {
+      "cell": "1991_V4235",
+      "N": null,
+      "printed_text": null,
+      "locator": {
+        "doc_id": "P1",
+        "pdf_page": 12,
+        "table": "Table 1",
+        "row": "Worthwhile to society",
+        "column": "1991"
+      },
+      "reason": "Item-specific N not printed."
+    },
+    {
+      "cell": "2006_V4235",
+      "N": null,
+      "printed_text": null,
+      "locator": {
+        "doc_id": "P1",
+        "pdf_page": 12,
+        "table": "Table 1",
+        "row": "Worthwhile to society",
+        "column": "2006"
+      },
+      "reason": "Item-specific N not printed."
+    },
+    {
+      "cell": "1976_V4233",
+      "N": null,
+      "printed_text": null,
+      "locator": {
+        "doc_id": "P1",
+        "pdf_page": 12,
+        "table": "Table 1",
+        "row": "Make friends",
+        "column": "1976"
+      },
+      "reason": "Item-specific N not printed."
+    },
+    {
+      "cell": "1991_V4233",
+      "N": null,
+      "printed_text": null,
+      "locator": {
+        "doc_id": "P1",
+        "pdf_page": 12,
+        "table": "Table 1",
+        "row": "Make friends",
+        "column": "1991"
+      },
+      "reason": "Item-specific N not printed."
+    },
+    {
+      "cell": "2006_V4233",
+      "N": null,
+      "printed_text": null,
+      "locator": {
+        "doc_id": "P1",
+        "pdf_page": 12,
+        "table": "Table 1",
+        "row": "Make friends",
+        "column": "2006"
+      },
+      "reason": "Item-specific N not printed."
+    },
+    {
+      "cell": "1976_V4245",
+      "N": null,
+      "printed_text": null,
+      "locator": {
+        "doc_id": "P1",
+        "pdf_page": 12,
+        "table": "Table 1",
+        "row": "Contact with many people",
+        "column": "1976"
+      },
+      "reason": "Item-specific N not printed."
+    },
+    {
+      "cell": "1991_V4245",
+      "N": null,
+      "printed_text": null,
+      "locator": {
+        "doc_id": "P1",
+        "pdf_page": 12,
+        "table": "Table 1",
+        "row": "Contact with many people",
+        "column": "1991"
+      },
+      "reason": "Item-specific N not printed."
+    },
+    {
+      "cell": "2006_V4245",
+      "N": null,
+      "printed_text": null,
+      "locator": {
+        "doc_id": "P1",
+        "pdf_page": 12,
+        "table": "Table 1",
+        "row": "Contact with many people",
+        "column": "2006"
+      },
+      "reason": "Item-specific N not printed."
+    },
+    {
+      "cell": "1976_V4226",
+      "N": null,
+      "printed_text": null,
+      "locator": {
+        "doc_id": "P1",
+        "pdf_page": 12,
+        "table": "Table 1",
+        "row": "High status and prestige",
+        "column": "1976"
+      },
+      "reason": "Item-specific N not printed."
+    },
+    {
+      "cell": "1991_V4226",
+      "N": null,
+      "printed_text": null,
+      "locator": {
+        "doc_id": "P1",
+        "pdf_page": 12,
+        "table": "Table 1",
+        "row": "High status and prestige",
+        "column": "1991"
+      },
+      "reason": "Item-specific N not printed."
+    },
+    {
+      "cell": "2006_V4226",
+      "N": null,
+      "printed_text": null,
+      "locator": {
+        "doc_id": "P1",
+        "pdf_page": 12,
+        "table": "Table 1",
+        "row": "High status and prestige",
+        "column": "2006"
+      },
+      "reason": "Item-specific N not printed."
+    },
+    {
+      "cell": "1976_V4244",
+      "N": null,
+      "printed_text": null,
+      "locator": {
+        "doc_id": "P1",
+        "pdf_page": 12,
+        "table": "Table 1",
+        "row": "Looked up to and respected",
+        "column": "1976"
+      },
+      "reason": "Item-specific N not printed."
+    },
+    {
+      "cell": "1991_V4244",
+      "N": null,
+      "printed_text": null,
+      "locator": {
+        "doc_id": "P1",
+        "pdf_page": 12,
+        "table": "Table 1",
+        "row": "Looked up to and respected",
+        "column": "1991"
+      },
+      "reason": "Item-specific N not printed."
+    },
+    {
+      "cell": "2006_V4244",
+      "N": null,
+      "printed_text": null,
+      "locator": {
+        "doc_id": "P1",
+        "pdf_page": 12,
+        "table": "Table 1",
+        "row": "Looked up to and respected",
+        "column": "2006"
+      },
+      "reason": "Item-specific N not printed."
+    },
+    {
+      "cell": "1976_V4230",
+      "N": null,
+      "printed_text": null,
+      "locator": {
+        "doc_id": "P1",
+        "pdf_page": 12,
+        "table": "Table 1",
+        "row": "Earn a good deal of money",
+        "column": "1976"
+      },
+      "reason": "Item-specific N not printed."
+    },
+    {
+      "cell": "1991_V4230",
+      "N": null,
+      "printed_text": null,
+      "locator": {
+        "doc_id": "P1",
+        "pdf_page": 12,
+        "table": "Table 1",
+        "row": "Earn a good deal of money",
+        "column": "1991"
+      },
+      "reason": "Item-specific N not printed."
+    },
+    {
+      "cell": "2006_V4230",
+      "N": null,
+      "printed_text": null,
+      "locator": {
+        "doc_id": "P1",
+        "pdf_page": 12,
+        "table": "Table 1",
+        "row": "Earn a good deal of money",
+        "column": "2006"
+      },
+      "reason": "Item-specific N not printed."
+    },
+    {
+      "cell": "1976_V4228",
+      "N": null,
+      "printed_text": null,
+      "locator": {
+        "doc_id": "P1",
+        "pdf_page": 12,
+        "table": "Table 1",
+        "row": "Advancement and promotion",
+        "column": "1976"
+      },
+      "reason": "Item-specific N not printed."
+    },
+    {
+      "cell": "1991_V4228",
+      "N": null,
+      "printed_text": null,
+      "locator": {
+        "doc_id": "P1",
+        "pdf_page": 12,
+        "table": "Table 1",
+        "row": "Advancement and promotion",
+        "column": "1991"
+      },
+      "reason": "Item-specific N not printed."
+    },
+    {
+      "cell": "2006_V4228",
+      "N": null,
+      "printed_text": null,
+      "locator": {
+        "doc_id": "P1",
+        "pdf_page": 12,
+        "table": "Table 1",
+        "row": "Advancement and promotion",
+        "column": "2006"
+      },
+      "reason": "Item-specific N not printed."
+    },
+    {
+      "cell": "1976_V3223",
+      "N": null,
+      "printed_text": null,
+      "locator": {
+        "doc_id": "P1",
+        "pdf_page": 12,
+        "table": "Table 1",
+        "row": "Work is only making a living",
+        "column": "1976"
+      },
+      "reason": "Item-specific N not printed."
+    },
+    {
+      "cell": "1991_V3223",
+      "N": null,
+      "printed_text": null,
+      "locator": {
+        "doc_id": "P1",
+        "pdf_page": 12,
+        "table": "Table 1",
+        "row": "Work is only making a living",
+        "column": "1991"
+      },
+      "reason": "Item-specific N not printed."
+    },
+    {
+      "cell": "2006_V3223",
+      "N": null,
+      "printed_text": null,
+      "locator": {
+        "doc_id": "P1",
+        "pdf_page": 12,
+        "table": "Table 1",
+        "row": "Work is only making a living",
+        "column": "2006"
+      },
+      "reason": "Item-specific N not printed."
+    },
+    {
+      "cell": "1976_V3224",
+      "N": null,
+      "printed_text": null,
+      "locator": {
+        "doc_id": "P1",
+        "pdf_page": 12,
+        "table": "Table 1",
+        "row": "Work central to life",
+        "column": "1976"
+      },
+      "reason": "Item-specific N not printed."
+    },
+    {
+      "cell": "1991_V3224",
+      "N": null,
+      "printed_text": null,
+      "locator": {
+        "doc_id": "P1",
+        "pdf_page": 12,
+        "table": "Table 1",
+        "row": "Work central to life",
+        "column": "1991"
+      },
+      "reason": "Item-specific N not printed."
+    },
+    {
+      "cell": "2006_V3224",
+      "N": null,
+      "printed_text": null,
+      "locator": {
+        "doc_id": "P1",
+        "pdf_page": 12,
+        "table": "Table 1",
+        "row": "Work central to life",
+        "column": "2006"
+      },
+      "reason": "Item-specific N not printed."
+    },
+    {
+      "cell": "1976_V3225",
+      "N": null,
+      "printed_text": null,
+      "locator": {
+        "doc_id": "P1",
+        "pdf_page": 12,
+        "table": "Table 1",
+        "row": "Best effort including overtime",
+        "column": "1976"
+      },
+      "reason": "Item-specific N not printed."
+    },
+    {
+      "cell": "1991_V3225",
+      "N": null,
+      "printed_text": null,
+      "locator": {
+        "doc_id": "P1",
+        "pdf_page": 12,
+        "table": "Table 1",
+        "row": "Best effort including overtime",
+        "column": "1991"
+      },
+      "reason": "Item-specific N not printed."
+    },
+    {
+      "cell": "2006_V3225",
+      "N": null,
+      "printed_text": null,
+      "locator": {
+        "doc_id": "P1",
+        "pdf_page": 12,
+        "table": "Table 1",
+        "row": "Best effort including overtime",
+        "column": "2006"
+      },
+      "reason": "Item-specific N not printed."
+    },
+    {
+      "cell": "1976_V3222",
+      "N": null,
+      "printed_text": null,
+      "locator": {
+        "doc_id": "P1",
+        "pdf_page": 13,
+        "table": "Table 1",
+        "row": "Forget work after the work day",
+        "column": "1976"
+      },
+      "reason": "Item-specific N not printed."
+    },
+    {
+      "cell": "1991_V3222",
+      "N": null,
+      "printed_text": null,
+      "locator": {
+        "doc_id": "P1",
+        "pdf_page": 13,
+        "table": "Table 1",
+        "row": "Forget work after the work day",
+        "column": "1991"
+      },
+      "reason": "Item-specific N not printed."
+    },
+    {
+      "cell": "2006_V3222",
+      "N": null,
+      "printed_text": null,
+      "locator": {
+        "doc_id": "P1",
+        "pdf_page": 13,
+        "table": "Table 1",
+        "row": "Forget work after the work day",
+        "column": "2006"
+      },
+      "reason": "Item-specific N not printed."
+    },
+    {
+      "cell": "1976_V3227",
+      "N": null,
+      "printed_text": null,
+      "locator": {
+        "doc_id": "P1",
+        "pdf_page": 13,
+        "table": "Table 1",
+        "row": "Want to work if financially comfortable",
+        "column": "1976"
+      },
+      "reason": "Item-specific N not printed."
+    },
+    {
+      "cell": "1991_V3227",
+      "N": null,
+      "printed_text": null,
+      "locator": {
+        "doc_id": "P1",
+        "pdf_page": 13,
+        "table": "Table 1",
+        "row": "Want to work if financially comfortable",
+        "column": "1991"
+      },
+      "reason": "Item-specific N not printed."
+    },
+    {
+      "cell": "2006_V3227",
+      "N": null,
+      "printed_text": null,
+      "locator": {
+        "doc_id": "P1",
+        "pdf_page": 13,
+        "table": "Table 1",
+        "row": "Want to work if financially comfortable",
+        "column": "2006"
+      },
+      "reason": "Item-specific N not printed."
+    },
+    {
+      "cell": "1976_V4247",
+      "N": null,
+      "printed_text": null,
+      "locator": {
+        "doc_id": "P1",
+        "pdf_page": 13,
+        "table": "Table 1",
+        "row": "Difficult and challenging problems",
+        "column": "1976"
+      },
+      "reason": "Item-specific N not printed."
+    },
+    {
+      "cell": "1991_V4247",
+      "N": null,
+      "printed_text": null,
+      "locator": {
+        "doc_id": "P1",
+        "pdf_page": 13,
+        "table": "Table 1",
+        "row": "Difficult and challenging problems",
+        "column": "1991"
+      },
+      "reason": "Item-specific N not printed."
+    },
+    {
+      "cell": "2006_V4247",
+      "N": null,
+      "printed_text": null,
+      "locator": {
+        "doc_id": "P1",
+        "pdf_page": 13,
+        "table": "Table 1",
+        "row": "Difficult and challenging problems",
+        "column": "2006"
+      },
+      "reason": "Item-specific N not printed."
+    },
+    {
+      "cell": "1976_V4237",
+      "N": null,
+      "printed_text": null,
+      "locator": {
+        "doc_id": "P1",
+        "pdf_page": 13,
+        "table": "Table 1",
+        "row": "Participate in decisions",
+        "column": "1976"
+      },
+      "reason": "Item-specific N not printed."
+    },
+    {
+      "cell": "1991_V4237",
+      "N": null,
+      "printed_text": null,
+      "locator": {
+        "doc_id": "P1",
+        "pdf_page": 13,
+        "table": "Table 1",
+        "row": "Participate in decisions",
+        "column": "1991"
+      },
+      "reason": "Item-specific N not printed."
+    },
+    {
+      "cell": "2006_V4237",
+      "N": null,
+      "printed_text": null,
+      "locator": {
+        "doc_id": "P1",
+        "pdf_page": 13,
+        "table": "Table 1",
+        "row": "Participate in decisions",
+        "column": "2006"
+      },
+      "reason": "Item-specific N not printed."
+    },
+    {
+      "cell": "1976_V4241",
+      "N": null,
+      "printed_text": null,
+      "locator": {
+        "doc_id": "P1",
+        "pdf_page": 13,
+        "table": "Table 1",
+        "row": "Predictable secure future",
+        "column": "1976"
+      },
+      "reason": "Item-specific N not printed."
+    },
+    {
+      "cell": "1991_V4241",
+      "N": null,
+      "printed_text": null,
+      "locator": {
+        "doc_id": "P1",
+        "pdf_page": 13,
+        "table": "Table 1",
+        "row": "Predictable secure future",
+        "column": "1991"
+      },
+      "reason": "Item-specific N not printed."
+    },
+    {
+      "cell": "2006_V4241",
+      "N": null,
+      "printed_text": null,
+      "locator": {
+        "doc_id": "P1",
+        "pdf_page": 13,
+        "table": "Table 1",
+        "row": "Predictable secure future",
+        "column": "2006"
+      },
+      "reason": "Item-specific N not printed."
+    },
+    {
+      "cell": "1976_V4239",
+      "N": null,
+      "printed_text": null,
+      "locator": {
+        "doc_id": "P1",
+        "pdf_page": 13,
+        "table": "Table 1",
+        "row": "Roots in a community without moving",
+        "column": "1976"
+      },
+      "reason": "Item-specific N not printed."
+    },
+    {
+      "cell": "1991_V4239",
+      "N": null,
+      "printed_text": null,
+      "locator": {
+        "doc_id": "P1",
+        "pdf_page": 13,
+        "table": "Table 1",
+        "row": "Roots in a community without moving",
+        "column": "1991"
+      },
+      "reason": "Item-specific N not printed."
+    },
+    {
+      "cell": "2006_V4239",
+      "N": null,
+      "printed_text": null,
+      "locator": {
+        "doc_id": "P1",
+        "pdf_page": 13,
+        "table": "Table 1",
+        "row": "Roots in a community without moving",
+        "column": "2006"
+      },
+      "reason": "Item-specific N not printed."
+    },
+    {
+      "cell": "1976_V3226",
+      "N": null,
+      "printed_text": null,
+      "locator": {
+        "doc_id": "P1",
+        "pdf_page": 13,
+        "table": "Table 1",
+        "row": "Same job for most adult life",
+        "column": "1976"
+      },
+      "reason": "Item-specific N not printed."
+    },
+    {
+      "cell": "1991_V3226",
+      "N": null,
+      "printed_text": null,
+      "locator": {
+        "doc_id": "P1",
+        "pdf_page": 13,
+        "table": "Table 1",
+        "row": "Same job for most adult life",
+        "column": "1991"
+      },
+      "reason": "Item-specific N not printed."
+    },
+    {
+      "cell": "2006_V3226",
+      "N": null,
+      "printed_text": null,
+      "locator": {
+        "doc_id": "P1",
+        "pdf_page": 13,
+        "table": "Table 1",
+        "row": "Same job for most adult life",
+        "column": "2006"
+      },
+      "reason": "Item-specific N not printed."
+    },
+    {
+      "cell": "1976 Form 3: 2 factor",
+      "N": null,
+      "printed_text": null,
+      "locator": {
+        "doc_id": "P1",
+        "pdf_page": 14,
+        "table": "Table 2",
+        "row": "1976 Form 3: 2 factor",
+        "column": "N"
+      },
+      "reason": "Model/difference-test N not printed."
+    },
+    {
+      "cell": "1976 Form 4: 7 factor",
+      "N": null,
+      "printed_text": null,
+      "locator": {
+        "doc_id": "P1",
+        "pdf_page": 14,
+        "table": "Table 2",
+        "row": "1976 Form 4: 7 factor",
+        "column": "N"
+      },
+      "reason": "Model/difference-test N not printed."
+    },
+    {
+      "cell": "1976 Form 4: 5 factor",
+      "N": null,
+      "printed_text": null,
+      "locator": {
+        "doc_id": "P1",
+        "pdf_page": 14,
+        "table": "Table 2",
+        "row": "1976 Form 4: 5 factor",
+        "column": "N"
+      },
+      "reason": "Model/difference-test N not printed."
+    },
+    {
+      "cell": "1991 Form 3: 2 factor",
+      "N": null,
+      "printed_text": null,
+      "locator": {
+        "doc_id": "P1",
+        "pdf_page": 14,
+        "table": "Table 2",
+        "row": "1991 Form 3: 2 factor",
+        "column": "N"
+      },
+      "reason": "Model/difference-test N not printed."
+    },
+    {
+      "cell": "1991 Form 4: 7 factor",
+      "N": null,
+      "printed_text": null,
+      "locator": {
+        "doc_id": "P1",
+        "pdf_page": 14,
+        "table": "Table 2",
+        "row": "1991 Form 4: 7 factor",
+        "column": "N"
+      },
+      "reason": "Model/difference-test N not printed."
+    },
+    {
+      "cell": "1991 Form 4: 5 factor",
+      "N": null,
+      "printed_text": null,
+      "locator": {
+        "doc_id": "P1",
+        "pdf_page": 14,
+        "table": "Table 2",
+        "row": "1991 Form 4: 5 factor",
+        "column": "N"
+      },
+      "reason": "Model/difference-test N not printed."
+    },
+    {
+      "cell": "2006 Form 3: 2 factor",
+      "N": null,
+      "printed_text": null,
+      "locator": {
+        "doc_id": "P1",
+        "pdf_page": 14,
+        "table": "Table 2",
+        "row": "2006 Form 3: 2 factor",
+        "column": "N"
+      },
+      "reason": "Model/difference-test N not printed."
+    },
+    {
+      "cell": "2006 Form 4: 7 factor",
+      "N": null,
+      "printed_text": null,
+      "locator": {
+        "doc_id": "P1",
+        "pdf_page": 14,
+        "table": "Table 2",
+        "row": "2006 Form 4: 7 factor",
+        "column": "N"
+      },
+      "reason": "Model/difference-test N not printed."
+    },
+    {
+      "cell": "2006 Form 4: 5 factor",
+      "N": null,
+      "printed_text": null,
+      "locator": {
+        "doc_id": "P1",
+        "pdf_page": 14,
+        "table": "Table 2",
+        "row": "2006 Form 4: 5 factor",
+        "column": "N"
+      },
+      "reason": "Model/difference-test N not printed."
+    },
+    {
+      "cell": "Model 1: configural inv",
+      "N": null,
+      "printed_text": null,
+      "locator": {
+        "doc_id": "P1",
+        "pdf_page": 14,
+        "table": "Table 2",
+        "row": "Model 1: configural inv",
+        "column": "N"
+      },
+      "reason": "Model/difference-test N not printed."
+    },
+    {
+      "cell": "Model 2: metric invariance",
+      "N": null,
+      "printed_text": null,
+      "locator": {
+        "doc_id": "P1",
+        "pdf_page": 14,
+        "table": "Table 2",
+        "row": "Model 2: metric invariance",
+        "column": "N"
+      },
+      "reason": "Model/difference-test N not printed."
+    },
+    {
+      "cell": "Delta Model 1 vs. Model 2",
+      "N": null,
+      "printed_text": null,
+      "locator": {
+        "doc_id": "P1",
+        "pdf_page": 14,
+        "table": "Table 2",
+        "row": "Delta Model 1 vs. Model 2",
+        "column": "N"
+      },
+      "reason": "Model/difference-test N not printed."
+    },
+    {
+      "cell": "Model 3: scalar invariance",
+      "N": null,
+      "printed_text": null,
+      "locator": {
+        "doc_id": "P1",
+        "pdf_page": 14,
+        "table": "Table 2",
+        "row": "Model 3: scalar invariance",
+        "column": "N"
+      },
+      "reason": "Model/difference-test N not printed."
+    },
+    {
+      "cell": "Delta Model 2 vs. Model 3",
+      "N": null,
+      "printed_text": null,
+      "locator": {
+        "doc_id": "P1",
+        "pdf_page": 14,
+        "table": "Table 2",
+        "row": "Delta Model 2 vs. Model 3",
+        "column": "N"
+      },
+      "reason": "Model/difference-test N not printed."
+    },
+    {
+      "cell": "Model 4: partial scalar",
+      "N": null,
+      "printed_text": null,
+      "locator": {
+        "doc_id": "P1",
+        "pdf_page": 14,
+        "table": "Table 2",
+        "row": "Model 4: partial scalar",
+        "column": "N"
+      },
+      "reason": "Model/difference-test N not printed."
+    },
+    {
+      "cell": "Delta Model 2 vs. Model 4",
+      "N": null,
+      "printed_text": null,
+      "locator": {
+        "doc_id": "P1",
+        "pdf_page": 14,
+        "table": "Table 2",
+        "row": "Delta Model 2 vs. Model 4",
+        "column": "N"
+      },
+      "reason": "Model/difference-test N not printed."
+    },
+    {
+      "cell": "Model 5: mean invariance",
+      "N": null,
+      "printed_text": null,
+      "locator": {
+        "doc_id": "P1",
+        "pdf_page": 14,
+        "table": "Table 2",
+        "row": "Model 5: mean invariance",
+        "column": "N"
+      },
+      "reason": "Model/difference-test N not printed."
+    },
+    {
+      "cell": "Delta Model 4 vs. Model 5",
+      "N": null,
+      "printed_text": null,
+      "locator": {
+        "doc_id": "P1",
+        "pdf_page": 14,
+        "table": "Table 2",
+        "row": "Delta Model 4 vs. Model 5",
+        "column": "N"
+      },
+      "reason": "Model/difference-test N not printed."
+    },
+    {
+      "cell": "1976_leisure_latent",
+      "N": null,
+      "printed_text": null,
+      "locator": {
+        "doc_id": "P1",
+        "pdf_page": 11,
+        "table": "Table 1",
+        "row": "leisure",
+        "column": "1976"
+      },
+      "reason": "Latent-mean analysis N not printed."
+    },
+    {
+      "cell": "1991_leisure_latent",
+      "N": null,
+      "printed_text": null,
+      "locator": {
+        "doc_id": "P1",
+        "pdf_page": 11,
+        "table": "Table 1",
+        "row": "leisure",
+        "column": "1991"
+      },
+      "reason": "Latent-mean analysis N not printed."
+    },
+    {
+      "cell": "2006_leisure_latent",
+      "N": null,
+      "printed_text": null,
+      "locator": {
+        "doc_id": "P1",
+        "pdf_page": 11,
+        "table": "Table 1",
+        "row": "leisure",
+        "column": "2006"
+      },
+      "reason": "Latent-mean analysis N not printed."
+    },
+    {
+      "cell": "1976_intrinsic_latent",
+      "N": null,
+      "printed_text": null,
+      "locator": {
+        "doc_id": "P1",
+        "pdf_page": 11,
+        "table": "Table 1",
+        "row": "intrinsic",
+        "column": "1976"
+      },
+      "reason": "Latent-mean analysis N not printed."
+    },
+    {
+      "cell": "1991_intrinsic_latent",
+      "N": null,
+      "printed_text": null,
+      "locator": {
+        "doc_id": "P1",
+        "pdf_page": 11,
+        "table": "Table 1",
+        "row": "intrinsic",
+        "column": "1991"
+      },
+      "reason": "Latent-mean analysis N not printed."
+    },
+    {
+      "cell": "2006_intrinsic_latent",
+      "N": null,
+      "printed_text": null,
+      "locator": {
+        "doc_id": "P1",
+        "pdf_page": 11,
+        "table": "Table 1",
+        "row": "intrinsic",
+        "column": "2006"
+      },
+      "reason": "Latent-mean analysis N not printed."
+    },
+    {
+      "cell": "1976_altruistic_latent",
+      "N": null,
+      "printed_text": null,
+      "locator": {
+        "doc_id": "P1",
+        "pdf_page": 12,
+        "table": "Table 1",
+        "row": "altruistic",
+        "column": "1976"
+      },
+      "reason": "Latent-mean analysis N not printed."
+    },
+    {
+      "cell": "1991_altruistic_latent",
+      "N": null,
+      "printed_text": null,
+      "locator": {
+        "doc_id": "P1",
+        "pdf_page": 12,
+        "table": "Table 1",
+        "row": "altruistic",
+        "column": "1991"
+      },
+      "reason": "Latent-mean analysis N not printed."
+    },
+    {
+      "cell": "2006_altruistic_latent",
+      "N": null,
+      "printed_text": null,
+      "locator": {
+        "doc_id": "P1",
+        "pdf_page": 12,
+        "table": "Table 1",
+        "row": "altruistic",
+        "column": "2006"
+      },
+      "reason": "Latent-mean analysis N not printed."
+    },
+    {
+      "cell": "1976_social_latent",
+      "N": null,
+      "printed_text": null,
+      "locator": {
+        "doc_id": "P1",
+        "pdf_page": 12,
+        "table": "Table 1",
+        "row": "social",
+        "column": "1976"
+      },
+      "reason": "Latent-mean analysis N not printed."
+    },
+    {
+      "cell": "1991_social_latent",
+      "N": null,
+      "printed_text": null,
+      "locator": {
+        "doc_id": "P1",
+        "pdf_page": 12,
+        "table": "Table 1",
+        "row": "social",
+        "column": "1991"
+      },
+      "reason": "Latent-mean analysis N not printed."
+    },
+    {
+      "cell": "2006_social_latent",
+      "N": null,
+      "printed_text": null,
+      "locator": {
+        "doc_id": "P1",
+        "pdf_page": 12,
+        "table": "Table 1",
+        "row": "social",
+        "column": "2006"
+      },
+      "reason": "Latent-mean analysis N not printed."
+    },
+    {
+      "cell": "1976_extrinsic_latent",
+      "N": null,
+      "printed_text": null,
+      "locator": {
+        "doc_id": "P1",
+        "pdf_page": 12,
+        "table": "Table 1",
+        "row": "extrinsic",
+        "column": "1976"
+      },
+      "reason": "Latent-mean analysis N not printed."
+    },
+    {
+      "cell": "1991_extrinsic_latent",
+      "N": null,
+      "printed_text": null,
+      "locator": {
+        "doc_id": "P1",
+        "pdf_page": 12,
+        "table": "Table 1",
+        "row": "extrinsic",
+        "column": "1991"
+      },
+      "reason": "Latent-mean analysis N not printed."
+    },
+    {
+      "cell": "2006_extrinsic_latent",
+      "N": null,
+      "printed_text": null,
+      "locator": {
+        "doc_id": "P1",
+        "pdf_page": 12,
+        "table": "Table 1",
+        "row": "extrinsic",
+        "column": "2006"
+      },
+      "reason": "Latent-mean analysis N not printed."
+    },
+    {
+      "cell": "survey annual sample",
+      "N": 15000,
+      "printed_text": "About 15,000",
+      "locator": {
+        "doc_id": "P1",
+        "pdf_page": 9,
+        "table": "Method",
+        "row": "Survey design",
+        "column": "approximate count"
+      },
+      "notes": "Approximate design description, not an exact analysis count."
+    },
+    {
+      "cell": "survey form subsample",
+      "N": 2500,
+      "printed_text": "about 2,500",
+      "locator": {
+        "doc_id": "P1",
+        "pdf_page": 9,
+        "table": "Method",
+        "row": "Survey design",
+        "column": "approximate count"
+      },
+      "notes": "Approximate design description, not an exact analysis count."
+    },
+    {
+      "cell": "V4236_1976_vs_1991_test",
+      "N": null,
+      "printed_text": null,
+      "locator": {
+        "doc_id": "P1",
+        "pdf_page": 11,
+        "table": "Table 1",
+        "row": "More than two weeks vacation",
+        "column": "1976 vs. 1991"
+      },
+      "reason": "Pairwise-test N and degrees of freedom not printed; reported form samples cannot be assumed to be test counts."
+    },
+    {
+      "cell": "V4236_1991_vs_2006_test",
+      "N": null,
+      "printed_text": null,
+      "locator": {
+        "doc_id": "P1",
+        "pdf_page": 11,
+        "table": "Table 1",
+        "row": "More than two weeks vacation",
+        "column": "1991 vs. 2006"
+      },
+      "reason": "Pairwise-test N and degrees of freedom not printed; reported form samples cannot be assumed to be test counts."
+    },
+    {
+      "cell": "V4236_1976_vs_2006_test",
+      "N": null,
+      "printed_text": null,
+      "locator": {
+        "doc_id": "P1",
+        "pdf_page": 11,
+        "table": "Table 1",
+        "row": "More than two weeks vacation",
+        "column": "1976 vs. 2006"
+      },
+      "reason": "Pairwise-test N and degrees of freedom not printed; reported form samples cannot be assumed to be test counts."
+    },
+    {
+      "cell": "V4238_1976_vs_1991_test",
+      "N": null,
+      "printed_text": null,
+      "locator": {
+        "doc_id": "P1",
+        "pdf_page": 11,
+        "table": "Table 1",
+        "row": "Time for other things in life",
+        "column": "1976 vs. 1991"
+      },
+      "reason": "Pairwise-test N and degrees of freedom not printed; reported form samples cannot be assumed to be test counts."
+    },
+    {
+      "cell": "V4238_1991_vs_2006_test",
+      "N": null,
+      "printed_text": null,
+      "locator": {
+        "doc_id": "P1",
+        "pdf_page": 11,
+        "table": "Table 1",
+        "row": "Time for other things in life",
+        "column": "1991 vs. 2006"
+      },
+      "reason": "Pairwise-test N and degrees of freedom not printed; reported form samples cannot be assumed to be test counts."
+    },
+    {
+      "cell": "V4238_1976_vs_2006_test",
+      "N": null,
+      "printed_text": null,
+      "locator": {
+        "doc_id": "P1",
+        "pdf_page": 11,
+        "table": "Table 1",
+        "row": "Time for other things in life",
+        "column": "1976 vs. 2006"
+      },
+      "reason": "Pairwise-test N and degrees of freedom not printed; reported form samples cannot be assumed to be test counts."
+    },
+    {
+      "cell": "V4246_1976_vs_1991_test",
+      "N": null,
+      "printed_text": null,
+      "locator": {
+        "doc_id": "P1",
+        "pdf_page": 11,
+        "table": "Table 1",
+        "row": "Easy pace; work slowly",
+        "column": "1976 vs. 1991"
+      },
+      "reason": "Pairwise-test N and degrees of freedom not printed; reported form samples cannot be assumed to be test counts."
+    },
+    {
+      "cell": "V4246_1991_vs_2006_test",
+      "N": null,
+      "printed_text": null,
+      "locator": {
+        "doc_id": "P1",
+        "pdf_page": 11,
+        "table": "Table 1",
+        "row": "Easy pace; work slowly",
+        "column": "1991 vs. 2006"
+      },
+      "reason": "Pairwise-test N and degrees of freedom not printed; reported form samples cannot be assumed to be test counts."
+    },
+    {
+      "cell": "V4246_1976_vs_2006_test",
+      "N": null,
+      "printed_text": null,
+      "locator": {
+        "doc_id": "P1",
+        "pdf_page": 11,
+        "table": "Table 1",
+        "row": "Easy pace; work slowly",
+        "column": "1976 vs. 2006"
+      },
+      "reason": "Pairwise-test N and degrees of freedom not printed; reported form samples cannot be assumed to be test counts."
+    },
+    {
+      "cell": "V4240_1976_vs_1991_test",
+      "N": null,
+      "printed_text": null,
+      "locator": {
+        "doc_id": "P1",
+        "pdf_page": 11,
+        "table": "Table 1",
+        "row": "Free from supervision",
+        "column": "1976 vs. 1991"
+      },
+      "reason": "Pairwise-test N and degrees of freedom not printed; reported form samples cannot be assumed to be test counts."
+    },
+    {
+      "cell": "V4240_1991_vs_2006_test",
+      "N": null,
+      "printed_text": null,
+      "locator": {
+        "doc_id": "P1",
+        "pdf_page": 11,
+        "table": "Table 1",
+        "row": "Free from supervision",
+        "column": "1991 vs. 2006"
+      },
+      "reason": "Pairwise-test N and degrees of freedom not printed; reported form samples cannot be assumed to be test counts."
+    },
+    {
+      "cell": "V4240_1976_vs_2006_test",
+      "N": null,
+      "printed_text": null,
+      "locator": {
+        "doc_id": "P1",
+        "pdf_page": 11,
+        "table": "Table 1",
+        "row": "Free from supervision",
+        "column": "1976 vs. 2006"
+      },
+      "reason": "Pairwise-test N and degrees of freedom not printed; reported form samples cannot be assumed to be test counts."
+    },
+    {
+      "cell": "V4227_1976_vs_1991_test",
+      "N": null,
+      "printed_text": null,
+      "locator": {
+        "doc_id": "P1",
+        "pdf_page": 11,
+        "table": "Table 1",
+        "row": "Interesting work",
+        "column": "1976 vs. 1991"
+      },
+      "reason": "Pairwise-test N and degrees of freedom not printed; reported form samples cannot be assumed to be test counts."
+    },
+    {
+      "cell": "V4227_1991_vs_2006_test",
+      "N": null,
+      "printed_text": null,
+      "locator": {
+        "doc_id": "P1",
+        "pdf_page": 11,
+        "table": "Table 1",
+        "row": "Interesting work",
+        "column": "1991 vs. 2006"
+      },
+      "reason": "Pairwise-test N and degrees of freedom not printed; reported form samples cannot be assumed to be test counts."
+    },
+    {
+      "cell": "V4227_1976_vs_2006_test",
+      "N": null,
+      "printed_text": null,
+      "locator": {
+        "doc_id": "P1",
+        "pdf_page": 11,
+        "table": "Table 1",
+        "row": "Interesting work",
+        "column": "1976 vs. 2006"
+      },
+      "reason": "Pairwise-test N and degrees of freedom not printed; reported form samples cannot be assumed to be test counts."
+    },
+    {
+      "cell": "V4242_1976_vs_1991_test",
+      "N": null,
+      "printed_text": null,
+      "locator": {
+        "doc_id": "P1",
+        "pdf_page": 11,
+        "table": "Table 1",
+        "row": "Learn new things and skills",
+        "column": "1976 vs. 1991"
+      },
+      "reason": "Pairwise-test N and degrees of freedom not printed; reported form samples cannot be assumed to be test counts."
+    },
+    {
+      "cell": "V4242_1991_vs_2006_test",
+      "N": null,
+      "printed_text": null,
+      "locator": {
+        "doc_id": "P1",
+        "pdf_page": 11,
+        "table": "Table 1",
+        "row": "Learn new things and skills",
+        "column": "1991 vs. 2006"
+      },
+      "reason": "Pairwise-test N and degrees of freedom not printed; reported form samples cannot be assumed to be test counts."
+    },
+    {
+      "cell": "V4242_1976_vs_2006_test",
+      "N": null,
+      "printed_text": null,
+      "locator": {
+        "doc_id": "P1",
+        "pdf_page": 11,
+        "table": "Table 1",
+        "row": "Learn new things and skills",
+        "column": "1976 vs. 2006"
+      },
+      "reason": "Pairwise-test N and degrees of freedom not printed; reported form samples cannot be assumed to be test counts."
+    },
+    {
+      "cell": "V4232_1976_vs_1991_test",
+      "N": null,
+      "printed_text": null,
+      "locator": {
+        "doc_id": "P1",
+        "pdf_page": 11,
+        "table": "Table 1",
+        "row": "Skills will not go out of date",
+        "column": "1976 vs. 1991"
+      },
+      "reason": "Pairwise-test N and degrees of freedom not printed; reported form samples cannot be assumed to be test counts."
+    },
+    {
+      "cell": "V4232_1991_vs_2006_test",
+      "N": null,
+      "printed_text": null,
+      "locator": {
+        "doc_id": "P1",
+        "pdf_page": 11,
+        "table": "Table 1",
+        "row": "Skills will not go out of date",
+        "column": "1991 vs. 2006"
+      },
+      "reason": "Pairwise-test N and degrees of freedom not printed; reported form samples cannot be assumed to be test counts."
+    },
+    {
+      "cell": "V4232_1976_vs_2006_test",
+      "N": null,
+      "printed_text": null,
+      "locator": {
+        "doc_id": "P1",
+        "pdf_page": 11,
+        "table": "Table 1",
+        "row": "Skills will not go out of date",
+        "column": "1976 vs. 2006"
+      },
+      "reason": "Pairwise-test N and degrees of freedom not printed; reported form samples cannot be assumed to be test counts."
+    },
+    {
+      "cell": "V4225_1976_vs_1991_test",
+      "N": null,
+      "printed_text": null,
+      "locator": {
+        "doc_id": "P1",
+        "pdf_page": 11,
+        "table": "Table 1",
+        "row": "See results of work",
+        "column": "1976 vs. 1991"
+      },
+      "reason": "Pairwise-test N and degrees of freedom not printed; reported form samples cannot be assumed to be test counts."
+    },
+    {
+      "cell": "V4225_1991_vs_2006_test",
+      "N": null,
+      "printed_text": null,
+      "locator": {
+        "doc_id": "P1",
+        "pdf_page": 11,
+        "table": "Table 1",
+        "row": "See results of work",
+        "column": "1991 vs. 2006"
+      },
+      "reason": "Pairwise-test N and degrees of freedom not printed; reported form samples cannot be assumed to be test counts."
+    },
+    {
+      "cell": "V4225_1976_vs_2006_test",
+      "N": null,
+      "printed_text": null,
+      "locator": {
+        "doc_id": "P1",
+        "pdf_page": 11,
+        "table": "Table 1",
+        "row": "See results of work",
+        "column": "1976 vs. 2006"
+      },
+      "reason": "Pairwise-test N and degrees of freedom not printed; reported form samples cannot be assumed to be test counts."
+    },
+    {
+      "cell": "V4234_1976_vs_1991_test",
+      "N": null,
+      "printed_text": null,
+      "locator": {
+        "doc_id": "P1",
+        "pdf_page": 11,
+        "table": "Table 1",
+        "row": "Uses skills and abilities",
+        "column": "1976 vs. 1991"
+      },
+      "reason": "Pairwise-test N and degrees of freedom not printed; reported form samples cannot be assumed to be test counts."
+    },
+    {
+      "cell": "V4234_1991_vs_2006_test",
+      "N": null,
+      "printed_text": null,
+      "locator": {
+        "doc_id": "P1",
+        "pdf_page": 11,
+        "table": "Table 1",
+        "row": "Uses skills and abilities",
+        "column": "1991 vs. 2006"
+      },
+      "reason": "Pairwise-test N and degrees of freedom not printed; reported form samples cannot be assumed to be test counts."
+    },
+    {
+      "cell": "V4234_1976_vs_2006_test",
+      "N": null,
+      "printed_text": null,
+      "locator": {
+        "doc_id": "P1",
+        "pdf_page": 11,
+        "table": "Table 1",
+        "row": "Uses skills and abilities",
+        "column": "1976 vs. 2006"
+      },
+      "reason": "Pairwise-test N and degrees of freedom not printed; reported form samples cannot be assumed to be test counts."
+    },
+    {
+      "cell": "V4243_1976_vs_1991_test",
+      "N": null,
+      "printed_text": null,
+      "locator": {
+        "doc_id": "P1",
+        "pdf_page": 11,
+        "table": "Table 1",
+        "row": "No need to pretend to be someone else",
+        "column": "1976 vs. 1991"
+      },
+      "reason": "Pairwise-test N and degrees of freedom not printed; reported form samples cannot be assumed to be test counts."
+    },
+    {
+      "cell": "V4243_1991_vs_2006_test",
+      "N": null,
+      "printed_text": null,
+      "locator": {
+        "doc_id": "P1",
+        "pdf_page": 11,
+        "table": "Table 1",
+        "row": "No need to pretend to be someone else",
+        "column": "1991 vs. 2006"
+      },
+      "reason": "Pairwise-test N and degrees of freedom not printed; reported form samples cannot be assumed to be test counts."
+    },
+    {
+      "cell": "V4243_1976_vs_2006_test",
+      "N": null,
+      "printed_text": null,
+      "locator": {
+        "doc_id": "P1",
+        "pdf_page": 11,
+        "table": "Table 1",
+        "row": "No need to pretend to be someone else",
+        "column": "1976 vs. 2006"
+      },
+      "reason": "Pairwise-test N and degrees of freedom not printed; reported form samples cannot be assumed to be test counts."
+    },
+    {
+      "cell": "V4231_1976_vs_1991_test",
+      "N": null,
+      "printed_text": null,
+      "locator": {
+        "doc_id": "P1",
+        "pdf_page": 11,
+        "table": "Table 1",
+        "row": "Chance to be creative",
+        "column": "1976 vs. 1991"
+      },
+      "reason": "Pairwise-test N and degrees of freedom not printed; reported form samples cannot be assumed to be test counts."
+    },
+    {
+      "cell": "V4231_1991_vs_2006_test",
+      "N": null,
+      "printed_text": null,
+      "locator": {
+        "doc_id": "P1",
+        "pdf_page": 11,
+        "table": "Table 1",
+        "row": "Chance to be creative",
+        "column": "1991 vs. 2006"
+      },
+      "reason": "Pairwise-test N and degrees of freedom not printed; reported form samples cannot be assumed to be test counts."
+    },
+    {
+      "cell": "V4231_1976_vs_2006_test",
+      "N": null,
+      "printed_text": null,
+      "locator": {
+        "doc_id": "P1",
+        "pdf_page": 11,
+        "table": "Table 1",
+        "row": "Chance to be creative",
+        "column": "1976 vs. 2006"
+      },
+      "reason": "Pairwise-test N and degrees of freedom not printed; reported form samples cannot be assumed to be test counts."
+    },
+    {
+      "cell": "V4229_1976_vs_1991_test",
+      "N": null,
+      "printed_text": null,
+      "locator": {
+        "doc_id": "P1",
+        "pdf_page": 12,
+        "table": "Table 1",
+        "row": "Directly helpful to others",
+        "column": "1976 vs. 1991"
+      },
+      "reason": "Pairwise-test N and degrees of freedom not printed; reported form samples cannot be assumed to be test counts."
+    },
+    {
+      "cell": "V4229_1991_vs_2006_test",
+      "N": null,
+      "printed_text": null,
+      "locator": {
+        "doc_id": "P1",
+        "pdf_page": 12,
+        "table": "Table 1",
+        "row": "Directly helpful to others",
+        "column": "1991 vs. 2006"
+      },
+      "reason": "Pairwise-test N and degrees of freedom not printed; reported form samples cannot be assumed to be test counts."
+    },
+    {
+      "cell": "V4229_1976_vs_2006_test",
+      "N": null,
+      "printed_text": null,
+      "locator": {
+        "doc_id": "P1",
+        "pdf_page": 12,
+        "table": "Table 1",
+        "row": "Directly helpful to others",
+        "column": "1976 vs. 2006"
+      },
+      "reason": "Pairwise-test N and degrees of freedom not printed; reported form samples cannot be assumed to be test counts."
+    },
+    {
+      "cell": "V4235_1976_vs_1991_test",
+      "N": null,
+      "printed_text": null,
+      "locator": {
+        "doc_id": "P1",
+        "pdf_page": 12,
+        "table": "Table 1",
+        "row": "Worthwhile to society",
+        "column": "1976 vs. 1991"
+      },
+      "reason": "Pairwise-test N and degrees of freedom not printed; reported form samples cannot be assumed to be test counts."
+    },
+    {
+      "cell": "V4235_1991_vs_2006_test",
+      "N": null,
+      "printed_text": null,
+      "locator": {
+        "doc_id": "P1",
+        "pdf_page": 12,
+        "table": "Table 1",
+        "row": "Worthwhile to society",
+        "column": "1991 vs. 2006"
+      },
+      "reason": "Pairwise-test N and degrees of freedom not printed; reported form samples cannot be assumed to be test counts."
+    },
+    {
+      "cell": "V4235_1976_vs_2006_test",
+      "N": null,
+      "printed_text": null,
+      "locator": {
+        "doc_id": "P1",
+        "pdf_page": 12,
+        "table": "Table 1",
+        "row": "Worthwhile to society",
+        "column": "1976 vs. 2006"
+      },
+      "reason": "Pairwise-test N and degrees of freedom not printed; reported form samples cannot be assumed to be test counts."
+    },
+    {
+      "cell": "V4233_1976_vs_1991_test",
+      "N": null,
+      "printed_text": null,
+      "locator": {
+        "doc_id": "P1",
+        "pdf_page": 12,
+        "table": "Table 1",
+        "row": "Make friends",
+        "column": "1976 vs. 1991"
+      },
+      "reason": "Pairwise-test N and degrees of freedom not printed; reported form samples cannot be assumed to be test counts."
+    },
+    {
+      "cell": "V4233_1991_vs_2006_test",
+      "N": null,
+      "printed_text": null,
+      "locator": {
+        "doc_id": "P1",
+        "pdf_page": 12,
+        "table": "Table 1",
+        "row": "Make friends",
+        "column": "1991 vs. 2006"
+      },
+      "reason": "Pairwise-test N and degrees of freedom not printed; reported form samples cannot be assumed to be test counts."
+    },
+    {
+      "cell": "V4233_1976_vs_2006_test",
+      "N": null,
+      "printed_text": null,
+      "locator": {
+        "doc_id": "P1",
+        "pdf_page": 12,
+        "table": "Table 1",
+        "row": "Make friends",
+        "column": "1976 vs. 2006"
+      },
+      "reason": "Pairwise-test N and degrees of freedom not printed; reported form samples cannot be assumed to be test counts."
+    },
+    {
+      "cell": "V4245_1976_vs_1991_test",
+      "N": null,
+      "printed_text": null,
+      "locator": {
+        "doc_id": "P1",
+        "pdf_page": 12,
+        "table": "Table 1",
+        "row": "Contact with many people",
+        "column": "1976 vs. 1991"
+      },
+      "reason": "Pairwise-test N and degrees of freedom not printed; reported form samples cannot be assumed to be test counts."
+    },
+    {
+      "cell": "V4245_1991_vs_2006_test",
+      "N": null,
+      "printed_text": null,
+      "locator": {
+        "doc_id": "P1",
+        "pdf_page": 12,
+        "table": "Table 1",
+        "row": "Contact with many people",
+        "column": "1991 vs. 2006"
+      },
+      "reason": "Pairwise-test N and degrees of freedom not printed; reported form samples cannot be assumed to be test counts."
+    },
+    {
+      "cell": "V4245_1976_vs_2006_test",
+      "N": null,
+      "printed_text": null,
+      "locator": {
+        "doc_id": "P1",
+        "pdf_page": 12,
+        "table": "Table 1",
+        "row": "Contact with many people",
+        "column": "1976 vs. 2006"
+      },
+      "reason": "Pairwise-test N and degrees of freedom not printed; reported form samples cannot be assumed to be test counts."
+    },
+    {
+      "cell": "V4226_1976_vs_1991_test",
+      "N": null,
+      "printed_text": null,
+      "locator": {
+        "doc_id": "P1",
+        "pdf_page": 12,
+        "table": "Table 1",
+        "row": "High status and prestige",
+        "column": "1976 vs. 1991"
+      },
+      "reason": "Pairwise-test N and degrees of freedom not printed; reported form samples cannot be assumed to be test counts."
+    },
+    {
+      "cell": "V4226_1991_vs_2006_test",
+      "N": null,
+      "printed_text": null,
+      "locator": {
+        "doc_id": "P1",
+        "pdf_page": 12,
+        "table": "Table 1",
+        "row": "High status and prestige",
+        "column": "1991 vs. 2006"
+      },
+      "reason": "Pairwise-test N and degrees of freedom not printed; reported form samples cannot be assumed to be test counts."
+    },
+    {
+      "cell": "V4226_1976_vs_2006_test",
+      "N": null,
+      "printed_text": null,
+      "locator": {
+        "doc_id": "P1",
+        "pdf_page": 12,
+        "table": "Table 1",
+        "row": "High status and prestige",
+        "column": "1976 vs. 2006"
+      },
+      "reason": "Pairwise-test N and degrees of freedom not printed; reported form samples cannot be assumed to be test counts."
+    },
+    {
+      "cell": "V4244_1976_vs_1991_test",
+      "N": null,
+      "printed_text": null,
+      "locator": {
+        "doc_id": "P1",
+        "pdf_page": 12,
+        "table": "Table 1",
+        "row": "Looked up to and respected",
+        "column": "1976 vs. 1991"
+      },
+      "reason": "Pairwise-test N and degrees of freedom not printed; reported form samples cannot be assumed to be test counts."
+    },
+    {
+      "cell": "V4244_1991_vs_2006_test",
+      "N": null,
+      "printed_text": null,
+      "locator": {
+        "doc_id": "P1",
+        "pdf_page": 12,
+        "table": "Table 1",
+        "row": "Looked up to and respected",
+        "column": "1991 vs. 2006"
+      },
+      "reason": "Pairwise-test N and degrees of freedom not printed; reported form samples cannot be assumed to be test counts."
+    },
+    {
+      "cell": "V4244_1976_vs_2006_test",
+      "N": null,
+      "printed_text": null,
+      "locator": {
+        "doc_id": "P1",
+        "pdf_page": 12,
+        "table": "Table 1",
+        "row": "Looked up to and respected",
+        "column": "1976 vs. 2006"
+      },
+      "reason": "Pairwise-test N and degrees of freedom not printed; reported form samples cannot be assumed to be test counts."
+    },
+    {
+      "cell": "V4230_1976_vs_1991_test",
+      "N": null,
+      "printed_text": null,
+      "locator": {
+        "doc_id": "P1",
+        "pdf_page": 12,
+        "table": "Table 1",
+        "row": "Earn a good deal of money",
+        "column": "1976 vs. 1991"
+      },
+      "reason": "Pairwise-test N and degrees of freedom not printed; reported form samples cannot be assumed to be test counts."
+    },
+    {
+      "cell": "V4230_1991_vs_2006_test",
+      "N": null,
+      "printed_text": null,
+      "locator": {
+        "doc_id": "P1",
+        "pdf_page": 12,
+        "table": "Table 1",
+        "row": "Earn a good deal of money",
+        "column": "1991 vs. 2006"
+      },
+      "reason": "Pairwise-test N and degrees of freedom not printed; reported form samples cannot be assumed to be test counts."
+    },
+    {
+      "cell": "V4230_1976_vs_2006_test",
+      "N": null,
+      "printed_text": null,
+      "locator": {
+        "doc_id": "P1",
+        "pdf_page": 12,
+        "table": "Table 1",
+        "row": "Earn a good deal of money",
+        "column": "1976 vs. 2006"
+      },
+      "reason": "Pairwise-test N and degrees of freedom not printed; reported form samples cannot be assumed to be test counts."
+    },
+    {
+      "cell": "V4228_1976_vs_1991_test",
+      "N": null,
+      "printed_text": null,
+      "locator": {
+        "doc_id": "P1",
+        "pdf_page": 12,
+        "table": "Table 1",
+        "row": "Advancement and promotion",
+        "column": "1976 vs. 1991"
+      },
+      "reason": "Pairwise-test N and degrees of freedom not printed; reported form samples cannot be assumed to be test counts."
+    },
+    {
+      "cell": "V4228_1991_vs_2006_test",
+      "N": null,
+      "printed_text": null,
+      "locator": {
+        "doc_id": "P1",
+        "pdf_page": 12,
+        "table": "Table 1",
+        "row": "Advancement and promotion",
+        "column": "1991 vs. 2006"
+      },
+      "reason": "Pairwise-test N and degrees of freedom not printed; reported form samples cannot be assumed to be test counts."
+    },
+    {
+      "cell": "V4228_1976_vs_2006_test",
+      "N": null,
+      "printed_text": null,
+      "locator": {
+        "doc_id": "P1",
+        "pdf_page": 12,
+        "table": "Table 1",
+        "row": "Advancement and promotion",
+        "column": "1976 vs. 2006"
+      },
+      "reason": "Pairwise-test N and degrees of freedom not printed; reported form samples cannot be assumed to be test counts."
+    },
+    {
+      "cell": "V3223_1976_vs_1991_test",
+      "N": null,
+      "printed_text": null,
+      "locator": {
+        "doc_id": "P1",
+        "pdf_page": 12,
+        "table": "Table 1",
+        "row": "Work is only making a living",
+        "column": "1976 vs. 1991"
+      },
+      "reason": "Pairwise-test N and degrees of freedom not printed; reported form samples cannot be assumed to be test counts."
+    },
+    {
+      "cell": "V3223_1991_vs_2006_test",
+      "N": null,
+      "printed_text": null,
+      "locator": {
+        "doc_id": "P1",
+        "pdf_page": 12,
+        "table": "Table 1",
+        "row": "Work is only making a living",
+        "column": "1991 vs. 2006"
+      },
+      "reason": "Pairwise-test N and degrees of freedom not printed; reported form samples cannot be assumed to be test counts."
+    },
+    {
+      "cell": "V3223_1976_vs_2006_test",
+      "N": null,
+      "printed_text": null,
+      "locator": {
+        "doc_id": "P1",
+        "pdf_page": 12,
+        "table": "Table 1",
+        "row": "Work is only making a living",
+        "column": "1976 vs. 2006"
+      },
+      "reason": "Pairwise-test N and degrees of freedom not printed; reported form samples cannot be assumed to be test counts."
+    },
+    {
+      "cell": "V3224_1976_vs_1991_test",
+      "N": null,
+      "printed_text": null,
+      "locator": {
+        "doc_id": "P1",
+        "pdf_page": 12,
+        "table": "Table 1",
+        "row": "Work central to life",
+        "column": "1976 vs. 1991"
+      },
+      "reason": "Pairwise-test N and degrees of freedom not printed; reported form samples cannot be assumed to be test counts."
+    },
+    {
+      "cell": "V3224_1991_vs_2006_test",
+      "N": null,
+      "printed_text": null,
+      "locator": {
+        "doc_id": "P1",
+        "pdf_page": 12,
+        "table": "Table 1",
+        "row": "Work central to life",
+        "column": "1991 vs. 2006"
+      },
+      "reason": "Pairwise-test N and degrees of freedom not printed; reported form samples cannot be assumed to be test counts."
+    },
+    {
+      "cell": "V3224_1976_vs_2006_test",
+      "N": null,
+      "printed_text": null,
+      "locator": {
+        "doc_id": "P1",
+        "pdf_page": 12,
+        "table": "Table 1",
+        "row": "Work central to life",
+        "column": "1976 vs. 2006"
+      },
+      "reason": "Pairwise-test N and degrees of freedom not printed; reported form samples cannot be assumed to be test counts."
+    },
+    {
+      "cell": "V3225_1976_vs_1991_test",
+      "N": null,
+      "printed_text": null,
+      "locator": {
+        "doc_id": "P1",
+        "pdf_page": 12,
+        "table": "Table 1",
+        "row": "Best effort including overtime",
+        "column": "1976 vs. 1991"
+      },
+      "reason": "Pairwise-test N and degrees of freedom not printed; reported form samples cannot be assumed to be test counts."
+    },
+    {
+      "cell": "V3225_1991_vs_2006_test",
+      "N": null,
+      "printed_text": null,
+      "locator": {
+        "doc_id": "P1",
+        "pdf_page": 12,
+        "table": "Table 1",
+        "row": "Best effort including overtime",
+        "column": "1991 vs. 2006"
+      },
+      "reason": "Pairwise-test N and degrees of freedom not printed; reported form samples cannot be assumed to be test counts."
+    },
+    {
+      "cell": "V3225_1976_vs_2006_test",
+      "N": null,
+      "printed_text": null,
+      "locator": {
+        "doc_id": "P1",
+        "pdf_page": 12,
+        "table": "Table 1",
+        "row": "Best effort including overtime",
+        "column": "1976 vs. 2006"
+      },
+      "reason": "Pairwise-test N and degrees of freedom not printed; reported form samples cannot be assumed to be test counts."
+    },
+    {
+      "cell": "V3222_1976_vs_1991_test",
+      "N": null,
+      "printed_text": null,
+      "locator": {
+        "doc_id": "P1",
+        "pdf_page": 13,
+        "table": "Table 1",
+        "row": "Forget work after the work day",
+        "column": "1976 vs. 1991"
+      },
+      "reason": "Pairwise-test N and degrees of freedom not printed; reported form samples cannot be assumed to be test counts."
+    },
+    {
+      "cell": "V3222_1991_vs_2006_test",
+      "N": null,
+      "printed_text": null,
+      "locator": {
+        "doc_id": "P1",
+        "pdf_page": 13,
+        "table": "Table 1",
+        "row": "Forget work after the work day",
+        "column": "1991 vs. 2006"
+      },
+      "reason": "Pairwise-test N and degrees of freedom not printed; reported form samples cannot be assumed to be test counts."
+    },
+    {
+      "cell": "V3222_1976_vs_2006_test",
+      "N": null,
+      "printed_text": null,
+      "locator": {
+        "doc_id": "P1",
+        "pdf_page": 13,
+        "table": "Table 1",
+        "row": "Forget work after the work day",
+        "column": "1976 vs. 2006"
+      },
+      "reason": "Pairwise-test N and degrees of freedom not printed; reported form samples cannot be assumed to be test counts."
+    },
+    {
+      "cell": "V3227_1976_vs_1991_test",
+      "N": null,
+      "printed_text": null,
+      "locator": {
+        "doc_id": "P1",
+        "pdf_page": 13,
+        "table": "Table 1",
+        "row": "Want to work if financially comfortable",
+        "column": "1976 vs. 1991"
+      },
+      "reason": "Pairwise-test N and degrees of freedom not printed; reported form samples cannot be assumed to be test counts."
+    },
+    {
+      "cell": "V3227_1991_vs_2006_test",
+      "N": null,
+      "printed_text": null,
+      "locator": {
+        "doc_id": "P1",
+        "pdf_page": 13,
+        "table": "Table 1",
+        "row": "Want to work if financially comfortable",
+        "column": "1991 vs. 2006"
+      },
+      "reason": "Pairwise-test N and degrees of freedom not printed; reported form samples cannot be assumed to be test counts."
+    },
+    {
+      "cell": "V3227_1976_vs_2006_test",
+      "N": null,
+      "printed_text": null,
+      "locator": {
+        "doc_id": "P1",
+        "pdf_page": 13,
+        "table": "Table 1",
+        "row": "Want to work if financially comfortable",
+        "column": "1976 vs. 2006"
+      },
+      "reason": "Pairwise-test N and degrees of freedom not printed; reported form samples cannot be assumed to be test counts."
+    },
+    {
+      "cell": "V4247_1976_vs_1991_test",
+      "N": null,
+      "printed_text": null,
+      "locator": {
+        "doc_id": "P1",
+        "pdf_page": 13,
+        "table": "Table 1",
+        "row": "Difficult and challenging problems",
+        "column": "1976 vs. 1991"
+      },
+      "reason": "Pairwise-test N and degrees of freedom not printed; reported form samples cannot be assumed to be test counts."
+    },
+    {
+      "cell": "V4247_1991_vs_2006_test",
+      "N": null,
+      "printed_text": null,
+      "locator": {
+        "doc_id": "P1",
+        "pdf_page": 13,
+        "table": "Table 1",
+        "row": "Difficult and challenging problems",
+        "column": "1991 vs. 2006"
+      },
+      "reason": "Pairwise-test N and degrees of freedom not printed; reported form samples cannot be assumed to be test counts."
+    },
+    {
+      "cell": "V4247_1976_vs_2006_test",
+      "N": null,
+      "printed_text": null,
+      "locator": {
+        "doc_id": "P1",
+        "pdf_page": 13,
+        "table": "Table 1",
+        "row": "Difficult and challenging problems",
+        "column": "1976 vs. 2006"
+      },
+      "reason": "Pairwise-test N and degrees of freedom not printed; reported form samples cannot be assumed to be test counts."
+    },
+    {
+      "cell": "V4237_1976_vs_1991_test",
+      "N": null,
+      "printed_text": null,
+      "locator": {
+        "doc_id": "P1",
+        "pdf_page": 13,
+        "table": "Table 1",
+        "row": "Participate in decisions",
+        "column": "1976 vs. 1991"
+      },
+      "reason": "Pairwise-test N and degrees of freedom not printed; reported form samples cannot be assumed to be test counts."
+    },
+    {
+      "cell": "V4237_1991_vs_2006_test",
+      "N": null,
+      "printed_text": null,
+      "locator": {
+        "doc_id": "P1",
+        "pdf_page": 13,
+        "table": "Table 1",
+        "row": "Participate in decisions",
+        "column": "1991 vs. 2006"
+      },
+      "reason": "Pairwise-test N and degrees of freedom not printed; reported form samples cannot be assumed to be test counts."
+    },
+    {
+      "cell": "V4237_1976_vs_2006_test",
+      "N": null,
+      "printed_text": null,
+      "locator": {
+        "doc_id": "P1",
+        "pdf_page": 13,
+        "table": "Table 1",
+        "row": "Participate in decisions",
+        "column": "1976 vs. 2006"
+      },
+      "reason": "Pairwise-test N and degrees of freedom not printed; reported form samples cannot be assumed to be test counts."
+    },
+    {
+      "cell": "V4241_1976_vs_1991_test",
+      "N": null,
+      "printed_text": null,
+      "locator": {
+        "doc_id": "P1",
+        "pdf_page": 13,
+        "table": "Table 1",
+        "row": "Predictable secure future",
+        "column": "1976 vs. 1991"
+      },
+      "reason": "Pairwise-test N and degrees of freedom not printed; reported form samples cannot be assumed to be test counts."
+    },
+    {
+      "cell": "V4241_1991_vs_2006_test",
+      "N": null,
+      "printed_text": null,
+      "locator": {
+        "doc_id": "P1",
+        "pdf_page": 13,
+        "table": "Table 1",
+        "row": "Predictable secure future",
+        "column": "1991 vs. 2006"
+      },
+      "reason": "Pairwise-test N and degrees of freedom not printed; reported form samples cannot be assumed to be test counts."
+    },
+    {
+      "cell": "V4241_1976_vs_2006_test",
+      "N": null,
+      "printed_text": null,
+      "locator": {
+        "doc_id": "P1",
+        "pdf_page": 13,
+        "table": "Table 1",
+        "row": "Predictable secure future",
+        "column": "1976 vs. 2006"
+      },
+      "reason": "Pairwise-test N and degrees of freedom not printed; reported form samples cannot be assumed to be test counts."
+    },
+    {
+      "cell": "V4239_1976_vs_1991_test",
+      "N": null,
+      "printed_text": null,
+      "locator": {
+        "doc_id": "P1",
+        "pdf_page": 13,
+        "table": "Table 1",
+        "row": "Roots in a community without moving",
+        "column": "1976 vs. 1991"
+      },
+      "reason": "Pairwise-test N and degrees of freedom not printed; reported form samples cannot be assumed to be test counts."
+    },
+    {
+      "cell": "V4239_1991_vs_2006_test",
+      "N": null,
+      "printed_text": null,
+      "locator": {
+        "doc_id": "P1",
+        "pdf_page": 13,
+        "table": "Table 1",
+        "row": "Roots in a community without moving",
+        "column": "1991 vs. 2006"
+      },
+      "reason": "Pairwise-test N and degrees of freedom not printed; reported form samples cannot be assumed to be test counts."
+    },
+    {
+      "cell": "V4239_1976_vs_2006_test",
+      "N": null,
+      "printed_text": null,
+      "locator": {
+        "doc_id": "P1",
+        "pdf_page": 13,
+        "table": "Table 1",
+        "row": "Roots in a community without moving",
+        "column": "1976 vs. 2006"
+      },
+      "reason": "Pairwise-test N and degrees of freedom not printed; reported form samples cannot be assumed to be test counts."
+    },
+    {
+      "cell": "V3226_1976_vs_1991_test",
+      "N": null,
+      "printed_text": null,
+      "locator": {
+        "doc_id": "P1",
+        "pdf_page": 13,
+        "table": "Table 1",
+        "row": "Same job for most adult life",
+        "column": "1976 vs. 1991"
+      },
+      "reason": "Pairwise-test N and degrees of freedom not printed; reported form samples cannot be assumed to be test counts."
+    },
+    {
+      "cell": "V3226_1991_vs_2006_test",
+      "N": null,
+      "printed_text": null,
+      "locator": {
+        "doc_id": "P1",
+        "pdf_page": 13,
+        "table": "Table 1",
+        "row": "Same job for most adult life",
+        "column": "1991 vs. 2006"
+      },
+      "reason": "Pairwise-test N and degrees of freedom not printed; reported form samples cannot be assumed to be test counts."
+    },
+    {
+      "cell": "V3226_1976_vs_2006_test",
+      "N": null,
+      "printed_text": null,
+      "locator": {
+        "doc_id": "P1",
+        "pdf_page": 13,
+        "table": "Table 1",
+        "row": "Same job for most adult life",
+        "column": "1976 vs. 2006"
+      },
+      "reason": "Pairwise-test N and degrees of freedom not printed; reported form samples cannot be assumed to be test counts."
+    },
+    {
+      "cell": "leisure_1976_vs_1991_latent_contrast",
+      "N": null,
+      "printed_text": null,
+      "locator": {
+        "doc_id": "P1",
+        "pdf_page": 11,
+        "table": "Table 1",
+        "row": "leisure",
+        "column": "1976 vs. 1991"
+      },
+      "reason": "Latent-contrast analytic counts not reported."
+    },
+    {
+      "cell": "leisure_1991_vs_2006_latent_contrast",
+      "N": null,
+      "printed_text": null,
+      "locator": {
+        "doc_id": "P1",
+        "pdf_page": 11,
+        "table": "Table 1",
+        "row": "leisure",
+        "column": "1991 vs. 2006"
+      },
+      "reason": "Latent-contrast analytic counts not reported."
+    },
+    {
+      "cell": "leisure_1976_vs_2006_latent_contrast",
+      "N": null,
+      "printed_text": null,
+      "locator": {
+        "doc_id": "P1",
+        "pdf_page": 11,
+        "table": "Table 1",
+        "row": "leisure",
+        "column": "1976 vs. 2006"
+      },
+      "reason": "Latent-contrast analytic counts not reported."
+    },
+    {
+      "cell": "intrinsic_1976_vs_1991_latent_contrast",
+      "N": null,
+      "printed_text": null,
+      "locator": {
+        "doc_id": "P1",
+        "pdf_page": 11,
+        "table": "Table 1",
+        "row": "intrinsic",
+        "column": "1976 vs. 1991"
+      },
+      "reason": "Latent-contrast analytic counts not reported."
+    },
+    {
+      "cell": "intrinsic_1991_vs_2006_latent_contrast",
+      "N": null,
+      "printed_text": null,
+      "locator": {
+        "doc_id": "P1",
+        "pdf_page": 11,
+        "table": "Table 1",
+        "row": "intrinsic",
+        "column": "1991 vs. 2006"
+      },
+      "reason": "Latent-contrast analytic counts not reported."
+    },
+    {
+      "cell": "intrinsic_1976_vs_2006_latent_contrast",
+      "N": null,
+      "printed_text": null,
+      "locator": {
+        "doc_id": "P1",
+        "pdf_page": 11,
+        "table": "Table 1",
+        "row": "intrinsic",
+        "column": "1976 vs. 2006"
+      },
+      "reason": "Latent-contrast analytic counts not reported."
+    },
+    {
+      "cell": "altruistic_1976_vs_1991_latent_contrast",
+      "N": null,
+      "printed_text": null,
+      "locator": {
+        "doc_id": "P1",
+        "pdf_page": 12,
+        "table": "Table 1",
+        "row": "altruistic",
+        "column": "1976 vs. 1991"
+      },
+      "reason": "Latent-contrast analytic counts not reported."
+    },
+    {
+      "cell": "altruistic_1991_vs_2006_latent_contrast",
+      "N": null,
+      "printed_text": null,
+      "locator": {
+        "doc_id": "P1",
+        "pdf_page": 12,
+        "table": "Table 1",
+        "row": "altruistic",
+        "column": "1991 vs. 2006"
+      },
+      "reason": "Latent-contrast analytic counts not reported."
+    },
+    {
+      "cell": "altruistic_1976_vs_2006_latent_contrast",
+      "N": null,
+      "printed_text": null,
+      "locator": {
+        "doc_id": "P1",
+        "pdf_page": 12,
+        "table": "Table 1",
+        "row": "altruistic",
+        "column": "1976 vs. 2006"
+      },
+      "reason": "Latent-contrast analytic counts not reported."
+    },
+    {
+      "cell": "social_1976_vs_1991_latent_contrast",
+      "N": null,
+      "printed_text": null,
+      "locator": {
+        "doc_id": "P1",
+        "pdf_page": 12,
+        "table": "Table 1",
+        "row": "social",
+        "column": "1976 vs. 1991"
+      },
+      "reason": "Latent-contrast analytic counts not reported."
+    },
+    {
+      "cell": "social_1991_vs_2006_latent_contrast",
+      "N": null,
+      "printed_text": null,
+      "locator": {
+        "doc_id": "P1",
+        "pdf_page": 12,
+        "table": "Table 1",
+        "row": "social",
+        "column": "1991 vs. 2006"
+      },
+      "reason": "Latent-contrast analytic counts not reported."
+    },
+    {
+      "cell": "social_1976_vs_2006_latent_contrast",
+      "N": null,
+      "printed_text": null,
+      "locator": {
+        "doc_id": "P1",
+        "pdf_page": 12,
+        "table": "Table 1",
+        "row": "social",
+        "column": "1976 vs. 2006"
+      },
+      "reason": "Latent-contrast analytic counts not reported."
+    },
+    {
+      "cell": "extrinsic_1976_vs_1991_latent_contrast",
+      "N": null,
+      "printed_text": null,
+      "locator": {
+        "doc_id": "P1",
+        "pdf_page": 12,
+        "table": "Table 1",
+        "row": "extrinsic",
+        "column": "1976 vs. 1991"
+      },
+      "reason": "Latent-contrast analytic counts not reported."
+    },
+    {
+      "cell": "extrinsic_1991_vs_2006_latent_contrast",
+      "N": null,
+      "printed_text": null,
+      "locator": {
+        "doc_id": "P1",
+        "pdf_page": 12,
+        "table": "Table 1",
+        "row": "extrinsic",
+        "column": "1991 vs. 2006"
+      },
+      "reason": "Latent-contrast analytic counts not reported."
+    },
+    {
+      "cell": "extrinsic_1976_vs_2006_latent_contrast",
+      "N": null,
+      "printed_text": null,
+      "locator": {
+        "doc_id": "P1",
+        "pdf_page": 12,
+        "table": "Table 1",
+        "row": "extrinsic",
+        "column": "1976 vs. 2006"
+      },
+      "reason": "Latent-contrast analytic counts not reported."
+    }
+  ]
+}

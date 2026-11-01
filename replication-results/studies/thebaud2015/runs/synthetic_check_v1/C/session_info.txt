@@ -1,0 +1,22 @@
+manifest: P-7Q3 (neutral, version 1)
+script: run.jl
+command line: implementation/synthetic/data runs/synthetic_check_v1/C ORIGIN
+start: 2026-10-28T01:58:06.346  end: 2026-10-28T02:12:58.500  elapsed_s: 892.2
+julia: 1.12.6
+os: Darwin arm64-apple-darwin24.0.0  cpu_threads: 12  julia_threads: 1
+blas: LBTConfig([ILP64] libopenblas64_.dylib)
+MixedModels: 5.9.1
+GLM: 1.9.5
+StatsModels: 0.7.10
+DataFrames: 1.8.2
+CSV: 0.10.17
+JSON3: 1.14.3
+CategoricalArrays: 1.1.1
+Distributions: 0.25.132
+stdlib: LinearAlgebra, Statistics, Random, SHA, Printf, Dates (SparseArrays accessed via MixedModels.SparseArrays)
+mixed-model routine (logit): fit(GeneralizedLinearMixedModel, ...; fast=false, nAGQ=1) -- Laplace, ML; optimizer NLopt LN_NEWUOA (MixedModels default)
+mixed-model routine (linear): fit(MixedModel, ...; REML=false) -- ML (U25: REML=true for M5)
+benchmark: GLM pooled fit; CR1 country-clustered sandwich SE with G/(G-1); normal two-sided p; M5 wild cluster bootstrap (Rademacher, null imposed, 999 reps, seed 20261028, Random.Xoshiro)
+patch: this script defines LinearAlgebra.mul!(::SparseMatrixCSC, ::Adjoint{<:ReMat{T,S}}, ::ReMat{T,P}) for S,P > 1, a method missing from MixedModels 5.9.1 (see IMPLEMENTATION_NOTES.md)
+weights: unweighted (manifest section 7); a weighted branch is not available with the specified mixed-model routines
+random-effects SDs are reported as |sigma| (MixedModels can return a negative sign on an independent-covariance diagonal)

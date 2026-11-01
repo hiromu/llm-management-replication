@@ -1,0 +1,202 @@
+201 checks passed.
+M1 independent sample membership
+M1 age centered within its own sample
+M2 independent sample membership
+M2 age centered within its own sample
+M3 independent sample membership
+M3 age centered within its own sample
+M4 independent sample membership
+M4 age centered within its own sample
+M4 business age centered within its own sample
+M5 independent sample membership
+M5 age centered within its own sample
+M5 business age centered within its own sample
+M6 independent sample membership
+M6 age centered within its own sample
+M6 business age centered within its own sample
+M7 independent sample membership
+M7 age centered within its own sample
+M7 business age centered within its own sample
+M8 independent sample membership
+M8 age centered within its own sample
+M8 business age centered within its own sample
+R1 independent sample membership
+R1 age centered within its own sample
+R2 independent sample membership
+R2 age centered within its own sample
+R3 independent sample membership
+R3 age centered within its own sample
+Exact 143-survey, 24-country roster
+leave survey-level n-1 standardization
+childcare survey-level n-1 standardization
+parttime survey-level n-1 standardization
+gdp survey-level n-1 standardization
+unemp survey-level n-1 standardization
+epl survey-level n-1 standardization
+status survey-level n-1 standardization
+wmgr survey-level n-1 standardization
+fert survey-level n-1 standardization
+Origin leave squared after standardization
+ORIGIN M1 sample construction
+ORIGIN M2 sample construction
+ORIGIN M3 sample construction
+ORIGIN M4 sample construction
+ORIGIN M5 sample construction
+ORIGIN M6 sample construction
+ORIGIN M7 sample construction
+ORIGIN M8 sample construction
+ORIGIN R1 sample construction
+ORIGIN R2 sample construction
+ORIGIN R3 sample construction
+U01 M3 sample construction
+U01 M4 sample construction
+U01 M5 sample construction
+U01 M6 sample construction
+U01 M7 sample construction
+U01 M8 sample construction
+U02 M3 sample construction
+U02 M4 sample construction
+U02 M5 sample construction
+U02 M6 sample construction
+U02 M7 sample construction
+U02 M8 sample construction
+U05 M3 sample construction
+U05 M4 sample construction
+U05 M5 sample construction
+U05 M6 sample construction
+U05 M7 sample construction
+U05 M8 sample construction
+U12 M3 sample construction
+U12 M4 sample construction
+U12 M5 sample construction
+U12 M6 sample construction
+U12 M7 sample construction
+U12 M8 sample construction
+U13 M3 sample construction
+U13 M4 sample construction
+U13 M5 sample construction
+U13 M6 sample construction
+U13 M7 sample construction
+U13 M8 sample construction
+U14 M3 sample construction
+U14 M4 sample construction
+U14 M5 sample construction
+U14 M6 sample construction
+U14 M7 sample construction
+U14 M8 sample construction
+U15 M3 sample construction
+U15 M4 sample construction
+U15 M5 sample construction
+U15 M6 sample construction
+U15 M7 sample construction
+U15 M8 sample construction
+U16 M3 sample construction
+U16 M4 sample construction
+U16 M5 sample construction
+U16 M6 sample construction
+U16 M7 sample construction
+U16 M8 sample construction
+U17 M3 sample construction
+U17 M4 sample construction
+U17 M5 sample construction
+U17 M6 sample construction
+U17 M7 sample construction
+U17 M8 sample construction
+U18 M3 sample construction
+U18 M4 sample construction
+U18 M5 sample construction
+U18 M6 sample construction
+U18 M7 sample construction
+U18 M8 sample construction
+U19 M3 sample construction
+U19 M4 sample construction
+U19 M5 sample construction
+U19 M6 sample construction
+U19 M7 sample construction
+U19 M8 sample construction
+U20 M3 sample construction
+U20 M4 sample construction
+U20 M5 sample construction
+U20 M6 sample construction
+U20 M7 sample construction
+U20 M8 sample construction
+U22 M3 sample construction
+U22 M4 sample construction
+U22 M5 sample construction
+U22 M6 sample construction
+U22 M7 sample construction
+U22 M8 sample construction
+U03 M3 sample construction
+U03 R1 sample construction
+U04 M3 sample construction
+U06 M3 sample construction
+U07 M4 sample construction
+U07 M5 sample construction
+U07 M6 sample construction
+U07 M7 sample construction
+U07 M8 sample construction
+U08 M4 sample construction
+U08 M5 sample construction
+U08 M6 sample construction
+U08 M7 sample construction
+U08 M8 sample construction
+U11 M4 sample construction
+U11 M5 sample construction
+U11 M6 sample construction
+U11 M7 sample construction
+U11 M8 sample construction
+U24 M4 sample construction
+U24 M5 sample construction
+U24 M6 sample construction
+U24 M7 sample construction
+U24 M8 sample construction
+U09 M4 sample construction
+U10 M4 sample construction
+U23 M6 sample construction
+U25 M5 sample construction
+U26 R2 sample construction
+N01 M3 sample construction
+N01 M4 sample construction
+N01 M5 sample construction
+N01 M6 sample construction
+N01 M7 sample construction
+N01 M8 sample construction
+U01 includes origin and permits age 18
+U02 includes origin and work category 6
+U05 expands roster
+U15 leave country means SD
+U16 leave individual SD
+U15 childcare country means SD
+U16 childcare individual SD
+U15 parttime country means SD
+U16 parttime individual SD
+U15 gdp country means SD
+U16 gdp individual SD
+U15 unemp country means SD
+U16 unemp individual SD
+U15 epl country means SD
+U16 epl individual SD
+U15 status country means SD
+U16 status individual SD
+U15 wmgr country means SD
+U16 wmgr individual SD
+U15 fert country means SD
+U16 fert individual SD
+U14 raw leave-square SD
+U17 leave lag keyed by calendar year
+U18 leave lag keyed by calendar year
+U03 SUWAGE exclusion, including missing and refusal codes
+Screening codes including 100 and missing
+U06 recodes 8 only
+Size count bounds and sentinel codes
+Growth difference strictly greater than five
+Business age zero, censored 1990 and log1p branch
+Status earliest later year, including ineligible respondents
+U22 status uses eligible respondents
+N01 disables status carryback
+female:leave bootstrap matches direct restricted-residual refits
+female:leave_sq bootstrap matches direct restricted-residual refits
+female:childcare bootstrap matches direct restricted-residual refits
+female:parttime bootstrap matches direct restricted-residual refits
+Constant-response mixed fit records failure
+N01 excludes 2001/2002 without silently rebasing year

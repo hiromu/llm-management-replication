@@ -1,0 +1,20 @@
+Implemented [code/run_all.py](/var/folders/7q/9m3zdcp550d685wgsq9kvf6r0000gn/T/role_86525d29ab34_tdbQ/code/run_all.py) plus four helpers.
+
+- **Synthetic:** 102/102 checks passed, including all estimators, exact likelihood, marginal effects, sandwich covariance, and influence refits.
+- **Sample:** eight distinct samples covering 604 scheduled fits.
+- **Outputs:** `synthetic_checks.md`, `sample_flow.csv`, `sample_index.csv`, hashed `samples/`, `implementation_notes.md`, `environment.txt`, and synthetic-only verification tables.
+
+Origin row counts:
+
+| Step | Rows |
+|---|---:|
+| S1 Regular season | 266,592 |
+| S2 Fourth downs | 24,282 |
+| S3 Decision rows | 22,909 |
+| S4 Regulation | 22,766 |
+| S5 Time exclusion | 21,540 |
+| S6 Team availability | 21,540 |
+| S7 Validated merges | 21,540 |
+| S8 Complete cases | 21,540 |
+
+No complete-case losses or division-code disagreements. No manifest items remain unimplemented. Only `synthetic` and `sample` were run; **no real-data model was fitted**.

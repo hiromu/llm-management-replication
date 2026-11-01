@@ -1,0 +1,5 @@
+Language: Julia 1.12.6
+Interpreter: ~/.juliaup/bin/julia
+Permitted packages (already installed in the default environment; do not install anything): MixedModels 5.9.1, GLM 1.9.5, StatsModels 0.7.10, DataFrames 1.8.2, CSV 0.10.17, JSON3 1.14.3, CategoricalArrays 1.1.1, Distributions 0.25.132, and the standard libraries (LinearAlgebra, Statistics, Random, SHA, Printf, Dates).
+Mixed models: MixedModels.fit(GeneralizedLinearMixedModel, ...; fast = false, nAGQ = 1) for the Laplace approximation, and fit(MixedModel, ...; REML = false) for ML. Package documentation is available offline in the package source (julia -e 'using MixedModels; @doc ...').
+Script name: run.jl

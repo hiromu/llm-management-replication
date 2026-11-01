@@ -1,0 +1,4 @@
+{"written": "2026-10-28, after implementation outputs existed and before any comparison with published targets",
+ "reason": "sealed/scoring_rules.json lists tolerances for the scored fields only; descriptive fields need a rule for the implementation-agreement report",
+ "rule": "fields not listed in scoring_rules implementation_agreement (SEs, p values, factor variances/SDs, alpha, percentages, chi-square differences, p of differences, CFI differences, Welch df): agree if |a-b| <= max(1e-3*max(|a|,|b|), 1e-6). Latent contrast Delta uses the d_eq/latent-mean bound 0.002; fit df and difference df exact; item n exact.",
+ "scoring_effect": "none on scored criteria: focal scoring uses d_eq (listed), item scoring uses item mean, SD, t and p (p derived from agreed t; reported p agreement uses this addendum)"}

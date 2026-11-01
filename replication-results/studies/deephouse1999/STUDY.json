@@ -1,0 +1,27 @@
+{
+  "study_id": "deephouse1999",
+  "citation": "Deephouse (1999). To Be Different, or to Be the Same?. Strategic Management Journal.",
+  "journal": "Strategic Management Journal",
+  "paper_path_from_project_root": "papers/journal_collection/SMJ/SMJ_1999_Deephouse.pdf",
+  "paper_sha256": "62eecc5b46b382896f2d660380b409de714b31faf8be5da2de505e27d16112e4",
+  "status": "completed_indeterminate",
+  "data_policy": "All empirical inputs must be newly acquired from publicly available source datasets or public primary records and independently constructed. No printed article data or author-provided replication packages. Published results may be extracted only as sealed comparison targets or publication diagnostics.",
+  "reader_runs": 2,
+  "model_fits": "3 implementations x 448 model settings + 8715 influence refits each (run_v1)",
+  "session_scope": "deephouse1999 only; other papers require a separate session",
+  "public_source_eligibility": "verified: Call Reports (Chicago Fed archive), FDIC BankFind, FRED/BLS, Census MSA files acquired 2026-10-27",
+  "author_package_availability": "none found (logs/supplement_and_package_search.json)",
+  "paper_id": "SMJ_1999_Deephouse",
+  "supplement_catalog_from_project_root": "papers/supplements/catalog.json",
+  "supplements": [],
+  "local_supplement_status": "no_local_match",
+  "external_supplement_availability": "none found after documented search",
+  "memorization_probes": 2,
+  "paper_outcome": "indeterminate (primary focal H3 indeterminate: first-order term magnitude outside band at both origins; N 1255-1260 vs 960)",
+  "coordinator_session": "e8c50fbe-47ce-48c1-8aa1-bd531593c98a",
+  "report": "reports/replication_report.md",
+  "pending": [
+    "human review (no discrepant verdict requested)",
+    "corpus calibration (out of session scope)"
+  ]
+}

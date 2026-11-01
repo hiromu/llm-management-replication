@@ -1,0 +1,244 @@
+{
+ "record": "role_run_model_verification",
+ "rows": [
+  {
+   "role": "memorization probe A",
+   "cli": "claude 2.1.270",
+   "requested": "claude-fable-5-1 high, fastMode false",
+   "reported_models": [
+    "claude-fable-5-1"
+   ],
+   "speed": "standard",
+   "fast_mode_state": "off",
+   "cost_usd": 0.17,
+   "record": "sealed/memorization/reader_a_fable/out.json",
+   "accepted": true
+  },
+  {
+   "role": "memorization probe B",
+   "cli": "codex-cli 0.164.0",
+   "requested": "gpt-6-astra, reasoning high, service_tier default, fast off",
+   "reported_models": "not echoed by codex exec JSON (verification limit)",
+   "record": "sealed/memorization/reader_b_astra/events.jsonl",
+   "accepted": true
+  },
+  {
+   "role": "reader A",
+   "cli": "claude 2.1.270",
+   "requested": "claude-fable-5-1 high, fastMode false",
+   "reported_models": [
+    "claude-fable-5-1"
+   ],
+   "speed": "standard",
+   "fast_mode_state": "off",
+   "cost_usd": 17.25,
+   "record": "readers/fable/initial_v1/run/role_dff130db_run.json",
+   "accepted": true
+  },
+  {
+   "role": "reader B",
+   "cli": "codex-cli 0.164.0",
+   "requested": "gpt-6-astra, reasoning high, service_tier default, fast off",
+   "reported_models": "not echoed by codex exec JSON (verification limit)",
+   "record": "readers/astra/initial_v1/run/role_f7611583_events.jsonl",
+   "accepted": true
+  },
+  {
+   "role": "implementer A_v1",
+   "cli": "claude 2.1.270",
+   "requested": "claude-fable-5-1 high, fastMode false",
+   "reported_models": [
+    "claude-fable-5-1"
+   ],
+   "speed": "standard",
+   "fast_mode_state": "off",
+   "cost_usd": 7.83,
+   "record": "implementation/A_v1/run/role_0077f933_run.json",
+   "accepted": true
+  },
+  {
+   "role": "implementer A_v1_1",
+   "cli": "claude 2.1.270",
+   "requested": "claude-fable-5-1 high, fastMode false",
+   "reported_models": [
+    "claude-fable-5-1"
+   ],
+   "speed": "standard",
+   "fast_mode_state": "off",
+   "cost_usd": 8.08,
+   "record": "implementation/A_v1_1/run/role_49d1bf6a_run.json",
+   "accepted": true
+  },
+  {
+   "role": "implementer A_v1_2",
+   "cli": "claude 2.1.270",
+   "requested": "claude-fable-5-1 high, fastMode false",
+   "reported_models": [
+    "claude-fable-5-1"
+   ],
+   "speed": "standard",
+   "fast_mode_state": "off",
+   "cost_usd": 5.44,
+   "record": "implementation/A_v1_2/run/role_f6a03399_run.json",
+   "accepted": true
+  },
+  {
+   "role": "implementer C_v1",
+   "cli": "claude 2.1.270",
+   "requested": "claude-fable-5-1 high, fastMode false",
+   "reported_models": [
+    "claude-fable-5-1"
+   ],
+   "speed": "standard",
+   "fast_mode_state": "off",
+   "cost_usd": 8.28,
+   "record": "implementation/C_v1/run/role_2519f1e1_run.json",
+   "accepted": true
+  },
+  {
+   "role": "implementer C_v1_1",
+   "cli": "claude 2.1.270",
+   "requested": "claude-fable-5-1 high, fastMode false",
+   "reported_models": [
+    "claude-fable-5-1"
+   ],
+   "speed": "standard",
+   "fast_mode_state": "off",
+   "cost_usd": 8.84,
+   "record": "implementation/C_v1_1/run/role_15e47bb8_run.json",
+   "accepted": true
+  },
+  {
+   "role": "implementer C_v1_2",
+   "cli": "claude 2.1.270",
+   "requested": "claude-fable-5-1 high, fastMode false",
+   "reported_models": [
+    "claude-fable-5-1"
+   ],
+   "speed": "standard",
+   "fast_mode_state": "off",
+   "cost_usd": 5.4,
+   "record": "implementation/C_v1_2/run/role_232d3f7c_run.json",
+   "accepted": true
+  },
+  {
+   "role": "implementer C_v1_2_REJECTED_model_substitution",
+   "cli": "claude 2.1.270",
+   "requested": "claude-fable-5-1 high, fastMode false",
+   "reported_models": [
+    "claude-opus-5",
+    "claude-opus-4-8"
+   ],
+   "speed": "standard",
+   "fast_mode_state": "off",
+   "cost_usd": 5.48,
+   "record": "implementation/C_v1_2_REJECTED_model_substitution/run/role_ada87ba1_run.json",
+   "accepted": false
+  },
+  {
+   "role": "implementer C_v1_2b_REJECTED_model_substitution",
+   "cli": "claude 2.1.270",
+   "requested": "claude-fable-5-1 high, fastMode false",
+   "reported_models": [
+    "claude-opus-5",
+    "claude-opus-4-8"
+   ],
+   "speed": "standard",
+   "fast_mode_state": "off",
+   "cost_usd": 3.24,
+   "record": "implementation/C_v1_2b_REJECTED_model_substitution/run/role_aba292ec_run.json",
+   "accepted": false
+  },
+  {
+   "role": "implementer B_v1",
+   "cli": "codex-cli 0.164.0",
+   "requested": "gpt-6-astra, reasoning high, service_tier default, fast off",
+   "reported_models": "not echoed by codex exec JSON (verification limit)",
+   "record": "implementation/B_v1/run/role_fb4d8de5_events.jsonl",
+   "accepted": true
+  },
+  {
+   "role": "implementer B_v1_1",
+   "cli": "codex-cli 0.164.0",
+   "requested": "gpt-6-astra, reasoning high, service_tier default, fast off",
+   "reported_models": "not echoed by codex exec JSON (verification limit)",
+   "record": "implementation/B_v1_1/run/role_d73d1881_events.jsonl",
+   "accepted": true
+  },
+  {
+   "role": "checker B_v1",
+   "cli": "claude 2.1.270",
+   "requested": "claude-fable-5-1 high, fastMode false",
+   "reported_models": [
+    "claude-fable-5-1"
+   ],
+   "speed": "standard",
+   "fast_mode_state": "off",
+   "cost_usd": 2.93,
+   "record": "checks/precheck/B_v1/role_92a4dcc5_run.json",
+   "accepted": true
+  },
+  {
+   "role": "checker B_v1_1",
+   "cli": "claude 2.1.270",
+   "requested": "claude-fable-5-1 high, fastMode false",
+   "reported_models": [
+    "claude-fable-5-1"
+   ],
+   "speed": "standard",
+   "fast_mode_state": "off",
+   "cost_usd": 3.82,
+   "record": "checks/precheck/B_v1_1/role_59605ea7_run.json",
+   "accepted": true
+  },
+  {
+   "role": "checker A_v1",
+   "cli": "codex-cli 0.164.0",
+   "requested": "gpt-6-astra, reasoning high, service_tier default, fast off",
+   "reported_models": "not echoed by codex exec JSON (verification limit)",
+   "record": "checks/precheck/A_v1/check_output.md",
+   "accepted": true
+  },
+  {
+   "role": "checker C_v1",
+   "cli": "codex-cli 0.164.0",
+   "requested": "gpt-6-astra, reasoning high, service_tier default, fast off",
+   "reported_models": "not echoed by codex exec JSON (verification limit)",
+   "record": "checks/precheck/C_v1/check_output.md",
+   "accepted": true
+  },
+  {
+   "role": "checker A_v1_1",
+   "cli": "codex-cli 0.164.0",
+   "requested": "gpt-6-astra, reasoning high, service_tier default, fast off",
+   "reported_models": "not echoed by codex exec JSON (verification limit)",
+   "record": "checks/precheck/A_v1_1/check_output.md",
+   "accepted": true
+  },
+  {
+   "role": "checker C_v1_1",
+   "cli": "codex-cli 0.164.0",
+   "requested": "gpt-6-astra, reasoning high, service_tier default, fast off",
+   "reported_models": "not echoed by codex exec JSON (verification limit)",
+   "record": "checks/precheck/C_v1_1/check_output.md",
+   "accepted": true
+  },
+  {
+   "role": "checker A_v1_2",
+   "cli": "codex-cli 0.164.0",
+   "requested": "gpt-6-astra, reasoning high, service_tier default, fast off",
+   "reported_models": "not echoed by codex exec JSON (verification limit)",
+   "record": "checks/precheck/A_v1_2/check_output.md",
+   "accepted": true
+  },
+  {
+   "role": "checker C_v1_2",
+   "cli": "codex-cli 0.164.0",
+   "requested": "gpt-6-astra, reasoning high, service_tier default, fast off",
+   "reported_models": "not echoed by codex exec JSON (verification limit)",
+   "record": "checks/precheck/C_v1_2/check_output.md",
+   "accepted": true
+  }
+ ],
+ "note": "Two Claude implementer runs (C v1.2 attempts 1 and 2) silently ran on claude-opus-4-8/claude-opus-5 although claude-fable-5-1 was requested; both rejected and preserved. The accepted C v1.2 run used --fallback-model claude-fable-5-1 to prevent silent fallback. Codex runs: model accepted by CLI but not echoed; ~/.codex/AGENTS.md (Python path, Markdown math, Gmail rules) loads despite --ignore-user-config."
+}

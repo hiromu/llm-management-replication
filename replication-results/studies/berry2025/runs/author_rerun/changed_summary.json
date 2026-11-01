@@ -1,0 +1,41 @@
+{
+  "label": "changed",
+  "n_expressions": 164,
+  "n_failed": 0,
+  "failures": [],
+  "r": "R version 4.6.1 (2026-06-24)",
+  "changes": [
+    {
+      "from": "PROLIFIC_PID",
+      "to": "part_uid",
+      "why": "column absent from deposited Study 1 file; part_uid is the anonymized person ID per dictionary"
+    },
+    {
+      "from": "reputation_with_broker",
+      "to": "relconcerns_with_broker",
+      "why": "column absent from deposited Study 2 and 3 files; dictionary lists relconcerns_with_broker built from broker_rep items"
+    },
+    {
+      "from": ": =",
+      "to": ":=",
+      "why": "current lavaan 0.6-21 rejects the space in the defined-parameter operator; same meaning"
+    },
+    {
+      "from": "PseudoR2(",
+      "to": "DescTools::PseudoR2(",
+      "why": "function's package is never loaded by the script"
+    },
+    {
+      "from": "library(psycho)",
+      "to": "# library(psycho)",
+      "why": "unavailable or unused; see install log",
+      "cond": false
+    },
+    {
+      "from": "library(reporttools)",
+      "to": "# library(reporttools)",
+      "why": "unavailable or unused; see install log",
+      "cond": false
+    }
+  ]
+}

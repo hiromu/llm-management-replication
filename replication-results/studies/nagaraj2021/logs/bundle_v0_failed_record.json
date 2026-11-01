@@ -1,0 +1,57 @@
+{
+ "bundle": "bundle_v1",
+ "built_by": "code/build_bundle.py",
+ "source": "data/raw (validated in logs/deposit_validation_pre.json)",
+ "rows_filtered": 0,
+ "changes": [
+  {
+   "file": "h12.csv",
+   "column": "column 3 (no header)",
+   "content": "OpenStreetMap user names",
+   "action": "replaced by U<n> codes numbered by first appearance; equality preserved; no mapping stored",
+   "rows_written": 2133235,
+   "distinct_codes": 1873
+  },
+  {
+   "file": "osm-events.csv",
+   "column": "field_3",
+   "content": "free-text event description; may contain personal handles",
+   "action": "replaced by E<n> codes numbered by first appearance; equality preserved; no mapping stored",
+   "rows_written": 227,
+   "distinct_codes": 70
+  }
+ ],
+ "free_text_review": {
+  "maptimes.csv": "location (city and state), title (group handle), name (county), state_name: names of public community groups and places, not persons; kept",
+  "osm-events.csv": "field_4 (6 event-type labels), name (county), state_name kept; field_3 recoded",
+  "county_lookup.csv": "NAME (county), STATE_NAME: place names; kept",
+  "land_area.csv": "Areaname: place names; kept",
+  "tiger_census_2008q2.csv": "county: place names; kept",
+  "tiger_osm_2018.csv": "county: place names; kept",
+  "timing.xlsx": "County: place names; SB Selected: one-letter code; kept",
+  "google_trends.csv": "States/Quarter: state names; kept",
+  "amenitycheck.csv": "integer columns only; kept",
+  "distance.csv": "coordinates and distances; no names; kept",
+  "boundary-counties.csv": "FIPS codes only; kept",
+  "acs5year.dta": "numeric only; kept",
+  "quarterly.csv": "numeric counts and keys; kept, including embedded header lines",
+  "h12.csv": "columns 1, 2, 4, 5 are ids, timestamps, a 46-value category and a small integer; kept; column 3 recoded"
+ },
+ "files_sha256": {
+  "acs5year.dta": "0458f24a1825da2900c6513340208cd47ff6fa610ed742a199a11247cc639155",
+  "amenitycheck.csv": "59232b2c43f2fa3e14da07537cc9906cdc1f87af6e52dcbf7f837ce7881c1981",
+  "boundary-counties.csv": "01b38a16118fd8a811233d1ac51416f370e0e0ca720d2d25c28627fbbb903518",
+  "county_lookup.csv": "034bb2c911e89b7b4072ffab6646a2e8ceefc3f2196c325cad5687066c23ee7c",
+  "distance.csv": "b36cb40ebda9b60bee1b60077e0db5de420ae3081dc5337495500b846b12080d",
+  "google_trends.csv": "90c05c7fe6be51a5b96babbad25c0b08c737fd629c731edd551d65e4960d33d3",
+  "h12.csv": "c8fb05d928bdece0ebe54573c5a21e15dff2d30c3587e5bbb9d6e1b496b2258e",
+  "land_area.csv": "0cb74d1430f4bb34f7397a9442796e65ed8ef89956fcfecabaee09427baa5640",
+  "maptimes.csv": "7efa2de984649cb4c9fa5f55915bdbb01012a500fe14133dc725118570904e6d",
+  "osm-events.csv": "2ae00063587f071fdca471955ac016605342f221bf447c5f0428ccb5c8c8e92c",
+  "quarterly.csv": "31ca141484d87de291c04bacf72a710358c09e3edb03cb849afee6858ff7ac7b",
+  "tiger_census_2008q2.csv": "dda022558d4e2595607fbb0fd2a3bc2e9759c43c2fc35adc443db0b5e2a1ab8c",
+  "tiger_osm_2018.csv": "4a2398abe79c02dcb8467fda6e3d7970ee6c3c57c0528bb76f132df4faa0c344",
+  "timing.xlsx": "1df0aae7baaa7db05225f9fce80f2b3b99dd025639ba337bebfb5a4b46523aae",
+  "tl_2010_us_county10.zip": "467463b260ef4b5f6a00e0fb59fb6537c5533ff58fa3bb3e9780ba538c09f04b"
+ }
+}

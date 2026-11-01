@@ -1,0 +1,600 @@
+2026-10-27 22:25:00 P-R7M2 v1 R version 4.6.1 (2026-06-24) 
+2026-10-27 22:25:00 Arguments: --grid grid.json --data data --out results --specs all --influence first20 
+2026-10-27 22:25:00 Packages: data.table 1.18.6.1; nanoparquet 0.5.2; jsonlite 2.0.0 
+2026-10-27 22:25:00 SYNTHETIC known_probit_coefficients PASS max absolute error 0.00914005; max standardized error 0.76658; n=60000 
+2026-10-27 22:25:00 SYNTHETIC marginal_effects_and_delta_finite_differences PASS ME error 1.62e-12; Jacobian error 2.03e-07; delta SE error 3.12e-08 
+2026-10-27 22:25:00 SYNTHETIC cluster_covariance_direct_sandwich PASS max covariance error 2.78e-17 
+2026-10-27 22:25:00 SYNTHETIC handmade_hierarchy_groups PASS single rank S=0; one member S=0; matching shares M=1; ranks 1,9 S=0.4; empty group missing 
+2026-10-27 22:25:00 SYNTHETIC delong_identical_and_tied_predictors PASS identical z=0, p=1; tied brute-force z error 8.88e-16 
+2026-10-27 22:25:00 SYNTHETIC NUL_safe_Parquet_pages PASS NUL at beginning/middle/end removed; spaces, empty strings and null values preserved 
+2026-10-27 22:25:00 SYNTHETIC duplicate_linkage_and_missing_design PASS duplicate unmatched/first/combine; missing regressor zero replacement and indicator 
+2026-10-27 22:25:00 SYNTHETIC coordinate_selection_and_capital_override PASS lowest entry selected; eligible capital km=1; unknown/no row missing; malformed degree missing; absent degree falls back 
+2026-10-27 22:25:00 cap reference fractions 0.11212,0.12348,0.11212,0.10265,0.10492,0.11136,0.10966,0.1161,0.10758 c 1.319 
+2026-10-27 22:25:00 cap missing: rank 0; height 100; age 0; education 80; dependents 0; officer 0; distance 0; length 0; n_g 0 
+2026-10-27 22:25:00 camp reference fractions 0.11212,0.12348,0.11212,0.10265,0.10492,0.11136,0.10966,0.1161,0.10758 c 1.319 
+2026-10-27 22:25:00 camp missing: rank 0; height 100; age 0; education 80; dependents 0; officer 0; distance 0; length 0; n_g 0 
+2026-10-27 22:25:02 SYNTHETIC all_families_on_synthetic_data PASS 104 synthetic models, 8 paired ROC comparisons, 96 leave-camp-out fits; constant-outcome failure recorded 
+2026-10-27 22:25:02 NUL-safe page reader: pow.parquet SERIAL_NO 
+2026-10-27 22:25:03 NUL-safe page reader: pow.parquet ARM_SVC_ALPHA 
+2026-10-27 22:25:03 NUL-safe page reader: pow.parquet ARM_SVC_CODE 
+2026-10-27 22:25:03 NUL-safe page reader: pow.parquet PARENT_UNIT_NUM 
+2026-10-27 22:25:03 NUL-safe page reader: pow.parquet PARENT_UNIT_TYPE 
+2026-10-27 22:25:03 NUL-safe page reader: pow.parquet DET_POWER 
+2026-10-27 22:25:03 NUL-safe page reader: pow.parquet CAMP 
+2026-10-27 22:25:19 Input rows: POW 143374 ; enlistment candidates 74210 
+2026-10-27 22:25:19 Input CSV warning: pow_CAMP_cl1277.csv Found and resolved improper quoting out-of-sample. First healed line 272: <<"793","POW Camp ("NO." & "SO.") (same as 791) Hongkong 22-114","">>. If the fields are not quoted (e.g. field separator does not appear within any field), try quote="" to avoid this warning. 
+2026-10-27 22:25:19 Input loading seconds 17.069 
+2026-10-27 22:25:19 BEGIN S000 families T4,T5,T5ROC,T6,R_cc,R_n50,R_n100,R_noexec,R_ger,R_jap,R_aaf,R_nosq,R_alt,R_friends,R_int,INFLUENCE 
+2026-10-27 22:25:20 Sample D0 143374 D 124387 R cap 101993 R camp 101993 
+2026-10-27 22:25:20 cap reference fractions 0.46202,0.087999,0.28109,0.0069676,0.13728,0.01546,0.0053048,0.0037069,0.00017034 c 1.319 
+2026-10-27 22:25:20 cap missing: rank 795; height 60811; age 44463; education 44334; dependents 44505; officer 795; distance 625; length 0; n_g 229 
+2026-10-27 22:25:20 camp reference fractions 0.46202,0.087999,0.28109,0.0069676,0.13728,0.01546,0.0053048,0.0037069,0.00017034 c 1.319 
+2026-10-27 22:25:20 camp missing: rank 795; height 60811; age 44463; education 44334; dependents 44505; officer 795; distance 625; length 0; n_g 100 
+2026-10-27 22:25:36 S000 T4__cap_simple_steepness ok N 100672 clusters 1674 seconds 16.04  
+2026-10-27 22:25:55 S000 T4__cap_full_steepness ok N 100672 clusters 1674 seconds 18.737 Aliased columns omitted: men_missing,men_sq_missing 
+2026-10-27 22:25:55 S000 T4__camp_simple_steepness ok N 101993 clusters 341 seconds 0.172  
+2026-10-27 22:25:56 S000 T4__camp_full_steepness ok N 101993 clusters 341 seconds 0.535 Aliased columns omitted: men_missing,men_sq_missing 
+2026-10-27 22:26:12 S000 T4__cap_simple_sameness ok N 100672 clusters 1674 seconds 16.138  
+2026-10-27 22:26:34 S000 T4__cap_full_sameness ok N 100672 clusters 1674 seconds 21.925 Aliased columns omitted: men_missing,men_sq_missing 
+2026-10-27 22:26:34 S000 T4__camp_simple_sameness ok N 101993 clusters 341 seconds 0.165  
+2026-10-27 22:26:35 S000 T4__camp_full_sameness ok N 101993 clusters 341 seconds 0.521 Aliased columns omitted: men_missing,men_sq_missing 
+2026-10-27 22:26:51 S000 T5__cap_simple_steepness+sameness ok N 100672 clusters 1674 seconds 16.226 Aliased columns omitted: sameness_missing 
+2026-10-27 22:27:12 S000 T5__cap_full_steepness+sameness ok N 100672 clusters 1674 seconds 20.822 Aliased columns omitted: sameness_missing,men_missing,men_sq_missing 
+2026-10-27 22:27:12 S000 T5__camp_simple_steepness+sameness ok N 101993 clusters 341 seconds 0.189 Aliased columns omitted: sameness_missing 
+2026-10-27 22:27:12 S000 T5__camp_full_steepness+sameness ok N 101993 clusters 341 seconds 0.544 Aliased columns omitted: sameness_missing,men_missing,men_sq_missing 
+2026-10-27 22:27:32 S000 T6__cap_simple_steepness ok N 100672 clusters 1674 seconds 18.888 Aliased columns omitted: steepness:officer_missing 
+2026-10-27 22:27:54 S000 T6__cap_full_steepness ok N 100672 clusters 1674 seconds 22.373 Aliased columns omitted: men_missing,men_sq_missing,steepness:officer_missing 
+2026-10-27 22:27:54 S000 T6__camp_simple_steepness ok N 101993 clusters 341 seconds 0.238 Aliased columns omitted: steepness:officer_missing 
+2026-10-27 22:27:55 S000 T6__camp_full_steepness ok N 101993 clusters 341 seconds 0.56 Aliased columns omitted: men_missing,men_sq_missing,steepness:officer_missing 
+2026-10-27 22:28:17 S000 T6__cap_simple_sameness ok N 100672 clusters 1674 seconds 22.084 Aliased columns omitted: sameness:officer_missing 
+2026-10-27 22:28:44 S000 T6__cap_full_sameness ok N 100672 clusters 1674 seconds 27.448 Aliased columns omitted: men_missing,men_sq_missing,sameness:officer_missing 
+2026-10-27 22:28:45 S000 T6__camp_simple_sameness ok N 101993 clusters 341 seconds 0.29 Aliased columns omitted: sameness:officer_missing 
+2026-10-27 22:28:45 S000 T6__camp_full_sameness ok N 101993 clusters 341 seconds 0.73 Aliased columns omitted: men_missing,men_sq_missing,sameness:officer_missing 
+2026-10-27 22:28:53 S000 R_cc__cap_full_steepness ok N 40074 clusters 852 seconds 7.583  
+2026-10-27 22:28:53 S000 R_cc__camp_full_steepness ok N 40810 clusters 216 seconds 0.351  
+2026-10-27 22:29:00 S000 R_cc__cap_full_sameness ok N 40074 clusters 852 seconds 7.036  
+2026-10-27 22:29:01 S000 R_cc__camp_full_sameness ok N 40810 clusters 216 seconds 0.28  
+2026-10-27 22:29:03 S000 R_n50__cap_simple_steepness ok N 91283 clusters 220 seconds 2.794  
+2026-10-27 22:29:07 S000 R_n50__cap_full_steepness ok N 91283 clusters 220 seconds 3.765  
+2026-10-27 22:29:07 S000 R_n50__camp_simple_steepness ok N 100055 clusters 78 seconds 0.215  
+2026-10-27 22:29:08 S000 R_n50__camp_full_steepness ok N 100055 clusters 78 seconds 0.697  
+2026-10-27 22:29:11 S000 R_n50__cap_simple_sameness ok N 91283 clusters 220 seconds 2.788  
+2026-10-27 22:29:15 S000 R_n50__cap_full_sameness ok N 91283 clusters 220 seconds 4.122  
+2026-10-27 22:29:15 S000 R_n50__camp_simple_sameness ok N 100055 clusters 78 seconds 0.173  
+2026-10-27 22:29:16 S000 R_n50__camp_full_sameness ok N 100055 clusters 78 seconds 0.57  
+2026-10-27 22:29:17 S000 R_n100__cap_simple_steepness ok N 86058 clusters 150 seconds 1.709  
+2026-10-27 22:29:20 S000 R_n100__cap_full_steepness ok N 86058 clusters 150 seconds 2.651  
+2026-10-27 22:29:20 S000 R_n100__camp_simple_steepness ok N 99057 clusters 64 seconds 0.177  
+2026-10-27 22:29:21 S000 R_n100__camp_full_steepness ok N 99057 clusters 64 seconds 0.68  
+2026-10-27 22:29:23 S000 R_n100__cap_simple_sameness ok N 86058 clusters 150 seconds 1.689  
+2026-10-27 22:29:26 S000 R_n100__cap_full_sameness ok N 86058 clusters 150 seconds 2.913  
+2026-10-27 22:29:26 S000 R_n100__camp_simple_sameness ok N 99057 clusters 64 seconds 0.213  
+2026-10-27 22:29:27 S000 R_n100__camp_full_sameness ok N 99057 clusters 64 seconds 0.685  
+2026-10-27 22:29:46 S000 R_noexec__cap_simple_steepness ok N 96673 clusters 1601 seconds 19.042  
+2026-10-27 22:30:08 S000 R_noexec__cap_full_steepness ok N 96673 clusters 1601 seconds 22.732 Aliased columns omitted: men_missing,men_sq_missing 
+2026-10-27 22:30:09 S000 R_noexec__camp_simple_steepness ok N 98124 clusters 336 seconds 0.267  
+2026-10-27 22:30:09 S000 R_noexec__camp_full_steepness ok N 98124 clusters 336 seconds 0.579 Aliased columns omitted: men_missing,men_sq_missing 
+2026-10-27 22:30:28 S000 R_noexec__cap_simple_sameness ok N 96673 clusters 1601 seconds 19.005  
+2026-10-27 22:30:50 S000 R_noexec__cap_full_sameness ok N 96673 clusters 1601 seconds 22.087 Aliased columns omitted: men_missing,men_sq_missing 
+2026-10-27 22:30:50 S000 R_noexec__camp_simple_sameness ok N 98124 clusters 336 seconds 0.211  
+2026-10-27 22:30:51 S000 R_noexec__camp_full_sameness ok N 98124 clusters 336 seconds 0.525 Aliased columns omitted: men_missing,men_sq_missing 
+2026-10-27 22:31:04 S000 R_ger__cap_simple_steepness warning N 72014 clusters 1102 seconds 13.297 glm.fit: fitted probabilities numerically 0 or 1 occurred 
+2026-10-27 22:31:22 S000 R_ger__cap_full_steepness warning N 72014 clusters 1102 seconds 17.661 glm.fit: fitted probabilities numerically 0 or 1 occurred; Aliased columns omitted: men_missing,men_sq_missing 
+2026-10-27 22:31:22 S000 R_ger__camp_simple_steepness ok N 73085 clusters 243 seconds 0.137  
+2026-10-27 22:31:23 S000 R_ger__camp_full_steepness ok N 73085 clusters 243 seconds 0.787  
+2026-10-27 22:31:37 S000 R_ger__cap_simple_sameness warning N 72014 clusters 1102 seconds 14.065 glm.fit: fitted probabilities numerically 0 or 1 occurred 
+2026-10-27 22:31:55 S000 R_ger__cap_full_sameness warning N 72014 clusters 1102 seconds 18.411 glm.fit: fitted probabilities numerically 0 or 1 occurred; Aliased columns omitted: men_missing,men_sq_missing 
+2026-10-27 22:31:55 S000 R_ger__camp_simple_sameness ok N 73085 clusters 243 seconds 0.133  
+2026-10-27 22:31:56 S000 R_ger__camp_full_sameness ok N 73085 clusters 243 seconds 0.742  
+2026-10-27 22:31:58 S000 R_jap__cap_simple_steepness ok N 28641 clusters 569 seconds 1.801  
+2026-10-27 22:32:01 S000 R_jap__cap_full_steepness ok N 28641 clusters 569 seconds 2.752 Aliased columns omitted: men_missing,men_sq_missing 
+2026-10-27 22:32:01 S000 R_jap__camp_simple_steepness ok N 28908 clusters 109 seconds 0.076  
+2026-10-27 22:32:01 S000 R_jap__camp_full_steepness ok N 28908 clusters 109 seconds 0.394 Aliased columns omitted: men_missing,men_sq_missing 
+2026-10-27 22:32:03 S000 R_jap__cap_simple_sameness ok N 28641 clusters 569 seconds 1.812  
+2026-10-27 22:32:06 S000 R_jap__cap_full_sameness ok N 28641 clusters 569 seconds 2.66 Aliased columns omitted: men_missing,men_sq_missing 
+2026-10-27 22:32:06 S000 R_jap__camp_simple_sameness ok N 28908 clusters 109 seconds 0.048  
+2026-10-27 22:32:06 S000 R_jap__camp_full_sameness ok N 28908 clusters 109 seconds 0.372 Aliased columns omitted: men_missing,men_sq_missing 
+2026-10-27 22:32:10 S000 R_aaf__cap_simple_steepness ok N 22570 clusters 487 seconds 3.704  
+2026-10-27 22:32:15 S000 R_aaf__cap_full_steepness ok N 22570 clusters 487 seconds 5.539 Aliased columns omitted: men_missing,men_sq_missing,officer_missing 
+2026-10-27 22:32:15 S000 R_aaf__camp_simple_steepness ok N 23317 clusters 172 seconds 0.06  
+2026-10-27 22:32:16 S000 R_aaf__camp_full_steepness ok N 23317 clusters 172 seconds 0.484  
+2026-10-27 22:32:19 S000 R_aaf__cap_simple_sameness ok N 22570 clusters 487 seconds 3.494  
+2026-10-27 22:32:25 S000 R_aaf__cap_full_sameness ok N 22570 clusters 487 seconds 5.529 Aliased columns omitted: men_missing,men_sq_missing,officer_missing 
+2026-10-27 22:32:25 S000 R_aaf__camp_simple_sameness ok N 23317 clusters 172 seconds 0.045  
+2026-10-27 22:32:25 S000 R_aaf__camp_full_sameness ok N 23317 clusters 172 seconds 0.485  
+2026-10-27 22:32:46 S000 R_nosq__cap_full_steepness ok N 100672 clusters 1674 seconds 20.047 Aliased columns omitted: men_missing 
+2026-10-27 22:32:46 S000 R_nosq__camp_full_steepness ok N 101993 clusters 341 seconds 0.5 Aliased columns omitted: men_missing 
+2026-10-27 22:33:09 S000 R_nosq__cap_full_sameness ok N 100672 clusters 1674 seconds 22.54 Aliased columns omitted: men_missing 
+2026-10-27 22:33:09 S000 R_nosq__camp_full_sameness ok N 101993 clusters 341 seconds 0.557 Aliased columns omitted: men_missing 
+2026-10-27 22:33:31 S000 R_alt__cap_simple_ratio warning N 100672 clusters 1674 seconds 21.432 glm.fit: fitted probabilities numerically 0 or 1 occurred 
+2026-10-27 22:33:58 S000 R_alt__cap_full_ratio warning N 100672 clusters 1674 seconds 27.144 glm.fit: fitted probabilities numerically 0 or 1 occurred; Aliased columns omitted: men_missing,men_sq_missing 
+2026-10-27 22:33:58 S000 R_alt__camp_simple_ratio ok N 101993 clusters 341 seconds 0.206  
+2026-10-27 22:33:59 S000 R_alt__camp_full_ratio ok N 101993 clusters 341 seconds 0.637 Aliased columns omitted: men_missing,men_sq_missing 
+2026-10-27 22:34:17 S000 R_alt__cap_simple_absolute ok N 100672 clusters 1674 seconds 18.088  
+2026-10-27 22:34:39 S000 R_alt__cap_full_absolute ok N 100672 clusters 1674 seconds 22.121 Aliased columns omitted: men_missing,men_sq_missing 
+2026-10-27 22:34:39 S000 R_alt__camp_simple_absolute ok N 101993 clusters 341 seconds 0.234  
+2026-10-27 22:34:40 S000 R_alt__camp_full_absolute ok N 101993 clusters 341 seconds 0.648 Aliased columns omitted: men_missing,men_sq_missing 
+2026-10-27 22:35:00 S000 R_alt__cap_full_distinct ok N 100672 clusters 1674 seconds 20.437 Aliased columns omitted: men_missing,men_sq_missing 
+2026-10-27 22:35:01 S000 R_alt__camp_full_distinct ok N 101993 clusters 341 seconds 0.702 Aliased columns omitted: men_missing,men_sq_missing 
+2026-10-27 22:35:22 S000 R_alt__cap_full_rank_sum ok N 100672 clusters 1674 seconds 21.347 Aliased columns omitted: men_missing,men_sq_missing 
+2026-10-27 22:35:23 S000 R_alt__camp_full_rank_sum ok N 101993 clusters 341 seconds 0.728 Aliased columns omitted: men_missing,men_sq_missing 
+2026-10-27 22:35:43 S000 R_alt__cap_full_admin ok N 100672 clusters 1674 seconds 19.797 Aliased columns omitted: men_missing,men_sq_missing 
+2026-10-27 22:35:43 S000 R_alt__camp_full_admin ok N 101993 clusters 341 seconds 0.564 Aliased columns omitted: men_missing,men_sq_missing 
+2026-10-27 22:36:05 S000 R_friends__cap_full_friends ok N 100672 clusters 1674 seconds 21.767 Aliased columns omitted: men_sq_missing 
+2026-10-27 22:36:06 S000 R_friends__camp_full_friends ok N 101993 clusters 341 seconds 0.713 Aliased columns omitted: men_sq_missing 
+2026-10-27 22:36:28 S000 R_friends__cap_full_steepness_friends ok N 100672 clusters 1674 seconds 21.915 Aliased columns omitted: men_missing,men_sq_missing 
+2026-10-27 22:36:28 S000 R_friends__camp_full_steepness_friends ok N 101993 clusters 341 seconds 0.576 Aliased columns omitted: men_missing,men_sq_missing 
+2026-10-27 22:36:50 S000 R_friends__cap_full_sameness_friends ok N 100672 clusters 1674 seconds 21.671 Aliased columns omitted: men_missing,men_sq_missing 
+2026-10-27 22:36:51 S000 R_friends__camp_full_sameness_friends ok N 101993 clusters 341 seconds 0.68 Aliased columns omitted: men_missing,men_sq_missing 
+2026-10-27 22:37:13 S000 R_friends__cap_full_unit_steepness_friends ok N 100672 clusters 1674 seconds 22.122 Aliased columns omitted: men_sq_missing,friends_missing 
+2026-10-27 22:37:13 S000 R_friends__camp_full_unit_steepness_friends ok N 101993 clusters 341 seconds 0.725 Aliased columns omitted: men_sq_missing,friends_missing 
+2026-10-27 22:37:37 S000 R_friends__cap_full_unit_sameness_friends ok N 100672 clusters 1674 seconds 23.689 Aliased columns omitted: men_sq_missing,friends_missing 
+2026-10-27 22:37:38 S000 R_friends__camp_full_unit_sameness_friends ok N 101993 clusters 341 seconds 0.818 Aliased columns omitted: men_sq_missing,friends_missing 
+2026-10-27 22:38:00 S000 R_int__cap_full_steepness ok N 100672 clusters 1674 seconds 22.6 Aliased columns omitted: men_missing,men_sq_missing,steepness:men_missing 
+2026-10-27 22:38:01 S000 R_int__camp_full_steepness ok N 101993 clusters 341 seconds 0.73 Aliased columns omitted: men_missing,men_sq_missing,steepness:men_missing 
+2026-10-27 22:38:28 S000 R_int__cap_full_sameness ok N 100672 clusters 1674 seconds 27.18 Aliased columns omitted: men_missing,men_sq_missing,sameness:men_missing 
+2026-10-27 22:38:29 S000 R_int__camp_full_sameness ok N 101993 clusters 341 seconds 0.779 Aliased columns omitted: men_missing,men_sq_missing,sameness:men_missing 
+2026-10-27 22:38:50 S000 T4__cap_simple_steepness deleted 002 ok seconds 21.012 
+2026-10-27 22:39:08 S000 T4__cap_simple_steepness deleted 003 ok seconds 17.837 
+2026-10-27 22:39:28 S000 T4__cap_simple_steepness deleted 004 ok seconds 19.722 
+2026-10-27 22:39:47 S000 T4__cap_simple_steepness deleted 005 ok seconds 19.612 
+2026-10-27 22:40:07 S000 T4__cap_simple_steepness deleted 006 ok seconds 19.605 
+2026-10-27 22:40:25 S000 T4__cap_simple_steepness deleted 007 ok seconds 18.402 
+2026-10-27 22:40:44 S000 T4__cap_simple_steepness deleted 008 ok seconds 18.968 
+2026-10-27 22:41:03 S000 T4__cap_simple_steepness deleted 009 ok seconds 18.749 
+2026-10-27 22:41:22 S000 T4__cap_simple_steepness deleted 011 ok seconds 19.087 
+2026-10-27 22:41:42 S000 T4__cap_simple_steepness deleted 012 ok seconds 19.568 
+2026-10-27 22:42:01 S000 T4__cap_simple_steepness deleted 013 ok seconds 18.972 
+2026-10-27 22:42:19 S000 T4__cap_simple_steepness deleted 014 ok seconds 17.744 
+2026-10-27 22:42:35 S000 T4__cap_simple_steepness deleted 015 ok seconds 16.609 
+2026-10-27 22:42:53 S000 T4__cap_simple_steepness deleted 016 ok seconds 17.573 
+2026-10-27 22:43:09 S000 T4__cap_simple_steepness deleted 017 ok seconds 16.465 
+2026-10-27 22:43:26 S000 T4__cap_simple_steepness deleted 018 ok seconds 16.415 
+2026-10-27 22:43:45 S000 T4__cap_simple_steepness deleted 020 ok seconds 19.607 
+2026-10-27 22:44:07 S000 T4__cap_simple_steepness deleted 023 ok seconds 21.218 
+2026-10-27 22:44:26 S000 T4__cap_simple_steepness deleted 025 ok seconds 19.255 
+2026-10-27 22:44:47 S000 T4__cap_simple_steepness deleted 026 ok seconds 21.579 
+2026-10-27 22:45:09 S000 T4__cap_full_steepness deleted 002 ok seconds 21.736 
+2026-10-27 22:45:31 S000 T4__cap_full_steepness deleted 003 ok seconds 22.197 
+2026-10-27 22:45:55 S000 T4__cap_full_steepness deleted 004 ok seconds 23.085 
+2026-10-27 22:46:19 S000 T4__cap_full_steepness deleted 005 ok seconds 24.795 
+2026-10-27 22:46:45 S000 T4__cap_full_steepness deleted 006 ok seconds 26.046 
+2026-10-27 22:47:08 S000 T4__cap_full_steepness deleted 007 ok seconds 22.346 
+2026-10-27 22:47:32 S000 T4__cap_full_steepness deleted 008 ok seconds 23.982 
+2026-10-27 22:47:57 S000 T4__cap_full_steepness deleted 009 ok seconds 24.992 
+2026-10-27 22:48:22 S000 T4__cap_full_steepness deleted 011 ok seconds 25.633 
+2026-10-27 22:48:47 S000 T4__cap_full_steepness deleted 012 ok seconds 24.43 
+2026-10-27 22:49:11 S000 T4__cap_full_steepness deleted 013 ok seconds 24.582 
+2026-10-27 22:49:41 S000 T4__cap_full_steepness deleted 014 ok seconds 29.678 
+2026-10-27 22:50:02 S000 T4__cap_full_steepness deleted 015 ok seconds 20.933 
+2026-10-27 22:50:24 S000 T4__cap_full_steepness deleted 016 ok seconds 21.986 
+2026-10-27 22:50:52 S000 T4__cap_full_steepness deleted 017 ok seconds 27.526 
+2026-10-27 22:51:16 S000 T4__cap_full_steepness deleted 018 ok seconds 24.54 
+2026-10-27 22:51:40 S000 T4__cap_full_steepness deleted 020 ok seconds 23.533 
+2026-10-27 22:52:03 S000 T4__cap_full_steepness deleted 023 ok seconds 23.31 
+2026-10-27 22:52:26 S000 T4__cap_full_steepness deleted 025 ok seconds 22.806 
+2026-10-27 22:52:51 S000 T4__cap_full_steepness deleted 026 ok seconds 25.113 
+2026-10-27 22:52:51 S000 T4__camp_simple_steepness deleted /91 ok seconds 0.214 
+2026-10-27 22:52:51 S000 T4__camp_simple_steepness deleted 0 0 ok seconds 0.183 
+2026-10-27 22:52:52 S000 T4__camp_simple_steepness deleted 0 1 ok seconds 0.238 
+2026-10-27 22:52:52 S000 T4__camp_simple_steepness deleted 0 2 ok seconds 0.183 
+2026-10-27 22:52:52 S000 T4__camp_simple_steepness deleted 0 3 ok seconds 0.218 
+2026-10-27 22:52:52 S000 T4__camp_simple_steepness deleted 0 5 ok seconds 0.208 
+2026-10-27 22:52:53 S000 T4__camp_simple_steepness deleted 0 8 ok seconds 0.173 
+2026-10-27 22:52:53 S000 T4__camp_simple_steepness deleted 0 9 ok seconds 0.174 
+2026-10-27 22:52:53 S000 T4__camp_simple_steepness deleted 001 ok seconds 0.205 
+2026-10-27 22:52:53 S000 T4__camp_simple_steepness deleted 002 ok seconds 0.2 
+2026-10-27 22:52:54 S000 T4__camp_simple_steepness deleted 003 ok seconds 0.228 
+2026-10-27 22:52:54 S000 T4__camp_simple_steepness deleted 004 ok seconds 0.171 
+2026-10-27 22:52:54 S000 T4__camp_simple_steepness deleted 005 ok seconds 0.195 
+2026-10-27 22:52:54 S000 T4__camp_simple_steepness deleted 006 ok seconds 0.166 
+2026-10-27 22:52:54 S000 T4__camp_simple_steepness deleted 007 ok seconds 0.172 
+2026-10-27 22:52:55 S000 T4__camp_simple_steepness deleted 008 ok seconds 0.2 
+2026-10-27 22:52:55 S000 T4__camp_simple_steepness deleted 009 ok seconds 0.204 
+2026-10-27 22:52:55 S000 T4__camp_simple_steepness deleted 00W ok seconds 0.231 
+2026-10-27 22:52:55 S000 T4__camp_simple_steepness deleted 010 ok seconds 0.176 
+2026-10-27 22:52:55 S000 T4__camp_simple_steepness deleted 011 ok seconds 0.2 
+2026-10-27 22:52:56 S000 T4__camp_full_steepness deleted /91 ok seconds 0.785 
+2026-10-27 22:52:57 S000 T4__camp_full_steepness deleted 0 0 ok seconds 0.737 
+2026-10-27 22:52:58 S000 T4__camp_full_steepness deleted 0 1 ok seconds 0.754 
+2026-10-27 22:52:58 S000 T4__camp_full_steepness deleted 0 2 ok seconds 0.691 
+2026-10-27 22:52:59 S000 T4__camp_full_steepness deleted 0 3 ok seconds 0.671 
+2026-10-27 22:53:00 S000 T4__camp_full_steepness deleted 0 5 ok seconds 0.658 
+2026-10-27 22:53:01 S000 T4__camp_full_steepness deleted 0 8 ok seconds 0.723 
+2026-10-27 22:53:01 S000 T4__camp_full_steepness deleted 0 9 ok seconds 0.608 
+2026-10-27 22:53:02 S000 T4__camp_full_steepness deleted 001 ok seconds 0.638 
+2026-10-27 22:53:02 S000 T4__camp_full_steepness deleted 002 ok seconds 0.612 
+2026-10-27 22:53:03 S000 T4__camp_full_steepness deleted 003 ok seconds 0.565 
+2026-10-27 22:53:04 S000 T4__camp_full_steepness deleted 004 ok seconds 0.579 
+2026-10-27 22:53:04 S000 T4__camp_full_steepness deleted 005 ok seconds 0.669 
+2026-10-27 22:53:05 S000 T4__camp_full_steepness deleted 006 ok seconds 0.7 
+2026-10-27 22:53:06 S000 T4__camp_full_steepness deleted 007 ok seconds 0.687 
+2026-10-27 22:53:06 S000 T4__camp_full_steepness deleted 008 ok seconds 0.636 
+2026-10-27 22:53:07 S000 T4__camp_full_steepness deleted 009 ok seconds 0.753 
+2026-10-27 22:53:08 S000 T4__camp_full_steepness deleted 00W ok seconds 0.773 
+2026-10-27 22:53:09 S000 T4__camp_full_steepness deleted 010 ok seconds 0.666 
+2026-10-27 22:53:09 S000 T4__camp_full_steepness deleted 011 ok seconds 0.687 
+2026-10-27 22:53:29 S000 T4__cap_simple_sameness deleted 002 ok seconds 19.928 
+2026-10-27 22:53:48 S000 T4__cap_simple_sameness deleted 003 ok seconds 18.497 
+2026-10-27 22:54:06 S000 T4__cap_simple_sameness deleted 004 ok seconds 18.045 
+2026-10-27 22:54:24 S000 T4__cap_simple_sameness deleted 005 ok seconds 17.906 
+2026-10-27 22:54:41 S000 T4__cap_simple_sameness deleted 006 ok seconds 17.363 
+2026-10-27 22:55:00 S000 T4__cap_simple_sameness deleted 007 ok seconds 18.67 
+2026-10-27 22:55:18 S000 T4__cap_simple_sameness deleted 008 ok seconds 18.638 
+2026-10-27 22:55:39 S000 T4__cap_simple_sameness deleted 009 ok seconds 20.955 
+2026-10-27 22:56:01 S000 T4__cap_simple_sameness deleted 011 ok seconds 21.659 
+2026-10-27 22:56:21 S000 T4__cap_simple_sameness deleted 012 ok seconds 19.304 
+2026-10-27 22:56:37 S000 T4__cap_simple_sameness deleted 013 ok seconds 16.679 
+2026-10-27 22:56:54 S000 T4__cap_simple_sameness deleted 014 ok seconds 16.393 
+2026-10-27 22:57:09 S000 T4__cap_simple_sameness deleted 015 ok seconds 15.803 
+2026-10-27 22:57:26 S000 T4__cap_simple_sameness deleted 016 ok seconds 16.044 
+2026-10-27 22:57:43 S000 T4__cap_simple_sameness deleted 017 ok seconds 17.027 
+2026-10-27 22:57:59 S000 T4__cap_simple_sameness deleted 018 ok seconds 15.951 
+2026-10-27 22:58:15 S000 T4__cap_simple_sameness deleted 020 ok seconds 16.857 
+2026-10-27 22:58:32 S000 T4__cap_simple_sameness deleted 023 ok seconds 16.514 
+2026-10-27 22:58:48 S000 T4__cap_simple_sameness deleted 025 ok seconds 16.383 
+2026-10-27 22:59:05 S000 T4__cap_simple_sameness deleted 026 ok seconds 16.336 
+2026-10-27 22:59:26 S000 T4__cap_full_sameness deleted 002 ok seconds 21.193 
+2026-10-27 22:59:47 S000 T4__cap_full_sameness deleted 003 ok seconds 20.73 
+2026-10-27 23:00:07 S000 T4__cap_full_sameness deleted 004 ok seconds 20.302 
+2026-10-27 23:00:28 S000 T4__cap_full_sameness deleted 005 ok seconds 20.564 
+2026-10-27 23:00:49 S000 T4__cap_full_sameness deleted 006 ok seconds 20.969 
+2026-10-27 23:01:09 S000 T4__cap_full_sameness deleted 007 ok seconds 20.629 
+2026-10-27 23:01:31 S000 T4__cap_full_sameness deleted 008 ok seconds 21.669 
+2026-10-27 23:01:55 S000 T4__cap_full_sameness deleted 009 ok seconds 23.731 
+2026-10-27 23:02:19 S000 T4__cap_full_sameness deleted 011 ok seconds 24.205 
+2026-10-27 23:02:42 S000 T4__cap_full_sameness deleted 012 ok seconds 23.652 
+2026-10-27 23:03:09 S000 T4__cap_full_sameness deleted 013 ok seconds 26.819 
+2026-10-27 23:03:42 S000 T4__cap_full_sameness deleted 014 ok seconds 32.727 
+2026-10-27 23:04:11 S000 T4__cap_full_sameness deleted 015 ok seconds 28.5 
+2026-10-27 23:04:35 S000 T4__cap_full_sameness deleted 016 ok seconds 24.532 
+2026-10-27 23:05:07 S000 T4__cap_full_sameness deleted 017 ok seconds 31.603 
+2026-10-27 23:05:40 S000 T4__cap_full_sameness deleted 018 ok seconds 32.847 
+2026-10-27 23:06:12 S000 T4__cap_full_sameness deleted 020 ok seconds 32.641 
+2026-10-27 23:06:41 S000 T4__cap_full_sameness deleted 023 ok seconds 28.68 
+2026-10-27 23:07:10 S000 T4__cap_full_sameness deleted 025 ok seconds 28.969 
+2026-10-27 23:07:38 S000 T4__cap_full_sameness deleted 026 ok seconds 28.326 
+2026-10-27 23:07:39 S000 T4__camp_simple_sameness deleted /91 ok seconds 0.186 
+2026-10-27 23:07:39 S000 T4__camp_simple_sameness deleted 0 0 ok seconds 0.206 
+2026-10-27 23:07:39 S000 T4__camp_simple_sameness deleted 0 1 ok seconds 0.199 
+2026-10-27 23:07:39 S000 T4__camp_simple_sameness deleted 0 2 ok seconds 0.203 
+2026-10-27 23:07:39 S000 T4__camp_simple_sameness deleted 0 3 ok seconds 0.178 
+2026-10-27 23:07:40 S000 T4__camp_simple_sameness deleted 0 5 ok seconds 0.214 
+2026-10-27 23:07:40 S000 T4__camp_simple_sameness deleted 0 8 ok seconds 0.153 
+2026-10-27 23:07:40 S000 T4__camp_simple_sameness deleted 0 9 ok seconds 0.198 
+2026-10-27 23:07:40 S000 T4__camp_simple_sameness deleted 001 ok seconds 0.184 
+2026-10-27 23:07:40 S000 T4__camp_simple_sameness deleted 002 ok seconds 0.192 
+2026-10-27 23:07:41 S000 T4__camp_simple_sameness deleted 003 ok seconds 0.199 
+2026-10-27 23:07:41 S000 T4__camp_simple_sameness deleted 004 ok seconds 0.183 
+2026-10-27 23:07:41 S000 T4__camp_simple_sameness deleted 005 ok seconds 0.2 
+2026-10-27 23:07:41 S000 T4__camp_simple_sameness deleted 006 ok seconds 0.176 
+2026-10-27 23:07:41 S000 T4__camp_simple_sameness deleted 007 ok seconds 0.196 
+2026-10-27 23:07:42 S000 T4__camp_simple_sameness deleted 008 ok seconds 0.181 
+2026-10-27 23:07:42 S000 T4__camp_simple_sameness deleted 009 ok seconds 0.192 
+2026-10-27 23:07:42 S000 T4__camp_simple_sameness deleted 00W ok seconds 0.181 
+2026-10-27 23:07:42 S000 T4__camp_simple_sameness deleted 010 ok seconds 0.199 
+2026-10-27 23:07:42 S000 T4__camp_simple_sameness deleted 011 ok seconds 0.16 
+2026-10-27 23:07:43 S000 T4__camp_full_sameness deleted /91 ok seconds 0.601 
+2026-10-27 23:07:44 S000 T4__camp_full_sameness deleted 0 0 ok seconds 0.609 
+2026-10-27 23:07:44 S000 T4__camp_full_sameness deleted 0 1 ok seconds 0.602 
+2026-10-27 23:07:45 S000 T4__camp_full_sameness deleted 0 2 ok seconds 0.646 
+2026-10-27 23:07:46 S000 T4__camp_full_sameness deleted 0 3 ok seconds 0.633 
+2026-10-27 23:07:46 S000 T4__camp_full_sameness deleted 0 5 ok seconds 0.643 
+2026-10-27 23:07:47 S000 T4__camp_full_sameness deleted 0 8 ok seconds 0.717 
+2026-10-27 23:07:48 S000 T4__camp_full_sameness deleted 0 9 ok seconds 0.653 
+2026-10-27 23:07:48 S000 T4__camp_full_sameness deleted 001 ok seconds 0.596 
+2026-10-27 23:07:49 S000 T4__camp_full_sameness deleted 002 ok seconds 0.632 
+2026-10-27 23:07:50 S000 T4__camp_full_sameness deleted 003 ok seconds 0.623 
+2026-10-27 23:07:50 S000 T4__camp_full_sameness deleted 004 ok seconds 0.608 
+2026-10-27 23:07:51 S000 T4__camp_full_sameness deleted 005 ok seconds 0.636 
+2026-10-27 23:07:52 S000 T4__camp_full_sameness deleted 006 ok seconds 0.666 
+2026-10-27 23:07:52 S000 T4__camp_full_sameness deleted 007 ok seconds 0.635 
+2026-10-27 23:07:53 S000 T4__camp_full_sameness deleted 008 ok seconds 0.646 
+2026-10-27 23:07:54 S000 T4__camp_full_sameness deleted 009 ok seconds 0.717 
+2026-10-27 23:07:54 S000 T4__camp_full_sameness deleted 00W ok seconds 0.647 
+2026-10-27 23:07:55 S000 T4__camp_full_sameness deleted 010 ok seconds 0.642 
+2026-10-27 23:07:56 S000 T4__camp_full_sameness deleted 011 ok seconds 0.687 
+2026-10-27 23:07:56 END S000 
+2026-10-27 23:07:56 BEGIN S001 families T4 
+2026-10-27 23:07:56 Sample D0 143374 D 124389 R cap 101995 R camp 101995 
+2026-10-27 23:07:56 cap reference fractions 0.46202,0.087999,0.28109,0.0069676,0.13728,0.01546,0.0053048,0.0037069,0.00017034 c 1.319 
+2026-10-27 23:07:56 cap missing: rank 797; height 60813; age 44465; education 44336; dependents 44507; officer 797; distance 625; length 0; n_g 229 
+2026-10-27 23:07:56 camp reference fractions 0.46202,0.087999,0.28109,0.0069676,0.13728,0.01546,0.0053048,0.0037069,0.00017034 c 1.319 
+2026-10-27 23:07:56 camp missing: rank 797; height 60813; age 44465; education 44336; dependents 44507; officer 797; distance 625; length 0; n_g 100 
+2026-10-27 23:08:19 S001 T4__cap_simple_steepness ok N 100673 clusters 1674 seconds 22.407  
+2026-10-27 23:08:42 S001 T4__cap_full_steepness ok N 100673 clusters 1674 seconds 23.376 Aliased columns omitted: men_missing,men_sq_missing 
+2026-10-27 23:08:42 S001 T4__camp_simple_steepness ok N 101995 clusters 341 seconds 0.261  
+2026-10-27 23:08:43 S001 T4__camp_full_steepness ok N 101995 clusters 341 seconds 0.609 Aliased columns omitted: men_missing,men_sq_missing 
+2026-10-27 23:09:03 S001 T4__cap_simple_sameness ok N 100673 clusters 1674 seconds 20.63  
+2026-10-27 23:09:36 S001 T4__cap_full_sameness ok N 100673 clusters 1674 seconds 32.994 Aliased columns omitted: men_missing,men_sq_missing 
+2026-10-27 23:09:37 S001 T4__camp_simple_sameness ok N 101995 clusters 341 seconds 0.323  
+2026-10-27 23:09:37 S001 T4__camp_full_sameness ok N 101995 clusters 341 seconds 0.679 Aliased columns omitted: men_missing,men_sq_missing 
+2026-10-27 23:09:37 END S001 
+2026-10-27 23:09:37 BEGIN S002 families T4 
+2026-10-27 23:09:38 Sample D0 143374 D 123881 R cap 101596 R camp 101596 
+2026-10-27 23:09:38 cap reference fractions 0.46202,0.088,0.28108,0.0069677,0.13728,0.01546,0.0053048,0.0037069,0.00017034 c 1.319 
+2026-10-27 23:09:38 cap missing: rank 399; height 60414; age 44066; education 43937; dependents 44108; officer 399; distance 623; length 0; n_g 20 
+2026-10-27 23:09:38 camp reference fractions 0.46202,0.088,0.28108,0.0069677,0.13728,0.01546,0.0053048,0.0037069,0.00017034 c 1.319 
+2026-10-27 23:09:38 camp missing: rank 399; height 60414; age 44066; education 43937; dependents 44108; officer 399; distance 623; length 0; n_g 0 
+2026-10-27 23:10:01 S002 T4__cap_simple_steepness ok N 100318 clusters 1629 seconds 23.299  
+2026-10-27 23:10:29 S002 T4__cap_full_steepness ok N 100318 clusters 1629 seconds 27.53 Aliased columns omitted: men_missing,men_sq_missing 
+2026-10-27 23:10:29 S002 T4__camp_simple_steepness ok N 101596 clusters 329 seconds 0.194  
+2026-10-27 23:10:30 S002 T4__camp_full_steepness ok N 101596 clusters 329 seconds 0.734  
+2026-10-27 23:10:52 S002 T4__cap_simple_sameness ok N 100318 clusters 1629 seconds 21.85  
+2026-10-27 23:11:16 S002 T4__cap_full_sameness ok N 100318 clusters 1629 seconds 24.892 Aliased columns omitted: men_missing,men_sq_missing 
+2026-10-27 23:11:17 S002 T4__camp_simple_sameness ok N 101596 clusters 329 seconds 0.187  
+2026-10-27 23:11:17 S002 T4__camp_full_sameness ok N 101596 clusters 329 seconds 0.589  
+2026-10-27 23:11:17 END S002 
+2026-10-27 23:11:17 BEGIN S003 families T4 
+2026-10-27 23:11:18 Sample D0 143374 D 124387 R cap 101993 R camp 105870 
+2026-10-27 23:11:18 cap reference fractions 0.46202,0.087999,0.28109,0.0069676,0.13728,0.01546,0.0053048,0.0037069,0.00017034 c 1.319 
+2026-10-27 23:11:18 cap missing: rank 795; height 60811; age 44463; education 44334; dependents 44505; officer 795; distance 625; length 0; n_g 229 
+2026-10-27 23:11:18 camp reference fractions 0.46202,0.087999,0.28109,0.0069676,0.13728,0.01546,0.0053048,0.0037069,0.00017034 c 1.319 
+2026-10-27 23:11:18 camp missing: rank 908; height 62830; age 46182; education 46050; dependents 46222; officer 908; distance 651; length 3877; n_g 129 
+2026-10-27 23:11:39 S003 T4__cap_simple_steepness ok N 100672 clusters 1674 seconds 21.028  
+2026-10-27 23:12:05 S003 T4__cap_full_steepness ok N 100672 clusters 1674 seconds 26.635 Aliased columns omitted: men_missing,men_sq_missing 
+2026-10-27 23:12:06 S003 T4__camp_simple_steepness ok N 105870 clusters 348 seconds 0.246  
+2026-10-27 23:12:06 S003 T4__camp_full_steepness ok N 105870 clusters 348 seconds 0.708 Aliased columns omitted: men_missing,men_sq_missing 
+2026-10-27 23:12:25 S003 T4__cap_simple_sameness ok N 100672 clusters 1674 seconds 18.818  
+2026-10-27 23:12:49 S003 T4__cap_full_sameness ok N 100672 clusters 1674 seconds 23.863 Aliased columns omitted: men_missing,men_sq_missing 
+2026-10-27 23:12:49 S003 T4__camp_simple_sameness ok N 105870 clusters 348 seconds 0.235  
+2026-10-27 23:12:50 S003 T4__camp_full_sameness ok N 105870 clusters 348 seconds 0.701 Aliased columns omitted: men_missing,men_sq_missing 
+2026-10-27 23:12:50 END S003 
+2026-10-27 23:12:50 BEGIN S004 families T4 
+2026-10-27 23:12:50 Sample D0 143374 D 124387 R cap 101896 R camp 101896 
+2026-10-27 23:12:51 cap reference fractions 0.46202,0.087999,0.28109,0.0069676,0.13728,0.01546,0.0053048,0.0037069,0.00017034 c 1.319 
+2026-10-27 23:12:51 cap missing: rank 793; height 60747; age 44417; education 44288; dependents 44459; officer 793; distance 528; length 0; n_g 227 
+2026-10-27 23:12:51 camp reference fractions 0.46202,0.087999,0.28109,0.0069676,0.13728,0.01546,0.0053048,0.0037069,0.00017034 c 1.319 
+2026-10-27 23:12:51 camp missing: rank 793; height 60747; age 44417; education 44288; dependents 44459; officer 793; distance 528; length 0; n_g 99 
+2026-10-27 23:13:09 S004 T4__cap_simple_steepness ok N 100659 clusters 1671 seconds 18.748  
+2026-10-27 23:13:31 S004 T4__cap_full_steepness ok N 100659 clusters 1671 seconds 21.59 Aliased columns omitted: men_missing,men_sq_missing 
+2026-10-27 23:13:31 S004 T4__camp_simple_steepness ok N 101896 clusters 303 seconds 0.202  
+2026-10-27 23:13:32 S004 T4__camp_full_steepness ok N 101896 clusters 303 seconds 0.617 Aliased columns omitted: men_missing,men_sq_missing 
+2026-10-27 23:13:55 S004 T4__cap_simple_sameness ok N 100659 clusters 1671 seconds 22.781  
+2026-10-27 23:14:30 S004 T4__cap_full_sameness ok N 100659 clusters 1671 seconds 35.87 Aliased columns omitted: men_missing,men_sq_missing 
+2026-10-27 23:14:31 S004 T4__camp_simple_sameness ok N 101896 clusters 303 seconds 0.239  
+2026-10-27 23:14:31 S004 T4__camp_full_sameness ok N 101896 clusters 303 seconds 0.73 Aliased columns omitted: men_missing,men_sq_missing 
+2026-10-27 23:14:31 END S004 
+2026-10-27 23:14:31 BEGIN S005 families T4 
+2026-10-27 23:14:32 Sample D0 143374 D 124387 R cap 101993 R camp 101993 
+2026-10-27 23:14:32 cap reference fractions 0.48822,0.06596,0.27768,0.00093757,0.14497,0.015305,0.0050872,0.0016755,0.00017362 c 1.319 
+2026-10-27 23:14:32 cap missing: rank 7516; height 60811; age 44463; education 44334; dependents 44505; officer 7516; distance 625; length 0; n_g 619 
+2026-10-27 23:14:32 camp reference fractions 0.48822,0.06596,0.27768,0.00093757,0.14497,0.015305,0.0050872,0.0016755,0.00017362 c 1.319 
+2026-10-27 23:14:32 camp missing: rank 7516; height 60811; age 44463; education 44334; dependents 44505; officer 7516; distance 625; length 0; n_g 106 
+2026-10-27 23:15:01 S005 T4__cap_simple_steepness ok N 100672 clusters 1674 seconds 28.541  
+2026-10-27 23:15:34 S005 T4__cap_full_steepness ok N 100672 clusters 1674 seconds 33.35 Aliased columns omitted: men_missing,men_sq_missing 
+2026-10-27 23:15:34 S005 T4__camp_simple_steepness ok N 101993 clusters 341 seconds 0.239  
+2026-10-27 23:15:35 S005 T4__camp_full_steepness ok N 101993 clusters 341 seconds 0.868 Aliased columns omitted: men_missing,men_sq_missing 
+2026-10-27 23:16:04 S005 T4__cap_simple_sameness ok N 100672 clusters 1674 seconds 28.672  
+2026-10-27 23:16:40 S005 T4__cap_full_sameness ok N 100672 clusters 1674 seconds 36.804 Aliased columns omitted: men_missing,men_sq_missing 
+2026-10-27 23:16:41 S005 T4__camp_simple_sameness ok N 101993 clusters 341 seconds 0.273  
+2026-10-27 23:16:42 S005 T4__camp_full_sameness ok N 101993 clusters 341 seconds 0.862 Aliased columns omitted: men_missing,men_sq_missing 
+2026-10-27 23:16:42 END S005 
+2026-10-27 23:16:42 BEGIN S006 families T4 
+2026-10-27 23:16:42 Sample D0 143374 D 124387 R cap 101993 R camp 101993 
+2026-10-27 23:16:42 cap reference fractions 0.46264,0.087131,0.28086,0.0071623,0.13647,0.015338,0.0053778,0.0048343,0.00017845 c 1.319 
+2026-10-27 23:16:42 cap missing: rank 795; height 60811; age 44463; education 44334; dependents 44505; officer 795; distance 625; length 0; n_g 229 
+2026-10-27 23:16:42 camp reference fractions 0.46264,0.087131,0.28086,0.0071623,0.13647,0.015338,0.0053778,0.0048343,0.00017845 c 1.319 
+2026-10-27 23:16:42 camp missing: rank 795; height 60811; age 44463; education 44334; dependents 44505; officer 795; distance 625; length 0; n_g 100 
+2026-10-27 23:17:11 S006 T4__cap_simple_steepness ok N 100672 clusters 1674 seconds 29.174  
+2026-10-27 23:17:44 S006 T4__cap_full_steepness ok N 100672 clusters 1674 seconds 33.029 Aliased columns omitted: men_missing,men_sq_missing 
+2026-10-27 23:17:45 S006 T4__camp_simple_steepness ok N 101993 clusters 341 seconds 0.225  
+2026-10-27 23:17:45 S006 T4__camp_full_steepness ok N 101993 clusters 341 seconds 0.789 Aliased columns omitted: men_missing,men_sq_missing 
+2026-10-27 23:18:14 S006 T4__cap_simple_sameness ok N 100672 clusters 1674 seconds 28.447  
+2026-10-27 23:18:49 S006 T4__cap_full_sameness ok N 100672 clusters 1674 seconds 35.223 Aliased columns omitted: men_missing,men_sq_missing 
+2026-10-27 23:18:49 S006 T4__camp_simple_sameness ok N 101993 clusters 341 seconds 0.252  
+2026-10-27 23:18:50 S006 T4__camp_full_sameness ok N 101993 clusters 341 seconds 0.831 Aliased columns omitted: men_missing,men_sq_missing 
+2026-10-27 23:18:50 END S006 
+2026-10-27 23:18:50 BEGIN S007 families T4 
+2026-10-27 23:18:51 Sample D0 143374 D 124387 R cap 101993 R camp 101993 
+2026-10-27 23:18:51 cap reference fractions 0.46202,0.087999,0.28109,0.0069676,0.13728,0.01546,0.0053048,0.0037069,0.00017034 c 1.319 
+2026-10-27 23:18:51 cap missing: rank 795; height 60811; age 44463; education 44334; dependents 44505; officer 795; distance 625; length 0; n_g 228 
+2026-10-27 23:18:51 camp reference fractions 0.46202,0.087999,0.28109,0.0069676,0.13728,0.01546,0.0053048,0.0037069,0.00017034 c 1.319 
+2026-10-27 23:18:51 camp missing: rank 795; height 60811; age 44463; education 44334; dependents 44505; officer 795; distance 625; length 0; n_g 82 
+2026-10-27 23:19:20 S007 T4__cap_simple_steepness ok N 100672 clusters 1674 seconds 29.55  
+2026-10-27 23:19:53 S007 T4__cap_full_steepness ok N 100672 clusters 1674 seconds 32.696 Aliased columns omitted: men_missing,men_sq_missing 
+2026-10-27 23:19:53 S007 T4__camp_simple_steepness ok N 101993 clusters 341 seconds 0.228  
+2026-10-27 23:19:54 S007 T4__camp_full_steepness ok N 101993 clusters 341 seconds 0.764 Aliased columns omitted: men_missing,men_sq_missing 
+2026-10-27 23:20:22 S007 T4__cap_simple_sameness ok N 100672 clusters 1674 seconds 27.995  
+2026-10-27 23:20:58 S007 T4__cap_full_sameness ok N 100672 clusters 1674 seconds 35.939 Aliased columns omitted: men_missing,men_sq_missing 
+2026-10-27 23:20:58 S007 T4__camp_simple_sameness ok N 101993 clusters 341 seconds 0.245  
+2026-10-27 23:20:59 S007 T4__camp_full_sameness ok N 101993 clusters 341 seconds 0.783 Aliased columns omitted: men_missing,men_sq_missing 
+2026-10-27 23:20:59 END S007 
+2026-10-27 23:20:59 BEGIN S008 families T4 
+2026-10-27 23:20:59 Sample D0 143374 D 124387 R cap 101993 R camp 101993 
+2026-10-27 23:20:59 cap reference fractions 0.46202,0.087999,0.28109,0.0069676,0.13728,0.01546,0.0053048,0.0037069,0.00017034 c 1.319 
+2026-10-27 23:20:59 cap missing: rank 795; height 60811; age 44463; education 44334; dependents 44505; officer 795; distance 625; length 0; n_g 2825 
+2026-10-27 23:20:59 camp reference fractions 0.46202,0.087999,0.28109,0.0069676,0.13728,0.01546,0.0053048,0.0037069,0.00017034 c 1.319 
+2026-10-27 23:20:59 camp missing: rank 795; height 60811; age 44463; education 44334; dependents 44505; officer 795; distance 625; length 0; n_g 496 
+2026-10-27 23:21:25 S008 T4__cap_simple_steepness ok N 100672 clusters 1674 seconds 25.469  
+2026-10-27 23:21:46 S008 T4__cap_full_steepness ok N 100672 clusters 1674 seconds 21.438 Aliased columns omitted: men_missing,men_sq_missing 
+2026-10-27 23:21:47 S008 T4__camp_simple_steepness ok N 101993 clusters 341 seconds 0.236  
+2026-10-27 23:21:47 S008 T4__camp_full_steepness ok N 101993 clusters 341 seconds 0.689 Aliased columns omitted: men_missing,men_sq_missing 
+2026-10-27 23:22:06 S008 T4__cap_simple_sameness ok N 100672 clusters 1674 seconds 18.299  
+2026-10-27 23:22:29 S008 T4__cap_full_sameness ok N 100672 clusters 1674 seconds 23.374 Aliased columns omitted: men_missing,men_sq_missing 
+2026-10-27 23:22:29 S008 T4__camp_simple_sameness ok N 101993 clusters 341 seconds 0.24  
+2026-10-27 23:22:30 S008 T4__camp_full_sameness ok N 101993 clusters 341 seconds 0.664 Aliased columns omitted: men_missing,men_sq_missing 
+2026-10-27 23:22:30 END S008 
+2026-10-27 23:22:30 BEGIN S009 families T4 
+2026-10-27 23:22:30 Sample D0 143374 D 124387 R cap 101993 R camp 101993 
+2026-10-27 23:22:30 cap reference fractions 0.47945,0.091484,0.26835,0.0063242,0.12885,0.015702,0.0056523,0.0039922,0.00020751 c 1.319 
+2026-10-27 23:22:30 cap missing: rank 795; height 60811; age 44463; education 44334; dependents 44505; officer 795; distance 625; length 0; n_g 229 
+2026-10-27 23:22:30 camp reference fractions 0.47945,0.091484,0.26835,0.0063242,0.12885,0.015702,0.0056523,0.0039922,0.00020751 c 1.319 
+2026-10-27 23:22:30 camp missing: rank 795; height 60811; age 44463; education 44334; dependents 44505; officer 795; distance 625; length 0; n_g 100 
+2026-10-27 23:22:49 S009 T4__cap_simple_steepness ok N 100672 clusters 1674 seconds 18.515  
+2026-10-27 23:23:11 S009 T4__cap_full_steepness ok N 100672 clusters 1674 seconds 22.244 Aliased columns omitted: men_missing,men_sq_missing 
+2026-10-27 23:23:11 S009 T4__camp_simple_steepness ok N 101993 clusters 341 seconds 0.208  
+2026-10-27 23:23:12 S009 T4__camp_full_steepness ok N 101993 clusters 341 seconds 0.548 Aliased columns omitted: men_missing,men_sq_missing 
+2026-10-27 23:23:30 S009 T4__cap_simple_sameness ok N 100672 clusters 1674 seconds 18.425  
+2026-10-27 23:23:55 S009 T4__cap_full_sameness ok N 100672 clusters 1674 seconds 24.19 Aliased columns omitted: men_missing,men_sq_missing 
+2026-10-27 23:23:55 S009 T4__camp_simple_sameness ok N 101993 clusters 341 seconds 0.229  
+2026-10-27 23:23:55 S009 T4__camp_full_sameness ok N 101993 clusters 341 seconds 0.569 Aliased columns omitted: men_missing,men_sq_missing 
+2026-10-27 23:23:55 END S009 
+2026-10-27 23:23:55 BEGIN S010 families T4 
+2026-10-27 23:23:56 Sample D0 143374 D 124387 R cap 101993 R camp 101993 
+2026-10-27 23:23:56 cap reference fractions 0.46202,0.087999,0.28109,0.0069676,0.13728,0.01546,0.0053048,0.0037069,0.00017034 c 1.319052 
+2026-10-27 23:23:56 cap missing: rank 795; height 60811; age 44463; education 44334; dependents 44505; officer 795; distance 625; length 0; n_g 229 
+2026-10-27 23:23:56 camp reference fractions 0.46202,0.087999,0.28109,0.0069676,0.13728,0.01546,0.0053048,0.0037069,0.00017034 c 1.319052 
+2026-10-27 23:23:56 camp missing: rank 795; height 60811; age 44463; education 44334; dependents 44505; officer 795; distance 625; length 0; n_g 100 
+2026-10-27 23:24:14 S010 T4__cap_simple_steepness ok N 100672 clusters 1674 seconds 18.242  
+2026-10-27 23:24:36 S010 T4__cap_full_steepness ok N 100672 clusters 1674 seconds 21.607 Aliased columns omitted: men_missing,men_sq_missing 
+2026-10-27 23:24:36 S010 T4__camp_simple_steepness ok N 101993 clusters 341 seconds 0.188  
+2026-10-27 23:24:37 S010 T4__camp_full_steepness ok N 101993 clusters 341 seconds 0.738 Aliased columns omitted: men_missing,men_sq_missing 
+2026-10-27 23:24:57 S010 T4__cap_simple_sameness ok N 100672 clusters 1674 seconds 20.343  
+2026-10-27 23:25:20 S010 T4__cap_full_sameness ok N 100672 clusters 1674 seconds 23.205 Aliased columns omitted: men_missing,men_sq_missing 
+2026-10-27 23:25:20 S010 T4__camp_simple_sameness ok N 101993 clusters 341 seconds 0.254  
+2026-10-27 23:25:21 S010 T4__camp_full_sameness ok N 101993 clusters 341 seconds 0.545 Aliased columns omitted: men_missing,men_sq_missing 
+2026-10-27 23:25:21 END S010 
+2026-10-27 23:25:21 BEGIN S011 families T4 
+2026-10-27 23:25:21 Sample D0 143374 D 124387 R cap 101993 R camp 101993 
+2026-10-27 23:25:21 cap reference fractions 0.46202,0.087999,0.28109,0.0069676,0.13728,0.01546,0.0053048,0.0037069,0.00017034 c 1.319 
+2026-10-27 23:25:21 cap missing: rank 795; height 60811; age 44463; education 44334; dependents 44505; officer 795; distance 625; length 0; n_g 229 
+2026-10-27 23:25:21 camp reference fractions 0.46202,0.087999,0.28109,0.0069676,0.13728,0.01546,0.0053048,0.0037069,0.00017034 c 1.319 
+2026-10-27 23:25:21 camp missing: rank 795; height 60811; age 44463; education 44334; dependents 44505; officer 795; distance 625; length 0; n_g 100 
+2026-10-27 23:25:39 S011 T4__cap_simple_steepness ok N 100672 clusters 1674 seconds 17.567  
+2026-10-27 23:25:59 S011 T4__cap_full_steepness ok N 100672 clusters 1674 seconds 19.941 Aliased columns omitted: men_missing,men_sq_missing 
+2026-10-27 23:25:59 S011 T4__camp_simple_steepness ok N 101993 clusters 341 seconds 0.185  
+2026-10-27 23:26:00 S011 T4__camp_full_steepness ok N 101993 clusters 341 seconds 0.565 Aliased columns omitted: men_missing,men_sq_missing 
+2026-10-27 23:26:16 S011 T4__cap_simple_sameness ok N 100672 clusters 1674 seconds 16.688  
+2026-10-27 23:26:38 S011 T4__cap_full_sameness ok N 100672 clusters 1674 seconds 22.027 Aliased columns omitted: men_missing,men_sq_missing 
+2026-10-27 23:26:39 S011 T4__camp_simple_sameness ok N 101993 clusters 341 seconds 0.257  
+2026-10-27 23:26:39 S011 T4__camp_full_sameness ok N 101993 clusters 341 seconds 0.538 Aliased columns omitted: men_missing,men_sq_missing 
+2026-10-27 23:26:39 END S011 
+2026-10-27 23:26:39 BEGIN S012 families T4 
+2026-10-27 23:26:40 Sample D0 143374 D 124387 R cap 101993 R camp 101993 
+2026-10-27 23:26:40 cap reference fractions 0.46202,0.087999,0.28109,0.0069676,0.13728,0.01546,0.0053048,0.0037069,0.00017034 c 1.319 
+2026-10-27 23:26:40 cap missing: rank 795; height 60811; age 44463; education 44478; dependents 44505; officer 795; distance 625; length 0; n_g 229 
+2026-10-27 23:26:40 camp reference fractions 0.46202,0.087999,0.28109,0.0069676,0.13728,0.01546,0.0053048,0.0037069,0.00017034 c 1.319 
+2026-10-27 23:26:40 camp missing: rank 795; height 60811; age 44463; education 44478; dependents 44505; officer 795; distance 625; length 0; n_g 100 
+2026-10-27 23:27:10 S012 T4__cap_simple_steepness ok N 100672 clusters 1674 seconds 30.222  
+2026-10-27 23:27:32 S012 T4__cap_full_steepness ok N 100672 clusters 1674 seconds 22.282 Aliased columns omitted: men_missing,men_sq_missing 
+2026-10-27 23:27:32 S012 T4__camp_simple_steepness ok N 101993 clusters 341 seconds 0.234  
+2026-10-27 23:27:33 S012 T4__camp_full_steepness ok N 101993 clusters 341 seconds 0.602 Aliased columns omitted: men_missing,men_sq_missing 
+2026-10-27 23:27:55 S012 T4__cap_simple_sameness ok N 100672 clusters 1674 seconds 21.983  
+2026-10-27 23:28:53 S012 T4__cap_full_sameness ok N 100672 clusters 1674 seconds 57.731 Aliased columns omitted: men_missing,men_sq_missing 
+2026-10-27 23:28:53 S012 T4__camp_simple_sameness ok N 101993 clusters 341 seconds 0.301  
+2026-10-27 23:28:54 S012 T4__camp_full_sameness ok N 101993 clusters 341 seconds 1.21 Aliased columns omitted: men_missing,men_sq_missing 
+2026-10-27 23:28:54 END S012 
+2026-10-27 23:28:54 BEGIN S013 families T4 
+2026-10-27 23:28:55 Sample D0 143374 D 124387 R cap 101993 R camp 101993 
+2026-10-27 23:28:55 cap reference fractions 0.46202,0.087999,0.28109,0.0069676,0.13728,0.01546,0.0053048,0.0037069,0.00017034 c 1.319 
+2026-10-27 23:28:55 cap missing: rank 795; height 60811; age 44463; education 44334; dependents 44505; officer 795; distance 625; length 0; n_g 229 
+2026-10-27 23:28:55 camp reference fractions 0.46202,0.087999,0.28109,0.0069676,0.13728,0.01546,0.0053048,0.0037069,0.00017034 c 1.319 
+2026-10-27 23:28:55 camp missing: rank 795; height 60811; age 44463; education 44334; dependents 44505; officer 795; distance 625; length 0; n_g 100 
+2026-10-27 23:29:37 S013 T4__cap_simple_steepness ok N 100672 clusters 1674 seconds 42.236  
+2026-10-27 23:30:09 S013 T4__cap_full_steepness ok N 100672 clusters 1674 seconds 31.564 Aliased columns omitted: men_missing,men_sq_missing 
+2026-10-27 23:30:09 S013 T4__camp_simple_steepness ok N 101993 clusters 341 seconds 0.208  
+2026-10-27 23:30:10 S013 T4__camp_full_steepness ok N 101993 clusters 341 seconds 0.586 Aliased columns omitted: men_missing,men_sq_missing 
+2026-10-27 23:30:36 S013 T4__cap_simple_sameness ok N 100672 clusters 1674 seconds 26.65  
+2026-10-27 23:31:19 S013 T4__cap_full_sameness ok N 100672 clusters 1674 seconds 42.994 Aliased columns omitted: men_missing,men_sq_missing 
+2026-10-27 23:31:20 S013 T4__camp_simple_sameness ok N 101993 clusters 341 seconds 0.793  
+2026-10-27 23:31:22 S013 T4__camp_full_sameness ok N 101993 clusters 341 seconds 2.389 Aliased columns omitted: men_missing,men_sq_missing 
+2026-10-27 23:31:22 END S013 
+2026-10-27 23:31:22 BEGIN S014 families T4 
+2026-10-27 23:31:23 Sample D0 143374 D 124387 R cap 101993 R camp 101993 
+2026-10-27 23:31:23 cap reference fractions 0.46202,0.087999,0.28109,0.0069676,0.13728,0.01546,0.0053048,0.0037069,0.00017034 c 1.319 
+2026-10-27 23:31:23 cap missing: rank 795; height 60811; age 44463; education 44334; dependents 54905; officer 795; distance 625; length 0; n_g 229 
+2026-10-27 23:31:23 camp reference fractions 0.46202,0.087999,0.28109,0.0069676,0.13728,0.01546,0.0053048,0.0037069,0.00017034 c 1.319 
+2026-10-27 23:31:23 camp missing: rank 795; height 60811; age 44463; education 44334; dependents 54905; officer 795; distance 625; length 0; n_g 100 
+2026-10-27 23:32:39 S014 T4__cap_simple_steepness ok N 100672 clusters 1674 seconds 75.951  
+2026-10-27 23:34:13 S014 T4__cap_full_steepness ok N 100672 clusters 1674 seconds 93.949 Aliased columns omitted: men_missing,men_sq_missing 
+2026-10-27 23:34:14 S014 T4__camp_simple_steepness ok N 101993 clusters 341 seconds 0.504  
+2026-10-27 23:34:15 S014 T4__camp_full_steepness ok N 101993 clusters 341 seconds 1.411 Aliased columns omitted: men_missing,men_sq_missing 
+2026-10-27 23:35:29 S014 T4__cap_simple_sameness ok N 100672 clusters 1674 seconds 74.558  
+2026-10-27 23:37:12 S014 T4__cap_full_sameness ok N 100672 clusters 1674 seconds 102.478 Aliased columns omitted: men_missing,men_sq_missing 
+2026-10-27 23:37:12 S014 T4__camp_simple_sameness ok N 101993 clusters 341 seconds 0.502  
+2026-10-27 23:37:14 S014 T4__camp_full_sameness ok N 101993 clusters 341 seconds 1.678 Aliased columns omitted: men_missing,men_sq_missing 
+2026-10-27 23:37:14 END S014 
+2026-10-27 23:37:14 BEGIN S015 families T4 
+2026-10-27 23:37:15 Sample D0 143374 D 124387 R cap 101993 R camp 101993 
+2026-10-27 23:37:15 cap reference fractions 0.46202,0.087999,0.28109,0.0069676,0.13728,0.01546,0.0053048,0.0037069,0.00017034 c 1.319 
+2026-10-27 23:37:15 cap missing: rank 795; height 101993; age 44463; education 44334; dependents 44505; officer 795; distance 625; length 0; n_g 229 
+2026-10-27 23:37:15 camp reference fractions 0.46202,0.087999,0.28109,0.0069676,0.13728,0.01546,0.0053048,0.0037069,0.00017034 c 1.319 
+2026-10-27 23:37:15 camp missing: rank 795; height 101993; age 44463; education 44334; dependents 44505; officer 795; distance 625; length 0; n_g 100 
+2026-10-27 23:38:27 S015 T4__cap_simple_steepness ok N 100672 clusters 1674 seconds 72.629  
+2026-10-27 23:40:03 S015 T4__cap_full_steepness ok N 100672 clusters 1674 seconds 95.811 Aliased columns omitted: men_missing,men_sq_missing; Constant columns omitted: height 
+2026-10-27 23:40:04 S015 T4__camp_simple_steepness ok N 101993 clusters 341 seconds 0.461  
+2026-10-27 23:40:06 S015 T4__camp_full_steepness ok N 101993 clusters 341 seconds 2.09 Aliased columns omitted: men_missing,men_sq_missing; Constant columns omitted: height 
+2026-10-27 23:41:28 S015 T4__cap_simple_sameness ok N 100672 clusters 1674 seconds 81.832  
+2026-10-27 23:43:07 S015 T4__cap_full_sameness ok N 100672 clusters 1674 seconds 99.909 Aliased columns omitted: men_missing,men_sq_missing; Constant columns omitted: height 
+2026-10-27 23:43:08 S015 T4__camp_simple_sameness ok N 101993 clusters 341 seconds 0.517  
+2026-10-27 23:43:10 S015 T4__camp_full_sameness ok N 101993 clusters 341 seconds 1.752 Aliased columns omitted: men_missing,men_sq_missing; Constant columns omitted: height 
+2026-10-27 23:43:10 END S015 
+2026-10-27 23:43:10 BEGIN S016 families T4 
+2026-10-27 23:43:10 Sample D0 143374 D 124387 R cap 101993 R camp 101993 
+2026-10-27 23:43:10 cap reference fractions 0.46202,0.087999,0.28109,0.0069676,0.13728,0.01546,0.0053048,0.0037069,0.00017034 c 1.319 
+2026-10-27 23:43:10 cap missing: rank 795; height 60811; age 44334; education 44334; dependents 44505; officer 795; distance 625; length 0; n_g 229 
+2026-10-27 23:43:11 camp reference fractions 0.46202,0.087999,0.28109,0.0069676,0.13728,0.01546,0.0053048,0.0037069,0.00017034 c 1.319 
+2026-10-27 23:43:11 camp missing: rank 795; height 60811; age 44334; education 44334; dependents 44505; officer 795; distance 625; length 0; n_g 100 
+2026-10-27 23:44:27 S016 T4__cap_simple_steepness ok N 100672 clusters 1674 seconds 76.61  
+2026-10-27 23:45:56 S016 T4__cap_full_steepness ok N 100672 clusters 1674 seconds 88.602 Aliased columns omitted: men_missing,men_sq_missing,education_missing 
+2026-10-27 23:45:57 S016 T4__camp_simple_steepness ok N 101993 clusters 341 seconds 0.566  
+2026-10-27 23:45:58 S016 T4__camp_full_steepness ok N 101993 clusters 341 seconds 1.911 Aliased columns omitted: men_missing,men_sq_missing,education_missing 
+2026-10-27 23:47:16 S016 T4__cap_simple_sameness ok N 100672 clusters 1674 seconds 77.126  
+2026-10-27 23:49:02 S016 T4__cap_full_sameness ok N 100672 clusters 1674 seconds 106.622 Aliased columns omitted: men_missing,men_sq_missing,education_missing 
+2026-10-27 23:49:03 S016 T4__camp_simple_sameness ok N 101993 clusters 341 seconds 0.722  
+2026-10-27 23:49:05 S016 T4__camp_full_sameness ok N 101993 clusters 341 seconds 1.901 Aliased columns omitted: men_missing,men_sq_missing,education_missing 
+2026-10-27 23:49:05 END S016 
+2026-10-27 23:49:05 BEGIN S017 families T4 
+2026-10-27 23:49:05 Sample D0 143374 D 124387 R cap 101993 R camp 101993 
+2026-10-27 23:49:05 cap reference fractions 0.46202,0.087999,0.28109,0.0069676,0.13728,0.01546,0.0053048,0.0037069,0.00017034 c 1.319 
+2026-10-27 23:49:05 cap missing: rank 795; height 60483; age 43983; education 43842; dependents 44022; officer 795; distance 625; length 0; n_g 229 
+2026-10-27 23:49:05 camp reference fractions 0.46202,0.087999,0.28109,0.0069676,0.13728,0.01546,0.0053048,0.0037069,0.00017034 c 1.319 
+2026-10-27 23:49:05 camp missing: rank 795; height 60483; age 43983; education 43842; dependents 44022; officer 795; distance 625; length 0; n_g 100 
+2026-10-27 23:50:29 S017 T4__cap_simple_steepness ok N 100672 clusters 1674 seconds 83.801  
+2026-10-27 23:52:10 S017 T4__cap_full_steepness ok N 100672 clusters 1674 seconds 101.154 Aliased columns omitted: men_missing,men_sq_missing 
+2026-10-27 23:52:11 S017 T4__camp_simple_steepness ok N 101993 clusters 341 seconds 0.655  
+2026-10-27 23:52:12 S017 T4__camp_full_steepness ok N 101993 clusters 341 seconds 1.282 Aliased columns omitted: men_missing,men_sq_missing 
+2026-10-27 23:53:35 S017 T4__cap_simple_sameness ok N 100672 clusters 1674 seconds 82.505  
+2026-10-27 23:55:23 S017 T4__cap_full_sameness ok N 100672 clusters 1674 seconds 107.846 Aliased columns omitted: men_missing,men_sq_missing 
+2026-10-27 23:55:23 S017 T4__camp_simple_sameness ok N 101993 clusters 341 seconds 0.618  
+2026-10-27 23:55:25 S017 T4__camp_full_sameness ok N 101993 clusters 341 seconds 1.93 Aliased columns omitted: men_missing,men_sq_missing 
+2026-10-27 23:55:25 END S017 
+2026-10-27 23:55:25 BEGIN S018 families T4 
+2026-10-27 23:55:27 Sample D0 143374 D 124387 R cap 101993 R camp 101993 
+2026-10-27 23:55:28 cap reference fractions 0.46202,0.087999,0.28109,0.0069676,0.13728,0.01546,0.0053048,0.0037069,0.00017034 c 1.319 
+2026-10-27 23:55:28 cap missing: rank 795; height 60723; age 44243; education 44104; dependents 44231; officer 795; distance 625; length 0; n_g 229 
+2026-10-27 23:55:28 camp reference fractions 0.46202,0.087999,0.28109,0.0069676,0.13728,0.01546,0.0053048,0.0037069,0.00017034 c 1.319 
+2026-10-27 23:55:28 camp missing: rank 795; height 60723; age 44243; education 44104; dependents 44231; officer 795; distance 625; length 0; n_g 100 
+2026-10-27 23:56:55 S018 T4__cap_simple_steepness ok N 100672 clusters 1674 seconds 87.642  
+2026-10-27 23:58:40 S018 T4__cap_full_steepness ok N 100672 clusters 1674 seconds 104.069 Aliased columns omitted: men_missing,men_sq_missing 
+2026-10-27 23:58:40 S018 T4__camp_simple_steepness ok N 101993 clusters 341 seconds 0.72  
+2026-10-27 23:58:43 S018 T4__camp_full_steepness ok N 101993 clusters 341 seconds 2.318 Aliased columns omitted: men_missing,men_sq_missing 
+2026-10-28 00:00:07 S018 T4__cap_simple_sameness ok N 100672 clusters 1674 seconds 84.85  
+2026-10-28 00:01:49 S018 T4__cap_full_sameness ok N 100672 clusters 1674 seconds 101.62 Aliased columns omitted: men_missing,men_sq_missing 
+2026-10-28 00:01:50 S018 T4__camp_simple_sameness ok N 101993 clusters 341 seconds 0.455  
+2026-10-28 00:01:51 S018 T4__camp_full_sameness ok N 101993 clusters 341 seconds 1.951 Aliased columns omitted: men_missing,men_sq_missing 
+2026-10-28 00:01:51 END S018 
+2026-10-28 00:01:51 BEGIN S019 families T4 
+2026-10-28 00:01:52 Sample D0 143374 D 124387 R cap 101993 R camp 101993 
+2026-10-28 00:01:52 cap reference fractions 0.46202,0.087999,0.28109,0.0069676,0.13728,0.01546,0.0053048,0.0037069,0.00017034 c 1.319 
+2026-10-28 00:01:52 cap missing: rank 795; height 60811; age 44463; education 44334; dependents 44505; officer 795; distance 8912; length 0; n_g 229 
+2026-10-28 00:01:52 camp reference fractions 0.46202,0.087999,0.28109,0.0069676,0.13728,0.01546,0.0053048,0.0037069,0.00017034 c 1.319 
+2026-10-28 00:01:52 camp missing: rank 795; height 60811; age 44463; education 44334; dependents 44505; officer 795; distance 8912; length 0; n_g 100 
+2026-10-28 00:03:09 S019 T4__cap_simple_steepness ok N 100672 clusters 1674 seconds 77.218  
+2026-10-28 00:04:38 S019 T4__cap_full_steepness ok N 100672 clusters 1674 seconds 88.522 Aliased columns omitted: men_missing,men_sq_missing 
+2026-10-28 00:04:38 S019 T4__camp_simple_steepness ok N 101993 clusters 341 seconds 0.534  
+2026-10-28 00:04:41 S019 T4__camp_full_steepness ok N 101993 clusters 341 seconds 2.475 Aliased columns omitted: men_missing,men_sq_missing 
+2026-10-28 00:05:55 S019 T4__cap_simple_sameness ok N 100672 clusters 1674 seconds 73.865  
+2026-10-28 00:07:32 S019 T4__cap_full_sameness ok N 100672 clusters 1674 seconds 96.851 Aliased columns omitted: men_missing,men_sq_missing 
+2026-10-28 00:07:32 S019 T4__camp_simple_sameness ok N 101993 clusters 341 seconds 0.518  
+2026-10-28 00:07:34 S019 T4__camp_full_sameness ok N 101993 clusters 341 seconds 1.741 Aliased columns omitted: men_missing,men_sq_missing 
+2026-10-28 00:07:34 END S019 
+2026-10-28 00:07:34 BEGIN S020 families R_friends 
+2026-10-28 00:07:34 Sample D0 143374 D 124387 R cap 101993 R camp 101993 
+2026-10-28 00:07:35 cap reference fractions 0.46202,0.087999,0.28109,0.0069676,0.13728,0.01546,0.0053048,0.0037069,0.00017034 c 1.319 
+2026-10-28 00:07:35 cap missing: rank 795; height 60811; age 44463; education 44334; dependents 44505; officer 795; distance 625; length 0; n_g 229 
+2026-10-28 00:07:35 camp reference fractions 0.46202,0.087999,0.28109,0.0069676,0.13728,0.01546,0.0053048,0.0037069,0.00017034 c 1.319 
+2026-10-28 00:07:35 camp missing: rank 795; height 60811; age 44463; education 44334; dependents 44505; officer 795; distance 625; length 0; n_g 100 
+2026-10-28 00:09:17 S020 R_friends__cap_full_friends ok N 100672 clusters 1674 seconds 101.811 Aliased columns omitted: men_sq_missing 
+2026-10-28 00:09:19 S020 R_friends__camp_full_friends ok N 101993 clusters 341 seconds 2.346 Aliased columns omitted: men_sq_missing 
+2026-10-28 00:11:01 S020 R_friends__cap_full_steepness_friends ok N 100672 clusters 1674 seconds 101.096 Aliased columns omitted: men_missing,men_sq_missing 
+2026-10-28 00:11:03 S020 R_friends__camp_full_steepness_friends ok N 101993 clusters 341 seconds 2.25 Aliased columns omitted: men_missing,men_sq_missing 
+2026-10-28 00:11:53 S020 R_friends__cap_full_sameness_friends ok N 100672 clusters 1674 seconds 49.896 Aliased columns omitted: men_missing,men_sq_missing 
+2026-10-28 00:11:53 S020 R_friends__camp_full_sameness_friends ok N 101993 clusters 341 seconds 0.643 Aliased columns omitted: men_missing,men_sq_missing 
+2026-10-28 00:12:14 S020 R_friends__cap_full_unit_steepness_friends ok N 100672 clusters 1674 seconds 20.67 Aliased columns omitted: men_sq_missing 
+2026-10-28 00:12:15 S020 R_friends__camp_full_unit_steepness_friends ok N 101993 clusters 341 seconds 0.643 Aliased columns omitted: men_sq_missing 
+2026-10-28 00:12:35 S020 R_friends__cap_full_unit_sameness_friends ok N 100672 clusters 1674 seconds 20.344 Aliased columns omitted: men_sq_missing 
+2026-10-28 00:12:36 S020 R_friends__camp_full_unit_sameness_friends ok N 101993 clusters 341 seconds 0.654 Aliased columns omitted: men_sq_missing 
+2026-10-28 00:12:36 END S020 
+2026-10-28 00:12:36 Run complete 

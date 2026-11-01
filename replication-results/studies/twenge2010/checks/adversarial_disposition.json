@@ -1,0 +1,14 @@
+{"review": "checks/audit/audit_report.md (Claude Opus 5.5 subagent; same family as implementation A, Reader A and the coordinator: not family-independent)",
+ "claims": [
+  {"claim": "Partial scalar invariance accepted (delta CFI M2-M4 < .002)", "frozen_rule_outcome": "discrepant_provisional",
+   "adversarial_result": "does not survive as a substantive discrepancy: all implementations and branches give delta CFI .0028-.0030, but the article's printed CFIs imply a baseline noncentrality about twice the reconstruction's (single-group CFIs show the same gap while model chi-squares are reproduced); on the article's implied baseline scale the reconstructed delta CFI is .0014-.0019, below .002. The article's model parameterization (printed df) also differs from manifest M4.",
+   "post_review_classification": "indeterminate", "subcode": "underdocumentation: CFI baseline model and multigroup parameterization not documented"},
+  {"claim": "Security and influence scales: no alpha exceeded .50", "frozen_rule_outcome": "discrepant_provisional",
+   "adversarial_result": "survives narrowly: only the 2006 security scale (V4239+V4241) exceeds .505 (S00 .518, S01 .509, S03 .520); bootstrap SE about .022 with 26% of replicates at or below .505; item composition of the scale is not stated in the article; an alpha of .52 still supports dropping the scale",
+   "post_review_classification": "discrepant_provisional (unconfirmed; low materiality; lower tier)", "subcode": "magnitude of one alpha"}
+ ],
+ "post_hoc_observations_not_rescored": [
+  "Altruistic contrasts: keeping V4229's intercept constrained (contrary to the reconciled reading of Table 1 footnote a, but consistent with the article's at-least-two-constrained-indicators rule) gives d_eq of -.041/-.060/-.101 versus printed -.04/-.06/-.10. Labels are frozen; this is reported as a documentation ambiguity, not as evidence.",
+  "Intrinsic contrasts: no principled specification found that reproduces the printed values; one post hoc item deletion does, which is not evidence."
+ ],
+ "scorer_alignment": "Two scorer-code deviations from the frozen rule text found by the audit (sign criterion grey vs agree at 2-4 SE; missing rounding band around the .002 delta-CFI threshold) were corrected to match sealed/scoring_rules.json; no claim outcome changed (previous output preserved in runs/run_20261028T035346Z/scoring_v2_before_rule_alignment/)."}

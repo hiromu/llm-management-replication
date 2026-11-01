@@ -1,0 +1,22 @@
+{
+  "hypothesis_outcomes": {
+    "H1": "consistent",
+    "H2": "discrepant_candidate",
+    "H3": "indeterminate:incomplete_coverage"
+  },
+  "paper_outcome": "indeterminate",
+  "rules_version": 1,
+  "study_id": "thebaud2015",
+  "doi": "10.1177/0001839215591627",
+  "execution": "exec_v1",
+  "scoring_rules": "reconciliation/frozen/scoring_rules.json v1 with addenda v1.1 and v1.2",
+  "specification_fragility": "not assessed (equivalent set empty)",
+  "adversarial_review": [
+    "audits/adversarial_v1/review.md (Claude Opus 5.5)",
+    "audits/adversarial_astra_v1/review.md (GPT-6 Astra)"
+  ],
+  "fully_verified_discrepancy": "withheld: no adversarial reviewer from a model family independent of every implementer (workflow.md section 6)",
+  "implementation_agreement": "A-B 276/276 ORIGIN terms; C stopped at user direction (runs/exec_v1/unexecuted_runs.json); deviation and influence grid from A only",
+  "memorization": "both reader models recognized the article and its argument; neither recalled numeric results",
+  "calibration": "corpus-level calibration arms not performed in this session"
+}

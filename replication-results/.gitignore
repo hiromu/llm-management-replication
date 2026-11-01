@@ -1,0 +1,54 @@
+# This repository publishes no articles and no data. Keep them out if you rerun a study locally.
+*.pdf
+studies/*/data/
+*.parquet
+*.rds
+*.rda
+*.RData
+*.sav
+*.por
+*.dta
+sample_ids/
+Rlib/
+__pycache__/
+*.pyc
+.DS_Store
+
+# Session logs written by local tooling at the repository root
+/chat_log.md
+/studies/chat_log.md
+
+# Re-include files that a parent repository's generic Python .gitignore would drop:
+# run logs (*.log) and frozen manifests (MANIFEST matches manifest/ on case-insensitive systems).
+!*.log
+!manifest/
+# The proposal and supplement PDFs are ours, not article copies.
+!proposal/*.pdf
+!proposal/**/*.pdf
+# LaTeX build files from compiling in proposal/
+proposal/*.aux
+proposal/*.log
+proposal/*.out
+proposal/*.toc
+proposal/*.synctex.gz
+
+# Article text and page images given to readers: copyrighted, never commit
+studies/*/readers/**/packet/
+studies/*/sources/
+
+# berry2025: the OSF deposit has no license. Keep out the reader packet (hash manifests excepted),
+# the authors' script with its rerun copies and output logs, the R library, row samples and the
+# Astra reader transcript, which echoes the article.
+studies/berry2025/packet/*
+!studies/berry2025/packet/publication_packet.json
+!studies/berry2025/packet/reader_v1/
+studies/berry2025/packet/reader_v1/*
+!studies/berry2025/packet/reader_v1/PACKET_SHA256.json
+studies/berry2025/sealed/author_package/
+studies/berry2025/runs/author_rerun/rlib/
+studies/berry2025/runs/author_rerun/script/*.Rmd
+studies/berry2025/runs/author_rerun/script/asis.R
+studies/berry2025/runs/author_rerun/script/changed.R
+studies/berry2025/runs/author_rerun/*_output.txt
+studies/berry2025/runs/**/samples.csv
+studies/berry2025/logs/roles/reader_astra.stdout

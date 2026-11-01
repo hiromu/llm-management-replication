@@ -1,0 +1,590 @@
+2026-10-27 22:28:10 Invocation={'grid': PosixPath('grid.json'), 'data': PosixPath('data'), 'out': PosixPath('results'), 'specs': 'all', 'influence': 'first20', 'families': None, 'self_test': False, 'integration_test': False, 'construct_only': False}; synthetic checks passed=7; numpy=2.4.2; pandas=2.2.3
+2026-10-27 22:28:18 Read D0=143374; scanned enlistments=9200232; retained=74210; distinct matching serials=73601; seconds=7.68
+2026-10-27 22:28:18 BEGIN S000; params={"age_rule": "range", "camp_valid": "nonblank", "coords": "crosswalk", "dup_serial": "unmatched", "educ_postgrad": 9, "friends_def": "incl_self", "group_members": "regression", "height_rule": "range", "married": 1, "pop_fractions": "descriptive", "rank_rule": "origin", "sameness_constant": "fixed", "sample_common": true, "svc_exclude": ["6", "7"]}; families=['T4', 'T5', 'T5ROC', 'T6', 'R_cc', 'R_n50', 'R_n100', 'R_noexec', 'R_ger', 'R_jap', 'R_aaf', 'R_nosq', 'R_alt', 'R_friends', 'R_int', 'INFLUENCE']
+2026-10-27 22:28:18 S000 sample service=128958
+2026-10-27 22:28:18 S000 sample power=124933
+2026-10-27 22:28:18 S000 sample D_status=124387
+2026-10-27 22:28:18 S000 cap: R=101993; linked=57659; rank_reference=[0.4619027539005482, 0.08810697719679522, 0.2810016542865484, 0.0069658438483246295, 0.13724901878101786, 0.015456226280450226, 0.0053034480521586816, 0.003843783450647118, 0.00017029420350968245]; missing={'rank': 772, 'height': 60811, 'age': 44463, 'education': 44334, 'dependents': 44505, 'officer': 772, 'length': 0, 'distance': 625, 'n_g': 228, 'steepness': 228, 'sameness': 228, 'ratio_sameness': 228, 'absolute_sameness': 228, 'distinct_ranks': 228, 'sum_ranks': 228, 'administrative_intensity': 228}
+2026-10-27 22:28:18 S000 cap: friends_missing=34282; unit_steepness_missing=34282
+2026-10-27 22:28:19 S000 camp: R=101993; linked=57659; rank_reference=[0.4619027539005482, 0.08810697719679522, 0.2810016542865484, 0.0069658438483246295, 0.13724901878101786, 0.015456226280450226, 0.0053034480521586816, 0.003843783450647118, 0.00017029420350968245]; missing={'rank': 772, 'height': 60811, 'age': 44463, 'education': 44334, 'dependents': 44505, 'officer': 772, 'length': 0, 'distance': 625, 'n_g': 100, 'steepness': 100, 'sameness': 100, 'ratio_sameness': 100, 'absolute_sameness': 100, 'distinct_ranks': 100, 'sum_ranks': 100, 'administrative_intensity': 100}
+2026-10-27 22:28:19 S000 camp: friends_missing=34282; unit_steepness_missing=34282
+2026-10-27 22:28:20 S000 T4__cap__simple__steepness: ok; N=100672 K=165 clusters=1674; PP=1321/178; omitted={}; scaled_score=8.61e-13; seconds=1.878
+2026-10-27 22:28:22 S000 T4__cap__simple__sameness: ok; N=100672 K=165 clusters=1674; PP=1321/178; omitted={}; scaled_score=1.2e-12; seconds=1.918
+2026-10-27 22:28:35 S000 T4__cap__full__steepness: ok; N=100672 K=178 clusters=1674; PP=1321/178; omitted={'men_missing': 'omitted_collinear', 'men_sq_missing': 'omitted_collinear'}; scaled_score=8.8e-12; seconds=12.319
+2026-10-27 22:28:48 S000 T4__cap__full__sameness: ok; N=100672 K=178 clusters=1674; PP=1321/178; omitted={'men_missing': 'omitted_collinear', 'men_sq_missing': 'omitted_collinear'}; scaled_score=1.65e-11; seconds=13.042
+2026-10-27 22:28:48 S000 T4__camp__simple__steepness: ok; N=101993 K=4 clusters=341; PP=0/0; omitted={}; scaled_score=1.3e-10; seconds=0.156
+2026-10-27 22:28:48 S000 T4__camp__simple__sameness: ok; N=101993 K=4 clusters=341; PP=0/0; omitted={}; scaled_score=1.22e-08; seconds=0.133
+2026-10-27 22:28:49 S000 T4__camp__full__steepness: ok; N=101993 K=19 clusters=341; PP=0/0; omitted={'men_missing': 'omitted_collinear', 'men_sq_missing': 'omitted_collinear'}; scaled_score=1.17e-14; seconds=0.562
+2026-10-27 22:28:49 S000 T4__camp__full__sameness: ok; N=101993 K=19 clusters=341; PP=0/0; omitted={'men_missing': 'omitted_collinear', 'men_sq_missing': 'omitted_collinear'}; scaled_score=1.13e-13; seconds=0.518
+2026-10-27 22:28:58 S000 T5__cap__simple__steepness+sameness: ok; N=100672 K=166 clusters=1674; PP=1321/178; omitted={'sameness_missing': 'omitted_collinear'}; scaled_score=5.46e-13; seconds=8.767
+2026-10-27 22:29:10 S000 T5__cap__full__steepness+sameness: ok; N=100672 K=179 clusters=1674; PP=1321/178; omitted={'sameness_missing': 'omitted_collinear', 'men_missing': 'omitted_collinear', 'men_sq_missing': 'omitted_collinear'}; scaled_score=6.53e-12; seconds=12.033
+2026-10-27 22:29:10 S000 T5__camp__simple__steepness+sameness: ok; N=101993 K=5 clusters=341; PP=0/0; omitted={'sameness_missing': 'omitted_collinear'}; scaled_score=6.54e-15; seconds=0.162
+2026-10-27 22:29:11 S000 T5__camp__full__steepness+sameness: ok; N=101993 K=20 clusters=341; PP=0/0; omitted={'sameness_missing': 'omitted_collinear', 'men_missing': 'omitted_collinear', 'men_sq_missing': 'omitted_collinear'}; scaled_score=9.27e-14; seconds=0.523
+2026-10-27 22:29:11 S000 T5ROC T5__cap__simple__steepness+sameness omit steepness: ok 
+2026-10-27 22:29:11 S000 T5ROC T5__cap__simple__steepness+sameness omit sameness: ok 
+2026-10-27 22:29:11 S000 T5ROC T5__cap__full__steepness+sameness omit steepness: ok 
+2026-10-27 22:29:11 S000 T5ROC T5__cap__full__steepness+sameness omit sameness: ok 
+2026-10-27 22:29:11 S000 T5ROC T5__camp__simple__steepness+sameness omit steepness: ok 
+2026-10-27 22:29:11 S000 T5ROC T5__camp__simple__steepness+sameness omit sameness: ok 
+2026-10-27 22:29:11 S000 T5ROC T5__camp__full__steepness+sameness omit steepness: ok 
+2026-10-27 22:29:11 S000 T5ROC T5__camp__full__steepness+sameness omit sameness: ok 
+2026-10-27 22:29:19 S000 T6__cap__simple__steepness: ok; N=100672 K=168 clusters=1674; PP=1321/178; omitted={'officer_x_steepness_missing': 'omitted_collinear'}; scaled_score=1.13e-12; seconds=8.564
+2026-10-27 22:29:28 S000 T6__cap__simple__sameness: ok; N=100672 K=168 clusters=1674; PP=1321/178; omitted={'officer_x_sameness_missing': 'omitted_collinear'}; scaled_score=1.04e-12; seconds=9.029
+2026-10-27 22:29:41 S000 T6__cap__full__steepness: ok; N=100672 K=179 clusters=1674; PP=1321/178; omitted={'men_missing': 'omitted_collinear', 'men_sq_missing': 'omitted_collinear', 'officer_x_steepness_missing': 'omitted_collinear'}; scaled_score=5.11e-12; seconds=12.702
+2026-10-27 22:29:54 S000 T6__cap__full__sameness: ok; N=100672 K=179 clusters=1674; PP=1321/178; omitted={'men_missing': 'omitted_collinear', 'men_sq_missing': 'omitted_collinear', 'officer_x_sameness_missing': 'omitted_collinear'}; scaled_score=5.34e-12; seconds=12.790
+2026-10-27 22:29:54 S000 T6__camp__simple__steepness: ok; N=101993 K=7 clusters=341; PP=0/0; omitted={'officer_x_steepness_missing': 'omitted_collinear'}; scaled_score=1.19e-09; seconds=0.192
+2026-10-27 22:29:54 S000 T6__camp__simple__sameness: ok; N=101993 K=7 clusters=341; PP=0/0; omitted={'officer_x_sameness_missing': 'omitted_collinear'}; scaled_score=7.97e-09; seconds=0.193
+2026-10-27 22:29:55 S000 T6__camp__full__steepness: ok; N=101993 K=20 clusters=341; PP=0/0; omitted={'men_missing': 'omitted_collinear', 'men_sq_missing': 'omitted_collinear', 'officer_x_steepness_missing': 'omitted_collinear'}; scaled_score=3.27e-14; seconds=0.624
+2026-10-27 22:29:56 S000 T6__camp__full__sameness: ok; N=101993 K=20 clusters=341; PP=0/0; omitted={'men_missing': 'omitted_collinear', 'men_sq_missing': 'omitted_collinear', 'officer_x_sameness_missing': 'omitted_collinear'}; scaled_score=7.14e-15; seconds=0.565
+2026-10-27 22:29:56 S000 R_cc__cap__full__steepness: ok; N=40080 K=104 clusters=852; PP=992/152; omitted={}; scaled_score=1.39e-12; seconds=0.650
+2026-10-27 22:29:57 S000 R_cc__cap__full__sameness: ok; N=40080 K=104 clusters=852; PP=992/152; omitted={}; scaled_score=1.52e-12; seconds=0.748
+2026-10-27 22:29:57 S000 R_cc__camp__full__steepness: ok; N=40816 K=12 clusters=216; PP=0/0; omitted={}; scaled_score=3.5e-09; seconds=0.110
+2026-10-27 22:29:57 S000 R_cc__camp__full__sameness: ok; N=40816 K=12 clusters=216; PP=0/0; omitted={}; scaled_score=2.28e-14; seconds=0.107
+2026-10-27 22:29:58 S000 R_n50__cap__simple__steepness: ok; N=91283 K=57 clusters=220; PP=1051/5; omitted={}; scaled_score=4.28e-13; seconds=0.707
+2026-10-27 22:29:59 S000 R_n50__cap__simple__sameness: ok; N=91283 K=57 clusters=220; PP=1051/5; omitted={}; scaled_score=5.91e-13; seconds=0.685
+2026-10-27 22:30:01 S000 R_n50__cap__full__steepness: ok; N=91283 K=70 clusters=220; PP=1051/5; omitted={}; scaled_score=1.12e-11; seconds=2.566
+2026-10-27 22:30:03 S000 R_n50__cap__full__sameness: ok; N=91283 K=70 clusters=220; PP=1051/5; omitted={}; scaled_score=4.47e-12; seconds=2.226
+2026-10-27 22:30:04 S000 R_n50__camp__simple__steepness: ok; N=100055 K=3 clusters=78; PP=0/0; omitted={}; scaled_score=2.47e-09; seconds=0.137
+2026-10-27 22:30:04 S000 R_n50__camp__simple__sameness: ok; N=100055 K=3 clusters=78; PP=0/0; omitted={}; scaled_score=6.89e-09; seconds=0.139
+2026-10-27 22:30:04 S000 R_n50__camp__full__steepness: ok; N=100055 K=18 clusters=78; PP=0/0; omitted={}; scaled_score=5.22e-14; seconds=0.433
+2026-10-27 22:30:05 S000 R_n50__camp__full__sameness: ok; N=100055 K=18 clusters=78; PP=0/0; omitted={}; scaled_score=7.22e-15; seconds=0.433
+2026-10-27 22:30:05 S000 R_n100__cap__simple__steepness: ok; N=86058 K=45 clusters=150; PP=1231/4; omitted={}; scaled_score=3.71e-13; seconds=0.608
+2026-10-27 22:30:06 S000 R_n100__cap__simple__sameness: ok; N=86058 K=45 clusters=150; PP=1231/4; omitted={}; scaled_score=1.61e-13; seconds=0.610
+2026-10-27 22:30:08 S000 R_n100__cap__full__steepness: ok; N=86058 K=58 clusters=150; PP=1231/4; omitted={}; scaled_score=1.84e-12; seconds=2.155
+2026-10-27 22:30:10 S000 R_n100__cap__full__sameness: ok; N=86058 K=58 clusters=150; PP=1231/4; omitted={}; scaled_score=2.29e-12; seconds=2.129
+2026-10-27 22:30:10 S000 R_n100__camp__simple__steepness: ok; N=99057 K=3 clusters=64; PP=0/0; omitted={}; scaled_score=5.86e-09; seconds=0.135
+2026-10-27 22:30:10 S000 R_n100__camp__simple__sameness: ok; N=99057 K=3 clusters=64; PP=0/0; omitted={}; scaled_score=3.34e-15; seconds=0.146
+2026-10-27 22:30:11 S000 R_n100__camp__full__steepness: ok; N=99057 K=18 clusters=64; PP=0/0; omitted={}; scaled_score=3.78e-12; seconds=0.411
+2026-10-27 22:30:11 S000 R_n100__camp__full__sameness: ok; N=99057 K=18 clusters=64; PP=0/0; omitted={}; scaled_score=3.45e-14; seconds=0.406
+2026-10-27 22:30:13 S000 R_noexec__cap__simple__steepness: ok; N=96673 K=158 clusters=1601; PP=1451/180; omitted={}; scaled_score=4.84e-13; seconds=1.829
+2026-10-27 22:30:15 S000 R_noexec__cap__simple__sameness: ok; N=96673 K=158 clusters=1601; PP=1451/180; omitted={}; scaled_score=5.12e-12; seconds=1.815
+2026-10-27 22:30:25 S000 R_noexec__cap__full__steepness: ok; N=96673 K=171 clusters=1601; PP=1451/180; omitted={'men_missing': 'omitted_collinear', 'men_sq_missing': 'omitted_collinear'}; scaled_score=9.98e-13; seconds=10.395
+2026-10-27 22:30:36 S000 R_noexec__cap__full__sameness: ok; N=96673 K=171 clusters=1601; PP=1451/180; omitted={'men_missing': 'omitted_collinear', 'men_sq_missing': 'omitted_collinear'}; scaled_score=4.53e-12; seconds=10.603
+2026-10-27 22:30:36 S000 R_noexec__camp__simple__steepness: ok; N=98124 K=4 clusters=336; PP=0/0; omitted={}; scaled_score=3.93e-11; seconds=0.168
+2026-10-27 22:30:36 S000 R_noexec__camp__simple__sameness: ok; N=98124 K=4 clusters=336; PP=0/0; omitted={}; scaled_score=5.48e-10; seconds=0.139
+2026-10-27 22:30:37 S000 R_noexec__camp__full__steepness: ok; N=98124 K=19 clusters=336; PP=0/0; omitted={'men_missing': 'omitted_collinear', 'men_sq_missing': 'omitted_collinear'}; scaled_score=1.37e-08; seconds=0.454
+2026-10-27 22:30:37 S000 R_noexec__camp__full__sameness: ok; N=98124 K=19 clusters=336; PP=0/0; omitted={'men_missing': 'omitted_collinear', 'men_sq_missing': 'omitted_collinear'}; scaled_score=1.12e-14; seconds=0.472
+2026-10-27 22:30:38 S000 R_ger__cap__simple__steepness: ok; N=72014 K=107 clusters=1102; PP=1071/138; omitted={}; scaled_score=1.1e-12; seconds=1.082
+2026-10-27 22:30:39 S000 R_ger__cap__simple__sameness: ok; N=72014 K=107 clusters=1102; PP=1071/138; omitted={}; scaled_score=1.16e-12; seconds=1.090
+2026-10-27 22:30:45 S000 R_ger__cap__full__steepness: failed; ValueError: Observed information singular or ill-conditioned; possible separation; seconds=6.055
+Traceback (most recent call last):
+  File "/private/var/folders/7q/9m3zdcp550d685wgsq9kvf6r0000gn/T/exec_rO9oSR/run.py", line 571, in run_fit
+    fit = fit_probit(x, y)
+  File "/private/var/folders/7q/9m3zdcp550d685wgsq9kvf6r0000gn/T/exec_rO9oSR/run.py", line 305, in fit_probit
+    raise ValueError("Observed information singular or ill-conditioned; possible separation")
+ValueError: Observed information singular or ill-conditioned; possible separation
+
+2026-10-27 22:30:50 S000 R_ger__cap__full__sameness: failed; ValueError: Observed information singular or ill-conditioned; possible separation; seconds=4.670
+Traceback (most recent call last):
+  File "/private/var/folders/7q/9m3zdcp550d685wgsq9kvf6r0000gn/T/exec_rO9oSR/run.py", line 571, in run_fit
+    fit = fit_probit(x, y)
+  File "/private/var/folders/7q/9m3zdcp550d685wgsq9kvf6r0000gn/T/exec_rO9oSR/run.py", line 305, in fit_probit
+    raise ValueError("Observed information singular or ill-conditioned; possible separation")
+ValueError: Observed information singular or ill-conditioned; possible separation
+
+2026-10-27 22:30:50 S000 R_ger__camp__simple__steepness: ok; N=73085 K=2 clusters=243; PP=0/0; omitted={}; scaled_score=9.56e-11; seconds=0.083
+2026-10-27 22:30:50 S000 R_ger__camp__simple__sameness: ok; N=73085 K=2 clusters=243; PP=0/0; omitted={}; scaled_score=3.58e-10; seconds=0.101
+2026-10-27 22:30:50 S000 R_ger__camp__full__steepness: ok; N=73085 K=17 clusters=243; PP=0/0; omitted={}; scaled_score=1.36e-13; seconds=0.276
+2026-10-27 22:30:51 S000 R_ger__camp__full__sameness: ok; N=73085 K=17 clusters=243; PP=0/0; omitted={}; scaled_score=2.26e-13; seconds=0.269
+2026-10-27 22:30:51 S000 R_jap__cap__simple__steepness: ok; N=28641 K=60 clusters=569; PP=267/51; omitted={}; scaled_score=6.08e-08; seconds=0.150
+2026-10-27 22:30:51 S000 R_jap__cap__simple__sameness: ok; N=28641 K=60 clusters=569; PP=267/51; omitted={}; scaled_score=2.46e-08; seconds=0.147
+2026-10-27 22:30:52 S000 R_jap__cap__full__steepness: ok; N=28641 K=73 clusters=569; PP=267/51; omitted={'men_missing': 'omitted_collinear', 'men_sq_missing': 'omitted_collinear'}; scaled_score=6.94e-13; seconds=0.489
+2026-10-27 22:30:52 S000 R_jap__cap__full__sameness: ok; N=28641 K=73 clusters=569; PP=267/51; omitted={'men_missing': 'omitted_collinear', 'men_sq_missing': 'omitted_collinear'}; scaled_score=3.12e-13; seconds=0.523
+2026-10-27 22:30:52 S000 R_jap__camp__simple__steepness: ok; N=28908 K=3 clusters=109; PP=0/0; omitted={}; scaled_score=4.03e-09; seconds=0.039
+2026-10-27 22:30:52 S000 R_jap__camp__simple__sameness: ok; N=28908 K=3 clusters=109; PP=0/0; omitted={}; scaled_score=1.82e-10; seconds=0.042
+2026-10-27 22:30:52 S000 R_jap__camp__full__steepness: ok; N=28908 K=18 clusters=109; PP=0/0; omitted={'men_missing': 'omitted_collinear', 'men_sq_missing': 'omitted_collinear'}; scaled_score=1.94e-14; seconds=0.131
+2026-10-27 22:30:52 S000 R_jap__camp__full__sameness: ok; N=28908 K=18 clusters=109; PP=0/0; omitted={'men_missing': 'omitted_collinear', 'men_sq_missing': 'omitted_collinear'}; scaled_score=4.14e-11; seconds=0.121
+2026-10-27 22:30:53 S000 R_aaf__cap__simple__steepness: failed; ValueError: Observed information singular or ill-conditioned; possible separation; seconds=0.143
+Traceback (most recent call last):
+  File "/private/var/folders/7q/9m3zdcp550d685wgsq9kvf6r0000gn/T/exec_rO9oSR/run.py", line 571, in run_fit
+    fit = fit_probit(x, y)
+  File "/private/var/folders/7q/9m3zdcp550d685wgsq9kvf6r0000gn/T/exec_rO9oSR/run.py", line 305, in fit_probit
+    raise ValueError("Observed information singular or ill-conditioned; possible separation")
+ValueError: Observed information singular or ill-conditioned; possible separation
+
+2026-10-27 22:30:53 S000 R_aaf__cap__simple__sameness: ok; N=22570 K=53 clusters=487; PP=747/121; omitted={}; scaled_score=4.05e-12; seconds=0.169
+2026-10-27 22:30:54 S000 R_aaf__cap__full__steepness: failed; ValueError: Observed information singular or ill-conditioned; possible separation; seconds=1.029
+Traceback (most recent call last):
+  File "/private/var/folders/7q/9m3zdcp550d685wgsq9kvf6r0000gn/T/exec_rO9oSR/run.py", line 571, in run_fit
+    fit = fit_probit(x, y)
+  File "/private/var/folders/7q/9m3zdcp550d685wgsq9kvf6r0000gn/T/exec_rO9oSR/run.py", line 305, in fit_probit
+    raise ValueError("Observed information singular or ill-conditioned; possible separation")
+ValueError: Observed information singular or ill-conditioned; possible separation
+
+2026-10-27 22:30:55 S000 R_aaf__cap__full__sameness: ok; N=22570 K=65 clusters=487; PP=747/121; omitted={'men_missing': 'omitted_collinear', 'men_sq_missing': 'omitted_collinear', 'officer_missing': 'omitted_collinear'}; scaled_score=3.74e-12; seconds=0.966
+2026-10-27 22:30:55 S000 R_aaf__camp__simple__steepness: ok; N=23317 K=2 clusters=172; PP=0/0; omitted={}; scaled_score=1.02e-13; seconds=0.047
+2026-10-27 22:30:55 S000 R_aaf__camp__simple__sameness: ok; N=23317 K=2 clusters=172; PP=0/0; omitted={}; scaled_score=1.44e-10; seconds=0.047
+2026-10-27 22:30:55 S000 R_aaf__camp__full__steepness: failed; LinAlgError: Matrix is singular.; seconds=0.113
+Traceback (most recent call last):
+  File "/private/var/folders/7q/9m3zdcp550d685wgsq9kvf6r0000gn/T/exec_rO9oSR/run.py", line 571, in run_fit
+    fit = fit_probit(x, y)
+  File "/private/var/folders/7q/9m3zdcp550d685wgsq9kvf6r0000gn/T/exec_rO9oSR/run.py", line 284, in fit_probit
+    step = linalg.solve(h, g, assume_a="pos")
+  File "~/.venv/lib/python3.13/site-packages/scipy/_lib/_util.py", line 1233, in wrapper
+    return f(*arrays, *other_args, **kwargs)
+  File "~/.venv/lib/python3.13/site-packages/scipy/linalg/_basic.py", line 341, in solve
+    _solve_check(n, info)
+    ~~~~~~~~~~~~^^^^^^^^^
+  File "~/.venv/lib/python3.13/site-packages/scipy/linalg/_basic.py", line 43, in _solve_check
+    raise LinAlgError('Matrix is singular.')
+numpy.linalg.LinAlgError: Matrix is singular.
+
+2026-10-27 22:30:55 S000 R_aaf__camp__full__sameness: failed; ValueError: Observed information singular or ill-conditioned; possible separation; seconds=0.124
+Traceback (most recent call last):
+  File "/private/var/folders/7q/9m3zdcp550d685wgsq9kvf6r0000gn/T/exec_rO9oSR/run.py", line 571, in run_fit
+    fit = fit_probit(x, y)
+  File "/private/var/folders/7q/9m3zdcp550d685wgsq9kvf6r0000gn/T/exec_rO9oSR/run.py", line 305, in fit_probit
+    raise ValueError("Observed information singular or ill-conditioned; possible separation")
+ValueError: Observed information singular or ill-conditioned; possible separation
+
+2026-10-27 22:31:03 S000 R_nosq__cap__full__steepness: ok; N=100672 K=177 clusters=1674; PP=1321/178; omitted={'men_missing': 'omitted_collinear'}; scaled_score=2.76e-12; seconds=8.143
+2026-10-27 22:31:12 S000 R_nosq__cap__full__sameness: ok; N=100672 K=177 clusters=1674; PP=1321/178; omitted={'men_missing': 'omitted_collinear'}; scaled_score=1.3e-12; seconds=8.585
+2026-10-27 22:31:12 S000 R_nosq__camp__full__steepness: ok; N=101993 K=18 clusters=341; PP=0/0; omitted={'men_missing': 'omitted_collinear'}; scaled_score=8.3e-14; seconds=0.373
+2026-10-27 22:31:13 S000 R_nosq__camp__full__sameness: ok; N=101993 K=18 clusters=341; PP=0/0; omitted={'men_missing': 'omitted_collinear'}; scaled_score=1.97e-14; seconds=0.388
+2026-10-27 22:31:14 S000 R_alt__cap__simple__ratio_sameness: ok; N=100672 K=165 clusters=1674; PP=1321/178; omitted={}; scaled_score=2.02e-13; seconds=1.617
+2026-10-27 22:31:25 S000 R_alt__cap__full__ratio_sameness: ok; N=100672 K=178 clusters=1674; PP=1321/178; omitted={'men_missing': 'omitted_collinear', 'men_sq_missing': 'omitted_collinear'}; scaled_score=3.25e-12; seconds=11.266
+2026-10-27 22:31:27 S000 R_alt__cap__simple__absolute_sameness: ok; N=100672 K=165 clusters=1674; PP=1321/178; omitted={}; scaled_score=1.6e-13; seconds=1.695
+2026-10-27 22:31:38 S000 R_alt__cap__full__absolute_sameness: ok; N=100672 K=178 clusters=1674; PP=1321/178; omitted={'men_missing': 'omitted_collinear', 'men_sq_missing': 'omitted_collinear'}; scaled_score=3.71e-12; seconds=10.903
+2026-10-27 22:31:49 S000 R_alt__cap__full__distinct_ranks: ok; N=100672 K=178 clusters=1674; PP=1321/178; omitted={'men_missing': 'omitted_collinear', 'men_sq_missing': 'omitted_collinear'}; scaled_score=6.13e-12; seconds=10.625
+2026-10-27 22:31:59 S000 R_alt__cap__full__sum_ranks: ok; N=100672 K=178 clusters=1674; PP=1321/178; omitted={'men_missing': 'omitted_collinear', 'men_sq_missing': 'omitted_collinear'}; scaled_score=5.99e-12; seconds=10.613
+2026-10-27 22:32:10 S000 R_alt__cap__full__administrative_intensity: ok; N=100672 K=178 clusters=1674; PP=1321/178; omitted={'men_missing': 'omitted_collinear', 'men_sq_missing': 'omitted_collinear'}; scaled_score=8.88e-12; seconds=10.712
+2026-10-27 22:32:10 S000 R_alt__camp__simple__ratio_sameness: ok; N=101993 K=4 clusters=341; PP=0/0; omitted={}; scaled_score=4.63e-09; seconds=0.139
+2026-10-27 22:32:11 S000 R_alt__camp__full__ratio_sameness: ok; N=101993 K=19 clusters=341; PP=0/0; omitted={'men_missing': 'omitted_collinear', 'men_sq_missing': 'omitted_collinear'}; scaled_score=2.83e-14; seconds=0.492
+2026-10-27 22:32:11 S000 R_alt__camp__simple__absolute_sameness: ok; N=101993 K=4 clusters=341; PP=0/0; omitted={}; scaled_score=4.95e-09; seconds=0.134
+2026-10-27 22:32:11 S000 R_alt__camp__full__absolute_sameness: ok; N=101993 K=19 clusters=341; PP=0/0; omitted={'men_missing': 'omitted_collinear', 'men_sq_missing': 'omitted_collinear'}; scaled_score=3.18e-14; seconds=0.431
+2026-10-27 22:32:12 S000 R_alt__camp__full__distinct_ranks: ok; N=101993 K=19 clusters=341; PP=0/0; omitted={'men_missing': 'omitted_collinear', 'men_sq_missing': 'omitted_collinear'}; scaled_score=3.17e-14; seconds=0.425
+2026-10-27 22:32:12 S000 R_alt__camp__full__sum_ranks: ok; N=101993 K=19 clusters=341; PP=0/0; omitted={'men_missing': 'omitted_collinear', 'men_sq_missing': 'omitted_collinear'}; scaled_score=2.74e-14; seconds=0.401
+2026-10-27 22:32:13 S000 R_alt__camp__full__administrative_intensity: ok; N=101993 K=19 clusters=341; PP=0/0; omitted={'men_missing': 'omitted_collinear', 'men_sq_missing': 'omitted_collinear'}; scaled_score=1.67e-13; seconds=0.402
+2026-10-27 22:32:22 S000 R_friends__cap__full__friends__friends_only: ok; N=100672 K=179 clusters=1674; PP=1321/178; omitted={'men_sq_missing': 'omitted_collinear'}; scaled_score=3.93e-12; seconds=9.705
+2026-10-27 22:32:33 S000 R_friends__cap__full__steepness__plus_friends: ok; N=100672 K=180 clusters=1674; PP=1321/178; omitted={'men_missing': 'omitted_collinear', 'men_sq_missing': 'omitted_collinear'}; scaled_score=2.67e-12; seconds=10.845
+2026-10-27 22:32:44 S000 R_friends__cap__full__steepness__unit_hierarchy: ok; N=100672 K=180 clusters=1674; PP=1321/178; omitted={'men_sq_missing': 'omitted_collinear', 'friends_missing': 'omitted_collinear'}; scaled_score=8.12e-12; seconds=11.094
+2026-10-27 22:32:56 S000 R_friends__cap__full__sameness__plus_friends: ok; N=100672 K=180 clusters=1674; PP=1321/178; omitted={'men_missing': 'omitted_collinear', 'men_sq_missing': 'omitted_collinear'}; scaled_score=4.7e-12; seconds=11.447
+2026-10-27 22:33:07 S000 R_friends__cap__full__sameness__unit_hierarchy: ok; N=100672 K=180 clusters=1674; PP=1321/178; omitted={'men_sq_missing': 'omitted_collinear', 'friends_missing': 'omitted_collinear'}; scaled_score=6.94e-12; seconds=11.859
+2026-10-27 22:33:08 S000 R_friends__camp__full__friends__friends_only: ok; N=101993 K=20 clusters=341; PP=0/0; omitted={'men_sq_missing': 'omitted_collinear'}; scaled_score=2.52e-14; seconds=0.581
+2026-10-27 22:33:09 S000 R_friends__camp__full__steepness__plus_friends: ok; N=101993 K=21 clusters=341; PP=0/0; omitted={'men_missing': 'omitted_collinear', 'men_sq_missing': 'omitted_collinear'}; scaled_score=1.22e-14; seconds=0.576
+2026-10-27 22:33:09 S000 R_friends__camp__full__steepness__unit_hierarchy: ok; N=101993 K=21 clusters=341; PP=0/0; omitted={'men_sq_missing': 'omitted_collinear', 'friends_missing': 'omitted_collinear'}; scaled_score=2.04e-13; seconds=0.529
+2026-10-27 22:33:10 S000 R_friends__camp__full__sameness__plus_friends: ok; N=101993 K=21 clusters=341; PP=0/0; omitted={'men_missing': 'omitted_collinear', 'men_sq_missing': 'omitted_collinear'}; scaled_score=7.9e-14; seconds=0.556
+2026-10-27 22:33:10 S000 R_friends__camp__full__sameness__unit_hierarchy: ok; N=101993 K=21 clusters=341; PP=0/0; omitted={'men_sq_missing': 'omitted_collinear', 'friends_missing': 'omitted_collinear'}; scaled_score=8.71e-14; seconds=0.590
+2026-10-27 22:33:22 S000 R_int__cap__full__steepness: ok; N=100672 K=179 clusters=1674; PP=1321/178; omitted={'men_missing': 'omitted_collinear', 'men_sq_missing': 'omitted_collinear', 'steepness_x_men_missing': 'omitted_collinear'}; scaled_score=1.78e-12; seconds=11.547
+2026-10-27 22:33:35 S000 R_int__cap__full__sameness: ok; N=100672 K=179 clusters=1674; PP=1321/178; omitted={'men_missing': 'omitted_collinear', 'men_sq_missing': 'omitted_collinear', 'sameness_x_men_missing': 'omitted_collinear'}; scaled_score=4.23e-12; seconds=13.201
+2026-10-27 22:33:36 S000 R_int__camp__full__steepness: ok; N=101993 K=20 clusters=341; PP=0/0; omitted={'men_missing': 'omitted_collinear', 'men_sq_missing': 'omitted_collinear', 'steepness_x_men_missing': 'omitted_collinear'}; scaled_score=9.06e-14; seconds=0.615
+2026-10-27 22:33:36 S000 R_int__camp__full__sameness: ok; N=101993 K=20 clusters=341; PP=0/0; omitted={'men_missing': 'omitted_collinear', 'men_sq_missing': 'omitted_collinear', 'sameness_x_men_missing': 'omitted_collinear'}; scaled_score=7.71e-15; seconds=0.565
+2026-10-27 22:33:38 S000 T4__cap__simple__steepness__delete_002: ok; N=98104 K=164 clusters=1650; PP=0/0; omitted={}; scaled_score=3.65e-13; seconds=1.719
+2026-10-27 22:33:40 S000 T4__cap__simple__steepness__delete_003: ok; N=94850 K=164 clusters=1641; PP=0/0; omitted={}; scaled_score=1.92e-12; seconds=1.589
+2026-10-27 22:33:41 S000 T4__cap__simple__steepness__delete_004: ok; N=96719 K=164 clusters=1643; PP=0/0; omitted={}; scaled_score=1.77e-13; seconds=1.701
+2026-10-27 22:33:43 S000 T4__cap__simple__steepness__delete_005: ok; N=99189 K=164 clusters=1653; PP=0/0; omitted={}; scaled_score=6.53e-13; seconds=1.741
+2026-10-27 22:33:45 S000 T4__cap__simple__steepness__delete_006: ok; N=92409 K=164 clusters=1649; PP=0/0; omitted={}; scaled_score=4e-13; seconds=1.596
+2026-10-27 22:33:47 S000 T4__cap__simple__steepness__delete_007: ok; N=98888 K=164 clusters=1663; PP=0/0; omitted={}; scaled_score=2.82e-13; seconds=1.755
+2026-10-27 22:33:48 S000 T4__cap__simple__steepness__delete_008: ok; N=100491 K=164 clusters=1653; PP=0/0; omitted={}; scaled_score=3.69e-13; seconds=1.752
+2026-10-27 22:33:50 S000 T4__cap__simple__steepness__delete_009: ok; N=100666 K=164 clusters=1669; PP=0/0; omitted={}; scaled_score=1.99e-13; seconds=1.721
+2026-10-27 22:33:52 S000 T4__cap__simple__steepness__delete_011: ok; N=100209 K=164 clusters=1654; PP=0/0; omitted={}; scaled_score=2.39e-13; seconds=1.644
+2026-10-27 22:33:53 S000 T4__cap__simple__steepness__delete_012: ok; N=100615 K=164 clusters=1667; PP=0/0; omitted={}; scaled_score=5.75e-13; seconds=1.654
+2026-10-27 22:33:55 S000 T4__cap__simple__steepness__delete_013: ok; N=92654 K=164 clusters=1637; PP=0/0; omitted={}; scaled_score=6.26e-13; seconds=1.484
+2026-10-27 22:33:56 S000 T4__cap__simple__steepness__delete_014: ok; N=99832 K=164 clusters=1655; PP=0/0; omitted={}; scaled_score=7.33e-13; seconds=1.573
+2026-10-27 22:33:58 S000 T4__cap__simple__steepness__delete_015: ok; N=100322 K=164 clusters=1665; PP=0/0; omitted={}; scaled_score=4.21e-13; seconds=1.582
+2026-10-27 22:34:00 S000 T4__cap__simple__steepness__delete_016: ok; N=100522 K=164 clusters=1657; PP=0/0; omitted={}; scaled_score=4.37e-13; seconds=1.510
+2026-10-27 22:34:01 S000 T4__cap__simple__steepness__delete_017: ok; N=100462 K=164 clusters=1666; PP=0/0; omitted={}; scaled_score=6.37e-13; seconds=1.667
+2026-10-27 22:34:03 S000 T4__cap__simple__steepness__delete_018: ok; N=99959 K=164 clusters=1647; PP=0/0; omitted={}; scaled_score=3.33e-13; seconds=1.731
+2026-10-27 22:34:05 S000 T4__cap__simple__steepness__delete_020: ok; N=100557 K=164 clusters=1664; PP=0/0; omitted={}; scaled_score=2.64e-13; seconds=1.642
+2026-10-27 22:34:06 S000 T4__cap__simple__steepness__delete_023: ok; N=99192 K=164 clusters=1658; PP=0/0; omitted={}; scaled_score=2.53e-13; seconds=1.763
+2026-10-27 22:34:08 S000 T4__cap__simple__steepness__delete_025: ok; N=97918 K=164 clusters=1642; PP=0/0; omitted={}; scaled_score=2.63e-13; seconds=1.616
+2026-10-27 22:34:10 S000 T4__cap__simple__steepness__delete_026: ok; N=100561 K=164 clusters=1652; PP=0/0; omitted={}; scaled_score=4.41e-13; seconds=1.612
+2026-10-27 22:34:11 S000 T4__cap__simple__sameness__delete_002: ok; N=98104 K=164 clusters=1650; PP=0/0; omitted={}; scaled_score=6.49e-13; seconds=1.692
+2026-10-27 22:34:13 S000 T4__cap__simple__sameness__delete_003: ok; N=94850 K=164 clusters=1641; PP=0/0; omitted={}; scaled_score=1.86e-13; seconds=1.547
+2026-10-27 22:34:15 S000 T4__cap__simple__sameness__delete_004: ok; N=96719 K=164 clusters=1643; PP=0/0; omitted={}; scaled_score=8.83e-14; seconds=1.630
+2026-10-27 22:34:17 S000 T4__cap__simple__sameness__delete_005: ok; N=99189 K=164 clusters=1653; PP=0/0; omitted={}; scaled_score=2.07e-13; seconds=1.852
+2026-10-27 22:34:18 S000 T4__cap__simple__sameness__delete_006: ok; N=92409 K=164 clusters=1649; PP=0/0; omitted={}; scaled_score=5.41e-13; seconds=1.549
+2026-10-27 22:34:20 S000 T4__cap__simple__sameness__delete_007: ok; N=98888 K=164 clusters=1663; PP=0/0; omitted={}; scaled_score=6.27e-13; seconds=1.571
+2026-10-27 22:34:21 S000 T4__cap__simple__sameness__delete_008: ok; N=100491 K=164 clusters=1653; PP=0/0; omitted={}; scaled_score=4.34e-13; seconds=1.684
+2026-10-27 22:34:23 S000 T4__cap__simple__sameness__delete_009: ok; N=100666 K=164 clusters=1669; PP=0/0; omitted={}; scaled_score=3.59e-13; seconds=1.676
+2026-10-27 22:34:25 S000 T4__cap__simple__sameness__delete_011: ok; N=100209 K=164 clusters=1654; PP=0/0; omitted={}; scaled_score=3.84e-13; seconds=1.566
+2026-10-27 22:34:26 S000 T4__cap__simple__sameness__delete_012: ok; N=100615 K=164 clusters=1667; PP=0/0; omitted={}; scaled_score=5.04e-13; seconds=1.591
+2026-10-27 22:34:28 S000 T4__cap__simple__sameness__delete_013: ok; N=92654 K=164 clusters=1637; PP=0/0; omitted={}; scaled_score=5.69e-13; seconds=1.440
+2026-10-27 22:34:29 S000 T4__cap__simple__sameness__delete_014: ok; N=99832 K=164 clusters=1655; PP=0/0; omitted={}; scaled_score=2.47e-13; seconds=1.664
+2026-10-27 22:34:31 S000 T4__cap__simple__sameness__delete_015: ok; N=100322 K=164 clusters=1665; PP=0/0; omitted={}; scaled_score=2.84e-13; seconds=1.658
+2026-10-27 22:34:33 S000 T4__cap__simple__sameness__delete_016: ok; N=100522 K=164 clusters=1657; PP=0/0; omitted={}; scaled_score=3.4e-14; seconds=1.646
+2026-10-27 22:34:34 S000 T4__cap__simple__sameness__delete_017: ok; N=100462 K=164 clusters=1666; PP=0/0; omitted={}; scaled_score=2.67e-13; seconds=1.636
+2026-10-27 22:34:36 S000 T4__cap__simple__sameness__delete_018: ok; N=99959 K=164 clusters=1647; PP=0/0; omitted={}; scaled_score=5.43e-13; seconds=1.702
+2026-10-27 22:34:38 S000 T4__cap__simple__sameness__delete_020: ok; N=100557 K=164 clusters=1664; PP=0/0; omitted={}; scaled_score=3.28e-13; seconds=1.648
+2026-10-27 22:34:39 S000 T4__cap__simple__sameness__delete_023: ok; N=99192 K=164 clusters=1658; PP=0/0; omitted={}; scaled_score=6.41e-13; seconds=1.591
+2026-10-27 22:34:41 S000 T4__cap__simple__sameness__delete_025: ok; N=97918 K=164 clusters=1642; PP=0/0; omitted={}; scaled_score=1.31e-13; seconds=1.672
+2026-10-27 22:34:43 S000 T4__cap__simple__sameness__delete_026: ok; N=100561 K=164 clusters=1652; PP=0/0; omitted={}; scaled_score=5.33e-13; seconds=1.741
+2026-10-27 22:34:53 S000 T4__cap__full__steepness__delete_002: ok; N=98104 K=177 clusters=1650; PP=0/0; omitted={'men_missing': 'omitted_collinear', 'men_sq_missing': 'omitted_collinear'}; scaled_score=1.52e-11; seconds=10.238
+2026-10-27 22:35:04 S000 T4__cap__full__steepness__delete_003: ok; N=94850 K=177 clusters=1641; PP=0/0; omitted={'men_missing': 'omitted_collinear', 'men_sq_missing': 'omitted_collinear'}; scaled_score=9.5e-13; seconds=11.138
+2026-10-27 22:35:16 S000 T4__cap__full__steepness__delete_004: ok; N=96719 K=177 clusters=1643; PP=0/0; omitted={'men_missing': 'omitted_collinear', 'men_sq_missing': 'omitted_collinear'}; scaled_score=4.88e-12; seconds=11.276
+2026-10-27 22:35:27 S000 T4__cap__full__steepness__delete_005: ok; N=99189 K=177 clusters=1653; PP=0/0; omitted={'men_missing': 'omitted_collinear', 'men_sq_missing': 'omitted_collinear'}; scaled_score=6.09e-12; seconds=11.405
+2026-10-27 22:35:37 S000 T4__cap__full__steepness__delete_006: ok; N=92409 K=177 clusters=1649; PP=0/0; omitted={'men_missing': 'omitted_collinear', 'men_sq_missing': 'omitted_collinear'}; scaled_score=3.99e-12; seconds=9.574
+2026-10-27 22:35:47 S000 T4__cap__full__steepness__delete_007: ok; N=98888 K=177 clusters=1663; PP=0/0; omitted={'men_missing': 'omitted_collinear', 'men_sq_missing': 'omitted_collinear'}; scaled_score=7.28e-12; seconds=10.819
+2026-10-27 22:35:59 S000 T4__cap__full__steepness__delete_008: ok; N=100491 K=177 clusters=1653; PP=0/0; omitted={'men_missing': 'omitted_collinear', 'men_sq_missing': 'omitted_collinear'}; scaled_score=9.62e-13; seconds=11.169
+2026-10-27 22:36:10 S000 T4__cap__full__steepness__delete_009: ok; N=100666 K=177 clusters=1669; PP=0/0; omitted={'men_missing': 'omitted_collinear', 'men_sq_missing': 'omitted_collinear'}; scaled_score=4.15e-12; seconds=10.986
+2026-10-27 22:36:21 S000 T4__cap__full__steepness__delete_011: ok; N=100209 K=177 clusters=1654; PP=0/0; omitted={'men_missing': 'omitted_collinear', 'men_sq_missing': 'omitted_collinear'}; scaled_score=8.7e-12; seconds=10.974
+2026-10-27 22:36:31 S000 T4__cap__full__steepness__delete_012: ok; N=100615 K=177 clusters=1667; PP=0/0; omitted={'men_missing': 'omitted_collinear', 'men_sq_missing': 'omitted_collinear'}; scaled_score=4.45e-12; seconds=10.765
+2026-10-27 22:36:41 S000 T4__cap__full__steepness__delete_013: ok; N=92654 K=177 clusters=1637; PP=0/0; omitted={'men_missing': 'omitted_collinear', 'men_sq_missing': 'omitted_collinear'}; scaled_score=2.17e-12; seconds=9.642
+2026-10-27 22:36:52 S000 T4__cap__full__steepness__delete_014: ok; N=99832 K=177 clusters=1655; PP=0/0; omitted={'men_missing': 'omitted_collinear', 'men_sq_missing': 'omitted_collinear'}; scaled_score=6.63e-12; seconds=10.544
+2026-10-27 22:37:03 S000 T4__cap__full__steepness__delete_015: ok; N=100322 K=177 clusters=1665; PP=0/0; omitted={'men_missing': 'omitted_collinear', 'men_sq_missing': 'omitted_collinear'}; scaled_score=9.36e-12; seconds=11.011
+2026-10-27 22:37:14 S000 T4__cap__full__steepness__delete_016: ok; N=100522 K=177 clusters=1657; PP=0/0; omitted={'men_missing': 'omitted_collinear', 'men_sq_missing': 'omitted_collinear'}; scaled_score=1.9e-12; seconds=11.546
+2026-10-27 22:37:26 S000 T4__cap__full__steepness__delete_017: ok; N=100462 K=177 clusters=1666; PP=0/0; omitted={'men_missing': 'omitted_collinear', 'men_sq_missing': 'omitted_collinear'}; scaled_score=3.24e-12; seconds=11.633
+2026-10-27 22:37:38 S000 T4__cap__full__steepness__delete_018: ok; N=99959 K=177 clusters=1647; PP=0/0; omitted={'men_missing': 'omitted_collinear', 'men_sq_missing': 'omitted_collinear'}; scaled_score=2.8e-12; seconds=11.708
+2026-10-27 22:37:50 S000 T4__cap__full__steepness__delete_020: ok; N=100557 K=177 clusters=1664; PP=0/0; omitted={'men_missing': 'omitted_collinear', 'men_sq_missing': 'omitted_collinear'}; scaled_score=1.78e-12; seconds=12.514
+2026-10-27 22:38:02 S000 T4__cap__full__steepness__delete_023: ok; N=99192 K=177 clusters=1658; PP=0/0; omitted={'men_missing': 'omitted_collinear', 'men_sq_missing': 'omitted_collinear'}; scaled_score=1.93e-12; seconds=11.664
+2026-10-27 22:38:14 S000 T4__cap__full__steepness__delete_025: ok; N=97918 K=177 clusters=1642; PP=0/0; omitted={'men_missing': 'omitted_collinear', 'men_sq_missing': 'omitted_collinear'}; scaled_score=1.44e-11; seconds=11.765
+2026-10-27 22:38:26 S000 T4__cap__full__steepness__delete_026: ok; N=100561 K=177 clusters=1652; PP=0/0; omitted={'men_missing': 'omitted_collinear', 'men_sq_missing': 'omitted_collinear'}; scaled_score=5.4e-12; seconds=12.616
+2026-10-27 22:38:39 S000 T4__cap__full__sameness__delete_002: ok; N=98104 K=177 clusters=1650; PP=0/0; omitted={'men_missing': 'omitted_collinear', 'men_sq_missing': 'omitted_collinear'}; scaled_score=8.82e-12; seconds=12.454
+2026-10-27 22:38:51 S000 T4__cap__full__sameness__delete_003: ok; N=94850 K=177 clusters=1641; PP=0/0; omitted={'men_missing': 'omitted_collinear', 'men_sq_missing': 'omitted_collinear'}; scaled_score=9.58e-13; seconds=11.854
+2026-10-27 22:39:02 S000 T4__cap__full__sameness__delete_004: ok; N=96719 K=177 clusters=1643; PP=0/0; omitted={'men_missing': 'omitted_collinear', 'men_sq_missing': 'omitted_collinear'}; scaled_score=3.42e-12; seconds=10.957
+2026-10-27 22:39:13 S000 T4__cap__full__sameness__delete_005: ok; N=99189 K=177 clusters=1653; PP=0/0; omitted={'men_missing': 'omitted_collinear', 'men_sq_missing': 'omitted_collinear'}; scaled_score=1.48e-12; seconds=11.728
+2026-10-27 22:39:25 S000 T4__cap__full__sameness__delete_006: ok; N=92409 K=177 clusters=1649; PP=0/0; omitted={'men_missing': 'omitted_collinear', 'men_sq_missing': 'omitted_collinear'}; scaled_score=9.38e-12; seconds=11.420
+2026-10-27 22:39:37 S000 T4__cap__full__sameness__delete_007: ok; N=98888 K=177 clusters=1663; PP=0/0; omitted={'men_missing': 'omitted_collinear', 'men_sq_missing': 'omitted_collinear'}; scaled_score=6.31e-13; seconds=12.045
+2026-10-27 22:39:49 S000 T4__cap__full__sameness__delete_008: ok; N=100491 K=177 clusters=1653; PP=0/0; omitted={'men_missing': 'omitted_collinear', 'men_sq_missing': 'omitted_collinear'}; scaled_score=9.33e-12; seconds=12.139
+2026-10-27 22:40:02 S000 T4__cap__full__sameness__delete_009: ok; N=100666 K=177 clusters=1669; PP=0/0; omitted={'men_missing': 'omitted_collinear', 'men_sq_missing': 'omitted_collinear'}; scaled_score=6.35e-12; seconds=12.859
+2026-10-27 22:40:14 S000 T4__cap__full__sameness__delete_011: ok; N=100209 K=177 clusters=1654; PP=0/0; omitted={'men_missing': 'omitted_collinear', 'men_sq_missing': 'omitted_collinear'}; scaled_score=1.09e-11; seconds=11.962
+2026-10-27 22:40:26 S000 T4__cap__full__sameness__delete_012: ok; N=100615 K=177 clusters=1667; PP=0/0; omitted={'men_missing': 'omitted_collinear', 'men_sq_missing': 'omitted_collinear'}; scaled_score=1.89e-11; seconds=11.744
+2026-10-27 22:40:37 S000 T4__cap__full__sameness__delete_013: ok; N=92654 K=177 clusters=1637; PP=0/0; omitted={'men_missing': 'omitted_collinear', 'men_sq_missing': 'omitted_collinear'}; scaled_score=3.78e-12; seconds=10.953
+2026-10-27 22:40:48 S000 T4__cap__full__sameness__delete_014: ok; N=99832 K=177 clusters=1655; PP=0/0; omitted={'men_missing': 'omitted_collinear', 'men_sq_missing': 'omitted_collinear'}; scaled_score=3.07e-12; seconds=11.643
+2026-10-27 22:41:00 S000 T4__cap__full__sameness__delete_015: ok; N=100322 K=177 clusters=1665; PP=0/0; omitted={'men_missing': 'omitted_collinear', 'men_sq_missing': 'omitted_collinear'}; scaled_score=2.28e-12; seconds=11.954
+2026-10-27 22:41:13 S000 T4__cap__full__sameness__delete_016: ok; N=100522 K=177 clusters=1657; PP=0/0; omitted={'men_missing': 'omitted_collinear', 'men_sq_missing': 'omitted_collinear'}; scaled_score=4.35e-12; seconds=12.513
+2026-10-27 22:41:25 S000 T4__cap__full__sameness__delete_017: ok; N=100462 K=177 clusters=1666; PP=0/0; omitted={'men_missing': 'omitted_collinear', 'men_sq_missing': 'omitted_collinear'}; scaled_score=3.77e-12; seconds=12.141
+2026-10-27 22:41:37 S000 T4__cap__full__sameness__delete_018: ok; N=99959 K=177 clusters=1647; PP=0/0; omitted={'men_missing': 'omitted_collinear', 'men_sq_missing': 'omitted_collinear'}; scaled_score=2.57e-12; seconds=12.087
+2026-10-27 22:41:50 S000 T4__cap__full__sameness__delete_020: ok; N=100557 K=177 clusters=1664; PP=0/0; omitted={'men_missing': 'omitted_collinear', 'men_sq_missing': 'omitted_collinear'}; scaled_score=9.75e-12; seconds=12.359
+2026-10-27 22:42:01 S000 T4__cap__full__sameness__delete_023: ok; N=99192 K=177 clusters=1658; PP=0/0; omitted={'men_missing': 'omitted_collinear', 'men_sq_missing': 'omitted_collinear'}; scaled_score=1.85e-11; seconds=11.405
+2026-10-27 22:42:13 S000 T4__cap__full__sameness__delete_025: ok; N=97918 K=177 clusters=1642; PP=0/0; omitted={'men_missing': 'omitted_collinear', 'men_sq_missing': 'omitted_collinear'}; scaled_score=2.78e-12; seconds=11.626
+2026-10-27 22:42:24 S000 T4__cap__full__sameness__delete_026: ok; N=100561 K=177 clusters=1652; PP=0/0; omitted={'men_missing': 'omitted_collinear', 'men_sq_missing': 'omitted_collinear'}; scaled_score=1.15e-11; seconds=11.017
+2026-10-27 22:42:24 SPEC FAILURE S000: Traceback (most recent call last):
+  File "/private/var/folders/7q/9m3zdcp550d685wgsq9kvf6r0000gn/T/exec_rO9oSR/run.py", line 568, in run_fit
+    out.ids(spec, model_id, d.record_seq)
+    ~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/private/var/folders/7q/9m3zdcp550d685wgsq9kvf6r0000gn/T/exec_rO9oSR/run.py", line 544, in ids
+    np.savetxt(path, np.sort(np.asarray(ids, dtype=np.int64)), fmt="%d")
+    ~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "~/.venv/lib/python3.13/site-packages/numpy/lib/_npyio_impl.py", line 1552, in savetxt
+    open(fname, 'wt').close()
+    ~~~~^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: 'results/sample_ids/S000__T4__camp__simple__steepness__delete_/91.txt'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/private/var/folders/7q/9m3zdcp550d685wgsq9kvf6r0000gn/T/exec_rO9oSR/run.py", line 1001, in main
+    run_spec(raw, linked_cache[rule], args.data, spec, families, out, args.influence, args.construct_only)
+    ~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/private/var/folders/7q/9m3zdcp550d685wgsq9kvf6r0000gn/T/exec_rO9oSR/run.py", line 694, in run_spec
+    run_influence(cache, bases, sid, out, influence)
+    ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/private/var/folders/7q/9m3zdcp550d685wgsq9kvf6r0000gn/T/exec_rO9oSR/run.py", line 652, in run_influence
+    fit = run_fit(base.loc[base.camp.ne(camp)], model, spec, out, write_results=False,
+                  suffix="__delete_" + camp)
+  File "/private/var/folders/7q/9m3zdcp550d685wgsq9kvf6r0000gn/T/exec_rO9oSR/run.py", line 609, in run_fit
+    out.ids(spec, model_id, d.record_seq)
+    ~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/private/var/folders/7q/9m3zdcp550d685wgsq9kvf6r0000gn/T/exec_rO9oSR/run.py", line 544, in ids
+    np.savetxt(path, np.sort(np.asarray(ids, dtype=np.int64)), fmt="%d")
+    ~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "~/.venv/lib/python3.13/site-packages/numpy/lib/_npyio_impl.py", line 1552, in savetxt
+    open(fname, 'wt').close()
+    ~~~~^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: 'results/sample_ids/S000__T4__camp__simple__steepness__delete_/91.txt'
+
+2026-10-27 22:42:24 BEGIN S001; params={"age_rule": "range", "camp_valid": "nonblank", "coords": "crosswalk", "dup_serial": "unmatched", "educ_postgrad": 9, "friends_def": "incl_self", "group_members": "regression", "height_rule": "range", "married": 1, "pop_fractions": "descriptive", "rank_rule": "origin", "sameness_constant": "fixed", "sample_common": true, "svc_exclude": ["6"]}; families=['T4']
+2026-10-27 22:42:24 S001 sample service=128962
+2026-10-27 22:42:24 S001 sample power=124935
+2026-10-27 22:42:24 S001 sample D_status=124389
+2026-10-27 22:42:24 S001 cap: R=101995; linked=57659; rank_reference=[0.4619027539005482, 0.08810697719679522, 0.2810016542865484, 0.0069658438483246295, 0.13724901878101786, 0.015456226280450226, 0.0053034480521586816, 0.003843783450647118, 0.00017029420350968245]; missing={'rank': 774, 'height': 60813, 'age': 44465, 'education': 44336, 'dependents': 44507, 'officer': 774, 'length': 0, 'distance': 625, 'n_g': 228, 'steepness': 228, 'sameness': 228, 'ratio_sameness': 228, 'absolute_sameness': 228, 'distinct_ranks': 228, 'sum_ranks': 228, 'administrative_intensity': 228}
+2026-10-27 22:42:24 S001 camp: R=101995; linked=57659; rank_reference=[0.4619027539005482, 0.08810697719679522, 0.2810016542865484, 0.0069658438483246295, 0.13724901878101786, 0.015456226280450226, 0.0053034480521586816, 0.003843783450647118, 0.00017029420350968245]; missing={'rank': 774, 'height': 60813, 'age': 44465, 'education': 44336, 'dependents': 44507, 'officer': 774, 'length': 0, 'distance': 625, 'n_g': 100, 'steepness': 100, 'sameness': 100, 'ratio_sameness': 100, 'absolute_sameness': 100, 'distinct_ranks': 100, 'sum_ranks': 100, 'administrative_intensity': 100}
+2026-10-27 22:42:26 S001 T4__cap__simple__steepness: ok; N=100673 K=165 clusters=1674; PP=1322/178; omitted={}; scaled_score=5.58e-13; seconds=1.646
+2026-10-27 22:42:28 S001 T4__cap__simple__sameness: ok; N=100673 K=165 clusters=1674; PP=1322/178; omitted={}; scaled_score=1.05e-12; seconds=1.658
+2026-10-27 22:42:39 S001 T4__cap__full__steepness: ok; N=100673 K=178 clusters=1674; PP=1322/178; omitted={'men_missing': 'omitted_collinear', 'men_sq_missing': 'omitted_collinear'}; scaled_score=3.81e-12; seconds=11.309
+2026-10-27 22:42:51 S001 T4__cap__full__sameness: ok; N=100673 K=178 clusters=1674; PP=1322/178; omitted={'men_missing': 'omitted_collinear', 'men_sq_missing': 'omitted_collinear'}; scaled_score=1.96e-12; seconds=11.835
+2026-10-27 22:42:51 S001 T4__camp__simple__steepness: ok; N=101995 K=4 clusters=341; PP=0/0; omitted={}; scaled_score=1.3e-10; seconds=0.125
+2026-10-27 22:42:51 S001 T4__camp__simple__sameness: ok; N=101995 K=4 clusters=341; PP=0/0; omitted={}; scaled_score=1.22e-08; seconds=0.122
+2026-10-27 22:42:52 S001 T4__camp__full__steepness: ok; N=101995 K=19 clusters=341; PP=0/0; omitted={'men_missing': 'omitted_collinear', 'men_sq_missing': 'omitted_collinear'}; scaled_score=1.24e-13; seconds=0.460
+2026-10-27 22:42:52 S001 T4__camp__full__sameness: ok; N=101995 K=19 clusters=341; PP=0/0; omitted={'men_missing': 'omitted_collinear', 'men_sq_missing': 'omitted_collinear'}; scaled_score=5.35e-14; seconds=0.458
+2026-10-27 22:42:52 END S001
+2026-10-27 22:42:52 BEGIN S002; params={"age_rule": "range", "camp_valid": "nonblank", "coords": "crosswalk", "dup_serial": "unmatched", "educ_postgrad": 9, "friends_def": "incl_self", "group_members": "regression", "height_rule": "range", "married": 1, "pop_fractions": "descriptive", "rank_rule": "origin", "sameness_constant": "fixed", "sample_common": true, "svc_exclude": ["4", "6", "7"]}; families=['T4']
+2026-10-27 22:42:52 S002 sample service=128434
+2026-10-27 22:42:52 S002 sample power=124411
+2026-10-27 22:42:52 S002 sample D_status=123881
+2026-10-27 22:42:53 S002 cap: R=101596; linked=57659; rank_reference=[0.4619064996148076, 0.08810769168389895, 0.2809958237035235, 0.006965900336536512, 0.13725013177634512, 0.015456351619835381, 0.005303491059481815, 0.0038438146210923244, 0.00017029558447877386]; missing={'rank': 376, 'height': 60414, 'age': 44066, 'education': 43937, 'dependents': 44108, 'officer': 376, 'length': 0, 'distance': 623, 'n_g': 19, 'steepness': 19, 'sameness': 19, 'ratio_sameness': 19, 'absolute_sameness': 19, 'distinct_ranks': 19, 'sum_ranks': 19, 'administrative_intensity': 19}
+2026-10-27 22:42:53 S002 camp: R=101596; linked=57659; rank_reference=[0.4619064996148076, 0.08810769168389895, 0.2809958237035235, 0.006965900336536512, 0.13725013177634512, 0.015456351619835381, 0.005303491059481815, 0.0038438146210923244, 0.00017029558447877386]; missing={'rank': 376, 'height': 60414, 'age': 44066, 'education': 43937, 'dependents': 44108, 'officer': 376, 'length': 0, 'distance': 623, 'n_g': 0, 'steepness': 0, 'sameness': 0, 'ratio_sameness': 0, 'absolute_sameness': 0, 'distinct_ranks': 0, 'sum_ranks': 0, 'administrative_intensity': 0}
+2026-10-27 22:42:54 S002 T4__cap__simple__steepness: ok; N=100318 K=160 clusters=1629; PP=1278/171; omitted={}; scaled_score=4.06e-13; seconds=1.649
+2026-10-27 22:42:56 S002 T4__cap__simple__sameness: ok; N=100318 K=160 clusters=1629; PP=1278/171; omitted={}; scaled_score=6.01e-13; seconds=1.652
+2026-10-27 22:43:06 S002 T4__cap__full__steepness: ok; N=100318 K=173 clusters=1629; PP=1278/171; omitted={'men_missing': 'omitted_collinear', 'men_sq_missing': 'omitted_collinear'}; scaled_score=2.74e-12; seconds=10.505
+2026-10-27 22:43:17 S002 T4__cap__full__sameness: ok; N=100318 K=173 clusters=1629; PP=1278/171; omitted={'men_missing': 'omitted_collinear', 'men_sq_missing': 'omitted_collinear'}; scaled_score=4.25e-12; seconds=10.504
+2026-10-27 22:43:17 S002 T4__camp__simple__steepness: ok; N=101596 K=3 clusters=329; PP=0/0; omitted={}; scaled_score=5.28e-11; seconds=0.117
+2026-10-27 22:43:17 S002 T4__camp__simple__sameness: ok; N=101596 K=3 clusters=329; PP=0/0; omitted={}; scaled_score=7.01e-10; seconds=0.121
+2026-10-27 22:43:18 S002 T4__camp__full__steepness: ok; N=101596 K=18 clusters=329; PP=0/0; omitted={}; scaled_score=4.61e-09; seconds=0.360
+2026-10-27 22:43:18 S002 T4__camp__full__sameness: ok; N=101596 K=18 clusters=329; PP=0/0; omitted={}; scaled_score=8.79e-15; seconds=0.383
+2026-10-27 22:43:18 END S002
+2026-10-27 22:43:18 BEGIN S003; params={"age_rule": "range", "camp_valid": "nonblank", "coords": "crosswalk", "dup_serial": "unmatched", "educ_postgrad": 9, "friends_def": "incl_self", "group_members": "regression", "height_rule": "range", "married": 1, "pop_fractions": "descriptive", "rank_rule": "origin", "sameness_constant": "fixed", "sample_common": false, "svc_exclude": ["6", "7"]}; families=['T4']
+2026-10-27 22:43:18 S003 sample service=128958
+2026-10-27 22:43:18 S003 sample power=124933
+2026-10-27 22:43:18 S003 sample D_status=124387
+2026-10-27 22:43:18 S003 cap: R=101993; linked=57659; rank_reference=[0.4619027539005482, 0.08810697719679522, 0.2810016542865484, 0.0069658438483246295, 0.13724901878101786, 0.015456226280450226, 0.0053034480521586816, 0.003843783450647118, 0.00017029420350968245]; missing={'rank': 772, 'height': 60811, 'age': 44463, 'education': 44334, 'dependents': 44505, 'officer': 772, 'length': 0, 'distance': 625, 'n_g': 228, 'steepness': 228, 'sameness': 228, 'ratio_sameness': 228, 'absolute_sameness': 228, 'distinct_ranks': 228, 'sum_ranks': 228, 'administrative_intensity': 228}
+2026-10-27 22:43:18 S003 camp: R=105870; linked=59820; rank_reference=[0.4619027539005482, 0.08810697719679522, 0.2810016542865484, 0.0069658438483246295, 0.13724901878101786, 0.015456226280450226, 0.0053034480521586816, 0.003843783450647118, 0.00017029420350968245]; missing={'rank': 883, 'height': 62830, 'age': 46182, 'education': 46050, 'dependents': 46222, 'officer': 883, 'length': 3877, 'distance': 651, 'n_g': 129, 'steepness': 129, 'sameness': 129, 'ratio_sameness': 129, 'absolute_sameness': 129, 'distinct_ranks': 129, 'sum_ranks': 129, 'administrative_intensity': 129}
+2026-10-27 22:43:20 S003 T4__cap__simple__steepness: ok; N=100672 K=165 clusters=1674; PP=1321/178; omitted={}; scaled_score=8.61e-13; seconds=1.594
+2026-10-27 22:43:22 S003 T4__cap__simple__sameness: ok; N=100672 K=165 clusters=1674; PP=1321/178; omitted={}; scaled_score=1.2e-12; seconds=1.624
+2026-10-27 22:43:33 S003 T4__cap__full__steepness: ok; N=100672 K=178 clusters=1674; PP=1321/178; omitted={'men_missing': 'omitted_collinear', 'men_sq_missing': 'omitted_collinear'}; scaled_score=8.8e-12; seconds=11.182
+2026-10-27 22:43:45 S003 T4__cap__full__sameness: ok; N=100672 K=178 clusters=1674; PP=1321/178; omitted={'men_missing': 'omitted_collinear', 'men_sq_missing': 'omitted_collinear'}; scaled_score=1.65e-11; seconds=12.301
+2026-10-27 22:43:45 S003 T4__camp__simple__steepness: ok; N=105870 K=4 clusters=348; PP=0/0; omitted={}; scaled_score=2.59e-10; seconds=0.172
+2026-10-27 22:43:45 S003 T4__camp__simple__sameness: ok; N=105870 K=4 clusters=348; PP=0/0; omitted={}; scaled_score=8.77e-10; seconds=0.138
+2026-10-27 22:43:46 S003 T4__camp__full__steepness: ok; N=105870 K=20 clusters=348; PP=0/0; omitted={'men_missing': 'omitted_collinear', 'men_sq_missing': 'omitted_collinear'}; scaled_score=1.46e-13; seconds=0.505
+2026-10-27 22:43:46 S003 T4__camp__full__sameness: ok; N=105870 K=20 clusters=348; PP=0/0; omitted={'men_missing': 'omitted_collinear', 'men_sq_missing': 'omitted_collinear'}; scaled_score=1.67e-14; seconds=0.503
+2026-10-27 22:43:46 END S003
+2026-10-27 22:43:47 BEGIN S004; params={"age_rule": "range", "camp_valid": "defined", "coords": "crosswalk", "dup_serial": "unmatched", "educ_postgrad": 9, "friends_def": "incl_self", "group_members": "regression", "height_rule": "range", "married": 1, "pop_fractions": "descriptive", "rank_rule": "origin", "sameness_constant": "fixed", "sample_common": true, "svc_exclude": ["6", "7"]}; families=['T4']
+2026-10-27 22:43:47 S004 sample service=128958
+2026-10-27 22:43:47 S004 sample power=124933
+2026-10-27 22:43:47 S004 sample D_status=124387
+2026-10-27 22:43:47 S004 cap: R=101896; linked=57608; rank_reference=[0.4619027539005482, 0.08810697719679522, 0.2810016542865484, 0.0069658438483246295, 0.13724901878101786, 0.015456226280450226, 0.0053034480521586816, 0.003843783450647118, 0.00017029420350968245]; missing={'rank': 770, 'height': 60747, 'age': 44417, 'education': 44288, 'dependents': 44459, 'officer': 770, 'length': 0, 'distance': 528, 'n_g': 226, 'steepness': 226, 'sameness': 226, 'ratio_sameness': 226, 'absolute_sameness': 226, 'distinct_ranks': 226, 'sum_ranks': 226, 'administrative_intensity': 226}
+2026-10-27 22:43:47 S004 camp: R=101896; linked=57608; rank_reference=[0.4619027539005482, 0.08810697719679522, 0.2810016542865484, 0.0069658438483246295, 0.13724901878101786, 0.015456226280450226, 0.0053034480521586816, 0.003843783450647118, 0.00017029420350968245]; missing={'rank': 770, 'height': 60747, 'age': 44417, 'education': 44288, 'dependents': 44459, 'officer': 770, 'length': 0, 'distance': 528, 'n_g': 99, 'steepness': 99, 'sameness': 99, 'ratio_sameness': 99, 'absolute_sameness': 99, 'distinct_ranks': 99, 'sum_ranks': 99, 'administrative_intensity': 99}
+2026-10-27 22:43:49 S004 T4__cap__simple__steepness: ok; N=100659 K=163 clusters=1671; PP=1237/142; omitted={}; scaled_score=1.3e-13; seconds=1.786
+2026-10-27 22:43:51 S004 T4__cap__simple__sameness: ok; N=100659 K=163 clusters=1671; PP=1237/142; omitted={}; scaled_score=4.29e-13; seconds=1.735
+2026-10-27 22:44:02 S004 T4__cap__full__steepness: ok; N=100659 K=176 clusters=1671; PP=1237/142; omitted={'men_missing': 'omitted_collinear', 'men_sq_missing': 'omitted_collinear'}; scaled_score=3.86e-12; seconds=11.866
+2026-10-27 22:44:15 S004 T4__cap__full__sameness: ok; N=100659 K=176 clusters=1671; PP=1237/142; omitted={'men_missing': 'omitted_collinear', 'men_sq_missing': 'omitted_collinear'}; scaled_score=3.23e-12; seconds=12.642
+2026-10-27 22:44:15 S004 T4__camp__simple__steepness: ok; N=101896 K=4 clusters=303; PP=0/0; omitted={}; scaled_score=6.4e-10; seconds=0.150
+2026-10-27 22:44:15 S004 T4__camp__simple__sameness: ok; N=101896 K=4 clusters=303; PP=0/0; omitted={}; scaled_score=4.77e-10; seconds=0.144
+2026-10-27 22:44:16 S004 T4__camp__full__steepness: ok; N=101896 K=19 clusters=303; PP=0/0; omitted={'men_missing': 'omitted_collinear', 'men_sq_missing': 'omitted_collinear'}; scaled_score=6.47e-14; seconds=0.565
+2026-10-27 22:44:16 S004 T4__camp__full__sameness: ok; N=101896 K=19 clusters=303; PP=0/0; omitted={'men_missing': 'omitted_collinear', 'men_sq_missing': 'omitted_collinear'}; scaled_score=1.91e-14; seconds=0.492
+2026-10-27 22:44:16 END S004
+2026-10-27 22:44:17 BEGIN S005; params={"age_rule": "range", "camp_valid": "nonblank", "coords": "crosswalk", "dup_serial": "unmatched", "educ_postgrad": 9, "friends_def": "incl_self", "group_members": "regression", "height_rule": "range", "married": 1, "pop_fractions": "descriptive", "rank_rule": "strict", "sameness_constant": "fixed", "sample_common": true, "svc_exclude": ["6", "7"]}; families=['T4']
+2026-10-27 22:44:17 S005 sample service=128958
+2026-10-27 22:44:17 S005 sample power=124933
+2026-10-27 22:44:17 S005 sample D_status=124387
+2026-10-27 22:44:17 S005 cap: R=101993; linked=57659; rank_reference=[0.48708199447422895, 0.0658069098121411, 0.2770420668808841, 0.0009353969807464122, 0.14463142760633646, 0.015269489602369672, 0.005075394728864792, 0.003984098251327311, 0.00017322166310118744]; missing={'rank': 7284, 'height': 60811, 'age': 44463, 'education': 44334, 'dependents': 44505, 'officer': 7284, 'length': 0, 'distance': 625, 'n_g': 612, 'steepness': 612, 'sameness': 612, 'ratio_sameness': 612, 'absolute_sameness': 612, 'distinct_ranks': 612, 'sum_ranks': 612, 'administrative_intensity': 612}
+2026-10-27 22:44:17 S005 camp: R=101993; linked=57659; rank_reference=[0.48708199447422895, 0.0658069098121411, 0.2770420668808841, 0.0009353969807464122, 0.14463142760633646, 0.015269489602369672, 0.005075394728864792, 0.003984098251327311, 0.00017322166310118744]; missing={'rank': 7284, 'height': 60811, 'age': 44463, 'education': 44334, 'dependents': 44505, 'officer': 7284, 'length': 0, 'distance': 625, 'n_g': 106, 'steepness': 106, 'sameness': 106, 'ratio_sameness': 106, 'absolute_sameness': 106, 'distinct_ranks': 106, 'sum_ranks': 106, 'administrative_intensity': 106}
+2026-10-27 22:44:19 S005 T4__cap__simple__steepness: ok; N=100672 K=165 clusters=1674; PP=1321/178; omitted={}; scaled_score=5.02e-13; seconds=1.876
+2026-10-27 22:44:21 S005 T4__cap__simple__sameness: ok; N=100672 K=165 clusters=1674; PP=1321/178; omitted={}; scaled_score=1.76e-13; seconds=1.825
+2026-10-27 22:44:34 S005 T4__cap__full__steepness: ok; N=100672 K=178 clusters=1674; PP=1321/178; omitted={'men_missing': 'omitted_collinear', 'men_sq_missing': 'omitted_collinear'}; scaled_score=9.39e-12; seconds=12.840
+2026-10-27 22:44:47 S005 T4__cap__full__sameness: ok; N=100672 K=178 clusters=1674; PP=1321/178; omitted={'men_missing': 'omitted_collinear', 'men_sq_missing': 'omitted_collinear'}; scaled_score=4.89e-12; seconds=13.754
+2026-10-27 22:44:48 S005 T4__camp__simple__steepness: ok; N=101993 K=4 clusters=341; PP=0/0; omitted={}; scaled_score=3.93e-09; seconds=0.145
+2026-10-27 22:44:48 S005 T4__camp__simple__sameness: ok; N=101993 K=4 clusters=341; PP=0/0; omitted={}; scaled_score=3.64e-09; seconds=0.136
+2026-10-27 22:44:48 S005 T4__camp__full__steepness: ok; N=101993 K=19 clusters=341; PP=0/0; omitted={'men_missing': 'omitted_collinear', 'men_sq_missing': 'omitted_collinear'}; scaled_score=7.46e-14; seconds=0.487
+2026-10-27 22:44:49 S005 T4__camp__full__sameness: ok; N=101993 K=19 clusters=341; PP=0/0; omitted={'men_missing': 'omitted_collinear', 'men_sq_missing': 'omitted_collinear'}; scaled_score=1.57e-13; seconds=0.527
+2026-10-27 22:44:49 END S005
+2026-10-27 22:44:49 BEGIN S006; params={"age_rule": "range", "camp_valid": "nonblank", "coords": "crosswalk", "dup_serial": "unmatched", "educ_postgrad": 9, "friends_def": "incl_self", "group_members": "regression", "height_rule": "range", "married": 1, "pop_fractions": "descriptive", "rank_rule": "grade_code", "sameness_constant": "fixed", "sample_common": true, "svc_exclude": ["6", "7"]}; families=['T4']
+2026-10-27 22:44:49 S006 sample service=128958
+2026-10-27 22:44:49 S006 sample power=124933
+2026-10-27 22:44:49 S006 sample D_status=124387
+2026-10-27 22:44:49 S006 cap: R=101993; linked=57659; rank_reference=[0.4625271659800837, 0.08721495994031593, 0.28079892309189397, 0.007160465795192838, 0.13643809400240034, 0.015334587563657595, 0.00537643128223426, 0.004970968892925492, 0.0001784034512958578]; missing={'rank': 772, 'height': 60811, 'age': 44463, 'education': 44334, 'dependents': 44505, 'officer': 772, 'length': 0, 'distance': 625, 'n_g': 228, 'steepness': 228, 'sameness': 228, 'ratio_sameness': 228, 'absolute_sameness': 228, 'distinct_ranks': 228, 'sum_ranks': 228, 'administrative_intensity': 228}
+2026-10-27 22:44:49 S006 camp: R=101993; linked=57659; rank_reference=[0.4625271659800837, 0.08721495994031593, 0.28079892309189397, 0.007160465795192838, 0.13643809400240034, 0.015334587563657595, 0.00537643128223426, 0.004970968892925492, 0.0001784034512958578]; missing={'rank': 772, 'height': 60811, 'age': 44463, 'education': 44334, 'dependents': 44505, 'officer': 772, 'length': 0, 'distance': 625, 'n_g': 100, 'steepness': 100, 'sameness': 100, 'ratio_sameness': 100, 'absolute_sameness': 100, 'distinct_ranks': 100, 'sum_ranks': 100, 'administrative_intensity': 100}
+2026-10-27 22:44:51 S006 T4__cap__simple__steepness: ok; N=100672 K=165 clusters=1674; PP=1321/178; omitted={}; scaled_score=3.81e-13; seconds=1.885
+2026-10-27 22:44:53 S006 T4__cap__simple__sameness: ok; N=100672 K=165 clusters=1674; PP=1321/178; omitted={}; scaled_score=2.12e-13; seconds=2.082
+2026-10-27 22:45:06 S006 T4__cap__full__steepness: ok; N=100672 K=178 clusters=1674; PP=1321/178; omitted={'men_missing': 'omitted_collinear', 'men_sq_missing': 'omitted_collinear'}; scaled_score=1.34e-11; seconds=12.280
+2026-10-27 22:45:18 S006 T4__cap__full__sameness: ok; N=100672 K=178 clusters=1674; PP=1321/178; omitted={'men_missing': 'omitted_collinear', 'men_sq_missing': 'omitted_collinear'}; scaled_score=3.15e-12; seconds=12.518
+2026-10-27 22:45:18 S006 T4__camp__simple__steepness: ok; N=101993 K=4 clusters=341; PP=0/0; omitted={}; scaled_score=4.18e-11; seconds=0.140
+2026-10-27 22:45:18 S006 T4__camp__simple__sameness: ok; N=101993 K=4 clusters=341; PP=0/0; omitted={}; scaled_score=1.19e-08; seconds=0.128
+2026-10-27 22:45:19 S006 T4__camp__full__steepness: ok; N=101993 K=19 clusters=341; PP=0/0; omitted={'men_missing': 'omitted_collinear', 'men_sq_missing': 'omitted_collinear'}; scaled_score=2.51e-14; seconds=0.533
+2026-10-27 22:45:19 S006 T4__camp__full__sameness: ok; N=101993 K=19 clusters=341; PP=0/0; omitted={'men_missing': 'omitted_collinear', 'men_sq_missing': 'omitted_collinear'}; scaled_score=1.22e-13; seconds=0.474
+2026-10-27 22:45:19 END S006
+2026-10-27 22:45:19 BEGIN S007; params={"age_rule": "range", "camp_valid": "nonblank", "coords": "crosswalk", "dup_serial": "unmatched", "educ_postgrad": 9, "friends_def": "incl_self", "group_members": "file", "height_rule": "range", "married": 1, "pop_fractions": "descriptive", "rank_rule": "origin", "sameness_constant": "fixed", "sample_common": true, "svc_exclude": ["6", "7"]}; families=['T4']
+2026-10-27 22:45:20 S007 sample service=128958
+2026-10-27 22:45:20 S007 sample power=124933
+2026-10-27 22:45:20 S007 sample D_status=124387
+2026-10-27 22:45:20 S007 cap: R=101993; linked=57659; rank_reference=[0.4619027539005482, 0.08810697719679522, 0.2810016542865484, 0.0069658438483246295, 0.13724901878101786, 0.015456226280450226, 0.0053034480521586816, 0.003843783450647118, 0.00017029420350968245]; missing={'rank': 772, 'height': 60811, 'age': 44463, 'education': 44334, 'dependents': 44505, 'officer': 772, 'length': 0, 'distance': 625, 'n_g': 227, 'steepness': 227, 'sameness': 227, 'ratio_sameness': 227, 'absolute_sameness': 227, 'distinct_ranks': 227, 'sum_ranks': 227, 'administrative_intensity': 227}
+2026-10-27 22:45:20 S007 camp: R=101993; linked=57659; rank_reference=[0.4619027539005482, 0.08810697719679522, 0.2810016542865484, 0.0069658438483246295, 0.13724901878101786, 0.015456226280450226, 0.0053034480521586816, 0.003843783450647118, 0.00017029420350968245]; missing={'rank': 772, 'height': 60811, 'age': 44463, 'education': 44334, 'dependents': 44505, 'officer': 772, 'length': 0, 'distance': 625, 'n_g': 82, 'steepness': 82, 'sameness': 82, 'ratio_sameness': 82, 'absolute_sameness': 82, 'distinct_ranks': 82, 'sum_ranks': 82, 'administrative_intensity': 82}
+2026-10-27 22:45:22 S007 T4__cap__simple__steepness: ok; N=100672 K=165 clusters=1674; PP=1321/178; omitted={}; scaled_score=2.18e-13; seconds=1.929
+2026-10-27 22:45:24 S007 T4__cap__simple__sameness: ok; N=100672 K=165 clusters=1674; PP=1321/178; omitted={}; scaled_score=2.2e-13; seconds=1.949
+2026-10-27 22:45:36 S007 T4__cap__full__steepness: ok; N=100672 K=178 clusters=1674; PP=1321/178; omitted={'men_missing': 'omitted_collinear', 'men_sq_missing': 'omitted_collinear'}; scaled_score=1.36e-12; seconds=11.988
+2026-10-27 22:45:48 S007 T4__cap__full__sameness: ok; N=100672 K=178 clusters=1674; PP=1321/178; omitted={'men_missing': 'omitted_collinear', 'men_sq_missing': 'omitted_collinear'}; scaled_score=1.83e-11; seconds=12.432
+2026-10-27 22:45:48 S007 T4__camp__simple__steepness: ok; N=101993 K=4 clusters=341; PP=0/0; omitted={}; scaled_score=1.69e-10; seconds=0.143
+2026-10-27 22:45:49 S007 T4__camp__simple__sameness: ok; N=101993 K=4 clusters=341; PP=0/0; omitted={}; scaled_score=2.52e-09; seconds=0.132
+2026-10-27 22:45:49 S007 T4__camp__full__steepness: ok; N=101993 K=19 clusters=341; PP=0/0; omitted={'men_missing': 'omitted_collinear', 'men_sq_missing': 'omitted_collinear'}; scaled_score=1.44e-14; seconds=0.531
+2026-10-27 22:45:50 S007 T4__camp__full__sameness: ok; N=101993 K=19 clusters=341; PP=0/0; omitted={'men_missing': 'omitted_collinear', 'men_sq_missing': 'omitted_collinear'}; scaled_score=2.54e-13; seconds=0.474
+2026-10-27 22:45:50 END S007
+2026-10-27 22:45:50 BEGIN S008; params={"age_rule": "range", "camp_valid": "nonblank", "coords": "crosswalk", "dup_serial": "unmatched", "educ_postgrad": 9, "friends_def": "incl_self", "group_members": "complete", "height_rule": "range", "married": 1, "pop_fractions": "descriptive", "rank_rule": "origin", "sameness_constant": "fixed", "sample_common": true, "svc_exclude": ["6", "7"]}; families=['T4']
+2026-10-27 22:45:50 S008 sample service=128958
+2026-10-27 22:45:50 S008 sample power=124933
+2026-10-27 22:45:50 S008 sample D_status=124387
+2026-10-27 22:45:50 S008 cap: R=101993; linked=57659; rank_reference=[0.4619027539005482, 0.08810697719679522, 0.2810016542865484, 0.0069658438483246295, 0.13724901878101786, 0.015456226280450226, 0.0053034480521586816, 0.003843783450647118, 0.00017029420350968245]; missing={'rank': 772, 'height': 60811, 'age': 44463, 'education': 44334, 'dependents': 44505, 'officer': 772, 'length': 0, 'distance': 625, 'n_g': 2825, 'steepness': 2825, 'sameness': 2825, 'ratio_sameness': 2825, 'absolute_sameness': 2825, 'distinct_ranks': 2825, 'sum_ranks': 2825, 'administrative_intensity': 2825}
+2026-10-27 22:45:50 S008 camp: R=101993; linked=57659; rank_reference=[0.4619027539005482, 0.08810697719679522, 0.2810016542865484, 0.0069658438483246295, 0.13724901878101786, 0.015456226280450226, 0.0053034480521586816, 0.003843783450647118, 0.00017029420350968245]; missing={'rank': 772, 'height': 60811, 'age': 44463, 'education': 44334, 'dependents': 44505, 'officer': 772, 'length': 0, 'distance': 625, 'n_g': 496, 'steepness': 496, 'sameness': 496, 'ratio_sameness': 496, 'absolute_sameness': 496, 'distinct_ranks': 496, 'sum_ranks': 496, 'administrative_intensity': 496}
+2026-10-27 22:45:52 S008 T4__cap__simple__steepness: ok; N=100672 K=165 clusters=1674; PP=1321/178; omitted={}; scaled_score=6.44e-13; seconds=1.767
+2026-10-27 22:45:54 S008 T4__cap__simple__sameness: ok; N=100672 K=165 clusters=1674; PP=1321/178; omitted={}; scaled_score=1.6e-12; seconds=1.808
+2026-10-27 22:46:06 S008 T4__cap__full__steepness: ok; N=100672 K=178 clusters=1674; PP=1321/178; omitted={'men_missing': 'omitted_collinear', 'men_sq_missing': 'omitted_collinear'}; scaled_score=6.01e-12; seconds=11.751
+2026-10-27 22:46:19 S008 T4__cap__full__sameness: ok; N=100672 K=178 clusters=1674; PP=1321/178; omitted={'men_missing': 'omitted_collinear', 'men_sq_missing': 'omitted_collinear'}; scaled_score=1.87e-11; seconds=12.991
+2026-10-27 22:46:19 S008 T4__camp__simple__steepness: ok; N=101993 K=4 clusters=341; PP=0/0; omitted={}; scaled_score=2.38e-09; seconds=0.128
+2026-10-27 22:46:19 S008 T4__camp__simple__sameness: ok; N=101993 K=4 clusters=341; PP=0/0; omitted={}; scaled_score=1.3e-10; seconds=0.132
+2026-10-27 22:46:19 S008 T4__camp__full__steepness: ok; N=101993 K=19 clusters=341; PP=0/0; omitted={'men_missing': 'omitted_collinear', 'men_sq_missing': 'omitted_collinear'}; scaled_score=3.71e-13; seconds=0.536
+2026-10-27 22:46:20 S008 T4__camp__full__sameness: ok; N=101993 K=19 clusters=341; PP=0/0; omitted={'men_missing': 'omitted_collinear', 'men_sq_missing': 'omitted_collinear'}; scaled_score=9.46e-14; seconds=0.506
+2026-10-27 22:46:20 END S008
+2026-10-27 22:46:20 BEGIN S009; params={"age_rule": "range", "camp_valid": "nonblank", "coords": "crosswalk", "dup_serial": "unmatched", "educ_postgrad": 9, "friends_def": "incl_self", "group_members": "regression", "height_rule": "range", "married": 1, "pop_fractions": "regression", "rank_rule": "origin", "sameness_constant": "fixed", "sample_common": true, "svc_exclude": ["6", "7"]}; families=['T4']
+2026-10-27 22:46:20 S009 sample service=128958
+2026-10-27 22:46:20 S009 sample power=124933
+2026-10-27 22:46:20 S009 sample D_status=124387
+2026-10-27 22:46:20 S009 cap: R=101993; linked=57659; rank_reference=[0.47933729166872485, 0.09154226889677043, 0.2682644905701386, 0.006322798628743047, 0.1288171426877822, 0.015698323470426098, 0.005651001274439098, 0.004159215972970036, 0.00020746683000563124]; missing={'rank': 772, 'height': 60811, 'age': 44463, 'education': 44334, 'dependents': 44505, 'officer': 772, 'length': 0, 'distance': 625, 'n_g': 228, 'steepness': 228, 'sameness': 228, 'ratio_sameness': 228, 'absolute_sameness': 228, 'distinct_ranks': 228, 'sum_ranks': 228, 'administrative_intensity': 228}
+2026-10-27 22:46:20 S009 camp: R=101993; linked=57659; rank_reference=[0.47933729166872485, 0.09154226889677043, 0.2682644905701386, 0.006322798628743047, 0.1288171426877822, 0.015698323470426098, 0.005651001274439098, 0.004159215972970036, 0.00020746683000563124]; missing={'rank': 772, 'height': 60811, 'age': 44463, 'education': 44334, 'dependents': 44505, 'officer': 772, 'length': 0, 'distance': 625, 'n_g': 100, 'steepness': 100, 'sameness': 100, 'ratio_sameness': 100, 'absolute_sameness': 100, 'distinct_ranks': 100, 'sum_ranks': 100, 'administrative_intensity': 100}
+2026-10-27 22:46:22 S009 T4__cap__simple__steepness: ok; N=100672 K=165 clusters=1674; PP=1321/178; omitted={}; scaled_score=8.61e-13; seconds=1.855
+2026-10-27 22:46:24 S009 T4__cap__simple__sameness: ok; N=100672 K=165 clusters=1674; PP=1321/178; omitted={}; scaled_score=3.94e-13; seconds=1.827
+2026-10-27 22:46:37 S009 T4__cap__full__steepness: ok; N=100672 K=178 clusters=1674; PP=1321/178; omitted={'men_missing': 'omitted_collinear', 'men_sq_missing': 'omitted_collinear'}; scaled_score=8.8e-12; seconds=12.709
+2026-10-27 22:46:50 S009 T4__cap__full__sameness: ok; N=100672 K=178 clusters=1674; PP=1321/178; omitted={'men_missing': 'omitted_collinear', 'men_sq_missing': 'omitted_collinear'}; scaled_score=2.57e-12; seconds=13.082
+2026-10-27 22:46:50 S009 T4__camp__simple__steepness: ok; N=101993 K=4 clusters=341; PP=0/0; omitted={}; scaled_score=1.3e-10; seconds=0.166
+2026-10-27 22:46:50 S009 T4__camp__simple__sameness: ok; N=101993 K=4 clusters=341; PP=0/0; omitted={}; scaled_score=2.91e-10; seconds=0.132
+2026-10-27 22:46:51 S009 T4__camp__full__steepness: ok; N=101993 K=19 clusters=341; PP=0/0; omitted={'men_missing': 'omitted_collinear', 'men_sq_missing': 'omitted_collinear'}; scaled_score=1.17e-14; seconds=0.558
+2026-10-27 22:46:51 S009 T4__camp__full__sameness: ok; N=101993 K=19 clusters=341; PP=0/0; omitted={'men_missing': 'omitted_collinear', 'men_sq_missing': 'omitted_collinear'}; scaled_score=4.5e-14; seconds=0.503
+2026-10-27 22:46:51 END S009
+2026-10-27 22:46:51 BEGIN S010; params={"age_rule": "range", "camp_valid": "nonblank", "coords": "crosswalk", "dup_serial": "unmatched", "educ_postgrad": 9, "friends_def": "incl_self", "group_members": "regression", "height_rule": "range", "married": 1, "pop_fractions": "descriptive", "rank_rule": "origin", "sameness_constant": "recomputed", "sample_common": true, "svc_exclude": ["6", "7"]}; families=['T4']
+2026-10-27 22:46:52 S010 sample service=128958
+2026-10-27 22:46:52 S010 sample power=124933
+2026-10-27 22:46:52 S010 sample D_status=124387
+2026-10-27 22:46:52 S010 cap: R=101993; linked=57659; rank_reference=[0.4619027539005482, 0.08810697719679522, 0.2810016542865484, 0.0069658438483246295, 0.13724901878101786, 0.015456226280450226, 0.0053034480521586816, 0.003843783450647118, 0.00017029420350968245]; missing={'rank': 772, 'height': 60811, 'age': 44463, 'education': 44334, 'dependents': 44505, 'officer': 772, 'length': 0, 'distance': 625, 'n_g': 228, 'steepness': 228, 'sameness': 228, 'ratio_sameness': 228, 'absolute_sameness': 228, 'distinct_ranks': 228, 'sum_ranks': 228, 'administrative_intensity': 228}
+2026-10-27 22:46:52 S010 camp: R=101993; linked=57659; rank_reference=[0.4619027539005482, 0.08810697719679522, 0.2810016542865484, 0.0069658438483246295, 0.13724901878101786, 0.015456226280450226, 0.0053034480521586816, 0.003843783450647118, 0.00017029420350968245]; missing={'rank': 772, 'height': 60811, 'age': 44463, 'education': 44334, 'dependents': 44505, 'officer': 772, 'length': 0, 'distance': 625, 'n_g': 100, 'steepness': 100, 'sameness': 100, 'ratio_sameness': 100, 'absolute_sameness': 100, 'distinct_ranks': 100, 'sum_ranks': 100, 'administrative_intensity': 100}
+2026-10-27 22:46:54 S010 T4__cap__simple__steepness: ok; N=100672 K=165 clusters=1674; PP=1321/178; omitted={}; scaled_score=8.61e-13; seconds=1.879
+2026-10-27 22:46:56 S010 T4__cap__simple__sameness: ok; N=100672 K=165 clusters=1674; PP=1321/178; omitted={}; scaled_score=1.01e-12; seconds=1.885
+2026-10-27 22:47:08 S010 T4__cap__full__steepness: ok; N=100672 K=178 clusters=1674; PP=1321/178; omitted={'men_missing': 'omitted_collinear', 'men_sq_missing': 'omitted_collinear'}; scaled_score=8.8e-12; seconds=12.405
+2026-10-27 22:47:21 S010 T4__cap__full__sameness: ok; N=100672 K=178 clusters=1674; PP=1321/178; omitted={'men_missing': 'omitted_collinear', 'men_sq_missing': 'omitted_collinear'}; scaled_score=6.34e-12; seconds=12.710
+2026-10-27 22:47:21 S010 T4__camp__simple__steepness: ok; N=101993 K=4 clusters=341; PP=0/0; omitted={}; scaled_score=1.3e-10; seconds=0.154
+2026-10-27 22:47:21 S010 T4__camp__simple__sameness: ok; N=101993 K=4 clusters=341; PP=0/0; omitted={}; scaled_score=1.22e-08; seconds=0.144
+2026-10-27 22:47:22 S010 T4__camp__full__steepness: ok; N=101993 K=19 clusters=341; PP=0/0; omitted={'men_missing': 'omitted_collinear', 'men_sq_missing': 'omitted_collinear'}; scaled_score=1.17e-14; seconds=0.587
+2026-10-27 22:47:22 S010 T4__camp__full__sameness: ok; N=101993 K=19 clusters=341; PP=0/0; omitted={'men_missing': 'omitted_collinear', 'men_sq_missing': 'omitted_collinear'}; scaled_score=3.2e-13; seconds=0.467
+2026-10-27 22:47:22 END S010
+2026-10-27 22:47:22 BEGIN S011; params={"age_rule": "range", "camp_valid": "nonblank", "coords": "crosswalk", "dup_serial": "unmatched", "educ_postgrad": 10, "friends_def": "incl_self", "group_members": "regression", "height_rule": "range", "married": 1, "pop_fractions": "descriptive", "rank_rule": "origin", "sameness_constant": "fixed", "sample_common": true, "svc_exclude": ["6", "7"]}; families=['T4']
+2026-10-27 22:47:23 S011 sample service=128958
+2026-10-27 22:47:23 S011 sample power=124933
+2026-10-27 22:47:23 S011 sample D_status=124387
+2026-10-27 22:47:23 S011 cap: R=101993; linked=57659; rank_reference=[0.4619027539005482, 0.08810697719679522, 0.2810016542865484, 0.0069658438483246295, 0.13724901878101786, 0.015456226280450226, 0.0053034480521586816, 0.003843783450647118, 0.00017029420350968245]; missing={'rank': 772, 'height': 60811, 'age': 44463, 'education': 44334, 'dependents': 44505, 'officer': 772, 'length': 0, 'distance': 625, 'n_g': 228, 'steepness': 228, 'sameness': 228, 'ratio_sameness': 228, 'absolute_sameness': 228, 'distinct_ranks': 228, 'sum_ranks': 228, 'administrative_intensity': 228}
+2026-10-27 22:47:23 S011 camp: R=101993; linked=57659; rank_reference=[0.4619027539005482, 0.08810697719679522, 0.2810016542865484, 0.0069658438483246295, 0.13724901878101786, 0.015456226280450226, 0.0053034480521586816, 0.003843783450647118, 0.00017029420350968245]; missing={'rank': 772, 'height': 60811, 'age': 44463, 'education': 44334, 'dependents': 44505, 'officer': 772, 'length': 0, 'distance': 625, 'n_g': 100, 'steepness': 100, 'sameness': 100, 'ratio_sameness': 100, 'absolute_sameness': 100, 'distinct_ranks': 100, 'sum_ranks': 100, 'administrative_intensity': 100}
+2026-10-27 22:47:25 S011 T4__cap__simple__steepness: ok; N=100672 K=165 clusters=1674; PP=1321/178; omitted={}; scaled_score=8.61e-13; seconds=1.805
+2026-10-27 22:47:27 S011 T4__cap__simple__sameness: ok; N=100672 K=165 clusters=1674; PP=1321/178; omitted={}; scaled_score=1.2e-12; seconds=1.889
+2026-10-27 22:47:39 S011 T4__cap__full__steepness: ok; N=100672 K=178 clusters=1674; PP=1321/178; omitted={'men_missing': 'omitted_collinear', 'men_sq_missing': 'omitted_collinear'}; scaled_score=7.63e-12; seconds=12.457
+2026-10-27 22:47:53 S011 T4__cap__full__sameness: ok; N=100672 K=178 clusters=1674; PP=1321/178; omitted={'men_missing': 'omitted_collinear', 'men_sq_missing': 'omitted_collinear'}; scaled_score=2.55e-12; seconds=13.765
+2026-10-27 22:47:53 S011 T4__camp__simple__steepness: ok; N=101993 K=4 clusters=341; PP=0/0; omitted={}; scaled_score=1.3e-10; seconds=0.152
+2026-10-27 22:47:53 S011 T4__camp__simple__sameness: ok; N=101993 K=4 clusters=341; PP=0/0; omitted={}; scaled_score=1.22e-08; seconds=0.146
+2026-10-27 22:47:54 S011 T4__camp__full__steepness: ok; N=101993 K=19 clusters=341; PP=0/0; omitted={'men_missing': 'omitted_collinear', 'men_sq_missing': 'omitted_collinear'}; scaled_score=1.45e-12; seconds=0.564
+2026-10-27 22:47:54 S011 T4__camp__full__sameness: ok; N=101993 K=19 clusters=341; PP=0/0; omitted={'men_missing': 'omitted_collinear', 'men_sq_missing': 'omitted_collinear'}; scaled_score=6.1e-14; seconds=0.543
+2026-10-27 22:47:54 END S011
+2026-10-27 22:47:54 BEGIN S012; params={"age_rule": "range", "camp_valid": "nonblank", "coords": "crosswalk", "dup_serial": "unmatched", "educ_postgrad": "missing", "friends_def": "incl_self", "group_members": "regression", "height_rule": "range", "married": 1, "pop_fractions": "descriptive", "rank_rule": "origin", "sameness_constant": "fixed", "sample_common": true, "svc_exclude": ["6", "7"]}; families=['T4']
+2026-10-27 22:47:55 S012 sample service=128958
+2026-10-27 22:47:55 S012 sample power=124933
+2026-10-27 22:47:55 S012 sample D_status=124387
+2026-10-27 22:47:55 S012 cap: R=101993; linked=57659; rank_reference=[0.4619027539005482, 0.08810697719679522, 0.2810016542865484, 0.0069658438483246295, 0.13724901878101786, 0.015456226280450226, 0.0053034480521586816, 0.003843783450647118, 0.00017029420350968245]; missing={'rank': 772, 'height': 60811, 'age': 44463, 'education': 44478, 'dependents': 44505, 'officer': 772, 'length': 0, 'distance': 625, 'n_g': 228, 'steepness': 228, 'sameness': 228, 'ratio_sameness': 228, 'absolute_sameness': 228, 'distinct_ranks': 228, 'sum_ranks': 228, 'administrative_intensity': 228}
+2026-10-27 22:47:55 S012 camp: R=101993; linked=57659; rank_reference=[0.4619027539005482, 0.08810697719679522, 0.2810016542865484, 0.0069658438483246295, 0.13724901878101786, 0.015456226280450226, 0.0053034480521586816, 0.003843783450647118, 0.00017029420350968245]; missing={'rank': 772, 'height': 60811, 'age': 44463, 'education': 44478, 'dependents': 44505, 'officer': 772, 'length': 0, 'distance': 625, 'n_g': 100, 'steepness': 100, 'sameness': 100, 'ratio_sameness': 100, 'absolute_sameness': 100, 'distinct_ranks': 100, 'sum_ranks': 100, 'administrative_intensity': 100}
+2026-10-27 22:47:57 S012 T4__cap__simple__steepness: ok; N=100672 K=165 clusters=1674; PP=1321/178; omitted={}; scaled_score=8.61e-13; seconds=1.979
+2026-10-27 22:47:59 S012 T4__cap__simple__sameness: ok; N=100672 K=165 clusters=1674; PP=1321/178; omitted={}; scaled_score=1.2e-12; seconds=2.075
+2026-10-27 22:48:13 S012 T4__cap__full__steepness: ok; N=100672 K=178 clusters=1674; PP=1321/178; omitted={'men_missing': 'omitted_collinear', 'men_sq_missing': 'omitted_collinear'}; scaled_score=5.21e-12; seconds=13.645
+2026-10-27 22:48:25 S012 T4__cap__full__sameness: ok; N=100672 K=178 clusters=1674; PP=1321/178; omitted={'men_missing': 'omitted_collinear', 'men_sq_missing': 'omitted_collinear'}; scaled_score=3.3e-12; seconds=12.583
+2026-10-27 22:48:25 S012 T4__camp__simple__steepness: ok; N=101993 K=4 clusters=341; PP=0/0; omitted={}; scaled_score=1.3e-10; seconds=0.135
+2026-10-27 22:48:25 S012 T4__camp__simple__sameness: ok; N=101993 K=4 clusters=341; PP=0/0; omitted={}; scaled_score=1.22e-08; seconds=0.129
+2026-10-27 22:48:26 S012 T4__camp__full__steepness: ok; N=101993 K=19 clusters=341; PP=0/0; omitted={'men_missing': 'omitted_collinear', 'men_sq_missing': 'omitted_collinear'}; scaled_score=2.26e-14; seconds=0.584
+2026-10-27 22:48:26 S012 T4__camp__full__sameness: ok; N=101993 K=19 clusters=341; PP=0/0; omitted={'men_missing': 'omitted_collinear', 'men_sq_missing': 'omitted_collinear'}; scaled_score=1.02e-13; seconds=0.473
+2026-10-27 22:48:26 END S012
+2026-10-27 22:48:27 BEGIN S013; params={"age_rule": "range", "camp_valid": "nonblank", "coords": "crosswalk", "dup_serial": "unmatched", "educ_postgrad": 9, "friends_def": "incl_self", "group_members": "regression", "height_rule": "range", "married": 0, "pop_fractions": "descriptive", "rank_rule": "origin", "sameness_constant": "fixed", "sample_common": true, "svc_exclude": ["6", "7"]}; families=['T4']
+2026-10-27 22:48:27 S013 sample service=128958
+2026-10-27 22:48:27 S013 sample power=124933
+2026-10-27 22:48:27 S013 sample D_status=124387
+2026-10-27 22:48:27 S013 cap: R=101993; linked=57659; rank_reference=[0.4619027539005482, 0.08810697719679522, 0.2810016542865484, 0.0069658438483246295, 0.13724901878101786, 0.015456226280450226, 0.0053034480521586816, 0.003843783450647118, 0.00017029420350968245]; missing={'rank': 772, 'height': 60811, 'age': 44463, 'education': 44334, 'dependents': 44505, 'officer': 772, 'length': 0, 'distance': 625, 'n_g': 228, 'steepness': 228, 'sameness': 228, 'ratio_sameness': 228, 'absolute_sameness': 228, 'distinct_ranks': 228, 'sum_ranks': 228, 'administrative_intensity': 228}
+2026-10-27 22:48:27 S013 camp: R=101993; linked=57659; rank_reference=[0.4619027539005482, 0.08810697719679522, 0.2810016542865484, 0.0069658438483246295, 0.13724901878101786, 0.015456226280450226, 0.0053034480521586816, 0.003843783450647118, 0.00017029420350968245]; missing={'rank': 772, 'height': 60811, 'age': 44463, 'education': 44334, 'dependents': 44505, 'officer': 772, 'length': 0, 'distance': 625, 'n_g': 100, 'steepness': 100, 'sameness': 100, 'ratio_sameness': 100, 'absolute_sameness': 100, 'distinct_ranks': 100, 'sum_ranks': 100, 'administrative_intensity': 100}
+2026-10-27 22:48:29 S013 T4__cap__simple__steepness: ok; N=100672 K=165 clusters=1674; PP=1321/178; omitted={}; scaled_score=8.61e-13; seconds=1.876
+2026-10-27 22:48:31 S013 T4__cap__simple__sameness: ok; N=100672 K=165 clusters=1674; PP=1321/178; omitted={}; scaled_score=1.2e-12; seconds=1.927
+2026-10-27 22:48:43 S013 T4__cap__full__steepness: ok; N=100672 K=178 clusters=1674; PP=1321/178; omitted={'men_missing': 'omitted_collinear', 'men_sq_missing': 'omitted_collinear'}; scaled_score=4.16e-12; seconds=12.594
+2026-10-27 22:48:56 S013 T4__cap__full__sameness: ok; N=100672 K=178 clusters=1674; PP=1321/178; omitted={'men_missing': 'omitted_collinear', 'men_sq_missing': 'omitted_collinear'}; scaled_score=6.01e-12; seconds=12.750
+2026-10-27 22:48:56 S013 T4__camp__simple__steepness: ok; N=101993 K=4 clusters=341; PP=0/0; omitted={}; scaled_score=1.3e-10; seconds=0.143
+2026-10-27 22:48:57 S013 T4__camp__simple__sameness: ok; N=101993 K=4 clusters=341; PP=0/0; omitted={}; scaled_score=1.22e-08; seconds=0.132
+2026-10-27 22:48:57 S013 T4__camp__full__steepness: ok; N=101993 K=19 clusters=341; PP=0/0; omitted={'men_missing': 'omitted_collinear', 'men_sq_missing': 'omitted_collinear'}; scaled_score=1.67e-08; seconds=0.500
+2026-10-27 22:48:58 S013 T4__camp__full__sameness: ok; N=101993 K=19 clusters=341; PP=0/0; omitted={'men_missing': 'omitted_collinear', 'men_sq_missing': 'omitted_collinear'}; scaled_score=3.53e-15; seconds=0.527
+2026-10-27 22:48:58 END S013
+2026-10-27 22:48:58 BEGIN S014; params={"age_rule": "range", "camp_valid": "nonblank", "coords": "crosswalk", "dup_serial": "unmatched", "educ_postgrad": 9, "friends_def": "incl_self", "group_members": "regression", "height_rule": "range", "married": "missing", "pop_fractions": "descriptive", "rank_rule": "origin", "sameness_constant": "fixed", "sample_common": true, "svc_exclude": ["6", "7"]}; families=['T4']
+2026-10-27 22:48:58 S014 sample service=128958
+2026-10-27 22:48:58 S014 sample power=124933
+2026-10-27 22:48:58 S014 sample D_status=124387
+2026-10-27 22:48:58 S014 cap: R=101993; linked=57659; rank_reference=[0.4619027539005482, 0.08810697719679522, 0.2810016542865484, 0.0069658438483246295, 0.13724901878101786, 0.015456226280450226, 0.0053034480521586816, 0.003843783450647118, 0.00017029420350968245]; missing={'rank': 772, 'height': 60811, 'age': 44463, 'education': 44334, 'dependents': 54905, 'officer': 772, 'length': 0, 'distance': 625, 'n_g': 228, 'steepness': 228, 'sameness': 228, 'ratio_sameness': 228, 'absolute_sameness': 228, 'distinct_ranks': 228, 'sum_ranks': 228, 'administrative_intensity': 228}
+2026-10-27 22:48:58 S014 camp: R=101993; linked=57659; rank_reference=[0.4619027539005482, 0.08810697719679522, 0.2810016542865484, 0.0069658438483246295, 0.13724901878101786, 0.015456226280450226, 0.0053034480521586816, 0.003843783450647118, 0.00017029420350968245]; missing={'rank': 772, 'height': 60811, 'age': 44463, 'education': 44334, 'dependents': 54905, 'officer': 772, 'length': 0, 'distance': 625, 'n_g': 100, 'steepness': 100, 'sameness': 100, 'ratio_sameness': 100, 'absolute_sameness': 100, 'distinct_ranks': 100, 'sum_ranks': 100, 'administrative_intensity': 100}
+2026-10-27 22:49:00 S014 T4__cap__simple__steepness: ok; N=100672 K=165 clusters=1674; PP=1321/178; omitted={}; scaled_score=8.61e-13; seconds=1.896
+2026-10-27 22:49:02 S014 T4__cap__simple__sameness: ok; N=100672 K=165 clusters=1674; PP=1321/178; omitted={}; scaled_score=1.2e-12; seconds=1.984
+2026-10-27 22:49:16 S014 T4__cap__full__steepness: ok; N=100672 K=178 clusters=1674; PP=1321/178; omitted={'men_missing': 'omitted_collinear', 'men_sq_missing': 'omitted_collinear'}; scaled_score=4.23e-12; seconds=13.540
+2026-10-27 22:49:29 S014 T4__cap__full__sameness: ok; N=100672 K=178 clusters=1674; PP=1321/178; omitted={'men_missing': 'omitted_collinear', 'men_sq_missing': 'omitted_collinear'}; scaled_score=6.92e-12; seconds=13.686
+2026-10-27 22:49:29 S014 T4__camp__simple__steepness: ok; N=101993 K=4 clusters=341; PP=0/0; omitted={}; scaled_score=1.3e-10; seconds=0.136
+2026-10-27 22:49:30 S014 T4__camp__simple__sameness: ok; N=101993 K=4 clusters=341; PP=0/0; omitted={}; scaled_score=1.22e-08; seconds=0.127
+2026-10-27 22:49:30 S014 T4__camp__full__steepness: ok; N=101993 K=19 clusters=341; PP=0/0; omitted={'men_missing': 'omitted_collinear', 'men_sq_missing': 'omitted_collinear'}; scaled_score=2.88e-14; seconds=0.554
+2026-10-27 22:49:31 S014 T4__camp__full__sameness: ok; N=101993 K=19 clusters=341; PP=0/0; omitted={'men_missing': 'omitted_collinear', 'men_sq_missing': 'omitted_collinear'}; scaled_score=4.53e-14; seconds=0.528
+2026-10-27 22:49:31 END S014
+2026-10-27 22:49:31 BEGIN S015; params={"age_rule": "range", "camp_valid": "nonblank", "coords": "crosswalk", "dup_serial": "unmatched", "educ_postgrad": 9, "friends_def": "incl_self", "group_members": "regression", "height_rule": "none", "married": 1, "pop_fractions": "descriptive", "rank_rule": "origin", "sameness_constant": "fixed", "sample_common": true, "svc_exclude": ["6", "7"]}; families=['T4']
+2026-10-27 22:49:31 S015 sample service=128958
+2026-10-27 22:49:31 S015 sample power=124933
+2026-10-27 22:49:31 S015 sample D_status=124387
+2026-10-27 22:49:31 S015 cap: R=101993; linked=57659; rank_reference=[0.4619027539005482, 0.08810697719679522, 0.2810016542865484, 0.0069658438483246295, 0.13724901878101786, 0.015456226280450226, 0.0053034480521586816, 0.003843783450647118, 0.00017029420350968245]; missing={'rank': 772, 'height': 101993, 'age': 44463, 'education': 44334, 'dependents': 44505, 'officer': 772, 'length': 0, 'distance': 625, 'n_g': 228, 'steepness': 228, 'sameness': 228, 'ratio_sameness': 228, 'absolute_sameness': 228, 'distinct_ranks': 228, 'sum_ranks': 228, 'administrative_intensity': 228}
+2026-10-27 22:49:31 S015 camp: R=101993; linked=57659; rank_reference=[0.4619027539005482, 0.08810697719679522, 0.2810016542865484, 0.0069658438483246295, 0.13724901878101786, 0.015456226280450226, 0.0053034480521586816, 0.003843783450647118, 0.00017029420350968245]; missing={'rank': 772, 'height': 101993, 'age': 44463, 'education': 44334, 'dependents': 44505, 'officer': 772, 'length': 0, 'distance': 625, 'n_g': 100, 'steepness': 100, 'sameness': 100, 'ratio_sameness': 100, 'absolute_sameness': 100, 'distinct_ranks': 100, 'sum_ranks': 100, 'administrative_intensity': 100}
+2026-10-27 22:49:33 S015 T4__cap__simple__steepness: ok; N=100672 K=165 clusters=1674; PP=1321/178; omitted={}; scaled_score=8.61e-13; seconds=1.901
+2026-10-27 22:49:35 S015 T4__cap__simple__sameness: ok; N=100672 K=165 clusters=1674; PP=1321/178; omitted={}; scaled_score=1.2e-12; seconds=1.937
+2026-10-27 22:49:46 S015 T4__cap__full__steepness: ok; N=100672 K=176 clusters=1674; PP=1321/178; omitted={'height': 'omitted_constant', 'height_missing': 'omitted_constant', 'men_missing': 'omitted_collinear', 'men_sq_missing': 'omitted_collinear'}; scaled_score=1.95e-12; seconds=11.079
+2026-10-27 22:49:58 S015 T4__cap__full__sameness: ok; N=100672 K=176 clusters=1674; PP=1321/178; omitted={'height': 'omitted_constant', 'height_missing': 'omitted_constant', 'men_missing': 'omitted_collinear', 'men_sq_missing': 'omitted_collinear'}; scaled_score=2.34e-12; seconds=11.707
+2026-10-27 22:49:58 S015 T4__camp__simple__steepness: ok; N=101993 K=4 clusters=341; PP=0/0; omitted={}; scaled_score=1.3e-10; seconds=0.131
+2026-10-27 22:49:58 S015 T4__camp__simple__sameness: ok; N=101993 K=4 clusters=341; PP=0/0; omitted={}; scaled_score=1.22e-08; seconds=0.127
+2026-10-27 22:49:59 S015 T4__camp__full__steepness: ok; N=101993 K=17 clusters=341; PP=0/0; omitted={'height': 'omitted_constant', 'height_missing': 'omitted_constant', 'men_missing': 'omitted_collinear', 'men_sq_missing': 'omitted_collinear'}; scaled_score=3.2e-14; seconds=0.438
+2026-10-27 22:49:59 S015 T4__camp__full__sameness: ok; N=101993 K=17 clusters=341; PP=0/0; omitted={'height': 'omitted_constant', 'height_missing': 'omitted_constant', 'men_missing': 'omitted_collinear', 'men_sq_missing': 'omitted_collinear'}; scaled_score=1.59e-14; seconds=0.403
+2026-10-27 22:49:59 END S015
+2026-10-27 22:49:59 BEGIN S016; params={"age_rule": "none", "camp_valid": "nonblank", "coords": "crosswalk", "dup_serial": "unmatched", "educ_postgrad": 9, "friends_def": "incl_self", "group_members": "regression", "height_rule": "range", "married": 1, "pop_fractions": "descriptive", "rank_rule": "origin", "sameness_constant": "fixed", "sample_common": true, "svc_exclude": ["6", "7"]}; families=['T4']
+2026-10-27 22:49:59 S016 sample service=128958
+2026-10-27 22:49:59 S016 sample power=124933
+2026-10-27 22:49:59 S016 sample D_status=124387
+2026-10-27 22:50:00 S016 cap: R=101993; linked=57659; rank_reference=[0.4619027539005482, 0.08810697719679522, 0.2810016542865484, 0.0069658438483246295, 0.13724901878101786, 0.015456226280450226, 0.0053034480521586816, 0.003843783450647118, 0.00017029420350968245]; missing={'rank': 772, 'height': 60811, 'age': 44334, 'education': 44334, 'dependents': 44505, 'officer': 772, 'length': 0, 'distance': 625, 'n_g': 228, 'steepness': 228, 'sameness': 228, 'ratio_sameness': 228, 'absolute_sameness': 228, 'distinct_ranks': 228, 'sum_ranks': 228, 'administrative_intensity': 228}
+2026-10-27 22:50:00 S016 camp: R=101993; linked=57659; rank_reference=[0.4619027539005482, 0.08810697719679522, 0.2810016542865484, 0.0069658438483246295, 0.13724901878101786, 0.015456226280450226, 0.0053034480521586816, 0.003843783450647118, 0.00017029420350968245]; missing={'rank': 772, 'height': 60811, 'age': 44334, 'education': 44334, 'dependents': 44505, 'officer': 772, 'length': 0, 'distance': 625, 'n_g': 100, 'steepness': 100, 'sameness': 100, 'ratio_sameness': 100, 'absolute_sameness': 100, 'distinct_ranks': 100, 'sum_ranks': 100, 'administrative_intensity': 100}
+2026-10-27 22:50:01 S016 T4__cap__simple__steepness: ok; N=100672 K=165 clusters=1674; PP=1321/178; omitted={}; scaled_score=8.61e-13; seconds=1.808
+2026-10-27 22:50:03 S016 T4__cap__simple__sameness: ok; N=100672 K=165 clusters=1674; PP=1321/178; omitted={}; scaled_score=1.2e-12; seconds=1.841
+2026-10-27 22:50:15 S016 T4__cap__full__steepness: ok; N=100672 K=177 clusters=1674; PP=1321/178; omitted={'men_missing': 'omitted_collinear', 'men_sq_missing': 'omitted_collinear', 'education_missing': 'omitted_collinear'}; scaled_score=2.62e-12; seconds=11.770
+2026-10-27 22:50:27 S016 T4__cap__full__sameness: ok; N=100672 K=177 clusters=1674; PP=1321/178; omitted={'men_missing': 'omitted_collinear', 'men_sq_missing': 'omitted_collinear', 'education_missing': 'omitted_collinear'}; scaled_score=2.43e-12; seconds=11.895
+2026-10-27 22:50:27 S016 T4__camp__simple__steepness: ok; N=101993 K=4 clusters=341; PP=0/0; omitted={}; scaled_score=1.3e-10; seconds=0.129
+2026-10-27 22:50:27 S016 T4__camp__simple__sameness: ok; N=101993 K=4 clusters=341; PP=0/0; omitted={}; scaled_score=1.22e-08; seconds=0.128
+2026-10-27 22:50:28 S016 T4__camp__full__steepness: ok; N=101993 K=18 clusters=341; PP=0/0; omitted={'men_missing': 'omitted_collinear', 'men_sq_missing': 'omitted_collinear', 'education_missing': 'omitted_collinear'}; scaled_score=9.78e-15; seconds=0.479
+2026-10-27 22:50:28 S016 T4__camp__full__sameness: ok; N=101993 K=18 clusters=341; PP=0/0; omitted={'men_missing': 'omitted_collinear', 'men_sq_missing': 'omitted_collinear', 'education_missing': 'omitted_collinear'}; scaled_score=4.61e-14; seconds=0.443
+2026-10-27 22:50:28 END S016
+2026-10-27 22:50:28 BEGIN S017; params={"age_rule": "range", "camp_valid": "nonblank", "coords": "crosswalk", "dup_serial": "first", "educ_postgrad": 9, "friends_def": "incl_self", "group_members": "regression", "height_rule": "range", "married": 1, "pop_fractions": "descriptive", "rank_rule": "origin", "sameness_constant": "fixed", "sample_common": true, "svc_exclude": ["6", "7"]}; families=['T4']
+2026-10-27 22:50:29 S017 sample service=128958
+2026-10-27 22:50:29 S017 sample power=124933
+2026-10-27 22:50:29 S017 sample D_status=124387
+2026-10-27 22:50:29 S017 cap: R=101993; linked=58151; rank_reference=[0.4619027539005482, 0.08810697719679522, 0.2810016542865484, 0.0069658438483246295, 0.13724901878101786, 0.015456226280450226, 0.0053034480521586816, 0.003843783450647118, 0.00017029420350968245]; missing={'rank': 772, 'height': 60483, 'age': 43983, 'education': 43842, 'dependents': 44022, 'officer': 772, 'length': 0, 'distance': 625, 'n_g': 228, 'steepness': 228, 'sameness': 228, 'ratio_sameness': 228, 'absolute_sameness': 228, 'distinct_ranks': 228, 'sum_ranks': 228, 'administrative_intensity': 228}
+2026-10-27 22:50:29 S017 camp: R=101993; linked=58151; rank_reference=[0.4619027539005482, 0.08810697719679522, 0.2810016542865484, 0.0069658438483246295, 0.13724901878101786, 0.015456226280450226, 0.0053034480521586816, 0.003843783450647118, 0.00017029420350968245]; missing={'rank': 772, 'height': 60483, 'age': 43983, 'education': 43842, 'dependents': 44022, 'officer': 772, 'length': 0, 'distance': 625, 'n_g': 100, 'steepness': 100, 'sameness': 100, 'ratio_sameness': 100, 'absolute_sameness': 100, 'distinct_ranks': 100, 'sum_ranks': 100, 'administrative_intensity': 100}
+2026-10-27 22:50:31 S017 T4__cap__simple__steepness: ok; N=100672 K=165 clusters=1674; PP=1321/178; omitted={}; scaled_score=8.61e-13; seconds=1.824
+2026-10-27 22:50:33 S017 T4__cap__simple__sameness: ok; N=100672 K=165 clusters=1674; PP=1321/178; omitted={}; scaled_score=1.2e-12; seconds=2.122
+2026-10-27 22:50:46 S017 T4__cap__full__steepness: ok; N=100672 K=178 clusters=1674; PP=1321/178; omitted={'men_missing': 'omitted_collinear', 'men_sq_missing': 'omitted_collinear'}; scaled_score=2.34e-12; seconds=13.163
+2026-10-27 22:50:59 S017 T4__cap__full__sameness: ok; N=100672 K=178 clusters=1674; PP=1321/178; omitted={'men_missing': 'omitted_collinear', 'men_sq_missing': 'omitted_collinear'}; scaled_score=1.08e-11; seconds=12.853
+2026-10-27 22:50:59 S017 T4__camp__simple__steepness: ok; N=101993 K=4 clusters=341; PP=0/0; omitted={}; scaled_score=1.3e-10; seconds=0.146
+2026-10-27 22:50:59 S017 T4__camp__simple__sameness: ok; N=101993 K=4 clusters=341; PP=0/0; omitted={}; scaled_score=1.22e-08; seconds=0.142
+2026-10-27 22:51:00 S017 T4__camp__full__steepness: ok; N=101993 K=19 clusters=341; PP=0/0; omitted={'men_missing': 'omitted_collinear', 'men_sq_missing': 'omitted_collinear'}; scaled_score=1.83e-14; seconds=0.582
+2026-10-27 22:51:00 S017 T4__camp__full__sameness: ok; N=101993 K=19 clusters=341; PP=0/0; omitted={'men_missing': 'omitted_collinear', 'men_sq_missing': 'omitted_collinear'}; scaled_score=1.38e-08; seconds=0.499
+2026-10-27 22:51:00 END S017
+2026-10-27 22:51:00 BEGIN S018; params={"age_rule": "range", "camp_valid": "nonblank", "coords": "crosswalk", "dup_serial": "combine", "educ_postgrad": 9, "friends_def": "incl_self", "group_members": "regression", "height_rule": "range", "married": 1, "pop_fractions": "descriptive", "rank_rule": "origin", "sameness_constant": "fixed", "sample_common": true, "svc_exclude": ["6", "7"]}; families=['T4']
+2026-10-27 22:51:01 S018 sample service=128958
+2026-10-27 22:51:01 S018 sample power=124933
+2026-10-27 22:51:01 S018 sample D_status=124387
+2026-10-27 22:51:01 S018 cap: R=101993; linked=58151; rank_reference=[0.4619027539005482, 0.08810697719679522, 0.2810016542865484, 0.0069658438483246295, 0.13724901878101786, 0.015456226280450226, 0.0053034480521586816, 0.003843783450647118, 0.00017029420350968245]; missing={'rank': 772, 'height': 60723, 'age': 44243, 'education': 44104, 'dependents': 44231, 'officer': 772, 'length': 0, 'distance': 625, 'n_g': 228, 'steepness': 228, 'sameness': 228, 'ratio_sameness': 228, 'absolute_sameness': 228, 'distinct_ranks': 228, 'sum_ranks': 228, 'administrative_intensity': 228}
+2026-10-27 22:51:01 S018 camp: R=101993; linked=58151; rank_reference=[0.4619027539005482, 0.08810697719679522, 0.2810016542865484, 0.0069658438483246295, 0.13724901878101786, 0.015456226280450226, 0.0053034480521586816, 0.003843783450647118, 0.00017029420350968245]; missing={'rank': 772, 'height': 60723, 'age': 44243, 'education': 44104, 'dependents': 44231, 'officer': 772, 'length': 0, 'distance': 625, 'n_g': 100, 'steepness': 100, 'sameness': 100, 'ratio_sameness': 100, 'absolute_sameness': 100, 'distinct_ranks': 100, 'sum_ranks': 100, 'administrative_intensity': 100}
+2026-10-27 22:51:03 S018 T4__cap__simple__steepness: ok; N=100672 K=165 clusters=1674; PP=1321/178; omitted={}; scaled_score=8.61e-13; seconds=2.101
+2026-10-27 22:51:05 S018 T4__cap__simple__sameness: ok; N=100672 K=165 clusters=1674; PP=1321/178; omitted={}; scaled_score=1.2e-12; seconds=2.051
+2026-10-27 22:51:18 S018 T4__cap__full__steepness: ok; N=100672 K=178 clusters=1674; PP=1321/178; omitted={'men_missing': 'omitted_collinear', 'men_sq_missing': 'omitted_collinear'}; scaled_score=7.26e-12; seconds=12.744
+2026-10-27 22:51:31 S018 T4__cap__full__sameness: ok; N=100672 K=178 clusters=1674; PP=1321/178; omitted={'men_missing': 'omitted_collinear', 'men_sq_missing': 'omitted_collinear'}; scaled_score=3.56e-12; seconds=12.991
+2026-10-27 22:51:31 S018 T4__camp__simple__steepness: ok; N=101993 K=4 clusters=341; PP=0/0; omitted={}; scaled_score=1.3e-10; seconds=0.143
+2026-10-27 22:51:31 S018 T4__camp__simple__sameness: ok; N=101993 K=4 clusters=341; PP=0/0; omitted={}; scaled_score=1.22e-08; seconds=0.131
+2026-10-27 22:51:32 S018 T4__camp__full__steepness: ok; N=101993 K=19 clusters=341; PP=0/0; omitted={'men_missing': 'omitted_collinear', 'men_sq_missing': 'omitted_collinear'}; scaled_score=1.53e-13; seconds=0.540
+2026-10-27 22:51:32 S018 T4__camp__full__sameness: ok; N=101993 K=19 clusters=341; PP=0/0; omitted={'men_missing': 'omitted_collinear', 'men_sq_missing': 'omitted_collinear'}; scaled_score=4.44e-13; seconds=0.554
+2026-10-27 22:51:32 END S018
+2026-10-27 22:51:32 BEGIN S019; params={"age_rule": "range", "camp_valid": "nonblank", "coords": "nara_degree", "dup_serial": "unmatched", "educ_postgrad": 9, "friends_def": "incl_self", "group_members": "regression", "height_rule": "range", "married": 1, "pop_fractions": "descriptive", "rank_rule": "origin", "sameness_constant": "fixed", "sample_common": true, "svc_exclude": ["6", "7"]}; families=['T4']
+2026-10-27 22:51:33 S019 sample service=128958
+2026-10-27 22:51:33 S019 sample power=124933
+2026-10-27 22:51:33 S019 sample D_status=124387
+2026-10-27 22:51:33 S019 cap: R=101993; linked=57659; rank_reference=[0.4619027539005482, 0.08810697719679522, 0.2810016542865484, 0.0069658438483246295, 0.13724901878101786, 0.015456226280450226, 0.0053034480521586816, 0.003843783450647118, 0.00017029420350968245]; missing={'rank': 772, 'height': 60811, 'age': 44463, 'education': 44334, 'dependents': 44505, 'officer': 772, 'length': 0, 'distance': 8912, 'n_g': 228, 'steepness': 228, 'sameness': 228, 'ratio_sameness': 228, 'absolute_sameness': 228, 'distinct_ranks': 228, 'sum_ranks': 228, 'administrative_intensity': 228}
+2026-10-27 22:51:33 S019 camp: R=101993; linked=57659; rank_reference=[0.4619027539005482, 0.08810697719679522, 0.2810016542865484, 0.0069658438483246295, 0.13724901878101786, 0.015456226280450226, 0.0053034480521586816, 0.003843783450647118, 0.00017029420350968245]; missing={'rank': 772, 'height': 60811, 'age': 44463, 'education': 44334, 'dependents': 44505, 'officer': 772, 'length': 0, 'distance': 8912, 'n_g': 100, 'steepness': 100, 'sameness': 100, 'ratio_sameness': 100, 'absolute_sameness': 100, 'distinct_ranks': 100, 'sum_ranks': 100, 'administrative_intensity': 100}
+2026-10-27 22:51:35 S019 T4__cap__simple__steepness: ok; N=100672 K=165 clusters=1674; PP=1321/178; omitted={}; scaled_score=8.61e-13; seconds=1.881
+2026-10-27 22:51:37 S019 T4__cap__simple__sameness: ok; N=100672 K=165 clusters=1674; PP=1321/178; omitted={}; scaled_score=1.2e-12; seconds=1.978
+2026-10-27 22:51:50 S019 T4__cap__full__steepness: ok; N=100672 K=178 clusters=1674; PP=1321/178; omitted={'men_missing': 'omitted_collinear', 'men_sq_missing': 'omitted_collinear'}; scaled_score=8.8e-12; seconds=12.956
+2026-10-27 22:52:02 S019 T4__cap__full__sameness: ok; N=100672 K=178 clusters=1674; PP=1321/178; omitted={'men_missing': 'omitted_collinear', 'men_sq_missing': 'omitted_collinear'}; scaled_score=1.65e-11; seconds=12.663
+2026-10-27 22:52:03 S019 T4__camp__simple__steepness: ok; N=101993 K=4 clusters=341; PP=0/0; omitted={}; scaled_score=1.3e-10; seconds=0.136
+2026-10-27 22:52:03 S019 T4__camp__simple__sameness: ok; N=101993 K=4 clusters=341; PP=0/0; omitted={}; scaled_score=1.22e-08; seconds=0.133
+2026-10-27 22:52:03 S019 T4__camp__full__steepness: ok; N=101993 K=19 clusters=341; PP=0/0; omitted={'men_missing': 'omitted_collinear', 'men_sq_missing': 'omitted_collinear'}; scaled_score=1.64e-13; seconds=0.642
+2026-10-27 22:52:04 S019 T4__camp__full__sameness: ok; N=101993 K=19 clusters=341; PP=0/0; omitted={'men_missing': 'omitted_collinear', 'men_sq_missing': 'omitted_collinear'}; scaled_score=1.77e-14; seconds=0.481
+2026-10-27 22:52:04 END S019
+2026-10-27 22:52:04 BEGIN S020; params={"age_rule": "range", "camp_valid": "nonblank", "coords": "crosswalk", "dup_serial": "unmatched", "educ_postgrad": 9, "friends_def": "others", "group_members": "regression", "height_rule": "range", "married": 1, "pop_fractions": "descriptive", "rank_rule": "origin", "sameness_constant": "fixed", "sample_common": true, "svc_exclude": ["6", "7"]}; families=['R_friends']
+2026-10-27 22:52:04 S020 sample service=128958
+2026-10-27 22:52:04 S020 sample power=124933
+2026-10-27 22:52:04 S020 sample D_status=124387
+2026-10-27 22:52:04 S020 cap: R=101993; linked=57659; rank_reference=[0.4619027539005482, 0.08810697719679522, 0.2810016542865484, 0.0069658438483246295, 0.13724901878101786, 0.015456226280450226, 0.0053034480521586816, 0.003843783450647118, 0.00017029420350968245]; missing={'rank': 772, 'height': 60811, 'age': 44463, 'education': 44334, 'dependents': 44505, 'officer': 772, 'length': 0, 'distance': 625, 'n_g': 228, 'steepness': 228, 'sameness': 228, 'ratio_sameness': 228, 'absolute_sameness': 228, 'distinct_ranks': 228, 'sum_ranks': 228, 'administrative_intensity': 228}
+2026-10-27 22:52:04 S020 cap: friends_missing=43731; unit_steepness_missing=34282
+2026-10-27 22:52:05 S020 camp: R=101993; linked=57659; rank_reference=[0.4619027539005482, 0.08810697719679522, 0.2810016542865484, 0.0069658438483246295, 0.13724901878101786, 0.015456226280450226, 0.0053034480521586816, 0.003843783450647118, 0.00017029420350968245]; missing={'rank': 772, 'height': 60811, 'age': 44463, 'education': 44334, 'dependents': 44505, 'officer': 772, 'length': 0, 'distance': 625, 'n_g': 100, 'steepness': 100, 'sameness': 100, 'ratio_sameness': 100, 'absolute_sameness': 100, 'distinct_ranks': 100, 'sum_ranks': 100, 'administrative_intensity': 100}
+2026-10-27 22:52:05 S020 camp: friends_missing=40558; unit_steepness_missing=34282
+2026-10-27 22:52:17 S020 R_friends__cap__full__friends__friends_only: ok; N=100672 K=179 clusters=1674; PP=1321/178; omitted={'men_sq_missing': 'omitted_collinear'}; scaled_score=1.86e-11; seconds=12.478
+2026-10-27 22:52:30 S020 R_friends__cap__full__steepness__plus_friends: ok; N=100672 K=180 clusters=1674; PP=1321/178; omitted={'men_missing': 'omitted_collinear', 'men_sq_missing': 'omitted_collinear'}; scaled_score=9.82e-12; seconds=13.449
+2026-10-27 22:52:44 S020 R_friends__cap__full__steepness__unit_hierarchy: ok; N=100672 K=181 clusters=1674; PP=1321/178; omitted={'men_sq_missing': 'omitted_collinear'}; scaled_score=2.29e-12; seconds=13.770
+2026-10-27 22:52:58 S020 R_friends__cap__full__sameness__plus_friends: ok; N=100672 K=180 clusters=1674; PP=1321/178; omitted={'men_missing': 'omitted_collinear', 'men_sq_missing': 'omitted_collinear'}; scaled_score=1.7e-11; seconds=13.705
+2026-10-27 22:53:11 S020 R_friends__cap__full__sameness__unit_hierarchy: ok; N=100672 K=181 clusters=1674; PP=1321/178; omitted={'men_sq_missing': 'omitted_collinear'}; scaled_score=8.35e-12; seconds=13.238
+2026-10-27 22:53:12 S020 R_friends__camp__full__friends__friends_only: ok; N=101993 K=20 clusters=341; PP=0/0; omitted={'men_sq_missing': 'omitted_collinear'}; scaled_score=6.5e-14; seconds=0.598
+2026-10-27 22:53:12 S020 R_friends__camp__full__steepness__plus_friends: ok; N=101993 K=21 clusters=341; PP=0/0; omitted={'men_missing': 'omitted_collinear', 'men_sq_missing': 'omitted_collinear'}; scaled_score=2.07e-14; seconds=0.627
+2026-10-27 22:53:13 S020 R_friends__camp__full__steepness__unit_hierarchy: ok; N=101993 K=22 clusters=341; PP=0/0; omitted={'men_sq_missing': 'omitted_collinear'}; scaled_score=4.17e-14; seconds=0.624
+2026-10-27 22:53:14 S020 R_friends__camp__full__sameness__plus_friends: ok; N=101993 K=21 clusters=341; PP=0/0; omitted={'men_missing': 'omitted_collinear', 'men_sq_missing': 'omitted_collinear'}; scaled_score=9.91e-14; seconds=0.585
+2026-10-27 22:53:14 S020 R_friends__camp__full__sameness__unit_hierarchy: ok; N=101993 K=22 clusters=341; PP=0/0; omitted={'men_sq_missing': 'omitted_collinear'}; scaled_score=1.77e-14; seconds=0.656
+2026-10-27 22:53:14 END S020

@@ -1,0 +1,224 @@
+{
+  "value_labels": {
+    "ID_9817_RDM": {},
+    "COUNTRY": {
+      "1.0": "US:UNITED STATES",
+      "7.0": "RU:RUSSIA",
+      "20.0": "EG:EGYPT",
+      "27.0": "ZA:SOUTH AFRICA",
+      "30.0": "GR:GREECE",
+      "31.0": "NL:NETHERLANDS",
+      "32.0": "BE:BELGIUM",
+      "33.0": "FR:FRANCE",
+      "34.0": "ES:SPAIN",
+      "36.0": "HU:HUNGRY",
+      "39.0": "IT:ITALY",
+      "40.0": "RO:ROMANIA",
+      "41.0": "SW:SWITZERLAND",
+      "43.0": "AT:AUSTRIA",
+      "44.0": "UK:UNITED KINGDOM",
+      "45.0": "DK:DENMARK",
+      "46.0": "SE:SWEDEN",
+      "47.0": "NO:NORWAY",
+      "48.0": "PL:POLAND",
+      "49.0": "DE:GERMANY",
+      "51.0": "PE:PERU",
+      "52.0": "MX:MEXICO",
+      "54.0": "AR:ARGENTINA",
+      "55.0": "BR:BRAZIL",
+      "56.0": "CL:CHILE",
+      "57.0": "CO:COLUMBIA",
+      "60.0": "MY:MALAYSIA",
+      "61.0": "AU:AUSTRALIA",
+      "62.0": "ID:INDONESIA",
+      "63.0": "PH:PHILIPPINES",
+      "64.0": "NZ:NEW ZEALAND",
+      "65.0": "SG:SINGAPORE",
+      "66.0": "TH:THAILAND",
+      "81.0": "JP:JAPAN",
+      "82.0": "KR:KOREA(SOUTH)",
+      "84.0": "VN:VIETNAM",
+      "86.0": "CH:CHINA",
+      "90.0": "TR:TURKEY",
+      "91.0": "IN:INDIA",
+      "92.0": "PK:PAKISTAN",
+      "98.0": "IR:IRAN",
+      "101.0": "CA:CANADA",
+      "212.0": "MA:MOROCCO",
+      "213.0": "DZ:ALGERIA",
+      "216.0": "TN:TUNISIA",
+      "218.0": "LY:LIBYA",
+      "221.0": "SN:SENEGAL",
+      "226.0": "BF:BURKINA FASO",
+      "233.0": "GH:GAHANA",
+      "234.0": "NG:NIGERIA",
+      "237.0": "CM:CAMEROON",
+      "244.0": "AO:ANGOLA",
+      "246.0": "BB:BARBADOS",
+      "251.0": "ET:ETHOPIA",
+      "256.0": "UG:UGANDA",
+      "260.0": "ZM:ZAMBIA",
+      "261.0": "MG:MADAGASCAR",
+      "264.0": "NA:NAMBIA",
+      "265.0": "MW:MALAWI",
+      "267.0": "BW:BOTSWANA",
+      "270.0": "NA:NAMBIA",
+      "351.0": "PT:PORTUGAL",
+      "352.0": "LU:LUXEMBORG",
+      "353.0": "IE:IRELAND",
+      "354.0": "IS:ICELAND",
+      "357.0": "CY:CYPRUS",
+      "358.0": "FI:FINLAND",
+      "359.0": "BG:BULGARIA",
+      "370.0": "LT:LITHUANIA",
+      "371.0": "LV:LATVIA",
+      "372.0": "EE:ESTONIA",
+      "381.0": "RS:SERBIA",
+      "382.0": "ME:MONTENEGRO",
+      "383.0": "XK:KOSOVO",
+      "385.0": "HR:CROATIA",
+      "386.0": "SI:SLOVENIA",
+      "387.0": "BA:BOSNIA & HERZEGOVINA",
+      "389.0": "MK:MACEDONIA",
+      "420.0": "CZ:CZECH REPUBLIC",
+      "421.0": "SK:SLOVAKIA",
+      "501.0": "BZ:BELIZE",
+      "502.0": "GT:GUATEMALA",
+      "503.0": "SV:EL SALVADOR",
+      "506.0": "CR:COSTA RICA",
+      "507.0": "PA:PANAMA",
+      "582.0": "VE:VENEZUELA",
+      "591.0": "BO:BOLIVA",
+      "593.0": "EC:ECUADOR",
+      "597.0": "SR:SURINAME",
+      "598.0": "UY:URUGUAY",
+      "620.0": "AZ:AZORES",
+      "676.0": "TO:TONGA",
+      "678.0": "VU:VANUATU",
+      "701.0": "KZ:KAZAKHSTAN",
+      "755.0": "SZ:SCHENZHEN",
+      "787.0": "PR:PUERTO RICO",
+      "809.0": "DO:DOMINICAN REPUBLIC",
+      "852.0": "HK:HONG KONG(SAR)",
+      "868.0": "TT:TRINIDAD-TOBAGO",
+      "876.0": "JM:JAMICA",
+      "880.0": "BD:BANGLADESH",
+      "886.0": "TW:TAIWAN",
+      "961.0": "LB:LEBANON",
+      "962.0": "JO:JORDAN",
+      "963.0": "SY:SYRIA",
+      "966.0": "SA:SAUDI ARABIA",
+      "967.0": "YE:YEMEN",
+      "970.0": "PS:WEST BANK/GAZA",
+      "971.0": "AE:UNITED ARAB EMIRATES",
+      "972.0": "IL:ISRAEL",
+      "974.0": "QA:QATAR",
+      "995.0": "GE:GEORGIA",
+      "1809.0": "DR:DOMINICAN REPUBLIC",
+      "4401.0": "UK:SCOTLAND",
+      "4402.0": "UK:WALES",
+      "6401.0": "NZ:MAORI SUBSAMPLE",
+      "8601.0": "CS:SHENZHEN(CHINA)"
+    },
+    "GEM_YR": {
+      "1998.0": "1998 GEM YR",
+      "1999.0": "1999 GEM YR",
+      "2000.0": "2000 GEM YR",
+      "2001.0": "2001 GEM YR",
+      "2002.0": "2002 GEM YR",
+      "2003.0": "2003 GEM YR",
+      "2004.0": "2004 GEM YR",
+      "2005.0": "2005 GEM YR",
+      "2006.0": "2006 GEM YR",
+      "2007.0": "2007 GEM YR",
+      "2008.0": "2008 GEM YR",
+      "2009.0": "2009 GEM YR",
+      "2010.0": "2010 GEM YR",
+      "2011.0": "2011 GEM YR",
+      "2012.0": "2012 GEM YR",
+      "2013.0": "2013 GEM YR",
+      "2014.0": "2014 GEM YR",
+      "2015.0": "2015 GEM YR",
+      "2016.0": "2016 GEM YR",
+      "2017.0": "2017 GEM YR"
+    },
+    "GEMSEX": {
+      "1.0": "MALE",
+      "2.0": "FEMALE",
+      "9.0": "DK/NR/MISS"
+    },
+    "OMREASON": {
+      "1.0": "EXPLOIT BUS OPPORT",
+      "2.0": "BEST WORK CHOICE",
+      "3.0": "WK CHOICE & OPPORT",
+      "4.0": "OTHER",
+      "6.0": "FAMILY BUSINESS",
+      "7.0": "Not Applicable",
+      "8.0": "DON T KNOW",
+      "9.0": "REFUSED",
+      "999999.0": "SYSTEM MISSING"
+    },
+    "OMNOWJOB": {
+      "0.0": "NONE",
+      "999999.0": "MISSING",
+      "9999997.0": "Not Applicable",
+      "9999999.0": "REFUSED/DON'T KNOW"
+    },
+    "OMYR5JOB": {
+      "0.0": "NONE",
+      "999999.0": "MISSING",
+      "9999997.0": "Not Applicable",
+      "9999999.0": "REFUSED/DON'T KNOW"
+    }
+  },
+  "missing_ranges": {
+    "GEMSEX": [
+      {
+        "lo": 9.0,
+        "hi": 9.0
+      }
+    ],
+    "OMNOWJOB": [
+      {
+        "lo": 9999997.0,
+        "hi": 9999997.0
+      },
+      {
+        "lo": 9999998.0,
+        "hi": 9999998.0
+      },
+      {
+        "lo": 9999999.0,
+        "hi": 9999999.0
+      }
+    ],
+    "OMYR5JOB": [
+      {
+        "lo": 9999997.0,
+        "hi": 9999997.0
+      },
+      {
+        "lo": 9999998.0,
+        "hi": 9999998.0
+      },
+      {
+        "lo": 9999999.0,
+        "hi": 9999999.0
+      }
+    ],
+    "OMREASON": [
+      {
+        "lo": 7.0,
+        "hi": 7.0
+      },
+      {
+        "lo": 8.0,
+        "hi": 8.0
+      },
+      {
+        "lo": 9.0,
+        "hi": 9.0
+      }
+    ]
+  }
+}

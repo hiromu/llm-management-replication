@@ -1,0 +1,48 @@
+{
+  "record": "coordinator_session_readiness",
+  "study_id": "delaney1996",
+  "paper_id": "AMJ_1996_DELANEY",
+  "coordinator_session_id": "b5dfe2d8-6c78-49e5-9b2d-f3b29045f21f",
+  "checked_utc": "2026-10-28T03:24:44Z",
+  "research_authorized": false,
+  "coordinator": {
+    "requested": {"model": "claude-opus-5-5", "effort": "high", "fast_mode": false},
+    "observed_model": "claude-opus-5-5 (from the session system context)",
+    "observed_effort": "high per .claude/settings.json; /status not callable from the coordinator, not independently observed",
+    "observed_fast_mode": "false per .claude/settings.json; not toggled in session",
+    "loaded_instruction_files": [
+      "../../CLAUDE.md (project root)",
+      "CLAUDE.md (study)"
+    ],
+    "global_claude_md_loaded": false,
+    "auto_memory": "disabled per settings; no memory content observed in context",
+    "verification_limits": "/status and /memory are interactive commands not available to the coordinator in the desktop app; values above come from the settings files and the session context"
+  },
+  "publication_packet_precheck": {
+    "article_path": "../../papers/journal_collection/AMJ/AMJ_1996_DELANEY.pdf",
+    "article_sha256_observed": "d2ec15a6fd3be26ef46211947312557f6240577168695ae2d68abc255f166b1c",
+    "matches_STUDY_json": true,
+    "local_supplement_catalog_matches": 0,
+    "external_supplement_search": "pending research authorization"
+  },
+  "supplied_bundle_precheck": {
+    "source_id": "icpsr06240",
+    "files_present": 6,
+    "all_sha256_match_inventory": true,
+    "md5_codebook_matches_provider_manifest": true,
+    "md5_DS0002_matches_provider_manifest": true,
+    "scope": "integrity only; source-role validation of unit, variables, coding, missing values, weights and terms pending"
+  },
+  "role_tooling": {
+    "claude_cli": {"path": "~/.local/bin/claude", "version": "2.1.270", "flags_present": ["--safe-mode", "--model", "--effort", "--settings", "--no-session-persistence", "--tools", "--allowed-tools"]},
+    "codex_cli": {"path": "~/.local/bin/codex", "version": "codex-cli 0.164.0", "flags_present": ["--ephemeral", "--ignore-user-config", "--skip-git-repo-check", "-C", "-m", "-s"]},
+    "codex_global_agents_md": "present (~/.codex/AGENTS.md, 1416 bytes); whether it loads under --ignore-user-config to be checked at launch",
+    "model_access_verified": false,
+    "model_access_note": "No reader, probe or connectivity call made; claude-fable-5-1 and gpt-6-astra access to be verified at launch"
+  },
+  "analysis_software": {
+    "python": "~/.venv/bin/python 3.13.4; pandas 2.2.3, numpy 2.4.2, statsmodels 0.14.6, scipy 1.16.3, pyreadstat 1.3.3, linearmodels 7.0, matplotlib 3.10.8, pdfplumber 0.11.10, PyMuPDF 1.27.1, pypdf 6.9.2",
+    "R": "4.6.1 at /opt/homebrew/bin/Rscript; haven, foreign, sandwich, lmtest, jsonlite installed; psych not installed",
+    "stata": "not installed"
+  }
+}

@@ -1,0 +1,29 @@
+{
+ "generated_utc": "2026-10-27T15:55:43+00:00",
+ "files": {
+  "data/derived/country_codes.csv": {
+   "sha256": "694a24d4ffbb61752b223f575b71fa6bf266f0daf78d4f32309616ed6c79515c",
+   "bytes": 787
+  },
+  "data/derived/country_year_inputs.csv": {
+   "sha256": "100122411753639c4db44f0cc53cb7a01c62b010c3ca32e2620962c51c687114",
+   "bytes": 29860
+  },
+  "data/derived/country_year_lineage.csv": {
+   "sha256": "14ff39b7564273e48409191aaae01f618d4e4a60096ffd42f451ae7784297723",
+   "bytes": 790367
+  },
+  "data/derived/gem_extract.csv": {
+   "sha256": "805814b164f957f0e6083659784e05c24bc00a202afe697a2fa8bd00c530c2df",
+   "bytes": 83100174
+  },
+  "registry/construction/hdr_parsed_rows.csv": {
+   "sha256": "d0431486c4d8145ca45c67ce587804fa8de4c16f663c7dbe1eddea3bba1ae9ae",
+   "bytes": 25500
+  },
+  "registry/construction/leave_inputs_audit.json": {
+   "sha256": "c01f03459aed46feab3585f1ca55ba206d17676ea2795b1eab4138f879554008",
+   "bytes": 4044
+  }
+ }
+}

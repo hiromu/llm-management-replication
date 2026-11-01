@@ -1,0 +1,369 @@
+[
+  {
+    "axis": "attention_filter_operationalization",
+    "study": 1,
+    "category": "sample_construction",
+    "analysis_ids": [
+      "S1_descriptives",
+      "S1_reliability",
+      "S1_paired_you_grant",
+      "S1_mixed_you_grant",
+      "S1_paired_prom_voice",
+      "S1_mixed_prom_voice",
+      "S1_paired_proh_voice",
+      "S1_mixed_proh_voice",
+      "S1_paired_loyal_comb",
+      "S1_gender_loyalty_sexual_harassment_male",
+      "S1_gender_loyalty_sexual_harassment_female",
+      "S1_gender_loyalty_all_wrongdoing_male",
+      "S1_gender_loyalty_all_wrongdoing_female",
+      "S1_gender_difference_sexual_harassment_loyal",
+      "S1_gender_difference_sexual_harassment_control",
+      "S1_gender_difference_theft_loyal",
+      "S1_gender_difference_theft_control",
+      "S1_gender_difference_false_advertising_loyal",
+      "S1_gender_difference_false_advertising_control",
+      "S1_gender_difference_fraud_loyal",
+      "S1_gender_difference_fraud_control",
+      "S1_gender_difference_bribery_loyal",
+      "S1_gender_difference_bribery_control",
+      "S1_gender_difference_plagiarism_loyal",
+      "S1_gender_difference_plagiarism_control",
+      "S1_gender_difference_dishonesty_loyal",
+      "S1_gender_difference_dishonesty_control",
+      "S1_gender_difference_Average_loyal",
+      "S1_gender_difference_Average_control"
+    ],
+    "levels": [
+      {
+        "level_id": "documented_exclusion_unresolved",
+        "description": "Exclude failed simple attention checks; exact executable rule unstated.",
+        "label": "equivalent",
+        "source_locator": "D11 PDF p. 1 §6; D01 PDF p. 7",
+        "rationale": "Closest described rule; not a license to select a filter by outcome fit."
+      },
+      {
+        "level_id": "all_named_checks",
+        "description": "Apply all condition-matched checks listed in the manifest candidate answer key; missing-check handling remains unresolved.",
+        "label": "uncertain",
+        "source_locator": "D31 attention/condition rows; D41 (unpaginated); D02 PDF pp. 1",
+        "rationale": "Dictionary supplies answer choices but does not identify which checks authors used; this is an inferred operationalization, not an alternative exclusion policy claimed as equivalent."
+      }
+    ],
+    "origin_level": "documented_exclusion_unresolved"
+  },
+  {
+    "axis": "composite_aggregation",
+    "study": 1,
+    "category": "variable_coding",
+    "analysis_ids": [
+      "S1_reliability",
+      "S1_paired_loyal_comb"
+    ],
+    "levels": [
+      {
+        "level_id": "existing_composite",
+        "description": "Use deposited constructed columns, with scoring unresolved.",
+        "label": "equivalent",
+        "source_locator": "D31 composite rows; D41 (unpaginated)",
+        "rationale": "Closest data representation; no assertion that columns are correct."
+      },
+      {
+        "level_id": "literal_sum",
+        "description": "Construct literal item sums as written in dictionary composite descriptions.",
+        "label": "uncertain",
+        "source_locator": "D31 composite rows; D01 PDF p. 9",
+        "rationale": "Documented addition notation conflicts with dictionary response-scale ranges; no silent selection."
+      },
+      {
+        "level_id": "item_mean",
+        "description": "Average the specified items without changing the item set.",
+        "label": "uncertain",
+        "source_locator": "D31 composite allowed-values fields; D01 PDF p. 9",
+        "rationale": "Mean is inferred from stated scale bounds, not from numerical agreement; missing-item rule still unknown. A linear rescaling changes raw-unit targets."
+      }
+    ],
+    "origin_level": "existing_composite"
+  },
+  {
+    "axis": "attention_filter_operationalization",
+    "study": 2,
+    "category": "sample_construction",
+    "analysis_ids": [
+      "S2_descriptives",
+      "S2_reliability",
+      "S2_t_you_grant",
+      "S2_parallel_you_grant",
+      "S2_t_prom_voice",
+      "S2_parallel_prom_voice",
+      "S2_t_proh_voice",
+      "S2_parallel_proh_voice",
+      "S2_serial_val_align_part_broker",
+      "S2_serial_relconcerns_with_broker",
+      "S2_gender_loyalty_sexual_harassment_male",
+      "S2_gender_loyalty_sexual_harassment_female",
+      "S2_gender_difference_loyal_colleague",
+      "S2_gender_difference_control"
+    ],
+    "levels": [
+      {
+        "level_id": "documented_exclusion_unresolved",
+        "description": "Exclude failed simple attention checks; exact executable rule unstated.",
+        "label": "equivalent",
+        "source_locator": "D12 PDF p. 1 §6; D01 PDF p. 10",
+        "rationale": "Closest described rule; not a license to select a filter by outcome fit."
+      },
+      {
+        "level_id": "all_named_checks",
+        "description": "Apply all condition-matched checks listed in the manifest candidate answer key; missing-check handling remains unresolved.",
+        "label": "uncertain",
+        "source_locator": "D32 attention/condition rows; D42 (unpaginated); D02 PDF pp. 2",
+        "rationale": "Dictionary supplies answer choices but does not identify which checks authors used; this is an inferred operationalization, not an alternative exclusion policy claimed as equivalent."
+      }
+    ],
+    "origin_level": "documented_exclusion_unresolved"
+  },
+  {
+    "axis": "composite_aggregation",
+    "study": 2,
+    "category": "variable_coding",
+    "analysis_ids": [
+      "S2_descriptives",
+      "S2_reliability",
+      "S2_parallel_you_grant",
+      "S2_parallel_prom_voice",
+      "S2_parallel_proh_voice",
+      "S2_serial_val_align_part_broker",
+      "S2_serial_relconcerns_with_broker"
+    ],
+    "levels": [
+      {
+        "level_id": "existing_composite",
+        "description": "Use deposited constructed columns, with scoring unresolved.",
+        "label": "equivalent",
+        "source_locator": "D32 composite rows; D42 (unpaginated)",
+        "rationale": "Closest data representation; no assertion that columns are correct."
+      },
+      {
+        "level_id": "literal_sum",
+        "description": "Construct literal item sums as written in dictionary composite descriptions.",
+        "label": "uncertain",
+        "source_locator": "D32 composite rows; D01 PDF p. 11",
+        "rationale": "Documented addition notation conflicts with dictionary response-scale ranges; no silent selection."
+      },
+      {
+        "level_id": "item_mean",
+        "description": "Average the specified items without changing the item set.",
+        "label": "uncertain",
+        "source_locator": "D32 composite allowed-values fields; D01 PDF p. 11",
+        "rationale": "Mean is inferred from stated scale bounds, not from numerical agreement; missing-item rule still unknown. A linear rescaling changes raw-unit targets."
+      }
+    ],
+    "origin_level": "existing_composite"
+  },
+  {
+    "axis": "attention_filter_operationalization",
+    "study": 3,
+    "category": "sample_construction",
+    "analysis_ids": [
+      "S3_descriptives",
+      "S3_reliability",
+      "S3_anova_you_grant",
+      "S3_contrast_H1_you_grant",
+      "S3_contrast_H3_you_grant",
+      "S3_anova_prom_voice",
+      "S3_contrast_H1_prom_voice",
+      "S3_contrast_H3_prom_voice",
+      "S3_anova_proh_voice",
+      "S3_contrast_H1_proh_voice",
+      "S3_contrast_H3_proh_voice",
+      "S3_anova_benev_trust_broker",
+      "S3_contrast_H1_benev_trust_broker",
+      "S3_contrast_H3_benev_trust_broker",
+      "S3_anova_integ_trust_broker",
+      "S3_contrast_H1_integ_trust_broker",
+      "S3_contrast_H3_integ_trust_broker",
+      "S3_anova_val_align_part_broker",
+      "S3_contrast_H1_val_align_part_broker",
+      "S3_contrast_H3_val_align_part_broker",
+      "S3_anova_relconcerns_with_broker",
+      "S3_contrast_H1_relconcerns_with_broker",
+      "S3_contrast_H3_relconcerns_with_broker"
+    ],
+    "levels": [
+      {
+        "level_id": "documented_exclusion_unresolved",
+        "description": "Exclude failed simple attention checks; exact executable rule unstated.",
+        "label": "equivalent",
+        "source_locator": "D13 PDF p. 1 §6; D01 PDF p. 12",
+        "rationale": "Closest described rule; not a license to select a filter by outcome fit."
+      },
+      {
+        "level_id": "all_named_checks",
+        "description": "Apply all condition-matched checks listed in the manifest candidate answer key; missing-check handling remains unresolved.",
+        "label": "uncertain",
+        "source_locator": "D33 attention/condition rows; D43 (unpaginated); D02 PDF pp. 2–3",
+        "rationale": "Dictionary supplies answer choices but does not identify which checks authors used; this is an inferred operationalization, not an alternative exclusion policy claimed as equivalent."
+      }
+    ],
+    "origin_level": "documented_exclusion_unresolved"
+  },
+  {
+    "axis": "composite_aggregation",
+    "study": 3,
+    "category": "variable_coding",
+    "analysis_ids": [
+      "S3_descriptives",
+      "S3_reliability",
+      "S3_anova_benev_trust_broker",
+      "S3_contrast_H1_benev_trust_broker",
+      "S3_contrast_H3_benev_trust_broker",
+      "S3_anova_integ_trust_broker",
+      "S3_contrast_H1_integ_trust_broker",
+      "S3_contrast_H3_integ_trust_broker",
+      "S3_anova_val_align_part_broker",
+      "S3_contrast_H1_val_align_part_broker",
+      "S3_contrast_H3_val_align_part_broker",
+      "S3_anova_relconcerns_with_broker",
+      "S3_contrast_H1_relconcerns_with_broker",
+      "S3_contrast_H3_relconcerns_with_broker"
+    ],
+    "levels": [
+      {
+        "level_id": "existing_composite",
+        "description": "Use deposited constructed columns, with scoring unresolved.",
+        "label": "equivalent",
+        "source_locator": "D33 composite rows; D43 (unpaginated)",
+        "rationale": "Closest data representation; no assertion that columns are correct."
+      },
+      {
+        "level_id": "literal_sum",
+        "description": "Construct literal item sums as written in dictionary composite descriptions.",
+        "label": "uncertain",
+        "source_locator": "D33 composite rows; D01 PDF p. 13",
+        "rationale": "Documented addition notation conflicts with dictionary response-scale ranges; no silent selection."
+      },
+      {
+        "level_id": "item_mean",
+        "description": "Average the specified items without changing the item set.",
+        "label": "uncertain",
+        "source_locator": "D33 composite allowed-values fields; D01 PDF p. 13",
+        "rationale": "Mean is inferred from stated scale bounds, not from numerical agreement; missing-item rule still unknown. A linear rescaling changes raw-unit targets."
+      }
+    ],
+    "origin_level": "existing_composite"
+  },
+  {
+    "axis": "moral_intensity_anchor_direction",
+    "study": 1,
+    "category": "variable_coding",
+    "analysis_ids": [
+      "S1_reliability"
+    ],
+    "levels": [
+      {
+        "level_id": "appendix_anchors",
+        "description": "Interpret original moral-intensity response anchors as 1=strongly agree,7=strongly disagree and apply listed reverse items.",
+        "label": "equivalent",
+        "source_locator": "D03 PDF p. 1; D11 PDF p. 2 §8",
+        "rationale": "Closest substantive description in appendix and preregistration; does not establish actual encoded values."
+      },
+      {
+        "level_id": "dictionary_anchors",
+        "description": "Interpret original anchors as 1=strongly disagree,7=strongly agree and use listed reversed columns.",
+        "label": "uncertain",
+        "source_locator": "D31 moral-intensity item and reverse rows (unpaginated)",
+        "rationale": "Actual coding cannot be adjudicated without valid source metadata; correlation invariance does not resolve semantic direction."
+      }
+    ],
+    "origin_level": "appendix_anchors"
+  },
+  {
+    "axis": "integrity_accused_third_item_wording",
+    "study": 2,
+    "category": "variable_coding",
+    "analysis_ids": [
+      "S2_reliability"
+    ],
+    "levels": [
+      {
+        "level_id": "dictionary_positive",
+        "description": "Third accused-integrity item positively worded, no reverse coding.",
+        "label": "equivalent",
+        "source_locator": "D32 inttrust_accused3; D03 PDF p. 2 (same measures as broker)",
+        "rationale": "Closest deposited variable description and appendix cross-reference."
+      },
+      {
+        "level_id": "preregistered_negative",
+        "description": "Third accused-integrity item is actions/behaviors not very consistent; reverse it if that version was administered.",
+        "label": "uncertain",
+        "source_locator": "D12 PDF p. 2 §8",
+        "rationale": "Preregistered item contradicts dictionary; coding cannot be selected using scale reliability."
+      }
+    ],
+    "origin_level": "dictionary_positive"
+  },
+  {
+    "axis": "study4_loyalty_transform",
+    "study": 4,
+    "category": "variable_coding",
+    "analysis_ids": [
+      "S4_logit_M1",
+      "S4_logit_M2",
+      "S4_logit_M3",
+      "S4_mediation_simultaneous",
+      "S4_mediation_independent_SignedTrust",
+      "S4_mediation_independent_SignedRisk"
+    ],
+    "levels": [
+      {
+        "level_id": "continuous_article",
+        "description": "Continuous recorded loyalty; main-text regressions describe this exposure.",
+        "label": "equivalent",
+        "source_locator": "D01 PDF pp. 15–16 Tables 5–6; D14 PDF p. 1 §5",
+        "rationale": "Closest described main-text implementation; mapping to LoyalRequestor inferred from D44."
+      },
+      {
+        "level_id": "strong_loyalty",
+        "description": "Conditional dichotomy: loyalty=7 versus all other values, under preregistered distribution-shape trigger.",
+        "label": "non_equivalent",
+        "source_locator": "D14 PDF p. 1 §§4–5; D44 StrongLoyaltyRequestor; D03 PDF p. 5",
+        "rationale": "Changes exposure/estimand; appendix Loyal versus Not Loyal language makes mediation coding uncertain, but does not validate a threshold."
+      },
+      {
+        "level_id": "exponential_loyalty",
+        "description": "Conditional exponential loyalty transformation; base unspecified.",
+        "label": "non_equivalent",
+        "source_locator": "D14 PDF p. 1 §§4–5; D44 ExpLoyaltyRequestor",
+        "rationale": "Preregistered alternative changes functional form; formula and trigger evaluation unavailable."
+      }
+    ],
+    "origin_level": "continuous_article"
+  },
+  {
+    "axis": "study4_duration_unit",
+    "study": 4,
+    "category": "variable_coding",
+    "analysis_ids": [
+      "S4_logit_M2",
+      "S4_logit_M3"
+    ],
+    "levels": [
+      {
+        "level_id": "article_semesters",
+        "description": "Use SemestersRequestor as semesters known.",
+        "label": "equivalent",
+        "source_locator": "D01 PDF p. 15 Measures; D44 SemestersRequestor",
+        "rationale": "Article gives semesters; dictionary does not validate variable."
+      },
+      {
+        "level_id": "preregistration_months",
+        "description": "Use duration in months as preregistered; conversion from semesters is unstated and must not be invented.",
+        "label": "non_equivalent",
+        "source_locator": "D14 PDF p. 1 §8",
+        "rationale": "Changes coefficient scale; no verified months column or semester-length conversion."
+      }
+    ],
+    "origin_level": "article_semesters"
+  }
+]

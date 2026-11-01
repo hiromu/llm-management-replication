@@ -1,0 +1,254 @@
+"key","value","source","published","match"
+"M1.you_grant.F",0.467,"rstatix::anova_test","0.47",TRUE
+"M1.prom_voice.F",0.122,"rstatix::anova_test","0.12",TRUE
+"M1.proh_voice.F",1.044,"rstatix::anova_test","1.04",TRUE
+"P1.you_grant.t",22.0582355131355,"t.test","22.06",TRUE
+"P1.you_grant.d",0.857968022945786,"effsize::cohen.d","0.86",TRUE
+"P1.prom_voice.t",17.5631028157085,"t.test","17.56",TRUE
+"P1.prom_voice.d",0.714252507316683,"effsize::cohen.d","0.71",TRUE
+"P1.proh_voice.t",16.8739214876662,"t.test","16.76",FALSE
+"P1.proh_voice.d",0.672529982556764,"effsize::cohen.d","0.67",TRUE
+"T2.you_grant.t",4.02792045973282,"t.test","4.03",TRUE
+"T2.you_grant.d",0.595183352012645,"effsize::cohen.d","0.60",TRUE
+"T2.prom_voice.t",2.95395437647844,"t.test","2.95",TRUE
+"T2.prom_voice.d",0.4356593802106,"effsize::cohen.d","0.44",TRUE
+"T2.proh_voice.t",2.21568613777964,"t.test","2.22",TRUE
+"T2.proh_voice.d",0.326543366081814,"effsize::cohen.d","0.33",TRUE
+"A3.you_grant.relationship.eta2",0.0480026281559186,"heplots::etasq","0.048",TRUE
+"A3.you_grant.history.eta2",0.0281054447134147,"heplots::etasq","0.028",TRUE
+"A3.you_grant.interaction.eta2",0.00284678109271675,"heplots::etasq","0.003",TRUE
+"A3.you_grant.relationship.F",14.02,"emmeans joint test","14.02",TRUE
+"A3.you_grant.history.F",8.153,"emmeans joint test","8.15",TRUE
+"A3.you_grant.interaction.F",0.805,"emmeans joint test","0.81",TRUE
+"C3.H1.you_grant.t",3.32895642056306,"emmeans pairwise","3.33",TRUE
+"C3.H3.you_grant.t",2.65400690809671,"emmeans pairwise","2.65",TRUE
+"C3.H3.you_grant.d",0.4115345946844,"effsize::cohen.d","0.412",TRUE
+"C3.H1.you_grant.d",0.468875787321351,"effsize::cohen.d","0.469",TRUE
+"C3.cell.you_grant.CC.mean",1.71621621621622,"Rmisc::summarySE","1.72",TRUE
+"C3.cell.you_grant.CC.sd",1.42886361850296,"Rmisc::summarySE","1.43",TRUE
+"C3.cell.you_grant.CD.mean",1.40579710144928,"Rmisc::summarySE",NA,NA
+"C3.cell.you_grant.CD.sd",0.959761621441218,"Rmisc::summarySE",NA,NA
+"C3.cell.you_grant.LC.mean",2.45205479452055,"Rmisc::summarySE","2.45",TRUE
+"C3.cell.you_grant.LC.sd",1.70000895332945,"Rmisc::summarySE","1.70",TRUE
+"C3.cell.you_grant.LD.mean",1.85714285714286,"Rmisc::summarySE","1.86",TRUE
+"C3.cell.you_grant.LD.sd",1.12011534454857,"Rmisc::summarySE","1.12",TRUE
+"A3.prom_voice.relationship.eta2",0.0367812530961054,"heplots::etasq","0.048",FALSE
+"A3.prom_voice.history.eta2",0.0073762058850461,"heplots::etasq","0.007",TRUE
+"A3.prom_voice.interaction.eta2",0.00556570267608099,"heplots::etasq","0.006",TRUE
+"A3.prom_voice.relationship.F",10.531,"emmeans joint test","10.53",TRUE
+"A3.prom_voice.history.F",2.094,"emmeans joint test","2.09",TRUE
+"A3.prom_voice.interaction.F",1.578,"emmeans joint test","1.58",TRUE
+"C3.H1.prom_voice.t",3.22844982789218,"emmeans pairwise","3.23",TRUE
+"C3.H3.prom_voice.t",1.911979272879,"emmeans pairwise","1.91",TRUE
+"C3.H3.prom_voice.d",0.28310491549787,"effsize::cohen.d","0.283",TRUE
+"C3.H1.prom_voice.d",0.464516013245034,"effsize::cohen.d","0.465",TRUE
+"C3.cell.prom_voice.CC.mean",1.59459459459459,"Rmisc::summarySE","1.59",TRUE
+"C3.cell.prom_voice.CC.sd",1.1926592701878,"Rmisc::summarySE","1.19",TRUE
+"C3.cell.prom_voice.CD.mean",1.56521739130435,"Rmisc::summarySE",NA,NA
+"C3.cell.prom_voice.CD.sd",1.00700868723347,"Rmisc::summarySE",NA,NA
+"C3.cell.prom_voice.LC.mean",2.28767123287671,"Rmisc::summarySE","2.29",TRUE
+"C3.cell.prom_voice.LC.sd",1.74387381722731,"Rmisc::summarySE","1.74",TRUE
+"C3.cell.prom_voice.LD.mean",1.87142857142857,"Rmisc::summarySE","1.87",TRUE
+"C3.cell.prom_voice.LD.sd",1.11539202923546,"Rmisc::summarySE","1.12",TRUE
+"A3.proh_voice.relationship.eta2",0.055326873580367,"heplots::etasq","0.055",TRUE
+"A3.proh_voice.history.eta2",0.00531357815813609,"heplots::etasq","0.005",TRUE
+"A3.proh_voice.interaction.eta2",0.0056870960880272,"heplots::etasq","0.006",TRUE
+"A3.proh_voice.relationship.F",16.216,"emmeans joint test","16.22",TRUE
+"A3.proh_voice.history.F",1.505,"emmeans joint test","1.51",TRUE
+"A3.proh_voice.interaction.F",1.613,"emmeans joint test","1.61",TRUE
+"C3.H1.proh_voice.t",3.79897233606085,"emmeans pairwise","3.80",TRUE
+"C3.H3.proh_voice.t",1.76590977714399,"emmeans pairwise","1.77",TRUE
+"C3.H3.proh_voice.d",0.26173667599286,"effsize::cohen.d","0.262",TRUE
+"C3.H1.proh_voice.d",0.55241144847852,"effsize::cohen.d","0.552",TRUE
+"C3.cell.proh_voice.CC.mean",1.7027027027027,"Rmisc::summarySE","1.70",TRUE
+"C3.cell.proh_voice.CC.sd",1.33169713256029,"Rmisc::summarySE","1.33",TRUE
+"C3.cell.proh_voice.CD.mean",1.71014492753623,"Rmisc::summarySE",NA,NA
+"C3.cell.proh_voice.CD.sd",1.13890361720181,"Rmisc::summarySE",NA,NA
+"C3.cell.proh_voice.LC.mean",2.61643835616438,"Rmisc::summarySE","2.62",TRUE
+"C3.cell.proh_voice.LC.sd",1.92664170245001,"Rmisc::summarySE","1.74",FALSE
+"C3.cell.proh_voice.LD.mean",2.18571428571429,"Rmisc::summarySE","2.12",FALSE
+"C3.cell.proh_voice.LD.sd",1.28866695692872,"Rmisc::summarySE","1.1.29",NA
+"A3.benev_trust_broker.relationship.eta2",0.336672509614218,"heplots::etasq","0.337",TRUE
+"A3.benev_trust_broker.history.eta2",0.12603882440062,"heplots::etasq","0.126",TRUE
+"A3.benev_trust_broker.interaction.eta2",0.028677273226289,"heplots::etasq","0.029",TRUE
+"A3.benev_trust_broker.relationship.F",141.093,"emmeans joint test","141.09",TRUE
+"A3.benev_trust_broker.history.F",40.654,"emmeans joint test","40.65",TRUE
+"A3.benev_trust_broker.interaction.F",8.326,"emmeans joint test","8.33",TRUE
+"C3.H1.benev_trust_broker.t",10.5886742811725,"emmeans pairwise","10.59",TRUE
+"C3.H3.benev_trust_broker.t",6.55016361602831,"emmeans pairwise","6.55",TRUE
+"C3.H3.benev_trust_broker.d",0.937906428752483,"effsize::cohen.d","0.938",TRUE
+"C3.H1.benev_trust_broker.d",1.55472394571706,"effsize::cohen.d","1.55",TRUE
+"C3.cell.benev_trust_broker.CC.mean",1.89189189186486,"Rmisc::summarySE","1.89",TRUE
+"C3.cell.benev_trust_broker.CC.sd",1.14955898910595,"Rmisc::summarySE","1.15",TRUE
+"C3.cell.benev_trust_broker.CD.mean",1.39130434778261,"Rmisc::summarySE",NA,NA
+"C3.cell.benev_trust_broker.CD.sd",0.718469055322859,"Rmisc::summarySE",NA,NA
+"C3.cell.benev_trust_broker.LC.mean",4.00913242009589,"Rmisc::summarySE","4.01",TRUE
+"C3.cell.benev_trust_broker.LC.sd",1.547571377694,"Rmisc::summarySE","1.55",TRUE
+"C3.cell.benev_trust_broker.LD.mean",2.68095238092857,"Rmisc::summarySE","2.68",TRUE
+"C3.cell.benev_trust_broker.LD.sd",1.26444722194655,"Rmisc::summarySE","1.26",TRUE
+"A3.integ_trust_broker.relationship.eta2",0.222744245239133,"heplots::etasq","0.222",FALSE
+"A3.integ_trust_broker.history.eta2",0.380423317816199,"heplots::etasq","0.380",TRUE
+"A3.integ_trust_broker.interaction.eta2",0.0348746880332287,"heplots::etasq","0.035",TRUE
+"A3.integ_trust_broker.relationship.F",79.155,"emmeans joint test","79.16",TRUE
+"A3.integ_trust_broker.history.F",173.117,"emmeans joint test","173.12",TRUE
+"A3.integ_trust_broker.interaction.F",10.19,"emmeans joint test","10.19",TRUE
+"C3.H1.integ_trust_broker.t",8.67040537766074,"emmeans pairwise","8.67",TRUE
+"C3.H3.integ_trust_broker.t",11.563148735372,"emmeans pairwise","11.56",TRUE
+"C3.H3.integ_trust_broker.d",1.80800881192483,"effsize::cohen.d","1.81",TRUE
+"C3.H1.integ_trust_broker.d",1.3232413251032,"effsize::cohen.d","1.32",TRUE
+"C3.cell.integ_trust_broker.CC.mean",3.00450450448649,"Rmisc::summarySE","3.00",TRUE
+"C3.cell.integ_trust_broker.CC.sd",1.14210044851054,"Rmisc::summarySE","1.14",TRUE
+"C3.cell.integ_trust_broker.CD.mean",1.69082125604348,"Rmisc::summarySE",NA,NA
+"C3.cell.integ_trust_broker.CD.sd",0.895374534766664,"Rmisc::summarySE",NA,NA
+"C3.cell.integ_trust_broker.LC.mean",4.5981735159863,"Rmisc::summarySE","4.59",FALSE
+"C3.cell.integ_trust_broker.LC.sd",1.26437280613041,"Rmisc::summarySE","1.26",TRUE
+"C3.cell.integ_trust_broker.LD.mean",2.4428571428,"Rmisc::summarySE","2.44",TRUE
+"C3.cell.integ_trust_broker.LD.sd",1.11167342572509,"Rmisc::summarySE","1.11",TRUE
+"A3.val_align_part_broker.relationship.eta2",0.131857245889256,"heplots::etasq","0.132",TRUE
+"A3.val_align_part_broker.history.eta2",0.24907361797928,"heplots::etasq","0.249",TRUE
+"A3.val_align_part_broker.interaction.eta2",0.0217729891653368,"heplots::etasq","0.022",TRUE
+"A3.val_align_part_broker.relationship.F",41.886,"emmeans joint test","41.89",TRUE
+"A3.val_align_part_broker.history.F",93.517,"emmeans joint test","93.52",TRUE
+"A3.val_align_part_broker.interaction.F",6.277,"emmeans joint test","6.28",TRUE
+"C3.H1.val_align_part_broker.t",6.43856760477384,"emmeans pairwise","6.44",TRUE
+"C3.H3.val_align_part_broker.t",8.61124155108869,"emmeans pairwise","8.61",TRUE
+"C3.H3.val_align_part_broker.d",1.28317551967008,"effsize::cohen.d","1.28",TRUE
+"C3.H1.val_align_part_broker.d",0.908661334276161,"effsize::cohen.d","0.909",TRUE
+"C3.cell.val_align_part_broker.CC.mean",2.57432432432432,"Rmisc::summarySE","2.57",TRUE
+"C3.cell.val_align_part_broker.CC.sd",1.28660760383636,"Rmisc::summarySE","1.29",TRUE
+"C3.cell.val_align_part_broker.CD.mean",1.46376811594203,"Rmisc::summarySE",NA,NA
+"C3.cell.val_align_part_broker.CD.sd",0.924816518287746,"Rmisc::summarySE",NA,NA
+"C3.cell.val_align_part_broker.LC.mean",3.96575342465753,"Rmisc::summarySE","3.97",TRUE
+"C3.cell.val_align_part_broker.LC.sd",1.74469188445682,"Rmisc::summarySE","1.74",TRUE
+"C3.cell.val_align_part_broker.LD.mean",2.07857142857143,"Rmisc::summarySE","2.08",TRUE
+"C3.cell.val_align_part_broker.LD.sd",1.11522959969748,"Rmisc::summarySE","1.12",TRUE
+"A3.relconcerns_with_broker.relationship.eta2",0.323881595618759,"heplots::etasq","0.324",TRUE
+"A3.relconcerns_with_broker.history.eta2",0.0214653704018158,"heplots::etasq","0.021",TRUE
+"A3.relconcerns_with_broker.interaction.eta2",5.14788688071019e-06,"heplots::etasq","0.00001",TRUE
+"A3.relconcerns_with_broker.relationship.F",134.956,"emmeans joint test","134.96",TRUE
+"A3.relconcerns_with_broker.history.F",6.186,"emmeans joint test","6.19",TRUE
+"A3.relconcerns_with_broker.interaction.F",0.001,"emmeans joint test","0.001",TRUE
+"C3.H1.relconcerns_with_broker.t",8.35920066577214,"emmeans pairwise","8.36",TRUE
+"C3.H3.relconcerns_with_broker.t",1.78597619494705,"emmeans pairwise","1.79",TRUE
+"C3.H3.relconcerns_with_broker.d",0.274825113533663,"effsize::cohen.d","0.275",TRUE
+"C3.H1.relconcerns_with_broker.d",1.3225130411567,"effsize::cohen.d","1.32",TRUE
+"C3.cell.relconcerns_with_broker.CC.mean",2.61711711710811,"Rmisc::summarySE","2.62",TRUE
+"C3.cell.relconcerns_with_broker.CC.sd",1.4635941586881,"Rmisc::summarySE","1.46",TRUE
+"C3.cell.relconcerns_with_broker.CD.mean",2.18357487924638,"Rmisc::summarySE",NA,NA
+"C3.cell.relconcerns_with_broker.CD.sd",1.22412598121215,"Rmisc::summarySE",NA,NA
+"C3.cell.relconcerns_with_broker.LC.mean",4.68036529679452,"Rmisc::summarySE","4.68",TRUE
+"C3.cell.relconcerns_with_broker.LC.sd",1.65219490766433,"Rmisc::summarySE","1.65",TRUE
+"C3.cell.relconcerns_with_broker.LD.mean",4.23333333327143,"Rmisc::summarySE","4.23",TRUE
+"C3.cell.relconcerns_with_broker.LD.sd",1.59946649720911,"Rmisc::summarySE","1.60",TRUE
+"L4.M1.LoyalRequestor.coef",0.939267535248412,"glm","0.94",TRUE
+"L4.M1.LoyalRequestor.or",2.55810700872891,"glm","2.56",TRUE
+"L4.M1.fit.mcf",0.131180532607325,"DescTools","0.13",TRUE
+"L4.M1.fit.cs",0.161861617477733,"DescTools","0.16",TRUE
+"L4.M2.LoyalRequestor.coef",1.09282775129622,"glm","1.09",TRUE
+"L4.M2.LoyalRequestor.or",2.98269648255521,"glm","2.98",TRUE
+"L4.M2.KnowRequestor.coef",-0.799137003210694,"glm","-0.80",TRUE
+"L4.M2.KnowRequestor.or",0.449716900940637,"glm","0.45",TRUE
+"L4.M2.LikeRequestor.coef",0.237327282674865,"glm","0.24",TRUE
+"L4.M2.LikeRequestor.or",1.26785599718226,"glm","1.27",TRUE
+"L4.M2.SemestersRequestor.coef",0.0757118851618974,"glm","0.08",TRUE
+"L4.M2.SemestersRequestor.or",1.07865175380804,"glm","1.08",TRUE
+"L4.M2.fit.mcf",0.190286090165337,"DescTools","0.19",TRUE
+"L4.M2.fit.cs",0.225958289648755,"DescTools","0.23",TRUE
+"L4.M3.LoyalRequestor.coef",0.80579304228068,"glm","0.81",TRUE
+"L4.M3.LoyalRequestor.or",2.23847099724574,"glm","2.23",FALSE
+"L4.M3.KnowRequestor.coef",-0.900709865073903,"glm","-0.90",TRUE
+"L4.M3.KnowRequestor.or",0.406281152551744,"glm","0.41",TRUE
+"L4.M3.LikeRequestor.coef",0.429435530000148,"glm","0.43",TRUE
+"L4.M3.LikeRequestor.or",1.53639003265352,"glm","1.54",TRUE
+"L4.M3.SemestersRequestor.coef",0.227610049233259,"glm","0.23",TRUE
+"L4.M3.SemestersRequestor.or",1.25559560948536,"glm","1.26",TRUE
+"L4.M3.LoyaltyHouse.coef",1.27438200402406,"glm","1.27",TRUE
+"L4.M3.LoyaltyHouse.or",3.57649047027738,"glm","3.58",TRUE
+"L4.M3.fit.mcf",0.271869218988338,"DescTools","0.27",TRUE
+"L4.M3.fit.cs",0.30645719123484,"DescTools","0.31",TRUE
+"PM2.you_grant.benev_trust_broker.ind",0.593533184966678,"lavaan","0.59",TRUE
+"PM2.you_grant.benev_trust_broker.ind#se",0.138227375876575,"lavaan","0.14",TRUE
+"PM2.you_grant.benev_trust_broker.ind#ci_low",0.32261250657111,"lavaan","0.32",TRUE
+"PM2.you_grant.benev_trust_broker.ind#ci_high",0.864453863362246,"lavaan","0.86",TRUE
+"PM2.you_grant.benev_trust_broker.ind#p",1.75569268392461e-05,"lavaan",NA,NA
+"PM2.you_grant.integ_trust_broker.ind",0.0369437368847472,"lavaan","0.04",TRUE
+"PM2.you_grant.integ_trust_broker.ind#se",0.110593131521812,"lavaan","0.11",TRUE
+"PM2.you_grant.integ_trust_broker.ind#ci_low",-0.179814817835506,"lavaan","-0.18",TRUE
+"PM2.you_grant.integ_trust_broker.ind#ci_high",0.253702291605001,"lavaan","0.25",TRUE
+"PM2.you_grant.integ_trust_broker.ind#p",0.738341137877094,"lavaan","0.738",TRUE
+"PM2.you_grant.val_align_part_broker.ind",0.414407922841836,"lavaan","0.41",TRUE
+"PM2.you_grant.val_align_part_broker.ind#se",0.107553844160969,"lavaan","0.11",TRUE
+"PM2.you_grant.val_align_part_broker.ind#ci_low",0.203606261887503,"lavaan","0.20",TRUE
+"PM2.you_grant.val_align_part_broker.ind#ci_high",0.62520958379617,"lavaan","0.63",TRUE
+"PM2.you_grant.val_align_part_broker.ind#p",0.000116666265783216,"lavaan",NA,NA
+"PM2.you_grant.relconcerns_with_broker.ind",0.400112646254882,"lavaan","0.40",TRUE
+"PM2.you_grant.relconcerns_with_broker.ind#se",0.126452346941845,"lavaan","0.13",TRUE
+"PM2.you_grant.relconcerns_with_broker.ind#ci_low",0.152270600488302,"lavaan","0.15",TRUE
+"PM2.you_grant.relconcerns_with_broker.ind#ci_high",0.647954692021462,"lavaan","0.65",TRUE
+"PM2.you_grant.relconcerns_with_broker.ind#p",0.00155543150800641,"lavaan","0.002",TRUE
+"PM2.prom_voice.benev_trust_broker.ind",0.577177509415676,"lavaan","0.58",TRUE
+"PM2.prom_voice.benev_trust_broker.ind#se",0.133397996730932,"lavaan","0.13",TRUE
+"PM2.prom_voice.benev_trust_broker.ind#ci_low",0.315722240213259,"lavaan","0.32",TRUE
+"PM2.prom_voice.benev_trust_broker.ind#ci_high",0.838632778618094,"lavaan","0.84",TRUE
+"PM2.prom_voice.benev_trust_broker.ind#p",1.5133724913019e-05,"lavaan",NA,NA
+"PM2.prom_voice.integ_trust_broker.ind",0.0584256649357452,"lavaan","0.06",TRUE
+"PM2.prom_voice.integ_trust_broker.ind#se",0.106640932768045,"lavaan","0.11",TRUE
+"PM2.prom_voice.integ_trust_broker.ind#ci_low",-0.150586722567379,"lavaan","-0.15",TRUE
+"PM2.prom_voice.integ_trust_broker.ind#ci_high",0.26743805243887,"lavaan","0.27",TRUE
+"PM2.prom_voice.integ_trust_broker.ind#p",0.583779256266297,"lavaan","0.584",TRUE
+"PM2.prom_voice.val_align_part_broker.ind",0.374606945961918,"lavaan","0.38",FALSE
+"PM2.prom_voice.val_align_part_broker.ind#se",0.101307408448936,"lavaan","0.10",TRUE
+"PM2.prom_voice.val_align_part_broker.ind#ci_low",0.176048074034915,"lavaan","0.18",TRUE
+"PM2.prom_voice.val_align_part_broker.ind#ci_high",0.573165817888922,"lavaan","0.57",TRUE
+"PM2.prom_voice.val_align_part_broker.ind#p",0.000217540296265417,"lavaan",NA,NA
+"PM2.prom_voice.relconcerns_with_broker.ind",0.332364561369882,"lavaan","0.33",TRUE
+"PM2.prom_voice.relconcerns_with_broker.ind#se",0.119726797798649,"lavaan","0.12",TRUE
+"PM2.prom_voice.relconcerns_with_broker.ind#ci_low",0.0977043497002199,"lavaan","0.10",TRUE
+"PM2.prom_voice.relconcerns_with_broker.ind#ci_high",0.567024773039544,"lavaan","0.57",TRUE
+"PM2.prom_voice.relconcerns_with_broker.ind#p",0.00550280087942268,"lavaan","0.006",TRUE
+"PM2.proh_voice.benev_trust_broker.ind",0.597821745213235,"lavaan","0.60",TRUE
+"PM2.proh_voice.benev_trust_broker.ind#se",0.147946309509111,"lavaan","0.15",TRUE
+"PM2.proh_voice.benev_trust_broker.ind#ci_low",0.307852306929762,"lavaan","0.31",TRUE
+"PM2.proh_voice.benev_trust_broker.ind#ci_high",0.887791183496709,"lavaan","0.89",TRUE
+"PM2.proh_voice.benev_trust_broker.ind#p",5.32687163541379e-05,"lavaan",NA,NA
+"PM2.proh_voice.integ_trust_broker.ind",0.112591866553572,"lavaan","0.11",TRUE
+"PM2.proh_voice.integ_trust_broker.ind#se",0.12098663726046,"lavaan","0.12",TRUE
+"PM2.proh_voice.integ_trust_broker.ind#ci_low",-0.124537585087542,"lavaan","-0.13",FALSE
+"PM2.proh_voice.integ_trust_broker.ind#ci_high",0.349721318194685,"lavaan","0.35",TRUE
+"PM2.proh_voice.integ_trust_broker.ind#p",0.352053235276951,"lavaan","0.352",TRUE
+"PM2.proh_voice.val_align_part_broker.ind",0.178996371124972,"lavaan","0.18",TRUE
+"PM2.proh_voice.val_align_part_broker.ind#se",0.0974679227877072,"lavaan","0.10",TRUE
+"PM2.proh_voice.val_align_part_broker.ind#ci_low",-0.0120372471868647,"lavaan","-0.01",TRUE
+"PM2.proh_voice.val_align_part_broker.ind#ci_high",0.370029989436809,"lavaan","0.37",TRUE
+"PM2.proh_voice.val_align_part_broker.ind#p",0.0662890013841302,"lavaan","0.066",TRUE
+"PM2.proh_voice.relconcerns_with_broker.ind",0.329882493319921,"lavaan","0.33",TRUE
+"PM2.proh_voice.relconcerns_with_broker.ind#se",0.133712744314628,"lavaan","0.13",TRUE
+"PM2.proh_voice.relconcerns_with_broker.ind#ci_low",0.0678103301892364,"lavaan","0.07",TRUE
+"PM2.proh_voice.relconcerns_with_broker.ind#ci_high",0.591954656450605,"lavaan","0.59",TRUE
+"PM2.proh_voice.relconcerns_with_broker.ind#p",0.0136212932296789,"lavaan","0.014",TRUE
+"SM2.val_align_part_broker.ind",0.468958052505437,"lavaan","0.47",TRUE
+"SM2.val_align_part_broker.ind#se",0.109626860236853,"lavaan","0.11",TRUE
+"SM2.val_align_part_broker.ind#p",1.88778333276574e-05,"lavaan",NA,NA
+"SM2.relconcerns_with_broker.ind",0.711560797626544,"lavaan","0.71",TRUE
+"SM2.relconcerns_with_broker.ind#se",0.233317451938724,"lavaan","0.23",TRUE
+"SM2.relconcerns_with_broker.ind#p",0.00229028990218083,"lavaan","0.002",TRUE
+"MED4.sim.SignedTrust.ind",0.098646367003403,"lavaan","0.10",TRUE
+"MED4.sim.SignedTrust.ind#se",0.0372120418266674,"lavaan","0.04",TRUE
+"MED4.sim.SignedTrust.ind#ci_low",0.0257121052319368,"lavaan","0.03",TRUE
+"MED4.sim.SignedTrust.ind#ci_high",0.171580628774869,"lavaan","0.17",TRUE
+"MED4.sim.SignedTrust.ind#p",0.00802714405710248,"lavaan","0.008",TRUE
+"MED4.sim.SignedRisk.ind",0.0107089006628566,"lavaan","0.01",TRUE
+"MED4.sim.SignedRisk.ind#se",0.0123710675490183,"lavaan","0.01",TRUE
+"MED4.sim.SignedRisk.ind#ci_low",-0.0135379461835315,"lavaan","-0.01",TRUE
+"MED4.sim.SignedRisk.ind#ci_high",0.0349557475092447,"lavaan","0.04",FALSE
+"MED4.sim.SignedRisk.ind#p",0.386687180481733,"lavaan","0.387",TRUE
+"MED4.ind.SignedTrust.ind",0.115326107675175,"lavaan","0.115",TRUE
+"MED4.ind.SignedTrust.ind#se",0.0409869068774878,"lavaan","0.041",TRUE
+"MED4.ind.SignedTrust.ind#ci_low",0.0349932463576019,"lavaan","0.035",TRUE
+"MED4.ind.SignedTrust.ind#ci_high",0.195658968992748,"lavaan","0.196",TRUE
+"MED4.ind.SignedTrust.ind#p",0.00489702726791852,"lavaan","0.005",TRUE
+"MED4.ind.SignedRisk.ind",0.0255039129732458,"lavaan","0.026",TRUE
+"MED4.ind.SignedRisk.ind#se",0.0244773931346173,"lavaan","0.024",TRUE
+"MED4.ind.SignedRisk.ind#ci_low",-0.0224708960060321,"lavaan","-0.022",TRUE
+"MED4.ind.SignedRisk.ind#ci_high",0.0734787219525236,"lavaan","0.073",TRUE
+"MED4.ind.SignedRisk.ind#p",0.297440672459003,"lavaan","0.297",TRUE

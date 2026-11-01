@@ -1,0 +1,202 @@
+{
+  "U15": {
+    "settings": {
+      "roster": "origin",
+      "age_rule": "origin",
+      "employ_rule": "origin",
+      "activity_def": "origin",
+      "screen8": "origin",
+      "owner_def": "origin",
+      "planb_def": "origin",
+      "bage_def": "origin",
+      "parttime_var": "pt_common_employees_women",
+      "leave_sq_std": "origin",
+      "std_method": "U15",
+      "leave_lag": 1,
+      "childcare_var": "childcare_interp",
+      "cov": "indep",
+      "status_sample": "origin",
+      "growth_def": "origin",
+      "sole_def": "origin",
+      "m5_reml": false,
+      "r2_fert": false,
+      "n01": false
+    },
+    "note": null,
+    "standardization_unit": "country means over surveys of the M3 stage-1 sample",
+    "n_units": 23,
+    "n_surveys_m3_stage1": 139,
+    "n_rows_m3_stage1": 342734,
+    "constants": {
+      "leave": {
+        "mean": 19.9457323288494,
+        "sd": 11.6446043991259
+      },
+      "childcare": {
+        "mean": 0.572013871635611,
+        "sd": 0.373911297458032
+      },
+      "parttime": {
+        "mean": 28.3084952467189,
+        "sd": 11.7962195105939
+      },
+      "gdp": {
+        "mean": 0.959184000505269,
+        "sd": 0.0425758564004153
+      },
+      "unemp": {
+        "mean": 6.88016273850932,
+        "sd": 3.31627495860955
+      },
+      "epl": {
+        "mean": 2.03855837109731,
+        "sd": 0.931296457198704
+      },
+      "status": {
+        "mean": 0.670556926152713,
+        "sd": 0.0779891244221306
+      },
+      "wmgr": {
+        "mean": 30.4211180124224,
+        "sd": 6.48915012093863
+      },
+      "fert": {
+        "mean": 1.651780363647,
+        "sd": 0.268506712367282
+      }
+    },
+    "leave_sq_rule": "(standardized leave)^2, not restandardized",
+    "centering": {
+      "M3": {
+        "age_mean": 38.5139291695604,
+        "bage_mean": null,
+        "n_obs": 342734
+      },
+      "M4": {
+        "age_mean": 40.9157677664975,
+        "bage_mean": 1.79731604016769,
+        "n_obs": 31520
+      },
+      "M5": {
+        "age_mean": 41.0207280080891,
+        "bage_mean": 1.82160872985415,
+        "n_obs": 33626
+      },
+      "M6": {
+        "age_mean": 41.0183238209672,
+        "bage_mean": 1.82264637420242,
+        "n_obs": 29961
+      },
+      "M7": {
+        "age_mean": 41.0134995439344,
+        "bage_mean": 1.82801189641305,
+        "n_obs": 32890
+      },
+      "M8": {
+        "age_mean": 41.0479843561975,
+        "bage_mean": 1.87633751905908,
+        "n_obs": 19944
+      }
+    }
+  },
+  "U16": {
+    "settings": {
+      "roster": "origin",
+      "age_rule": "origin",
+      "employ_rule": "origin",
+      "activity_def": "origin",
+      "screen8": "origin",
+      "owner_def": "origin",
+      "planb_def": "origin",
+      "bage_def": "origin",
+      "parttime_var": "pt_common_employees_women",
+      "leave_sq_std": "origin",
+      "std_method": "U16",
+      "leave_lag": 1,
+      "childcare_var": "childcare_interp",
+      "cov": "indep",
+      "status_sample": "origin",
+      "growth_def": "origin",
+      "sole_def": "origin",
+      "m5_reml": false,
+      "r2_fert": false,
+      "n01": false
+    },
+    "note": null,
+    "standardization_unit": "individual rows of the M3 estimation sample",
+    "n_units": 342734,
+    "n_surveys_m3_stage1": 139,
+    "n_rows_m3_stage1": 342734,
+    "constants": {
+      "leave": {
+        "mean": 18.2190600301894,
+        "sd": 11.9430347182623
+      },
+      "childcare": {
+        "mean": 0.621756757427064,
+        "sd": 0.317536508162967
+      },
+      "parttime": {
+        "mean": 29.3152719958381,
+        "sd": 10.6534996825431
+      },
+      "gdp": {
+        "mean": 0.965706493402776,
+        "sd": 0.0256909884057701
+      },
+      "unemp": {
+        "mean": 6.99501632386962,
+        "sd": 2.56244086942899
+      },
+      "epl": {
+        "mean": 1.94927413289193,
+        "sd": 0.724303826629969
+      },
+      "status": {
+        "mean": 0.669717834162493,
+        "sd": 0.0785892821332104
+      },
+      "wmgr": {
+        "mean": 31.6326859897172,
+        "sd": 5.50687840133987
+      },
+      "fert": {
+        "mean": 1.63633141088013,
+        "sd": 0.244300357959829
+      }
+    },
+    "leave_sq_rule": "(standardized leave)^2, not restandardized",
+    "centering": {
+      "M3": {
+        "age_mean": 38.5139291695604,
+        "bage_mean": null,
+        "n_obs": 342734
+      },
+      "M4": {
+        "age_mean": 40.9157677664975,
+        "bage_mean": 1.79731604016769,
+        "n_obs": 31520
+      },
+      "M5": {
+        "age_mean": 41.0207280080891,
+        "bage_mean": 1.82160872985415,
+        "n_obs": 33626
+      },
+      "M6": {
+        "age_mean": 41.0183238209672,
+        "bage_mean": 1.82264637420242,
+        "n_obs": 29961
+      },
+      "M7": {
+        "age_mean": 41.0134995439344,
+        "bage_mean": 1.82801189641305,
+        "n_obs": 32890
+      },
+      "M8": {
+        "age_mean": 41.0479843561975,
+        "bage_mean": 1.87633751905908,
+        "n_obs": 19944
+      }
+    }
+  }
+}

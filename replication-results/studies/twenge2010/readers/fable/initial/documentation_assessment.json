@@ -1,0 +1,161 @@
+{
+ "choices": [
+  {
+   "choice": "Time-lag design using three cross-sections 15 years apart from a national school survey",
+   "commonness": "common",
+   "justified_in_article": true,
+   "locator": {
+    "doc_id": "P1",
+    "pdf_page": 10,
+    "section_or_table": "Method"
+   }
+  },
+  {
+   "choice": "Use of Forms 3 and 4 only; no sample exclusions",
+   "commonness": "common",
+   "justified_in_article": true,
+   "locator": {
+    "doc_id": "P1",
+    "pdf_page": 10,
+    "section_or_table": "Method"
+   }
+  },
+  {
+   "choice": "No sampling weights and no design-based variance adjustment",
+   "commonness": "common",
+   "justified_in_article": false,
+   "locator": {
+    "doc_id": "P1",
+    "pdf_page": 9,
+    "section_or_table": "Method"
+   }
+  },
+  {
+   "choice": "Missing-data handling not described",
+   "commonness": "common",
+   "justified_in_article": false,
+   "locator": {
+    "doc_id": "P1",
+    "pdf_page": 10,
+    "section_or_table": "Method"
+   }
+  },
+  {
+   "choice": "Dropping two two-item factors for alpha < .50 and re-fitting a five-factor model",
+   "commonness": "common",
+   "justified_in_article": true,
+   "locator": {
+    "doc_id": "P1",
+    "pdf_page": 10,
+    "section_or_table": "Preliminary Analyses"
+   }
+  },
+  {
+   "choice": "Not scaling the Form 3 work-centrality items because of poor CFA fit and low alpha; item-level t tests instead",
+   "commonness": "common",
+   "justified_in_article": true,
+   "locator": {
+    "doc_id": "P1",
+    "pdf_page": 10,
+    "section_or_table": "Preliminary Analyses"
+   }
+  },
+  {
+   "choice": "Multigroup invariance sequence with delta CFI .002 criterion (Meade et al.) preferred over chi-square difference",
+   "commonness": "common",
+   "justified_in_article": true,
+   "locator": {
+    "doc_id": "P1",
+    "pdf_page": 15,
+    "section_or_table": "Primary Analyses"
+   }
+  },
+  {
+   "choice": "Partial scalar invariance with six freed intercepts including one of the two altruistic items",
+   "commonness": "common",
+   "justified_in_article": false,
+   "locator": {
+    "doc_id": "P1",
+    "pdf_page": 13,
+    "section_or_table": "Table 1 footnote a"
+   }
+  },
+  {
+   "choice": "Reporting latent means on the item metric for all groups with LISREL SEs and 95% CIs; effect sizes d without a stated formula",
+   "commonness": "rare",
+   "justified_in_article": false,
+   "locator": {
+    "doc_id": "P1",
+    "pdf_page": 13,
+    "section_or_table": "Table 1 note"
+   }
+  },
+  {
+   "choice": "Significance of latent mean differences judged from effect sizes/CIs rather than reported pairwise tests",
+   "commonness": "rare",
+   "justified_in_article": true,
+   "locator": {
+    "doc_id": "P1",
+    "pdf_page": 15,
+    "section_or_table": "Primary Analyses"
+   }
+  },
+  {
+   "choice": "Item-level independent t tests with stars; variance assumption and n not stated",
+   "commonness": "default",
+   "justified_in_article": false,
+   "locator": {
+    "doc_id": "P1",
+    "pdf_page": 13,
+    "section_or_table": "Table 1 note"
+   }
+  }
+ ],
+ "structural_counts": {
+  "n_open_decisions": 9,
+  "n_undocumented_items": 8,
+  "undocumented_items_list": [
+   "missing-data rule",
+   "weighting",
+   "d formula and standardizer",
+   "SD definition in scale rows",
+   "latent mean identification/scaling",
+   "CFA estimator",
+   "t-test variant and item-level n",
+   "assignment of dropped items to security/influence and of Form 3 items to centrality/stability"
+  ]
+ },
+ "unusualness_rating": "2 - The design and invariance workflow are conventional for the field; the unusual elements are reporting latent means on the raw item metric with d values whose formula is unstated, judging pairwise significance from CIs/effect sizes without pairwise tests, and text/table discrepancies (5-point vs 4-point scale; reliabilities said to be in Table 1 but absent).",
+ "documentation_scores": {
+  "specificity": "3",
+  "precision": "3",
+  "exhaustiveness": "2",
+  "rationale": "Items, forms, years, factor assignments, freed intercepts and software are specified; missing data, weights, estimator, d formula, SD definition and item-level n are not; Table 1 reproduces all means/SDs/percentages/t and Table 2 all fit statistics, but alphas for retained scales are promised and absent, and the Form 4 response scale is misdescribed."
+ },
+ "wider_space": [
+  {
+   "axis": "Alternative generation cutoffs / additional survey years (e.g., all years 1976-2006, linear trend models)",
+   "levels": [
+    "three fixed years (article)",
+    "all available years with year as continuous predictor"
+   ],
+   "note": "off unless explicitly included before execution"
+  },
+  {
+   "axis": "Observed composite scoring instead of latent means for all five scales",
+   "levels": [
+    "latent (article)",
+    "unit-weighted item mean"
+   ],
+   "note": "off unless explicitly included before execution; see AX04.L1 which affects only the standardizer"
+  },
+  {
+   "axis": "Design-based inference (school clusters) with external PSU structure",
+   "levels": [
+    "none (article)",
+    "approximate via region/self-representing strata"
+   ],
+   "note": "off; no cluster identifiers in public files"
+  }
+ ]
+}

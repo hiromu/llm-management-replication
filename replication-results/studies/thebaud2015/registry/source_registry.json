@@ -1,0 +1,2003 @@
+{
+ "schema_version": 1,
+ "study_id": "thebaud2015",
+ "generated_utc": "2026-10-27T15:02:52Z",
+ "generated_by": "source-acquisition role (fresh context), registry/scripts/build_registry.py",
+ "paper_countries": [
+  "Australia",
+  "Austria",
+  "Belgium",
+  "Canada",
+  "Czech Republic",
+  "Denmark",
+  "Finland",
+  "France",
+  "Germany",
+  "Greece",
+  "Iceland",
+  "Ireland",
+  "Italy",
+  "Japan",
+  "Netherlands",
+  "New Zealand",
+  "Norway",
+  "Poland",
+  "Portugal",
+  "Spain",
+  "Sweden",
+  "Switzerland",
+  "United Kingdom",
+  "United States"
+ ],
+ "paper_survey_years": "2001-2008 (143 country-years per Online Appendix Table A1)",
+ "acquisition_log": "registry/acquisition_log.jsonl (every request incl. failures; first 7 rows are a local tooling failure of python urllib under -I, not provider failures)",
+ "sources": [
+  {
+   "source_id": "icpsr20320",
+   "role_in_paper": "Individual-level data for all models (pp. 679-685; Online Appendix tables A1-A3): entrepreneurial activity (nascent or established owner-manager), female, age and age squared, post-secondary degree, labour-force restriction and employment status, perceptions (skills, fear of failure, knows entrepreneur; supplementary model 3), owner subsample outcomes (no-better-choices motive, business size from current jobs, growth aspiration from expected jobs in five years, product new to all customers, technology less than five years old), ownership share (sole owner), business age (first year of payments to owners); survey-level control 'social status of entrepreneurship' (country-year mean of the status item, p. 683-684). The article does not name the GEM release or distributor.",
+   "provider": "Inter-university Consortium for Political and Social Research (ICPSR), distributor; principal investigator Paul D. Reynolds; originating programme Global Entrepreneurship Monitor (GEM)",
+   "title": "Global Entrepreneurship Monitor [GEM]: Adult Population Survey Data Set, 1998-2017",
+   "doi": "10.3886/ICPSR20320.v6",
+   "url_or_query": "https://www.icpsr.umich.edu/web/ICPSR/studies/20320 (downloaded by the user; no agent access)",
+   "acquisition": {
+    "mode": "user_supplied_by_hand",
+    "user_download_date": "2026-10-27 (TermsOfUse.html states the user agreed to the terms on 2026-10-27 pursuant to the download); exact time not recorded; file modification times in the bundle are 2026-10-27 09:41-10:03 local time (UTC+9), i.e. about 00:41-01:03 UTC, indicative only",
+    "validated_utc": "2026-10-27T15:02:49Z"
+   },
+   "licence_terms": "ICPSR Terms of Use (TermsOfUse.html, agreed by the user on 2026-10-27): research/statistical use only; no re-identification; no redistribution without ICPSR written agreement except among authorized users at member institutions; cite the dataset; report publications to ICPSR bibliography; restriction on sharing with listed countries of concern. Implication for this study: keep data inside the study folder; never copy to reader staging; implementers may receive derived numeric extracts only within the project.",
+   "release_vintage": "ICPSR 20320 V6, 2022-07-12 (data/codebook added 2021-04-12; harmonized file version 4.01 per PI codebook dated 2020-04-01). Paper (published 2015, survey years 2001-2008) used an unnamed GEM release; necessarily an earlier vintage (GEM public annual files and/or ICPSR V1-V3). Harmonization, age imputation and transformed variables in V6 may differ from what the author used.",
+   "files": [
+    {
+     "path": "data/supplied/ICPSR_20320/20320-descriptioncitation.html",
+     "bytes": 11218,
+     "sha256": "a10e0d89aa91db995e1d94f82d1fb9db4a93c6f3e0e0ed184065328bbd2f3d75"
+    },
+    {
+     "path": "data/supplied/ICPSR_20320/20320-manifest.txt",
+     "bytes": 3518,
+     "sha256": "7f6cffdc68b40fe7123eb22a9293b5bfb614b6b61e26749cf3a18353636f4d72"
+    },
+    {
+     "path": "data/supplied/ICPSR_20320/20320-related_literature.txt",
+     "bytes": 54440,
+     "sha256": "522ac6e893b881e68a28f5e3cad42199610bc65d6f7b68c98baad27f7ed3b37c"
+    },
+    {
+     "path": "data/supplied/ICPSR_20320/TermsOfUse.html",
+     "bytes": 7139,
+     "sha256": "9ee3bde4cedcecfb61bd983d96f57ad90df0eb0614b246abd03272869f708d83"
+    },
+    {
+     "path": "data/supplied/ICPSR_20320/DS0001/20320-0001-Codebook-ICPSR.pdf",
+     "bytes": 1954669,
+     "sha256": "e54631d01f13aae28777b3d3355c068f584be2c29e688c54c5b7d47b2a89cecb"
+    },
+    {
+     "path": "data/supplied/ICPSR_20320/DS0001/20320-0001-Codebook-PI.pdf",
+     "bytes": 13358109,
+     "sha256": "45da1471f68e1c44ad1e3ea42b1156b3732970b2d7b6112ecaa20d1a2c129f42"
+    },
+    {
+     "path": "data/supplied/ICPSR_20320/DS0001/20320-0001-Data.sav",
+     "bytes": 597173370,
+     "sha256": "c34177c43db423be01d8c60c493b7c21614e01e299d188d8984ad1d2adc1b974"
+    }
+   ],
+   "status": "partially_available",
+   "status_reason": "All 143 paper country-years are present and nearly all needed variables exist, but (1) the status item NBSTATUS (input to the social-status control) has no valid responses in survey years 2001 and 2002 for any country; (2) GEMWORK and GEMEDUC have no valid responses for France 2003, a paper survey-year; see registry/validation/README.md.",
+   "integrity": "SHA-256 of all 7 files equal the inventory in data/supplied/supplied_sources.json; MD5 of Data.sav, Codebook-ICPSR.pdf and Codebook-PI.pdf equal the ICPSR manifest. Manifest lists other formats (dta, rda, stc, tsv, txt, setup files) and 20320-descriptioncitation.pdf that are not in the bundle; not needed (the .sav suffices; the citation page is present as HTML).",
+   "failed_attempts": [],
+   "missing_from_bundle_needed_from_user": [],
+   "notes": "Read-only; not copied. Loads in pyreadstat 1.3.3 and R haven 2.5.5 with identical shape (2,796,985 x 97) and identical fingerprints on 10 variables (WEIGHT sums differ only at 1e-6 float rounding). Missing values are not declared as SPSS user-missing; they are system-missing plus labelled codes (e.g. 8/9, 9999, 999999...) documented in value labels."
+  },
+  {
+   "source_id": "gem_aps_original",
+   "role_in_paper": "Checked as a possible original-provider source for the social-status item in survey years 2001-2002 (absent from ICPSR V6). Result: the public GEM 2001 and 2002 APS individual files contain a variable named nbstatus but it has no non-missing values; the 2002 national-level file has no status indicator. Not a substitute for any paper variable; retained as evidence and as an original-vintage cross-check of 2001-2002 individual records.",
+   "provider": "Global Entrepreneurship Monitor consortium / Global Entrepreneurship Research Association (gemconsortium.org)",
+   "url_or_query": "POST https://www.gemconsortium.org/download@file with id=48777 (2001 APS individual), id=48778 (2002 APS individual), id=47183 (2002 APS national level); public download buttons on https://www.gemconsortium.org/data/sets?id=aps; no login or terms dialog",
+   "licence_terms": "Public download; GEM states full APS datasets are made public three years after collection. No explicit licence text was displayed with the download; cite GEM as source. No login, registration or terms acceptance performed.",
+   "release_vintage": "Zip files dated 2014-07/08 (server names 1407424654GEM_2001..., 1407424562GEM_2002..., 1407423885GEM_2002...). Closer to the paper's era than ICPSR V6.",
+   "status": "available",
+   "sourced_alternative": true,
+   "sourced_alternative_reason": "Attempted to fill the 2001-2002 status-item gap from the original provider; it does not fill it.",
+   "notes": "Zips saved unmodified; extracted copies in unzipped_* subfolders (extraction only). pyreadstat fails on these .sav files ('multi-response set record is invalid'); R foreign::read.spss reads them. The acquisition log rows for these three downloads show mangled file names (header-parsing bug in fetch_post.sh); files were renamed to the server-supplied Content-Disposition names without content change; sha256 below is authoritative.",
+   "files": [
+    {
+     "path": "data/raw/gem_aps_original/1407423885GEM_2002_APS_Global_National_Level_Data.zip",
+     "bytes": 47171,
+     "sha256": "f265f2ee2e417577a2c72bde03827ac1315d7cb2aea123d40de81bf32be888c4"
+    },
+    {
+     "path": "data/raw/gem_aps_original/1407424562GEM_2002_APS_Global_Individual_Level_Data.zip",
+     "bytes": 5126437,
+     "sha256": "a94657d13449e7bc90cd02be1dded06967af623d960ffc62e26bfa4612daf620"
+    },
+    {
+     "path": "data/raw/gem_aps_original/1407424654GEM_2001_APS_Global_Individual_Level_Data.zip",
+     "bytes": 2585534,
+     "sha256": "5260c3f0871181a5aa432f8f12cbe167864364329e1cbe82703df25b0d68134e"
+    },
+    {
+     "path": "data/raw/gem_aps_original/unzipped_2001_individual/GEM 2001 APS Global Individual Level Data.sav",
+     "bytes": 15245510,
+     "sha256": "1c82305c1e21d736ea06a77f27645f93361204d192041ce9bca5229e400f737a"
+    },
+    {
+     "path": "data/raw/gem_aps_original/unzipped_2002_individual/GEM 2002 APS Global Individual Level Data.sav",
+     "bytes": 30340487,
+     "sha256": "683fc43d6fa28369a663dae3a316ae314cf5108a0c1fb3ffdaec49f2b359d713"
+    },
+    {
+     "path": "data/raw/gem_aps_original/unzipped_2002_national/GEM 2002 APS Global National Level Data/GEM 2002 APS Global National Level Data.sav",
+     "bytes": 87752,
+     "sha256": "b91a69d6a65838926584cab3bf675b686936976719bd47bfb47abc0b117dd76c"
+    }
+   ],
+   "acquisition": {
+    "mode": "agent_download",
+    "utc_first": "2026-10-27T14:55:52Z",
+    "utc_last": "2026-10-27T14:55:55Z",
+    "requests": [
+     {
+      "url": "https://www.gemconsortium.org/download@file",
+      "post_form": "id=48777",
+      "utc_time": "2026-10-27T14:55:52Z",
+      "http_status": "200",
+      "final_url": "https://www.gemconsortium.org/download@file",
+      "bytes": 2585534,
+      "sha256": "5260c3f0871181a5aa432f8f12cbe167864364329e1cbe82703df25b0d68134e",
+      "file": "data/raw/gem_aps_original/1407424654GEM_200"
+     },
+     {
+      "url": "https://www.gemconsortium.org/download@file",
+      "post_form": "id=48778",
+      "utc_time": "2026-10-27T14:55:54Z",
+      "http_status": "200",
+      "final_url": "https://www.gemconsortium.org/download@file",
+      "bytes": 5126437,
+      "sha256": "a94657d13449e7bc90cd02be1dded06967af623d960ffc62e26bfa4612daf620",
+      "file": "data/raw/gem_aps_original/content-disposition: attachment; filename=\"1407424562GEM_2002_APS_Global_Individual_Level_Data.zip\""
+     },
+     {
+      "url": "https://www.gemconsortium.org/download@file",
+      "post_form": "id=47183",
+      "utc_time": "2026-10-27T14:55:55Z",
+      "http_status": "200",
+      "final_url": "https://www.gemconsortium.org/download@file",
+      "bytes": 47171,
+      "sha256": "f265f2ee2e417577a2c72bde03827ac1315d7cb2aea123d40de81bf32be888c4",
+      "file": "data/raw/gem_aps_original/content-disposition: attachment; filename=\"1407423885GEM_2002_APS_Global_National_Level_Data.zip\""
+     }
+    ]
+   },
+   "failed_attempts": []
+  },
+  {
+   "source_id": "cepr_parental_leave",
+   "role_in_paper": "Paid leave for mothers in FTE weeks (p. 681-682, footnote 6): 'Ray, 2008' and 'Ray, Gornick, and Schmitt, 2010' cited for weeks of full-time-equivalent paid leave (duration x wage replacement rate), 21 countries.",
+   "provider": "Center for Economic and Policy Research (CEPR), Washington DC; archived copies from the Internet Archive Wayback Machine",
+   "url_or_query": "Original URLs http://www.cepr.net/documents/publications/parental-app_2008_09.pdf (Ray 2008, 'A Detailed Look at Parental Leave Policies in 21 OECD Countries', Sept 2008), .../parental_2008_09.pdf (Ray, Gornick & Schmitt 2008, 'Parental Leave Policies in 21 Countries: Assessing Generosity and Gender Equality', CEPR report), .../parental-summary-2008-09.pdf (one-page summary); retrieved as raw archived bytes via https://web.archive.org/web/<timestamp>id_/<original URL> (captures 2008-10-23 and 2010-10-17)",
+   "licence_terms": "Publicly released CEPR reports; no licence statement found; documentary use. The 2010 Journal of European Social Policy article (Ray, Gornick & Schmitt 2010) is paywalled and was not acquired; the 2008 CEPR report is its public working-paper version.",
+   "release_vintage": "Ray (2008) and the 2008 CEPR report match the paper's cited Ray (2008); the JESP 2010 article version (cited) not acquired - possible minor revisions between versions.",
+   "status": "partially_available",
+   "status_reason": "Ray 2008 obtained; JESP 2010 article version not obtained (paywalled). Direct cepr.net download blocked by a Cloudflare browser challenge (not bypassed); archived originals used. Covers 21 of the paper's 24 countries; Czech Republic, Iceland and Poland do not appear in either report (text check); for these the ILO and OECD sources are the only acquired leave sources.",
+   "notes": "These are source publications containing printed policy parameters; they are permitted public primary records (not the focal article). The paper says it 'used multiple sources to create an FTE paid-leave database' with policy changes for 8 countries lagged one year; this construction is not reproducible from a single file.",
+   "files": [
+    {
+     "path": "data/raw/cepr_parental_leave/parental-app_2008_09.pdf",
+     "bytes": 387193,
+     "sha256": "b4abb43c38ffb3c9954ea50900de5d85db891c21325890294caab1889bbe4795"
+    },
+    {
+     "path": "data/raw/cepr_parental_leave/parental-summary-2008-09.pdf",
+     "bytes": 61376,
+     "sha256": "49cffabe868ff84c3aebfacc279681440f7f2e2c21ae82779e5419256e98b304"
+    },
+    {
+     "path": "data/raw/cepr_parental_leave/parental_2008_09.pdf",
+     "bytes": 290833,
+     "sha256": "354234d9a8ef59ae7b41cef10a38d8a3fb64b7dff36d04a97cda2d300321a521"
+    }
+   ],
+   "acquisition": {
+    "mode": "agent_download",
+    "utc_first": "2026-10-27T14:45:33Z",
+    "utc_last": "2026-10-27T14:45:37Z",
+    "requests": [
+     {
+      "url": "https://web.archive.org/web/20101017203049id_/http://www.cepr.net/documents/publications/parental-app_2008_09.pdf",
+      "post_form": null,
+      "utc_time": "2026-10-27T14:45:33Z",
+      "http_status": "200",
+      "final_url": "https://web.archive.org/web/20101017203049id_/http://www.cepr.net/documents/publications/parental-app_2008_09.pdf",
+      "bytes": 387193,
+      "sha256": "b4abb43c38ffb3c9954ea50900de5d85db891c21325890294caab1889bbe4795",
+      "file": "data/raw/cepr_parental_leave/parental-app_2008_09.pdf"
+     },
+     {
+      "url": "https://web.archive.org/web/20081023184120id_/http://www.cepr.net/documents/publications/parental_2008_09.pdf",
+      "post_form": null,
+      "utc_time": "2026-10-27T14:45:36Z",
+      "http_status": "200",
+      "final_url": "https://web.archive.org/web/20081023184120id_/http://www.cepr.net/documents/publications/parental_2008_09.pdf",
+      "bytes": 290833,
+      "sha256": "354234d9a8ef59ae7b41cef10a38d8a3fb64b7dff36d04a97cda2d300321a521",
+      "file": "data/raw/cepr_parental_leave/parental_2008_09.pdf"
+     },
+     {
+      "url": "https://web.archive.org/web/20101017203030id_/http://www.cepr.net/documents/publications/parental-summary-2008-09.pdf",
+      "post_form": null,
+      "utc_time": "2026-10-27T14:45:37Z",
+      "http_status": "200",
+      "final_url": "https://web.archive.org/web/20101017203030id_/http://www.cepr.net/documents/publications/parental-summary-2008-09.pdf",
+      "bytes": 61376,
+      "sha256": "49cffabe868ff84c3aebfacc279681440f7f2e2c21ae82779e5419256e98b304",
+      "file": "data/raw/cepr_parental_leave/parental-summary-2008-09.pdf"
+     }
+    ]
+   },
+   "failed_attempts": [
+    {
+     "url": "https://cepr.net/documents/publications/parental_app_2008_09.pdf",
+     "post_form": null,
+     "utc_time": "2026-10-27T14:45:33Z",
+     "http_status": "403",
+     "error": null,
+     "note": null
+    }
+   ]
+  },
+  {
+   "source_id": "ilo_travail_maternity",
+   "role_in_paper": "Paid leave for mothers (p. 681-682): 'ILO, 2012, Maternity protection database' (ILO Conditions of Work and Employment Programme, TRAVAIL), used as one of multiple sources for the FTE paid-leave database.",
+   "provider": "International Labour Organization (ILO) TRAVAIL legal databases, Maternity protection; archived copies from the Internet Archive Wayback Machine",
+   "url_or_query": "Cited URL http://www.ilo.org/travaildatabase/servlet/maternityprotection now 404; database discontinued at ilo.org/dyn/travail (404). Retrieved archived country reports: https://web.archive.org/web/<ts>id_/http://www.ilo.org:80/dyn/travail/travmain.sectionReport1?p_lang=en&p_countries=<ISO2>&p_sc_id=2000&p_year=<2009|2011>&p_structure=3 (fallback for 2011: ...&p_print=Y capture of 2016-03-12)",
+   "licence_terms": "ILO web content; documentary use; no login.",
+   "release_vintage": "Database editions labelled 2009 (captures 2010-01 and 2012-08) and 2011 (captures 2012-08-25; Belgium, Ireland, Netherlands from 2016-03-12 print captures). The paper cites ILO 2012 (consistent with the 2011 edition as online in 2012).",
+   "status": "partially_available",
+   "status_reason": "Substantive 2011-edition reports for 21/24 countries (missing Canada, France, Poland: no archived capture). 2009-edition reports substantive for 20/24 (Czech Republic, Greece, Poland captures are empty shells; Portugal not captured). Poland has no substantive report in either edition.",
+   "notes": "Archived HTML pages saved unmodified. Each page includes ILO site navigation text; country content follows the country list.",
+   "files": [
+    {
+     "path": "data/raw/ilo_travail_maternity/travail_maternity_2009_AT.html",
+     "bytes": 58158,
+     "sha256": "f2b7c6be5324a869e1d82bd3dba9e7e05238d98ce8ce2be7d7b7d46da13fea40"
+    },
+    {
+     "path": "data/raw/ilo_travail_maternity/travail_maternity_2009_AU.html",
+     "bytes": 49965,
+     "sha256": "31acd333b3ecd3f0736ac71de9632c679d414fa32468b2119be0ad1b4a4a70be"
+    },
+    {
+     "path": "data/raw/ilo_travail_maternity/travail_maternity_2009_BE.html",
+     "bytes": 60724,
+     "sha256": "1e37c96deab0a29a46012ee790e3fe72a5449f01dbf1ab3fde8c0c784e43fef9"
+    },
+    {
+     "path": "data/raw/ilo_travail_maternity/travail_maternity_2009_CA.html",
+     "bytes": 62538,
+     "sha256": "3e9adf79a7782a980d57bf12057b5fbd79224ec88e65d0994679080ea08f5bb8"
+    },
+    {
+     "path": "data/raw/ilo_travail_maternity/travail_maternity_2009_CH.html",
+     "bytes": 48812,
+     "sha256": "c8e1280c634b87f5fb8c066b4043e60b432978d86e4df25087f8f61ab8523d7b"
+    },
+    {
+     "path": "data/raw/ilo_travail_maternity/travail_maternity_2009_CZ.html",
+     "bytes": 25826,
+     "sha256": "e1e82395adf527a07d9063093d265442638fefd81f768a7aa8a9e881a942267e"
+    },
+    {
+     "path": "data/raw/ilo_travail_maternity/travail_maternity_2009_DE.html",
+     "bytes": 61495,
+     "sha256": "33a59131b18ab735d6fcbdefc4805ab369730806199fb156f74f34a6272ae849"
+    },
+    {
+     "path": "data/raw/ilo_travail_maternity/travail_maternity_2009_DK.html",
+     "bytes": 58391,
+     "sha256": "468699bf42bf58c3c4bbdeb61372d619f9c17b9e7deeeef0ad76af2e94a0f188"
+    },
+    {
+     "path": "data/raw/ilo_travail_maternity/travail_maternity_2009_ES.html",
+     "bytes": 47022,
+     "sha256": "b8415e9f2f963300aef12813f64fe66d5cf3958854aad66763c544a2636fa8c8"
+    },
+    {
+     "path": "data/raw/ilo_travail_maternity/travail_maternity_2009_FI.html",
+     "bytes": 55297,
+     "sha256": "d7eb703675ab23d8c3ea027b735a082a76625912aabb827adebb1d70577e39a8"
+    },
+    {
+     "path": "data/raw/ilo_travail_maternity/travail_maternity_2009_FR.html",
+     "bytes": 71267,
+     "sha256": "fc9f1afe51cee7d385ce0406f0473939e33cabaac9a96639caea878efcb24393"
+    },
+    {
+     "path": "data/raw/ilo_travail_maternity/travail_maternity_2009_GB.html",
+     "bytes": 59938,
+     "sha256": "dffd4e1564f369c0b9ffcb982b6029874daf3eec8fdfd39bc9a385571711fc10"
+    },
+    {
+     "path": "data/raw/ilo_travail_maternity/travail_maternity_2009_GR.html",
+     "bytes": 25875,
+     "sha256": "0df03b5f3a705e412bc50d1974b9f4a38f0ef014205fd4ec9daf669a330fe02e"
+    },
+    {
+     "path": "data/raw/ilo_travail_maternity/travail_maternity_2009_IE.html",
+     "bytes": 61401,
+     "sha256": "214cb0944e923bd16589af6de1fc26e7f9019aedca22310b3a5469321227daaa"
+    },
+    {
+     "path": "data/raw/ilo_travail_maternity/travail_maternity_2009_IS.html",
+     "bytes": 51155,
+     "sha256": "07830f2afe8448e952fb8381220daf6b6eb8c7fd14bf208efd1f5c56379d5acc"
+    },
+    {
+     "path": "data/raw/ilo_travail_maternity/travail_maternity_2009_IT.html",
+     "bytes": 58458,
+     "sha256": "184dcab530e68f29cdd8705fa169750b7c1615e2ca7d7c498e2a19adf2fcafce"
+    },
+    {
+     "path": "data/raw/ilo_travail_maternity/travail_maternity_2009_JP.html",
+     "bytes": 48194,
+     "sha256": "b16536cb062ed9104b0896f7386563822beeb957a5a5d62ea1eca659b9ebdf2b"
+    },
+    {
+     "path": "data/raw/ilo_travail_maternity/travail_maternity_2009_NL.html",
+     "bytes": 51382,
+     "sha256": "aa02ab5deab3bdf2097ea083454b0947807979370635daa160135acad3a80fd7"
+    },
+    {
+     "path": "data/raw/ilo_travail_maternity/travail_maternity_2009_NO.html",
+     "bytes": 54221,
+     "sha256": "4edacdf9ba73f7d9352669ef0f870565cb4537ea815d054d8b68820f441a299e"
+    },
+    {
+     "path": "data/raw/ilo_travail_maternity/travail_maternity_2009_NZ.html",
+     "bytes": 44285,
+     "sha256": "53924a46417cb92ddef6cf32df55768b6b85d83ae3b148c233c3a9bd5d7ae01d"
+    },
+    {
+     "path": "data/raw/ilo_travail_maternity/travail_maternity_2009_PL.html",
+     "bytes": 28045,
+     "sha256": "dd4d8605f221d69bc24c4b8db720260178a8b6206eeb9ce222ca12b5f3518646"
+    },
+    {
+     "path": "data/raw/ilo_travail_maternity/travail_maternity_2009_SE.html",
+     "bytes": 46364,
+     "sha256": "fb001305b12b7ad7748b78005e7acc839bb49eaa9ae616d067108f83fd7d9556"
+    },
+    {
+     "path": "data/raw/ilo_travail_maternity/travail_maternity_2009_US.html",
+     "bytes": 48117,
+     "sha256": "0c6433045975f3cf40848cf9dc885e036850b213d41566d84deb8c2f815bfe67"
+    },
+    {
+     "path": "data/raw/ilo_travail_maternity/travail_maternity_2011_AT.html",
+     "bytes": 92352,
+     "sha256": "25a9d7788f74d98825264f903a7d3b3d01abeda7ec7edcd287c5f72aa8c2259d"
+    },
+    {
+     "path": "data/raw/ilo_travail_maternity/travail_maternity_2011_AU.html",
+     "bytes": 61219,
+     "sha256": "7df9445dfc8d68b6b73cf4d338249c0b866bc68e77bc63fe4fb497b1238cbd19"
+    },
+    {
+     "path": "data/raw/ilo_travail_maternity/travail_maternity_2011_BE.html",
+     "bytes": 72270,
+     "sha256": "9d6ed2fbefd0ab81cbe3c926b06f267723f3e354c0f2e83426e5f6ddc32fb9de"
+    },
+    {
+     "path": "data/raw/ilo_travail_maternity/travail_maternity_2011_CH.html",
+     "bytes": 68902,
+     "sha256": "7caaf3d4d9aafe622c5f98d3d38be086ba7a82e84c22494aba99f994ff3a6cf2"
+    },
+    {
+     "path": "data/raw/ilo_travail_maternity/travail_maternity_2011_CZ.html",
+     "bytes": 87930,
+     "sha256": "bd794c1e463c0b2b818e913f1c2874d420b89a86080e213bff931f19b749351a"
+    },
+    {
+     "path": "data/raw/ilo_travail_maternity/travail_maternity_2011_DE.html",
+     "bytes": 66647,
+     "sha256": "b94dffc33e24b2a44731d5d06af3626612c8dfd21ea439bfa59dc347cd7ceb37"
+    },
+    {
+     "path": "data/raw/ilo_travail_maternity/travail_maternity_2011_DK.html",
+     "bytes": 85665,
+     "sha256": "0e40f6852656509f28b9e55eaa162002ddb443b64da7d0847567a429f24f55ae"
+    },
+    {
+     "path": "data/raw/ilo_travail_maternity/travail_maternity_2011_ES.html",
+     "bytes": 64949,
+     "sha256": "ceafbacd0221661d1d61156e8bfaa2eca99b533604613a38a371b8e3ee2b1982"
+    },
+    {
+     "path": "data/raw/ilo_travail_maternity/travail_maternity_2011_FI.html",
+     "bytes": 73199,
+     "sha256": "27b7e083f739fa0fb64b4de6ea258cd5d523ab6229571402055e566bb5a03dc9"
+    },
+    {
+     "path": "data/raw/ilo_travail_maternity/travail_maternity_2011_GB.html",
+     "bytes": 89327,
+     "sha256": "8892f85ae6bda9f1a4494e6b331d2a5943335e79dc05fc000c09e645a32f942e"
+    },
+    {
+     "path": "data/raw/ilo_travail_maternity/travail_maternity_2011_GR.html",
+     "bytes": 55729,
+     "sha256": "eaa70c47a9d6a71f139a838c3843386516963480e88954949e72c85b5db6095b"
+    },
+    {
+     "path": "data/raw/ilo_travail_maternity/travail_maternity_2011_IE.html",
+     "bytes": 69673,
+     "sha256": "473d4770aea646458789785d97b898189e7656f0db4070822d87268aaea4b71a"
+    },
+    {
+     "path": "data/raw/ilo_travail_maternity/travail_maternity_2011_IS.html",
+     "bytes": 79379,
+     "sha256": "fc89c2df6681202f2a51f80d4b63e3cfc8dfab7b51256e5af7e1064f872c75fa"
+    },
+    {
+     "path": "data/raw/ilo_travail_maternity/travail_maternity_2011_IT.html",
+     "bytes": 103558,
+     "sha256": "30ad6a9048be1e0333e01f4e0fc4ba1c786b38b19231b0dd6e333e90ecaf8fc1"
+    },
+    {
+     "path": "data/raw/ilo_travail_maternity/travail_maternity_2011_JP.html",
+     "bytes": 96726,
+     "sha256": "9ba14ce1524b7416189663fcf8f1e2d0f9b7eb3504f81eb20267314967d117ce"
+    },
+    {
+     "path": "data/raw/ilo_travail_maternity/travail_maternity_2011_NL.html",
+     "bytes": 55244,
+     "sha256": "8cc3be37a8ef813a3c800f5301c932be1bd61a458c2c28342da6f40edc5dc3c0"
+    },
+    {
+     "path": "data/raw/ilo_travail_maternity/travail_maternity_2011_NO.html",
+     "bytes": 98407,
+     "sha256": "0c19114e9979fbdbf30dd2802360c3f5cf620707063836863c4b2121b7036fad"
+    },
+    {
+     "path": "data/raw/ilo_travail_maternity/travail_maternity_2011_NZ.html",
+     "bytes": 74692,
+     "sha256": "d68b2f6d37e8b2f3ac2acc2ce47c704fc9dcebe757c84b944091ba0dfa73c528"
+    },
+    {
+     "path": "data/raw/ilo_travail_maternity/travail_maternity_2011_PT.html",
+     "bytes": 58449,
+     "sha256": "1c6302e57fb6af4e3b7869a64f8a13f15189847d517d913d7626a1b85d83b10e"
+    },
+    {
+     "path": "data/raw/ilo_travail_maternity/travail_maternity_2011_SE.html",
+     "bytes": 64081,
+     "sha256": "b6b277c8e03acf2b1f510801938d898dd35ea0505ea8b0fbc95775b7a946c82c"
+    },
+    {
+     "path": "data/raw/ilo_travail_maternity/travail_maternity_2011_US.html",
+     "bytes": 88819,
+     "sha256": "32b977e230439aa09c172f81ab9e9ecda3abad00b1ed2f86918a21cc07996741"
+    }
+   ],
+   "acquisition": {
+    "mode": "agent_download",
+    "utc_first": "2026-10-27T14:46:58Z",
+    "utc_last": "2026-10-27T14:52:23Z",
+    "requests": [
+     {
+      "url": "https://web.archive.org/web/20120825000000id_/http://www.ilo.org:80/dyn/travail/travmain.sectionReport1?p_lang=en&p_countries=AU&p_sc_id=2000&p_year=2011&p_structure=3",
+      "post_form": null,
+      "utc_time": "2026-10-27T14:46:58Z",
+      "http_status": "200",
+      "final_url": "https://web.archive.org/web/20120825234123id_/http://www.ilo.org/dyn/travail/travmain.sectionReport1?p_lang=en&p_countries=AU&p_sc_id=2000&p_year=2011&p_structure=3",
+      "bytes": 61219,
+      "sha256": "7df9445dfc8d68b6b73cf4d338249c0b866bc68e77bc63fe4fb497b1238cbd19",
+      "file": "data/raw/ilo_travail_maternity/travail_maternity_2011_AU.html"
+     },
+     {
+      "url": "https://web.archive.org/web/20120825000000id_/http://www.ilo.org:80/dyn/travail/travmain.sectionReport1?p_lang=en&p_countries=AT&p_sc_id=2000&p_year=2011&p_structure=3",
+      "post_form": null,
+      "utc_time": "2026-10-27T14:47:00Z",
+      "http_status": "200",
+      "final_url": "https://web.archive.org/web/20120825233610id_/http://www.ilo.org/dyn/travail/travmain.sectionReport1?p_lang=en&p_countries=AT&p_sc_id=2000&p_year=2011&p_structure=3",
+      "bytes": 92352,
+      "sha256": "25a9d7788f74d98825264f903a7d3b3d01abeda7ec7edcd287c5f72aa8c2259d",
+      "file": "data/raw/ilo_travail_maternity/travail_maternity_2011_AT.html"
+     },
+     {
+      "url": "https://web.archive.org/web/20120825000000id_/http://www.ilo.org:80/dyn/travail/travmain.sectionReport1?p_lang=en&p_countries=BE&p_sc_id=2000&p_year=2011&p_structure=3",
+      "post_form": null,
+      "utc_time": "2026-10-27T14:47:01Z",
+      "http_status": "200",
+      "final_url": "https://web.archive.org/web/20160312053801id_/http://www.ilo.org/dyn/travail/travmain.sectionReport1?p_lang=en&p_countries=BE&p_sc_id=2000&p_year=2011&p_structure=3",
+      "bytes": 72270,
+      "sha256": "9d6ed2fbefd0ab81cbe3c926b06f267723f3e354c0f2e83426e5f6ddc32fb9de",
+      "file": "data/raw/ilo_travail_maternity/travail_maternity_2011_BE.html"
+     },
+     {
+      "url": "https://web.archive.org/web/20120825000000id_/http://www.ilo.org:80/dyn/travail/travmain.sectionReport1?p_lang=en&p_countries=CZ&p_sc_id=2000&p_year=2011&p_structure=3",
+      "post_form": null,
+      "utc_time": "2026-10-27T14:47:03Z",
+      "http_status": "200",
+      "final_url": "https://web.archive.org/web/20120825234811id_/http://www.ilo.org/dyn/travail/travmain.sectionReport1?p_lang=en&p_countries=CZ&p_sc_id=2000&p_year=2011&p_structure=3",
+      "bytes": 87930,
+      "sha256": "bd794c1e463c0b2b818e913f1c2874d420b89a86080e213bff931f19b749351a",
+      "file": "data/raw/ilo_travail_maternity/travail_maternity_2011_CZ.html"
+     },
+     {
+      "url": "https://web.archive.org/web/20120825000000id_/http://www.ilo.org:80/dyn/travail/travmain.sectionReport1?p_lang=en&p_countries=DK&p_sc_id=2000&p_year=2011&p_structure=3",
+      "post_form": null,
+      "utc_time": "2026-10-27T14:47:07Z",
+      "http_status": "200",
+      "final_url": "https://web.archive.org/web/20120825233045id_/http://www.ilo.org/dyn/travail/travmain.sectionReport1?p_lang=en&p_countries=DK&p_sc_id=2000&p_year=2011&p_structure=3",
+      "bytes": 85665,
+      "sha256": "0e40f6852656509f28b9e55eaa162002ddb443b64da7d0847567a429f24f55ae",
+      "file": "data/raw/ilo_travail_maternity/travail_maternity_2011_DK.html"
+     },
+     {
+      "url": "https://web.archive.org/web/20120825000000id_/http://www.ilo.org:80/dyn/travail/travmain.sectionReport1?p_lang=en&p_countries=FI&p_sc_id=2000&p_year=2011&p_structure=3",
+      "post_form": null,
+      "utc_time": "2026-10-27T14:47:08Z",
+      "http_status": "200",
+      "final_url": "https://web.archive.org/web/20120825225645id_/http://www.ilo.org/dyn/travail/travmain.sectionReport1?p_lang=en&p_countries=FI&p_sc_id=2000&p_year=2011&p_structure=3",
+      "bytes": 73199,
+      "sha256": "27b7e083f739fa0fb64b4de6ea258cd5d523ab6229571402055e566bb5a03dc9",
+      "file": "data/raw/ilo_travail_maternity/travail_maternity_2011_FI.html"
+     },
+     {
+      "url": "https://web.archive.org/web/20120825000000id_/http://www.ilo.org:80/dyn/travail/travmain.sectionReport1?p_lang=en&p_countries=DE&p_sc_id=2000&p_year=2011&p_structure=3",
+      "post_form": null,
+      "utc_time": "2026-10-27T14:47:11Z",
+      "http_status": "200",
+      "final_url": "https://web.archive.org/web/20120825234817id_/http://www.ilo.org/dyn/travail/travmain.sectionReport1?p_lang=en&p_countries=DE&p_sc_id=2000&p_year=2011&p_structure=3",
+      "bytes": 66647,
+      "sha256": "b94dffc33e24b2a44731d5d06af3626612c8dfd21ea439bfa59dc347cd7ceb37",
+      "file": "data/raw/ilo_travail_maternity/travail_maternity_2011_DE.html"
+     },
+     {
+      "url": "https://web.archive.org/web/20120825000000id_/http://www.ilo.org:80/dyn/travail/travmain.sectionReport1?p_lang=en&p_countries=GR&p_sc_id=2000&p_year=2011&p_structure=3",
+      "post_form": null,
+      "utc_time": "2026-10-27T14:47:13Z",
+      "http_status": "200",
+      "final_url": "https://web.archive.org/web/20120825232518id_/http://www.ilo.org/dyn/travail/travmain.sectionReport1?p_lang=en&p_countries=GR&p_sc_id=2000&p_year=2011&p_structure=3",
+      "bytes": 55729,
+      "sha256": "eaa70c47a9d6a71f139a838c3843386516963480e88954949e72c85b5db6095b",
+      "file": "data/raw/ilo_travail_maternity/travail_maternity_2011_GR.html"
+     },
+     {
+      "url": "https://web.archive.org/web/20120825000000id_/http://www.ilo.org:80/dyn/travail/travmain.sectionReport1?p_lang=en&p_countries=IS&p_sc_id=2000&p_year=2011&p_structure=3",
+      "post_form": null,
+      "utc_time": "2026-10-27T14:47:15Z",
+      "http_status": "200",
+      "final_url": "https://web.archive.org/web/20120825234347id_/http://www.ilo.org/dyn/travail/travmain.sectionReport1?p_lang=en&p_countries=IS&p_sc_id=2000&p_year=2011&p_structure=3",
+      "bytes": 79379,
+      "sha256": "fc89c2df6681202f2a51f80d4b63e3cfc8dfab7b51256e5af7e1064f872c75fa",
+      "file": "data/raw/ilo_travail_maternity/travail_maternity_2011_IS.html"
+     },
+     {
+      "url": "https://web.archive.org/web/20120825000000id_/http://www.ilo.org:80/dyn/travail/travmain.sectionReport1?p_lang=en&p_countries=IE&p_sc_id=2000&p_year=2011&p_structure=3",
+      "post_form": null,
+      "utc_time": "2026-10-27T14:47:16Z",
+      "http_status": "200",
+      "final_url": "https://web.archive.org/web/20160312054932id_/http://www.ilo.org/dyn/travail/travmain.sectionReport1?p_lang=en&p_countries=IE&p_sc_id=2000&p_year=2011&p_structure=3",
+      "bytes": 69673,
+      "sha256": "473d4770aea646458789785d97b898189e7656f0db4070822d87268aaea4b71a",
+      "file": "data/raw/ilo_travail_maternity/travail_maternity_2011_IE.html"
+     },
+     {
+      "url": "https://web.archive.org/web/20120825000000id_/http://www.ilo.org:80/dyn/travail/travmain.sectionReport1?p_lang=en&p_countries=IT&p_sc_id=2000&p_year=2011&p_structure=3",
+      "post_form": null,
+      "utc_time": "2026-10-27T14:47:19Z",
+      "http_status": "200",
+      "final_url": "https://web.archive.org/web/20120825233139id_/http://www.ilo.org/dyn/travail/travmain.sectionReport1?p_lang=en&p_countries=IT&p_sc_id=2000&p_year=2011&p_structure=3",
+      "bytes": 103558,
+      "sha256": "30ad6a9048be1e0333e01f4e0fc4ba1c786b38b19231b0dd6e333e90ecaf8fc1",
+      "file": "data/raw/ilo_travail_maternity/travail_maternity_2011_IT.html"
+     },
+     {
+      "url": "https://web.archive.org/web/20120825000000id_/http://www.ilo.org:80/dyn/travail/travmain.sectionReport1?p_lang=en&p_countries=JP&p_sc_id=2000&p_year=2011&p_structure=3",
+      "post_form": null,
+      "utc_time": "2026-10-27T14:47:20Z",
+      "http_status": "200",
+      "final_url": "https://web.archive.org/web/20120825233818id_/http://www.ilo.org/dyn/travail/travmain.sectionReport1?p_lang=en&p_countries=JP&p_sc_id=2000&p_year=2011&p_structure=3",
+      "bytes": 96726,
+      "sha256": "9ba14ce1524b7416189663fcf8f1e2d0f9b7eb3504f81eb20267314967d117ce",
+      "file": "data/raw/ilo_travail_maternity/travail_maternity_2011_JP.html"
+     },
+     {
+      "url": "https://web.archive.org/web/20120825000000id_/http://www.ilo.org:80/dyn/travail/travmain.sectionReport1?p_lang=en&p_countries=NL&p_sc_id=2000&p_year=2011&p_structure=3",
+      "post_form": null,
+      "utc_time": "2026-10-27T14:47:22Z",
+      "http_status": "200",
+      "final_url": "https://web.archive.org/web/20160312055729id_/http://www.ilo.org/dyn/travail/travmain.sectionReport1?p_lang=en&p_countries=NL&p_sc_id=2000&p_year=2011&p_structure=3",
+      "bytes": 55244,
+      "sha256": "8cc3be37a8ef813a3c800f5301c932be1bd61a458c2c28342da6f40edc5dc3c0",
+      "file": "data/raw/ilo_travail_maternity/travail_maternity_2011_NL.html"
+     },
+     {
+      "url": "https://web.archive.org/web/20120825000000id_/http://www.ilo.org:80/dyn/travail/travmain.sectionReport1?p_lang=en&p_countries=NZ&p_sc_id=2000&p_year=2011&p_structure=3",
+      "post_form": null,
+      "utc_time": "2026-10-27T14:47:23Z",
+      "http_status": "200",
+      "final_url": "https://web.archive.org/web/20120825233421id_/http://www.ilo.org/dyn/travail/travmain.sectionReport1?p_lang=en&p_countries=NZ&p_sc_id=2000&p_year=2011&p_structure=3",
+      "bytes": 74692,
+      "sha256": "d68b2f6d37e8b2f3ac2acc2ce47c704fc9dcebe757c84b944091ba0dfa73c528",
+      "file": "data/raw/ilo_travail_maternity/travail_maternity_2011_NZ.html"
+     },
+     {
+      "url": "https://web.archive.org/web/20120825000000id_/http://www.ilo.org:80/dyn/travail/travmain.sectionReport1?p_lang=en&p_countries=NO&p_sc_id=2000&p_year=2011&p_structure=3",
+      "post_form": null,
+      "utc_time": "2026-10-27T14:47:24Z",
+      "http_status": "200",
+      "final_url": "https://web.archive.org/web/20120825233407id_/http://www.ilo.org/dyn/travail/travmain.sectionReport1?p_lang=en&p_countries=NO&p_sc_id=2000&p_year=2011&p_structure=3",
+      "bytes": 98407,
+      "sha256": "0c19114e9979fbdbf30dd2802360c3f5cf620707063836863c4b2121b7036fad",
+      "file": "data/raw/ilo_travail_maternity/travail_maternity_2011_NO.html"
+     },
+     {
+      "url": "https://web.archive.org/web/20120825000000id_/http://www.ilo.org:80/dyn/travail/travmain.sectionReport1?p_lang=en&p_countries=PT&p_sc_id=2000&p_year=2011&p_structure=3",
+      "post_form": null,
+      "utc_time": "2026-10-27T14:48:30Z",
+      "http_status": "200",
+      "final_url": "https://web.archive.org/web/20120825223008id_/http://www.ilo.org/dyn/travail/travmain.sectionReport1?p_lang=en&p_countries=PT&p_sc_id=2000&p_year=2011&p_structure=3",
+      "bytes": 58449,
+      "sha256": "1c6302e57fb6af4e3b7869a64f8a13f15189847d517d913d7626a1b85d83b10e",
+      "file": "data/raw/ilo_travail_maternity/travail_maternity_2011_PT.html"
+     },
+     {
+      "url": "https://web.archive.org/web/20120825000000id_/http://www.ilo.org:80/dyn/travail/travmain.sectionReport1?p_lang=en&p_countries=ES&p_sc_id=2000&p_year=2011&p_structure=3",
+      "post_form": null,
+      "utc_time": "2026-10-27T14:48:41Z",
+      "http_status": "200",
+      "final_url": "https://web.archive.org/web/20120825234850id_/http://www.ilo.org/dyn/travail/travmain.sectionReport1?p_lang=en&p_countries=ES&p_sc_id=2000&p_year=2011&p_structure=3",
+      "bytes": 64949,
+      "sha256": "ceafbacd0221661d1d61156e8bfaa2eca99b533604613a38a371b8e3ee2b1982",
+      "file": "data/raw/ilo_travail_maternity/travail_maternity_2011_ES.html"
+     },
+     {
+      "url": "https://web.archive.org/web/20120825000000id_/http://www.ilo.org:80/dyn/travail/travmain.sectionReport1?p_lang=en&p_countries=SE&p_sc_id=2000&p_year=2011&p_structure=3",
+      "post_form": null,
+      "utc_time": "2026-10-27T14:48:49Z",
+      "http_status": "200",
+      "final_url": "https://web.archive.org/web/20120825233924id_/http://www.ilo.org/dyn/travail/travmain.sectionReport1?p_lang=en&p_countries=SE&p_sc_id=2000&p_year=2011&p_structure=3",
+      "bytes": 64081,
+      "sha256": "b6b277c8e03acf2b1f510801938d898dd35ea0505ea8b0fbc95775b7a946c82c",
+      "file": "data/raw/ilo_travail_maternity/travail_maternity_2011_SE.html"
+     },
+     {
+      "url": "https://web.archive.org/web/20120825000000id_/http://www.ilo.org:80/dyn/travail/travmain.sectionReport1?p_lang=en&p_countries=CH&p_sc_id=2000&p_year=2011&p_structure=3",
+      "post_form": null,
+      "utc_time": "2026-10-27T14:48:57Z",
+      "http_status": "200",
+      "final_url": "https://web.archive.org/web/20120825235311id_/http://www.ilo.org/dyn/travail/travmain.sectionReport1?p_lang=en&p_countries=CH&p_sc_id=2000&p_year=2011&p_structure=3",
+      "bytes": 68902,
+      "sha256": "7caaf3d4d9aafe622c5f98d3d38be086ba7a82e84c22494aba99f994ff3a6cf2",
+      "file": "data/raw/ilo_travail_maternity/travail_maternity_2011_CH.html"
+     },
+     {
+      "url": "https://web.archive.org/web/20120825000000id_/http://www.ilo.org:80/dyn/travail/travmain.sectionReport1?p_lang=en&p_countries=GB&p_sc_id=2000&p_year=2011&p_structure=3",
+      "post_form": null,
+      "utc_time": "2026-10-27T14:49:04Z",
+      "http_status": "200",
+      "final_url": "https://web.archive.org/web/20120825233753id_/http://www.ilo.org/dyn/travail/travmain.sectionReport1?p_lang=en&p_countries=GB&p_sc_id=2000&p_year=2011&p_structure=3",
+      "bytes": 89327,
+      "sha256": "8892f85ae6bda9f1a4494e6b331d2a5943335e79dc05fc000c09e645a32f942e",
+      "file": "data/raw/ilo_travail_maternity/travail_maternity_2011_GB.html"
+     },
+     {
+      "url": "https://web.archive.org/web/20120825000000id_/http://www.ilo.org:80/dyn/travail/travmain.sectionReport1?p_lang=en&p_countries=US&p_sc_id=2000&p_year=2011&p_structure=3",
+      "post_form": null,
+      "utc_time": "2026-10-27T14:49:13Z",
+      "http_status": "200",
+      "final_url": "https://web.archive.org/web/20120825232333id_/http://www.ilo.org/dyn/travail/travmain.sectionReport1?p_lang=en&p_countries=US&p_sc_id=2000&p_year=2011&p_structure=3",
+      "bytes": 88819,
+      "sha256": "32b977e230439aa09c172f81ab9e9ecda3abad00b1ed2f86918a21cc07996741",
+      "file": "data/raw/ilo_travail_maternity/travail_maternity_2011_US.html"
+     },
+     {
+      "url": "https://web.archive.org/web/20100109000000id_/http://www.ilo.org:80/dyn/travail/travmain.sectionReport1?p_lang=en&p_countries=AU&p_sc_id=2000&p_year=2009&p_structure=3",
+      "post_form": null,
+      "utc_time": "2026-10-27T14:49:23Z",
+      "http_status": "200",
+      "final_url": "https://web.archive.org/web/20100109213552id_/http://www.ilo.org/dyn/travail/travmain.sectionReport1?p_lang=en&p_countries=AU&p_sc_id=2000&p_year=2009&p_structure=3",
+      "bytes": 49965,
+      "sha256": "31acd333b3ecd3f0736ac71de9632c679d414fa32468b2119be0ad1b4a4a70be",
+      "file": "data/raw/ilo_travail_maternity/travail_maternity_2009_AU.html"
+     },
+     {
+      "url": "https://web.archive.org/web/20100109000000id_/http://www.ilo.org:80/dyn/travail/travmain.sectionReport1?p_lang=en&p_countries=AT&p_sc_id=2000&p_year=2009&p_structure=3",
+      "post_form": null,
+      "utc_time": "2026-10-27T14:49:30Z",
+      "http_status": "200",
+      "final_url": "https://web.archive.org/web/20100109213538id_/http://www.ilo.org/dyn/travail/travmain.sectionReport1?p_lang=en&p_countries=AT&p_sc_id=2000&p_year=2009&p_structure=3",
+      "bytes": 58158,
+      "sha256": "f2b7c6be5324a869e1d82bd3dba9e7e05238d98ce8ce2be7d7b7d46da13fea40",
+      "file": "data/raw/ilo_travail_maternity/travail_maternity_2009_AT.html"
+     },
+     {
+      "url": "https://web.archive.org/web/20100109000000id_/http://www.ilo.org:80/dyn/travail/travmain.sectionReport1?p_lang=en&p_countries=BE&p_sc_id=2000&p_year=2009&p_structure=3",
+      "post_form": null,
+      "utc_time": "2026-10-27T14:49:37Z",
+      "http_status": "200",
+      "final_url": "https://web.archive.org/web/20120825221638id_/http://www.ilo.org/dyn/travail/travmain.sectionReport1?p_lang=en&p_countries=BE&p_sc_id=2000&p_year=2009&p_structure=3",
+      "bytes": 60724,
+      "sha256": "1e37c96deab0a29a46012ee790e3fe72a5449f01dbf1ab3fde8c0c784e43fef9",
+      "file": "data/raw/ilo_travail_maternity/travail_maternity_2009_BE.html"
+     },
+     {
+      "url": "https://web.archive.org/web/20100109000000id_/http://www.ilo.org:80/dyn/travail/travmain.sectionReport1?p_lang=en&p_countries=CA&p_sc_id=2000&p_year=2009&p_structure=3",
+      "post_form": null,
+      "utc_time": "2026-10-27T14:49:45Z",
+      "http_status": "200",
+      "final_url": "https://web.archive.org/web/20100109210811id_/http://www.ilo.org/dyn/travail/travmain.sectionReport1?p_lang=en&p_countries=CA&p_sc_id=2000&p_year=2009&p_structure=3",
+      "bytes": 62538,
+      "sha256": "3e9adf79a7782a980d57bf12057b5fbd79224ec88e65d0994679080ea08f5bb8",
+      "file": "data/raw/ilo_travail_maternity/travail_maternity_2009_CA.html"
+     },
+     {
+      "url": "https://web.archive.org/web/20100109000000id_/http://www.ilo.org:80/dyn/travail/travmain.sectionReport1?p_lang=en&p_countries=CZ&p_sc_id=2000&p_year=2009&p_structure=3",
+      "post_form": null,
+      "utc_time": "2026-10-27T14:49:52Z",
+      "http_status": "200",
+      "final_url": "https://web.archive.org/web/20100109210922id_/http://www.ilo.org/dyn/travail/travmain.sectionReport1?p_lang=en&p_countries=CZ&p_sc_id=2000&p_year=2009&p_structure=3",
+      "bytes": 25826,
+      "sha256": "e1e82395adf527a07d9063093d265442638fefd81f768a7aa8a9e881a942267e",
+      "file": "data/raw/ilo_travail_maternity/travail_maternity_2009_CZ.html"
+     },
+     {
+      "url": "https://web.archive.org/web/20100109000000id_/http://www.ilo.org:80/dyn/travail/travmain.sectionReport1?p_lang=en&p_countries=DK&p_sc_id=2000&p_year=2009&p_structure=3",
+      "post_form": null,
+      "utc_time": "2026-10-27T14:49:59Z",
+      "http_status": "200",
+      "final_url": "https://web.archive.org/web/20100109214026id_/http://www.ilo.org/dyn/travail/travmain.sectionReport1?p_lang=en&p_countries=DK&p_sc_id=2000&p_year=2009&p_structure=3",
+      "bytes": 58391,
+      "sha256": "468699bf42bf58c3c4bbdeb61372d619f9c17b9e7deeeef0ad76af2e94a0f188",
+      "file": "data/raw/ilo_travail_maternity/travail_maternity_2009_DK.html"
+     },
+     {
+      "url": "https://web.archive.org/web/20100109000000id_/http://www.ilo.org:80/dyn/travail/travmain.sectionReport1?p_lang=en&p_countries=FI&p_sc_id=2000&p_year=2009&p_structure=3",
+      "post_form": null,
+      "utc_time": "2026-10-27T14:50:08Z",
+      "http_status": "200",
+      "final_url": "https://web.archive.org/web/20100109211033id_/http://www.ilo.org/dyn/travail/travmain.sectionReport1?p_lang=en&p_countries=FI&p_sc_id=2000&p_year=2009&p_structure=3",
+      "bytes": 55297,
+      "sha256": "d7eb703675ab23d8c3ea027b735a082a76625912aabb827adebb1d70577e39a8",
+      "file": "data/raw/ilo_travail_maternity/travail_maternity_2009_FI.html"
+     },
+     {
+      "url": "https://web.archive.org/web/20100109000000id_/http://www.ilo.org:80/dyn/travail/travmain.sectionReport1?p_lang=en&p_countries=FR&p_sc_id=2000&p_year=2009&p_structure=3",
+      "post_form": null,
+      "utc_time": "2026-10-27T14:50:16Z",
+      "http_status": "200",
+      "final_url": "https://web.archive.org/web/20100109214151id_/http://www.ilo.org/dyn/travail/travmain.sectionReport1?p_lang=en&p_countries=FR&p_sc_id=2000&p_year=2009&p_structure=3",
+      "bytes": 71267,
+      "sha256": "fc9f1afe51cee7d385ce0406f0473939e33cabaac9a96639caea878efcb24393",
+      "file": "data/raw/ilo_travail_maternity/travail_maternity_2009_FR.html"
+     },
+     {
+      "url": "https://web.archive.org/web/20100109000000id_/http://www.ilo.org:80/dyn/travail/travmain.sectionReport1?p_lang=en&p_countries=DE&p_sc_id=2000&p_year=2009&p_structure=3",
+      "post_form": null,
+      "utc_time": "2026-10-27T14:50:23Z",
+      "http_status": "200",
+      "final_url": "https://web.archive.org/web/20100109210932id_/http://www.ilo.org/dyn/travail/travmain.sectionReport1?p_lang=en&p_countries=DE&p_sc_id=2000&p_year=2009&p_structure=3",
+      "bytes": 61495,
+      "sha256": "33a59131b18ab735d6fcbdefc4805ab369730806199fb156f74f34a6272ae849",
+      "file": "data/raw/ilo_travail_maternity/travail_maternity_2009_DE.html"
+     },
+     {
+      "url": "https://web.archive.org/web/20100109000000id_/http://www.ilo.org:80/dyn/travail/travmain.sectionReport1?p_lang=en&p_countries=GR&p_sc_id=2000&p_year=2009&p_structure=3",
+      "post_form": null,
+      "utc_time": "2026-10-27T14:50:31Z",
+      "http_status": "200",
+      "final_url": "https://web.archive.org/web/20100109214236id_/http://www.ilo.org/dyn/travail/travmain.sectionReport1?p_lang=en&p_countries=GR&p_sc_id=2000&p_year=2009&p_structure=3",
+      "bytes": 25875,
+      "sha256": "0df03b5f3a705e412bc50d1974b9f4a38f0ef014205fd4ec9daf669a330fe02e",
+      "file": "data/raw/ilo_travail_maternity/travail_maternity_2009_GR.html"
+     },
+     {
+      "url": "https://web.archive.org/web/20100109000000id_/http://www.ilo.org:80/dyn/travail/travmain.sectionReport1?p_lang=en&p_countries=IS&p_sc_id=2000&p_year=2009&p_structure=3",
+      "post_form": null,
+      "utc_time": "2026-10-27T14:50:41Z",
+      "http_status": "200",
+      "final_url": "https://web.archive.org/web/20100109211214id_/http://www.ilo.org/dyn/travail/travmain.sectionReport1?p_lang=en&p_countries=IS&p_sc_id=2000&p_year=2009&p_structure=3",
+      "bytes": 51155,
+      "sha256": "07830f2afe8448e952fb8381220daf6b6eb8c7fd14bf208efd1f5c56379d5acc",
+      "file": "data/raw/ilo_travail_maternity/travail_maternity_2009_IS.html"
+     },
+     {
+      "url": "https://web.archive.org/web/20100109000000id_/http://www.ilo.org:80/dyn/travail/travmain.sectionReport1?p_lang=en&p_countries=IE&p_sc_id=2000&p_year=2009&p_structure=3",
+      "post_form": null,
+      "utc_time": "2026-10-27T14:50:49Z",
+      "http_status": "200",
+      "final_url": "https://web.archive.org/web/20100109214359id_/http://www.ilo.org/dyn/travail/travmain.sectionReport1?p_lang=en&p_countries=IE&p_sc_id=2000&p_year=2009&p_structure=3",
+      "bytes": 61401,
+      "sha256": "214cb0944e923bd16589af6de1fc26e7f9019aedca22310b3a5469321227daaa",
+      "file": "data/raw/ilo_travail_maternity/travail_maternity_2009_IE.html"
+     },
+     {
+      "url": "https://web.archive.org/web/20100109000000id_/http://www.ilo.org:80/dyn/travail/travmain.sectionReport1?p_lang=en&p_countries=IT&p_sc_id=2000&p_year=2009&p_structure=3",
+      "post_form": null,
+      "utc_time": "2026-10-27T14:50:56Z",
+      "http_status": "200",
+      "final_url": "https://web.archive.org/web/20100109211219id_/http://www.ilo.org/dyn/travail/travmain.sectionReport1?p_lang=en&p_countries=IT&p_sc_id=2000&p_year=2009&p_structure=3",
+      "bytes": 58458,
+      "sha256": "184dcab530e68f29cdd8705fa169750b7c1615e2ca7d7c498e2a19adf2fcafce",
+      "file": "data/raw/ilo_travail_maternity/travail_maternity_2009_IT.html"
+     },
+     {
+      "url": "https://web.archive.org/web/20100109000000id_/http://www.ilo.org:80/dyn/travail/travmain.sectionReport1?p_lang=en&p_countries=JP&p_sc_id=2000&p_year=2009&p_structure=3",
+      "post_form": null,
+      "utc_time": "2026-10-27T14:51:04Z",
+      "http_status": "200",
+      "final_url": "https://web.archive.org/web/20100109214449id_/http://www.ilo.org/dyn/travail/travmain.sectionReport1?p_lang=en&p_countries=JP&p_sc_id=2000&p_year=2009&p_structure=3",
+      "bytes": 48194,
+      "sha256": "b16536cb062ed9104b0896f7386563822beeb957a5a5d62ea1eca659b9ebdf2b",
+      "file": "data/raw/ilo_travail_maternity/travail_maternity_2009_JP.html"
+     },
+     {
+      "url": "https://web.archive.org/web/20100109000000id_/http://www.ilo.org:80/dyn/travail/travmain.sectionReport1?p_lang=en&p_countries=NL&p_sc_id=2000&p_year=2009&p_structure=3",
+      "post_form": null,
+      "utc_time": "2026-10-27T14:51:12Z",
+      "http_status": "200",
+      "final_url": "https://web.archive.org/web/20100109211612id_/http://www.ilo.org/dyn/travail/travmain.sectionReport1?p_lang=en&p_countries=NL&p_sc_id=2000&p_year=2009&p_structure=3",
+      "bytes": 51382,
+      "sha256": "aa02ab5deab3bdf2097ea083454b0947807979370635daa160135acad3a80fd7",
+      "file": "data/raw/ilo_travail_maternity/travail_maternity_2009_NL.html"
+     },
+     {
+      "url": "https://web.archive.org/web/20100109000000id_/http://www.ilo.org:80/dyn/travail/travmain.sectionReport1?p_lang=en&p_countries=NZ&p_sc_id=2000&p_year=2009&p_structure=3",
+      "post_form": null,
+      "utc_time": "2026-10-27T14:51:21Z",
+      "http_status": "200",
+      "final_url": "https://web.archive.org/web/20100109214817id_/http://www.ilo.org/dyn/travail/travmain.sectionReport1?p_lang=en&p_countries=NZ&p_sc_id=2000&p_year=2009&p_structure=3",
+      "bytes": 44285,
+      "sha256": "53924a46417cb92ddef6cf32df55768b6b85d83ae3b148c233c3a9bd5d7ae01d",
+      "file": "data/raw/ilo_travail_maternity/travail_maternity_2009_NZ.html"
+     },
+     {
+      "url": "https://web.archive.org/web/20100109000000id_/http://www.ilo.org:80/dyn/travail/travmain.sectionReport1?p_lang=en&p_countries=NO&p_sc_id=2000&p_year=2009&p_structure=3",
+      "post_form": null,
+      "utc_time": "2026-10-27T14:51:28Z",
+      "http_status": "200",
+      "final_url": "https://web.archive.org/web/20100109214800id_/http://www.ilo.org/dyn/travail/travmain.sectionReport1?p_lang=en&p_countries=NO&p_sc_id=2000&p_year=2009&p_structure=3",
+      "bytes": 54221,
+      "sha256": "4edacdf9ba73f7d9352669ef0f870565cb4537ea815d054d8b68820f441a299e",
+      "file": "data/raw/ilo_travail_maternity/travail_maternity_2009_NO.html"
+     },
+     {
+      "url": "https://web.archive.org/web/20100109000000id_/http://www.ilo.org:80/dyn/travail/travmain.sectionReport1?p_lang=en&p_countries=PL&p_sc_id=2000&p_year=2009&p_structure=3",
+      "post_form": null,
+      "utc_time": "2026-10-27T14:51:36Z",
+      "http_status": "200",
+      "final_url": "https://web.archive.org/web/20120825233916id_/http://www.ilo.org/dyn/travail/travmain.sectionReport1?p_lang=en&p_countries=PL&p_sc_id=2000&p_year=2009&p_structure=3",
+      "bytes": 28045,
+      "sha256": "dd4d8605f221d69bc24c4b8db720260178a8b6206eeb9ce222ca12b5f3518646",
+      "file": "data/raw/ilo_travail_maternity/travail_maternity_2009_PL.html"
+     },
+     {
+      "url": "https://web.archive.org/web/20100109000000id_/http://www.ilo.org:80/dyn/travail/travmain.sectionReport1?p_lang=en&p_countries=ES&p_sc_id=2000&p_year=2009&p_structure=3",
+      "post_form": null,
+      "utc_time": "2026-10-27T14:51:51Z",
+      "http_status": "200",
+      "final_url": "https://web.archive.org/web/20100109214121id_/http://www.ilo.org/dyn/travail/travmain.sectionReport1?p_lang=en&p_countries=ES&p_sc_id=2000&p_year=2009&p_structure=3",
+      "bytes": 47022,
+      "sha256": "b8415e9f2f963300aef12813f64fe66d5cf3958854aad66763c544a2636fa8c8",
+      "file": "data/raw/ilo_travail_maternity/travail_maternity_2009_ES.html"
+     },
+     {
+      "url": "https://web.archive.org/web/20100109000000id_/http://www.ilo.org:80/dyn/travail/travmain.sectionReport1?p_lang=en&p_countries=SE&p_sc_id=2000&p_year=2009&p_structure=3",
+      "post_form": null,
+      "utc_time": "2026-10-27T14:52:01Z",
+      "http_status": "200",
+      "final_url": "https://web.archive.org/web/20100109212420id_/http://www.ilo.org/dyn/travail/travmain.sectionReport1?p_lang=en&p_countries=SE&p_sc_id=2000&p_year=2009&p_structure=3",
+      "bytes": 46364,
+      "sha256": "fb001305b12b7ad7748b78005e7acc839bb49eaa9ae616d067108f83fd7d9556",
+      "file": "data/raw/ilo_travail_maternity/travail_maternity_2009_SE.html"
+     },
+     {
+      "url": "https://web.archive.org/web/20100109000000id_/http://www.ilo.org:80/dyn/travail/travmain.sectionReport1?p_lang=en&p_countries=CH&p_sc_id=2000&p_year=2009&p_structure=3",
+      "post_form": null,
+      "utc_time": "2026-10-27T14:52:08Z",
+      "http_status": "200",
+      "final_url": "https://web.archive.org/web/20100109210831id_/http://www.ilo.org/dyn/travail/travmain.sectionReport1?p_lang=en&p_countries=CH&p_sc_id=2000&p_year=2009&p_structure=3",
+      "bytes": 48812,
+      "sha256": "c8e1280c634b87f5fb8c066b4043e60b432978d86e4df25087f8f61ab8523d7b",
+      "file": "data/raw/ilo_travail_maternity/travail_maternity_2009_CH.html"
+     },
+     {
+      "url": "https://web.archive.org/web/20100109000000id_/http://www.ilo.org:80/dyn/travail/travmain.sectionReport1?p_lang=en&p_countries=GB&p_sc_id=2000&p_year=2009&p_structure=3",
+      "post_form": null,
+      "utc_time": "2026-10-27T14:52:16Z",
+      "http_status": "200",
+      "final_url": "https://web.archive.org/web/20100109214211id_/http://www.ilo.org/dyn/travail/travmain.sectionReport1?p_lang=en&p_countries=GB&p_sc_id=2000&p_year=2009&p_structure=3",
+      "bytes": 59938,
+      "sha256": "dffd4e1564f369c0b9ffcb982b6029874daf3eec8fdfd39bc9a385571711fc10",
+      "file": "data/raw/ilo_travail_maternity/travail_maternity_2009_GB.html"
+     },
+     {
+      "url": "https://web.archive.org/web/20100109000000id_/http://www.ilo.org:80/dyn/travail/travmain.sectionReport1?p_lang=en&p_countries=US&p_sc_id=2000&p_year=2009&p_structure=3",
+      "post_form": null,
+      "utc_time": "2026-10-27T14:52:23Z",
+      "http_status": "200",
+      "final_url": "https://web.archive.org/web/20100109215645id_/http://www.ilo.org/dyn/travail/travmain.sectionReport1?p_lang=en&p_countries=US&p_sc_id=2000&p_year=2009&p_structure=3",
+      "bytes": 48117,
+      "sha256": "0c6433045975f3cf40848cf9dc885e036850b213d41566d84deb8c2f815bfe67",
+      "file": "data/raw/ilo_travail_maternity/travail_maternity_2009_US.html"
+     }
+    ]
+   },
+   "failed_attempts": [
+    {
+     "url": "https://web.archive.org/web/20120825000000id_/http://www.ilo.org:80/dyn/travail/travmain.sectionReport1?p_lang=en&p_countries=CA&p_sc_id=2000&p_year=2011&p_structure=3",
+     "post_form": null,
+     "utc_time": "2026-10-27T14:47:03Z",
+     "http_status": "404",
+     "error": null,
+     "note": null
+    },
+    {
+     "url": "https://web.archive.org/web/20120825000000id_/http://www.ilo.org:80/dyn/travail/travmain.sectionReport1?p_lang=en&p_countries=FR&p_sc_id=2000&p_year=2011&p_structure=3",
+     "post_form": null,
+     "utc_time": "2026-10-27T14:47:10Z",
+     "http_status": "404",
+     "error": null,
+     "note": null
+    },
+    {
+     "url": "https://web.archive.org/web/20120825000000id_/http://www.ilo.org:80/dyn/travail/travmain.sectionReport1?p_lang=en&p_countries=PL&p_sc_id=2000&p_year=2011&p_structure=3",
+     "post_form": null,
+     "utc_time": "2026-10-27T14:47:26Z",
+     "http_status": "404",
+     "error": null,
+     "note": null
+    },
+    {
+     "url": "https://web.archive.org/web/20120825000000id_/http://www.ilo.org:80/dyn/travail/travmain.sectionReport1?p_lang=en&p_countries=PT&p_sc_id=2000&p_year=2011&p_structure=3",
+     "post_form": null,
+     "utc_time": "2026-10-27T14:47:27Z",
+     "http_status": "000",
+     "error": null,
+     "note": null
+    },
+    {
+     "url": "https://web.archive.org/web/20120825000000id_/http://www.ilo.org:80/dyn/travail/travmain.sectionReport1?p_lang=en&p_countries=ES&p_sc_id=2000&p_year=2011&p_structure=3",
+     "post_form": null,
+     "utc_time": "2026-10-27T14:47:27Z",
+     "http_status": "000",
+     "error": null,
+     "note": null
+    },
+    {
+     "url": "https://web.archive.org/web/20120825000000id_/http://www.ilo.org:80/dyn/travail/travmain.sectionReport1?p_lang=en&p_countries=SE&p_sc_id=2000&p_year=2011&p_structure=3",
+     "post_form": null,
+     "utc_time": "2026-10-27T14:47:27Z",
+     "http_status": "000",
+     "error": null,
+     "note": null
+    },
+    {
+     "url": "https://web.archive.org/web/20120825000000id_/http://www.ilo.org:80/dyn/travail/travmain.sectionReport1?p_lang=en&p_countries=CH&p_sc_id=2000&p_year=2011&p_structure=3",
+     "post_form": null,
+     "utc_time": "2026-10-27T14:47:27Z",
+     "http_status": "000",
+     "error": null,
+     "note": null
+    },
+    {
+     "url": "https://web.archive.org/web/20120825000000id_/http://www.ilo.org:80/dyn/travail/travmain.sectionReport1?p_lang=en&p_countries=GB&p_sc_id=2000&p_year=2011&p_structure=3",
+     "post_form": null,
+     "utc_time": "2026-10-27T14:47:28Z",
+     "http_status": "000",
+     "error": null,
+     "note": null
+    },
+    {
+     "url": "https://web.archive.org/web/20120825000000id_/http://www.ilo.org:80/dyn/travail/travmain.sectionReport1?p_lang=en&p_countries=US&p_sc_id=2000&p_year=2011&p_structure=3",
+     "post_form": null,
+     "utc_time": "2026-10-27T14:47:28Z",
+     "http_status": "000",
+     "error": null,
+     "note": null
+    },
+    {
+     "url": "https://web.archive.org/web/20100109000000id_/http://www.ilo.org:80/dyn/travail/travmain.sectionReport1?p_lang=en&p_countries=AU&p_sc_id=2000&p_year=2009&p_structure=3",
+     "post_form": null,
+     "utc_time": "2026-10-27T14:47:28Z",
+     "http_status": "000",
+     "error": null,
+     "note": null
+    },
+    {
+     "url": "https://web.archive.org/web/20100109000000id_/http://www.ilo.org:80/dyn/travail/travmain.sectionReport1?p_lang=en&p_countries=AT&p_sc_id=2000&p_year=2009&p_structure=3",
+     "post_form": null,
+     "utc_time": "2026-10-27T14:47:28Z",
+     "http_status": "000",
+     "error": null,
+     "note": null
+    },
+    {
+     "url": "https://web.archive.org/web/20100109000000id_/http://www.ilo.org:80/dyn/travail/travmain.sectionReport1?p_lang=en&p_countries=BE&p_sc_id=2000&p_year=2009&p_structure=3",
+     "post_form": null,
+     "utc_time": "2026-10-27T14:47:28Z",
+     "http_status": "000",
+     "error": null,
+     "note": null
+    },
+    {
+     "url": "https://web.archive.org/web/20100109000000id_/http://www.ilo.org:80/dyn/travail/travmain.sectionReport1?p_lang=en&p_countries=CA&p_sc_id=2000&p_year=2009&p_structure=3",
+     "post_form": null,
+     "utc_time": "2026-10-27T14:47:29Z",
+     "http_status": "000",
+     "error": null,
+     "note": null
+    },
+    {
+     "url": "https://web.archive.org/web/20100109000000id_/http://www.ilo.org:80/dyn/travail/travmain.sectionReport1?p_lang=en&p_countries=CZ&p_sc_id=2000&p_year=2009&p_structure=3",
+     "post_form": null,
+     "utc_time": "2026-10-27T14:47:29Z",
+     "http_status": "000",
+     "error": null,
+     "note": null
+    },
+    {
+     "url": "https://web.archive.org/web/20100109000000id_/http://www.ilo.org:80/dyn/travail/travmain.sectionReport1?p_lang=en&p_countries=DK&p_sc_id=2000&p_year=2009&p_structure=3",
+     "post_form": null,
+     "utc_time": "2026-10-27T14:47:29Z",
+     "http_status": "000",
+     "error": null,
+     "note": null
+    },
+    {
+     "url": "https://web.archive.org/web/20100109000000id_/http://www.ilo.org:80/dyn/travail/travmain.sectionReport1?p_lang=en&p_countries=FI&p_sc_id=2000&p_year=2009&p_structure=3",
+     "post_form": null,
+     "utc_time": "2026-10-27T14:47:29Z",
+     "http_status": "000",
+     "error": null,
+     "note": null
+    },
+    {
+     "url": "https://web.archive.org/web/20100109000000id_/http://www.ilo.org:80/dyn/travail/travmain.sectionReport1?p_lang=en&p_countries=FR&p_sc_id=2000&p_year=2009&p_structure=3",
+     "post_form": null,
+     "utc_time": "2026-10-27T14:47:29Z",
+     "http_status": "000",
+     "error": null,
+     "note": null
+    },
+    {
+     "url": "https://web.archive.org/web/20100109000000id_/http://www.ilo.org:80/dyn/travail/travmain.sectionReport1?p_lang=en&p_countries=DE&p_sc_id=2000&p_year=2009&p_structure=3",
+     "post_form": null,
+     "utc_time": "2026-10-27T14:47:30Z",
+     "http_status": "000",
+     "error": null,
+     "note": null
+    },
+    {
+     "url": "https://web.archive.org/web/20100109000000id_/http://www.ilo.org:80/dyn/travail/travmain.sectionReport1?p_lang=en&p_countries=GR&p_sc_id=2000&p_year=2009&p_structure=3",
+     "post_form": null,
+     "utc_time": "2026-10-27T14:47:30Z",
+     "http_status": "000",
+     "error": null,
+     "note": null
+    },
+    {
+     "url": "https://web.archive.org/web/20100109000000id_/http://www.ilo.org:80/dyn/travail/travmain.sectionReport1?p_lang=en&p_countries=IS&p_sc_id=2000&p_year=2009&p_structure=3",
+     "post_form": null,
+     "utc_time": "2026-10-27T14:47:30Z",
+     "http_status": "000",
+     "error": null,
+     "note": null
+    },
+    {
+     "url": "https://web.archive.org/web/20100109000000id_/http://www.ilo.org:80/dyn/travail/travmain.sectionReport1?p_lang=en&p_countries=IE&p_sc_id=2000&p_year=2009&p_structure=3",
+     "post_form": null,
+     "utc_time": "2026-10-27T14:47:30Z",
+     "http_status": "000",
+     "error": null,
+     "note": null
+    },
+    {
+     "url": "https://web.archive.org/web/20100109000000id_/http://www.ilo.org:80/dyn/travail/travmain.sectionReport1?p_lang=en&p_countries=IT&p_sc_id=2000&p_year=2009&p_structure=3",
+     "post_form": null,
+     "utc_time": "2026-10-27T14:47:30Z",
+     "http_status": "000",
+     "error": null,
+     "note": null
+    },
+    {
+     "url": "https://web.archive.org/web/20100109000000id_/http://www.ilo.org:80/dyn/travail/travmain.sectionReport1?p_lang=en&p_countries=JP&p_sc_id=2000&p_year=2009&p_structure=3",
+     "post_form": null,
+     "utc_time": "2026-10-27T14:47:31Z",
+     "http_status": "000",
+     "error": null,
+     "note": null
+    },
+    {
+     "url": "https://web.archive.org/web/20100109000000id_/http://www.ilo.org:80/dyn/travail/travmain.sectionReport1?p_lang=en&p_countries=NL&p_sc_id=2000&p_year=2009&p_structure=3",
+     "post_form": null,
+     "utc_time": "2026-10-27T14:47:31Z",
+     "http_status": "000",
+     "error": null,
+     "note": null
+    },
+    {
+     "url": "https://web.archive.org/web/20100109000000id_/http://www.ilo.org:80/dyn/travail/travmain.sectionReport1?p_lang=en&p_countries=NZ&p_sc_id=2000&p_year=2009&p_structure=3",
+     "post_form": null,
+     "utc_time": "2026-10-27T14:47:31Z",
+     "http_status": "000",
+     "error": null,
+     "note": null
+    },
+    {
+     "url": "https://web.archive.org/web/20100109000000id_/http://www.ilo.org:80/dyn/travail/travmain.sectionReport1?p_lang=en&p_countries=NO&p_sc_id=2000&p_year=2009&p_structure=3",
+     "post_form": null,
+     "utc_time": "2026-10-27T14:47:31Z",
+     "http_status": "000",
+     "error": null,
+     "note": null
+    },
+    {
+     "url": "https://web.archive.org/web/20100109000000id_/http://www.ilo.org:80/dyn/travail/travmain.sectionReport1?p_lang=en&p_countries=PL&p_sc_id=2000&p_year=2009&p_structure=3",
+     "post_form": null,
+     "utc_time": "2026-10-27T14:47:31Z",
+     "http_status": "000",
+     "error": null,
+     "note": null
+    },
+    {
+     "url": "https://web.archive.org/web/20100109000000id_/http://www.ilo.org:80/dyn/travail/travmain.sectionReport1?p_lang=en&p_countries=PT&p_sc_id=2000&p_year=2009&p_structure=3",
+     "post_form": null,
+     "utc_time": "2026-10-27T14:47:32Z",
+     "http_status": "000",
+     "error": null,
+     "note": null
+    },
+    {
+     "url": "https://web.archive.org/web/20100109000000id_/http://www.ilo.org:80/dyn/travail/travmain.sectionReport1?p_lang=en&p_countries=ES&p_sc_id=2000&p_year=2009&p_structure=3",
+     "post_form": null,
+     "utc_time": "2026-10-27T14:47:32Z",
+     "http_status": "000",
+     "error": null,
+     "note": null
+    },
+    {
+     "url": "https://web.archive.org/web/20100109000000id_/http://www.ilo.org:80/dyn/travail/travmain.sectionReport1?p_lang=en&p_countries=SE&p_sc_id=2000&p_year=2009&p_structure=3",
+     "post_form": null,
+     "utc_time": "2026-10-27T14:47:32Z",
+     "http_status": "000",
+     "error": null,
+     "note": null
+    },
+    {
+     "url": "https://web.archive.org/web/20100109000000id_/http://www.ilo.org:80/dyn/travail/travmain.sectionReport1?p_lang=en&p_countries=CH&p_sc_id=2000&p_year=2009&p_structure=3",
+     "post_form": null,
+     "utc_time": "2026-10-27T14:47:32Z",
+     "http_status": "000",
+     "error": null,
+     "note": null
+    },
+    {
+     "url": "https://web.archive.org/web/20100109000000id_/http://www.ilo.org:80/dyn/travail/travmain.sectionReport1?p_lang=en&p_countries=GB&p_sc_id=2000&p_year=2009&p_structure=3",
+     "post_form": null,
+     "utc_time": "2026-10-27T14:47:32Z",
+     "http_status": "000",
+     "error": null,
+     "note": null
+    },
+    {
+     "url": "https://web.archive.org/web/20100109000000id_/http://www.ilo.org:80/dyn/travail/travmain.sectionReport1?p_lang=en&p_countries=US&p_sc_id=2000&p_year=2009&p_structure=3",
+     "post_form": null,
+     "utc_time": "2026-10-27T14:47:33Z",
+     "http_status": "000",
+     "error": null,
+     "note": null
+    },
+    {
+     "url": "https://web.archive.org/web/20120825000000id_/http://www.ilo.org:80/dyn/travail/travmain.sectionReport1?p_lang=en&p_countries=CA&p_sc_id=2000&p_year=2011&p_structure=3",
+     "post_form": null,
+     "utc_time": "2026-10-27T14:47:49Z",
+     "http_status": "000",
+     "error": null,
+     "note": null
+    },
+    {
+     "url": "https://web.archive.org/web/20160312000000id_/http://www.ilo.org/dyn/travail/travmain.sectionReport1?p_lang=en&p_structure=3&p_year=2011&p_start=1&p_increment=10&p_sc_id=2000&p_countries=CA&p_print=Y",
+     "post_form": null,
+     "utc_time": "2026-10-27T14:47:55Z",
+     "http_status": "404",
+     "error": null,
+     "note": null
+    },
+    {
+     "url": "https://web.archive.org/web/20120825000000id_/http://www.ilo.org:80/dyn/travail/travmain.sectionReport1?p_lang=en&p_countries=FR&p_sc_id=2000&p_year=2011&p_structure=3",
+     "post_form": null,
+     "utc_time": "2026-10-27T14:48:04Z",
+     "http_status": "000",
+     "error": null,
+     "note": null
+    },
+    {
+     "url": "https://web.archive.org/web/20160312000000id_/http://www.ilo.org/dyn/travail/travmain.sectionReport1?p_lang=en&p_structure=3&p_year=2011&p_start=1&p_increment=10&p_sc_id=2000&p_countries=FR&p_print=Y",
+     "post_form": null,
+     "utc_time": "2026-10-27T14:48:10Z",
+     "http_status": "404",
+     "error": null,
+     "note": null
+    },
+    {
+     "url": "https://web.archive.org/web/20120825000000id_/http://www.ilo.org:80/dyn/travail/travmain.sectionReport1?p_lang=en&p_countries=PL&p_sc_id=2000&p_year=2011&p_structure=3",
+     "post_form": null,
+     "utc_time": "2026-10-27T14:48:17Z",
+     "http_status": "404",
+     "error": null,
+     "note": null
+    },
+    {
+     "url": "https://web.archive.org/web/20160312000000id_/http://www.ilo.org/dyn/travail/travmain.sectionReport1?p_lang=en&p_structure=3&p_year=2011&p_start=1&p_increment=10&p_sc_id=2000&p_countries=PL&p_print=Y",
+     "post_form": null,
+     "utc_time": "2026-10-27T14:48:24Z",
+     "http_status": "404",
+     "error": null,
+     "note": null
+    },
+    {
+     "url": "https://web.archive.org/web/20100109000000id_/http://www.ilo.org:80/dyn/travail/travmain.sectionReport1?p_lang=en&p_countries=PT&p_sc_id=2000&p_year=2009&p_structure=3",
+     "post_form": null,
+     "utc_time": "2026-10-27T14:51:44Z",
+     "http_status": "404",
+     "error": null,
+     "note": null
+    }
+   ]
+  },
+  {
+   "source_id": "oecd_family_database",
+   "role_in_paper": "OECD (2012a) Family Database: (a) paid leave for mothers (cited with Ray and ILO; p. 681-682); (b) state childcare spending, % of GDP spent on childcare services for children under five, 'published in 2005 and again in 2007; information for missing years was imputed' (p. 682, footnote 9); (c) fertility rate (p. 684). Also alternative-control candidates: women's part-time share (LMF1.6), women's share of managers (LMF1.6, 2010+ only), enrolment (PF3.2; footnote 9 alternative).",
+   "provider": "OECD, Directorate for Employment, Labour and Social Affairs, OECD Family Database",
+   "url_or_query": "https://webfs.oecd.org/els-com/Family_Database/<file>.xlsx for PF2_1_Parental_leave_systems, PF2_5_Trends_in_leave_entitlements_around_childbirth, PF3_1_Public_spending_on_childcare_and_early_education, PF3_2_Enrolment_childcare_preschool, PF1_1_Public_spending_on_family_benefits, SF_2_1_Fertility_rates, LMF_1_6_Gender_differences_in_employment_outcomes",
+   "licence_terms": "OECD terms and conditions (oecd.org/termsandconditions): OECD data may be used and reproduced with attribution (CC BY 4.0 for OECD data since 2024); no login.",
+   "release_vintage": "Current vintage (files cover up to 2021-2025). Paper used the 2012 vintage. Differences: PF3.1 time series is total public spending on early childhood education and care (childcare plus pre-primary), not 'childcare services' alone, and is a revised series rather than the 2005/2007 publication points; PF2.5 time series gives weeks of paid leave by year but no historical payment rate, so FTE weeks cannot be computed from it alone; PF2.1 gives current (2025) payment rates/FRE only; SF2.1 fertility series revised.",
+   "status": "available",
+   "notes": "Old cited URLs (www.oecd.org/els/family/...) return 404 and the OECD landing page returned 403; webfs.oecd.org files downloaded without login. France's PF2.5 Total_paid entries are text (parity-dependent), not numeric.",
+   "files": [
+    {
+     "path": "data/raw/oecd_family_database/LMF_1_6_Gender_differences_in_employment_outcomes.xlsx",
+     "bytes": 417168,
+     "sha256": "7012ae4b73c783bb9dd8f36fe86ee468fbf52484680dd67e90c0c9e06c23803a"
+    },
+    {
+     "path": "data/raw/oecd_family_database/PF1_1_Public_spending_on_family_benefits.xlsx",
+     "bytes": 166532,
+     "sha256": "de00248c98b4ea9aeaf53d4c30b01a6fb911108abc76e58c6654b34afbbf8914"
+    },
+    {
+     "path": "data/raw/oecd_family_database/PF2_1_Parental_leave_systems.xlsx",
+     "bytes": 151184,
+     "sha256": "5a157575709aa1666742d5bffbe67bd6bafeffb1ef86cae9a7a944bc6ba2f0ea"
+    },
+    {
+     "path": "data/raw/oecd_family_database/PF2_5_Trends_in_leave_entitlements_around_childbirth.xlsx",
+     "bytes": 280727,
+     "sha256": "af1c75dbc878c29d3e26026e048af5196f7cfcb424b2b3306f9687dc72f71e66"
+    },
+    {
+     "path": "data/raw/oecd_family_database/PF3_1_Public_spending_on_childcare_and_early_education.xlsx",
+     "bytes": 87974,
+     "sha256": "89b8ef93e20ce0b11af19115db77624f18308ac120d4c4fbbd860fbb3ef50f2f"
+    },
+    {
+     "path": "data/raw/oecd_family_database/PF3_2_Enrolment_childcare_preschool.xlsx",
+     "bytes": 203903,
+     "sha256": "f762289d6810b80899aaa1249fba89b4e3c46175db61e4e1b07efee27caf1bcf"
+    },
+    {
+     "path": "data/raw/oecd_family_database/SF_2_1_Fertility_rates.xlsx",
+     "bytes": 342811,
+     "sha256": "73dd78ed40bd52e108e7e032961a0dca43668834c666bf96cd5b320a303801ad"
+    }
+   ],
+   "acquisition": {
+    "mode": "agent_download",
+    "utc_first": "2026-10-27T14:39:15Z",
+    "utc_last": "2026-10-27T14:39:27Z",
+    "requests": [
+     {
+      "url": "https://webfs.oecd.org/els-com/Family_Database/PF2_1_Parental_leave_systems.xlsx",
+      "post_form": null,
+      "utc_time": "2026-10-27T14:39:15Z",
+      "http_status": "200",
+      "final_url": "https://webfs.oecd.org/els-com/Family_Database/PF2_1_Parental_leave_systems.xlsx",
+      "bytes": 151184,
+      "sha256": "5a157575709aa1666742d5bffbe67bd6bafeffb1ef86cae9a7a944bc6ba2f0ea",
+      "file": "data/raw/oecd_family_database/PF2_1_Parental_leave_systems.xlsx"
+     },
+     {
+      "url": "https://webfs.oecd.org/els-com/Family_Database/PF2_5_Trends_in_leave_entitlements_around_childbirth.xlsx",
+      "post_form": null,
+      "utc_time": "2026-10-27T14:39:17Z",
+      "http_status": "200",
+      "final_url": "https://webfs.oecd.org/els-com/Family_Database/PF2_5_Trends_in_leave_entitlements_around_childbirth.xlsx",
+      "bytes": 280727,
+      "sha256": "af1c75dbc878c29d3e26026e048af5196f7cfcb424b2b3306f9687dc72f71e66",
+      "file": "data/raw/oecd_family_database/PF2_5_Trends_in_leave_entitlements_around_childbirth.xlsx"
+     },
+     {
+      "url": "https://webfs.oecd.org/els-com/Family_Database/PF3_1_Public_spending_on_childcare_and_early_education.xlsx",
+      "post_form": null,
+      "utc_time": "2026-10-27T14:39:19Z",
+      "http_status": "200",
+      "final_url": "https://webfs.oecd.org/els-com/Family_Database/PF3_1_Public_spending_on_childcare_and_early_education.xlsx",
+      "bytes": 87974,
+      "sha256": "89b8ef93e20ce0b11af19115db77624f18308ac120d4c4fbbd860fbb3ef50f2f",
+      "file": "data/raw/oecd_family_database/PF3_1_Public_spending_on_childcare_and_early_education.xlsx"
+     },
+     {
+      "url": "https://webfs.oecd.org/els-com/Family_Database/PF3_2_Enrolment_childcare_preschool.xlsx",
+      "post_form": null,
+      "utc_time": "2026-10-27T14:39:20Z",
+      "http_status": "200",
+      "final_url": "https://webfs.oecd.org/els-com/Family_Database/PF3_2_Enrolment_childcare_preschool.xlsx",
+      "bytes": 203903,
+      "sha256": "f762289d6810b80899aaa1249fba89b4e3c46175db61e4e1b07efee27caf1bcf",
+      "file": "data/raw/oecd_family_database/PF3_2_Enrolment_childcare_preschool.xlsx"
+     },
+     {
+      "url": "https://webfs.oecd.org/els-com/Family_Database/PF1_1_Public_spending_on_family_benefits.xlsx",
+      "post_form": null,
+      "utc_time": "2026-10-27T14:39:22Z",
+      "http_status": "200",
+      "final_url": "https://webfs.oecd.org/els-com/Family_Database/PF1_1_Public_spending_on_family_benefits.xlsx",
+      "bytes": 166532,
+      "sha256": "de00248c98b4ea9aeaf53d4c30b01a6fb911108abc76e58c6654b34afbbf8914",
+      "file": "data/raw/oecd_family_database/PF1_1_Public_spending_on_family_benefits.xlsx"
+     },
+     {
+      "url": "https://webfs.oecd.org/els-com/Family_Database/SF_2_1_Fertility_rates.xlsx",
+      "post_form": null,
+      "utc_time": "2026-10-27T14:39:24Z",
+      "http_status": "200",
+      "final_url": "https://webfs.oecd.org/els-com/Family_Database/SF_2_1_Fertility_rates.xlsx",
+      "bytes": 342811,
+      "sha256": "73dd78ed40bd52e108e7e032961a0dca43668834c666bf96cd5b320a303801ad",
+      "file": "data/raw/oecd_family_database/SF_2_1_Fertility_rates.xlsx"
+     },
+     {
+      "url": "https://webfs.oecd.org/els-com/Family_Database/LMF_1_6_Gender_differences_in_employment_outcomes.xlsx",
+      "post_form": null,
+      "utc_time": "2026-10-27T14:39:27Z",
+      "http_status": "200",
+      "final_url": "https://webfs.oecd.org/els-com/Family_Database/LMF_1_6_Gender_differences_in_employment_outcomes.xlsx",
+      "bytes": 417168,
+      "sha256": "7012ae4b73c783bb9dd8f36fe86ee468fbf52484680dd67e90c0c9e06c23803a",
+      "file": "data/raw/oecd_family_database/LMF_1_6_Gender_differences_in_employment_outcomes.xlsx"
+     }
+    ]
+   },
+   "failed_attempts": [
+    {
+     "url": "https://www.oecd.org/els/family/PF2_1_Parental_leave_systems.xlsx",
+     "post_form": null,
+     "utc_time": "2026-10-27T14:39:29Z",
+     "http_status": "404",
+     "error": null,
+     "note": null
+    },
+    {
+     "url": "https://www.oecd.org/en/data/datasets/oecd-family-database.html",
+     "post_form": null,
+     "utc_time": "2026-10-27T14:39:30Z",
+     "http_status": "403",
+     "error": null,
+     "note": null
+    }
+   ]
+  },
+  {
+   "source_id": "oecd_socx_family",
+   "role_in_paper": "Sourced alternative/complement for state childcare spending (p. 682): SOCX public expenditure on family, early childhood education and care (TP521) and maternity/parental leave (TP512), % GDP, annual. The 2012 Family Database childcare indicator was derived from SOCX plus education spending data.",
+   "provider": "OECD Social Expenditure Database (SOCX), OECD Data Explorer SDMX API",
+   "url_or_query": "https://sdmx.oecd.org/public/rest/data/OECD.ELS.SPD,DSD_SOCX_AGG@DF_PUB_FAM,1.0/<24 ISO3>.......?startPeriod=1990&endPeriod=2015&format=csvfilewithlabels",
+   "licence_terms": "OECD terms (attribution; CC BY 4.0); no login.",
+   "release_vintage": "Current SOCX (2025/26 vintage). Paper used 2012-vintage Family Database figures; series revised since.",
+   "status": "available",
+   "sourced_alternative": true,
+   "sourced_alternative_reason": "Annual public ECEC spending series to examine the paper's imputation of missing years; not the paper's exact indicator.",
+   "files": [
+    {
+     "path": "data/raw/oecd_socx_family/OECD.ELS.SPD_DSD_SOCX_AGG@DF_PUB_FAM_1.0.csv",
+     "bytes": 11923957,
+     "sha256": "90fb446f8903d552560e9fff2df02e634ff3afe284f637a1f4d2dc0ef1ea9a23"
+    }
+   ],
+   "acquisition": {
+    "mode": "agent_download",
+    "utc_first": "2026-10-27T14:53:44Z",
+    "utc_last": "2026-10-27T14:53:44Z",
+    "requests": [
+     {
+      "url": "https://sdmx.oecd.org/public/rest/data/OECD.ELS.SPD,DSD_SOCX_AGG@DF_PUB_FAM,1.0/AUS+AUT+BEL+CAN+CZE+DNK+FIN+FRA+DEU+GRC+ISL+IRL+ITA+JPN+NLD+NZL+NOR+POL+PRT+ESP+SWE+CHE+GBR+USA.......?startPeriod=1990&endPeriod=2015&format=csvfilewithlabels",
+      "post_form": null,
+      "utc_time": "2026-10-27T14:53:44Z",
+      "http_status": "200",
+      "final_url": "https://sdmx.oecd.org/public/rest/data/OECD.ELS.SPD,DSD_SOCX_AGG@DF_PUB_FAM,1.0/AUS+AUT+BEL+CAN+CZE+DNK+FIN+FRA+DEU+GRC+ISL+IRL+ITA+JPN+NLD+NZL+NOR+POL+PRT+ESP+SWE+CHE+GBR+USA.......?startPeriod=1990&endPeriod=2015&format=csvfilewithlabels",
+      "bytes": 11923957,
+      "sha256": "90fb446f8903d552560e9fff2df02e634ff3afe284f637a1f4d2dc0ef1ea9a23",
+      "file": "data/raw/oecd_socx_family/OECD.ELS.SPD_DSD_SOCX_AGG@DF_PUB_FAM_1.0.csv"
+     }
+    ]
+   },
+   "failed_attempts": []
+  },
+  {
+   "source_id": "oecd_ftpt",
+   "role_in_paper": "Women's part-time employment (p. 682): 'percentage of women in paid employment who work part time (OECD, 2012b)' (Table A1 footnote: percent of female employees in part-time work).",
+   "provider": "OECD Labour Force Statistics, OECD Data Explorer SDMX API",
+   "url_or_query": "https://sdmx.oecd.org/public/rest/data/OECD.ELS.SAE,DSD_FTPT@DF_FTPT_COMMON_INC,1.0/<24 ISO3>..........?startPeriod=1990&endPeriod=2015&format=csvfilewithlabels ; same for DSD_FTPT@DF_FTPT_NATIONAL_INC; structure: https://sdmx.oecd.org/public/rest/dataflow/OECD.ELS.SAE/DSD_FTPT@DF_FTPT_COMMON_INC/latest?references=all&detail=referencepartial",
+   "licence_terms": "OECD terms (attribution; CC BY 4.0); no login.",
+   "release_vintage": "Current vintage (2025/26). Paper: OECD Labour Force Statistics as of 2012 (stats.oecd.org). Revisions likely.",
+   "status": "available",
+   "notes": "Common (30-hour) definition: women employees series lacks Japan; women total-employment 15-64 lacks USA. National-definition series covers all 24. Choice of definition/worker status/age band is an implementer decision to be frozen in the manifest.",
+   "files": [
+    {
+     "path": "data/raw/oecd_ftpt/OECD.ELS.SAE_DSD_FTPT@DF_FTPT_COMMON_INC_1.0.csv",
+     "bytes": 60507043,
+     "sha256": "05f2f52941a6519fd755ac4afd46fd1721685b5303d43e5be3b04017f8c240ce"
+    },
+    {
+     "path": "data/raw/oecd_ftpt/OECD.ELS.SAE_DSD_FTPT@DF_FTPT_NATIONAL_INC_1.0.csv",
+     "bytes": 17664690,
+     "sha256": "debb326350424c2883877217de21834144550ea93cbca4cba9595e6068d7a793"
+    },
+    {
+     "path": "data/raw/oecd_ftpt/structure_DSD_FTPT@DF_FTPT_COMMON_INC.xml",
+     "bytes": 648803,
+     "sha256": "6296ac74d79df9f7ae462062f70ec474354288c5e57c4b54bff9673a72217d5c"
+    }
+   ],
+   "acquisition": {
+    "mode": "agent_download",
+    "utc_first": "2026-10-27T14:37:36Z",
+    "utc_last": "2026-10-27T14:37:51Z",
+    "requests": [
+     {
+      "url": "https://sdmx.oecd.org/public/rest/data/OECD.ELS.SAE,DSD_FTPT@DF_FTPT_COMMON_INC,1.0/AUS+AUT+BEL+CAN+CZE+DNK+FIN+FRA+DEU+GRC+ISL+IRL+ITA+JPN+NLD+NZL+NOR+POL+PRT+ESP+SWE+CHE+GBR+USA..........?startPeriod=1990&endPeriod=2015&format=csvfilewithlabels",
+      "post_form": null,
+      "utc_time": "2026-10-27T14:37:36Z",
+      "http_status": "200",
+      "final_url": "https://sdmx.oecd.org/public/rest/data/OECD.ELS.SAE,DSD_FTPT@DF_FTPT_COMMON_INC,1.0/AUS+AUT+BEL+CAN+CZE+DNK+FIN+FRA+DEU+GRC+ISL+IRL+ITA+JPN+NLD+NZL+NOR+POL+PRT+ESP+SWE+CHE+GBR+USA..........?startPeriod=1990&endPeriod=2015&format=csvfilewithlabels",
+      "bytes": 60507043,
+      "sha256": "05f2f52941a6519fd755ac4afd46fd1721685b5303d43e5be3b04017f8c240ce",
+      "file": "data/raw/oecd_ftpt/OECD.ELS.SAE_DSD_FTPT@DF_FTPT_COMMON_INC_1.0.csv"
+     },
+     {
+      "url": "https://sdmx.oecd.org/public/rest/data/OECD.ELS.SAE,DSD_FTPT@DF_FTPT_NATIONAL_INC,1.0/AUS+AUT+BEL+CAN+CZE+DNK+FIN+FRA+DEU+GRC+ISL+IRL+ITA+JPN+NLD+NZL+NOR+POL+PRT+ESP+SWE+CHE+GBR+USA..........?startPeriod=1990&endPeriod=2015&format=csvfilewithlabels",
+      "post_form": null,
+      "utc_time": "2026-10-27T14:37:46Z",
+      "http_status": "200",
+      "final_url": "https://sdmx.oecd.org/public/rest/data/OECD.ELS.SAE,DSD_FTPT@DF_FTPT_NATIONAL_INC,1.0/AUS+AUT+BEL+CAN+CZE+DNK+FIN+FRA+DEU+GRC+ISL+IRL+ITA+JPN+NLD+NZL+NOR+POL+PRT+ESP+SWE+CHE+GBR+USA..........?startPeriod=1990&endPeriod=2015&format=csvfilewithlabels",
+      "bytes": 17664690,
+      "sha256": "debb326350424c2883877217de21834144550ea93cbca4cba9595e6068d7a793",
+      "file": "data/raw/oecd_ftpt/OECD.ELS.SAE_DSD_FTPT@DF_FTPT_NATIONAL_INC_1.0.csv"
+     },
+     {
+      "url": "https://sdmx.oecd.org/public/rest/dataflow/OECD.ELS.SAE/DSD_FTPT@DF_FTPT_COMMON_INC/latest?references=all&detail=referencepartial",
+      "post_form": null,
+      "utc_time": "2026-10-27T14:37:51Z",
+      "http_status": "200",
+      "final_url": "https://sdmx.oecd.org/public/rest/dataflow/OECD.ELS.SAE/DSD_FTPT@DF_FTPT_COMMON_INC/latest?references=all&detail=referencepartial",
+      "bytes": 648803,
+      "sha256": "6296ac74d79df9f7ae462062f70ec474354288c5e57c4b54bff9673a72217d5c",
+      "file": "data/raw/oecd_ftpt/structure_DSD_FTPT@DF_FTPT_COMMON_INC.xml"
+     }
+    ]
+   },
+   "failed_attempts": [
+    {
+     "url": "https://sdmx.oecd.org/public/rest/data/OECD.ELS.SAE,DSD_FTPT@DF_FTPT_COMMON_INC,1.0/AUS+AUT+BEL+CAN+CZE+DNK+FIN+FRA+DEU+GRC+ISL+IRL+ITA+JPN+NLD+NZL+NOR+POL+PRT+ESP+SWE+CHE+GBR+USA..........?startPeriod=1990&endPeriod=2015&format=csvfilewithlabels",
+     "post_form": null,
+     "utc_time": "2026-10-27T14:37:05Z",
+     "http_status": null,
+     "error": "URLError('unknown url type: https')",
+     "note": null
+    },
+    {
+     "url": "https://sdmx.oecd.org/public/rest/data/OECD.ELS.SAE,DSD_FTPT@DF_FTPT_NATIONAL_INC,1.0/AUS+AUT+BEL+CAN+CZE+DNK+FIN+FRA+DEU+GRC+ISL+IRL+ITA+JPN+NLD+NZL+NOR+POL+PRT+ESP+SWE+CHE+GBR+USA..........?startPeriod=1990&endPeriod=2015&format=csvfilewithlabels",
+     "post_form": null,
+     "utc_time": "2026-10-27T14:37:05Z",
+     "http_status": null,
+     "error": "URLError('unknown url type: https')",
+     "note": null
+    },
+    {
+     "url": "https://sdmx.oecd.org/public/rest/dataflow/OECD.ELS.SAE/DSD_FTPT@DF_FTPT_COMMON_INC/latest?references=all&detail=referencepartial",
+     "post_form": null,
+     "utc_time": "2026-10-27T14:37:05Z",
+     "http_status": null,
+     "error": "URLError('unknown url type: https')",
+     "note": null
+    }
+   ]
+  },
+  {
+   "source_id": "oecd_epl",
+   "role_in_paper": "Employment protection index (p. 683): overall protection of regular and temporary employees from dismissal (OECD, 2012b).",
+   "provider": "OECD Employment Protection Legislation database, OECD Data Explorer SDMX API",
+   "url_or_query": "https://sdmx.oecd.org/public/rest/data/OECD.ELS.JAI,DSD_EPL@DF_EPL,1.0/.<24 ISO3>...?startPeriod=1985&endPeriod=2015&format=csvfilewithlabels ; structure .../dataflow/OECD.ELS.JAI/DSD_EPL@DF_EPL/latest?references=all",
+   "licence_terms": "OECD terms (attribution; CC BY 4.0); no login.",
+   "release_vintage": "Current EPL database (versions 1-4, through 2019). Paper used 2012 vintage; the 2012-era 'overall EPL' summary (version 1/2 average of regular and temporary) is not published as a single series here; components EPL_R/EPL_OV/EPL_T/EPL_CD by version are.",
+   "status": "available",
+   "notes": "Iceland has no EPL values 2001-2007 in version 1 and none in version 2 (2001-2008).",
+   "files": [
+    {
+     "path": "data/raw/oecd_epl/OECD.ELS.JAI_DSD_EPL@DF_EPL_1.0.csv",
+     "bytes": 1030865,
+     "sha256": "57e08cb18ed5241dce3e58c6beac8e6e069d9a3b90308378bdb19ceec095c118"
+    },
+    {
+     "path": "data/raw/oecd_epl/structure_DSD_EPL@DF_EPL.xml",
+     "bytes": 959687,
+     "sha256": "a613ec428e50c9a42f444308aa318a9129bb2a56a04f3e759561c64483bd03a2"
+    }
+   ],
+   "acquisition": {
+    "mode": "agent_download",
+    "utc_first": "2026-10-27T14:37:51Z",
+    "utc_last": "2026-10-27T14:37:53Z",
+    "requests": [
+     {
+      "url": "https://sdmx.oecd.org/public/rest/data/OECD.ELS.JAI,DSD_EPL@DF_EPL,1.0/.AUS+AUT+BEL+CAN+CZE+DNK+FIN+FRA+DEU+GRC+ISL+IRL+ITA+JPN+NLD+NZL+NOR+POL+PRT+ESP+SWE+CHE+GBR+USA...?startPeriod=1985&endPeriod=2015&format=csvfilewithlabels",
+      "post_form": null,
+      "utc_time": "2026-10-27T14:37:51Z",
+      "http_status": "200",
+      "final_url": "https://sdmx.oecd.org/public/rest/data/OECD.ELS.JAI,DSD_EPL@DF_EPL,1.0/.AUS+AUT+BEL+CAN+CZE+DNK+FIN+FRA+DEU+GRC+ISL+IRL+ITA+JPN+NLD+NZL+NOR+POL+PRT+ESP+SWE+CHE+GBR+USA...?startPeriod=1985&endPeriod=2015&format=csvfilewithlabels",
+      "bytes": 1030865,
+      "sha256": "57e08cb18ed5241dce3e58c6beac8e6e069d9a3b90308378bdb19ceec095c118",
+      "file": "data/raw/oecd_epl/OECD.ELS.JAI_DSD_EPL@DF_EPL_1.0.csv"
+     },
+     {
+      "url": "https://sdmx.oecd.org/public/rest/dataflow/OECD.ELS.JAI/DSD_EPL@DF_EPL/latest?references=all&detail=referencepartial",
+      "post_form": null,
+      "utc_time": "2026-10-27T14:37:53Z",
+      "http_status": "200",
+      "final_url": "https://sdmx.oecd.org/public/rest/dataflow/OECD.ELS.JAI/DSD_EPL@DF_EPL/latest?references=all&detail=referencepartial",
+      "bytes": 959687,
+      "sha256": "a613ec428e50c9a42f444308aa318a9129bb2a56a04f3e759561c64483bd03a2",
+      "file": "data/raw/oecd_epl/structure_DSD_EPL@DF_EPL.xml"
+     }
+    ]
+   },
+   "failed_attempts": [
+    {
+     "url": "https://sdmx.oecd.org/public/rest/data/OECD.ELS.JAI,DSD_EPL@DF_EPL,1.0/.AUS+AUT+BEL+CAN+CZE+DNK+FIN+FRA+DEU+GRC+ISL+IRL+ITA+JPN+NLD+NZL+NOR+POL+PRT+ESP+SWE+CHE+GBR+USA...?startPeriod=1985&endPeriod=2015&format=csvfilewithlabels",
+     "post_form": null,
+     "utc_time": "2026-10-27T14:37:05Z",
+     "http_status": null,
+     "error": "URLError('unknown url type: https')",
+     "note": null
+    },
+    {
+     "url": "https://sdmx.oecd.org/public/rest/dataflow/OECD.ELS.JAI/DSD_EPL@DF_EPL/latest?references=all&detail=referencepartial",
+     "post_form": null,
+     "utc_time": "2026-10-27T14:37:05Z",
+     "http_status": null,
+     "error": "URLError('unknown url type: https')",
+     "note": null
+    }
+   ]
+  },
+  {
+   "source_id": "oecd_unemployment",
+   "role_in_paper": "Unemployment rate (p. 683): 'OECD, 2012c, Main Economic Indicators'.",
+   "provider": "OECD Infra-annual Labour Statistics (harmonised unemployment rates; source of MEI unemployment), OECD Data Explorer SDMX API",
+   "url_or_query": "https://sdmx.oecd.org/public/rest/data/OECD.SDD.TPS,DSD_LFS@DF_IALFS_UNE_M,1.0/<24 ISO3>.........A?startPeriod=1990&endPeriod=2015&format=csvfilewithlabels (server returned monthly, quarterly and annual series)",
+   "licence_terms": "OECD terms (attribution; CC BY 4.0); no login.",
+   "release_vintage": "Current vintage; paper used MEI 2012. Harmonised series revised since.",
+   "status": "available",
+   "notes": "Annual total 15+: Switzerland no values 2001-2008 and Iceland none for 2001-2002 in this dataflow; OECD LFS indicators (oecd_lfs_indicators) provide UNE_RATE as an alternative.",
+   "files": [
+    {
+     "path": "data/raw/oecd_unemployment/OECD.SDD.TPS_DSD_LFS@DF_IALFS_UNE_M_1.0_annual.csv",
+     "bytes": 58427855,
+     "sha256": "b19f3cc8865d21bcf85a1ac619891975fd6eca3b382f6823af7bf568319c3c6e"
+    },
+    {
+     "path": "data/raw/oecd_unemployment/structure_DSD_LFS@DF_IALFS_UNE_M.xml",
+     "bytes": 431935,
+     "sha256": "848e370ed797dbe383dd86dea00787cbb139c57d93e80a1a6b01b8e3bcefc26a"
+    }
+   ],
+   "acquisition": {
+    "mode": "agent_download",
+    "utc_first": "2026-10-27T14:37:53Z",
+    "utc_last": "2026-10-27T14:38:00Z",
+    "requests": [
+     {
+      "url": "https://sdmx.oecd.org/public/rest/data/OECD.SDD.TPS,DSD_LFS@DF_IALFS_UNE_M,1.0/AUS+AUT+BEL+CAN+CZE+DNK+FIN+FRA+DEU+GRC+ISL+IRL+ITA+JPN+NLD+NZL+NOR+POL+PRT+ESP+SWE+CHE+GBR+USA.........A?startPeriod=1990&endPeriod=2015&format=csvfilewithlabels",
+      "post_form": null,
+      "utc_time": "2026-10-27T14:37:53Z",
+      "http_status": "200",
+      "final_url": "https://sdmx.oecd.org/public/rest/data/OECD.SDD.TPS,DSD_LFS@DF_IALFS_UNE_M,1.0/AUS+AUT+BEL+CAN+CZE+DNK+FIN+FRA+DEU+GRC+ISL+IRL+ITA+JPN+NLD+NZL+NOR+POL+PRT+ESP+SWE+CHE+GBR+USA.........A?startPeriod=1990&endPeriod=2015&format=csvfilewithlabels",
+      "bytes": 58427855,
+      "sha256": "b19f3cc8865d21bcf85a1ac619891975fd6eca3b382f6823af7bf568319c3c6e",
+      "file": "data/raw/oecd_unemployment/OECD.SDD.TPS_DSD_LFS@DF_IALFS_UNE_M_1.0_annual.csv"
+     },
+     {
+      "url": "https://sdmx.oecd.org/public/rest/dataflow/OECD.SDD.TPS/DSD_LFS@DF_IALFS_UNE_M/latest?references=all&detail=referencepartial",
+      "post_form": null,
+      "utc_time": "2026-10-27T14:38:00Z",
+      "http_status": "200",
+      "final_url": "https://sdmx.oecd.org/public/rest/dataflow/OECD.SDD.TPS/DSD_LFS@DF_IALFS_UNE_M/latest?references=all&detail=referencepartial",
+      "bytes": 431935,
+      "sha256": "848e370ed797dbe383dd86dea00787cbb139c57d93e80a1a6b01b8e3bcefc26a",
+      "file": "data/raw/oecd_unemployment/structure_DSD_LFS@DF_IALFS_UNE_M.xml"
+     }
+    ]
+   },
+   "failed_attempts": [
+    {
+     "url": "https://sdmx.oecd.org/public/rest/data/OECD.SDD.TPS,DSD_LFS@DF_IALFS_UNE_M,1.0/AUS+AUT+BEL+CAN+CZE+DNK+FIN+FRA+DEU+GRC+ISL+IRL+ITA+JPN+NLD+NZL+NOR+POL+PRT+ESP+SWE+CHE+GBR+USA.........A?startPeriod=1990&endPeriod=2015&format=csvfilewithlabels",
+     "post_form": null,
+     "utc_time": "2026-10-27T14:37:05Z",
+     "http_status": null,
+     "error": "URLError('unknown url type: https')",
+     "note": null
+    },
+    {
+     "url": "https://sdmx.oecd.org/public/rest/dataflow/OECD.SDD.TPS/DSD_LFS@DF_IALFS_UNE_M/latest?references=all&detail=referencepartial",
+     "post_form": null,
+     "utc_time": "2026-10-27T14:37:05Z",
+     "http_status": null,
+     "error": "URLError('unknown url type: https')",
+     "note": null
+    }
+   ]
+  },
+  {
+   "source_id": "oecd_lfs_indicators",
+   "role_in_paper": "Alternative-control candidates (footnote 12): women's labour force participation rate; also unemployment rate (UNE_RATE) as alternative to oecd_unemployment.",
+   "provider": "OECD Labour Force Statistics (annual), OECD Data Explorer SDMX API",
+   "url_or_query": "https://sdmx.oecd.org/public/rest/data/OECD.ELS.SAE,DSD_LFS@DF_LFS_INDIC,1.1/<24 ISO3>.LF_RATE+EMP_RATE+UNE_RATE..F+M+_T.Y15T64+Y25T54+Y_GE15....A?startPeriod=1995&endPeriod=2012&format=csvfilewithlabels",
+   "licence_terms": "OECD terms (attribution; CC BY 4.0); no login.",
+   "release_vintage": "Current vintage; paper vintage 2012.",
+   "status": "available",
+   "notes": "Returned measures UNE_RATE and LF_RATE; ages Y15T64 and Y25T54 (EMP_RATE and Y_GE15 not returned for this key).",
+   "files": [
+    {
+     "path": "data/raw/oecd_lfs_indicators/OECD.ELS.SAE_DSD_LFS@DF_LFS_INDIC_1.1.csv",
+     "bytes": 1633004,
+     "sha256": "9e94922072d9f2c52886312d4a6069e8eac769a23ed5f871410e38f65a740eb6"
+    }
+   ],
+   "acquisition": {
+    "mode": "agent_download",
+    "utc_first": "2026-10-27T14:53:50Z",
+    "utc_last": "2026-10-27T14:53:50Z",
+    "requests": [
+     {
+      "url": "https://sdmx.oecd.org/public/rest/data/OECD.ELS.SAE,DSD_LFS@DF_LFS_INDIC,1.1/AUS+AUT+BEL+CAN+CZE+DNK+FIN+FRA+DEU+GRC+ISL+IRL+ITA+JPN+NLD+NZL+NOR+POL+PRT+ESP+SWE+CHE+GBR+USA.LF_RATE+EMP_RATE+UNE_RATE..F+M+_T.Y15T64+Y25T54+Y_GE15....A?startPeriod=1995&endPeriod=2012&format=csvfilewithlabels",
+      "post_form": null,
+      "utc_time": "2026-10-27T14:53:50Z",
+      "http_status": "200",
+      "final_url": "https://sdmx.oecd.org/public/rest/data/OECD.ELS.SAE,DSD_LFS@DF_LFS_INDIC,1.1/AUS+AUT+BEL+CAN+CZE+DNK+FIN+FRA+DEU+GRC+ISL+IRL+ITA+JPN+NLD+NZL+NOR+POL+PRT+ESP+SWE+CHE+GBR+USA.LF_RATE+EMP_RATE+UNE_RATE..F+M+_T.Y15T64+Y25T54+Y_GE15....A?startPeriod=1995&endPeriod=2012&format=csvfilewithlabels",
+      "bytes": 1633004,
+      "sha256": "9e94922072d9f2c52886312d4a6069e8eac769a23ed5f871410e38f65a740eb6",
+      "file": "data/raw/oecd_lfs_indicators/OECD.ELS.SAE_DSD_LFS@DF_LFS_INDIC_1.1.csv"
+     }
+    ]
+   },
+   "failed_attempts": []
+  },
+  {
+   "source_id": "oecd_union_density",
+   "role_in_paper": "Alternative control (footnote 11): union density.",
+   "provider": "OECD/AIAS ICTWSS trade union density, OECD Data Explorer SDMX API",
+   "url_or_query": "https://sdmx.oecd.org/public/rest/data/OECD.ELS.SAE,DSD_TUD_CBC@DF_TUD,1.0/<24 ISO3>..?startPeriod=1990&endPeriod=2015&format=csvfilewithlabels",
+   "licence_terms": "OECD terms (attribution; CC BY 4.0); no login.",
+   "release_vintage": "Current vintage; paper vintage 2012.",
+   "status": "available",
+   "notes": "Gaps: France 2006-2007, Greece 2002-03/2005-06/2008, Portugal 2001/2005/2007.",
+   "files": [
+    {
+     "path": "data/raw/oecd_union_density/OECD.ELS.SAE_DSD_TUD_CBC@DF_TUD_1.0.csv",
+     "bytes": 104266,
+     "sha256": "d93fbe6d52c5a413bec1578752eac2c49ea1b341264b8a327fc0dc56f6f2ded9"
+    }
+   ],
+   "acquisition": {
+    "mode": "agent_download",
+    "utc_first": "2026-10-27T14:53:42Z",
+    "utc_last": "2026-10-27T14:53:42Z",
+    "requests": [
+     {
+      "url": "https://sdmx.oecd.org/public/rest/data/OECD.ELS.SAE,DSD_TUD_CBC@DF_TUD,1.0/AUS+AUT+BEL+CAN+CZE+DNK+FIN+FRA+DEU+GRC+ISL+IRL+ITA+JPN+NLD+NZL+NOR+POL+PRT+ESP+SWE+CHE+GBR+USA..?startPeriod=1990&endPeriod=2015&format=csvfilewithlabels",
+      "post_form": null,
+      "utc_time": "2026-10-27T14:53:42Z",
+      "http_status": "200",
+      "final_url": "https://sdmx.oecd.org/public/rest/data/OECD.ELS.SAE,DSD_TUD_CBC@DF_TUD,1.0/AUS+AUT+BEL+CAN+CZE+DNK+FIN+FRA+DEU+GRC+ISL+IRL+ITA+JPN+NLD+NZL+NOR+POL+PRT+ESP+SWE+CHE+GBR+USA..?startPeriod=1990&endPeriod=2015&format=csvfilewithlabels",
+      "bytes": 104266,
+      "sha256": "d93fbe6d52c5a413bec1578752eac2c49ea1b341264b8a327fc0dc56f6f2ded9",
+      "file": "data/raw/oecd_union_density/OECD.ELS.SAE_DSD_TUD_CBC@DF_TUD_1.0.csv"
+     }
+    ]
+   },
+   "failed_attempts": []
+  },
+  {
+   "source_id": "undp_hdr",
+   "role_in_paper": "GDP per capita control, measured as the HDR 'GDP index' (Table A1 column 'GDP index'; text p. 683 'GDP per capita (UNDP, 2004, 2005, 2006, 2007, 2009, 2010)'); percentage of legislators, senior officials and managers who are women (p. 684); 'High Human Development' sample criterion (p. 680); alternative indicators in footnote 12 (women in parliament, etc.).",
+   "provider": "United Nations Development Programme, Human Development Report Office",
+   "url_or_query": "https://hdr.undp.org/system/files/documents/human-development-report-2004-english.human-development-report-2004-english (and 2005, 2006; 2007/2008: .../2008-english.2008-english; 2009: .../human-development-report-2009-english...; 2010: .../human-development-report-2010-complete-english...), linked from https://hdr.undp.org/content/human-development-report-<year>",
+   "licence_terms": "UNDP publications, freely downloadable; documentary use with attribution; no login.",
+   "release_vintage": "Exactly the six cited reports (HDR 2004, 2005, 2006, 2007/2008, 2009, 2010). Statistical tables in each report generally refer to data about two years before the report year (per HDR conventions); mapping report to survey year is an implementer decision.",
+   "status": "partially_available",
+   "status_reason": "PDFs obtained for all six cited reports and all 24 countries appear in each. Text layer: 'GDP index' and 'legislators, senior officials and managers' labels present in 2004, 2005, 2006, 2007/8 and 2009 reports; absent from HDR 2010 (which replaced the GDP index by a GNI-based income index and the GEM by the Gender Inequality Index). Values are printed tables in PDFs requiring extraction.",
+   "notes": "Machine-readable historical HDR tables (e.g. Excel annex tables for 2004-2009) were not located; HDRO's current time series do not include the old GDP index or the female-managers share.",
+   "files": [
+    {
+     "path": "data/raw/undp_hdr/2008-english.pdf",
+     "bytes": 12591874,
+     "sha256": "bf4f6c9d3b17424a4481dcf223d1e4219a8724c8f332a8aba77fe68e17eb7afd"
+    },
+    {
+     "path": "data/raw/undp_hdr/human-development-report-2004-english.pdf",
+     "bytes": 3814218,
+     "sha256": "aee6120df181449bb69bb1ac06407fbf38b130c40bf8b5d473624fd1cc30d673"
+    },
+    {
+     "path": "data/raw/undp_hdr/human-development-report-2005-english.pdf",
+     "bytes": 6467931,
+     "sha256": "8366e60ab5c5e88b0a41e5343fbaf927d142ae434b824509d4849213f46c9556"
+    },
+    {
+     "path": "data/raw/undp_hdr/human-development-report-2006-english.pdf",
+     "bytes": 8271408,
+     "sha256": "1e2b20f8fcb07fb203f847a3f3819e1bed669ee75399bac6f626b54741bf064a"
+    },
+    {
+     "path": "data/raw/undp_hdr/human-development-report-2009-english.pdf",
+     "bytes": 3977693,
+     "sha256": "40c2eb90d1d030757ab68dd5d365e12b31fa72769a59211dd496242021fe55ad"
+    },
+    {
+     "path": "data/raw/undp_hdr/human-development-report-2010-complete-english.pdf",
+     "bytes": 13701137,
+     "sha256": "941320dadd12b2adae506a1212691ab4bb914c702404b667e6a1cbe9bd5aae08"
+    }
+   ],
+   "acquisition": {
+    "mode": "agent_download",
+    "utc_first": "2026-10-27T14:49:05Z",
+    "utc_last": "2026-10-27T14:49:09Z",
+    "requests": [
+     {
+      "url": "https://hdr.undp.org/system/files/documents/human-development-report-2004-english.human-development-report-2004-english",
+      "post_form": null,
+      "utc_time": "2026-10-27T14:49:05Z",
+      "http_status": "200",
+      "final_url": "https://hdr.undp.org/system/files/documents/human-development-report-2004-english.human-development-report-2004-english",
+      "bytes": 3814218,
+      "sha256": "aee6120df181449bb69bb1ac06407fbf38b130c40bf8b5d473624fd1cc30d673",
+      "file": "data/raw/undp_hdr/human-development-report-2004-english.pdf"
+     },
+     {
+      "url": "https://hdr.undp.org/system/files/documents/human-development-report-2005-english.human-development-report-2005-english",
+      "post_form": null,
+      "utc_time": "2026-10-27T14:49:06Z",
+      "http_status": "200",
+      "final_url": "https://hdr.undp.org/system/files/documents/human-development-report-2005-english.human-development-report-2005-english",
+      "bytes": 6467931,
+      "sha256": "8366e60ab5c5e88b0a41e5343fbaf927d142ae434b824509d4849213f46c9556",
+      "file": "data/raw/undp_hdr/human-development-report-2005-english.pdf"
+     },
+     {
+      "url": "https://hdr.undp.org/system/files/documents/human-development-report-2006-english.human-development-report-2006-english",
+      "post_form": null,
+      "utc_time": "2026-10-27T14:49:07Z",
+      "http_status": "200",
+      "final_url": "https://hdr.undp.org/system/files/documents/human-development-report-2006-english.human-development-report-2006-english",
+      "bytes": 8271408,
+      "sha256": "1e2b20f8fcb07fb203f847a3f3819e1bed669ee75399bac6f626b54741bf064a",
+      "file": "data/raw/undp_hdr/human-development-report-2006-english.pdf"
+     },
+     {
+      "url": "https://hdr.undp.org/system/files/documents/2008-english.2008-english",
+      "post_form": null,
+      "utc_time": "2026-10-27T14:49:08Z",
+      "http_status": "200",
+      "final_url": "https://hdr.undp.org/system/files/documents/2008-english.2008-english",
+      "bytes": 12591874,
+      "sha256": "bf4f6c9d3b17424a4481dcf223d1e4219a8724c8f332a8aba77fe68e17eb7afd",
+      "file": "data/raw/undp_hdr/2008-english.pdf"
+     },
+     {
+      "url": "https://hdr.undp.org/system/files/documents/human-development-report-2009-english.human-development-report-2009-english",
+      "post_form": null,
+      "utc_time": "2026-10-27T14:49:09Z",
+      "http_status": "200",
+      "final_url": "https://hdr.undp.org/system/files/documents/human-development-report-2009-english.human-development-report-2009-english",
+      "bytes": 3977693,
+      "sha256": "40c2eb90d1d030757ab68dd5d365e12b31fa72769a59211dd496242021fe55ad",
+      "file": "data/raw/undp_hdr/human-development-report-2009-english.pdf"
+     },
+     {
+      "url": "https://hdr.undp.org/system/files/documents/human-development-report-2010-complete-english.human-development-report-2010-complete-english",
+      "post_form": null,
+      "utc_time": "2026-10-27T14:49:09Z",
+      "http_status": "200",
+      "final_url": "https://hdr.undp.org/system/files/documents/human-development-report-2010-complete-english.human-development-report-2010-complete-english",
+      "bytes": 13701137,
+      "sha256": "941320dadd12b2adae506a1212691ab4bb914c702404b667e6a1cbe9bd5aae08",
+      "file": "data/raw/undp_hdr/human-development-report-2010-complete-english.pdf"
+     }
+    ]
+   },
+   "failed_attempts": []
+  },
+  {
+   "source_id": "worldbank_income_class",
+   "role_in_paper": "Sample criterion (p. 680): 'a sample of 24 high-income countries (World Bank Group, 2013)'.",
+   "provider": "World Bank, historical country income classifications (OGHIST)",
+   "url_or_query": "https://datacatalogfiles.worldbank.org/ddh-published/0037712/DR0090754/OGHIST.xlsx",
+   "licence_terms": "World Bank Data Catalog, CC BY 4.0; no login.",
+   "release_vintage": "Current OGHIST (classification history FY1989 onward); includes the 2013 classifications cited.",
+   "status": "available",
+   "files": [
+    {
+     "path": "data/raw/worldbank_income_class/OGHIST.xlsx",
+     "bytes": 116890,
+     "sha256": "17eb9e67b2eaf7d489ceb303f39f53697ce5b6238ed13c0b11c0846c33024d7b"
+    }
+   ],
+   "acquisition": {
+    "mode": "agent_download",
+    "utc_first": "2026-10-27T14:53:15Z",
+    "utc_last": "2026-10-27T14:53:15Z",
+    "requests": [
+     {
+      "url": "https://datacatalogfiles.worldbank.org/ddh-published/0037712/DR0090754/OGHIST.xlsx",
+      "post_form": null,
+      "utc_time": "2026-10-27T14:53:15Z",
+      "http_status": "200",
+      "final_url": "https://datacatalogfiles.worldbank.org/ddh-published/0037712/DR0090754/OGHIST.xlsx",
+      "bytes": 116890,
+      "sha256": "17eb9e67b2eaf7d489ceb303f39f53697ce5b6238ed13c0b11c0846c33024d7b",
+      "file": "data/raw/worldbank_income_class/OGHIST.xlsx"
+     }
+    ]
+   },
+   "failed_attempts": [
+    {
+     "url": "https://ddh-openapi.worldbank.org/resources/DR0090754/download/",
+     "utc_time": "2026-10-27T14:50Z (probe)",
+     "http_status": "404",
+     "note": "probe only, not logged by fetch script"
+    }
+   ]
+  },
+  {
+   "source_id": "worldbank_doing_business",
+   "role_in_paper": "Alternative control (footnote 11): index of start-up procedures, time and cost (World Bank Group, 2013, Doing Business database).",
+   "provider": "World Bank Doing Business (discontinued 2021), archive site",
+   "url_or_query": "https://archive.doingbusiness.org/content/dam/doingBusiness/excel/db2020/Historical-data---COMPLETE-dataset-with-scores.xlsx",
+   "licence_terms": "World Bank terms of use (CC BY 4.0 for datasets); no login.",
+   "release_vintage": "DB2020 historical file covering DB2004-DB2020 (data years 2003-2019) with later methodology back-revisions; paper accessed in 2013. Survey years 2001-2002 not covered by any DB edition.",
+   "status": "available",
+   "files": [
+    {
+     "path": "data/raw/worldbank_doing_business/Historical-data---COMPLETE-dataset-with-scores.xlsx",
+     "bytes": 3817016,
+     "sha256": "4361cc3909345f404482dbeb8709df7ba45b0ba9c748e66910e9c55ad5b149e8"
+    }
+   ],
+   "acquisition": {
+    "mode": "agent_download",
+    "utc_first": "2026-10-27T14:53:15Z",
+    "utc_last": "2026-10-27T14:53:15Z",
+    "requests": [
+     {
+      "url": "https://archive.doingbusiness.org/content/dam/doingBusiness/excel/db2020/Historical-data---COMPLETE-dataset-with-scores.xlsx",
+      "post_form": null,
+      "utc_time": "2026-10-27T14:53:15Z",
+      "http_status": "200",
+      "final_url": "https://archive.doingbusiness.org/content/dam/doingBusiness/excel/db2020/Historical-data---COMPLETE-dataset-with-scores.xlsx",
+      "bytes": 3817016,
+      "sha256": "4361cc3909345f404482dbeb8709df7ba45b0ba9c748e66910e9c55ad5b149e8",
+      "file": "data/raw/worldbank_doing_business/Historical-data---COMPLETE-dataset-with-scores.xlsx"
+     }
+    ]
+   },
+   "failed_attempts": []
+  },
+  {
+   "source_id": "worldbank_wdi_gdppc",
+   "role_in_paper": "Sourced alternative for the GDP control (p. 683) where HDR GDP index is unavailable (e.g. HDR 2010): GDP per capita, PPP (current international $).",
+   "provider": "World Bank World Development Indicators API",
+   "url_or_query": "https://api.worldbank.org/v2/country/<24 ISO3 ;-separated>/indicator/NY.GDP.PCAP.PP.CD?format=json&date=1995:2012&per_page=1000",
+   "licence_terms": "CC BY 4.0; no login.",
+   "release_vintage": "Current WDI vintage.",
+   "status": "available",
+   "sourced_alternative": true,
+   "sourced_alternative_reason": "HDR 2010 lacks the GDP index; WDI is the original source series underlying HDR income measures. Not the paper's measure (the GDP index is a log-transformed, bounded transformation of GDP per capita PPP).",
+   "notes": "Constant-price request NY.GDP.PCAP.PP.KD returned HTTP 400 (logged).",
+   "files": [
+    {
+     "path": "data/raw/worldbank_wdi_gdppc/NY.GDP.PCAP.PP.CD_24countries_1995-2012.json",
+     "bytes": 103147,
+     "sha256": "d96c73cb91116693c743e5a300a9bb60ef07b17a81e9bc211efdc7e3de4a790a"
+    }
+   ],
+   "acquisition": {
+    "mode": "agent_download",
+    "utc_first": "2026-10-27T14:53:41Z",
+    "utc_last": "2026-10-27T14:53:41Z",
+    "requests": [
+     {
+      "url": "https://api.worldbank.org/v2/country/AUS;AUT;BEL;CAN;CZE;DNK;FIN;FRA;DEU;GRC;ISL;IRL;ITA;JPN;NLD;NZL;NOR;POL;PRT;ESP;SWE;CHE;GBR;USA/indicator/NY.GDP.PCAP.PP.CD?format=json&date=1995:2012&per_page=1000",
+      "post_form": null,
+      "utc_time": "2026-10-27T14:53:41Z",
+      "http_status": "200",
+      "final_url": "https://api.worldbank.org/v2/country/AUS;AUT;BEL;CAN;CZE;DNK;FIN;FRA;DEU;GRC;ISL;IRL;ITA;JPN;NLD;NZL;NOR;POL;PRT;ESP;SWE;CHE;GBR;USA/indicator/NY.GDP.PCAP.PP.CD?format=json&date=1995:2012&per_page=1000",
+      "bytes": 103147,
+      "sha256": "d96c73cb91116693c743e5a300a9bb60ef07b17a81e9bc211efdc7e3de4a790a",
+      "file": "data/raw/worldbank_wdi_gdppc/NY.GDP.PCAP.PP.CD_24countries_1995-2012.json"
+     }
+    ]
+   },
+   "failed_attempts": [
+    {
+     "url": "https://api.worldbank.org/v2/country/AUS;AUT;BEL;CAN;CZE;DNK;FIN;FRA;DEU;GRC;ISL;IRL;ITA;JPN;NLD;NZL;NOR;POL;PRT;ESP;SWE;CHE;GBR;USA/indicator/NY.GDP.PCAP.PP.KD?format=json&date=1995:2012&per_page=1000",
+     "post_form": null,
+     "utc_time": "2026-10-27T14:53:15Z",
+     "http_status": "400",
+     "error": null,
+     "note": null
+    }
+   ]
+  },
+  {
+   "source_id": "issp_2002_family_gender_roles_iii",
+   "role_in_paper": "Alternative indicator (footnote 12): national-level gender ideology from ISSP 2002 'Family and Changing Gender Roles III'.",
+   "provider": "GESIS - Leibniz Institute for the Social Sciences (ISSP data archive)",
+   "url_or_query": "https://doi.org/10.4232/1.11564 (ZA3880, ISSP 2002 Family and Changing Gender Roles III)",
+   "acquisition": {
+    "mode": "not_attempted_login_required"
+   },
+   "licence_terms": "GESIS download requires a registered account and acceptance of terms; agents may not log in or accept terms.",
+   "release_vintage": "Paper cites ISSP 2002.",
+   "files": [],
+   "status": "unavailable_login_required",
+   "needed_from_user": "If this robustness indicator is to be reproduced: the user should download ZA3880_v1-1-0.sav (or the current .sav/.dta version of ZA3880) and its codebook from GESIS by hand into data/supplied/ and inventory it in supplied_sources.json.",
+   "failed_attempts": [],
+   "notes": "Only used in an unreported alternative specification (footnote 12)."
+  },
+  {
+   "source_id": "charles_bradley_2009_field_segregation",
+   "role_in_paper": "Alternative indicator (footnote 12): gender segregation by academic field (Charles and Bradley, 2009, American Journal of Sociology).",
+   "provider": "Published journal article (secondary compilation); underlying UNESCO data not identified",
+   "url_or_query": "none",
+   "acquisition": {
+    "mode": "not_acquired"
+   },
+   "files": [],
+   "licence_terms": "Paywalled article",
+   "release_vintage": "2009",
+   "status": "not_found",
+   "failed_attempts": [],
+   "notes": "No public original dataset identified; values exist only as printed results in a third-party article. Not acquired; unreported alternative only."
+  },
+  {
+   "source_id": "oecd_service_sector_and_gender_wage_gap",
+   "role_in_paper": "Alternative controls (footnotes 11-12): size of the service sector (OECD 2012b) and gender wage gap.",
+   "provider": "OECD (Labour Force Statistics; Earnings database)",
+   "url_or_query": "not requested",
+   "acquisition": {
+    "mode": "not_acquired"
+   },
+   "files": [],
+   "licence_terms": "OECD terms",
+   "release_vintage": "n/a",
+   "status": "not_acquired_optional",
+   "failed_attempts": [],
+   "notes": "Unreported robustness alternatives; can be fetched later from OECD Data Explorer (e.g. DSD_EARNINGS gender wage gap; ALFS employment by sector) if the manifest includes them."
+  }
+ ]
+}

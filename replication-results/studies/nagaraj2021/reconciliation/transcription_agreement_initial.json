@@ -1,0 +1,29 @@
+{
+ "regression_fields": 164,
+ "regression_fields_agree": 164,
+ "mismatches": [],
+ "tables_1_2": {
+  "Table 1": {
+   "opus_numbers": 49,
+   "astra_numbers": 49,
+   "common": 47,
+   "only_opus": [
+    "38.8",
+    "5"
+   ],
+   "only_astra": [
+    "0.484",
+    "177.6"
+   ]
+  },
+  "Table 2": {
+   "opus_numbers": 95,
+   "astra_numbers": 94,
+   "common": 94,
+   "only_opus": [
+    "171"
+   ],
+   "only_astra": []
+  }
+ }
+}

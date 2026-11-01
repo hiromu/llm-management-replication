@@ -1,0 +1,67 @@
+{
+  "stage": "prepared_not_run",
+  "coordinator": {
+    "platform": "Claude Code",
+    "provider": "Anthropic",
+    "model": "claude-opus-5-5",
+    "effort": "high",
+    "fast_mode": false,
+    "auto_memory": false,
+    "settings_file": ".claude/settings.json at the project root and in each study folder",
+    "context": "fresh separate session for exactly one user-selected paper",
+    "actual_run": null
+  },
+  "readers": [
+    {
+      "role": "reader_a",
+      "provider": "Anthropic",
+      "model": "claude-fable-5-1",
+      "effort": "high",
+      "processing_mode": "normal",
+      "output": "readers/fable",
+      "actual_run": null,
+      "fast_mode": false,
+      "launch_settings": {
+        "fastMode": false
+      }
+    },
+    {
+      "role": "reader_b",
+      "provider": "OpenAI",
+      "model": "gpt-6-astra",
+      "effort": "high",
+      "processing_mode": "normal",
+      "output": "readers/astra",
+      "actual_run": null,
+      "fast_mode": false,
+      "service_tier": "default",
+      "launch_settings": {
+        "model_reasoning_effort": "high",
+        "service_tier": "default",
+        "features.fast_mode": false
+      }
+    }
+  ],
+  "implementer_design": {
+    "A": "family 1, reported language or R",
+    "B": "family 2, same language as A",
+    "C": "family 1 or 2, a different language",
+    "exact_assignments": "freeze in new session before implementation"
+  },
+  "policy": "No silent substitution. Both readers use High effort and normal (standard) speed, with Fast and Ultrafast disabled. Set speed explicitly rather than inheriting a global preference. Verify actual model/effort/speed where observable; record verification limits. Role directories are relative to each study. The coordinator and reader_a are both Anthropic models; the coordinator does not read independently, and the shared family is recorded.",
+  "execution_scope": {
+    "mode": "one_paper_per_separate_session",
+    "batch_papers": false,
+    "automatic_next_paper": false,
+    "shared_read_only": [
+      "papers/",
+      "instructions/",
+      "prompts/",
+      "config/"
+    ],
+    "working_directory": "studies/<selected_study_id>/",
+    "stop_after": "selected study deliverables",
+    "cross_paper_validation": "separate user-requested task"
+  },
+  "isolation": "Readers, memorization probes, implementers and pre-execution checkers run as separate claude or codex CLI processes from neutral staging directories, never as coordinator subagents, because subagents can inherit the project's CLAUDE.md files."
+}

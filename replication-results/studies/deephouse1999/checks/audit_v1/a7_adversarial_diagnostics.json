@@ -1,0 +1,364 @@
+{
+ "D2_H3_joint": {
+  "O_A": {
+   "b_SD": 0.11163737438545401,
+   "b_SD2": -0.0042915887272662314,
+   "corr_bSD_bSD2": -0.9786576333779362,
+   "turning_point_rec": 13.006532251818047,
+   "turning_point_pub_point": 14.166666666666668,
+   "turning_point_pub_rounding_range": [
+    13.03846153846154,
+    15.500000000000002
+   ],
+   "aux_delta_SD_rec": 29.28082804701128,
+   "aux_delta_SD_pub_implied": 31.666666666666668,
+   "aux_delta_SD_pub_rounding_range": [
+    29.07692307692308,
+    34.72727272727273
+   ],
+   "SD_gap_pub_minus_rec": 0.058362625614546,
+   "gap_part_from_M2_SD": -0.005976102813879235,
+   "gap_part_from_SD2_magnitude_at_rec_delta": 0.05002369671049317,
+   "gap_part_from_delta": 0.014315031717932329,
+   "SD2_true_SE_implied_by_F134.1": [
+    0.000475,
+    0.000561
+   ],
+   "SD2_gap_in_implied_true_SE_units": [
+    2.154030789186753,
+    3.2980912601038006
+   ],
+   "mahalanobis_pub_pair_vs_rec_cov_posthoc": 4.185769118272089,
+   "rec_SSE": {
+    "M1": 3.010527145520274,
+    "M2": 2.9674869133591253,
+    "M3": 2.815119630761747
+   },
+   "pub_SSE": {
+    "M1": 2.978,
+    "M2": 2.886,
+    "M3": 2.53
+   }
+  },
+  "O_B": {
+   "b_SD": 0.10030480394488739,
+   "b_SD2": -0.003931532581105133,
+   "corr_bSD_bSD2": -0.9800114953893245,
+   "turning_point_rec": 12.756450808388346,
+   "turning_point_pub_point": 14.166666666666668,
+   "turning_point_pub_rounding_range": [
+    13.03846153846154,
+    15.500000000000002
+   ],
+   "aux_delta_SD_rec": 27.07255411133435,
+   "aux_delta_SD_pub_implied": 31.666666666666668,
+   "aux_delta_SD_pub_rounding_range": [
+    29.07692307692308,
+    34.72727272727273
+   ],
+   "SD_gap_pub_minus_rec": 0.06969519605511262,
+   "gap_part_from_M2_SD": -0.01386817540244569,
+   "gap_part_from_SD2_magnitude_at_rec_delta": 0.05599869612556338,
+   "gap_part_from_delta": 0.027564675331993898,
+   "SD2_true_SE_implied_by_F134.1": [
+    0.000475,
+    0.000561
+   ],
+   "SD2_gap_in_implied_true_SE_units": [
+    2.795842101416874,
+    3.9931803453568855
+   ],
+   "mahalanobis_pub_pair_vs_rec_cov_posthoc": 5.033795223982408,
+   "rec_SSE": {
+    "M1": 2.9658586692263302,
+    "M2": 2.958935906137145,
+    "M3": 2.872981544665384
+   },
+   "pub_SSE": {
+    "M1": 2.978,
+    "M2": 2.886,
+    "M3": 2.53
+   }
+  }
+ },
+ "D3_ms_consistency": {
+  "O_A": {
+   "sum_MS": 7.838162776859054,
+   "mean_MS_at_rec_N": 0.006220764108618297,
+   "mean_MS_if_same_sum_over_960": 0.008164752892561515,
+   "published_mean_MS": 0.008
+  },
+  "O_B": {
+   "sum_MS": 7.836519706781328,
+   "mean_MS_at_rec_N": 0.006244238810184325,
+   "mean_MS_if_same_sum_over_960": 0.00816304136123055,
+   "published_mean_MS": 0.008
+  }
+ },
+ "D3_table1_agree_counts": [
+  {
+   "origin": "O_A",
+   "stat": "corr",
+   "sum": 10,
+   "count": 21
+  },
+  {
+   "origin": "O_A",
+   "stat": "mean",
+   "sum": 5,
+   "count": 7
+  },
+  {
+   "origin": "O_A",
+   "stat": "sd",
+   "sum": 2,
+   "count": 7
+  },
+  {
+   "origin": "O_B",
+   "stat": "corr",
+   "sum": 7,
+   "count": 21
+  },
+  {
+   "origin": "O_B",
+   "stat": "mean",
+   "sum": 6,
+   "count": 7
+  },
+  {
+   "origin": "O_B",
+   "stat": "sd",
+   "sum": 4,
+   "count": 7
+  }
+ ],
+ "D4_sample_anatomy": {
+  "O_A": {
+   "rows_by_year": {
+    "1985": 188,
+    "1986": 188,
+    "1987": 170,
+    "1988": 154,
+    "1989": 149,
+    "1990": 146,
+    "1991": 133,
+    "1992": 132
+   },
+   "rows_by_county": {
+    "Anoka County, MN": 66,
+    "Carver County, MN": 87,
+    "Chisago County, MN": 64,
+    "Dakota County, MN": 134,
+    "Hennepin County, MN": 368,
+    "Isanti County, MN": 32,
+    "Ramsey County, MN": 188,
+    "Scott County, MN": 52,
+    "St. Croix County, WI": 78,
+    "Washington County, MN": 79,
+    "Wright County, MN": 112
+   },
+   "banks": 195,
+   "weight_share_top_banks": {
+    "66855 FIRST NB OF MINNEAPOLIS": 0.3016,
+    "995151 NORWEST BK MINNEAPOLIS NA": 0.2141,
+    "37855 MARQUETTE BK MINNEAPOLIS NA": 0.056,
+    "181253 FIRST NB OF ST PAUL": 0.0322,
+    "747752 AMERICAN NB&TC": 0.0223
+   },
+   "rows_small_MS_lt_0.001": 357,
+   "weight_share_rows_MS_lt_0.001": 0.029999253590228283
+  },
+  "O_B": {
+   "rows_by_year": {
+    "1985": 186,
+    "1986": 188,
+    "1987": 169,
+    "1988": 154,
+    "1989": 148,
+    "1990": 146,
+    "1991": 132,
+    "1992": 132
+   },
+   "rows_by_county": {
+    "Anoka County, MN": 66,
+    "Carver County, MN": 87,
+    "Chisago County, MN": 64,
+    "Dakota County, MN": 134,
+    "Hennepin County, MN": 367,
+    "Isanti County, MN": 32,
+    "Ramsey County, MN": 186,
+    "Scott County, MN": 52,
+    "St. Croix County, WI": 78,
+    "Washington County, MN": 78,
+    "Wright County, MN": 111
+   },
+   "banks": 195,
+   "weight_share_top_banks": {
+    "66855 FIRST NB OF MINNEAPOLIS": 0.3264,
+    "995151 NORWEST BK MINNEAPOLIS NA": 0.2145,
+    "37855 MARQUETTE BK MINNEAPOLIS NA": 0.0535,
+    "181253 FIRST NB OF ST PAUL": 0.032,
+    "747752 AMERICAN NB&TC": 0.0213
+   },
+   "rows_small_MS_lt_0.001": 381,
+   "weight_share_rows_MS_lt_0.001": 0.03173299602486484
+  }
+ },
+ "D5_outlier": {
+  "rebuild_hash_after_deletion_matches_O_A": true,
+  "n_with_named_row": 1261,
+  "M1": {
+   "top3_rows": [
+    [
+     995151,
+     1987
+    ],
+    [
+     995151,
+     1988
+    ],
+    [
+     66855,
+     1991
+    ]
+   ],
+   "top3_abs_rstudent": [
+    25.6,
+    14.98,
+    12.98
+   ],
+   "ratio_first_to_second": 1.7092428637844173
+  },
+  "M2": {
+   "top3_rows": [
+    [
+     995151,
+     1987
+    ],
+    [
+     995151,
+     1988
+    ],
+    [
+     66855,
+     1991
+    ]
+   ],
+   "top3_abs_rstudent": [
+    24.69,
+    15.37,
+    14.36
+   ],
+   "ratio_first_to_second": 1.606183876229014
+  },
+  "M3": {
+   "top3_rows": [
+    [
+     995151,
+     1987
+    ],
+    [
+     995151,
+     1988
+    ],
+    [
+     66855,
+     1991
+    ]
+   ],
+   "top3_abs_rstudent": [
+    26.02,
+    15.77,
+    13.65
+   ],
+   "ratio_first_to_second": 1.64995200227027
+  }
+ },
+ "D6_H2_M2_SD": [
+  {
+   "spec_id": "O_A",
+   "n": 1260.0,
+   "estimate": -0.0140238971861205,
+   "se": 0.0032883425676192,
+   "p_two_sided": 2.151666769409e-05
+  },
+  {
+   "spec_id": "O_B",
+   "n": 1255.0,
+   "estimate": -0.0061318245975546,
+   "se": 0.0035870427148341,
+   "p_two_sided": 0.0876183742232299
+  },
+  {
+   "spec_id": "O_A__R02.charter",
+   "n": 1260.0,
+   "estimate": -0.0140238971861205,
+   "se": 0.0032883425676192,
+   "p_two_sided": 2.151666769409e-05
+  },
+  {
+   "spec_id": "O_A__R05.all4",
+   "n": 1255.0,
+   "estimate": -0.0128069037078902,
+   "se": 0.0032928962482436,
+   "p_two_sided": 0.000105848828673
+  },
+  {
+   "spec_id": "O_A__R14.literal",
+   "n": 1260.0,
+   "estimate": -0.0096411715750417,
+   "se": 0.0035861572391529,
+   "p_two_sided": 0.0072737503924909
+  },
+  {
+   "spec_id": "O_A__R15.missing",
+   "n": 1260.0,
+   "estimate": -0.0140238971861205,
+   "se": 0.0032883425676192,
+   "p_two_sided": 2.151666769409e-05
+  },
+  {
+   "spec_id": "O_A__R18.consolidated",
+   "n": 1260.0,
+   "estimate": -0.0117820558057331,
+   "se": 0.0033045310334083,
+   "p_two_sided": 0.0003769318883056
+  },
+  {
+   "spec_id": "O_B__R02.charter_entity",
+   "n": 1255.0,
+   "estimate": -0.0061318245975546,
+   "se": 0.0035870427148341,
+   "p_two_sided": 0.0876183742232299
+  },
+  {
+   "spec_id": "O_B__R05.min2_fallback",
+   "n": 1260.0,
+   "estimate": -0.0072212243227221,
+   "se": 0.0035801744740143,
+   "p_two_sided": 0.0439079210645951
+  },
+  {
+   "spec_id": "O_B__R14.broad",
+   "n": 1255.0,
+   "estimate": -0.0107082015218204,
+   "se": 0.0033123239259161,
+   "p_two_sided": 0.0012577090499803
+  },
+  {
+   "spec_id": "O_B__R15.zero_if_not_collected",
+   "n": 1255.0,
+   "estimate": -0.0061318245975546,
+   "se": 0.0035870427148341,
+   "p_two_sided": 0.0876183742232299
+  },
+  {
+   "spec_id": "O_B__R18.domestic",
+   "n": 1255.0,
+   "estimate": -0.0083643922188812,
+   "se": 0.0035893189216829,
+   "p_two_sided": 0.0199459244871394
+  }
+ ]
+}

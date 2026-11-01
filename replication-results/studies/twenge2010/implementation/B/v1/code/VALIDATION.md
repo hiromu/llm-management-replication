@@ -1,0 +1,515 @@
+# Output validation
+
+Result: PASS
+
+476 checks across 77 fitted models, all specifications, and two influence deletions.
+
+No additional statistical analyses were fitted by this validation.
+
+Checks cover output metadata, convergence, sample hashes, finite fit indices, independently computed versus lavaan chi-square, contrast direction and covariance, requested output coverage, identification-invariant effects, robust standard errors, influence schema, and full-precision JSON serialization.
+
+## Detailed checks
+
+- PASS: All 12 specification files exist
+- PASS: S00 metadata
+- PASS: S00 form3.1976 converged
+- PASS: S00 form3.1976 analysis samples
+- PASS: S00 form3.1976 finite fit indices
+- PASS: S00 form3.1976 manual chi-square agrees with lavaan (2.7853275241795927e-12)
+- PASS: S00 form3.1991 converged
+- PASS: S00 form3.1991 analysis samples
+- PASS: S00 form3.1991 finite fit indices
+- PASS: S00 form3.1991 manual chi-square agrees with lavaan (-2.1600499167107046e-12)
+- PASS: S00 form3.2006 converged
+- PASS: S00 form3.2006 analysis samples
+- PASS: S00 form3.2006 finite fit indices
+- PASS: S00 form3.2006 manual chi-square agrees with lavaan (0)
+- PASS: S00 form4_seven.1976 converged
+- PASS: S00 form4_seven.1976 analysis samples
+- PASS: S00 form4_seven.1976 finite fit indices
+- PASS: S00 form4_seven.1976 manual chi-square agrees with lavaan (1.0913936421275139e-11)
+- PASS: S00 form4_seven.1991 converged
+- PASS: S00 form4_seven.1991 analysis samples
+- PASS: S00 form4_seven.1991 finite fit indices
+- PASS: S00 form4_seven.1991 manual chi-square agrees with lavaan (-8.1854523159563541e-12)
+- PASS: S00 form4_seven.2006 converged
+- PASS: S00 form4_seven.2006 analysis samples
+- PASS: S00 form4_seven.2006 finite fit indices
+- PASS: S00 form4_seven.2006 manual chi-square agrees with lavaan (-8.1854523159563541e-12)
+- PASS: S00 form4_five.1976 converged
+- PASS: S00 form4_five.1976 analysis samples
+- PASS: S00 form4_five.1976 finite fit indices
+- PASS: S00 form4_five.1976 manual chi-square agrees with lavaan (-1.0913936421275139e-11)
+- PASS: S00 form4_five.1991 converged
+- PASS: S00 form4_five.1991 analysis samples
+- PASS: S00 form4_five.1991 finite fit indices
+- PASS: S00 form4_five.1991 manual chi-square agrees with lavaan (0)
+- PASS: S00 form4_five.2006 converged
+- PASS: S00 form4_five.2006 analysis samples
+- PASS: S00 form4_five.2006 finite fit indices
+- PASS: S00 form4_five.2006 manual chi-square agrees with lavaan (0)
+- PASS: S00 M1 converged
+- PASS: S00 M1 analysis samples
+- PASS: S00 M1 finite fit indices
+- PASS: S00 M1 manual chi-square agrees with lavaan (-2.7284841053187847e-11)
+- PASS: S00 M2 converged
+- PASS: S00 M2 analysis samples
+- PASS: S00 M2 finite fit indices
+- PASS: S00 M2 manual chi-square agrees with lavaan (2.1827872842550278e-11)
+- PASS: S00 M3 converged
+- PASS: S00 M3 analysis samples
+- PASS: S00 M3 finite fit indices
+- PASS: S00 M3 manual chi-square agrees with lavaan (-1.6370904631912708e-11)
+- PASS: S00 M4 converged
+- PASS: S00 M4 analysis samples
+- PASS: S00 M4 finite fit indices
+- PASS: S00 M4 manual chi-square agrees with lavaan (-2.5465851649641991e-11)
+- PASS: S00 M5 converged
+- PASS: S00 M5 analysis samples
+- PASS: S00 M5 finite fit indices
+- PASS: S00 M5 manual chi-square agrees with lavaan (-2.0008883439004421e-11)
+- PASS: S00 all 15 contrasts
+- PASS: S00 K1 P1 direction and covariance
+- PASS: S00 K1 P2 direction and covariance
+- PASS: S00 K1 P3 direction and covariance
+- PASS: S00 K2 P1 direction and covariance
+- PASS: S00 K2 P2 direction and covariance
+- PASS: S00 K2 P3 direction and covariance
+- PASS: S00 K3 P1 direction and covariance
+- PASS: S00 K3 P2 direction and covariance
+- PASS: S00 K3 P3 direction and covariance
+- PASS: S00 K4 P1 direction and covariance
+- PASS: S00 K4 P2 direction and covariance
+- PASS: S00 K4 P3 direction and covariance
+- PASS: S00 K5 P1 direction and covariance
+- PASS: S00 K5 P2 direction and covariance
+- PASS: S00 K5 P3 direction and covariance
+- PASS: S01 metadata
+- PASS: S01 form3.1976 converged
+- PASS: S01 form3.1976 analysis samples
+- PASS: S01 form3.1976 finite fit indices
+- PASS: S01 form3.1976 manual chi-square agrees with lavaan (0)
+- PASS: S01 form3.1991 converged
+- PASS: S01 form3.1991 analysis samples
+- PASS: S01 form3.1991 finite fit indices
+- PASS: S01 form3.1991 manual chi-square agrees with lavaan (0)
+- PASS: S01 form3.2006 converged
+- PASS: S01 form3.2006 analysis samples
+- PASS: S01 form3.2006 finite fit indices
+- PASS: S01 form3.2006 manual chi-square agrees with lavaan (2.0463630789890885e-12)
+- PASS: S01 form4_seven.1976 converged
+- PASS: S01 form4_seven.1976 analysis samples
+- PASS: S01 form4_seven.1976 finite fit indices
+- PASS: S01 form4_seven.1976 manual chi-square agrees with lavaan (0)
+- PASS: S01 form4_seven.1991 converged
+- PASS: S01 form4_seven.1991 analysis samples
+- PASS: S01 form4_seven.1991 finite fit indices
+- PASS: S01 form4_seven.1991 manual chi-square agrees with lavaan (8.6401996668428183e-12)
+- PASS: S01 form4_seven.2006 converged
+- PASS: S01 form4_seven.2006 analysis samples
+- PASS: S01 form4_seven.2006 finite fit indices
+- PASS: S01 form4_seven.2006 manual chi-square agrees with lavaan (0)
+- PASS: S01 form4_five.1976 converged
+- PASS: S01 form4_five.1976 analysis samples
+- PASS: S01 form4_five.1976 finite fit indices
+- PASS: S01 form4_five.1976 manual chi-square agrees with lavaan (0)
+- PASS: S01 form4_five.1991 converged
+- PASS: S01 form4_five.1991 analysis samples
+- PASS: S01 form4_five.1991 finite fit indices
+- PASS: S01 form4_five.1991 manual chi-square agrees with lavaan (-1.7053025658242404e-11)
+- PASS: S01 form4_five.2006 converged
+- PASS: S01 form4_five.2006 analysis samples
+- PASS: S01 form4_five.2006 finite fit indices
+- PASS: S01 form4_five.2006 manual chi-square agrees with lavaan (0)
+- PASS: S01 M1 converged
+- PASS: S01 M1 analysis samples
+- PASS: S01 M1 finite fit indices
+- PASS: S01 M1 manual chi-square agrees with lavaan (-3.2741809263825417e-11)
+- PASS: S01 M2 converged
+- PASS: S01 M2 analysis samples
+- PASS: S01 M2 finite fit indices
+- PASS: S01 M2 manual chi-square agrees with lavaan (-6.0936145018786192e-11)
+- PASS: S01 M3 converged
+- PASS: S01 M3 analysis samples
+- PASS: S01 M3 finite fit indices
+- PASS: S01 M3 manual chi-square agrees with lavaan (-3.637978807091713e-11)
+- PASS: S01 M4 converged
+- PASS: S01 M4 analysis samples
+- PASS: S01 M4 finite fit indices
+- PASS: S01 M4 manual chi-square agrees with lavaan (-1.9463186617940664e-10)
+- PASS: S01 M5 converged
+- PASS: S01 M5 analysis samples
+- PASS: S01 M5 finite fit indices
+- PASS: S01 M5 manual chi-square agrees with lavaan (-9.276845958083868e-11)
+- PASS: S01 all 15 contrasts
+- PASS: S01 K1 P1 direction and covariance
+- PASS: S01 K1 P2 direction and covariance
+- PASS: S01 K1 P3 direction and covariance
+- PASS: S01 K2 P1 direction and covariance
+- PASS: S01 K2 P2 direction and covariance
+- PASS: S01 K2 P3 direction and covariance
+- PASS: S01 K3 P1 direction and covariance
+- PASS: S01 K3 P2 direction and covariance
+- PASS: S01 K3 P3 direction and covariance
+- PASS: S01 K4 P1 direction and covariance
+- PASS: S01 K4 P2 direction and covariance
+- PASS: S01 K4 P3 direction and covariance
+- PASS: S01 K5 P1 direction and covariance
+- PASS: S01 K5 P2 direction and covariance
+- PASS: S01 K5 P3 direction and covariance
+- PASS: S02 metadata
+- PASS: S02 M1 converged
+- PASS: S02 M1 analysis samples
+- PASS: S02 M1 finite fit indices
+- PASS: S02 M1 manual chi-square agrees with lavaan (1.2732925824820995e-11)
+- PASS: S02 M2 converged
+- PASS: S02 M2 analysis samples
+- PASS: S02 M2 finite fit indices
+- PASS: S02 M2 manual chi-square agrees with lavaan (-4.1836756281554699e-11)
+- PASS: S02 M3 converged
+- PASS: S02 M3 analysis samples
+- PASS: S02 M3 finite fit indices
+- PASS: S02 M3 manual chi-square agrees with lavaan (8.1854523159563541e-12)
+- PASS: S02 M4 converged
+- PASS: S02 M4 analysis samples
+- PASS: S02 M4 finite fit indices
+- PASS: S02 M4 manual chi-square agrees with lavaan (-6.4574123825877905e-11)
+- PASS: S02 M5 converged
+- PASS: S02 M5 analysis samples
+- PASS: S02 M5 finite fit indices
+- PASS: S02 M5 manual chi-square agrees with lavaan (-2.1827872842550278e-11)
+- PASS: S02 all 15 contrasts
+- PASS: S02 K1 P1 direction and covariance
+- PASS: S02 K1 P2 direction and covariance
+- PASS: S02 K1 P3 direction and covariance
+- PASS: S02 K2 P1 direction and covariance
+- PASS: S02 K2 P2 direction and covariance
+- PASS: S02 K2 P3 direction and covariance
+- PASS: S02 K3 P1 direction and covariance
+- PASS: S02 K3 P2 direction and covariance
+- PASS: S02 K3 P3 direction and covariance
+- PASS: S02 K4 P1 direction and covariance
+- PASS: S02 K4 P2 direction and covariance
+- PASS: S02 K4 P3 direction and covariance
+- PASS: S02 K5 P1 direction and covariance
+- PASS: S02 K5 P2 direction and covariance
+- PASS: S02 K5 P3 direction and covariance
+- PASS: S03 metadata
+- PASS: S03 form3.1976 converged
+- PASS: S03 form3.1976 analysis samples
+- PASS: S03 form3.1976 finite fit indices
+- PASS: S03 form3.1976 manual chi-square agrees with lavaan (2.7853275241795927e-12)
+- PASS: S03 form3.1991 converged
+- PASS: S03 form3.1991 analysis samples
+- PASS: S03 form3.1991 finite fit indices
+- PASS: S03 form3.1991 manual chi-square agrees with lavaan (-2.1600499167107046e-12)
+- PASS: S03 form3.2006 converged
+- PASS: S03 form3.2006 analysis samples
+- PASS: S03 form3.2006 finite fit indices
+- PASS: S03 form3.2006 manual chi-square agrees with lavaan (0)
+- PASS: S03 form4_seven.1976 converged
+- PASS: S03 form4_seven.1976 analysis samples
+- PASS: S03 form4_seven.1976 finite fit indices
+- PASS: S03 form4_seven.1976 manual chi-square agrees with lavaan (1.0913936421275139e-11)
+- PASS: S03 form4_seven.1991 converged
+- PASS: S03 form4_seven.1991 analysis samples
+- PASS: S03 form4_seven.1991 finite fit indices
+- PASS: S03 form4_seven.1991 manual chi-square agrees with lavaan (-8.1854523159563541e-12)
+- PASS: S03 form4_seven.2006 converged
+- PASS: S03 form4_seven.2006 analysis samples
+- PASS: S03 form4_seven.2006 finite fit indices
+- PASS: S03 form4_seven.2006 manual chi-square agrees with lavaan (-8.1854523159563541e-12)
+- PASS: S03 form4_five.1976 converged
+- PASS: S03 form4_five.1976 analysis samples
+- PASS: S03 form4_five.1976 finite fit indices
+- PASS: S03 form4_five.1976 manual chi-square agrees with lavaan (-1.0913936421275139e-11)
+- PASS: S03 form4_five.1991 converged
+- PASS: S03 form4_five.1991 analysis samples
+- PASS: S03 form4_five.1991 finite fit indices
+- PASS: S03 form4_five.1991 manual chi-square agrees with lavaan (0)
+- PASS: S03 form4_five.2006 converged
+- PASS: S03 form4_five.2006 analysis samples
+- PASS: S03 form4_five.2006 finite fit indices
+- PASS: S03 form4_five.2006 manual chi-square agrees with lavaan (1.6143530956469476e-11)
+- PASS: S03 M1 converged
+- PASS: S03 M1 analysis samples
+- PASS: S03 M1 finite fit indices
+- PASS: S03 M1 manual chi-square agrees with lavaan (-2.7284841053187847e-12)
+- PASS: S03 M2 converged
+- PASS: S03 M2 analysis samples
+- PASS: S03 M2 finite fit indices
+- PASS: S03 M2 manual chi-square agrees with lavaan (-2.9103830456733704e-11)
+- PASS: S03 M3 converged
+- PASS: S03 M3 analysis samples
+- PASS: S03 M3 finite fit indices
+- PASS: S03 M3 manual chi-square agrees with lavaan (-1.2823875294998288e-10)
+- PASS: S03 M4 converged
+- PASS: S03 M4 analysis samples
+- PASS: S03 M4 finite fit indices
+- PASS: S03 M4 manual chi-square agrees with lavaan (-8.0035533756017685e-11)
+- PASS: S03 M5 converged
+- PASS: S03 M5 analysis samples
+- PASS: S03 M5 finite fit indices
+- PASS: S03 M5 manual chi-square agrees with lavaan (-9.276845958083868e-11)
+- PASS: S03 all 15 contrasts
+- PASS: S03 K1 P1 direction and covariance
+- PASS: S03 K1 P2 direction and covariance
+- PASS: S03 K1 P3 direction and covariance
+- PASS: S03 K2 P1 direction and covariance
+- PASS: S03 K2 P2 direction and covariance
+- PASS: S03 K2 P3 direction and covariance
+- PASS: S03 K3 P1 direction and covariance
+- PASS: S03 K3 P2 direction and covariance
+- PASS: S03 K3 P3 direction and covariance
+- PASS: S03 K4 P1 direction and covariance
+- PASS: S03 K4 P2 direction and covariance
+- PASS: S03 K4 P3 direction and covariance
+- PASS: S03 K5 P1 direction and covariance
+- PASS: S03 K5 P2 direction and covariance
+- PASS: S03 K5 P3 direction and covariance
+- PASS: S04 metadata
+- PASS: S04 M1 converged
+- PASS: S04 M1 analysis samples
+- PASS: S04 M1 finite fit indices
+- PASS: S04 M1 manual chi-square agrees with lavaan (0)
+- PASS: S04 M2 converged
+- PASS: S04 M2 analysis samples
+- PASS: S04 M2 finite fit indices
+- PASS: S04 M2 manual chi-square agrees with lavaan (0)
+- PASS: S04 M3 converged
+- PASS: S04 M3 analysis samples
+- PASS: S04 M3 finite fit indices
+- PASS: S04 M3 manual chi-square agrees with lavaan (0)
+- PASS: S04 M4 converged
+- PASS: S04 M4 analysis samples
+- PASS: S04 M4 finite fit indices
+- PASS: S04 M4 manual chi-square agrees with lavaan (0)
+- PASS: S04 M5 converged
+- PASS: S04 M5 analysis samples
+- PASS: S04 M5 finite fit indices
+- PASS: S04 M5 manual chi-square agrees with lavaan (0)
+- PASS: S04 all 15 contrasts
+- PASS: S04 K1 P1 direction and covariance
+- PASS: S04 K1 P2 direction and covariance
+- PASS: S04 K1 P3 direction and covariance
+- PASS: S04 K2 P1 direction and covariance
+- PASS: S04 K2 P2 direction and covariance
+- PASS: S04 K2 P3 direction and covariance
+- PASS: S04 K3 P1 direction and covariance
+- PASS: S04 K3 P2 direction and covariance
+- PASS: S04 K3 P3 direction and covariance
+- PASS: S04 K4 P1 direction and covariance
+- PASS: S04 K4 P2 direction and covariance
+- PASS: S04 K4 P3 direction and covariance
+- PASS: S04 K5 P1 direction and covariance
+- PASS: S04 K5 P2 direction and covariance
+- PASS: S04 K5 P3 direction and covariance
+- PASS: S05 metadata
+- PASS: S05 M1 converged
+- PASS: S05 M1 analysis samples
+- PASS: S05 M1 finite fit indices
+- PASS: S05 M1 manual chi-square agrees with lavaan (-2.7284841053187847e-11)
+- PASS: S05 M2 converged
+- PASS: S05 M2 analysis samples
+- PASS: S05 M2 finite fit indices
+- PASS: S05 M2 manual chi-square agrees with lavaan (2.1827872842550278e-11)
+- PASS: S05 M3 converged
+- PASS: S05 M3 analysis samples
+- PASS: S05 M3 finite fit indices
+- PASS: S05 M3 manual chi-square agrees with lavaan (2.7284841053187847e-12)
+- PASS: S05 M4 converged
+- PASS: S05 M4 analysis samples
+- PASS: S05 M4 finite fit indices
+- PASS: S05 M4 manual chi-square agrees with lavaan (-7.6397554948925972e-11)
+- PASS: S05 M5 converged
+- PASS: S05 M5 analysis samples
+- PASS: S05 M5 finite fit indices
+- PASS: S05 M5 manual chi-square agrees with lavaan (-8.1854523159563541e-12)
+- PASS: S05 all 15 contrasts
+- PASS: S05 K1 P1 direction and covariance
+- PASS: S05 K1 P2 direction and covariance
+- PASS: S05 K1 P3 direction and covariance
+- PASS: S05 K2 P1 direction and covariance
+- PASS: S05 K2 P2 direction and covariance
+- PASS: S05 K2 P3 direction and covariance
+- PASS: S05 K3 P1 direction and covariance
+- PASS: S05 K3 P2 direction and covariance
+- PASS: S05 K3 P3 direction and covariance
+- PASS: S05 K4 P1 direction and covariance
+- PASS: S05 K4 P2 direction and covariance
+- PASS: S05 K4 P3 direction and covariance
+- PASS: S05 K5 P1 direction and covariance
+- PASS: S05 K5 P2 direction and covariance
+- PASS: S05 K5 P3 direction and covariance
+- PASS: S06 metadata
+- PASS: S06 M1 converged
+- PASS: S06 M1 analysis samples
+- PASS: S06 M1 finite fit indices
+- PASS: S06 M1 manual chi-square agrees with lavaan (-4.1836756281554699e-11)
+- PASS: S06 M2 converged
+- PASS: S06 M2 analysis samples
+- PASS: S06 M2 finite fit indices
+- PASS: S06 M2 manual chi-square agrees with lavaan (3.5470293369144201e-11)
+- PASS: S06 M3 converged
+- PASS: S06 M3 analysis samples
+- PASS: S06 M3 finite fit indices
+- PASS: S06 M3 manual chi-square agrees with lavaan (-1.546140993013978e-11)
+- PASS: S06 M4 converged
+- PASS: S06 M4 analysis samples
+- PASS: S06 M4 finite fit indices
+- PASS: S06 M4 manual chi-square agrees with lavaan (1.0004441719502211e-11)
+- PASS: S06 M5 converged
+- PASS: S06 M5 analysis samples
+- PASS: S06 M5 finite fit indices
+- PASS: S06 M5 manual chi-square agrees with lavaan (4.638422979041934e-11)
+- PASS: S06 all 15 contrasts
+- PASS: S06 K1 P1 direction and covariance
+- PASS: S06 K1 P2 direction and covariance
+- PASS: S06 K1 P3 direction and covariance
+- PASS: S06 K2 P1 direction and covariance
+- PASS: S06 K2 P2 direction and covariance
+- PASS: S06 K2 P3 direction and covariance
+- PASS: S06 K3 P1 direction and covariance
+- PASS: S06 K3 P2 direction and covariance
+- PASS: S06 K3 P3 direction and covariance
+- PASS: S06 K4 P1 direction and covariance
+- PASS: S06 K4 P2 direction and covariance
+- PASS: S06 K4 P3 direction and covariance
+- PASS: S06 K5 P1 direction and covariance
+- PASS: S06 K5 P2 direction and covariance
+- PASS: S06 K5 P3 direction and covariance
+- PASS: S07a metadata
+- PASS: S07a form4_seven.1976 converged
+- PASS: S07a form4_seven.1976 analysis samples
+- PASS: S07a form4_seven.1976 finite fit indices
+- PASS: S07a form4_seven.1976 manual chi-square agrees with lavaan (0)
+- PASS: S07a form4_seven.1991 converged
+- PASS: S07a form4_seven.1991 analysis samples
+- PASS: S07a form4_seven.1991 finite fit indices
+- PASS: S07a form4_seven.1991 manual chi-square agrees with lavaan (8.6401996668428183e-12)
+- PASS: S07a form4_seven.2006 converged
+- PASS: S07a form4_seven.2006 analysis samples
+- PASS: S07a form4_seven.2006 finite fit indices
+- PASS: S07a form4_seven.2006 manual chi-square agrees with lavaan (1.6370904631912708e-11)
+- PASS: S07b metadata
+- PASS: S07b form4_seven.1976 converged
+- PASS: S07b form4_seven.1976 analysis samples
+- PASS: S07b form4_seven.1976 finite fit indices
+- PASS: S07b form4_seven.1976 manual chi-square agrees with lavaan (0)
+- PASS: S07b form4_seven.1991 converged
+- PASS: S07b form4_seven.1991 analysis samples
+- PASS: S07b form4_seven.1991 finite fit indices
+- PASS: S07b form4_seven.1991 manual chi-square agrees with lavaan (-8.6401996668428183e-12)
+- PASS: S07b form4_seven.2006 converged
+- PASS: S07b form4_seven.2006 analysis samples
+- PASS: S07b form4_seven.2006 finite fit indices
+- PASS: S07b form4_seven.2006 manual chi-square agrees with lavaan (8.1854523159563541e-12)
+- PASS: S08 metadata
+- PASS: S08 form3.1976 converged
+- PASS: S08 form3.1976 analysis samples
+- PASS: S08 form3.1976 finite fit indices
+- PASS: S08 form3.1976 manual chi-square agrees with lavaan (5.7411853049416095e-12)
+- PASS: S08 form3.1991 converged
+- PASS: S08 form3.1991 analysis samples
+- PASS: S08 form3.1991 finite fit indices
+- PASS: S08 form3.1991 manual chi-square agrees with lavaan (0)
+- PASS: S08 form3.2006 converged
+- PASS: S08 form3.2006 analysis samples
+- PASS: S08 form3.2006 finite fit indices
+- PASS: S08 form3.2006 manual chi-square agrees with lavaan (4.2632564145606011e-12)
+- PASS: CHK1 metadata
+- PASS: CHK1 M4 converged
+- PASS: CHK1 M4 analysis samples
+- PASS: CHK1 M4 finite fit indices
+- PASS: CHK1 M4 manual chi-square agrees with lavaan (1.6370904631912708e-11)
+- PASS: CHK1 all 15 contrasts
+- PASS: CHK1 K1 P1 direction and covariance
+- PASS: CHK1 K1 P2 direction and covariance
+- PASS: CHK1 K1 P3 direction and covariance
+- PASS: CHK1 K2 P1 direction and covariance
+- PASS: CHK1 K2 P2 direction and covariance
+- PASS: CHK1 K2 P3 direction and covariance
+- PASS: CHK1 K3 P1 direction and covariance
+- PASS: CHK1 K3 P2 direction and covariance
+- PASS: CHK1 K3 P3 direction and covariance
+- PASS: CHK1 K4 P1 direction and covariance
+- PASS: CHK1 K4 P2 direction and covariance
+- PASS: CHK1 K4 P3 direction and covariance
+- PASS: CHK1 K5 P1 direction and covariance
+- PASS: CHK1 K5 P2 direction and covariance
+- PASS: CHK1 K5 P3 direction and covariance
+- PASS: CHK2 metadata
+- PASS: CHK2 M1 converged
+- PASS: CHK2 M1 analysis samples
+- PASS: CHK2 M1 finite fit indices
+- PASS: CHK2 M1 manual chi-square agrees with lavaan (-1.7280399333685637e-11)
+- PASS: CHK2 M2 converged
+- PASS: CHK2 M2 analysis samples
+- PASS: CHK2 M2 finite fit indices
+- PASS: CHK2 M2 manual chi-square agrees with lavaan (4.0017766878008842e-11)
+- PASS: CHK2 M3 converged
+- PASS: CHK2 M3 analysis samples
+- PASS: CHK2 M3 finite fit indices
+- PASS: CHK2 M3 manual chi-square agrees with lavaan (7.2759576141834259e-12)
+- PASS: CHK2 M4 converged
+- PASS: CHK2 M4 analysis samples
+- PASS: CHK2 M4 finite fit indices
+- PASS: CHK2 M4 manual chi-square agrees with lavaan (1.2732925824820995e-11)
+- PASS: CHK2 M5 converged
+- PASS: CHK2 M5 analysis samples
+- PASS: CHK2 M5 finite fit indices
+- PASS: CHK2 M5 manual chi-square agrees with lavaan (-5.184119800105691e-11)
+- PASS: CHK2 all 15 contrasts
+- PASS: CHK2 K1 P1 direction and covariance
+- PASS: CHK2 K1 P2 direction and covariance
+- PASS: CHK2 K1 P3 direction and covariance
+- PASS: CHK2 K2 P1 direction and covariance
+- PASS: CHK2 K2 P2 direction and covariance
+- PASS: CHK2 K2 P3 direction and covariance
+- PASS: CHK2 K3 P1 direction and covariance
+- PASS: CHK2 K3 P2 direction and covariance
+- PASS: CHK2 K3 P3 direction and covariance
+- PASS: CHK2 K4 P1 direction and covariance
+- PASS: CHK2 K4 P2 direction and covariance
+- PASS: CHK2 K4 P3 direction and covariance
+- PASS: CHK2 K5 P1 direction and covariance
+- PASS: CHK2 K5 P2 direction and covariance
+- PASS: CHK2 K5 P3 direction and covariance
+- PASS: S00 item and alpha coverage
+- PASS: S01 item and alpha coverage
+- PASS: S03 item and alpha coverage
+- PASS: CHK1 d_eq identification invariance on survey data (5.5857055044628012e-06)
+- PASS: CHK2 d_eq identification invariance on survey data (4.2815291753407758e-06)
+- PASS: S04 is explicitly unavailable only for undefined observed-score contrasts
+- PASS: S06 uses the observed-score sandwich
+- PASS: Influence CSV exact schema and successful two deletions
+- PASS: Influence has 30 finite outputs per deletion
+- PASS: Influence includes per-deletion sample hashes
+- PASS: JSON serialization round-trips full double precision
+
+## Session information
+
+```
+R version 4.6.1 (2026-06-24)
+Platform: aarch64-apple-darwin25.6.0
+Running under: macOS Tahoe 26.6.2
+
+Matrix products: default
+BLAS:   /opt/homebrew/Cellar/openblas/0.3.34/lib/libopenblasp-r0.3.34.dylib 
+LAPACK: /opt/homebrew/Cellar/r/4.6.1_1/lib/R/lib/libRlapack.dylib;  LAPACK version 3.12.1
+
+locale:
+[1] C.UTF-8/C.UTF-8/C.UTF-8/C/C.UTF-8/C.UTF-8
+
+time zone: Asia/Tokyo
+tzcode source: internal
+
+attached base packages:
+[1] stats     graphics  grDevices utils     datasets  methods   base     
+
+other attached packages:
+[1] jsonlite_2.0.0 lavaan_0.7-3  
+
+loaded via a namespace (and not attached):
+[1] compiler_4.6.1 mnormt_2.1.2   pbivnorm_0.6.0 stats4_4.6.1   quadprog_1.5-8
+```

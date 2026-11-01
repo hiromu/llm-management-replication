@@ -1,0 +1,116 @@
+{
+ "registry_version": "v1",
+ "built": "2026-11-01 by the coordinator from data/derived/bundle_v1 (logs/bundle_v1_record.json) and the deposit data notes; definitions, formats and coverage only, no summary statistics",
+ "provenance": {
+  "deposit": "OSF node a47e9, license CC-By 4.0 per the OSF API; files validated in logs/deposit_validation_pre.json",
+  "author_processing": "All deposit files were prepared by the depositor. Files flagged (*) were pre-processed by the depositor; files flagged (**) were computed by the depositor from OpenStreetMap full-history files. Neither the raw OpenStreetMap history nor the depositor's processing code is part of this study's inputs.",
+  "public_file": "Census TIGER/Line 2010 county file tl_2010_us_county10.zip, from www2.census.gov (logs/tiger_receipt.json)",
+  "no_dictionary": "The deposit has no variable dictionary. Column meanings below come only from the column names, stored labels and the deposit's one-line file notes."
+ },
+ "loader_equivalence": "R (data.table, haven, readxl) and Python (pandas) read identical row and column counts and identical cell text for every file (logs/loader_check_compare.json), with two noted differences: data.table strips the leading space of the boundary-counties.csv header ' border counties' (content identical), and timing.xlsx FIPS is stored as text cells, which pandas converts to integers and readxl keeps as text with leading zeros (numerically identical).",
+ "files": {
+  "quarterly.csv": {
+   "deposit_note": "county-quarter level contributions to OpenStreetMap (**)",
+   "format": "tab-separated, header row, values double-quoted in most lines",
+   "rows_including_irregular": 89788,
+   "unit": "county x calendar quarter",
+   "keys": {"geoid": "county FIPS stored as text without leading zero (4 digits for state codes 01-09)", "quarter": "text YYYYqN"},
+   "columns": ["geoid", "quarter", "totaltigerall", "totalowneredit", "totaltaga", "totaltagv2a", "totaltagb", "totaltagv2b", "totaltagh", "totaltagv2h", "totalversion2", "totalversion3", "totalversion4plus", "totalchange", "totalcontrib", "totalusers", "totalnewusers", "totalpctcontrib25", "totalpctcontrib50", "totalpctcontrib75", "totalpctcontrib99", "totaloldusers_active", "totaloldfocused1", "totaloldfocused5", "totalpctcontrib10", "totalpctcontrib90"],
+   "column_types": "all columns other than geoid and quarter are numeric counts or shares when parsed",
+   "coverage": "3112 distinct counties; 38 distinct quarter values from 2005q2 to 2014q4 (2005q1 and 2005q3 never appear); counties appear in between 3 and 36 quarters; there is no duplicate county-quarter",
+   "irregular_lines": "3111 lines inside the file repeat the header (quoted), so every column reads as text until they are removed; 2 lines have an empty quarter and contain header names as values in the last two columns",
+   "absent_rows": "County-quarters not present in the file are not explained by the deposit notes"
+  },
+  "h12.csv": {
+   "deposit_note": "object-level edited activity in the state of Florida (**)",
+   "format": "tab-separated, no header row, 5 columns",
+   "rows": 2133235,
+   "columns": {
+    "1": "integer identifier up to 16 digits; 878068 distinct values",
+    "2": "UTC timestamp text YYYY-MM-DDTHH:MM:SSZ, from 2006-09-25 to 2014-12-21",
+    "3": "pseudonymous contributor code U<n> (original user names replaced; equality preserved)",
+    "4": "text category; 150 distinct values, OpenStreetMap highway-type style tags with spelling variants and combined values",
+    "5": "integer county FIPS, 67 distinct Florida codes (12001-12133)"
+   }
+  },
+  "tiger_census_2008q2.csv": {
+   "deposit_note": "lengths and counts by county of ways added to OpenStreetMap by the TIGER import, as of 2008q2 (**)",
+   "format": "comma-separated, header row",
+   "rows": 3214,
+   "unit": "county",
+   "keys": {"fips": "integer county FIPS", "state": "integer state FIPS", "county": "county name"},
+   "columns": ["county", "state", "fips", "residential-count", "residential-length", "secondary-count", "secondary-length", "primary-count", "primary-length", "motorway-count", "motorway-length"]
+  },
+  "tiger_osm_2018.csv": {
+   "deposit_note": "lengths and counts of TIGER highways as of 2018, from TIGER/Line shapefiles (*)",
+   "format": "comma-separated, header row",
+   "rows": 3231, "unit": "county",
+   "columns": ["county", "state", "fips", "length", "count"]
+  },
+  "county_lookup.csv": {
+   "deposit_note": "treatment status by county coded from Fusaro and Avnayim (2006)",
+   "format": "comma-separated, header row",
+   "rows": 3109, "unit": "county",
+   "columns": {"NAME": "county name", "STATE_NAME": "state name", "STATE_FIPS": "integer", "CNTY_FIPS": "integer", "FIPS": "integer county FIPS", "area": "number", "population": "number", "treat": "0 or 1"}
+  },
+  "acs5year.dta": {
+   "deposit_note": "control variables from the American Community Survey 5-year data, years 2005-2011",
+   "format": "Stata .dta",
+   "rows": 22545, "unit": "county x ACS year",
+   "coverage": "3223 distinct counties, 52 state codes, acsyear 2005 to 2011, no duplicate county-year",
+   "columns": {"geo_fips": "county FIPS (label Geo_FIPS)", "geo_state": "state FIPS (Geo_STATE)", "population": "SE_T001_001", "popdensity": "SE_T002_002", "area": "SE_T003_001", "popmales": "SE_T004_002", "households": "SE_T017_001", "unemploymentrate": "SE_T033_006", "income_householdmedian": "SE_T057_001", "income_medianearnings": "SE_T066_001", "income_percapita": "SE_T083_001", "popeduc": "no label", "popyoungmales": "no label", "acsyear": "ACS year"},
+   "label_note": "SE_T codes are Social Explorer ACS table codes as stored in the file"
+  },
+  "timing.xlsx": {
+   "deposit_note": "U.S. Census Bureau data on scheduled timing of MTAIP updates, obtained by personal communication",
+   "format": "Excel, one sheet MTAIP_Upload_Dates",
+   "rows": 3233, "unit": "county",
+   "columns": {"ID": "integer", "FIPS": "county FIPS stored as text", "County": "county name", "SB Selected": "one-letter code S or blank", "Thread": "integer 1-10 or blank", "Sch SB Delivery": "date, 2002 to 2007"},
+   "missing": "Sch SB Delivery blank in 4 rows, SB Selected in 3, Thread in 5"
+  },
+  "boundary-counties.csv": {
+   "deposit_note": "border counties by focal county (*)",
+   "format": "comma-separated, header row; second header has a leading space",
+   "rows": 3220,
+   "columns": {"source county": "integer county FIPS", " border counties": "semicolon-separated list of county FIPS"}
+  },
+  "land_area.csv": {
+   "deposit_note": "land area of US counties (*)",
+   "format": "tab-separated, header row", "rows": 3198,
+   "columns": {"Areaname": "county name", "geoid": "integer county FIPS", "land_area": "number"}
+  },
+  "distance.csv": {
+   "deposit_note": "driving distance between origin and destination pairs from OSRM and Google Maps (queried in 2017)",
+   "format": "tab-separated, header row", "rows": 99403, "unit": "origin-destination pair",
+   "coverage": "2327 distinct counties",
+   "columns": {"origin_lat": "number", "origin_lon": "number", "dest_lat": "number", "dest_lon": "number", "fips": "integer county FIPS", "ggl_distance": "integer", "osrm_distance": "number"}
+  },
+  "amenitycheck.csv": {
+   "deposit_note": "match score for establishment names for restaurants in proprietary InfoUSA data compared with OpenStreetMap as of 2018 (*)",
+   "format": "tab-separated, header row", "rows": 109771,
+   "columns": {"v5": "integer, 51 distinct values", "v6": "integer, 321 distinct values", "v79": "integer, 40 distinct values", "_id": "integer row identifier"},
+   "note": "column meanings are not documented"
+  },
+  "google_trends.csv": {
+   "deposit_note": "popularity of 'Google Maps' on Google Trends, downloaded April 2017",
+   "format": "comma-separated, header row", "rows": 51, "unit": "state (wide by quarter)",
+   "columns": "States/Quarter (state name), then Data_2005_Q1 ... Data_2014_Q4"
+  },
+  "maptimes.csv": {
+   "deposit_note": "OpenStreetMap local community groups (maptime chapters), as of April 2017",
+   "format": "tab-separated, header row", "rows": 56,
+   "columns": {"location": "city and state", "title": "group handle", "name": "county name", "state_name": "state", "state_fips": "integer", "cnty_fips": "integer", "fips": "integer county FIPS"}
+  },
+  "osm-events.csv": {
+   "deposit_note": "OpenStreetMap local in-person events, as of April 2017",
+   "format": "tab-separated, header row", "rows": 226,
+   "columns": {"field_1": "date as integer YYYYMMDD, 2008-02-09 to 2016-11-29", "field_4": "event type: Conference, Mapping party, Meeting, Pizza, Social, Speaking", "field_3": "pseudonymous event-description code E<n> (free text replaced; equality preserved)", "name": "county name", "state_name": "state", "state_fips": "integer", "cnty_fips": "integer", "fips": "integer county FIPS"}
+  },
+  "tl_2010_us_county10.zip": {
+   "source": "Census TIGER/Line 2010 county shapefile",
+   "format": "zip with .shp, .shx, .dbf, .prj, .shp.xml", "records": 3221,
+   "fields": ["STATEFP10", "COUNTYFP10", "COUNTYNS10", "GEOID10", "NAME10", "NAMELSAD10", "LSAD10", "CLASSFP10", "MTFCC10", "CSAFP10", "CBSAFP10", "METDIVFP10", "FUNCSTAT10", "ALAND10", "AWATER10", "INTPTLAT10", "INTPTLON10"],
+   "software_note": "R package sf is not installed; the .dbf attributes are readable with foreign::read.dbf. Python geopandas and shapely are installed."
+  }
+ }
+}

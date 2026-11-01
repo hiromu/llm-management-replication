@@ -1,0 +1,5 @@
+(version 1)
+(allow default)
+(deny network*)
+(deny file-write*)
+(allow file-write* (subpath "<project>/studies/delaney1996/runs/run_20261028_v1_1/out_C") (subpath "/private/var/folders") (subpath "/private/tmp") (literal "/dev/null") (literal "/dev/stdout") (literal "/dev/stderr"))

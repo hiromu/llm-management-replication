@@ -1,0 +1,418 @@
+{
+  "paper_id": "P-OPAQUE-01",
+  "wider_grid_enabled": false,
+  "assessment_scope": "Qualitative reader judgments about documented design and mapping choices, not measured frequencies in a surveyed literature and never a replication verdict.",
+  "axes": [
+    {
+      "axis_id": "A01",
+      "default_common_rare": "common",
+      "justified_unjustified": "partially justified; implementation detail undocumented",
+      "structural_counts": {
+        "levels": 4,
+        "labels": {
+          "origin": 1,
+          "equivalent": 0,
+          "uncertain": 3,
+          "non_equivalent": 0
+        }
+      },
+      "rationale": "The underlying choice is routine in panel financial-data reconstruction; the origin is a transparent convention, not verified author practice.",
+      "source": "DOC01 p9 Sample and data"
+    },
+    {
+      "axis_id": "A02",
+      "default_common_rare": "common",
+      "justified_unjustified": "partially justified; implementation detail undocumented",
+      "structural_counts": {
+        "levels": 3,
+        "labels": {
+          "origin": 1,
+          "equivalent": 0,
+          "uncertain": 2,
+          "non_equivalent": 0
+        }
+      },
+      "rationale": "The underlying choice is routine in panel financial-data reconstruction; the origin is a transparent convention, not verified author practice.",
+      "source": "DOC01 p9 Sample and data; DOC01 p4 bank context"
+    },
+    {
+      "axis_id": "A03",
+      "default_common_rare": "common",
+      "justified_unjustified": "partially justified; implementation detail undocumented",
+      "structural_counts": {
+        "levels": 3,
+        "labels": {
+          "origin": 1,
+          "equivalent": 0,
+          "uncertain": 1,
+          "non_equivalent": 1
+        }
+      },
+      "rationale": "The underlying choice is routine in panel financial-data reconstruction; the origin is a transparent convention, not verified author practice.",
+      "source": "DOC01 p9 Sample and data; DOC01 p10 lagged dependent variable"
+    },
+    {
+      "axis_id": "A04",
+      "default_common_rare": "common",
+      "justified_unjustified": "partially justified; implementation detail undocumented",
+      "structural_counts": {
+        "levels": 3,
+        "labels": {
+          "origin": 1,
+          "equivalent": 0,
+          "uncertain": 2,
+          "non_equivalent": 0
+        }
+      },
+      "rationale": "The underlying choice is routine in panel financial-data reconstruction; the origin is a transparent convention, not verified author practice.",
+      "source": "DOC01 p9 Dependent and independent variables; DOC01 p10 equation"
+    },
+    {
+      "axis_id": "A05",
+      "default_common_rare": "common",
+      "justified_unjustified": "partially justified; implementation detail undocumented",
+      "structural_counts": {
+        "levels": 3,
+        "labels": {
+          "origin": 1,
+          "equivalent": 0,
+          "uncertain": 2,
+          "non_equivalent": 0
+        }
+      },
+      "rationale": "The underlying choice is routine in panel financial-data reconstruction; the origin is a transparent convention, not verified author practice.",
+      "source": "DOC01 p9 Sample and data; Dependent variable"
+    },
+    {
+      "axis_id": "A06",
+      "default_common_rare": "common",
+      "justified_unjustified": "partially justified; implementation detail undocumented",
+      "structural_counts": {
+        "levels": 3,
+        "labels": {
+          "origin": 1,
+          "equivalent": 1,
+          "uncertain": 1,
+          "non_equivalent": 0
+        }
+      },
+      "rationale": "The underlying choice is routine in panel financial-data reconstruction; the origin is a transparent convention, not verified author practice.",
+      "source": "DOC01 p9 Independent variable eleven strategies"
+    },
+    {
+      "axis_id": "A07",
+      "default_common_rare": "rare",
+      "justified_unjustified": "partially justified; implementation detail undocumented",
+      "structural_counts": {
+        "levels": 3,
+        "labels": {
+          "origin": 1,
+          "equivalent": 0,
+          "uncertain": 2,
+          "non_equivalent": 0
+        }
+      },
+      "rationale": "Named residual-based deletion is study-specific; propagation into lags and norms is undocumented.",
+      "source": "DOC01 p11 Analysis outlier paragraph"
+    },
+    {
+      "axis_id": "A08",
+      "default_common_rare": "common",
+      "justified_unjustified": "partially justified; implementation detail undocumented",
+      "structural_counts": {
+        "levels": 4,
+        "labels": {
+          "origin": 1,
+          "equivalent": 0,
+          "uncertain": 3,
+          "non_equivalent": 0
+        }
+      },
+      "rationale": "The underlying choice is routine in panel financial-data reconstruction; the origin is a transparent convention, not verified author practice.",
+      "source": "DOC01 p9 Dependent variable"
+    },
+    {
+      "axis_id": "A09",
+      "default_common_rare": "common",
+      "justified_unjustified": "partially justified; implementation detail undocumented",
+      "structural_counts": {
+        "levels": 3,
+        "labels": {
+          "origin": 1,
+          "equivalent": 0,
+          "uncertain": 2,
+          "non_equivalent": 0
+        }
+      },
+      "rationale": "The underlying choice is routine in panel financial-data reconstruction; the origin is a transparent convention, not verified author practice.",
+      "source": "DOC01 p9 Independent variable; DOC01 p10 controls"
+    },
+    {
+      "axis_id": "A10",
+      "default_common_rare": "common",
+      "justified_unjustified": "partially justified; implementation detail undocumented",
+      "structural_counts": {
+        "levels": 2,
+        "labels": {
+          "origin": 1,
+          "equivalent": 0,
+          "uncertain": 1,
+          "non_equivalent": 0
+        }
+      },
+      "rationale": "The underlying choice is routine in panel financial-data reconstruction; the origin is a transparent convention, not verified author practice.",
+      "source": "DOC01 p10 Market share of deposits; Market growth of deposits"
+    },
+    {
+      "axis_id": "A11",
+      "default_common_rare": "common",
+      "justified_unjustified": "partially justified; implementation detail undocumented",
+      "structural_counts": {
+        "levels": 2,
+        "labels": {
+          "origin": 1,
+          "equivalent": 0,
+          "uncertain": 1,
+          "non_equivalent": 0
+        }
+      },
+      "rationale": "The underlying choice is routine in panel financial-data reconstruction; the origin is a transparent convention, not verified author practice.",
+      "source": "DOC01 p9 Eleven asset strategies commercial loans"
+    },
+    {
+      "axis_id": "A12",
+      "default_common_rare": "common",
+      "justified_unjustified": "partially justified; implementation detail undocumented",
+      "structural_counts": {
+        "levels": 2,
+        "labels": {
+          "origin": 1,
+          "equivalent": 0,
+          "uncertain": 1,
+          "non_equivalent": 0
+        }
+      },
+      "rationale": "The underlying choice is routine in panel financial-data reconstruction; the origin is a transparent convention, not verified author practice.",
+      "source": "DOC01 p9 Eleven asset strategies agriculture loans and real estate loans"
+    },
+    {
+      "axis_id": "A13",
+      "default_common_rare": "common",
+      "justified_unjustified": "partially justified; implementation detail undocumented",
+      "structural_counts": {
+        "levels": 3,
+        "labels": {
+          "origin": 1,
+          "equivalent": 0,
+          "uncertain": 2,
+          "non_equivalent": 0
+        }
+      },
+      "rationale": "The underlying choice is routine in panel financial-data reconstruction; the origin is a transparent convention, not verified author practice.",
+      "source": "DOC01 p9 Eleven asset strategies other loans and leases"
+    },
+    {
+      "axis_id": "A14",
+      "default_common_rare": "rare",
+      "justified_unjustified": "partially justified; implementation detail undocumented",
+      "structural_counts": {
+        "levels": 3,
+        "labels": {
+          "origin": 1,
+          "equivalent": 0,
+          "uncertain": 2,
+          "non_equivalent": 0
+        }
+      },
+      "rationale": "A broad strategic other-assets category is unusually hard to map without original item codes.",
+      "source": "DOC01 p9 Eleven asset strategies other assets"
+    },
+    {
+      "axis_id": "A15",
+      "default_common_rare": "common",
+      "justified_unjustified": "partially justified; implementation detail undocumented",
+      "structural_counts": {
+        "levels": 2,
+        "labels": {
+          "origin": 1,
+          "equivalent": 0,
+          "uncertain": 1,
+          "non_equivalent": 0
+        }
+      },
+      "rationale": "The underlying choice is routine in panel financial-data reconstruction; the origin is a transparent convention, not verified author practice.",
+      "source": "DOC01 p9 Bank asset strategies and performance"
+    },
+    {
+      "axis_id": "A16",
+      "default_common_rare": "rare",
+      "justified_unjustified": "partially justified; implementation detail undocumented",
+      "structural_counts": {
+        "levels": 3,
+        "labels": {
+          "origin": 1,
+          "equivalent": 0,
+          "uncertain": 2,
+          "non_equivalent": 0
+        }
+      },
+      "rationale": "The absolute-z construction needs annual norm and zero-SD choices not reported.",
+      "source": "DOC01 p10 Strategic-deviation equation"
+    },
+    {
+      "axis_id": "A17",
+      "default_common_rare": "common",
+      "justified_unjustified": "partially justified; implementation detail undocumented",
+      "structural_counts": {
+        "levels": 4,
+        "labels": {
+          "origin": 1,
+          "equivalent": 0,
+          "uncertain": 3,
+          "non_equivalent": 0
+        }
+      },
+      "rationale": "The underlying choice is routine in panel financial-data reconstruction; the origin is a transparent convention, not verified author practice.",
+      "source": "DOC01 p10 Real market growth"
+    },
+    {
+      "axis_id": "A18",
+      "default_common_rare": "common",
+      "justified_unjustified": "justified algebraic equivalence",
+      "structural_counts": {
+        "levels": 2,
+        "labels": {
+          "origin": 1,
+          "equivalent": 1,
+          "uncertain": 0,
+          "non_equivalent": 0
+        }
+      },
+      "rationale": "The underlying choice is routine in panel financial-data reconstruction; the origin is a transparent convention, not verified author practice.",
+      "source": "DOC01 p11 Analysis WLS and SSE comparisons"
+    },
+    {
+      "axis_id": "A19",
+      "default_common_rare": "common",
+      "justified_unjustified": "partially justified; implementation detail undocumented",
+      "structural_counts": {
+        "levels": 2,
+        "labels": {
+          "origin": 1,
+          "equivalent": 0,
+          "uncertain": 0,
+          "non_equivalent": 1
+        }
+      },
+      "rationale": "The underlying choice is routine in panel financial-data reconstruction; the origin is a transparent convention, not verified author practice.",
+      "source": "DOC01 p11 Analysis pooled time series and WLS"
+    },
+    {
+      "axis_id": "A20",
+      "default_common_rare": "common",
+      "justified_unjustified": "partially justified; implementation detail undocumented",
+      "structural_counts": {
+        "levels": 2,
+        "labels": {
+          "origin": 1,
+          "equivalent": 0,
+          "uncertain": 1,
+          "non_equivalent": 0
+        }
+      },
+      "rationale": "The underlying choice is routine in panel financial-data reconstruction; the origin is a transparent convention, not verified author practice.",
+      "source": "DOC01 p10 Directional hypotheses; DOC01 p12 table significance notes"
+    },
+    {
+      "axis_id": "A21",
+      "default_common_rare": "common",
+      "justified_unjustified": "justified algebraic equivalence",
+      "structural_counts": {
+        "levels": 2,
+        "labels": {
+          "origin": 1,
+          "equivalent": 1,
+          "uncertain": 0,
+          "non_equivalent": 0
+        }
+      },
+      "rationale": "The underlying choice is routine in panel financial-data reconstruction; the origin is a transparent convention, not verified author practice.",
+      "source": "DOC01 p11 Model 3 equation; DOC01 p13 collinearity"
+    }
+  ],
+  "structural_counts": {
+    "axes": 21,
+    "levels": 58,
+    "axes_by_priority": {
+      "sample_construction": 7,
+      "variable_coding": 11,
+      "fixed_effects_clustering": 1,
+      "estimator": 2
+    },
+    "levels_by_label": {
+      "origin": 21,
+      "equivalent": 3,
+      "uncertain": 32,
+      "non_equivalent": 2
+    },
+    "naive_cartesian_product": 967458816,
+    "admissible_crossings_count": null,
+    "count_note": "Naive product is a structural upper bound, not an authorized execution grid; conditional levels and compatibility constraints reduce it. No quota was used.",
+    "source": "DOC01 p9 Research design; DOC01 p10–11 variables and analysis"
+  },
+  "overall_design": {
+    "default_common_rare": "mixed",
+    "justified_unjustified": "partially justified",
+    "unusualness_rating": 3,
+    "scale": "1 routine through 5 highly unusual; qualitative, not a replication verdict",
+    "rationale": "Hierarchical polynomial regression, a lagged outcome and common banking ratios are familiar. A single-market unbalanced panel, absolute standardized distance over eleven strategies, market-share precision weighting chosen from residual plots, and a named residual-based exclusion are distinctive. Article supplies rationales for these choices but not the full construction or inference recipe.",
+    "source": "DOC01 p9 Sample and variables; DOC01 p10 equation; DOC01 p11 Analysis"
+  },
+  "documented_choices": [
+    {
+      "choice": "WLS precision related to market share",
+      "default_common_rare": "less common than unweighted regression",
+      "justified_unjustified": "justified qualitatively, variance model unverified in printed record",
+      "source": "DOC01 p11 Heteroscedasticity residual plot"
+    },
+    {
+      "choice": "No fixed effects or clustering, with lag and h diagnostic",
+      "default_common_rare": "classical pooled dynamic approach; prevalence not quantified",
+      "justified_unjustified": "reason given but incomplete dependence assessment",
+      "source": "DOC01 p11 Analysis"
+    },
+    {
+      "choice": "Residual-driven named observation exclusion",
+      "default_common_rare": "study-specific",
+      "justified_unjustified": "explained, but before-deletion coefficient table absent",
+      "source": "DOC01 p11 Outlier paragraph"
+    },
+    {
+      "choice": "SSE tests instead of R-squared",
+      "default_common_rare": "nested F tests common; stated blanket objection to GLS R-squared questionable",
+      "justified_unjustified": "tests appropriate under common weighting/sample; R-squared discussion not fully justified",
+      "source": "DOC01 p11 WLS and goodness of fit"
+    }
+  ],
+  "documentation_scores": {
+    "specificity": {
+      "score": 3,
+      "justification": "Population, named strategies, controls and model progression are explicit; data items, annualization and geography are not.",
+      "source": "DOC01 p9 Research design; DOC01 p10 variables"
+    },
+    "precision": {
+      "score": 3,
+      "justification": "Equations and scaling are precise, but source mappings, SD convention, weights syntax and software remain open.",
+      "source": "DOC01 p10 Deviation equation; DOC01 p11 Analysis and scaling"
+    },
+    "exhaustiveness": {
+      "score": 2,
+      "justification": "No sample-flow reconciliation, source-codebook, fully reported diagnostics or augmented-control estimates.",
+      "source": "DOC01 p9 Sample and data; DOC01 p10–11 omitted strategy-control estimates; DOC01 p13 diagnostics"
+    }
+  },
+  "limitations": [
+    "No external methodological sources were consulted. Methodological works named in DOC01 are treated as article citations, not as independently inspected evidence.",
+    "Future measures and mechanism tests on DOC01 p13–16 are outside this execution specification."
+  ]
+}

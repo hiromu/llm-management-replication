@@ -1,0 +1,24 @@
+M4_common_U18_U14 N=27263
+                            label model     n            term    estimate
+female          M4_common_U18_U14    M4 27263          female  0.01237590
+female:leave    M4_common_U18_U14    M4 27263    female:leave -0.02331776
+female:leave_sq M4_common_U18_U14    M4 27263 female:leave_sq  0.07126966
+female:parttime M4_common_U18_U14    M4 27263 female:parttime -0.07818608
+                        se          p    loglik singular cpu_seconds warnings
+female          0.03567069 0.72862985 -12204.95     TRUE      77.875         
+female:leave    0.08989469 0.79533455 -12204.95     TRUE      77.875         
+female:leave_sq 0.07969279 0.37115873 -12204.95     TRUE      77.875         
+female:parttime 0.03974813 0.04917882 -12204.95     TRUE      77.875         
+completed M4_common_U18_U14 CPU=77.875
+M4_common_U09_U18_U14 N=27263
+                                label model     n            term    estimate
+female          M4_common_U09_U18_U14    M4 27263          female  0.06984349
+female:leave    M4_common_U09_U18_U14    M4 27263    female:leave -0.03313234
+female:leave_sq M4_common_U09_U18_U14    M4 27263 female:leave_sq  0.05066198
+female:parttime M4_common_U09_U18_U14    M4 27263 female:parttime -0.03247246
+                        se          p    loglik singular cpu_seconds warnings
+female          0.02857638 0.01452145 -16669.76     TRUE       43.04         
+female:leave    0.07628803 0.66406636 -16669.76     TRUE       43.04         
+female:leave_sq 0.07009042 0.46979730 -16669.76     TRUE       43.04         
+female:parttime 0.03242027 0.31653198 -16669.76     TRUE       43.04         
+completed M4_common_U09_U18_U14 CPU=43.04

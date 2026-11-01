@@ -1,0 +1,130 @@
+{
+  "study_id": "thebaud2015",
+  "doi": "10.1177/0001839215591627",
+  "checked_utc": "2026-10-27T14:37:27Z",
+  "role": "package-eligibility and supplement-search role (coordinator subagent, claude-opus-5-5)",
+  "searches": [
+    {
+      "where": "Crossref REST API",
+      "query_or_url": "https://api.crossref.org/works/10.1177/0001839215591627",
+      "date": "2026-10-27",
+      "result": "Journal article record (published online 2015-06-05, print 2015-12). update-to/updated-by empty, relation empty; links only to article PDF/XML. No dataset relation."
+    },
+    {
+      "where": "Crossref REST API",
+      "query_or_url": "https://api.crossref.org/works?filter=updates:10.1177/0001839215591627",
+      "date": "2026-10-27",
+      "result": "0 items (no registered update, correction or retraction notices)."
+    },
+    {
+      "where": "Crossref REST API",
+      "query_or_url": "works?query.bibliographic=10.1177/0001839215591627&filter=type:dataset",
+      "date": "2026-10-27",
+      "result": "No relevant dataset records (only unrelated matches on the number 1177)."
+    },
+    {
+      "where": "SAGE article page (built-in browser)",
+      "query_or_url": "https://journals.sagepub.com/doi/full/10.1177/0001839215591627#supplementary-materials",
+      "date": "2026-10-27",
+      "result": "Supplementary Material section lists one file only: ds_10.1177_0001839215591627.pdf (459.90 KB). No data or code files, no data availability statement, no correction/erratum notice. History: first published online June 5, 2015; issue December 2015. Plain curl/WebFetch to SAGE returned HTTP 403 (bot protection); browser rendering succeeded without login or CAPTCHA."
+    },
+    {
+      "where": "ASQ data and methods transparency policy",
+      "query_or_url": "https://journals.sagepub.com/page/asq/2.data-and-methods-transparency-policy ; https://omt.aom.org/discussion/asq-data-and-methods-transparency-policy",
+      "date": "2026-10-27",
+      "result": "ASQ policy requiring archiving of data and code was posted 2024-06-14, effective 2024-07-01; it postdates this 2015 article, so no mandatory package is implied."
+    },
+    {
+      "where": "Harvard Dataverse search API",
+      "query_or_url": "https://dataverse.harvard.edu/api/search?q=Thebaud | q=Th%C3%A9baud | q=\"Business as Plan B\" | q=0001839215591627",
+      "date": "2026-10-27",
+      "result": "Title and DOI queries: 0 hits. Name queries: two Roper Center TESS experiment datasets by Thébaud on unrelated work-family experiments plus one unrelated medical dataset; nothing for this article."
+    },
+    {
+      "where": "openICPSR",
+      "query_or_url": "https://www.openicpsr.org/openicpsr/search/studies?q=Thebaud",
+      "date": "2026-10-27",
+      "result": "Server returned HTTP 500; not verifiable via this route."
+    },
+    {
+      "where": "ICPSR study search",
+      "query_or_url": "https://www.icpsr.umich.edu/web/ICPSR/search/studies?q=Thebaud",
+      "date": "2026-10-27",
+      "result": "0 studies. One 'data-related publication' bibliography entry (a citation-index record, not a deposit; not opened further)."
+    },
+    {
+      "where": "OSF API (nodes by title)",
+      "query_or_url": "https://api.osf.io/v2/nodes/?filter[title]=Business as Plan B ; filter[title]=Thebaud",
+      "date": "2026-10-27",
+      "result": "One public project https://osf.io/9sxua/ titled 'A Replication Study of \"Business as Plan B ...\"', created 2026-02-16, contributors Weiyu Dai and Andreas Schwab; description says it is a third-party hybrid replication using its own new survey instrument and an extended country sample. Not authored by Thébaud; not an author package. Contents not opened. Other hit: an unrelated comment on a different Thébaud paper."
+    },
+    {
+      "where": "OSF API (users)",
+      "query_or_url": "https://api.osf.io/v2/users/fmn4h/nodes/",
+      "date": "2026-10-27",
+      "result": "OSF user 'Sarah Thebaud' (registered 2023-01-12) has 0 public nodes."
+    },
+    {
+      "where": "GitHub search API",
+      "query_or_url": "search/repositories q=Thebaud entrepreneurship ; \"Business as Plan B\" ; thebaud GEM gender ; search/users q=thebaud",
+      "date": "2026-10-27",
+      "result": "0 repository hits. User accounts named thebaud/thebaudsj etc. have no related repositories (checked thebaud, thebaudsj)."
+    },
+    {
+      "where": "Zenodo API",
+      "query_or_url": "https://zenodo.org/api/records?q=\"Business as Plan B\" ; q=0001839215591627 ; q=Thebaud entrepreneurship",
+      "date": "2026-10-27",
+      "result": "0 hits for title and DOI; keyword query returned only unrelated records."
+    },
+    {
+      "where": "DataCite API",
+      "query_or_url": "https://api.datacite.org/dois?query=\"Business as Plan B\" ; relatedIdentifiers.relatedIdentifier:\"10.1177/0001839215591627\" ; creators.familyName:Thébaud/Thebaud",
+      "date": "2026-10-27",
+      "result": "0 hits for title and related-identifier queries; creator queries return only unrelated works (a SAGE figshare appendix for a different Thébaud-coauthored paper on housework norms is not this article)."
+    },
+    {
+      "where": "Google Scholar",
+      "query_or_url": "https://scholar.google.com/scholar?q=\"Business as Plan B\" Thébaud ; cluster=10017968470805860643",
+      "date": "2026-10-27",
+      "result": "Single cluster; versions are SAGE PDF/abstract and EBSCO records. No data or code links."
+    },
+    {
+      "where": "Author faculty page (UCSB Sociology)",
+      "query_or_url": "https://www.soc.ucsb.edu/people/sarah-thebaud",
+      "date": "2026-10-27",
+      "result": "Publication list links the article DOI only; no data, code, replication or repository links."
+    },
+    {
+      "where": "Author profile (Stanford VMware Women's Leadership Lab)",
+      "query_or_url": "https://womensleadership.stanford.edu/people/sarah-thebaud",
+      "date": "2026-10-27",
+      "result": "No data or code links."
+    },
+    {
+      "where": "Personal site guesses",
+      "query_or_url": "https://sarahthebaud.com ; https://www.sarahthebaud.com ; https://www.socialsciences.ucsb.edu/people/sarah-thebaud",
+      "date": "2026-10-27",
+      "result": "No site resolved / 404."
+    },
+    {
+      "where": "Web search",
+      "query_or_url": "Thébaud 2015 \"Business as Plan B\" replication data ; \"Business as Plan B\" Thébaud dataverse OR openicpsr OR osf OR github ; Sarah Thébaud UCSB sociology \"Business as Plan B\"",
+      "date": "2026-10-27",
+      "result": "No author replication package found; results unrelated or general."
+    },
+    {
+      "where": "Article text (local extraction, identity check only)",
+      "query_or_url": "sources/text/ASQ_2015_Thebaud.layout.txt",
+      "date": "2026-10-27",
+      "result": "No data or code availability statement and no repository link; the only supplemental pointer is the generic Online Appendix URL http://asq.sagepub.com/supplemental. Data are described as coming from public original sources (GEM, OECD, ILO etc.)."
+    }
+  ],
+  "package_found": false,
+  "evidence": "No author-provided replication data or code package was found on SAGE (supplement is a 3-page PDF appendix only), Harvard Dataverse, ICPSR, OSF, GitHub, Zenodo, DataCite, Crossref relations, Google Scholar, or the author's UCSB/Stanford pages. The ASQ data/code archiving policy dates from July 2024 and does not apply to this 2015 article. One third-party replication project exists on OSF (https://osf.io/9sxua/, Dai and Schwab, created 2026-02-16) using newly collected survey data; it is not author-provided and was not opened. openICPSR search returned HTTP 500 (not checked by that route; ICPSR main search found no deposited study).",
+  "limitations": [
+    "openICPSR search endpoint returned HTTP 500",
+    "Absence of evidence from public searches; author may hold files privately (not a public package)",
+    "SAGE direct HTTP blocked (403); page reviewed via rendered browser instead"
+  ],
+  "conclusion": "No publicly available author-provided replication data or code package found as of 2026-10-27. The paper meets the no-package selection criterion. Note for coordinator: a third-party replication project (OSF 9sxua) exists; it is not an author package, must not be consulted as an empirical input, and is not used here."
+}

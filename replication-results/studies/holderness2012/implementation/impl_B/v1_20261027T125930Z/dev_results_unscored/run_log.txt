@@ -1,0 +1,40 @@
+2026-10-27 22:08:08 P-R7M2 v1 R version 4.6.1 (2026-06-24) 
+2026-10-27 22:08:08 Arguments: --grid grid.json --data data --out results --specs S000 --families T4 --influence none 
+2026-10-27 22:08:08 Packages: data.table 1.18.6.1; nanoparquet 0.5.2; jsonlite 2.0.0 
+2026-10-27 22:08:09 SYNTHETIC known_probit_coefficients PASS max absolute error 0.00914005; max standardized error 0.76658; n=60000 
+2026-10-27 22:08:09 SYNTHETIC marginal_effects_and_delta_finite_differences PASS ME error 1.62e-12; Jacobian error 2.03e-07; delta SE error 3.12e-08 
+2026-10-27 22:08:09 SYNTHETIC cluster_covariance_direct_sandwich PASS max covariance error 2.78e-17 
+2026-10-27 22:08:09 SYNTHETIC handmade_hierarchy_groups PASS single rank S=0; one member S=0; matching shares M=1; ranks 1,9 S=0.4; empty group missing 
+2026-10-27 22:08:09 SYNTHETIC delong_identical_and_tied_predictors PASS identical z=0, p=1; tied brute-force z error 8.88e-16 
+2026-10-27 22:08:09 SYNTHETIC NUL_safe_Parquet_pages PASS NUL at beginning/middle/end removed; spaces, empty strings and null values preserved 
+2026-10-27 22:08:09 SYNTHETIC duplicate_linkage_and_missing_design PASS duplicate unmatched/first/combine; missing regressor zero replacement and indicator 
+2026-10-27 22:08:09 cap reference fractions 0.11212,0.12348,0.11212,0.10265,0.10492,0.11136,0.10966,0.1161,0.10758 c 1.319 
+2026-10-27 22:08:09 cap missing: rank 0; height 100; age 0; education 80; dependents 0; officer 0; distance 0; length 0; n_g 0 
+2026-10-27 22:08:09 camp reference fractions 0.11212,0.12348,0.11212,0.10265,0.10492,0.11136,0.10966,0.1161,0.10758 c 1.319 
+2026-10-27 22:08:09 camp missing: rank 0; height 100; age 0; education 80; dependents 0; officer 0; distance 0; length 0; n_g 0 
+2026-10-27 22:08:10 SYNTHETIC all_families_on_synthetic_data PASS 104 synthetic models, 8 paired ROC comparisons, 96 leave-camp-out fits; constant-outcome failure recorded 
+2026-10-27 22:08:11 NUL-safe page reader: pow.parquet SERIAL_NO 
+2026-10-27 22:08:11 NUL-safe page reader: pow.parquet ARM_SVC_ALPHA 
+2026-10-27 22:08:11 NUL-safe page reader: pow.parquet ARM_SVC_CODE 
+2026-10-27 22:08:11 NUL-safe page reader: pow.parquet PARENT_UNIT_NUM 
+2026-10-27 22:08:11 NUL-safe page reader: pow.parquet PARENT_UNIT_TYPE 
+2026-10-27 22:08:11 NUL-safe page reader: pow.parquet DET_POWER 
+2026-10-27 22:08:11 NUL-safe page reader: pow.parquet CAMP 
+2026-10-27 22:08:27 Input rows: POW 143374 ; enlistment candidates 74210 
+2026-10-27 22:08:27 Input loading seconds 16.795 
+2026-10-27 22:08:27 BEGIN S000 families T4 
+2026-10-27 22:08:28 Sample D0 143374 D 124387 R cap 101993 R camp 101993 
+2026-10-27 22:08:28 cap reference fractions 0.46202,0.087999,0.28109,0.0069676,0.13728,0.01546,0.0053048,0.0037069,0.00017034 c 1.319 
+2026-10-27 22:08:28 cap missing: rank 795; height 60811; age 44463; education 44334; dependents 44505; officer 795; distance 625; length 0; n_g 229 
+2026-10-27 22:08:28 camp reference fractions 0.46202,0.087999,0.28109,0.0069676,0.13728,0.01546,0.0053048,0.0037069,0.00017034 c 1.319 
+2026-10-27 22:08:28 camp missing: rank 795; height 60811; age 44463; education 44334; dependents 44505; officer 795; distance 625; length 0; n_g 100 
+2026-10-27 22:08:44 S000 T4__cap_simple_steepness ok N 100672 clusters 1674 seconds 16.235  
+2026-10-27 22:09:03 S000 T4__cap_full_steepness ok N 100672 clusters 1674 seconds 18.754 Aliased columns omitted: men_missing,men_sq_missing 
+2026-10-27 22:09:03 S000 T4__camp_simple_steepness ok N 101993 clusters 341 seconds 0.161  
+2026-10-27 22:09:03 S000 T4__camp_full_steepness ok N 101993 clusters 341 seconds 0.509 Aliased columns omitted: men_missing,men_sq_missing 
+2026-10-27 22:09:20 S000 T4__cap_simple_sameness ok N 100672 clusters 1674 seconds 16.141  
+2026-10-27 22:09:40 S000 T4__cap_full_sameness ok N 100672 clusters 1674 seconds 20.322 Aliased columns omitted: men_missing,men_sq_missing 
+2026-10-27 22:09:40 S000 T4__camp_simple_sameness ok N 101993 clusters 341 seconds 0.159  
+2026-10-27 22:09:41 S000 T4__camp_full_sameness ok N 101993 clusters 341 seconds 0.487 Aliased columns omitted: men_missing,men_sq_missing 
+2026-10-27 22:09:41 END S000 
+2026-10-27 22:09:41 Run complete 

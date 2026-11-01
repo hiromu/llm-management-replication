@@ -1,0 +1,27 @@
+{
+ "frozen_utc": "2026-11-01, before any empirical fit",
+ "files_sha256": {
+  "scoring/scoring_rules_v1.json": "d26b734625a46796a8b62e15b03558187d04f0ab3e0a503229e66075d9d17520",
+  "scoring/influence_plan_v1.json": "4f74f427506fbe1fb54d6f0d99f80f0fba329f1aff259b4c25d94d6ac1b730c0",
+  "scoring/claims_v1.json": "13bbc2c35df94f79adf83bd405f144eb7fa1649e864d7add98edcfae2671d492",
+  "sealed/targets/targets_v1.json": "c9b3a3135bdf76e146d333694a460c624552988a48e3d1ae5b8275565bb8304f",
+  "reconciliation/axis_ledger_v1.json": "5f62676de020dc5741448f6230433bed38737f5aaf4105075aafedb20082ab89",
+  "reconciliation/claim_ledger_initial.csv": "2c31effcaf0f12a2f5ea8c2478740fdfff4af92a2a3ac2f5d19b689bbfc83dbd",
+  "reconciliation/agreement_initial.json": "d213b7fb8af021c9ef7658f16112a8b54e557b83631028288a987e0631767858",
+  "reconciliation/transcription_agreement_initial.json": "0f5346eafd8574704e5682a922edac9eb80da79f267954b8ac41452a657da987",
+  "code/build_claims.py": "e7f8aa16f0fb1bea2bcdd23e83b7694387a43fcce4171e2f46534e5e9e2b74a1",
+  "code/reconcile_tiers.py": "40d75e4b51eabd6949d876b5d0e2f66873c464594d5ee51037cf5bcc01fc7f38",
+  "data/derived/run_input_v1/acs5year.dta": "0458f24a1825da2900c6513340208cd47ff6fa610ed742a199a11247cc639155",
+  "data/derived/run_input_v1/boundary-counties.csv": "01b38a16118fd8a811233d1ac51416f370e0e0ca720d2d25c28627fbbb903518",
+  "data/derived/run_input_v1/county_lookup.csv": "034bb2c911e89b7b4072ffab6646a2e8ceefc3f2196c325cad5687066c23ee7c",
+  "data/derived/run_input_v1/distance.csv": "b36cb40ebda9b60bee1b60077e0db5de420ae3081dc5337495500b846b12080d",
+  "data/derived/run_input_v1/placebo_draws.csv": "6300fa96ed459e9ecaa631a9f969f6110754d87a19d7d6476180cbeb719958da",
+  "data/derived/run_input_v1/quarterly.csv": "31ca141484d87de291c04bacf72a710358c09e3edb03cb849afee6858ff7ac7b",
+  "data/derived/run_input_v1/timing.xlsx": "1df0aae7baaa7db05225f9fce80f2b3b99dd025639ba337bebfb5a4b46523aae",
+  "code/score.py": "34bfdcf7b42c97330aaa47ab93895beff155069a7984353498a05137d3a68afb",
+  "code/normalize_desc.py": "f6351c2760d93379039328dd7c32dd509cdb1f685b49c5c9fa883263f04ec6c6",
+  "code/compare_impls.py": "43c8a7739722f55e8f0a8dd26b0d06c29c7b8f8dadf0a1ebd604e24966f07318",
+  "checks/pre_execution/disposition_v1.md": "2649d428a34a5d6de89910aca2a569aa7edc1f023cd9fb9ab9609d3916cf5bb6"
+ },
+ "scorer_frozen_utc": "2026-11-01T04:31:50.665334+00:00 (before any real-data output was read)"
+}

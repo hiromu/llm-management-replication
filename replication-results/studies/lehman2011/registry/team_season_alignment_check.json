@@ -1,0 +1,152 @@
+{
+  "created_utc": "2026-10-27T12:18:45Z",
+  "script": "data/scripts/build_alignment.py",
+  "crosswalk": "registry/team_season_alignment.csv",
+  "games_file": "data/raw/nflverse/schedules_release_20261027T113315Z/games.parquet",
+  "validation_rule": "Regular-season games 2000-2005: div_game == 1 requires both teams in the same division that season; div_game == 0 requires different divisions.",
+  "validation": {
+    "div_game_1": {
+      "games": 644,
+      "same_division": 644,
+      "mismatch_game_ids": []
+    },
+    "div_game_0": {
+      "games": 876,
+      "different_division": 876,
+      "mismatch_game_ids": []
+    },
+    "div_game_missing_or_other": [],
+    "teams_not_found": [],
+    "by_season": {
+      "2000": {
+        "regular_season_games": 248,
+        "agreements": 248,
+        "mismatches": 0
+      },
+      "2001": {
+        "regular_season_games": 248,
+        "agreements": 248,
+        "mismatches": 0
+      },
+      "2002": {
+        "regular_season_games": 256,
+        "agreements": 256,
+        "mismatches": 0
+      },
+      "2003": {
+        "regular_season_games": 256,
+        "agreements": 256,
+        "mismatches": 0
+      },
+      "2004": {
+        "regular_season_games": 256,
+        "agreements": 256,
+        "mismatches": 0
+      },
+      "2005": {
+        "regular_season_games": 256,
+        "agreements": 256,
+        "mismatches": 0
+      }
+    },
+    "total_regular_season_games": 1520,
+    "total_agreements": 1520,
+    "total_mismatches": 0
+  },
+  "structure": {
+    "2000": {
+      "teams": 31,
+      "divisions": 6,
+      "teams_per_division": [
+        5,
+        6
+      ],
+      "missing_pbp_abbr": [],
+      "games_file_teams_not_in_crosswalk": [],
+      "crosswalk_teams_not_in_games_file": []
+    },
+    "2001": {
+      "teams": 31,
+      "divisions": 6,
+      "teams_per_division": [
+        5,
+        6
+      ],
+      "missing_pbp_abbr": [],
+      "games_file_teams_not_in_crosswalk": [],
+      "crosswalk_teams_not_in_games_file": []
+    },
+    "2002": {
+      "teams": 32,
+      "divisions": 8,
+      "teams_per_division": [
+        4
+      ],
+      "missing_pbp_abbr": [],
+      "games_file_teams_not_in_crosswalk": [],
+      "crosswalk_teams_not_in_games_file": []
+    },
+    "2003": {
+      "teams": 32,
+      "divisions": 8,
+      "teams_per_division": [
+        4
+      ],
+      "missing_pbp_abbr": [],
+      "games_file_teams_not_in_crosswalk": [],
+      "crosswalk_teams_not_in_games_file": []
+    },
+    "2004": {
+      "teams": 32,
+      "divisions": 8,
+      "teams_per_division": [
+        4
+      ],
+      "missing_pbp_abbr": [],
+      "games_file_teams_not_in_crosswalk": [],
+      "crosswalk_teams_not_in_games_file": []
+    },
+    "2005": {
+      "teams": 32,
+      "divisions": 8,
+      "teams_per_division": [
+        4
+      ],
+      "missing_pbp_abbr": [],
+      "games_file_teams_not_in_crosswalk": [],
+      "crosswalk_teams_not_in_games_file": []
+    }
+  },
+  "pbp_abbreviation_mapping_rule": "For each season, games-file home/away codes joined to play-by-play home/away codes on game_id; each games-file code maps to exactly one play-by-play code.",
+  "pbp_codes_that_differ_from_games_file": [
+    "2000: OAK -> LV",
+    "2000: SD -> LAC",
+    "2000: STL -> LA",
+    "2001: OAK -> LV",
+    "2001: SD -> LAC",
+    "2001: STL -> LA",
+    "2002: OAK -> LV",
+    "2002: SD -> LAC",
+    "2002: STL -> LA",
+    "2003: OAK -> LV",
+    "2003: SD -> LAC",
+    "2003: STL -> LA",
+    "2004: OAK -> LV",
+    "2004: SD -> LAC",
+    "2004: STL -> LA",
+    "2005: OAK -> LV",
+    "2005: SD -> LAC",
+    "2005: STL -> LA"
+  ],
+  "source_crosscheck_2002_2005_nfldata_vs_wikipedia": {
+    "seasons_compared": [
+      2002,
+      2003,
+      2004,
+      2005
+    ],
+    "agree": 128,
+    "disagree": [],
+    "only_in_one_source": []
+  }
+}

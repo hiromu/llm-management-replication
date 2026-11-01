@@ -1,0 +1,1540 @@
+[
+  {
+    "issue": "Table 1 difference-of-means identity: Contributions",
+    "locator": "D01, PDF p. 8, Table 1",
+    "values": {
+      "treatment": "2,375.5",
+      "control": "3,593.3",
+      "difference": "−1,217.7",
+      "p_printed": "0.00",
+      "possible_difference_interval": [
+        "-1217.90",
+        "-1217.70"
+      ],
+      "printed_difference_interval": [
+        "-1217.75",
+        "-1217.65"
+      ]
+    },
+    "check": "Treatment minus control interval intersects the printed difference interval; rounding can account for the apparent arithmetic gap.",
+    "within_rounding": true
+  },
+  {
+    "issue": "Table 1 difference-of-means identity: Follow-on Contributions",
+    "locator": "D01, PDF p. 8, Table 1",
+    "values": {
+      "treatment": "457.9",
+      "control": "635.5",
+      "difference": "−177.6",
+      "p_printed": "0.05",
+      "possible_difference_interval": [
+        "-177.70",
+        "-177.50"
+      ],
+      "printed_difference_interval": [
+        "-177.65",
+        "-177.55"
+      ]
+    },
+    "check": "Treatment minus control interval intersects the printed difference interval; rounding can account for the apparent arithmetic gap.",
+    "within_rounding": true
+  },
+  {
+    "issue": "Table 1 difference-of-means identity: Contributors",
+    "locator": "D01, PDF p. 8, Table 1",
+    "values": {
+      "treatment": "7.482",
+      "control": "7.966",
+      "difference": "−0.484",
+      "p_printed": "0.26",
+      "possible_difference_interval": [
+        "-0.4850",
+        "-0.4830"
+      ],
+      "printed_difference_interval": [
+        "-0.4845",
+        "-0.4835"
+      ]
+    },
+    "check": "Treatment minus control interval intersects the printed difference interval; rounding can account for the apparent arithmetic gap.",
+    "within_rounding": true
+  },
+  {
+    "issue": "Table 1 difference-of-means identity: Error-Score",
+    "locator": "D01, PDF p. 8, Table 1",
+    "values": {
+      "treatment": "1,830.2",
+      "control": "2,046.7",
+      "difference": "−216.5",
+      "p_printed": "0.09",
+      "possible_difference_interval": [
+        "-216.60",
+        "-216.40"
+      ],
+      "printed_difference_interval": [
+        "-216.55",
+        "-216.45"
+      ]
+    },
+    "check": "Treatment minus control interval intersects the printed difference interval; rounding can account for the apparent arithmetic gap.",
+    "within_rounding": true
+  },
+  {
+    "issue": "Table 1 difference-of-means identity: Owner-Contributions",
+    "locator": "D01, PDF p. 8, Table 1",
+    "values": {
+      "treatment": "149.6",
+      "control": "203.6",
+      "difference": "−54.08",
+      "p_printed": "0.21",
+      "possible_difference_interval": [
+        "-54.10",
+        "-53.90"
+      ],
+      "printed_difference_interval": [
+        "-54.085",
+        "-54.075"
+      ]
+    },
+    "check": "Treatment minus control interval intersects the printed difference interval; rounding can account for the apparent arithmetic gap.",
+    "within_rounding": true
+  },
+  {
+    "issue": "Table 1 difference-of-means identity: Δ Population",
+    "locator": "D01, PDF p. 8, Table 1",
+    "values": {
+      "treatment": "7,324.3",
+      "control": "6,756.5",
+      "difference": "567.8",
+      "p_printed": "0.62",
+      "possible_difference_interval": [
+        "567.70",
+        "567.90"
+      ],
+      "printed_difference_interval": [
+        "567.75",
+        "567.85"
+      ]
+    },
+    "check": "Treatment minus control interval intersects the printed difference interval; rounding can account for the apparent arithmetic gap.",
+    "within_rounding": true
+  },
+  {
+    "issue": "Table 1 difference-of-means identity: Δ Households",
+    "locator": "D01, PDF p. 8, Table 1",
+    "values": {
+      "treatment": "2,186.4",
+      "control": "1,899.8",
+      "difference": "286.6",
+      "p_printed": "0.42",
+      "possible_difference_interval": [
+        "286.50",
+        "286.70"
+      ],
+      "printed_difference_interval": [
+        "286.55",
+        "286.65"
+      ]
+    },
+    "check": "Treatment minus control interval intersects the printed difference interval; rounding can account for the apparent arithmetic gap.",
+    "within_rounding": true
+  },
+  {
+    "issue": "Table 1 difference-of-means identity: Δ Unemployed Pop.",
+    "locator": "D01, PDF p. 8, Table 1",
+    "values": {
+      "treatment": "−646.1",
+      "control": "−543.6",
+      "difference": "−102.5",
+      "p_printed": "0.27",
+      "possible_difference_interval": [
+        "-102.60",
+        "-102.40"
+      ],
+      "printed_difference_interval": [
+        "-102.55",
+        "-102.45"
+      ]
+    },
+    "check": "Treatment minus control interval intersects the printed difference interval; rounding can account for the apparent arithmetic gap.",
+    "within_rounding": true
+  },
+  {
+    "issue": "Table 1 difference-of-means identity: Δ Educ. Population",
+    "locator": "D01, PDF p. 8, Table 1",
+    "values": {
+      "treatment": "1,995.9",
+      "control": "1,884.8",
+      "difference": "111.0",
+      "p_printed": "0.68",
+      "possible_difference_interval": [
+        "111.00",
+        "111.20"
+      ],
+      "printed_difference_interval": [
+        "110.95",
+        "111.05"
+      ]
+    },
+    "check": "Treatment minus control interval intersects the printed difference interval; rounding can account for the apparent arithmetic gap.",
+    "within_rounding": true
+  },
+  {
+    "issue": "Table 1 difference-of-means identity: Δ Male Population (18−45)",
+    "locator": "D01, PDF p. 8, Table 1",
+    "values": {
+      "treatment": "555.3",
+      "control": "410.5",
+      "difference": "144.8",
+      "p_printed": "0.42",
+      "possible_difference_interval": [
+        "144.70",
+        "144.90"
+      ],
+      "printed_difference_interval": [
+        "144.75",
+        "144.85"
+      ]
+    },
+    "check": "Treatment minus control interval intersects the printed difference interval; rounding can account for the apparent arithmetic gap.",
+    "within_rounding": true
+  },
+  {
+    "issue": "Table 1 difference-of-means identity: Δ Income per Capita",
+    "locator": "D01, PDF p. 8, Table 1",
+    "values": {
+      "treatment": "3,152.7",
+      "control": "2,773.7",
+      "difference": "379.0",
+      "p_printed": "0.01",
+      "possible_difference_interval": [
+        "378.90",
+        "379.10"
+      ],
+      "printed_difference_interval": [
+        "378.95",
+        "379.05"
+      ]
+    },
+    "check": "Treatment minus control interval intersects the printed difference interval; rounding can account for the apparent arithmetic gap.",
+    "within_rounding": true
+  },
+  {
+    "issue": "Coefficient/SE/star arithmetic: Table 3  column 1 Post × Treat",
+    "locator": "D01, PDF p. 14, Table 3 column 1",
+    "values": {
+      "coefficient": "−0.471",
+      "se": "0.0466",
+      "stars": "***",
+      "abs_ratio_rounding_interval": [
+        10.085745,
+        10.128894
+      ],
+      "conditional_two_sided_normal_p_interval": [
+        0.0,
+        0.0
+      ]
+    },
+    "check": "Conditional large-sample two-sided normal check only, not a recovered native p-value. Compatible with conventional star bands keyed in Table 3. Native degrees of freedom, test distribution and (outside Table 3) explicit star legend are not supplied; no native-test verdict follows.",
+    "within_rounding": null
+  },
+  {
+    "issue": "Coefficient/SE/star arithmetic: Table 3  column 2 Post × Treat",
+    "locator": "D01, PDF p. 14, Table 3 column 2",
+    "values": {
+      "coefficient": "−0.472",
+      "se": "0.0403",
+      "stars": "***",
+      "abs_ratio_rounding_interval": [
+        11.685254,
+        11.73913
+      ],
+      "conditional_two_sided_normal_p_interval": [
+        0.0,
+        0.0
+      ]
+    },
+    "check": "Conditional large-sample two-sided normal check only, not a recovered native p-value. Compatible with conventional star bands keyed in Table 3. Native degrees of freedom, test distribution and (outside Table 3) explicit star legend are not supplied; no native-test verdict follows.",
+    "within_rounding": null
+  },
+  {
+    "issue": "Coefficient/SE/star arithmetic: Table 3  column 3 Post × Treat",
+    "locator": "D01, PDF p. 14, Table 3 column 3",
+    "values": {
+      "coefficient": "−0.141",
+      "se": "0.0484",
+      "stars": "***",
+      "abs_ratio_rounding_interval": [
+        2.899897,
+        2.926577
+      ],
+      "conditional_two_sided_normal_p_interval": [
+        0.00342715,
+        0.00373286
+      ]
+    },
+    "check": "Conditional large-sample two-sided normal check only, not a recovered native p-value. Compatible with conventional star bands keyed in Table 3. Native degrees of freedom, test distribution and (outside Table 3) explicit star legend are not supplied; no native-test verdict follows.",
+    "within_rounding": null
+  },
+  {
+    "issue": "Coefficient/SE/star arithmetic: Table 3  column 4 Post × Treat",
+    "locator": "D01, PDF p. 14, Table 3 column 4",
+    "values": {
+      "coefficient": "−0.152",
+      "se": "0.0448",
+      "stars": "***",
+      "abs_ratio_rounding_interval": [
+        3.377926,
+        3.407821
+      ],
+      "conditional_two_sided_normal_p_interval": [
+        0.00065484,
+        0.00073035
+      ]
+    },
+    "check": "Conditional large-sample two-sided normal check only, not a recovered native p-value. Compatible with conventional star bands keyed in Table 3. Native degrees of freedom, test distribution and (outside Table 3) explicit star legend are not supplied; no native-test verdict follows.",
+    "within_rounding": null
+  },
+  {
+    "issue": "Coefficient/SE/star arithmetic: Table 3  column 5 Post × Treat",
+    "locator": "D01, PDF p. 14, Table 3 column 5",
+    "values": {
+      "coefficient": "−0.0557",
+      "se": "0.0171",
+      "stars": "***",
+      "abs_ratio_rounding_interval": [
+        3.244898,
+        3.269795
+      ],
+      "conditional_two_sided_normal_p_interval": [
+        0.00107626,
+        0.00117493
+      ]
+    },
+    "check": "Conditional large-sample two-sided normal check only, not a recovered native p-value. Compatible with conventional star bands keyed in Table 3. Native degrees of freedom, test distribution and (outside Table 3) explicit star legend are not supplied; no native-test verdict follows.",
+    "within_rounding": null
+  },
+  {
+    "issue": "Coefficient/SE/star arithmetic: Table 3  column 6 Post × Treat",
+    "locator": "D01, PDF p. 14, Table 3 column 6",
+    "values": {
+      "coefficient": "−0.0556",
+      "se": "0.0143",
+      "stars": "***",
+      "abs_ratio_rounding_interval": [
+        3.87108,
+        3.905263
+      ],
+      "conditional_two_sided_normal_p_interval": [
+        9.412e-05,
+        0.00010835
+      ]
+    },
+    "check": "Conditional large-sample two-sided normal check only, not a recovered native p-value. Compatible with conventional star bands keyed in Table 3. Native degrees of freedom, test distribution and (outside Table 3) explicit star legend are not supplied; no native-test verdict follows.",
+    "within_rounding": null
+  },
+  {
+    "issue": "Coefficient/SE/star arithmetic: Table 4  column 1 Treat",
+    "locator": "D01, PDF p. 15, Table 4 column 1",
+    "values": {
+      "coefficient": "−0.609",
+      "se": "0.0442",
+      "stars": "***",
+      "abs_ratio_rounding_interval": [
+        13.751412,
+        13.80521
+      ],
+      "conditional_two_sided_normal_p_interval": [
+        0.0,
+        0.0
+      ]
+    },
+    "check": "Conditional large-sample two-sided normal check only, not a recovered native p-value. Compatible with conventional star bands keyed in Table 3. Native degrees of freedom, test distribution and (outside Table 3) explicit star legend are not supplied; no native-test verdict follows.",
+    "within_rounding": null
+  },
+  {
+    "issue": "Coefficient/SE/star arithmetic: Table 4  column 2 Treat",
+    "locator": "D01, PDF p. 15, Table 4 column 2",
+    "values": {
+      "coefficient": "−0.934",
+      "se": "0.0521",
+      "stars": "***",
+      "abs_ratio_rounding_interval": [
+        17.900288,
+        17.95389
+      ],
+      "conditional_two_sided_normal_p_interval": [
+        0.0,
+        0.0
+      ]
+    },
+    "check": "Conditional large-sample two-sided normal check only, not a recovered native p-value. Compatible with conventional star bands keyed in Table 3. Native degrees of freedom, test distribution and (outside Table 3) explicit star legend are not supplied; no native-test verdict follows.",
+    "within_rounding": null
+  },
+  {
+    "issue": "Coefficient/SE/star arithmetic: Table 4  column 3 Treat",
+    "locator": "D01, PDF p. 15, Table 4 column 3",
+    "values": {
+      "coefficient": "−0.193",
+      "se": "0.0604",
+      "stars": "***",
+      "abs_ratio_rounding_interval": [
+        3.18445,
+        3.206297
+      ],
+      "conditional_two_sided_normal_p_interval": [
+        0.00134455,
+        0.00145029
+      ]
+    },
+    "check": "Conditional large-sample two-sided normal check only, not a recovered native p-value. Compatible with conventional star bands keyed in Table 3. Native degrees of freedom, test distribution and (outside Table 3) explicit star legend are not supplied; no native-test verdict follows.",
+    "within_rounding": null
+  },
+  {
+    "issue": "Coefficient/SE/star arithmetic: Table 4  column 4 Treat",
+    "locator": "D01, PDF p. 15, Table 4 column 4",
+    "values": {
+      "coefficient": "−0.405",
+      "se": "0.0657",
+      "stars": "***",
+      "abs_ratio_rounding_interval": [
+        6.152091,
+        6.176695
+      ],
+      "conditional_two_sided_normal_p_interval": [
+        0.0,
+        0.0
+      ]
+    },
+    "check": "Conditional large-sample two-sided normal check only, not a recovered native p-value. Compatible with conventional star bands keyed in Table 3. Native degrees of freedom, test distribution and (outside Table 3) explicit star legend are not supplied; no native-test verdict follows.",
+    "within_rounding": null
+  },
+  {
+    "issue": "Coefficient/SE/star arithmetic: Table 4  column 5 Treat",
+    "locator": "D01, PDF p. 15, Table 4 column 5",
+    "values": {
+      "coefficient": "−0.128",
+      "se": "0.0166",
+      "stars": "***",
+      "abs_ratio_rounding_interval": [
+        7.657658,
+        7.76435
+      ],
+      "conditional_two_sided_normal_p_interval": [
+        0.0,
+        0.0
+      ]
+    },
+    "check": "Conditional large-sample two-sided normal check only, not a recovered native p-value. Compatible with conventional star bands keyed in Table 3. Native degrees of freedom, test distribution and (outside Table 3) explicit star legend are not supplied; no native-test verdict follows.",
+    "within_rounding": null
+  },
+  {
+    "issue": "Coefficient/SE/star arithmetic: Table 4  column 6 Treat",
+    "locator": "D01, PDF p. 15, Table 4 column 6",
+    "values": {
+      "coefficient": "−0.283",
+      "se": "0.0186",
+      "stars": "***",
+      "abs_ratio_rounding_interval": [
+        15.147453,
+        15.283019
+      ],
+      "conditional_two_sided_normal_p_interval": [
+        0.0,
+        0.0
+      ]
+    },
+    "check": "Conditional large-sample two-sided normal check only, not a recovered native p-value. Compatible with conventional star bands keyed in Table 3. Native degrees of freedom, test distribution and (outside Table 3) explicit star legend are not supplied; no native-test verdict follows.",
+    "within_rounding": null
+  },
+  {
+    "issue": "Coefficient/SE/star arithmetic: Table 5 A column 1 Post × Treat",
+    "locator": "D01, PDF p. 17, Table 5(A) column 1",
+    "values": {
+      "coefficient": "−0.187",
+      "se": "0.0469",
+      "stars": "***",
+      "abs_ratio_rounding_interval": [
+        3.972311,
+        4.002134
+      ],
+      "conditional_two_sided_normal_p_interval": [
+        6.277e-05,
+        7.118e-05
+      ]
+    },
+    "check": "Conditional large-sample two-sided normal check only, not a recovered native p-value. Compatible with conventional star bands keyed in Table 3. Native degrees of freedom, test distribution and (outside Table 3) explicit star legend are not supplied; no native-test verdict follows.",
+    "within_rounding": null
+  },
+  {
+    "issue": "Coefficient/SE/star arithmetic: Table 5 A column 2 Post × Treat",
+    "locator": "D01, PDF p. 17, Table 5(A) column 2",
+    "values": {
+      "coefficient": "−0.0917",
+      "se": "0.0144",
+      "stars": "***",
+      "abs_ratio_rounding_interval": [
+        6.342561,
+        6.393728
+      ],
+      "conditional_two_sided_normal_p_interval": [
+        0.0,
+        0.0
+      ]
+    },
+    "check": "Conditional large-sample two-sided normal check only, not a recovered native p-value. Compatible with conventional star bands keyed in Table 3. Native degrees of freedom, test distribution and (outside Table 3) explicit star legend are not supplied; no native-test verdict follows.",
+    "within_rounding": null
+  },
+  {
+    "issue": "Coefficient/SE/star arithmetic: Table 5 A column 3 Post × Treat",
+    "locator": "D01, PDF p. 17, Table 5(A) column 3",
+    "values": {
+      "coefficient": "0.00783",
+      "se": "0.0483",
+      "stars": null,
+      "abs_ratio_rounding_interval": [
+        0.161841,
+        0.162383
+      ],
+      "conditional_two_sided_normal_p_interval": [
+        0.87100393,
+        0.87143127
+      ]
+    },
+    "check": "Conditional large-sample two-sided normal check only, not a recovered native p-value. Compatible with conventional star bands keyed in Table 3. Native degrees of freedom, test distribution and (outside Table 3) explicit star legend are not supplied; no native-test verdict follows.",
+    "within_rounding": null
+  },
+  {
+    "issue": "Coefficient/SE/star arithmetic: Table 5 A column 4 Post × Treat",
+    "locator": "D01, PDF p. 17, Table 5(A) column 4",
+    "values": {
+      "coefficient": "−0.0218",
+      "se": "0.0174",
+      "stars": null,
+      "abs_ratio_rounding_interval": [
+        1.246418,
+        1.259366
+      ],
+      "conditional_two_sided_normal_p_interval": [
+        0.20789817,
+        0.21261085
+      ]
+    },
+    "check": "Conditional large-sample two-sided normal check only, not a recovered native p-value. Compatible with conventional star bands keyed in Table 3. Native degrees of freedom, test distribution and (outside Table 3) explicit star legend are not supplied; no native-test verdict follows.",
+    "within_rounding": null
+  },
+  {
+    "issue": "Coefficient/SE/star arithmetic: Table 5 A column 5 Post × Treat",
+    "locator": "D01, PDF p. 17, Table 5(A) column 5",
+    "values": {
+      "coefficient": "−0.135",
+      "se": "0.0563",
+      "stars": "**",
+      "abs_ratio_rounding_interval": [
+        2.386868,
+        2.408889
+      ],
+      "conditional_two_sided_normal_p_interval": [
+        0.01600117,
+        0.0169926
+      ]
+    },
+    "check": "Conditional large-sample two-sided normal check only, not a recovered native p-value. Compatible with conventional star bands keyed in Table 3. Native degrees of freedom, test distribution and (outside Table 3) explicit star legend are not supplied; no native-test verdict follows.",
+    "within_rounding": null
+  },
+  {
+    "issue": "Coefficient/SE/star arithmetic: Table 5 A column 6 Post × Treat",
+    "locator": "D01, PDF p. 17, Table 5(A) column 6",
+    "values": {
+      "coefficient": "−0.282",
+      "se": "0.0634",
+      "stars": "***",
+      "abs_ratio_rounding_interval": [
+        4.436564,
+        4.459353
+      ],
+      "conditional_two_sided_normal_p_interval": [
+        8.22e-06,
+        9.14e-06
+      ]
+    },
+    "check": "Conditional large-sample two-sided normal check only, not a recovered native p-value. Compatible with conventional star bands keyed in Table 3. Native degrees of freedom, test distribution and (outside Table 3) explicit star legend are not supplied; no native-test verdict follows.",
+    "within_rounding": null
+  },
+  {
+    "issue": "Coefficient/SE/star arithmetic: Table 5 A column 7 Post × Treat",
+    "locator": "D01, PDF p. 17, Table 5(A) column 7",
+    "values": {
+      "coefficient": "−0.0335",
+      "se": "0.0194",
+      "stars": "*",
+      "abs_ratio_rounding_interval": [
+        1.719794,
+        1.73385
+      ],
+      "conditional_two_sided_normal_p_interval": [
+        0.08294468,
+        0.08546983
+      ]
+    },
+    "check": "Conditional large-sample two-sided normal check only, not a recovered native p-value. Compatible with conventional star bands keyed in Table 3. Native degrees of freedom, test distribution and (outside Table 3) explicit star legend are not supplied; no native-test verdict follows.",
+    "within_rounding": null
+  },
+  {
+    "issue": "Coefficient/SE/star arithmetic: Table 5 A column 8 Post × Treat",
+    "locator": "D01, PDF p. 17, Table 5(A) column 8",
+    "values": {
+      "coefficient": "−0.0795",
+      "se": "0.0227",
+      "stars": "***",
+      "abs_ratio_rounding_interval": [
+        3.492308,
+        3.512141
+      ],
+      "conditional_two_sided_normal_p_interval": [
+        0.00044451,
+        0.00047887
+      ]
+    },
+    "check": "Conditional large-sample two-sided normal check only, not a recovered native p-value. Compatible with conventional star bands keyed in Table 3. Native degrees of freedom, test distribution and (outside Table 3) explicit star legend are not supplied; no native-test verdict follows.",
+    "within_rounding": null
+  },
+  {
+    "issue": "Coefficient/SE/star arithmetic: Table 5 B column 1 Treat",
+    "locator": "D01, PDF p. 17, Table 5(B) column 1",
+    "values": {
+      "coefficient": "−0.183",
+      "se": "0.0704",
+      "stars": "***",
+      "abs_ratio_rounding_interval": [
+        2.59049,
+        2.608387
+      ],
+      "conditional_two_sided_normal_p_interval": [
+        0.00909701,
+        0.00958395
+      ]
+    },
+    "check": "Conditional large-sample two-sided normal check only, not a recovered native p-value. Compatible with conventional star bands keyed in Table 3. Native degrees of freedom, test distribution and (outside Table 3) explicit star legend are not supplied; no native-test verdict follows.",
+    "within_rounding": null
+  },
+  {
+    "issue": "Coefficient/SE/star arithmetic: Table 5 B column 2 Treat",
+    "locator": "D01, PDF p. 17, Table 5(B) column 2",
+    "values": {
+      "coefficient": "−0.412",
+      "se": "0.0761",
+      "stars": "***",
+      "abs_ratio_rounding_interval": [
+        5.403808,
+        5.424063
+      ],
+      "conditional_two_sided_normal_p_interval": [
+        6e-08,
+        7e-08
+      ]
+    },
+    "check": "Conditional large-sample two-sided normal check only, not a recovered native p-value. Compatible with conventional star bands keyed in Table 3. Native degrees of freedom, test distribution and (outside Table 3) explicit star legend are not supplied; no native-test verdict follows.",
+    "within_rounding": null
+  },
+  {
+    "issue": "Coefficient/SE/star arithmetic: Table 5 B column 3 Treat",
+    "locator": "D01, PDF p. 17, Table 5(B) column 3",
+    "values": {
+      "coefficient": "−0.0815",
+      "se": "0.0183",
+      "stars": "***",
+      "abs_ratio_rounding_interval": [
+        4.438692,
+        4.468493
+      ],
+      "conditional_two_sided_normal_p_interval": [
+        7.88e-06,
+        9.05e-06
+      ]
+    },
+    "check": "Conditional large-sample two-sided normal check only, not a recovered native p-value. Compatible with conventional star bands keyed in Table 3. Native degrees of freedom, test distribution and (outside Table 3) explicit star legend are not supplied; no native-test verdict follows.",
+    "within_rounding": null
+  },
+  {
+    "issue": "Coefficient/SE/star arithmetic: Table 5 B column 4 Treat",
+    "locator": "D01, PDF p. 17, Table 5(B) column 4",
+    "values": {
+      "coefficient": "−0.200",
+      "se": "0.0210",
+      "stars": "***",
+      "abs_ratio_rounding_interval": [
+        9.477435,
+        9.570406
+      ],
+      "conditional_two_sided_normal_p_interval": [
+        0.0,
+        0.0
+      ]
+    },
+    "check": "Conditional large-sample two-sided normal check only, not a recovered native p-value. Compatible with conventional star bands keyed in Table 3. Native degrees of freedom, test distribution and (outside Table 3) explicit star legend are not supplied; no native-test verdict follows.",
+    "within_rounding": null
+  },
+  {
+    "issue": "Coefficient/SE/star arithmetic: Table 5 B column 5 Treat",
+    "locator": "D01, PDF p. 17, Table 5(B) column 5",
+    "values": {
+      "coefficient": "−0.265",
+      "se": "0.0780",
+      "stars": "***",
+      "abs_ratio_rounding_interval": [
+        3.388853,
+        3.40603
+      ],
+      "conditional_two_sided_normal_p_interval": [
+        0.00065915,
+        0.00070186
+      ]
+    },
+    "check": "Conditional large-sample two-sided normal check only, not a recovered native p-value. Compatible with conventional star bands keyed in Table 3. Native degrees of freedom, test distribution and (outside Table 3) explicit star legend are not supplied; no native-test verdict follows.",
+    "within_rounding": null
+  },
+  {
+    "issue": "Coefficient/SE/star arithmetic: Table 5 B column 6 Treat",
+    "locator": "D01, PDF p. 17, Table 5(B) column 6",
+    "values": {
+      "coefficient": "−0.535",
+      "se": "0.0849",
+      "stars": "***",
+      "abs_ratio_rounding_interval": [
+        6.291936,
+        6.311137
+      ],
+      "conditional_two_sided_normal_p_interval": [
+        0.0,
+        0.0
+      ]
+    },
+    "check": "Conditional large-sample two-sided normal check only, not a recovered native p-value. Compatible with conventional star bands keyed in Table 3. Native degrees of freedom, test distribution and (outside Table 3) explicit star legend are not supplied; no native-test verdict follows.",
+    "within_rounding": null
+  },
+  {
+    "issue": "Coefficient/SE/star arithmetic: Table 5 B column 7 Treat",
+    "locator": "D01, PDF p. 17, Table 5(B) column 7",
+    "values": {
+      "coefficient": "−0.121",
+      "se": "0.0216",
+      "stars": "***",
+      "abs_ratio_rounding_interval": [
+        5.56582,
+        5.638051
+      ],
+      "conditional_two_sided_normal_p_interval": [
+        2e-08,
+        3e-08
+      ]
+    },
+    "check": "Conditional large-sample two-sided normal check only, not a recovered native p-value. Compatible with conventional star bands keyed in Table 3. Native degrees of freedom, test distribution and (outside Table 3) explicit star legend are not supplied; no native-test verdict follows.",
+    "within_rounding": null
+  },
+  {
+    "issue": "Coefficient/SE/star arithmetic: Table 5 B column 8 Treat",
+    "locator": "D01, PDF p. 17, Table 5(B) column 8",
+    "values": {
+      "coefficient": "−0.291",
+      "se": "0.0245",
+      "stars": "***",
+      "abs_ratio_rounding_interval": [
+        11.832994,
+        11.92229
+      ],
+      "conditional_two_sided_normal_p_interval": [
+        0.0,
+        0.0
+      ]
+    },
+    "check": "Conditional large-sample two-sided normal check only, not a recovered native p-value. Compatible with conventional star bands keyed in Table 3. Native degrees of freedom, test distribution and (outside Table 3) explicit star legend are not supplied; no native-test verdict follows.",
+    "within_rounding": null
+  },
+  {
+    "issue": "Coefficient/SE/star arithmetic: Table 6  column 1 Treat",
+    "locator": "D01, PDF p. 18, Table 6 column 1",
+    "values": {
+      "coefficient": "0.126",
+      "se": "0.0708",
+      "stars": "*",
+      "abs_ratio_rounding_interval": [
+        1.771348,
+        1.787986
+      ],
+      "conditional_two_sided_normal_p_interval": [
+        0.07377829,
+        0.07650286
+      ]
+    },
+    "check": "Conditional large-sample two-sided normal check only, not a recovered native p-value. Compatible with conventional star bands keyed in Table 3. Native degrees of freedom, test distribution and (outside Table 3) explicit star legend are not supplied; no native-test verdict follows.",
+    "within_rounding": null
+  },
+  {
+    "issue": "Coefficient/SE/star arithmetic: Table 6  column 1 Distance",
+    "locator": "D01, PDF p. 18, Table 6 column 1",
+    "values": {
+      "coefficient": "0.0340",
+      "se": "0.00262",
+      "stars": "***",
+      "abs_ratio_rounding_interval": [
+        12.933333,
+        13.021033
+      ],
+      "conditional_two_sided_normal_p_interval": [
+        0.0,
+        0.0
+      ]
+    },
+    "check": "Conditional large-sample two-sided normal check only, not a recovered native p-value. Compatible with conventional star bands keyed in Table 3. Native degrees of freedom, test distribution and (outside Table 3) explicit star legend are not supplied; no native-test verdict follows.",
+    "within_rounding": null
+  },
+  {
+    "issue": "Coefficient/SE/star arithmetic: Table 6  column 2 Treat",
+    "locator": "D01, PDF p. 18, Table 6 column 2",
+    "values": {
+      "coefficient": "0.149",
+      "se": "0.0800",
+      "stars": "*",
+      "abs_ratio_rounding_interval": [
+        1.855091,
+        1.869919
+      ],
+      "conditional_two_sided_normal_p_interval": [
+        0.06149511,
+        0.06358329
+      ]
+    },
+    "check": "Conditional large-sample two-sided normal check only, not a recovered native p-value. Compatible with conventional star bands keyed in Table 3. Native degrees of freedom, test distribution and (outside Table 3) explicit star legend are not supplied; no native-test verdict follows.",
+    "within_rounding": null
+  },
+  {
+    "issue": "Coefficient/SE/star arithmetic: Table 6  column 2 Distance",
+    "locator": "D01, PDF p. 18, Table 6 column 2",
+    "values": {
+      "coefficient": "0.0339",
+      "se": "0.00292",
+      "stars": "***",
+      "abs_ratio_rounding_interval": [
+        11.57265,
+        11.646655
+      ],
+      "conditional_two_sided_normal_p_interval": [
+        0.0,
+        0.0
+      ]
+    },
+    "check": "Conditional large-sample two-sided normal check only, not a recovered native p-value. Compatible with conventional star bands keyed in Table 3. Native degrees of freedom, test distribution and (outside Table 3) explicit star legend are not supplied; no native-test verdict follows.",
+    "within_rounding": null
+  },
+  {
+    "issue": "Coefficient/SE/star arithmetic: Table 6  column 3 Treat",
+    "locator": "D01, PDF p. 18, Table 6 column 3",
+    "values": {
+      "coefficient": "0.297",
+      "se": "0.0915",
+      "stars": "***",
+      "abs_ratio_rounding_interval": [
+        3.238667,
+        3.253144
+      ],
+      "conditional_two_sided_normal_p_interval": [
+        0.00114136,
+        0.0012009
+      ]
+    },
+    "check": "Conditional large-sample two-sided normal check only, not a recovered native p-value. Compatible with conventional star bands keyed in Table 3. Native degrees of freedom, test distribution and (outside Table 3) explicit star legend are not supplied; no native-test verdict follows.",
+    "within_rounding": null
+  },
+  {
+    "issue": "Coefficient/SE/star arithmetic: Table 6  column 3 Distance",
+    "locator": "D01, PDF p. 18, Table 6 column 3",
+    "values": {
+      "coefficient": "0.0376",
+      "se": "0.00320",
+      "stars": "***",
+      "abs_ratio_rounding_interval": [
+        11.716069,
+        11.784038
+      ],
+      "conditional_two_sided_normal_p_interval": [
+        0.0,
+        0.0
+      ]
+    },
+    "check": "Conditional large-sample two-sided normal check only, not a recovered native p-value. Compatible with conventional star bands keyed in Table 3. Native degrees of freedom, test distribution and (outside Table 3) explicit star legend are not supplied; no native-test verdict follows.",
+    "within_rounding": null
+  },
+  {
+    "issue": "Coefficient/SE/star arithmetic: Table 7  column 1 Post × Treat",
+    "locator": "D01, PDF p. 19, Table 7 column 1",
+    "values": {
+      "coefficient": "0.131",
+      "se": "0.0391",
+      "stars": "***",
+      "abs_ratio_rounding_interval": [
+        3.333333,
+        3.367478
+      ],
+      "conditional_two_sided_normal_p_interval": [
+        0.00075859,
+        0.00085812
+      ]
+    },
+    "check": "Conditional large-sample two-sided normal check only, not a recovered native p-value. Compatible with conventional star bands keyed in Table 3. Native degrees of freedom, test distribution and (outside Table 3) explicit star legend are not supplied; no native-test verdict follows.",
+    "within_rounding": null
+  },
+  {
+    "issue": "Coefficient/SE/star arithmetic: Table 7  column 2 Post × Treat",
+    "locator": "D01, PDF p. 19, Table 7 column 2",
+    "values": {
+      "coefficient": "−0.227",
+      "se": "0.0497",
+      "stars": "***",
+      "abs_ratio_rounding_interval": [
+        4.552764,
+        4.582075
+      ],
+      "conditional_two_sided_normal_p_interval": [
+        4.6e-06,
+        5.29e-06
+      ]
+    },
+    "check": "Conditional large-sample two-sided normal check only, not a recovered native p-value. Compatible with conventional star bands keyed in Table 3. Native degrees of freedom, test distribution and (outside Table 3) explicit star legend are not supplied; no native-test verdict follows.",
+    "within_rounding": null
+  },
+  {
+    "issue": "Coefficient/SE/star arithmetic: Table 7  column 3 Post × Treat",
+    "locator": "D01, PDF p. 19, Table 7 column 3",
+    "values": {
+      "coefficient": "−0.00281",
+      "se": "0.00280",
+      "stars": null,
+      "abs_ratio_rounding_interval": [
+        1.0,
+        1.007156
+      ],
+      "conditional_two_sided_normal_p_interval": [
+        0.31385999,
+        0.31731051
+      ]
+    },
+    "check": "Conditional large-sample two-sided normal check only, not a recovered native p-value. Compatible with conventional star bands keyed in Table 3. Native degrees of freedom, test distribution and (outside Table 3) explicit star legend are not supplied; no native-test verdict follows.",
+    "within_rounding": null
+  },
+  {
+    "issue": "Coefficient/SE/star arithmetic: Table 7  column 4 Post × Treat",
+    "locator": "D01, PDF p. 19, Table 7 column 4",
+    "values": {
+      "coefficient": "−0.0586",
+      "se": "0.0127",
+      "stars": "***",
+      "abs_ratio_rounding_interval": [
+        4.592157,
+        4.636364
+      ],
+      "conditional_two_sided_normal_p_interval": [
+        3.55e-06,
+        4.39e-06
+      ]
+    },
+    "check": "Conditional large-sample two-sided normal check only, not a recovered native p-value. Compatible with conventional star bands keyed in Table 3. Native degrees of freedom, test distribution and (outside Table 3) explicit star legend are not supplied; no native-test verdict follows.",
+    "within_rounding": null
+  },
+  {
+    "issue": "Coefficient/SE/star arithmetic: Table 7  column 5 Post × Treat",
+    "locator": "D01, PDF p. 19, Table 7 column 5",
+    "values": {
+      "coefficient": "−0.00847",
+      "se": "0.00574",
+      "stars": null,
+      "abs_ratio_rounding_interval": [
+        1.473455,
+        1.477768
+      ],
+      "conditional_two_sided_normal_p_interval": [
+        0.13946986,
+        0.14062834
+      ]
+    },
+    "check": "Conditional large-sample two-sided normal check only, not a recovered native p-value. Compatible with conventional star bands keyed in Table 3. Native degrees of freedom, test distribution and (outside Table 3) explicit star legend are not supplied; no native-test verdict follows.",
+    "within_rounding": null
+  },
+  {
+    "issue": "Coefficient/SE/star arithmetic: Table 7  column 6 Post × Treat",
+    "locator": "D01, PDF p. 19, Table 7 column 6",
+    "values": {
+      "coefficient": "−0.0357",
+      "se": "0.0173",
+      "stars": "**",
+      "abs_ratio_rounding_interval": [
+        2.054755,
+        2.072464
+      ],
+      "conditional_two_sided_normal_p_interval": [
+        0.03822221,
+        0.03990267
+      ]
+    },
+    "check": "Conditional large-sample two-sided normal check only, not a recovered native p-value. Compatible with conventional star bands keyed in Table 3. Native degrees of freedom, test distribution and (outside Table 3) explicit star legend are not supplied; no native-test verdict follows.",
+    "within_rounding": null
+  },
+  {
+    "issue": "Coefficient/SE/star arithmetic: Table 7  column 7 Post × Treat",
+    "locator": "D01, PDF p. 19, Table 7 column 7",
+    "values": {
+      "coefficient": "−0.161",
+      "se": "0.0369",
+      "stars": "***",
+      "abs_ratio_rounding_interval": [
+        4.343708,
+        4.382632
+      ],
+      "conditional_two_sided_normal_p_interval": [
+        1.173e-05,
+        1.401e-05
+      ]
+    },
+    "check": "Conditional large-sample two-sided normal check only, not a recovered native p-value. Compatible with conventional star bands keyed in Table 3. Native degrees of freedom, test distribution and (outside Table 3) explicit star legend are not supplied; no native-test verdict follows.",
+    "within_rounding": null
+  },
+  {
+    "issue": "County and panel totals conflict",
+    "locator": "D01, PDF p. 5, 8, 11–12, 14, §2.2.3; Tables 1–3; §2.4.5",
+    "values": {
+      "full_counties": "3,107",
+      "treated": "1,851",
+      "control_in_Table_1": "1,242",
+      "control_in_§2.2.3": "1,256",
+      "text_panel_N": "120,627",
+      "table_panel_N": "121,173",
+      "quarters": "39",
+      "identities": [
+        "1851 + 1242 = 3093",
+        "1851 + 1256 = 3107",
+        "3093 × 39 = 120627",
+        "3107 × 39 = 121173"
+      ]
+    },
+    "check": "Both N values align exactly with different printed county totals, but the publication presents them as the same sample. Counts are integers; rounding cannot reconcile the two totals.",
+    "within_rounding": false
+  },
+  {
+    "issue": "Boundary/timing counts and panel headings conflict",
+    "locator": "D01, PDF p. 8–9, 17, §2.3.3, Figure 2, Table 5",
+    "values": {
+      "text_and_Figure_2": {
+        "Boundary": "1,820",
+        "Timing": "2,218"
+      },
+      "Table_5B": {
+        "Boundary": "2,218",
+        "Timing": "1,820"
+      },
+      "Table_5A_N_by_column": [
+        "121,173",
+        "121,173",
+        "121,173",
+        "121,173",
+        "86,502",
+        "70,980",
+        "86,502",
+        "70,980"
+      ],
+      "integer_identities": [
+        "2218 × 39 = 86502",
+        "1820 × 39 = 70980"
+      ],
+      "text_group_sums": [
+        "1096 + 724 = 1820",
+        "1228 + 990 = 2218"
+      ]
+    },
+    "check": "The text and Figure 2 agree on restricted-sample counts but Table 5B reverses their labels. Table 5A alternates the implied sample size within both sample headings. Preserve printed column placement; do not swap columns or select a sample by numerical fit.",
+    "within_rounding": false
+  },
+  {
+    "issue": "Quality collection sample exceeds estimation sample",
+    "locator": "D01, PDF p. 11, 18, §2.4.3 and Table 6",
+    "values": {
+      "collected_pairs": "98,711",
+      "collected_counties": "2,312",
+      "treated_counties": "1,325",
+      "control_counties": "987",
+      "target_pairs_per_county": "50",
+      "full_estimation_pairs": "81,007",
+      "difference_pairs": "17,704"
+    },
+    "check": "The text explains that some counties have fewer than the target pair count, but does not explain the further drop from collected pairs to Table 6. The county group counts add correctly. Unknown filters/missingness prevent identifying the estimation county count.",
+    "within_rounding": null
+  },
+  {
+    "issue": "Panel calendar and Post summaries",
+    "locator": "D01, PDF p. 12, Table 2",
+    "values": {
+      "quarters": "2005 Q2–2014 Q4",
+      "quarter_codes": [
+        "181.00",
+        "219.00"
+      ],
+      "quarter_mean": "200.00",
+      "post_mean": "0.72",
+      "year_mean": "2,009.62",
+      "derived_calendar_fractions": [
+        "28 post quarters / 39 = 0.7179487…",
+        "annual mean with 3 quarters in 2005 and 4 thereafter = 2009.6153846…"
+      ]
+    },
+    "check": "The inclusive calendar has 39 quarters; equal quarter weighting yields the printed Post and Year means within their rounding intervals. The numeric quarter codes also span 39 integers centered on the printed mean; software epoch is not established.",
+    "within_rounding": true
+  },
+  {
+    "issue": "Table 1 versus Table 2 weighted means: Contributions",
+    "locator": "D01, PDF p. 8, 12, Tables 1–2",
+    "values": {
+      "treatment_mean": "2,375.5",
+      "control_mean": "3,593.3",
+      "Table_2_mean": "2,867.80",
+      "conditional_count_checks": {
+        "1242": {
+          "weighted_mean_interval": [
+            "2864.459893307468477206595538",
+            "2864.559893307468477206595538"
+          ],
+          "overlap_summary": false
+        },
+        "1256": {
+          "weighted_mean_interval": [
+            "2867.743788220148052784036048",
+            "2867.843788220148052784036048"
+          ],
+          "overlap_summary": true
+        }
+      }
+    },
+    "check": "Conditional identity if Table 1 means share the Table 2 balanced-panel window and county weighting. One count choice can align more closely, but this does not establish which sample or averaging rule was used, and is not used to choose a specification.",
+    "within_rounding": null
+  },
+  {
+    "issue": "Table 1 versus Table 2 weighted means: Follow-on Contributions",
+    "locator": "D01, PDF p. 8, 12, Tables 1–2",
+    "values": {
+      "treatment_mean": "457.9",
+      "control_mean": "635.5",
+      "Table_2_mean": "529.68",
+      "conditional_count_checks": {
+        "1242": {
+          "weighted_mean_interval": [
+            "529.1656159068865179437439379",
+            "529.2656159068865179437439379"
+          ],
+          "overlap_summary": false
+        },
+        "1256": {
+          "weighted_mean_interval": [
+            "529.6445284840682330222079176",
+            "529.7445284840682330222079176"
+          ],
+          "overlap_summary": true
+        }
+      }
+    },
+    "check": "Conditional identity if Table 1 means share the Table 2 balanced-panel window and county weighting. One count choice can align more closely, but this does not establish which sample or averaging rule was used, and is not used to choose a specification.",
+    "within_rounding": null
+  },
+  {
+    "issue": "Table 1 versus Table 2 weighted means: Contributors",
+    "locator": "D01, PDF p. 8, 12, Tables 1–2",
+    "values": {
+      "treatment_mean": "7.482",
+      "control_mean": "7.966",
+      "Table_2_mean": "7.68",
+      "conditional_count_checks": {
+        "1242": {
+          "weighted_mean_interval": [
+            "7.675851115421920465567410281",
+            "7.676851115421920465567410281"
+          ],
+          "overlap_summary": true
+        },
+        "1256": {
+          "weighted_mean_interval": [
+            "7.677156260057933698101062118",
+            "7.678156260057933698101062118"
+          ],
+          "overlap_summary": true
+        }
+      }
+    },
+    "check": "Conditional identity if Table 1 means share the Table 2 balanced-panel window and county weighting. One count choice can align more closely, but this does not establish which sample or averaging rule was used, and is not used to choose a specification.",
+    "within_rounding": null
+  },
+  {
+    "issue": "Follow-on categories are explicitly non-exhaustive",
+    "locator": "D01, PDF p. 12, 25, Table 2 and endnote 20",
+    "values": {
+      "total_follow_on_mean": "529.68",
+      "distant_mean": "120.21",
+      "incremental_mean": "366.00",
+      "sum_of_two_printed_means": "486.21"
+    },
+    "check": "The two component means need not sum to total follow-on: endnote 20 explicitly allows other information outside the two categories. This is not an accounting contradiction under the documented definition.",
+    "within_rounding": null
+  },
+  {
+    "issue": "New and old contributor counts are not an exhaustive arithmetic partition",
+    "locator": "D01, PDF p. 10, 12, 19, §2.4.1 and Tables 2, 7",
+    "values": {
+      "contributors_mean": "7.68",
+      "new_mean": "4.77",
+      "old_mean": "0.10",
+      "new_plus_old_printed": "4.87"
+    },
+    "check": "Old is defined as active before seeding, while new means first activity in the county-period. Returning post-seeding entrants need not belong to either. The prose says divide into two groups, but definitions do not establish exhaustion; no correction made.",
+    "within_rounding": null
+  },
+  {
+    "issue": "Ownership measure units versus contributor counts",
+    "locator": "D01, PDF p. 10, 12, 19, 22, §2.4.1; Tables 2, 7; §4.3",
+    "values": {
+      "old_contributors_mean": "0.10",
+      "high_ownership_contributions_mean": "123.52",
+      "low_ownership_contributions_mean": "2.00"
+    },
+    "check": "The ownership rows say contributions, while discussions sometimes say old users or contributors. Different units can explain why these are not bounded by the old-user count; exact D51 formulas are not available, so a subset-count identity is unjustified.",
+    "within_rounding": null
+  },
+  {
+    "issue": "Log coefficient expressed as a percent: T3C2",
+    "locator": "D01, PDF p. 14, Table 3 column 2; associated main-text interpretation",
+    "values": {
+      "coefficient": "−0.472",
+      "printed_percent_magnitude": "47.2%",
+      "conditional_exact_percent_change_in_logged_quantity_interval": [
+        -37.65583,
+        -37.59345
+      ]
+    },
+    "check": "Prose uses approximately 100 times the coefficient rather than 100×(exp(beta)−1). This is a linear approximation, not a correction target. For ln(Y+1), exponentiation concerns Y+1 and need not be a constant percentage change in Y. The printed percentage is preserved.",
+    "within_rounding": null
+  },
+  {
+    "issue": "Log coefficient expressed as a percent: T3C4",
+    "locator": "D01, PDF p. 14, Table 3 column 4; associated main-text interpretation",
+    "values": {
+      "coefficient": "−0.152",
+      "printed_percent_magnitude": "15.2%",
+      "conditional_exact_percent_change_in_logged_quantity_interval": [
+        -14.14411,
+        -14.05821
+      ]
+    },
+    "check": "Prose uses approximately 100 times the coefficient rather than 100×(exp(beta)−1). This is a linear approximation, not a correction target. For ln(Y+1), exponentiation concerns Y+1 and need not be a constant percentage change in Y. The printed percentage is preserved.",
+    "within_rounding": null
+  },
+  {
+    "issue": "Log coefficient expressed as a percent: T3C6",
+    "locator": "D01, PDF p. 14, Table 3 column 6; associated main-text interpretation",
+    "values": {
+      "coefficient": "−0.0556",
+      "printed_percent_magnitude": "5.6%",
+      "conditional_exact_percent_change_in_logged_quantity_interval": [
+        -5.41299,
+        -5.40353
+      ]
+    },
+    "check": "Prose uses approximately 100 times the coefficient rather than 100×(exp(beta)−1). This is a linear approximation, not a correction target. For ln(Y+1), exponentiation concerns Y+1 and need not be a constant percentage change in Y. The printed percentage is preserved.",
+    "within_rounding": null
+  },
+  {
+    "issue": "Log coefficient expressed as a percent: T4C3",
+    "locator": "D01, PDF p. 15, Table 4 column 3; associated main-text interpretation",
+    "values": {
+      "coefficient": "−0.193",
+      "printed_percent_magnitude": "19%",
+      "conditional_exact_percent_change_in_logged_quantity_interval": [
+        -17.59302,
+        -17.51057
+      ]
+    },
+    "check": "Prose uses approximately 100 times the coefficient rather than 100×(exp(beta)−1). This is a linear approximation, not a correction target. For ln(Y+1), exponentiation concerns Y+1 and need not be a constant percentage change in Y. The printed percentage is preserved.",
+    "within_rounding": null
+  },
+  {
+    "issue": "Log coefficient expressed as a percent: T4C4",
+    "locator": "D01, PDF p. 15, Table 4 column 4; associated main-text interpretation",
+    "values": {
+      "coefficient": "−0.405",
+      "printed_percent_magnitude": "40.5%",
+      "conditional_exact_percent_change_in_logged_quantity_interval": [
+        -33.33566,
+        -33.26896
+      ]
+    },
+    "check": "Prose uses approximately 100 times the coefficient rather than 100×(exp(beta)−1). This is a linear approximation, not a correction target. For ln(Y+1), exponentiation concerns Y+1 and need not be a constant percentage change in Y. The printed percentage is preserved.",
+    "within_rounding": null
+  },
+  {
+    "issue": "Log coefficient expressed as a percent: T4C5",
+    "locator": "D01, PDF p. 15, Table 4 column 5; associated main-text interpretation",
+    "values": {
+      "coefficient": "−0.128",
+      "printed_percent_magnitude": "12.8%",
+      "conditional_exact_percent_change_in_logged_quantity_interval": [
+        -12.05864,
+        -11.97066
+      ]
+    },
+    "check": "Prose uses approximately 100 times the coefficient rather than 100×(exp(beta)−1). This is a linear approximation, not a correction target. For ln(Y+1), exponentiation concerns Y+1 and need not be a constant percentage change in Y. The printed percentage is preserved.",
+    "within_rounding": null
+  },
+  {
+    "issue": "Log coefficient expressed as a percent: T4C6",
+    "locator": "D01, PDF p. 15, Table 4 column 6; associated main-text interpretation",
+    "values": {
+      "coefficient": "−0.283",
+      "printed_percent_magnitude": "28.3%",
+      "conditional_exact_percent_change_in_logged_quantity_interval": [
+        -24.68569,
+        -24.61034
+      ]
+    },
+    "check": "Prose uses approximately 100 times the coefficient rather than 100×(exp(beta)−1). This is a linear approximation, not a correction target. For ln(Y+1), exponentiation concerns Y+1 and need not be a constant percentage change in Y. The printed percentage is preserved.",
+    "within_rounding": null
+  },
+  {
+    "issue": "Log coefficient expressed as a percent: T6C1",
+    "locator": "D01, PDF p. 18, Table 6 column 1; associated main-text interpretation",
+    "values": {
+      "coefficient": "0.126",
+      "printed_percent_magnitude": "12.6%",
+      "conditional_exact_percent_change_in_logged_quantity_interval": [
+        13.37152,
+        13.48495
+      ]
+    },
+    "check": "Prose uses approximately 100 times the coefficient rather than 100×(exp(beta)−1). This is a linear approximation, not a correction target. For ln(Y+1), exponentiation concerns Y+1 and need not be a constant percentage change in Y. The printed percentage is preserved.",
+    "within_rounding": null
+  },
+  {
+    "issue": "Log coefficient expressed as a percent: T6C2",
+    "locator": "D01, PDF p. 18, Table 6 column 2; associated main-text interpretation",
+    "values": {
+      "coefficient": "0.149",
+      "printed_percent_magnitude": "14.9%",
+      "conditional_exact_percent_change_in_logged_quantity_interval": [
+        16.00928,
+        16.12535
+      ]
+    },
+    "check": "Prose uses approximately 100 times the coefficient rather than 100×(exp(beta)−1). This is a linear approximation, not a correction target. For ln(Y+1), exponentiation concerns Y+1 and need not be a constant percentage change in Y. The printed percentage is preserved.",
+    "within_rounding": null
+  },
+  {
+    "issue": "Log coefficient expressed as a percent: T6C3",
+    "locator": "D01, PDF p. 18, Table 6 column 3; associated main-text interpretation",
+    "values": {
+      "coefficient": "0.297",
+      "printed_percent_magnitude": "29.7%",
+      "conditional_exact_percent_change_in_logged_quantity_interval": [
+        34.51426,
+        34.64884
+      ]
+    },
+    "check": "Prose uses approximately 100 times the coefficient rather than 100×(exp(beta)−1). This is a linear approximation, not a correction target. For ln(Y+1), exponentiation concerns Y+1 and need not be a constant percentage change in Y. The printed percentage is preserved.",
+    "within_rounding": null
+  },
+  {
+    "issue": "Log coefficient expressed as a percent: T7C1",
+    "locator": "D01, PDF p. 19, Table 7 column 1; associated main-text interpretation",
+    "values": {
+      "coefficient": "0.131",
+      "printed_percent_magnitude": "13.1%",
+      "conditional_exact_percent_change_in_logged_quantity_interval": [
+        13.93979,
+        14.05379
+      ]
+    },
+    "check": "Prose uses approximately 100 times the coefficient rather than 100×(exp(beta)−1). This is a linear approximation, not a correction target. For ln(Y+1), exponentiation concerns Y+1 and need not be a constant percentage change in Y. The printed percentage is preserved.",
+    "within_rounding": null
+  },
+  {
+    "issue": "Log coefficient expressed as a percent: T7C2",
+    "locator": "D01, PDF p. 19, Table 7 column 2; associated main-text interpretation",
+    "values": {
+      "coefficient": "−0.227",
+      "printed_percent_magnitude": "22.7%",
+      "conditional_exact_percent_change_in_logged_quantity_interval": [
+        -20.34776,
+        -20.26807
+      ]
+    },
+    "check": "Prose uses approximately 100 times the coefficient rather than 100×(exp(beta)−1). This is a linear approximation, not a correction target. For ln(Y+1), exponentiation concerns Y+1 and need not be a constant percentage change in Y. The printed percentage is preserved.",
+    "within_rounding": null
+  },
+  {
+    "issue": "Introductory activity ranges versus main regressions",
+    "locator": "D01, PDF p. 3, 14–15, Introduction and Tables 3–4",
+    "values": {
+      "intro_contributors": "4–5.5% fewer",
+      "intro_follow_on": "10–15% fewer",
+      "controlled_DD_coefficients": [
+        "−0.0556",
+        "−0.152"
+      ],
+      "cross_section_follow_on": [
+        "−0.193",
+        "−0.405"
+      ],
+      "cross_section_contributors": [
+        "−0.128",
+        "−0.283"
+      ]
+    },
+    "check": "The introductory ranges do not encompass all printed main-model effects under the paper’s own coefficient-times-100 convention. Different horizons and approximate prose may contribute, but the source does not identify a precise reconciliation.",
+    "within_rounding": null
+  },
+  {
+    "issue": "Introductory quality summary versus Table 6",
+    "locator": "D01, PDF p. 3, 18, Introduction, §3.5 and Table 6",
+    "values": {
+      "intro": "about 10% higher over a 10-year period",
+      "main_text": [
+        "12.6%",
+        "14.9%",
+        "29.7%"
+      ],
+      "Table_6_coefficients": [
+        "0.126",
+        "0.149",
+        "0.297"
+      ]
+    },
+    "check": "The introductory approximation differs from the detailed magnitude range. Seeding in late 2007 and quality early 2017 are roughly a decade apart; no exact rounding rule is stated.",
+    "within_rounding": null
+  },
+  {
+    "issue": "Figure 4 pretrend prose versus plotted intervals",
+    "locator": "D01, PDF p. 14–15, §3.2.2 and Figure 4",
+    "values": {
+      "prose": "treatment and control following a parallel trajectory before seeding",
+      "visually_read_follow_on_2005_and_2006_coefficient_interval": [
+        0.11,
+        0.14
+      ],
+      "visually_read_lower_CI_interval": [
+        0.04,
+        0.06
+      ],
+      "zero_reference_year": "2007 (inferred)"
+    },
+    "check": "The early follow-on confidence intervals appear entirely above zero relative to the inferred reference year. This qualifies a claim of no pretreatment differences, but it is not a formal joint parallel-trends test. Contributor preperiod intervals appear to include zero. Visual reading uncertainty retained.",
+    "within_rounding": null
+  },
+  {
+    "issue": "Figure 4 time unit differs within the text",
+    "locator": "D01, PDF p. 14–15, §3.2.2 and Figure 4 note",
+    "values": {
+      "equation_and_note": "county-year; year effects",
+      "prose": "every quarter before and after 2007"
+    },
+    "check": "County-year is the explicit model unit; the conflicting quarter wording is retained as documentation ambiguity, not silently rewritten.",
+    "within_rounding": null
+  },
+  {
+    "issue": "Figure 5 terminal estimate versus Table 4",
+    "locator": "D01, PDF p. 15–16, Table 4 column 4 and Figure 5",
+    "values": {
+      "Table_4_2014_follow_on": "−0.405",
+      "Table_4_rounding_interval": [
+        "−0.4055",
+        "−0.4045"
+      ],
+      "Figure_5_2014_visual_interval": [
+        -0.37,
+        -0.33
+      ]
+    },
+    "check": "The intervals do not overlap. Both are described as the 2014 follow-on cross-section with controls and covariate fixed effects, but unknown sample/aggregation/implementation differences cannot be ruled out. No adjustment to either value is made.",
+    "within_rounding": false
+  },
+  {
+    "issue": "Figure 6 density claims versus plot",
+    "locator": "D01, PDF p. 19–20, §3.6 and Figure 6(a)",
+    "values": {
+      "text": "negative for bottom 80 percent; top 20 percent significantly more positive; top decile doubles follow-on and raises contributors about 60%",
+      "visual_decile_8_contributors": [
+        0.02,
+        0.06
+      ],
+      "visual_decile_9_follow_on": [
+        0.02,
+        0.08
+      ],
+      "visual_top_decile_follow_on": [
+        1.04,
+        1.12
+      ],
+      "visual_top_decile_contributors": [
+        0.5,
+        0.54
+      ]
+    },
+    "check": "Contributor decile eight is visually positive, and decile-nine follow-on uncertainty crosses zero. Top-decile plotted coefficient and percent wording cannot be compared exactly without the missing model/transform specification; retain both.",
+    "within_rounding": null
+  },
+  {
+    "issue": "Figure 6 commitment significance claim versus bars",
+    "locator": "D01, PDF p. 19–20, §3.6 and Figure 6(b)",
+    "values": {
+      "text": "only top one percentile unaffected; rest deterred",
+      "visual_upper_bar_25th_and_50th_interval": [
+        -0.003,
+        0.005
+      ],
+      "visual_upper_bar_99th_interval": [
+        -0.004,
+        0.004
+      ]
+    },
+    "check": "The 25th and 50th percentile bars appear to touch or cross zero as does the 99th. Confidence level is unstated, and visual precision cannot establish strict inequalities; do not translate the prose into exact p-values.",
+    "within_rounding": null
+  },
+  {
+    "issue": "Control-set and demographic-definition conflicts",
+    "locator": "D01, PDF p. 8, 11, 15, Table 1 and §§2.4.4, 3.3.1; D02, PDF p. 11–12, Tables D.3–D.4, methods only; D03/D41 (unpaginated)",
+    "values": {
+      "§2.4.4": "nine controls including area, median age and IT workers",
+      "baseline_supplement": "ten labels including unemployment rate and Young Pop.",
+      "male_age_Table_1": "18–45",
+      "male_age_supplement": "18–44",
+      "ACS_D03": "2005–2011",
+      "ACS_main_text": "2009–2014",
+      "Table_1_change": "2014–2005"
+    },
+    "check": "These are incompatible descriptions without additional coding rules. A numeric fit cannot determine the intended control set or vintage. The explicit supplementary regression control labels are preserved as the closest method list with ambiguous mappings.",
+    "within_rounding": null
+  },
+  {
+    "issue": "Quality outcome definition and unit conflict",
+    "locator": "D01, PDF p. 10–11, 18, §§2.4.3, 3.5 and Table 6",
+    "values": {
+      "detailed_definition": "log of absolute route-length difference",
+      "summary_phrase": "log-difference in trip distance",
+      "§2.4.3_unit": "county average of logged error",
+      "Table_6_unit": "county-address-pair"
+    },
+    "check": "Average of logs, log of a difference, difference of logs and pair-level regression are not interchangeable. The manifest records the table’s explicit pair-level definition and leaves the other formulations as sourced branches.",
+    "within_rounding": null
+  },
+  {
+    "issue": "Ownership proxy timing and distant-content scope conflict",
+    "locator": "D01, PDF p. 10, 19, 22, 25, §2.4.1, Table 7, Predictions 1–3 and endnotes 20–21",
+    "values": {
+      "distant_definition": "buildings in §2.4.1; parks/restaurants/amenities in interpretation",
+      "ownership_timing": "pre-existing ownership in Prediction 3; counting window not specified in variable construction"
+    },
+    "check": "Candidate D51 fields do not uniquely identify these constructions. No raw-data or numerical result comparison is used to choose a mapping.",
+    "within_rounding": null
+  }
+]

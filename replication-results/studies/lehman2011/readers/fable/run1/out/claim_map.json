@@ -1,0 +1,291 @@
+{
+  "paper_id": "P01",
+  "claims": [
+    {
+      "claim_id": "C1",
+      "type": "hypothesis",
+      "statement": "H1A: For performance below the aspiration level, the performance-risk relationship is inverted U-shaped.",
+      "hypothesis_label": "H1A",
+      "predicted_direction": "specific pattern (negative linear and negative quadratic spline terms for performance at or below aspiration, i.e. odds ratios below 1.0 for both; inverted U in probability)",
+      "estimand": "Coefficients (odds ratios) on Performance (<=aspiration) and Performance^2 (<=aspiration) in Model 2 of Table 5; marginal effect of performance at the game level (All quarters row of Table 6, estimated from Model 2)",
+      "population": "Fourth-down plays by NFL offensive teams in 2000-2005 regular-season games, overtime and the final two minutes of each game excluded; analysis sample of Table 5",
+      "scale": "odds ratio (Table 5); probability derivative / marginal effect (Table 6)",
+      "tier": "focal",
+      "supporting_results": ["T21", "T22", "T51", "T52", "T53", "T54"],
+      "paper_reports_supported": "yes",
+      "source": [
+        {"doc": "D01", "pdf_page": 4, "where": "Hypothesis 1A statement, left column"},
+        {"doc": "D01", "pdf_page": 10, "where": "Results text, right column: 'both the linear and quadratic terms were negative and significant ... indicating an inverted U-shaped relationship'"},
+        {"doc": "D01", "pdf_page": 11, "where": "Table 5, Model 2, rows Performance (<=aspiration) and Performance^2 (<=aspiration)"},
+        {"doc": "D01", "pdf_page": 12, "where": "Table 6, All quarters row; text left column 'suggest support for Hypothesis 1A'"}
+      ]
+    },
+    {
+      "claim_id": "C2",
+      "type": "hypothesis",
+      "statement": "H1B: For performance above the aspiration level, the performance-risk relationship is positive.",
+      "hypothesis_label": "H1B",
+      "predicted_direction": "positive",
+      "estimand": "Coefficient (odds ratio) on Performance (>aspiration) in Model 2 of Table 5; marginal effects of performance at performance-minus-aspiration of 14, 28, 42 in the All quarters row of Table 6",
+      "population": "Fourth-down plays by NFL offensive teams in 2000-2005 regular-season games, overtime and final two minutes excluded; analysis sample of Table 5",
+      "scale": "odds ratio (Table 5); marginal effect (Table 6)",
+      "tier": "focal",
+      "supporting_results": ["T23", "T55", "T56", "T57"],
+      "paper_reports_supported": "no",
+      "source": [
+        {"doc": "D01", "pdf_page": 4, "where": "Hypothesis 1B statement, left column"},
+        {"doc": "D01", "pdf_page": 10, "where": "Results text, right column: 'For performance above the aspiration level, the performance term was not significant'"},
+        {"doc": "D01", "pdf_page": 12, "where": "text left column: 'suggest support for Hypothesis 1A but not for Hypothesis 1B'"}
+      ]
+    },
+    {
+      "claim_id": "C3",
+      "type": "hypothesis",
+      "statement": "H2: For performance below the aspiration level, deadline proximity moderates the performance-risk relationship such that it becomes stronger (a more pronounced inverted U) as deadlines approach.",
+      "hypothesis_label": "H2",
+      "predicted_direction": "specific pattern (interactions of minutes remaining with the below-aspiration linear and quadratic terms significant; by-quarter marginal effects become more negative just below aspiration and more positive far below aspiration from quarter 1 to quarter 4)",
+      "estimand": "Odds ratios on Performance (<=aspiration) x Minutes remaining and Performance^2 (<=aspiration) x Minutes remaining in Model 3 of Table 5; by-quarter marginal effects of performance at performance-minus-aspiration of -42, -28, -14, 0 (Table 6 rows 1st to 4th quarter, from Model 3 with minutes remaining fixed at 53, 38, 23, 8)",
+      "population": "Fourth-down plays by NFL offensive teams in 2000-2005 regular-season games, overtime and final two minutes excluded; analysis sample of Table 5",
+      "scale": "odds ratio (Table 5); marginal effect (Table 6); predicted probability surface (Figure 3)",
+      "tier": "focal",
+      "supporting_results": ["T42", "T43", "T58", "T59", "T60", "T61", "T65", "T66", "T67", "T68", "T72", "T73", "T74", "T75", "T79", "T80", "T81", "T82", "T86", "T87", "T88", "T89"],
+      "paper_reports_supported": "yes",
+      "source": [
+        {"doc": "D01", "pdf_page": 7, "where": "Hypothesis 2 statement, left column top"},
+        {"doc": "D01", "pdf_page": 11, "where": "Table 5, Model 3 interaction rows; text right column 'each of the interaction terms ... was significant'"},
+        {"doc": "D01", "pdf_page": 12, "where": "Table 6 quarter rows; text 'Hypotheses 2 and 3 were tested using the marginal effects by quarter estimated from the Model 3 parameters'"},
+        {"doc": "D01", "pdf_page": 13, "where": "text left column: 'Hypothesis 2 is thus supported' and 'strong support for Hypothesis 2'"}
+      ]
+    },
+    {
+      "claim_id": "C4",
+      "type": "hypothesis",
+      "statement": "H3: For performance above the aspiration level, deadline proximity moderates the performance-risk relationship such that it becomes stronger (more positive) as deadlines approach.",
+      "hypothesis_label": "H3",
+      "predicted_direction": "specific pattern (interaction of minutes remaining with the above-aspiration term below 1.0 in odds-ratio terms; by-quarter marginal effects above aspiration move from negative in early quarters to positive in the fourth quarter)",
+      "estimand": "Odds ratio on Performance (>aspiration) x Minutes remaining in Model 3 of Table 5; by-quarter marginal effects of performance at performance-minus-aspiration of 14, 28, 42 (Table 6)",
+      "population": "Fourth-down plays by NFL offensive teams in 2000-2005 regular-season games, overtime and final two minutes excluded; analysis sample of Table 5",
+      "scale": "odds ratio (Table 5); marginal effect (Table 6)",
+      "tier": "focal",
+      "supporting_results": ["T44", "T62", "T63", "T64", "T69", "T70", "T71", "T76", "T77", "T78", "T83", "T84", "T85"],
+      "paper_reports_supported": "partial",
+      "source": [
+        {"doc": "D01", "pdf_page": 7, "where": "Hypothesis 3 statement, left column"},
+        {"doc": "D01", "pdf_page": 11, "where": "Table 5, Model 3, row Performance (>aspiration) x Minutes remaining"},
+        {"doc": "D01", "pdf_page": 13, "where": "text left column: 'Hypothesis 3 is thus also supported' and later 'weak support for Hypothesis 3'"}
+      ]
+    },
+    {
+      "claim_id": "C5",
+      "type": "stated_finding",
+      "statement": "Risk-related controls: the likelihood of a conversion attempt is greater when fewer yards are needed for a first down and when fewer yards are needed for a touchdown.",
+      "hypothesis_label": null,
+      "predicted_direction": "negative",
+      "estimand": "Odds ratios on Yards to go for 1st down and Yards to go for touchdown in Model 1 of Table 5",
+      "population": "Analysis sample of Table 5",
+      "scale": "odds ratio",
+      "tier": "nuisance_control",
+      "supporting_results": ["T2", "T3"],
+      "paper_reports_supported": "yes",
+      "source": [
+        {"doc": "D01", "pdf_page": 10, "where": "Results text, bottom left / top right: 'The effects of the risk-related control variables were significant as expected'"},
+        {"doc": "D01", "pdf_page": 11, "where": "Table 5, Model 1"}
+      ]
+    },
+    {
+      "claim_id": "C6",
+      "type": "stated_finding",
+      "statement": "The odds ratio for minutes remaining in Model 1 suggests a conversion attempt is more likely when fewer minutes remain on the clock.",
+      "hypothesis_label": null,
+      "predicted_direction": "negative",
+      "estimand": "Odds ratio on Minutes remaining in Model 1 of Table 5",
+      "population": "Analysis sample of Table 5",
+      "scale": "odds ratio",
+      "tier": "nuisance_control",
+      "supporting_results": ["T8"],
+      "paper_reports_supported": "yes",
+      "source": [
+        {"doc": "D01", "pdf_page": 10, "where": "Results text, right column: 'the odds ratio for minutes remaining (0.946, p < 0.01) suggests ...'"}
+      ]
+    },
+    {
+      "claim_id": "C7",
+      "type": "stated_finding",
+      "statement": "Model 2 fits satisfactorily and improves significantly over the null Model 1 by a likelihood-ratio test.",
+      "hypothesis_label": null,
+      "predicted_direction": "nonzero",
+      "estimand": "LR chi-square of Model 2 and the delta LR chi-square of Model 2 versus Model 1 (Table 5)",
+      "population": "Analysis sample of Table 5",
+      "scale": "other (chi-square statistic)",
+      "tier": "identification_inference_diagnostic",
+      "supporting_results": ["T10", "T11", "T26", "T27", "T29"],
+      "paper_reports_supported": "yes",
+      "source": [
+        {"doc": "D01", "pdf_page": 10, "where": "Results text, right column: 'The overall fit of Model 2 was satisfactory ... the likelihood ratio (LR) test for improvement over the null model (Model 1) was significant'"},
+        {"doc": "D01", "pdf_page": 11, "where": "Table 5, rows LR chi2, df, delta LR chi2"}
+      ]
+    },
+    {
+      "claim_id": "C8",
+      "type": "stated_finding",
+      "statement": "The performance-below-aspiration terms and performance-above-aspiration terms were significantly different from each other, indicating sensitivity to the aspiration level.",
+      "hypothesis_label": null,
+      "predicted_direction": "nonzero",
+      "estimand": "Chi-square test of equality between the below- and above-aspiration performance terms in Model 2 (test form not specified)",
+      "population": "Analysis sample of Table 5",
+      "scale": "other (chi-square statistic)",
+      "tier": "identification_inference_diagnostic",
+      "supporting_results": ["T50"],
+      "paper_reports_supported": "yes",
+      "source": [
+        {"doc": "D01", "pdf_page": 10, "where": "Results text, right column, last sentence before Table 3"}
+      ]
+    },
+    {
+      "claim_id": "C9",
+      "type": "stated_finding",
+      "statement": "Model 3 fits satisfactorily and improves significantly over Model 2 by a likelihood-ratio test; each interaction between minutes remaining and performance is significant.",
+      "hypothesis_label": null,
+      "predicted_direction": "nonzero",
+      "estimand": "LR chi-square of Model 3, delta LR chi-square of Model 3 versus Model 2, and the three interaction odds ratios (Table 5)",
+      "population": "Analysis sample of Table 5",
+      "scale": "other (chi-square statistic); odds ratio",
+      "tier": "identification_inference_diagnostic",
+      "supporting_results": ["T46", "T47", "T49", "T42", "T43", "T44"],
+      "paper_reports_supported": "yes",
+      "source": [
+        {"doc": "D01", "pdf_page": 11, "where": "Results text, right column: 'The overall fit of Model 3 was satisfactory ... improvement over Model 2 was also significant'"}
+      ]
+    },
+    {
+      "claim_id": "C10",
+      "type": "stated_finding",
+      "statement": "Unexpected finding: in the first quarter the marginal effects were positive and significant for values just below the aspiration level (at -14 points).",
+      "hypothesis_label": null,
+      "predicted_direction": "positive",
+      "estimand": "Marginal effect of performance at performance-minus-aspiration = -14 with minutes remaining fixed at 53 (Table 6, 1st quarter row)",
+      "population": "Analysis sample of Table 5; Model 3 parameters",
+      "scale": "marginal effect (probability per point)",
+      "tier": "robustness",
+      "supporting_results": ["T60"],
+      "paper_reports_supported": "yes",
+      "source": [
+        {"doc": "D01", "pdf_page": 13, "where": "text left column: 'An unexpected finding, the marginal effects were found to be positive and significant in the first quarter ... (at -14 points, marginal effect = 0.0004, p < .01)'"},
+        {"doc": "D01", "pdf_page": 12, "where": "Table 6, 1st quarter row, column -14"}
+      ]
+    },
+    {
+      "claim_id": "C11",
+      "type": "robustness_claim",
+      "statement": "Repeating the analysis with the number of quarters remaining as the deadline-proximity measure gave results consistent with those reported.",
+      "hypothesis_label": null,
+      "predicted_direction": "specific pattern (same pattern as H2 and H3 results)",
+      "estimand": "Model 3 analogue with quarters remaining replacing minutes remaining (no numbers reported)",
+      "population": "Analysis sample of Table 5",
+      "scale": "other (not reported)",
+      "tier": "robustness",
+      "supporting_results": [],
+      "paper_reports_supported": "yes",
+      "source": [
+        {"doc": "D01", "pdf_page": 9, "where": "Variables section, Deadline Proximity paragraph, right column"}
+      ]
+    },
+    {
+      "claim_id": "C12",
+      "type": "robustness_claim",
+      "statement": "Additional analyses (alternative aspiration level; separate conversion-versus-kick models within field-goal range and conversion-versus-punt models outside it) are qualitatively consistent with the reported results; available on request.",
+      "hypothesis_label": null,
+      "predicted_direction": "specific pattern (qualitatively consistent with reported results)",
+      "estimand": "Unreported alternative-specification models",
+      "population": "Analysis sample of Table 5, or subsamples within and outside field-goal range",
+      "scale": "other (not reported)",
+      "tier": "robustness",
+      "supporting_results": [],
+      "paper_reports_supported": "yes",
+      "source": [
+        {"doc": "D01", "pdf_page": 16, "where": "Endnote 4"}
+      ]
+    },
+    {
+      "claim_id": "C13",
+      "type": "descriptive_claim",
+      "statement": "Teams punted or attempted a field goal in most fourth-down plays and attempted a conversion in a small minority; conversion attempts succeeded less than half the time; punts and field goals mostly produced routine outcomes.",
+      "hypothesis_label": null,
+      "predicted_direction": null,
+      "estimand": "Sample proportions: punt or FG share, go-for-it share, punt possession outcome share, FG success share, conversion success share",
+      "population": "Final fourth-down data set (text says 'in our data set')",
+      "scale": "probability (percentages)",
+      "tier": "descriptive",
+      "supporting_results": ["T174", "T175", "T176", "T177", "T178", "T179"],
+      "paper_reports_supported": "not stated",
+      "source": [
+        {"doc": "D01", "pdf_page": 8, "where": "Study Context, 'Third' paragraph, left column"}
+      ]
+    },
+    {
+      "claim_id": "C14",
+      "type": "descriptive_claim",
+      "statement": "Conversion attempts per game average about one and a half; most games had at least one; conversion attempts were more likely later in the game (Table 3).",
+      "hypothesis_label": null,
+      "predicted_direction": "specific pattern (share of fourth downs that are conversion attempts rises by quarter)",
+      "estimand": "Game-level frequency distribution of attempts (Table 2); conversion-attempt share by quarter (Table 3)",
+      "population": "1,520-game sample (Table 2) and final fourth-down sample (Table 3)",
+      "scale": "probability (percentages) and counts",
+      "tier": "descriptive",
+      "supporting_results": ["T116", "T117", "T118", "T119", "T120", "T121", "T122", "T123", "T124", "T125", "T126", "T127", "T128", "T129", "T130", "T163", "T164", "T165", "T166", "T167", "T168", "T169", "T170", "T171", "T172", "T173"],
+      "paper_reports_supported": "not stated",
+      "source": [
+        {"doc": "D01", "pdf_page": 10, "where": "Results, first paragraph; Table 2; Table 3"}
+      ]
+    },
+    {
+      "claim_id": "C15",
+      "type": "descriptive_claim",
+      "statement": "Distribution of performance (distance from aspiration) by quarter, separately for plays at or below and above the aspiration level (Table 4); range is -50 to 48 because the aspiration is one point ahead of the opponent.",
+      "hypothesis_label": null,
+      "predicted_direction": null,
+      "estimand": "Counts, means, SDs, min and max of performance-minus-aspiration by quarter and side of aspiration",
+      "population": "Final fourth-down sample",
+      "scale": "other (points)",
+      "tier": "descriptive",
+      "supporting_results": ["T131", "T132", "T133", "T134", "T135", "T136", "T137", "T138", "T139", "T140", "T141", "T142", "T143", "T144", "T145", "T146", "T147", "T148", "T149", "T150", "T151", "T152", "T153", "T154", "T155", "T156", "T157", "T158", "T159", "T160", "T161", "T162"],
+      "paper_reports_supported": "not stated",
+      "source": [
+        {"doc": "D01", "pdf_page": 11, "where": "Table 4 and its Notes"}
+      ]
+    },
+    {
+      "claim_id": "C16",
+      "type": "descriptive_claim",
+      "statement": "Play-level descriptive statistics and correlations of the model variables (Table 1).",
+      "hypothesis_label": null,
+      "predicted_direction": null,
+      "estimand": "Means, SDs and pairwise correlations of the eleven model variables",
+      "population": "Final fourth-down sample",
+      "scale": "other (variable units; correlations)",
+      "tier": "descriptive",
+      "supporting_results": ["T90", "T91", "T92", "T93", "T94", "T95", "T96", "T97", "T98", "T99", "T100", "T101", "T102", "T103", "T104", "T105", "T106", "T107", "T108", "T109", "T110", "T111", "T112", "T113", "T114", "T115"],
+      "paper_reports_supported": "not stated",
+      "source": [
+        {"doc": "D01", "pdf_page": 10, "where": "Table 1"}
+      ]
+    },
+    {
+      "claim_id": "C17",
+      "type": "stated_finding",
+      "statement": "Home-field advantage and week of season raise the likelihood of a conversion attempt in Models 2 and 3; total points is significant in Models 1 and 3; same division and same conference are not significant.",
+      "hypothesis_label": null,
+      "predicted_direction": "nonzero",
+      "estimand": "Odds ratios on the non-risk control variables in Table 5",
+      "population": "Analysis sample of Table 5",
+      "scale": "odds ratio",
+      "tier": "nuisance_control",
+      "supporting_results": ["T1", "T4", "T5", "T6", "T7", "T13", "T16", "T17", "T18", "T19", "T30", "T33", "T34", "T35", "T36"],
+      "paper_reports_supported": "not stated",
+      "source": [
+        {"doc": "D01", "pdf_page": 11, "where": "Table 5 control rows (no text discussion beyond the risk-related controls)"}
+      ]
+    }
+  ],
+  "focal_claims_rationale": "The article states four hypotheses (H1A, H1B on D01 PDF page 4; H2 on page 7; H3 on page 7) and says that Model 2 of Table 5 tests H1A/H1B and Model 3 tests H2/H3 (D01 page 10, right column), with the formal hypothesis tests carried out through the marginal effects in Table 6 (D01 page 12: 'Hypothesis 1 was tested using the marginal effects at the game level ... estimated from Model 2'; 'Hypotheses 2 and 3 were tested using the marginal effects by quarter estimated from the Model 3 parameters'). C1-C4 are therefore focal, with Table 5 odds ratios as the primary estimates and Table 6 marginal effects as the stated hypothesis tests. The likelihood-ratio and difference tests (C7-C9) are inference diagnostics; the quarters-remaining check and the by-request analyses (C11, C12) are robustness; Tables 1-4 and the text percentages are descriptive; the remaining control-variable statements are nuisance controls."
+}

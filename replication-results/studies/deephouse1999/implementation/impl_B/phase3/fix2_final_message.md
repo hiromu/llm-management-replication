@@ -1,0 +1,11 @@
+- C1: Verified optional county lookup handling and missing-crosswalk tests.
+- C2: Implemented RSSD9425 exclusions `{1,2,4,9}`; missing counts as zero.
+- C3: Preserved origin filters for savings admission; logged zero qualifying records.
+- C4: Required four quarters, RCON fallback, calendar-day weights, and no asset fallback.
+- C5: Corrected analytic references, including 1984; undefined rebuilt rows are dropped and counted.
+- C6: Retained centered M2/M3 back-transformation; M3_SQ now reports `not_applicable`.
+- C7: Verified explicit calendar-year lags and growth with gap tests.
+- C8: Verified failure statuses and all coefficient output. All 138 synthetic checks and 112 construction checks passed; overwrote `tests/test_output.txt`. No real-data fitting.
+- Checker 1: Fixed special-purpose exclusion; documented in README.
+- Checker 2: Fixed four-quarter day-weighting requirement; documented in README.
+- Checker 3: Removed the M3_SQ constrained re-expression per C6; updated README and tests.

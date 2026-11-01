@@ -1,0 +1,10 @@
+{
+  "record": "execution_isolation_test",
+  "tested_utc": "2026-10-28T04:05:00Z",
+  "tool": "/usr/bin/sandbox-exec with profile (allow default)(deny network*)",
+  "python": "socket.create_connection under sandbox -> PermissionError [Errno 1] Operation not permitted; HTTPS fetch failed",
+  "R": "url('https://example.com') under sandbox -> could not resolve host (try-error)",
+  "control_note": "An unsandboxed socket attempt from the coordinator shell also timed out (coordinator shell has its own restrictions), so the unsandboxed control is not informative; the EPERM under sandbox-exec shows the policy denial.",
+  "plan": "Frozen numerical runs execute under sandbox-exec denying network and restricting file writes to the run directory.",
+  "reader_isolation": "Reader A: claude --safe-mode, tools limited to Read/Write/Edit/Glob/Grep and Bash restricted to the Python interpreter; no WebFetch/WebSearch tools; file reads outside the staging dir are not technically blocked (instruction-only). Reader B: codex -s workspace-write (writes limited to staging dir; network disabled by Codex sandbox default); reads outside staging not technically blocked (instruction-only)."
+}

@@ -1,0 +1,50 @@
+{
+ "version": "v1",
+ "rule_set": "Axes are matched when both readers address the same open decision for the same analyses. Within a matched axis, levels are matched by content. Matched levels with equal labels keep the label; different labels become uncertain. Levels proposed by one reader are kept (union) with that reader's label and flagged single_reader. A level that cannot be computed from the deposit is kept as unavailable with the reason. Non-equivalent levels are recorded and not run. Coordinator-added levels are flagged coordinator_fallback and labelled uncertain; they are added only where both readers state the choice is unstated and the implementation needs a rule.",
+ "matched_level_pairs": [
+  {"axis": "log_zero_handling", "level": "ln(Y+1) for all", "opus": ["G1", "equivalent"], "astra": ["log1p", "equivalent"], "reconciled": "equivalent (origin)"},
+  {"axis": "log_zero_handling", "level": "add one only to zeros", "opus": ["G2", "uncertain"], "astra": ["zero_only", "uncertain"], "reconciled": "uncertain"},
+  {"axis": "cross_section_contributor_aggregation", "level": "sum of quarterly contributor counts", "opus": ["C1", "equivalent"], "astra": ["sum_quarter_counts", "uncertain"], "reconciled": "uncertain (origin by feasibility)"},
+  {"axis": "cross_section_contributor_aggregation", "level": "distinct users over the period", "opus": ["C2", "non_equivalent"], "astra": ["unique_period", "equivalent"], "reconciled": "uncertain; unavailable: the deposit holds only per-quarter county user counts, so period-distinct users cannot be computed"},
+  {"axis": "distant_follow_on", "level": "buildings only", "opus": ["D1", "equivalent"], "astra": ["buildings", "equivalent"], "reconciled": "equivalent (origin)"},
+  {"axis": "distant_follow_on", "level": "buildings plus amenities", "opus": ["D2", "non_equivalent"], "astra": ["nonstreet", "uncertain"], "reconciled": "uncertain"},
+  {"axis": "quartile_fe_variables", "level": "density, household income, per-capita income", "opus": ["Q1", "equivalent"], "astra": ["density", "equivalent"], "reconciled": "equivalent (origin)"},
+  {"axis": "quartile_fe_variables", "level": "population instead of density", "opus": ["Q2", "non_equivalent"], "astra": ["population", "uncertain"], "reconciled": "uncertain"},
+  {"axis": "boundary_rule", "level": "symmetric opposite-status adjacency", "opus": ["B1", "equivalent"], "astra": ["symmetric", "equivalent"], "reconciled": "equivalent (origin)"},
+  {"axis": "boundary_rule", "level": "treated must border a control; controls kept", "opus": ["B2", "non_equivalent"], "astra": ["treated_only", "uncertain"], "reconciled": "uncertain"},
+  {"axis": "quality_outcome_level", "level": "address-pair ln|OSRM-Google|", "opus": ["W1", "equivalent"], "astra": ["pair / log_abs_difference", "equivalent"], "reconciled": "equivalent (origin)"},
+  {"axis": "quality_outcome_level", "level": "county mean of logged error", "opus": ["W2", "non_equivalent"], "astra": ["county_mean_log", "non_equivalent"], "reconciled": "non_equivalent (not run)"},
+  {"axis": "placebo_assignment", "level": "random reassignment at county level", "opus": ["PL1", "uncertain"], "astra": ["random", "equivalent"], "reconciled": "uncertain"},
+  {"axis": "acs_vintage", "level": "deposit ACS years 2005-2011", "opus": ["V1", "uncertain"], "astra": ["deposit_years", "uncertain"], "reconciled": "uncertain (origin by feasibility)"},
+  {"axis": "acs_vintage", "level": "article ACS 2009-2014", "opus": ["V2", "non_equivalent"], "astra": ["article_years", "uncertain"], "reconciled": "uncertain; unavailable: the deposit has ACS years 2005-2011 only"}
+ ],
+ "single_reader_levels": [
+  {"reader": "opus", "axis": "county_universe", "levels": [["U1 non-MA counties in county_lookup", "equivalent, origin"], ["U2 smaller unstated universe", "non_equivalent, not run"]]},
+  {"reader": "opus", "axis": "panel_zero_fill", "levels": [["Z1 zero-fill absent county-quarters", "equivalent, origin"], ["Z2 present rows only", "non_equivalent, not run"]], "note": "Astra's manifest states zero-fill versus missing rows is unstated and gives no level; its missing-data line says not to treat missing counts as zero. Recorded as a contradiction; the balanced-panel description (Table 2 note) supports Z1."},
+  {"reader": "opus", "axis": "post_start", "levels": [["P1 2008Q1", "equivalent, origin"], ["P2 2007Q4", "non_equivalent, not run"]]},
+  {"reader": "opus", "axis": "boundary_adjacency_source", "levels": [["B3 recompute adjacency from geometry", "uncertain; not run: R implementations lack a geometry library (sf missing), so the branch cannot be implemented in all three languages; deposited boundary-counties.csv is used"]]},
+  {"reader": "opus", "axis": "timing_date_column", "levels": [["S1 year of Sch SB Delivery in {2005, 2006}", "equivalent, origin"], ["S2 SB Selected date", "uncertain; not run: the registry shows SB Selected is a one-letter code, not a date"]]},
+  {"reader": "opus", "axis": "table5B_sample_labels", "levels": [["K1 as labelled", "equivalent"], ["K2 swapped", "non_equivalent"]], "note": "Both samples are fitted for every outcome, so K changes only which target a fit is compared with; handled in scoring as an inconsistent-target check, not as extra fits."},
+  {"reader": "opus", "axis": "follow_on_columns", "levels": [["F1 totaltaga+totaltagb+totaltagh", "equivalent (reader); reconciled uncertain because Opus wrote 'or their v2 variants' and Astra lists all six fields as unresolved candidates"], ["F2 v2 fields only", "uncertain"], ["F3 version-count fields", "uncertain"]], "coordinator_addition": "F4 all six tag fields summed, uncertain, from Astra's candidate list"},
+  {"reader": "opus", "axis": "low_ownership", "levels": [["O1 totaloldfocused5 - totaloldfocused1", "equivalent, origin"], ["O2 totaloldfocused5", "uncertain"]], "note": "Astra lists focused1, focused5 and oldusers_active as candidates without a formula; reconciled O1 uncertain origin."},
+  {"reader": "opus", "axis": "subsample_quartile_cutoffs", "levels": [["R1 full-universe cutoffs", "uncertain, origin"], ["R2 recomputed within subsample", "uncertain"]]},
+  {"reader": "opus", "axis": "diff_time_trends", "levels": [["T1 density-quartile x quarter FE", "equivalent, origin"], ["T2 group linear trends", "non_equivalent, not run"]], "note": "Astra's 'common vs density-group quarter' axis describes the same Table 5 specification as a non-equivalent alternative to the baseline; consistent with T1."},
+  {"reader": "opus", "axis": "panel_se", "levels": [["E1 cluster by county", "uncertain"], ["E2 heteroskedasticity-robust", "non_equivalent"]], "note": "Handled as inference variants, not specifications: both are computed on every panel fit."},
+  {"reader": "opus", "axis": "pair_se", "levels": [["H1 heteroskedasticity-robust", "uncertain"], ["H2 cluster by county", "non_equivalent"]], "note": "Handled as inference variants; county clustering is the scoring benchmark."},
+  {"reader": "opus", "axis": "quality_transform_zero", "levels": [["W3 ln(|d|+1)", "uncertain"]]},
+  {"reader": "astra", "axis": "quality_transform_reading", "levels": [["difference_of_logs |ln OSRM - ln Google|", "uncertain"]]},
+  {"reader": "opus", "axis": "table5A_controls", "levels": [["X1 with controls", "uncertain, origin"], ["X2 without controls", "uncertain"]]},
+  {"reader": "opus", "axis": "figure6a_estimator", "levels": [["M1 panel DiD within decile", "uncertain, origin"], ["M2 cross-section within decile", "uncertain"]], "note": "Astra: DD versus cross-section unstated; consistent."},
+  {"reader": "astra", "axis": "figure6b_groups", "levels": [["threshold counts (pctcontrib columns as given)", "equivalent, origin"], ["percentile_types disjoint groups", "uncertain; not run: requires contributor-level data absent from the county aggregates"]]},
+  {"reader": "astra", "axis": "full_vs_restricted_samples", "levels": [["full", "origin"], ["boundary", "non_equivalent"], ["timing", "non_equivalent"]], "note": "Treated as separate reported analyses (Table 5, Table 6 cols 2-3), as Opus does."},
+  {"reader": "astra", "axis": "dd_vs_cross_section", "levels": [["dd", "origin"], ["cross_section", "non_equivalent"]], "note": "Separate reported analyses (Tables 3 and 4); not an alternative."}
+ ],
+ "coordinator_fallbacks": [
+  {"axis": "control_transformation", "levels": [["levels as stored", "uncertain, origin"], ["natural log of count and income controls; rate and density as stored", "uncertain"]], "basis": "Both readers state the transformation of the ten controls is unstated (Opus A06/A08 controls.source; Astra control entries)."},
+  {"axis": "cross_section_control_year", "levels": [["ACS 2011 (latest deposit year)", "uncertain, origin"], ["ACS 2008 (first post year)", "uncertain"], ["mean of ACS 2005-2011", "uncertain"]], "basis": "Both readers state the reference year of cross-sectional controls and quartile variables is unstated."},
+  {"axis": "panel_control_years", "levels": [["acsyear equal to calendar year; years after 2011 carry 2011 values", "uncertain, origin (Opus V1 rule)"]], "basis": "Opus V1; Astra: extension outside 2005-2011 unstated."},
+  {"axis": "distance_unit", "levels": [["kilometres, haversine with radius 6371.0088 km", "origin"], ["miles", "algebraic rescaling of the Distance coefficient only; not a new fit"]], "basis": "Both readers: geodesic formula and unit unstated."},
+  {"axis": "event_study_reference_year", "levels": [["2007 omitted", "origin"]], "basis": "Opus: omitted year not stated in text, plot shows 2007 at zero; Astra: relative to an omitted year. Single level."}
+ ],
+ "control_set": "Ten controls from D02 Tables D.3-D.4 mapped to the ten non-area ACS columns: population, popdensity, popmales, households, unemploymentrate, income_householdmedian, income_medianearnings, income_percapita, popeduc, popyoungmales. The label-to-column pairing of 'Male Pop(18-44)' and 'Young Pop.' is unresolved but changes no fit. The D01 Section 2.4.4 nine-variable list is unavailable (median age, IT workers, highly educated are not in the deposit) and is recorded as a main-text/appendix contradiction."
+}

@@ -1,0 +1,44 @@
+[
+  {
+    "study": "lehman2011",
+    "source": "runs/score_v1/target_comparisons_all_cells.csv",
+    "sha256": "f5e54297ab1e9707383e2423b963341c02936e098eb959bce3df11a1892a98f9",
+    "rows": 70,
+    "unique_common_terms": 70
+  },
+  {
+    "study": "holderness2012",
+    "source": "scoring/claim_scores.csv",
+    "sha256": "98286d15627407efe7dbe04ee21e32f48b665bf626c302f33b0d56c19865f548",
+    "rows": 112,
+    "unique_common_terms": 112
+  },
+  {
+    "study": "deephouse1999",
+    "source": "scoring/run_v1/term_scores.csv",
+    "sha256": "b500d246955a25922e5e1e8c2132f75a535702e0a09a4d7b715aacc73394f1e7",
+    "rows": 38,
+    "unique_common_terms": 19
+  },
+  {
+    "study": "thebaud2015",
+    "source": "reports/exports/term_comparisons.csv",
+    "sha256": "f92af1282a73f32f2659ba81e75a3108bb0ef03fa8eab51909af61c9a4866456",
+    "rows": 280,
+    "unique_common_terms": 280
+  },
+  {
+    "study": "twenge2010",
+    "source": "reports/claim_comparisons.csv",
+    "sha256": "70992ae5f9d1f5c072e33074e4cc84bce6924f407395920e803525bf7ffcafb5",
+    "rows": 102,
+    "unique_common_terms": 102
+  },
+  {
+    "study": "delaney1996",
+    "source": "reports/data/claim_cell_comparisons.csv",
+    "sha256": "efe7120f4224ac2ccf9a679bcb4f6e7ea3330a2ff6b345b285949dd82593c5df",
+    "rows": 150,
+    "unique_common_terms": 150
+  }
+]

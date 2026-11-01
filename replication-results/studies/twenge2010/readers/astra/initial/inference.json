@@ -1,0 +1,142 @@
+{
+  "observation_unit": "Individual sampled high-school senior responding to one questionnaire form (P1 pp.9–10, Method).",
+  "sampling_unit": "Article: high schools and students in a multistage random sample (P1 p.9). Supplied source description adds geographic PSUs, schools and students/classrooms; exact design identifiers are not supplied.",
+  "assignment_unit": "No randomized assignment to cohort or survey year. Questionnaire forms are distributed within schools according to the source description; forms are measurement subsamples, not treatments (P1 p.10; source_description.md, Questionnaire-form design).",
+  "clusters": "School/PSU clustering is part of sampling; number of clusters, strata and identifiers are unavailable in the public dictionaries. Repeated surveys are separate respondent cross-sections. No empirical overlap or clustering adjustment is established (P1 p.9; source_description.md, Sampling design/Identifiers).",
+  "native_se_method_software": "LISREL 8.7 for CFA (P1 p.10), with LISREL SEs used for latent mean confidence intervals (P1 p.15). Fitting function, information matrix, robust/survey correction and item-test software/df are not stated.",
+  "first_stage_strength": "Not applicable: no instrumental-variable model or first-stage regression (P1 pp.10,14–15).",
+  "unavailable_source_fallbacks": [
+    {
+      "item": "Original author code/model syntax",
+      "fallback": "Retain the fixed item list and prespecified open decisions; do not reconstruct releases or anchors to fit targets.",
+      "label": "uncertain",
+      "reason": "No syntax accompanies P1.",
+      "locator": {
+        "doc_id": "P1",
+        "pdf_page": 15,
+        "section_or_table": "Primary Analyses"
+      },
+      "source_file": null
+    },
+    {
+      "item": "Original microdata release for each administration",
+      "fallback": "Use the supplied release metadata as an uncertain vintage, with discrepancy log.",
+      "label": "uncertain",
+      "reason": "Original vintage not identified precisely; no raw data are supplied here.",
+      "locator": {
+        "doc_id": "P1",
+        "pdf_page": 10,
+        "section_or_table": "Method"
+      },
+      "source_file": null
+    },
+    {
+      "item": "School/PSU/stratum identifiers and annual design guidance",
+      "fallback": "Report design-adjusted inference unavailable; provisional model-based inference must be labeled.",
+      "label": "uncertain",
+      "reason": "Public sources omit identifiers; annual design guidance is absent.",
+      "locator": {
+        "doc_id": "P1",
+        "pdf_page": 9,
+        "section_or_table": "Method"
+      },
+      "source_file": null
+    },
+    {
+      "item": "Original unmodified survey weights",
+      "fallback": "Use supplied public V5 if weighting is selected; report confidentiality modification and do not claim exact original-weight recovery.",
+      "label": "uncertain",
+      "reason": "Source description says public weights differ from original weights.",
+      "locator": {
+        "doc_id": "P1",
+        "pdf_page": 9,
+        "section_or_table": "Method"
+      },
+      "source_file": null
+    },
+    {
+      "item": "Five-category Form 4 instrument described in text",
+      "fallback": "Use dictionary-native four-category items provisionally; no invented fifth code or linear rescaling.",
+      "label": "uncertain",
+      "reason": "Article/source-metadata discrepancy.",
+      "locator": {
+        "doc_id": "P1",
+        "pdf_page": 10,
+        "section_or_table": "Method"
+      },
+      "source_file": null
+    },
+    {
+      "item": "Retained-scale alpha estimates said to be in Table 1",
+      "fallback": "Keep targets null; compute later only from data under a declared alpha convention.",
+      "label": "uncertain",
+      "reason": "No identifiable printed alpha entries.",
+      "locator": {
+        "doc_id": "P1",
+        "pdf_page": 10,
+        "section_or_table": "Preliminary Analyses"
+      },
+      "source_file": null
+    },
+    {
+      "item": "Exact d formula, scale SD and latent origin",
+      "fallback": "Keep the published formula null and label provisional formula/identification branches.",
+      "label": "uncertain",
+      "reason": "Effect size is named but formula/units are incompletely specified.",
+      "locator": {
+        "doc_id": "P1",
+        "pdf_page": 15,
+        "section_or_table": "Primary Analyses"
+      },
+      "source_file": null
+    },
+    {
+      "item": "Original item-test and latent pairwise-test outputs",
+      "fallback": "Keep exact p, analytic N, df and contrast covariance null; use explicit uncertainty axes for later implementation.",
+      "label": "uncertain",
+      "reason": "Only t/star or d summaries are printed.",
+      "locator": {
+        "doc_id": "P1",
+        "pdf_page": 13,
+        "section_or_table": "Table 1 notes"
+      },
+      "source_file": null
+    },
+    {
+      "item": "Supplements/corrections search evidence and inaccessible publisher tab",
+      "fallback": "Record a packet gap; do not assume no supplement exists and do not contact or browse.",
+      "label": "uncertain",
+      "reason": "Packet supplies no supplements and references a search log not included in this directory.",
+      "locator": {
+        "doc_id": null,
+        "pdf_page": null,
+        "section_or_table": "publication_packet.json"
+      },
+      "source_file": "packet/publication_packet.json"
+    }
+  ],
+  "vintage_notes": "Supplied releases: 1976 ICPSR 7927 V4 (2007-05-25); 1991 ICPSR 9871 V1 (2006-03-30); 2006 ICPSR 20022 V3 (2008-09-12). The article gives no year-specific release checksum or original extraction syntax (P1 p.10; reference to data file on p.24). Use supplied metadata only as an uncertain implementation vintage, not proof of original files. Source notes mention a 1976 missing-code change to V151, outside the requested work-item list; removed 1976 Form 3 V3319–V3332 also lie outside it. Confidentiality recodes and cross-time-index flags require item-specific documentation; never restore unavailable values.",
+  "locators": [
+    {
+      "doc_id": "P1",
+      "pdf_page": 9,
+      "section_or_table": "Method"
+    },
+    {
+      "doc_id": "P1",
+      "pdf_page": 10,
+      "section_or_table": "Preliminary Analyses"
+    },
+    {
+      "doc_id": "P1",
+      "pdf_page": 15,
+      "section_or_table": "Primary Analyses"
+    },
+    {
+      "doc_id": "P1",
+      "pdf_page": 24,
+      "section_or_table": "References: survey data file"
+    }
+  ],
+  "source_documentation": "sources/source_description.md and the six selected per-file dictionaries; those sources are metadata, not additional publication doc_ids."
+}

@@ -1,0 +1,8 @@
+{
+  "tested": "2026-10-27, before run_v1",
+  "method": "sandbox-exec with the profile in runs/execute_frozen.sh, applied to a throwaway directory",
+  "write_inside_run_dir": "allowed",
+  "write_outside_run_dir": "blocked (Operation not permitted)",
+  "network": "blocked (curl to https://example.com failed)",
+  "limits": "Reads are not restricted (the process can read any user-readable file); temp areas under /private/var/folders and /private/tmp remain writable."
+}

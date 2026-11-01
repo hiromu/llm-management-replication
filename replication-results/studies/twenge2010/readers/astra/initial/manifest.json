@@ -1,0 +1,3068 @@
+{
+  "target_free": true,
+  "opaque_paper_id": "PAPER_X",
+  "rule": "No article identity, bibliographic names, reported result numbers, reported sample counts, or result directions. Numeric source codes, years, method constants and locators are operational metadata, not targets.",
+  "data_sources": [
+    {
+      "source_key": "1976_DS0003",
+      "role": "Administration 1976, Form 3 Questionnaire; distinct repeated cross-section, no raw file supplied to this reader.",
+      "dictionary": "sources/dictionaries/1976_DS0003.dictionary.json",
+      "source_release": "ICPSR 7927 V4",
+      "locators": [
+        {
+          "doc_id": "P1",
+          "pdf_page": 10,
+          "section_or_table": "Method: administrations and forms"
+        }
+      ],
+      "source_documentation": "sources/source_description.md: Files and releases; Questionnaire-form design"
+    },
+    {
+      "source_key": "1991_DS0004",
+      "role": "Administration 1991, Form 3 Data; distinct repeated cross-section, no raw file supplied to this reader.",
+      "dictionary": "sources/dictionaries/1991_DS0004.dictionary.json",
+      "source_release": "ICPSR 9871 V1",
+      "locators": [
+        {
+          "doc_id": "P1",
+          "pdf_page": 10,
+          "section_or_table": "Method: administrations and forms"
+        }
+      ],
+      "source_documentation": "sources/source_description.md: Files and releases; Questionnaire-form design"
+    },
+    {
+      "source_key": "2006_DS0004",
+      "role": "Administration 2006, Form 3 Data; distinct repeated cross-section, no raw file supplied to this reader.",
+      "dictionary": "sources/dictionaries/2006_DS0004.dictionary.json",
+      "source_release": "ICPSR 20022 V3",
+      "locators": [
+        {
+          "doc_id": "P1",
+          "pdf_page": 10,
+          "section_or_table": "Method: administrations and forms"
+        }
+      ],
+      "source_documentation": "sources/source_description.md: Files and releases; Questionnaire-form design"
+    },
+    {
+      "source_key": "1976_DS0004",
+      "role": "Administration 1976, Form 4 Questionnaire; distinct repeated cross-section, no raw file supplied to this reader.",
+      "dictionary": "sources/dictionaries/1976_DS0004.dictionary.json",
+      "source_release": "ICPSR 7927 V4",
+      "locators": [
+        {
+          "doc_id": "P1",
+          "pdf_page": 10,
+          "section_or_table": "Method: administrations and forms"
+        }
+      ],
+      "source_documentation": "sources/source_description.md: Files and releases; Questionnaire-form design"
+    },
+    {
+      "source_key": "1991_DS0005",
+      "role": "Administration 1991, Form 4 Data; distinct repeated cross-section, no raw file supplied to this reader.",
+      "dictionary": "sources/dictionaries/1991_DS0005.dictionary.json",
+      "source_release": "ICPSR 9871 V1",
+      "locators": [
+        {
+          "doc_id": "P1",
+          "pdf_page": 10,
+          "section_or_table": "Method: administrations and forms"
+        }
+      ],
+      "source_documentation": "sources/source_description.md: Files and releases; Questionnaire-form design"
+    },
+    {
+      "source_key": "2006_DS0005",
+      "role": "Administration 2006, Form 4 Data; distinct repeated cross-section, no raw file supplied to this reader.",
+      "dictionary": "sources/dictionaries/2006_DS0005.dictionary.json",
+      "source_release": "ICPSR 20022 V3",
+      "locators": [
+        {
+          "doc_id": "P1",
+          "pdf_page": 10,
+          "section_or_table": "Method: administrations and forms"
+        }
+      ],
+      "source_documentation": "sources/source_description.md: Files and releases; Questionnaire-form design"
+    }
+  ],
+  "variables": [
+    {
+      "variable_id": "V001",
+      "concept": "More than two weeks vacation",
+      "source_variables": {
+        "1976_DS0004": "V4236",
+        "1991_DS0005": "V4236",
+        "2006_DS0005": "V4236"
+      },
+      "coding": "Native 1=not important, 2=a little important, 3=pretty important, 4=very important; higher means more importance; no reverse coding. AX02 resolves the instrument-description conflict. Endorsement indicator is x==4.",
+      "missing_rule": "System missing and all declared missing codes/ranges are NA before scoring; only labeled substantive response codes are valid. Earlier releases: zero or codes at/above nine are not responses; later release: minus nine is missing. Do not impute as a response. Case eligibility is AX01.",
+      "source_metadata": {
+        "1976_DS0004": {
+          "declared_missing_values": [
+            0
+          ],
+          "declared_missing_range": [
+            9,
+            "HIGHEST"
+          ],
+          "codebook_missing_rule": null,
+          "value_labels": {
+            "1": "NOT IMPORTANT",
+            "2": "A LITTLE IMPORTANT",
+            "3": "PRETTY IMPORTANT",
+            "4": "VERY IMPORTANT"
+          }
+        },
+        "1991_DS0005": {
+          "declared_missing_values": [
+            0,
+            9
+          ],
+          "declared_missing_range": null,
+          "codebook_missing_rule": "MISSING 0 OR GE 9",
+          "value_labels": {
+            "1": "Not important",
+            "2": "A little important",
+            "3": "Pretty important",
+            "4": "Very important"
+          }
+        },
+        "2006_DS0005": {
+          "declared_missing_values": [
+            -9
+          ],
+          "declared_missing_range": null,
+          "codebook_missing_rule": "-9",
+          "value_labels": {
+            "-9": "MISSING",
+            "1": "NOT IMPT:(1)",
+            "2": "LIT IMPT:(2)",
+            "3": "PRTY IMP:(3)",
+            "4": "VRY IMPT:(4)"
+          }
+        }
+      },
+      "source_dictionary_refs": [
+        "sources/dictionaries/1976_DS0004.dictionary.json#V4236",
+        "sources/dictionaries/1991_DS0005.dictionary.json#V4236",
+        "sources/dictionaries/2006_DS0005.dictionary.json#V4236"
+      ],
+      "locators": [
+        {
+          "doc_id": "P1",
+          "pdf_page": 10,
+          "section_or_table": "Method: questionnaire forms"
+        },
+        {
+          "doc_id": "P1",
+          "pdf_page": 11,
+          "section_or_table": "Table 1: item wording and membership"
+        }
+      ]
+    },
+    {
+      "variable_id": "V002",
+      "concept": "Time for other things in life",
+      "source_variables": {
+        "1976_DS0004": "V4238",
+        "1991_DS0005": "V4238",
+        "2006_DS0005": "V4238"
+      },
+      "coding": "Native 1=not important, 2=a little important, 3=pretty important, 4=very important; higher means more importance; no reverse coding. AX02 resolves the instrument-description conflict. Endorsement indicator is x==4.",
+      "missing_rule": "System missing and all declared missing codes/ranges are NA before scoring; only labeled substantive response codes are valid. Earlier releases: zero or codes at/above nine are not responses; later release: minus nine is missing. Do not impute as a response. Case eligibility is AX01.",
+      "source_metadata": {
+        "1976_DS0004": {
+          "declared_missing_values": [
+            0
+          ],
+          "declared_missing_range": [
+            9,
+            "HIGHEST"
+          ],
+          "codebook_missing_rule": null,
+          "value_labels": {
+            "1": "NOT IMPORTANT",
+            "2": "A LITTLE IMPORTANT",
+            "3": "PRETTY IMPORTANT",
+            "4": "VERY IMPORTANT"
+          }
+        },
+        "1991_DS0005": {
+          "declared_missing_values": [
+            0,
+            9
+          ],
+          "declared_missing_range": null,
+          "codebook_missing_rule": "MISSING 0 OR GE 9",
+          "value_labels": {
+            "1": "Not important",
+            "2": "A little important",
+            "3": "Pretty important",
+            "4": "Very important"
+          }
+        },
+        "2006_DS0005": {
+          "declared_missing_values": [
+            -9
+          ],
+          "declared_missing_range": null,
+          "codebook_missing_rule": "-9",
+          "value_labels": {
+            "-9": "MISSING",
+            "1": "NOT IMPT:(1)",
+            "2": "LIT IMPT:(2)",
+            "3": "PRTY IMP:(3)",
+            "4": "VRY IMPT:(4)"
+          }
+        }
+      },
+      "source_dictionary_refs": [
+        "sources/dictionaries/1976_DS0004.dictionary.json#V4238",
+        "sources/dictionaries/1991_DS0005.dictionary.json#V4238",
+        "sources/dictionaries/2006_DS0005.dictionary.json#V4238"
+      ],
+      "locators": [
+        {
+          "doc_id": "P1",
+          "pdf_page": 10,
+          "section_or_table": "Method: questionnaire forms"
+        },
+        {
+          "doc_id": "P1",
+          "pdf_page": 11,
+          "section_or_table": "Table 1: item wording and membership"
+        }
+      ]
+    },
+    {
+      "variable_id": "V003",
+      "concept": "Easy pace; work slowly",
+      "source_variables": {
+        "1976_DS0004": "V4246",
+        "1991_DS0005": "V4246",
+        "2006_DS0005": "V4246"
+      },
+      "coding": "Native 1=not important, 2=a little important, 3=pretty important, 4=very important; higher means more importance; no reverse coding. AX02 resolves the instrument-description conflict. Endorsement indicator is x==4.",
+      "missing_rule": "System missing and all declared missing codes/ranges are NA before scoring; only labeled substantive response codes are valid. Earlier releases: zero or codes at/above nine are not responses; later release: minus nine is missing. Do not impute as a response. Case eligibility is AX01.",
+      "source_metadata": {
+        "1976_DS0004": {
+          "declared_missing_values": [
+            0
+          ],
+          "declared_missing_range": [
+            9,
+            "HIGHEST"
+          ],
+          "codebook_missing_rule": null,
+          "value_labels": {
+            "1": "NOT IMPORTANT",
+            "2": "A LITTLE IMPORTANT",
+            "3": "PRETTY IMPORTANT",
+            "4": "VERY IMPORTANT"
+          }
+        },
+        "1991_DS0005": {
+          "declared_missing_values": [
+            0,
+            9
+          ],
+          "declared_missing_range": null,
+          "codebook_missing_rule": "MISSING 0 OR GE 9",
+          "value_labels": {
+            "1": "Not important",
+            "2": "A little important",
+            "3": "Pretty important",
+            "4": "Very important"
+          }
+        },
+        "2006_DS0005": {
+          "declared_missing_values": [
+            -9
+          ],
+          "declared_missing_range": null,
+          "codebook_missing_rule": "-9",
+          "value_labels": {
+            "-9": "MISSING",
+            "1": "NOT IMPT:(1)",
+            "2": "LIT IMPT:(2)",
+            "3": "PRTY IMP:(3)",
+            "4": "VRY IMPT:(4)"
+          }
+        }
+      },
+      "source_dictionary_refs": [
+        "sources/dictionaries/1976_DS0004.dictionary.json#V4246",
+        "sources/dictionaries/1991_DS0005.dictionary.json#V4246",
+        "sources/dictionaries/2006_DS0005.dictionary.json#V4246"
+      ],
+      "locators": [
+        {
+          "doc_id": "P1",
+          "pdf_page": 10,
+          "section_or_table": "Method: questionnaire forms"
+        },
+        {
+          "doc_id": "P1",
+          "pdf_page": 11,
+          "section_or_table": "Table 1: item wording and membership"
+        }
+      ]
+    },
+    {
+      "variable_id": "V004",
+      "concept": "Free from supervision",
+      "source_variables": {
+        "1976_DS0004": "V4240",
+        "1991_DS0005": "V4240",
+        "2006_DS0005": "V4240"
+      },
+      "coding": "Native 1=not important, 2=a little important, 3=pretty important, 4=very important; higher means more importance; no reverse coding. AX02 resolves the instrument-description conflict. Endorsement indicator is x==4.",
+      "missing_rule": "System missing and all declared missing codes/ranges are NA before scoring; only labeled substantive response codes are valid. Earlier releases: zero or codes at/above nine are not responses; later release: minus nine is missing. Do not impute as a response. Case eligibility is AX01.",
+      "source_metadata": {
+        "1976_DS0004": {
+          "declared_missing_values": [
+            0
+          ],
+          "declared_missing_range": [
+            9,
+            "HIGHEST"
+          ],
+          "codebook_missing_rule": null,
+          "value_labels": {
+            "1": "NOT IMPORTANT",
+            "2": "A LITTLE IMPORTANT",
+            "3": "PRETTY IMPORTANT",
+            "4": "VERY IMPORTANT"
+          }
+        },
+        "1991_DS0005": {
+          "declared_missing_values": [
+            0,
+            9
+          ],
+          "declared_missing_range": null,
+          "codebook_missing_rule": "MISSING 0 OR GE 9",
+          "value_labels": {
+            "1": "Not important",
+            "2": "A little important",
+            "3": "Pretty important",
+            "4": "Very important"
+          }
+        },
+        "2006_DS0005": {
+          "declared_missing_values": [
+            -9
+          ],
+          "declared_missing_range": null,
+          "codebook_missing_rule": "-9",
+          "value_labels": {
+            "-9": "MISSING",
+            "1": "NOT IMPT:(1)",
+            "2": "LIT IMPT:(2)",
+            "3": "PRTY IMP:(3)",
+            "4": "VRY IMPT:(4)"
+          }
+        }
+      },
+      "source_dictionary_refs": [
+        "sources/dictionaries/1976_DS0004.dictionary.json#V4240",
+        "sources/dictionaries/1991_DS0005.dictionary.json#V4240",
+        "sources/dictionaries/2006_DS0005.dictionary.json#V4240"
+      ],
+      "locators": [
+        {
+          "doc_id": "P1",
+          "pdf_page": 10,
+          "section_or_table": "Method: questionnaire forms"
+        },
+        {
+          "doc_id": "P1",
+          "pdf_page": 11,
+          "section_or_table": "Table 1: item wording and membership"
+        }
+      ]
+    },
+    {
+      "variable_id": "V005",
+      "concept": "Interesting work",
+      "source_variables": {
+        "1976_DS0004": "V4227",
+        "1991_DS0005": "V4227",
+        "2006_DS0005": "V4227"
+      },
+      "coding": "Native 1=not important, 2=a little important, 3=pretty important, 4=very important; higher means more importance; no reverse coding. AX02 resolves the instrument-description conflict. Endorsement indicator is x==4.",
+      "missing_rule": "System missing and all declared missing codes/ranges are NA before scoring; only labeled substantive response codes are valid. Earlier releases: zero or codes at/above nine are not responses; later release: minus nine is missing. Do not impute as a response. Case eligibility is AX01.",
+      "source_metadata": {
+        "1976_DS0004": {
+          "declared_missing_values": [
+            0
+          ],
+          "declared_missing_range": [
+            9,
+            "HIGHEST"
+          ],
+          "codebook_missing_rule": null,
+          "value_labels": {
+            "1": "NOT IMPORTANT",
+            "2": "A LITTLE IMPORTANT",
+            "3": "PRETTY IMPORTANT",
+            "4": "VERY IMPORTANT"
+          }
+        },
+        "1991_DS0005": {
+          "declared_missing_values": [
+            0,
+            9
+          ],
+          "declared_missing_range": null,
+          "codebook_missing_rule": "MISSING 0 OR GE 9",
+          "value_labels": {
+            "1": "Not important",
+            "2": "A little important",
+            "3": "Pretty important",
+            "4": "Very important"
+          }
+        },
+        "2006_DS0005": {
+          "declared_missing_values": [
+            -9
+          ],
+          "declared_missing_range": null,
+          "codebook_missing_rule": "-9",
+          "value_labels": {
+            "-9": "MISSING",
+            "1": "NOT IMPT:(1)",
+            "2": "LIT IMPT:(2)",
+            "3": "PRTY IMP:(3)",
+            "4": "VRY IMPT:(4)"
+          }
+        }
+      },
+      "source_dictionary_refs": [
+        "sources/dictionaries/1976_DS0004.dictionary.json#V4227",
+        "sources/dictionaries/1991_DS0005.dictionary.json#V4227",
+        "sources/dictionaries/2006_DS0005.dictionary.json#V4227"
+      ],
+      "locators": [
+        {
+          "doc_id": "P1",
+          "pdf_page": 10,
+          "section_or_table": "Method: questionnaire forms"
+        },
+        {
+          "doc_id": "P1",
+          "pdf_page": 11,
+          "section_or_table": "Table 1: item wording and membership"
+        }
+      ]
+    },
+    {
+      "variable_id": "V006",
+      "concept": "Learn new things and skills",
+      "source_variables": {
+        "1976_DS0004": "V4242",
+        "1991_DS0005": "V4242",
+        "2006_DS0005": "V4242"
+      },
+      "coding": "Native 1=not important, 2=a little important, 3=pretty important, 4=very important; higher means more importance; no reverse coding. AX02 resolves the instrument-description conflict. Endorsement indicator is x==4.",
+      "missing_rule": "System missing and all declared missing codes/ranges are NA before scoring; only labeled substantive response codes are valid. Earlier releases: zero or codes at/above nine are not responses; later release: minus nine is missing. Do not impute as a response. Case eligibility is AX01.",
+      "source_metadata": {
+        "1976_DS0004": {
+          "declared_missing_values": [
+            0
+          ],
+          "declared_missing_range": [
+            9,
+            "HIGHEST"
+          ],
+          "codebook_missing_rule": null,
+          "value_labels": {
+            "1": "NOT IMPORTANT",
+            "2": "A LITTLE IMPORTANT",
+            "3": "PRETTY IMPORTANT",
+            "4": "VERY IMPORTANT"
+          }
+        },
+        "1991_DS0005": {
+          "declared_missing_values": [
+            0,
+            9
+          ],
+          "declared_missing_range": null,
+          "codebook_missing_rule": "MISSING 0 OR GE 9",
+          "value_labels": {
+            "1": "Not important",
+            "2": "A little important",
+            "3": "Pretty important",
+            "4": "Very important"
+          }
+        },
+        "2006_DS0005": {
+          "declared_missing_values": [
+            -9
+          ],
+          "declared_missing_range": null,
+          "codebook_missing_rule": "-9",
+          "value_labels": {
+            "-9": "MISSING",
+            "1": "NOT IMPT:(1)",
+            "2": "LIT IMPT:(2)",
+            "3": "PRTY IMP:(3)",
+            "4": "VRY IMPT:(4)"
+          }
+        }
+      },
+      "source_dictionary_refs": [
+        "sources/dictionaries/1976_DS0004.dictionary.json#V4242",
+        "sources/dictionaries/1991_DS0005.dictionary.json#V4242",
+        "sources/dictionaries/2006_DS0005.dictionary.json#V4242"
+      ],
+      "locators": [
+        {
+          "doc_id": "P1",
+          "pdf_page": 10,
+          "section_or_table": "Method: questionnaire forms"
+        },
+        {
+          "doc_id": "P1",
+          "pdf_page": 11,
+          "section_or_table": "Table 1: item wording and membership"
+        }
+      ]
+    },
+    {
+      "variable_id": "V007",
+      "concept": "Skills will not go out of date",
+      "source_variables": {
+        "1976_DS0004": "V4232",
+        "1991_DS0005": "V4232",
+        "2006_DS0005": "V4232"
+      },
+      "coding": "Native 1=not important, 2=a little important, 3=pretty important, 4=very important; higher means more importance; no reverse coding. AX02 resolves the instrument-description conflict. Endorsement indicator is x==4.",
+      "missing_rule": "System missing and all declared missing codes/ranges are NA before scoring; only labeled substantive response codes are valid. Earlier releases: zero or codes at/above nine are not responses; later release: minus nine is missing. Do not impute as a response. Case eligibility is AX01.",
+      "source_metadata": {
+        "1976_DS0004": {
+          "declared_missing_values": [
+            0
+          ],
+          "declared_missing_range": [
+            9,
+            "HIGHEST"
+          ],
+          "codebook_missing_rule": null,
+          "value_labels": {
+            "1": "NOT IMPORTANT",
+            "2": "A LITTLE IMPORTANT",
+            "3": "PRETTY IMPORTANT",
+            "4": "VERY IMPORTANT"
+          }
+        },
+        "1991_DS0005": {
+          "declared_missing_values": [
+            0,
+            9
+          ],
+          "declared_missing_range": null,
+          "codebook_missing_rule": "MISSING 0 OR GE 9",
+          "value_labels": {
+            "1": "Not important",
+            "2": "A little important",
+            "3": "Pretty important",
+            "4": "Very important"
+          }
+        },
+        "2006_DS0005": {
+          "declared_missing_values": [
+            -9
+          ],
+          "declared_missing_range": null,
+          "codebook_missing_rule": "-9",
+          "value_labels": {
+            "-9": "MISSING",
+            "1": "NOT IMPT:(1)",
+            "2": "LIT IMPT:(2)",
+            "3": "PRTY IMP:(3)",
+            "4": "VRY IMPT:(4)"
+          }
+        }
+      },
+      "source_dictionary_refs": [
+        "sources/dictionaries/1976_DS0004.dictionary.json#V4232",
+        "sources/dictionaries/1991_DS0005.dictionary.json#V4232",
+        "sources/dictionaries/2006_DS0005.dictionary.json#V4232"
+      ],
+      "locators": [
+        {
+          "doc_id": "P1",
+          "pdf_page": 10,
+          "section_or_table": "Method: questionnaire forms"
+        },
+        {
+          "doc_id": "P1",
+          "pdf_page": 11,
+          "section_or_table": "Table 1: item wording and membership"
+        }
+      ]
+    },
+    {
+      "variable_id": "V008",
+      "concept": "See results of work",
+      "source_variables": {
+        "1976_DS0004": "V4225",
+        "1991_DS0005": "V4225",
+        "2006_DS0005": "V4225"
+      },
+      "coding": "Native 1=not important, 2=a little important, 3=pretty important, 4=very important; higher means more importance; no reverse coding. AX02 resolves the instrument-description conflict. Endorsement indicator is x==4.",
+      "missing_rule": "System missing and all declared missing codes/ranges are NA before scoring; only labeled substantive response codes are valid. Earlier releases: zero or codes at/above nine are not responses; later release: minus nine is missing. Do not impute as a response. Case eligibility is AX01.",
+      "source_metadata": {
+        "1976_DS0004": {
+          "declared_missing_values": [
+            0
+          ],
+          "declared_missing_range": [
+            9,
+            "HIGHEST"
+          ],
+          "codebook_missing_rule": null,
+          "value_labels": {
+            "1": "NOT IMPORTANT",
+            "2": "A LITTLE IMPORTANT",
+            "3": "PRETTY IMPORTANT",
+            "4": "VERY IMPORTANT"
+          }
+        },
+        "1991_DS0005": {
+          "declared_missing_values": [
+            0,
+            9
+          ],
+          "declared_missing_range": null,
+          "codebook_missing_rule": "MISSING 0 OR GE 9",
+          "value_labels": {
+            "1": "Not important",
+            "2": "A little important",
+            "3": "Pretty important",
+            "4": "Very important"
+          }
+        },
+        "2006_DS0005": {
+          "declared_missing_values": [
+            -9
+          ],
+          "declared_missing_range": null,
+          "codebook_missing_rule": "-9",
+          "value_labels": {
+            "-9": "MISSING",
+            "1": "NOT IMPT:(1)",
+            "2": "LIT IMPT:(2)",
+            "3": "PRTY IMP:(3)",
+            "4": "VRY IMPT:(4)"
+          }
+        }
+      },
+      "source_dictionary_refs": [
+        "sources/dictionaries/1976_DS0004.dictionary.json#V4225",
+        "sources/dictionaries/1991_DS0005.dictionary.json#V4225",
+        "sources/dictionaries/2006_DS0005.dictionary.json#V4225"
+      ],
+      "locators": [
+        {
+          "doc_id": "P1",
+          "pdf_page": 10,
+          "section_or_table": "Method: questionnaire forms"
+        },
+        {
+          "doc_id": "P1",
+          "pdf_page": 11,
+          "section_or_table": "Table 1: item wording and membership"
+        }
+      ]
+    },
+    {
+      "variable_id": "V009",
+      "concept": "Uses skills and abilities",
+      "source_variables": {
+        "1976_DS0004": "V4234",
+        "1991_DS0005": "V4234",
+        "2006_DS0005": "V4234"
+      },
+      "coding": "Native 1=not important, 2=a little important, 3=pretty important, 4=very important; higher means more importance; no reverse coding. AX02 resolves the instrument-description conflict. Endorsement indicator is x==4.",
+      "missing_rule": "System missing and all declared missing codes/ranges are NA before scoring; only labeled substantive response codes are valid. Earlier releases: zero or codes at/above nine are not responses; later release: minus nine is missing. Do not impute as a response. Case eligibility is AX01.",
+      "source_metadata": {
+        "1976_DS0004": {
+          "declared_missing_values": [
+            0
+          ],
+          "declared_missing_range": [
+            9,
+            "HIGHEST"
+          ],
+          "codebook_missing_rule": null,
+          "value_labels": {
+            "1": "NOT IMPORTANT",
+            "2": "A LITTLE IMPORTANT",
+            "3": "PRETTY IMPORTANT",
+            "4": "VERY IMPORTANT"
+          }
+        },
+        "1991_DS0005": {
+          "declared_missing_values": [
+            0,
+            9
+          ],
+          "declared_missing_range": null,
+          "codebook_missing_rule": "MISSING 0 OR GE 9",
+          "value_labels": {
+            "1": "Not important",
+            "2": "A little important",
+            "3": "Pretty important",
+            "4": "Very important"
+          }
+        },
+        "2006_DS0005": {
+          "declared_missing_values": [
+            -9
+          ],
+          "declared_missing_range": null,
+          "codebook_missing_rule": "-9",
+          "value_labels": {
+            "-9": "MISSING",
+            "1": "NOT IMPT:(1)",
+            "2": "LIT IMPT:(2)",
+            "3": "PRTY IMP:(3)",
+            "4": "VRY IMPT:(4)"
+          }
+        }
+      },
+      "source_dictionary_refs": [
+        "sources/dictionaries/1976_DS0004.dictionary.json#V4234",
+        "sources/dictionaries/1991_DS0005.dictionary.json#V4234",
+        "sources/dictionaries/2006_DS0005.dictionary.json#V4234"
+      ],
+      "locators": [
+        {
+          "doc_id": "P1",
+          "pdf_page": 10,
+          "section_or_table": "Method: questionnaire forms"
+        },
+        {
+          "doc_id": "P1",
+          "pdf_page": 11,
+          "section_or_table": "Table 1: item wording and membership"
+        }
+      ]
+    },
+    {
+      "variable_id": "V010",
+      "concept": "No need to pretend to be someone else",
+      "source_variables": {
+        "1976_DS0004": "V4243",
+        "1991_DS0005": "V4243",
+        "2006_DS0005": "V4243"
+      },
+      "coding": "Native 1=not important, 2=a little important, 3=pretty important, 4=very important; higher means more importance; no reverse coding. AX02 resolves the instrument-description conflict. Endorsement indicator is x==4.",
+      "missing_rule": "System missing and all declared missing codes/ranges are NA before scoring; only labeled substantive response codes are valid. Earlier releases: zero or codes at/above nine are not responses; later release: minus nine is missing. Do not impute as a response. Case eligibility is AX01.",
+      "source_metadata": {
+        "1976_DS0004": {
+          "declared_missing_values": [
+            0
+          ],
+          "declared_missing_range": [
+            9,
+            "HIGHEST"
+          ],
+          "codebook_missing_rule": null,
+          "value_labels": {
+            "1": "NOT IMPORTANT",
+            "2": "A LITTLE IMPORTANT",
+            "3": "PRETTY IMPORTANT",
+            "4": "VERY IMPORTANT"
+          }
+        },
+        "1991_DS0005": {
+          "declared_missing_values": [
+            0,
+            9
+          ],
+          "declared_missing_range": null,
+          "codebook_missing_rule": "MISSING 0 OR GE 9",
+          "value_labels": {
+            "1": "Not important",
+            "2": "A little important",
+            "3": "Pretty important",
+            "4": "Very important"
+          }
+        },
+        "2006_DS0005": {
+          "declared_missing_values": [
+            -9
+          ],
+          "declared_missing_range": null,
+          "codebook_missing_rule": "-9",
+          "value_labels": {
+            "-9": "MISSING",
+            "1": "NOT IMPT:(1)",
+            "2": "LIT IMPT:(2)",
+            "3": "PRTY IMP:(3)",
+            "4": "VRY IMPT:(4)"
+          }
+        }
+      },
+      "source_dictionary_refs": [
+        "sources/dictionaries/1976_DS0004.dictionary.json#V4243",
+        "sources/dictionaries/1991_DS0005.dictionary.json#V4243",
+        "sources/dictionaries/2006_DS0005.dictionary.json#V4243"
+      ],
+      "locators": [
+        {
+          "doc_id": "P1",
+          "pdf_page": 10,
+          "section_or_table": "Method: questionnaire forms"
+        },
+        {
+          "doc_id": "P1",
+          "pdf_page": 11,
+          "section_or_table": "Table 1: item wording and membership"
+        }
+      ]
+    },
+    {
+      "variable_id": "V011",
+      "concept": "Chance to be creative",
+      "source_variables": {
+        "1976_DS0004": "V4231",
+        "1991_DS0005": "V4231",
+        "2006_DS0005": "V4231"
+      },
+      "coding": "Native 1=not important, 2=a little important, 3=pretty important, 4=very important; higher means more importance; no reverse coding. AX02 resolves the instrument-description conflict. Endorsement indicator is x==4.",
+      "missing_rule": "System missing and all declared missing codes/ranges are NA before scoring; only labeled substantive response codes are valid. Earlier releases: zero or codes at/above nine are not responses; later release: minus nine is missing. Do not impute as a response. Case eligibility is AX01.",
+      "source_metadata": {
+        "1976_DS0004": {
+          "declared_missing_values": [
+            0
+          ],
+          "declared_missing_range": [
+            9,
+            "HIGHEST"
+          ],
+          "codebook_missing_rule": null,
+          "value_labels": {
+            "1": "NOT IMPORTANT",
+            "2": "A LITTLE IMPORTANT",
+            "3": "PRETTY IMPORTANT",
+            "4": "VERY IMPORTANT"
+          }
+        },
+        "1991_DS0005": {
+          "declared_missing_values": [
+            0,
+            9
+          ],
+          "declared_missing_range": null,
+          "codebook_missing_rule": "MISSING 0 OR GE 9",
+          "value_labels": {
+            "1": "Not important",
+            "2": "A little important",
+            "3": "Pretty important",
+            "4": "Very important"
+          }
+        },
+        "2006_DS0005": {
+          "declared_missing_values": [
+            -9
+          ],
+          "declared_missing_range": null,
+          "codebook_missing_rule": "-9",
+          "value_labels": {
+            "-9": "MISSING",
+            "1": "NOT IMPT:(1)",
+            "2": "LIT IMPT:(2)",
+            "3": "PRTY IMP:(3)",
+            "4": "VRY IMPT:(4)"
+          }
+        }
+      },
+      "source_dictionary_refs": [
+        "sources/dictionaries/1976_DS0004.dictionary.json#V4231",
+        "sources/dictionaries/1991_DS0005.dictionary.json#V4231",
+        "sources/dictionaries/2006_DS0005.dictionary.json#V4231"
+      ],
+      "locators": [
+        {
+          "doc_id": "P1",
+          "pdf_page": 10,
+          "section_or_table": "Method: questionnaire forms"
+        },
+        {
+          "doc_id": "P1",
+          "pdf_page": 11,
+          "section_or_table": "Table 1: item wording and membership"
+        }
+      ]
+    },
+    {
+      "variable_id": "V012",
+      "concept": "Directly helpful to others",
+      "source_variables": {
+        "1976_DS0004": "V4229",
+        "1991_DS0005": "V4229",
+        "2006_DS0005": "V4229"
+      },
+      "coding": "Native 1=not important, 2=a little important, 3=pretty important, 4=very important; higher means more importance; no reverse coding. AX02 resolves the instrument-description conflict. Endorsement indicator is x==4.",
+      "missing_rule": "System missing and all declared missing codes/ranges are NA before scoring; only labeled substantive response codes are valid. Earlier releases: zero or codes at/above nine are not responses; later release: minus nine is missing. Do not impute as a response. Case eligibility is AX01.",
+      "source_metadata": {
+        "1976_DS0004": {
+          "declared_missing_values": [
+            0
+          ],
+          "declared_missing_range": [
+            9,
+            "HIGHEST"
+          ],
+          "codebook_missing_rule": null,
+          "value_labels": {
+            "1": "NOT IMPORTANT",
+            "2": "A LITTLE IMPORTANT",
+            "3": "PRETTY IMPORTANT",
+            "4": "VERY IMPORTANT"
+          }
+        },
+        "1991_DS0005": {
+          "declared_missing_values": [
+            0,
+            9
+          ],
+          "declared_missing_range": null,
+          "codebook_missing_rule": "MISSING 0 OR GE 9",
+          "value_labels": {
+            "1": "Not important",
+            "2": "A little important",
+            "3": "Pretty important",
+            "4": "Very important"
+          }
+        },
+        "2006_DS0005": {
+          "declared_missing_values": [
+            -9
+          ],
+          "declared_missing_range": null,
+          "codebook_missing_rule": "-9",
+          "value_labels": {
+            "-9": "MISSING",
+            "1": "NOT IMPT:(1)",
+            "2": "LIT IMPT:(2)",
+            "3": "PRTY IMP:(3)",
+            "4": "VRY IMPT:(4)"
+          }
+        }
+      },
+      "source_dictionary_refs": [
+        "sources/dictionaries/1976_DS0004.dictionary.json#V4229",
+        "sources/dictionaries/1991_DS0005.dictionary.json#V4229",
+        "sources/dictionaries/2006_DS0005.dictionary.json#V4229"
+      ],
+      "locators": [
+        {
+          "doc_id": "P1",
+          "pdf_page": 10,
+          "section_or_table": "Method: questionnaire forms"
+        },
+        {
+          "doc_id": "P1",
+          "pdf_page": 12,
+          "section_or_table": "Table 1: item wording and membership"
+        }
+      ]
+    },
+    {
+      "variable_id": "V013",
+      "concept": "Worthwhile to society",
+      "source_variables": {
+        "1976_DS0004": "V4235",
+        "1991_DS0005": "V4235",
+        "2006_DS0005": "V4235"
+      },
+      "coding": "Native 1=not important, 2=a little important, 3=pretty important, 4=very important; higher means more importance; no reverse coding. AX02 resolves the instrument-description conflict. Endorsement indicator is x==4.",
+      "missing_rule": "System missing and all declared missing codes/ranges are NA before scoring; only labeled substantive response codes are valid. Earlier releases: zero or codes at/above nine are not responses; later release: minus nine is missing. Do not impute as a response. Case eligibility is AX01.",
+      "source_metadata": {
+        "1976_DS0004": {
+          "declared_missing_values": [
+            0
+          ],
+          "declared_missing_range": [
+            9,
+            "HIGHEST"
+          ],
+          "codebook_missing_rule": null,
+          "value_labels": {
+            "1": "NOT IMPORTANT",
+            "2": "A LITTLE IMPORTANT",
+            "3": "PRETTY IMPORTANT",
+            "4": "VERY IMPORTANT"
+          }
+        },
+        "1991_DS0005": {
+          "declared_missing_values": [
+            0,
+            9
+          ],
+          "declared_missing_range": null,
+          "codebook_missing_rule": "MISSING 0 OR GE 9",
+          "value_labels": {
+            "1": "Not important",
+            "2": "A little important",
+            "3": "Pretty important",
+            "4": "Very important"
+          }
+        },
+        "2006_DS0005": {
+          "declared_missing_values": [
+            -9
+          ],
+          "declared_missing_range": null,
+          "codebook_missing_rule": "-9",
+          "value_labels": {
+            "-9": "MISSING",
+            "1": "NOT IMPT:(1)",
+            "2": "LIT IMPT:(2)",
+            "3": "PRTY IMP:(3)",
+            "4": "VRY IMPT:(4)"
+          }
+        }
+      },
+      "source_dictionary_refs": [
+        "sources/dictionaries/1976_DS0004.dictionary.json#V4235",
+        "sources/dictionaries/1991_DS0005.dictionary.json#V4235",
+        "sources/dictionaries/2006_DS0005.dictionary.json#V4235"
+      ],
+      "locators": [
+        {
+          "doc_id": "P1",
+          "pdf_page": 10,
+          "section_or_table": "Method: questionnaire forms"
+        },
+        {
+          "doc_id": "P1",
+          "pdf_page": 12,
+          "section_or_table": "Table 1: item wording and membership"
+        }
+      ]
+    },
+    {
+      "variable_id": "V014",
+      "concept": "Make friends",
+      "source_variables": {
+        "1976_DS0004": "V4233",
+        "1991_DS0005": "V4233",
+        "2006_DS0005": "V4233"
+      },
+      "coding": "Native 1=not important, 2=a little important, 3=pretty important, 4=very important; higher means more importance; no reverse coding. AX02 resolves the instrument-description conflict. Endorsement indicator is x==4.",
+      "missing_rule": "System missing and all declared missing codes/ranges are NA before scoring; only labeled substantive response codes are valid. Earlier releases: zero or codes at/above nine are not responses; later release: minus nine is missing. Do not impute as a response. Case eligibility is AX01.",
+      "source_metadata": {
+        "1976_DS0004": {
+          "declared_missing_values": [
+            0
+          ],
+          "declared_missing_range": [
+            9,
+            "HIGHEST"
+          ],
+          "codebook_missing_rule": null,
+          "value_labels": {
+            "1": "NOT IMPORTANT",
+            "2": "A LITTLE IMPORTANT",
+            "3": "PRETTY IMPORTANT",
+            "4": "VERY IMPORTANT"
+          }
+        },
+        "1991_DS0005": {
+          "declared_missing_values": [
+            0,
+            9
+          ],
+          "declared_missing_range": null,
+          "codebook_missing_rule": "MISSING 0 OR GE 9",
+          "value_labels": {
+            "1": "Not important",
+            "2": "A little important",
+            "3": "Pretty important",
+            "4": "Very important"
+          }
+        },
+        "2006_DS0005": {
+          "declared_missing_values": [
+            -9
+          ],
+          "declared_missing_range": null,
+          "codebook_missing_rule": "-9",
+          "value_labels": {
+            "-9": "MISSING",
+            "1": "NOT IMPT:(1)",
+            "2": "LIT IMPT:(2)",
+            "3": "PRTY IMP:(3)",
+            "4": "VRY IMPT:(4)"
+          }
+        }
+      },
+      "source_dictionary_refs": [
+        "sources/dictionaries/1976_DS0004.dictionary.json#V4233",
+        "sources/dictionaries/1991_DS0005.dictionary.json#V4233",
+        "sources/dictionaries/2006_DS0005.dictionary.json#V4233"
+      ],
+      "locators": [
+        {
+          "doc_id": "P1",
+          "pdf_page": 10,
+          "section_or_table": "Method: questionnaire forms"
+        },
+        {
+          "doc_id": "P1",
+          "pdf_page": 12,
+          "section_or_table": "Table 1: item wording and membership"
+        }
+      ]
+    },
+    {
+      "variable_id": "V015",
+      "concept": "Contact with many people",
+      "source_variables": {
+        "1976_DS0004": "V4245",
+        "1991_DS0005": "V4245",
+        "2006_DS0005": "V4245"
+      },
+      "coding": "Native 1=not important, 2=a little important, 3=pretty important, 4=very important; higher means more importance; no reverse coding. AX02 resolves the instrument-description conflict. Endorsement indicator is x==4.",
+      "missing_rule": "System missing and all declared missing codes/ranges are NA before scoring; only labeled substantive response codes are valid. Earlier releases: zero or codes at/above nine are not responses; later release: minus nine is missing. Do not impute as a response. Case eligibility is AX01.",
+      "source_metadata": {
+        "1976_DS0004": {
+          "declared_missing_values": [
+            0
+          ],
+          "declared_missing_range": [
+            9,
+            "HIGHEST"
+          ],
+          "codebook_missing_rule": null,
+          "value_labels": {
+            "1": "NOT IMPORTANT",
+            "2": "A LITTLE IMPORTANT",
+            "3": "PRETTY IMPORTANT",
+            "4": "VERY IMPORTANT"
+          }
+        },
+        "1991_DS0005": {
+          "declared_missing_values": [
+            0,
+            9
+          ],
+          "declared_missing_range": null,
+          "codebook_missing_rule": "MISSING 0 OR GE 9",
+          "value_labels": {
+            "1": "Not important",
+            "2": "A little important",
+            "3": "Pretty important",
+            "4": "Very important"
+          }
+        },
+        "2006_DS0005": {
+          "declared_missing_values": [
+            -9
+          ],
+          "declared_missing_range": null,
+          "codebook_missing_rule": "-9",
+          "value_labels": {
+            "-9": "MISSING",
+            "1": "NOT IMPT:(1)",
+            "2": "LIT IMPT:(2)",
+            "3": "PRTY IMP:(3)",
+            "4": "VRY IMPT:(4)"
+          }
+        }
+      },
+      "source_dictionary_refs": [
+        "sources/dictionaries/1976_DS0004.dictionary.json#V4245",
+        "sources/dictionaries/1991_DS0005.dictionary.json#V4245",
+        "sources/dictionaries/2006_DS0005.dictionary.json#V4245"
+      ],
+      "locators": [
+        {
+          "doc_id": "P1",
+          "pdf_page": 10,
+          "section_or_table": "Method: questionnaire forms"
+        },
+        {
+          "doc_id": "P1",
+          "pdf_page": 12,
+          "section_or_table": "Table 1: item wording and membership"
+        }
+      ]
+    },
+    {
+      "variable_id": "V016",
+      "concept": "High status and prestige",
+      "source_variables": {
+        "1976_DS0004": "V4226",
+        "1991_DS0005": "V4226",
+        "2006_DS0005": "V4226"
+      },
+      "coding": "Native 1=not important, 2=a little important, 3=pretty important, 4=very important; higher means more importance; no reverse coding. AX02 resolves the instrument-description conflict. Endorsement indicator is x==4.",
+      "missing_rule": "System missing and all declared missing codes/ranges are NA before scoring; only labeled substantive response codes are valid. Earlier releases: zero or codes at/above nine are not responses; later release: minus nine is missing. Do not impute as a response. Case eligibility is AX01.",
+      "source_metadata": {
+        "1976_DS0004": {
+          "declared_missing_values": [
+            0
+          ],
+          "declared_missing_range": [
+            9,
+            "HIGHEST"
+          ],
+          "codebook_missing_rule": null,
+          "value_labels": {
+            "1": "NOT IMPORTANT",
+            "2": "A LITTLE IMPORTANT",
+            "3": "PRETTY IMPORTANT",
+            "4": "VERY IMPORTANT"
+          }
+        },
+        "1991_DS0005": {
+          "declared_missing_values": [
+            0,
+            9
+          ],
+          "declared_missing_range": null,
+          "codebook_missing_rule": "MISSING 0 OR GE 9",
+          "value_labels": {
+            "1": "Not important",
+            "2": "A little important",
+            "3": "Pretty important",
+            "4": "Very important"
+          }
+        },
+        "2006_DS0005": {
+          "declared_missing_values": [
+            -9
+          ],
+          "declared_missing_range": null,
+          "codebook_missing_rule": "-9",
+          "value_labels": {
+            "-9": "MISSING",
+            "1": "NOT IMPT:(1)",
+            "2": "LIT IMPT:(2)",
+            "3": "PRTY IMP:(3)",
+            "4": "VRY IMPT:(4)"
+          }
+        }
+      },
+      "source_dictionary_refs": [
+        "sources/dictionaries/1976_DS0004.dictionary.json#V4226",
+        "sources/dictionaries/1991_DS0005.dictionary.json#V4226",
+        "sources/dictionaries/2006_DS0005.dictionary.json#V4226"
+      ],
+      "locators": [
+        {
+          "doc_id": "P1",
+          "pdf_page": 10,
+          "section_or_table": "Method: questionnaire forms"
+        },
+        {
+          "doc_id": "P1",
+          "pdf_page": 12,
+          "section_or_table": "Table 1: item wording and membership"
+        }
+      ]
+    },
+    {
+      "variable_id": "V017",
+      "concept": "Looked up to and respected",
+      "source_variables": {
+        "1976_DS0004": "V4244",
+        "1991_DS0005": "V4244",
+        "2006_DS0005": "V4244"
+      },
+      "coding": "Native 1=not important, 2=a little important, 3=pretty important, 4=very important; higher means more importance; no reverse coding. AX02 resolves the instrument-description conflict. Endorsement indicator is x==4.",
+      "missing_rule": "System missing and all declared missing codes/ranges are NA before scoring; only labeled substantive response codes are valid. Earlier releases: zero or codes at/above nine are not responses; later release: minus nine is missing. Do not impute as a response. Case eligibility is AX01.",
+      "source_metadata": {
+        "1976_DS0004": {
+          "declared_missing_values": [
+            0
+          ],
+          "declared_missing_range": [
+            9,
+            "HIGHEST"
+          ],
+          "codebook_missing_rule": null,
+          "value_labels": {
+            "1": "NOT IMPORTANT",
+            "2": "A LITTLE IMPORTANT",
+            "3": "PRETTY IMPORTANT",
+            "4": "VERY IMPORTANT"
+          }
+        },
+        "1991_DS0005": {
+          "declared_missing_values": [
+            0,
+            9
+          ],
+          "declared_missing_range": null,
+          "codebook_missing_rule": "MISSING 0 OR GE 9",
+          "value_labels": {
+            "1": "Not important",
+            "2": "A little important",
+            "3": "Pretty important",
+            "4": "Very important"
+          }
+        },
+        "2006_DS0005": {
+          "declared_missing_values": [
+            -9
+          ],
+          "declared_missing_range": null,
+          "codebook_missing_rule": "-9",
+          "value_labels": {
+            "-9": "MISSING",
+            "1": "NOT IMPT:(1)",
+            "2": "LIT IMPT:(2)",
+            "3": "PRTY IMP:(3)",
+            "4": "VRY IMPT:(4)"
+          }
+        }
+      },
+      "source_dictionary_refs": [
+        "sources/dictionaries/1976_DS0004.dictionary.json#V4244",
+        "sources/dictionaries/1991_DS0005.dictionary.json#V4244",
+        "sources/dictionaries/2006_DS0005.dictionary.json#V4244"
+      ],
+      "locators": [
+        {
+          "doc_id": "P1",
+          "pdf_page": 10,
+          "section_or_table": "Method: questionnaire forms"
+        },
+        {
+          "doc_id": "P1",
+          "pdf_page": 12,
+          "section_or_table": "Table 1: item wording and membership"
+        }
+      ]
+    },
+    {
+      "variable_id": "V018",
+      "concept": "Earn a good deal of money",
+      "source_variables": {
+        "1976_DS0004": "V4230",
+        "1991_DS0005": "V4230",
+        "2006_DS0005": "V4230"
+      },
+      "coding": "Native 1=not important, 2=a little important, 3=pretty important, 4=very important; higher means more importance; no reverse coding. AX02 resolves the instrument-description conflict. Endorsement indicator is x==4.",
+      "missing_rule": "System missing and all declared missing codes/ranges are NA before scoring; only labeled substantive response codes are valid. Earlier releases: zero or codes at/above nine are not responses; later release: minus nine is missing. Do not impute as a response. Case eligibility is AX01.",
+      "source_metadata": {
+        "1976_DS0004": {
+          "declared_missing_values": [
+            0
+          ],
+          "declared_missing_range": [
+            9,
+            "HIGHEST"
+          ],
+          "codebook_missing_rule": null,
+          "value_labels": {
+            "1": "NOT IMPORTANT",
+            "2": "A LITTLE IMPORTANT",
+            "3": "PRETTY IMPORTANT",
+            "4": "VERY IMPORTANT"
+          }
+        },
+        "1991_DS0005": {
+          "declared_missing_values": [
+            0,
+            9
+          ],
+          "declared_missing_range": null,
+          "codebook_missing_rule": "MISSING 0 OR GE 9",
+          "value_labels": {
+            "1": "Not important",
+            "2": "A little important",
+            "3": "Pretty important",
+            "4": "Very important"
+          }
+        },
+        "2006_DS0005": {
+          "declared_missing_values": [
+            -9
+          ],
+          "declared_missing_range": null,
+          "codebook_missing_rule": "-9",
+          "value_labels": {
+            "-9": "MISSING",
+            "1": "NOT IMPT:(1)",
+            "2": "LIT IMPT:(2)",
+            "3": "PRTY IMP:(3)",
+            "4": "VRY IMPT:(4)"
+          }
+        }
+      },
+      "source_dictionary_refs": [
+        "sources/dictionaries/1976_DS0004.dictionary.json#V4230",
+        "sources/dictionaries/1991_DS0005.dictionary.json#V4230",
+        "sources/dictionaries/2006_DS0005.dictionary.json#V4230"
+      ],
+      "locators": [
+        {
+          "doc_id": "P1",
+          "pdf_page": 10,
+          "section_or_table": "Method: questionnaire forms"
+        },
+        {
+          "doc_id": "P1",
+          "pdf_page": 12,
+          "section_or_table": "Table 1: item wording and membership"
+        }
+      ]
+    },
+    {
+      "variable_id": "V019",
+      "concept": "Advancement and promotion",
+      "source_variables": {
+        "1976_DS0004": "V4228",
+        "1991_DS0005": "V4228",
+        "2006_DS0005": "V4228"
+      },
+      "coding": "Native 1=not important, 2=a little important, 3=pretty important, 4=very important; higher means more importance; no reverse coding. AX02 resolves the instrument-description conflict. Endorsement indicator is x==4.",
+      "missing_rule": "System missing and all declared missing codes/ranges are NA before scoring; only labeled substantive response codes are valid. Earlier releases: zero or codes at/above nine are not responses; later release: minus nine is missing. Do not impute as a response. Case eligibility is AX01.",
+      "source_metadata": {
+        "1976_DS0004": {
+          "declared_missing_values": [
+            0
+          ],
+          "declared_missing_range": [
+            9,
+            "HIGHEST"
+          ],
+          "codebook_missing_rule": null,
+          "value_labels": {
+            "1": "NOT IMPORTANT",
+            "2": "A LITTLE IMPORTANT",
+            "3": "PRETTY IMPORTANT",
+            "4": "VERY IMPORTANT"
+          }
+        },
+        "1991_DS0005": {
+          "declared_missing_values": [
+            0,
+            9
+          ],
+          "declared_missing_range": null,
+          "codebook_missing_rule": "MISSING 0 OR GE 9",
+          "value_labels": {
+            "1": "Not important",
+            "2": "A little important",
+            "3": "Pretty important",
+            "4": "Very important"
+          }
+        },
+        "2006_DS0005": {
+          "declared_missing_values": [
+            -9
+          ],
+          "declared_missing_range": null,
+          "codebook_missing_rule": "-9",
+          "value_labels": {
+            "-9": "MISSING",
+            "1": "NOT IMPT:(1)",
+            "2": "LIT IMPT:(2)",
+            "3": "PRTY IMP:(3)",
+            "4": "VRY IMPT:(4)"
+          }
+        }
+      },
+      "source_dictionary_refs": [
+        "sources/dictionaries/1976_DS0004.dictionary.json#V4228",
+        "sources/dictionaries/1991_DS0005.dictionary.json#V4228",
+        "sources/dictionaries/2006_DS0005.dictionary.json#V4228"
+      ],
+      "locators": [
+        {
+          "doc_id": "P1",
+          "pdf_page": 10,
+          "section_or_table": "Method: questionnaire forms"
+        },
+        {
+          "doc_id": "P1",
+          "pdf_page": 12,
+          "section_or_table": "Table 1: item wording and membership"
+        }
+      ]
+    },
+    {
+      "variable_id": "V020",
+      "concept": "Work is only making a living",
+      "source_variables": {
+        "1976_DS0003": "V3223",
+        "1991_DS0004": "V3223",
+        "2006_DS0004": "V3223"
+      },
+      "coding": "Native 1=disagree, 2=mostly disagree, 3=neither, 4=mostly agree, 5=agree; endorsement is x in {4,5}. Retain native item summaries. For centrality-oriented CFA use 6-x under AX03.L0.",
+      "missing_rule": "System missing and all declared missing codes/ranges are NA before scoring; only labeled substantive response codes are valid. Earlier releases: zero or codes at/above nine are not responses; later release: minus nine is missing. Do not impute as a response. Case eligibility is AX01.",
+      "source_metadata": {
+        "1976_DS0003": {
+          "declared_missing_values": [
+            0
+          ],
+          "declared_missing_range": [
+            9,
+            "HIGHEST"
+          ],
+          "codebook_missing_rule": null,
+          "value_labels": {
+            "1": "DISAGREE",
+            "2": "MOSTLY DISAGREE",
+            "3": "NEITHER",
+            "4": "MOSTLY AGREE",
+            "5": "AGREE"
+          }
+        },
+        "1991_DS0004": {
+          "declared_missing_values": [
+            0,
+            9
+          ],
+          "declared_missing_range": null,
+          "codebook_missing_rule": "MISSING 0 OR GE 9",
+          "value_labels": {
+            "1": "Disagree",
+            "2": "Mostly disagree",
+            "3": "Neither",
+            "4": "Mostly agree",
+            "5": "Agree"
+          }
+        },
+        "2006_DS0004": {
+          "declared_missing_values": [
+            -9
+          ],
+          "declared_missing_range": null,
+          "codebook_missing_rule": "-9",
+          "value_labels": {
+            "-9": "MISSING",
+            "1": "DISAGREE:(1)",
+            "2": "MOST DIS:(2)",
+            "3": "NEITHER:(3)",
+            "4": "MOST AGR:(4)",
+            "5": "AGREE:(5)"
+          }
+        }
+      },
+      "source_dictionary_refs": [
+        "sources/dictionaries/1976_DS0003.dictionary.json#V3223",
+        "sources/dictionaries/1991_DS0004.dictionary.json#V3223",
+        "sources/dictionaries/2006_DS0004.dictionary.json#V3223"
+      ],
+      "locators": [
+        {
+          "doc_id": "P1",
+          "pdf_page": 10,
+          "section_or_table": "Method: questionnaire forms"
+        },
+        {
+          "doc_id": "P1",
+          "pdf_page": 12,
+          "section_or_table": "Table 1: item wording and membership"
+        }
+      ]
+    },
+    {
+      "variable_id": "V021",
+      "concept": "Work central to life",
+      "source_variables": {
+        "1976_DS0003": "V3224",
+        "1991_DS0004": "V3224",
+        "2006_DS0004": "V3224"
+      },
+      "coding": "Native 1=disagree, 2=mostly disagree, 3=neither, 4=mostly agree, 5=agree; endorsement is x in {4,5}. Retain native item summaries. No reversal.",
+      "missing_rule": "System missing and all declared missing codes/ranges are NA before scoring; only labeled substantive response codes are valid. Earlier releases: zero or codes at/above nine are not responses; later release: minus nine is missing. Do not impute as a response. Case eligibility is AX01.",
+      "source_metadata": {
+        "1976_DS0003": {
+          "declared_missing_values": [
+            0
+          ],
+          "declared_missing_range": [
+            9,
+            "HIGHEST"
+          ],
+          "codebook_missing_rule": null,
+          "value_labels": {
+            "1": "DISAGREE",
+            "2": "MOSTLY DISAGREE",
+            "3": "NEITHER",
+            "4": "MOSTLY AGREE",
+            "5": "AGREE"
+          }
+        },
+        "1991_DS0004": {
+          "declared_missing_values": [
+            0,
+            9
+          ],
+          "declared_missing_range": null,
+          "codebook_missing_rule": "MISSING 0 OR GE 9",
+          "value_labels": {
+            "1": "Disagree",
+            "2": "Mostly disagree",
+            "3": "Neither",
+            "4": "Mostly agree",
+            "5": "Agree"
+          }
+        },
+        "2006_DS0004": {
+          "declared_missing_values": [
+            -9
+          ],
+          "declared_missing_range": null,
+          "codebook_missing_rule": "-9",
+          "value_labels": {
+            "-9": "MISSING",
+            "1": "DISAGREE:(1)",
+            "2": "MOST DIS:(2)",
+            "3": "NEITHER:(3)",
+            "4": "MOST AGR:(4)",
+            "5": "AGREE:(5)"
+          }
+        }
+      },
+      "source_dictionary_refs": [
+        "sources/dictionaries/1976_DS0003.dictionary.json#V3224",
+        "sources/dictionaries/1991_DS0004.dictionary.json#V3224",
+        "sources/dictionaries/2006_DS0004.dictionary.json#V3224"
+      ],
+      "locators": [
+        {
+          "doc_id": "P1",
+          "pdf_page": 10,
+          "section_or_table": "Method: questionnaire forms"
+        },
+        {
+          "doc_id": "P1",
+          "pdf_page": 12,
+          "section_or_table": "Table 1: item wording and membership"
+        }
+      ]
+    },
+    {
+      "variable_id": "V022",
+      "concept": "Best effort including overtime",
+      "source_variables": {
+        "1976_DS0003": "V3225",
+        "1991_DS0004": "V3225",
+        "2006_DS0004": "V3225"
+      },
+      "coding": "Native 1=disagree, 2=mostly disagree, 3=neither, 4=mostly agree, 5=agree; endorsement is x in {4,5}. Retain native item summaries. No reversal.",
+      "missing_rule": "System missing and all declared missing codes/ranges are NA before scoring; only labeled substantive response codes are valid. Earlier releases: zero or codes at/above nine are not responses; later release: minus nine is missing. Do not impute as a response. Case eligibility is AX01.",
+      "source_metadata": {
+        "1976_DS0003": {
+          "declared_missing_values": [
+            0
+          ],
+          "declared_missing_range": [
+            9,
+            "HIGHEST"
+          ],
+          "codebook_missing_rule": null,
+          "value_labels": {
+            "1": "DISAGREE",
+            "2": "MOSTLY DISAGREE",
+            "3": "NEITHER",
+            "4": "MOSTLY AGREE",
+            "5": "AGREE"
+          }
+        },
+        "1991_DS0004": {
+          "declared_missing_values": [
+            0,
+            9
+          ],
+          "declared_missing_range": null,
+          "codebook_missing_rule": "MISSING 0 OR GE 9",
+          "value_labels": {
+            "1": "Disagree",
+            "2": "Mostly disagree",
+            "3": "Neither",
+            "4": "Mostly agree",
+            "5": "Agree"
+          }
+        },
+        "2006_DS0004": {
+          "declared_missing_values": [
+            -9
+          ],
+          "declared_missing_range": null,
+          "codebook_missing_rule": "-9",
+          "value_labels": {
+            "-9": "MISSING",
+            "1": "DISAGREE:(1)",
+            "2": "MOST DIS:(2)",
+            "3": "NEITHER:(3)",
+            "4": "MOST AGR:(4)",
+            "5": "AGREE:(5)"
+          }
+        }
+      },
+      "source_dictionary_refs": [
+        "sources/dictionaries/1976_DS0003.dictionary.json#V3225",
+        "sources/dictionaries/1991_DS0004.dictionary.json#V3225",
+        "sources/dictionaries/2006_DS0004.dictionary.json#V3225"
+      ],
+      "locators": [
+        {
+          "doc_id": "P1",
+          "pdf_page": 10,
+          "section_or_table": "Method: questionnaire forms"
+        },
+        {
+          "doc_id": "P1",
+          "pdf_page": 12,
+          "section_or_table": "Table 1: item wording and membership"
+        }
+      ]
+    },
+    {
+      "variable_id": "V023",
+      "concept": "Forget work after the work day",
+      "source_variables": {
+        "1976_DS0003": "V3222",
+        "1991_DS0004": "V3222",
+        "2006_DS0004": "V3222"
+      },
+      "coding": "Native 1=disagree, 2=mostly disagree, 3=neither, 4=mostly agree, 5=agree; endorsement is x in {4,5}. Retain native item summaries. For centrality-oriented CFA use 6-x under AX03.L0.",
+      "missing_rule": "System missing and all declared missing codes/ranges are NA before scoring; only labeled substantive response codes are valid. Earlier releases: zero or codes at/above nine are not responses; later release: minus nine is missing. Do not impute as a response. Case eligibility is AX01.",
+      "source_metadata": {
+        "1976_DS0003": {
+          "declared_missing_values": [
+            0
+          ],
+          "declared_missing_range": [
+            9,
+            "HIGHEST"
+          ],
+          "codebook_missing_rule": null,
+          "value_labels": {
+            "1": "DISAGREE",
+            "2": "MOSTLY DISAGREE",
+            "3": "NEITHER",
+            "4": "MOSTLY AGREE",
+            "5": "AGREE"
+          }
+        },
+        "1991_DS0004": {
+          "declared_missing_values": [
+            0,
+            9
+          ],
+          "declared_missing_range": null,
+          "codebook_missing_rule": "MISSING 0 OR GE 9",
+          "value_labels": {
+            "1": "Disagree",
+            "2": "Mostly disagree",
+            "3": "Neither",
+            "4": "Mostly agree",
+            "5": "Agree"
+          }
+        },
+        "2006_DS0004": {
+          "declared_missing_values": [
+            -9
+          ],
+          "declared_missing_range": null,
+          "codebook_missing_rule": "-9",
+          "value_labels": {
+            "-9": "MISSING",
+            "1": "DISAGREE:(1)",
+            "2": "MOST DIS:(2)",
+            "3": "NEITHER:(3)",
+            "4": "MOST AGR:(4)",
+            "5": "AGREE:(5)"
+          }
+        }
+      },
+      "source_dictionary_refs": [
+        "sources/dictionaries/1976_DS0003.dictionary.json#V3222",
+        "sources/dictionaries/1991_DS0004.dictionary.json#V3222",
+        "sources/dictionaries/2006_DS0004.dictionary.json#V3222"
+      ],
+      "locators": [
+        {
+          "doc_id": "P1",
+          "pdf_page": 10,
+          "section_or_table": "Method: questionnaire forms"
+        },
+        {
+          "doc_id": "P1",
+          "pdf_page": 13,
+          "section_or_table": "Table 1: item wording and membership"
+        }
+      ]
+    },
+    {
+      "variable_id": "V024",
+      "concept": "Want to work if financially comfortable",
+      "source_variables": {
+        "1976_DS0003": "V3227",
+        "1991_DS0004": "V3227",
+        "2006_DS0004": "V3227"
+      },
+      "coding": "Native 1=would want to work, 2=would not want to work. Retain native means/SDs; endorsement is x==1. For centrality-oriented CFA use 3-x under AX03.L0.",
+      "missing_rule": "System missing and all declared missing codes/ranges are NA before scoring; only labeled substantive response codes are valid. Earlier releases: zero or codes at/above nine are not responses; later release: minus nine is missing. Do not impute as a response. Case eligibility is AX01.",
+      "source_metadata": {
+        "1976_DS0003": {
+          "declared_missing_values": [
+            0
+          ],
+          "declared_missing_range": [
+            9,
+            "HIGHEST"
+          ],
+          "codebook_missing_rule": null,
+          "value_labels": {
+            "1": "I WOULD WANT TO WORK",
+            "2": "I WOULD NOT WANT TO WORK"
+          }
+        },
+        "1991_DS0004": {
+          "declared_missing_values": [
+            0,
+            9
+          ],
+          "declared_missing_range": null,
+          "codebook_missing_rule": "MISSING 0 OR GE 9",
+          "value_labels": {
+            "1": "I would want to work",
+            "2": "I would not want to work"
+          }
+        },
+        "2006_DS0004": {
+          "declared_missing_values": [
+            -9
+          ],
+          "declared_missing_range": null,
+          "codebook_missing_rule": "-9",
+          "value_labels": {
+            "-9": "MISSING",
+            "1": "WORK:(1)",
+            "2": "NOT WORK:(2)"
+          }
+        }
+      },
+      "source_dictionary_refs": [
+        "sources/dictionaries/1976_DS0003.dictionary.json#V3227",
+        "sources/dictionaries/1991_DS0004.dictionary.json#V3227",
+        "sources/dictionaries/2006_DS0004.dictionary.json#V3227"
+      ],
+      "locators": [
+        {
+          "doc_id": "P1",
+          "pdf_page": 10,
+          "section_or_table": "Method: questionnaire forms"
+        },
+        {
+          "doc_id": "P1",
+          "pdf_page": 13,
+          "section_or_table": "Table 1: item wording and membership"
+        }
+      ]
+    },
+    {
+      "variable_id": "V025",
+      "concept": "Difficult and challenging problems",
+      "source_variables": {
+        "1976_DS0004": "V4247",
+        "1991_DS0005": "V4247",
+        "2006_DS0005": "V4247"
+      },
+      "coding": "Native 1=not important, 2=a little important, 3=pretty important, 4=very important; higher means more importance; no reverse coding. AX02 resolves the instrument-description conflict. Endorsement indicator is x==4.",
+      "missing_rule": "System missing and all declared missing codes/ranges are NA before scoring; only labeled substantive response codes are valid. Earlier releases: zero or codes at/above nine are not responses; later release: minus nine is missing. Do not impute as a response. Case eligibility is AX01.",
+      "source_metadata": {
+        "1976_DS0004": {
+          "declared_missing_values": [
+            0
+          ],
+          "declared_missing_range": [
+            9,
+            "HIGHEST"
+          ],
+          "codebook_missing_rule": null,
+          "value_labels": {
+            "1": "NOT IMPORTANT",
+            "2": "A LITTLE IMPORTANT",
+            "3": "PRETTY IMPORTANT",
+            "4": "VERY IMPORTANT"
+          }
+        },
+        "1991_DS0005": {
+          "declared_missing_values": [
+            0,
+            9
+          ],
+          "declared_missing_range": null,
+          "codebook_missing_rule": "MISSING 0 OR GE 9",
+          "value_labels": {
+            "1": "Not important",
+            "2": "A little important",
+            "3": "Pretty important",
+            "4": "Very important"
+          }
+        },
+        "2006_DS0005": {
+          "declared_missing_values": [
+            -9
+          ],
+          "declared_missing_range": null,
+          "codebook_missing_rule": "-9",
+          "value_labels": {
+            "-9": "MISSING",
+            "1": "NOT IMPT:(1)",
+            "2": "LIT IMPT:(2)",
+            "3": "PRTY IMP:(3)",
+            "4": "VRY IMPT:(4)"
+          }
+        }
+      },
+      "source_dictionary_refs": [
+        "sources/dictionaries/1976_DS0004.dictionary.json#V4247",
+        "sources/dictionaries/1991_DS0005.dictionary.json#V4247",
+        "sources/dictionaries/2006_DS0005.dictionary.json#V4247"
+      ],
+      "locators": [
+        {
+          "doc_id": "P1",
+          "pdf_page": 10,
+          "section_or_table": "Method: questionnaire forms"
+        },
+        {
+          "doc_id": "P1",
+          "pdf_page": 13,
+          "section_or_table": "Table 1: item wording and membership"
+        }
+      ]
+    },
+    {
+      "variable_id": "V026",
+      "concept": "Participate in decisions",
+      "source_variables": {
+        "1976_DS0004": "V4237",
+        "1991_DS0005": "V4237",
+        "2006_DS0005": "V4237"
+      },
+      "coding": "Native 1=not important, 2=a little important, 3=pretty important, 4=very important; higher means more importance; no reverse coding. AX02 resolves the instrument-description conflict. Endorsement indicator is x==4.",
+      "missing_rule": "System missing and all declared missing codes/ranges are NA before scoring; only labeled substantive response codes are valid. Earlier releases: zero or codes at/above nine are not responses; later release: minus nine is missing. Do not impute as a response. Case eligibility is AX01.",
+      "source_metadata": {
+        "1976_DS0004": {
+          "declared_missing_values": [
+            0
+          ],
+          "declared_missing_range": [
+            9,
+            "HIGHEST"
+          ],
+          "codebook_missing_rule": null,
+          "value_labels": {
+            "1": "NOT IMPORTANT",
+            "2": "A LITTLE IMPORTANT",
+            "3": "PRETTY IMPORTANT",
+            "4": "VERY IMPORTANT"
+          }
+        },
+        "1991_DS0005": {
+          "declared_missing_values": [
+            0,
+            9
+          ],
+          "declared_missing_range": null,
+          "codebook_missing_rule": "MISSING 0 OR GE 9",
+          "value_labels": {
+            "1": "Not important",
+            "2": "A little important",
+            "3": "Pretty important",
+            "4": "Very important"
+          }
+        },
+        "2006_DS0005": {
+          "declared_missing_values": [
+            -9
+          ],
+          "declared_missing_range": null,
+          "codebook_missing_rule": "-9",
+          "value_labels": {
+            "-9": "MISSING",
+            "1": "NOT IMPT:(1)",
+            "2": "LIT IMPT:(2)",
+            "3": "PRTY IMP:(3)",
+            "4": "VRY IMPT:(4)"
+          }
+        }
+      },
+      "source_dictionary_refs": [
+        "sources/dictionaries/1976_DS0004.dictionary.json#V4237",
+        "sources/dictionaries/1991_DS0005.dictionary.json#V4237",
+        "sources/dictionaries/2006_DS0005.dictionary.json#V4237"
+      ],
+      "locators": [
+        {
+          "doc_id": "P1",
+          "pdf_page": 10,
+          "section_or_table": "Method: questionnaire forms"
+        },
+        {
+          "doc_id": "P1",
+          "pdf_page": 13,
+          "section_or_table": "Table 1: item wording and membership"
+        }
+      ]
+    },
+    {
+      "variable_id": "V027",
+      "concept": "Predictable secure future",
+      "source_variables": {
+        "1976_DS0004": "V4241",
+        "1991_DS0005": "V4241",
+        "2006_DS0005": "V4241"
+      },
+      "coding": "Native 1=not important, 2=a little important, 3=pretty important, 4=very important; higher means more importance; no reverse coding. AX02 resolves the instrument-description conflict. Endorsement indicator is x==4.",
+      "missing_rule": "System missing and all declared missing codes/ranges are NA before scoring; only labeled substantive response codes are valid. Earlier releases: zero or codes at/above nine are not responses; later release: minus nine is missing. Do not impute as a response. Case eligibility is AX01.",
+      "source_metadata": {
+        "1976_DS0004": {
+          "declared_missing_values": [
+            0
+          ],
+          "declared_missing_range": [
+            9,
+            "HIGHEST"
+          ],
+          "codebook_missing_rule": null,
+          "value_labels": {
+            "1": "NOT IMPORTANT",
+            "2": "A LITTLE IMPORTANT",
+            "3": "PRETTY IMPORTANT",
+            "4": "VERY IMPORTANT"
+          }
+        },
+        "1991_DS0005": {
+          "declared_missing_values": [
+            0,
+            9
+          ],
+          "declared_missing_range": null,
+          "codebook_missing_rule": "MISSING 0 OR GE 9",
+          "value_labels": {
+            "1": "Not important",
+            "2": "A little important",
+            "3": "Pretty important",
+            "4": "Very important"
+          }
+        },
+        "2006_DS0005": {
+          "declared_missing_values": [
+            -9
+          ],
+          "declared_missing_range": null,
+          "codebook_missing_rule": "-9",
+          "value_labels": {
+            "-9": "MISSING",
+            "1": "NOT IMPT:(1)",
+            "2": "LIT IMPT:(2)",
+            "3": "PRTY IMP:(3)",
+            "4": "VRY IMPT:(4)"
+          }
+        }
+      },
+      "source_dictionary_refs": [
+        "sources/dictionaries/1976_DS0004.dictionary.json#V4241",
+        "sources/dictionaries/1991_DS0005.dictionary.json#V4241",
+        "sources/dictionaries/2006_DS0005.dictionary.json#V4241"
+      ],
+      "locators": [
+        {
+          "doc_id": "P1",
+          "pdf_page": 10,
+          "section_or_table": "Method: questionnaire forms"
+        },
+        {
+          "doc_id": "P1",
+          "pdf_page": 13,
+          "section_or_table": "Table 1: item wording and membership"
+        }
+      ]
+    },
+    {
+      "variable_id": "V028",
+      "concept": "Roots in a community without moving",
+      "source_variables": {
+        "1976_DS0004": "V4239",
+        "1991_DS0005": "V4239",
+        "2006_DS0005": "V4239"
+      },
+      "coding": "Native 1=not important, 2=a little important, 3=pretty important, 4=very important; higher means more importance; no reverse coding. AX02 resolves the instrument-description conflict. Endorsement indicator is x==4.",
+      "missing_rule": "System missing and all declared missing codes/ranges are NA before scoring; only labeled substantive response codes are valid. Earlier releases: zero or codes at/above nine are not responses; later release: minus nine is missing. Do not impute as a response. Case eligibility is AX01.",
+      "source_metadata": {
+        "1976_DS0004": {
+          "declared_missing_values": [
+            0
+          ],
+          "declared_missing_range": [
+            9,
+            "HIGHEST"
+          ],
+          "codebook_missing_rule": null,
+          "value_labels": {
+            "1": "NOT IMPORTANT",
+            "2": "A LITTLE IMPORTANT",
+            "3": "PRETTY IMPORTANT",
+            "4": "VERY IMPORTANT"
+          }
+        },
+        "1991_DS0005": {
+          "declared_missing_values": [
+            0,
+            9
+          ],
+          "declared_missing_range": null,
+          "codebook_missing_rule": "MISSING 0 OR GE 9",
+          "value_labels": {
+            "1": "Not important",
+            "2": "A little important",
+            "3": "Pretty important",
+            "4": "Very important"
+          }
+        },
+        "2006_DS0005": {
+          "declared_missing_values": [
+            -9
+          ],
+          "declared_missing_range": null,
+          "codebook_missing_rule": "-9",
+          "value_labels": {
+            "-9": "MISSING",
+            "1": "NOT IMPT:(1)",
+            "2": "LIT IMPT:(2)",
+            "3": "PRTY IMP:(3)",
+            "4": "VRY IMPT:(4)"
+          }
+        }
+      },
+      "source_dictionary_refs": [
+        "sources/dictionaries/1976_DS0004.dictionary.json#V4239",
+        "sources/dictionaries/1991_DS0005.dictionary.json#V4239",
+        "sources/dictionaries/2006_DS0005.dictionary.json#V4239"
+      ],
+      "locators": [
+        {
+          "doc_id": "P1",
+          "pdf_page": 10,
+          "section_or_table": "Method: questionnaire forms"
+        },
+        {
+          "doc_id": "P1",
+          "pdf_page": 13,
+          "section_or_table": "Table 1: item wording and membership"
+        }
+      ]
+    },
+    {
+      "variable_id": "V029",
+      "concept": "Same job for most adult life",
+      "source_variables": {
+        "1976_DS0003": "V3226",
+        "1991_DS0004": "V3226",
+        "2006_DS0004": "V3226"
+      },
+      "coding": "Native 1=disagree, 2=mostly disagree, 3=neither, 4=mostly agree, 5=agree; endorsement is x in {4,5}. Retain native item summaries. No reversal.",
+      "missing_rule": "System missing and all declared missing codes/ranges are NA before scoring; only labeled substantive response codes are valid. Earlier releases: zero or codes at/above nine are not responses; later release: minus nine is missing. Do not impute as a response. Case eligibility is AX01.",
+      "source_metadata": {
+        "1976_DS0003": {
+          "declared_missing_values": [
+            0
+          ],
+          "declared_missing_range": [
+            9,
+            "HIGHEST"
+          ],
+          "codebook_missing_rule": null,
+          "value_labels": {
+            "1": "DISAGREE",
+            "2": "MOSTLY DISAGREE",
+            "3": "NEITHER",
+            "4": "MOSTLY AGREE",
+            "5": "AGREE"
+          }
+        },
+        "1991_DS0004": {
+          "declared_missing_values": [
+            0,
+            9
+          ],
+          "declared_missing_range": null,
+          "codebook_missing_rule": "MISSING 0 OR GE 9",
+          "value_labels": {
+            "1": "Disagree",
+            "2": "Mostly disagree",
+            "3": "Neither",
+            "4": "Mostly agree",
+            "5": "Agree"
+          }
+        },
+        "2006_DS0004": {
+          "declared_missing_values": [
+            -9
+          ],
+          "declared_missing_range": null,
+          "codebook_missing_rule": "-9",
+          "value_labels": {
+            "-9": "MISSING",
+            "1": "DISAGREE:(1)",
+            "2": "MOST DIS:(2)",
+            "3": "NEITHER:(3)",
+            "4": "MOST AGR:(4)",
+            "5": "AGREE:(5)"
+          }
+        }
+      },
+      "source_dictionary_refs": [
+        "sources/dictionaries/1976_DS0003.dictionary.json#V3226",
+        "sources/dictionaries/1991_DS0004.dictionary.json#V3226",
+        "sources/dictionaries/2006_DS0004.dictionary.json#V3226"
+      ],
+      "locators": [
+        {
+          "doc_id": "P1",
+          "pdf_page": 10,
+          "section_or_table": "Method: questionnaire forms"
+        },
+        {
+          "doc_id": "P1",
+          "pdf_page": 13,
+          "section_or_table": "Table 1: item wording and membership"
+        }
+      ]
+    },
+    {
+      "variable_id": "V030",
+      "concept": "Administration year",
+      "source_variables": {
+        "1976_DS0003": "V1",
+        "1991_DS0004": "V1",
+        "2006_DS0004": "V1",
+        "1976_DS0004": "V1",
+        "1991_DS0005": "V1",
+        "2006_DS0005": "V1"
+      },
+      "coding": "Use source-key year; validate V1 as 76,91,2006 in the corresponding files; map two-digit codes to full years.",
+      "missing_rule": "Honor per-file declared missing metadata; year/form validation failure requires an audit, not silent recoding.",
+      "source_metadata": {
+        "1976_DS0003": {
+          "declared_missing_values": null,
+          "declared_missing_range": null
+        },
+        "1991_DS0004": {
+          "declared_missing_values": [
+            99
+          ],
+          "declared_missing_range": null
+        },
+        "2006_DS0004": {
+          "declared_missing_values": null,
+          "declared_missing_range": null
+        },
+        "1976_DS0004": {
+          "declared_missing_values": null,
+          "declared_missing_range": null
+        },
+        "1991_DS0005": {
+          "declared_missing_values": [
+            99
+          ],
+          "declared_missing_range": null
+        },
+        "2006_DS0005": {
+          "declared_missing_values": null,
+          "declared_missing_range": null
+        }
+      },
+      "source_dictionary_refs": [
+        "sources/dictionaries/1976_DS0003.dictionary.json#V1",
+        "sources/dictionaries/1991_DS0004.dictionary.json#V1",
+        "sources/dictionaries/2006_DS0004.dictionary.json#V1",
+        "sources/dictionaries/1976_DS0004.dictionary.json#V1",
+        "sources/dictionaries/1991_DS0005.dictionary.json#V1",
+        "sources/dictionaries/2006_DS0005.dictionary.json#V1"
+      ],
+      "locators": [
+        {
+          "doc_id": "P1",
+          "pdf_page": 9,
+          "section_or_table": "Method: survey sampling"
+        },
+        {
+          "doc_id": "P1",
+          "pdf_page": 10,
+          "section_or_table": "Method: selected administrations and forms"
+        }
+      ]
+    },
+    {
+      "variable_id": "V031",
+      "concept": "Questionnaire form",
+      "source_variables": {
+        "1976_DS0003": "V3",
+        "1991_DS0004": "V3",
+        "2006_DS0004": "V3",
+        "1976_DS0004": "V3",
+        "1991_DS0005": "V3",
+        "2006_DS0005": "V3"
+      },
+      "coding": "Validate Form 3 and Form 4 from provider mapping, not the DS number.",
+      "missing_rule": "Honor per-file declared missing metadata; year/form validation failure requires an audit, not silent recoding.",
+      "source_metadata": {
+        "1976_DS0003": {
+          "declared_missing_values": null,
+          "declared_missing_range": null
+        },
+        "1991_DS0004": {
+          "declared_missing_values": [
+            9
+          ],
+          "declared_missing_range": null
+        },
+        "2006_DS0004": {
+          "declared_missing_values": null,
+          "declared_missing_range": null
+        },
+        "1976_DS0004": {
+          "declared_missing_values": null,
+          "declared_missing_range": null
+        },
+        "1991_DS0005": {
+          "declared_missing_values": [
+            9
+          ],
+          "declared_missing_range": null
+        },
+        "2006_DS0005": {
+          "declared_missing_values": null,
+          "declared_missing_range": null
+        }
+      },
+      "source_dictionary_refs": [
+        "sources/dictionaries/1976_DS0003.dictionary.json#V3",
+        "sources/dictionaries/1991_DS0004.dictionary.json#V3",
+        "sources/dictionaries/2006_DS0004.dictionary.json#V3",
+        "sources/dictionaries/1976_DS0004.dictionary.json#V3",
+        "sources/dictionaries/1991_DS0005.dictionary.json#V3",
+        "sources/dictionaries/2006_DS0005.dictionary.json#V3"
+      ],
+      "locators": [
+        {
+          "doc_id": "P1",
+          "pdf_page": 9,
+          "section_or_table": "Method: survey sampling"
+        },
+        {
+          "doc_id": "P1",
+          "pdf_page": 10,
+          "section_or_table": "Method: selected administrations and forms"
+        }
+      ]
+    },
+    {
+      "variable_id": "V032",
+      "concept": "Within-year respondent serial identifier",
+      "source_variables": {
+        "1976_DS0003": "V4",
+        "1991_DS0004": "V4",
+        "2006_DS0004": "V4",
+        "1976_DS0004": "V4",
+        "1991_DS0005": "V4",
+        "2006_DS0005": "V4"
+      },
+      "coding": "Identify cases by year plus V4; forms are disjoint. Do not join different years on serial number.",
+      "missing_rule": "Honor per-file declared missing metadata; year/form validation failure requires an audit, not silent recoding.",
+      "source_metadata": {
+        "1976_DS0003": {
+          "declared_missing_values": null,
+          "declared_missing_range": null
+        },
+        "1991_DS0004": {
+          "declared_missing_values": [
+            99999
+          ],
+          "declared_missing_range": [
+            99999,
+            "HIGHEST"
+          ]
+        },
+        "2006_DS0004": {
+          "declared_missing_values": null,
+          "declared_missing_range": null
+        },
+        "1976_DS0004": {
+          "declared_missing_values": null,
+          "declared_missing_range": null
+        },
+        "1991_DS0005": {
+          "declared_missing_values": [
+            99999
+          ],
+          "declared_missing_range": [
+            99999,
+            "HIGHEST"
+          ]
+        },
+        "2006_DS0005": {
+          "declared_missing_values": null,
+          "declared_missing_range": null
+        }
+      },
+      "source_dictionary_refs": [
+        "sources/dictionaries/1976_DS0003.dictionary.json#V4",
+        "sources/dictionaries/1991_DS0004.dictionary.json#V4",
+        "sources/dictionaries/2006_DS0004.dictionary.json#V4",
+        "sources/dictionaries/1976_DS0004.dictionary.json#V4",
+        "sources/dictionaries/1991_DS0005.dictionary.json#V4",
+        "sources/dictionaries/2006_DS0005.dictionary.json#V4"
+      ],
+      "locators": [
+        {
+          "doc_id": "P1",
+          "pdf_page": 9,
+          "section_or_table": "Method: survey sampling"
+        },
+        {
+          "doc_id": "P1",
+          "pdf_page": 10,
+          "section_or_table": "Method: selected administrations and forms"
+        }
+      ]
+    },
+    {
+      "variable_id": "V033",
+      "concept": "Sampling weight",
+      "source_variables": {
+        "1976_DS0003": "V5",
+        "1991_DS0004": "V5",
+        "2006_DS0004": "V5",
+        "1976_DS0004": "V5",
+        "1991_DS0005": "V5",
+        "2006_DS0005": "V5"
+      },
+      "coding": "Use only positive finite weights not declared missing; whether to use and normalize is AX06. Do not reinterpret weights as replication frequencies.",
+      "missing_rule": "Honor per-file declared missing metadata; year/form validation failure requires an audit, not silent recoding.",
+      "source_metadata": {
+        "1976_DS0003": {
+          "declared_missing_values": [
+            0
+          ],
+          "declared_missing_range": [
+            9,
+            "HIGHEST"
+          ]
+        },
+        "1991_DS0004": {
+          "declared_missing_values": [
+            0,
+            9
+          ],
+          "declared_missing_range": null
+        },
+        "2006_DS0004": {
+          "declared_missing_values": null,
+          "declared_missing_range": null
+        },
+        "1976_DS0004": {
+          "declared_missing_values": [
+            0
+          ],
+          "declared_missing_range": [
+            9,
+            "HIGHEST"
+          ]
+        },
+        "1991_DS0005": {
+          "declared_missing_values": [
+            0,
+            9
+          ],
+          "declared_missing_range": null
+        },
+        "2006_DS0005": {
+          "declared_missing_values": null,
+          "declared_missing_range": null
+        }
+      },
+      "source_dictionary_refs": [
+        "sources/dictionaries/1976_DS0003.dictionary.json#V5",
+        "sources/dictionaries/1991_DS0004.dictionary.json#V5",
+        "sources/dictionaries/2006_DS0004.dictionary.json#V5",
+        "sources/dictionaries/1976_DS0004.dictionary.json#V5",
+        "sources/dictionaries/1991_DS0005.dictionary.json#V5",
+        "sources/dictionaries/2006_DS0005.dictionary.json#V5"
+      ],
+      "locators": [
+        {
+          "doc_id": "P1",
+          "pdf_page": 9,
+          "section_or_table": "Method: survey sampling"
+        },
+        {
+          "doc_id": "P1",
+          "pdf_page": 10,
+          "section_or_table": "Method: selected administrations and forms"
+        }
+      ]
+    }
+  ],
+  "constructs": [
+    {
+      "construct_id": "leisure",
+      "items": [
+        "V001",
+        "V002",
+        "V003",
+        "V004"
+      ],
+      "scoring": "Latent factor with the indicated observed items; no mean/sum composite or minimum-item averaging rule is authorized. CFA eligibility is AX01; scale identification is AX04. Final multigroup mean/variance model; intercept release pattern is AX05.",
+      "locators": [
+        {
+          "doc_id": "P1",
+          "pdf_page": 10,
+          "section_or_table": "Preliminary Analyses"
+        },
+        {
+          "doc_id": "P1",
+          "pdf_page": 11,
+          "section_or_table": "Table 1: item membership"
+        },
+        {
+          "doc_id": "P1",
+          "pdf_page": 14,
+          "section_or_table": "Primary Analyses: multigroup model"
+        }
+      ]
+    },
+    {
+      "construct_id": "intrinsic",
+      "items": [
+        "V005",
+        "V006",
+        "V007",
+        "V008",
+        "V009",
+        "V010",
+        "V011"
+      ],
+      "scoring": "Latent factor with the indicated observed items; no mean/sum composite or minimum-item averaging rule is authorized. CFA eligibility is AX01; scale identification is AX04. Final multigroup mean/variance model; intercept release pattern is AX05.",
+      "locators": [
+        {
+          "doc_id": "P1",
+          "pdf_page": 10,
+          "section_or_table": "Preliminary Analyses"
+        },
+        {
+          "doc_id": "P1",
+          "pdf_page": 11,
+          "section_or_table": "Table 1: item membership"
+        },
+        {
+          "doc_id": "P1",
+          "pdf_page": 14,
+          "section_or_table": "Primary Analyses: multigroup model"
+        }
+      ]
+    },
+    {
+      "construct_id": "altruistic",
+      "items": [
+        "V012",
+        "V013"
+      ],
+      "scoring": "Latent factor with the indicated observed items; no mean/sum composite or minimum-item averaging rule is authorized. CFA eligibility is AX01; scale identification is AX04. Final multigroup mean/variance model; intercept release pattern is AX05.",
+      "locators": [
+        {
+          "doc_id": "P1",
+          "pdf_page": 10,
+          "section_or_table": "Preliminary Analyses"
+        },
+        {
+          "doc_id": "P1",
+          "pdf_page": 12,
+          "section_or_table": "Table 1: item membership"
+        },
+        {
+          "doc_id": "P1",
+          "pdf_page": 14,
+          "section_or_table": "Primary Analyses: multigroup model"
+        }
+      ]
+    },
+    {
+      "construct_id": "social",
+      "items": [
+        "V014",
+        "V015"
+      ],
+      "scoring": "Latent factor with the indicated observed items; no mean/sum composite or minimum-item averaging rule is authorized. CFA eligibility is AX01; scale identification is AX04. Final multigroup mean/variance model; intercept release pattern is AX05.",
+      "locators": [
+        {
+          "doc_id": "P1",
+          "pdf_page": 10,
+          "section_or_table": "Preliminary Analyses"
+        },
+        {
+          "doc_id": "P1",
+          "pdf_page": 12,
+          "section_or_table": "Table 1: item membership"
+        },
+        {
+          "doc_id": "P1",
+          "pdf_page": 14,
+          "section_or_table": "Primary Analyses: multigroup model"
+        }
+      ]
+    },
+    {
+      "construct_id": "extrinsic",
+      "items": [
+        "V016",
+        "V017",
+        "V018",
+        "V019"
+      ],
+      "scoring": "Latent factor with the indicated observed items; no mean/sum composite or minimum-item averaging rule is authorized. CFA eligibility is AX01; scale identification is AX04. Final multigroup mean/variance model; intercept release pattern is AX05.",
+      "locators": [
+        {
+          "doc_id": "P1",
+          "pdf_page": 10,
+          "section_or_table": "Preliminary Analyses"
+        },
+        {
+          "doc_id": "P1",
+          "pdf_page": 12,
+          "section_or_table": "Table 1: item membership"
+        },
+        {
+          "doc_id": "P1",
+          "pdf_page": 14,
+          "section_or_table": "Primary Analyses: multigroup model"
+        }
+      ]
+    },
+    {
+      "construct_id": "work_centrality",
+      "items": [
+        "V020",
+        "V021",
+        "V022",
+        "V023",
+        "V024"
+      ],
+      "scoring": "Latent factor with the indicated observed items; no mean/sum composite or minimum-item averaging rule is authorized. CFA eligibility is AX01; scale identification is AX04. Preliminary model only; no total-score output.",
+      "locators": [
+        {
+          "doc_id": "P1",
+          "pdf_page": 10,
+          "section_or_table": "Preliminary Analyses"
+        },
+        {
+          "doc_id": "P1",
+          "pdf_page": 12,
+          "section_or_table": "Table 1: item membership"
+        },
+        {
+          "doc_id": "P1",
+          "pdf_page": 14,
+          "section_or_table": "Primary Analyses: multigroup model"
+        }
+      ]
+    },
+    {
+      "construct_id": "job_stability",
+      "items": [
+        "V029"
+      ],
+      "scoring": "Single manifest indicator: loading fixed to one and measurement error fixed to zero in preliminary model.",
+      "locators": [
+        {
+          "doc_id": "P1",
+          "pdf_page": 10,
+          "section_or_table": "Preliminary Analyses"
+        },
+        {
+          "doc_id": "P1",
+          "pdf_page": 13,
+          "section_or_table": "Table 1: item membership"
+        },
+        {
+          "doc_id": "P1",
+          "pdf_page": 14,
+          "section_or_table": "Primary Analyses: multigroup model"
+        }
+      ]
+    },
+    {
+      "construct_id": "security",
+      "items": [
+        "V027",
+        "V028"
+      ],
+      "scoring": "Latent factor with the indicated observed items; no mean/sum composite or minimum-item averaging rule is authorized. CFA eligibility is AX01; scale identification is AX04. Preliminary model only; assignment is provisional under AX12.",
+      "locators": [
+        {
+          "doc_id": "P1",
+          "pdf_page": 10,
+          "section_or_table": "Preliminary Analyses"
+        },
+        {
+          "doc_id": "P1",
+          "pdf_page": 13,
+          "section_or_table": "Table 1: item membership"
+        },
+        {
+          "doc_id": "P1",
+          "pdf_page": 14,
+          "section_or_table": "Primary Analyses: multigroup model"
+        }
+      ]
+    },
+    {
+      "construct_id": "influence",
+      "items": [
+        "V025",
+        "V026"
+      ],
+      "scoring": "Latent factor with the indicated observed items; no mean/sum composite or minimum-item averaging rule is authorized. CFA eligibility is AX01; scale identification is AX04. Preliminary model only; assignment is provisional under AX12.",
+      "locators": [
+        {
+          "doc_id": "P1",
+          "pdf_page": 10,
+          "section_or_table": "Preliminary Analyses"
+        },
+        {
+          "doc_id": "P1",
+          "pdf_page": 13,
+          "section_or_table": "Table 1: item membership"
+        },
+        {
+          "doc_id": "P1",
+          "pdf_page": 14,
+          "section_or_table": "Primary Analyses: multigroup model"
+        }
+      ]
+    }
+  ],
+  "sample_steps": [
+    {
+      "step_id": "S01",
+      "operation": "Read only the selected source form files and keep year and questionnaire form explicit. Retain the sampled seniors; do not add an exact-age, employment, race, gender or graduation filter absent further documentation.",
+      "applies_to": "all sources",
+      "locators": [
+        {
+          "doc_id": "P1",
+          "pdf_page": 9,
+          "section_or_table": "Method"
+        }
+      ]
+    },
+    {
+      "step_id": "S02",
+      "operation": "Validate year/form variables using source metadata. Use year plus serial as a unique key. Keep the two forms as separate respondent samples; never inner-join Form 3 with Form 4 or append a duplicate core-file copy.",
+      "applies_to": "all sources",
+      "locators": [
+        {
+          "doc_id": "P1",
+          "pdf_page": 10,
+          "section_or_table": "Method: forms"
+        }
+      ]
+    },
+    {
+      "step_id": "S03",
+      "operation": "Select the fixed item list in variables. Decode user-missing and system-missing values before any valid-response or weight filtering; record exclusions by reason.",
+      "applies_to": "all item analyses",
+      "locators": [
+        {
+          "doc_id": "P1",
+          "pdf_page": 10,
+          "section_or_table": "Method: questionnaire items"
+        }
+      ]
+    },
+    {
+      "step_id": "S04",
+      "operation": "Apply the chosen AX01 eligibility rule separately for each descriptive item and each CFA model. In a weighted branch, additionally require valid positive V5 and record how many records are excluded.",
+      "applies_to": "per year, form, item/model",
+      "locators": [
+        {
+          "doc_id": "P1",
+          "pdf_page": 10,
+          "section_or_table": "Method and Preliminary Analyses"
+        }
+      ]
+    },
+    {
+      "step_id": "S05",
+      "operation": "Compute native item means, SDs and endorsement rates with explicit denominators. Use AX03 orientation only for the preliminary centrality CFA and named oriented outputs.",
+      "applies_to": "item outputs and Form 3 preliminary CFA",
+      "locators": [
+        {
+          "doc_id": "P1",
+          "pdf_page": 13,
+          "section_or_table": "Table 1 notes"
+        }
+      ]
+    },
+    {
+      "step_id": "S06",
+      "operation": "Fit preliminary Form 3 centrality plus manifest job-stability model and preliminary Form 4 seven-factor model. Evaluate internal consistency separately for each multi-item construct; do not data-select a new item list.",
+      "applies_to": "preliminary models",
+      "locators": [
+        {
+          "doc_id": "P1",
+          "pdf_page": 10,
+          "section_or_table": "Preliminary Analyses"
+        }
+      ]
+    },
+    {
+      "step_id": "S07",
+      "operation": "Fit the prespecified five-factor Form 4 model using the indicated memberships. Keep security and influence items in descriptive outputs but out of the final measurement model.",
+      "applies_to": "Form 4 final model",
+      "locators": [
+        {
+          "doc_id": "P1",
+          "pdf_page": 10,
+          "section_or_table": "Preliminary Analyses"
+        }
+      ]
+    },
+    {
+      "step_id": "S08",
+      "operation": "Fit configural, metric, full scalar, partial scalar and equal-latent-mean models across administration years in the stated nested sequence. Resolve AX04/AX05 before interpreting absolute latent means; do not search constraints by agreement with targets.",
+      "applies_to": "Form 4 multigroup model",
+      "locators": [
+        {
+          "doc_id": "P1",
+          "pdf_page": 14,
+          "section_or_table": "Primary Analyses"
+        }
+      ]
+    },
+    {
+      "step_id": "S09",
+      "operation": "Output each year’s latent moments and covariance, all chronological pairwise contrasts, standardized contrasts under AX09, interval estimates and inference under AX10/AX11. Save actual eligible case counts separately for every output.",
+      "applies_to": "final outputs",
+      "locators": [
+        {
+          "doc_id": "P1",
+          "pdf_page": 15,
+          "section_or_table": "Primary Analyses"
+        }
+      ]
+    }
+  ],
+  "weights": {
+    "rule": "Not determined by article. AX06 origin uses public V5; normalize within each CFA group only as specified there. Summaries use sum(w*x)/sum(w). Always output unweighted eligible n and sum(w), never infer either from a target. Weight variance/SE interpretation must be explicit. Weighted SD and sampling-variance choices are explicitly AX13; these are not settled by normalization.",
+    "locators": [
+      {
+        "doc_id": "P1",
+        "pdf_page": 9,
+        "section_or_table": "Method: sampling"
+      },
+      {
+        "doc_id": "P1",
+        "pdf_page": 10,
+        "section_or_table": "Preliminary Analyses"
+      }
+    ],
+    "source_documentation": "sources/source_description.md: Weights"
+  },
+  "estimators": [
+    {
+      "estimator_id": "E01",
+      "quantity": "For each item and year: m=sum(w*x)/W, percentage=100*sum(w*I(endorsement))/W. Unweighted SD uses sum((x-m)^2)/(n-1). Provisional analytic-weight SD uses sum(w*(x-m)^2)/(W-sum(w^2)/W); this is an explicit convention, not a recovered native default. Missing weights are ineligible only in the weighted branch.",
+      "groups": "Within each administration year and questionnaire form; never pool forms for one item.",
+      "software_default_notes": "Descriptive software not named. Source items remain in native units. AX01, AX02 and AX06 apply. AX13 fixes the provisional weighted-variance convention.",
+      "locators": [
+        {
+          "doc_id": "P1",
+          "pdf_page": 11,
+          "section_or_table": "Table 1"
+        },
+        {
+          "doc_id": "P1",
+          "pdf_page": 13,
+          "section_or_table": "Table 1 notes"
+        }
+      ]
+    },
+    {
+      "estimator_id": "E02",
+      "quantity": "For group g, x=nu_g+Lambda_g*eta+epsilon; E[x]=nu_g+Lambda_g*mu_g and Cov[x]=Lambda_g*Phi_g*Lambda_g^T+Theta_g. Simple item structure from constructs; provisional correlated factors and diagonal residual covariance. Normal-theory ML minimizes sum_g n_g[log|Sigma_g|+tr(S_g*Sigma_g^-1)+(m_g-model_m_g)^T*Sigma_g^-1*(m_g-model_m_g)-log|S_g|-p], with ML-normalized covariance inputs. Raw-data likelihood is an equivalent complete-case implementation. Full model syntax is unavailable; AX04/05/08/12 remain open.",
+      "groups": "Separate-year preliminary models and the same three administration groups in the final multigroup model.",
+      "software_default_notes": "LISREL 8.7 is named; fitting function, optimizer, tolerance, moment scaling, residual covariances and identification are not documented. No software default is silently treated as stated.",
+      "locators": [
+        {
+          "doc_id": "P1",
+          "pdf_page": 10,
+          "section_or_table": "Preliminary Analyses"
+        },
+        {
+          "doc_id": "P1",
+          "pdf_page": 14,
+          "section_or_table": "Primary Analyses"
+        },
+        {
+          "doc_id": "P1",
+          "pdf_page": 15,
+          "section_or_table": "Primary Analyses"
+        }
+      ]
+    },
+    {
+      "estimator_id": "E03",
+      "quantity": "Metric model: constrain loadings equal across groups. Scalar model: additionally constrain item intercepts. Partial scalar model: free flagged-item intercepts under AX05; flagged variables are V4238, V4240, V4231, V4229, V4230, V4228. Equal-mean model: additionally constrain all final factor means across groups. Preserve nesting and the same analytic sample for differences.",
+      "groups": "All administration-year groups, Form 4.",
+      "software_default_notes": "Use identical metric identification and sample for nested comparisons. A group-specific release matrix is not supplied; it must not be reverse-engineered from fit values.",
+      "locators": [
+        {
+          "doc_id": "P1",
+          "pdf_page": 13,
+          "section_or_table": "Table 1 footnote a"
+        },
+        {
+          "doc_id": "P1",
+          "pdf_page": 14,
+          "section_or_table": "Primary Analyses"
+        },
+        {
+          "doc_id": "P1",
+          "pdf_page": 15,
+          "section_or_table": "Primary Analyses"
+        }
+      ]
+    },
+    {
+      "estimator_id": "E04",
+      "quantity": "Exact published standardization formula is unavailable. Provisional AX09.L0: d_ab=(mu_b-mu_a)/sqrt((Phi_a,kk+Phi_b,kk)/2). AX09.L1: d_ab=(mu_b-mu_a)/sqrt(((n_a-1)*Phi_a,kk+(n_b-1)*Phi_b,kk)/(n_a+n_b-2)). Both define positive as a higher latent mean in later year b. Do not substitute observed composite SDs without a documented conversion.",
+      "groups": "All chronological year pairs, separately by final construct.",
+      "software_default_notes": "No bias correction is described. Output raw latent contrast and the denominator used; do not infer denominator from numerical fit to targets.",
+      "published_formula": null,
+      "unavailable_reason": "Article calls the statistic d and change in SDs without defining the standardizer or its variance source.",
+      "locators": [
+        {
+          "doc_id": "P1",
+          "pdf_page": 13,
+          "section_or_table": "Table 1 notes"
+        },
+        {
+          "doc_id": "P1",
+          "pdf_page": 15,
+          "section_or_table": "Primary Analyses"
+        },
+        {
+          "doc_id": "P1",
+          "pdf_page": 16,
+          "section_or_table": "Figure 1 note"
+        }
+      ]
+    },
+    {
+      "estimator_id": "E05",
+      "quantity": "Unweighted pooled t=(m_b-m_a)/(sp*sqrt(1/n_a+1/n_b)); sp^2=((n_a-1)*s_a^2+(n_b-1)*s_b^2)/(n_a+n_b-2), df=n_a+n_b-2. Welch alternative t=(m_b-m_a)/sqrt(s_a^2/n_a+s_b^2/n_b), df=(s_a^2/n_a+s_b^2/n_b)^2/[(s_a^2/n_a)^2/(n_a-1)+(s_b^2/n_b)^2/(n_b-1)]. These formulas are exact for the specified unweighted branches. Weighted tests require the AX06/AX07 variance convention to be supplied; do not treat weights as extra respondents. For the work-if-financially-comfortable item also output the explicitly named oriented contrast in 3-x, separate from native-coded means. In the provisional analytic-weight branch AX13.L0, set v_g=s_w,g^2*sum(w_g^2)/W_g^2 and use z=(m_b-m_a)/sqrt(v_a+v_b); label it approximate weighted Wald, not the unweighted t target. Original weighted-test df remain null until a documented rule is supplied.",
+      "groups": "All chronological year pairs for each item; AX10 chooses the test.",
+      "software_default_notes": "Printed test convention is incompletely documented; preserve both native and explicitly oriented output labels, not an ad hoc sign change.",
+      "locators": [
+        {
+          "doc_id": "P1",
+          "pdf_page": 11,
+          "section_or_table": "Table 1 t columns"
+        },
+        {
+          "doc_id": "P1",
+          "pdf_page": 12,
+          "section_or_table": "Table 1 t columns"
+        },
+        {
+          "doc_id": "P1",
+          "pdf_page": 13,
+          "section_or_table": "Table 1 t columns and notes"
+        }
+      ]
+    },
+    {
+      "estimator_id": "E06",
+      "quantity": "Reliability diagnostic for k-item scales: alpha=k/(k-1)*(1-sum_j S_jj/(1^T*S*1)); define item covariance after stated reversals and missingness handling. Raw covariance alpha is provisional; no numeric reliability values are assumed.",
+      "groups": "Per year and multi-item preliminary/final construct.",
+      "software_default_notes": "Reliability computation and standardization are not specified. No reliability value is a manifest input. Raw versus standardized alpha is AX14.",
+      "locators": [
+        {
+          "doc_id": "P1",
+          "pdf_page": 10,
+          "section_or_table": "Preliminary Analyses"
+        }
+      ]
+    }
+  ],
+  "inference": {
+    "test": "Nested chi-square differences for invariance; CFI decrement is CFI_less_constrained-CFI_more_constrained with the stated .002 decision criterion. Equality at the cutoff is not defined. Item tests are AX10. Provisional latent pairwise Wald z=(mu_b-mu_a)/sqrt(Var(mu_b)+Var(mu_a)-2*Cov(mu_a,mu_b)); AX11 also defines the alternative nested contrast test.",
+    "se_method": "Native model-based SEs from LISREL are described; information-matrix choice and robust options are unreported. AX07 governs unavailable survey-design covariance.",
+    "tail": "Unreported; provisional two-sided mean-contrast tests, upper-tail nested chi-square tests.",
+    "alpha": null,
+    "alpha_reason": "No universal testing alpha declared. Output 95% individual mean CIs, and star thresholds .05, .01, .001 as the table key specifies; provisional pairwise nominal alpha is in AX11.",
+    "clustering": "Multistage sampling; actual cluster/stratum identifiers unavailable in public source metadata. No clustering adjustment is documented. AX07.",
+    "multiple_comparison": "Not documented; AX11 origin is explicitly unadjusted and provisional.",
+    "locators": [
+      {
+        "doc_id": "P1",
+        "pdf_page": 9,
+        "section_or_table": "Method"
+      },
+      {
+        "doc_id": "P1",
+        "pdf_page": 13,
+        "section_or_table": "Table 1 notes"
+      },
+      {
+        "doc_id": "P1",
+        "pdf_page": 14,
+        "section_or_table": "Table 2 notes"
+      },
+      {
+        "doc_id": "P1",
+        "pdf_page": 15,
+        "section_or_table": "Primary Analyses"
+      }
+    ]
+  },
+  "outputs_required": [
+    "Per item/year: actual valid unweighted count, weight sum, mean, SD, endorsement count and percentage with denominators, and missing-code/exclusion audit.",
+    "Per item/year pair: native-coded contrast, optional explicitly oriented binary contrast, t, df, SE, exact computed p, nominal tail and threshold, interval and chosen variance/weight convention.",
+    "Per model/year/group: eligible counts, input moments, loading/intercept/residual constraints, latent covariance, convergence diagnostics, chi-square, df, RMSEA, SRMSR, TLI, CFI and reliability diagnostics.",
+    "Per final construct/year: latent mean, latent SD with its definition, SE and 95% CI in a common identified scale; do not substitute item-average scores.",
+    "Per nested comparison: chi-square and df differences, calculated p and CFI decrement; retain full precision before display rounding.",
+    "Per final construct/year pair: latent contrast and full-covariance SE, chosen standardized contrast and denominator, interval, inference, and all chosen spec-space level IDs."
+  ],
+  "open_decisions": [
+    "AX01",
+    "AX02",
+    "AX03",
+    "AX04",
+    "AX05",
+    "AX06",
+    "AX07",
+    "AX08",
+    "AX09",
+    "AX10",
+    "AX11",
+    "AX12",
+    "AX13",
+    "AX14"
+  ]
+}

@@ -1,0 +1,3 @@
+1. R02.no_special: the level is marked `unavailable` unconditionally without consulting the data dictionary that the grid says supplies the RSSD9425 special-purpose codes (code/analysis.py:182-184).
+2. R06.rck_days: the day-weighted mean is taken over whatever quarters pass the origin's R05 coverage rule (two quarters at O_A, with the zero-quarter RCFD2170 fallback) instead of over the four quarterly 3368 values of year t (code/analysis.py:296-312).
+3. R09.analytic: the recomputed reference population keeps the full all-market 1984 population rather than only bank-years in the final estimation sample, so 1984 benchmarks, 1985 lags and 1985 real market growth are not built from the analytic sample (code/analysis.py:613).

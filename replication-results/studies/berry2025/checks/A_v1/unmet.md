@@ -1,0 +1,11 @@
+Missing data: each quantity uses complete cases on its own variables — input/code/analysis.R:608-609,620-621,629-631,963-975 apply whole-model complete-case filters before estimating mediator paths and total effects that involve fewer variables.
+Missing data: a composite is missing if any item is missing — input/code/analysis.R:123-124 returns existing composites without checking their items.
+Pearson correlations on pairwise complete cases — input/code/analysis.R:139-142 rejects two complete pairs even when their Pearson correlation is defined.
+Cronbach's alpha from complete cases on the items — input/code/analysis.R:145-151 rejects two complete rows even when the specified alpha is defined.
+Bias-corrected bootstrap interval — input/code/analysis.R:245-249 returns missing bounds when z0 is infinite, although the specified probabilities become 0 or 1 and yield endpoint quantiles.
+Bootstrap discard counts in .boot_failed — input/code/analysis.R:244,265-273 loses the discard count when fewer than two resamples succeed, marking the count failed instead of reporting it.
+One row per quantity; do not stop on one failure — input/code/analysis.R:93-97,1014-1022 substitutes a single block/read failure row for all remaining required quantities; empty retained samples also trigger block termination at lines 415-416,593-594,807-808,933-934.
+Compute every quantity independently of failures in other quantities — input/code/analysis.R:364-375,540-547,780-798,819-822 lets unavailable tests, HC3 calculations, or empty-cell means suppress otherwise computable descriptive quantities and counts.
+A3.o.term F, df1, df2, p, eta2, eta2_classic — input/code/analysis.R:750-774 does not reject rank-deficient four-cell designs and uses nominal term degrees of freedom even when a term is not estimable.
+C3.H1.o and C3.H3.o pooled contrasts: full four-cell MSE and df = N - 4 — input/code/analysis.R:786-794 drops absent cells and reports N minus the number of observed cells; the same calculation is used for influence at line 857.
+Leave-one-out influence: keep failures with failed status and a reason — input/code/analysis.R:57-62,503-504,700-701,858-859,1000-1001 checks only thrown errors, so returned non-finite estimates or p values can be written as blanks with status ok and no reason.

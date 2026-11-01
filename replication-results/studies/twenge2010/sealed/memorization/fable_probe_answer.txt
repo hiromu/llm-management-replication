@@ -1,0 +1,34 @@
+**Answering from memory only; no tools used.**
+
+**1. Recognition**
+Yes. Twenge, Campbell, Hoffman and Lance, *Journal of Management*, 2010, volume 36, issue 5, pages 1117–1142. Confidence: 90 on journal and year, 75 on volume/issue/pages.
+
+**2. Data source, years, populations, samples**
+- Data come from the Monitoring the Future (MTF) survey of U.S. high school seniors, run by the University of Michigan Institute for Social Research.
+- Three cohorts measured at the same age in a time-lag design: 1976 (Boomers), 1991 (Generation X), and 2006 (GenMe/Millennials).
+- Total N is roughly 16,500 across the three waves. I recall 16,507 but my confidence on the exact figure is about 55. Each wave is a few thousand students because MTF rotates item sets across questionnaire forms.
+
+**3. Measures and methods**
+- Students rate how important various job characteristics are to them, on a four-point scale from not important to very important.
+- Items are grouped into five work value categories: leisure (time for other things, vacation, easy pace), extrinsic (pay, status, promotion), intrinsic (interesting work, learning, using skills), altruistic (helping others, worthwhile to society), and social (making friends, contact with people).
+- Additional items on work centrality, such as expecting work to be a central part of life and willingness to work overtime or hard.
+- Analysis compares cohort means and computes Cohen's d with pooled SDs, plus percentages endorsing individual items. I believe ANOVA or similar tests of cohort effects were also reported, but I am less sure of the specifics.
+
+**4. Numeric results recalled**
+
+| Result | Comparison | Confidence |
+|---|---|---|
+| Leisure values increased, d = 0.57 | Boomers (1976) vs GenMe (2006), overall leisure scale | 70 |
+| Extrinsic values higher in GenMe than Boomers, d = 0.26 | Boomers vs GenMe, extrinsic scale; peaked with GenX | 65 |
+| Social values lower in GenMe than Boomers, roughly d = -0.3 | Boomers vs GenMe, social scale | 35 (guess on magnitude) |
+| Intrinsic values lower in GenMe than Boomers, roughly d = -0.2 | Boomers vs GenMe, intrinsic scale | 30 (guess on magnitude) |
+| Altruistic values showed no meaningful generational change | All cohorts, altruistic scale | 70 (direction), no magnitude recalled |
+| Percentage wanting a job with "more than two weeks vacation" rose noticeably over cohorts | Leisure item | 40, no exact figures recalled |
+| Percentage agreeing that work would be a central part of life declined | Work centrality item | 50, no exact figures recalled |
+
+No means, SDs, test statistics, or p values are recalled with confidence.
+
+**5. Replication, data, criticisms**
+- No formal replication package or code. The underlying MTF data are publicly archived at ICPSR, so secondary analysis is possible.
+- I am not aware of a published correction.
+- Criticisms exist of the broader cross-temporal and time-lag approach. Trzesniewski and Donnellan published skeptical reanalyses of MTF generational claims around 2010. Costanza and colleagues published a 2012 meta-analysis in *Journal of Business and Psychology* finding generational differences in work attitudes to be small. Kowske, Rasch and Wiley (2010) and Parry and Urwin (2011) also questioned the size and interpretability of generational effects. These critiques target the design and the age, period, cohort confound rather than a specific error in this article.

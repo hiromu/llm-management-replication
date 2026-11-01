@@ -1,0 +1,107 @@
+R version 4.6.1 (2026-06-24)
+Platform: aarch64-apple-darwin24.6.0
+Running under: macOS Sequoia 15.7.9
+
+Matrix products: default
+BLAS:   /opt/homebrew/Cellar/openblas/0.3.34/lib/libopenblasp-r0.3.34.dylib 
+LAPACK: /opt/homebrew/Cellar/r/4.6.1_2/lib/R/lib/libRlapack.dylib;  LAPACK version 3.12.1
+
+Random number generation:
+ RNG:     L'Ecuyer-CMRG 
+ Normal:  Inversion 
+ Sample:  Rejection 
+ 
+locale:
+[1] C/C.UTF-8/en_US/C/en_US/en_US
+
+time zone: America/Los_Angeles
+tzcode source: internal
+
+attached base packages:
+[1] stats     graphics  grDevices utils     datasets  methods   base     
+
+loaded via a namespace (and not attached):
+ [1] lme4_2.0-6       Formula_1.2-5    Matrix_1.7-5     lattice_0.22-9  
+ [5] splines_4.6.1    zoo_1.8-15       abind_1.4-8      parallel_4.6.1  
+ [9] Rdpack_2.6.6     nloptr_2.2.1     sandwich_3.1-1   grid_4.6.1      
+[13] reformulas_0.4.4 compiler_4.6.1   car_3.1-5        boot_1.3-32     
+[17] rbibutils_2.4.1  tools_4.6.1      nlme_3.1-169     carData_3.0-6   
+[21] minqa_1.2.8      Rcpp_1.1.2       MASS_7.3-65     
+
+Command line:
+/opt/homebrew/Cellar/r/4.6.1_2/lib/R/bin/exec/R --no-echo --no-restore --file=implementation/B/v1/analysis.R --args --data data/derived/implementer_bundle --out runs/empirical_20261031T084512Z/B --seed 20261031 --boot 5000
+
+Seed: 20261031
+Bootstrap resamples per model: 5000
+RNG: L'Ecuyer-CMRG, one nextRNGStream stream per model (shared across parallel paths).
+Quantile type: 7; BC tie weight: 0.5; BC critical value: 1.96.
+
+Required packages:
+lme4 2.0.6
+car 3.1.5
+sandwich 3.1.1
+
+Bootstrap stream starting states:
+D2_any/PM2/you_grant/benev_trust_broker+integ_trust_broker+val_align_part_broker+relconcerns_with_broker: 10407,-1802543494,-1659577933,-1301058728,775449977,1312280294,1192778799
+D2_any/SI2/you_grant/benev_trust_broker: 10407,984202340,932175993,1900138466,-1813797423,2059026906,-1271621069
+D2_any/SI2/you_grant/integ_trust_broker: 10407,-480791934,-2121829935,-1024785551,-1572396194,-34201734,1481822390
+D2_any/SI2/you_grant/val_align_part_broker: 10407,1967269827,861265059,298199675,2016354511,-2023493721,-2111514738
+D2_any/SI2/you_grant/relconcerns_with_broker: 10407,-1959716668,1291886799,-1851907094,-1061921397,-816512,388643140
+D2_any/PM2/prom_voice/benev_trust_broker+integ_trust_broker+val_align_part_broker+relconcerns_with_broker: 10407,1087553380,542954058,-1700265808,387928013,1992462334,185977964
+D2_any/SI2/prom_voice/benev_trust_broker: 10407,643549516,-2072654449,1939472000,-1685777911,1987784506,-1688106448
+D2_any/SI2/prom_voice/integ_trust_broker: 10407,427026977,-777508601,-1028416262,1978386264,-1115648970,-75118764
+D2_any/SI2/prom_voice/val_align_part_broker: 10407,1422856635,-773361317,312638244,155601948,1781963102,-1812252364
+D2_any/SI2/prom_voice/relconcerns_with_broker: 10407,-2066697824,1980710442,-761502961,-629921133,-2048880239,1497531881
+D2_any/PM2/proh_voice/benev_trust_broker+integ_trust_broker+val_align_part_broker+relconcerns_with_broker: 10407,1383830183,2061366604,495819369,55744099,230567558,1667198962
+D2_any/SI2/proh_voice/benev_trust_broker: 10407,-136298274,-613603697,-302170561,-472649922,-272802367,-1124103175
+D2_any/SI2/proh_voice/integ_trust_broker: 10407,-51972421,-1120642508,-1539997859,-1191609206,-168417982,778446497
+D2_any/SI2/proh_voice/val_align_part_broker: 10407,-1701079747,1162462631,1771696814,1396749811,1830803409,-1692513877
+D2_any/SI2/proh_voice/relconcerns_with_broker: 10407,127089438,1066178926,1298425770,1072057470,-1219767845,-494804734
+D2_any/SM2.val_align_part_broker: 10407,-1443325341,-1165238806,829197688,-1486722232,1582810188,-261921683
+D2_any/SM2.relconcerns_with_broker: 10407,-749071846,1548352927,399963358,1146688067,-1623348016,-2072114936
+D2_both/PM2/you_grant/benev_trust_broker+integ_trust_broker+val_align_part_broker+relconcerns_with_broker: 10407,512397794,686740560,-1856211987,-232547839,-1516080055,-1889852602
+D2_both/SI2/you_grant/benev_trust_broker: 10407,1333692690,513902936,422515772,596201578,82448065,1438390583
+D2_both/SI2/you_grant/integ_trust_broker: 10407,354962496,1948016201,1393084743,-1766253441,-610885312,1465383821
+D2_both/SI2/you_grant/val_align_part_broker: 10407,-1329403853,-1031767321,-304765228,1716159536,-1155823727,1896020738
+D2_both/SI2/you_grant/relconcerns_with_broker: 10407,-1814708696,1423823959,191862220,-1744303044,1536487173,1851279818
+D2_both/PM2/prom_voice/benev_trust_broker+integ_trust_broker+val_align_part_broker+relconcerns_with_broker: 10407,1187915183,-1559506160,2136101602,1270426785,604379634,1662256730
+D2_both/SI2/prom_voice/benev_trust_broker: 10407,-929741728,603829343,-1892313793,1653927926,1209998721,-1140767443
+D2_both/SI2/prom_voice/integ_trust_broker: 10407,-1833906033,1182136375,999075854,447830989,210925852,1945367178
+D2_both/SI2/prom_voice/val_align_part_broker: 10407,1287619152,-1001375002,-1832627949,-1579791184,-142290844,1512632038
+D2_both/SI2/prom_voice/relconcerns_with_broker: 10407,1330522711,-1682541607,-1199498624,-990378616,-1348560969,174044746
+D2_both/PM2/proh_voice/benev_trust_broker+integ_trust_broker+val_align_part_broker+relconcerns_with_broker: 10407,-1192802963,-1164447556,-544552640,74054547,1639623209,552555586
+D2_both/SI2/proh_voice/benev_trust_broker: 10407,360701119,-298885400,1500887914,-842541360,-2023146097,1403906853
+D2_both/SI2/proh_voice/integ_trust_broker: 10407,1241694453,-2098870346,-1040170968,1787472967,900667770,1886600026
+D2_both/SI2/proh_voice/val_align_part_broker: 10407,-1841516973,1098264839,45131843,-289381602,1086486550,77618230
+D2_both/SI2/proh_voice/relconcerns_with_broker: 10407,-1766041592,-1732689854,640652118,1312449561,588165167,1485734956
+D2_both/SM2.val_align_part_broker: 10407,-820469895,-849378903,897964091,-1642807323,1020333708,2141549301
+D2_both/SM2.relconcerns_with_broker: 10407,-1139383560,1656377253,-242668593,2109163683,1289058444,877825576
+D2_none/PM2/you_grant/benev_trust_broker+integ_trust_broker+val_align_part_broker+relconcerns_with_broker: 10407,503731335,2004009967,1443669504,-2040976425,-1799218976,-1762082009
+D2_none/SI2/you_grant/benev_trust_broker: 10407,-170344645,1475071024,1715007707,-1428270523,330439675,-1015433973
+D2_none/SI2/you_grant/integ_trust_broker: 10407,-1730474559,-1199538776,-1442993652,-1056162364,157293668,-2112831431
+D2_none/SI2/you_grant/val_align_part_broker: 10407,368775018,-1937687994,-1052016397,1468603133,-1833455950,-70936767
+D2_none/SI2/you_grant/relconcerns_with_broker: 10407,-1544569750,1095181008,-893403239,-1073134614,-1400377237,-635091213
+D2_none/PM2/prom_voice/benev_trust_broker+integ_trust_broker+val_align_part_broker+relconcerns_with_broker: 10407,1859813621,678709013,-1791954763,557042059,-2057578297,544010733
+D2_none/SI2/prom_voice/benev_trust_broker: 10407,1296227566,1114784158,2054466256,-1318325831,-1454356664,-1252977486
+D2_none/SI2/prom_voice/integ_trust_broker: 10407,1078221974,2068349089,-1141887871,-1244284236,343274077,-1054717244
+D2_none/SI2/prom_voice/val_align_part_broker: 10407,-1709063742,1745744556,1341282517,2145785079,-1251765853,-43475420
+D2_none/SI2/prom_voice/relconcerns_with_broker: 10407,1777571026,790811754,-1163473721,1142465439,1226352224,1699202900
+D2_none/PM2/proh_voice/benev_trust_broker+integ_trust_broker+val_align_part_broker+relconcerns_with_broker: 10407,730098417,1475434049,-40414823,324829547,-274905000,1899309079
+D2_none/SI2/proh_voice/benev_trust_broker: 10407,833661368,-1808170321,-1540042177,896019120,-230537718,-1538259785
+D2_none/SI2/proh_voice/integ_trust_broker: 10407,1357606111,-1904636687,1053039621,593792863,145282445,1369260298
+D2_none/SI2/proh_voice/val_align_part_broker: 10407,-1277211420,48354243,198429137,754671930,109624117,-92464065
+D2_none/SI2/proh_voice/relconcerns_with_broker: 10407,-1622857480,-408861834,-1839000455,574862863,-851075987,888431038
+D2_none/SM2.val_align_part_broker: 10407,1967996510,292416488,-171241510,1328814868,-236208902,-2106167363
+D2_none/SM2.relconcerns_with_broker: 10407,-314198849,-1512492983,-672951132,2049759989,-363397759,-36205278
+D4_loyal/linear_cont/sim/SignedTrust+SignedRisk: 10407,-1405561015,1618868900,861318154,-1444725564,-1206751500,-583087610
+D4_loyal/linear_cont/ind/SignedTrust: 10407,-1360258338,1373655270,-1673580445,-1010806468,1730128384,-1135778160
+D4_loyal/linear_cont/ind/SignedRisk: 10407,-1778704060,-657967915,-954764494,-1156959170,1927783379,835062313
+D4_loyal/logit_cont/sim/SignedTrust+SignedRisk: 10407,106220402,-1569239759,1116270287,401136698,1254702761,1547327452
+D4_loyal/logit_cont/ind/SignedTrust: 10407,1024024551,-1781750606,-846406131,207070627,-673647457,988412594
+D4_loyal/logit_cont/ind/SignedRisk: 10407,1187706848,-886507539,-376996704,-857818967,-1258479716,1505957934
+D4_loyal/linear_strong/sim/SignedTrust+SignedRisk: 10407,-625690911,2123915524,-225799235,-1490067005,2006130507,-1121292896
+D4_loyal/linear_strong/ind/SignedTrust: 10407,-1778169162,1516584864,393938319,-1764488074,-85348475,1251275329
+D4_loyal/linear_strong/ind/SignedRisk: 10407,1195885822,716766067,1125480306,-1629169848,-1604653338,1243624177
+D4_loyal/logit_strong/sim/SignedTrust+SignedRisk: 10407,-2111658521,-1359276848,-2028552533,-1778220176,-1925922897,406842893
+D4_loyal/logit_strong/ind/SignedTrust: 10407,-1245292657,2083202984,-756557434,-107333697,-221293212,381369380
+D4_loyal/logit_strong/ind/SignedRisk: 10407,-1613662750,1268978989,582551043,-1480778329,1421691324,809541632

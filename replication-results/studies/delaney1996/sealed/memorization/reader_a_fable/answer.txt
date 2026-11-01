@@ -1,0 +1,41 @@
+Answering from memory only, with confidence labels. I have not used any tools.
+
+1. Journal, year, volume, issue, pages
+Academy of Management Journal, 1996, volume 39, issue 4, pages 949-969. Confidence: high.
+
+2. Data source and survey year
+The National Organizations Survey (NOS), conducted in 1991. It was a telephone survey of establishments identified through the 1991 General Social Survey respondents' employers (a "hypernetwork" sampling design). Confidence: high on the NOS and 1991; medium on the sampling detail.
+
+3. Number of organizations analysed
+The full NOS had roughly 727 organizations. The usable sample in this article was around 590 for-profit and nonprofit organizations. I recall analyses being run on the full sample and on a for-profit subsample, and the for-profit subsample is the one used for the market performance measure. I do not recall the exact N of the subsample. Confidence: medium on the 590 figure; low on subsample counts.
+
+4. Dependent variables and measurement
+Two perceptual performance measures, each the mean of Likert-type items (1 to 4 scale) asking the respondent to compare their organization with others doing the same kind of work over the past three years:
+- Perceived organizational performance: about seven items (quality of products or services, development of new products, ability to attract and retain essential employees, customer satisfaction, relations between management and employees, relations among employees, and a similar item). Reported alpha around .85.
+- Perceived market performance: about four items (marketing, growth in sales, profitability, market share), used for for-profit firms. Reported alpha around .86.
+Confidence: high on the two-variable structure; medium on item counts and alphas.
+
+5. HRM practice measures
+- Staffing selectivity (number of applicants per position, or proportion hired).
+- Training (whether formal training was provided and perceived training effectiveness).
+- Incentive compensation (whether pay or bonuses were tied to performance for core employees or managers).
+- Grievance procedure (presence of a formal grievance system).
+- Decentralized decision making or employee participation (extent of employee involvement in decisions).
+- Internal labor market or promotion opportunities (promotion from within).
+- Vertical hierarchy (number of levels between the lowest employee and the top).
+Measures were asked separately for core and managerial employees in some cases. Confidence: medium.
+
+6. Control variables
+Organizational size (log of employees), organizational age, union presence or percent unionized, for-profit versus nonprofit status, whether the establishment was part of a larger organization, and industry dummies. Possibly also a dummy for whether the organization had a human resources department. Confidence: medium; low on the HR department control.
+
+7. Estimation method and inference conventions
+Ordinary least squares regression. Hypotheses were directional, and I believe one-tailed tests were used for the HRM coefficients, with significance reported at p < .10, .05, and .01 levels. Confidence: high on OLS; medium on one-tailed tests and thresholds.
+
+8. Specific numeric results
+I do not recall specific coefficients, standard errors, F statistics or bivariate correlations with enough precision to report them. My general memory is that adjusted R-squared values for the performance equations were modest, in the range of about .10 to .25, and that staffing selectivity, training, and incentive compensation carried positive and significant coefficients in the main tables. I do not recall the exact table numbers. Confidence: low.
+
+9. Main conclusions by hypothesis
+- Hypothesis that progressive HRM practices (selectivity, training, incentive compensation) are positively associated with perceived organizational performance: supported. Staffing selectivity and training were positively related to perceived organizational performance, and incentive compensation was positively related to perceived market performance. Confidence: high.
+- Hypotheses on grievance procedures, decentralized decision making, internal labor markets and vertical hierarchy: mixed or weak support. I recall decentralized decision making being positive in some models, and little support for the others. Confidence: medium.
+- Hypothesis of complementarities or synergies among HRM practices (interaction terms, or a "systems" effect): not supported. Interaction terms and a practices-configuration test did not add explanatory power. Confidence: high.
+- The authors stressed that because measures were perceptual, single-respondent and cross-sectional, common-method variance and causality concerns limited the findings, and they called for better designs. Confidence: high.

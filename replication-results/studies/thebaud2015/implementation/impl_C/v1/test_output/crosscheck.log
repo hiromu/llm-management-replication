@@ -1,0 +1,9 @@
+M1 fast=true : 4.8s deviance=4245.3561 theta=[0.0691, 0.0, 0.1461, -0.2276] ret=FTOL_REACHED
+M1 fast=false: 48.5s deviance=4245.3039 theta=[-0.0749, 0.0035, 0.1457, 0.2293] ret=FTOL_REACHED feval=10589
+   female fast=true -0.6275 fast=false -0.64
+   max |beta_fast - beta_slow| = 0.0125
+M3 fast=true : 2.4s deviance=4216.8059 theta=[-0.0, -0.0, 0.0, -0.0] ret=FTOL_REACHED
+M3 fast=false: 186.5s deviance=4216.8073 theta=[-0.0202, 0.0045, -0.0009, -0.0002] ret=FTOL_REACHED feval=27557
+   female:childcare fast=true -0.3227 fast=false -0.3228
+   female fast=true -0.6456 fast=false -0.6458
+   max |beta_fast - beta_slow| = 0.0037

@@ -1,0 +1,131 @@
+{
+  "origin": {
+    "description": "Models M1, M2 and M3 as described in manifest.json: sample = regular-season fourth-down plays of six seasons on which the offense punted, attempted a field goal, or ran a run/pass play (play_type in punt, field_goal, run, pass), overtime excluded, plays with 120 or fewer seconds of regulation remaining excluded, listwise deletion; dependent = conversion attempt indicator; performance = own score minus opponent score minus one, split into at-or-below linear and squared pieces, an above piece and an at-or-below indicator; minutes remaining = game seconds remaining / 60 (fractional); interactions = products of minutes remaining with the three performance pieces (not the indicator); controls = offense's own score, yards to go for first down, yards to goal line, same division, same conference (nested definition), home-field (provider home team), linear week of season; estimator = conditional fixed-effects logit grouped by possession team with season dummies, conventional ML standard errors, odds ratios reported; post-estimation = LR tests between nested models, and marginal effects of performance at seven evaluation points with controls at means, minutes at its mean (M2) or at quarter midpoints 53/38/23/8 (M3), group effect set to zero, delta-method standard errors.",
+    "source": [
+      {"doc": "D01", "pdf_page": 8, "where": "Data and Risk Taking paragraphs"},
+      {"doc": "D01", "pdf_page": 9, "where": "Performance, Deadline Proximity, Control Variables and Data Analysis Model paragraphs"},
+      {"doc": "D01", "pdf_page": 11, "where": "Table 5 and Notes"},
+      {"doc": "D01", "pdf_page": 12, "where": "Table 6 Notes; Figure 2 Notes"},
+      {"doc": "D01", "pdf_page": 15, "where": "Endnotes 1-3"},
+      {"doc": "D01", "pdf_page": 16, "where": "Endnote 3 continued; Endnote 4"}
+    ]
+  },
+  "axes": [
+    {
+      "axis_id": "A1",
+      "decision": "Which fourth-down rows constitute a 'decision' (handling of penalty-nullified plays, kneel-downs and spikes)",
+      "priority_class": "sample_construction",
+      "levels": [
+        {"level_id": "A1.0", "description": "Keep rows with play_type in {punt, field_goal, run, pass}; exclude no_play, qb_kneel, qb_spike and missing play types", "is_origin": true, "source": {"doc": "D01", "pdf_page": 8, "where": "Risk Taking paragraph: the decision set is punt, field-goal attempt or conversion attempt; nothing else is mentioned"}},
+        {"level_id": "A1.1", "description": "Additionally include no_play rows on fourth down where the attempted choice is identifiable from provider flags (punt_attempt, field_goal_attempt, pass or rush indicators that include penalty plays), coding the dependent variable from the attempted choice", "is_origin": false, "label": "uncertain", "rationale": "The paper is silent on plays nullified by penalty (D01 PDF page 8). A play that was snapped and then nullified still reveals the coach's choice, so including it is defensible, but the authors' source may not have recorded such plays as fourth-down plays. The data dictionary's 'pass' and 'rush' columns include plays with penalties while 'pass_attempt'/'rush_attempt' do not, so the two readings differ in the public data.", "basis": "article"},
+        {"level_id": "A1.2", "description": "Additionally treat fourth-down qb_kneel and qb_spike rows as non-risky decisions (dependent variable = 0)", "is_origin": false, "label": "uncertain", "rationale": "Kneel-downs and spikes on fourth down are neither punts nor field goals nor conversion attempts; the paper's binary definition (D01 PDF page 8) does not cover them. With the final two minutes of the game removed, such plays are rare (end of first half), so either reading is defensible but not documented.", "basis": "article"}
+      ],
+      "compatible_with": ["all"],
+      "notes": "Rows affected are expected to be few relative to the sample; report the counts under each level."
+    },
+    {
+      "axis_id": "A2",
+      "decision": "Boundary of the 'last two minutes' exclusion",
+      "priority_class": "sample_construction",
+      "levels": [
+        {"level_id": "A2.0", "description": "Drop plays with game_seconds_remaining <= 120 (a play at exactly 2:00 is dropped)", "is_origin": true, "source": {"doc": "D01", "pdf_page": 16, "where": "Endnote 3: 'we have removed the last two minutes of each game'; the two-minute warning occurs at 2:00"}},
+        {"level_id": "A2.1", "description": "Drop plays with game_seconds_remaining < 120 (a play at exactly 2:00 is kept)", "is_origin": false, "label": "equivalent", "rationale": "Both are literal readings of the same stated rule; they differ only in plays snapped exactly at the two-minute mark, which under the two-minute-warning rule is a stoppage and rarely a snap time (D01 PDF pages 15-16, endnote 3).", "basis": "article"}
+      ],
+      "compatible_with": ["all"],
+      "notes": "Must be applied to regulation time only; overtime is excluded separately (fixed)."
+    },
+    {
+      "axis_id": "A3",
+      "decision": "Measurement of minutes remaining",
+      "priority_class": "variable_coding",
+      "levels": [
+        {"level_id": "A3.0", "description": "Fractional minutes: game_seconds_remaining / 60", "is_origin": true, "source": {"doc": "D01", "pdf_page": 9, "where": "Deadline Proximity paragraph: 'the number of minutes and seconds remaining to play the game at the time of each play'"}},
+        {"level_id": "A3.1", "description": "Whole minutes: floor(game_seconds_remaining / 60)", "is_origin": false, "label": "uncertain", "rationale": "The phrase 'minutes and seconds' (D01 PDF page 9) suggests seconds were used, but the variable is named 'minutes remaining' throughout and Table 6 evaluates it at whole-minute values; truncation changes the regressor by less than one unit on a 60-unit scale, so coefficient differences should be small but are not guaranteed to be negligible for the interaction terms.", "basis": "article"},
+        {"level_id": "A3.2", "description": "Quarters remaining (count of quarters not yet completed at the time of the play) in place of minutes remaining, including in the interaction terms", "is_origin": false, "label": "non_equivalent", "rationale": "The authors report this as a separate robustness check whose results were 'consistent' and chose minutes remaining for its greater variance (D01 PDF page 9). It is a different measure with a different scale, so Table 5 and Table 6 values are not comparable; it belongs to the robustness tier (claim C11).", "basis": "article"}
+      ],
+      "compatible_with": ["all"],
+      "notes": "Table 6 evaluation points (53, 38, 23, 8 minutes) apply to A3.0 and A3.1 only."
+    },
+    {
+      "axis_id": "A4",
+      "decision": "Coding of the same-conference control relative to the same-division control",
+      "priority_class": "variable_coding",
+      "levels": [
+        {"level_id": "A4.0", "description": "Nested: same_conference = 1 for every same-conference opponent, including same-division opponents", "is_origin": true, "source": {"doc": "D01", "pdf_page": 9, "where": "Control Variables item (b): 'whether the opponent is in the same division or conference'"}},
+        {"level_id": "A4.1", "description": "Exclusive: same_conference = 1 only for same-conference opponents in a different division (so the two indicators are mutually exclusive)", "is_origin": false, "label": "uncertain", "rationale": "The paper's wording admits both readings and its Table 1 descriptive statistics for the two indicators (D01 PDF page 10) are not reconcilable with the nested definition under either row labelling (see forensics F19), so the authors' coding cannot be determined. Both are a reparameterisation of the same two-indicator information only if the division indicator is also kept, which it is; the model fit is identical under A4.0 and A4.1 (the coefficient on same_division changes meaning), so for the focal coefficients the levels are expected to be numerically equivalent while the printed control coefficients differ.", "basis": "article"}
+      ],
+      "compatible_with": ["all"],
+      "notes": "Because same_division is always included, A4.0 and A4.1 span the same column space; the choice affects only the interpretation and value of the two control coefficients, not the focal estimates. The 'uncertain' label reflects uncertainty about matching the printed control rows."
+    },
+    {
+      "axis_id": "A5",
+      "decision": "Implementation of team and year fixed effects in the logit",
+      "priority_class": "fixed_effects_clustering",
+      "levels": [
+        {"level_id": "A5.0", "description": "Conditional (fixed-effects) logit grouped by possession team, with season dummies as regressors (Stata xtlogit, fe)", "is_origin": true, "source": {"doc": "D01", "pdf_page": 9, "where": "Data Analysis Model paragraph ('Fixed-effect estimations ... xtlogit function in STATA'); Table 5 df pattern on PDF page 11 equals regressors plus seasons minus one"}},
+        {"level_id": "A5.1", "description": "Unconditional logit with team dummies and season dummies (pooled logit with dummy variables)", "is_origin": false, "label": "equivalent", "rationale": "With a small number of groups each containing many hundreds of observations, the incidental-parameters bias of the dummy-variable logit is negligible and the conditional and unconditional fixed-effects logit estimates coincide to reporting precision (Chamberlain 1980, 'Analysis of covariance with qualitative data', Review of Economic Studies; Greene 2004, 'The behaviour of the maximum likelihood estimator of limited dependent variable models in the presence of fixed effects', Econometrics Journal). Log-likelihood and LR chi-square values are not comparable between the two (conditional versus unconditional likelihood), so only coefficients, standard errors and marginal effects should be compared.", "basis": "methodological_literature"},
+        {"level_id": "A5.2", "description": "Conditional logit grouped by team-season (both team and year effects conditioned out, no season dummies)", "is_origin": false, "label": "uncertain", "rationale": "A literal reading of 'team- and year-level fixed effects' (Table 5 note, D01 PDF page 11) could mean team-by-year groups, but the reported degrees of freedom are consistent with season dummies plus a single team grouping rather than team-season groups. Included as a documented alternative reading; coefficients may differ because within-team-season variation is used.", "basis": "article"},
+        {"level_id": "A5.3", "description": "Random-effects panel logit by team with season dummies (Stata xtlogit, re)", "is_origin": false, "label": "non_equivalent", "rationale": "The paper explicitly says fixed-effect estimations (D01 PDF page 9 and Table 5 title), and random effects impose independence between team effects and regressors; estimates and standard errors differ in general (Wooldridge 2010, Econometric Analysis of Cross Section and Panel Data, ch. 15).", "basis": "both"}
+      ],
+      "compatible_with": ["all"],
+      "notes": "Under A5.0 and A5.2, predicted probabilities for marginal effects require a convention for the unestimated group effect (see A7)."
+    },
+    {
+      "axis_id": "A6",
+      "decision": "Covariance estimator for coefficient standard errors",
+      "priority_class": "fixed_effects_clustering",
+      "levels": [
+        {"level_id": "A6.0", "description": "Conventional maximum-likelihood (observed information) standard errors; odds-ratio SEs by the delta method", "is_origin": true, "source": {"doc": "D01", "pdf_page": 9, "where": "Data Analysis Model paragraph names the software command and says nothing about robust or clustered errors; Table 5 note 'standard errors are shown in parentheses'"}},
+        {"level_id": "A6.1", "description": "Cluster-robust standard errors by game (both teams' plays in a game share a cluster)", "is_origin": false, "label": "non_equivalent", "rationale": "Plays within a game are dependent (score and clock evolve jointly for both teams), so clustering by game is the methodologically indicated correction (Cameron and Miller 2015, 'A practitioner's guide to cluster-robust inference', Journal of Human Resources), but it changes standard errors and stars relative to the paper and is not what the paper did.", "basis": "methodological_literature"},
+        {"level_id": "A6.2", "description": "Cluster-robust standard errors by team", "is_origin": false, "label": "non_equivalent", "rationale": "Clustering at the fixed-effect group level is a common alternative (Cameron and Miller 2015), but with few clusters the asymptotics are poor and the paper did not do this; point estimates are unchanged but inference differs.", "basis": "methodological_literature"}
+      ],
+      "compatible_with": ["all"],
+      "notes": "Only A6.0 is relevant for matching the published standard errors; A6.1 and A6.2 are documented sensitivity checks."
+    },
+    {
+      "axis_id": "A7",
+      "decision": "Computation of marginal effects and predicted probabilities",
+      "priority_class": "estimator",
+      "levels": [
+        {"level_id": "A7.0", "description": "Analytic derivative of the predicted probability with respect to performance at the stated evaluation points, controls at sample means, minutes at its sample mean (M2) or at quarter midpoints (M3), group (team) effect set to zero, delta-method standard errors", "is_origin": true, "source": {"doc": "D01", "pdf_page": 12, "where": "Table 6 Notes and Figure 2 Notes ('Control variables were held constant at their means'; minutes fixed at quarter midpoints); text PDF page 11 citing Wiersema and Bowen (2009)"}},
+        {"level_id": "A7.1", "description": "Finite difference: predicted probability at performance + 1 minus predicted probability at performance, same evaluation conventions", "is_origin": false, "label": "uncertain", "rationale": "The text describes the values as 'the change in likelihood of going for it ... based on a one-point positive change in performance' (D01 PDF page 12), which can be read as a discrete one-unit change; for a logit the two differ slightly, more so where the curve is steep (fourth-quarter values).", "basis": "article"},
+        {"level_id": "A7.2", "description": "Same as A7.0 but with the group effect handled by averaging predicted probabilities over estimated team effects from the unconditional dummy-variable logit (A5.1), rather than setting it to zero", "is_origin": false, "label": "uncertain", "rationale": "After a conditional logit the group effects are not estimated, and the software's default prediction sets them to zero; the paper does not say how predicted probabilities were obtained (D01 PDF pages 12-13). The scale of marginal effects depends on the baseline probability, so this choice can change magnitudes (Wiersema and Bowen 2009, 'The use of limited dependent variable techniques in strategy research', Strategic Management Journal).", "basis": "both"},
+        {"level_id": "A7.3", "description": "Average marginal effects over the sample distribution of controls instead of effects at means", "is_origin": false, "label": "non_equivalent", "rationale": "The paper explicitly holds controls at their means (Figure 2 and Figure 3 Notes, D01 PDF pages 12-13); average marginal effects are a different estimand.", "basis": "article"}
+      ],
+      "compatible_with": ["A5"],
+      "notes": "A7.2 requires A5.1. Standard errors of marginal effects are not described in the paper; delta method is the default of the cited approach."
+    },
+    {
+      "axis_id": "A8",
+      "decision": "Coding of home-field advantage in neutral-site games",
+      "priority_class": "variable_coding",
+      "levels": [
+        {"level_id": "A8.0", "description": "Use the provider's designated home team (posteam_type == 'home') in all games", "is_origin": true, "source": {"doc": "D01", "pdf_page": 9, "where": "Control Variables item (c); no treatment of neutral sites is described"}},
+        {"level_id": "A8.1", "description": "Code home_field = 0 for both teams in games with S2 location == 'Neutral'", "is_origin": false, "label": "uncertain", "rationale": "The paper's rationale for the control is familiarity with the home environment (D01 PDF page 9), which does not apply at a neutral site; but the authors' data source may not have flagged neutral sites. Affects very few regular-season games in these seasons.", "basis": "article"}
+      ],
+      "compatible_with": ["all"],
+      "notes": "Report the number of neutral-site games found in S2 for these seasons."
+    }
+  ],
+  "fixed_not_varied": [
+    "Dependent variable: conversion attempt (run or pass) = 1 versus punt or field-goal attempt = 0; punts and field goals are pooled (D01 PDF page 8).",
+    "Performance definition: own score minus opponent score minus one (aspiration = opponent's score plus one), scores at the time of the play (D01 PDF page 9).",
+    "Spline structure: at-or-below linear piece, at-or-below squared piece, above piece, and at-or-below indicator; the indicator is not interacted with minutes remaining (D01 PDF pages 9 and 11).",
+    "Explicit control list in every model: offense's own total points, yards to go for first down, yards to go for touchdown, same division, same conference, home-field advantage, week of season (linear), minutes remaining (D01 PDF page 9; Table 5). This list may not change within the equivalent set.",
+    "Regular-season games only; postseason and preseason excluded (D01 PDF page 15, endnote 1).",
+    "Overtime plays excluded (D01 PDF page 15, endnote 2).",
+    "Final two minutes of each game excluded (D01 PDF page 16, endnote 3); the first-half two-minute period is not excluded.",
+    "Seasons 2000 through 2005 inclusive (D01 PDF page 8).",
+    "Team and season fixed effects present in all three models; logit link; odds ratios reported (D01 PDF page 9; Table 5).",
+    "Nested model sequence M1 (controls) -> M2 (adds spline) -> M3 (adds interactions) with LR tests between successive models (Table 5).",
+    "Marginal-effect evaluation grid: performance-minus-aspiration at -42, -28, -14, 0, 14, 28, 42; minutes remaining at 53, 38, 23, 8 for quarters 1-4 (Table 6 Notes, D01 PDF page 12)."
+  ],
+  "excluded_alternatives": [
+    {"description": "Separate models for conversion-versus-kick within field-goal range and conversion-versus-punt outside field-goal range", "why_excluded": "Reported only as by-request robustness analyses with no numbers (D01 PDF page 16, endnote 4); the field-goal-range threshold is not defined; these are different outcomes/subsamples, not interchangeable specifications."},
+    {"description": "Alternative aspiration level (e.g., simply outscoring the opponent, or maintaining a recently held point spread)", "why_excluded": "Mentioned only as a by-request robustness analysis without definition or numbers (D01 PDF page 16, endnote 4); the main text fixes the aspiration at opponent's score plus one."},
+    {"description": "Probit or linear probability model", "why_excluded": "The paper explicitly uses logistic regression and reports odds ratios; no article basis for another link, and marginal effects would not be comparable."},
+    {"description": "Centring of variables before forming interaction terms", "why_excluded": "Table 5 reports main effects and interactions on the raw scale (minutes remaining main effect changes sign between Model 2 and Model 3 in the direction expected for uncentred products); no mention of centring."},
+    {"description": "Dropping the same-conference or same-division control because conference membership must be derived", "why_excluded": "Explicit control lists may not change within the equivalent set; if derivation fails this is a documented deviation, not a specification level."},
+    {"description": "Including first-half two-minute plays as an additional exclusion", "why_excluded": "Endnote 3 refers to the two-minute warning at the end of the fourth quarter and 'the last two minutes of each game'; no article basis for excluding the end of the first half."}
+  ]
+}

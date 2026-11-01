@@ -1,0 +1,19 @@
+.runtime/
+artifacts/
+.venv/
+node_modules/
+__pycache__/
+*.py[cod]
+.env
+.env.*
+tmp/
+
+# Public DB is tracked; newly generated work and SQLite sidecars are local.
+data/console.sqlite3-*
+data/server.lock
+data/runs/
+data/results/
+data/media/
+data/imports/
+data/sources/
+data/demo-revealed.json

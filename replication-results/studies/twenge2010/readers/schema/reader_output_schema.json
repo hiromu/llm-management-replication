@@ -1,0 +1,94 @@
+{
+  "schema_id": "twenge2010_reader_schema_v1",
+  "frozen_before_reader_runs": true,
+  "general": {
+    "format": "Each output is a UTF-8 JSON file in the reader's output directory, plus reader_notes.md. Every interpretive field cites locators: {doc_id, pdf_page, section_or_table}. doc_id values come from publication_packet.json (P1 = main article). Missing values are null with a reason; never fill from memory.",
+    "id_rules": "claim_id C01..; target_id T001..; axis_id AX01..; level_id AX01.L0 (origin) / AX01.L1...; step_id S01..; variable_id V001.."
+  },
+  "files": {
+    "claim_map.json": {
+      "claims": [{
+        "claim_id": "string",
+        "statement": "hypothesis or stated finding, paraphrased",
+        "hypothesis_label": "e.g. H1 or null",
+        "direction_claimed": "increase|decrease|no_difference|mixed|other",
+        "tier": "focal|identification_inference_diagnostic|robustness|descriptive|nuisance_control",
+        "estimand": "precise statistical quantity (e.g. standardized mean difference between named cohorts on named scale, with sign convention)",
+        "effect_scale_and_null": "scale name and null value",
+        "population": "who, which years, which questionnaire form(s)",
+        "comparison_units": "e.g. year pair",
+        "supporting_results": [{"doc_id": "", "pdf_page": 0, "table": "", "column": "", "row": ""}],
+        "target_ids": ["T001"],
+        "notes": ""
+      }]
+    },
+    "targets.json": {
+      "sealed": true,
+      "targets": [{
+        "target_id": "string",
+        "claim_ids": [],
+        "quantity": "what number this is (e.g. mean, SD, d, N, percentage, t, p)",
+        "construct_or_item": "",
+        "group_or_comparison": "e.g. 1976 vs 2006",
+        "value": null,
+        "printed_text": "exact string as printed",
+        "published_se": null,
+        "exact_p": null,
+        "stars_or_inequality": null,
+        "alpha": null,
+        "tail_direction": null,
+        "N": null,
+        "N_printed_text": null,
+        "model_or_analysis": "",
+        "locator": {"doc_id": "", "pdf_page": 0, "table": "", "row": "", "column": ""},
+        "notes": ""
+      }]
+    },
+    "manifest.json": {
+      "target_free": true,
+      "opaque_paper_id": "PAPER_X",
+      "rule": "No article identity, author names, title, journal, published numbers, published Ns, or result directions may appear in this file. Describe operations on the source data only.",
+      "data_sources": [{"source_key": "e.g. year_form key as named in the source description", "role": ""}],
+      "variables": [{"variable_id": "", "concept": "neutral description", "source_variables": {"<year>_<DS>": "original variable name(s)"}, "coding": "recode rules, reverse coding, valid range", "missing_rule": "", "locators": []}],
+      "constructs": [{"construct_id": "", "items": ["variable_id"], "scoring": "mean/sum/standardization rule, minimum items rule", "locators": []}],
+      "sample_steps": [{"step_id": "", "operation": "ordered sample construction step", "applies_to": "", "locators": []}],
+      "weights": {"rule": "", "locators": []},
+      "estimators": [{"estimator_id": "", "quantity": "exact formula, e.g. Cohen's d with pooled SD definition and sign convention", "groups": "", "software_default_notes": "", "locators": []}],
+      "inference": {"test": "", "se_method": "", "tail": "", "alpha": null, "clustering": "", "multiple_comparison": "", "locators": []},
+      "outputs_required": "list of quantities the implementation must output per construct/item and comparison",
+      "open_decisions": ["references to axis_id in spec_space.json"]
+    },
+    "published_N_branch.json": {
+      "sealed": true,
+      "rule": "Published Ns per analysis cell, kept out of manifest.json; evaluated by code only.",
+      "cells": [{"cell": "", "N": null, "printed_text": "", "locator": {}}]
+    },
+    "spec_space.json": {
+      "origin": "closest-described specification: list of level ids, one per axis (L0)",
+      "axes": [{
+        "axis_id": "", "decision": "", "category": "sample_construction|variable_coding|construct_scoring|weighting|estimator|inference|other",
+        "levels": [{"level_id": "", "description": "", "label": "origin|equivalent|non_equivalent|uncertain", "rationale": "", "basis": "article|methodological_literature|source_documentation", "source_locator": "doc/page or full literature citation"}],
+        "compatible_with": "constraints on crossing with other axes",
+        "priority_rank": 1
+      }],
+      "notes": "Alternatives need an article or methodological-literature basis. Explicitly reported items/controls cannot be changed within the equivalent set. Distinct reported outcomes are not interchangeable specifications."
+    },
+    "documentation_assessment.json": {
+      "choices": [{"choice": "", "commonness": "default|common|rare", "justified_in_article": true, "locator": {}}],
+      "structural_counts": {"n_open_decisions": 0, "n_undocumented_items": 0},
+      "unusualness_rating": "1-5 with rationale",
+      "documentation_scores": {"specificity": "1-5", "precision": "1-5", "exhaustiveness": "1-5", "rationale": ""},
+      "wider_space": [{"axis": "", "levels": [], "note": "off unless explicitly included before execution"}]
+    },
+    "inference.json": {
+      "observation_unit": "", "sampling_unit": "", "assignment_unit": "", "clusters": "", "native_se_method_software": "",
+      "first_stage_strength": "not applicable or value",
+      "unavailable_source_fallbacks": [{"item": "", "fallback": "", "label": "uncertain"}],
+      "vintage_notes": ""
+    },
+    "forensics.json": {
+      "findings": [{"finding_id": "", "check": "e.g. d recomputed from printed means/SDs, p vs stars, N vs df", "inputs_locators": [], "computation": "", "result": "consistent|inconsistent_beyond_rounding|not_checkable", "rounding_interval_used": "", "notes": ""}]
+    },
+    "reader_notes.md": "Free text: contradictions, missing appendices, redaction gaps, questions for the coordinator about missing inputs, limitations."
+  }
+}

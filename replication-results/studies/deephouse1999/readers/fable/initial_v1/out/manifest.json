@@ -1,0 +1,366 @@
+{
+  "paper_id": "P-OPAQUE-01",
+  "design_summary": "Pooled cross-section time-series of bank-years for commercial banks in one metropolitan banking market (Minneapolis-St. Paul, Minnesota, 'Twin Cities'), annual observations for calendar years 1985 through 1992, built from year-end Reports of Condition and Income (Call Reports). Outcome: bank ROA minus the market-average ROA in the same year. Focal regressor: a 'strategic deviation' index summing absolute standardized deviations of 11 asset-category shares from the market mean in the same year, entered linearly and squared in a hierarchy of three nested models. Estimator: weighted least squares with weights proportional to the bank's deposit market share, conventional WLS standard errors, nested-model F tests from weighted sums of squared errors.",
+  "data_sources": [
+    {
+      "file": "call_mnwi_core_1983q4_1993q4.csv (or the all-items twin call_mnwi_allitems_1983q4_1993q4.csv.gz)",
+      "use": "Primary source for every bank-level variable. Rows are reporting entity x quarter (key: quarter, RSSD9001).",
+      "columns": [
+        "quarter", "RSSD9001", "RSSD9010", "RSSD9048", "RSSD9331", "RSSD9425", "CALL8786", "RSSD9210", "RSSD9150", "RSSD9180", "RSSD9050", "RSSD9348",
+        "RCFD2170", "RCFD3368", "RCON3368", "RIAD4340", "RIAD4300", "RIAD4073", "RIAD4093",
+        "RCON2200", "RCFD2200",
+        "RCFD1766", "RCFD1600", "RCFD1410", "RCFD1975", "RCFD1590", "RCFD1400", "RCFD2165", "RCFD0010", "RCFD1350", "RCFD0390", "RCFD2146", "RCFD2145", "RCFD2150", "RCFD2130", "RCFD2155", "RCFD2143", "RCFD2160"
+      ]
+    },
+    {
+      "file": "msa_minneapolis_stpaul_counties_by_vintage.csv",
+      "use": "County list (county_fips5, state_fips, county_fips3) of metropolitan area code 5120 for the OMB definition vintage in force during 1985-1992 (1983-06-27 definition; the 1984-1990 change notes record no change to area 5120). Used to define the market by county of physical location (RSSD9210 + RSSD9150).",
+      "columns": ["definition_vintage", "omb_definition_date", "area_code", "county_fips5", "state_fips", "county_fips3", "county_name", "central_outlying_flag"]
+    },
+    {
+      "file": "deflators_long.csv",
+      "use": "Price index to convert nominal total market deposits to real terms for the market growth control. Filter by series_id.",
+      "columns": ["provider", "series_id", "frequency", "date", "bls_period", "value", "vintage"]
+    },
+    {
+      "file": "fdic_institutions_mnwi_and_linked.csv",
+      "use": "Optional cross-check of bank identity (FED_RSSD to RSSD9001, CERT to RSSD9050), establishment and inactive dates (ESTYMD, ENDEFYMD) and charter class (BKCLASS, CLCODE) when confirming that an entity is a commercial bank and when documenting foundings and exits. Not a filter source by default.",
+      "columns": ["CERT", "FED_RSSD", "NAME", "BKCLASS", "CLCODE", "STCNTY", "ESTYMD", "ENDEFYMD"]
+    },
+    {
+      "file": "fdic_structure_events_mnwi_1983_1994.csv",
+      "use": "Optional documentation of mergers, absorptions, failures and new charters (CHANGECODE, CHANGECODE_DESC, EFFDATE, ACQ_CERT, OUT_CERT, SUR_CERT). Used only to describe sample attrition; the default sample rule does not exclude acquirers (see sample_steps S7).",
+      "columns": ["EFFDATE", "CHANGECODE", "CHANGECODE_DESC", "CERT", "ACQ_CERT", "OUT_CERT", "SUR_CERT"]
+    },
+    {
+      "file": "call_item_presence_by_quarter.csv",
+      "use": "To verify that each item used exists in each year-end quarter 1984Q4-1992Q4 (in_file, any_nonmissing_mnwi) before treating a missing component as zero (see missingness_rule).",
+      "columns": ["item", "quarter", "in_file", "any_nonmissing_mnwi"]
+    }
+  ],
+  "sample_steps": [
+    {
+      "step_id": "S1",
+      "description": "Load quarterly Call Report records and keep one record per bank per quarter at the bank (consolidated) reporting level.",
+      "rule": "From call_mnwi_core_1983q4_1993q4.csv keep rows with CALL8786 in {1, 2} (fully consolidated incl. foreign offices, or domestic office consolidation). Drop rows with CALL8786 in {4, 5, 0} (head-office-only, branch/office combinations, not available). If an RSSD9001-quarter still has more than one row, keep the row with CALL8786 = 1 and log the duplication.",
+      "source": "DOC01 p9 Sample and data ('The variables were collected from the Call Reports data base maintained by U.S. government regulators'); data dictionary CALL8786 caveat",
+      "ambiguity": "The article does not describe record-level filtering; this step is a data-structure necessity."
+    },
+    {
+      "step_id": "S2",
+      "description": "Restrict to commercial banks.",
+      "rule": "Keep rows with RSSD9048 = 200 (commercial bank charter). Drop nondeposit trust companies (250), savings banks (300), savings and loans (310), industrial banks (340), Edge/agreement corporations (400) and code 0. Additionally require RSSD9331 = 1 (commercial bank entity type) where RSSD9331 is populated; log any disagreement between RSSD9048 and RSSD9331 and resolve in favor of RSSD9048.",
+      "source": "DOC01 p9 Sample and data ('a population of commercial banks'); DOC01 p4 ('A commercial bank differs from a bank holding company ... savings banks')",
+      "ambiguity": "Whether special-purpose commercial banks (RSSD9425 bank type analysis code: bankers' banks, credit-card banks, trust-only banks with a commercial charter) were retained is not stated. Default: retain all RSSD9048 = 200 entities; record RSSD9425 so a sensitivity exclusion can be run (see specification space axis A2)."
+    },
+    {
+      "step_id": "S3",
+      "description": "Restrict to banks physically located in the Minneapolis-St. Paul metropolitan area (the market).",
+      "rule": "Build county_fips5 = RSSD9210 (2 digits, zero-padded) + RSSD9150 (3 digits, zero-padded). Keep a bank-quarter if its county_fips5 is in the county list of area_code 5120 from msa_minneapolis_stpaul_counties_by_vintage.csv for definition_vintage dated 1983-06-27 (apply the same list to every year 1984-1992). Both Minnesota and Wisconsin counties of the area are included. Evaluate location quarter by quarter; a bank belongs to the market in year t if its year-end (Q4) record of year t is in the area.",
+      "source": "DOC01 p9 Sample and data ('located in the Minneapolis-St. Paul, Minnesota, United States, metropolitan area (Twin Cities)'); DOC01 p4 ('Competitive banking markets were defined by bank regulators as metropolitan areas or rural counties during the period under study')",
+      "ambiguity": "(a) The article says 'Minneapolis-St. Paul, Minnesota ... metropolitan area', which could be read as the full MN-WI metropolitan area (default) or as its Minnesota counties only. (b) The provider's MSA code RSSD9180 = 5120 is an alternative market flag whose definition vintage is unstated. (c) Banks that relocate across the boundary during the window are handled year by year."
+    },
+    {
+      "step_id": "S4",
+      "description": "Define the annual observation and the data needed for each year.",
+      "rule": "Annual observation for bank i in year t uses: (i) the December (Q4) report of year t for balance-sheet stocks (asset categories, total assets, deposits); (ii) the December report of year t for income-statement flows, which are calendar year-to-date and therefore equal the full calendar year; (iii) Schedule RC-K quarterly averages from the four quarters Q1-Q4 of year t for average assets. Analysis years are t = 1985, ..., 1992. Year 1984 values are needed only to form the lagged outcome for 1985 and the 1985 market-growth control.",
+      "source": "DOC01 p9 ('The unit of analysis is the bank-year. 1985 was the first year because regulators instituted a major revision in the Call Reports in 1984'); data dictionary general conventions (RIAD items are calendar year-to-date)",
+      "ambiguity": "The article does not state which quarter's balance sheet measures the asset strategies; year-end is the default reading of 'in a given year'. An annual average of quarterly shares is an alternative (axis V5)."
+    },
+    {
+      "step_id": "S5",
+      "description": "Market-year population used for market means, standard deviations and market totals.",
+      "rule": "For each year t in 1984-1992, the market population M_t is the set of all banks passing S1-S3 with a Q4 record in year t and non-missing RCFD2170 > 0. Market means and SDs of asset shares, the market-average ROA, total market deposits and deposit market shares are computed over M_t, before any sample attrition from lagging or outlier deletion.",
+      "source": "DOC01 p9 ('the average ROA of all Twin Cities' banks in a given year'); DOC01 p10 ('M(P_at) is the mean of asset strategy a in year t for Twin Cities' banks, and SD(P_at) is its standard deviation')",
+      "ambiguity": "Whether 'all Twin Cities banks' means all banks in the market (default) or only banks that end up in the regression sample is not stated (axis V2)."
+    },
+    {
+      "step_id": "S6",
+      "description": "Require the lagged outcome.",
+      "rule": "Keep bank-year (i, t) for t in 1985-1992 only if bank i has a valid relative ROA in year t-1 (i.e., bank i is in M_{t-1} with non-missing ROA_{i,t-1}). This drops the first observed year of newly chartered banks and any bank-year following a year with missing income data.",
+      "source": "DOC01 p9 ('After accounting for foundings, mergers, failures, the use of lagged dependent variables ...')",
+      "ambiguity": "The article does not say whether a bank with a partial first year (chartered mid-year) is kept in its first full year; default keeps it as long as t-1 data exist. Partial-year income for a mid-year charter is used as reported (year-to-date) without annualization (axis S4)."
+    },
+    {
+      "step_id": "S7",
+      "description": "Foundings, mergers and failures.",
+      "rule": "No explicit exclusion of acquirers or of banks that later fail. A bank absorbed in a merger simply stops contributing observations after its last Q4 report; the surviving/acquiring bank continues as one entity (RSSD9001 unchanged) and its post-merger balance sheet enters the asset-share calculation as reported. A bank that fails contributes observations up to its last Q4 report. A newly chartered bank enters at its first year with a valid lag (S6).",
+      "source": "DOC01 p9 ('Many acquisitions subsequently occurred, the effects of which are incorporated in the measurement of strategic position'); DOC01 p9 ('After accounting for foundings, mergers, failures ...')",
+      "ambiguity": "'Accounting for' mergers could alternatively mean dropping the acquirer's merger-year observation; the sentence about acquisitions being 'incorporated in the measurement of strategic position' points to keeping it (default). Recorded as axis S3."
+    },
+    {
+      "step_id": "S8",
+      "description": "Require complete analysis variables.",
+      "rule": "Drop bank-years with a missing value in any of: relative ROA_t, relative ROA_{t-1}, strategic deviation_t, market share_t, total expense ratio_t, real market growth_t. Listwise deletion. Do not impute.",
+      "source": "DOC01 p12 Table 2 reports a single n for all models (implies one common estimation sample)",
+      "ambiguity": "Not described; listwise deletion is the default consequence of a common n."
+    },
+    {
+      "step_id": "S9",
+      "description": "Delete the single named outlier.",
+      "rule": "Delete the 1987 observation of the bank whose RSSD9010 short name (in the 1987Q4 file) corresponds to 'Norwest Bank Minneapolis, N.A.' (national bank, Minneapolis, Hennepin County MN; confirm with RSSD9048 = 200, RSSD9421 = 1, RSSD9130 = Minneapolis, and FDIC NAME via RSSD9050 to CERT if needed). Record its RSSD9001. If more than one entity matches, choose the one with the largest RCFD2170 in 1987Q4 and log the choice.",
+      "source": "DOC01 p11 Analysis ('One outlying observation stood out ... Norwest Bank Minneapolis, N.A., in 1987 ... this observation was deleted'); DOC01 p9 ('the deletion of one outlying value')",
+      "ambiguity": "The article identified the outlier by the maximum studentized deleted residual from WLS estimates of all three models; the replication deletes by name (default) and separately reports whether the same observation has the maximum studentized deleted residual in its own estimates (axis S5). No other observation is deleted."
+    },
+    {
+      "step_id": "S10",
+      "description": "Final analysis set and scaling.",
+      "rule": "The resulting bank-years for 1985-1992 constitute the estimation sample for Models 1, 2 and 3 (identical sample for all three). Multiply relative ROA_t and relative ROA_{t-1} by 100 before estimation; leave all other variables in the units defined below.",
+      "source": "DOC01 p11 Results ('relative ROA and its lagged value were multiplied by 100 prior to estimation'); DOC01 p12 Table 2 note (single n)",
+      "ambiguity": null
+    }
+  ],
+  "variables": [
+    {
+      "name": "total_assets_eoy",
+      "role": "id",
+      "definition": "RCFD2170 at the Q4 report of year t (thousands of dollars).",
+      "timing": "Q4 of year t",
+      "transformations": "none",
+      "ambiguity": "RCFD equals RCON for banks without foreign offices; RCFD (consolidated) is used because asset strategies are bank-level.",
+      "source": "DOC01 p9 ('Each asset strategy was measured as a proportion of total assets')"
+    },
+    {
+      "name": "avg_assets",
+      "role": "id",
+      "definition": "Mean of RCFD3368 (Schedule RC-K quarterly average of total assets) over the four quarterly reports Q1, Q2, Q3, Q4 of year t, using the quarters present for that bank in year t (minimum two quarters; otherwise missing). Fallback if RCFD3368 is missing in a quarter: use RCON3368; if both are missing in all quarters, use the mean of end-of-quarter RCFD2170 over Q4 of year t-1 through Q4 of year t.",
+      "timing": "Q1-Q4 of year t",
+      "transformations": "none",
+      "ambiguity": "The article says 'average assets ... consistent with bank regulatory practice' without a formula. Alternatives: average of five quarter-end total assets (Q4 t-1 to Q4 t); average of beginning and end of year; FDIC-computed average assets. See axis V3.",
+      "source": "DOC01 p9 Dependent variable ('return on average assets (ROA), the ratio of net income to average assets. Average assets was used in the denominator, consistent with bank regulatory practice')"
+    },
+    {
+      "name": "roa",
+      "role": "outcome",
+      "definition": "RIAD4340 at the Q4 report of year t (net income, calendar year-to-date = full year) divided by avg_assets.",
+      "timing": "Q4 of year t for the numerator; year-t average for the denominator",
+      "transformations": "ratio (not percent)",
+      "ambiguity": "Net income (RIAD4340) is the plain reading of 'net income'. Income before extraordinary items (RIAD4300) is a possible alternative (axis V4).",
+      "source": "DOC01 p9 Dependent variable"
+    },
+    {
+      "name": "relative_roa",
+      "role": "outcome",
+      "definition": "roa_{i,t} minus the unweighted arithmetic mean of roa over all banks in the market population M_t (sample_steps S5) in year t.",
+      "timing": "year t",
+      "transformations": "multiplied by 100 before estimation (both current and lagged values); Table-level descriptive statistics in the article were in raw ratio units",
+      "ambiguity": "Unweighted mean over all market banks is the default reading of 'the average ROA of all Twin Cities' banks in a given year'; asset-weighted mean or mean over the regression sample are alternatives (axis V2).",
+      "source": "DOC01 p9 Dependent variable ('Relative ROA is the difference between the bank's ROA and the average ROA of all Twin Cities' banks in a given year'); DOC01 p11 Results (x100)"
+    },
+    {
+      "name": "relative_roa_lag",
+      "role": "lag",
+      "definition": "relative_roa of the same bank (same RSSD9001) in year t-1, computed with the year t-1 market population M_{t-1}.",
+      "timing": "year t-1",
+      "transformations": "multiplied by 100 before estimation",
+      "ambiguity": "None beyond relative_roa. For t = 1985 the lag uses 1984 data (1984 Q1-Q4 reports exist in the files).",
+      "source": "DOC01 p10 Control variables, Lagged dependent variable; DOC01 p11 Model 3 equation (Relative ROA_{i,t-1})"
+    },
+    {
+      "name": "asset_share_a",
+      "role": "focal",
+      "definition": "For each of 11 asset categories a, share P_{a,i,t} = item_a / RCFD2170 at the Q4 report of year t. Items (all RCFD, thousands of dollars): (1) commercial loans = RCFD1766 (commercial and industrial loans, excluding acceptances of other banks); (2) real estate loans = RCFD1410; (3) loans to individuals = RCFD1975; (4) agriculture loans = RCFD1590; (5) other loans and leases = RCFD1400 - RCFD1766 - RCFD1410 - RCFD1975 - RCFD1590 (residual of gross total loans and leases; includes lease financing receivables RCFD2165, loans to depository institutions, loans to purchase securities, loans to foreign governments, obligations of states and political subdivisions, all other loans, and acceptances of other banks); (6) cash = RCFD0010; (7) overnight money = RCFD1350 (federal funds sold and securities purchased under agreements to resell); (8) securities = RCFD0390 (total investment securities, book value); (9) trading accounts = RCFD2146; (10) fixed assets = RCFD2145; (11) other assets = RCFD2150 + RCFD2130 + RCFD2155 + RCFD2143 + RCFD2160 (other real estate owned, investments in unconsolidated subsidiaries, customers' liability on acceptances, intangible assets, other assets).",
+      "timing": "Q4 of year t",
+      "transformations": "proportion of total assets",
+      "ambiguity": "Item mappings are the reader's; the article names categories only. Defensible alternatives: commercial loans = RCFD1600 (including acceptances); other loans and leases = explicit sum of components rather than residual; other assets = RCFD2160 only, or residual RCFD2170 minus the ten other categories (which would absorb the loan-loss allowance and unearned income with negative sign). Shares need not sum to one (loans are gross of allowance and unearned income). See axes V6-V8.",
+      "source": "DOC01 p9 Independent variable ('This research examined 11 strategy variables: commercial loans, real estate loans, loans to individuals, agriculture loans, other loans and leases, cash, overnight money, securities, trading accounts, fixed assets, and other assets. Each asset strategy was measured as a proportion of total assets')"
+    },
+    {
+      "name": "strategic_deviation",
+      "role": "focal",
+      "definition": "SD_{i,t} = sum over a = 1..11 of | (P_{a,i,t} - M_{a,t}) / S_{a,t} |, where M_{a,t} is the unweighted mean and S_{a,t} the standard deviation (n-1 denominator) of P_{a,·,t} over the market population M_t in year t. If S_{a,t} = 0 for some category-year, set that category's term to 0 for all banks in that year and log it.",
+      "timing": "year t (Q4 balance sheets)",
+      "transformations": "sum of absolute z-scores; range >= 0",
+      "ambiguity": "Standard deviation denominator (n-1 vs n) is not stated (axis V9). Population M_t vs regression sample for the mean/SD (axis V2). Zero-SD handling not stated.",
+      "source": "DOC01 p9-10 Independent variable and equation ('Strategic Deviation_it = sum_{a=1}^{11} ABS[(P_ait - M(P_at))/SD(P_at)]')"
+    },
+    {
+      "name": "strategic_deviation_sq",
+      "role": "focal",
+      "definition": "strategic_deviation squared (not centered before squaring).",
+      "timing": "year t",
+      "transformations": "square of the raw index",
+      "ambiguity": "The article does not mention centering before squaring and reports the raw-index correlation with its square, so no centering is applied.",
+      "source": "DOC01 p11 Model 3 equation (b1 * Strategic Deviation_it^2); DOC01 p11 Results (correlation between SD and its squared value)"
+    },
+    {
+      "name": "market_share",
+      "role": "control",
+      "definition": "RCON2200 (total deposits, domestic offices) of bank i at the Q4 report of year t divided by the sum of RCON2200 over all banks in M_t at the Q4 report of year t. Proportion (0-1), not percent.",
+      "timing": "Q4 of year t",
+      "transformations": "proportion",
+      "ambiguity": "Deposit concept (domestic RCON2200 vs consolidated RCFD2200; identical for banks without foreign offices), timing (year-end vs annual average), and denominator population (commercial banks in M_t vs all depository institutions) are not stated (axes V10-V11).",
+      "source": "DOC01 p10 Control variables, Market share of deposits ('Market share based on deposits is used here'); DOC01 p12 Table 1 scale (proportion)"
+    },
+    {
+      "name": "total_expense_ratio",
+      "role": "control",
+      "definition": "(RIAD4073 + RIAD4093) at the Q4 report of year t (total interest expense plus total noninterest expense, full calendar year) divided by avg_assets. Proportion, not percent.",
+      "timing": "Q4 of year t (year-to-date flows) over year-t average assets",
+      "transformations": "proportion",
+      "ambiguity": "Provision for loan losses (RIAD4230) is not part of 'interest and non-interest expense' on Schedule RI and is excluded; the article does not mention it.",
+      "source": "DOC01 p10 Control variables, Total expense ratio ('the ratio of total interest and non-interest expense to total average assets')"
+    },
+    {
+      "name": "real_market_growth",
+      "role": "control",
+      "definition": "100 * [ (D_t / P_t) / (D_{t-1} / P_{t-1}) - 1 ], where D_t = sum of RCON2200 over all banks in M_t at the Q4 report of year t (total market deposits) and P_t = annual average CPI-U, all items, U.S. city average, not seasonally adjusted (deflators_long.csv, series_id CPIAUCNS with frequency = annual average as provided by FRED; if the annual row is absent, use the December value of CUUR0000SA0/CPIAUCNS, and record which). Same value for every bank in year t.",
+      "timing": "Q4 of years t and t-1; price index for years t and t-1",
+      "transformations": "percent",
+      "ambiguity": "The article says only 'annual percent change in real total market deposits'. Deflator (national CPI vs Minneapolis-St. Paul area CPI vs GDP deflator), averaging convention (annual average vs December), and deposit population are not stated (axes V12-V13). The market-growth variable has only eight distinct values (one per year).",
+      "source": "DOC01 p10 Control variables, Market growth of deposits ('the annual percent change in real total market deposits was included as a control variable'); DOC01 p12 Table 1 label 'Real Market Growth (%)'"
+    },
+    {
+      "name": "wls_weight",
+      "role": "weight",
+      "definition": "w_{i,t} = market_share_{i,t} (weights proportional to deposit market share, because error variance is assumed inversely proportional to market share).",
+      "timing": "year t",
+      "transformations": "none (raw proportion). Rescaling all weights by a constant leaves coefficients, standard errors and F tests unchanged but rescales the sum of squared errors.",
+      "ambiguity": "The article states variance 'inversely proportional to market share', which implies weight = market share. The weight scale (raw proportion vs normalized to mean one) affects only the printed SSE magnitude (axis E1).",
+      "source": "DOC01 p11 Analysis ('the error variance was inversely proportional to market share. Weighted least-squares estimation ... was used')"
+    },
+    {
+      "name": "bank_id",
+      "role": "id",
+      "definition": "RSSD9001.",
+      "timing": "constant",
+      "transformations": "none",
+      "ambiguity": null,
+      "source": "data dictionary RSSD9001"
+    },
+    {
+      "name": "year",
+      "role": "id",
+      "definition": "Calendar year of the Q4 report (quarter string YYYYQ4).",
+      "timing": "year t",
+      "transformations": "none",
+      "ambiguity": null,
+      "source": "DOC01 p9 ('The unit of analysis is the bank-year')"
+    }
+  ],
+  "estimator": {
+    "method": "Weighted least squares (a special case of GLS) on the pooled bank-year sample, with weights w = market_share. Equivalent to OLS on all variables (including the intercept column) multiplied by sqrt(w). Report coefficients, conventional WLS standard errors, and the weighted sum of squared errors SSE = sum_i w_i * e_i^2 for each model.",
+    "source": "DOC01 p11 Analysis (heteroscedasticity paragraph; 'These are reported in the results')"
+  },
+  "models": [
+    {
+      "model_id": "M1",
+      "outcome": "relative_roa x100",
+      "regressors": ["intercept", "market_share", "total_expense_ratio", "real_market_growth", "relative_roa_lag x100"],
+      "source": "DOC01 p11 Analysis ('Model 1 tested the control variables'); DOC01 p12 Table 2 Model 1 rows"
+    },
+    {
+      "model_id": "M2",
+      "outcome": "relative_roa x100",
+      "regressors": ["intercept", "strategic_deviation", "market_share", "total_expense_ratio", "real_market_growth", "relative_roa_lag x100"],
+      "source": "DOC01 p11 Analysis ('Model 2 added the first-order strategic deviation term'); DOC01 p12 Table 2 Model 2 rows"
+    },
+    {
+      "model_id": "M3",
+      "outcome": "relative_roa x100",
+      "regressors": ["intercept", "strategic_deviation_sq", "strategic_deviation", "market_share", "total_expense_ratio", "real_market_growth", "relative_roa_lag x100"],
+      "source": "DOC01 p11 Analysis and Model 3 equation; DOC01 p12 Table 2 Model 3 rows"
+    },
+    {
+      "model_id": "M3_noLinear (robustness)",
+      "outcome": "relative_roa x100",
+      "regressors": ["intercept", "strategic_deviation_sq", "market_share", "total_expense_ratio", "real_market_growth", "relative_roa_lag x100"],
+      "source": "DOC01 p13 Results ('Model 3 was estimated without the first-order term')"
+    }
+  ],
+  "fixed_effects": {
+    "value": "None. No bank or year fixed effects. Year-level market and macroeconomic factors are handled indirectly by demeaning the outcome within year (relative ROA) and by the market-growth control.",
+    "source": "DOC01 p9 Dependent variable ('This procedure also controls indirectly for several market and macroeconomic factors'); DOC01 p11 Model 3 equation (no fixed-effect terms)"
+  },
+  "covariance_method": {
+    "value": "Conventional (model-based) WLS standard errors, i.e. sigma^2 (X'WX)^-1 with sigma^2 = SSE_w / (n - k). No robust or clustered covariance.",
+    "source": "DOC01 p11 Analysis (no mention of robust or clustered errors; WLS chosen to address heteroscedasticity); DOC01 p12 Table 2 note a ('Standard errors are in parentheses')"
+  },
+  "autocorrelation_handling": {
+    "value": "Diagnostic only. First-order autocorrelation within bank was assumed as the alternative and tested with Durbin's h statistic (appropriate with a lagged dependent variable), computed on the panel stacked by bank with a missing row inserted between banks so lags are not formed across banks. The h statistics were judged not significant and no autocorrelation correction was applied to the reported WLS models. Implementers should compute Durbin h per model (h = rho_hat * sqrt(n / (1 - n * Var_hat(b_lag))), using the WLS residuals, rho_hat from the within-bank lag-1 residual regression, and Var_hat(b_lag) the estimated variance of the lagged-outcome coefficient) and report it; if 1 - n*Var_hat(b_lag) <= 0 report h as undefined.",
+    "source": "DOC01 p11 Analysis (autocorrelation paragraph: 'Missing values were inserted between each bank ... Durbin's h-statistics ... were used to test for autocorrelation in the presence of lagged dependent variables ... Kennedy (1992: 140-141) noted that OLS estimators are usually the most appropriate estimator in this case')"
+  },
+  "outlier_rule": {
+    "value": "Exactly one bank-year deleted: the 1987 observation of Norwest Bank Minneapolis, N.A. (sample_steps S9). Diagnostic to report: studentized deleted residuals (externally studentized, computed from the WLS fit treated as OLS on sqrt(w)-transformed data) for each model; identify the maximum and the ratio to the second largest.",
+    "source": "DOC01 p11 Analysis (outlier paragraph)"
+  },
+  "missingness_rule": {
+    "value": "(1) Provider missing values are not imputed. (2) For the 11 asset categories: if a component item is missing on a bank's Q4 record while RCFD2170 is present and call_item_presence_by_quarter.csv shows the item is not collected (in_file = 0 or any_nonmissing_mnwi = 0) for that quarter, treat the component as 0; if the item is collected in that quarter but missing for that bank, the share is missing and the bank-year is dropped (S8). Log counts. (3) Income items missing at Q4 make ROA missing. (4) Listwise deletion of bank-years with any missing analysis variable.",
+    "source": "Not described in DOC01; source descriptions ('Smaller-bank forms collect fewer detail items, so component items can be missing for some banks while totals are present')"
+  },
+  "software_defaults": {
+    "value": "Software not stated in the article. Use any WLS implementation; verify that the weight enters as w (not sqrt(w) or 1/w) by checking that OLS on sqrt(w)-scaled data reproduces the estimates. Standard deviation for z-scores: n-1 denominator (common software default). Correlations in descriptive tables: Pearson, pairwise over the estimation sample.",
+    "source": "DOC01 p11 Analysis (no software named)"
+  },
+  "model_comparison_tests": {
+    "value": "Nested-model F tests computed from weighted SSE: F = [(SSE_restricted - SSE_full) / q] / [SSE_full / (n - k_full)], where q is the number of added regressors and k_full the number of estimated parameters including the intercept. Three comparisons: M2 vs M1 (q = 1), M3 vs M1 (q = 2), M3 vs M2 (q = 1). Report delta SSE, F, degrees of freedom and p value. R-squared is not interpreted after the GLS transformation.",
+    "source": "DOC01 p11 Analysis ('The GLS transformation negates the interpretability of R-squared goodness of fit measures. Because of this, Models 1, 2, and 3 were compared using F-tests computed with sums of squared errors'); DOC01 p12-13 Results (d.f. reported as 1,954; 2,953; 1,953)"
+  },
+  "additional_diagnostics": {
+    "value": "(a) Pearson correlation between strategic_deviation and strategic_deviation_sq. (b) Condition number of the Model 3 regressor matrix following Belsley, Kuh and Welsch (columns scaled to unit length, intercept included, no centering); report the largest condition index. (c) Residual plots of OLS residuals against fitted values, year and each regressor (to document the heteroscedasticity pattern vs market share).",
+    "source": "DOC01 p11 Results (correlation); DOC01 p13 Results (condition numbers; Belsley, Kuh and Welsch, 1980); DOC01 p11 Analysis (residual plots)"
+  },
+  "inference": {
+    "observation_unit": "bank-year",
+    "sampling_unit": "Not a sample: the full population of commercial banks in one metropolitan market over 1985-1992 (DOC01 p9 'a population of commercial banks competing in a single market').",
+    "assignment_unit": "Not applicable (observational; strategic deviation is a bank-year attribute).",
+    "clusters": "Not applicable in the published analysis: no clustering; repeated observations of the same bank are treated as independent after the Durbin h diagnostic (DOC01 p11). The natural cluster for a sensitivity analysis would be the bank (RSSD9001).",
+    "native_se_method": "Conventional WLS standard errors (DOC01 p12 Table 2 note a; DOC01 p11 Analysis).",
+    "software_if_stated": null,
+    "first_stage_strength": "Not applicable (no instrumental variables).",
+    "tail_and_direction_by_hypothesis": {
+      "H1": "Directional (positive coefficient on strategic_deviation in M2); table stars use conventional significance levels with tails unstated (DOC01 p10 Hypothesis 1; p12 Table 2 note).",
+      "H2": "Directional (negative coefficient on strategic_deviation in M2); tails unstated (DOC01 p10 Hypothesis 2).",
+      "H3": "Directional (negative coefficient on strategic_deviation_sq in M3) plus improvement in fit by F test over M1 and M2 and an interior maximum within the observed range of strategic_deviation (DOC01 p10 Hypothesis 3; p11 Analysis; p13 Results).",
+      "controls": "Expected signs: market_share positive, total_expense_ratio negative, real_market_growth positive, relative_roa_lag positive (DOC01 p10 Control variables)."
+    },
+    "alpha": "Stars at 0.05, 0.01 and 0.001 (DOC01 p12 Tables 1 and 2 notes); text discusses results at the p < 0.001 level."
+  },
+  "documentation_scores": {
+    "specificity": {"score": 3, "justification": "Model equation, variable list, weighting rule and nested F tests are explicit, but Call Report item mappings, the market boundary, average-asset formula and deflator are not specified (DOC01 p9-11)."},
+    "precision": {"score": 3, "justification": "Coefficients and SEs printed to three decimals, F statistics with degrees of freedom, but no exact p values and some small coefficients (0.001 / 0.0001) are printed at a precision that limits comparison (DOC01 p12-13)."},
+    "exhaustiveness": {"score": 2, "justification": "Sample attrition from foundings, mergers and failures is described only in one sentence; no counts by year, no description of the 1984 lag year, no appendix or codebook; models with asset-strategy controls are unreported (DOC01 p9, p10-11)."}
+  },
+  "unavailable_or_vintage_fallbacks": [
+    {
+      "item": "Market definition (metropolitan area boundary)",
+      "fallback": "Primary: county list of area 5120 from the 1983-06-27 OMB definition (msa_minneapolis_stpaul_counties_by_vintage.csv). Fallback/sensitivity: RSSD9180 = 5120 as carried on each quarterly file. Report the number of banks that differ between the two rules.",
+      "rationale": "The provider's MSA code vintage is unstated (data dictionary RSSD9180 caveat); the OMB 1983 definition was in force throughout 1985-1992 with no change to area 5120 (source descriptions section 5)."
+    },
+    {
+      "item": "Average assets (RCFD3368) missing for a quarter",
+      "fallback": "Use RCON3368; if still missing, mean of end-of-quarter RCFD2170 from Q4 of year t-1 to Q4 of year t.",
+      "rationale": "RC-K quarterly averages are reported on all forms but may be missing for individual records; end-of-period averaging is the standard substitute (call_item_candidates.json note on 3368)."
+    },
+    {
+      "item": "Commercial and industrial loans excluding acceptances (RCFD1766)",
+      "fallback": "Use RCFD1600 (including acceptances) if RCFD1766 is missing for a bank-quarter; 1983Q4 follows the pre-1984 layout and is not needed for asset shares (only 1984Q4 onward is used for lagged outcomes, and asset shares start in 1985).",
+      "rationale": "Source descriptions, reporting-form changes (1766 introduced March 1984)."
+    },
+    {
+      "item": "Trading account assets (RCFD2146) and other small-form items missing",
+      "fallback": "Treat as zero when the item is not collected on the bank's form in that quarter (verify with call_item_presence_by_quarter.csv); otherwise missing.",
+      "rationale": "Smaller-bank forms collect fewer items (source descriptions section 1)."
+    },
+    {
+      "item": "Deflator for real market deposits",
+      "fallback": "Primary: national CPI-U NSA annual average (CPIAUCNS / CUUR0000SA0). Sensitivity: Minneapolis-St. Paul area CPI (CUUSA211SA0 annual; available from 1984) and GDP implicit price deflator (A191RD3A086NBEA annual, current vintage). Note that ALFRED real-time vintages of GDPDEF differ in base year; base-year differences do not affect percent changes but revised values do.",
+      "rationale": "The article does not name the deflator (DOC01 p10). The area CPI is available only semiannually/annually after 1986 (source descriptions section 4)."
+    },
+    {
+      "item": "Fed funds sold and reverse repos",
+      "fallback": "Use RCFD1350 (combined) in all years; do not use 0276/0277 which exist only from 1988.",
+      "rationale": "Source descriptions, reporting-form changes."
+    },
+    {
+      "item": "FDIC financial fields (fdic_financials_core_mnwi_1984q1_1994q4.csv)",
+      "fallback": "Use only as a cross-check (e.g., FDIC ROA field, DEP, ASSET) or if a Call Report item is unavailable for a bank-year; FDIC derivations may differ from Call Report items.",
+      "rationale": "Source descriptions section 3 limitations."
+    },
+    {
+      "item": "Outlier bank identity",
+      "fallback": "If no entity short name in RSSD9010 matches, link RSSD9050 to FDIC CERT and search fdic_institutions_mnwi_and_linked.csv NAME for the bank; if still unmatched, report the observation with the largest studentized deleted residual in Model 2 as the candidate and do not delete without logging.",
+      "rationale": "Name fields may be abbreviated on archival files (data dictionary RSSD9010)."
+    }
+  ]
+}

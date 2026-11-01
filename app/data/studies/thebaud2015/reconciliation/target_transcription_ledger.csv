@@ -1,0 +1,360 @@
+table,model,row,quantity,fable_value,astra_value,fable_se,astra_se,fable_stars,astra_stars,fable_printed,astra_printed,page,doc,status
+Table 1,1,2002,coefficient,0.05,0.05,0.08,0.08,,,.05,.05,19,MAIN,agree
+Table 1,1,2003,coefficient,0.01,0.01,0.08,0.08,,,.01,.01,19,MAIN,agree
+Table 1,1,2004,coefficient,0.13,0.13,0.08,0.08,•,•,.13•,.13•,19,MAIN,agree
+Table 1,1,2005,coefficient,0.2,0.2,0.08,0.08,••,••,.20••,.20••,19,MAIN,agree
+Table 1,1,2006,coefficient,0.04,0.04,0.08,0.08,,,.04,.04,19,MAIN,agree
+Table 1,1,2007,coefficient,0.07,0.07,0.08,0.08,,,.07,.07,19,MAIN,agree
+Table 1,1,2008,coefficient,0.2,0.2,0.09,0.09,••,••,.20••,.20••,19,MAIN,agree
+Table 1,1,age,coefficient,0.02,0.02,0.001,0.001,•••,•••,.02•••,.02•••,19,MAIN,agree
+Table 1,1,age squared,coefficient,-0.001,-0.001,0.0001,0.0001,•••,•••,–.001•••,–.001•••,19,MAIN,agree
+Table 1,1,female,coefficient,-0.57,-0.57,0.04,0.04,•••,•••,–.57•••,–.57•••,19,MAIN,agree
+Table 1,1,intercept,coefficient,-1.63,-1.63,0.1,0.1,•••,•••,–1.63•••,–1.63•••,19,MAIN,agree
+Table 1,1,postsecondary degree or higher,coefficient,0.04,0.04,0.01,0.01,•••,•••,.04•••,.04•••,19,MAIN,agree
+Table 1,1,aic,fit_statistic,265533.3,265533.3,,,,,265533.3,265533.3,19,MAIN,agree
+Table 1,1,log likelihood,fit_statistic,-132748.67,-132748.67,,,,,–132748.67,–132748.67,19,MAIN,agree
+Table 1,1,n individual level,n_individuals,354143,354143.0,,,,,"354, 143","354, 143",19,MAIN,agree
+Table 1,1,between country female s.d.,variance_component,0.1968,0.1968,,,,,.1968,.1968,19,MAIN,agree
+Table 1,1,between country intercept s.d.,variance_component,0.3842,0.3842,,,,,.3842,.3842,19,MAIN,agree
+Table 1,1,between survey female s.d.,variance_component,0.131,0.131,,,,,.1310,.1310,19,MAIN,agree
+Table 1,1,between survey intercept s.d.,variance_component,0.2125,0.2125,,,,,.2125,.2125,19,MAIN,agree
+Table 1,2,2002,coefficient,0.11,0.11,0.08,0.08,,,.11,.11,19,MAIN,agree
+Table 1,2,2003,coefficient,0.06,0.06,0.08,0.08,,,.06,.06,19,MAIN,agree
+Table 1,2,2004,coefficient,0.09,0.09,0.08,0.08,,,.09,.09,19,MAIN,agree
+Table 1,2,2005,coefficient,0.24,0.24,0.09,0.09,•••,•••,.24•••,.24•••,19,MAIN,agree
+Table 1,2,2006,coefficient,0.08,0.08,0.09,0.09,,,.08,.08,19,MAIN,agree
+Table 1,2,2007,coefficient,0.11,0.11,0.09,0.09,,,.11,.11,19,MAIN,agree
+Table 1,2,2008,coefficient,0.18,0.18,0.1,0.1,•,•,.18•,.18•,19,MAIN,agree
+Table 1,2,age,coefficient,0.02,0.02,0.001,0.001,•••,•••,.02•••,.02•••,19,MAIN,agree
+Table 1,2,age squared,coefficient,-0.001,-0.001,,-0.001,•••,•••,–.001•••,–.001•••,19,MAIN,disagree
+Table 1,2,employment protection index,coefficient,-0.001,-0.001,0.07,0.07,,,–.001,–.001,19,MAIN,agree
+Table 1,2,female,coefficient,-0.57,-0.57,0.04,0.04,•••,•••,–.57•••,–.57•••,19,MAIN,agree
+Table 1,2,fertility rate,coefficient,0.09,0.09,0.09,0.09,,,.09,.09,19,MAIN,agree
+Table 1,2,gdp,coefficient,-0.2,-0.2,0.07,0.07,•••,•••,–.20•••,–.20•••,19,MAIN,agree
+Table 1,2,intercept,coefficient,-1.65,-1.65,0.09,0.09,•••,•••,–1.65•••,–1.65•••,19,MAIN,agree
+Table 1,2,paid leave for mothers,coefficient,-0.13,-0.13,0.13,0.13,,,–.13,–.13,19,MAIN,agree
+Table 1,2,paid leave squared,coefficient,0.18,0.18,0.12,0.12,,,.18,.18,19,MAIN,agree
+Table 1,2,percent women managers,coefficient,0.01,0.01,0.06,0.06,,,.01,.01,19,MAIN,agree
+Table 1,2,postsecondary degree or higher,coefficient,0.04,0.04,0.01,0.01,•••,•••,.04•••,.04•••,19,MAIN,agree
+Table 1,2,social status of entrepreneurship,coefficient,0.18,0.18,0.04,0.04,•••,•••,.18•••,.18•••,19,MAIN,agree
+Table 1,2,state childcare spending,coefficient,0.04,0.04,0.06,0.06,,,.04,.04,19,MAIN,agree
+Table 1,2,unemployment rate,coefficient,-0.08,-0.08,0.06,0.06,,,–.08,–.08,19,MAIN,agree
+Table 1,2,women s part time employment,coefficient,0.03,0.03,0.07,0.07,,,.03,.03,19,MAIN,agree
+Table 1,2,aic,fit_statistic,265528.1,265528.1,,,,,265528.1,265528.1,19,MAIN,agree
+Table 1,2,log likelihood,fit_statistic,-132736.03,-132736.03,,,,,–132736.03,–132736.03,19,MAIN,agree
+Table 1,2,n individual level,n_individuals,354143,354143.0,,,,,"354, 143","354, 143",19,MAIN,agree
+Table 1,2,between country female s.d.,variance_component,0.1951,0.1951,,,,,.1951,.1951,19,MAIN,agree
+Table 1,2,between country intercept s.d.,variance_component,0.2878,0.2878,,,,,.2878,.2878,19,MAIN,agree
+Table 1,2,between survey female s.d.,variance_component,0.1301,0.1301,,,,,.1301,.1301,19,MAIN,agree
+Table 1,2,between survey intercept s.d.,variance_component,0.209,0.209,,,,,.2090,.2090,19,MAIN,agree
+Table 1,3,2002,coefficient,0.11,0.11,0.08,0.08,,,.11,.11,19,MAIN,agree
+Table 1,3,2003,coefficient,0.07,0.07,0.08,0.08,,,.07,.07,19,MAIN,agree
+Table 1,3,2004,coefficient,0.1,0.1,0.08,0.08,,,.10,.10,19,MAIN,agree
+Table 1,3,2005,coefficient,0.25,0.25,0.09,0.09,•••,•••,.25•••,.25•••,19,MAIN,agree
+Table 1,3,2006,coefficient,0.09,0.09,0.09,0.09,,,.09,.09,19,MAIN,agree
+Table 1,3,2007,coefficient,0.13,0.13,0.09,0.09,,,.13,.13,19,MAIN,agree
+Table 1,3,2008,coefficient,0.2,0.2,0.1,0.1,••,••,.20••,.20••,19,MAIN,agree
+Table 1,3,age,coefficient,0.02,0.02,0.001,0.001,•••,•••,.02•••,.02•••,19,MAIN,agree
+Table 1,3,age squared,coefficient,-0.001,-0.001,0.0001,0.0001,•••,•••,–.001•••,–.001•••,19,MAIN,agree
+Table 1,3,childcare x female,coefficient,-0.1,-0.1,0.04,0.04,•••,•••,–.10•••,–.10•••,19,MAIN,agree
+Table 1,3,employment protection index,coefficient,-0.02,-0.02,0.07,0.07,,,–0.02,–0.02,19,MAIN,agree
+Table 1,3,female,coefficient,-0.58,-0.58,0.04,0.04,•••,•••,–.58•••,–.58•••,19,MAIN,agree
+Table 1,3,fertility rate,coefficient,0.07,0.07,0.08,0.08,,,0.07,0.07,19,MAIN,agree
+Table 1,3,gdp,coefficient,-0.2,-0.2,0.07,0.07,•••,•••,–0.20•••,–0.20•••,19,MAIN,agree
+Table 1,3,intercept,coefficient,-1.67,-1.67,0.09,0.09,•••,•••,–1.67•••,–1.67•••,19,MAIN,agree
+Table 1,3,paid leave for mothers,coefficient,-0.15,-0.15,0.13,0.13,,,–.15,–.15,19,MAIN,agree
+Table 1,3,paid leave squared,coefficient,0.18,0.18,0.12,0.12,,,.18,.18,19,MAIN,agree
+Table 1,3,paid leave squared x female,coefficient,0.01,0.01,0.08,0.08,,,.01,.01,19,MAIN,agree
+Table 1,3,paid leave x female,coefficient,-0.05,-0.05,0.08,0.08,,,–.05,–.05,19,MAIN,agree
+Table 1,3,part time employment x female,coefficient,-0.03,-0.03,0.04,0.04,,,–.03,–.03,19,MAIN,agree
+Table 1,3,percent women managers,coefficient,0.001,0.001,0.06,0.06,,,0.001,0.001,19,MAIN,agree
+Table 1,3,postsecondary degree or higher,coefficient,0.04,0.04,0.01,0.01,•••,•••,.04•••,.04•••,19,MAIN,agree
+Table 1,3,social status of entrepreneurship,coefficient,0.18,0.18,0.04,0.04,•••,•••,0.18•••,0.18•••,19,MAIN,agree
+Table 1,3,state childcare spending,coefficient,0.04,0.04,0.06,0.06,,,.04,.04,19,MAIN,agree
+Table 1,3,unemployment rate,coefficient,-0.08,-0.08,0.06,0.06,,,–0.08,–0.08,19,MAIN,agree
+Table 1,3,women s part time employment,coefficient,0.03,0.03,0.07,0.07,,,.03,.03,19,MAIN,agree
+Table 1,3,aic,fit_statistic,265527.8,265527.8,,,,,265527.8,265527.8,19,MAIN,agree
+Table 1,3,log likelihood,fit_statistic,-132731.91,-132731.91,,,,,–132731.91,–132731.91,19,MAIN,agree
+Table 1,3,n individual level,n_individuals,354143,354143.0,,,,,"354, 143","354, 143",19,MAIN,agree
+Table 1,3,between country female s.d.,variance_component,0.1405,0.1405,,,,,.1405,.1405,19,MAIN,agree
+Table 1,3,between country intercept s.d.,variance_component,0.28,0.28,,,,,.2800,.2800,19,MAIN,agree
+Table 1,3,between survey female s.d.,variance_component,0.1353,0.1353,,,,,.1353,.1353,19,MAIN,agree
+Table 1,3,between survey intercept s.d.,variance_component,0.2081,0.2081,,,,,.2081,.2081,19,MAIN,agree
+Table 2,4,2002,coefficient,-0.04,-0.04,0.13,0.13,,,–.04 (.13),–.04 (.13),22,MAIN,agree
+Table 2,4,2003,coefficient,0.004,0.004,0.13,0.13,,,.004 (.13),.004 (.13),22,MAIN,agree
+Table 2,4,2004,coefficient,-0.02,-0.02,0.12,0.12,,,–.02 (.12),–.02 (.12),22,MAIN,agree
+Table 2,4,2005,coefficient,0.16,0.16,0.13,0.13,,,.16 (.13),.16 (.13),22,MAIN,agree
+Table 2,4,2006,coefficient,0.09,0.09,0.13,0.13,,,.09 (.13),.09 (.13),22,MAIN,agree
+Table 2,4,2007,coefficient,0.24,0.24,0.14,0.14,,,.24 (.14),.24 (.14),22,MAIN,agree
+Table 2,4,2008,coefficient,0.38,0.38,0.14,0.14,•••,•••,.38••• (.14),.38••• (.14),22,MAIN,agree
+Table 2,4,age,coefficient,0.01,0.01,0.002,0.002,•••,•••,.01••• (.002),.01••• (.002),22,MAIN,agree
+Table 2,4,age squared,coefficient,0.0,0.0,0.0,0.0,,,.00 (.00),.00 (.00),22,MAIN,agree
+Table 2,4,business age,coefficient,0.09,0.09,0.02,0.02,•••,•••,.09••• (.02),.09••• (.02),22,MAIN,agree
+Table 2,4,childcare x female,coefficient,-0.1,-0.1,0.04,0.04,••,••,–.10•• (.04),–.10•• (.04),22,MAIN,agree
+Table 2,4,employment protection index,coefficient,-0.09,-0.09,0.06,0.06,,,–.09 (.06),–.09 (.06),22,MAIN,agree
+Table 2,4,female,coefficient,0.06,0.06,0.03,0.03,•,•,.06• (.03),.06• (.03),22,MAIN,agree
+Table 2,4,fertility rate,coefficient,-0.09,-0.09,0.08,0.08,,,–.09 (.08),–.09 (.08),22,MAIN,agree
+Table 2,4,gdp,coefficient,-0.15,-0.15,0.07,0.07,••,••,–.15•• (.07),–.15•• (.07),22,MAIN,agree
+Table 2,4,intercept,coefficient,-1.0,-1.0,0.12,0.12,•••,•••,–1.00••• (.12),–1.00••• (.12),22,MAIN,agree
+Table 2,4,paid leave for mothers,coefficient,-0.14,-0.14,0.15,0.15,,,–.14 (.15),–.14 (.15),22,MAIN,agree
+Table 2,4,paid leave squared,coefficient,0.13,0.13,0.14,0.14,,,.13 (.14),.13 (.14),22,MAIN,agree
+Table 2,4,paid leave squared x female,coefficient,-0.1,-0.1,0.11,0.11,,,–.10 (.11),–.10 (.11),22,MAIN,agree
+Table 2,4,paid leave x female,coefficient,0.07,0.07,0.1,0.1,,,.07 (.10),.07 (.10),22,MAIN,agree
+Table 2,4,part time employment x female,coefficient,-0.1,-0.1,0.03,0.03,•••,•••,–.10••• (.03),–.10••• (.03),22,MAIN,agree
+Table 2,4,percent women managers,coefficient,-0.23,-0.23,0.07,0.07,•••,•••,–.23••• (.07),–.23••• (.07),22,MAIN,agree
+Table 2,4,postsecondary degree or higher,coefficient,-0.33,-0.33,0.03,0.03,•••,•••,–.33••• (.03),–.33••• (.03),22,MAIN,agree
+Table 2,4,social status of entrepreneurship,coefficient,0.09,0.09,0.05,0.05,•,•,.09• (.05),.09• (.05),22,MAIN,agree
+Table 2,4,sole owner of business 1 yes,coefficient,0.17,0.17,0.03,0.03,•••,•••,.17••• (.03),.17••• (.03),22,MAIN,agree
+Table 2,4,state childcare spending,coefficient,-0.02,-0.02,0.07,0.07,,,–.02 (.07),–.02 (.07),22,MAIN,agree
+Table 2,4,unemployment rate,coefficient,0.15,0.15,0.07,0.07,••,••,.15•• (.07),.15•• (.07),22,MAIN,agree
+Table 2,4,women s part time employment,coefficient,0.06,0.06,0.06,0.06,,,.06 (.06),.06 (.06),22,MAIN,agree
+Table 2,4,aic,fit_statistic,34726.88,34726.88,,,,,34726.88,34726.88,22,MAIN,agree
+Table 2,4,log likelihood,fit_statistic,-17329.44,-17329.44,,,,,–17329.44,–17329.44,22,MAIN,agree
+Table 2,4,n individual level,n_individuals,28775,28775.0,,,,,28775,28775,22,MAIN,agree
+Table 2,4,between country female s.d.,variance_component,0.0044,0.0044,,,,,.0044,.0044,22,MAIN,agree
+Table 2,4,between country intercept s.d.,variance_component,0.1858,0.1858,,,,,.1858,.1858,22,MAIN,agree
+Table 2,4,between survey female s.d.,variance_component,0.0232,0.0232,,,,,.0232,.0232,22,MAIN,agree
+Table 2,4,between survey intercept s.d.,variance_component,0.2454,0.2454,,,,,.2454,.2454,22,MAIN,agree
+Table 2,5,2002,coefficient,-0.02,-0.02,0.07,0.07,,,–.02 (.07),–.02 (.07),22,MAIN,agree
+Table 2,5,2003,coefficient,0.04,0.04,0.07,0.07,,,.04 (.07),.04 (.07),22,MAIN,agree
+Table 2,5,2004,coefficient,-0.001,-0.001,0.07,0.07,,,–.001 (.07),–.001 (.07),22,MAIN,agree
+Table 2,5,2005,coefficient,0.02,0.02,0.07,0.07,,,.02 (.07),.02 (.07),22,MAIN,agree
+Table 2,5,2006,coefficient,0.07,0.07,0.07,0.07,,,.07 (.07),.07 (.07),22,MAIN,agree
+Table 2,5,2007,coefficient,0.1,0.1,0.08,0.08,,,.10 (.08),.10 (.08),22,MAIN,agree
+Table 2,5,2008,coefficient,0.03,0.03,0.08,0.08,,,.03 (.08),.03 (.08),22,MAIN,agree
+Table 2,5,age,coefficient,-0.002,-0.002,0.001,0.001,•••,•••,–.002••• (.001),–.002••• (.001),22,MAIN,agree
+Table 2,5,age squared,coefficient,0.0,0.0,0.0,0.0,,,.00 (.000),.00 (.000),22,MAIN,agree
+Table 2,5,business age,coefficient,0.11,0.11,0.01,0.01,•••,•••,.11••• (.01),.11••• (.01),22,MAIN,agree
+Table 2,5,childcare x female,coefficient,-0.01,-0.01,0.03,0.03,,,–.01 (.03),–.01 (.03),22,MAIN,agree
+Table 2,5,employment protection index,coefficient,-0.05,-0.05,0.03,0.03,•,•,–.05• (.03),–.05• (.03),22,MAIN,agree
+Table 2,5,female,coefficient,-0.25,-0.25,0.02,0.02,•••,•••,–.25••• (.02),–.25••• (.02),22,MAIN,agree
+Table 2,5,fertility rate,coefficient,-0.05,-0.05,0.04,0.04,,,–.05 (.04),–.05 (.04),22,MAIN,agree
+Table 2,5,gdp,coefficient,-0.02,-0.02,0.03,0.03,,,–.02 (.03),–.02 (.03),22,MAIN,agree
+Table 2,5,intercept,coefficient,1.54,1.54,0.06,0.06,•••,•••,1.54••• (.06),1.54••• (.06),22,MAIN,agree
+Table 2,5,paid leave for mothers,coefficient,0.01,0.01,0.08,0.08,,,.01 (.08),.01 (.08),22,MAIN,agree
+Table 2,5,paid leave squared,coefficient,0.03,0.03,0.08,0.08,,,.03 (.08),.03 (.08),22,MAIN,agree
+Table 2,5,paid leave squared x female,coefficient,-0.11,-0.11,0.06,0.06,•,•,–.11• (.06),–.11• (.06),22,MAIN,agree
+Table 2,5,paid leave x female,coefficient,0.12,0.12,0.06,0.06,••,••,.12•• (.06),.12•• (.06),22,MAIN,agree
+Table 2,5,part time employment x female,coefficient,-0.03,-0.03,0.02,0.02,,,–.03 (.02),–.03 (.02),22,MAIN,agree
+Table 2,5,percent women managers,coefficient,-0.02,-0.02,0.04,0.04,,,–.02 (.04),–.02 (.04),22,MAIN,agree
+Table 2,5,postsecondary degree or higher,coefficient,0.09,0.09,0.01,0.01,•••,•••,.09••• (.01),.09••• (.01),22,MAIN,agree
+Table 2,5,social status of entrepreneurship,coefficient,-0.01,-0.01,0.02,0.02,,,–.01 (.02),–.01 (.02),22,MAIN,agree
+Table 2,5,sole owner of business 1 yes,coefficient,-0.62,-0.62,0.01,0.01,•••,•••,–.62••• (.01),–.62••• (.01),22,MAIN,agree
+Table 2,5,state childcare spending,coefficient,-0.06,-0.06,0.03,0.03,•,•,–.06• (.03),–.06• (.03),22,MAIN,agree
+Table 2,5,unemployment rate,coefficient,-0.02,-0.02,0.04,0.04,,,–.02 (.04),–.02 (.04),22,MAIN,agree
+Table 2,5,women s part time employment,coefficient,0.02,0.02,0.03,0.03,,,.02 (.03),.02 (.03),22,MAIN,agree
+Table 2,5,aic,fit_statistic,82338.74,82338.74,,,,,82338.74,82338.74,22,MAIN,agree
+Table 2,5,log likelihood,fit_statistic,-41141.37,-41141.37,,,,,–41141.37,–41141.37,22,MAIN,agree
+Table 2,5,n individual level,n_individuals,28775,28775.0,,,,,28775,28775,22,MAIN,agree
+Table 2,5,between country female s.d.,variance_component,0.0822,0.0822,,,,,.0822,.0822,22,MAIN,agree
+Table 2,5,between country intercept s.d.,variance_component,0.0935,0.0935,,,,,.0935,.0935,22,MAIN,agree
+Table 2,5,between survey female s.d.,variance_component,0.013,0.013,,,,,.0130,.0130,22,MAIN,agree
+Table 2,5,between survey intercept s.d.,variance_component,0.1647,0.1647,,,,,.1647,.1647,22,MAIN,agree
+Table 2,6,2002,coefficient,0.1,0.1,0.1,0.1,,,.10 (.10),.10 (.10),22,MAIN,agree
+Table 2,6,2003,coefficient,-0.06,-0.06,0.1,0.1,,,–.06 (.10),–.06 (.10),22,MAIN,agree
+Table 2,6,2004,coefficient,-0.07,-0.07,0.09,0.09,,,–.07 (.09),–.07 (.09),22,MAIN,agree
+Table 2,6,2005,coefficient,0.003,0.003,0.1,0.1,,,.003 (.10),.003 (.10),22,MAIN,agree
+Table 2,6,2006,coefficient,-0.09,-0.09,0.1,0.1,,,–.09 (.10),–.09 (.10),22,MAIN,agree
+Table 2,6,2007,coefficient,-0.17,-0.17,0.1,0.1,•,•,–.17• (.10),–.17• (.10),22,MAIN,agree
+Table 2,6,2008,coefficient,-0.1,-0.1,0.11,0.11,,,–.10 (.11),–.10 (.11),22,MAIN,agree
+Table 2,6,age,coefficient,-0.01,-0.01,0.002,0.002,•••,•••,–.01••• (.002),–.01••• (.002),22,MAIN,agree
+Table 2,6,age squared,coefficient,-0.0004,-0.0004,0.0001,0.0001,••,••,–.0004•• (.0001),–.0004•• (.0001),22,MAIN,agree
+Table 2,6,business age,coefficient,-0.28,-0.28,0.02,0.02,•••,•••,–.28••• (.02),–.28••• (.02),22,MAIN,agree
+Table 2,6,childcare x female,coefficient,-0.05,-0.05,0.05,0.05,,,–.05 (.05),–.05 (.05),22,MAIN,agree
+Table 2,6,employment protection index,coefficient,-0.04,-0.04,0.04,0.04,,,–.04 (.04),–.04 (.04),22,MAIN,agree
+Table 2,6,female,coefficient,-0.29,-0.29,0.04,0.04,•••,•••,–.29••• (.04),–.29••• (.04),22,MAIN,agree
+Table 2,6,fertility rate,coefficient,0.02,0.02,0.05,0.05,,,.02 (.05),.02 (.05),22,MAIN,agree
+Table 2,6,gdp,coefficient,0.07,0.07,0.04,0.04,,,.07 (.04),.07 (.04),22,MAIN,agree
+Table 2,6,intercept,coefficient,-1.12,-1.12,0.09,0.09,,,–1.12 (.09),–1.12 (.09),22,MAIN,agree
+Table 2,6,paid leave for mothers,coefficient,0.06,0.06,0.11,0.11,,,.06 (.11),.06 (.11),22,MAIN,agree
+Table 2,6,paid leave squared,coefficient,-0.09,-0.09,0.11,0.11,,,–.09 (.11),–.09 (.11),22,MAIN,agree
+Table 2,6,paid leave squared x female,coefficient,-0.29,-0.29,0.14,0.14,••,••,–.29•• (.14),–.29•• (.14),22,MAIN,agree
+Table 2,6,paid leave x female,coefficient,0.31,0.31,0.14,0.14,••,••,.31•• (.14),.31•• (.14),22,MAIN,agree
+Table 2,6,part time employment x female,coefficient,-0.03,-0.03,0.04,0.04,,,–.03 (.04),–.03 (.04),22,MAIN,agree
+Table 2,6,percent women managers,coefficient,-0.05,-0.05,0.05,0.05,,,–.05 (.05),–.05 (.05),22,MAIN,agree
+Table 2,6,postsecondary degree or higher,coefficient,0.02,0.02,0.03,0.03,,,.02 (.03),.02 (.03),22,MAIN,agree
+Table 2,6,social status of entrepreneurship,coefficient,-0.03,-0.03,0.03,0.03,,,–.03 (.03),–.03 (.03),22,MAIN,agree
+Table 2,6,sole owner of business 1 yes,coefficient,-0.52,-0.52,0.03,0.03,•••,•••,–.52••• (.03),–.52••• (.03),22,MAIN,agree
+Table 2,6,state childcare spending,coefficient,-0.07,-0.07,0.04,0.04,•,•,–.07• (.04),–.07• (.04),22,MAIN,agree
+Table 2,6,unemployment rate,coefficient,0.05,0.05,0.04,0.04,,,.05 (.04),.05 (.04),22,MAIN,agree
+Table 2,6,women s part time employment,coefficient,-0.04,-0.04,0.04,0.04,,,–.04 (.04),–.04 (.04),22,MAIN,agree
+Table 2,6,aic,fit_statistic,25786.5,25786.5,,,,,25786.5,25786.5,22,MAIN,agree
+Table 2,6,log likelihood,fit_statistic,-12859.25,-12859.25,,,,,–12859.25,–12859.25,22,MAIN,agree
+Table 2,6,n individual level,n_individuals,28775,28775.0,,,,,28775,28775,22,MAIN,agree
+Table 2,6,between country female s.d.,variance_component,0.0474,0.0474,,,,,.0474,.0474,22,MAIN,agree
+Table 2,6,between country intercept s.d.,variance_component,0.0768,0.0768,,,,,.0768,.0768,22,MAIN,agree
+Table 2,6,between survey female s.d.,variance_component,0.0001,0.0001,,,,,.0001,.0001,22,MAIN,agree
+Table 2,6,between survey intercept s.d.,variance_component,0.0,0.0,,,,,.000,.000,22,MAIN,agree
+Table 2,7,2002,coefficient,,,,,,,-,-,22,MAIN,agree
+Table 2,7,2003,coefficient,0.04,0.04,0.17,0.17,,,.04 (.17),.04 (.17),22,MAIN,agree
+Table 2,7,2004,coefficient,0.08,0.08,0.17,0.17,,,.08 (.17),.08 (.17),22,MAIN,agree
+Table 2,7,2005,coefficient,0.18,0.18,0.18,0.18,,,.18 (.18),.18 (.18),22,MAIN,agree
+Table 2,7,2006,coefficient,0.19,0.19,0.18,0.18,,,.19 (.18),.19 (.18),22,MAIN,agree
+Table 2,7,2007,coefficient,0.09,0.09,0.19,0.19,,,.09 (.19),.09 (.19),22,MAIN,agree
+Table 2,7,2008,coefficient,0.23,0.23,0.19,0.19,,,.23 (.19),.23 (.19),22,MAIN,agree
+Table 2,7,age,coefficient,0.003,0.003,0.003,0.003,,,.003 (.003),.003 (.003),22,MAIN,agree
+Table 2,7,age squared,coefficient,0.0001,0.0001,0.0003,0.0003,,,.0001 (.0003),.0001 (.0003),22,MAIN,agree
+Table 2,7,business age,coefficient,-0.22,-0.22,0.02,0.02,•••,•••,–.22••• (.02),–.22••• (.02),22,MAIN,agree
+Table 2,7,childcare x female,coefficient,0.03,0.03,0.07,0.07,,,.03 (.07),.03 (.07),22,MAIN,agree
+Table 2,7,employment protection index,coefficient,-0.03,-0.03,0.09,0.09,,,–.03 (.09),–.03 (.09),22,MAIN,agree
+Table 2,7,female,coefficient,-0.15,-0.15,0.06,0.06,••,••,–.15•• (.06),–.15•• (.06),22,MAIN,agree
+Table 2,7,fertility rate,coefficient,-0.12,-0.12,0.11,0.11,,,–.12 (.11),–.12 (.11),22,MAIN,agree
+Table 2,7,gdp,coefficient,-0.02,-0.02,0.09,0.09,,,–.02 (.09),–.02 (.09),22,MAIN,agree
+Table 2,7,intercept,coefficient,-2.69,-2.69,0.14,0.14,•••,•••,–2.69••• (.14),–2.69••• (.14),22,MAIN,agree
+Table 2,7,paid leave for mothers,coefficient,0.17,0.17,0.23,0.23,,,.17 (.23),.17 (.23),22,MAIN,agree
+Table 2,7,paid leave squared,coefficient,-0.21,-0.21,0.22,0.22,,,–.21 (.22),–.21 (.22),22,MAIN,agree
+Table 2,7,paid leave squared x female,coefficient,-0.58,-0.58,0.24,0.24,••,••,–.58•• (.24),–.58•• (.24),22,MAIN,agree
+Table 2,7,paid leave x female,coefficient,0.56,0.56,0.23,0.23,••,••,.56•• (.23),.56•• (.23),22,MAIN,agree
+Table 2,7,part time employment x female,coefficient,0.01,0.01,0.07,0.07,,,.01 (.07),.01 (.07),22,MAIN,agree
+Table 2,7,percent women managers,coefficient,-0.04,-0.04,0.1,0.1,,,–.04 (.10),–.04 (.10),22,MAIN,agree
+Table 2,7,postsecondary degree or higher,coefficient,0.24,0.24,0.05,0.05,•••,•••,.24••• (.05),.24••• (.05),22,MAIN,agree
+Table 2,7,social status of entrepreneurship,coefficient,0.04,0.04,0.07,0.07,,,.04 (.07),.04 (.07),22,MAIN,agree
+Table 2,7,sole owner of business 1 yes,coefficient,0.02,0.02,0.04,0.04,,,.02 (.04),.02 (.04),22,MAIN,agree
+Table 2,7,state childcare spending,coefficient,-0.02,-0.02,0.08,0.08,,,–.02 (.08),–.02 (.08),22,MAIN,agree
+Table 2,7,unemployment rate,coefficient,-0.02,-0.02,0.11,0.11,,,–.02 (.11),–.02 (.11),22,MAIN,agree
+Table 2,7,women s part time employment,coefficient,-0.1,-0.1,0.08,0.08,,,–.10 (.08),–.10 (.08),22,MAIN,agree
+Table 2,7,aic,fit_statistic,16123.9,16123.9,,,,,16123.9,16123.9,22,MAIN,agree
+Table 2,7,log likelihood,fit_statistic,-8028.95,-8028.95,,,,,–8028.95,–8028.95,22,MAIN,agree
+Table 2,7,n individual level,n_individuals,27107,27107.0,,,,,27107,27107,22,MAIN,agree
+Table 2,7,between country female s.d.,variance_component,0.078,0.078,,,,,.0780,.0780,22,MAIN,agree
+Table 2,7,between country intercept s.d.,variance_component,0.1729,0.1729,,,,,.1729,.1729,22,MAIN,agree
+Table 2,7,between survey female s.d.,variance_component,0.0729,0.0729,,,,,.0729,.0729,22,MAIN,agree
+Table 2,7,between survey intercept s.d.,variance_component,0.3419,0.3419,,,,,.3419,.3419,22,MAIN,agree
+Table 2,8,2002,coefficient,,,,,,,n/a,n/a,22,MAIN,agree
+Table 2,8,2003,coefficient,,,,,,,n/a,n/a,22,MAIN,agree
+Table 2,8,2004,coefficient,,,,,,,n/a,n/a,22,MAIN,agree
+Table 2,8,2005,coefficient,-0.35,-0.35,0.34,0.34,,,–.35 (.34),–.35 (.34),22,MAIN,agree
+Table 2,8,2006,coefficient,-0.04,-0.04,0.34,0.34,,,–.04 (.34),–.04 (.34),22,MAIN,agree
+Table 2,8,2007,coefficient,-0.1,-0.1,0.32,0.32,,,–.10 (.32),–.10 (.32),22,MAIN,agree
+Table 2,8,2008,coefficient,,,,,,,-,-,22,MAIN,agree
+Table 2,8,age,coefficient,0.002,0.002,0.003,0.003,,,.002 (.003),.002 (.003),22,MAIN,agree
+Table 2,8,age squared,coefficient,-0.0001,-0.0001,0.0002,0.0002,,,–.0001 (.0002),–.0001 (.0002),22,MAIN,agree
+Table 2,8,business age,coefficient,-0.46,-0.46,0.02,0.02,•••,•••,–.46••• (.02),–.46••• (.02),22,MAIN,agree
+Table 2,8,childcare x female,coefficient,0.13,0.13,0.07,0.07,•,•,.13• (.07),.13• (.07),22,MAIN,agree
+Table 2,8,employment protection index,coefficient,0.03,0.03,0.18,0.18,,,.03 (.18),.03 (.18),22,MAIN,agree
+Table 2,8,female,coefficient,-0.14,-0.14,0.06,0.06,••,••,–.14•• (.06),–.14•• (.06),22,MAIN,agree
+Table 2,8,fertility rate,coefficient,0.04,0.04,0.18,0.18,,,.04 (.18),.04 (.18),22,MAIN,agree
+Table 2,8,gdp,coefficient,-0.51,-0.51,0.23,0.23,••,••,–.51•• (.23),–.51•• (.23),22,MAIN,agree
+Table 2,8,intercept,coefficient,-1.28,-1.28,0.26,0.26,•••,•••,–1.28••• (.26),–1.28••• (.26),22,MAIN,agree
+Table 2,8,paid leave for mothers,coefficient,-0.41,-0.41,0.44,0.44,,,–.41 (.44),–.41 (.44),22,MAIN,agree
+Table 2,8,paid leave squared,coefficient,0.46,0.46,0.36,0.36,,,.46 (.36),.46 (.36),22,MAIN,agree
+Table 2,8,paid leave squared x female,coefficient,0.02,0.02,0.17,0.17,,,.02 (.17),.02 (.17),22,MAIN,agree
+Table 2,8,paid leave x female,coefficient,-0.04,-0.04,0.18,0.18,,,–.04 (.18),–.04 (.18),22,MAIN,agree
+Table 2,8,part time employment x female,coefficient,-0.01,-0.01,0.06,0.06,,,–.01 (.06),–.01 (.06),22,MAIN,agree
+Table 2,8,percent women managers,coefficient,-0.08,-0.08,0.2,0.2,,,–.08 (.20),–.08 (.20),22,MAIN,agree
+Table 2,8,postsecondary degree or higher,coefficient,0.1,0.1,0.04,0.04,••,••,.10•• (.04),.10•• (.04),22,MAIN,agree
+Table 2,8,social status of entrepreneurship,coefficient,-0.01,-0.01,0.15,0.15,,,–.01 (.15),–.01 (.15),22,MAIN,agree
+Table 2,8,sole owner of business 1 yes,coefficient,-0.14,-0.14,0.04,0.04,•••,•••,–.14••• (.04),–.14••• (.04),22,MAIN,agree
+Table 2,8,state childcare spending,coefficient,0.06,0.06,0.16,0.16,,,.06 (.16),.06 (.16),22,MAIN,agree
+Table 2,8,unemployment rate,coefficient,-0.05,-0.05,0.26,0.26,,,–.05 (.26),–.05 (.26),22,MAIN,agree
+Table 2,8,women s part time employment,coefficient,-0.13,-0.13,0.15,0.15,,,–.13 (.15),–.13 (.15),22,MAIN,agree
+Table 2,8,aic,fit_statistic,15917.34,15917.34,,,,,15917.34,15917.34,22,MAIN,agree
+Table 2,8,log likelihood,fit_statistic,-7928.67,-7928.67,,,,,–7928.67,–7928.67,22,MAIN,agree
+Table 2,8,n individual level,n_individuals,17498,17498.0,,,,,17498,17498,22,MAIN,agree
+Table 2,8,between country female s.d.,variance_component,0.0,0.0,,,,,.0000,.0000,22,MAIN,agree
+Table 2,8,between country intercept s.d.,variance_component,0.0,0.0,,,,,.0000,.0000,22,MAIN,agree
+Table 2,8,between survey female s.d.,variance_component,0.0311,0.0311,,,,,.0311,.0311,22,MAIN,agree
+Table 2,8,between survey intercept s.d.,variance_component,0.8398,0.8398,,,,,.8398,.8398,22,MAIN,agree
+Table A3,1,2002,coefficient,-0.01,-0.01,0.1,0.1,,,-0.01,-0.01,3,S1,agree
+Table A3,1,2003,coefficient,0.04,0.04,0.09,0.09,,,0.04,0.04,3,S1,agree
+Table A3,1,2004,coefficient,-0.1,-0.1,0.1,0.1,,,-0.10,-0.10,3,S1,agree
+Table A3,1,2005,coefficient,0.15,0.15,0.1,0.1,,,0.15,0.15,3,S1,agree
+Table A3,1,2006,coefficient,0.07,0.07,0.1,0.1,,,0.07,0.07,3,S1,agree
+Table A3,1,2007,coefficient,0.09,0.09,0.11,0.11,,,0.09,0.09,3,S1,agree
+Table A3,1,2008,coefficient,-0.01,-0.01,0.11,0.11,,,-0.01,-0.01,3,S1,agree
+Table A3,1,age,coefficient,-0.01,-0.01,0.001,0.001,•••,•••,-0.01•••,-0.01•••,3,S1,agree
+Table A3,1,age squared,coefficient,-0.001,-0.001,0.0001,0.0001,•••,•••,-0.001•••,-0.001•••,3,S1,agree
+Table A3,1,childcare x female,coefficient,-0.09,-0.09,0.04,0.04,••,••,-0.09••,-0.09••,3,S1,agree
+Table A3,1,employment protection index,coefficient,-0.06,-0.06,0.08,0.08,,,-0.06,-0.06,3,S1,agree
+Table A3,1,female,coefficient,-0.56,-0.56,0.04,0.04,•••,•••,-0.56•••,-0.56•••,3,S1,agree
+Table A3,1,fertility rate,coefficient,0.18,0.18,0.08,0.08,••,••,0.18••,0.18••,3,S1,agree
+Table A3,1,gdp,coefficient,-0.13,-0.13,0.08,0.08,•,•,-0.13•,-0.13•,3,S1,agree
+Table A3,1,intercept,coefficient,-3.17,-3.17,0.1,0.1,•••,•••,-3.17•••,-3.17•••,3,S1,agree
+Table A3,1,paid leave for mothers,coefficient,-0.14,-0.14,0.15,0.15,,,-0.14,-0.14,3,S1,agree
+Table A3,1,paid leave squared,coefficient,0.2,0.2,0.13,0.13,,,0.20,0.20,3,S1,agree
+Table A3,1,paid leave squared x female,coefficient,0.07,0.07,0.1,0.1,,,0.07,0.07,3,S1,agree
+Table A3,1,paid leave x female,coefficient,-0.15,-0.15,0.1,0.1,,,-0.15,-0.15,3,S1,agree
+Table A3,1,part time employment x female,coefficient,-0.02,-0.02,0.04,0.04,,,-0.02,-0.02,3,S1,agree
+Table A3,1,percent women managers,coefficient,0.02,0.02,0.07,0.07,,,0.02,0.02,3,S1,agree
+Table A3,1,postsecondary degree or higher,coefficient,0.18,0.18,0.02,0.02,•••,•••,0.18•••,0.18•••,3,S1,agree
+Table A3,1,social status of entrepreneurship,coefficient,0.07,0.07,0.05,0.05,•,•,0.07•,0.07•,3,S1,agree
+Table A3,1,state childcare spending,coefficient,-0.04,-0.04,0.07,0.07,,,-0.04,-0.04,3,S1,agree
+Table A3,1,unemployment rate,coefficient,-0.02,-0.02,0.06,0.06,,,-0.02,-0.02,3,S1,agree
+Table A3,1,women s part time employment,coefficient,-0.06,-0.06,0.08,0.08,,,-0.06,-0.06,3,S1,agree
+Table A3,1,aic,fit_statistic,95506.07,95506.07,,,,,95506.07,95506.07,3,S1,agree
+Table A3,1,log likelihood,fit_statistic,-47721.01,-47721.01,,,,,-47721.01,-47721.01,3,S1,agree
+Table A3,1,n individual level,n_individuals,354143,354143.0,,,,,"354,143","354,143",3,S1,agree
+Table A3,1,between country female s.d.,variance_component,0.099,0.099,,,,,0.0990,0.0990,3,S1,agree
+Table A3,1,between country intercept s.d.,variance_component,0.2959,0.2959,,,,,0.2959,0.2959,3,S1,agree
+Table A3,1,between survey female s.d.,variance_component,0.2052,0.2052,,,,,0.2052,0.2052,3,S1,agree
+Table A3,1,between survey intercept s.d.,variance_component,0.2386,0.2386,,,,,0.2386,0.2386,3,S1,agree
+Table A3,2,2002,coefficient,0.09,0.09,0.08,0.08,,,0.09,0.09,3,S1,agree
+Table A3,2,2003,coefficient,0.05,0.05,0.08,0.08,,,0.05,0.05,3,S1,agree
+Table A3,2,2004,coefficient,0.1,0.1,0.08,0.08,,,0.10,0.10,3,S1,agree
+Table A3,2,2005,coefficient,0.26,0.26,0.09,0.09,•••,•••,0.26•••,0.26•••,3,S1,agree
+Table A3,2,2006,coefficient,0.1,0.1,0.09,0.09,,,0.10,0.10,3,S1,agree
+Table A3,2,2007,coefficient,0.16,0.16,0.09,0.09,•,•,0.16•,0.16•,3,S1,agree
+Table A3,2,2008,coefficient,0.21,0.21,0.1,0.1,••,••,0.21••,0.21••,3,S1,agree
+Table A3,2,age,coefficient,0.02,0.02,0.001,0.001,•••,•••,0.02•••,0.02•••,3,S1,agree
+Table A3,2,age squared,coefficient,-0.001,-0.001,0.0001,0.0001,•••,•••,-0.001•••,-0.001•••,3,S1,agree
+Table A3,2,childcare x female,coefficient,-0.1,-0.1,0.03,0.03,•••,•••,-0.10•••,-0.10•••,3,S1,agree
+Table A3,2,employment protection index,coefficient,-0.02,-0.02,0.07,0.07,,,-0.02,-0.02,3,S1,agree
+Table A3,2,female,coefficient,-0.58,-0.58,0.03,0.03,•••,•••,-0.58•••,-0.58•••,3,S1,agree
+Table A3,2,fertility rate,coefficient,,,,,,,,,3,S1,fable_only
+Table A3,2,gdp,coefficient,-0.18,-0.18,0.07,0.07,••,••,-0.18••,-0.18••,3,S1,agree
+Table A3,2,intercept,coefficient,-1.67,-1.67,0.09,0.09,•••,•••,-1.67•••,-1.67•••,3,S1,agree
+Table A3,2,not employed,coefficient,-1.52,-1.52,0.03,0.03,•••,•••,-1.52•••,-1.52•••,3,S1,agree
+Table A3,2,paid leave for mothers,coefficient,-0.18,-0.18,0.13,0.13,,,-0.18,-0.18,3,S1,agree
+Table A3,2,paid leave squared,coefficient,0.19,0.19,0.12,0.12,,,0.19,0.19,3,S1,agree
+Table A3,2,paid leave squared x female,coefficient,0.07,0.07,0.08,0.08,,,0.07,0.07,3,S1,agree
+Table A3,2,paid leave x female,coefficient,-0.12,-0.12,0.08,0.08,,,-0.12,-0.12,3,S1,agree
+Table A3,2,part time employment x female,coefficient,-0.02,-0.02,0.03,0.03,,,-0.02,-0.02,3,S1,agree
+Table A3,2,percent women managers,coefficient,-0.02,-0.02,0.06,0.06,,,-0.02,-0.02,3,S1,agree
+Table A3,2,postsecondary degree or higher,coefficient,0.07,0.07,0.01,0.01,•••,•••,0.07•••,0.07•••,3,S1,agree
+Table A3,2,social status of entrepreneurship,coefficient,0.17,0.17,0.04,0.04,•••,•••,0.17•••,0.17•••,3,S1,agree
+Table A3,2,state childcare spending,coefficient,0.03,0.03,0.06,0.06,,,0.03,0.03,3,S1,agree
+Table A3,2,unemployment rate,coefficient,-0.06,-0.06,0.06,0.06,,,-0.06,-0.06,3,S1,agree
+Table A3,2,women s part time employment,coefficient,0.02,0.02,0.07,0.07,,,0.02,0.02,3,S1,agree
+Table A3,2,aic,fit_statistic,281932.2,281932.2,,,,,281932.2,281932.2,3,S1,agree
+Table A3,2,log likelihood,fit_statistic,-140933.12,-140933.12,,,,,-140933.12,-140933.12,3,S1,agree
+Table A3,2,n individual level,n_individuals,417026,417026.0,,,,,"417,026","417,026",3,S1,agree
+Table A3,2,between country female s.d.,variance_component,0.142,0.142,,,,,0.1420,0.1420,3,S1,agree
+Table A3,2,between country intercept s.d.,variance_component,0.2822,0.2822,,,,,0.2822,0.2822,3,S1,agree
+Table A3,2,between survey female s.d.,variance_component,0.1592,0.1592,,,,,0.1592,0.1592,3,S1,agree
+Table A3,2,between survey intercept s.d.,variance_component,0.2064,0.2064,,,,,0.2064,0.2064,3,S1,agree
+Table A3,3,2002,coefficient,0.09,0.09,0.1,0.1,,,0.09,0.09,3,S1,agree
+Table A3,3,2003,coefficient,0.43,0.43,0.11,0.11,•••,•••,0.43•••,0.43•••,3,S1,agree
+Table A3,3,2004,coefficient,0.5,0.5,0.11,0.11,•••,•••,0.50•••,0.50•••,3,S1,agree
+Table A3,3,2005,coefficient,0.67,0.67,0.11,0.11,•••,•••,0.67•••,0.67•••,3,S1,agree
+Table A3,3,2006,coefficient,0.46,0.46,0.12,0.12,•••,•••,0.46•••,0.46•••,3,S1,agree
+Table A3,3,2007,coefficient,0.44,0.44,0.12,0.12,•••,•••,0.44•••,0.44•••,3,S1,agree
+Table A3,3,2008,coefficient,0.58,0.58,0.12,0.12,•••,•••,0.58•••,0.58•••,3,S1,agree
+Table A3,3,age,coefficient,0.02,0.02,0.001,0.001,•••,•••,0.02•••,0.02•••,3,S1,agree
+Table A3,3,age squared,coefficient,-0.001,-0.001,0.0001,0.0001,•••,•••,-0.001•••,-0.001•••,3,S1,agree
+Table A3,3,childcare x female,coefficient,-0.08,-0.08,0.03,0.03,•••,•••,-0.08•••,-0.08•••,3,S1,agree
+Table A3,3,employment protection index,coefficient,-0.08,-0.08,0.08,0.08,,,-0.08,-0.08,3,S1,agree
+Table A3,3,fears business failure,coefficient,-0.64,-0.64,0.01,0.01,•••,•••,-0.64•••,-0.64•••,3,S1,agree
+Table A3,3,female,coefficient,-0.22,-0.22,0.03,0.03,•••,•••,-0.22•••,-0.22•••,3,S1,agree
+Table A3,3,fertility rate,coefficient,-0.02,-0.02,0.09,0.09,,,-0.02,-0.02,3,S1,agree
+Table A3,3,gdp,coefficient,-0.16,-0.16,0.08,0.08,••,••,-0.16••,-0.16••,3,S1,agree
+Table A3,3,intercept,coefficient,-3.09,-3.09,0.11,0.11,•••,•••,-3.09•••,-3.09•••,3,S1,agree
+Table A3,3,knows another entrepreneur,coefficient,0.47,0.47,0.01,0.01,•••,•••,0.47•••,0.47•••,3,S1,agree
+Table A3,3,paid leave for mothers,coefficient,-0.01,-0.01,0.16,0.16,,,-0.01,-0.01,3,S1,agree
+Table A3,3,paid leave squared,coefficient,0.04,0.04,0.14,0.14,,,0.04,0.04,3,S1,agree
+Table A3,3,paid leave squared x female,coefficient,0.06,0.06,0.07,0.07,,,0.06,0.06,3,S1,agree
+Table A3,3,paid leave x female,coefficient,-0.09,-0.09,0.07,0.07,,,-0.09,-0.09,3,S1,agree
+Table A3,3,part time employment x female,coefficient,0.01,0.01,0.03,0.03,,,0.01,0.01,3,S1,agree
+Table A3,3,percent women managers,coefficient,-0.11,-0.11,0.08,0.08,,,-0.11,-0.11,3,S1,agree
+Table A3,3,postsecondary degree or higher,coefficient,-0.13,-0.13,0.01,0.01,•••,•••,-0.13•••,-0.13•••,3,S1,agree
+Table A3,3,self assessed entrepreneurial ability,coefficient,1.9,1.9,0.02,0.02,•••,•••,1.90•••,1.90•••,3,S1,agree
+Table A3,3,social status of entrepreneurship,coefficient,0.11,0.11,0.05,0.05,••,••,0.11••,0.11••,3,S1,agree
+Table A3,3,state childcare spending,coefficient,-0.02,-0.02,0.07,0.07,,,-0.02,-0.02,3,S1,agree
+Table A3,3,unemployment rate,coefficient,-0.07,-0.07,0.07,0.07,,,-0.07,-0.07,3,S1,agree
+Table A3,3,women s part time employment,coefficient,0.06,0.06,0.08,0.08,,,0.06,0.06,3,S1,agree
+Table A3,3,aic,fit_statistic,19950,19950.0,,,,,19950,19950,3,S1,agree
+Table A3,3,log likelihood,fit_statistic,-99719.09,-99719.09,,,,,-99719.09,-99719.09,3,S1,agree
+Table A3,3,n individual level,n_individuals,265075,265075.0,,,,,"265,075","265,075",3,S1,agree
+Table A3,3,between country female s.d.,variance_component,0.0982,0.0982,,,,,0.0982,0.0982,3,S1,agree
+Table A3,3,between country intercept s.d.,variance_component,0.2949,0.2949,,,,,0.2949,0.2949,3,S1,agree
+Table A3,3,between survey female s.d.,variance_component,0.1203,0.1203,,,,,0.1203,0.1203,3,S1,agree
+Table A3,3,between survey intercept s.d.,variance_component,0.2694,0.2694,,,,,0.2694,0.2694,3,S1,agree

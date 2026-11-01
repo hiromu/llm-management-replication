@@ -1,0 +1,9 @@
+spec_id,model_id,reduced_model_id,row,auc_full,auc_reduced,difference,z,p,n,status,error
+NA,"T5__cap_simple_steepness+sameness","T4__cap_simple_sameness","steepness",0.62180125237651,0.621946081451872,-0.000144829075362618,-0.172838418848215,0.862778437597254,5280,"ok",""
+NA,"T5__cap_simple_steepness+sameness","T4__cap_simple_steepness","sameness",0.62180125237651,0.62220355536362,-0.00040230298710997,-0.23990309680095,0.810405380057873,5280,"ok",""
+NA,"T5__cap_full_steepness+sameness","T4__cap_full_sameness","steepness",0.651211648821969,0.651233592621266,-2.19437992966531e-05,-0.268888152172351,0.788015754520155,5280,"ok",""
+NA,"T5__cap_full_steepness+sameness","T4__cap_full_steepness","sameness",0.651211648821969,0.65099133307703,0.000220315744939525,0.358251890930481,0.720154817371132,5280,"ok",""
+NA,"T5__camp_simple_steepness+sameness","T4__camp_simple_sameness","steepness",0.613159784213457,0.614318416816319,-0.00115863260286253,-0.913626893818728,0.360912929905781,5280,"ok",""
+NA,"T5__camp_simple_steepness+sameness","T4__camp_simple_steepness","sameness",0.613159784213457,0.605950514684497,0.00720926952895962,1.49028279552057,0.136149894231921,5280,"ok",""
+NA,"T5__camp_full_steepness+sameness","T4__camp_full_sameness","steepness",0.648615112197183,0.648621549044977,-6.43684779366716e-06,-0.0279996696220826,0.977662414648029,5280,"ok",""
+NA,"T5__camp_full_steepness+sameness","T4__camp_full_steepness","sameness",0.648615112197183,0.648062567330891,0.000552544866292193,1.04923704333982,0.294069033481657,5280,"ok",""

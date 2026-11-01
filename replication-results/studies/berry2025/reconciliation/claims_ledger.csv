@@ -1,0 +1,66 @@
+claim_key,tier_fable,tier_astra,tier_reconciled,decision
+S1.descriptives,descriptive,descriptive,descriptive,agree
+S1.gender_cells,descriptive,robustness,uncertain,"tier label differs: tier uncertain, not counted as focal in aggregation"
+S1.gender_within,robustness,robustness,robustness,agree
+S1.interaction.proh_voice,identification_or_inference_diagnostic,identification_or_inference_diagnostic,identification_or_inference_diagnostic,agree
+S1.interaction.prom_voice,identification_or_inference_diagnostic,identification_or_inference_diagnostic,identification_or_inference_diagnostic,agree
+S1.interaction.you_grant,identification_or_inference_diagnostic,identification_or_inference_diagnostic,identification_or_inference_diagnostic,agree
+S1.manipcheck,identification_or_inference_diagnostic,identification_or_inference_diagnostic,identification_or_inference_diagnostic,agree
+S1.paired.proh_voice,focal,focal,focal,agree
+S1.paired.prom_voice,focal,focal,focal,agree
+S1.paired.you_grant,focal,focal,focal,agree
+S1.reliability,nuisance,identification_or_inference_diagnostic,uncertain,"tier label differs: tier uncertain, not counted as focal in aggregation"
+S1.sample,descriptive,,descriptive,structure from one reader: retained
+S2.descriptives,descriptive,descriptive,descriptive,agree
+S2.gender,robustness,robustness,robustness,agree
+S2.ind.proh_voice.benev,focal,focal,focal,agree
+S2.ind.proh_voice.integ,robustness,robustness,robustness,agree
+S2.ind.proh_voice.relconcerns,focal,focal,focal,agree
+S2.ind.proh_voice.val_align,focal,focal,focal,agree
+S2.ind.prom_voice.benev,focal,focal,focal,agree
+S2.ind.prom_voice.integ,robustness,robustness,robustness,agree
+S2.ind.prom_voice.relconcerns,focal,focal,focal,agree
+S2.ind.prom_voice.val_align,focal,focal,focal,agree
+S2.ind.you_grant.benev,focal,focal,focal,agree
+S2.ind.you_grant.integ,robustness,robustness,robustness,agree
+S2.ind.you_grant.relconcerns,focal,focal,focal,agree
+S2.ind.you_grant.val_align,focal,focal,focal,agree
+S2.reliability,nuisance,identification_or_inference_diagnostic,uncertain,"tier label differs: tier uncertain, not counted as focal in aggregation"
+S2.sample,descriptive,,descriptive,structure from one reader: retained
+S2.serial.relconcerns,robustness,robustness,robustness,agree
+S2.serial.val_align,robustness,robustness,robustness,agree
+S2.t.proh_voice,focal,focal,focal,agree
+S2.t.prom_voice,focal,focal,focal,agree
+S2.t.you_grant,focal,focal,focal,agree
+S3.anova.proh_voice.history,focal,identification_or_inference_diagnostic,uncertain,"tier label differs: tier uncertain, not counted as focal in aggregation"
+S3.anova.proh_voice.interaction,focal,identification_or_inference_diagnostic,uncertain,"tier label differs: tier uncertain, not counted as focal in aggregation"
+S3.anova.proh_voice.relationship,focal,identification_or_inference_diagnostic,uncertain,"tier label differs: tier uncertain, not counted as focal in aggregation"
+S3.anova.prom_voice.history,focal,identification_or_inference_diagnostic,uncertain,"tier label differs: tier uncertain, not counted as focal in aggregation"
+S3.anova.prom_voice.interaction,focal,identification_or_inference_diagnostic,uncertain,"tier label differs: tier uncertain, not counted as focal in aggregation"
+S3.anova.prom_voice.relationship,focal,identification_or_inference_diagnostic,uncertain,"tier label differs: tier uncertain, not counted as focal in aggregation"
+S3.anova.you_grant.history,focal,identification_or_inference_diagnostic,uncertain,"tier label differs: tier uncertain, not counted as focal in aggregation"
+S3.anova.you_grant.interaction,focal,identification_or_inference_diagnostic,uncertain,"tier label differs: tier uncertain, not counted as focal in aggregation"
+S3.anova.you_grant.relationship,focal,identification_or_inference_diagnostic,uncertain,"tier label differs: tier uncertain, not counted as focal in aggregation"
+S3.contrast.proh_voice.H1,focal,focal,focal,agree
+S3.contrast.proh_voice.H3,focal,focal,focal,agree
+S3.contrast.prom_voice.H1,focal,focal,focal,agree
+S3.contrast.prom_voice.H3,focal,focal,focal,agree
+S3.contrast.you_grant.H1,focal,focal,focal,agree
+S3.contrast.you_grant.H3,focal,focal,focal,agree
+S3.descriptives,descriptive,descriptive,descriptive,agree
+S3.mechanism.benev,robustness,robustness,robustness,agree
+S3.mechanism.integ,robustness,robustness,robustness,agree
+S3.mechanism.relconcerns,robustness,robustness,robustness,agree
+S3.mechanism.val_align,robustness,robustness,robustness,agree
+S3.reliability,nuisance,identification_or_inference_diagnostic,uncertain,"tier label differs: tier uncertain, not counted as focal in aggregation"
+S3.sample,descriptive,,descriptive,structure from one reader: retained
+S4.M1,focal,focal,focal,agree
+S4.M2,robustness,robustness,robustness,agree
+S4.M3,robustness,robustness,robustness,agree
+S4.controls,nuisance,nuisance,nuisance,agree
+S4.descriptives,descriptive,descriptive,descriptive,agree
+S4.fit,identification_or_inference_diagnostic,identification_or_inference_diagnostic,identification_or_inference_diagnostic,agree
+S4.med.independent,robustness,robustness,robustness,agree
+S4.med.simultaneous,robustness,robustness,robustness,agree
+S4.overview_table_mediation_mark,,focal,focal,structure from one reader: retained
+S4.sample,descriptive,,descriptive,structure from one reader: retained

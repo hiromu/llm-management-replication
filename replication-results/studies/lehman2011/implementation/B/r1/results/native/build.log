@@ -1,0 +1,4 @@
+using C compiler: ‘Apple clang version 21.0.0 (clang-2100.3.34.2)’
+using SDK: ‘MacOSX27.0.sdk’
+clang -std=gnu23 -I"/opt/homebrew/Cellar/r/4.6.1_1/lib/R/include" -DNDEBUG   -I/opt/homebrew/opt/gettext/include -I/opt/homebrew/opt/readline/include -I/opt/homebrew/opt/xz/include -I/opt/homebrew/include    -fPIC  -g -O2  -c results/native/exact.c -o results/native/exact.o
+clang -std=gnu23 -dynamiclib -Wl,-headerpad_max_install_names -undefined dynamic_lookup -L/opt/homebrew/Cellar/r/4.6.1_1/lib/R/lib -L/opt/homebrew/opt/gettext/lib -L/opt/homebrew/opt/readline/lib -L/opt/homebrew/opt/xz/lib -L/opt/homebrew/lib -o results/native/exact.so results/native/exact.o -L/opt/homebrew/Cellar/r/4.6.1_1/lib/R/lib -lR

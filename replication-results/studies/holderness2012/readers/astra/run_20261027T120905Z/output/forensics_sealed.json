@@ -1,0 +1,371 @@
+{
+  "observations": [
+    {
+      "id": "F01",
+      "type": "coef_se_p_consistency",
+      "description": "Tables 4–6 report effects and p-values but no SEs or test statistics. A coefficient/SE/p identity cannot be checked; do not recover an SE by treating rounded p-values as exact.",
+      "rounding_interval_check": "For two-decimal p, use [p−0.005,p+0.005) intersect [0,1]; printed 0.00 lies in [0,0.005), not the point zero. Coefficients similarly span rounding intervals. No discrepancy established.",
+      "severity": "none",
+      "locators": [
+        {
+          "doc_id": "D1",
+          "pdf_page": 9,
+          "journal_page": null,
+          "section": null,
+          "table": "4; 5",
+          "column": null,
+          "row": null,
+          "quote": null
+        },
+        {
+          "doc_id": "D1",
+          "pdf_page": 13,
+          "journal_page": null,
+          "section": null,
+          "table": "6",
+          "column": null,
+          "row": null,
+          "quote": null
+        }
+      ]
+    },
+    {
+      "id": "F02",
+      "type": "n_df",
+      "description": "Table 4 prints N=100,464 and Table 6 prints N=102,334, an increase of 1,870 despite adding officer interactions. Descriptive total is 122,765. The respective descriptive-to-regression gaps are 22,301 and 20,431.",
+      "rounding_interval_check": "Integer counts have no decimal rounding ambiguity. Under an identical base sample, merely adding regressors cannot enlarge eligibility. Samples may differ, but no such explanation is given. Table 5 N and all regression df/cluster counts are absent. This is a documentation inconsistency, not proof of erroneous estimation.",
+      "severity": "notable",
+      "locators": [
+        {
+          "doc_id": "D1",
+          "pdf_page": 6,
+          "journal_page": null,
+          "section": null,
+          "table": "1",
+          "column": "All POWs",
+          "row": "Total POWs",
+          "quote": null
+        },
+        {
+          "doc_id": "D1",
+          "pdf_page": 9,
+          "journal_page": null,
+          "section": null,
+          "table": "4",
+          "column": null,
+          "row": "Notes",
+          "quote": null
+        },
+        {
+          "doc_id": "D1",
+          "pdf_page": 13,
+          "journal_page": null,
+          "section": null,
+          "table": "6",
+          "column": null,
+          "row": "Notes",
+          "quote": null
+        }
+      ]
+    },
+    {
+      "id": "F03",
+      "type": "text_table_mismatch",
+      "description": "Introduction says the most hierarchical groups are 20% less likely to survive. Section 4.4 gives 81% versus 87% for upper/lower captured-steepness quartiles from the second regression. Those yield six percentage points, about 6.90% relatively.",
+      "rounding_interval_check": "Whole-percent rounding permits top [80.5,81.5) and bottom [86.5,87.5): absolute contrast (5,7) percentage points and relative reduction approximately (5.78%,8.00%). This cannot be 20% for that same contrast. The introduction may describe another comparison; its model, cutoffs and scale are unspecified. Do not declare two distinct unidentified estimands mathematically inconsistent.",
+      "severity": "notable",
+      "locators": [
+        {
+          "doc_id": "D1",
+          "pdf_page": 3,
+          "journal_page": null,
+          "section": "1",
+          "table": null,
+          "column": null,
+          "row": null,
+          "quote": null
+        },
+        {
+          "doc_id": "D1",
+          "pdf_page": 8,
+          "journal_page": null,
+          "section": "4.4; footnote 11",
+          "table": null,
+          "column": null,
+          "row": null,
+          "quote": null
+        }
+      ]
+    },
+    {
+      "id": "F04",
+      "type": "table_identity",
+      "description": "Section 4.5 calls the ROC evidence Panel C, but Table 5 has only Panels A and B.",
+      "rounding_interval_check": "Not numerical; page-image confirmed. Panel B contains the described ROC p-values. Preserve the erroneous reference rather than invent a missing Panel C.",
+      "severity": "minor",
+      "locators": [
+        {
+          "doc_id": "D1",
+          "pdf_page": 9,
+          "journal_page": null,
+          "section": "4.5",
+          "table": "5",
+          "column": null,
+          "row": null,
+          "quote": null
+        }
+      ]
+    },
+    {
+      "id": "F05",
+      "type": "transformation",
+      "description": "Table 3 Group D sameness is printed 0.95. Using its exact fictional counts, Group C shares as the stated reference, and 1.319 gives 0.9566626232, which ordinarily rounds to 0.96.",
+      "rounding_interval_check": "Printed 0.95 permits [0.945,0.955). Even allowing each reference fraction from Group C to vary by ±0.0005 and scaling constant to vary within [1.3185,1.3195], a conservative independent-coordinate bound gives [0.95629105,0.95703050], still disjoint. The bound is deliberately wider than a sum-to-one constrained bound. Thus ordinary rounding does not explain D if C represents the reference as stated. An undocumented benchmark or truncation rule could explain it, but cannot be supplied from memory.",
+      "severity": "notable",
+      "locators": [
+        {
+          "doc_id": "D1",
+          "pdf_page": 7,
+          "journal_page": null,
+          "section": "4.1.2",
+          "table": "3",
+          "column": "D",
+          "row": "Sameness of the Hierarchy",
+          "quote": null
+        },
+        {
+          "doc_id": "D1",
+          "pdf_page": 7,
+          "journal_page": null,
+          "section": "4.1.2",
+          "table": "3",
+          "column": "C",
+          "row": null,
+          "quote": null
+        }
+      ]
+    },
+    {
+      "id": "F06",
+      "type": "transformation",
+      "description": "Table 3 Group E sameness is printed 0.85; exact published C shares and scale give 0.8447278241.",
+      "rounding_interval_check": "At face-value exact inputs, this is just below the 0.845 rounding boundary. With ±0.0005 uncertainty in each reference fraction and scaling interval [1.3185,1.3195], conservative bounds [0.84385267,0.84559890] intersect the printed interval [0.845,0.855). Do not label E a robust internal mismatch.",
+      "severity": "minor",
+      "locators": [
+        {
+          "doc_id": "D1",
+          "pdf_page": 7,
+          "journal_page": null,
+          "section": "4.1.2",
+          "table": "3",
+          "column": "E",
+          "row": "Sameness of the Hierarchy",
+          "quote": null
+        }
+      ]
+    },
+    {
+      "id": "F07",
+      "type": "table_identity",
+      "description": "All six Table 3 rank-count columns sum to their printed total 1,000. Ordered-Gini values computed only from the hypothetical printed counts are A=0, B=0, C=0.34543259, D=0.35880226, E=0.29840616 and F=0.14047749.",
+      "rounding_interval_check": "Each computed Gini lies within its published two-decimal rounding interval. Sameness A≈0.0188673, B≈0.7087839, C=1, F≈0.6221122 likewise round to the printed values. These are sealed publication algebra, not registry estimates.",
+      "severity": "none",
+      "locators": [
+        {
+          "doc_id": "D1",
+          "pdf_page": 6,
+          "journal_page": null,
+          "section": "4.1.1",
+          "table": null,
+          "column": null,
+          "row": null,
+          "quote": null
+        },
+        {
+          "doc_id": "D1",
+          "pdf_page": 7,
+          "journal_page": null,
+          "section": "4.1.2",
+          "table": "3",
+          "column": null,
+          "row": null,
+          "quote": null
+        }
+      ]
+    },
+    {
+      "id": "F08",
+      "type": "n_df",
+      "description": "Table 1 totals add correctly: 93,666+29,099=122,765 prisoners; 188+92=280 camps; 1,276+662=1,938 captured cohorts.",
+      "rounding_interval_check": "Exact printed integer identities hold. Multiplying group means by group counts does not recover all prisoners, but summary denominators vary and no common aggregation denominator is stated; no definite count contradiction follows.",
+      "severity": "none",
+      "locators": [
+        {
+          "doc_id": "D1",
+          "pdf_page": 6,
+          "journal_page": null,
+          "section": null,
+          "table": "1",
+          "column": null,
+          "row": null,
+          "quote": null
+        }
+      ]
+    },
+    {
+      "id": "F09",
+      "type": "table_identity",
+      "description": "Table 1 gives overall/German/Japanese death rates of 10/3/36 percent. Weighting the printed country percentages by printed total counts gives about 10.82%, but this is not a definitive inconsistency.",
+      "rounding_interval_check": "Country-rate intervals [2.5,3.5) and [35.5,36.5), weighted by printed counts, allow approximately [10.322,11.322) percent. This overlaps overall [9.5,10.5), so whole rounding intervals do not establish a mismatch. The 2,402 German deaths in prose divided by 93,666 is about 2.56%, consistent with 3% after rounding.",
+      "severity": "none",
+      "locators": [
+        {
+          "doc_id": "D1",
+          "pdf_page": 4,
+          "journal_page": null,
+          "section": "2.1",
+          "table": null,
+          "column": null,
+          "row": null,
+          "quote": null
+        },
+        {
+          "doc_id": "D1",
+          "pdf_page": 6,
+          "journal_page": null,
+          "section": null,
+          "table": "1",
+          "column": null,
+          "row": null,
+          "quote": null
+        }
+      ]
+    },
+    {
+      "id": "F10",
+      "type": "coef_se_p_consistency",
+      "description": "Section 4.4 calls all Table 4 hierarchy results at least marginally significant. One camp-steepness p-value is printed 0.10.",
+      "rounding_interval_check": "A rounded 0.10 lies in [0.095,0.105), straddling a possible 10% cutoff. Alpha and tails are not specified. Do not mark it definitively above or below a 10% threshold based on the printed midpoint. Printed 0.05 entries similarly straddle 5%.",
+      "severity": "minor",
+      "locators": [
+        {
+          "doc_id": "D1",
+          "pdf_page": 8,
+          "journal_page": null,
+          "section": "4.4",
+          "table": null,
+          "column": null,
+          "row": null,
+          "quote": null
+        },
+        {
+          "doc_id": "D1",
+          "pdf_page": 9,
+          "journal_page": null,
+          "section": null,
+          "table": "4",
+          "column": "Steepness / camp / controlled",
+          "row": "Hierarchy",
+          "quote": null
+        }
+      ]
+    },
+    {
+      "id": "F11",
+      "type": "transformation",
+      "description": "Table 6 presents negative officer-product slopes, but an independently varied product-regressor marginal effect is not generally the officer-versus-enlisted difference in the hierarchy derivative of a probit probability.",
+      "rounding_interval_check": "No arithmetic verdict is possible without latent coefficients and evaluation convention. Significance of the product coefficient need not identify the significance of the probability-scale interaction; no SE or covariance is published.",
+      "severity": "notable",
+      "locators": [
+        {
+          "doc_id": "D1",
+          "pdf_page": 12,
+          "journal_page": null,
+          "section": "6.1",
+          "table": null,
+          "column": null,
+          "row": null,
+          "quote": null
+        },
+        {
+          "doc_id": "D1",
+          "pdf_page": 13,
+          "journal_page": null,
+          "section": null,
+          "table": "6",
+          "column": null,
+          "row": null,
+          "quote": null
+        }
+      ]
+    },
+    {
+      "id": "F12",
+      "type": "other",
+      "description": "Section 4.5 labels the comparison a probit-appropriate F-test and then describes a paired ROC-area test. No statistic, degrees of freedom, ROC areas or software implementation are reported.",
+      "rounding_interval_check": "Only rounded p-values can be transcribed; no F or paired-ROC identity can be tested. Predictive discrimination is not itself a causal identification diagnostic.",
+      "severity": "minor",
+      "locators": [
+        {
+          "doc_id": "D1",
+          "pdf_page": 9,
+          "journal_page": null,
+          "section": "4.5",
+          "table": "5",
+          "column": null,
+          "row": null,
+          "quote": null
+        }
+      ]
+    },
+    {
+      "id": "F13",
+      "type": "text_table_mismatch",
+      "description": "Source coverage prose gives enlistment years 1938–1946 in one paragraph and 1938–1945 in the next.",
+      "rounding_interval_check": "Calendar endpoints are not rounded estimates. They do not establish an actual sample restriction; retain ambiguity.",
+      "severity": "minor",
+      "locators": [
+        {
+          "doc_id": "D1",
+          "pdf_page": 5,
+          "journal_page": null,
+          "section": "3",
+          "table": null,
+          "column": null,
+          "row": null,
+          "quote": null
+        }
+      ]
+    },
+    {
+      "id": "F14",
+      "type": "other",
+      "description": "The article claims ten hierarchy measures, but its explicit list does not unambiguously enumerate ten distinct measurements independently of friend-based regroupings or group definitions.",
+      "rounding_interval_check": "Count claim preserved as printed; no missing variants reconstructed to force agreement.",
+      "severity": "minor",
+      "locators": [
+        {
+          "doc_id": "D1",
+          "pdf_page": 10,
+          "journal_page": null,
+          "section": "5.2; 5.3.1",
+          "table": null,
+          "column": null,
+          "row": null,
+          "quote": null
+        },
+        {
+          "doc_id": "D1",
+          "pdf_page": 11,
+          "journal_page": null,
+          "section": "5.3.2; 5.4",
+          "table": null,
+          "column": null,
+          "row": null,
+          "quote": null
+        }
+      ]
+    }
+  ],
+  "scope": "Only published-record transcription and deterministic published-table algebra. No raw data were accessed, modeled or compared; diagnostics are not automatic replication verdicts."
+}

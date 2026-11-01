@@ -1,0 +1,62 @@
+{
+ "mismatches": [],
+ "n_cells_checked_per_reader": 25,
+ "arithmetic": [
+  [
+   "dSSE M2-M1",
+   0.092,
+   0.092
+  ],
+  [
+   "dSSE M3-M1",
+   0.448,
+   0.448
+  ],
+  [
+   "dSSE M3-M2",
+   0.356,
+   0.356
+  ],
+  [
+   "F M2 vs M1 (K=6)",
+   30.41,
+   30.4
+  ],
+  [
+   "F M3 vs M1 (K=7)",
+   84.38,
+   84.4
+  ],
+  [
+   "F M3 vs M2 (K=7)",
+   134.1,
+   134.1
+  ],
+  [
+   "F M3_SQ vs M1 implied (K=6)",
+   59.56,
+   "not printed"
+  ]
+ ],
+ "implied_t_and_se_range_from_F": [
+  [
+   "M2 SD",
+   5.514,
+   0.003537,
+   0.003718
+  ],
+  [
+   "M3 vs M2 (SD2 given SD)",
+   11.58,
+   0.000475,
+   0.000561
+  ],
+  [
+   "M3_SQ SD2 (from SSE 2.803)",
+   7.718,
+   6.5e-05,
+   0.000194
+  ]
+ ],
+ "note": "SE implied by F for M3 SD2 must lie in [0.000475,0.000561] given |b| in [0.0055,0.0065]; printed 0.001 requires >=0.0005, so the true SE is about 0.0005, half the printed value."
+}

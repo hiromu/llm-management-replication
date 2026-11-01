@@ -1,0 +1,27 @@
+{
+  "study_id": "lehman2011",
+  "paper_id": "ORSC_2011_Lehman",
+  "doi": "10.1287/orsc.1100.0626",
+  "coordinator_session_id": "854f82b1-fa2c-409c-9663-ea33f56d31cd",
+  "research_authorized_by_user": "2026-10-27 (in this session)",
+  "supplied_pdf_sha256": "93278fe5f7ad8a54cb4808305f6b8725ae968944fd6e9cda75e8089047e6c8d3",
+  "planned_scope": "Article's reported fourth-down risk-taking models estimated on NFL play-by-play data for 2000-2005 regular seasons, reconstructed from independently acquired nflverse public data. Exact model list fixed after reader reconciliation.",
+  "eligibility": {
+    "author_package": "no_package_found_after_documented_search (logs/package_availability.json)",
+    "public_source": "eligible: nflverse play-by-play and schedules (CC-BY-4.0) cover all six seasons; two 2000 games lack play-by-play rows (registry/source_registry.json)",
+    "supplements": "none found (logs/supplement_search.json)"
+  },
+  "model_configuration": "config/roles.json; actual launch records under sealed/memorization/*/ and readers/*/run1/",
+  "compute_budget": {
+    "reader_runs": "one initial run per reader; at most one written clarification round",
+    "implementations": "three (A, B, C); at most 3 checker rounds per implementation",
+    "specifications": "the frozen finite grid, fitted in full; no cap on grid size beyond what reconciliation sources",
+    "influence_diagnostics": "registered before fitting (deletion unit and scope fixed from study design)",
+    "wall_clock": "single session"
+  },
+  "environment_notes": [
+    "The venv Python cannot import ssl (missing Homebrew openssl@3 dylib), so all HTTPS was done with curl.",
+    "The acquisition role installed pyarrow 26.0.0 into the venv from a sha256-verified wheel (--no-index), and the R package nanoparquet 0.5.2 into /opt/homebrew/lib/R/4.6/site-library.",
+    "data/raw/download_log.tsv could not be made read-only (permission refusal); all raw data files are read-only."
+  ]
+}

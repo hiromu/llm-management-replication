@@ -1,0 +1,14 @@
+Python: 3.13.16 (main, Sep 30 2026, 18:57:20) [Clang 17.0.0 (clang-1700.6.4.2)]
+Executable: ~/.venv/bin/python
+Platform: macOS-15.7.9-arm64-arm-64bit-Mach-O
+numpy: 2.4.2
+pandas: 2.3.3
+scipy: 1.17.1
+statsmodels: 0.14.6
+seed: 20261031
+boot: 300
+RNG: numpy default_rng; model streams derived with SHA-256 and SeedSequence
+CSV floats: 17 significant digits; two-sided p values; normal reference for robust and Wald tests
+Warnings (deduplicated):
+LMM1.proh_voice (ri_person): Random effects covariance is singular
+LMM1.prom_voice (ri_person): Random effects covariance is singular

@@ -1,0 +1,530 @@
+
+\documentclass[11pt]{article}
+\usepackage[margin=0.85in]{geometry}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern,microtype,graphicx,booktabs,tabularx,longtable,array,amsmath,enumitem,titlesec,float}
+\usepackage[hidelinks]{hyperref}
+\usepackage{xurl,caption,tocloft}
+\setcounter{tocdepth}{1}
+\setlength{\cftsecnumwidth}{3em}
+\captionsetup{font=small,labelfont=bf}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{5pt}
+\setlist{nosep,leftmargin=*}
+\newcolumntype{Y}{>{\raggedright\arraybackslash}X}
+\renewcommand{\thesection}{S\arabic{section}}
+\renewcommand{\thesubsection}{\thesection.\arabic{subsection}}
+\counterwithin{table}{section}
+\counterwithin{figure}{section}
+\titleformat{\section}{\Large\bfseries}{\thesection}{.7em}{}
+\titlespacing*{\section}{0pt}{12pt}{6pt}
+\newcommand{\artifact}[1]{\nolinkurl{#1}}
+\newcommand{\study}[1]{\texttt{#1}}
+\newcommand{\casefigure}[3]{\begin{figure}[H]\centering\includegraphics[width=\linewidth,height=.62\textheight,keepaspectratio]{supplement_assets/#1.pdf}\caption{#2}\label{fig:#1}\end{figure}{\footnotesize Source: \artifact{studies/#1/#3}. Plotted bars show single-unit deletion ranges.}}
+\title{Technical Supplement\\\large Codifying the Research Routine: Reproducing Organizational Research with Partitioned AI Agents}
+\author{}
+\date{1 November 2026}
+\begin{document}
+\maketitle
+\vspace{-1em}
+This supplement documents six public-source reconstructions and the screening pipeline from which they were selected. It reports each study's frozen scoring rules, post-score reviews, and a post hoc cross-study comparison under a shared rule. Sections~\ref{sec:berry} and~\ref{sec:nagaraj} report two additional reconstructions using deposited data, with author code sealed until scoring. These cases are separate from the six-study comparison.
+
+\tableofcontents
+\clearpage
+\section{Paper selection}\label{sec:selection}
+\subsection{Frame and journal windows}
+The screening pipeline retrieved journal articles from Crossref by ISSN, allowing a one-year buffer around each window. It assigned publication year using print year first, followed by issue date, publication date, and online date. Missing abstracts were queried by DOI in OpenAlex, treating strings under 50 characters as missing. Duplicate detection matched on normalized title and first author, or on volume, issue, and page range. Flagged duplicates remained in the ledger and were excluded from article counts. For \textit{Management Science}, the frame was restricted to strategy, organizations, and entrepreneurship/innovation.
+
+\begin{table}[H]\centering\small
+\begin{tabularx}{\linewidth}{@{}lrrY@{}}\toprule
+Journal & Window & Articles & Endpoint basis in the screening record\\\midrule
+Organization Science & 1990--2025 & 2,173 & Transparency policy applied to new submissions from August 2025.\\
+Strategic Management Journal & 1990--2025 & 2,898 & No mandatory data-posting policy documented through 2025.\\
+Academy of Management Journal & 1990--2025 & 2,285 & No mandatory data-posting policy documented through 2025.\\
+Journal of Management & 1990--2025 & 2,093 & Materials available to editors on request; no public posting mandate.\\
+Administrative Science Quarterly & 1990--2024 & 752 & Transparency policy effective July 2024.\\
+Management Science & 1990--2019 & 850 & Data-disclosure policy for submissions from mid-2019; department filter above.\\\midrule
+Total && 11,051 & Eligible research articles after routing and deduplication.\\\bottomrule
+\end{tabularx}\caption{Screening windows and article counts by journal.}\end{table}
+The window endpoints use publication-year cutoffs aligned with each journal's data-sharing policy dates. Exact policy references and retrieval steps are recorded in \artifact{papers/screening/METHOD_1_abstract_screening.md}; individual submission dates will be checked article by article before the Stage 2 corpus run.
+
+\subsection{Abstract and full-text screening}
+Claude coders classified titles and abstracts in batches under fixed codebooks, recording article type, method, named datasets, estimated data access, confidence, and a short rationale. \textit{Organization Science} used separate routing and data-classification passes; the other five journals used a single combined pass. When method or data access was unclear from the abstract, the record stayed a candidate at the routing step; the full-text list was then drawn from the 825 candidates in Groups A--C rated high on data access.
+
+A script mapped data-source tiers into five groups: A (simulation or formal models requiring no empirical data), B (public data), C (public data plus Compustat or CRSP), D (other commercial databases), and E (proprietary, survey, or author-collected data). A ``high'' feasibility rating required plausible access to all core datasets and clear source identification. Among 825 high-rated Group A--C articles, a text filter removed 49 records that mentioned posted data or replication files in the abstract or coder notes, leaving 776 full-text targets.
+
+Full-text coders verified the PDF, classified the primary empirical design, and logged each dataset's role, access tier, citation location, and supporting text. Because core datasets were defined by the sample, dependent variable, and focal independent variables, an article in Group B or C could still use restricted data for a control variable. Replication-package flags were coded from the article text during this pass.
+
+\begin{table}[H]\centering\small
+\begin{tabularx}{\linewidth}{@{}rY@{}}\toprule
+Count & Operational definition\\\midrule
+11,051 & Research-article frame after duplicate and department exclusions.\\
+776 & High-priority full texts after removing 49 records with posted-data flags from the 825 high-rated A--C abstracts.\\
+501 & Full-text Groups A, B, or C (275 of the 776 full texts fell into Groups D, E, or non-empirical categories).\\
+468 & Candidates without a replication package reported in the article (33 of 501 reported a package).\\
+277 & Empirical Group B/C candidates after excluding 191 simulations and formal models (265 archival, 7 mixed-method, 5 meta-analyses).\\
+265 & Archival-quantitative subset of the 277 empirical candidates.\\
+209 & Archival candidates with a nonempty source list where every listed dataset falls in tiers R, T0, T1, T5, or T2c.\\
+154 & Archival candidates where every listed dataset is public (excluding tier T2c, Compustat/CRSP).\\\bottomrule
+\end{tabularx}\caption{Screening funnel from 11,051 abstracts to 154 all-public archival candidates. The 277 empirical candidates consist of 211 Group B and 66 Group C papers.}\end{table}
+In the screening ledger, tier R denotes data printed in the article, T0 freely downloadable public data, T1 public data requiring free registration, T5 author-posted files, and T2c Compustat or CRSP. All six completed pilot studies drew exclusively on T0 and T1 sources.
+
+\subsection{Coding scheme for Stage 2}\label{app:coding}
+The 776 full-text records contain article characteristics and source-access assessments; screening retained 277 empirical candidates. Claim outcomes and reconstruction barriers are available for the six pilot studies reported here. Table~\ref{tab:coding} summarizes the Stage 2 reporting fields. Its first five rows summarize screening information, using harmonized labels rather than reproducing the historical codebook verbatim; the last three describe the reconstruction record.
+
+\begin{table}[H]\centering\small
+\begin{tabularx}{\linewidth}{@{}p{.24\linewidth}Y@{}}\toprule
+Item & Reporting fields\\\midrule
+Journal and year & One of the six journals; publication year and journal-specific cutoff.\\
+Research design & Quantitative, qualitative, mixed-method, or non-empirical; primary and secondary empirical methods.\\
+Data origin & Primary, secondary, or mixed; named sources and their roles in the sample, outcomes, predictors, and controls.\\
+Data access & Source-level access tiers, including R, T0, T1, T5, and T2c as defined above, and the restricted-source tiers; core and ancillary source roles.\\
+Replication package & Article-reported package availability in the historical screen; search evidence, verification date, and package coverage in Stage 2.\\
+Central claims & Claims and target quantities selected before implementation; unresolved interpretations.\\
+Reconstruction outcome & Claim-level protocol categories, paper-level summaries, and reasons for non-attempt (Section~\ref{sec:criterion}).\\
+Barriers & Data access, design, measurement, analysis, reporting, or reconstruction; supporting evidence, unresolved choices, and effects on the result.\\\bottomrule
+\end{tabularx}\caption{Reporting scheme for Stage 2.}\label{tab:coding}\end{table}
+In Th\'ebaud (2015), the original year-specific paid-leave series was unavailable. The run scaled the CEPR 2008 level using OECD PF2.5 paid-week ratios; the rebuilt series left the Czech Republic missing in every leave model. Stage 2 will log substitutions of this kind as data-access barriers rather than automatically exclude the study. A study whose core data cannot be obtained will remain in the ledger as not attempted, with the access reason recorded.
+
+\subsection{Checks and selection limitations}
+A second model session independently recoded 77 full texts (29 SMJ, 19 ORSC, 12 AMJ, 8 MNSC, 5 ASQ, and 4 JOM), matching on 96\% of candidate confirmations ($\kappa=.91$) and 100\% of replication-package flags. A separate 420-paper audit sample overlapped the 776 full texts on 14 articles, agreeing on group assignment in 12 of 14 cases and candidate status in 13 of 14.
+
+Because full-text evaluation was restricted to the 776 prioritized abstracts, the 501/11,051 ratio is a lower bound rather than the share of public-data papers in organizational research. Abstract and full-text coding can also miss dead URLs, restricted control variables, or unstated sample filters until source acquisition begins.
+
+\subsection{Selection of the six feasibility cases}
+All six completed studies belong to both the 277-paper empirical queue and the 154-paper all-public archival subset:
+\begin{table}[H]\centering\small
+\begin{tabularx}{\linewidth}{@{}lY@{}}\toprule
+Screening ID & DOI\\\midrule
+\artifact{ORSC_2011_Lehman} & \url{https://doi.org/10.1287/orsc.1100.0626}\\
+\artifact{MNSC_2012_Holderness} & \url{https://doi.org/10.1287/mnsc.1120.1532}\\
+\artifact{SMJ_1999_Deephouse} & \url{https://doi.org/10.1002/(SICI)1097-0266(199902)20:2<147::AID-SMJ11>3.0.CO;2-Q}\\
+\artifact{ASQ_2015_Thebaud} & \url{https://doi.org/10.1177/0001839215591627}\\
+\artifact{JOM_2010_Twenge} & \url{https://doi.org/10.1177/0149206309352246}\\
+\artifact{AMJ_1996_DELANEY} & \url{https://doi.org/10.5465/256718}\\\bottomrule
+\end{tabularx}\caption{Screening IDs and DOIs for the six completed studies.}\end{table}
+We selected these papers purposively to cover one feasible public-data study per journal. Seven studies were completed, two of them from the \textit{Academy of Management Journal}. The AMJ case was chosen after both had finished: we report Delaney and Huselid (1996), a widely cited study of HRM practices, in place of Weigelt and Sarkar (2009), a study of technology vendors to credit unions. Weigelt and Sarkar also ended indeterminate, after two adversarial reviews traced its gaps to the authors' hand-coded provider histories, so the swap does not change the count of outcomes. Its run is archived outside this artifact (\artifact{papers/screening/six_case_membership.csv}).
+
+The repository includes the 11,051-record frame, the 776 full-text assessments, dataset-level coding, the 277-paper and 154-paper candidate lists, and a SHA-256 manifest in \artifact{papers/screening/}. Copyrighted abstract text, article PDFs, and verbatim passages are omitted from the public files.
+
+\clearpage
+\section{Implementation and information access}\label{sec:implementation}\label{app:protocol}
+\subsection{Workflow actually used}
+Each paper ran in its own coordinator session on 27--28 October 2026. First, a source-acquisition agent verified the article PDF, searched for online supplements and replication packages, downloaded raw public datasets from their providers, and logged file versions, SHA-256 hashes, failed requests, and summary-free data dictionaries. For Delaney and Huselid (1996), Th\'ebaud (2015) and Twenge et al.\ (2010), the project lead manually downloaded the registration-gated ICPSR bundles (\texttt{ICPSR\_06240}, \texttt{ICPSR\_20320}, \texttt{ICPSR\_07927}, \texttt{ICPSR\_09871}, and \texttt{ICPSR\_20022}); agents verified the manifest checksums without logging into ICPSR. Data printed inside the articles were never used as empirical inputs.
+
+Second, two independent reader sessions (Claude Fable 5.1 and GPT-6 Astra) received the article packet, workflow rules, and summary-free data dictionaries, extracting the paper's claims, published targets, and analytical specifications before any cross-reading. Separate memorization probes tested whether the models recalled the paper's findings from title and author names. The coordinator session computed initial reader agreement, logged every disagreement in a decision ledger, kept disputed methodological choices as uncertain branches in the specification grid, stripped all published numbers, and froze both the target-free manifest and the study's scoring rules prior to model fitting. In Delaney and Huselid (1996), Table 1 footnote b specifies logged training items, whereas the text describes standardizing and averaging them. The coordinator used the more specific footnote as the baseline (``origin'') and kept the unlogged reading as an uncertain branch. In Deephouse (1999), replacing market-share WLS with unweighted OLS changes the estimand and reverses the curvature sign; it was fitted as a non-equivalent setting. An alternative was labeled equivalent only if both readers judged it faithful to the same claim; Section~\ref{sec:overview} reports the outcome of that assessment.
+
+Third, three isolated implementer sessions wrote and ran code from the target-free manifest and raw data: A (Claude Fable 5.1 in R), B (GPT-6 Astra in R, testing model-family sensitivity in the same language), and C (Python, or Julia for Th\'ebaud, testing language sensitivity). Before execution, a separate checker compared each script against the manifest and returned a bare list of unmet items. After execution, deterministic code checked agreement across the three implementations and scored the outputs against the sealed published targets.
+
+\subsection{Intended access and observed enforcement}
+\begin{table}[H]\centering\small
+\begin{tabularx}{\linewidth}{@{}lcccccc@{}}\toprule
+Role & Identity & Article & Data & Targets & Other code & Scored output\\\midrule
+Source acquisition & Yes & Relevant & Yes & Excluded & No & No\\
+Reader & Yes & Yes & No & Yes & No & No\\
+Coordinator & Yes & Yes & Yes & Yes & Yes & Yes\\
+Implementer & No & No & Execution & No & No & No\\
+Pre-run checker & No & No & No & No & Assigned & No\\
+Deterministic scorer & IDs & Excluded & Outputs & Yes & Excluded & Produces\\
+Post-score reviewer & Yes & Yes & Yes & Yes & Yes & Yes\\\bottomrule
+\end{tabularx}\caption{Information access by role across the pipeline.}\end{table}
+During numerical execution, macOS sandbox profiles blocked external network access (in Lehman et al., Implementation A allowed \texttt{localhost} IPC for a local parallel socket cluster while blocking external DNS and IP traffic). While CLI staging directories isolated implementer workspaces, file-read restrictions for several Claude roles relied on prompt instructions, and Codex write sandboxes did not block all host file reads.
+
+The protocol pinned Claude Opus 5.5 as the coordinator, Claude Fable 5.1 as Reader A, and GPT-6 Astra as Reader B at high effort and normal speed (\artifact{config/roles.json}). CLI receipts verified the served model for Fable 5.1 runs, whereas Codex CLI logs did not always report the served tier.
+
+\begin{table}[H]\centering\small
+\begin{tabularx}{\linewidth}{@{}lYY@{}}\toprule
+Study & Implementations and libraries & Executed agreement and limits\\\midrule
+Lehman & Fable/R, Astra/R, Astra/Python; conditional logit & All three agree at origin and shared grid cells (max coefficient gap $4.5\times10^{-8}$); Stata unavailable.\\
+Holderness & Fable/R, Astra/R, Astra/Python; probit & A and B agree on all 32 core terms; C agrees on 22/32 due to rank-grade string parsing differences.\\
+Deephouse & Fable/R 4.6.1, Astra/R 4.6.1, Astra/Python 3.13.4; WLS & All three agree at both reader origins; two non-origin branches scored on B and C.\\
+Th\'ebaud & Fable/R lme4 2.1.0, Astra/R lme4, Fable/Julia MixedModels 5.9.1 & A and B agree on all 276 origin terms; Julia implementation C timed out after 8.4 hours without saving estimates.\\
+Twenge & Fable/R, Astra/R (lavaan 0.7.3), Astra/Python NumPy/SciPy ML & All three agree within $10^{-5}$ in $d$ across 12 specifications (1,288 quantities compared at S00).\\
+Delaney & Fable/R, Astra/R, Fable/Python; OLS with HC3 benchmark & A and B agree on all 38 specifications (identical samples, coefficients within $2.4\times10^{-12}$); C matches A to $10^{-11}$ after correcting one record's unlabelled code. Two C repair attempts ran on a substituted model and were rejected.\\\bottomrule
+\end{tabularx}\caption{Software configurations and cross-implementation agreement across the six studies.}\end{table}
+
+\subsection{Initial reader agreement and review}
+\begin{table}[H]\centering\small
+\begin{tabularx}{\linewidth}{@{}lYYY@{}}\toprule
+Study & Claim-tier agreement & Specification-label agreement & Target transcription\\\midrule
+Lehman & 11/12; AC1 .90 & 2/4 equivalence labels; AC1 .26 & 81/81 focal components\\
+Holderness & 21/27; AC1 .73 & 10/11; AC1 .89 & 248/248\\
+Deephouse & 14/17; AC1 .78 & 25/31; AC1 .76 & Table 2 and text statistics identical\\
+Th\'ebaud & 29/31; AC1 .92 & 17/32; AC1 .34 & 357/358\\
+Twenge & 53/54; AC1 .978 & 13/18; AC1 .669 & 519/519\\
+Delaney & 9/15; AC1 .51 & 25/46; AC1 .42 & 191/192 regression-table cells\\\bottomrule
+\end{tabularx}\caption{Pre-reconciliation agreement between Reader A (Claude Fable 5.1) and Reader B (GPT-6 Astra).}\end{table}
+In all six studies, adversarial reviews were conducted by Anthropic or OpenAI models, the same two model families used for implementation. No discrepancy candidate has undergone third-family review. In Delaney, AI review overturned 16 of 23 discrepancy candidates and left 7 uncertain; it recommended confirming none.
+
+Wall-clock runtimes ranged from 2 hours 24 minutes (Twenge) to 11 hours (Th\'ebaud). Delaney's recorded Claude CLI calls cost \$76.76; Codex cost was not reported. Lehman and Twenge record individual reader costs, but complete per-study API totals are unavailable for the other five runs.
+
+\subsection{Planned second pass and retained evidence}
+In Delaney and Huselid (1996), a post hoc diagnostic relaxed three missing-data rules: staffing items skipped for establishments with no outside hires, managers in the same occupation as the core group, and competition coded ``not applicable''. Together, these changes raised the organizational sample from 361 to 584 establishments, against 590 published, and moved the incentive-compensation coefficient to the published 0.120. The diagnostic was developed after seeing the results and did not change the frozen classification.
+
+In Stage 2, rules of this kind will enter a versioned convention list by dataset and method. The list will be applied only after the initial article-only run has been scored, with the original outputs retained. Each application will record the convention version, supporting source, affected specification, and changes in sign, significance, magnitude, or classification. The systematic comparison of initial and convention-assisted runs is planned work, not a completed six-study result.
+
+Table~\ref{tab:artifact-map} lists the retained files and their repository locations.
+
+\subsection{Relation to other systems}
+\begin{table}[H]\centering\small
+\begin{tabularx}{\linewidth}{@{}p{.19\linewidth}YYY@{}}\toprule
+System & Empirical inputs & Target access & Comparison and uncertainty\\\midrule
+Kohler et al.\ (2026) & Least-processed usable files inside author replication packages & Extracted methods and blank result templates given to implementers & Deterministic numerical evaluation and error analysis with blinded implementation.\\
+Kubota et al.\ (2026) & Locally supplied GSS 1993 variable subset and codebook & Published targets used for evaluation; discrepancy feedback returned to code generator & LLM alignment scores and iterative code revision; best attempt retained for human review.\\
+Liu et al.\ (2026) & SEER cancer data and documentation & Reproduction arm sees the paper; robustness arm sees only a derived research question & Claim grading plus analytical-robustness grid, including inconclusive outcomes.\\
+Muravyev (2026) & Article text and subscribed financial databases (Compustat/CRSP) & Single-pipeline reconstruction from paper and standard databases & 1,328 finance paper reconstructions with independent audit passes.\\
+Schwartz et al.\ (2026) & Published author replication packages & Full access to paper and package files & Reproduction, sensitivity checks, computational speedups, and extensions.\\
+This tool & Raw public datasets or user-supplied ICPSR files (no replication packages) & Readers see paper and targets; implementers see only target-free manifest and data & Explicit ambiguity grid, 6-outcome scorer, deletion influence checks, and AI review across 6 journals.\\\bottomrule
+\end{tabularx}\caption{Comparison with recent AI reproduction and robustness systems.}\end{table}
+Sources: Kohler et al.\ (2026, §§3.1--3.3, \url{https://arxiv.org/abs/2604.21965}); Kubota et al.\ (2026, §§3--4, \url{https://arxiv.org/abs/2602.18453}); Liu et al.\ (2026, §§3.1--3.2, \url{https://arxiv.org/abs/2610.23845}); Muravyev (2026, \url{https://www.dmurav.com/replications/}); Schwartz, Andrews, and Shapiro (2026, NBER Working Paper 35782, \url{https://doi.org/10.3386/w35782}).
+
+\clearpage
+\section{Overview of the six papers}\label{sec:overview}
+All six pilot studies are quantitative studies of secondary data, with no author replication package used. Table~\ref{tab:sixcoded} records their research questions, models, sources, and samples. Lehman, Holderness, and Deephouse use open-download sources; Th\'ebaud, Twenge, and Delaney also require free ICPSR registration. Exact access routes appear in Section~\ref{sec:reuse}.
+\begin{table}[H]\centering\small
+\begin{tabularx}{\linewidth}{@{}p{.18\linewidth}YY@{}}\toprule
+Paper & Organizational question and model & Source and reconstructed/published sample\\\midrule
+Lehman et al.\ (2011) & Deadline proximity and risk-taking; team fixed-effects logit & NFL play-by-play, 2000--2005; 21,540 vs 22,603 plays.\\
+Holderness and Pontiff (2012) & Hierarchy and POW survival; probit marginal effects & NARA records; captured models 100,672 vs 100,464, camp models 101,993 vs 100,464.\\
+Deephouse (1999) & Strategic differentiation and bank performance; market-share WLS & Call Reports; 1,260 (Origin A) and 1,255 (Origin B) vs 960 bank-years.\\
+Th\'ebaud (2015) & Work-family institutions and entrepreneurship; multilevel logit/linear models & GEM and country indicators; M3 342,734 vs 354,143; owner $N$s vary by model.\\
+Twenge et al.\ (2010) & Work values across survey cohorts; multigroup factor analysis & MTF, 1976/1991/2006; complete-case $N$s 3,097/2,413/2,297 vs form $N$s 3,296/2,526/2,406.\\
+Delaney and Huselid (1996) & HRM practices and perceived organizational and market performance; OLS & National Organizations Survey 1991 (ICPSR 6240); 361 vs 590 (organizational) and 239 vs 373 (market) establishments.\\\bottomrule
+\end{tabularx}\caption{Research questions, statistical models, data sources, and sample sizes for the six studies.}\label{tab:sixcoded}\end{table}
+
+\begin{table}[H]\centering\small
+\begin{tabularx}{\linewidth}{@{}lYYY@{}}\toprule
+Paper & Frozen-rule outcome & Common-rule summary (post hoc) & Main boundary or open question\\\midrule
+Lehman & Consistent (4/4 focal hypotheses); comparability mapping partially reproduced. & Partially reproduced & No agreed equivalent set; Table 6 marginal effects depend on team-effect convention.\\
+Holderness & Partially reproduced (4/4 focal claims consistent; 4 lower-tier flags). & Consistent (coefficient scope) & Published SEs omitted; 3 text-only robustness checks outside coefficient scorer.\\
+Deephouse & Indeterminate (H2 and H3 indeterminate). & Indeterminate & Rebuilt sample 31\% larger than published $N$; first-order term differs.\\
+Th\'ebaud & Indeterminate (H1 consistent; H2 candidates; H3 sample gap $>$15\%). & Not reproduced (unverified); formally indeterminate & Two H3 owner samples differ by $>$15\%; Julia implementation C incomplete.\\
+Twenge & Indeterminate (3/5 focal claims consistent; 2 indeterminate). & Not reproduced (unverified); formally indeterminate & Table 1 and text print opposite signs for 1976--1991 intrinsic contrast; SEs derived.\\
+Delaney & Indeterminate (H1 and H2 indeterminate; sample reconstruction, label-sensitive). & Indeterminate & Three undocumented missing-data rules explain most of the sample gap; AI review overturned 16 of 23 candidates and left 7 uncertain.\\\bottomrule
+\end{tabularx}\caption{Study outcomes under each study's frozen protocol rule and under the post hoc common rule (\texttt{common\_v1}).}\end{table}
+\begin{table}[H]\centering\small
+\begin{tabularx}{\linewidth}{@{}p{.21\linewidth}Yp{.20\linewidth}@{}}\toprule
+Study & Selected comparison (reconstructed vs.\ published) & Frozen paper outcome\\\midrule
+Lehman et al.\ (2011) & Interaction odds ratio: $1.0109$ vs.\ $1.011$ & Consistent\\
+Holderness and Pontiff (2012) & Captured-cohort effect: $-0.103$ vs.\ $-0.11$ & Partially reproduced\\
+Deephouse (1999) & Curvature: $-0.0043$ vs.\ $-0.006$ & Indeterminate\\
+Th\'ebaud (2015) & Childcare interaction: $-0.131$ vs.\ $-0.10$ & Indeterminate\\
+Twenge et al.\ (2010) & Leisure contrast: $0.571$ vs.\ $0.57$ & Indeterminate\\
+Delaney and Huselid (1996) & Training: $0.239$ vs.\ $0.125$ & Indeterminate\\\bottomrule
+\end{tabularx}\caption{Selected numerical comparisons from the six studies.}\label{tab:cases}\end{table}
+In Deephouse (1999), the squared strategic-deviation coefficient is $-0.0043$ against $-0.006$ published, but the linear term lies 3.3 to 4.0 published SEs below the printed value across the two reader origins. The first origin contains 1,260 bank-years against 960 published, leaving the paper indeterminate. No pilot paper was classified as not reproduced under its frozen rule.
+
+Across all six studies, the two readers never agreed that any substantive alternative specification was strictly equivalent to the baseline model, leaving formal specification fragility unassessed. Sections S5--S10 report each study's estimates, uncertain-branch grids, deletion influence checks, and audit findings.
+
+\clearpage
+\section{Common criterion and its limits}\label{sec:criterion}
+\subsection{Claim categories and paper summaries}
+Lehman et al.\ (2011) are \textit{consistent} on all four focal hypotheses; lower-tier flags yield a separate \textit{partially reproduced} comparability mapping. Holderness and Pontiff (2012) are \textit{partially reproduced}: four focal claims are consistent, but one lower-tier coefficient and three text-only checks remain unresolved. Delaney and Huselid (1996) are \textit{indeterminate}: training is 0.239 against 0.125 published, 2.77 SEs apart, but the sample is 361 against 590 establishments; Deephouse, Th\'ebaud, and Twenge are also indeterminate (Section~\ref{sec:overview}). None has a verified \textit{not reproduced} outcome: a focal estimate outside tolerance on a matched, unambiguous reconstruction, confirmed by independent adversarial review.
+
+Delaney's unprinted models are not attempted.
+
+\subsection{Frozen rules and post hoc comparison}
+Each study froze its scoring tolerances before model fitting. After all six runs finished, we rescored the 733 saved estimates under uniform cutoffs on 28 October 2026, without refitting (\artifact{studies/score_common.py}; \artifact{studies/scoring_rules_common_v1.json}). The six claim categories are \texttt{consistent}, \texttt{fragile}, \texttt{fragile inference}, \texttt{discrepant}, \texttt{indeterminate}, and \texttt{not attemptable}. Lehman's four focal hypotheses are consistent. Th\'ebaud's H3 is indeterminate: two owner samples differ from published sizes by more than 15\%. Its postsecondary controls in M1--M3 are the three study-scorer FI terms in Section~\ref{sec:comparisons}: coefficients 0.02606, 0.02354, and 0.02366 (SE about 0.0098), with $p=.0077$, $.01642$, and $.01588$, against 0.04 published at $p<.001$. Delaney's unprinted models are not attemptable. No claim is a verified discrepancy or is classified as fragile across agreed equivalent specifications; no such equivalent set was established (Section~\ref{sec:overview}).
+
+\begin{table}[H]\centering\small
+\begin{tabularx}{\linewidth}{@{}l p{.23\linewidth}Y@{}}\toprule
+Study & Frozen SE-distance bands (consistent / grey / mismatch) & Frozen sample-size ($N$) rule\\\midrule
+Deephouse & $\leq1.5$ / $(1.5,3]$ / $>3$ & $\leq5\%$ close; 5--15\% grey; $>15\%$ converts discrepancies to indeterminate.\\
+Lehman & $\leq1.5$ / $(1.5,3]$ / $>3$ & $\leq2\%$ close; 2--5\% moderate; $>5\%$ converts non-consistent targets to source-vintage indeterminate.\\
+Th\'ebaud & $\leq1.5$ / $(1.5,3]$ / $>3$ & $\leq5\%$ match; 5--15\% grey; $>15\%$ blocks both consistent and discrepant verdicts.\\
+Twenge & $\leq2$ / $(2,4]$ / $>4$ & Form-$N$ gap logged; SEs derived from printed sample sizes and $t$-statistics.\\
+Delaney & $\leq1$ / $(1,2]$ / $>2$ & $\leq2\%$ match; 2--5\% near; $>5\%$ blocks a consistent verdict (indeterminate, sample reconstruction).\\
+Holderness & SE-unit distance unaudited (no printed SEs) & $\leq0.5\%$ match; larger gaps recorded as coverage qualifications.\\\bottomrule
+\end{tabularx}\caption{Frozen magnitude and sample-size tolerances by study.}\end{table}
+Each study's frozen rule is archived in its \artifact{registry/}, \artifact{reconciliation/}, or \artifact{sealed/} folder.
+
+\subsection{Implemented numerical rule}
+For each target $j$, the shared scorer computes the standardized distance from the reconstructed point estimate $\widehat\theta_j$ to the published rounding interval $I_{\mathrm{published},j}$:
+\[
+d_j=\frac{\operatorname{dist}(\widehat\theta_{j},I_{\mathrm{published},j})}{s_j}.
+\]
+Here $s_j$ is the study's standard-error denominator: the upper rounding bound of the printed SE in Deephouse, log-scale SE bounds in Lehman, the printed SE in Th\'ebaud and Delaney, and the derived SE in Twenge (Holderness prints only $p$-values, leaving $d_j$ unaudited).
+
+Under \texttt{common\_v1}, the magnitude cutoffs are $d_j\leq1.5$ (consistent), $1.5<d_j\leq3$ (grey), and $d_j>3$ (mismatch). For published results significant at $p<.10$, a sign reversal with reconstructed $p<.10$ is a mismatch, and with $p\geq.10$ is grey. Inference compares native reconstructed two-sided $p$-values (one-tailed for Delaney, whose article prints one-tailed stars) across four bands ($<.01$, $.01\text{--}<.05$, $.05\text{--}<.10$, and $\geq.10$): weakening by one band is grey, and weakening by two or more bands is a mismatch.
+
+Missing estimates, contradictory printed targets, disagreement in outcome between two reader origins (Deephouse), or a relative sample-size gap above 15\% make a term indeterminate. Otherwise, any mismatch flags the term as an unverified candidate (\texttt{U}), any grey criterion makes it indeterminate (\texttt{I}), and all remaining terms are consistent (\texttt{C}). At the claim level, a claim is consistent if every focal term is \texttt{C}, a candidate if any focal term is \texttt{U}, and indeterminate otherwise. At the paper level, all focal claims \texttt{C} with no lower-tier \texttt{U} yields \texttt{consistent}; all focal claims \texttt{C} with at least one lower-tier \texttt{U} yields \texttt{partially reproduced}; and any focal \texttt{U} yields \texttt{not reproduced (unverified)}, which remains formally indeterminate until verified by an independent model family.
+
+\subsection{Sensitivity, coverage, and final judgment}
+\begin{table}[H]\centering\small
+\begin{tabularx}{\linewidth}{@{}lrrrrY@{}}\toprule
+Study & C & I & U & Total & Lenient rule (C / I / U)\\\midrule
+Lehman & 34 & 19 & 17 & 70 & 39 / 17 / 14\\
+Holderness & 105 & 7 & 0 & 112 & 105 / 7 / 0\\
+Deephouse & 0 & 19 & 0 & 19 & 9 / 10 / 0\\
+Th\'ebaud & 141 & 90 & 49 & 280 & 196 / 45 / 39\\
+Twenge & 91 & 10 & 1 & 102 & 91 / 11 / 0\\
+Delaney & 0 & 150 & 0 & 150 & 93 / 57 / 0\\\bottomrule
+\end{tabularx}\caption{Term-level outcomes across the 733 targets under the post hoc common rule and its lenient variant (C: consistent; I: indeterminate; U: unverified candidate).}\end{table}
+The lenient variant widens the SE-distance cutoffs to $2.0$ and $4.0$ and allows terms with an $N$ gap above 15\% to score as consistent (while still blocking mismatch candidates when $N$ differs by more than 15\%). Under that variant, Twenge's single focal candidate moves to indeterminate, 9 of Deephouse's 19 terms and 93 of Delaney's 150 meet the wider cutoffs, and Delaney's H1 stays indeterminate. Because \texttt{common\_v1} scores only regression coefficients and latent contrasts, it does not cover Deephouse's incremental $F$-tests, Holderness's three text-only robustness checks and ROC tests, Lehman's descriptive-table diagnostics, Th\'ebaud's descriptive figures and Tables A1/A2, Twenge's CFA fit and alpha diagnostics, or Delaney's HRM-block and interaction-block $F$-tests (the latter decide H2, which therefore has no rescored claim). Those items remain part of each study's case report below.
+
+\clearpage
+\section{Lehman et al. (2011)}\label{sec:lehman}
+\textbf{Overview and judgment.} Lehman et al.\ (2011) test how deadline proximity moderates the relationship between prior performance and risk-taking using team fixed-effects conditional logits of NFL fourth-down choices. All four focal hypotheses are consistent under the study's frozen rule (including the article's unsupported game-level H1B), yielding a consistent paper outcome. Under the separate comparability mapping, lower-tier sign flags yield partially reproduced.
+
+\textbf{Coverage and construction.} We numerically compare Table 5 coefficients and Table 6 marginal effects, and log internal inconsistencies in Tables 1--4 as publication diagnostics. Spread-based reference points and narrative field-goal-range checks lack sufficient documentation to attempt. Agents downloaded public nflverse play-by-play and schedule files for 2000--2005 and a historical division-alignment table. Two games from the 2000 season are absent from the public play-by-play archive, leaving a rebuilt sample of 21,540 regular-season regulation fourth-down plays (excluding the final two minutes) against 22,603 published (a 4.7\% difference).
+
+Performance is measured as own score minus (opponent score plus one), spline-split at zero, and minutes remaining as regulation seconds divided by 60. The conditional logits include offensive-team fixed effects and season dummies. Two R implementations and one Python implementation agree across all origin estimates (Stata was unavailable). Table 5 is displayed on the odds-ratio scale below, with standardized distances computed on the log-odds scale.
+
+\input{supplement_assets/generated/lehman2011_focal.tex}
+\textbf{Claim judgments.} H1A, H1B, H2, and H3 are consistent under both the frozen rule and \texttt{common\_v1}. For H2, the log-odds coefficient of $0.010855$ exponentiates to an odds ratio of $1.0109$, inside the printed rounding interval $[1.0105, 1.0115]$, with matching native and game-clustered significance bands ($p<.01$). In Table 6 (secondary marginal effects), 8 of 35 cells match when team fixed effects are set to zero, compared with 28 of 35 under the prespecified alternative that averages across estimated team effects. Those Table 6 differences generate 17 secondary candidates under \texttt{common\_v1} (\texttt{partially reproduced}).
+
+\textbf{Robustness and influence.} The grid spans 191 uncertain branches per model (577 distinct model settings in total), nine non-equivalent fits, one marginal-effects variant, and two algebraic checks. All six focal odds ratios stay consistent across all 191 uncertain branches. Single-unit deletions across 1,518 games, 32 teams, and 6 seasons for Models 2 and 3 preserve every focal sign and $p<.05$ significance level, and the game-clustered benchmark flags no focal fragile inference.
+
+\casefigure{lehman2011}{Focal Table 5 coefficients on the log-odds/published-SE scale (left) and native $p$-values (right). Thick bars show single-game deletions; thin bars show single-team deletions ($N = 21,540$ plays).}{reports/figure_reconstruction_influence.csv}
+
+\textbf{Audit and unresolved record.} In Table 5, the nonsignificant same-division and same-conference control coefficients flip signs relative to the printed table (consistent with a possible label swap in Table 1), and the printed likelihood-ratio test statistics are internally inconsistent with the log-likelihoods. Sealed memorization probes recalled the study design without recalling numerical estimates.
+
+\textbf{Evidence.} \artifact{studies/lehman2011/reports/replication_report.md}, \artifact{reports/technical_supplement.md}, \artifact{reports/data/claim_and_paper_records.json}, \artifact{runs/score_v1/target_comparisons_all_cells.csv}, and \artifact{reconciliation/scoring_rules_v1.json}. Full numerical comparisons appear in Section~\ref{sec:tables-lehman2011}.
+
+\clearpage
+\section{Holderness and Pontiff (2012)}\label{sec:holderness}
+\textbf{Overview and judgment.} Holderness and Pontiff (2012) estimate probit models relating military hierarchy (rank Steepness and Sameness) to prisoner-of-war survival in World War II. All four focal claims (Steepness and Sameness across captured cohorts and prison camps) are consistent on assessed criteria. Because one lower-tier coefficient and three text-only robustness checks remain unresolved after AI adversarial review, the frozen paper outcome is partially reproduced. The article prints $p$-values without standard errors, leaving SE-unit distances unaudited.
+
+\textbf{Coverage and construction.} We compare the eight focal probit models in Table 4, the alternative hierarchy measures, controls, and officer interactions in Tables 5--6, text-only robustness claims, and ROC/fit statistics. Agents linked the NARA World War II POW file (RG 389, NAID 1263907; 143,374 records) to the Army Serial Number enlistment file (RG 64, NAID 1263923; 9,200,232 records) and matched camp locations via GeoNames and NARA camp codes. Because exact capture dates are absent from the public NARA files, report month serves as the cohort proxy, and pay-grade models are omitted for lack of a historical pay table.
+
+The rebuilt known-fate population is 124,387 against 122,765 in Table 1. Camp-level models use 101,993 observations; captured-cohort fixed-effect models drop 1,321 prisoners in 178 single-outcome cohorts, leaving 100,672 observations against 100,464 published. Probit marginal effects are evaluated at covariate means with cohort- or camp-clustered $p$-values. Implementations A and B agree on all 32 core terms; Implementation C's regex for rank-grade strings differed on 708 records, so scoring uses the A/B pair.
+
+\input{supplement_assets/generated/holderness2012_focal.tex}
+\textbf{Claim judgments.} Captured Steepness, camp Steepness, captured Sameness, and camp Sameness are consistent under both the frozen rule and \texttt{common\_v1}. In the full camp model without fixed effects, camp Steepness has a reconstructed $p$-value of $.145$ against $.10$ printed (one significance band weaker, while the camp fixed-effects model matches at $p=.021$ vs.\ $.01$). Under \texttt{common\_v1}, which evaluates only tabular coefficients, the paper scores as consistent; the frozen rule's \texttt{partially reproduced} verdict incorporates the three text-only robustness checks.
+
+\textbf{Robustness and influence.} Each implementation ran 266 model fits and eight ROC comparisons. Across 19 uncertain branches on the eight focal models (152 fits, 101 distinct non-origin designs), stricter rank-label filters or complete-covariate group rules push several Sameness $p$-values above $.10$. Across all 2,016 single-camp deletions in Implementation A (with 160 cross-checked by B and C), no focal effect changes sign, and full-sample camp Steepness $p$-values range from $.03$ to $.32$.
+
+\casefigure{holderness2012}{Eight focal probit marginal effects on POW survival (left) and clustered $p$-values (right), with single-camp deletion ranges ($N = 100,672$ for captured cohorts and $101,993$ for camps).}{reports/figure/reconstruction_influence.csv}
+
+\textbf{Audit and unresolved record.} In Table 5, the surviving Sameness sign flag is statistically nonsignificant in both the published and rebuilt tables, and three squared-group-size flags reflect unit-scaling conventions. The three text-only robustness flags involve within-unit hierarchy, alternative concentration indices, and an ROC area test where perfectly predicted camps cause separation. Memorization probes showed no recall of the paper's numerical estimates.
+
+\textbf{Evidence.} \artifact{studies/holderness2012/reports/replication_report.md}, \artifact{reports/technical_supplement.md}, \artifact{reports/adversarial_review.md}, \artifact{scoring/claim_scores.csv}, \artifact{scoring/final_classification.json}, and \artifact{sealed/scoring/scoring_rules_v1.json}. Full comparisons appear in Section~\ref{sec:tables-holderness2012}.
+
+\clearpage
+\section{Deephouse (1999)}\label{sec:deephouse}
+\textbf{Overview and judgment.} Deephouse (1999) tests strategic balance theory by estimating market-share-weighted least squares (WLS) regressions of bank return on assets on first-order and squared strategic deviation. While the rebuilt squared term is negative and significant ($-0.0043$ at Origin A and $-0.0039$ at Origin B vs.\ $-0.006$ published), the first-order term is 3.3 to 4.0 SEs below the published value ($0.112/0.100$ vs.\ $0.170$), and the rebuilt sample is 31\% larger than reported ($1,260$ and $1,255$ bank-years vs.\ $960$). Because the sample filter cannot be matched from the article text, H2, H3, and the overall paper are indeterminate under both the frozen rule and \texttt{common\_v1}.
+
+\textbf{Coverage and construction.} We compare the three WLS models in Table 2, the text-reported specification omitting the linear term, and the incremental $F$-tests. Agents downloaded 41 quarterly Federal Reserve Bank of Chicago Call Report files (1983Q4--1993Q4), FDIC BankFind histories, FRED/BLS price deflators, and Census/OMB metropolitan definitions for Minneapolis--St.\ Paul. Relative ROA is constructed from net income over average assets, and strategic deviation is summed across 11 asset-allocation shares for 1985--1992, excluding Norwest Bank Minneapolis in 1987 as specified in the paper.
+
+Readers A and B differed on charter filters, asset denominators, missing-item handling, and deposit rules, yielding $N = 1,260$ at Origin A and $N = 1,255$ at Origin B (against $N = 960$ published). All three implementations agree at both origins.
+
+\input{supplement_assets/generated/deephouse1999_focal.tex}
+\textbf{Claim judgments.} H3 is indeterminate due to the $>15\%$ sample-size gap and the first-order coefficient offset. H2 is sensitive to the reader origin: the Model 2 linear term has $p=.088$ at Origin B vs.\ $p>.10$ published. The text-reported quadratic-only model matches in sign and significance. Under the frozen rule, 7 of 15 control rows are consistent; under \texttt{common\_v1}, the 31\% sample-size gap places all 19 terms in the indeterminate column.
+
+\textbf{Robustness and influence.} Each implementation fitted 112 specifications (2 origins, 72 deduplicated uncertain branches, 22 non-equivalent specifications, and 4 algebraic checks). Across the 72 uncertain branches, the squared term remains negative in 99\% of fits and significant at $p<.05$ in 97\%. Clustering standard errors by bank raises the squared-term $p$-value to $.075$ (Origin A) and $.155$ (Origin B), and unweighted OLS reverses the curvature sign. Single bank-year deletions ($5,030$ fits) leave the curvature stable, whereas dropping a single large bank (780 bank deletions) can raise Origin A's curvature $p$-value to $.47$ due to market-share weighting.
+
+\casefigure{deephouse1999}{Focal coefficients and native WLS $p$-values at Reader Origins A ($N=1,260$) and B ($N=1,255$), with single bank-year deletion bars.}{reports/figure_reconstruction_influence.csv}
+
+\textbf{Audit and unresolved record.} In a post-score diagnostic, restricting the geographic boundary to the seven core Twin Cities counties narrowed the sample to $N = 974$ (159 banks) and moved the linear term closer to the published estimate, pointing to metropolitan-county boundary definitions as the primary source of the sample gap.
+
+\textbf{Evidence.} \artifact{studies/deephouse1999/reports/replication_report.md}, \artifact{reports/technical_supplement.md}, \artifact{reports/exports/}, \artifact{scoring/run_v1/term_scores.csv}, \artifact{checks/audit_v1/}, and \artifact{registry/scoring_rules_v1.json}. Full comparisons appear in Section~\ref{sec:tables-deephouse1999}.
+
+\clearpage
+\section{Th\'ebaud (2015)}\label{sec:thebaud}
+\textbf{Overview and judgment.} Th\'ebaud (2015) estimates three-level hierarchical models across 24 countries to test how paid leave, childcare spending, and part-time employment shape gender gaps in business entry (H1), necessity-driven ``plan B'' entrepreneurship (H2), and venture quality (H3). Under the study's frozen rule, H1 is consistent ($-0.131$ vs.\ $-0.10$ for female $\times$ childcare spending), H2 has unverified mismatch candidates, and H3 is indeterminate because two of the five business-owner samples differ from published $N$ by more than 15\%, making the paper indeterminate.
+
+\textbf{Coverage and construction.} We compare all regression models in Tables 1, 2, and Appendix Table A3. The project lead supplied the registration-gated Global Entrepreneurship Monitor (GEM) Adult Population Survey bundle (\texttt{ICPSR\_20320} v6; 2,796,985 records across 143 country-years), and agents downloaded country-level indicators from the OECD, CEPR, ILO, World Bank, and UNDP. France 2003 lacks required covariates, and 2001--2002 country indicators are carried back from adjacent releases. Three-level models include random intercepts and random female slopes at the country-year and country levels (Laplace approximation for binary outcomes; linear multilevel model for log employees plus one in M5). Implementations A and B (both R \texttt{lme4}) agree across all 276 origin terms; Implementation C (Julia \texttt{MixedModels.jl}) was terminated after 8.4 hours before saving parameter estimates, so grid and deletion runs rely on Implementation A.
+
+\input{supplement_assets/generated/thebaud2015_focal.tex}
+\textbf{Samples and claim judgments.} Rebuilt versus published sample sizes are $342,734$ vs.\ $354,143$ for M3 ($-3.2\%$); $31,520$ vs.\ $28,775$ for M4 ($+9.5\%$); $33,626$ vs.\ $28,775$ for M5 ($+16.9\%$); $29,961$ vs.\ $28,775$ for M6 ($+4.1\%$); $32,890$ vs.\ $27,107$ for M7 ($+21.3\%$); and $19,944$ vs.\ $17,498$ for M8 ($+14.0\%$). Because M5 and M7 exceed the 15\% sample-gap threshold, H3 is indeterminate. In M4 (H2), the female $\times$ childcare and female $\times$ part-time interactions yield $p=.12$ and $p=.19$ against significant published effects.
+
+\textbf{Robustness and influence.} Across all uncertain specification branches, the M3 female $\times$ childcare interaction remains negative and significant. In M4, only 1 of 15 branches for part-time employment reaches $p<.05$ (the two-year leave-lag variant, $p=.046$), while a broader plan-B motive coding brings female $\times$ childcare to $p=.07$. Across 137 single-country deletion refits, dropping a single country shifts the M4 female $\times$ childcare coefficient to $-0.105$ ($p=.02$).
+
+\casefigure{thebaud2015}{All 24 female $\times$ policy interactions across Models M3--M8, with single-country deletion ranges for coefficients (left) and $p$-values (right).}{reports/figure/influence_figure.csv}
+
+\textbf{Audit and unresolved record.} Adversarial reviews by both Claude and GPT-6 Astra traced the country-level differences to harmonized GEM release v6 vs.\ the author's earlier extract, early-education vs.\ childcare-only spending series, and whether squared paid leave is standardized before or after squaring. The published tables also contain three internal printing anomalies: a negative standard error on age squared, a blank fertility cell, and mismatched significance stars on the M6 intercept.
+
+\textbf{Evidence.} \artifact{studies/thebaud2015/reports/replication_report.md}, \artifact{reports/technical_supplement.md}, \artifact{reports/exports/}, \artifact{runs/exec_v1/unexecuted_runs.json}, \artifact{audits/adversarial_v1/}, \artifact{audits/adversarial_astra_v1/}, and \artifact{reconciliation/frozen/}. Full comparisons appear in Section~\ref{sec:tables-thebaud2015}.
+
+\clearpage
+\section{Twenge et al. (2010)}\label{sec:twenge}
+\textbf{Overview and judgment.} Twenge et al.\ (2010) use multigroup confirmatory factor analysis on Monitoring the Future (MTF) 12th-grade surveys from 1976, 1991, and 2006 to test changes in five work-value dimensions. Three of the five focal claims reproduce cleanly (leisure values rise, $d = 0.571$ vs.\ $0.57$; extrinsic values peak in 1991; social values decline), while intrinsic and altruistic values end as indeterminate, making the overall paper indeterminate.
+
+\textbf{Coverage and construction.} We compare the 15 latent $d$ contrasts and 29 item-level contrasts in Table 1, and evaluate CFA fit, invariance tests, and scale reliabilities in Table 2 and the text. Using the user-supplied ICPSR MTF files (\texttt{ICPSR\_07927} v4 for 1976, \texttt{ICPSR\_09871} v1 for 1991, and \texttt{ICPSR\_20022} v3 for 2006), agents verified 42 files and extracted Form 4 respondents ($3,341 / 2,556 / 2,461$ total rows vs.\ $3,296 / 2,526 / 2,406$ published; $3,097 / 2,413 / 2,297$ complete cases across all 19 work-value items). Both R (\texttt{lavaan} 0.7.3) implementations and the Python maximum-likelihood implementation agree to within $10^{-5}$ in $d$ across all 12 specifications.
+
+\input{supplement_assets/generated/twenge2010_focal.tex}
+\textbf{Claim judgments.} Leisure (RQ1), extrinsic (RQ2), and social (RQ5) work values are consistent under both the frozen rule and \texttt{common\_v1}. Intrinsic values (RQ3) are indeterminate under the frozen rule and an unverified candidate under \texttt{common\_v1} (which disappears under the lenient rule): the 1976--1991 contrast is printed as $-0.05$ in Table 1 and $+0.05$ in the article text, and the 1976--2006 decline is larger in our rebuild ($-0.22$ vs.\ $-0.16$, 2 to 3 derived SEs apart). Altruistic values (RQ4) sit in the 2 to 4 SE grey zone on two contrasts. At the item level, 27 of 29 claims are consistent, with two printed $t$-statistics carrying the opposite sign of the printed mean differences.
+
+\textbf{Robustness and influence.} Applying the public sampling weights shifts the 1976--2006 altruistic contrast from indeterminate into the consistent band, while leaving the overall RQ4 claim indeterminate. Across all 7,807 single-respondent deletions, every model converges and only the 1976--1991 intrinsic contrast crosses the $.05$ threshold ($p$ ranging from $.038$ to $.057$).
+
+\casefigure{twenge2010}{Fifteen latent survey-year contrasts in $d$ units (left) and native Wald $p$-values (right), with bars spanning all 7,807 single-respondent deletions.}{reports/figure_reconstruction_influence.csv}
+
+\textbf{Audit and unresolved record.} Reconstructed configural CFA fit is $\mathrm{CFI} = .876$ ($\mathrm{df} = 426$) against $.939$ ($\mathrm{df} = 375$) published, reflecting undocumented error-covariance or baseline-model specifications in the original software. In sealed memorization probes, both reader models recalled the paper's headline leisure effect ($d = 0.57$) from title and authors.
+
+\textbf{Evidence.} \artifact{studies/twenge2010/reports/replication_report.md}, \artifact{reports/technical_supplement.md}, \artifact{reports/claim_comparisons.csv}, \artifact{reports/all_specification_results.csv}, \artifact{sealed/scoring_rules.json}, \artifact{sealed/memorization/}, and \artifact{checks/audit_target_keying_correction.md}. Full comparisons appear in Section~\ref{sec:tables-twenge2010}.
+
+\clearpage
+\section{Delaney and Huselid (1996)}\label{sec:delaney}
+\textbf{Overview and judgment.} Delaney and Huselid (1996) relate seven HRM practices (staffing selectivity, training, incentive compensation, grievance procedures, decentralization, internal labor markets and vertical hierarchy) to an informant's perception of organizational and market performance, using OLS on the 1991 National Organizations Survey. H1 (practices are positively associated with perceived performance) and H2 (complementarities among practices) are both indeterminate under the frozen rule, so the paper is indeterminate. The main reason is the sample: the frozen origin yields 361 establishments for organizational performance and 239 for market performance, against 590 and 373 printed, and no specification in the frozen grid exceeded 372 and 250. The estimate is an association between practices and perceived performance reported by one informant; the article itself disclaims a causal reading.
+
+\textbf{Coverage and construction.} We compare every coefficient in Tables 3 and 4 (models 1--10) and the HRM-block and interaction-block $F$-tests. The complementarity, threshold and spline models the article describes but does not show, and its for-profit/nonprofit subgroup analyses, print no estimates and were not attemptable. The project lead supplied the National Organizations Survey bundle (\texttt{ICPSR\_06240} v1, SPSS file DS0002: 727 establishments, 1,016 variables). The release has 1980 Census industry codes but no SIC codes, so the source role downloaded the Census Bureau's 1980 industry list with 1972 SIC equivalents and built 54 industry dummies for the organizational sample and 47 for the market sample; the authors' 33-group coding is unknown. Implementers developed their code on column-permuted synthetic data and never received the real records; the frozen run executed with network access denied. Implementations A and B agree on all 38 specifications; scoring uses that pair. The article reports one-tailed tests, so $p$-values below are one-tailed in the hypothesized positive direction.
+
+\input{supplement_assets/generated/delaney1996_focal.tex}
+\textbf{Claim judgments.} Within the smaller samples, three practices behave differently from the article. Training is about twice its published size (0.239 vs.\ 0.125 in Table 3, model 2; 2.77 published SEs). Incentive compensation is positive but not significant for organizational performance (0.065, $p=.19$, vs.\ 0.120 at $p<.01$). Staffing selectivity is near zero for market performance ($-0.013$ vs.\ 0.145 at $p<.01$). Of H1's 10 primary cells, 6 are indeterminate and 4 are discrepancy candidates; the frozen rule needs at least 6 discrepant cells for an H1 discrepancy. H2 rests on four interaction-block $F$-tests, nonsignificant both in print (0.445 to 0.868) and in the rebuild (0.81 to 1.89, $p=.13$ to $.49$), but each is indeterminate on sample size. Under \texttt{common\_v1}, all 150 coefficients are indeterminate because both samples are more than 35\% short of the printed $N$.
+
+\textbf{Robustness and influence.} The grid has 38 specifications (the origin, 34 single-axis uncertain deviations and 3 algebraic checks), fitted as 912 models per implementation; two market-sample models with a collinear interaction ($N=69$) failed. No alternative was agreed to be equivalent, so specification fragility is not assessed. Across the 34 uncertain specifications, the Table 3 model 2 training coefficient ranges from 0.103 to 0.888, organizational incentive compensation from $-0.060$ to 0.085, and market staffing selectivity from $-0.197$ to 0.028. Across 2,400 leave-one-record-out refits per implementation, no single establishment drives the main gaps: training stays above its published value in every deletion, and organizational incentive compensation and market staffing never reach theirs.
+
+\begin{figure}[p]\centering\includegraphics[width=\linewidth]{supplement_assets/delaney1996_organizational.pdf}\caption{Organizational performance: every HRM-practice and interaction coefficient in Table 3 models 2--5 (left; unstandardized OLS, null 0) and rebuilt one-tailed $p$-values (right, log scale). Lines show leave-one-record-out ranges, not confidence intervals ($N=361$ rebuilt, 590 published). Source: \artifact{studies/delaney1996/reports/figures/reconstruction_influence.csv}.}\label{fig:delaney1996}\end{figure}
+\begin{figure}[p]\centering\includegraphics[width=\linewidth]{supplement_assets/delaney1996_market.pdf}\caption{Market performance: every HRM-practice and interaction coefficient in Table 4 models 7--10, with the same axes and symbols as Figure~\ref{fig:delaney1996}. Lines show leave-one-record-out ranges, not confidence intervals ($N=239$ rebuilt, 373 published). Source: \artifact{studies/delaney1996/reports/figures/reconstruction_influence.csv}.}\label{fig:delaney1996-market}\end{figure}
+
+\textbf{Audit and unresolved record.} The scorer flagged 23 discrepancy candidates. The adversarial review overturned 16, left 7 uncertain and recommends confirming none: the incentive-compensation flags arise because the rebuilt SE is 1.5 times the published one; the staffing gap appears to come from construction rather than an article error; the subsidiary coefficient was coded in the opposite direction in the article's Table 2; and seven cells were flagged only because a near-zero estimate changed sign. The review traced most of the sample shortfall to three missing-data rules the article does not document: staffing items skipped for establishments that did not hire from outside, managers in the same occupation as the core group, and competition coded ``not applicable'', mostly for nonprofits. One gap is our own: Reader A's coding of the share of managers, which keeps those establishments, was logged as an origin in reconciliation but never executed, and no amended run was made. A post hoc exploration relaxing the three rules reaches $N=584$ and 373 and moves several estimates toward the printed ones (organizational incentive compensation 0.120; market staffing 0.119 to 0.122). It was found after seeing results, partly by matching sample size, so it is reported as a diagnostic and changes no classification.
+
+Both readers found contradictions within the article (firm age described in years but labelled as logged; a 1--4 competition scale with mean .44 and SD .50; training ``standardized and averaged'' in the text but ``logged'' in a footnote), and the journal scan and the author's retypeset copy disagree on several cells. In sealed probes, both reader models recalled the data source and the 590-organization sample.
+
+\textbf{Evidence.} \artifact{studies/delaney1996/reports/replication_report.md}, \artifact{reports/technical_supplement.md}, \artifact{reports/data/claim_cell_comparisons.csv}, \artifact{reports/data/claim_and_paper_outcomes.json}, \artifact{checks/audit/adversarial_v1/REVIEW.md}, \artifact{checks/scoring_rules_v1.json}, and \artifact{reconciliation/decisions_v1.md}. Full comparisons appear in Section~\ref{sec:tables-delaney1996}.
+
+\clearpage
+\section{Validation, artifact access, and reuse}\label{sec:reuse}
+\subsection{Artifact map and commands}
+\begin{table}[H]\centering\small
+\begin{tabularx}{\linewidth}{@{}p{.40\linewidth}Y@{}}\toprule
+Path & Contents\\\midrule
+\artifact{CLAUDE.md}, \artifact{instructions/}, \artifact{prompts/} & Coordinator protocol, role prompts, reconciliation rules, scoring rules, and reporting standards.\\
+\artifact{config/roles.json} & Pinned model and effort settings for each pipeline role.\\
+\artifact{papers/catalog.json} & Article DOIs, file names, and SHA-256 checksums (PDFs omitted for copyright).\\
+\artifact{papers/screening/} & Screening frame (11,051 records), full-text assessments (776), candidate lists (277 and 154), and methods.\\
+\artifact{studies/<id>/reports/} & Replication report, technical supplement, common-rule report, influence figures, and CSV exports.\\
+\artifact{studies/<id>/registry/} & Data provider URLs, release dates, SHA-256 hashes, and lineage records (raw data omitted).\\
+\artifact{studies/<id>/reconciliation/} & Merged specifications, uncertain grids, and coordinator decision ledgers.\\
+\artifact{studies/<id>/implementation/}, \artifact{runs/} & Implementer scripts in R, Python, and Julia, saved parameter outputs, and execution logs.\\
+\artifact{studies/<id>/checks/}, \artifact{audits/} & Pre-run checker outputs, AI adversarial reviews, and adjudication records.\\
+\artifact{studies/score_common.py} & Script that rescores all six studies under \artifact{studies/scoring_rules_common_v1.json}.\\\bottomrule
+\end{tabularx}\caption{Directory map of the accompanying \artifact{Replication_management/} artifact.}\label{tab:artifact-map}\end{table}
+
+Paths in the table are relative to \artifact{Replication_management/}. Conversation transcripts are omitted from this distribution; numerical outputs, execution logs, and written review records are retained. Historical receipts describe the original runs, before this anonymization.\par
+To regenerate all cross-study common-rule tables and study summaries from the saved estimates:
+\begin{quote}\small\ttfamily
+cd Replication\_management/studies \&\& python score\_common.py
+\end{quote}
+Running this command with Python (\texttt{pandas} and \texttt{numpy}) reproduces all 26 common-rule summary files byte for byte. The script \artifact{proposal/scripts/build_supplement_assets.py} builds the LaTeX comparison tables in this document directly from those saved exports, and \artifact{proposal/} holds the sources of this supplement and the proposal.
+
+\subsection{What has and has not been validated}
+\begin{table}[H]\centering\small
+\begin{tabularx}{\linewidth}{@{}p{.27\linewidth}Y@{}}\toprule
+Check & Current status across the six studies\\\midrule
+Independent implementations & Completed across 3 implementations in 5 studies (A and B in R, C in Python); Th\'ebaud completed A and B in R.\\
+Data-loader verification & SHA-256 checksums, independent R/Python reads, and sample-count traces logged in each study's registry.\\
+Synthetic scorer tests & Verified on synthetic test cases (including 8 unit tests in Lehman); empirical false-flag rate will be calibrated in Stage 2.\\
+Memorization probes & Sealed title/author probes run for all 6 studies; Twenge readers recalled headline $d=0.57$ and Delaney readers the 590-organization sample, while the other 4 recalled no estimates.\\
+Adversarial review & Completed on all flagged candidates using Anthropic and OpenAI models; third-family review planned for Stage 2.\\
+Common-rule rescoring & Verified byte-for-byte via \artifact{score_common.py} across all 733 target terms.\\\bottomrule
+\end{tabularx}\caption{Summary of completed verification steps and Stage 2 calibration tasks.}\end{table}
+
+\subsection{Access routes for full reconstruction}
+\begin{table}[H]\centering\small
+\begin{tabularx}{\linewidth}{@{}lYY@{}}\toprule
+Study & Data provider and access route & Main source-vintage difference\\\midrule
+Lehman & Public download: nflverse play-by-play and schedule releases (2000--2005) & Two 2000-season games absent from public archive ($21,540$ vs $22,603$ plays).\\
+Holderness & Public download: U.S.\ National Archives RG 389 (NAID 1263907) and RG 64 (NAID 1263923); GeoNames & Report month used in place of unarchived capture date ($100,672$ vs $100,464$).\\
+Deephouse & Public download: Chicago Fed Call Reports (1983--1993), FDIC BankFind, FRED/BLS, Census/OMB & Metropolitan county filter yields $1,260 / 1,255$ bank-years vs $960$ published.\\
+Th\'ebaud & Free ICPSR registration (\texttt{ICPSR\_20320} v6) plus public OECD, CEPR, ILO, UNDP, and World Bank series & Harmonized GEM v6 release and OECD early-education series differ from original vintage.\\
+Twenge & Free ICPSR registration (\texttt{ICPSR\_07927} v4, \texttt{ICPSR\_09871} v1, \texttt{ICPSR\_20022} v3) & Public MTF files omit school/PSU cluster IDs and apply confidentiality weight top-coding.\\
+Delaney & Free ICPSR registration (\texttt{ICPSR\_06240} v1) plus the Census Bureau's 1980 industry list & Same public release; three undocumented missing-data rules leave 361/239 vs 590/373 establishments; the authors' 33-group industry coding is unknown.\\\bottomrule
+\end{tabularx}\caption{Data sources and access routes required to rerun the six studies from raw data.}\end{table}
+Because publisher copyrights and ICPSR terms of use prohibit redistributing article PDFs and raw survey microdata, those files are omitted from \artifact{Replication_management/}. Each study's \artifact{README.md} and \artifact{registry/} folder list the exact filenames and SHA-256 hashes needed to verify a fresh download.
+
+\subsection{Starting a new paper}
+To run the pipeline on a new study, create a fresh \artifact{studies/<study_id>/} directory from the setup guide in \artifact{instructions/new_study.md}, register the article PDF hash in \artifact{papers/catalog.json}, and open an isolated coordinator session following \artifact{CLAUDE.md} and \artifact{instructions/workflow.md}.
+
+\clearpage
+\section{Complete numerical comparisons}\label{sec:comparisons}
+The tables below report all 733 target terms in the common-rule scope (752 rows with Deephouse's two reader origins shown separately). An asterisk (\texttt{*}) marks a focal term under \texttt{common\_v1}. Published standard errors and significance stars are shown where printed in the article; reconstructed standard errors appear where exported by the study scorer, and native two-sided $p$-values are shown otherwise (\texttt{--} indicates that a quantity was not printed or not exported). In Lehman Table 5, log-odds coefficients are exponentiated to odds ratios for side-by-side display, while standardized distances $d_j$ and $p$-values are evaluated on the log-odds scale. Delaney's $p$-values are one-tailed (upper tail), as in the article.
+
+Outcome codes: \texttt{C} = consistent on assessed criteria; \texttt{I} = indeterminate; \texttt{U} = unverified mismatch candidate; \texttt{FI} = fragile inference; \texttt{NA} = not assessed.
+
+\subsection{Lehman et al.}\label{sec:tables-lehman2011}
+\input{supplement_assets/generated/lehman2011_all.tex}
+\clearpage
+\subsection{Holderness and Pontiff}\label{sec:tables-holderness2012}
+\input{supplement_assets/generated/holderness2012_all.tex}
+\clearpage
+\subsection{Deephouse}\label{sec:tables-deephouse1999}
+\input{supplement_assets/generated/deephouse1999_all.tex}
+\clearpage
+\subsection{Th\'ebaud}\label{sec:tables-thebaud2015}
+\input{supplement_assets/generated/thebaud2015_all.tex}
+\clearpage
+\subsection{Twenge et al.}\label{sec:tables-twenge2010}
+\input{supplement_assets/generated/twenge2010_all.tex}
+\clearpage
+\subsection{Delaney and Huselid}\label{sec:tables-delaney1996}
+\input{supplement_assets/generated/delaney1996_all.tex}
+
+\clearpage
+\section{Berry and Hildreth (2025)}\label{sec:berry}
+\textbf{Overview and judgment.} Berry and Hildreth (2025, \textit{Organization Science} 36(2):762--785) report four preregistered experiments on whether loyalty to a friend leads people to support that friend's indirect ties in moral dilemmas. The authors deposited the data, dictionaries, preregistrations and an R Markdown analysis script at \url{https://osf.io/3h6vc}. The agents rebuilt the results from the written methods and the deposited data, with the authors' script sealed until scoring was finished. All 22 focal claims are consistent under the frozen rules, so the paper is consistent. The script, once unsealed, showed that the article's bootstrap intervals were never bootstrapped.
+
+\textbf{Selection and scope.} We chose the paper from OSF file listings, before seeing any result, because its deposit separates data from code and carries per-study dictionaries and preregistrations. It is outside the 277 screened candidates and the six-case comparison, and it was received by the journal on 1 August 2023, before the journal's data rules for submissions from August 2025. The scope is main-text Studies 1--4; the Online Appendix Studies S1--S7 are out of scope. The study-specific rules are in \artifact{instructions/shared_data.md}.
+
+\textbf{Coverage and construction.} Readers received the article, the Online Appendix, the deposited materials appendix, four preregistrations, a deviation report, dictionaries and column names, but no data rows. Implementers received four files named \texttt{dataset\_1} to \texttt{dataset\_4}, built by code from the deposit with no row filtered and identifying free-text columns removed (seven from Study 1, five each from Studies 2 and 3). They developed on synthetic data, and the coordinator ran the frozen scripts on the real files with the network denied. Implementer A used Claude Fable 5.1 in R, B used GPT-6 Astra in R and C used GPT-6 Astra in Python; each checker came from the other model family. Every rebuilt sample matched the published $N$: 530, 186, 286 and 50. The deposit's Study 4 dictionary is a copy of the Study S4 dictionary and shares no variable names with the Study 4 file, so all Study 4 variable mappings were inferred. Readers agreed on 47 of 60 claim tiers (AC1 .74), on 3 of 12 shared equivalence labels (AC1 $-.12$) and on all 472 statistics both transcribed.
+
+\textbf{Three comparisons.} The authors' script stayed sealed until reader outputs, the frozen grid, implementer code and outputs, the frozen scoring rules and the scored comparison were hashed. Its hash before and after unsealing matched the OSF receipt. The study then reports three comparisons separately.
+\begin{table}[H]\centering\small
+\begin{tabularx}{\linewidth}{@{}p{.30\linewidth}Y@{}}\toprule
+Comparison & Result\\\midrule
+AI reconstruction against the article (protocol outcome) & 22 of 22 focal claims consistent; 440 of 483 parseable printed statistics matched at printed precision; one non-focal discrepancy candidate, judged indeterminate after adversarial review.\\
+Author script against the article & The script failed in 31 of 164 expressions as deposited: it calls two columns the deposit lacks, a function from a package it never loads, and a model syntax current \texttt{lavaan} rejects. After four recorded text changes, it matched 222 of 232 published statistics it computes. It covers 171 of the 484 target statistics.\\
+AI code against author code & 13 construction differences classified by written source; none was an AI misreading of a clear written statement. Seven change a reported number, from the third decimal of an effect size to a non-focal serial-mediation estimate (0.149 against 0.712). None changes a focal sign or a focal interval's side of zero.\\\bottomrule
+\end{tabularx}\caption{Berry and Hildreth (2025): the three comparisons required by the study rules.}\label{tab:berry-comparisons}\end{table}
+
+\textbf{The bootstrap finding.} The article reports 95\% bias-corrected bootstrap intervals for its indirect effects, and the preregistration specifies 5,000 resamples. The implementers ran that bootstrap. The authors' script passes \texttt{bootstrap = 5000} to \texttt{lavaan} without requesting bootstrap standard errors, so it returns normal-theory standard errors and symmetric intervals. Under the method the article describes, standard errors are 1.10 to 1.56 times the printed ones. All 16 indirect-effect intervals in Studies 2 and 4 stay on the same side of zero, so no conclusion changes. For the nine Study 2 focal indirect effects, ``consistent'' therefore means that the estimate, sign and zero exclusion match; the printed standard errors and intervals cannot be produced by the written method.
+
+\textbf{Other differences from the authors' code.} Three effect-size conventions are stated nowhere in the documents. For paired $d$, the AI's condition-SD formula matched 11 of 21 printed values, while the author's paired formula matches all 20 it covers. For Study 3 $d$, a pooled SD matches 14 of 14. For eta squared, Type II sums of squares match 19 of 21 printed values against 15 of 21 for the AI's Type III. The one discrepancy candidate is an Online Appendix serial mediation through relational concerns, printed at 0.71 against 0.149 rebuilt. The author's script reaches 0.712 only with two residual covariances that no document mentions.
+
+\textbf{Errors in the published record.} Adversarial review examined eight printed values the data do not reproduce and traced seven to the article; the eighth, a Study 1 $t$ of 16.76 against 16.87 rebuilt, is undecided because the authors' script also gives 16.87. Examples: a Table 2 mean printed as 3.88 where the data give 2.88, above both printed condition means; a Study 1 interaction printed at $p=.944$ where the $F$ statistic implies .993 to .995; and a Study 3 eta squared of .048 where the data give .036, probably copied from the adjacent outcome's line.
+
+\textbf{One claim from text to score.} For Study 3, prohibitive voice, the article prints a planned contrast of $t(282)=1.77$, $p=.079$. Both readers mapped it to H3. The printed degrees of freedom led Reader A to the full-model error term, while the preregistration suggested a two-cell test, so the grid froze the pooled contrast as origin and kept the two-cell tests as uncertain. All three implementations returned $t=1.766$, $p=.0785$, 0.21 published SEs from the printed estimate against a 0.25 limit, so the claim is consistent. The authors' contrast gives the same 1.77. This is the closest focal call in the study; it traces to a printed mean of 2.12 where the data give 2.19.
+
+\textbf{Robustness and influence.} Each implementation produced 12,710 quantities across 2,551 analysis settings; 12,676 were unanimous, and every non-unanimous row is a non-focal Study 4 model. Specification fragility was assessed only for Study 2 and Study 4 mediation, where readers agreed on equivalent alternatives; all stayed on the same side of the threshold. Across 5,688 single-unit deletions with no failed fit, single deletions cross $p=.05$ for four claims, among them the Study 3 H3 contrasts ($p$ down to .028 and .046).
+
+\begin{figure}[H]\centering\includegraphics[width=\linewidth,height=.55\textheight,keepaspectratio]{supplement_assets/berry2025.png}\caption{Focal estimates in Studies 1--4 (left; mean differences and indirect effects in 1--7 scale points, logit coefficients in log-odds, null 0) and two-sided $p$-values (right, log scale). Crosses are published values, dots rebuilt values, lines the full leave-one-out range ($N=530$, 186, 286 and 50). Lines show influence ranges, not confidence intervals.}\label{fig:berry2025}\end{figure}
+{\footnotesize Source: \artifact{studies/berry2025/reports/figures/reconstruction_influence.csv}.}
+
+\textbf{Limits.} This is one paper from authors who shared voluntarily, with preregistrations and dictionaries, so it is likely a favorable case. The deposited data were processed by the authors, which removes the sample-reconstruction problem behind most gaps in the six public-source studies. The coordinator wrote the implementer manifest after seeing the published targets and the deposit's row counts; a leak scan found no target value in it. Memorization probes gave no sign of recall: Reader A weakly recognized the authors' research program and named no result, and Reader B recalled nothing. The adversarial review used Claude Opus 5.5, so no model family independent of both implementation families reviewed the result. The run took about two hours from authorization to the final report. One study does not generalize to experiments as a class.
+
+\textbf{Evidence.} \artifact{studies/berry2025/reports/replication_report.md}, \artifact{reports/technical_supplement.md}, \artifact{reports/audit_pre_unseal.md}, \artifact{reports/adversarial_review.md}, \artifact{reports/exports/}, \artifact{logs/pre_unseal_hashes.json}, \artifact{logs/unseal_record.json}, and \artifact{runs/author_rerun/}. The article and the deposit are not redistributed; the deposit is at \url{https://osf.io/3h6vc}.
+
+\clearpage
+\section{Nagaraj (2021)}\label{sec:nagaraj}
+\textbf{Overview and judgment.} Nagaraj (2021, \textit{Management Science} 67(8):4908--4934) studies how importing Census map data into OpenStreetMap affects subsequent contributions and map quality. This deposited-data reconstruction is separate from the six public-source cases and their common-rule comparison. The paper-level outcome is indeterminate under the study's frozen rules: of nine paper-focal claims, one is consistent, one has fragile inference, six are indeterminate, and one is discrepant but not fully verified. The discrepancy concerns the routing-error measure in Table 6. No human reviewed this run or its classifications; human verification remains a requirement before releasing a verified study report.
+
+\textbf{Scope and inputs.} The run covered main-text Tables 1--7 and Figures 1--6, using the deposit at \url{https://osf.io/a47e9} and the Census TIGER/Line 2010 county file. All 60 deposit files matched the recorded OSF hashes; author code, the full Readme and the LaTeX results file remained sealed until the pre-unsealing record was hashed. These are author-processed aggregates, not a reconstruction from raw OpenStreetMap history. The deposit includes historical inputs that an outsider cannot independently reacquire in the same form, including Census correspondence, proprietary InfoUSA data and 2017 routing queries. Online Appendices A--D informed the methods but were outside the target set. Figure 1(b) was not audited because it is an illustrative image pair; the four Figure 3 panels were not scored because neither reader recorded numerical targets.
+
+\textbf{Readers, implementation and access.} Independent readers received the article packet and data documentation without data rows. The coordinator reconciled their readings into an implementation manifest without published estimates or article identity. Separate implementers used Claude Opus 5.5 in R (A), GPT-6 Astra in R (B), and GPT-6 Astra in Python (C). They developed on synthetic files; the coordinator executed their frozen code on the empirical data with network access denied. Role processes used file-read barriers covering the project and session stores, but command-level internet access during development was controlled by instructions, not blocked. Astra's requested model and speed tier were not confirmed in its CLI receipts. The setup session had seen an earlier replication summary; its exposure was recorded, and the new research session used only the declared packet. The reader probes showed qualitative familiarity, so absence of prior knowledge cannot be established.
+
+\textbf{Scoring and focal results.} The study used its own provisional, uncalibrated thresholds, not the post hoc common rule for the six cases. Magnitude was measured from the published rounding interval in published-SE units: at most 0.5 was a match, above 0.5 through 2 was grey, and above 2 was a mismatch. Inference used the $.01$, $.05$ and $.10$ thresholds. Sample gaps above 0.5\% prevented a consistent classification. Across all 84 ledger units, 17 were consistent, one had fragile inference, 53 were indeterminate, eight were discrepant but unverified, and five were not audited. The eight activity coefficients in Table~\ref{tab:nagaraj-focal} retain the published negative signs; seven remain significant at $.05$. This sign agreement does not resolve sample or magnitude differences.
+
+\input{supplement_assets/generated/nagaraj2021_focal.tex}
+
+\textbf{Three comparisons.} The pre-unsealing hash record covered 391 files. The sealed author files matched their deposit hashes before and after opening. The comparisons below keep the frozen reconstruction separate from later diagnostics.
+\begin{table}[H]\centering\small
+\begin{tabularx}{\linewidth}{@{}p{.29\linewidth}Y@{}}\toprule
+Comparison & Result\\\midrule
+AI reconstruction against the article & Overall indeterminate; Table 6's focal routing-error coefficient reverses sign under the written absolute-error definition. No discrepancy has completed independent-family or human verification.\\
+Author code against the article & Not run: Stata was unavailable. Inspection of the author code and modified AI scripts do not substitute for executing the original Stata pipeline.\\
+AI code against author code & Inspection recorded 23 comparison items, including agreements and differences. Post-unsealing variants isolate sample, control-construction and outcome-definition choices. Applying the combined author choices brings the evaluated claims in Tables 3, 4, 5B and 7 within 0.36 published SEs. Frozen outcomes are unchanged.\\\bottomrule
+\end{tabularx}\caption{Nagaraj (2021): reconstruction, unavailable author-code execution, and post-unsealing diagnostics.}\label{tab:nagaraj-comparisons}\end{table}
+
+\textbf{The routing-error finding.} The article describes the logged absolute difference between OSRM and Google route lengths. All three implementations return a treatment coefficient of $-0.108$ under this definition (county-clustered SE $0.033$, $p=.0012$, $N=80{,}370$), against $0.126$ (SE $0.0708$, $N=81{,}007$) in Table 6, column 1. None of 35 uncertain alternatives meets the frozen pass criteria. Adversarial review retained the discrepancy, but used the same model family as implementation A. After unsealing, the author code was found to reverse the sign of the logged absolute error when the OSRM route is shorter. Adding this signed transformation alone to the frozen AI code gives $0.125$, close to the printed $0.126$. This is a diagnostic of a text--code difference, not a completed author-code rerun or a human-verified correction to the article.
+
+\textbf{Other construction differences.} The author code retains Massachusetts as controls although the article says it is excluded, and interpolates and extrapolates county controls without describing those steps. The deposited ACS files end in 2011, whereas the article describes later years; 671 counties lack median earnings in the 2011 rows. The coordinator's fallback rule did not fill individual missing values, reducing the controlled panel to 110,391 observations and the cross-sections to 2,451 counties. That fallback is a limitation of this reconstruction. The author code also uses a window of twelve months either side of June 2005 for the timing sample, rather than the calendar years 2005--2006 stated in the article. Sample labels and some table headings are internally inconsistent, so several gaps remain classified as indeterminate.
+
+\textbf{Uncertain specifications and influence.} Each implementation ran 1,295 grid rows: 112 origin settings, 530 single-axis deviations, 253 combinations of uncertain choices, and 400 placebo draws. These are three implementations of the same grid, not 3,885 distinct specifications. There were no alternatives jointly classified as equivalent, so specification fragility was not assessed. Implementation A completed 22,409 leave-one-county-out refits across the nine focal models; C repeated all of them with no failures and agreement on every refit. No deletion reversed a focal sign or crossed $.05$. Table 4, column 3 remained nonsignificant ($p=.18$--$.28$); the other eight focal coefficients remained significant.
+
+\begin{figure}[H]\centering\includegraphics[width=\linewidth,height=.55\textheight,keepaspectratio]{supplement_assets/nagaraj2021.png}\caption{Nagaraj (2021): nine focal coefficients and leave-one-county-out influence. Crosses mark published coefficients; dots mark reconstructed coefficients (left) and two-sided benchmark $p$-values (right, log scale). Lines show deletion ranges, not confidence intervals. The dashed line marks $p=.05$; published significance stars appear at the right. Coefficients concern log activity counts or the logged routing-error measure. Table~\ref{tab:nagaraj-focal} reports numerical $p$-values and sample sizes.}\label{fig:nagaraj2021}\end{figure}
+{\footnotesize Source: \artifact{supplement_assets/generated/nagaraj2021_influence.csv}, exported from the frozen run's \artifact{reports/figures/figure_focal_influence.csv}.}
+
+\textbf{Figure diagnostics after unsealing.} The later comparison of Figure 6(a) found that the author's pooled regression without controls gives a top-decile follow-on coefficient of 1.075, against a published plot reading of 1.077. Separate per-decile models following the article's description instead give a near-zero or negative top-decile effect. The reported urban reversal therefore depends on the specification in this diagnostic. Visual comparison of Figure 2 suggests that the printed sample counts, rather than the map titles, were swapped; it is not a county-by-county verification. Annual aggregation brings the reconstructed Figure 3 series closer to the published display, but those panels remain unscored. These figure comparisons were added after unsealing and do not revise the frozen outcomes.
+
+\textbf{Limits and retained evidence.} The case uses deposited aggregates, incomplete documentation, and a single study design. It cannot establish performance on raw-data reconstruction or generalize to natural experiments as a class. Scorer v1.1 corrected two omitted frozen rules before unsealing, without changing any outcome category; both versions are retained. No human review, independent-family discrepancy review, or author-code execution was completed. The source record is \artifact{studies/nagaraj2021/}: \artifact{reports/replication_report.md}, \artifact{reports/technical_supplement.md}, \artifact{reports/data/claim_outcomes.csv}, \artifact{scoring/scoring_rules_v1.json}, \artifact{runs/run_20261101_v1/scoring/final_summary.json}, \artifact{post_unseal/comparisons_2_and_3.md}, and \artifact{logs/pre_unseal_hashes.json}. The protocol as run is preserved under \artifact{studies/nagaraj2021/protocol_as_run/}. Source hashes for the table and figure are supplied in \artifact{supplement_assets/generated/nagaraj2021_provenance.json}.
+
+\clearpage
+\section{References and source record}
+\begingroup\small\setlength{\parskip}{6pt}
+\input{proposal_references.tex}
+
+Muravyev D (2026) Does empirical finance replicate? Working paper, University of Illinois Urbana-Champaign. \url{https://www.dmurav.com/replications/}.
+
+Schwartz M, Andrews I, Shapiro JM (2026) An LLM workflow that reproduces, improves, and extends published economics research. NBER Working Paper 35782. \url{https://doi.org/10.3386/w35782}.
+\endgroup
+\end{document}

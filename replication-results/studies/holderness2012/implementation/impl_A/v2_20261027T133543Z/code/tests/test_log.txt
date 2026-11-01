@@ -1,0 +1,96 @@
+Synthetic tests, 2026-10-27 22:50:30, R version 4.6.1 (2026-06-24) 
+--- Test 1: probit with known coefficients 
+  true: 0.300 -0.500 0.800 1.200 | estimated: 0.301 -0.507 0.813 1.200 | glm: 0.301 -0.507 0.813 1.200 
+PASS 1a coefficients within 4 SE of truth  [max |b - beta| = 0.0133] 
+PASS 1b coefficients equal glm probit  [max diff = 8.77e-07] 
+PASS 1c log likelihood equals glm  [diff = -6.46e-11] 
+PASS 1d converged flag  [iterations = 5] 
+PASS 1e FE model coefficients equal glm with dummies  [max diff = 4.40e-07] 
+PASS 1f FE model recovers true camp effects (max abs error < 0.15)  [max abs error = 0.082] 
+--- Test 2: marginal effects at means and delta-method SEs vs numerical finite differences 
+PASS 2a marginal effects match finite-difference derivative/discrete change  [max diff = 3.40e-11] 
+PASS 2b delta-method gradient matches numerical Jacobian  [max diff = 4.55e-11] 
+PASS 2c delta-method SEs match numerical-Jacobian SEs  [max diff = 4.81e-13; SEs = 0.00229 0.00420 0.00851] 
+  ME at means: x1=-0.0957 (se 0.0023), x2=0.1408 (se 0.0042), x3=0.2263 (se 0.0085) 
+--- Test 3: cluster-robust covariance vs direct sandwich (tiny example, with camp dummies) 
+PASS 3a cluster-robust covariance equals direct sandwich  [max rel diff = 7.34e-08] 
+PASS 3b analytic observed Hessian equals numerical Hessian  [max rel diff = 4.06e-08] 
+  cluster SEs: 0.8136 0.2732 0.3330 0.6815 0.7632 0.6886 
+--- Test 4: Steepness and Sameness formulas 
+PASS 4a one rank only gives Steepness 0  [S = 0.000e+00] 
+PASS 4b single member gives Steepness 0  [S = 0.000e+00] 
+PASS 4c group with shares equal to reference gives Sameness 1  [M = 1.000000] 
+PASS 4d group with shares equal to reference: ratio and absdev sameness = 1 
+PASS 4e Steepness hand value for ranks (1,1,9,9) = 0.4  [S = 0.400000] 
+PASS 4f Sameness hand value for group D  [M = 0.774071] 
+PASS 4g absolute-deviation sameness hand value for group D 
+PASS 4h n_g, distinct ranks, sum of ranks, admin intensity for group D 
+PASS 4i Steepness for ranks 1..4 equals 0.25  [S = 0.250000] 
+  recomputed sameness constant for p_ref: 1.2880 
+--- Test 5: DeLong test 
+PASS 5a identical predictors give z = 0 and p = 1  [auc = 0.7468] 
+PASS 5b AUC equals Mann-Whitney U / (m n)  [auc = 0.746835, U/(mn) = 0.746835] 
+PASS 5c constant predictor has AUC 0.5 
+PASS 5d better predictor vs noisy predictor gives |z| > 3  [auc1 = 0.747 auc2 = 0.541 z = 5.96 p = 2.49e-09] 
+PASS 5e DeLong variance equals double-loop computation  [var = 1.197e-03] 
+--- Test 6: design builder 
+PASS 6a missing -> 0 with indicator; all-missing and constant columns dropped; product gets its own indicator  [kept: (Intercept),a,officer,officer_x_a,a_miss,officer_miss,officer_x_a_miss; dropped: japan,b,b_miss] 
+PASS 6b binary set = officer and indicators (product indicator included) 
+PASS 6c interaction uses imputed values 
+PASS 6d product missing indicator = 1 where either component is missing 
+PASS 6e no product indicator when no component is missing 
+--- Test 8: raw -> string conversion keeps every non-NUL byte 
+PASS 8a NUL bytes removed, lengths preserved  [AB | <e9>Z||001] 
+PASS 8b a byte above 0x7f is kept (not replaced by ?) 
+PASS 8c cleaning then works on such strings 
+--- Test 9: code list and crosswalk cleaning; nara_degree coordinates 
+PASS 9a code list codes are cleaned (NUL escape text removed, trimmed)  [001|002|0 3] 
+PASS 9b padded confidence value is accepted after cleaning; place name cleaned 
+PASS 9c first exact/approximate row per code (unknown row skipped) 
+PASS 9d nara_degree: absent text -> crosswalk coordinates 
+PASS 9e nara_degree: text parsed as whole degrees (first pair; internal spaces ignored) 
+PASS 9f nara_degree: present but unparsable text -> missing (no fallback) 
+--- Test 10: duplicate enlistment records combined field by field before the card layout 
+PASS 10a serial A: CARD_NUM disagrees -> blank -> standard layout; HEIGHT taken from the only non-blank duplicate 
+PASS 10b serial B: agreeing field kept, disagreeing field missing, blank-vs-value keeps the value 
+PASS 10c single records unchanged (CARD_NUM 3 uses ERC fields) 
+PASS 10d serial D: HEIGHT disagrees -> missing, other fields agree 
+PASS 10e one row per serial 
+PASS 10f 'first' uses the smallest record_seq (serial A -> record 1, CARD_NUM 3, ERC height 99 -> out of range -> missing) 
+PASS 10g 'unmatched' keeps only serials with one record 
+--- Test 11: R_cc filter: distance required for camp models only 
+PASS 11a cap complete-case filter does not require distance 
+PASS 11b camp complete-case filter requires distance 
+--- Test 12: camp dummies treated as binary regressors 
+PASS 12a camp dummies are in the binary set 
+PASS 12b camp dummy ME equals the discrete change  [me = 0.22769, discrete = 0.22769, derivative = 0.23725] 
+=== ALL TESTS PASSED 
+--- Test 7: synthetic end-to-end pipeline (all families), 2026-10-27 22:50:31 
+  synthetic run of all S000 families (20000 POW rows) took 12.4 secs 
+PASS 7a every defined model appears in results.csv  [104 models expected, 104 found; missing: ] 
+PASS 7b model count by family matches manifest (8,4,8,4,8,8,8,8,8,8,4,14,10,4) 
+PASS 7c all synthetic fits ok except (possibly) R_n100 cap fits with an empty sample  [Rn100_steepness_cap_simple failed estimation sample has no outcome variation; Rn100_steepness_cap_full failed estimation sample has no outcome variation; Rn100_sameness_cap_simple failed estimation sample has no outcome variation; Rn100_sameness_cap_full failed estimation sample has no outcome variation] 
+PASS 7d cap models report camp-clustered SEs, camp models do not 
+PASS 7e cap models contain camp dummies and dropped-camp counts 
+PASS 7f R_ger/R_jap camp models omit japan 
+PASS 7g T6 models have the interaction term 
+PASS 7h R_int models have hierarchy x men 
+PASS 7i R_nosq models have no men_sq 
+PASS 7j roc.csv has 8 rows, all ok, with equal-row comparisons  [ok,ok,ok,ok,ok,ok,ok,ok] 
+PASS 7k influence.csv has 20 camps x 8 T4 models  [rows = 160; statuses: ok] 
+PASS 7l sample id files written for every fitted model 
+PASS 7m pseudo R2 in (0,1) and ll >= ll0  [pseudo R2 range 0.0000..0.1814] 
+PASS 7n p values in [0,1] 
+PASS 7o R_n50 samples only contain groups with n_g >= 50 (n smaller than T4) 
+PASS 7p T4 camp full coefficients equal glm on the same design (glm precision ~1e-4) and LL not below glm  [max diff = 4.37e-05 over 17 terms, n = 15763, ll mine -7409.475732 glm -7409.475732] 
+PASS 7q T4 cap full coefficients equal glm with camp dummies (glm precision ~1e-4) and LL not below glm  [max diff = 2.07e-06 over 58 terms, n = 15763, camps dropped = 0, ll mine -6660.5205 glm -6660.5205] 
+PASS 7r synthetic truth: officer ME positive and significant in T4 cap full (japan is camp-level: 45 camps, reported only)  [japan ME = 0.246 (p 0.082), officer ME = 0.068 (p 0.000)] 
+PASS 7s duplicate missing indicators: the hierarchy's own indicator is kept in T4; every omitted column is reported as a term with NA estimates  [64 models with omitted columns] 
+PASS 7t T5ROC runs after T5 and before T6  [first T5 line 18, T5ROC 22, T6 30] 
+PASS 7u R_cc cap sample keeps rows with missing distance (complete-case covariates only) and matches results.csv  [rows with missing distance in the cap complete-case sample: 1316 of 8152] 
+PASS 7v R_aaf camp n_g equals the number of AAF rows of R with a rank in the camp  [25 camps checked] 
+PASS 7w friends (incl_self) = ln(members with the same unit); non-members with no such member are missing 
+PASS 7x failed base fit: status failed, sample id file written with the estimation rows 
+PASS 7y failed base fit: leave-one-camp-out fits still run and are recorded  [20 influence rows] 
+  example: T4_steepness_cap_full steepness ME = 0.1423 (se 0.0963, p 0.140) 
+=== PIPELINE TEST PASSED 

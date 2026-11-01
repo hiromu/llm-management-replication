@@ -1,0 +1,14 @@
+{
+  "version": "v1",
+  "registered_before_results": true,
+  "estimand": "logit coefficient (log-odds scale) of each focal performance term in the conditional fixed-effects logit; null value 0. Published values enter as ln(printed odds ratio).",
+  "rows_fixed_order": [
+    "M2 perf_below", "M2 perf_below_sq", "M2 perf_above", "M2 below_indicator",
+    "M3 perf_below", "M3 perf_below_sq", "M3 perf_above", "M3 below_indicator",
+    "M3 perf_below_x_min", "M3 perf_below_sq_x_min", "M3 perf_above_x_min"
+  ],
+  "left_panel": "published ln(OR) as a cross; reconstructed origin coefficient as a filled dot; min-max across all eligible leave-one-game-out refits as a thick horizontal line; min-max across leave-one-team-out refits as a thin line beneath; zero reference line. Rows have very different scales, so each row is shown standardised by the published log-scale SE (upper rounding bound), with raw values in the CSV.",
+  "right_panel": "reconstructed two-sided native p as a dot; min-max of p across game deletions as a horizontal line on a log10 scale; a reference line at 0.05; the published star band shown as a shaded interval; p values below 1e-300 are plotted at 1e-300 and flagged in the CSV.",
+  "caption_requirements": "Deletion ranges are influence ranges, not confidence intervals. State N, the missingness rule, the nflverse provenance and the independent construction. Deletions are not part of the equivalent set, and the figure cannot establish a fragile verdict.",
+  "outputs": "reports/figure_reconstruction_influence.svg/.png, reports/figure_reconstruction_influence.csv, reports/make_figure.py"
+}

@@ -1,0 +1,173 @@
+2026-10-27 22:10:44 P-R7M2 v1 R version 4.6.1 (2026-06-24) 
+2026-10-27 22:10:44 Arguments: --grid grid.json --data data --out construction_checks --specs all --construct-only --influence none 
+2026-10-27 22:10:44 Packages: data.table 1.18.6.1; nanoparquet 0.5.2; jsonlite 2.0.0 
+2026-10-27 22:10:45 SYNTHETIC known_probit_coefficients PASS max absolute error 0.00914005; max standardized error 0.76658; n=60000 
+2026-10-27 22:10:45 SYNTHETIC marginal_effects_and_delta_finite_differences PASS ME error 1.62e-12; Jacobian error 2.03e-07; delta SE error 3.12e-08 
+2026-10-27 22:10:45 SYNTHETIC cluster_covariance_direct_sandwich PASS max covariance error 2.78e-17 
+2026-10-27 22:10:45 SYNTHETIC handmade_hierarchy_groups PASS single rank S=0; one member S=0; matching shares M=1; ranks 1,9 S=0.4; empty group missing 
+2026-10-27 22:10:45 SYNTHETIC delong_identical_and_tied_predictors PASS identical z=0, p=1; tied brute-force z error 8.88e-16 
+2026-10-27 22:10:45 SYNTHETIC NUL_safe_Parquet_pages PASS NUL at beginning/middle/end removed; spaces, empty strings and null values preserved 
+2026-10-27 22:10:45 SYNTHETIC duplicate_linkage_and_missing_design PASS duplicate unmatched/first/combine; missing regressor zero replacement and indicator 
+2026-10-27 22:10:45 cap reference fractions 0.11212,0.12348,0.11212,0.10265,0.10492,0.11136,0.10966,0.1161,0.10758 c 1.319 
+2026-10-27 22:10:45 cap missing: rank 0; height 100; age 0; education 80; dependents 0; officer 0; distance 0; length 0; n_g 0 
+2026-10-27 22:10:45 camp reference fractions 0.11212,0.12348,0.11212,0.10265,0.10492,0.11136,0.10966,0.1161,0.10758 c 1.319 
+2026-10-27 22:10:45 camp missing: rank 0; height 100; age 0; education 80; dependents 0; officer 0; distance 0; length 0; n_g 0 
+2026-10-27 22:10:47 SYNTHETIC all_families_on_synthetic_data PASS 104 synthetic models, 8 paired ROC comparisons, 96 leave-camp-out fits; constant-outcome failure recorded 
+2026-10-27 22:10:47 NUL-safe page reader: pow.parquet SERIAL_NO 
+2026-10-27 22:10:47 NUL-safe page reader: pow.parquet ARM_SVC_ALPHA 
+2026-10-27 22:10:47 NUL-safe page reader: pow.parquet ARM_SVC_CODE 
+2026-10-27 22:10:47 NUL-safe page reader: pow.parquet PARENT_UNIT_NUM 
+2026-10-27 22:10:48 NUL-safe page reader: pow.parquet PARENT_UNIT_TYPE 
+2026-10-27 22:10:48 NUL-safe page reader: pow.parquet DET_POWER 
+2026-10-27 22:10:48 NUL-safe page reader: pow.parquet CAMP 
+2026-10-27 22:11:04 Input rows: POW 143374 ; enlistment candidates 74210 
+2026-10-27 22:11:04 Input CSV warning: pow_CAMP_cl1277.csv Found and resolved improper quoting out-of-sample. First healed line 272: <<"793","POW Camp ("NO." & "SO.") (same as 791) Hongkong 22-114","">>. If the fields are not quoted (e.g. field separator does not appear within any field), try quote="" to avoid this warning. 
+2026-10-27 22:11:04 Input loading seconds 17.25 
+2026-10-27 22:11:04 BEGIN S000 families T4,T5,T5ROC,T6,R_cc,R_n50,R_n100,R_noexec,R_ger,R_jap,R_aaf,R_nosq,R_alt,R_friends,R_int,INFLUENCE 
+2026-10-27 22:11:04 Sample D0 143374 D 124387 R cap 101993 R camp 101993 
+2026-10-27 22:11:05 cap reference fractions 0.46202,0.087999,0.28109,0.0069676,0.13728,0.01546,0.0053048,0.0037069,0.00017034 c 1.319 
+2026-10-27 22:11:05 cap missing: rank 795; height 60811; age 44463; education 44334; dependents 44505; officer 795; distance 625; length 0; n_g 229 
+2026-10-27 22:11:05 camp reference fractions 0.46202,0.087999,0.28109,0.0069676,0.13728,0.01546,0.0053048,0.0037069,0.00017034 c 1.319 
+2026-10-27 22:11:05 camp missing: rank 795; height 60811; age 44463; education 44334; dependents 44505; officer 795; distance 625; length 0; n_g 100 
+2026-10-27 22:11:05 END S000 
+2026-10-27 22:11:05 BEGIN S001 families T4 
+2026-10-27 22:11:05 Sample D0 143374 D 124389 R cap 101995 R camp 101995 
+2026-10-27 22:11:05 cap reference fractions 0.46202,0.087999,0.28109,0.0069676,0.13728,0.01546,0.0053048,0.0037069,0.00017034 c 1.319 
+2026-10-27 22:11:05 cap missing: rank 797; height 60813; age 44465; education 44336; dependents 44507; officer 797; distance 625; length 0; n_g 229 
+2026-10-27 22:11:05 camp reference fractions 0.46202,0.087999,0.28109,0.0069676,0.13728,0.01546,0.0053048,0.0037069,0.00017034 c 1.319 
+2026-10-27 22:11:05 camp missing: rank 797; height 60813; age 44465; education 44336; dependents 44507; officer 797; distance 625; length 0; n_g 100 
+2026-10-27 22:11:05 END S001 
+2026-10-27 22:11:05 BEGIN S002 families T4 
+2026-10-27 22:11:06 Sample D0 143374 D 123881 R cap 101596 R camp 101596 
+2026-10-27 22:11:06 cap reference fractions 0.46202,0.088,0.28108,0.0069677,0.13728,0.01546,0.0053048,0.0037069,0.00017034 c 1.319 
+2026-10-27 22:11:06 cap missing: rank 399; height 60414; age 44066; education 43937; dependents 44108; officer 399; distance 623; length 0; n_g 20 
+2026-10-27 22:11:06 camp reference fractions 0.46202,0.088,0.28108,0.0069677,0.13728,0.01546,0.0053048,0.0037069,0.00017034 c 1.319 
+2026-10-27 22:11:06 camp missing: rank 399; height 60414; age 44066; education 43937; dependents 44108; officer 399; distance 623; length 0; n_g 0 
+2026-10-27 22:11:06 END S002 
+2026-10-27 22:11:06 BEGIN S003 families T4 
+2026-10-27 22:11:06 Sample D0 143374 D 124387 R cap 101993 R camp 105870 
+2026-10-27 22:11:06 cap reference fractions 0.46202,0.087999,0.28109,0.0069676,0.13728,0.01546,0.0053048,0.0037069,0.00017034 c 1.319 
+2026-10-27 22:11:06 cap missing: rank 795; height 60811; age 44463; education 44334; dependents 44505; officer 795; distance 625; length 0; n_g 229 
+2026-10-27 22:11:06 camp reference fractions 0.46202,0.087999,0.28109,0.0069676,0.13728,0.01546,0.0053048,0.0037069,0.00017034 c 1.319 
+2026-10-27 22:11:06 camp missing: rank 908; height 62830; age 46182; education 46050; dependents 46222; officer 908; distance 651; length 3877; n_g 129 
+2026-10-27 22:11:06 END S003 
+2026-10-27 22:11:06 BEGIN S004 families T4 
+2026-10-27 22:11:07 Sample D0 143374 D 124387 R cap 101896 R camp 101896 
+2026-10-27 22:11:07 cap reference fractions 0.46202,0.087999,0.28109,0.0069676,0.13728,0.01546,0.0053048,0.0037069,0.00017034 c 1.319 
+2026-10-27 22:11:07 cap missing: rank 793; height 60747; age 44417; education 44288; dependents 44459; officer 793; distance 528; length 0; n_g 227 
+2026-10-27 22:11:07 camp reference fractions 0.46202,0.087999,0.28109,0.0069676,0.13728,0.01546,0.0053048,0.0037069,0.00017034 c 1.319 
+2026-10-27 22:11:07 camp missing: rank 793; height 60747; age 44417; education 44288; dependents 44459; officer 793; distance 528; length 0; n_g 99 
+2026-10-27 22:11:07 END S004 
+2026-10-27 22:11:07 BEGIN S005 families T4 
+2026-10-27 22:11:07 Sample D0 143374 D 124387 R cap 101993 R camp 101993 
+2026-10-27 22:11:07 cap reference fractions 0.48822,0.06596,0.27768,0.00093757,0.14497,0.015305,0.0050872,0.0016755,0.00017362 c 1.319 
+2026-10-27 22:11:07 cap missing: rank 7516; height 60811; age 44463; education 44334; dependents 44505; officer 7516; distance 625; length 0; n_g 619 
+2026-10-27 22:11:07 camp reference fractions 0.48822,0.06596,0.27768,0.00093757,0.14497,0.015305,0.0050872,0.0016755,0.00017362 c 1.319 
+2026-10-27 22:11:07 camp missing: rank 7516; height 60811; age 44463; education 44334; dependents 44505; officer 7516; distance 625; length 0; n_g 106 
+2026-10-27 22:11:07 END S005 
+2026-10-27 22:11:07 BEGIN S006 families T4 
+2026-10-27 22:11:08 Sample D0 143374 D 124387 R cap 101993 R camp 101993 
+2026-10-27 22:11:08 cap reference fractions 0.46264,0.087131,0.28086,0.0071623,0.13647,0.015338,0.0053778,0.0048343,0.00017845 c 1.319 
+2026-10-27 22:11:08 cap missing: rank 795; height 60811; age 44463; education 44334; dependents 44505; officer 795; distance 625; length 0; n_g 229 
+2026-10-27 22:11:08 camp reference fractions 0.46264,0.087131,0.28086,0.0071623,0.13647,0.015338,0.0053778,0.0048343,0.00017845 c 1.319 
+2026-10-27 22:11:08 camp missing: rank 795; height 60811; age 44463; education 44334; dependents 44505; officer 795; distance 625; length 0; n_g 100 
+2026-10-27 22:11:08 END S006 
+2026-10-27 22:11:08 BEGIN S007 families T4 
+2026-10-27 22:11:08 Sample D0 143374 D 124387 R cap 101993 R camp 101993 
+2026-10-27 22:11:08 cap reference fractions 0.46202,0.087999,0.28109,0.0069676,0.13728,0.01546,0.0053048,0.0037069,0.00017034 c 1.319 
+2026-10-27 22:11:08 cap missing: rank 795; height 60811; age 44463; education 44334; dependents 44505; officer 795; distance 625; length 0; n_g 228 
+2026-10-27 22:11:08 camp reference fractions 0.46202,0.087999,0.28109,0.0069676,0.13728,0.01546,0.0053048,0.0037069,0.00017034 c 1.319 
+2026-10-27 22:11:08 camp missing: rank 795; height 60811; age 44463; education 44334; dependents 44505; officer 795; distance 625; length 0; n_g 82 
+2026-10-27 22:11:08 END S007 
+2026-10-27 22:11:08 BEGIN S008 families T4 
+2026-10-27 22:11:09 Sample D0 143374 D 124387 R cap 101993 R camp 101993 
+2026-10-27 22:11:09 cap reference fractions 0.46202,0.087999,0.28109,0.0069676,0.13728,0.01546,0.0053048,0.0037069,0.00017034 c 1.319 
+2026-10-27 22:11:09 cap missing: rank 795; height 60811; age 44463; education 44334; dependents 44505; officer 795; distance 625; length 0; n_g 2825 
+2026-10-27 22:11:09 camp reference fractions 0.46202,0.087999,0.28109,0.0069676,0.13728,0.01546,0.0053048,0.0037069,0.00017034 c 1.319 
+2026-10-27 22:11:09 camp missing: rank 795; height 60811; age 44463; education 44334; dependents 44505; officer 795; distance 625; length 0; n_g 496 
+2026-10-27 22:11:09 END S008 
+2026-10-27 22:11:09 BEGIN S009 families T4 
+2026-10-27 22:11:09 Sample D0 143374 D 124387 R cap 101993 R camp 101993 
+2026-10-27 22:11:09 cap reference fractions 0.47945,0.091484,0.26835,0.0063242,0.12885,0.015702,0.0056523,0.0039922,0.00020751 c 1.319 
+2026-10-27 22:11:09 cap missing: rank 795; height 60811; age 44463; education 44334; dependents 44505; officer 795; distance 625; length 0; n_g 229 
+2026-10-27 22:11:09 camp reference fractions 0.47945,0.091484,0.26835,0.0063242,0.12885,0.015702,0.0056523,0.0039922,0.00020751 c 1.319 
+2026-10-27 22:11:09 camp missing: rank 795; height 60811; age 44463; education 44334; dependents 44505; officer 795; distance 625; length 0; n_g 100 
+2026-10-27 22:11:09 END S009 
+2026-10-27 22:11:09 BEGIN S010 families T4 
+2026-10-27 22:11:10 Sample D0 143374 D 124387 R cap 101993 R camp 101993 
+2026-10-27 22:11:10 cap reference fractions 0.46202,0.087999,0.28109,0.0069676,0.13728,0.01546,0.0053048,0.0037069,0.00017034 c 1.319052 
+2026-10-27 22:11:10 cap missing: rank 795; height 60811; age 44463; education 44334; dependents 44505; officer 795; distance 625; length 0; n_g 229 
+2026-10-27 22:11:10 camp reference fractions 0.46202,0.087999,0.28109,0.0069676,0.13728,0.01546,0.0053048,0.0037069,0.00017034 c 1.319052 
+2026-10-27 22:11:10 camp missing: rank 795; height 60811; age 44463; education 44334; dependents 44505; officer 795; distance 625; length 0; n_g 100 
+2026-10-27 22:11:10 END S010 
+2026-10-27 22:11:10 BEGIN S011 families T4 
+2026-10-27 22:11:10 Sample D0 143374 D 124387 R cap 101993 R camp 101993 
+2026-10-27 22:11:10 cap reference fractions 0.46202,0.087999,0.28109,0.0069676,0.13728,0.01546,0.0053048,0.0037069,0.00017034 c 1.319 
+2026-10-27 22:11:10 cap missing: rank 795; height 60811; age 44463; education 44334; dependents 44505; officer 795; distance 625; length 0; n_g 229 
+2026-10-27 22:11:10 camp reference fractions 0.46202,0.087999,0.28109,0.0069676,0.13728,0.01546,0.0053048,0.0037069,0.00017034 c 1.319 
+2026-10-27 22:11:10 camp missing: rank 795; height 60811; age 44463; education 44334; dependents 44505; officer 795; distance 625; length 0; n_g 100 
+2026-10-27 22:11:10 END S011 
+2026-10-27 22:11:10 BEGIN S012 families T4 
+2026-10-27 22:11:11 Sample D0 143374 D 124387 R cap 101993 R camp 101993 
+2026-10-27 22:11:11 cap reference fractions 0.46202,0.087999,0.28109,0.0069676,0.13728,0.01546,0.0053048,0.0037069,0.00017034 c 1.319 
+2026-10-27 22:11:11 cap missing: rank 795; height 60811; age 44463; education 44478; dependents 44505; officer 795; distance 625; length 0; n_g 229 
+2026-10-27 22:11:11 camp reference fractions 0.46202,0.087999,0.28109,0.0069676,0.13728,0.01546,0.0053048,0.0037069,0.00017034 c 1.319 
+2026-10-27 22:11:11 camp missing: rank 795; height 60811; age 44463; education 44478; dependents 44505; officer 795; distance 625; length 0; n_g 100 
+2026-10-27 22:11:11 END S012 
+2026-10-27 22:11:11 BEGIN S013 families T4 
+2026-10-27 22:11:11 Sample D0 143374 D 124387 R cap 101993 R camp 101993 
+2026-10-27 22:11:11 cap reference fractions 0.46202,0.087999,0.28109,0.0069676,0.13728,0.01546,0.0053048,0.0037069,0.00017034 c 1.319 
+2026-10-27 22:11:11 cap missing: rank 795; height 60811; age 44463; education 44334; dependents 44505; officer 795; distance 625; length 0; n_g 229 
+2026-10-27 22:11:11 camp reference fractions 0.46202,0.087999,0.28109,0.0069676,0.13728,0.01546,0.0053048,0.0037069,0.00017034 c 1.319 
+2026-10-27 22:11:11 camp missing: rank 795; height 60811; age 44463; education 44334; dependents 44505; officer 795; distance 625; length 0; n_g 100 
+2026-10-27 22:11:11 END S013 
+2026-10-27 22:11:11 BEGIN S014 families T4 
+2026-10-27 22:11:11 Sample D0 143374 D 124387 R cap 101993 R camp 101993 
+2026-10-27 22:11:12 cap reference fractions 0.46202,0.087999,0.28109,0.0069676,0.13728,0.01546,0.0053048,0.0037069,0.00017034 c 1.319 
+2026-10-27 22:11:12 cap missing: rank 795; height 60811; age 44463; education 44334; dependents 54905; officer 795; distance 625; length 0; n_g 229 
+2026-10-27 22:11:12 camp reference fractions 0.46202,0.087999,0.28109,0.0069676,0.13728,0.01546,0.0053048,0.0037069,0.00017034 c 1.319 
+2026-10-27 22:11:12 camp missing: rank 795; height 60811; age 44463; education 44334; dependents 54905; officer 795; distance 625; length 0; n_g 100 
+2026-10-27 22:11:12 END S014 
+2026-10-27 22:11:12 BEGIN S015 families T4 
+2026-10-27 22:11:12 Sample D0 143374 D 124387 R cap 101993 R camp 101993 
+2026-10-27 22:11:12 cap reference fractions 0.46202,0.087999,0.28109,0.0069676,0.13728,0.01546,0.0053048,0.0037069,0.00017034 c 1.319 
+2026-10-27 22:11:12 cap missing: rank 795; height 101993; age 44463; education 44334; dependents 44505; officer 795; distance 625; length 0; n_g 229 
+2026-10-27 22:11:12 camp reference fractions 0.46202,0.087999,0.28109,0.0069676,0.13728,0.01546,0.0053048,0.0037069,0.00017034 c 1.319 
+2026-10-27 22:11:12 camp missing: rank 795; height 101993; age 44463; education 44334; dependents 44505; officer 795; distance 625; length 0; n_g 100 
+2026-10-27 22:11:12 END S015 
+2026-10-27 22:11:12 BEGIN S016 families T4 
+2026-10-27 22:11:12 Sample D0 143374 D 124387 R cap 101993 R camp 101993 
+2026-10-27 22:11:12 cap reference fractions 0.46202,0.087999,0.28109,0.0069676,0.13728,0.01546,0.0053048,0.0037069,0.00017034 c 1.319 
+2026-10-27 22:11:12 cap missing: rank 795; height 60811; age 44334; education 44334; dependents 44505; officer 795; distance 625; length 0; n_g 229 
+2026-10-27 22:11:13 camp reference fractions 0.46202,0.087999,0.28109,0.0069676,0.13728,0.01546,0.0053048,0.0037069,0.00017034 c 1.319 
+2026-10-27 22:11:13 camp missing: rank 795; height 60811; age 44334; education 44334; dependents 44505; officer 795; distance 625; length 0; n_g 100 
+2026-10-27 22:11:13 END S016 
+2026-10-27 22:11:13 BEGIN S017 families T4 
+2026-10-27 22:11:13 Sample D0 143374 D 124387 R cap 101993 R camp 101993 
+2026-10-27 22:11:13 cap reference fractions 0.46202,0.087999,0.28109,0.0069676,0.13728,0.01546,0.0053048,0.0037069,0.00017034 c 1.319 
+2026-10-27 22:11:13 cap missing: rank 795; height 60483; age 43983; education 43842; dependents 44022; officer 795; distance 625; length 0; n_g 229 
+2026-10-27 22:11:13 camp reference fractions 0.46202,0.087999,0.28109,0.0069676,0.13728,0.01546,0.0053048,0.0037069,0.00017034 c 1.319 
+2026-10-27 22:11:13 camp missing: rank 795; height 60483; age 43983; education 43842; dependents 44022; officer 795; distance 625; length 0; n_g 100 
+2026-10-27 22:11:13 END S017 
+2026-10-27 22:11:13 BEGIN S018 families T4 
+2026-10-27 22:11:15 Sample D0 143374 D 124387 R cap 101993 R camp 101993 
+2026-10-27 22:11:15 cap reference fractions 0.46202,0.087999,0.28109,0.0069676,0.13728,0.01546,0.0053048,0.0037069,0.00017034 c 1.319 
+2026-10-27 22:11:15 cap missing: rank 795; height 60723; age 44243; education 44104; dependents 44231; officer 795; distance 625; length 0; n_g 229 
+2026-10-27 22:11:15 camp reference fractions 0.46202,0.087999,0.28109,0.0069676,0.13728,0.01546,0.0053048,0.0037069,0.00017034 c 1.319 
+2026-10-27 22:11:15 camp missing: rank 795; height 60723; age 44243; education 44104; dependents 44231; officer 795; distance 625; length 0; n_g 100 
+2026-10-27 22:11:15 END S018 
+2026-10-27 22:11:15 BEGIN S019 families T4 
+2026-10-27 22:11:15 Sample D0 143374 D 124387 R cap 101993 R camp 101993 
+2026-10-27 22:11:15 cap reference fractions 0.46202,0.087999,0.28109,0.0069676,0.13728,0.01546,0.0053048,0.0037069,0.00017034 c 1.319 
+2026-10-27 22:11:15 cap missing: rank 795; height 60811; age 44463; education 44334; dependents 44505; officer 795; distance 8912; length 0; n_g 229 
+2026-10-27 22:11:15 camp reference fractions 0.46202,0.087999,0.28109,0.0069676,0.13728,0.01546,0.0053048,0.0037069,0.00017034 c 1.319 
+2026-10-27 22:11:15 camp missing: rank 795; height 60811; age 44463; education 44334; dependents 44505; officer 795; distance 8912; length 0; n_g 100 
+2026-10-27 22:11:15 END S019 
+2026-10-27 22:11:15 BEGIN S020 families R_friends 
+2026-10-27 22:11:16 Sample D0 143374 D 124387 R cap 101993 R camp 101993 
+2026-10-27 22:11:16 cap reference fractions 0.46202,0.087999,0.28109,0.0069676,0.13728,0.01546,0.0053048,0.0037069,0.00017034 c 1.319 
+2026-10-27 22:11:16 cap missing: rank 795; height 60811; age 44463; education 44334; dependents 44505; officer 795; distance 625; length 0; n_g 229 
+2026-10-27 22:11:16 camp reference fractions 0.46202,0.087999,0.28109,0.0069676,0.13728,0.01546,0.0053048,0.0037069,0.00017034 c 1.319 
+2026-10-27 22:11:16 camp missing: rank 795; height 60811; age 44463; education 44334; dependents 44505; officer 795; distance 625; length 0; n_g 100 
+2026-10-27 22:11:16 END S020 
+2026-10-27 22:11:16 Run complete 

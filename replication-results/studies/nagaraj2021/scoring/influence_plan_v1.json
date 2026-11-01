@@ -1,0 +1,12 @@
+{
+ "version": "v1",
+ "frozen": "before empirical fitting",
+ "deletion_unit": "county",
+ "justification": "Treatment is assigned at the county level and every model's identifying variation is between counties; county is the cluster and assignment unit. Deleting a county removes all its county-quarters (panel), its single row (cross-section) or all its address pairs (Table 6).",
+ "models": "origin rows of the nine paper-focal claims: T3 (3)-(6) (AN03 followon and contributors, with and without controls), T4 (3)-(6) (AN04 followon and contributors, 2008-2014 and 2014), T6 (1) (AN07 full sample, Treat)",
+ "scope": "every county in each model's estimation sample; one refit per county; all refits retained including failures with reasons",
+ "implementations": "A runs every deletion; C runs the 50 counties with the smallest values of u in placebo_draws.csv seed 200 among each model's sample, for agreement checking",
+ "effect_scale": "coefficient on treat or post x treat in log points (natural-log outcome), null value 0; Table 6 in log points of the routing error",
+ "inference": "benchmark p (CR1 county for panel and address pair, HC1 for county cross-section), two-sided, threshold 0.05",
+ "interpretation": "Deletion ranges are influence ranges, not confidence intervals, and are not part of the equivalent-specification set. The figure alone cannot establish a fragile verdict."
+}

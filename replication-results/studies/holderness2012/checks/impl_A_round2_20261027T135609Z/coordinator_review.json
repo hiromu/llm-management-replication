@@ -1,0 +1,8 @@
+{"implementation": "A", "round": 2,
+ "items": [
+  {"item": 1, "review": "No effect: the literal text \\x00 occurs 0 times in either raw file (byte grep); it occurs only in the constructed crosswalk's representation of NUL-containing codes, which A's cleaning aligns.", "status": "reviewed_no_effect"},
+  {"item": 2, "review": "Manifest silent on blank serials. Under the origin dup_serial='unmatched', blank enlistment serials would be duplicates and unmatched anyway; difference can arise only in S017/S018 and is monitored by implementation comparison.", "status": "manifest_ambiguity_monitored"},
+  {"item": 3, "review": "Columns removed are exact linear dependencies; the fitted model's column span and the scored hierarchy effects are unchanged.", "status": "reviewed_no_effect_on_scored_quantities"},
+  {"item": 4, "review": "Same as item 3 for camp dummies.", "status": "reviewed_no_effect_on_scored_quantities"},
+  {"item": 5, "review": "Scoring treats any status other than ok/converged as a failed fit, and any ROC comparison involving a non-converged model as failed. Recorded in scoring implementation.", "status": "handled_in_scoring"}],
+ "decision": "Code v2 of implementation A accepted for frozen execution. Version 1 preserved."}

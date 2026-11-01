@@ -1,0 +1,128 @@
+{
+  "study_id": "twenge2010",
+  "paper_id": "JOM_2010_Twenge",
+  "search_date_utc": "2026-10-28",
+  "local_catalog": {
+    "path_from_project_root": "papers/supplements/catalog.json",
+    "sha256": "5e1886dc19ea6b27032c9fb615cef4d0b756fa3bbcca26b8904b194f65c08a91",
+    "result": "no_local_match",
+    "detail": "No entry with paper_id JOM_2010_Twenge in files, excluded_code_only or known_uncollected; the string 'Twenge' does not occur in the catalog."
+  },
+  "article_identity_check": {
+    "path_from_project_root": "papers/journal_collection/JOM/JOM_2010_Twenge.pdf",
+    "expected_sha256": "b556175cc775fe710cca7f8e83c571c4fe8b4bb7ebb7a0878939e6eb36f0042e",
+    "observed_sha256": "b556175cc775fe710cca7f8e83c571c4fe8b4bb7ebb7a0878939e6eb36f0042e",
+    "sha256_match": true,
+    "size_bytes": 217359,
+    "page_count": 26,
+    "pdf_version": "1.7",
+    "page_size_pts": "468 x 684",
+    "pdf_metadata_title": "Generational Differences in Work Values: Leisure and Extrinsic Values Increasing, Social and Intrinsic Values Decreasing",
+    "pdf_metadata_subject": "Journal of Management 2010.36:1117-1142",
+    "text_title": "Generational Differences in Work Values: Leisure and Extrinsic Values Increasing, Social and Intrinsic Values Decreasing",
+    "text_authors": [
+      "Jean M. Twenge (San Diego State University)",
+      "Stacy M. Campbell (Kennesaw State University)",
+      "Brian J. Hoffman (University of Georgia)",
+      "Charles E. Lance (University of Georgia)"
+    ],
+    "text_journal": "Journal of Management, Vol. 36 No. 5, September 2010, 1117-1142",
+    "text_doi": "10.1177/0149206309352246",
+    "journal_page_mapping": "PDF page n = journal page 1116+n (PDF 1 = p. 1117; PDF 26 = p. 1142)",
+    "version": "Publisher version of record (SAGE typeset, copyright notice 'The Author(s) 2010')",
+    "identity_matches_STUDY_json": true,
+    "tools": "pdfinfo/pdftotext 26.10.0 (Poppler); Python 3.13.4 (~/.venv/bin/python)",
+    "appendix_or_supplement_mentions": "None. No appendix, online supplement, supplementary material, data-availability or code-availability statement appears in the article text. Table 1, Table 2 and Figure 1 are within the main text.",
+    "data_source_mentions": [
+      {
+        "pdf_page": 9,
+        "journal_page": 1125,
+        "text_summary": "Method section names Monitoring the Future and points to www.monitoringthefuture.org for sampling description."
+      },
+      {
+        "pdf_page": 24,
+        "journal_page": 1140,
+        "text_summary": "Reference: Johnston, Bachman & O'Malley (2006), Monitoring the future [Computer file], 2nd ICPSR ed., ICPSR, Ann Arbor."
+      },
+      {
+        "pdf_page": 10,
+        "journal_page": 1126,
+        "text_summary": "Analysis software named as LISREL 8.7 (method mention only; no code supplied)."
+      }
+    ],
+    "embedded_data_or_code": "No author code, syntax or code links in the article. The article prints summary tables (Tables 1-2, Figure 1); these are sealed comparison targets only, not empirical inputs."
+  },
+  "publisher_supplementary_material": {
+    "status": "unavailable_to_inspect",
+    "urls": [
+      "https://journals.sagepub.com/doi/10.1177/0149206309352246",
+      "https://journals.sagepub.com/doi/suppl/10.1177/0149206309352246"
+    ],
+    "detail": "HTTP 403 to automated fetch on 2026-10-28; not logged in. Indirect evidence: Crossref record has no supplementary or relation entries; the article text references no supplement; OpenAlex/Semantic Scholar show none. Assessed as not found after documented search, with direct publisher-page verification unavailable."
+  },
+  "supplements_found": [],
+  "supplements_saved": [],
+  "supplements_unavailable": [
+    {
+      "item": "SAGE supplementary-material tab",
+      "reason": "HTTP 403; existence not indicated by any other source"
+    }
+  ],
+  "corrections": {
+    "status": "none_found_after_documented_search",
+    "checks": [
+      {
+        "source": "Crossref works record",
+        "url": "https://api.crossref.org/works/10.1177/0149206309352246",
+        "result": "No update-to, updated-by, relation or assertion fields."
+      },
+      {
+        "source": "Crossref relation search",
+        "url": "https://api.crossref.org/works?filter=relation.object:10.1177/0149206309352246",
+        "result": "0 results."
+      },
+      {
+        "source": "Crossref bibliographic search in JOM (ISSN 0149-2063) for erratum",
+        "url": "https://api.crossref.org/works?query.bibliographic=erratum+Generational+Differences+in+Work+Values+Leisure+and+Extrinsic&filter=issn:0149-2063&rows=10",
+        "result": "Three 'Erratum' items returned (1984, 1994, 2011); none concerns this article (2011 erratum, 10.1177/0149206311424388, concerns Becker, Cropanzano & Sanfey 2011)."
+      },
+      {
+        "source": "OpenAlex (incorporates retraction data)",
+        "url": "https://api.openalex.org/works/doi:10.1177/0149206309352246",
+        "result": "is_retracted false."
+      },
+      {
+        "source": "Crossref Labs API (Retraction Watch annotations)",
+        "url": "https://api.labs.crossref.org/works/10.1177/0149206309352246",
+        "result": "HTTP 403: requires a contact email parameter; not queried further (no address supplied for this role)."
+      },
+      {
+        "source": "Web search",
+        "query": "\"Generational Differences in Work Values\" Twenge 2010 erratum OR corrigendum OR correction Journal of Management",
+        "result": "No correction notice found."
+      },
+      {
+        "source": "Web search",
+        "query": "site:journals.sagepub.com \"Generational Differences in Work Values\" Twenge erratum OR correction OR \"supplemental material\"",
+        "result": "No correction or supplement notice found."
+      }
+    ]
+  },
+  "replacement_or_alternate_versions": [
+    {
+      "url": "https://digitalcommons.kennesaw.edu/facpubs/732",
+      "status": "metadata-only record (OpenAlex labels it submittedVersion); no file"
+    },
+    {
+      "url": "https://www.psychology.uga.edu/sites/default/files/CVs/Generational%20Differences%20in%20Work%20Values-%20Leisure%20and%20Extrinsic%20Values%20Increasing%2C%20Social%2C%20and%20Intrinsic%20Values%20Decreasing-3%20%281%29.docx",
+      "status": "manuscript copy seen in search results; not opened or downloaded; the supplied version of record governs"
+    },
+    {
+      "url": "https://cdn2.psychologytoday.com/assets/attachments/4330/genworkvaluesjom.pdf",
+      "status": "hosted article copy seen in search results; not opened or downloaded"
+    }
+  ],
+  "excluded_author_code": [],
+  "uncertain_identity": [],
+  "publication_packet_recommendation": "Main article only (JOM_2010_Twenge.pdf, sha256 b556175c...042e). No permitted supplement identified."
+}

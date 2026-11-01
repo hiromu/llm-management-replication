@@ -1,0 +1,6 @@
+{"manifest": "implementation/manifest/manifest_v1.md",
+ "identity_terms_found": [],
+ "numeric_overlap_with_target_strings": ["19", "23", "95"],
+ "review": {"19": "number of model items, a design constant from the reconciled manifests", "23": "number of Form 4 items, design constant", "95": "95% confidence level, method constant"},
+ "conclusion": "reviewed false positives; no published estimate, N or direction in the manifest",
+ "scanner": "inline Python scan of numeric tokens against all printed_text strings in both readers' targets.json, plus author/journal/construct-name word list"}

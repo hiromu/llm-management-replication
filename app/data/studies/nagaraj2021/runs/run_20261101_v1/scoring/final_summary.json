@@ -1,0 +1,22 @@
+{
+ "outcomes": {
+  "consistent": 17,
+  "indeterminate": 53,
+  "fragile_inference": 1,
+  "discrepant_not_fully_verified": 8,
+  "not_audited": 5
+ },
+ "paper_focal": {
+  "T3|(3)": "fragile_inference (benchmark band weaker by 1; HC1 band not weaker)",
+  "T3|(4)": "indeterminate (magnitude_grey_zone)",
+  "T3|(5)": "consistent (origin sign, magnitude, inference and N criteria met)",
+  "T3|(6)": "indeterminate (magnitude_grey_zone)",
+  "T4|(3)": "indeterminate (label_sensitive)",
+  "T4|(4)": "indeterminate (magnitude_grey_zone)",
+  "T4|(5)": "indeterminate (sample_reconstruction; inconsistent_targets)",
+  "T4|(6)": "indeterminate (magnitude_grey_zone)",
+  "T6|(1) Treat": "discrepant_not_fully_verified (sign;magnitude; survived adversarial review by a same-family reviewer)"
+ },
+ "paper_level": "indeterminate",
+ "review_limitation": "Adversarial review used Claude Opus 5.5, the family of implementation A; no third model family was available. Discrepancies are reported as not fully verified. No human review was performed."
+}

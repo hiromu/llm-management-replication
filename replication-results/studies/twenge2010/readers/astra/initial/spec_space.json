@@ -1,0 +1,532 @@
+{
+  "origin": [
+    "AX01.L0",
+    "AX02.L0",
+    "AX03.L0",
+    "AX04.L0",
+    "AX05.L0",
+    "AX06.L0",
+    "AX07.L0",
+    "AX08.L0",
+    "AX09.L0",
+    "AX10.L0",
+    "AX11.L0",
+    "AX12.L0",
+    "AX13.L0",
+    "AX14.L0"
+  ],
+  "axes": [
+    {
+      "axis_id": "AX01",
+      "decision": "Analysis-specific missing-data sample and treatment",
+      "category": "sample_construction",
+      "levels": [
+        {
+          "level_id": "AX01.L0",
+          "description": "Use available valid responses for each item; use within-year, within-model complete cases for CFA. This is provisional, not a documented deletion rule.",
+          "label": "origin",
+          "classification": "uncertain",
+          "rationale": "The article reports form samples and items, not analysis exclusions; P1 p.10 does not identify missing-data handling.",
+          "basis": "article",
+          "source_locator": {
+            "doc_id": "P1",
+            "pdf_page": 10,
+            "section_or_table": "Method and Preliminary Analyses"
+          }
+        },
+        {
+          "level_id": "AX01.L1",
+          "description": "Use one complete-case Form 4 sample on the full retained item list for all Form 4 item summaries and latent analyses; keep Form 3 separate.",
+          "label": "uncertain",
+          "classification": "uncertain",
+          "rationale": "A common analysis sample could underlie the tabulated results, but it is not stated; changes the descriptive estimand under item nonresponse.",
+          "basis": "article",
+          "source_locator": {
+            "doc_id": "P1",
+            "pdf_page": 10,
+            "section_or_table": "Method and Preliminary Analyses"
+          }
+        },
+        {
+          "level_id": "AX01.L2",
+          "description": "Use likelihood-based handling of partially observed items in CFA and item-specific available responses for descriptions.",
+          "label": "uncertain",
+          "classification": "uncertain",
+          "rationale": "CFA is specified, but the treatment of partially observed vectors is not. Only applicable if the selected fitting method supports the chosen observed-data likelihood; not asserted as the original LISREL procedure.",
+          "basis": "article",
+          "source_locator": {
+            "doc_id": "P1",
+            "pdf_page": 10,
+            "section_or_table": "Method and Preliminary Analyses"
+          }
+        }
+      ],
+      "compatible_with": "Cross only when the analysis uses the same observed items, years and forms; never select using target agreement.",
+      "priority_rank": 1
+    },
+    {
+      "axis_id": "AX02",
+      "decision": "Conflicting Form 4 response-scale documentation",
+      "category": "variable_coding",
+      "levels": [
+        {
+          "level_id": "AX02.L0",
+          "description": "Keep native source categories 1,2,3,4; very important is 4. Do not manufacture a fifth category.",
+          "label": "origin",
+          "classification": "uncertain",
+          "rationale": "P1 p.10 says five points, whereas all supplied Form 4 dictionaries label four. Source coding is directly observable metadata but article intent is contradictory.",
+          "basis": "article",
+          "source_locator": {
+            "doc_id": "P1",
+            "pdf_page": 10,
+            "section_or_table": "Method: Form 4 response scale"
+          },
+          "source_documentation": [
+            "sources/dictionaries/1976_DS0004.dictionary.json: V4225–V4247 value_labels",
+            "sources/dictionaries/1991_DS0005.dictionary.json: V4225–V4247 value_labels",
+            "sources/dictionaries/2006_DS0005.dictionary.json: V4225–V4247 value_labels"
+          ]
+        },
+        {
+          "level_id": "AX02.L1",
+          "description": "Resolve and implement the article-described five-category instrument only if an original questionnaire or documented transformation is supplied; currently not executable.",
+          "label": "non_equivalent",
+          "classification": "non_equivalent",
+          "rationale": "P1 p.10 explicitly describes five points; there is no source-documented mapping to it. Arbitrary stretching or treating missing codes as a fifth response is prohibited.",
+          "basis": "article",
+          "source_locator": {
+            "doc_id": "P1",
+            "pdf_page": 10,
+            "section_or_table": "Method: Form 4 response scale"
+          }
+        }
+      ],
+      "compatible_with": "Cross only when the analysis uses the same observed items, years and forms; never select using target agreement.",
+      "priority_rank": 2
+    },
+    {
+      "axis_id": "AX03",
+      "decision": "Orientation of work-centrality indicators for the preliminary CFA",
+      "category": "variable_coding",
+      "levels": [
+        {
+          "level_id": "AX03.L0",
+          "description": "For CFA orient all centrality items toward centrality: reverse V3222 and V3223 as 6-x, V3227 as 3-x; keep V3224 and V3225. Preserve native coding for all descriptive means and SDs.",
+          "label": "origin",
+          "classification": "uncertain",
+          "rationale": "P1 p.10 identifies a centrality factor but omits reverse coding; source wording supports these semantic orientations. Binary and agreement items have different ranges.",
+          "basis": "article",
+          "source_locator": {
+            "doc_id": "P1",
+            "pdf_page": 10,
+            "section_or_table": "Form 3 preliminary CFA; Table 1 pp.12–13"
+          }
+        },
+        {
+          "level_id": "AX03.L1",
+          "description": "Fit native-coded centrality indicators, allowing loadings of either sign; algebraically transform factor/indicator parameters and covariance matrices to the origin orientation when comparing outputs.",
+          "label": "equivalent",
+          "classification": "equivalent",
+          "rationale": "A reversible affine indicator transformation leaves model fit unchanged if means, intercepts, residual variances and covariance inputs are transformed consistently. This equivalence is algebraic; it does not identify which coding the article used.",
+          "basis": "article",
+          "source_locator": {
+            "doc_id": "P1",
+            "pdf_page": 10,
+            "section_or_table": "Form 3 preliminary CFA; Table 1 pp.12–13"
+          }
+        }
+      ],
+      "compatible_with": "Cross only when the analysis uses the same observed items, years and forms; never select using target agreement.",
+      "priority_rank": 3
+    },
+    {
+      "axis_id": "AX04",
+      "decision": "Latent scale, origin and identification constraints",
+      "category": "construct_scoring",
+      "levels": [
+        {
+          "level_id": "AX04.L0",
+          "description": "Use marker-indicator identification with loading fixed to one, choosing an unflagged indicator per factor (V4236, V4227, V4235, V4233, V4226); set that marker intercept to zero to express absolute latent means. Treat this as provisional; original anchors are unknown.",
+          "label": "origin",
+          "classification": "uncertain",
+          "rationale": "P1 pp.14–15 compares latent means but supplies no factor scaling, marker or intercept-origin syntax.",
+          "basis": "article",
+          "source_locator": {
+            "doc_id": "P1",
+            "pdf_page": 15,
+            "section_or_table": "Primary Analyses: latent mean comparisons"
+          }
+        },
+        {
+          "level_id": "AX04.L1",
+          "description": "Use a different unflagged marker or factor-variance normalization and explicitly transform latent means, SDs and contrasts back to the same origin and units before comparison.",
+          "label": "equivalent",
+          "classification": "equivalent",
+          "rationale": "Equivalent reparameterizations can describe the same measurement model; output must be transformed consistently. Untransformed latent means from different anchors are not numerically equivalent.",
+          "basis": "article",
+          "source_locator": {
+            "doc_id": "P1",
+            "pdf_page": 15,
+            "section_or_table": "Primary Analyses: latent mean comparisons"
+          }
+        }
+      ],
+      "compatible_with": "Cross only when the analysis uses the same observed items, years and forms; never select using target agreement.",
+      "priority_rank": 4
+    },
+    {
+      "axis_id": "AX05",
+      "decision": "Partial scalar invariance release pattern",
+      "category": "construct_scoring",
+      "levels": [
+        {
+          "level_id": "AX05.L0",
+          "description": "Retain all specified items and free across-group intercept constraints for the Table 1 footnote-a items in every group; keep loadings invariant and other intercepts equal.",
+          "label": "origin",
+          "classification": "uncertain",
+          "rationale": "The footnote identifies affected items, but does not state the group-specific release syntax. P1 p.15 describes partial scalar invariance; the documented pattern cannot be fully reconciled with the stated constraint rule without original syntax.",
+          "basis": "article",
+          "source_locator": {
+            "doc_id": "P1",
+            "pdf_page": 13,
+            "section_or_table": "Table 1 footnote a; P1 p.15 partial scalar invariance"
+          }
+        },
+        {
+          "level_id": "AX05.L1",
+          "description": "Use the original group-specific release pattern for exactly the flagged item set if recovered; no executable pattern can presently be specified.",
+          "label": "uncertain",
+          "classification": "uncertain",
+          "rationale": "Footnote a says items were left unconstrained but does not distinguish release in one group from release in all groups. Do not search subsets or drop items based on fit/targets.",
+          "basis": "article",
+          "source_locator": {
+            "doc_id": "P1",
+            "pdf_page": 13,
+            "section_or_table": "Table 1 footnote a; P1 p.15 partial scalar invariance"
+          }
+        }
+      ],
+      "compatible_with": "Cross only when the analysis uses the same observed items, years and forms; never select using target agreement.",
+      "priority_rank": 5
+    },
+    {
+      "axis_id": "AX06",
+      "decision": "Use and normalization of sampling weights",
+      "category": "weighting",
+      "levels": [
+        {
+          "level_id": "AX06.L0",
+          "description": "Use public V5 for descriptive statistics; for CFA use within-group normalized weights with sum equal to the eligible case count. Report raw case count and weight sum separately.",
+          "label": "origin",
+          "classification": "uncertain",
+          "rationale": "Article describes a probability sample (P1 pp.9–10) but does not say whether weights were used; source_description.md recommends V5. The CFA normalization is a provisional explicit convention.",
+          "basis": "article",
+          "source_locator": {
+            "doc_id": "P1",
+            "pdf_page": 9,
+            "section_or_table": "Method: sampling"
+          },
+          "source_documentation": "sources/source_description.md: Weights; selected dictionaries: V5"
+        },
+        {
+          "level_id": "AX06.L1",
+          "description": "Use unweighted summaries and unweighted CFA.",
+          "label": "uncertain",
+          "classification": "uncertain",
+          "rationale": "The article names LISREL and form samples without mentioning weight application. This is compatible with a conventional unweighted analysis but not confirmed and not assumed equivalent to population weighting.",
+          "basis": "article",
+          "source_locator": {
+            "doc_id": "P1",
+            "pdf_page": 9,
+            "section_or_table": "Method: sampling"
+          }
+        }
+      ],
+      "compatible_with": "Cross only when the analysis uses the same observed items, years and forms; never select using target agreement.",
+      "priority_rank": 6
+    },
+    {
+      "axis_id": "AX07",
+      "decision": "Sampling-design covariance adjustment",
+      "category": "inference",
+      "levels": [
+        {
+          "level_id": "AX07.L0",
+          "description": "Use model-based independence covariance, explicitly recording that the available public files lack cluster and stratum identifiers.",
+          "label": "origin",
+          "classification": "uncertain",
+          "rationale": "P1 pp.9–10 describes multistage sampling but pp.10,15 do not report an adjustment. This is closest to the named native-model inference, not a claim of survey-valid precision.",
+          "basis": "article",
+          "source_locator": {
+            "doc_id": "P1",
+            "pdf_page": 9,
+            "section_or_table": "Method: multistage sampling; P1 p.15 LISREL SEs"
+          }
+        },
+        {
+          "level_id": "AX07.L1",
+          "description": "Use actual school/PSU and stratum design information for design-adjusted covariance if those identifiers and instructions become available; currently unavailable.",
+          "label": "uncertain",
+          "classification": "uncertain",
+          "rationale": "The article describes multistage sampling. The supplied source description warns against standard confidence intervals but excludes the identifiers. No region or serial-number proxy is authorized.",
+          "basis": "article",
+          "source_locator": {
+            "doc_id": "P1",
+            "pdf_page": 9,
+            "section_or_table": "Method: multistage sampling; P1 p.15 LISREL SEs"
+          },
+          "source_documentation": "sources/source_description.md: Sampling design and Identifiers and geography"
+        }
+      ],
+      "compatible_with": "Cross only when the analysis uses the same observed items, years and forms; never select using target agreement.",
+      "priority_rank": 7
+    },
+    {
+      "axis_id": "AX08",
+      "decision": "CFA fitting function and covariance normalization",
+      "category": "estimator",
+      "levels": [
+        {
+          "level_id": "AX08.L0",
+          "description": "Provisional continuous-indicator normal-theory maximum likelihood using means and covariance matrices with an explicitly recorded ML covariance denominator; original fitting function remains unverified.",
+          "label": "origin",
+          "classification": "uncertain",
+          "rationale": "P1 p.10 specifies LISREL 8.7 and CFA; no fitting function, moment inputs or robust option is named.",
+          "basis": "article",
+          "source_locator": {
+            "doc_id": "P1",
+            "pdf_page": 10,
+            "section_or_table": "Preliminary Analyses: LISREL CFA"
+          }
+        },
+        {
+          "level_id": "AX08.L1",
+          "description": "On the same complete cases, fit the identical continuous normal model by raw-data likelihood with the same weighting and covariance normalization.",
+          "label": "equivalent",
+          "classification": "equivalent",
+          "rationale": "The raw-data normal likelihood reduces to the sufficient mean and covariance statistics, so this is a computational re-expression under identical data and normalization, not a different model. Not equivalent under different missing-data handling.",
+          "basis": "article",
+          "source_locator": {
+            "doc_id": "P1",
+            "pdf_page": 10,
+            "section_or_table": "Preliminary Analyses: LISREL CFA"
+          }
+        }
+      ],
+      "compatible_with": "Equivalence of L1 requires complete cases and exactly the same weights, normalization, model constraints and moments as L0; does not cross as equivalent with full-information missing-data handling.",
+      "priority_rank": 8
+    },
+    {
+      "axis_id": "AX09",
+      "decision": "Standard deviation denominator for standardized latent contrasts",
+      "category": "estimator",
+      "levels": [
+        {
+          "level_id": "AX09.L0",
+          "description": "d_ab=(mu_b-mu_a)/sqrt((s_a^2+s_b^2)/2), with s_g the model-implied latent SD in the same factor units. Later survey year minus earlier year.",
+          "label": "origin",
+          "classification": "uncertain",
+          "rationale": "P1 pp.13,15–16 supplies d and describes change in SDs, but never defines its denominator or whether the scale SD is latent. Equal-group RMS is an explicit provisional choice, not recovered fact.",
+          "basis": "article",
+          "source_locator": {
+            "doc_id": "P1",
+            "pdf_page": 15,
+            "section_or_table": "Primary Analyses: effect sizes; Figure 1 p.16"
+          }
+        },
+        {
+          "level_id": "AX09.L1",
+          "description": "d_ab=(mu_b-mu_a)/sqrt(((n_a-1)*s_a^2+(n_b-1)*s_b^2)/(n_a+n_b-2)); n is the actual eligible analysis count, not a reported total.",
+          "label": "uncertain",
+          "classification": "uncertain",
+          "rationale": "The label d and standardized-mean comparisons (P1 pp.13,15–16) do not distinguish an equal-group denominator from sample-size pooling. Cannot claim equivalence under unequal sizes or variances.",
+          "basis": "article",
+          "source_locator": {
+            "doc_id": "P1",
+            "pdf_page": 15,
+            "section_or_table": "Primary Analyses: effect sizes; Figure 1 p.16"
+          }
+        }
+      ],
+      "compatible_with": "Cross only when the analysis uses the same observed items, years and forms; never select using target agreement.",
+      "priority_rank": 9
+    },
+    {
+      "axis_id": "AX10",
+      "decision": "Variance assumption in single-item t comparisons",
+      "category": "inference",
+      "levels": [
+        {
+          "level_id": "AX10.L0",
+          "description": "Two-sided pooled-variance independent-group t tests on native item values, using the same analytic sample and descriptive weights; any weighted implementation must explicitly define variance and effective sample size.",
+          "label": "origin",
+          "classification": "uncertain",
+          "rationale": "P1 pp.11–13 prints t without df, tail, weight handling or variance assumption; provisional ordinary t is fully defined only in the unweighted branch.",
+          "basis": "article",
+          "source_locator": {
+            "doc_id": "P1",
+            "pdf_page": 13,
+            "section_or_table": "Table 1 notes and t columns"
+          }
+        },
+        {
+          "level_id": "AX10.L1",
+          "description": "Two-sided Welch independent-group t tests on the same item values; specify Satterthwaite df.",
+          "label": "uncertain",
+          "classification": "uncertain",
+          "rationale": "The reported generic t label does not establish equality of group variances. This is an unresolved variance assumption, not an equivalent test in general.",
+          "basis": "article",
+          "source_locator": {
+            "doc_id": "P1",
+            "pdf_page": 13,
+            "section_or_table": "Table 1 notes and t columns"
+          }
+        }
+      ],
+      "compatible_with": "Cross only when the analysis uses the same observed items, years and forms; never select using target agreement.",
+      "priority_rank": 10
+    },
+    {
+      "axis_id": "AX11",
+      "decision": "Latent pairwise inference and multiplicity",
+      "category": "inference",
+      "levels": [
+        {
+          "level_id": "AX11.L0",
+          "description": "Use model-covariance Wald tests of each latent mean difference, two-sided at nominal .05 without multiplicity adjustment; flag all these choices as provisional.",
+          "label": "origin",
+          "classification": "uncertain",
+          "rationale": "P1 p.15 mentions a series of pairwise comparisons and individual 95% CIs, without specifying a contrast test, tail or multiplicity rule.",
+          "basis": "article",
+          "source_locator": {
+            "doc_id": "P1",
+            "pdf_page": 15,
+            "section_or_table": "Primary Analyses: pairwise comparisons and confidence intervals"
+          }
+        },
+        {
+          "level_id": "AX11.L1",
+          "description": "Use equality-constrained nested latent-mean models for each pairwise comparison with a chi-square difference test; keep the same measurement constraints and cases.",
+          "label": "uncertain",
+          "classification": "uncertain",
+          "rationale": "P1 pp.14–15 explicitly uses nested equality-of-means testing for the omnibus question; it does not say whether pairwise contrasts were tested this way. Wald and likelihood-ratio procedures need not agree in finite samples.",
+          "basis": "article",
+          "source_locator": {
+            "doc_id": "P1",
+            "pdf_page": 15,
+            "section_or_table": "Primary Analyses: pairwise comparisons and confidence intervals"
+          }
+        }
+      ],
+      "compatible_with": "Cross only when the analysis uses the same observed items, years and forms; never select using target agreement.",
+      "priority_rank": 11
+    },
+    {
+      "axis_id": "AX12",
+      "decision": "Preliminary seven-factor assignment of the four omitted Form 4 items",
+      "category": "construct_scoring",
+      "levels": [
+        {
+          "level_id": "AX12.L0",
+          "description": "Assign V4241 and V4239 to security, V4237 and V4247 to influence, using their wording; all other item-to-factor memberships are fixed by Table 1.",
+          "label": "origin",
+          "classification": "uncertain",
+          "rationale": "P1 p.10 names security and influence but Table 1 places the four items in an undifferentiated omitted list. The proposed split follows wording, not a supplied factor-loading table.",
+          "basis": "article",
+          "source_locator": {
+            "doc_id": "P1",
+            "pdf_page": 10,
+            "section_or_table": "Preliminary Analyses; Table 1 p.13 omitted items"
+          }
+        },
+        {
+          "level_id": "AX12.L1",
+          "description": "Use original seven-factor membership syntax if supplied; until then mark preliminary seven-factor reproduction unresolved.",
+          "label": "uncertain",
+          "classification": "uncertain",
+          "rationale": "The article refers to prior psychometric work but that work is not in the frozen packet. No alternative item swap is authorized from memory.",
+          "basis": "article",
+          "source_locator": {
+            "doc_id": "P1",
+            "pdf_page": 10,
+            "section_or_table": "Preliminary Analyses; Table 1 p.13 omitted items"
+          }
+        }
+      ],
+      "compatible_with": "Cross only when the analysis uses the same observed items, years and forms; never select using target agreement.",
+      "priority_rank": 12
+    },
+    {
+      "axis_id": "AX13",
+      "decision": "Variance convention for weighted item summaries and tests",
+      "category": "weighting",
+      "levels": [
+        {
+          "level_id": "AX13.L0",
+          "description": "Treat normalized V5 as analytic weights; weighted SD denominator is W-sum(w^2)/W. For provisional independent-unit weighted means use variance s_w^2*sum(w^2)/W^2; pairwise mean-variance sums define an approximate Wald statistic, not a confirmed original t.",
+          "label": "origin",
+          "classification": "uncertain",
+          "rationale": "P1 pp.11–13 reports SDs and t but not any weight or weighted-variance convention. Source documentation recommends sampling weights rather than frequency counts.",
+          "basis": "article",
+          "source_locator": {
+            "doc_id": "P1",
+            "pdf_page": 13,
+            "section_or_table": "Table 1: SDs and tests; P1 p.9 sampling"
+          }
+        },
+        {
+          "level_id": "AX13.L1",
+          "description": "Use survey-design linearization with the actual design if supplied; weighted mean and proportion estimands stay the same while SD and sampling-SE definitions are recorded separately.",
+          "label": "uncertain",
+          "classification": "uncertain",
+          "rationale": "The sampling design in P1 p.9 and source_description.md requires distinguishing population dispersion from sampling uncertainty. Without design identifiers this branch is unavailable.",
+          "basis": "article",
+          "source_locator": {
+            "doc_id": "P1",
+            "pdf_page": 13,
+            "section_or_table": "Table 1: SDs and tests; P1 p.9 sampling"
+          }
+        }
+      ],
+      "compatible_with": "Relevant only to weighted branches; design-adjusted level requires AX07.L1 and actual design metadata. No arbitrary replication-weight construction.",
+      "priority_rank": 7
+    },
+    {
+      "axis_id": "AX14",
+      "decision": "Raw versus standardized coefficient alpha",
+      "category": "estimator",
+      "levels": [
+        {
+          "level_id": "AX14.L0",
+          "description": "Compute covariance-based alpha after semantic reversals on each model-eligible sample.",
+          "label": "origin",
+          "classification": "uncertain",
+          "rationale": "P1 p.10 says internal consistency reliability/alpha but does not identify raw versus standardized coefficients.",
+          "basis": "article",
+          "source_locator": {
+            "doc_id": "P1",
+            "pdf_page": 10,
+            "section_or_table": "Preliminary Analyses: reliability"
+          }
+        },
+        {
+          "level_id": "AX14.L1",
+          "description": "Compute standardized alpha by replacing the covariance matrix with the item correlation matrix.",
+          "label": "uncertain",
+          "classification": "uncertain",
+          "rationale": "Both are internal-consistency summaries of the same specified item list; article omits standardization. They are not identical with unequal indicator variances, especially mixed binary and agreement items.",
+          "basis": "article",
+          "source_locator": {
+            "doc_id": "P1",
+            "pdf_page": 10,
+            "section_or_table": "Preliminary Analyses: reliability"
+          }
+        }
+      ],
+      "compatible_with": "Cross only when the analysis uses the same observed items, years and forms; never select using target agreement.",
+      "priority_rank": 13
+    }
+  ],
+  "notes": "Closest-described origin is provisional where the article is silent or contradictory. L0 retains schema label origin and separately records its substantive classification. No alternatives selected by target agreement. Explicit years/forms/item lists remain fixed. Distinct outcomes are not interchangeable specifications. No wider grid is enabled; unavailable levels are not executable.",
+  "execution_status": "Reader stage only; no raw-data execution authorized or performed."
+}

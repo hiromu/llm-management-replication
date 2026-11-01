@@ -1,0 +1,14 @@
+~/.local/bin/claude
+-p
+--safe-mode
+--model
+claude-fable-5-1
+--effort
+high
+--settings
+{"fastMode":false,"autoMemoryEnabled":false}
+--no-session-persistence
+--tools
+
+--output-format
+json

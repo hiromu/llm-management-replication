@@ -1,0 +1,48 @@
+{
+  "scope": "Catalog entries for the six studied articles only. The PDF files are not included; get each article from its publisher. Paths are where the article sat in the original run; sha256 identifies the exact file the readers used.",
+  "pdfs_included": false,
+  "files": [
+    {
+      "study_id": "delaney1996",
+      "path": "papers/journal_collection/AMJ/AMJ_1996_DELANEY.pdf",
+      "sha256": "d2ec15a6fd3be26ef46211947312557f6240577168695ae2d68abc255f166b1c",
+      "bytes": 1264216,
+      "doi": "10.5465/256718"
+    },
+    {
+      "study_id": "thebaud2015",
+      "path": "papers/journal_collection/ASQ/ASQ_2015_Thebaud.pdf",
+      "sha256": "65b9354449e0f46108a5ec81b46fc00e9bf43fcce113f49585f40e5625d60b07",
+      "bytes": 631999,
+      "doi": "10.1177/0001839215591627"
+    },
+    {
+      "study_id": "twenge2010",
+      "path": "papers/journal_collection/JOM/JOM_2010_Twenge.pdf",
+      "sha256": "b556175cc775fe710cca7f8e83c571c4fe8b4bb7ebb7a0878939e6eb36f0042e",
+      "bytes": 217359,
+      "doi": "10.1177/0149206309352246"
+    },
+    {
+      "study_id": "holderness2012",
+      "path": "papers/journal_collection/MNSC/MNSC_2012_Holderness.pdf",
+      "sha256": "57d70148a9f57247cb0a26f58ef497bc750c3193b7f5f91297bacf272e0fdbb4",
+      "bytes": 2947048,
+      "doi": "10.1287/mnsc.1120.1532"
+    },
+    {
+      "study_id": "lehman2011",
+      "path": "papers/journal_collection/ORSC/ORSC_2011_Lehman.pdf",
+      "sha256": "93278fe5f7ad8a54cb4808305f6b8725ae968944fd6e9cda75e8089047e6c8d3",
+      "bytes": 896062,
+      "doi": "10.1287/orsc.1100.0626"
+    },
+    {
+      "study_id": "deephouse1999",
+      "path": "papers/journal_collection/SMJ/SMJ_1999_Deephouse.pdf",
+      "sha256": "62eecc5b46b382896f2d660380b409de714b31faf8be5da2de505e27d16112e4",
+      "bytes": 128563,
+      "doi": "10.1002/(SICI)1097-0266(199902)20:2<147::AID-SMJ11>3.0.CO;2-Q"
+    }
+  ]
+}

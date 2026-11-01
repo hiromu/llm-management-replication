@@ -1,0 +1,53 @@
+{
+  "rule": "../../scoring_rules_common_v1.json",
+  "status": "post hoc",
+  "study_rule_paper": "consistent (comparability mapping: partially reproduced)",
+  "paper": {
+    "common": "partially reproduced",
+    "lenient": "partially reproduced"
+  },
+  "claims": {
+    "common": {
+      "H1B": "consistent",
+      "H1A": "consistent",
+      "H3": "consistent",
+      "H2": "consistent"
+    },
+    "lenient": {
+      "H1B": "consistent",
+      "H1A": "consistent",
+      "H3": "consistent",
+      "H2": "consistent"
+    }
+  },
+  "terms_by_table": {
+    "common": {
+      "Table 5": {
+        "consistent": 28,
+        "indeterminate": 7,
+        "candidate": 0,
+        "total": 35
+      },
+      "Table 6": {
+        "consistent": 6,
+        "indeterminate": 12,
+        "candidate": 17,
+        "total": 35
+      }
+    },
+    "lenient": {
+      "Table 5": {
+        "consistent": 32,
+        "indeterminate": 3,
+        "candidate": 0,
+        "total": 35
+      },
+      "Table 6": {
+        "consistent": 7,
+        "indeterminate": 14,
+        "candidate": 14,
+        "total": 35
+      }
+    }
+  }
+}

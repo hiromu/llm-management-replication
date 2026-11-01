@@ -1,0 +1,131 @@
+{
+  "seed": 20261028,
+  "software": {
+    "python": "3.13.4",
+    "numpy": "2.4.2",
+    "scipy": "1.16.3",
+    "pandas": "2.2.3",
+    "statsmodels": "0.14.6",
+    "semopy": "2.3.11",
+    "numdifftools": "0.9.42"
+  },
+  "status": "ok",
+  "tests": [
+    {
+      "name": "known_parameter_recovery",
+      "passed": true,
+      "detail": {
+        "max_mean_error": 0.01775157595344934,
+        "max_loading_error": 0.006809569131467574,
+        "max_covariance_error": 0.02598584478605115,
+        "chi2": 479.5617431885912,
+        "df": 470
+      }
+    },
+    {
+      "name": "analytic_likelihood_gradient",
+      "passed": true,
+      "detail": {
+        "maximum_absolute_error": 3.3390127097162985e-10
+      }
+    },
+    {
+      "name": "moment_derivatives",
+      "passed": true,
+      "detail": {
+        "maximum_absolute_error": 2.6324720181492012e-11
+      }
+    },
+    {
+      "name": "expected_information_SE",
+      "passed": true,
+      "detail": {
+        "maximum_SE_ratio_error": 0.003969473727613249
+      }
+    },
+    {
+      "name": "reference_mean_variance_identification",
+      "passed": true,
+      "detail": {
+        "maximum_d_eq_difference": 5.803355171418723e-09,
+        "chi2_difference": 1.7456613932154141e-10
+      }
+    },
+    {
+      "name": "alternate_markers",
+      "passed": true,
+      "detail": {
+        "maximum_d_eq_difference": 8.564232448216025e-09
+      }
+    },
+    {
+      "name": "effects_coding_equalities",
+      "passed": true,
+      "detail": {
+        "maximum_constraint_residual": 2.220446049250313e-16,
+        "df": 478
+      }
+    },
+    {
+      "name": "FIML_complete_data_equivalence",
+      "passed": true,
+      "detail": {
+        "chi2_difference": 1.0857093002414331e-11,
+        "max_parameter_difference": 0.0
+      }
+    },
+    {
+      "name": "FIML_missing_data_recovery",
+      "passed": true,
+      "detail": {
+        "maximum_mean_error": 0.03445499683338804,
+        "chi2": 479.7877626301488
+      }
+    },
+    {
+      "name": "weighted_moments",
+      "passed": true,
+      "detail": {
+        "mean": [
+          2.9000000000000004,
+          2.5
+        ],
+        "covariance": [
+          [
+            1.1866666666666668,
+            -0.8666666666666667
+          ],
+          [
+            -0.8666666666666667,
+            1.6666666666666667
+          ]
+        ]
+      }
+    },
+    {
+      "name": "robust_covariance",
+      "passed": true,
+      "detail": {
+        "minimum_covariance_eigenvalue": 4.181356561037471e-05,
+        "method": "Huber-White observed-information sandwich; Yuan-Bentler Mplus T2* correction",
+        "scaling_factor": 1.0015485666047297,
+        "scaled_chi_square": 496.5743958153991,
+        "scaled_p": 0.1914433988297807,
+        "h1_trace": 627.4803821996102,
+        "h0_trace": 156.75255589538722,
+        "observed_hessian_central_difference_relative_step": 0.0001,
+        "scaling_formula": "(trace(H1_inverse J1) - trace(H0_inverse J0)) / df; H0 observed, H1 saturated normal information",
+        "score_meat": "sum of individual score outer products; no degrees-of-freedom adjustment"
+      }
+    },
+    {
+      "name": "deletion_moments",
+      "passed": true,
+      "detail": {
+        "deleted_index": 5
+      }
+    }
+  ],
+  "synthetic_sample_n_per_group": 18000,
+  "supplied_data_accessed": false
+}

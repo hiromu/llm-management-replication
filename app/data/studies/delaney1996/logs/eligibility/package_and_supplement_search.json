@@ -1,0 +1,32 @@
+{
+  "record": "author_package_and_supplement_search",
+  "study_id": "delaney1996",
+  "searched_utc": "2026-10-28T03:26:00Z/2026-10-28T03:31:00Z",
+  "searcher": "coordinator (claude-opus-5-5), web search and direct API queries",
+  "author_replication_package": {
+    "status": "not_found_after_documented_search",
+    "queries": [
+      {"tool": "WebSearch", "query": "Delaney Huselid 1996 \"Impact of Human Resource Management Practices on Perceptions of Organizational Performance\" replication data code", "result": "no package; unrelated replication pages"},
+      {"tool": "WebSearch", "query": "\"National Organizations Survey\" Delaney Huselid replication openICPSR OR dataverse OR osf", "result": "no package"},
+      {"tool": "WebSearch", "query": "openicpsr.org \"Huselid\" HRM practices perceived organizational performance replication package", "result": "no package; author site hosts article PDF only"},
+      {"tool": "Harvard Dataverse API", "query": "q=Delaney Huselid, type=dataset", "file": "logs/eligibility/dataverse_search.json", "result": "36 hits, none by these authors on this topic"},
+      {"tool": "Zenodo API", "query": "Delaney Huselid 1996", "file": "logs/eligibility/zenodo_search.json", "result": "top hits unrelated"},
+      {"tool": "OSF API", "query": "Delaney Huselid", "result": "endpoint returned Not found; OSF not searchable via this endpoint (limitation)"},
+      {"tool": "openICPSR search page", "result": "HTTP 500; not searchable by fetch (limitation); web search found no openICPSR project"},
+      {"tool": "WebFetch", "url": "https://www.markhuselid.com/articles.html", "result": "entry links only to the article PDF; no data, code or syntax files offered"}
+    ],
+    "conclusion": "No publicly available author-provided replication data or code package found. Selection criterion met on available evidence. ICPSR 6240 is the original NOS survey release, not a focal-author package; ICPSR related literature lists the article as a user of the data (item 2), which is bibliographic only.",
+    "limitations": "AOM journal page returned HTTP 403; openICPSR and OSF search not directly queryable."
+  },
+  "supplements_and_corrections": {
+    "local_catalog_matches": 0,
+    "crossref": {"doi_10.2307/256718": "title and pages 949-969 confirmed; no relation, update-to or updated-by entries", "doi_10.5465/256718": "empty response from Crossref API", "updates_filter_10.5465/256718": "0 results", "files": ["logs/eligibility/crossref_10.2307_256718.json", "logs/eligibility/crossref_updates.json"]},
+    "publisher_page": "https://journals.aom.org/doi/10.5465/256718 returned HTTP 403; not inspected",
+    "web_search": "no erratum, correction or supplementary appendix found",
+    "article_text": "Article refers to subgroup analyses 'available upon request' and complementarity results 'not shown'; these are unpublished, not supplements",
+    "found_documents": [
+      {"id": "D2", "description": "Author-hosted copy of the published article", "url": "https://www.markhuselid.com/pdfs/articles/1996_AMJ_Delaney_Huselid.pdf", "retrieved_utc": "2026-10-28T03:30:06Z", "path": "sources/supplements/author_site_copy/1996_AMJ_Delaney_Huselid.pdf", "bytes": 99558, "sha256": "bc006eff604167cb4673f633deee87f3a74a26a85fcdb9a767b674a68873c112", "pdf_metadata": "author Mark Huselid; Acrobat PDFWriter 2.01; created 1997-02-17", "pages": 21, "classification": "alternate version of main article (not a supplement); same title, authors, journal, volume and pages", "contains_code_or_data_links": false}
+    ],
+    "status": "no supplement found after documented search; one alternate article copy found"
+  }
+}

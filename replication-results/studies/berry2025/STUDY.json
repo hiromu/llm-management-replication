@@ -1,0 +1,87 @@
+{
+  "study_id": "berry2025",
+  "paper_id": "ORSC_2025_Berry",
+  "citation": "Berry, Z., and Hildreth, J. A. D. (2025). When Your Friend is My Friend: How Loyalty Prompts Support for Indirect Ties in Moral Dilemmas. Organization Science, 36(2), 762-785.",
+  "journal": "Organization Science",
+  "doi": "10.1287/orsc.2023.18003",
+  "paper_path_from_study": "packet/berry2025.pdf",
+  "paper_sha256": "c1946109453c4aa028fe29aa3061dd55d4a5f30e1b6e42d8320816cdc3a4863f",
+  "paper_acquisition": "saved by the user by hand",
+  "received_by_journal": "2023-08-01",
+  "status": "complete",
+  "research_authorized": true,
+  "scope": "Main-text Studies 1, 2, 3 and 4. Supplemental Studies S1-S7 are out of scope.",
+  "data_policy": "Empirical inputs are the deposited OSF files. No printed article data. Published results are sealed comparison targets or publication diagnostics only. Author script sealed until the unsealing point in instructions/shared_data.md.",
+  "deposit": {
+    "provider": "OSF",
+    "node": "3h6vc",
+    "url": "https://osf.io/3h6vc",
+    "receipt": "logs/osf_receipt.json",
+    "files": 37,
+    "license": "none shown by the OSF API; link, do not rehost"
+  },
+  "author_code": {
+    "path_from_study": "sealed/author_package/ltran_analysis_script.Rmd",
+    "status": "unsealed after pre_unseal_hashes.json; hash unchanged",
+    "language": "R Markdown, judged from the file extension only"
+  },
+  "selection": "Chosen from OSF file listings for separated data and code, per-study dictionaries, preregistrations and a low citation count, before results were seen. Outside the 277 candidates and the six-case table.",
+  "known_deposit_issues": [
+    "The dictionary in the Study 4 folder is byte-identical to the Study S4 dictionary, and the first variables inspected do not match the Study 4 CSV header (Requestee, Signed, LoyalRequestor). A full comparison has not been run.",
+    "study1_data_ltran.csv has free-text columns name_person and gender_person_text. Remove them from implementer bundles and do not print their values."
+  ],
+  "online_appendix": {
+    "path_from_study": "packet/berry2025_online_appendix.pdf",
+    "sha256": "97c87fd3845cc8f328f76ca0846c7ccc8182eddd0991faf58f38eb2cf8676b1f",
+    "acquisition": "saved by the user by hand",
+    "pages": 37,
+    "pdf_title": "ltran_SOM_FINAL",
+    "distinct_from_osf_appendixA": true,
+    "note": "Setup checked only the file identity and first page. Use it for main-text Studies 1-4; Studies S1-S7 stay out of scope."
+  },
+  "known_packet_gaps": [],
+  "setup_exposure": {
+    "session": "The setup session was not a fresh protocol session; it held the user's global instructions and memory.",
+    "seen": [
+      "OSF file listing, sizes and hashes",
+      "Article first page including abstract, PDF metadata, and grep hits for study headings and appendix mentions",
+      "AppendixA opening lines",
+      "First rows of the Study 1-4 dictionaries and CSV column names"
+    ],
+    "not_seen": [
+      "Author script",
+      "Data rows",
+      "Article results tables"
+    ],
+    "grep_note": "Grep hits were truncated lines from the whole article, and a few included fragments of Study 3 results text. No target was extracted and none was used in setup."
+  },
+  "tools_checked_at_setup": {
+    "rscript": "/opt/homebrew/opt/r/bin/Rscript, R 4.6.1; lme4, fixest, sandwich, lavaan, psych, haven, readxl, rmarkdown, knitr, tidyverse present; lmerTest, mediation, emmeans missing",
+    "python": "~/.venv/bin/python with pandas, statsmodels, scipy, linearmodels, pyreadstat, pyfixest",
+    "reader_models": "claude-fable-5-1 and gpt-6-astra each answered one connectivity call on 2026-10-30, without the launch flags --safe-mode or --ignore-user-config; recheck with the full launch settings",
+    "network_denial": "sandbox-exec deny network* blocked a test curl on 2026-10-30"
+  },
+  "setup_drafts": {
+    "note": "Unfrozen and untested. Adopt or replace, and record which.",
+    "files": [
+      "setup_drafts/build_reader_packet.py",
+      "setup_drafts/run_role.py",
+      "setup_drafts/reader_prompt_v1.md",
+      "setup_drafts/probe_prompt.txt"
+    ]
+  },
+  "reader_runs": 2,
+  "model_fits": "see reports/exports/counts.json",
+  "session_scope": "berry2025 only",
+  "authorized_utc": "2026-10-31T07:19:32.870775+00:00",
+  "authorization": "User in session: \"Authorize with installs\"",
+  "setup_drafts_decision": {
+    "build_reader_packet.py": "adopted with changes as code/build_reader_packet.py",
+    "run_role.py": "adopted with changes as code/run_role.py",
+    "reader_prompt_v1.md": "adopted with additions as prompts_frozen/reader_prompt_v2.md",
+    "probe_prompt.txt": "adopted unchanged"
+  },
+  "paper_outcome": "consistent (frozen rules); fully reproduced under the comparability map, with Study 2 SE and interval qualification",
+  "human_review": "removed at the user's request during the study; not performed",
+  "report": "reports/replication_report.md"
+}

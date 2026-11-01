@@ -1,0 +1,38 @@
+{
+  "choices": [
+    {"choice": "Perceptual, benchmarked performance measures (two multi-item Likert indices) instead of financial outcomes", "commonness": "common", "justified": true, "locator": {"doc_id": "D1", "pdf_page": 6, "where": "Measures, journal pp. 953-954 (NOS collected no financial data; cites Dollinger & Golden 1992, Powell 1992)"}},
+    {"choice": "Two outcomes with different samples (all organizations vs profit-making only)", "commonness": "common", "justified": true, "locator": {"doc_id": "D1", "pdf_page": 7, "where": "Measures, journal p. 954 ('examination of alternative dependent variables and samples should provide important confirmatory information')"}},
+    {"choice": "Seven separate HRM practice indices built from heterogeneous NOS items (z-scores of logs, 1-3 and 1-5 means, a dummy, a logged count) rather than a single HRM system scale or factor scores", "commonness": "common", "justified": true, "locator": {"doc_id": "D1", "pdf_page": 11, "where": "Journal p. 958: factor/cluster approaches 'precluded ... because of the extreme degree of nonnormality'"}},
+    {"choice": "Single-practice regressions (model 1/6) reported alongside simultaneous-entry models", "commonness": "common", "justified": true, "locator": {"doc_id": "D1", "pdf_page": 15, "where": "Table 3 footnote b; text on overstatement from single-practice analyses"}},
+    {"choice": "Two alternative measures of one construct (internal labor market vs vertical hierarchy) run as separate models rather than together", "commonness": "rare", "justified": true, "locator": {"doc_id": "D1", "pdf_page": 15, "where": "Text below Table 3 (continued): 'used as alternate measures of the same construct'"}},
+    {"choice": "Interaction subsets chosen by conceptual grouping after 'extensive' experimentation, with only four two-way products reported", "commonness": "common", "justified": false, "locator": {"doc_id": "D1", "pdf_page": 17, "where": "Journal p. 964: 'we experimented extensively with subsets of interactions'"}},
+    {"choice": "Complementarity count variable and its transformations analysed but results not shown", "commonness": "common", "justified": false, "locator": {"doc_id": "D1", "pdf_page": 17, "where": "Journal p. 964, first paragraph"}},
+    {"choice": "One-tailed tests at .10, .05 and .01 for all coefficients, including controls without hypothesized direction", "commonness": "common", "justified": false, "locator": {"doc_id": "D1", "pdf_page": 15, "where": "Table 3 notes; directional hypotheses H1/H2 D1 p5"}},
+    {"choice": "33 two-digit SIC industry dummies in a sample of a few hundred establishments", "commonness": "common", "justified": true, "locator": {"doc_id": "D1", "pdf_page": 12, "where": "Journal p. 959, control variables"}},
+    {"choice": "Unweighted OLS on a probability-proportional-to-size establishment sample (no design weights, no mention)", "commonness": "common", "justified": false, "locator": {"doc_id": "D1", "pdf_page": 5, "where": "Data section describes the size-proportional design; Methods never mention weights"}},
+    {"choice": "Conventional OLS standard errors; no robust or clustered inference; duplicate establishment records not discussed", "commonness": "default", "justified": false, "locator": {"doc_id": "D1", "pdf_page": 15, "where": "Table 3 footnote a"}},
+    {"choice": "Log transformations of employment, firm age (per tables), vertical levels and application counts", "commonness": "common", "justified": true, "locator": {"doc_id": "D1", "pdf_page": 11, "where": "Control variables; Table 1 footnotes b and c"}},
+    {"choice": "Incremental F-tests (Delta R2) for the HRM block and for the interaction block", "commonness": "common", "justified": true, "locator": {"doc_id": "D1", "pdf_page": 15, "where": "Table 3 footnotes c and d"}},
+    {"choice": "Listwise deletion to a common analysis sample (implied, not stated); no missing-data discussion", "commonness": "default", "justified": false, "locator": {"doc_id": "D1", "pdf_page": 15, "where": "Identical N across all columns of Tables 3 and 4"}},
+    {"choice": "Subgroup robustness (for-profit vs nonprofit) claimed but 'available upon request'", "commonness": "common", "justified": false, "locator": {"doc_id": "D1", "pdf_page": 18, "where": "Discussion, journal p. 965"}},
+    {"choice": "Controls coded 1/2 rather than 0/1 for nonprofit and subsidiary (per Table 2 means) while described as dummies", "commonness": "rare", "justified": false, "locator": {"doc_id": "D1", "pdf_page": 13, "where": "Table 2 rows 10-11"}}
+  ],
+  "structural_counts": {
+    "n_models_reported": 10,
+    "n_regressions_underlying": 22,
+    "n_outcomes": 2,
+    "n_hrm_measures": 7,
+    "n_controls": 9,
+    "n_industry_dummies_stated": 33,
+    "n_interaction_terms": 4,
+    "notes": "Ten model columns (Table 3 models 1-5, Table 4 models 6-10); models 1 and 6 each summarize seven separate regressions, so 22 regressions underlie the tables. Nine named controls in Table 3 (eight in Table 4, which omits the nonprofit dummy) plus the SIC dummies."
+  },
+  "unusualness_rating": "moderate",
+  "rationale": "The design is a standard mid-1990s cross-sectional OLS study of HRM practices and performance: additive indices, a fixed control list, industry dummies, hierarchical F-tests and one-tailed significance. What is unusual is (a) the reliance on a secondary survey not built for the question, forcing idiosyncratic index constructions (z-scores of logged dummies, decision-locus recodes) that are described only loosely; (b) the alternate-measure design (ILM vs vertical hierarchy in separate models); (c) exploratory, author-selected interaction subsets with unreported alternatives; and (d) the absence of any treatment of the size-proportional sampling design or duplicate establishment records. None of these is exotic, but together they leave many coding decisions to the implementer.",
+  "documentation_scores": {
+    "specificity": 3,
+    "precision": 2,
+    "exhaustiveness": 2,
+    "rationale": "Specificity 3: every variable is named and its NOS items are listed in Table 1, hypotheses and model structure are explicit, and the control list and test rules are stated; but the industry coding, union pressure items, decision-making recode and missing-data rules are not given. Precision 2: several descriptions conflict with the tables (firm age years vs log; competition scale vs dummy; 'profit-making' vs 'publicly held'; 'dummy' variables with 1/2 means), the text layer labels 'training' differently from Table 1, and the standardization/log steps are described inconsistently between text and footnote b. Exhaustiveness 2: no appendix, no sample-construction account from the responding organizations to the analysis N, no missing-data policy, unreported count-variable and subgroup analyses, 'extensive' unreported interaction experiments, no software or degrees of freedom, and no treatment of duplicates or weights."
+  }
+}

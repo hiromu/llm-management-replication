@@ -1,0 +1,1256 @@
+[
+  {
+    "claim_id": "C01",
+    "statement": "Moderate paid leave is hypothesized to enlarge the gender gap in entrepreneurial activity; the reported interaction terms do not establish this association.",
+    "hypothesis_label": "H1(a)",
+    "direction": "negative female-by-leave and positive female-by-leave-squared expected",
+    "tier": "focal",
+    "estimand": "Female interactions with paid leave and its square in M3",
+    "scale": "log-odds",
+    "population": "Selected working-age respondents in the listed country-year surveys, subject to the unresolved labor-force/employment restriction.",
+    "support": [
+      {
+        "doc": "MAIN",
+        "page": 8,
+        "table": null,
+        "column_or_model": "H1(a)",
+        "row": null
+      },
+      {
+        "doc": "MAIN",
+        "page": 19,
+        "table": "Table 1",
+        "column_or_model": "Model 3",
+        "row": "Paid leave × Female; Paid leave squared × Female"
+      },
+      {
+        "doc": "MAIN",
+        "page": 20,
+        "table": null,
+        "column_or_model": "Results",
+        "row": null
+      }
+    ],
+    "notes": "A curved relationship requires joint interpretation of both terms; no joint test is printed."
+  },
+  {
+    "claim_id": "C02",
+    "statement": "Greater public childcare spending is associated with a larger male advantage in entrepreneurial activity.",
+    "hypothesis_label": "H1(b)",
+    "direction": "negative",
+    "tier": "focal",
+    "estimand": "Female × childcare coefficient in M3",
+    "scale": "log-odds",
+    "population": "Selected working-age respondents in the listed country-year surveys, subject to the unresolved labor-force/employment restriction.",
+    "support": [
+      {
+        "doc": "MAIN",
+        "page": 8,
+        "table": null,
+        "column_or_model": "H1(b)",
+        "row": null
+      },
+      {
+        "doc": "MAIN",
+        "page": 19,
+        "table": "Table 1",
+        "column_or_model": "Model 3",
+        "row": "Childcare × Female"
+      }
+    ],
+    "notes": ""
+  },
+  {
+    "claim_id": "C03",
+    "statement": "Part-time work availability is hypothesized to enlarge the gender gap in entrepreneurial activity, but its interaction is reported as nonsignificant.",
+    "hypothesis_label": "H1(c)",
+    "direction": "negative expected; reported null-effect",
+    "tier": "focal",
+    "estimand": "Female × part-time employment coefficient in M3",
+    "scale": "log-odds",
+    "population": "Selected working-age respondents in the listed country-year surveys, subject to the unresolved labor-force/employment restriction.",
+    "support": [
+      {
+        "doc": "MAIN",
+        "page": 8,
+        "table": null,
+        "column_or_model": "H1(c)",
+        "row": null
+      },
+      {
+        "doc": "MAIN",
+        "page": 19,
+        "table": "Table 1",
+        "column_or_model": "Model 3",
+        "row": "Part-time employment × Female"
+      },
+      {
+        "doc": "MAIN",
+        "page": 20,
+        "table": null,
+        "column_or_model": "Results",
+        "row": null
+      }
+    ],
+    "notes": "Nonsignificance is not evidence of an exact zero."
+  },
+  {
+    "claim_id": "C04",
+    "statement": "Supportive institutions are hypothesized to reduce women’s relative propensity to report limited employment options as their entrepreneurial motivation.",
+    "hypothesis_label": "H2",
+    "direction": "negative female-by-support interactions expected",
+    "tier": "focal",
+    "estimand": "Four female-by-institution coefficients in M4",
+    "scale": "log-odds",
+    "population": "Established business owners as defined in the article; exact owner eligibility is unclear.",
+    "support": [
+      {
+        "doc": "MAIN",
+        "page": 9,
+        "table": null,
+        "column_or_model": "H2",
+        "row": null
+      },
+      {
+        "doc": "MAIN",
+        "page": 22,
+        "table": "Table 2",
+        "column_or_model": "Model 4",
+        "row": "Institutional effects on the gender gap"
+      }
+    ],
+    "notes": "The paid-leave terms are not marked significant; evidence is policy-specific."
+  },
+  {
+    "claim_id": "C05",
+    "statement": "Higher childcare spending is associated with lower female-relative odds of limited-employment-options motivation.",
+    "hypothesis_label": "H2",
+    "direction": "negative",
+    "tier": "focal",
+    "estimand": "Female × childcare in M4",
+    "scale": "log-odds",
+    "population": "Established business owners as defined in the article; exact owner eligibility is unclear.",
+    "support": [
+      {
+        "doc": "MAIN",
+        "page": 22,
+        "table": "Table 2",
+        "column_or_model": "Model 4",
+        "row": "Childcare × Female"
+      },
+      {
+        "doc": "MAIN",
+        "page": 23,
+        "table": null,
+        "column_or_model": "Gender Gaps in Plan B Motivations",
+        "row": null
+      }
+    ],
+    "notes": ""
+  },
+  {
+    "claim_id": "C06",
+    "statement": "Higher women’s part-time employment is associated with lower female-relative odds of limited-employment-options motivation.",
+    "hypothesis_label": "H2",
+    "direction": "negative",
+    "tier": "focal",
+    "estimand": "Female × part-time employment in M4",
+    "scale": "log-odds",
+    "population": "Established business owners as defined in the article; exact owner eligibility is unclear.",
+    "support": [
+      {
+        "doc": "MAIN",
+        "page": 22,
+        "table": "Table 2",
+        "column_or_model": "Model 4",
+        "row": "Part-time employment × Female"
+      },
+      {
+        "doc": "MAIN",
+        "page": 23,
+        "table": null,
+        "column_or_model": "Gender Gaps in Plan B Motivations",
+        "row": null
+      }
+    ],
+    "notes": ""
+  },
+  {
+    "claim_id": "C07",
+    "statement": "Moderate leave is associated with a smaller gender gap in current business size.",
+    "hypothesis_label": "H3",
+    "direction": "positive female-by-leave and negative female-by-leave-squared",
+    "tier": "focal",
+    "estimand": "Paid-leave interactions in M5",
+    "scale": "linear coefficient",
+    "population": "Established business owners as defined in the article; exact owner eligibility is unclear.",
+    "support": [
+      {
+        "doc": "MAIN",
+        "page": 9,
+        "table": null,
+        "column_or_model": "H3",
+        "row": null
+      },
+      {
+        "doc": "MAIN",
+        "page": 22,
+        "table": "Table 2",
+        "column_or_model": "Model 5",
+        "row": "Paid leave × Female; Paid leave squared × Female"
+      },
+      {
+        "doc": "MAIN",
+        "page": 24,
+        "table": null,
+        "column_or_model": "Gender Gaps in Growth-oriented Forms",
+        "row": null
+      }
+    ],
+    "notes": "Outcome is log(employees + 1), despite the table heading referring to number of employees."
+  },
+  {
+    "claim_id": "C08",
+    "statement": "Moderate leave is associated with a smaller gender gap in high-growth aspirations.",
+    "hypothesis_label": "H3",
+    "direction": "positive female-by-leave and negative female-by-leave-squared",
+    "tier": "focal",
+    "estimand": "Paid-leave interactions in M6",
+    "scale": "log-odds",
+    "population": "Established business owners as defined in the article; exact owner eligibility is unclear.",
+    "support": [
+      {
+        "doc": "MAIN",
+        "page": 22,
+        "table": "Table 2",
+        "column_or_model": "Model 6",
+        "row": "Paid leave × Female; Paid leave squared × Female"
+      },
+      {
+        "doc": "MAIN",
+        "page": 24,
+        "table": null,
+        "column_or_model": "Gender Gaps in Growth-oriented Forms",
+        "row": null
+      }
+    ],
+    "notes": ""
+  },
+  {
+    "claim_id": "C09",
+    "statement": "Moderate leave is associated with a smaller gender gap in offering a product or service new to all customers.",
+    "hypothesis_label": "H3",
+    "direction": "positive female-by-leave and negative female-by-leave-squared",
+    "tier": "focal",
+    "estimand": "Paid-leave interactions in M7",
+    "scale": "log-odds",
+    "population": "Established business owners as defined in the article; exact owner eligibility is unclear. Survey years 2002–2008.",
+    "support": [
+      {
+        "doc": "MAIN",
+        "page": 22,
+        "table": "Table 2",
+        "column_or_model": "Model 7",
+        "row": "Paid leave × Female; Paid leave squared × Female"
+      },
+      {
+        "doc": "MAIN",
+        "page": 25,
+        "table": null,
+        "column_or_model": "Results",
+        "row": null
+      }
+    ],
+    "notes": ""
+  },
+  {
+    "claim_id": "C10",
+    "statement": "Childcare spending is associated with somewhat higher female-relative odds of using new technology.",
+    "hypothesis_label": "H3",
+    "direction": "positive",
+    "tier": "focal",
+    "estimand": "Female × childcare in M8",
+    "scale": "log-odds",
+    "population": "Established business owners as defined in the article; exact owner eligibility is unclear. Survey years 2005–2008; Poland excluded.",
+    "support": [
+      {
+        "doc": "MAIN",
+        "page": 22,
+        "table": "Table 2",
+        "column_or_model": "Model 8",
+        "row": "Childcare × Female"
+      },
+      {
+        "doc": "MAIN",
+        "page": 26,
+        "table": null,
+        "column_or_model": "Results",
+        "row": null
+      }
+    ],
+    "notes": "The article calls this effect small relative to its SE; one-dot significance only."
+  },
+  {
+    "claim_id": "C11",
+    "statement": "Part-time employment is not associated with gender gaps in the growth-oriented outcomes.",
+    "hypothesis_label": "H3",
+    "direction": "null-effect",
+    "tier": "focal",
+    "estimand": "Female × part-time employment across M5–M8",
+    "scale": "other",
+    "population": "Established business owners as defined in the article; exact owner eligibility is unclear.",
+    "support": [
+      {
+        "doc": "MAIN",
+        "page": 22,
+        "table": "Table 2",
+        "column_or_model": "Models 5–8",
+        "row": "Part-time employment × Female"
+      },
+      {
+        "doc": "MAIN",
+        "page": 28,
+        "table": null,
+        "column_or_model": "Discussion",
+        "row": null
+      }
+    ],
+    "notes": "Reported nonsignificance, not proof of no effect; distinct outcomes remain separate. Printed scales across the linked models: log-odds and linear coefficient."
+  },
+  {
+    "claim_id": "C12",
+    "statement": "Childcare is not associated with the gender gap in business size; leave is not clearly associated with the technology gap.",
+    "hypothesis_label": "H3",
+    "direction": "null-effect",
+    "tier": "focal",
+    "estimand": "Female × childcare in M5; leave interactions in M8",
+    "scale": "other",
+    "population": "Established business owners as defined in the article; exact owner eligibility is unclear.",
+    "support": [
+      {
+        "doc": "MAIN",
+        "page": 22,
+        "table": "Table 2",
+        "column_or_model": "Models 5 and 8",
+        "row": "Relevant interaction rows"
+      },
+      {
+        "doc": "MAIN",
+        "page": 24,
+        "table": null,
+        "column_or_model": "Results",
+        "row": null
+      },
+      {
+        "doc": "MAIN",
+        "page": 29,
+        "table": null,
+        "column_or_model": "Discussion",
+        "row": null
+      }
+    ],
+    "notes": " Printed scales across the linked models: log-odds and linear coefficient."
+  },
+  {
+    "claim_id": "C13",
+    "statement": "Women have substantially lower entrepreneurial odds than men in the baseline model.",
+    "hypothesis_label": null,
+    "direction": "negative",
+    "tier": "focal",
+    "estimand": "Female coefficient in M1",
+    "scale": "log-odds",
+    "population": "Selected working-age respondents in the listed country-year surveys, subject to the unresolved labor-force/employment restriction.",
+    "support": [
+      {
+        "doc": "MAIN",
+        "page": 19,
+        "table": "Table 1",
+        "column_or_model": "Model 1",
+        "row": "Female"
+      },
+      {
+        "doc": "MAIN",
+        "page": 18,
+        "table": null,
+        "column_or_model": "Modeling Gender Gaps",
+        "row": null
+      }
+    ],
+    "notes": "Odds comparisons in the prose should not be read as probability ratios."
+  },
+  {
+    "claim_id": "C14",
+    "statement": "At other covariates’ means, higher childcare spending widens the predicted probability gap mainly through a lower predicted probability for women.",
+    "hypothesis_label": "H1(b)",
+    "direction": "negative female probability gradient",
+    "tier": "focal",
+    "estimand": "Fixed-part predictions from M3 in raw childcare units",
+    "scale": "probability",
+    "population": "Selected working-age respondents in the listed country-year surveys, subject to the unresolved labor-force/employment restriction.",
+    "support": [
+      {
+        "doc": "MAIN",
+        "page": 20,
+        "table": "Figure 4",
+        "column_or_model": "M3 predictions",
+        "row": null
+      },
+      {
+        "doc": "MAIN",
+        "page": 21,
+        "table": null,
+        "column_or_model": "Results and footnote 20",
+        "row": null
+      }
+    ],
+    "notes": ""
+  },
+  {
+    "claim_id": "C15",
+    "statement": "At high childcare and part-time employment levels, the gender gap in limited-options motivation reverses, with women below men.",
+    "hypothesis_label": "H2",
+    "direction": "female-minus-male gap decreases and reverses",
+    "tier": "focal",
+    "estimand": "Fixed-part predicted probabilities from M4",
+    "scale": "probability",
+    "population": "Established business owners as defined in the article; exact owner eligibility is unclear.",
+    "support": [
+      {
+        "doc": "MAIN",
+        "page": 23,
+        "table": "Figure 5",
+        "column_or_model": "Panels A and B",
+        "row": null
+      },
+      {
+        "doc": "MAIN",
+        "page": 24,
+        "table": null,
+        "column_or_model": "Results",
+        "row": null
+      }
+    ],
+    "notes": ""
+  },
+  {
+    "claim_id": "C16",
+    "statement": "The business-size gender gap is smallest at moderate leave, and women’s high-growth aspirations peak at moderate leave.",
+    "hypothesis_label": "H3",
+    "direction": "curvilinear narrowing",
+    "tier": "focal",
+    "estimand": "Fixed-part predictions from M5 and M6",
+    "scale": "other",
+    "population": "Established business owners as defined in the article; exact owner eligibility is unclear.",
+    "support": [
+      {
+        "doc": "MAIN",
+        "page": 25,
+        "table": "Figure 6",
+        "column_or_model": "Panels A and B",
+        "row": null
+      },
+      {
+        "doc": "MAIN",
+        "page": 24,
+        "table": null,
+        "column_or_model": "Results",
+        "row": null
+      }
+    ],
+    "notes": "Printed plots do not supply exact point estimates or uncertainty bands. Printed scales across the linked models: linear coefficient and probability."
+  },
+  {
+    "claim_id": "C17",
+    "statement": "The innovation gap nearly disappears at moderate leave; the technology gap becomes small at higher childcare spending.",
+    "hypothesis_label": "H3",
+    "direction": "curvilinear narrowing / positive childcare interaction",
+    "tier": "focal",
+    "estimand": "Fixed-part predictions from M7 and M8",
+    "scale": "probability",
+    "population": "Established business owners as defined in the article; exact owner eligibility is unclear.",
+    "support": [
+      {
+        "doc": "MAIN",
+        "page": 26,
+        "table": "Figure 7",
+        "column_or_model": "Panels A and B",
+        "row": null
+      },
+      {
+        "doc": "MAIN",
+        "page": 27,
+        "table": null,
+        "column_or_model": "Results",
+        "row": null
+      }
+    ],
+    "notes": "Indiscernible in a plot is not a reported test of equality."
+  },
+  {
+    "claim_id": "C18",
+    "statement": "The childcare interaction persists when predicting nascent entrepreneurship.",
+    "hypothesis_label": "H1(b)",
+    "direction": "negative",
+    "tier": "robustness",
+    "estimand": "Female × childcare in A3_M1",
+    "scale": "log-odds",
+    "population": "Selected working-age respondents in the listed country-year surveys, subject to the unresolved labor-force/employment restriction.",
+    "support": [
+      {
+        "doc": "S1",
+        "page": 3,
+        "table": "Table A3",
+        "column_or_model": "Model 1",
+        "row": "Childcare × Female"
+      },
+      {
+        "doc": "MAIN",
+        "page": 21,
+        "table": null,
+        "column_or_model": "Supplementary analyses",
+        "row": null
+      }
+    ],
+    "notes": "This changes the outcome, so is not an interchangeable specification of total entrepreneurship."
+  },
+  {
+    "claim_id": "C19",
+    "statement": "The childcare interaction persists when respondents who are not employed are included.",
+    "hypothesis_label": "H1(b)",
+    "direction": "negative",
+    "tier": "robustness",
+    "estimand": "Female × childcare in A3_M2",
+    "scale": "log-odds",
+    "population": "Working-age full sample, including not-employed respondents.",
+    "support": [
+      {
+        "doc": "S1",
+        "page": 3,
+        "table": "Table A3",
+        "column_or_model": "Model 2",
+        "row": "Childcare × Female"
+      },
+      {
+        "doc": "MAIN",
+        "page": 10,
+        "table": null,
+        "column_or_model": "Footnote 2",
+        "row": null
+      },
+      {
+        "doc": "MAIN",
+        "page": 21,
+        "table": null,
+        "column_or_model": "Supplementary analyses",
+        "row": null
+      }
+    ],
+    "notes": "A3_M2 has a blank fertility cell; do not silently add that control."
+  },
+  {
+    "claim_id": "C20",
+    "statement": "The childcare interaction persists after adjusting for entrepreneurial perceptions and a network tie.",
+    "hypothesis_label": "H1(b)",
+    "direction": "negative",
+    "tier": "robustness",
+    "estimand": "Female × childcare in A3_M3",
+    "scale": "log-odds",
+    "population": "Selected working-age respondents in the listed country-year surveys, subject to the unresolved labor-force/employment restriction. With responses on the additional perception/network items.",
+    "support": [
+      {
+        "doc": "S1",
+        "page": 3,
+        "table": "Table A3",
+        "column_or_model": "Model 3",
+        "row": "Childcare × Female"
+      },
+      {
+        "doc": "MAIN",
+        "page": 21,
+        "table": null,
+        "column_or_model": "Supplementary analyses",
+        "row": null
+      }
+    ],
+    "notes": "Non-entrepreneur questionnaire skip patterns change selection after 2002."
+  },
+  {
+    "claim_id": "C21",
+    "statement": "Self-assessed ability and knowing an entrepreneur predict higher entrepreneurial odds, whereas fear of failure predicts lower odds.",
+    "hypothesis_label": null,
+    "direction": "positive ability/network; negative fear",
+    "tier": "nuisance_control",
+    "estimand": "Perception/network coefficients in A3_M3",
+    "scale": "log-odds",
+    "population": "Selected working-age respondents in the listed country-year surveys, subject to the unresolved labor-force/employment restriction.",
+    "support": [
+      {
+        "doc": "S1",
+        "page": 3,
+        "table": "Table A3",
+        "column_or_model": "Model 3",
+        "row": "Self-assessed entrepreneurial ability; Fears business failure; Knows another entrepreneur"
+      },
+      {
+        "doc": "MAIN",
+        "page": 21,
+        "table": null,
+        "column_or_model": "Supplementary analyses",
+        "row": null
+      }
+    ],
+    "notes": ""
+  },
+  {
+    "claim_id": "C22",
+    "statement": "Middle-aged and postsecondary-educated respondents have higher entrepreneurial odds in the baseline analysis.",
+    "hypothesis_label": null,
+    "direction": "positive education; concave age",
+    "tier": "nuisance_control",
+    "estimand": "Age, age squared, education in M1",
+    "scale": "log-odds",
+    "population": "Selected working-age respondents in the listed country-year surveys, subject to the unresolved labor-force/employment restriction.",
+    "support": [
+      {
+        "doc": "MAIN",
+        "page": 19,
+        "table": "Table 1",
+        "column_or_model": "Model 1",
+        "row": "Age; Age squared; Postsecondary degree or higher"
+      },
+      {
+        "doc": "MAIN",
+        "page": 18,
+        "table": null,
+        "column_or_model": "Modeling Gender Gaps",
+        "row": null
+      }
+    ],
+    "notes": ""
+  },
+  {
+    "claim_id": "C23",
+    "statement": "Entrepreneurial activity is lower in higher-GDP contexts and higher where entrepreneurship has higher social status.",
+    "hypothesis_label": null,
+    "direction": "negative GDP; positive status",
+    "tier": "nuisance_control",
+    "estimand": "GDP and entrepreneurship-status coefficients in M2/M3",
+    "scale": "log-odds",
+    "population": "Selected working-age respondents in the listed country-year surveys, subject to the unresolved labor-force/employment restriction.",
+    "support": [
+      {
+        "doc": "MAIN",
+        "page": 19,
+        "table": "Table 1",
+        "column_or_model": "Models 2–3",
+        "row": "GDP; Social status of entrepreneurship"
+      },
+      {
+        "doc": "MAIN",
+        "page": 20,
+        "table": null,
+        "column_or_model": "Results",
+        "row": null
+      },
+      {
+        "doc": "MAIN",
+        "page": 29,
+        "table": null,
+        "column_or_model": "Discussion",
+        "row": null
+      }
+    ],
+    "notes": ""
+  },
+  {
+    "claim_id": "C24",
+    "statement": "Older, less educated, sole owners with older businesses are more likely to report limited-options motivation.",
+    "hypothesis_label": null,
+    "direction": "positive age/sole ownership/business age; negative education",
+    "tier": "nuisance_control",
+    "estimand": "Individual covariate coefficients in M4",
+    "scale": "log-odds",
+    "population": "Established business owners as defined in the article; exact owner eligibility is unclear.",
+    "support": [
+      {
+        "doc": "MAIN",
+        "page": 22,
+        "table": "Table 2",
+        "column_or_model": "Model 4",
+        "row": "Age; Postsecondary degree or higher; Sole owner; Business age"
+      },
+      {
+        "doc": "MAIN",
+        "page": 21,
+        "table": null,
+        "column_or_model": "Gender Gaps in Plan B Motivations",
+        "row": null
+      }
+    ],
+    "notes": ""
+  },
+  {
+    "claim_id": "C25",
+    "statement": "Limited-options motivation is more common in lower-GDP, higher-unemployment, lower-women-management and higher-entrepreneurship-status contexts.",
+    "hypothesis_label": null,
+    "direction": "negative GDP/managers; positive unemployment/status",
+    "tier": "nuisance_control",
+    "estimand": "Macro control coefficients in M4",
+    "scale": "log-odds",
+    "population": "Established business owners as defined in the article; exact owner eligibility is unclear.",
+    "support": [
+      {
+        "doc": "MAIN",
+        "page": 22,
+        "table": "Table 2",
+        "column_or_model": "Model 4",
+        "row": "GDP; Unemployment rate; Percent women managers; Social status of entrepreneurship"
+      },
+      {
+        "doc": "MAIN",
+        "page": 23,
+        "table": null,
+        "column_or_model": "Results",
+        "row": null
+      }
+    ],
+    "notes": ""
+  },
+  {
+    "claim_id": "C26",
+    "statement": "Women business owners have lower business size, growth aspirations, innovation and technology use at the reference institutional values.",
+    "hypothesis_label": null,
+    "direction": "negative",
+    "tier": "focal",
+    "estimand": "Female coefficients in M5–M8",
+    "scale": "other",
+    "population": "Established business owners as defined in the article; exact owner eligibility is unclear.",
+    "support": [
+      {
+        "doc": "MAIN",
+        "page": 22,
+        "table": "Table 2",
+        "column_or_model": "Models 5–8",
+        "row": "Female"
+      },
+      {
+        "doc": "MAIN",
+        "page": 24,
+        "table": null,
+        "column_or_model": "Results",
+        "row": null
+      },
+      {
+        "doc": "MAIN",
+        "page": 27,
+        "table": null,
+        "column_or_model": "Discussion",
+        "row": null
+      }
+    ],
+    "notes": "Female coefficients are conditional on centered/standardized institutional values, not unconditional gender averages. Printed scales across the linked models: log-odds and linear coefficient."
+  },
+  {
+    "claim_id": "C27",
+    "statement": "Entrepreneurial activity varies substantially across countries; France is lowest and Greece highest, and women’s share is not tightly aligned with total activity.",
+    "hypothesis_label": null,
+    "direction": "none",
+    "tier": "descriptive",
+    "estimand": "Country aggregate entrepreneurship proportions and female shares",
+    "scale": "probability",
+    "population": "Selected working-age respondents in the listed country-year surveys, subject to the unresolved labor-force/employment restriction.",
+    "support": [
+      {
+        "doc": "MAIN",
+        "page": 16,
+        "table": "Figure 1",
+        "column_or_model": null,
+        "row": "Country bars"
+      }
+    ],
+    "notes": "Descriptive association, with no inferential test printed."
+  },
+  {
+    "claim_id": "C28",
+    "statement": "Adjusted probability gaps are largest in Ireland, Iceland and Norway and small in Japan, Spain and Canada.",
+    "hypothesis_label": null,
+    "direction": "male probability exceeds female probability",
+    "tier": "descriptive",
+    "estimand": "Country-specific average marginal gender effects from logistic regressions",
+    "scale": "probability",
+    "population": "Selected working-age respondents in the listed country-year surveys, subject to the unresolved labor-force/employment restriction.",
+    "support": [
+      {
+        "doc": "MAIN",
+        "page": 17,
+        "table": "Figure 2",
+        "column_or_model": null,
+        "row": "Country bars"
+      },
+      {
+        "doc": "MAIN",
+        "page": 16,
+        "table": null,
+        "column_or_model": "Cross-national Patterns",
+        "row": null
+      }
+    ],
+    "notes": ""
+  },
+  {
+    "claim_id": "C29",
+    "statement": "Country-average childcare provision correlates positively with the adjusted gender gap; paid leave has a weak correlation and part-time work little correlation.",
+    "hypothesis_label": null,
+    "direction": "positive childcare; weak leave; near-zero part-time",
+    "tier": "descriptive",
+    "estimand": "Correlations of country means with country-specific adjusted probability gaps",
+    "scale": "other",
+    "population": "Selected working-age respondents in the listed country-year surveys, subject to the unresolved labor-force/employment restriction.",
+    "support": [
+      {
+        "doc": "MAIN",
+        "page": 17,
+        "table": null,
+        "column_or_model": "Cross-national Patterns",
+        "row": null
+      },
+      {
+        "doc": "MAIN",
+        "page": 18,
+        "table": "Figure 3",
+        "column_or_model": null,
+        "row": null
+      }
+    ],
+    "notes": ""
+  },
+  {
+    "claim_id": "C30",
+    "statement": "The three institutional indicators are weakly related and do not support collapsing them into one index.",
+    "hypothesis_label": null,
+    "direction": "none",
+    "tier": "identification_or_inference_diagnostic",
+    "estimand": "Pairwise correlations, Cronbach alpha and factor loadings",
+    "scale": "other",
+    "population": "Country-year institutional measures.",
+    "support": [
+      {
+        "doc": "MAIN",
+        "page": 13,
+        "table": null,
+        "column_or_model": "Footnote 10",
+        "row": null
+      }
+    ],
+    "notes": "Aggregation assessment is reported, not independently reproduced."
+  },
+  {
+    "claim_id": "C31",
+    "statement": "Pooled country-level predictors have limited collinearity by the reported VIFs.",
+    "hypothesis_label": null,
+    "direction": "none",
+    "tier": "identification_or_inference_diagnostic",
+    "estimand": "Maximum pooled VIF",
+    "scale": "other",
+    "population": "Country-level predictors.",
+    "support": [
+      {
+        "doc": "MAIN",
+        "page": 14,
+        "table": null,
+        "column_or_model": "Footnote 13",
+        "row": null
+      }
+    ],
+    "notes": ""
+  },
+  {
+    "claim_id": "C32",
+    "statement": "Random gender slopes improve the empty-model comparison and group levels account for some latent entrepreneurial-activity correlation.",
+    "hypothesis_label": null,
+    "direction": "positive variance",
+    "tier": "identification_or_inference_diagnostic",
+    "estimand": "LR comparison and latent-scale ICCs",
+    "scale": "other",
+    "population": "Selected working-age respondents in the listed country-year surveys, subject to the unresolved labor-force/employment restriction.",
+    "support": [
+      {
+        "doc": "MAIN",
+        "page": 18,
+        "table": null,
+        "column_or_model": "Footnote 17",
+        "row": null
+      }
+    ],
+    "notes": "Test statistic, df, exact p, boundary correction and empty-model estimates are absent."
+  },
+  {
+    "claim_id": "C33",
+    "statement": "Adding macro variables explains a sizeable part of between-country intercept variance.",
+    "hypothesis_label": null,
+    "direction": "negative unexplained variance",
+    "tier": "identification_or_inference_diagnostic",
+    "estimand": "Proportional decrease in country intercept variance, M1 to M2",
+    "scale": "other",
+    "population": "Selected working-age respondents in the listed country-year surveys, subject to the unresolved labor-force/employment restriction.",
+    "support": [
+      {
+        "doc": "MAIN",
+        "page": 19,
+        "table": "Table 1",
+        "column_or_model": "Models 1–2",
+        "row": "Between-country intercept s.d."
+      },
+      {
+        "doc": "MAIN",
+        "page": 19,
+        "table": null,
+        "column_or_model": "Footnote 18",
+        "row": null
+      }
+    ],
+    "notes": ""
+  },
+  {
+    "claim_id": "C34",
+    "statement": "Institutional gender interactions explain country-level gender-gap variance, but do not explain survey-level gender-gap variance.",
+    "hypothesis_label": null,
+    "direction": "negative country-level unexplained variance",
+    "tier": "identification_or_inference_diagnostic",
+    "estimand": "Changes in female random-slope variances, M2 to M3",
+    "scale": "other",
+    "population": "Selected working-age respondents in the listed country-year surveys, subject to the unresolved labor-force/employment restriction.",
+    "support": [
+      {
+        "doc": "MAIN",
+        "page": 19,
+        "table": "Table 1",
+        "column_or_model": "Models 2–3",
+        "row": "Female s.d. rows"
+      },
+      {
+        "doc": "MAIN",
+        "page": 20,
+        "table": null,
+        "column_or_model": "Footnote 19 and Results",
+        "row": null
+      }
+    ],
+    "notes": ""
+  },
+  {
+    "claim_id": "C35",
+    "statement": "Very little between-country gender-gap variance remains in the technology model.",
+    "hypothesis_label": null,
+    "direction": "near-zero variance",
+    "tier": "identification_or_inference_diagnostic",
+    "estimand": "Country female random-slope SD in M8",
+    "scale": "other",
+    "population": "Established business owners as defined in the article; exact owner eligibility is unclear. Technology sample.",
+    "support": [
+      {
+        "doc": "MAIN",
+        "page": 22,
+        "table": "Table 2",
+        "column_or_model": "Model 8",
+        "row": "Between-country female s.d."
+      },
+      {
+        "doc": "MAIN",
+        "page": 26,
+        "table": null,
+        "column_or_model": "Results",
+        "row": null
+      }
+    ],
+    "notes": "Rounded zero does not establish exact absence of heterogeneity; country intercept is also printed zero."
+  },
+  {
+    "claim_id": "C36",
+    "statement": "Changing the leave-policy lag to zero or two years gives similar results.",
+    "hypothesis_label": null,
+    "direction": "none",
+    "tier": "robustness",
+    "estimand": "Institutional effects under alternative leave lags",
+    "scale": "other",
+    "population": "Selected working-age respondents in the listed country-year surveys, subject to the unresolved labor-force/employment restriction. / owner outcomes",
+    "support": [
+      {
+        "doc": "MAIN",
+        "page": 12,
+        "table": null,
+        "column_or_model": "Footnote 8",
+        "row": null
+      }
+    ],
+    "notes": "No numerical estimates for this check are supplied; not reconstructed."
+  },
+  {
+    "claim_id": "C37",
+    "statement": "Alternative economic/legal controls yield similar results.",
+    "hypothesis_label": null,
+    "direction": "none",
+    "tier": "robustness",
+    "estimand": "Institutional effects controlling start-up regulation, union density or service-sector size",
+    "scale": "other",
+    "population": "Selected working-age respondents in the listed country-year surveys, subject to the unresolved labor-force/employment restriction.",
+    "support": [
+      {
+        "doc": "MAIN",
+        "page": 13,
+        "table": null,
+        "column_or_model": "Footnote 11",
+        "row": null
+      }
+    ],
+    "notes": "No numerical estimates for this check are supplied; not reconstructed."
+  },
+  {
+    "claim_id": "C38",
+    "statement": "Alternative indicators of women’s social/cultural status yield similar results but weaker fits, and do not directly predict the entrepreneurship gender gap.",
+    "hypothesis_label": null,
+    "direction": "none",
+    "tier": "robustness",
+    "estimand": "Gender-gap coefficients and model-fit comparisons",
+    "scale": "other",
+    "population": "Selected working-age respondents in the listed country-year surveys, subject to the unresolved labor-force/employment restriction.",
+    "support": [
+      {
+        "doc": "MAIN",
+        "page": 14,
+        "table": null,
+        "column_or_model": "Footnote 12",
+        "row": null
+      }
+    ],
+    "notes": "No numerical estimates for this check are supplied; not reconstructed."
+  },
+  {
+    "claim_id": "C39",
+    "statement": "Entering macro predictors individually gives similar results.",
+    "hypothesis_label": null,
+    "direction": "none",
+    "tier": "robustness",
+    "estimand": "Institutional effects with macro predictors entered one at a time",
+    "scale": "other",
+    "population": "Selected working-age respondents in the listed country-year surveys, subject to the unresolved labor-force/employment restriction.",
+    "support": [
+      {
+        "doc": "MAIN",
+        "page": 14,
+        "table": null,
+        "column_or_model": "Footnote 13",
+        "row": null
+      }
+    ],
+    "notes": "No numerical estimates for this check are supplied; not reconstructed."
+  },
+  {
+    "claim_id": "C40",
+    "statement": "Entering perception/network variables individually leaves the institutional gender-gap results similar.",
+    "hypothesis_label": null,
+    "direction": "none",
+    "tier": "robustness",
+    "estimand": "Female-by-institution effects with perception covariates entered one at a time",
+    "scale": "other",
+    "population": "Selected working-age respondents in the listed country-year surveys, subject to the unresolved labor-force/employment restriction.",
+    "support": [
+      {
+        "doc": "MAIN",
+        "page": 21,
+        "table": null,
+        "column_or_model": "Footnote 21",
+        "row": null
+      }
+    ],
+    "notes": "No numerical estimates for this check are supplied; not reconstructed."
+  },
+  {
+    "claim_id": "C41",
+    "statement": "Women-only models confirm lower limited-options motivation with greater childcare spending.",
+    "hypothesis_label": null,
+    "direction": "none",
+    "tier": "robustness",
+    "estimand": "Childcare coefficient in women-only motivation model",
+    "scale": "other",
+    "population": "Established business owners as defined in the article; exact owner eligibility is unclear. Women only.",
+    "support": [
+      {
+        "doc": "MAIN",
+        "page": 24,
+        "table": null,
+        "column_or_model": "Footnote 22",
+        "row": null
+      }
+    ],
+    "notes": "No numerical estimates for this check are supplied; not reconstructed."
+  },
+  {
+    "claim_id": "C42",
+    "statement": "Women-only models confirm curved leave associations for size, aspirations and innovation.",
+    "hypothesis_label": null,
+    "direction": "none",
+    "tier": "robustness",
+    "estimand": "Leave and squared-leave coefficients in women-only growth models",
+    "scale": "other",
+    "population": "Established business owners as defined in the article; exact owner eligibility is unclear. Women only.",
+    "support": [
+      {
+        "doc": "MAIN",
+        "page": 26,
+        "table": null,
+        "column_or_model": "Footnote 23",
+        "row": null
+      }
+    ],
+    "notes": "No numerical estimates for this check are supplied; not reconstructed."
+  },
+  {
+    "claim_id": "C43",
+    "statement": "Adjusting aspirations, innovation and technology models for current business size leaves the substantive institutional conclusions unchanged.",
+    "hypothesis_label": null,
+    "direction": "none",
+    "tier": "robustness",
+    "estimand": "Female-by-institution coefficients with log business size added",
+    "scale": "other",
+    "population": "Established business owners as defined in the article; exact owner eligibility is unclear.",
+    "support": [
+      {
+        "doc": "MAIN",
+        "page": 27,
+        "table": null,
+        "column_or_model": "Footnote 24",
+        "row": null
+      }
+    ],
+    "notes": "No numerical estimates for this check are supplied; not reconstructed."
+  },
+  {
+    "claim_id": "C44",
+    "statement": "Excluding one or more countries with regional policy variation produces similar findings.",
+    "hypothesis_label": null,
+    "direction": "none",
+    "tier": "robustness",
+    "estimand": "Institutional effects after excluding some of United States, Canada, Switzerland, Netherlands and Spain",
+    "scale": "other",
+    "population": "Selected working-age respondents in the listed country-year surveys, subject to the unresolved labor-force/employment restriction. / owner outcomes",
+    "support": [
+      {
+        "doc": "MAIN",
+        "page": 31,
+        "table": null,
+        "column_or_model": "Footnote 25",
+        "row": null
+      }
+    ],
+    "notes": "No numerical estimates for this check are supplied; not reconstructed."
+  },
+  {
+    "claim_id": "C45",
+    "statement": "Expressing logistic estimates as odds ratios gives the same substantive findings.",
+    "hypothesis_label": null,
+    "direction": "none",
+    "tier": "robustness",
+    "estimand": "Exponentiated logit coefficients",
+    "scale": "other",
+    "population": "All logistic-model samples",
+    "support": [
+      {
+        "doc": "MAIN",
+        "page": 15,
+        "table": null,
+        "column_or_model": "Footnote 16",
+        "row": null
+      }
+    ],
+    "notes": "No numerical estimates for this check are supplied; not reconstructed."
+  },
+  {
+    "claim_id": "C46",
+    "statement": "The full-sample robustness findings also hold without an employment-status control.",
+    "hypothesis_label": null,
+    "direction": "none",
+    "tier": "robustness",
+    "estimand": "Female-by-institution coefficients without not-employed control",
+    "scale": "other",
+    "population": "Full working-age sample",
+    "support": [
+      {
+        "doc": "S1",
+        "page": 3,
+        "table": null,
+        "column_or_model": "Table A3 note †",
+        "row": null
+      }
+    ],
+    "notes": "No numerical estimates for this check are supplied; not reconstructed."
+  },
+  {
+    "claim_id": "C47",
+    "statement": "The survey descriptives summarize the overall and owner subsamples and the different innovation/technology windows.",
+    "hypothesis_label": null,
+    "direction": "none",
+    "tier": "descriptive",
+    "estimand": "Means, standard deviations and sample sizes",
+    "scale": "other",
+    "population": "Selected working-age respondents in the listed country-year surveys, subject to the unresolved labor-force/employment restriction. / owner sample",
+    "support": [
+      {
+        "doc": "S1",
+        "page": 1,
+        "table": "Table A1",
+        "column_or_model": null,
+        "row": null
+      },
+      {
+        "doc": "S1",
+        "page": 2,
+        "table": "Table A2",
+        "column_or_model": "Panels A and B",
+        "row": null
+      }
+    ],
+    "notes": "Published summaries are comparison targets only, not inputs or imputation donors."
+  },
+  {
+    "claim_id": "C48",
+    "statement": "The proposed selection mechanism links supportive institutions, fewer fallback motivations and stronger female representation in growth-oriented ventures.",
+    "hypothesis_label": "H2/H3",
+    "direction": "policy-specific mediation/selection interpretation",
+    "tier": "focal",
+    "estimand": "Joint pattern across M3–M8; no direct mediation estimand is fitted",
+    "scale": "other",
+    "population": "Selected working-age respondents in the listed country-year surveys, subject to the unresolved labor-force/employment restriction. / owner sample",
+    "support": [
+      {
+        "doc": "MAIN",
+        "page": 27,
+        "table": null,
+        "column_or_model": "Discussion",
+        "row": null
+      },
+      {
+        "doc": "MAIN",
+        "page": 28,
+        "table": null,
+        "column_or_model": "Discussion",
+        "row": null
+      },
+      {
+        "doc": "MAIN",
+        "page": 30,
+        "table": null,
+        "column_or_model": "Contributions",
+        "row": null
+      },
+      {
+        "doc": "MAIN",
+        "page": 31,
+        "table": null,
+        "column_or_model": "Limitations",
+        "row": null
+      }
+    ],
+    "notes": "Mechanism is an interpretation of associational evidence. Parenthood, work–family conflict and longitudinal transitions are not measured; no causal mediation test is reported."
+  }
+]

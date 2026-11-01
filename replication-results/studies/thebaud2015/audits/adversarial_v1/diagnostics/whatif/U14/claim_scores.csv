@@ -1,0 +1,16 @@
+claim,model,terms,outcome,term_outcomes
+F01,M3,female:leave;female:leave_sq,indeterminate:grey_zone,indeterminate:grey_zone;indeterminate:grey_zone
+F02,M3,female:childcare,consistent,consistent
+F03,M3,female:parttime,indeterminate:grey_zone,indeterminate:grey_zone
+F04,M1,female,indeterminate:implementation_failure,indeterminate:implementation_failure
+F05,M4,female:childcare,discrepant_candidate,discrepant_candidate
+F06,M4,female:parttime,discrepant_candidate,discrepant_candidate
+F07,M4,female:leave;female:leave_sq,indeterminate:grey_zone,indeterminate:grey_zone;indeterminate:grey_zone
+F08,M5,female:leave;female:leave_sq,indeterminate:incomplete_coverage,indeterminate:incomplete_coverage;indeterminate:incomplete_coverage
+F09,M6,female:leave;female:leave_sq,discrepant_candidate,discrepant_candidate;discrepant_candidate
+F10,M7,female:leave;female:leave_sq,indeterminate:incomplete_coverage,indeterminate:incomplete_coverage;indeterminate:incomplete_coverage
+F11,M8,female:childcare,indeterminate:grey_zone,indeterminate:grey_zone
+R01,R1,female:childcare,indeterminate:implementation_failure,indeterminate:implementation_failure
+R02,R2,female:childcare,indeterminate:implementation_failure,indeterminate:implementation_failure
+R03,R3,female:childcare,indeterminate:implementation_failure,indeterminate:implementation_failure
+F12,M5-M8,null interactions,indeterminate:incomplete_coverage,indeterminate:incomplete_coverage;indeterminate:incomplete_coverage;discrepant_candidate;discrepant_candidate;indeterminate:incomplete_coverage;indeterminate:incomplete_coverage;discrepant_candidate;discrepant_candidate;indeterminate:grey_zone

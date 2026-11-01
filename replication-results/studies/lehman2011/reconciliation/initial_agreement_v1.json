@@ -1,0 +1,71 @@
+{
+ "computed_utc": "2026-10-27T12:12:25+00:00",
+ "stage": "initial (before any clarification round)",
+ "claim_tier": {
+  "n": 12,
+  "agree": 11,
+  "pa": 0.9167,
+  "pe": 0.1884,
+  "ac1": 0.8973
+ },
+ "claim_type": {
+  "n": 12,
+  "agree": 12,
+  "pa": 1.0,
+  "pe": 0.2407,
+  "ac1": 1.0
+ },
+ "manifest_certainty": {
+  "n": 25,
+  "agree": 20,
+  "pa": 0.8,
+  "pe": 0.2764,
+  "ac1": 0.7236
+ },
+ "equivalence_label": {
+  "n": 4,
+  "agree": 2,
+  "pa": 0.5,
+  "pe": 0.3281,
+  "ac1": 0.2558
+ },
+ "structural_coverage": {
+  "claims": {
+   "matched": 12,
+   "fable_only": 5,
+   "astra_only": 7,
+   "fable_total": 17,
+   "astra_total": 19
+  },
+  "variables": {
+   "matched": 19,
+   "fable_only": 0,
+   "astra_only": 3
+  },
+  "sample_steps": {
+   "matched": 6,
+   "fable_only": 2,
+   "astra_only": 1
+  },
+  "spec_levels_non_origin": {
+   "matched": 4,
+   "fable_only": 11,
+   "astra_only": 8
+  },
+  "models": {
+   "fable": 3,
+   "astra": 3,
+   "same_regressor_lists": true
+  }
+ },
+ "transcription": {
+  "fable_targets": 183,
+  "astra_targets": 139,
+  "matched_keys": 41,
+  "strict_value_as_printed_agreement": 17,
+  "numeric_value_agreement_ignoring_stars_and_commas": 41,
+  "numeric_disagreements": [],
+  "published_se_agreement": 41,
+  "note": "strict comparison follows rules_v1 normalisation; fable embeds significance stars in value_as_printed and astra records them separately, so the numeric comparison (added after seeing that formatting difference, not after any result) is reported alongside."
+ }
+}

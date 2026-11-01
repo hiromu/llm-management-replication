@@ -1,0 +1,17 @@
+{
+  "frozen_before_execution": true,
+  "design": "three implementations (instructions/workflow.md section 4)",
+  "degradation": "The article's software is unstated; Stata is implied by a citation but is not available. A and B therefore use R (the default when the article's language is not specified), and C uses Julia. Adaptive quadrature is not available for this random-effects structure in either package, so all three use the Laplace approximation.",
+  "implementers": {
+    "A": {"family": "Anthropic", "model": "claude-fable-5-1", "effort": "high", "fast_mode": false, "language": "R 4.6.1 (lme4 2.1.0)", "cli": "claude 2.1.270 -p --safe-mode", "tools": "Read, Write, Edit, Glob, Grep, Bash limited to Rscript"},
+    "B": {"family": "OpenAI", "model": "gpt-6-astra", "effort": "high", "service_tier": "default", "language": "R 4.6.1 (lme4 2.1.0)", "cli": "codex-cli 0.164.0 exec, sandbox workspace-write (network off by default)"},
+    "C": {"family": "Anthropic", "model": "claude-fable-5-1", "effort": "high", "fast_mode": false, "language": "Julia 1.12.6 (MixedModels 5.9.1, GLM 1.9.5)", "cli": "claude 2.1.270 -p --safe-mode", "tools": "Read, Write, Edit, Glob, Grep, Bash limited to julia"}
+  },
+  "checkers": {
+    "for_A_and_C": {"model": "gpt-6-astra", "cli": "codex exec, sandbox read-only"},
+    "for_B": {"model": "claude-fable-5-1", "cli": "claude -p --safe-mode, tools Read, Glob, Grep"}
+  },
+  "inputs": "neutral manifest, assignment, language spec, synthetic data; no paper identity, targets, scoring rules, other implementations or real data",
+  "real_data_execution": "by the coordinator, on the frozen scripts, with network access denied for the numerical process",
+  "isolation_limits": "Claude implementers' Read tool is not path-restricted and their Bash is limited to the interpreter; staging paths are opaque. Isolation from the study folder rests partly on instructions and is disclosed. Codex uses its workspace-write sandbox."
+}

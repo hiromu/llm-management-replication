@@ -1,0 +1,51 @@
+{
+  "version": "v1",
+  "frozen": "2026-10-27, before any empirical fit",
+  "calibration_status": "provisional and uncalibrated: constants chosen from rounding arithmetic and conventional practice; no real-paper calibration performed",
+  "implementation_agreement": {
+    "compare_first": "sample record_seq sets, N, then origin marginal effects; before any target comparison",
+    "tolerances": {"me_abs": 0.0005, "me_rel": 0.001, "rule": "agree if |d| <= me_abs or |d|/max(|a|,|b|) <= me_rel", "p_abs": 0.002, "n": "exact", "sample_ids": "identical sets"},
+    "two_of_three": "If two implementations agree, score that pair and send the third to code audit. No agreeing pair: indeterminate (implementation_disagreement)."
+  },
+  "published_values": {
+    "rounding": "printed to 2 decimals: true value in [v - 0.005, v + 0.005]; printed p '0.00' means [0, 0.005); '-0.00' has negative sign with magnitude < 0.005",
+    "published_se": "not printed in the article; SE-unit magnitude criterion is NOT audited",
+    "implied_se_diagnostic": "SE implied by printed marginal effect and printed p (two-sided normal) computed with interval arithmetic as a separate publication diagnostic; never used for a verdict"
+  },
+  "criteria": {
+    "sign": "Mismatch only if the reconstructed estimate lies outside the published rounding interval and has the opposite sign of the published value (published 0.00 has no sign).",
+    "inference_bands": ["p<0.01", "0.01<=p<0.05", "0.05<=p<0.10", "p>=0.10"],
+    "inference_rule": "Published band set = bands overlapping the published p rounding interval. Band distance = minimum index distance between published and reconstructed bands. For a claim of significance in the hypothesized direction, a stronger reconstructed band is not a failure. Distance 1 is never sufficient for discrepancy; a weaker band by 2 or more is an inference failure. A reconstructed result significant at 0.10 where the article reports p >= 0.10 is recorded as contradicting nonsignificance.",
+    "tail": "two-sided, normal reference, as the article reports two-sided robust p values (both readers; A assumed two)",
+    "hypothesized_direction": "negative for hierarchy coefficients (article's stated finding)",
+    "magnitude": "SE-unit magnitude not audited (no published SEs). Report absolute difference, whether the reconstruction lies within the printed rounding interval, and relative difference, labelled as printed-precision descriptives."
+  },
+  "benchmark_inference": {
+    "model_class": "probit (nonlinear)",
+    "rule": "assignment-level clustered sandwich. The hierarchy regressor is assigned at the group level (captured cohort or camp), which equals the native clustering; benchmark = native. Captured-cohort models also report camp clustering as an uncertain alternative, not as benchmark.",
+    "few_cluster_threshold": 30,
+    "below_threshold": "inference not audited for that model (no nonlinear wild bootstrap is specified)"
+  },
+  "equivalent_set": "Origin only: reconciliation produced no substantive alternative labelled equivalent by both readers. Specification fragility is therefore NOT assessed; one-at-a-time uncertain branches are reported separately with sign agreement, share significant at 0.05 and 0.10 in the hypothesized direction, median and range.",
+  "label_sensitivity": "If replacing the origin by any uncertain branch would change a claim's outcome category between consistent and potential discrepancy, flag label_sensitive and keep both.",
+  "outcomes": {
+    "consistent": "implementations agree; origin sign criterion passes and inference band distance <= 1 or stronger; magnitude criterion not audited (stated); equivalent set = origin",
+    "fragile": "not assessable (no substantive equivalent alternatives)",
+    "fragile_inference": "not applicable unless benchmark differs from native; benchmark equals native here",
+    "potential_discrepancy": "implementations agree and origin fails sign or inference (>= 2 bands weaker) criterion",
+    "discrepant": "potential discrepancy that survives adversarial review and actual human confirmation; adversarial review cannot use a model family independent of both implementation families (none available), so no fully verified discrepancy can be claimed in this session",
+    "indeterminate": "sub-codes: implementation_disagreement, inference_unaudited_few_clusters, within_claim_mixed, label_sensitive, source_vintage, underdocumentation",
+    "not_attemptable": "core source absent or fit impossible"
+  },
+  "precedence": ["not_attemptable", "indeterminate:implementation_disagreement", "potential_discrepancy/discrepant", "consistent"],
+  "grey_zone": "benefit of uncertainty goes to indeterminate",
+  "n_branch": {"rule": "computed by code: match if |N_rec - N_pub| / N_pub <= 0.005; otherwise record N mismatch and its size; N mismatch qualifies coverage but does not by itself change the outcome category", "use": "never used to choose a sample"},
+  "claim_aggregation": "A Table 4 claim (measure x group type) has two coefficients (simple and full). Consistent if both consistent; potential discrepancy if both are; otherwise indeterminate:within_claim_mixed.",
+  "paper_aggregation": {
+    "focal": "four Table 4 claims (Steepness-captured, Steepness-camp, Sameness-captured, Sameness-camp)",
+    "mapping": "fully reproduced: all four consistent and no lower tier potential discrepancy; partially reproduced: all four consistent with a discrepant lower tier; not reproduced: all four discrepant; indeterminate: any focal claim indeterminate; other combinations (mixed consistent/discrepant focal) reported as 'not covered by mapping: focal mixed' with counts",
+    "label_sensitivity": "repeat with the four Table 6 interaction claims added as focal (Table 6 focal status uncertain)",
+    "lower_tiers": "Table 5 Panel A, Table 5 ROC and text-only robustness claims are scored descriptively (sign and significance counts against the article's statement) and can qualify but not determine the paper outcome"
+  },
+  "data_regime": "same provider and file series as the article (NARA RG 389 POW file and RG 64 enlistment file); the article's vintage/download date is unknown; camp geocoding and rank mapping independently constructed"
+}

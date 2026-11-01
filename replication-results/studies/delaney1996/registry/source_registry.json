@@ -1,0 +1,334 @@
+{
+ "schema_version": 1,
+ "study_id": "delaney1996",
+ "created_utc": "2026-10-28T03:49:17Z",
+ "created_by": "source-acquisition role (Claude Code coordinator subagent, claude-opus-5-5)",
+ "sources": [
+  {
+   "source_id": "icpsr06240",
+   "type": "user_supplied_original_survey_data",
+   "title": "National Organizations Survey (NOS), 1991",
+   "provider": "ICPSR",
+   "study_number": 6240,
+   "release": "V1 (ICPSR06240-v1)",
+   "doi": "10.3886/ICPSR06240.v1",
+   "provider_original_release_date": "1994-10-17",
+   "provider_version_date": "2006-01-18",
+   "codebook_release_statement": "Second ICPSR Release, November 1994 (codebook PDF converted May 1999; manifest date 1999-05-14)",
+   "provider_manifest_file_dates": {
+    "06240-0002-Data.por": "1997-06-04",
+    "06240-Codebook.pdf": "1999-05-14",
+    "06240-descriptioncitation.pdf": "2014-07-03"
+   },
+   "por_internal_header": {
+    "product": "SPSS Release 4.0 for Sun 4",
+    "creation": "1994-09-19 15:18:36"
+   },
+   "path": "data/supplied/ICPSR_06240",
+   "provenance": {
+    "acquisition": "Downloaded by hand from ICPSR by the user (a human) under the user's own ICPSR access; no agent downloaded it or logged in to ICPSR.",
+    "user_download_time": "not recorded; TermsOfUse.html states the terms were agreed on 2026-10-27 by the downloading user (date only); filesystem modification times of the files are 2026-10-27 22:36 local time (JST), which is not established as the download time",
+    "setup_copy_time_utc": "2026-10-28T03:14:22Z",
+    "location_history": [
+     {
+      "path": "../Replication_management_v4_codex/studies/delaney1996/data/raw/ICPSR_06240",
+      "note": "where the user saved the download (Codex project); the original stays there"
+     },
+     {
+      "path": "studies/delaney1996/data/supplied/ICPSR_06240",
+      "time_utc": "2026-10-28T03:14:22Z",
+      "note": "byte-identical copy for the Claude project; files unchanged"
+     }
+    ],
+    "note": "Location history is recorded from the setup inventory only; the earlier location was not inspected."
+   },
+   "integrity_check_utc": "2026-10-28T03:31:15Z",
+   "files": [
+    {
+     "path": "data/supplied/ICPSR_06240/06240-Codebook.pdf",
+     "bytes": 5751458,
+     "sha256": "014c8ae03834a68a193b99e05fccda06577a13addab8427cc1e90a08aa795d81",
+     "sha256_matches_setup_inventory": true,
+     "bytes_match_inventory": true,
+     "md5": "39fd5cdb64b627bae0292df38735adab",
+     "provider_manifest_md5": "39fd5cdb64b627bae0292df38735adab",
+     "md5_matches_provider_manifest": true
+    },
+    {
+     "path": "data/supplied/ICPSR_06240/06240-descriptioncitation.html",
+     "bytes": 4543,
+     "sha256": "3e78d84fc73f2663a230657036b99bb1bfe70037fdc5a312ffb86a739bcd15d4",
+     "sha256_matches_setup_inventory": true,
+     "bytes_match_inventory": true
+    },
+    {
+     "path": "data/supplied/ICPSR_06240/06240-manifest.txt",
+     "bytes": 1830,
+     "sha256": "0230ed61966b8868608b54c5779ed06367535663acdf4edeb0d2b71bea05903d",
+     "sha256_matches_setup_inventory": true,
+     "bytes_match_inventory": true
+    },
+    {
+     "path": "data/supplied/ICPSR_06240/06240-related_literature.txt",
+     "bytes": 9053,
+     "sha256": "65266b7b9964a2630b5d1fd2befd98afe72d1b830a77e8b39df50fe0d98f80fe",
+     "sha256_matches_setup_inventory": true,
+     "bytes_match_inventory": true
+    },
+    {
+     "path": "data/supplied/ICPSR_06240/DS0002/06240-0002-Data.por",
+     "bytes": 1803788,
+     "sha256": "a1cd5d8a8b6c8d3681a706ab54fb85fe0cfec8b59e5538df54ed6256a508d72f",
+     "sha256_matches_setup_inventory": true,
+     "bytes_match_inventory": true,
+     "md5": "e571c7b7556c832a5aea267c8278f72d",
+     "provider_manifest_md5": "e571c7b7556c832a5aea267c8278f72d",
+     "md5_matches_provider_manifest": true
+    },
+    {
+     "path": "data/supplied/ICPSR_06240/TermsOfUse.html",
+     "bytes": 7138,
+     "sha256": "b9c35c43d6c3ba595498bec5f599a071589174db552ff851f4b9e35ec39f551a",
+     "sha256_matches_setup_inventory": true,
+     "bytes_match_inventory": true
+    }
+   ],
+   "integrity_result": "all 6 files present; SHA-256 and sizes match the setup inventory; codebook and .por MD5 match the ICPSR manifest",
+   "manifest_components_absent": [
+    {
+     "file": "DS0001/06240-0001-Data.txt",
+     "note": "fixed-width ASCII version of the same data; not supplied and not needed (DS0002 is complete); not requested"
+    },
+    {
+     "file": "DS0001/06240-0001-Setup.sps",
+     "note": "listed in manifest; not offered by ICPSR per setup notes; not needed; not requested"
+    },
+    {
+     "file": "06240-descriptioncitation.pdf",
+     "note": "manifest lists PDF; bundle holds 06240-descriptioncitation.html instead (same description content assumed, not verified)"
+    }
+   ],
+   "validation": {
+    "records": 727,
+    "variables": 1016,
+    "matches_manifest_counts": true,
+    "unit": "record = GSS-nominated employer (work establishment) linked to one GSS respondent or spouse; 39 records are documented duplicate-employer copies (V3 = 0), leaving 688 distinct establishments per documentation",
+    "record_id": "V1 (SRL case identification number; unique per record); SRLID/NOSID copies; GSS person link V5/GSSID/ID; duplicate grouping variables DUP, NUMOBS",
+    "weights": "WEIGHT (RAWWGT x 688/83.637; label 'rawwgt adjusted to n=688'), RAWWGT = 1/NEWTOTAL; no weight variable set in .por header; GSS person weights FORMWT/OVERSAMP not applicable to establishments",
+    "missing_values": "970 variables carry declared user-missing codes in the .por (one with a range); technical manual states the original SPSS-X file declared none; several declarations are substantive (e.g. 995 'large number of applications') and some non-substantive codes are undeclared (e.g. 997, 'varies/depends' = 4)",
+    "loader_equivalence": {
+     "mismatch_cells_parser_raw_vs_haven_user_na_TRUE": 0,
+     "mismatch_cells_parser_usermissing_to_NaN_vs_haven_user_na_FALSE": 0,
+     "mismatch_cells_parser_usermissing_to_NaN_vs_pyreadstat": 0,
+     "mismatch_cells_pyreadstat_vs_haven_user_na_FALSE": 0,
+     "mismatch_cells_parser_raw_vs_pyreadstat": 114484,
+     "cells_declared_user_missing_codes_converted_to_NaN_by_pyreadstat": 114484,
+     "max_abs_diff_parser_raw_vs_haven_user_na_TRUE": 4.884981308350689e-15,
+     "mismatch_cells_written_csv_vs_parser_raw": 0,
+     "mismatch_cells_written_csv_vs_haven_user_na_TRUE": 0
+    },
+    "loader_missing_value_handling": {
+     "por_parser.py (this study)": "Returns all stored values; SPSS system-missing ('*.') -> None/NaN; declared user-missing codes are returned as stored and the declarations are exposed in metadata.",
+     "pyreadstat.read_por 1.3.3": "No user_missing option for .por; declared user-missing codes are returned as NaN and missing-value declarations are not exposed (missing_ranges empty).",
+     "haven::read_por(user_na=TRUE)": "Keeps declared user-missing codes as stored values; declarations exposed in na_values / na_range attributes (labelled_spss).",
+     "haven::read_por(user_na=FALSE)": "Declared user-missing codes converted to NA.",
+     "foreign::read.spss": "Failed to open this file ('not in any supported SPSS format'); probable cause (not verified): the file's header/lines do not follow the fixed 80-column layout foreign expects (line lengths vary because trailing blanks are stripped). haven/pyreadstat (ReadStat) and the study parser read it."
+    },
+    "analytical_coverage": "see registry/coverage_audit.md",
+    "embedded_documents_note": "DOCUMENT records in .por inherited from a GSS 1972-1991 cumulative file; not applicable to NOS"
+   },
+   "terms_of_use": {
+    "file": "data/supplied/ICPSR_06240/TermsOfUse.html",
+    "summary": [
+     "Use solely for research or statistical purposes; no investigation or identification of specific research subjects (individuals or organizations); report inadvertent identification to ICPSR.",
+     "No redistribution of data or other materials without ICPSR written agreement (exceptions for official representatives/collaborating authorized users only).",
+     "Prohibition on sharing ICPSR Membership-sponsored data with persons in specified countries of concern.",
+     "Cite the data in publications and send citations to ICPSR.",
+     "Disclaimer of responsibility by original collectors, ICPSR and funder."
+    ],
+    "implications_for_study": "Raw and derived microdata stay inside studies/delaney1996; readers receive only summary-free dictionaries; no data publication. ZIP code (V352) and telephone prefixes (V350, V351) are present in the release and are not needed; they should not be used for identification."
+   },
+   "focal_author_package": "no (original survey source collection, not a replication package)"
+  },
+  {
+   "source_id": "census_io_1980_industry_occupation_code_list",
+   "type": "newly_acquired_public_government_document",
+   "title": "1980 Industry and Occupation Code List (Census Bureau); Appendix A-5: 1980 Census of Population Industry Classification System with 1972 SIC code equivalents",
+   "provider": "U.S. Census Bureau",
+   "landing_page": "https://www.census.gov/topics/employment/industry-occupation/guidance/code-lists.html",
+   "url": "https://www2.census.gov/programs-surveys/demo/guidance/industry-occupation/1980-industry-occupation-code-list.pdf",
+   "retrieved_utc": "2026-10-28T03:39:24Z",
+   "http_status": 200,
+   "content_type": "application/pdf",
+   "path": "data/raw/census_io_1980_industry_occupation_code_list/1980-industry-occupation-code-list.pdf",
+   "bytes": 1466750,
+   "sha256": "2e4016f713e4d37e031f9f5ea0dd92ef175a2fa015130e32be9d3f2325c7f3f3",
+   "pdf_metadata": "18 pages, scanned image (no text layer), PDF created 2018-07-17",
+   "purpose": "crosswalk from 1980 Census industry codes (V43, INDUSTRY) to 1972 SIC for two-digit SIC industry controls",
+   "acquired_by": "source-acquisition role via curl"
+  },
+  {
+   "source_id": "census_io_1990_census_sic_codes",
+   "type": "newly_acquired_public_government_document",
+   "title": "1990 Industrial Classification System (Census Bureau) with 1987 SIC definitions",
+   "provider": "U.S. Census Bureau",
+   "landing_page": "https://www.census.gov/topics/employment/industry-occupation/guidance/code-lists.html",
+   "url": "https://www2.census.gov/programs-surveys/demo/guidance/industry-occupation/1990-census-sic-codes.pdf",
+   "retrieved_utc": "2026-10-28T03:39:25Z",
+   "http_status": 200,
+   "content_type": "application/pdf",
+   "path": "data/raw/census_io_1990_census_sic_codes/1990-census-sic-codes.pdf",
+   "bytes": 647216,
+   "sha256": "69ab6d95c2a3a96ae31b6afbe153c1fa86b30a87a573e925c031a304d91414b3",
+   "pdf_metadata": "4 pages, scanned image",
+   "purpose": "reference for 1987-SIC alternative and for checking the 1980 list (e.g., paints = 285); not transcribed",
+   "acquired_by": "source-acquisition role via curl"
+  },
+  {
+   "source_id": "census_io_changes_1980_ind_and_occ_classification",
+   "type": "newly_acquired_public_government_document",
+   "title": "Changes to the 1980 industry and occupation classifications for the 1990 Census (Census Bureau)",
+   "provider": "U.S. Census Bureau",
+   "landing_page": "https://www.census.gov/topics/employment/industry-occupation/guidance/code-lists.html",
+   "url": "https://www2.census.gov/programs-surveys/demo/guidance/industry-occupation/changes-1980-ind-and-occ-classification.pdf",
+   "retrieved_utc": "2026-10-28T03:39:27Z",
+   "http_status": 200,
+   "content_type": "application/pdf",
+   "path": "data/raw/census_io_changes_1980_ind_and_occ_classification/changes-1980-ind-and-occ-classification.pdf",
+   "bytes": 432543,
+   "sha256": "0a0fb8e5ae71f73a42c47103f1fcc7f8822a17e4b50d7d0089a066ed29c1e761",
+   "pdf_metadata": "10 pages, scanned image",
+   "purpose": "context for 1980 vs 1990 code differences; not transcribed",
+   "acquired_by": "source-acquisition role via curl"
+  }
+ ],
+ "derived_products": [
+  {
+   "path": "data/derived/nos1991_v1/nos1991_ds0002.csv",
+   "bytes": 1557552,
+   "sha256": "99f45ad8b45a59e3d25ac6ed30cf671bb1be3f5739f82f359e18989088067dda",
+   "lineage": [
+    "icpsr06240: DS0002/06240-0002-Data.por",
+    "scripts/por_parser.py",
+    "scripts/02_convert_and_validate.py"
+   ],
+   "note": "raw stored codes, all records and variables; for implementers only under role rules",
+   "may_go_to_readers": false
+  },
+  {
+   "path": "data/derived/nos1991_v1/nos1991_ds0002_metadata.json",
+   "bytes": 440835,
+   "sha256": "4a3d43e5e429cf8286adc8c31e5f6ad683966131021317252f670acb634e6a4a",
+   "lineage": [
+    "icpsr06240 .por metadata"
+   ],
+   "note": "labels, formats, value labels, declared missing; no statistics",
+   "may_go_to_readers": false
+  },
+  {
+   "path": "data/derived/nos1991_v1/loader_equivalence.json",
+   "bytes": 2815,
+   "sha256": "e8fa5127de20193433da503f8af9ec8c88c04a53d36958551624d255ffde9b30",
+   "lineage": [
+    "por_parser.py",
+    "pyreadstat 1.3.3",
+    "haven 2.5.5"
+   ],
+   "note": "mismatch counts only",
+   "may_go_to_readers": false
+  },
+  {
+   "path": "data/derived/nos1991_v1/coverage_counts_coordinator_only.json",
+   "bytes": 86056,
+   "sha256": "c59800cb3e9d430b3a5a307862d518db6479a4ea5166a9049e3857b933ac78af",
+   "lineage": [
+    "nos1991_ds0002.csv"
+   ],
+   "note": "COORDINATOR ONLY: contains counts",
+   "may_go_to_readers": false
+  },
+  {
+   "path": "data/derived/census1980_ind_sic1972_v1/census1980_industry_sic1972.csv",
+   "bytes": 21168,
+   "sha256": "ab2f76e8fbd172388a12d1cba6517a86271ed34be27e14391f293896e9978023",
+   "lineage": [
+    "census_io_1980_industry_occupation_code_list (pages 13-18)",
+    "tesseract 5.5.3 OCR",
+    "scripts/transcribe_census1980_industry.py with visual corrections"
+   ],
+   "note": "1980 Census industry codes with printed 1972 SIC equivalents; 232 categories",
+   "may_go_to_readers": true
+  },
+  {
+   "path": "sources/reader_dictionary/nos1991_dictionary.json",
+   "bytes": 574804,
+   "sha256": "c94eb540612a67cae618d91def90057e42213c6c575c70065f841c43988bd2d0",
+   "lineage": [
+    "nos1991_ds0002_metadata.json",
+    "06240-Codebook.pdf Section III wording (frequencies removed)",
+    "scripts/04_build_reader_dictionary.py"
+   ],
+   "note": "summary-free reader dictionary",
+   "may_go_to_readers": true
+  },
+  {
+   "path": "sources/reader_dictionary/nos1991_dictionary.md",
+   "bytes": 177975,
+   "sha256": "14ef7a26525bb2c25ec49b6210d3e06f77a706d9434d476f7a8e8684b2d6841b",
+   "lineage": [
+    "as above"
+   ],
+   "note": "summary-free reader dictionary (Markdown)",
+   "may_go_to_readers": true
+  },
+  {
+   "path": "sources/reader_dictionary/nos1991_source_description.md",
+   "bytes": 7445,
+   "sha256": "0b7dbc2f57b4a05cefa89dc539aaa5cca28b9c98e711bb900f851974cbacda19",
+   "lineage": [
+    "06240-descriptioncitation.html",
+    "06240-Codebook.pdf technical manual and file-creation syntax",
+    ".por header"
+   ],
+   "note": "design/release facts only",
+   "may_go_to_readers": true
+  },
+  {
+   "path": "registry/coverage_audit.json",
+   "bytes": 66413,
+   "sha256": "5cf84e5250a4583aa70bca47ee8f987dd42d25a97cd564b77fba6e083eba9e26",
+   "lineage": [
+    "nos1991_ds0002_metadata.json",
+    "article Measures section (constructs only)"
+   ],
+   "note": "coordinator-facing coverage audit; no counts",
+   "may_go_to_readers": false
+  },
+  {
+   "path": "registry/coverage_audit.md",
+   "bytes": 37465,
+   "sha256": "32f3c59e8a0cd18ae36882d2eb782c7ef4f808c8f3db5a12c53c233569dc07c6",
+   "lineage": [
+    "as above"
+   ],
+   "note": "coordinator-facing coverage audit; no counts",
+   "may_go_to_readers": false
+  }
+ ],
+ "supplied_folder_unchanged_check": "re-hashed at registry creation; all hashes match setup inventory",
+ "software": {
+  "python": "3.13.4",
+  "pyreadstat": "1.3.3",
+  "pandas": "2.2.3",
+  "numpy": "2.4.2",
+  "r": {
+   "R": "R version 4.6.1 (2026-06-24)",
+   "haven": "2.5.5",
+   "jsonlite": "2.0.0",
+   "foreign": "0.8.92",
+   "foreign_read_spss_result": "error: file '<project>/studies/delaney1996/data/supplied/ICPSR_06240/DS0002/06240-0002-Data.por' is not in any supported SPSS format"
+  },
+  "tesseract": "5.5.3",
+  "pdftoppm/pdftotext": "26.10.0 (poppler)"
+ }
+}

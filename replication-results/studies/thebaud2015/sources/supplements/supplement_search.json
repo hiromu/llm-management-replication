@@ -1,0 +1,68 @@
+{
+  "study_id": "thebaud2015",
+  "checked_utc": "2026-10-27T14:37:27Z",
+  "s1_identity_check": {
+    "local_path": "../../papers/supplements/ASQ/ASQ_2015_Thebaud_S1.pdf",
+    "title": "ONLINE APPENDIX (heading on page 1; the PDF carries no article title or DOI in its text)",
+    "author": "PDF metadata Author = 'Sarah Thebaud'; created with Microsoft Word 2010, CreationDate 2015-05-26",
+    "doi": "Not printed in the PDF; identity established by publisher filename ds_10.1177_0001839215591627.pdf, which matches the single supplemental file listed on the SAGE page for DOI 10.1177/0001839215591627",
+    "contents": "Three appendix tables: Table A1, country-level means of survey-level (country-year) institutional and economic variables with survey years by country; Table A2, descriptive statistics for individual-level variables and survey year in two panels (A total sample, B established business owners only); Table A3, alternative model specifications for nascent and total entrepreneurial activity (coefficient table). No narrative text.",
+    "matches_article_reference": true,
+    "match_notes": "The article cites an Online Appendix at http://asq.sagepub.com/supplemental and references tables A1, A2 (panel A) and A3; all three are present and no table beyond A3 is referenced. Minor cross-reference inconsistency: article text (layout line ~711) refers to 'Panel B of Online Appendix table A1' for established-owner descriptives, whereas in S1 the established-owner panel is Panel B of Table A2 (A1 has no panels). Recorded as a labeling discrepancy only.",
+    "page_count": 3,
+    "bytes": 470934,
+    "publisher_listed_size": "459.90 KB (= 470,934 bytes at 1024 bytes/KB; matches local file)",
+    "sha256": "5f6590b995f551e25f5de4dc6d5ae27827884023899a1236d19d202511f0c866",
+    "sha256_verified": true,
+    "sha256_verification_note": "Local file hash recomputed and equals STUDY.json/catalog value. A fresh publisher copy could not be hashed (direct fetch returned HTTP 403), so the publisher match rests on filename and exact byte size."
+  },
+  "additional_items": {
+    "found": [],
+    "unavailable": [],
+    "not_found_after_search": [
+      "No second supplement, data file or code file on the SAGE Supplementary Material section (only ds_10.1177_0001839215591627.pdf)",
+      "No erratum/corrigendum",
+      "No replacement or updated version"
+    ]
+  },
+  "errata_or_corrections": "None found. Crossref updates filter returns 0 items; article record has no updated-by/relation; SAGE page shows no correction notice; Crossref search of ASQ errata found none referencing this article; web search found none.",
+  "replacement_versions": "None found. SAGE history: online 2015-06-05, issue December 2015 (vol 60 no 4). Local article PDF (42 pages, created 2015-11-05, SHA-256 65b9354449e0f46108a5ec81b46fc00e9bf43fcce113f49585f40e5625d60b07) corresponds to the issue version (pp. 671-711). Google Scholar lists only SAGE and EBSCO copies.",
+  "code_or_links_in_supplied_pdfs": {
+    "supplement_S1": "No code, scripts or code links. No hyperlink annotations.",
+    "article": "No code or code links. URLs present are references to public sources and the Online Appendix (asq.sagepub.com/supplemental; ilo.org maternity protection database, which is also a hyperlink annotation; oecd.org/stats.oecd.org; issp.org; doingbusiness.org; wilcoproject.eu; a CNN Money news link). A Stata Press methods book is cited in references; no code is embedded.",
+    "printed_data_disclosure": "S1 Table A1 prints country-level values and S1 Tables A2-A3 print descriptive statistics and coefficients. These are printed results/data: sealed targets or diagnostics only, never empirical inputs. No values transcribed here."
+  },
+  "searches": [
+    {
+      "where": "SAGE article page, Supplementary Material section (built-in browser)",
+      "query_or_url": "https://journals.sagepub.com/doi/suppl/10.1177/0001839215591627 (redirects to /doi/full/...#supplementary-materials)",
+      "date": "2026-10-27",
+      "result": "One file: ds_10.1177_0001839215591627.pdf, 459.90 KB, href https://journals.sagepub.com/doi/suppl/10.1177/0001839215591627/suppl_file/ds_10.1177_0001839215591627.pdf. No correction notice."
+    },
+    {
+      "where": "Crossref",
+      "query_or_url": "https://api.crossref.org/works/10.1177/0001839215591627 ; works?filter=updates:10.1177/0001839215591627 ; works?query.bibliographic=Erratum Business as Plan B Thebaud&filter=issn:0001-8392",
+      "date": "2026-10-27",
+      "result": "No updates, relations or errata linked to this article."
+    },
+    {
+      "where": "Web search",
+      "query_or_url": "\"Business as Plan B\" Administrative Science Quarterly erratum OR corrigendum OR correction Thébaud",
+      "date": "2026-10-27",
+      "result": "Nothing relevant."
+    },
+    {
+      "where": "Google Scholar versions",
+      "query_or_url": "https://scholar.google.com/scholar?cluster=10017968470805860643",
+      "date": "2026-10-27",
+      "result": "SAGE and EBSCO copies only; no alternate appendix or version."
+    },
+    {
+      "where": "Local catalog",
+      "query_or_url": "../../papers/supplements/catalog.json",
+      "date": "2026-10-27",
+      "result": "One entry ASQ_2015_Thebaud_S1, bytes 470934, SHA-256 matches."
+    }
+  ],
+  "downloads_this_session": []
+}

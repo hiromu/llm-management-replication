@@ -1,0 +1,28 @@
+{
+  "source": "studies/delaney1996/reports/figures/reconstruction_influence.csv",
+  "source_sha256": "cd249014e7c63e7a8db94d65e4a060634f84c9b45acc81a7300586b75a51d880",
+  "empirical_models_refitted": false,
+  "all_exported_rows_shown_once": true,
+  "panels": [
+    {
+      "file": "delaney1996_organizational.pdf",
+      "rows": 30,
+      "models": [
+        "org_M2",
+        "org_M3",
+        "org_M4",
+        "org_M5"
+      ]
+    },
+    {
+      "file": "delaney1996_market.pdf",
+      "rows": 30,
+      "models": [
+        "mkt_M7",
+        "mkt_M8",
+        "mkt_M9",
+        "mkt_M10"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,227 @@
+[
+ {
+  "analysis_id": "A01",
+  "n_obs": null,
+  "n_counties": 3107,
+  "n_quarters": null,
+  "n_treated": 1851,
+  "n_control": 1242,
+  "locator": "D01 p.8 (journal p.4915); Table 1 title and headers; text p.5 gives control 1,256"
+ },
+ {
+  "analysis_id": "A02",
+  "n_obs": 121173,
+  "n_counties": 3107,
+  "n_quarters": 39,
+  "n_treated": null,
+  "n_control": null,
+  "locator": "D01 p.12 (journal p.4919); Table 2 note; text p.11 gives 120,627 observations"
+ },
+ {
+  "analysis_id": "A02",
+  "n_obs": 120627,
+  "n_counties": null,
+  "n_quarters": 39,
+  "n_treated": null,
+  "n_control": null,
+  "locator": "D01 p.11 (journal p.4918); Sec 2.4.5 text (conflicting)"
+ },
+ {
+  "analysis_id": "A03",
+  "n_obs": null,
+  "n_counties": 3107,
+  "n_quarters": null,
+  "n_treated": 1851,
+  "n_control": 1256,
+  "locator": "D01 p.5 (journal p.4912); Sec 2.2.3"
+ },
+ {
+  "analysis_id": "A04",
+  "n_obs": null,
+  "n_counties": 1820,
+  "n_quarters": null,
+  "n_treated": 1096,
+  "n_control": 724,
+  "locator": "D01 p.8 (journal p.4915); boundary sample, Sec 2.3.3; Figure 2(a) note p.9"
+ },
+ {
+  "analysis_id": "A04",
+  "n_obs": null,
+  "n_counties": 2218,
+  "n_quarters": null,
+  "n_treated": 1228,
+  "n_control": 990,
+  "locator": "D01 p.8 (journal p.4915); timing sample, Sec 2.3.3; Figure 2(b) note p.9"
+ },
+ {
+  "analysis_id": "A05",
+  "n_obs": null,
+  "n_counties": null,
+  "n_quarters": null,
+  "n_treated": null,
+  "n_control": null,
+  "locator": "D01 p.13 (journal p.4920); Figure 3: not reported"
+ },
+ {
+  "analysis_id": "A06",
+  "n_obs": 121173,
+  "n_counties": null,
+  "n_quarters": null,
+  "n_treated": null,
+  "n_control": null,
+  "locator": "D01 p.14 (journal p.4921); Table 3 N, all columns"
+ },
+ {
+  "analysis_id": "A07",
+  "n_obs": null,
+  "n_counties": null,
+  "n_quarters": null,
+  "n_treated": null,
+  "n_control": null,
+  "locator": "D01 p.15 (journal p.4922); Figure 4: not reported"
+ },
+ {
+  "analysis_id": "A08",
+  "n_obs": 3107,
+  "n_counties": 3107,
+  "n_quarters": null,
+  "n_treated": null,
+  "n_control": null,
+  "locator": "D01 p.15 (journal p.4922); Table 4 N, all columns"
+ },
+ {
+  "analysis_id": "A09",
+  "n_obs": null,
+  "n_counties": null,
+  "n_quarters": null,
+  "n_treated": null,
+  "n_control": null,
+  "locator": "D01 p.16 (journal p.4923); Figure 5: not reported"
+ },
+ {
+  "analysis_id": "A10",
+  "n_obs": 121173,
+  "n_counties": null,
+  "n_quarters": null,
+  "n_treated": null,
+  "n_control": null,
+  "locator": "D01 p.17 (journal p.4924); Table 5A Diff-Time-Trends"
+ },
+ {
+  "analysis_id": "A11",
+  "n_obs": 121173,
+  "n_counties": null,
+  "n_quarters": null,
+  "n_treated": null,
+  "n_control": null,
+  "locator": "D01 p.17 (journal p.4924); Table 5A Placebo"
+ },
+ {
+  "analysis_id": "A12",
+  "n_obs": 86502,
+  "n_counties": 1820,
+  "n_quarters": null,
+  "n_treated": 1096,
+  "n_control": 724,
+  "locator": "D01 p.17 (journal p.4924); Table 5A Boundary Follow-on N; counties from text p.8 (conflict: 86,502/39 = 2,218)"
+ },
+ {
+  "analysis_id": "A12",
+  "n_obs": 70980,
+  "n_counties": 1820,
+  "n_quarters": null,
+  "n_treated": 1096,
+  "n_control": 724,
+  "locator": "D01 p.17 (journal p.4924); Table 5A Boundary Contributors N; counties from text p.8"
+ },
+ {
+  "analysis_id": "A13",
+  "n_obs": 86502,
+  "n_counties": 2218,
+  "n_quarters": null,
+  "n_treated": 1228,
+  "n_control": 990,
+  "locator": "D01 p.17 (journal p.4924); Table 5A Timing Follow-on N; counties from text p.8"
+ },
+ {
+  "analysis_id": "A13",
+  "n_obs": 70980,
+  "n_counties": 2218,
+  "n_quarters": null,
+  "n_treated": 1228,
+  "n_control": 990,
+  "locator": "D01 p.17 (journal p.4924); Table 5A Timing Contributors N; counties from text p.8 (conflict: 70,980/39 = 1,820)"
+ },
+ {
+  "analysis_id": "A14",
+  "n_obs": 2218,
+  "n_counties": 1820,
+  "n_quarters": null,
+  "n_treated": 1096,
+  "n_control": 724,
+  "locator": "D01 p.17 (journal p.4924); Table 5B cols (1)-(4) N=2,218; text boundary counties 1,820 (conflict)"
+ },
+ {
+  "analysis_id": "A15",
+  "n_obs": 1820,
+  "n_counties": 2218,
+  "n_quarters": null,
+  "n_treated": 1228,
+  "n_control": 990,
+  "locator": "D01 p.17 (journal p.4924); Table 5B cols (5)-(8) N=1,820; text timing counties 2,218 (conflict)"
+ },
+ {
+  "analysis_id": "A16",
+  "n_obs": 81007,
+  "n_counties": 2312,
+  "n_quarters": null,
+  "n_treated": 1325,
+  "n_control": 987,
+  "locator": "D01 p.18 (journal p.4925); Table 6 col (1) N; address-data counties from Sec 2.4.3 p.11 (98,711 pairs collected)"
+ },
+ {
+  "analysis_id": "A16",
+  "n_obs": 58715,
+  "n_counties": null,
+  "n_quarters": null,
+  "n_treated": null,
+  "n_control": null,
+  "locator": "D01 p.18 (journal p.4925); Table 6 col (2) Boundary"
+ },
+ {
+  "analysis_id": "A16",
+  "n_obs": 49095,
+  "n_counties": null,
+  "n_quarters": null,
+  "n_treated": null,
+  "n_control": null,
+  "locator": "D01 p.18 (journal p.4925); Table 6 col (3) Timing"
+ },
+ {
+  "analysis_id": "A17",
+  "n_obs": 121173,
+  "n_counties": null,
+  "n_quarters": null,
+  "n_treated": null,
+  "n_control": null,
+  "locator": "D01 p.19 (journal p.4926); Table 7 N, all columns"
+ },
+ {
+  "analysis_id": "A18",
+  "n_obs": null,
+  "n_counties": null,
+  "n_quarters": null,
+  "n_treated": null,
+  "n_control": null,
+  "locator": "D01 p.20 (journal p.4927); Figure 6(a): not reported"
+ },
+ {
+  "analysis_id": "A19",
+  "n_obs": null,
+  "n_counties": null,
+  "n_quarters": null,
+  "n_treated": null,
+  "n_control": null,
+  "locator": "D01 p.20 (journal p.4927); Figure 6(b): not reported"
+ }
+]

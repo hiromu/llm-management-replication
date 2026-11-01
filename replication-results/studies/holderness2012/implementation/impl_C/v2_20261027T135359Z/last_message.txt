@@ -1,0 +1,5 @@
+Completed CHECK.md item 1: camp codes now produce safe filenames, and deletion failures are recorded individually without aborting later runs.
+
+All synthetic tests passed, including 96 deletion refits. Logs are saved under `code/tests/`, and “Check round 1 responses” documents the changes in `code/NOTES.md`.
+
+All changes are inside `code/`. Invocation is unchanged; no real-data analyses were run.

@@ -1,0 +1,2561 @@
+{
+ "study_id": "delaney1996",
+ "source": "ICPSR 6240 V1 DS0002 (NOS 1991)",
+ "scope": "Source coverage only. No sample constructed, no scales computed, no models fitted. No frequencies, means or case counts.",
+ "constructs": [
+  {
+   "construct_id": "dv_org_perf",
+   "construct": "Perceived organizational performance (7 items)",
+   "article_description": "Seven items: performance over the past 3 years relative to similar organizations; Likert 1 'worse' to 4 'much better'.",
+   "coverage_status": "covered",
+   "candidate_variables": [
+    "V289",
+    "V290",
+    "V291",
+    "V292",
+    "V293",
+    "V294",
+    "V295"
+   ],
+   "alternative_or_related_candidates": [],
+   "issues_and_ambiguities": [
+    "Stored coding runs 1 = much better, 2 = somewhat better, 3 = about the same, 4 = worse, the reverse of the article's stated 1 = worse to 4 = much better. Reversal is a recode, not a source gap.",
+    "Codes 7 (not applicable), 8 (don't know) and 9 (no response) are declared missing.",
+    "Asked of all organizations (Q.75)."
+   ],
+   "candidate_metadata": [
+    {
+     "name": "V289",
+     "role": "candidate",
+     "position": 929,
+     "label": "Q.75a  Perform/quality of prodts-service",
+     "format": "F1.0",
+     "value_labels": {
+      "1": "Much better",
+      "2": "Somewhat better",
+      "3": "About the same",
+      "4": "Worse",
+      "7": "Not applicable",
+      "8": "Do not know",
+      "9": "No response/refused"
+     },
+     "declared_missing_values": [
+      7,
+      8,
+      9
+     ],
+     "declared_missing_ranges": []
+    },
+    {
+     "name": "V290",
+     "role": "candidate",
+     "position": 930,
+     "label": "Q.75b  Perform/development of new prodts",
+     "format": "F1.0",
+     "value_labels": {
+      "1": "Much better",
+      "2": "Somewhat better",
+      "3": "About the same",
+      "4": "Worse",
+      "7": "Not applicable",
+      "8": "Do not know",
+      "9": "No response/refused"
+     },
+     "declared_missing_values": [
+      7,
+      8,
+      9
+     ],
+     "declared_missing_ranges": []
+    },
+    {
+     "name": "V291",
+     "role": "candidate",
+     "position": 931,
+     "label": "Q.75c  Perform/ability to attract emplys",
+     "format": "F1.0",
+     "value_labels": {
+      "1": "Much better",
+      "2": "Somewhat better",
+      "3": "About the same",
+      "4": "Worse",
+      "7": "Not applicable",
+      "8": "Do not know",
+      "9": "No response/refused"
+     },
+     "declared_missing_values": [
+      7,
+      8,
+      9
+     ],
+     "declared_missing_ranges": []
+    },
+    {
+     "name": "V292",
+     "role": "candidate",
+     "position": 932,
+     "label": "Q.75d  Perform/ability to retain emplyes",
+     "format": "F1.0",
+     "value_labels": {
+      "1": "Much better",
+      "2": "Somewhat better",
+      "3": "About the same",
+      "4": "Worse",
+      "7": "Not applicable",
+      "8": "Do not know",
+      "9": "No response/refused"
+     },
+     "declared_missing_values": [
+      7,
+      8,
+      9
+     ],
+     "declared_missing_ranges": []
+    },
+    {
+     "name": "V293",
+     "role": "candidate",
+     "position": 933,
+     "label": "Q.75e  Perform/satisfaction of customers",
+     "format": "F1.0",
+     "value_labels": {
+      "1": "Much better",
+      "2": "Somewhat better",
+      "3": "About the same",
+      "4": "Worse",
+      "7": "Not applicable",
+      "8": "Do not know",
+      "9": "No response/refused"
+     },
+     "declared_missing_values": [
+      7,
+      8,
+      9
+     ],
+     "declared_missing_ranges": []
+    },
+    {
+     "name": "V294",
+     "role": "candidate",
+     "position": 934,
+     "label": "Q.75f  Perform/relation btwn mgmnt-emply",
+     "format": "F1.0",
+     "value_labels": {
+      "1": "Much better",
+      "2": "Somewhat better",
+      "3": "About the same",
+      "4": "Worse",
+      "7": "Not applicable",
+      "8": "Do not know",
+      "9": "No response/refused"
+     },
+     "declared_missing_values": [
+      7,
+      8,
+      9
+     ],
+     "declared_missing_ranges": []
+    },
+    {
+     "name": "V295",
+     "role": "candidate",
+     "position": 935,
+     "label": "Q.75g  Perform/relations among employees",
+     "format": "F1.0",
+     "value_labels": {
+      "1": "Much better",
+      "2": "Somewhat better",
+      "3": "About the same",
+      "4": "Worse",
+      "7": "Not applicable",
+      "8": "Do not know",
+      "9": "No response/refused"
+     },
+     "declared_missing_values": [
+      7,
+      8,
+      9
+     ],
+     "declared_missing_ranges": []
+    }
+   ]
+  },
+  {
+   "construct_id": "dv_mkt_perf",
+   "construct": "Perceived market performance (4 items)",
+   "article_description": "Four items, profit-making organizations only: marketing, growth in sales, profitability, market share relative to competitors over the past 3 years.",
+   "coverage_status": "covered",
+   "candidate_variables": [
+    "V296",
+    "V297",
+    "V298",
+    "V299"
+   ],
+   "alternative_or_related_candidates": [],
+   "issues_and_ambiguities": [
+    "Universe: Box F, profit-making organizations only. Q.76 is skipped for others.",
+    "Same reversed stored coding and 7/8/9 declared missing as Q.75."
+   ],
+   "candidate_metadata": [
+    {
+     "name": "V296",
+     "role": "candidate",
+     "position": 936,
+     "label": "Q.76a  Performance/marketing",
+     "format": "F1.0",
+     "value_labels": {
+      "1": "Much better",
+      "2": "Somewhat better",
+      "3": "About the same",
+      "4": "Worse",
+      "7": "Not applicable",
+      "8": "Do not know",
+      "9": "No response/refused"
+     },
+     "declared_missing_values": [
+      7,
+      8,
+      9
+     ],
+     "declared_missing_ranges": []
+    },
+    {
+     "name": "V297",
+     "role": "candidate",
+     "position": 937,
+     "label": "Q.76b  Performance/growth in sales",
+     "format": "F1.0",
+     "value_labels": {
+      "1": "Much better",
+      "2": "Somewhat better",
+      "3": "About the same",
+      "4": "Worse",
+      "7": "Not applicable",
+      "8": "Do not know",
+      "9": "No response/refused"
+     },
+     "declared_missing_values": [
+      7,
+      8,
+      9
+     ],
+     "declared_missing_ranges": []
+    },
+    {
+     "name": "V298",
+     "role": "candidate",
+     "position": 938,
+     "label": "Q.76c  Performance/profitability",
+     "format": "F1.0",
+     "value_labels": {
+      "1": "Much better",
+      "2": "Somewhat better",
+      "3": "About the same",
+      "4": "Worse",
+      "7": "Not applicable",
+      "8": "Do not know",
+      "9": "No response/refused"
+     },
+     "declared_missing_values": [
+      7,
+      8,
+      9
+     ],
+     "declared_missing_ranges": []
+    },
+    {
+     "name": "V299",
+     "role": "candidate",
+     "position": 939,
+     "label": "Q.76d  Performance/market share",
+     "format": "F1.0",
+     "value_labels": {
+      "1": "Much better",
+      "2": "Somewhat better",
+      "3": "About the same",
+      "4": "Worse",
+      "7": "Not applicable",
+      "8": "Do not know",
+      "9": "No response/refused"
+     },
+     "declared_missing_values": [
+      7,
+      8,
+      9
+     ],
+     "declared_missing_ranges": []
+    }
+   ]
+  },
+  {
+   "construct_id": "staffing",
+   "construct": "Staffing selectivity (3 occupations)",
+   "article_description": "Applications considered per opening in the past 2 years for CORE, GSS-respondent occupation and managers; standardized logged values averaged.",
+   "coverage_status": "covered_with_ambiguity",
+   "candidate_variables": [
+    "V62",
+    "V97",
+    "V131"
+   ],
+   "alternative_or_related_candidates": [
+    "V50",
+    "V85",
+    "V119",
+    "V79",
+    "V114",
+    "V63",
+    "V98",
+    "V132"
+   ],
+   "issues_and_ambiguities": [
+    "Asked only if the organization hired from outside in the past 2 years (V50 CORE, V85 GSS, V119 managers). Otherwise system-missing.",
+    "The GSS block is skipped when the GSS occupation equals CORE (Box A, V79 = 2). The manager block is skipped when CORE or GSS is a manager (Box B, V114 = 2). Treatment of such organizations is not specified by the source.",
+    "Code 995 'large number of applications' is declared missing in the .por but is substantive. Code 997 'not applicable' is not declared missing. Zero values and the log transform need a rule.",
+    "The article says 'applicants considered for each position'. The NOS wording is 'applications considered for each opening'. Related items: applicants interviewed (V63, V98, V132)."
+   ],
+   "candidate_metadata": [
+    {
+     "name": "V62",
+     "role": "candidate",
+     "position": 702,
+     "label": "Q.13  Number of applicatns fr a opening",
+     "format": "F3.0",
+     "value_labels": {
+      "995": "Large number of appl",
+      "997": "Not applicable",
+      "998": "Do not know",
+      "999": "No response/refused"
+     },
+     "declared_missing_values": [
+      995,
+      998,
+      999
+     ],
+     "declared_missing_ranges": []
+    },
+    {
+     "name": "V97",
+     "role": "candidate",
+     "position": 737,
+     "label": "Q.23  Number of applicatns fr a opening",
+     "format": "F3.0",
+     "value_labels": {
+      "995": "Large number of appl",
+      "997": "Not applicable",
+      "998": "Do not know",
+      "999": "No response/refused"
+     },
+     "declared_missing_values": [
+      995,
+      998,
+      999
+     ],
+     "declared_missing_ranges": []
+    },
+    {
+     "name": "V131",
+     "role": "candidate",
+     "position": 771,
+     "label": "Q.32  Number of applicatns fr a opening",
+     "format": "F3.0",
+     "value_labels": {
+      "995": "Large number of appl",
+      "997": "Not applicable",
+      "998": "Do not know",
+      "999": "No response/refused"
+     },
+     "declared_missing_values": [
+      995,
+      998,
+      999
+     ],
+     "declared_missing_ranges": []
+    },
+    {
+     "name": "V50",
+     "role": "alternative_or_related",
+     "position": 690,
+     "label": "Q.11a  Hired COREs from outside ORG",
+     "format": "F1.0",
+     "value_labels": {
+      "1": "Yes",
+      "2": "No",
+      "8": "Do not know",
+      "9": "No response/refused"
+     },
+     "declared_missing_values": [
+      8,
+      9
+     ],
+     "declared_missing_ranges": []
+    },
+    {
+     "name": "V85",
+     "role": "alternative_or_related",
+     "position": 725,
+     "label": "Q.21a  Hired GSSs from outside ORG",
+     "format": "F1.0",
+     "value_labels": {
+      "1": "Yes",
+      "2": "No",
+      "8": "Do not know",
+      "9": "No response/refused"
+     },
+     "declared_missing_values": [
+      8,
+      9
+     ],
+     "declared_missing_ranges": []
+    },
+    {
+     "name": "V119",
+     "role": "alternative_or_related",
+     "position": 759,
+     "label": "Q.30a  Hired mngr from outside ORG",
+     "format": "F1.0",
+     "value_labels": {
+      "1": "Yes",
+      "2": "No",
+      "8": "Do not know",
+      "9": "No response/refused"
+     },
+     "declared_missing_values": [
+      8,
+      9
+     ],
+     "declared_missing_ranges": []
+    },
+    {
+     "name": "V79",
+     "role": "alternative_or_related",
+     "position": 719,
+     "label": "Q.19a  GSSs work for ORG on March 1 1991",
+     "format": "F1.0",
+     "value_labels": {
+      "1": "Yes",
+      "2": "Yes but same as core",
+      "3": "No",
+      "8": "Do not know",
+      "9": "No response/refused"
+     },
+     "declared_missing_values": [
+      8,
+      9
+     ],
+     "declared_missing_ranges": []
+    },
+    {
+     "name": "V114",
+     "role": "alternative_or_related",
+     "position": 754,
+     "label": "Q.29a  Mngr/admin on payroll on Mar 1 91",
+     "format": "F1.0",
+     "value_labels": {
+      "1": "Yes",
+      "2": "Yes but sam core/gss",
+      "3": "No",
+      "8": "Do not know",
+      "9": "No response/refused"
+     },
+     "declared_missing_values": [
+      8,
+      9
+     ],
+     "declared_missing_ranges": []
+    },
+    {
+     "name": "V63",
+     "role": "alternative_or_related",
+     "position": 703,
+     "label": "Q.14a  Number of applicants interviewed",
+     "format": "F3.0",
+     "value_labels": {
+      "995": "Large number of appl",
+      "997": "Not applicable",
+      "998": "Do not know",
+      "999": "No response/refused"
+     },
+     "declared_missing_values": [
+      995,
+      998,
+      999
+     ],
+     "declared_missing_ranges": []
+    },
+    {
+     "name": "V98",
+     "role": "alternative_or_related",
+     "position": 738,
+     "label": "Q.24a  Number of applicants interviewed",
+     "format": "F3.0",
+     "value_labels": {
+      "995": "Large number of appl",
+      "997": "Not applicable",
+      "998": "Do not know",
+      "999": "No response/refused"
+     },
+     "declared_missing_values": [
+      995,
+      998,
+      999
+     ],
+     "declared_missing_ranges": []
+    },
+    {
+     "name": "V132",
+     "role": "alternative_or_related",
+     "position": 772,
+     "label": "Q.33a  Number of applicants interviewed",
+     "format": "F3.0",
+     "value_labels": {
+      "995": "Large number of appl",
+      "997": "Not applicable",
+      "998": "Do not know",
+      "999": "No response/refused"
+     },
+     "declared_missing_values": [
+      995,
+      998,
+      999
+     ],
+     "declared_missing_ranges": []
+    }
+   ]
+  },
+  {
+   "construct_id": "training",
+   "construct": "Training index (3 items)",
+   "article_description": "Any formal job training in past 2 years; number of employees receiving formal training; training effectiveness 1 'not at all' to 3 'highly effective'; standardized and averaged.",
+   "coverage_status": "covered_with_ambiguity",
+   "candidate_variables": [
+    "V145",
+    "V157",
+    "V172"
+   ],
+   "alternative_or_related_candidates": [
+    "V158",
+    "V159",
+    "V160",
+    "V154",
+    "V156"
+   ],
+   "issues_and_ambiguities": [
+    "V145 = no or don't know skips Q.38-Q.52, so V157 and V172 are system-missing for organizations without formal training. Treatment of these (e.g. zero or missing) is not specified by the source.",
+    "V157 is a raw count of participants (99996 = top code '100,000+', not declared missing). The article does not say whether a proportion of employment or a log was used.",
+    "V172 stored coding is 1 = highly effective, 2 = somewhat, 3 = not at all, the reverse of the article's scale. Code 4 'varies/depends' is not declared missing. 8 and 9 are declared missing.",
+    "V145 coding is 1 = yes, 2 = no."
+   ],
+   "candidate_metadata": [
+    {
+     "name": "V145",
+     "role": "candidate",
+     "position": 785,
+     "label": "Q.37  Provide formal job training",
+     "format": "F1.0",
+     "value_labels": {
+      "1": "Yes",
+      "2": "No",
+      "8": "Do not know",
+      "9": "No response/refused"
+     },
+     "declared_missing_values": [
+      8,
+      9
+     ],
+     "declared_missing_ranges": []
+    },
+    {
+     "name": "V157",
+     "role": "candidate",
+     "position": 797,
+     "label": "Q.45a  Number of emplys prtcptd training",
+     "format": "F5.0",
+     "value_labels": {
+      "99996": "100,000 employees +",
+      "99998": "Do not know",
+      "99999": "No response/refused"
+     },
+     "declared_missing_values": [
+      99998,
+      99999
+     ],
+     "declared_missing_ranges": []
+    },
+    {
+     "name": "V172",
+     "role": "candidate",
+     "position": 812,
+     "label": "Q.49  Effectiveness of training",
+     "format": "F1.0",
+     "value_labels": {
+      "1": "Highly effective",
+      "2": "Somewhat effective",
+      "3": "Not at all effective",
+      "4": "Varies/depends",
+      "8": "Do not know",
+      "9": "No response/refused"
+     },
+     "declared_missing_values": [
+      8,
+      9
+     ],
+     "declared_missing_ranges": []
+    },
+    {
+     "name": "V158",
+     "role": "alternative_or_related",
+     "position": 798,
+     "label": "Q.45b1  Receive formal training / COREs",
+     "format": "F1.0",
+     "value_labels": {
+      "1": "Yes",
+      "2": "No",
+      "7": "Not applicable",
+      "8": "Do not know",
+      "9": "No response/refused"
+     },
+     "declared_missing_values": [
+      7,
+      8,
+      9
+     ],
+     "declared_missing_ranges": []
+    },
+    {
+     "name": "V159",
+     "role": "alternative_or_related",
+     "position": 799,
+     "label": "Q.45b2  Receive formal training / GSSs",
+     "format": "F1.0",
+     "value_labels": {
+      "1": "Yes",
+      "2": "No",
+      "7": "Not applicable",
+      "8": "Do not know",
+      "9": "No response/refused"
+     },
+     "declared_missing_values": [
+      7,
+      8,
+      9
+     ],
+     "declared_missing_ranges": []
+    },
+    {
+     "name": "V160",
+     "role": "alternative_or_related",
+     "position": 800,
+     "label": "Q.45b3  Receive formal training/ mgr-adm",
+     "format": "F1.0",
+     "value_labels": {
+      "1": "Yes",
+      "2": "No",
+      "7": "Not applicable",
+      "8": "Do not know",
+      "9": "No response/refused"
+     },
+     "declared_missing_values": [
+      7,
+      8,
+      9
+     ],
+     "declared_missing_ranges": []
+    },
+    {
+     "name": "V154",
+     "role": "alternative_or_related",
+     "position": 794,
+     "label": "Q.42  Cost ORG spent on training in 2yrs",
+     "format": "F7.0",
+     "value_labels": {
+      "9999996": "$10,000,000 or more",
+      "9999999": "No response/refused"
+     },
+     "declared_missing_values": [
+      9999998,
+      9999999
+     ],
+     "declared_missing_ranges": []
+    },
+    {
+     "name": "V156",
+     "role": "alternative_or_related",
+     "position": 796,
+     "label": "Q.44  ORG devt more/less resrc to traing",
+     "format": "F1.0",
+     "value_labels": {
+      "1": "More resources",
+      "2": "Fewer resources",
+      "3": "About the same",
+      "8": "Do not know",
+      "9": "No response/refused"
+     },
+     "declared_missing_values": [
+      8,
+      9
+     ],
+     "declared_missing_ranges": []
+    }
+   ]
+  },
+  {
+   "construct_id": "incentive",
+   "construct": "Incentive compensation (3 items)",
+   "article_description": "Importance of job performance in determining earnings for the three occupational groups.",
+   "coverage_status": "covered_with_ambiguity",
+   "candidate_variables": [
+    "V209",
+    "V222",
+    "V235"
+   ],
+   "alternative_or_related_candidates": [
+    "V184",
+    "V186"
+   ],
+   "issues_and_ambiguities": [
+    "V209 = managers (Q.61b), V222 = CORE (Q.63c), V235 = GSS (Q.65c). Stored coding 1 = very important, 2 = somewhat, 3 = not important, so higher means less important.",
+    "V209 and V235 declare 7 (not applicable) missing. V222 has no code 7.",
+    "GSS earnings items are skipped by Box D when the GSS occupation equals CORE or manager. Manager items depend on Q.29 routing."
+   ],
+   "candidate_metadata": [
+    {
+     "name": "V209",
+     "role": "candidate",
+     "position": 849,
+     "label": "Q.61b  Importance/job performance",
+     "format": "F1.0",
+     "value_labels": {
+      "1": "Very important",
+      "2": "Somewhat important",
+      "3": "Not important",
+      "7": "Not applicable",
+      "8": "Do not know",
+      "9": "No response/refused"
+     },
+     "declared_missing_values": [
+      7,
+      8,
+      9
+     ],
+     "declared_missing_ranges": []
+    },
+    {
+     "name": "V222",
+     "role": "candidate",
+     "position": 862,
+     "label": "Q.63c  Importance/job performance",
+     "format": "F1.0",
+     "value_labels": {
+      "1": "Very important",
+      "2": "Somewhat important",
+      "3": "Not important",
+      "8": "Do not know",
+      "9": "No response/refused"
+     },
+     "declared_missing_values": [
+      8,
+      9
+     ],
+     "declared_missing_ranges": []
+    },
+    {
+     "name": "V235",
+     "role": "candidate",
+     "position": 875,
+     "label": "Q.65c  Importance/job performance",
+     "format": "F1.0",
+     "value_labels": {
+      "1": "Very important",
+      "2": "Somewhat important",
+      "3": "Not important",
+      "7": "Not applicable",
+      "8": "Do not know",
+      "9": "No response/refused"
+     },
+     "declared_missing_values": [
+      7,
+      8,
+      9
+     ],
+     "declared_missing_ranges": []
+    },
+    {
+     "name": "V184",
+     "role": "alternative_or_related",
+     "position": 824,
+     "label": "Q.53h  Benefit/cash/stock bonus fr pfmnc",
+     "format": "F1.0",
+     "value_labels": {
+      "1": "Yes",
+      "2": "No",
+      "8": "Do not know",
+      "9": "No response/refused"
+     },
+     "declared_missing_values": [
+      8,
+      9
+     ],
+     "declared_missing_ranges": []
+    },
+    {
+     "name": "V186",
+     "role": "alternative_or_related",
+     "position": 826,
+     "label": "Q.53j  Benefit/profit-sharing program",
+     "format": "F1.0",
+     "value_labels": {
+      "1": "Yes",
+      "2": "No",
+      "8": "Do not know",
+      "9": "No response/refused"
+     },
+     "declared_missing_values": [
+      8,
+      9
+     ],
+     "declared_missing_ranges": []
+    }
+   ]
+  },
+  {
+   "construct_id": "grievance",
+   "construct": "Grievance procedure (dummy)",
+   "article_description": "Formal procedure for resolving disputes between employees and supervisors or co-workers; 0 = no, 1 = yes.",
+   "coverage_status": "covered",
+   "candidate_variables": [
+    "V270"
+   ],
+   "alternative_or_related_candidates": [],
+   "issues_and_ambiguities": [
+    "Stored 1 = yes, 2 = no. Codes 7 (NA), 8 and 9 are declared missing. A recode to 0/1 is needed."
+   ],
+   "candidate_metadata": [
+    {
+     "name": "V270",
+     "role": "candidate",
+     "position": 910,
+     "label": "Q.71  Formal procedrs for reslvng dispts",
+     "format": "F1.0",
+     "value_labels": {
+      "1": "Yes",
+      "2": "No",
+      "7": "Not applicable",
+      "8": "Do not know",
+      "9": "No response/refused"
+     },
+     "declared_missing_values": [
+      7,
+      8,
+      9
+     ],
+     "declared_missing_ranges": []
+    }
+   ]
+  },
+  {
+   "construct_id": "decentral",
+   "construct": "Decentralized decision making (8 items)",
+   "article_description": "Who makes final decisions in 8 areas (number employed, hiring, subcontractors/temporaries, evaluation, promotions, wages, discharge/layoff, scheduling/overtime); lowest if CEO, higher if someone lower.",
+   "coverage_status": "ambiguous",
+   "candidate_variables": [
+    "V271",
+    "V272",
+    "V273",
+    "V274",
+    "V275",
+    "V276",
+    "V277",
+    "V278",
+    "V279",
+    "V280",
+    "V281",
+    "V282",
+    "V283",
+    "V284",
+    "V285",
+    "V286"
+   ],
+   "alternative_or_related_candidates": [],
+   "issues_and_ambiguities": [
+    "The same 8 decision areas are stored in two sets. Q.72a (V271-V278) is for organizations that are part of a larger organization; its options are head of ORG, someone below, someone at larger org and combinations. Q.72b (V279-V286) is for independent organizations. Combining the two sets is required and not specified by the source.",
+    "Codes 3 (larger org / above), 4 (head and below), 5 (head and larger org / above) and 6 (depends) have no stated position on the article's ordering. Only 'CEO lowest, someone lower higher' is described.",
+    "The codebook's printed Q.72b response codes (1, 2, 3, 4, 7, 8) differ from the .por value labels (3 = someone above, 5 = head and above, 6 = depends).",
+    "Codes 7, 8 and 9 are declared missing."
+   ],
+   "candidate_metadata": [
+    {
+     "name": "V271",
+     "role": "candidate",
+     "position": 911,
+     "label": "Q.72a1  Larger ORG/nmbr of people emplyd",
+     "format": "F1.0",
+     "value_labels": {
+      "1": "The head of org",
+      "2": "Someone below",
+      "3": "Someone at largr org",
+      "4": "Head and below",
+      "5": "Head and larger org",
+      "6": "Depends",
+      "7": "Not applicable",
+      "8": "Do not know",
+      "9": "No response/refused"
+     },
+     "declared_missing_values": [
+      7,
+      8,
+      9
+     ],
+     "declared_missing_ranges": []
+    },
+    {
+     "name": "V272",
+     "role": "candidate",
+     "position": 912,
+     "label": "Q.72a2  Larger ORG/new employees to hire",
+     "format": "F1.0",
+     "value_labels": {
+      "1": "The head of org",
+      "2": "Someone below",
+      "3": "Someone at largr org",
+      "4": "Head and below",
+      "5": "Head and larger org",
+      "6": "Depends",
+      "7": "Not applicable",
+      "8": "Do not know",
+      "9": "No response/refused"
+     },
+     "declared_missing_values": [
+      7,
+      8,
+      9
+     ],
+     "declared_missing_ranges": []
+    },
+    {
+     "name": "V273",
+     "role": "candidate",
+     "position": 913,
+     "label": "Q.72a3  Larger ORG/subcntrctrs-temporary",
+     "format": "F1.0",
+     "value_labels": {
+      "1": "The head of org",
+      "2": "Someone below",
+      "3": "Someone at largr org",
+      "4": "Head and below",
+      "5": "Head and larger org",
+      "6": "Depends",
+      "7": "Not applicable",
+      "8": "Do not know",
+      "9": "No response/refused"
+     },
+     "declared_missing_values": [
+      7,
+      8,
+      9
+     ],
+     "declared_missing_ranges": []
+    },
+    {
+     "name": "V274",
+     "role": "candidate",
+     "position": 914,
+     "label": "Q.72a4  Larger ORG/evaltg wkr perfrmace",
+     "format": "F1.0",
+     "value_labels": {
+      "1": "The head of org",
+      "2": "Someone below",
+      "3": "Someone at largr org",
+      "4": "Head and below",
+      "5": "Head and larger org",
+      "6": "Depends",
+      "7": "Not applicable",
+      "8": "Do not know",
+      "9": "No response/refused"
+     },
+     "declared_missing_values": [
+      7,
+      8,
+      9
+     ],
+     "declared_missing_ranges": []
+    },
+    {
+     "name": "V275",
+     "role": "candidate",
+     "position": 915,
+     "label": "Q.72a5  Larger ORG/worker promotions",
+     "format": "F1.0",
+     "value_labels": {
+      "1": "The head of org",
+      "2": "Someone below",
+      "3": "Someone at largr org",
+      "4": "Head and below",
+      "5": "Head and larger org",
+      "6": "Depends",
+      "7": "Not applicable",
+      "8": "Do not know",
+      "9": "No response/refused"
+     },
+     "declared_missing_values": [
+      7,
+      8,
+      9
+     ],
+     "declared_missing_ranges": []
+    },
+    {
+     "name": "V276",
+     "role": "candidate",
+     "position": 916,
+     "label": "Q.72a6  Larger ORG/wage rate-salary lvls",
+     "format": "F1.0",
+     "value_labels": {
+      "1": "The head of org",
+      "2": "Someone below",
+      "3": "Someone at largr org",
+      "4": "Head and below",
+      "5": "Head and larger org",
+      "6": "Depends",
+      "7": "Not applicable",
+      "8": "Do not know",
+      "9": "No response/refused"
+     },
+     "declared_missing_values": [
+      7,
+      8,
+      9
+     ],
+     "declared_missing_ranges": []
+    },
+    {
+     "name": "V277",
+     "role": "candidate",
+     "position": 917,
+     "label": "Q.72a7  Larger ORG/dischg-layng off wrks",
+     "format": "F1.0",
+     "value_labels": {
+      "1": "The head of org",
+      "2": "Someone below",
+      "3": "Someone at largr org",
+      "4": "Head and below",
+      "5": "Head and larger org",
+      "6": "Depends",
+      "7": "Not applicable",
+      "8": "Do not know",
+      "9": "No response/refused"
+     },
+     "declared_missing_values": [
+      7,
+      8,
+      9
+     ],
+     "declared_missing_ranges": []
+    },
+    {
+     "name": "V278",
+     "role": "candidate",
+     "position": 918,
+     "label": "Q.72a8  Larger ORG/scheduling - overtime",
+     "format": "F1.0",
+     "value_labels": {
+      "1": "The head of org",
+      "2": "Someone below",
+      "3": "Someone at largr org",
+      "4": "Head and below",
+      "5": "Head and larger org",
+      "6": "Depends",
+      "7": "Not applicable",
+      "8": "Do not know",
+      "9": "No response/refused"
+     },
+     "declared_missing_values": [
+      7,
+      8,
+      9
+     ],
+     "declared_missing_ranges": []
+    },
+    {
+     "name": "V279",
+     "role": "candidate",
+     "position": 919,
+     "label": "Q.72b1  ORG/number of people employed",
+     "format": "F1.0",
+     "value_labels": {
+      "1": "The head of org",
+      "2": "Someone below",
+      "3": "Someone above",
+      "4": "Head and below",
+      "5": "Head and above",
+      "6": "Depends",
+      "7": "Not applicable",
+      "8": "Do not know",
+      "9": "No response/refused"
+     },
+     "declared_missing_values": [
+      7,
+      8,
+      9
+     ],
+     "declared_missing_ranges": []
+    },
+    {
+     "name": "V280",
+     "role": "candidate",
+     "position": 920,
+     "label": "Q.72b2  ORG/new employees to hire",
+     "format": "F1.0",
+     "value_labels": {
+      "1": "The head of org",
+      "2": "Someone below",
+      "3": "Someone above",
+      "4": "Head and below",
+      "5": "Head and above",
+      "6": "Depends",
+      "7": "Not applicable",
+      "8": "Do not know",
+      "9": "No response/refused"
+     },
+     "declared_missing_values": [
+      7,
+      8,
+      9
+     ],
+     "declared_missing_ranges": []
+    },
+    {
+     "name": "V281",
+     "role": "candidate",
+     "position": 921,
+     "label": "Q.72b3  ORG/subcntrctrs-temporary workrs",
+     "format": "F1.0",
+     "value_labels": {
+      "1": "The head of org",
+      "2": "Someone below",
+      "3": "Someone above",
+      "4": "Head and below",
+      "5": "Head and above",
+      "6": "Depends",
+      "7": "Not applicable",
+      "8": "Do not know",
+      "9": "No response/refused"
+     },
+     "declared_missing_values": [
+      7,
+      8,
+      9
+     ],
+     "declared_missing_ranges": []
+    },
+    {
+     "name": "V282",
+     "role": "candidate",
+     "position": 922,
+     "label": "Q.72b4  ORG/evaluating worker perfrmace",
+     "format": "F1.0",
+     "value_labels": {
+      "1": "The head of org",
+      "2": "Someone below",
+      "3": "Someone above",
+      "4": "Head and below",
+      "5": "Head and above",
+      "6": "Depends",
+      "7": "Not applicable",
+      "8": "Do not know",
+      "9": "No response/refused"
+     },
+     "declared_missing_values": [
+      7,
+      8,
+      9
+     ],
+     "declared_missing_ranges": []
+    },
+    {
+     "name": "V283",
+     "role": "candidate",
+     "position": 923,
+     "label": "Q.72b5  ORG/worker promotions",
+     "format": "F1.0",
+     "value_labels": {
+      "1": "The head of org",
+      "2": "Someone below",
+      "3": "Someone above",
+      "4": "Head and below",
+      "5": "Head and above",
+      "6": "Depends",
+      "7": "Not applicable",
+      "8": "Do not know",
+      "9": "No response/refused"
+     },
+     "declared_missing_values": [
+      7,
+      8,
+      9
+     ],
+     "declared_missing_ranges": []
+    },
+    {
+     "name": "V284",
+     "role": "candidate",
+     "position": 924,
+     "label": "Q.72b6  ORG/wage rate or salary levels",
+     "format": "F1.0",
+     "value_labels": {
+      "1": "The head of org",
+      "2": "Someone below",
+      "3": "Someone above",
+      "4": "Head and below",
+      "5": "Head and above",
+      "6": "Depends",
+      "7": "Not applicable",
+      "8": "Do not know",
+      "9": "No response/refused"
+     },
+     "declared_missing_values": [
+      7,
+      8,
+      9
+     ],
+     "declared_missing_ranges": []
+    },
+    {
+     "name": "V285",
+     "role": "candidate",
+     "position": 925,
+     "label": "Q.72b7  ORG/discharging-laying off wrkrs",
+     "format": "F1.0",
+     "value_labels": {
+      "1": "The head of org",
+      "2": "Someone below",
+      "3": "Someone above",
+      "4": "Head and below",
+      "5": "Head and above",
+      "6": "Depends",
+      "7": "Not applicable",
+      "8": "Do not know",
+      "9": "No response/refused"
+     },
+     "declared_missing_values": [
+      7,
+      8,
+      9
+     ],
+     "declared_missing_ranges": []
+    },
+    {
+     "name": "V286",
+     "role": "candidate",
+     "position": 926,
+     "label": "Q.72b8  ORG/worker scheduling - overtime",
+     "format": "F1.0",
+     "value_labels": {
+      "1": "The head of org",
+      "2": "Someone below",
+      "3": "Someone above",
+      "4": "Head and below",
+      "5": "Head and above",
+      "6": "Depends",
+      "7": "Not applicable",
+      "8": "Do not know",
+      "9": "No response/refused"
+     },
+     "declared_missing_values": [
+      7,
+      8,
+      9
+     ],
+     "declared_missing_ranges": []
+    }
+   ]
+  },
+  {
+   "construct_id": "ilm",
+   "construct": "Internal labor market (5 items)",
+   "article_description": "Five yes/no items on promotion from within (fill CORE vacancies internally, CORE promotable above CORE, fill GSS vacancies internally, GSS promotable above GSS, fill managerial vacancies internally); coded yes = 2, no = 1.",
+   "coverage_status": "covered_with_ambiguity",
+   "candidate_variables": [
+    "V67",
+    "V76",
+    "V102",
+    "V111",
+    "V136"
+   ],
+   "alternative_or_related_candidates": [
+    "V74",
+    "V109",
+    "V143",
+    "V77",
+    "V112"
+   ],
+   "issues_and_ambiguities": [
+    "Stored 1 = yes, 2 = no, the reverse of the article's yes = 2, no = 1.",
+    "The GSS items (V102, V111) are skipped when the GSS occupation equals CORE. The manager item (V136) is skipped when managers equal CORE or GSS, or when there are none. Handling of these structural skips is unspecified.",
+    "8 and 9 are declared missing."
+   ],
+   "candidate_metadata": [
+    {
+     "name": "V67",
+     "role": "candidate",
+     "position": 707,
+     "label": "Q.16a  Fill vacancies with people at ORG",
+     "format": "F1.0",
+     "value_labels": {
+      "1": "Yes",
+      "2": "No",
+      "8": "Do not know",
+      "9": "No response/refused"
+     },
+     "declared_missing_values": [
+      8,
+      9
+     ],
+     "declared_missing_ranges": []
+    },
+    {
+     "name": "V76",
+     "role": "candidate",
+     "position": 716,
+     "label": "Q.18a  Possible to be promtd above COREs",
+     "format": "F1.0",
+     "value_labels": {
+      "1": "Yes",
+      "2": "No",
+      "8": "Do not know",
+      "9": "No response/refused"
+     },
+     "declared_missing_values": [
+      8,
+      9
+     ],
+     "declared_missing_ranges": []
+    },
+    {
+     "name": "V102",
+     "role": "candidate",
+     "position": 742,
+     "label": "Q.26a  Fill vacancies with people at ORG",
+     "format": "F1.0",
+     "value_labels": {
+      "1": "Yes",
+      "2": "No",
+      "8": "Do not know",
+      "9": "No response/refused"
+     },
+     "declared_missing_values": [
+      8,
+      9
+     ],
+     "declared_missing_ranges": []
+    },
+    {
+     "name": "V111",
+     "role": "candidate",
+     "position": 751,
+     "label": "Q.28a  Possible to be promtd above GSSs",
+     "format": "F1.0",
+     "value_labels": {
+      "1": "Yes",
+      "2": "No",
+      "8": "Do not know",
+      "9": "No response/refused"
+     },
+     "declared_missing_values": [
+      8,
+      9
+     ],
+     "declared_missing_ranges": []
+    },
+    {
+     "name": "V136",
+     "role": "candidate",
+     "position": 776,
+     "label": "Q.35a  Fill vacancies with people at ORG",
+     "format": "F1.0",
+     "value_labels": {
+      "1": "Yes",
+      "2": "No",
+      "8": "Do not know",
+      "9": "No response/refused"
+     },
+     "declared_missing_values": [
+      8,
+      9
+     ],
+     "declared_missing_ranges": []
+    },
+    {
+     "name": "V74",
+     "role": "alternative_or_related",
+     "position": 714,
+     "label": "Q.17a  There are diffrnt levels of COREs",
+     "format": "F1.0",
+     "value_labels": {
+      "1": "Yes",
+      "2": "No",
+      "8": "Do not know",
+      "9": "No response/refused"
+     },
+     "declared_missing_values": [
+      8,
+      9
+     ],
+     "declared_missing_ranges": []
+    },
+    {
+     "name": "V109",
+     "role": "alternative_or_related",
+     "position": 749,
+     "label": "Q.27a  There are diffrnt levels of GSSs",
+     "format": "F1.0",
+     "value_labels": {
+      "1": "Yes",
+      "2": "No",
+      "8": "Do not know",
+      "9": "No response/refused"
+     },
+     "declared_missing_values": [
+      8,
+      9
+     ],
+     "declared_missing_ranges": []
+    },
+    {
+     "name": "V143",
+     "role": "alternative_or_related",
+     "position": 783,
+     "label": "Q.36a  There are diffrnt levels of mngrs",
+     "format": "F1.0",
+     "value_labels": {
+      "1": "Yes",
+      "2": "No",
+      "8": "Do not know",
+      "9": "No response/refused"
+     },
+     "declared_missing_values": [
+      8,
+      9
+     ],
+     "declared_missing_ranges": []
+    },
+    {
+     "name": "V77",
+     "role": "alternative_or_related",
+     "position": 717,
+     "label": "Q.18b  Freq of promotion above COREs",
+     "format": "F1.0",
+     "value_labels": {
+      "1": "Very often",
+      "2": "Often",
+      "3": "Not very often",
+      "8": "Do not know",
+      "9": "No response/refused"
+     },
+     "declared_missing_values": [
+      8,
+      9
+     ],
+     "declared_missing_ranges": []
+    },
+    {
+     "name": "V112",
+     "role": "alternative_or_related",
+     "position": 752,
+     "label": "Q.28b  Freq of promotion above GSSs",
+     "format": "F1.0",
+     "value_labels": {
+      "1": "Very often",
+      "2": "Often",
+      "3": "Not very often",
+      "8": "Do not know",
+      "9": "No response/refused"
+     },
+     "declared_missing_values": [
+      8,
+      9
+     ],
+     "declared_missing_ranges": []
+    }
+   ]
+  },
+  {
+   "construct_id": "hierarchy",
+   "construct": "Vertical hierarchy (levels)",
+   "article_description": "Number of occupation levels between highest and lowest jobs (Table 1 note: value is a logarithm).",
+   "coverage_status": "covered",
+   "candidate_variables": [
+    "V261"
+   ],
+   "alternative_or_related_candidates": [],
+   "issues_and_ambiguities": [
+    "Code 96 = '100 levels or more' (top code, not declared missing). 98 and 99 are declared missing."
+   ],
+   "candidate_metadata": [
+    {
+     "name": "V261",
+     "role": "candidate",
+     "position": 901,
+     "label": "Q.69  Number of vertcl levels btwn postn",
+     "format": "F2.0",
+     "value_labels": {
+      "96": "100 levels or more",
+      "98": "Do not know",
+      "99": "No response/refused"
+     },
+     "declared_missing_values": [
+      98,
+      99
+     ],
+     "declared_missing_ranges": []
+    }
+   ]
+  },
+  {
+   "construct_id": "nonprofit",
+   "construct": "Nonprofit organization (dummy) / for-profit indicator",
+   "article_description": "Dummy for nonprofit vs. for-profit; market performance available only for profit-making organizations.",
+   "coverage_status": "covered_with_ambiguity",
+   "candidate_variables": [
+    "V8"
+   ],
+   "alternative_or_related_candidates": [
+    "V12",
+    "V14",
+    "V15",
+    "V9"
+   ],
+   "issues_and_ambiguities": [
+    "V8: 1 = for profit, 2 = not for profit, with no declared missing codes.",
+    "Government agencies and public institutions answer V8 = not for profit. Related items V12 (kind of organization), V14 (government level) and V15 (public/private) could distinguish public-sector organizations. Whether to do so is not specified."
+   ],
+   "candidate_metadata": [
+    {
+     "name": "V8",
+     "role": "candidate",
+     "position": 649,
+     "label": "Q.1a  Profit / non - profit organization",
+     "format": "F1.0",
+     "value_labels": {
+      "1": "For profit",
+      "2": "Not for profit org"
+     },
+     "declared_missing_values": [],
+     "declared_missing_ranges": []
+    },
+    {
+     "name": "V12",
+     "role": "alternative_or_related",
+     "position": 653,
+     "label": "Q.2a  Kind of ORG",
+     "format": "F1.0",
+     "value_labels": {
+      "1": "Elem/junior/high sch",
+      "2": "Coll/univ/junior col",
+      "3": "Hospital",
+      "4": "Social service agncy",
+      "5": "Governmental agency",
+      "6": "Something else",
+      "8": "Do not know",
+      "9": "No response/refused"
+     },
+     "declared_missing_values": [
+      8,
+      9
+     ],
+     "declared_missing_ranges": []
+    },
+    {
+     "name": "V14",
+     "role": "alternative_or_related",
+     "position": 655,
+     "label": "Q.2b  ORG is local/state/federal agency",
+     "format": "F1.0",
+     "value_labels": {
+      "1": "Local",
+      "2": "State",
+      "3": "Federal agency",
+      "8": "Do not know",
+      "9": "No response/refused"
+     },
+     "declared_missing_values": [
+      8,
+      9
+     ],
+     "declared_missing_ranges": []
+    },
+    {
+     "name": "V15",
+     "role": "alternative_or_related",
+     "position": 656,
+     "label": "Q.2c  ORG is public / private",
+     "format": "F1.0",
+     "value_labels": {
+      "1": "Public",
+      "2": "Private",
+      "8": "Do not know",
+      "9": "No response/refused"
+     },
+     "declared_missing_values": [
+      8,
+      9
+     ],
+     "declared_missing_ranges": []
+    },
+    {
+     "name": "V9",
+     "role": "alternative_or_related",
+     "position": 650,
+     "label": "Q.1b  Legal form of ORG",
+     "format": "F1.0",
+     "value_labels": {
+      "1": "Sole proprietorship",
+      "2": "Partnership",
+      "3": "Franchise",
+      "4": "Corp-publ held stock",
+      "5": "Corp-priv held stock",
+      "6": "Something else",
+      "8": "Do not know",
+      "9": "No response/refused"
+     },
+     "declared_missing_values": [
+      8,
+      9
+     ],
+     "declared_missing_ranges": []
+    }
+   ]
+  },
+  {
+   "construct_id": "subsidiary",
+   "construct": "Subsidiary (dummy)",
+   "article_description": "Dummy for whether an organization is a subsidiary of another organization.",
+   "coverage_status": "ambiguous",
+   "candidate_variables": [
+    "V17",
+    "V21"
+   ],
+   "alternative_or_related_candidates": [],
+   "issues_and_ambiguities": [
+    "V17 (Q.4a) = part of a larger organization vs. completely independent.",
+    "V21 (Q.4e) gives the form of affiliation for affiliated organizations: wholly owned branch, wholly owned subsidiary, locally owned franchise, school in school system, campus, governmental unit, other.",
+    "A 'subsidiary' dummy could be V17 = 1, or V21 = 2 only, or another grouping."
+   ],
+   "candidate_metadata": [
+    {
+     "name": "V17",
+     "role": "candidate",
+     "position": 658,
+     "label": "Q.4a  ORG is part of large ORG/indepndnt",
+     "format": "F1.0",
+     "value_labels": {
+      "1": "Part of larger org",
+      "2": "Completely indepndnt"
+     },
+     "declared_missing_values": [],
+     "declared_missing_ranges": []
+    },
+    {
+     "name": "V21",
+     "role": "candidate",
+     "position": 662,
+     "label": "Q.4e  Way ORG is part of larger ORG",
+     "format": "F1.0",
+     "value_labels": {
+      "1": "Whol owned brnch fac",
+      "2": "Whol owned subsdiary",
+      "3": "Locally ownd franchs",
+      "4": "School in schl systm",
+      "5": "Campus higher ed sys",
+      "6": "Governmental unit",
+      "7": "Something else",
+      "8": "Do not know",
+      "9": "No response/refused"
+     },
+     "declared_missing_values": [
+      8,
+      9
+     ],
+     "declared_missing_ranges": []
+    }
+   ]
+  },
+  {
+   "construct_id": "size",
+   "construct": "Log of total employment",
+   "article_description": "Natural log of the number of employees in the organization.",
+   "coverage_status": "ambiguous",
+   "candidate_variables": [
+    "V23",
+    "V32",
+    "NEWFULL",
+    "NEWPART",
+    "NEWTOTAL"
+   ],
+   "alternative_or_related_candidates": [
+    "V339",
+    "V45"
+   ],
+   "issues_and_ambiguities": [
+    "V23 counts full-time and V32 part-time employees at the establishment (ORG) as of 1 March 1991. 99998 and 99999 are declared missing.",
+    "NEWFULL, NEWPART and NEWTOTAL are 'assigned values' created by the NOS team for weighting. The assignment rule is undocumented.",
+    "V339 counts employees of the LARGER ORG, asked only of affiliated organizations. 'Organization' could mean either level.",
+    "Whether part-time employees are included is not stated in the article."
+   ],
+   "candidate_metadata": [
+    {
+     "name": "V23",
+     "role": "candidate",
+     "position": 664,
+     "label": "Q.5a  Number of full time employees",
+     "format": "F5.0",
+     "value_labels": {
+      "99998": "Do not know",
+      "99999": "No response/refused"
+     },
+     "declared_missing_values": [
+      99998,
+      99999
+     ],
+     "declared_missing_ranges": []
+    },
+    {
+     "name": "V32",
+     "role": "candidate",
+     "position": 673,
+     "label": "Q.5a  Number of part time employees",
+     "format": "F5.0",
+     "value_labels": {
+      "99998": "Do not know",
+      "99999": "No response/refused"
+     },
+     "declared_missing_values": [
+      99998,
+      99999
+     ],
+     "declared_missing_ranges": []
+    },
+    {
+     "name": "NEWFULL",
+     "role": "candidate",
+     "position": 998,
+     "label": "ASSIGNED VALUES FOR FULL-TIME WORKERS",
+     "format": "F8.2",
+     "value_labels": {},
+     "declared_missing_values": [
+      99998,
+      99999
+     ],
+     "declared_missing_ranges": []
+    },
+    {
+     "name": "NEWPART",
+     "role": "candidate",
+     "position": 999,
+     "label": "ASSIGNED VALUES FOR PART-TIME WRKERS",
+     "format": "F8.2",
+     "value_labels": {},
+     "declared_missing_values": [
+      99998,
+      99999
+     ],
+     "declared_missing_ranges": []
+    },
+    {
+     "name": "NEWTOTAL",
+     "role": "candidate",
+     "position": 1000,
+     "label": "TOTAL EMPLOYEES BASED ON ASSIGNED",
+     "format": "F8.2",
+     "value_labels": {},
+     "declared_missing_values": [],
+     "declared_missing_ranges": []
+    },
+    {
+     "name": "V339",
+     "role": "alternative_or_related",
+     "position": 979,
+     "label": "Q.92  Total number of full/part employes",
+     "format": "F7.0",
+     "value_labels": {
+      "9999998": "Do not know",
+      "9999999": "No response/refused"
+     },
+     "declared_missing_values": [
+      9999998,
+      9999999
+     ],
+     "declared_missing_ranges": []
+    },
+    {
+     "name": "V45",
+     "role": "alternative_or_related",
+     "position": 685,
+     "label": "Q.9a  Number of total COREs work for ORG",
+     "format": "F5.0",
+     "value_labels": {
+      "99998": "Do not know",
+      "99999": "No response/refused"
+     },
+     "declared_missing_values": [
+      99998,
+      99999
+     ],
+     "declared_missing_ranges": []
+    }
+   ]
+  },
+  {
+   "construct_id": "age",
+   "construct": "Firm age",
+   "article_description": "1991 minus founding year.",
+   "coverage_status": "covered_with_ambiguity",
+   "candidate_variables": [
+    "V16"
+   ],
+   "alternative_or_related_candidates": [
+    "V340",
+    "V20"
+   ],
+   "issues_and_ambiguities": [
+    "V16 = year the ORG was first established (probe: at any location). 9998 and 9999 are declared missing.",
+    "V340 = year the LARGER ORG was first established (affiliated organizations only). V20 = year (or duration) of affiliation. Which applies to affiliated establishments is not specified."
+   ],
+   "candidate_metadata": [
+    {
+     "name": "V16",
+     "role": "candidate",
+     "position": 657,
+     "label": "Q.3  Year ORG was first established",
+     "format": "F4.0",
+     "value_labels": {
+      "9998": "Do not know",
+      "9999": "No response/refused"
+     },
+     "declared_missing_values": [
+      9998,
+      9999
+     ],
+     "declared_missing_ranges": []
+    },
+    {
+     "name": "V340",
+     "role": "alternative_or_related",
+     "position": 980,
+     "label": "Q.93  Year larger ORG first establised",
+     "format": "F4.0",
+     "value_labels": {
+      "9998": "Do not know",
+      "9999": "No response/refused"
+     },
+     "declared_missing_values": [
+      9998,
+      9999
+     ],
+     "declared_missing_ranges": []
+    },
+    {
+     "name": "V20",
+     "role": "alternative_or_related",
+     "position": 661,
+     "label": "Q.4d  Year ORG affiliated w/larger ORG",
+     "format": "F4.0",
+     "value_labels": {
+      "9998": "Do not know",
+      "9999": "No response/refused"
+     },
+     "declared_missing_values": [
+      9998,
+      9999
+     ],
+     "declared_missing_ranges": []
+    }
+   ]
+  },
+  {
+   "construct_id": "competition",
+   "construct": "Market competition",
+   "article_description": "Amount of competition in primary product/service market, 1 = none to 4 = a great deal.",
+   "coverage_status": "covered",
+   "candidate_variables": [
+    "V328"
+   ],
+   "alternative_or_related_candidates": [
+    "V329",
+    "V330"
+   ],
+   "issues_and_ambiguities": [
+    "Stored 1 = none, 2 = very little, 3 = moderate, 4 = a great deal, matching the article's direction. 7 (NA), 8 and 9 are declared missing."
+   ],
+   "candidate_metadata": [
+    {
+     "name": "V328",
+     "role": "candidate",
+     "position": 968,
+     "label": "Q.86  Competition in main mkt/serv area",
+     "format": "F1.0",
+     "value_labels": {
+      "1": "None",
+      "2": "Very little",
+      "3": "Moderate amount",
+      "4": "A great deal",
+      "7": "Not applicable",
+      "8": "Do not know",
+      "9": "No response/refused"
+     },
+     "declared_missing_values": [
+      7,
+      8,
+      9
+     ],
+     "declared_missing_ranges": []
+    },
+    {
+     "name": "V329",
+     "role": "alternative_or_related",
+     "position": 969,
+     "label": "Q.87  Competition in area fm foreign org",
+     "format": "F1.0",
+     "value_labels": {
+      "1": "None",
+      "2": "Very little",
+      "3": "Moderate amount",
+      "4": "A great deal",
+      "7": "Not applicable",
+      "8": "Do not know",
+      "9": "No response/refused"
+     },
+     "declared_missing_values": [
+      7,
+      8,
+      9
+     ],
+     "declared_missing_ranges": []
+    },
+    {
+     "name": "V330",
+     "role": "alternative_or_related",
+     "position": 970,
+     "label": "Q.88  Amount of competition in past 3yrs",
+     "format": "F1.0",
+     "value_labels": {
+      "1": "Increased",
+      "2": "Decreased",
+      "3": "Stayd about the same",
+      "7": "Not applicable",
+      "8": "Do not know",
+      "9": "No response/refused"
+     },
+     "declared_missing_values": [
+      7,
+      8,
+      9
+     ],
+     "declared_missing_ranges": []
+    }
+   ]
+  },
+  {
+   "construct_id": "product_service",
+   "construct": "Product / service dummies (omitted: both)",
+   "article_description": "Dummies for producing a product or delivering a service; omitted category = both.",
+   "coverage_status": "covered",
+   "candidate_variables": [
+    "V41"
+   ],
+   "alternative_or_related_candidates": [],
+   "issues_and_ambiguities": [
+    "Stored 1 = produces a product, 2 = delivers a service, 3 = both, 4 = neither. 8 and 9 are declared missing. Code 4 'neither' is not declared missing."
+   ],
+   "candidate_metadata": [
+    {
+     "name": "V41",
+     "role": "candidate",
+     "position": 682,
+     "label": "Q.8a  Kind of work ORG does",
+     "format": "F1.0",
+     "value_labels": {
+      "1": "Produces a product",
+      "2": "Delivers a service",
+      "3": "Both",
+      "4": "Neither",
+      "8": "Do not know",
+      "9": "No response/refused"
+     },
+     "declared_missing_values": [
+      8,
+      9
+     ],
+     "declared_missing_ranges": []
+    }
+   ]
+  },
+  {
+   "construct_id": "union",
+   "construct": "Union pressure index (multi-item, perceived union influence on management)",
+   "article_description": "Index of respondents' perception of the influence of unions on their organization (alpha reported); 'the only measure of union influence available in the NOS'.",
+   "coverage_status": "ambiguous_partial",
+   "candidate_variables": [
+    "V220",
+    "V233",
+    "V300"
+   ],
+   "alternative_or_related_candidates": [
+    "V166",
+    "PCTUNION",
+    "ORGEFF1",
+    "UNFAIR",
+    "UNION",
+    "MEMUNION"
+   ],
+   "issues_and_ambiguities": [
+    "No NOS item asks directly about union influence on management. The establishment-level items that mention unions are:",
+    "- V220: importance of union negotiations for CORE earnings (Q.63a).",
+    "- V233: the same for GSS earnings (Q.65a; skipped by Box D).",
+    "- V300: relations with unions as a problem over the next 3 years (Q.77a).",
+    "- V166: whether formal training is offered because of union contracts (Q.47b; training block only).",
+    "Which items formed the article's index, and how many, cannot be determined from the source. Candidate coding directions differ.",
+    "Industry-level union measures (PCTUNION, ORGEFF1, UNFAIR) and the GSS respondent's own union membership (UNION, MEMUNION) are not perceptions of the establishment informant."
+   ],
+   "candidate_metadata": [
+    {
+     "name": "V220",
+     "role": "candidate",
+     "position": 860,
+     "label": "Q.63a  Importance/union negotiations",
+     "format": "F1.0",
+     "value_labels": {
+      "1": "Very important",
+      "2": "Somewhat important",
+      "3": "Not important",
+      "8": "Do not know",
+      "9": "No response/refused"
+     },
+     "declared_missing_values": [
+      8,
+      9
+     ],
+     "declared_missing_ranges": []
+    },
+    {
+     "name": "V233",
+     "role": "candidate",
+     "position": 873,
+     "label": "Q.65a  Importance/union negotiations",
+     "format": "F1.0",
+     "value_labels": {
+      "1": "Very important",
+      "2": "Somewhat important",
+      "3": "Not important",
+      "7": "Not applicable",
+      "8": "Do not know",
+      "9": "No response/refused"
+     },
+     "declared_missing_values": [
+      7,
+      8,
+      9
+     ],
+     "declared_missing_ranges": []
+    },
+    {
+     "name": "V300",
+     "role": "candidate",
+     "position": 940,
+     "label": "Q.77a  Problem/relations with unions",
+     "format": "F1.0",
+     "value_labels": {
+      "1": "A major problem",
+      "2": "A minor problem",
+      "3": "Not a problem at all",
+      "7": "Not applicable",
+      "8": "Do not know",
+      "9": "No response/refused"
+     },
+     "declared_missing_values": [
+      7,
+      8,
+      9
+     ],
+     "declared_missing_ranges": []
+    },
+    {
+     "name": "V166",
+     "role": "alternative_or_related",
+     "position": 806,
+     "label": "Q.47b  Reason/union contract",
+     "format": "F1.0",
+     "value_labels": {
+      "1": "Yes",
+      "2": "No",
+      "8": "Do not know",
+      "9": "No response/refused"
+     },
+     "declared_missing_values": [
+      8,
+      9
+     ],
+     "declared_missing_ranges": []
+    },
+    {
+     "name": "PCTUNION",
+     "role": "alternative_or_related",
+     "position": 38,
+     "label": "% WORKERS BELONGING TO UNIONS",
+     "format": "F8.2",
+     "value_labels": {},
+     "declared_missing_values": [
+      -999
+     ],
+     "declared_missing_ranges": []
+    },
+    {
+     "name": "ORGEFF1",
+     "role": "alternative_or_related",
+     "position": 29,
+     "label": "% ELIGIBLE VOTERS IN NLRB ELECTIONS",
+     "format": "F8.2",
+     "value_labels": {},
+     "declared_missing_values": [
+      -999
+     ],
+     "declared_missing_ranges": []
+    },
+    {
+     "name": "UNFAIR",
+     "role": "alternative_or_related",
+     "position": 30,
+     "label": "NLRB UNFAIR LABOR PRAC CASES PER EMP",
+     "format": "F8.2",
+     "value_labels": {},
+     "declared_missing_values": [
+      -999
+     ],
+     "declared_missing_ranges": []
+    },
+    {
+     "name": "UNION",
+     "role": "alternative_or_related",
+     "position": 273,
+     "label": "DOES R OR SPOUSE BELONG TO UNION",
+     "format": "F1.0",
+     "value_labels": {
+      "0": "NAP",
+      "1": "R BELONGS",
+      "2": "SPOUSE BELONGS",
+      "3": "R AND SPOUSE BELONG",
+      "4": "NEITHER BELONGS",
+      "8": "DK",
+      "9": "NA"
+     },
+     "declared_missing_values": [
+      0,
+      8,
+      9
+     ],
+     "declared_missing_ranges": []
+    },
+    {
+     "name": "MEMUNION",
+     "role": "alternative_or_related",
+     "position": 367,
+     "label": "MEMBERSHIP IN LABOR UNION",
+     "format": "F1.0",
+     "value_labels": {
+      "0": "NAP",
+      "1": "YES",
+      "2": "NO",
+      "8": "DK",
+      "9": "NA"
+     },
+     "declared_missing_values": [
+      0,
+      8,
+      9
+     ],
+     "declared_missing_ranges": []
+    }
+   ]
+  },
+  {
+   "construct_id": "pct_managers",
+   "construct": "Percent managers",
+   "article_description": "Percentage of employees in managerial occupations (relative managerial employment).",
+   "coverage_status": "ambiguous",
+   "candidate_variables": [
+    "V115",
+    "V23",
+    "V32",
+    "NEWTOTAL"
+   ],
+   "alternative_or_related_candidates": [
+    "V114",
+    "V45",
+    "V80"
+   ],
+   "issues_and_ambiguities": [
+    "The numerator V115 (number of managers and administrators, Q.29b) is asked only when managers exist and are not the same occupation as CORE or GSS (V114 = 1). When V114 = 2 the managerial count is in V45 (CORE) or V80 (GSS). When V114 = 3 there are none.",
+    "Denominator candidates are the same as for total employment."
+   ],
+   "candidate_metadata": [
+    {
+     "name": "V115",
+     "role": "candidate",
+     "position": 755,
+     "label": "Q.29b  Number of full and part-time mngr",
+     "format": "F5.0",
+     "value_labels": {
+      "99998": "Do not know",
+      "99999": "No response/refused"
+     },
+     "declared_missing_values": [
+      99998,
+      99999
+     ],
+     "declared_missing_ranges": []
+    },
+    {
+     "name": "V23",
+     "role": "candidate",
+     "position": 664,
+     "label": "Q.5a  Number of full time employees",
+     "format": "F5.0",
+     "value_labels": {
+      "99998": "Do not know",
+      "99999": "No response/refused"
+     },
+     "declared_missing_values": [
+      99998,
+      99999
+     ],
+     "declared_missing_ranges": []
+    },
+    {
+     "name": "V32",
+     "role": "candidate",
+     "position": 673,
+     "label": "Q.5a  Number of part time employees",
+     "format": "F5.0",
+     "value_labels": {
+      "99998": "Do not know",
+      "99999": "No response/refused"
+     },
+     "declared_missing_values": [
+      99998,
+      99999
+     ],
+     "declared_missing_ranges": []
+    },
+    {
+     "name": "NEWTOTAL",
+     "role": "candidate",
+     "position": 1000,
+     "label": "TOTAL EMPLOYEES BASED ON ASSIGNED",
+     "format": "F8.2",
+     "value_labels": {},
+     "declared_missing_values": [],
+     "declared_missing_ranges": []
+    },
+    {
+     "name": "V114",
+     "role": "alternative_or_related",
+     "position": 754,
+     "label": "Q.29a  Mngr/admin on payroll on Mar 1 91",
+     "format": "F1.0",
+     "value_labels": {
+      "1": "Yes",
+      "2": "Yes but sam core/gss",
+      "3": "No",
+      "8": "Do not know",
+      "9": "No response/refused"
+     },
+     "declared_missing_values": [
+      8,
+      9
+     ],
+     "declared_missing_ranges": []
+    },
+    {
+     "name": "V45",
+     "role": "alternative_or_related",
+     "position": 685,
+     "label": "Q.9a  Number of total COREs work for ORG",
+     "format": "F5.0",
+     "value_labels": {
+      "99998": "Do not know",
+      "99999": "No response/refused"
+     },
+     "declared_missing_values": [
+      99998,
+      99999
+     ],
+     "declared_missing_ranges": []
+    },
+    {
+     "name": "V80",
+     "role": "alternative_or_related",
+     "position": 720,
+     "label": "Q.19b  Number of full and part-time GSSs",
+     "format": "F5.0",
+     "value_labels": {
+      "99998": "Do not know",
+      "99999": "No response/refused"
+     },
+     "declared_missing_values": [
+      99998,
+      99999
+     ],
+     "declared_missing_ranges": []
+    }
+   ]
+  },
+  {
+   "construct_id": "industry",
+   "construct": "Two-digit SIC industry dummies",
+   "article_description": "Dummy variables for two-digit Standard Industrial Classification industries.",
+   "coverage_status": "partial_requires_crosswalk",
+   "candidate_variables": [
+    "V43",
+    "INDUSTRY"
+   ],
+   "alternative_or_related_candidates": [
+    "INDUS80",
+    "OCC80"
+   ],
+   "issues_and_ambiguities": [
+    "The release has no SIC code variable. V43 (main product/service, Q.8c) and INDUSTRY carry 1980 Census of Population industry codes. INDUSTRY is the industry-file key, set equal to V43 in file creation, and is missing (-999 or blank) for some records. V43 is the more complete source.",
+    "A public crosswalk was acquired from the U.S. Census Bureau: the '1980 Census of Population Industry Classification System' with 1972 SIC equivalents (data/raw/census_io_1980_industry_occupation_code_list). It was transcribed to data/derived/census1980_ind_sic1972_v1/census1980_industry_sic1972.csv.",
+    "Some Census categories span several 2-digit SIC groups: 041 (11, 12), 060 (15, 16, 17), 710 (62, 67), 711 (63, 64), 712 (65, 66), 800 (78, 79).",
+    "'Not specified' categories (122, 301, 332, 350, 382, 392, 472, 522, 571, 691) have no printed SIC. Code 991 (Armed Forces) has none either.",
+    "The source prints code 190 (paints) as SIC 287, probably a typo for 285. Both are SIC major group 28, so the 2-digit mapping is unaffected.",
+    "A small number of V43 values are not in the 1980 code list. The codes are listed in the coordinator-only file.",
+    "The SIC edition the article used (1972 or 1987) is not known. The Census Bureau's 1990 classification with 1987 SIC equivalents was also acquired (not transcribed).",
+    "The technical manual states that the industry-level merge was done 'at the two-digit SIC code level'. The NOS team's own Census-to-SIC mapping is not released."
+   ],
+   "candidate_metadata": [
+    {
+     "name": "V43",
+     "role": "candidate",
+     "position": 40,
+     "label": "Q.8c  Main product / service of ORG",
+     "format": "F3.0",
+     "value_labels": {},
+     "declared_missing_values": [],
+     "declared_missing_ranges": []
+    },
+    {
+     "name": "INDUSTRY",
+     "role": "candidate",
+     "position": 1,
+     "label": "1980 CENSUS INDUSTRY CODE",
+     "format": "F8.2",
+     "value_labels": {},
+     "declared_missing_values": [
+      -999
+     ],
+     "declared_missing_ranges": []
+    },
+    {
+     "name": "INDUS80",
+     "role": "alternative_or_related",
+     "position": 50,
+     "label": "RS INDUSTRY CODE   (1980)",
+     "format": "F3.0",
+     "value_labels": {
+      "0": "NAP",
+      "998": "DK",
+      "999": "NA"
+     },
+     "declared_missing_values": [
+      0,
+      998,
+      999
+     ],
+     "declared_missing_ranges": []
+    },
+    {
+     "name": "OCC80",
+     "role": "alternative_or_related",
+     "position": 48,
+     "label": "RS CENSUS OCCUPATION CODE (1980)",
+     "format": "F3.0",
+     "value_labels": {
+      "0": "NAP",
+      "998": "DK",
+      "999": "NA"
+     },
+     "declared_missing_values": [
+      0,
+      998,
+      999
+     ],
+     "declared_missing_ranges": []
+    }
+   ]
+  },
+  {
+   "construct_id": "weights",
+   "construct": "Sampling weights",
+   "article_description": "(Not described in the article's Measures; checked for design.)",
+   "coverage_status": "available",
+   "candidate_variables": [
+    "WEIGHT",
+    "RAWWGT"
+   ],
+   "alternative_or_related_candidates": [
+    "NEWTOTAL",
+    "FORMWT",
+    "OVERSAMP"
+   ],
+   "issues_and_ambiguities": [
+    "WEIGHT = RAWWGT x 688/83.637. RAWWGT = 1/NEWTOTAL, which inverts the size-proportional selection. No weight is set in the .por header. Whether the article weighted is not stated in the Measures section.",
+    "The GSS weights FORMWT and OVERSAMP refer to persons, not establishments."
+   ],
+   "candidate_metadata": [
+    {
+     "name": "WEIGHT",
+     "role": "candidate",
+     "position": 1002,
+     "label": "rawwgt adjusted to n=688",
+     "format": "F8.2",
+     "value_labels": {},
+     "declared_missing_values": [
+      0
+     ],
+     "declared_missing_ranges": []
+    },
+    {
+     "name": "RAWWGT",
+     "role": "candidate",
+     "position": 1001,
+     "label": "RECIPROCAL OF SIZE (NEWTOTAL)",
+     "format": "F8.2",
+     "value_labels": {},
+     "declared_missing_values": [],
+     "declared_missing_ranges": []
+    },
+    {
+     "name": "NEWTOTAL",
+     "role": "alternative_or_related",
+     "position": 1000,
+     "label": "TOTAL EMPLOYEES BASED ON ASSIGNED",
+     "format": "F8.2",
+     "value_labels": {},
+     "declared_missing_values": [],
+     "declared_missing_ranges": []
+    },
+    {
+     "name": "FORMWT",
+     "role": "alternative_or_related",
+     "position": 633,
+     "label": "POST-STRATIFICATION WEIGHT",
+     "format": "F5.3",
+     "value_labels": {},
+     "declared_missing_values": [],
+     "declared_missing_ranges": []
+    },
+    {
+     "name": "OVERSAMP",
+     "role": "alternative_or_related",
+     "position": 636,
+     "label": "WEIGHTS FOR BLACK OVERSAMPLES",
+     "format": "F6.4",
+     "value_labels": {},
+     "declared_missing_values": [],
+     "declared_missing_ranges": []
+    }
+   ]
+  },
+  {
+   "construct_id": "unit_duplicates",
+   "construct": "Respondent unit and duplicate employer records",
+   "article_description": "Article describes 727 organizations.",
+   "coverage_status": "ambiguous",
+   "candidate_variables": [
+    "V1",
+    "V3",
+    "DUP",
+    "NUMOBS",
+    "V6",
+    "RSSOC"
+   ],
+   "alternative_or_related_candidates": [],
+   "issues_and_ambiguities": [
+    "The release has 727 records, one per GSS nominator-employer pair. V1 is a record-level ID.",
+    "The documentation reports that 39 completions are duplicate employers (V3 = 0), whose data were copied from another nominator's interview. That leaves 688 distinct establishments.",
+    "DUP and NUMOBS are labelled 'cases from the same org' and 'number of cases for org'.",
+    "Whether duplicates are kept, dropped or down-weighted is a sample-construction decision not made here. The article's 727 matches the record count, not the distinct-establishment count."
+   ],
+   "candidate_metadata": [
+    {
+     "name": "V1",
+     "role": "candidate",
+     "position": 642,
+     "label": "SRL Case Identification Number",
+     "format": "F5.0",
+     "value_labels": {},
+     "declared_missing_values": [],
+     "declared_missing_ranges": []
+    },
+    {
+     "name": "V3",
+     "role": "candidate",
+     "position": 644,
+     "label": "DC Method",
+     "format": "F1.0",
+     "value_labels": {
+      "0": "Duplicated by SRL",
+      "1": "Phone",
+      "2": "Mail"
+     },
+     "declared_missing_values": [],
+     "declared_missing_ranges": []
+    },
+    {
+     "name": "DUP",
+     "role": "candidate",
+     "position": 996,
+     "label": "CASES FROM THE SAME ORG",
+     "format": "F8.2",
+     "value_labels": {},
+     "declared_missing_values": [],
+     "declared_missing_ranges": []
+    },
+    {
+     "name": "NUMOBS",
+     "role": "candidate",
+     "position": 997,
+     "label": "NUMBER OF CASES FOR ORG",
+     "format": "F8.2",
+     "value_labels": {},
+     "declared_missing_values": [],
+     "declared_missing_ranges": []
+    },
+    {
+     "name": "V6",
+     "role": "candidate",
+     "position": 647,
+     "label": "R/Spouse Employer",
+     "format": "F1.0",
+     "value_labels": {
+      "1": "Respondent",
+      "2": "Spouse Employer"
+     },
+     "declared_missing_values": [],
+     "declared_missing_ranges": []
+    },
+    {
+     "name": "RSSOC",
+     "role": "candidate",
+     "position": 1007,
+     "label": "RESPONDENT SPOUSE INDICATOR",
+     "format": "F8.2",
+     "value_labels": {},
+     "declared_missing_values": [
+      -1
+     ],
+     "declared_missing_ranges": []
+    }
+   ]
+  }
+ ]
+}

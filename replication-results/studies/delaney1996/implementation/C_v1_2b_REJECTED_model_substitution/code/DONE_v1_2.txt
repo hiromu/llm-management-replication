@@ -1,0 +1,31 @@
+PAPER_K7 grid implementation, repair round v1.2 complete (2026-10-28).
+
+Inputs applied: checker_items.md (3 items) against spec_amendment_v1_1.md (A1-A10, already
+incorporated in v1.1) and implementation_spec.md.
+
+Changes (each checker item, with the amendment / spec point it serves):
+- Item 1 (A5/A10). code/paperk7/regression.py: _check_non_dummy_columns no longer raises a
+  residual-df error for a rank-deficient non-industry design with too few rows; it reports the
+  all-zero or collinear reason instead. The residual-df failure now occurs only in fit_linear,
+  after the permitted industry-dummy drops.
+- Item 2 (A6). code/paperk7/pipeline.py: when the original influence model failed, influence_rows
+  emits one failed row per estimation-sample record (term NA), not one per term, and no rows when
+  the sample is empty. New helper _failed_record_row. Per-deletion failures still record per-term
+  rows (spec section 7).
+- Item 3 (spec section 6). code/paperk7/pipeline.py: _stat_row gained a k parameter and uses n_ind
+  on the failure path; run_spec captures the resolved column set and reports k and
+  n_industry_dummies on a failed fit when dummy resolution succeeded (NA otherwise).
+- code/run_grid.py: implementation_version set to v1.2.
+
+No checker item was judged mistaken; all three were addressed. README "v1.2 changes" explains each.
+
+Tests: 87 tests in 6 files, all passing (code/dev_out/test_log_v1_2.txt). New file
+code/tests/test_v1_2.py (12 tests) covers the three checker items plus HC3 with a leverage-one row
+(OLS and WLS) and the copy-rule validity, as the prompt requested. Two v1.1 tests that encoded the
+old behaviour were updated to the amended behaviour.
+
+Full grid on synthetic data/survey.csv: code/dev_out/v1_2/ (all six output files; 38 specs; 32
+recorded failures, all the D05 empty-sample artefact; grid log code/dev_out/v1_2_log.txt).
+Synthetic results are not interpreted.
+
+README: code/README.md, section "v1.2 changes".

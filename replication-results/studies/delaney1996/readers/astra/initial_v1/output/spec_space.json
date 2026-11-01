@@ -1,0 +1,1325 @@
+{
+  "axes": [
+    {
+      "axis_id": "A01",
+      "decision": "Repeated nominations / copied interviews",
+      "priority": "sample",
+      "origin_level": "L0",
+      "levels": [
+        {
+          "level_id": "L0",
+          "description": "Retain nominated records; article does not explicitly describe deduplication.",
+          "label": "origin",
+          "source": "D1 PDF p5, Methods/Data; p6 completed interviews; source/nos1991_source_description.md, Duplicate employers; dictionary V3",
+          "rationale": "Closest described branch; origin does not establish that an unspecified choice was actually used.",
+          "locator": {
+            "doc_id": "D1",
+            "pdf_page": 5,
+            "where": "Methods/Data; p6 completed interviews"
+          }
+        },
+        {
+          "level_id": "L1",
+          "description": "Exclude V3=0 copied interviews.",
+          "label": "uncertain",
+          "source": "D1 PDF p5, Methods/Data; p6 completed interviews; source/nos1991_source_description.md, Duplicate employers; dictionary V3",
+          "rationale": "Source documents copies of one interview; changes unit weighting and sample. Article does not resolve policy.",
+          "locator": {
+            "doc_id": "D1",
+            "pdf_page": 5,
+            "where": "Methods/Data; p6 completed interviews"
+          }
+        }
+      ],
+      "locator": {
+        "doc_id": "D1",
+        "pdf_page": 5,
+        "where": "Methods/Data; p6 completed interviews"
+      }
+    },
+    {
+      "axis_id": "A02",
+      "decision": "Market-outcome eligibility",
+      "priority": "sample",
+      "origin_level": "L0",
+      "levels": [
+        {
+          "level_id": "L0",
+          "description": "V8=1, all profit-making establishments.",
+          "label": "origin",
+          "source": "D1 PDF p7, Dependent variables; Table 1 p10 footnote a; dictionary Q.1 and Box F",
+          "rationale": "Closest described branch; origin does not establish that an unspecified choice was actually used.",
+          "locator": {
+            "doc_id": "D1",
+            "pdf_page": 7,
+            "where": "Dependent variables; Table 1 p10 footnote a"
+          }
+        },
+        {
+          "level_id": "L1",
+          "description": "V8=1 and V9=4, publicly held corporations.",
+          "label": "uncertain",
+          "source": "D1 PDF p7, Dependent variables; Table 1 p10 footnote a; dictionary Q.1 and Box F",
+          "rationale": "Footnote explicitly supports narrower population, conflicting with prose and survey routing; not equivalent populations.",
+          "locator": {
+            "doc_id": "D1",
+            "pdf_page": 7,
+            "where": "Dependent variables; Table 1 p10 footnote a"
+          }
+        }
+      ],
+      "locator": {
+        "doc_id": "D1",
+        "pdf_page": 7,
+        "where": "Dependent variables; Table 1 p10 footnote a"
+      }
+    },
+    {
+      "axis_id": "A03",
+      "decision": "Structural occupational skips",
+      "priority": "sample",
+      "origin_level": "L0",
+      "levels": [
+        {
+          "level_id": "L0",
+          "description": "Leave distinct occupational nonresponse missing; same-occupation and absence rules unresolved.",
+          "label": "origin",
+          "source": "D1 PDF p7, Three occupational groups; p8 scales; dictionary Boxes A/B/D, V79,V114,V44,V349",
+          "rationale": "Closest described branch; origin does not establish that an unspecified choice was actually used.",
+          "locator": {
+            "doc_id": "D1",
+            "pdf_page": 7,
+            "where": "Three occupational groups; p8 scales"
+          }
+        },
+        {
+          "level_id": "L1",
+          "description": "Average only observed distinct occupational items, with minimum count fixed before fitting.",
+          "label": "uncertain",
+          "source": "D1 PDF p7, Three occupational groups; p8 scales; dictionary Boxes A/B/D, V79,V114,V44,V349",
+          "rationale": "Article averages occupational items but does not state what happens when blocks are skipped.",
+          "locator": {
+            "doc_id": "D1",
+            "pdf_page": 7,
+            "where": "Three occupational groups; p8 scales"
+          }
+        },
+        {
+          "level_id": "L2",
+          "description": "Copy the corresponding CORE/GSS responses only when routing establishes identical occupation, then apply item completeness rule.",
+          "label": "uncertain",
+          "source": "D1 PDF p7, Three occupational groups; p8 scales; dictionary Boxes A/B/D, V79,V114,V44,V349",
+          "rationale": "Dictionary Boxes A/B/D support routing identity; article never documents reuse.",
+          "locator": {
+            "doc_id": "D1",
+            "pdf_page": 7,
+            "where": "Three occupational groups; p8 scales"
+          }
+        },
+        {
+          "level_id": "L3",
+          "description": "Require all nominal occupational items without reuse.",
+          "label": "uncertain",
+          "source": "D1 PDF p7, Three occupational groups; p8 scales; dictionary Boxes A/B/D, V79,V114,V44,V349",
+          "rationale": "Complete-item reading changes population by routing; not stated by article.",
+          "locator": {
+            "doc_id": "D1",
+            "pdf_page": 7,
+            "where": "Three occupational groups; p8 scales"
+          }
+        }
+      ],
+      "locator": {
+        "doc_id": "D1",
+        "pdf_page": 7,
+        "where": "Three occupational groups; p8 scales"
+      }
+    },
+    {
+      "axis_id": "A04",
+      "decision": "Scale completeness and regression missingness",
+      "priority": "sample",
+      "origin_level": "L0",
+      "levels": [
+        {
+          "level_id": "L0",
+          "description": "Unknown item minimum and unknown analysis deletion policy; closest scale reading is equal-item means.",
+          "label": "origin",
+          "source": "D1 PDF p7, Scale construction; Tables 3/4 footnotes",
+          "rationale": "Closest described branch; origin does not establish that an unspecified choice was actually used.",
+          "locator": {
+            "doc_id": "D1",
+            "pdf_page": 7,
+            "where": "Scale construction; Tables 3/4 footnotes"
+          }
+        },
+        {
+          "level_id": "L1",
+          "description": "Require all constituent items and common complete cases within outcome over all HRM variables/controls.",
+          "label": "uncertain",
+          "source": "D1 PDF p7, Scale construction; Tables 3/4 footnotes",
+          "rationale": "Stable comparisons are meaningful, but no common-case rule is printed.",
+          "locator": {
+            "doc_id": "D1",
+            "pdf_page": 7,
+            "where": "Scale construction; Tables 3/4 footnotes"
+          }
+        },
+        {
+          "level_id": "L2",
+          "description": "Use available-item means; freeze per-scale minimum, then common cases within outcome.",
+          "label": "uncertain",
+          "source": "D1 PDF p7, Scale construction; Tables 3/4 footnotes",
+          "rationale": "Averaging is documented for some scales, missing-item handling is not.",
+          "locator": {
+            "doc_id": "D1",
+            "pdf_page": 7,
+            "where": "Scale construction; Tables 3/4 footnotes"
+          }
+        },
+        {
+          "level_id": "L3",
+          "description": "Equation-specific complete cases after a fixed scale rule; nested tests refit reduced model on full-model rows.",
+          "label": "uncertain",
+          "source": "D1 PDF p7, Scale construction; Tables 3/4 footnotes",
+          "rationale": "Regression convention is plausible; no explicit sample rule supports selection over common cases.",
+          "locator": {
+            "doc_id": "D1",
+            "pdf_page": 7,
+            "where": "Scale construction; Tables 3/4 footnotes"
+          }
+        },
+        {
+          "level_id": "L4",
+          "description": "For complete equal-weight items, sum then divide by item count.",
+          "label": "equivalent",
+          "source": "D1 PDF p7, Scale construction; Tables 3/4 footnotes",
+          "rationale": "Algebraically identical to arithmetic mean on the same rows; does not resolve item missingness.",
+          "locator": {
+            "doc_id": "D1",
+            "pdf_page": 7,
+            "where": "Scale construction; Tables 3/4 footnotes"
+          }
+        }
+      ],
+      "locator": {
+        "doc_id": "D1",
+        "pdf_page": 7,
+        "where": "Scale construction; Tables 3/4 footnotes"
+      }
+    },
+    {
+      "axis_id": "A05",
+      "decision": "No-training skips and exceptional effectiveness response",
+      "priority": "coding",
+      "origin_level": "L0",
+      "levels": [
+        {
+          "level_id": "L0",
+          "description": "Treat unanswered training count/effectiveness as missing; effect of V145=no on scale unresolved.",
+          "label": "origin",
+          "source": "D1 PDF p7, Training construction; dictionary Q.37,Q.45a,Q.49",
+          "rationale": "Closest described branch; origin does not establish that an unspecified choice was actually used.",
+          "locator": {
+            "doc_id": "D1",
+            "pdf_page": 7,
+            "where": "Training construction"
+          }
+        },
+        {
+          "level_id": "L1",
+          "description": "V145=no implies trained count zero, but effectiveness remains missing; apply fixed available-item rule.",
+          "label": "uncertain",
+          "source": "D1 PDF p7, Training construction; dictionary Q.37,Q.45a,Q.49",
+          "rationale": "Zero participation follows absence of formal training, but index construction is not printed.",
+          "locator": {
+            "doc_id": "D1",
+            "pdf_page": 7,
+            "where": "Training construction"
+          }
+        },
+        {
+          "level_id": "L2",
+          "description": "Assign a minimum training-effectiveness score for no-training establishments.",
+          "label": "non_equivalent",
+          "source": "D1 PDF p7, Training construction; dictionary Q.37,Q.45a,Q.49",
+          "rationale": "No training is not an observed ineffective program; this supplies a substantive value absent from article.",
+          "locator": {
+            "doc_id": "D1",
+            "pdf_page": 7,
+            "where": "Training construction"
+          }
+        },
+        {
+          "level_id": "L3",
+          "description": "Treat V172=4 varies/depends as missing outside stated 1–3 scale.",
+          "label": "uncertain",
+          "source": "D1 PDF p7, Training construction; dictionary Q.37,Q.45a,Q.49",
+          "rationale": "Supported by scale endpoints, but exclusion is not explicit.",
+          "locator": {
+            "doc_id": "D1",
+            "pdf_page": 7,
+            "where": "Training construction"
+          }
+        },
+        {
+          "level_id": "L4",
+          "description": "Retain V172=4 as a numerical effectiveness category.",
+          "label": "non_equivalent",
+          "source": "D1 PDF p7, Training construction; dictionary Q.37,Q.45a,Q.49",
+          "rationale": "Conflicts with the explicitly ordered three-category effectiveness construct.",
+          "locator": {
+            "doc_id": "D1",
+            "pdf_page": 7,
+            "where": "Training construction"
+          }
+        }
+      ],
+      "locator": {
+        "doc_id": "D1",
+        "pdf_page": 7,
+        "where": "Training construction"
+      }
+    },
+    {
+      "axis_id": "A06",
+      "decision": "Training transformation conflict",
+      "priority": "coding",
+      "origin_level": "L0",
+      "levels": [
+        {
+          "level_id": "L0",
+          "description": "Text branch: orient three items, standardize and average without an explicitly stated logarithm.",
+          "label": "origin",
+          "source": "D1 PDF p7, Training paragraph; Table 1 pp9–10 footnote b",
+          "rationale": "Closest described branch; origin does not establish that an unspecified choice was actually used.",
+          "locator": {
+            "doc_id": "D1",
+            "pdf_page": 7,
+            "where": "Training paragraph; Table 1 pp9–10 footnote b"
+          }
+        },
+        {
+          "level_id": "L1",
+          "description": "Table-footnote branch: log each of three positively coded items, standardize, average.",
+          "label": "uncertain",
+          "source": "D1 PDF p7, Training paragraph; Table 1 pp9–10 footnote b",
+          "rationale": "Footnote b applies to training as well as staffing, but binary coding and zero-trained counts are not resolved.",
+          "locator": {
+            "doc_id": "D1",
+            "pdf_page": 7,
+            "where": "Training paragraph; Table 1 pp9–10 footnote b"
+          }
+        },
+        {
+          "level_id": "L2",
+          "description": "Log count only, retain binary and effectiveness levels before z scores.",
+          "label": "uncertain",
+          "source": "D1 PDF p7, Training paragraph; Table 1 pp9–10 footnote b",
+          "rationale": "Hybrid count-versus-ordinal interpretation of prose/footnote; not explicitly specified and not an equivalent correction.",
+          "locator": {
+            "doc_id": "D1",
+            "pdf_page": 7,
+            "where": "Training paragraph; Table 1 pp9–10 footnote b"
+          }
+        }
+      ],
+      "locator": {
+        "doc_id": "D1",
+        "pdf_page": 7,
+        "where": "Training paragraph; Table 1 pp9–10 footnote b"
+      }
+    },
+    {
+      "axis_id": "A07",
+      "decision": "Application count logs and special categories",
+      "priority": "coding",
+      "origin_level": "L0",
+      "levels": [
+        {
+          "level_id": "L0",
+          "description": "Log positive numeric counts; keep unspecified nonpositive/special-category handling unresolved.",
+          "label": "origin",
+          "source": "D1 PDF p7, Staffing selectivity; dictionary V62,V97,V131",
+          "rationale": "Closest described branch; origin does not establish that an unspecified choice was actually used.",
+          "locator": {
+            "doc_id": "D1",
+            "pdf_page": 7,
+            "where": "Staffing selectivity"
+          }
+        },
+        {
+          "level_id": "L1",
+          "description": "Change logarithm base uniformly before item z scoring.",
+          "label": "equivalent",
+          "source": "D1 PDF p7, Staffing selectivity; dictionary V62,V97,V131",
+          "rationale": "For positive observations and same z-score reference, positive log-base rescaling cancels exactly.",
+          "locator": {
+            "doc_id": "D1",
+            "pdf_page": 7,
+            "where": "Staffing selectivity"
+          }
+        },
+        {
+          "level_id": "L2",
+          "description": "Use log(1+x) for numeric counts.",
+          "label": "uncertain",
+          "source": "D1 PDF p7, Staffing selectivity; dictionary V62,V97,V131",
+          "rationale": "Handles zeros but changes distances; article says logged value without an offset.",
+          "locator": {
+            "doc_id": "D1",
+            "pdf_page": 7,
+            "where": "Staffing selectivity"
+          }
+        },
+        {
+          "level_id": "L3",
+          "description": "Treat 995 large number as missing according to release.",
+          "label": "uncertain",
+          "source": "D1 PDF p7, Staffing selectivity; dictionary V62,V97,V131",
+          "rationale": "Release declaration available; no quantitative magnitude supplied.",
+          "locator": {
+            "doc_id": "D1",
+            "pdf_page": 7,
+            "where": "Staffing selectivity"
+          }
+        },
+        {
+          "level_id": "L4",
+          "description": "Treat 995 or 997 as literal counts.",
+          "label": "non_equivalent",
+          "source": "D1 PDF p7, Staffing selectivity; dictionary V62,V97,V131",
+          "rationale": "Dictionary labels are categories, not observed application numbers.",
+          "locator": {
+            "doc_id": "D1",
+            "pdf_page": 7,
+            "where": "Staffing selectivity"
+          }
+        }
+      ],
+      "locator": {
+        "doc_id": "D1",
+        "pdf_page": 7,
+        "where": "Staffing selectivity"
+      }
+    },
+    {
+      "axis_id": "A08",
+      "decision": "Reference sample and denominator for standard scores",
+      "priority": "coding",
+      "origin_level": "L0",
+      "levels": [
+        {
+          "level_id": "L0",
+          "description": "Reference sample, timing and SD denominator not stated.",
+          "label": "origin",
+          "source": "D1 PDF p7, Staffing and training z-score averages",
+          "rationale": "Closest described branch; origin does not establish that an unspecified choice was actually used.",
+          "locator": {
+            "doc_id": "D1",
+            "pdf_page": 7,
+            "where": "Staffing and training z-score averages"
+          }
+        },
+        {
+          "level_id": "L1",
+          "description": "Standardize itemwise over eligible source records before complete-case selection.",
+          "label": "uncertain",
+          "source": "D1 PDF p7, Staffing and training z-score averages",
+          "rationale": "Matches an itemwise reading but not uniquely identified.",
+          "locator": {
+            "doc_id": "D1",
+            "pdf_page": 7,
+            "where": "Staffing and training z-score averages"
+          }
+        },
+        {
+          "level_id": "L2",
+          "description": "Standardize over the locked outcome-specific complete cases.",
+          "label": "uncertain",
+          "source": "D1 PDF p7, Staffing and training z-score averages",
+          "rationale": "Uses analysis population; changes units and possibly composites relative to itemwise reference.",
+          "locator": {
+            "doc_id": "D1",
+            "pdf_page": 7,
+            "where": "Staffing and training z-score averages"
+          }
+        },
+        {
+          "level_id": "L3",
+          "description": "Use one shared eligible reference population for both outcome models.",
+          "label": "uncertain",
+          "source": "D1 PDF p7, Staffing and training z-score averages",
+          "rationale": "Maintains common units; neither mandated nor ruled out.",
+          "locator": {
+            "doc_id": "D1",
+            "pdf_page": 7,
+            "where": "Staffing and training z-score averages"
+          }
+        },
+        {
+          "level_id": "L4",
+          "description": "Sample SD versus population SD with the same complete item reference.",
+          "label": "uncertain",
+          "source": "D1 PDF p7, Staffing and training z-score averages",
+          "rationale": "Changes scale units unless back-transformed; differing item reference counts can also change relative weights.",
+          "locator": {
+            "doc_id": "D1",
+            "pdf_page": 7,
+            "where": "Staffing and training z-score averages"
+          }
+        }
+      ],
+      "locator": {
+        "doc_id": "D1",
+        "pdf_page": 7,
+        "where": "Staffing and training z-score averages"
+      }
+    },
+    {
+      "axis_id": "A09",
+      "decision": "Decision-authority mapping",
+      "priority": "coding",
+      "origin_level": "L0",
+      "levels": [
+        {
+          "level_id": "L0",
+          "description": "Merge routed blocks; require a fully documented five-level map with lower authority higher. Exact map is unavailable.",
+          "label": "origin",
+          "source": "D1 PDF p8, Decentralized decision making; Table 1 p10; dictionary Q.72a/b including conflicting labels and depends",
+          "rationale": "Closest described branch; origin does not establish that an unspecified choice was actually used.",
+          "locator": {
+            "doc_id": "D1",
+            "pdf_page": 8,
+            "where": "Decentralized decision making; Table 1 p10"
+          }
+        },
+        {
+          "level_id": "L1",
+          "description": "Use source numeric codes 1–5 directly.",
+          "label": "non_equivalent",
+          "source": "D1 PDF p8, Decentralized decision making; Table 1 p10; dictionary Q.72a/b including conflicting labels and depends",
+          "rationale": "Source 2=below but 3=above; this is not the described increasing decentralization scale.",
+          "locator": {
+            "doc_id": "D1",
+            "pdf_page": 8,
+            "where": "Decentralized decision making; Table 1 p10"
+          }
+        },
+        {
+          "level_id": "L2",
+          "description": "Construct an ordered authority map placing larger-organization/above decisions below establishment-head and below-head decisions; determine mixed-category positions independently.",
+          "label": "uncertain",
+          "source": "D1 PDF p8, Decentralized decision making; Table 1 p10; dictionary Q.72a/b including conflicting labels and depends",
+          "rationale": "Follows construct direction, but article gives neither spacing nor mixed-response ordering; no unique map may be filled in.",
+          "locator": {
+            "doc_id": "D1",
+            "pdf_page": 8,
+            "where": "Decentralized decision making; Table 1 p10"
+          }
+        },
+        {
+          "level_id": "L3",
+          "description": "Reduce to an indicator of any below-head participation.",
+          "label": "non_equivalent",
+          "source": "D1 PDF p8, Decentralized decision making; Table 1 p10; dictionary Q.72a/b including conflicting labels and depends",
+          "rationale": "Changes the stated five-level measure to a binary construct.",
+          "locator": {
+            "doc_id": "D1",
+            "pdf_page": 8,
+            "where": "Decentralized decision making; Table 1 p10"
+          }
+        }
+      ],
+      "locator": {
+        "doc_id": "D1",
+        "pdf_page": 8,
+        "where": "Decentralized decision making; Table 1 p10"
+      }
+    },
+    {
+      "axis_id": "A10",
+      "decision": "Age and hierarchy transformations",
+      "priority": "coding",
+      "origin_level": "L0",
+      "levels": [
+        {
+          "level_id": "L0",
+          "description": "Log age and hierarchy as table labels/footnote specify; base and zeros unresolved.",
+          "label": "origin",
+          "source": "D1 PDF p11, Age control; Table 1 p10 hierarchy footnote c; Tables 3/4 rows",
+          "rationale": "Closest described branch; origin does not establish that an unspecified choice was actually used.",
+          "locator": {
+            "doc_id": "D1",
+            "pdf_page": 11,
+            "where": "Age control; Table 1 p10 hierarchy footnote c; Tables 3/4 rows"
+          }
+        },
+        {
+          "level_id": "L1",
+          "description": "Age in years as prose describes.",
+          "label": "uncertain",
+          "source": "D1 PDF p11, Age control; Table 1 p10 hierarchy footnote c; Tables 3/4 rows",
+          "rationale": "Explicit prose branch conflicts with regression labels.",
+          "locator": {
+            "doc_id": "D1",
+            "pdf_page": 11,
+            "where": "Age control; Table 1 p10 hierarchy footnote c; Tables 3/4 rows"
+          }
+        },
+        {
+          "level_id": "L2",
+          "description": "Raw hierarchy count as prose describes.",
+          "label": "uncertain",
+          "source": "D1 PDF p11, Age control; Table 1 p10 hierarchy footnote c; Tables 3/4 rows",
+          "rationale": "Prose lacks log; table footnote explicitly uses log.",
+          "locator": {
+            "doc_id": "D1",
+            "pdf_page": 11,
+            "where": "Age control; Table 1 p10 hierarchy footnote c; Tables 3/4 rows"
+          }
+        },
+        {
+          "level_id": "L3",
+          "description": "Change positive-count log base with coefficient/SE back-transformation.",
+          "label": "equivalent",
+          "source": "D1 PDF p11, Age control; Table 1 p10 hierarchy footnote c; Tables 3/4 rows",
+          "rationale": "Fixed positive sample gives a linear predictor rescaling; effects must be compared in original units.",
+          "locator": {
+            "doc_id": "D1",
+            "pdf_page": 11,
+            "where": "Age control; Table 1 p10 hierarchy footnote c; Tables 3/4 rows"
+          }
+        },
+        {
+          "level_id": "L4",
+          "description": "Use log(1+age) or log(1+hierarchy).",
+          "label": "uncertain",
+          "source": "D1 PDF p11, Age control; Table 1 p10 hierarchy footnote c; Tables 3/4 rows",
+          "rationale": "Addresses zero inputs but no offset is stated; not equivalent to ordinary log.",
+          "locator": {
+            "doc_id": "D1",
+            "pdf_page": 11,
+            "where": "Age control; Table 1 p10 hierarchy footnote c; Tables 3/4 rows"
+          }
+        }
+      ],
+      "locator": {
+        "doc_id": "D1",
+        "pdf_page": 11,
+        "where": "Age control; Table 1 p10 hierarchy footnote c; Tables 3/4 rows"
+      }
+    },
+    {
+      "axis_id": "A11",
+      "decision": "Binary controls and affiliation scope",
+      "priority": "coding",
+      "origin_level": "L0",
+      "levels": [
+        {
+          "level_id": "L0",
+          "description": "Indicator of nonprofit and indicator of being part of another organization.",
+          "label": "origin",
+          "source": "D1 PDF p11, Nonprofit and subsidiary controls; dictionary V8,V17,V21",
+          "rationale": "Closest described branch; origin does not establish that an unspecified choice was actually used.",
+          "locator": {
+            "doc_id": "D1",
+            "pdf_page": 11,
+            "where": "Nonprofit and subsidiary controls"
+          }
+        },
+        {
+          "level_id": "L1",
+          "description": "Retain binary source values with same orientation/reference, adjusting intercept.",
+          "label": "equivalent",
+          "source": "D1 PDF p11, Nonprofit and subsidiary controls; dictionary V8,V17,V21",
+          "rationale": "An additive shift under an intercept preserves slopes and fitted values.",
+          "locator": {
+            "doc_id": "D1",
+            "pdf_page": 11,
+            "where": "Nonprofit and subsidiary controls"
+          }
+        },
+        {
+          "level_id": "L2",
+          "description": "Reverse dummy polarity with explicit contrast and coefficient sign conversion.",
+          "label": "equivalent",
+          "source": "D1 PDF p11, Nonprofit and subsidiary controls; dictionary V8,V17,V21",
+          "rationale": "Same partition and fitted values; unconverted coefficients are not the same estimand.",
+          "locator": {
+            "doc_id": "D1",
+            "pdf_page": 11,
+            "where": "Nonprofit and subsidiary controls"
+          }
+        },
+        {
+          "level_id": "L3",
+          "description": "Define subsidiary strictly as V21=2.",
+          "label": "uncertain",
+          "source": "D1 PDF p11, Nonprofit and subsidiary controls; dictionary V8,V17,V21",
+          "rationale": "Questionnaire has a narrow legal class, while article names subsidiary without specifying which source item; changes partition.",
+          "locator": {
+            "doc_id": "D1",
+            "pdf_page": 11,
+            "where": "Nonprofit and subsidiary controls"
+          }
+        }
+      ],
+      "locator": {
+        "doc_id": "D1",
+        "pdf_page": 11,
+        "where": "Nonprofit and subsidiary controls"
+      }
+    },
+    {
+      "axis_id": "A12",
+      "decision": "Employment total and manager denominator",
+      "priority": "coding",
+      "origin_level": "L0",
+      "levels": [
+        {
+          "level_id": "L0",
+          "description": "Raw establishment full-time plus part-time employment, numerator mapped from manager occupation where observed.",
+          "label": "origin",
+          "source": "D1 PDF p11, Total employment; p12 percent managers; dictionary employment counts and assigned-size variables",
+          "rationale": "Closest described branch; origin does not establish that an unspecified choice was actually used.",
+          "locator": {
+            "doc_id": "D1",
+            "pdf_page": 11,
+            "where": "Total employment; p12 percent managers"
+          }
+        },
+        {
+          "level_id": "L1",
+          "description": "Use release-assigned NEWTOTAL consistently for both employment log and manager denominator.",
+          "label": "uncertain",
+          "source": "D1 PDF p11, Total employment; p12 percent managers; dictionary employment counts and assigned-size variables",
+          "rationale": "Release documents assigned counts but not their assignment algorithm; article does not identify source.",
+          "locator": {
+            "doc_id": "D1",
+            "pdf_page": 11,
+            "where": "Total employment; p12 percent managers"
+          }
+        },
+        {
+          "level_id": "L2",
+          "description": "Use larger-organization employment V339.",
+          "label": "non_equivalent",
+          "source": "D1 PDF p11, Total employment; p12 percent managers; dictionary employment counts and assigned-size variables",
+          "rationale": "Changes unit from establishment to parent organization and is structurally absent for independent firms.",
+          "locator": {
+            "doc_id": "D1",
+            "pdf_page": 11,
+            "where": "Total employment; p12 percent managers"
+          }
+        }
+      ],
+      "locator": {
+        "doc_id": "D1",
+        "pdf_page": 11,
+        "where": "Total employment; p12 percent managers"
+      }
+    },
+    {
+      "axis_id": "A13",
+      "decision": "Manager share units",
+      "priority": "coding",
+      "origin_level": "L0",
+      "levels": [
+        {
+          "level_id": "L0",
+          "description": "Percentage, manager count/total multiplied by 100, following prose.",
+          "label": "origin",
+          "source": "D1 PDF p12, Percent managers",
+          "rationale": "Closest described branch; origin does not establish that an unspecified choice was actually used.",
+          "locator": {
+            "doc_id": "D1",
+            "pdf_page": 12,
+            "where": "Percent managers"
+          }
+        },
+        {
+          "level_id": "L1",
+          "description": "Fraction, manager count/total, with exact coefficient and SE unit conversion.",
+          "label": "equivalent",
+          "source": "D1 PDF p12, Percent managers",
+          "rationale": "Pure positive scaling on identical numerator/denominator and rows; table comparison requires conversion.",
+          "locator": {
+            "doc_id": "D1",
+            "pdf_page": 12,
+            "where": "Percent managers"
+          }
+        }
+      ],
+      "locator": {
+        "doc_id": "D1",
+        "pdf_page": 12,
+        "where": "Percent managers"
+      }
+    },
+    {
+      "axis_id": "A14",
+      "decision": "Union-pressure index source items",
+      "priority": "coding",
+      "origin_level": "L0",
+      "levels": [
+        {
+          "level_id": "L0",
+          "description": "Item composition unknown; no executable origin item set.",
+          "label": "origin",
+          "source": "D1 PDF p12, Union pressure; dictionary Q.63a,Q.65a,Q.77a and PCTUNION",
+          "rationale": "Closest described branch; origin does not establish that an unspecified choice was actually used.",
+          "locator": {
+            "doc_id": "D1",
+            "pdf_page": 12,
+            "where": "Union pressure"
+          }
+        },
+        {
+          "level_id": "L1",
+          "description": "Mean of reverse-coded V220 and V233.",
+          "label": "uncertain",
+          "source": "D1 PDF p12, Union pressure; dictionary Q.63a,Q.65a,Q.77a and PCTUNION",
+          "rationale": "Both explicitly measure union influence on wages; article gives no item list.",
+          "locator": {
+            "doc_id": "D1",
+            "pdf_page": 12,
+            "where": "Union pressure"
+          }
+        },
+        {
+          "level_id": "L2",
+          "description": "Mean of reverse-coded V220,V233 and V300.",
+          "label": "uncertain",
+          "source": "D1 PDF p12, Union pressure; dictionary Q.63a,Q.65a,Q.77a and PCTUNION",
+          "rationale": "Adds anticipated union-relations problems, a related but different construct; not confirmed.",
+          "locator": {
+            "doc_id": "D1",
+            "pdf_page": 12,
+            "where": "Union pressure"
+          }
+        },
+        {
+          "level_id": "L3",
+          "description": "Replace index with industry union density PCTUNION.",
+          "label": "non_equivalent",
+          "source": "D1 PDF p12, Union pressure; dictionary Q.63a,Q.65a,Q.77a and PCTUNION",
+          "rationale": "Changes respondent-reported establishment pressure to industry-level coverage; article distinguishes pressure from density.",
+          "locator": {
+            "doc_id": "D1",
+            "pdf_page": 12,
+            "where": "Union pressure"
+          }
+        }
+      ],
+      "locator": {
+        "doc_id": "D1",
+        "pdf_page": 12,
+        "where": "Union pressure"
+      }
+    },
+    {
+      "axis_id": "A15",
+      "decision": "Competition score and neither product nor service",
+      "priority": "coding",
+      "origin_level": "L0",
+      "levels": [
+        {
+          "level_id": "L0",
+          "description": "Competition uses V328 1–4. Product/service dummies omit V41=3 both; V41=4 treatment unstated.",
+          "label": "origin",
+          "source": "D1 PDF p12, Market competition and product/service controls; dictionary V328,V41",
+          "rationale": "Closest described branch; origin does not establish that an unspecified choice was actually used.",
+          "locator": {
+            "doc_id": "D1",
+            "pdf_page": 12,
+            "where": "Market competition and product/service controls"
+          }
+        },
+        {
+          "level_id": "L1",
+          "description": "Dichotomize V328 at a specified cutoff.",
+          "label": "non_equivalent",
+          "source": "D1 PDF p12, Market competition and product/service controls; dictionary V328,V41",
+          "rationale": "No cutoff is documented; replaces explicitly stated ordinal control.",
+          "locator": {
+            "doc_id": "D1",
+            "pdf_page": 12,
+            "where": "Market competition and product/service controls"
+          }
+        },
+        {
+          "level_id": "L2",
+          "description": "Exclude V41=4 from the described three-category comparison.",
+          "label": "uncertain",
+          "source": "D1 PDF p12, Market competition and product/service controls; dictionary V328,V41",
+          "rationale": "Neither is outside the stated reference; exclusion not expressly documented.",
+          "locator": {
+            "doc_id": "D1",
+            "pdf_page": 12,
+            "where": "Market competition and product/service controls"
+          }
+        },
+        {
+          "level_id": "L3",
+          "description": "Include V41=4 with both in reference.",
+          "label": "non_equivalent",
+          "source": "D1 PDF p12, Market competition and product/service controls; dictionary V328,V41",
+          "rationale": "Changes stated both-product-and-service comparator.",
+          "locator": {
+            "doc_id": "D1",
+            "pdf_page": 12,
+            "where": "Market competition and product/service controls"
+          }
+        },
+        {
+          "level_id": "L4",
+          "description": "Add a separate neither indicator.",
+          "label": "non_equivalent",
+          "source": "D1 PDF p12, Market competition and product/service controls; dictionary V328,V41",
+          "rationale": "Adds a control not in the explicit list; outside equivalent set.",
+          "locator": {
+            "doc_id": "D1",
+            "pdf_page": 12,
+            "where": "Market competition and product/service controls"
+          }
+        }
+      ],
+      "locator": {
+        "doc_id": "D1",
+        "pdf_page": 12,
+        "where": "Market competition and product/service controls"
+      }
+    },
+    {
+      "axis_id": "A16",
+      "decision": "Top-coded counts",
+      "priority": "coding",
+      "origin_level": "L0",
+      "levels": [
+        {
+          "level_id": "L0",
+          "description": "Top-code numerical treatment not specified.",
+          "label": "origin",
+          "source": "D1 PDF p10, Hierarchy item and p9 training item; dictionary V261,V157",
+          "rationale": "Closest described branch; origin does not establish that an unspecified choice was actually used.",
+          "locator": {
+            "doc_id": "D1",
+            "pdf_page": 10,
+            "where": "Hierarchy item and p9 training item"
+          }
+        },
+        {
+          "level_id": "L1",
+          "description": "Use threshold lower bounds for V261=96 (100+) and V157=99996 (100000+).",
+          "label": "uncertain",
+          "source": "D1 PDF p10, Hierarchy item and p9 training item; dictionary V261,V157",
+          "rationale": "Dictionary supplies category threshold, not exact count.",
+          "locator": {
+            "doc_id": "D1",
+            "pdf_page": 10,
+            "where": "Hierarchy item and p9 training item"
+          }
+        },
+        {
+          "level_id": "L2",
+          "description": "Exclude top-coded observations for transformations requiring exact counts.",
+          "label": "uncertain",
+          "source": "D1 PDF p10, Hierarchy item and p9 training item; dictionary V261,V157",
+          "rationale": "Avoids invented count but introduces an undocumented sample restriction.",
+          "locator": {
+            "doc_id": "D1",
+            "pdf_page": 10,
+            "where": "Hierarchy item and p9 training item"
+          }
+        },
+        {
+          "level_id": "L3",
+          "description": "Use category storage codes as observed counts.",
+          "label": "non_equivalent",
+          "source": "D1 PDF p10, Hierarchy item and p9 training item; dictionary V261,V157",
+          "rationale": "Confuses coding labels with quantitative observations.",
+          "locator": {
+            "doc_id": "D1",
+            "pdf_page": 10,
+            "where": "Hierarchy item and p9 training item"
+          }
+        }
+      ],
+      "locator": {
+        "doc_id": "D1",
+        "pdf_page": 10,
+        "where": "Hierarchy item and p9 training item"
+      }
+    },
+    {
+      "axis_id": "A18",
+      "decision": "Interaction centering",
+      "priority": "coding",
+      "origin_level": "L0",
+      "levels": [
+        {
+          "level_id": "L0",
+          "description": "Products of constructed uncentered scales; centering not stated.",
+          "label": "origin",
+          "source": "D1 PDF p17, Within-category interaction tests",
+          "rationale": "Closest described branch; origin does not establish that an unspecified choice was actually used.",
+          "locator": {
+            "doc_id": "D1",
+            "pdf_page": 17,
+            "where": "Within-category interaction tests"
+          }
+        },
+        {
+          "level_id": "L1",
+          "description": "Center constituents on fixed same-sample means while retaining all lower-order terms and transform coefficients back.",
+          "label": "equivalent",
+          "source": "D1 PDF p17, Within-category interaction tests",
+          "rationale": "Same model column space and interaction coefficients; main effects refer to different reference points until back-transformed.",
+          "locator": {
+            "doc_id": "D1",
+            "pdf_page": 17,
+            "where": "Within-category interaction tests"
+          }
+        }
+      ],
+      "locator": {
+        "doc_id": "D1",
+        "pdf_page": 17,
+        "where": "Within-category interaction tests"
+      }
+    },
+    {
+      "axis_id": "A19",
+      "decision": "Unshown complementarity and subgroup details",
+      "priority": "coding",
+      "origin_level": "L0",
+      "levels": [
+        {
+          "level_id": "L0",
+          "description": "Strictly above each of seven sample medians; population for median computation unspecified.",
+          "label": "origin",
+          "source": "D1 PDF p11, Above-median count; p17 transformations; p18 subgroups",
+          "rationale": "Closest described branch; origin does not establish that an unspecified choice was actually used.",
+          "locator": {
+            "doc_id": "D1",
+            "pdf_page": 11,
+            "where": "Above-median count; p17 transformations; p18 subgroups"
+          }
+        },
+        {
+          "level_id": "L1",
+          "description": "Compute medians separately within each outcome-eligible sample.",
+          "label": "uncertain",
+          "source": "D1 PDF p11, Above-median count; p17 transformations; p18 subgroups",
+          "rationale": "Reasonable meaning of sample, but not specified.",
+          "locator": {
+            "doc_id": "D1",
+            "pdf_page": 11,
+            "where": "Above-median count; p17 transformations; p18 subgroups"
+          }
+        },
+        {
+          "level_id": "L2",
+          "description": "Use common organizational-outcome sample medians for both outcomes.",
+          "label": "uncertain",
+          "source": "D1 PDF p11, Above-median count; p17 transformations; p18 subgroups",
+          "rationale": "Also consistent with one practice-count construction.",
+          "locator": {
+            "doc_id": "D1",
+            "pdf_page": 11,
+            "where": "Above-median count; p17 transformations; p18 subgroups"
+          }
+        },
+        {
+          "level_id": "L3",
+          "description": "Include ties at the median.",
+          "label": "non_equivalent",
+          "source": "D1 PDF p11, Above-median count; p17 transformations; p18 subgroups",
+          "rationale": "Contradicts above-median wording.",
+          "locator": {
+            "doc_id": "D1",
+            "pdf_page": 11,
+            "where": "Above-median count; p17 transformations; p18 subgroups"
+          }
+        },
+        {
+          "level_id": "L4",
+          "description": "Implement spline or unspecified interaction subsets after choosing knots/products.",
+          "label": "uncertain",
+          "source": "D1 PDF p11, Above-median count; p17 transformations; p18 subgroups",
+          "rationale": "Article says explored but supplies no exact basis; no automatic grid of invented choices is authorized.",
+          "locator": {
+            "doc_id": "D1",
+            "pdf_page": 11,
+            "where": "Above-median count; p17 transformations; p18 subgroups"
+          }
+        }
+      ],
+      "locator": {
+        "doc_id": "D1",
+        "pdf_page": 11,
+        "where": "Above-median count; p17 transformations; p18 subgroups"
+      }
+    },
+    {
+      "axis_id": "A17",
+      "decision": "Industry effects, mapping and reference",
+      "priority": "fixed_effects_clustering",
+      "origin_level": "L0",
+      "levels": [
+        {
+          "level_id": "L0",
+          "description": "Use documented two-digit SIC effects; source-to-SIC mapping unresolved where crosswalk is multi-valued or missing.",
+          "label": "origin",
+          "source": "D1 PDF p12, Two-digit SIC indicators; source/census1980_industry_sic1972_README.md and CSV",
+          "rationale": "Closest described branch; origin does not establish that an unspecified choice was actually used.",
+          "locator": {
+            "doc_id": "D1",
+            "pdf_page": 12,
+            "where": "Two-digit SIC indicators"
+          }
+        },
+        {
+          "level_id": "L1",
+          "description": "Apply supplied Census 1980/1972 SIC transcription to singleton mappings and leave ambiguous codes unresolved pending external documentation.",
+          "label": "uncertain",
+          "source": "D1 PDF p12, Two-digit SIC indicators; source/census1980_industry_sic1972_README.md and CSV",
+          "rationale": "Historical crosswalk is supplied but article SIC vintage and aggregation rules are absent.",
+          "locator": {
+            "doc_id": "D1",
+            "pdf_page": 12,
+            "where": "Two-digit SIC indicators"
+          }
+        },
+        {
+          "level_id": "L2",
+          "description": "Change omitted SIC group or use a full-rank contrast parameterization on identical groups.",
+          "label": "equivalent",
+          "source": "D1 PDF p12, Two-digit SIC indicators; source/census1980_industry_sic1972_README.md and CSV",
+          "rationale": "With intercept, same column space; HRM slopes/fit unchanged.",
+          "locator": {
+            "doc_id": "D1",
+            "pdf_page": 12,
+            "where": "Two-digit SIC indicators"
+          }
+        },
+        {
+          "level_id": "L3",
+          "description": "Use Census categories directly or truncate Census codes.",
+          "label": "non_equivalent",
+          "source": "D1 PDF p12, Two-digit SIC indicators; source/census1980_industry_sic1972_README.md and CSV",
+          "rationale": "Census categories are not two-digit SIC; does not reproduce specified effects.",
+          "locator": {
+            "doc_id": "D1",
+            "pdf_page": 12,
+            "where": "Two-digit SIC indicators"
+          }
+        },
+        {
+          "level_id": "L4",
+          "description": "Remove industry controls or replace them by broad sectors.",
+          "label": "non_equivalent",
+          "source": "D1 PDF p12, Two-digit SIC indicators; source/census1980_industry_sic1972_README.md and CSV",
+          "rationale": "Violates explicit industry-control specification.",
+          "locator": {
+            "doc_id": "D1",
+            "pdf_page": 12,
+            "where": "Two-digit SIC indicators"
+          }
+        }
+      ],
+      "locator": {
+        "doc_id": "D1",
+        "pdf_page": 12,
+        "where": "Two-digit SIC indicators"
+      }
+    },
+    {
+      "axis_id": "A20",
+      "decision": "Sampling weights and covariance",
+      "priority": "fixed_effects_clustering",
+      "origin_level": "L0",
+      "levels": [
+        {
+          "level_id": "L0",
+          "description": "Weights and covariance method are unstated; unweighted conventional OLS is only a working origin.",
+          "label": "origin",
+          "source": "D1 PDF p5, PPS establishment sampling; Tables 3/4 SE notes; source description sampling and weights; no external methods consulted",
+          "rationale": "Closest described branch; origin does not establish that an unspecified choice was actually used.",
+          "locator": {
+            "doc_id": "D1",
+            "pdf_page": 5,
+            "where": "PPS establishment sampling; Tables 3/4 SE notes"
+          }
+        },
+        {
+          "level_id": "L1",
+          "description": "Use establishment design weights WEIGHT or RAWWGT with a documented duplicate policy.",
+          "label": "uncertain",
+          "source": "D1 PDF p5, PPS establishment sampling; Tables 3/4 SE notes; source description sampling and weights; no external methods consulted",
+          "rationale": "Source states they undo PPS; changes projection population, so not automatically equivalent.",
+          "locator": {
+            "doc_id": "D1",
+            "pdf_page": 5,
+            "where": "PPS establishment sampling; Tables 3/4 SE notes"
+          }
+        },
+        {
+          "level_id": "L2",
+          "description": "Use heteroskedasticity-robust covariance.",
+          "label": "non_equivalent",
+          "source": "D1 PDF p5, PPS establishment sampling; Tables 3/4 SE notes; source description sampling and weights; no external methods consulted",
+          "rationale": "Same OLS point estimates, different inference; table notes do not identify robust SEs.",
+          "locator": {
+            "doc_id": "D1",
+            "pdf_page": 5,
+            "where": "PPS establishment sampling; Tables 3/4 SE notes"
+          }
+        },
+        {
+          "level_id": "L3",
+          "description": "Cluster repeated interviews by establishment or sampling nominations using a validated cluster identifier.",
+          "label": "uncertain",
+          "source": "D1 PDF p5, PPS establishment sampling; Tables 3/4 SE notes; source description sampling and weights; no external methods consulted",
+          "rationale": "Design and duplicates justify considering dependence, but cluster identity/correction are not specified.",
+          "locator": {
+            "doc_id": "D1",
+            "pdf_page": 5,
+            "where": "PPS establishment sampling; Tables 3/4 SE notes"
+          }
+        },
+        {
+          "level_id": "L4",
+          "description": "Cluster by industry.",
+          "label": "uncertain",
+          "source": "D1 PDF p5, PPS establishment sampling; Tables 3/4 SE notes; source description sampling and weights; no external methods consulted",
+          "rationale": "Shared industry environment motivates consideration but fixed effects do not imply this covariance; no article instruction supports calling it native.",
+          "locator": {
+            "doc_id": "D1",
+            "pdf_page": 5,
+            "where": "PPS establishment sampling; Tables 3/4 SE notes"
+          }
+        }
+      ],
+      "locator": {
+        "doc_id": "D1",
+        "pdf_page": 5,
+        "where": "PPS establishment sampling; Tables 3/4 SE notes"
+      }
+    },
+    {
+      "axis_id": "A21",
+      "decision": "Estimator and computational defaults",
+      "priority": "estimator",
+      "origin_level": "L0",
+      "levels": [
+        {
+          "level_id": "L0",
+          "description": "OLS with intercept as closest linear-regression interpretation; package/version and df convention unavailable.",
+          "label": "origin",
+          "source": "D1 PDF p11, Multiple regression choice",
+          "rationale": "Closest described branch; origin does not establish that an unspecified choice was actually used.",
+          "locator": {
+            "doc_id": "D1",
+            "pdf_page": 11,
+            "where": "Multiple regression choice"
+          }
+        },
+        {
+          "level_id": "L1",
+          "description": "QR versus another stable exact full-rank least-squares solver on identical design and rows.",
+          "label": "equivalent",
+          "source": "D1 PDF p11, Multiple regression choice",
+          "rationale": "Computes the same least-squares solution; this is an algebraic computational equivalence.",
+          "locator": {
+            "doc_id": "D1",
+            "pdf_page": 11,
+            "where": "Multiple regression choice"
+          }
+        },
+        {
+          "level_id": "L2",
+          "description": "Ordered-response regression instead of linear regression.",
+          "label": "non_equivalent",
+          "source": "D1 PDF p11, Multiple regression choice",
+          "rationale": "Changes link, estimand and multi-item scale treatment; no such reported model.",
+          "locator": {
+            "doc_id": "D1",
+            "pdf_page": 11,
+            "where": "Multiple regression choice"
+          }
+        },
+        {
+          "level_id": "L3",
+          "description": "Factor or cluster-derived HRM bundle model.",
+          "label": "non_equivalent",
+          "source": "D1 PDF p11, Multiple regression choice",
+          "rationale": "Article explicitly declines these approaches due to nonnormality; it is not the reported practice model.",
+          "locator": {
+            "doc_id": "D1",
+            "pdf_page": 11,
+            "where": "Multiple regression choice"
+          }
+        }
+      ],
+      "locator": {
+        "doc_id": "D1",
+        "pdf_page": 11,
+        "where": "Multiple regression choice"
+      }
+    },
+    {
+      "axis_id": "A22",
+      "decision": "Tail direction and multiplicity",
+      "priority": "estimator",
+      "origin_level": "L0",
+      "levels": [
+        {
+          "level_id": "L0",
+          "description": "One-tailed positive tests for H1/H2; nuisance-control direction and multiplicity correction unstated.",
+          "label": "origin",
+          "source": "D1 PDF p15, Table 3 significance notes; p17 Table 4 notes",
+          "rationale": "Closest described branch; origin does not establish that an unspecified choice was actually used.",
+          "locator": {
+            "doc_id": "D1",
+            "pdf_page": 15,
+            "where": "Table 3 significance notes; p17 Table 4 notes"
+          }
+        },
+        {
+          "level_id": "L1",
+          "description": "Forensic magnitude convention: evaluate smaller signed tail for every coefficient.",
+          "label": "uncertain",
+          "source": "D1 PDF p15, Table 3 significance notes; p17 Table 4 notes",
+          "rationale": "Negative control stars invite this diagnostic, but direction may not have been prespecified; do not interpret as positive-hypothesis support.",
+          "locator": {
+            "doc_id": "D1",
+            "pdf_page": 15,
+            "where": "Table 3 significance notes; p17 Table 4 notes"
+          }
+        },
+        {
+          "level_id": "L2",
+          "description": "Use two-sided p values or multiplicity adjustment.",
+          "label": "non_equivalent",
+          "source": "D1 PDF p15, Table 3 significance notes; p17 Table 4 notes",
+          "rationale": "Changes inference relative to printed one-tailed rule; can be supplementary, never substituted for native comparison.",
+          "locator": {
+            "doc_id": "D1",
+            "pdf_page": 15,
+            "where": "Table 3 significance notes; p17 Table 4 notes"
+          }
+        }
+      ],
+      "locator": {
+        "doc_id": "D1",
+        "pdf_page": 15,
+        "where": "Table 3 significance notes; p17 Table 4 notes"
+      }
+    }
+  ],
+  "compatibility_notes": "All reported outcomes and models remain mandatory, distinct specifications. Internal labor market versus hierarchy is a reported pair of models, not permission to select the more favorable one. Origin labels identify closest textual readings, not empirically selected solutions. Null/unknown origins must be resolved before execution. Do not cross product incompatible branches: zero-coded training cannot be logged without another explicit rule; reference-sample choices depend on duplicate and missingness rules; manager ratio and employment denominator must agree; nested tests require identical rows and industry design; any reparameterization must be converted to the original estimand. Explicit controls are fixed within the equivalent set. No alternative is selected using targets.",
+  "explicit_controls_fixed": true,
+  "paper_id": "PAPER_K7"
+}

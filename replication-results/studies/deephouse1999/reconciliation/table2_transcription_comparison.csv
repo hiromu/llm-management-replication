@@ -1,0 +1,32 @@
+model,term,coef_A,coef_B,se_A,se_B,stars_A,stars_B,match
+,table note,,,,,,,True
+M1,intercept,0.929,0.929,0.169,0.169,***,***,True
+M1,lag_relative_roa,0.369,0.369,0.028,0.028,***,***,True
+M1,market_share,-0.576,-0.576,0.138,0.138,***,***,True
+M1,real_market_growth,0.014,0.014,0.004,0.004,***,***,True
+M1,sd,,,,,,,True
+M1,sd_sq,,,,,,,True
+M1,sum of ^2 errors,,,,,,,True
+M1,total_expense_ratio,-9.948,-9.948,2.001,2.001,***,***,True
+M2,delta sum of ^2 errors over model 1,,,,,***(table);text:'significantatthep<0.001level',,False
+M2,intercept,1.164,1.164,0.172,0.172,***,***,True
+M2,lag_relative_roa,0.361,0.361,0.027,0.027,***,***,True
+M2,market_share,-0.093,-0.093,0.161,0.161,,,True
+M2,real_market_growth,0.016,0.016,0.004,0.004,***,***,True
+M2,sd,-0.02,-0.02,0.004,0.004,***,***,True
+M2,sd_sq,,,,,,,True
+M2,sum of ^2 errors,,,,,,,True
+M2,sum of ^2 errors over m1,,,,,,***,False
+M2,total_expense_ratio,-10.601,-10.601,1.974,1.974,***,***,True
+M3,delta sum of ^2 errors over model 1,,,,,***(table);text:'significantatthep<0.001level',,False
+M3,delta sum of ^2 errors over model 2,,,,,***(table);text:'alsosignificantatthep<0.001level',,False
+M3,intercept,0.511,0.511,0.171,0.171,**,**,True
+M3,lag_relative_roa,0.403,0.403,0.026,0.026,***,***,True
+M3,market_share,-0.457,-0.457,0.155,0.155,**,**,True
+M3,real_market_growth,0.018,0.018,0.003,0.003,***,***,True
+M3,sd,0.17,0.17,0.017,0.017,***,***,True
+M3,sd_sq,-0.006,-0.006,0.001,0.001,***,***,True
+M3,sum of ^2 errors,,,,,,,True
+M3,sum of ^2 errors over m1,,,,,,***,False
+M3,sum of ^2 errors over m2,,,,,,***,False
+M3,total_expense_ratio,-15.387,-15.387,1.895,1.895,***,***,True

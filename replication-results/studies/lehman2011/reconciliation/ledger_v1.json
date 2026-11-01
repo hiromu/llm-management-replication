@@ -1,0 +1,664 @@
+{
+ "ledger": [
+  {
+   "kind": "claim",
+   "fable": "C1",
+   "astra": "C2",
+   "note": "H1A",
+   "fable_tier": "focal",
+   "astra_tier": "focal",
+   "fable_type": "hypothesis",
+   "astra_type": "hypothesis",
+   "decision": "agree"
+  },
+  {
+   "kind": "claim",
+   "fable": "C2",
+   "astra": "C3",
+   "note": "H1B",
+   "fable_tier": "focal",
+   "astra_tier": "focal",
+   "fable_type": "hypothesis",
+   "astra_type": "hypothesis",
+   "decision": "agree"
+  },
+  {
+   "kind": "claim",
+   "fable": "C3",
+   "astra": "C4",
+   "note": "H2",
+   "fable_tier": "focal",
+   "astra_tier": "focal",
+   "fable_type": "hypothesis",
+   "astra_type": "hypothesis",
+   "decision": "agree"
+  },
+  {
+   "kind": "claim",
+   "fable": "C4",
+   "astra": "C5",
+   "note": "H3",
+   "fable_tier": "focal",
+   "astra_tier": "focal",
+   "fable_type": "hypothesis",
+   "astra_type": "hypothesis",
+   "decision": "agree"
+  },
+  {
+   "kind": "claim",
+   "fable": "C5",
+   "astra": "C9",
+   "note": "situational controls; fable splits minutes into C6",
+   "fable_tier": "nuisance_control",
+   "astra_tier": "nuisance_control",
+   "fable_type": "stated_finding",
+   "astra_type": "stated_finding",
+   "decision": "agree"
+  },
+  {
+   "kind": "claim",
+   "fable": "C7",
+   "astra": "C10",
+   "note": "model fit and LR improvement; fable splits M3 into C9",
+   "fable_tier": "identification_inference_diagnostic",
+   "astra_tier": "identification_inference_diagnostic",
+   "fable_type": "stated_finding",
+   "astra_type": "stated_finding",
+   "decision": "agree"
+  },
+  {
+   "kind": "claim",
+   "fable": "C8",
+   "astra": "C11",
+   "note": "below vs above aspiration difference test",
+   "fable_tier": "identification_inference_diagnostic",
+   "astra_tier": "identification_inference_diagnostic",
+   "fable_type": "stated_finding",
+   "astra_type": "stated_finding",
+   "decision": "agree"
+  },
+  {
+   "kind": "claim",
+   "fable": "C10",
+   "astra": "C15",
+   "note": "unexpected first-quarter finding just below aspiration",
+   "fable_tier": "robustness",
+   "astra_tier": "focal",
+   "fable_type": "stated_finding",
+   "astra_type": "stated_finding",
+   "decision": "tier disagreement -> uncertain tier; both retained"
+  },
+  {
+   "kind": "claim",
+   "fable": "C11",
+   "astra": "C7",
+   "note": "quarters-remaining robustness",
+   "fable_tier": "robustness",
+   "astra_tier": "robustness",
+   "fable_type": "robustness_claim",
+   "astra_type": "robustness_claim",
+   "decision": "agree"
+  },
+  {
+   "kind": "claim",
+   "fable": "C12",
+   "astra": "C18",
+   "note": "alternative aspiration and separate-choice robustness; astra splits into C18, C19",
+   "fable_tier": "robustness",
+   "astra_tier": "robustness",
+   "fable_type": "robustness_claim",
+   "astra_type": "robustness_claim",
+   "decision": "agree"
+  },
+  {
+   "kind": "claim",
+   "fable": "C13",
+   "astra": "C6",
+   "note": "fourth-down choice context",
+   "fable_tier": "descriptive",
+   "astra_tier": "descriptive",
+   "fable_type": "descriptive_claim",
+   "astra_type": "descriptive_claim",
+   "decision": "agree"
+  },
+  {
+   "kind": "claim",
+   "fable": "C14",
+   "astra": "C8",
+   "note": "conversion attempts per game and timing",
+   "fable_tier": "descriptive",
+   "astra_tier": "descriptive",
+   "fable_type": "descriptive_claim",
+   "astra_type": "descriptive_claim",
+   "decision": "agree"
+  },
+  {
+   "kind": "claim",
+   "fable": "C6",
+   "note": "The odds ratio for minutes remaining in Model 1 suggests a conversion attempt is more likely when fewer minutes remain on the clock.",
+   "tier": "nuisance_control",
+   "decision": "unmatched; retained (union)"
+  },
+  {
+   "kind": "claim",
+   "fable": "C9",
+   "note": "Model 3 fits satisfactorily and improves significantly over Model 2 by a likelihood-ratio test; each interaction between minutes remaining and performance is si",
+   "tier": "identification_inference_diagnostic",
+   "decision": "unmatched; retained (union)"
+  },
+  {
+   "kind": "claim",
+   "fable": "C15",
+   "note": "Distribution of performance (distance from aspiration) by quarter, separately for plays at or below and above the aspiration level (Table 4); range is -50 to 48",
+   "tier": "descriptive",
+   "decision": "unmatched; retained (union)"
+  },
+  {
+   "kind": "claim",
+   "fable": "C16",
+   "note": "Play-level descriptive statistics and correlations of the model variables (Table 1).",
+   "tier": "descriptive",
+   "decision": "unmatched; retained (union)"
+  },
+  {
+   "kind": "claim",
+   "fable": "C17",
+   "note": "Home-field advantage and week of season raise the likelihood of a conversion attempt in Models 2 and 3; total points is significant in Models 1 and 3; same divi",
+   "tier": "nuisance_control",
+   "decision": "unmatched; retained (union)"
+  },
+  {
+   "kind": "claim",
+   "astra": "C1",
+   "note": "Deadline proximity moderates the performance–risk relationship within a performance period; the hypotheses receive support.",
+   "tier": "focal",
+   "decision": "unmatched; retained (union)"
+  },
+  {
+   "kind": "claim",
+   "astra": "C12",
+   "note": "All-game marginal effects support the below-aspiration hypothesis but not the above-aspiration hypothesis.",
+   "tier": "focal",
+   "decision": "unmatched; retained (union)"
+  },
+  {
+   "kind": "claim",
+   "astra": "C13",
+   "note": "An inverted U-shaped relationship emerges and strengthens as the game progresses.",
+   "tier": "focal",
+   "decision": "unmatched; retained (union)"
+  },
+  {
+   "kind": "claim",
+   "astra": "C14",
+   "note": "Above aspirations, slopes are negative early and positive late; the evidence for deadline moderation is weak.",
+   "tier": "focal",
+   "decision": "unmatched; retained (union)"
+  },
+  {
+   "kind": "claim",
+   "astra": "C16",
+   "note": "Seven-point improvements in performance imply changes in conversion likelihood whose size depends on performance and time remaining.",
+   "tier": "focal",
+   "decision": "unmatched; retained (union)"
+  },
+  {
+   "kind": "claim",
+   "astra": "C17",
+   "note": "Patterns are consistent with attention shifting from aspirations early to survival or slack later.",
+   "tier": "identification_inference_diagnostic",
+   "decision": "unmatched; retained (union)"
+  },
+  {
+   "kind": "claim",
+   "astra": "C19",
+   "note": "Separate conversion-versus-kick and conversion-versus-punt analyses within and outside field-goal range produce qualitatively consistent results.",
+   "tier": "robustness",
+   "decision": "unmatched; retained (union)"
+  },
+  {
+   "kind": "variable",
+   "fable": "risk_taking",
+   "astra": "risk_taking",
+   "fable_certainty": "explicit",
+   "astra_certainty": "inferred",
+   "fable_definition": "Binary indicator of the offense's fourth-down choice: 1 if the offense attempted a fourth-down conversion (an ordinary run or pass play from scrimmage, including sacks and scrambles); 0 if the offense punted or attempted a field goal.",
+   "astra_definition": "Offensive choice on fourth down: conversion attempt versus punt or field-goal attempt, regardless of success. For unambiguous executed S1 pass/run (including sacks and scrambles) classify as attempt, and for unambiguous punt/field_goal classify as non-attempt. Use description and kick flags to detect conflicts/fakes; unresolved unusual plays remain missing until a coding rule is frozen."
+  },
+  {
+   "kind": "variable",
+   "fable": "performance",
+   "astra": "performance_gap",
+   "fable_certainty": "explicit",
+   "astra_certainty": "explicit",
+   "fable_definition": "Offense's score minus opponent's score at the time of the play, minus one point; i.e. the distance of the offense's current score from the aspiration level, where the aspiration level is defined as one point more than the opponent's score. Scores are those at the start of the play (before the play's outcome). Example in the paper: offense with six points and opponent with nine gives performance of minus four.",
+   "astra_definition": "Auxiliary pre-play point gap relative to aspiration: d = posteam_score - (defteam_score + 1) = score_differential - 1. Subtract the aspiration offset once, not twice. Use the worked example in the methods to disambiguate wording. Provider pre-play score columns are preferred over total_home_score/total_away_score, whose timing is disputed in the supplied dictionary."
+  },
+  {
+   "kind": "variable",
+   "fable": "perf_below",
+   "astra": "performance_below",
+   "fable_certainty": "explicit",
+   "astra_certainty": "explicit",
+   "fable_definition": "Spline piece for performance at or below the aspiration level: equals performance when performance <= 0 and 0 when performance > 0. Takes non-positive values.",
+   "astra_definition": "b = min(d,0), with missing d remaining missing; negative distance below the aspiration threshold, zero above."
+  },
+  {
+   "kind": "variable",
+   "fable": "perf_below_sq",
+   "astra": "performance_below_sq",
+   "fable_certainty": "explicit",
+   "astra_certainty": "explicit",
+   "fable_definition": "Square of the at-or-below spline piece, to allow curvature below the aspiration level. Zero when performance > 0.",
+   "astra_definition": "b*b, where b is performance_below; zero above aspiration, missing if b missing."
+  },
+  {
+   "kind": "variable",
+   "fable": "perf_above",
+   "astra": "performance_above",
+   "fable_certainty": "explicit",
+   "astra_certainty": "explicit",
+   "fable_definition": "Spline piece for performance above the aspiration level: equals performance when performance > 0 and 0 otherwise. Takes non-negative values.",
+   "astra_definition": "a = max(d,0), with missing d remaining missing; positive distance above aspiration, zero at or below."
+  },
+  {
+   "kind": "variable",
+   "fable": "below_indicator",
+   "astra": "below_indicator",
+   "fable_certainty": "explicit",
+   "astra_certainty": "explicit",
+   "fable_definition": "Indicator that performance is at or below the aspiration level, included so that the two spline pieces need not meet at the aspiration level.",
+   "astra_definition": "Indicator for d <= 0. Allows different intercepts on either side of the aspiration threshold. Equality belongs to the below branch. Table 5 includes this in M2 and M3; general prose says each model, creating an unresolved inconsistency for M1."
+  },
+  {
+   "kind": "variable",
+   "fable": "minutes_remaining",
+   "astra": "minutes_remaining",
+   "fable_certainty": "inferred",
+   "astra_certainty": "inferred",
+   "fable_definition": "Deadline proximity: regulation game time remaining at the time of the play, expressed in minutes. The paper says 'the number of minutes and seconds remaining to play the game at the time of each play' and treats the game as 60 minutes of four 15-minute quarters. Larger values mean a more distant deadline. After sample step 5 the variable lies strictly above two minutes and at most sixty.",
+   "astra_definition": "t = game_seconds_remaining/60 before the play, preserving seconds as fractions of a minute. Cross-check against ((4-qtr)*900 + quarter_seconds_remaining)/60. Larger t means a more distant deadline. The article does not state integer rounding or centering."
+  },
+  {
+   "kind": "variable",
+   "fable": "perf_below_x_min",
+   "astra": "below_x_time",
+   "fable_certainty": "explicit",
+   "astra_certainty": "explicit",
+   "fable_definition": "Product of perf_below and minutes_remaining.",
+   "astra_definition": "performance_below * minutes_remaining. Construct from the same underlying gap and clock; propagate missingness."
+  },
+  {
+   "kind": "variable",
+   "fable": "perf_below_sq_x_min",
+   "astra": "below_sq_x_time",
+   "fable_certainty": "explicit",
+   "astra_certainty": "explicit",
+   "fable_definition": "Product of perf_below_sq and minutes_remaining.",
+   "astra_definition": "performance_below_sq * minutes_remaining. Construct from the same underlying gap and clock; propagate missingness."
+  },
+  {
+   "kind": "variable",
+   "fable": "perf_above_x_min",
+   "astra": "above_x_time",
+   "fable_certainty": "explicit",
+   "astra_certainty": "explicit",
+   "fable_definition": "Product of perf_above and minutes_remaining. The indicator variable is NOT interacted with minutes remaining (only the three performance variables are).",
+   "astra_definition": "performance_above * minutes_remaining. Construct from the same underlying gap and clock; propagate missingness."
+  },
+  {
+   "kind": "variable",
+   "fable": "total_points",
+   "astra": "total_points",
+   "fable_certainty": "explicit",
+   "astra_certainty": "explicit",
+   "fable_definition": "Total number of points held by the offensive (possession) team at the time of the play (its own score before the play), not the combined score of both teams.",
+   "astra_definition": "Offensive-team points already accumulated before the play; use posteam_score, not final home_score/away_score or post-play scores."
+  },
+  {
+   "kind": "variable",
+   "fable": "yards_to_go_first_down",
+   "astra": "yards_first_down",
+   "fable_certainty": "explicit",
+   "astra_certainty": "inferred",
+   "fable_definition": "Yards needed for a first down at the snap (in goal-to-go situations the yards to the goal line, as recorded by the provider).",
+   "astra_definition": "Pre-play yards needed to gain a first down, or to reach the end zone in goal-to-go situations; use S1.ydstogo. Goal-to-go handling is source-based inference."
+  },
+  {
+   "kind": "variable",
+   "fable": "yards_to_go_touchdown",
+   "astra": "yards_touchdown",
+   "fable_certainty": "explicit",
+   "astra_certainty": "explicit",
+   "fable_definition": "Field location: yards from the line of scrimmage to the opponent's end zone at the snap.",
+   "astra_definition": "Distance from the pre-play line of scrimmage to the opponent end zone; use yardline_100, not yards from own end zone or kick_distance."
+  },
+  {
+   "kind": "variable",
+   "fable": "same_division",
+   "astra": "same_division",
+   "fable_certainty": "explicit",
+   "astra_certainty": "unclear",
+   "fable_definition": "Indicator that the opponent is in the same division as the offense in that season's league alignment.",
+   "astra_definition": "Same-division opponent indicator from S2.div_game, joined by game_id. Natural affirmative coding is inferred because the article does not give binary codes; do not invert or exchange labels without clarification."
+  },
+  {
+   "kind": "variable",
+   "fable": "same_conference",
+   "astra": "same_conference",
+   "fable_certainty": "unclear",
+   "astra_certainty": "unclear",
+   "fable_definition": "Indicator that the opponent is in the same conference as the offense in that season. Origin coding is the natural nested definition (all same-conference opponents, including same-division opponents, are coded 1). The paper lists 'same division' and 'same conference' as two separate controls without saying whether the conference indicator excludes division games; see open_questions and the specification space.",
+   "astra_definition": "Join offense and defense to a season-specific franchise-to-conference crosswalk and compare membership. Same division is ordinarily nested within same conference. Crosswalk is absent from supplied source descriptions; include realignment and franchise-entry timing only from documented information. A same-conference-excluding-division indicator is not explicitly stated."
+  },
+  {
+   "kind": "variable",
+   "fable": "home_field",
+   "astra": "home_field",
+   "fable_certainty": "explicit",
+   "astra_certainty": "unclear",
+   "fable_definition": "Indicator that the offense is playing in its own stadium (is the home team).",
+   "astra_definition": "Whether offense plays in its own stadium. Proposed origin uses S1.posteam_type == home for ordinary home venues and checks S2.location for neutral venues. A designated home team at a neutral or relocated venue is not necessarily at home; those cases need a documented rule."
+  },
+  {
+   "kind": "variable",
+   "fable": "week_of_season",
+   "astra": "season_week",
+   "fable_certainty": "explicit",
+   "astra_certainty": "explicit",
+   "fable_definition": "Week of the game within the regular season, entered as a single continuous (linear) regressor.",
+   "astra_definition": "Numbered week within the regular season, not team games played; use S1.week and cross-check S2.week."
+  },
+  {
+   "kind": "variable",
+   "fable": "team_fe",
+   "astra": "offense_team",
+   "fable_certainty": "inferred",
+   "astra_certainty": "inferred",
+   "fable_definition": "Fixed effect for the possession team (franchise identity, constant across seasons).",
+   "astra_definition": "Offensive franchise identity, normalized consistently across files and seasons. Closest reading is conditional-logit panel identifier by offensive franchise, not game, team-game, or team-season; exact panel declaration is absent."
+  },
+  {
+   "kind": "variable",
+   "fable": "year_fe",
+   "astra": "season_effect",
+   "fable_certainty": "inferred",
+   "astra_certainty": "inferred",
+   "fable_definition": "Season (year) fixed effects, entered as a set of season indicator variables with one season omitted.",
+   "astra_definition": "Season indicators, with a reference season omitted. Season is the football season, including games played in the following calendar year. Separate season effects rather than team-by-season effects are the closest reading."
+  },
+  {
+   "kind": "variable",
+   "astra": "quarters_remaining",
+   "decision": "unmatched; retained (union)",
+   "definition": "For the narrative robustness check, replace remaining minutes with an ordinal measure based on qtr. Candidate definition is 5-qtr, including the current quarter. Whether the article instead used 4-qtr, fractional quarters, or rounding is unstated. A constant shift is equivalent only if all associated main terms are retained and transformed consistently."
+  },
+  {
+   "kind": "variable",
+   "astra": "recent_spread_aspiration",
+   "decision": "unmatched; retained (union)",
+   "definition": "Narrative robustness alternative using a recently held point spread as aspiration. Lookback, reset rules, statistic and lag are absent; construction must remain undefined until documentary clarification."
+  },
+  {
+   "kind": "variable",
+   "astra": "within_field_goal_range",
+   "decision": "unmatched; retained (union)",
+   "definition": "Sample selector only for narrative robustness models; field-goal range cutoff and treatment of punts inside or kicks outside are not given. Requires a preregistered, documented rule; do not substitute nflverse expected-points or win-probability models."
+  },
+  {
+   "kind": "sample_step",
+   "fable": 1,
+   "astra": 1,
+   "note": "regular season, 2000-2005",
+   "fable_certainty": "explicit",
+   "astra_certainty": "explicit",
+   "fable_rule": "Load S1 play-by-play for seasons 2000, 2001, 2002, 2003, 2004 and 2005 and stack them. Keep only regular-season games: season_type == 'REG' (equivalently S2 game_type == 'REG'). Postseason games are excluded by the paper; preseason games are not present in the source.",
+   "astra_rule": "Load the S1 season files for seasons 2000 through 2005 inclusive. Keep season_type == REG; use season, not calendar year. For game summaries use the S2 regular-season game universe for the same seasons. Audit unavailable game coverage without fabricating play rows. Source mapping: data_description/source_descriptions.md, S1–S2."
+  },
+  {
+   "kind": "sample_step",
+   "fable": 3,
+   "astra": 4,
+   "note": "decision-play classification",
+   "fable_certainty": "inferred",
+   "astra_certainty": "unclear",
+   "fable_rule": "Keep only rows in which the offense made one of the three fourth-down choices: play_type in {'punt', 'field_goal', 'run', 'pass'}. Exclude play_type 'no_play' (timeouts and plays nullified by penalty), 'qb_kneel', 'qb_spike', empty/missing play_type, and any other code. The paper defines the decision as punt, field-goal attempt or conversion attempt and says nothing about penalties, kneel-downs, spikes or fakes; this rule is the closest reading. A fake punt or fake field goal that is recorded as a run or pass counts as a conversion attempt under this rule.",
+   "astra_rule": "Start from down == 4. Remove administrative events (timeouts and period-end markers), kickoff/extra-point/two-point events, and deleted plays when documented by the source. Closest executable convention: retain actual pass/run/punt/field-goal plays with a known offensive team; distinguish an executed play with a penalty from an administrative no_play row. Classification of nullified plays, kneels, spikes, fakes, aborted kicks, and intentional safeties is not specified; flag them for a prespecified adjudication rule, leaving unknown decisions missing. Do not define the outcome from conversion success alone or silently classify every non-kick row as an attempt."
+  },
+  {
+   "kind": "sample_step",
+   "fable": 4,
+   "astra": 3,
+   "note": "exclude overtime",
+   "fable_certainty": "explicit",
+   "astra_certainty": "explicit",
+   "fable_rule": "Exclude overtime plays: keep qtr <= 4 (equivalently game_half != 'Overtime').",
+   "astra_rule": "Retain regulation qtr in {1,2,3,4}; exclude all overtime. Do not exclude regulation plays merely because their game later enters overtime."
+  },
+  {
+   "kind": "sample_step",
+   "fable": 5,
+   "astra": 5,
+   "note": "exclude last two minutes",
+   "fable_certainty": "inferred",
+   "astra_certainty": "inferred",
+   "fable_rule": "Exclude the last two minutes of each game: drop plays with game_seconds_remaining <= 120 (i.e. keep plays with strictly more than two minutes of regulation time remaining at the snap). The paper motivates this by the two-minute warning at the end of the fourth quarter and says 'the last two minutes of each game' were removed; it does not say whether a play at exactly 2:00 is kept, and it does not remove the last two minutes of the first half. Because exclusion of overtime (step 4) already restricts to regulation, this is equivalent to dropping fourth-quarter plays with quarter_seconds_remaining <= 120.",
+   "astra_rule": "Remove plays with regulation game_seconds_remaining <= 120. This implements removal of the last two minutes; the exact treatment of a snap at 02:00 is not explicit. Keep the end of the first half. Prefer the pre-play clock, and flag disagreements with (4-qtr)*900 + quarter_seconds_remaining."
+  },
+  {
+   "kind": "sample_step",
+   "fable": 6,
+   "astra": 2,
+   "note": "join games file, team-code mapping",
+   "fable_certainty": "inferred",
+   "astra_certainty": "inferred",
+   "fable_rule": "Join S2 on game_id to attach game_type, week, div_game, location, home_team and away_team. Derive conference membership of posteam and defteam for the game's season from the derived membership table. Note that S1 team columns use current franchise abbreviations (LA, LAC, LV) while game_id and S2 use the abbreviations of the time (STL, SD, OAK); map abbreviations before any team comparison.",
+   "astra_rule": "Verify S1 keys game_id + play_id and S2 game_id uniqueness; merge S2 many-to-one by game_id. Resolve conflicting duplicate keys as a source-quality question rather than arbitrary deletion. Normalize team identities LA→STL, LAC→SD, LV→OAK for comparison with S2, retaining stable franchise identities for team effects. Source mapping: data_description/data_dictionary.md, Linkage."
+  },
+  {
+   "kind": "sample_step",
+   "fable": 7,
+   "astra": 7,
+   "note": "missing data",
+   "fable_certainty": "unclear",
+   "astra_certainty": "unclear",
+   "fable_rule": "Keep rows with non-missing values on every model variable listed under 'variables' (dependent variable, both score fields, game clock, ydstogo, yardline_100, posteam, posteam_type, week, season, division and conference indicators). The paper does not describe any missing-data handling; this is listwise deletion as performed by default by the stated software. Report how many rows are dropped at this step.",
+   "astra_rule": "The publication does not state a missing-data rule. Proposed origin: use a common complete-case set on the union of M1–M3 variables after sample and classification rules are settled, record exclusions, and use no imputation or weights. Report any groups lost through conditional likelihood or separation. This is an implementation assumption requiring freezing before fitting, not a documented exclusion."
+  },
+  {
+   "kind": "sample_step",
+   "fable": 2,
+   "decision": "unmatched; retained (union)",
+   "rule": "Keep rows with down == 4 (fourth-down plays). Rows with missing down (kickoffs, extra points, timeouts, end-of-quarter markers) are excluded."
+  },
+  {
+   "kind": "sample_step",
+   "fable": 8,
+   "decision": "unmatched; retained (union)",
+   "rule": "Define the panel (fixed-effect group) as the possession team (posteam, franchise identity constant across seasons) and the season as the year dimension. All franchises that appear in the regular-season data for these seasons form the team groups; the expansion franchise that first appears in 2002 is a group with fewer seasons."
+  },
+  {
+   "kind": "sample_step",
+   "astra": 6,
+   "decision": "unmatched; retained (union)",
+   "rule": "Construct all variables below from the pre-play state. Obtain a documented season-specific conference-membership lookup before deriving same_conference. S2.div_game supplies same_division. Do not replace either explicit control with a proxy, omit it, or infer its coding from a desired numerical result."
+  },
+  {
+   "kind": "spec_level",
+   "fable": "A2.1",
+   "astra": "A1.1",
+   "note": "keep a play at exactly 2:00",
+   "fable_label": "equivalent",
+   "astra_label": "uncertain",
+   "reconciled_label": "uncertain",
+   "fable_rationale": "Both are literal readings of the same stated rule; they differ only in plays snapped exactly at the two-minute mark, which under the two-minute-warning rule is a stoppage and rarely a snap time (D01 PDF pages 15-16, endnote 3).",
+   "astra_rationale": "D01 PDF pp. 15–16, Endnote 3 invokes the last two minutes and the warning but does not specify boundary inclusion; this is a narrow unresolved sample difference."
+  },
+  {
+   "kind": "spec_level",
+   "fable": "A1.1",
+   "astra": "A2.1",
+   "note": "include nullified fourth-down plays with an identifiable choice",
+   "fable_label": "uncertain",
+   "astra_label": "uncertain",
+   "reconciled_label": "uncertain",
+   "fable_rationale": "The paper is silent on plays nullified by penalty (D01 PDF page 8). A play that was snapped and then nullified still reveals the coach's choice, so including it is defensible, but the authors' source may not have recorded such plays as fourth-down plays. The data dictionary's 'pass' and 'rush' columns include plays with penalties while 'pass_attempt'/'rush_attempt' do not, so the two readings differ in the public data.",
+   "astra_rationale": "D01 PDF p. 8 describes decisions rather than provider play-type codes. A nullified snap can embody a decision even if it is not an official statistical play; its inclusion is not specified. No arbitrary all-penalties exclusion is justified."
+  },
+  {
+   "kind": "spec_level",
+   "fable": "A3.2",
+   "astra": "A3.1",
+   "note": "quarters remaining in place of minutes remaining",
+   "fable_label": "non_equivalent",
+   "astra_label": "non_equivalent",
+   "reconciled_label": "non_equivalent",
+   "fable_rationale": "The authors report this as a separate robustness check whose results were 'consistent' and chose minutes remaining for its greater variance (D01 PDF page 9). It is a different measure with a different scale, so Table 5 and Table 6 values are not comparable; it belongs to the robustness tier (claim C11).",
+   "astra_rationale": "D01 PDF p. 9 explicitly reports this robustness analysis, but coarsening time changes the design matrix and estimand. Exact ordinal convention is not supplied."
+  },
+  {
+   "kind": "spec_level",
+   "fable": "A5.1",
+   "astra": "A5.1",
+   "note": "unconditional logit with team and season dummies",
+   "fable_label": "equivalent",
+   "astra_label": "non_equivalent",
+   "reconciled_label": "uncertain",
+   "fable_rationale": "With a small number of groups each containing many hundreds of observations, the incidental-parameters bias of the dummy-variable logit is negligible and the conditional and unconditional fixed-effects logit estimates coincide to reporting precision (Chamberlain 1980, 'Analysis of covariance with qualitative data', Review of Economic Studies; Greene 2004, 'The behaviour of the maximum likelihood estimator of limited dependent variable models in the presence of fixed effects', Econometrics Journal). Log-likelihood and LR chi-square values are not comparable between the two (conditional versus unconditional likelihood), so only coefficients, standard errors and marginal effects should be compared.",
+   "astra_rationale": "D01 PDF p. 9 describes fixed effects but does not give options. Unconditional and conditional likelihoods differ in nuisance-effect treatment and finite-sample estimation, so this plausible interpretation must not be called numerically equivalent. It also changes how probability predictions can be constructed."
+  },
+  {
+   "kind": "spec_level",
+   "fable": "A1.2",
+   "label": "uncertain",
+   "description": "Additionally treat fourth-down qb_kneel and qb_spike rows as non-risky decisions (dependent variable = 0)",
+   "decision": "unmatched; retained (union)"
+  },
+  {
+   "kind": "spec_level",
+   "fable": "A3.1",
+   "label": "uncertain",
+   "description": "Whole minutes: floor(game_seconds_remaining / 60)",
+   "decision": "unmatched; retained (union)"
+  },
+  {
+   "kind": "spec_level",
+   "fable": "A4.1",
+   "label": "uncertain",
+   "description": "Exclusive: same_conference = 1 only for same-conference opponents in a different division (so the two indicators are mutually exclusive)",
+   "decision": "unmatched; retained (union)"
+  },
+  {
+   "kind": "spec_level",
+   "fable": "A5.2",
+   "label": "uncertain",
+   "description": "Conditional logit grouped by team-season (both team and year effects conditioned out, no season dummies)",
+   "decision": "unmatched; retained (union)"
+  },
+  {
+   "kind": "spec_level",
+   "fable": "A5.3",
+   "label": "non_equivalent",
+   "description": "Random-effects panel logit by team with season dummies (Stata xtlogit, re)",
+   "decision": "unmatched; retained (union)"
+  },
+  {
+   "kind": "spec_level",
+   "fable": "A6.1",
+   "label": "non_equivalent",
+   "description": "Cluster-robust standard errors by game (both teams' plays in a game share a cluster)",
+   "decision": "unmatched; retained (union)"
+  },
+  {
+   "kind": "spec_level",
+   "fable": "A6.2",
+   "label": "non_equivalent",
+   "description": "Cluster-robust standard errors by team",
+   "decision": "unmatched; retained (union)"
+  },
+  {
+   "kind": "spec_level",
+   "fable": "A7.1",
+   "label": "uncertain",
+   "description": "Finite difference: predicted probability at performance + 1 minus predicted probability at performance, same evaluation conventions",
+   "decision": "unmatched; retained (union)"
+  },
+  {
+   "kind": "spec_level",
+   "fable": "A7.2",
+   "label": "uncertain",
+   "description": "Same as A7.0 but with the group effect handled by averaging predicted probabilities over estimated team effects from the unconditional dummy-variable logit (A5.1), rather than setting it to zero",
+   "decision": "unmatched; retained (union)"
+  },
+  {
+   "kind": "spec_level",
+   "fable": "A7.3",
+   "label": "non_equivalent",
+   "description": "Average marginal effects over the sample distribution of controls instead of effects at means",
+   "decision": "unmatched; retained (union)"
+  },
+  {
+   "kind": "spec_level",
+   "fable": "A8.1",
+   "label": "uncertain",
+   "description": "Code home_field = 0 for both teams in games with S2 location == 'Neutral'",
+   "decision": "unmatched; retained (union)"
+  },
+  {
+   "kind": "spec_level",
+   "astra": "A3.2",
+   "label": "equivalent",
+   "description": "Use elapsed minutes = 60 - minutes remaining, retaining and transforming all lower-order terms and interactions.",
+   "decision": "unmatched; retained (union)"
+  },
+  {
+   "kind": "spec_level",
+   "astra": "A4.1",
+   "label": "equivalent",
+   "description": "Complement a binary control and transform the intercept/team effects and its coefficient consistently, preserving the exact observations and semantic categories.",
+   "decision": "unmatched; retained (union)"
+  },
+  {
+   "kind": "spec_level",
+   "astra": "A6.1",
+   "label": "uncertain",
+   "description": "Include below_indicator in M1 as well as M2 and M3.",
+   "decision": "unmatched; retained (union)"
+  },
+  {
+   "kind": "spec_level",
+   "astra": "A7.1",
+   "label": "uncertain",
+   "description": "Use complete cases separately for each model, recording all exclusions and estimating LR comparisons only on a common sample.",
+   "decision": "unmatched; retained (union)"
+  },
+  {
+   "kind": "spec_level",
+   "astra": "A8.1",
+   "label": "uncertain",
+   "description": "Report the right-hand derivative at the threshold, with the above-regime limit.",
+   "decision": "unmatched; retained (union)"
+  },
+  {
+   "kind": "spec_level",
+   "astra": "A9.1",
+   "label": "non_equivalent",
+   "description": "Replace aspiration with a benchmark based on recently held point spreads, once its exact lag/window and resetting rule are supplied.",
+   "decision": "unmatched; retained (union)"
+  },
+  {
+   "kind": "spec_level",
+   "astra": "A10.1",
+   "label": "non_equivalent",
+   "description": "Conversion versus kick within field-goal range, with documented range and third-choice treatment required.",
+   "decision": "unmatched; retained (union)"
+  },
+  {
+   "kind": "spec_level",
+   "astra": "A10.2",
+   "label": "non_equivalent",
+   "description": "Conversion versus punt outside field-goal range, with documented range and third-choice treatment required.",
+   "decision": "unmatched; retained (union)"
+  }
+ ]
+}

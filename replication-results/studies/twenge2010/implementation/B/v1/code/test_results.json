@@ -1,0 +1,279 @@
+{
+  "status": "ok",
+  "synthetic_only": true,
+  "seed": 20261028,
+  "design": "Three groups of 900, 1100, 1300 observations; five correlated factors, 19 indicators; known unequal latent means/variances, invariant loadings, six noninvariant intercepts. Gaussian draws whitened to exact known means/covariances.",
+  "checks": {
+    "Synthetic moments equal known population moments": {
+      "passed": true,
+      "details": 3.5527136788005009e-15
+    },
+    "M1 converges with expected df": {
+      "passed": true,
+      "details": {
+        "df": 426,
+        "expected": 426,
+        "warnings": [],
+        "error": null
+      }
+    },
+    "M2 converges with expected df": {
+      "passed": true,
+      "details": {
+        "df": 454,
+        "expected": 454,
+        "warnings": [],
+        "error": null
+      }
+    },
+    "M3 converges with expected df": {
+      "passed": true,
+      "details": {
+        "df": 482,
+        "expected": 482,
+        "warnings": [],
+        "error": null
+      }
+    },
+    "M4 converges with expected df": {
+      "passed": true,
+      "details": {
+        "df": 470,
+        "expected": 470,
+        "warnings": [],
+        "error": null
+      }
+    },
+    "M5 converges with expected df": {
+      "passed": true,
+      "details": {
+        "df": 480,
+        "expected": 480,
+        "warnings": [],
+        "error": null
+      }
+    },
+    "M4 recovers known loadings intercepts latent means and variances": {
+      "passed": true,
+      "details": {
+        "loadings": 1.9179106081068653e-08,
+        "intercepts": 5.3932295851488732e-08,
+        "means": 3.5218891580868217e-08,
+        "variances": 1.5829024713198692e-07
+      }
+    },
+    "M4 zero population discrepancy and custom Wishart chi-square": {
+      "passed": true,
+      "details": {
+        "chi_square": 2.8687781944044491e-11,
+        "lavaan_standard_chi_square": 3.0883740009812755e-11,
+        "SRMR": 2.1472898808133095e-08
+      }
+    },
+    "All 15 standardized contrasts recover truth": {
+      "passed": true,
+      "details": 4.8679707459475807e-08
+    },
+    "Contrast SE includes parameter covariance": {
+      "passed": true,
+      "details": {
+        "numerical_delta_SE": 0.043591007626287703,
+        "reported_SE": 0.043591007626361644,
+        "covariance": 7.3866876654409615e-05
+      }
+    },
+    "CHK1 M4 converges": {
+      "passed": true,
+      "details": {
+        "error": null,
+        "warnings": "lavaan->lav_model_vcov():  \n   The variance-covariance matrix of the estimated parameters (vcov) does not \n   appear to be positive definite! The smallest eigenvalue (= 7.881979e-17) \n   is close to zero. This may be a symptom that the model is not identified.",
+        "df": 468
+      }
+    },
+    "CHK1 identification invariant d_eq": {
+      "passed": true,
+      "details": 8.6660291304108128e-08
+    },
+    "CHK2 M4 converges": {
+      "passed": true,
+      "details": {
+        "error": null,
+        "warnings": [],
+        "df": 470
+      }
+    },
+    "CHK2 identification invariant d_eq": {
+      "passed": true,
+      "details": 5.354988666383953e-08
+    },
+    "S05 M4 converges": {
+      "passed": true,
+      "details": {
+        "error": null,
+        "warnings": [],
+        "df": 478
+      }
+    },
+    "S05 exact loading averages and intercept sums": {
+      "passed": true,
+      "details": 1.0026701691145945e-15
+    },
+    "Warm-start deletion agrees with cold refit": {
+      "passed": true,
+      "details": {
+        "warm": 0.13861514364553948,
+        "cold": 0.13861516101709248
+      }
+    },
+    "S01 normalized weighted covariance divisor n-1": {
+      "passed": true,
+      "details": null
+    },
+    "S02 covariance divisor n": {
+      "passed": true,
+      "details": null
+    },
+    "Weight validity includes dictionary missing codes": {
+      "passed": true,
+      "details": null
+    },
+    "S02 M4 supported and converges": {
+      "passed": true,
+      "details": {
+        "error": null,
+        "warnings": [],
+        "fit": {
+          "chi_square": 5.1816478136702754e-11,
+          "df": 470,
+          "p": 1,
+          "RMSEA": 0,
+          "CFI": 1,
+          "TLI": 1.0201189474592116,
+          "SRMR": 2.250893089357139e-08,
+          "SRMR_by_group": {
+            "1976": 3.2427781610312415e-08,
+            "1991": 1.5448633870200579e-08,
+            "2006": 2.1616131724833676e-08
+          },
+          "baseline": {
+            "chi_square": 26011.351792010031,
+            "df": 513,
+            "definition": "Free means and variances; zero covariances; no group constraints"
+          },
+          "sample_moments": 627,
+          "effective_free_parameters": 157,
+          "c_g": {
+            "1976": 900,
+            "1991": 1100,
+            "2006": 1300
+          },
+          "lavaan_standard_chi_square": 6.2527760746888816e-11
+        }
+      }
+    },
+    "S06 M4 supported and converges": {
+      "passed": true,
+      "details": {
+        "error": null,
+        "warnings": [],
+        "fit": {
+          "chi_square": 5.9632448245777147e-11,
+          "df": 470,
+          "p": 0.99999999999999989,
+          "RMSEA": 0,
+          "CFI": 1,
+          "TLI": 1.0201189474592112,
+          "SRMR": 2.2508930901089403e-08,
+          "SRMR_by_group": {
+            "1976": 3.2427781502974488e-08,
+            "1991": 1.5448633846339949e-08,
+            "2006": 2.1616131838418498e-08
+          },
+          "baseline": {
+            "chi_square": 26011.351792010031,
+            "df": 513,
+            "definition": "Free means and variances; zero covariances; no group constraints"
+          },
+          "sample_moments": 627,
+          "effective_free_parameters": 157,
+          "c_g": {
+            "1976": 900,
+            "1991": 1100,
+            "2006": 1300
+          },
+          "lavaan_standard_chi_square": 5.2224891078367364e-11,
+          "scaled_chi_square": {
+            "test": "yuan.bentler.mplus",
+            "chi_square": 5.2492571881223775e-11,
+            "df": 470,
+            "p": 1,
+            "scaling_factor": 0.99490059653655194
+          }
+        }
+      }
+    },
+    "S06 reports finite sandwich SE and scaled statistic": {
+      "passed": true,
+      "details": null
+    },
+    "S06 raw-data normalization agrees with explicit divisor-n discrepancy": {
+      "passed": true,
+      "details": {
+        "chi_square": 5.9632448245777147e-11,
+        "lavaan_standard_chi_square": 5.2224891078367364e-11
+      }
+    },
+    "S04 M4 supported and converges": {
+      "passed": true,
+      "details": {
+        "error": null,
+        "warnings": [],
+        "fit": {
+          "chi_square": 54.850706582760722,
+          "df": 470,
+          "p": 1,
+          "RMSEA": 0,
+          "CFI": 1,
+          "TLI": 1.0195146630068888,
+          "SRMR": 0.0071111295818953348,
+          "SRMR_by_group": {
+            "1976": 0.0079597602121549583,
+            "1991": 0.007666076056614156,
+            "2006": 0.0060540459746458251
+          },
+          "baseline": {
+            "chi_square": 23733.028812340483,
+            "df": 513,
+            "definition": "Free means and variances; zero covariances; no group constraints"
+          },
+          "sample_moments": 627,
+          "effective_free_parameters": 157,
+          "c_g": {
+            "1976": 900,
+            "1991": 1100,
+            "2006": 1300
+          },
+          "lavaan_standard_chi_square": 54.850706582760722
+        }
+      }
+    }
+  },
+  "software": {
+    "R": "R version 4.6.1 (2026-06-24)",
+    "packages": [
+      {
+        "package": "lavaan",
+        "version": "0.7.3"
+      },
+      {
+        "package": "jsonlite",
+        "version": "2.0.0"
+      },
+      {
+        "package": "numDeriv",
+        "version": "2016.8.1.1"
+      }
+    ],
+    "sessionInfo": ["R version 4.6.1 (2026-06-24)", "Platform: aarch64-apple-darwin25.6.0", "Running under: macOS Tahoe 26.6.2", "", "Matrix products: default", "BLAS:   /opt/homebrew/Cellar/openblas/0.3.34/lib/libopenblasp-r0.3.34.dylib ", "LAPACK: /opt/homebrew/Cellar/r/4.6.1_1/lib/R/lib/libRlapack.dylib;  LAPACK version 3.12.1", "", "locale:", "[1] C.UTF-8/C.UTF-8/C.UTF-8/C/C.UTF-8/C.UTF-8", "", "time zone: Asia/Tokyo", "tzcode source: internal", "", "attached base packages:", "[1] stats     graphics  grDevices utils     datasets  methods   base     ", "", "other attached packages:", "[1] jsonlite_2.0.0 lavaan_0.7-3  ", "", "loaded via a namespace (and not attached):", "[1] MASS_7.3-66         compiler_4.6.1      parallel_4.6.1     ", "[4] mnormt_2.1.2        pbivnorm_0.6.0      numDeriv_2016.8-1.1", "[7] stats4_4.6.1        quadprog_1.5-8     "]
+  }
+}

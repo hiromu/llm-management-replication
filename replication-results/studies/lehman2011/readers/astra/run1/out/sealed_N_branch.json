@@ -1,0 +1,636 @@
+{
+  "N_targets": [
+    {
+      "what": "Original regular-season regulation fourth-down decisions before late-game exclusion",
+      "value": 23965,
+      "source": {
+        "doc": "D01",
+        "pdf_page": 8,
+        "where": "Data"
+      }
+    },
+    {
+      "what": "Games in original data",
+      "value": 1520,
+      "source": {
+        "doc": "D01",
+        "pdf_page": 8,
+        "where": "Data"
+      }
+    },
+    {
+      "what": "Final fourth-down analysis sample",
+      "value": 22603,
+      "source": {
+        "doc": "D01",
+        "pdf_page": 8,
+        "where": "Data"
+      }
+    },
+    {
+      "what": "Table 1 play-level observations",
+      "value": 22603,
+      "source": {
+        "doc": "D01",
+        "pdf_page": 10,
+        "where": "Table 1 / note"
+      }
+    },
+    {
+      "what": "Table 2 games",
+      "value": 1520,
+      "source": {
+        "doc": "D01",
+        "pdf_page": 10,
+        "where": "Table 2 / note"
+      }
+    },
+    {
+      "what": "Table 5 Model 1 observations",
+      "value": 22603,
+      "source": {
+        "doc": "D01",
+        "pdf_page": 11,
+        "where": "Table 5 / Model 1 / No. of obs. (N)"
+      }
+    },
+    {
+      "what": "Table 5 Model 2 observations",
+      "value": 22603,
+      "source": {
+        "doc": "D01",
+        "pdf_page": 11,
+        "where": "Table 5 / Model 2 / No. of obs. (N)"
+      }
+    },
+    {
+      "what": "Table 5 Model 3 observations",
+      "value": 22603,
+      "source": {
+        "doc": "D01",
+        "pdf_page": 11,
+        "where": "Table 5 / Model 3 / No. of obs. (N)"
+      }
+    },
+    {
+      "what": "Table 3 / quarter 1 / total fourth downs",
+      "value": 5280,
+      "source": {
+        "doc": "D01",
+        "pdf_page": 10,
+        "where": "Table 3 / 1 / Total fourth downs"
+      }
+    },
+    {
+      "what": "Table 3 / quarter 2 / total fourth downs",
+      "value": 6532,
+      "source": {
+        "doc": "D01",
+        "pdf_page": 10,
+        "where": "Table 3 / 2 / Total fourth downs"
+      }
+    },
+    {
+      "what": "Table 3 / quarter 3 / total fourth downs",
+      "value": 5267,
+      "source": {
+        "doc": "D01",
+        "pdf_page": 10,
+        "where": "Table 3 / 3 / Total fourth downs"
+      }
+    },
+    {
+      "what": "Table 3 / quarter 4 / total fourth downs",
+      "value": 5524,
+      "source": {
+        "doc": "D01",
+        "pdf_page": 10,
+        "where": "Table 3 / 4 / Total fourth downs"
+      }
+    },
+    {
+      "what": "Table 3 / quarter All / total fourth downs",
+      "value": 22603,
+      "source": {
+        "doc": "D01",
+        "pdf_page": 10,
+        "where": "Table 3 / All / Total fourth downs"
+      }
+    },
+    {
+      "what": "Table 4 / quarter 1 / at or below aspiration N",
+      "value": 4529,
+      "source": {
+        "doc": "D01",
+        "pdf_page": 11,
+        "where": "Table 4 / Quarter 1 / at or below aspiration / N"
+      }
+    },
+    {
+      "what": "Table 4 / quarter 2 / at or below aspiration N",
+      "value": 4201,
+      "source": {
+        "doc": "D01",
+        "pdf_page": 11,
+        "where": "Table 4 / Quarter 2 / at or below aspiration / N"
+      }
+    },
+    {
+      "what": "Table 4 / quarter 3 / at or below aspiration N",
+      "value": 3096,
+      "source": {
+        "doc": "D01",
+        "pdf_page": 11,
+        "where": "Table 4 / Quarter 3 / at or below aspiration / N"
+      }
+    },
+    {
+      "what": "Table 4 / quarter 4 / at or below aspiration N",
+      "value": 3063,
+      "source": {
+        "doc": "D01",
+        "pdf_page": 11,
+        "where": "Table 4 / Quarter 4 / at or below aspiration / N"
+      }
+    },
+    {
+      "what": "Table 4 / quarter All / at or below aspiration N",
+      "value": 14889,
+      "source": {
+        "doc": "D01",
+        "pdf_page": 11,
+        "where": "Table 4 / Quarter All / at or below aspiration / N"
+      }
+    },
+    {
+      "what": "Table 4 / quarter 1 / above aspiration N",
+      "value": 751,
+      "source": {
+        "doc": "D01",
+        "pdf_page": 11,
+        "where": "Table 4 / Quarter 1 / above aspiration / N"
+      }
+    },
+    {
+      "what": "Table 4 / quarter 2 / above aspiration N",
+      "value": 2231,
+      "source": {
+        "doc": "D01",
+        "pdf_page": 11,
+        "where": "Table 4 / Quarter 2 / above aspiration / N"
+      }
+    },
+    {
+      "what": "Table 4 / quarter 3 / above aspiration N",
+      "value": 2171,
+      "source": {
+        "doc": "D01",
+        "pdf_page": 11,
+        "where": "Table 4 / Quarter 3 / above aspiration / N"
+      }
+    },
+    {
+      "what": "Table 4 / quarter 4 / above aspiration N",
+      "value": 2461,
+      "source": {
+        "doc": "D01",
+        "pdf_page": 11,
+        "where": "Table 4 / Quarter 4 / above aspiration / N"
+      }
+    },
+    {
+      "what": "Table 4 / quarter All / above aspiration N",
+      "value": 7714,
+      "source": {
+        "doc": "D01",
+        "pdf_page": 11,
+        "where": "Table 4 / Quarter All / above aspiration / N"
+      }
+    }
+  ],
+  "count_targets": [
+    {
+      "what": "Fourth-down observations removed for final two minutes of regulation",
+      "value": 1362,
+      "source": {
+        "doc": "D01",
+        "pdf_page": 16,
+        "where": "Endnote 3"
+      }
+    },
+    {
+      "what": "Franchise teams described",
+      "value": 32,
+      "source": {
+        "doc": "D01",
+        "pdf_page": 7,
+        "where": "Study Context / first paragraph"
+      }
+    },
+    {
+      "what": "Seasons described",
+      "value": 6,
+      "source": {
+        "doc": "D01",
+        "pdf_page": 13,
+        "where": "Discussion and Conclusion / opening paragraph"
+      }
+    },
+    {
+      "what": "Table 2 / conversion attempts 0 / game frequency",
+      "value": 352,
+      "source": {
+        "doc": "D01",
+        "pdf_page": 10,
+        "where": "Table 2 / row 0 / game frequency"
+      }
+    },
+    {
+      "what": "Table 2 / conversion attempts 0 / percentage",
+      "value": 23.16,
+      "source": {
+        "doc": "D01",
+        "pdf_page": 10,
+        "where": "Table 2 / row 0 / percentage"
+      }
+    },
+    {
+      "what": "Table 2 / conversion attempts 0 / cumulative percentage",
+      "value": 23.16,
+      "source": {
+        "doc": "D01",
+        "pdf_page": 10,
+        "where": "Table 2 / row 0 / cumulative percentage"
+      }
+    },
+    {
+      "what": "Table 2 / conversion attempts 1 / game frequency",
+      "value": 474,
+      "source": {
+        "doc": "D01",
+        "pdf_page": 10,
+        "where": "Table 2 / row 1 / game frequency"
+      }
+    },
+    {
+      "what": "Table 2 / conversion attempts 1 / percentage",
+      "value": 31.18,
+      "source": {
+        "doc": "D01",
+        "pdf_page": 10,
+        "where": "Table 2 / row 1 / percentage"
+      }
+    },
+    {
+      "what": "Table 2 / conversion attempts 1 / cumulative percentage",
+      "value": 54.34,
+      "source": {
+        "doc": "D01",
+        "pdf_page": 10,
+        "where": "Table 2 / row 1 / cumulative percentage"
+      }
+    },
+    {
+      "what": "Table 2 / conversion attempts 2 / game frequency",
+      "value": 382,
+      "source": {
+        "doc": "D01",
+        "pdf_page": 10,
+        "where": "Table 2 / row 2 / game frequency"
+      }
+    },
+    {
+      "what": "Table 2 / conversion attempts 2 / percentage",
+      "value": 25.13,
+      "source": {
+        "doc": "D01",
+        "pdf_page": 10,
+        "where": "Table 2 / row 2 / percentage"
+      }
+    },
+    {
+      "what": "Table 2 / conversion attempts 2 / cumulative percentage",
+      "value": 79.47,
+      "source": {
+        "doc": "D01",
+        "pdf_page": 10,
+        "where": "Table 2 / row 2 / cumulative percentage"
+      }
+    },
+    {
+      "what": "Table 2 / conversion attempts 3 / game frequency",
+      "value": 167,
+      "source": {
+        "doc": "D01",
+        "pdf_page": 10,
+        "where": "Table 2 / row 3 / game frequency"
+      }
+    },
+    {
+      "what": "Table 2 / conversion attempts 3 / percentage",
+      "value": 10.99,
+      "source": {
+        "doc": "D01",
+        "pdf_page": 10,
+        "where": "Table 2 / row 3 / percentage"
+      }
+    },
+    {
+      "what": "Table 2 / conversion attempts 3 / cumulative percentage",
+      "value": 90.46,
+      "source": {
+        "doc": "D01",
+        "pdf_page": 10,
+        "where": "Table 2 / row 3 / cumulative percentage"
+      }
+    },
+    {
+      "what": "Table 2 / conversion attempts 4 / game frequency",
+      "value": 99,
+      "source": {
+        "doc": "D01",
+        "pdf_page": 10,
+        "where": "Table 2 / row 4 / game frequency"
+      }
+    },
+    {
+      "what": "Table 2 / conversion attempts 4 / percentage",
+      "value": 6.51,
+      "source": {
+        "doc": "D01",
+        "pdf_page": 10,
+        "where": "Table 2 / row 4 / percentage"
+      }
+    },
+    {
+      "what": "Table 2 / conversion attempts 4 / cumulative percentage",
+      "value": 96.97,
+      "source": {
+        "doc": "D01",
+        "pdf_page": 10,
+        "where": "Table 2 / row 4 / cumulative percentage"
+      }
+    },
+    {
+      "what": "Table 2 / conversion attempts 5 / game frequency",
+      "value": 33,
+      "source": {
+        "doc": "D01",
+        "pdf_page": 10,
+        "where": "Table 2 / row 5 / game frequency"
+      }
+    },
+    {
+      "what": "Table 2 / conversion attempts 5 / percentage",
+      "value": 2.17,
+      "source": {
+        "doc": "D01",
+        "pdf_page": 10,
+        "where": "Table 2 / row 5 / percentage"
+      }
+    },
+    {
+      "what": "Table 2 / conversion attempts 5 / cumulative percentage",
+      "value": 99.14,
+      "source": {
+        "doc": "D01",
+        "pdf_page": 10,
+        "where": "Table 2 / row 5 / cumulative percentage"
+      }
+    },
+    {
+      "what": "Table 2 / conversion attempts 6 / game frequency",
+      "value": 7,
+      "source": {
+        "doc": "D01",
+        "pdf_page": 10,
+        "where": "Table 2 / row 6 / game frequency"
+      }
+    },
+    {
+      "what": "Table 2 / conversion attempts 6 / percentage",
+      "value": 0.46,
+      "source": {
+        "doc": "D01",
+        "pdf_page": 10,
+        "where": "Table 2 / row 6 / percentage"
+      }
+    },
+    {
+      "what": "Table 2 / conversion attempts 6 / cumulative percentage",
+      "value": 99.6,
+      "source": {
+        "doc": "D01",
+        "pdf_page": 10,
+        "where": "Table 2 / row 6 / cumulative percentage"
+      }
+    },
+    {
+      "what": "Table 2 / conversion attempts 7 / game frequency",
+      "value": 5,
+      "source": {
+        "doc": "D01",
+        "pdf_page": 10,
+        "where": "Table 2 / row 7 / game frequency"
+      }
+    },
+    {
+      "what": "Table 2 / conversion attempts 7 / percentage",
+      "value": 0.33,
+      "source": {
+        "doc": "D01",
+        "pdf_page": 10,
+        "where": "Table 2 / row 7 / percentage"
+      }
+    },
+    {
+      "what": "Table 2 / conversion attempts 7 / cumulative percentage",
+      "value": 99.93,
+      "source": {
+        "doc": "D01",
+        "pdf_page": 10,
+        "where": "Table 2 / row 7 / cumulative percentage"
+      }
+    },
+    {
+      "what": "Table 2 / conversion attempts 8 / game frequency",
+      "value": 1,
+      "source": {
+        "doc": "D01",
+        "pdf_page": 10,
+        "where": "Table 2 / row 8 / game frequency"
+      }
+    },
+    {
+      "what": "Table 2 / conversion attempts 8 / percentage",
+      "value": 0.07,
+      "source": {
+        "doc": "D01",
+        "pdf_page": 10,
+        "where": "Table 2 / row 8 / percentage"
+      }
+    },
+    {
+      "what": "Table 2 / conversion attempts 8 / cumulative percentage",
+      "value": 100.0,
+      "source": {
+        "doc": "D01",
+        "pdf_page": 10,
+        "where": "Table 2 / row 8 / cumulative percentage"
+      }
+    },
+    {
+      "what": "Table 3 / quarter 1 / conversion attempts",
+      "value": 323,
+      "source": {
+        "doc": "D01",
+        "pdf_page": 10,
+        "where": "Table 3 / 1 / Conversion attempts"
+      }
+    },
+    {
+      "what": "Table 3 / quarter 1 / percentage",
+      "value": 6.12,
+      "source": {
+        "doc": "D01",
+        "pdf_page": 10,
+        "where": "Table 3 / 1 / Percentage"
+      }
+    },
+    {
+      "what": "Table 3 / quarter 2 / conversion attempts",
+      "value": 552,
+      "source": {
+        "doc": "D01",
+        "pdf_page": 10,
+        "where": "Table 3 / 2 / Conversion attempts"
+      }
+    },
+    {
+      "what": "Table 3 / quarter 2 / percentage",
+      "value": 8.45,
+      "source": {
+        "doc": "D01",
+        "pdf_page": 10,
+        "where": "Table 3 / 2 / Percentage"
+      }
+    },
+    {
+      "what": "Table 3 / quarter 3 / conversion attempts",
+      "value": 468,
+      "source": {
+        "doc": "D01",
+        "pdf_page": 10,
+        "where": "Table 3 / 3 / Conversion attempts"
+      }
+    },
+    {
+      "what": "Table 3 / quarter 3 / percentage",
+      "value": 8.89,
+      "source": {
+        "doc": "D01",
+        "pdf_page": 10,
+        "where": "Table 3 / 3 / Percentage"
+      }
+    },
+    {
+      "what": "Table 3 / quarter 4 / conversion attempts",
+      "value": 1042,
+      "source": {
+        "doc": "D01",
+        "pdf_page": 10,
+        "where": "Table 3 / 4 / Conversion attempts"
+      }
+    },
+    {
+      "what": "Table 3 / quarter 4 / percentage",
+      "value": 18.86,
+      "source": {
+        "doc": "D01",
+        "pdf_page": 10,
+        "where": "Table 3 / 4 / Percentage"
+      }
+    },
+    {
+      "what": "Table 3 / quarter All / conversion attempts",
+      "value": 2385,
+      "source": {
+        "doc": "D01",
+        "pdf_page": 10,
+        "where": "Table 3 / All / Conversion attempts"
+      }
+    },
+    {
+      "what": "Table 3 / quarter All / percentage",
+      "value": 10.55,
+      "source": {
+        "doc": "D01",
+        "pdf_page": 10,
+        "where": "Table 3 / All / Percentage"
+      }
+    },
+    {
+      "what": "Punt or field goal share of fourth downs (percent)",
+      "value": 89.45,
+      "source": {
+        "doc": "D01",
+        "pdf_page": 8,
+        "where": "Study Context / third reason"
+      }
+    },
+    {
+      "what": "Punts giving opponent possession on its own half (percent)",
+      "value": 86.79,
+      "source": {
+        "doc": "D01",
+        "pdf_page": 8,
+        "where": "Study Context / third reason"
+      }
+    },
+    {
+      "what": "Successful field-goal attempts (percent)",
+      "value": 79.93,
+      "source": {
+        "doc": "D01",
+        "pdf_page": 8,
+        "where": "Study Context / third reason"
+      }
+    },
+    {
+      "what": "Conversion-attempt share of fourth downs (percent)",
+      "value": 10.55,
+      "source": {
+        "doc": "D01",
+        "pdf_page": 8,
+        "where": "Study Context / third reason"
+      }
+    },
+    {
+      "what": "Successful conversion attempts (percent)",
+      "value": 46.0,
+      "source": {
+        "doc": "D01",
+        "pdf_page": 8,
+        "where": "Study Context / third reason"
+      }
+    },
+    {
+      "what": "Conversion attempts handing possession to opponent (percent)",
+      "value": 54.0,
+      "source": {
+        "doc": "D01",
+        "pdf_page": 8,
+        "where": "Study Context / third reason"
+      }
+    },
+    {
+      "what": "Games with at least one conversion attempt (percent)",
+      "value": 76.84,
+      "source": {
+        "doc": "D01",
+        "pdf_page": 10,
+        "where": "Results / first paragraph"
+      }
+    }
+  ]
+}

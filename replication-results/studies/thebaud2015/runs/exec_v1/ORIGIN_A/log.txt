@@ -1,0 +1,19 @@
+02:13:50 - reading inputs from data/derived 
+02:13:51 - gem_extract rows: 713933; country_year rows: 264 
+02:13:51 - run ORIGIN: preparing data 
+02:17:09 - run ORIGIN model M1: status=ok n=345570 (196.2s) 
+02:26:48 - run ORIGIN model M2: status=ok n=342734 (579.4s) 
+02:37:53 - run ORIGIN model M3: status=ok n=342734 (665.1s) 
+02:40:03 - run ORIGIN model M4: status=ok n=31520 (130.2s) 
+boundary (singular) fit: see help('isSingular')
+02:40:07 - run ORIGIN model M5: status=ok n=33626 (3.3s) 
+02:44:56 - run ORIGIN model M6: status=ok n=29961 (289.8s) 
+02:49:07 - run ORIGIN model M7: status=ok n=32890 (250.2s) 
+02:52:10 - run ORIGIN model M8: status=ok n=19944 (183.5s) 
+03:34:29 - run ORIGIN model R1: status=ok n=342734 (2538.6s) 
+03:57:54 - run ORIGIN model R2: status=ok n=438919 (1405.2s) 
+04:19:52 - run ORIGIN model R3: status=ok n=256913 (1318.2s) 
+04:19:52 - done: 277 result rows written to runs/exec_v1/ORIGIN_A 
+real 7562.76
+user 7392.78
+sys 43.97

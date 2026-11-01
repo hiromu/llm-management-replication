@@ -1,0 +1,16 @@
+impl_C_v1 rc 0 sec 517 {"models_in_events": [], "effort_in_events": [], "service_tier_in_events": []} 
+impl_B_v1 rc 0 sec 652 {"models_in_events": [], "effort_in_events": [], "service_tier_in_events": []} 
+checker_C_v1 rc 0 sec 211 {"modelUsage": ["claude-fable-5-1"], "is_error": false, "num_turns": 6, "total_cost_usd": 1.7973192500000001} 
+C checker v1 lines 2
+impl_C_v2 rc 0 sec 85 {"models_in_events": [], "effort_in_events": [], "service_tier_in_events": []} 
+impl_A_v1 rc 0 sec 921 {"modelUsage": ["claude-fable-5-1"], "is_error": false, "num_turns": 31, "total_cost_usd": 6.476666999999999} 
+checker_B_v1 rc 0 sec 353 {"modelUsage": ["claude-fable-5-1"], "is_error": false, "num_turns": 6, "total_cost_usd": 2.517246} 
+B checker v1 lines 1
+checker_A_v1 rc 0 sec 90 {"models_in_events": [], "effort_in_events": [], "service_tier_in_events": []} 
+A checker v1 lines 11
+checker_C_v2 rc 0 sec 344 {"modelUsage": ["claude-fable-5-1"], "is_error": false, "num_turns": 5, "total_cost_usd": 2.4368565} 
+C checker v2 lines 1
+impl_A_v2 rc 0 sec 740 {"modelUsage": ["claude-fable-5-1"], "is_error": false, "num_turns": 25, "total_cost_usd": 6.133225250000001} 
+checker_A_v2 rc 0 sec 104 {"models_in_events": [], "effort_in_events": [], "service_tier_in_events": []} 
+A checker v2 lines 1
+ALL DONE

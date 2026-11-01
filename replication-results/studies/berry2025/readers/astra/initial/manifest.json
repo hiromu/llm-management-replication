@@ -1,0 +1,4421 @@
+{
+  "paper_id": "PX01",
+  "studies": {
+    "1": {
+      "data_file": "unstated; D41_columns_study1.txt contains column names only",
+      "unit_of_observation": "participant × relationship-condition rating; inferred long layout from part_uid and cond",
+      "design": {
+        "factors": [
+          {
+            "name": "relationship to broker",
+            "column": "cond",
+            "levels": [
+              "loyal",
+              "control"
+            ],
+            "between_or_within": "within"
+          },
+          {
+            "name": "type of wrongdoing",
+            "column": "wrongdoing",
+            "levels": [
+              "sexual harassment",
+              "theft",
+              "false_advertising",
+              "fraud",
+              "bribery",
+              "plagiarism",
+              "dishonesty"
+            ],
+            "between_or_within": "between"
+          }
+        ],
+        "assignment_unit": "participant; wrongdoing assignment and order of within-person relationship conditions randomized",
+        "source_locator": "D01 PDF p. 7 (printed p. 768; Procedure); D11 PDF p. 1 §4; D31 rows cond, wrongdoing; D41 (unpaginated)"
+      },
+      "sample_steps": [
+        {
+          "order": 1,
+          "description": "Recruit full-time employees and assign wrongdoing and relationship order. Recruitment/eligibility variables absent from supplied columns.",
+          "variables": "unstated",
+          "values": "unstated",
+          "source_locator": "D01 PDF p. 7 (Participants and Procedure); D11 PDF p. 1 §§2,4,7",
+          "mapping_status": "documented"
+        },
+        {
+          "order": 2,
+          "description": "Exclude participants failing simple attention checks; exact failure aggregation across repeated records and handling of missing checks are unstated.",
+          "variables": [
+            "attn",
+            "wrongdoing_num"
+          ],
+          "values": "Candidate match attn == wrongdoing_num; inferred from matching category codes, not a documented exclusion algorithm.",
+          "source_locator": "D11 PDF p. 1 §6; D31 rows attn, wrongdoing_num; D41 (unpaginated)",
+          "mapping_status": "inferred"
+        },
+        {
+          "order": 3,
+          "description": "Recruit additional batches after attention exclusions until preregistered stopping rule, before inspecting outcomes. Batch membership and discarded observations are unavailable.",
+          "variables": "unstated",
+          "values": "unstated",
+          "source_locator": "D01 PDF p. 7 (Transparency and Openness); D11 PDF p. 1 §7",
+          "mapping_status": "documented"
+        },
+        {
+          "order": 4,
+          "description": "Link within-person relationship responses for paired analyses.",
+          "variables": [
+            "part_uid",
+            "cond"
+          ],
+          "values": "Pair loyal with control using part_uid; duplicate, incomplete-pair and missing-item rules unstated.",
+          "source_locator": "D11 PDF p. 1 §§4–5; D31 rows part_uid, cond; D41 (unpaginated)",
+          "mapping_status": "inferred"
+        }
+      ],
+      "variables": [
+        {
+          "name": "you_grant",
+          "source_columns": [
+            "you_grant"
+          ],
+          "reverse_coding": "none documented",
+          "scoring_rule": "Single item: likelihood of granting the colleague/broker request; 1=extremely unlikely, 7=extremely likely.",
+          "condition_coding": "not applicable",
+          "mapping_status": "documented",
+          "source_locator": "D31 row you_grant; D41 (unpaginated); D01 PDF p. 9"
+        },
+        {
+          "name": "prom_voice",
+          "source_columns": [
+            "prom_voice"
+          ],
+          "reverse_coding": "none documented",
+          "scoring_rule": "Single item: I would speak up publicly in support of the accused; 1=strongly disagree, 7=strongly agree.",
+          "condition_coding": "not applicable",
+          "mapping_status": "documented",
+          "source_locator": "D31 row prom_voice; D41 (unpaginated); D01 PDF p. 9"
+        },
+        {
+          "name": "proh_voice",
+          "source_columns": [
+            "proh_voice"
+          ],
+          "reverse_coding": "none documented",
+          "scoring_rule": "Single item: I would speak up and condemn the accusations made against the accused; 1=strongly disagree, 7=strongly agree.",
+          "condition_coding": "not applicable",
+          "mapping_status": "documented",
+          "source_locator": "D31 row proh_voice; D41 (unpaginated); D01 PDF p. 9"
+        },
+        {
+          "name": "gender",
+          "source_columns": [
+            "gender"
+          ],
+          "reverse_coding": "none documented",
+          "scoring_rule": "single recorded category",
+          "condition_coding": "1=female; 2=male; 3=open-text entry; exploratory binary comparisons retain 1 or 2, inferred from descriptions",
+          "mapping_status": "documented",
+          "source_locator": "D31 row gender; D03 PDF pp. 5–6; D01 PDF p. 17 (printed p. 778)"
+        },
+        {
+          "name": "cond_recode",
+          "source_columns": [
+            "cond",
+            "cond_recode"
+          ],
+          "reverse_coding": "none documented",
+          "scoring_rule": "existing numeric recode",
+          "condition_coding": "loyal=1, control=0",
+          "mapping_status": "documented",
+          "source_locator": "D31 rows cond, cond_recode; D01 PDF p. 9 Table 2"
+        },
+        {
+          "name": "wrongdoing_num",
+          "source_columns": [
+            "wrongdoing",
+            "wrongdoing_num"
+          ],
+          "reverse_coding": "none documented",
+          "scoring_rule": "categorical code",
+          "condition_coding": {
+            "1": "sexual harassment",
+            "2": "theft",
+            "3": "false_advertising",
+            "4": "fraud",
+            "5": "bribery",
+            "6": "plagiarism",
+            "7": "dishonesty"
+          },
+          "mapping_status": "documented",
+          "source_locator": "D31 rows wrongdoing, wrongdoing_num; D11 PDF p. 1 §4"
+        },
+        {
+          "name": "loyal_comb",
+          "source_columns": [
+            "loyal1",
+            "loyal2",
+            "loyal3"
+          ],
+          "reverse_coding": "none documented",
+          "scoring_rule": "D31 literal formula loyal1+loyal2+loyal3; averaging inferred from documented response scale but not stated. Existing composite available; aggregation unresolved.",
+          "condition_coding": "not applicable",
+          "mapping_status": "documented",
+          "source_locator": "D31 loyalty rows; D01 PDF p. 9 Manipulation Check"
+        },
+        {
+          "name": "magnitude",
+          "source_columns": [
+            "magnitude1_rev",
+            "magnitude2"
+          ],
+          "reverse_coding": "Reverse magnitude1; 8−item is inferred for 1–7 scale, using existing _rev column requires validation.",
+          "scoring_rule": "D31 literal sum; D03 defines paired subscale without aggregation operator. Source anchors conflict: D03 and D11 1=agree,7=disagree; D31 1=disagree,7=agree. No interaction-probing model specified.",
+          "condition_coding": "not applicable",
+          "mapping_status": "documented",
+          "source_locator": "D03 PDF p. 1; D11 PDF pp. 1–2 §8; D31 corresponding item/composite rows"
+        },
+        {
+          "name": "prob_of_effect",
+          "source_columns": [
+            "prob_effect1",
+            "prob_effect2_rev"
+          ],
+          "reverse_coding": "Reverse prob_effect2; 8−item is inferred for 1–7 scale, using existing _rev column requires validation.",
+          "scoring_rule": "D31 literal sum; D03 defines paired subscale without aggregation operator. Source anchors conflict: D03 and D11 1=agree,7=disagree; D31 1=disagree,7=agree. No interaction-probing model specified.",
+          "condition_coding": "not applicable",
+          "mapping_status": "documented",
+          "source_locator": "D03 PDF p. 1; D11 PDF pp. 1–2 §8; D31 corresponding item/composite rows"
+        },
+        {
+          "name": "temp_immediacy",
+          "source_columns": [
+            "temp_imm1",
+            "temp_imm2_rev"
+          ],
+          "reverse_coding": "Reverse temp_imm2; 8−item is inferred for 1–7 scale, using existing _rev column requires validation.",
+          "scoring_rule": "D31 literal sum; D03 defines paired subscale without aggregation operator. Source anchors conflict: D03 and D11 1=agree,7=disagree; D31 1=disagree,7=agree. No interaction-probing model specified.",
+          "condition_coding": "not applicable",
+          "mapping_status": "documented",
+          "source_locator": "D03 PDF p. 1; D11 PDF pp. 1–2 §8; D31 corresponding item/composite rows"
+        },
+        {
+          "name": "proximity_effect",
+          "source_columns": [
+            "proxim_eff1_rev",
+            "proxim_eff2"
+          ],
+          "reverse_coding": "Reverse proxim_eff1; 8−item is inferred for 1–7 scale, using existing _rev column requires validation.",
+          "scoring_rule": "D31 literal sum; D03 defines paired subscale without aggregation operator. Source anchors conflict: D03 and D11 1=agree,7=disagree; D31 1=disagree,7=agree. No interaction-probing model specified.",
+          "condition_coding": "not applicable",
+          "mapping_status": "documented",
+          "source_locator": "D03 PDF p. 1; D11 PDF pp. 1–2 §8; D31 corresponding item/composite rows"
+        },
+        {
+          "name": "social_consensus",
+          "source_columns": [
+            "social_cons1",
+            "social_cons2_rev"
+          ],
+          "reverse_coding": "Reverse social_cons2; 8−item is inferred for 1–7 scale, using existing _rev column requires validation.",
+          "scoring_rule": "D31 literal sum; D03 defines paired subscale without aggregation operator. Source anchors conflict: D03 and D11 1=agree,7=disagree; D31 1=disagree,7=agree. No interaction-probing model specified.",
+          "condition_coding": "not applicable",
+          "mapping_status": "documented",
+          "source_locator": "D03 PDF p. 1; D11 PDF pp. 1–2 §8; D31 corresponding item/composite rows"
+        },
+        {
+          "name": "concentration_of_effect",
+          "source_columns": [
+            "concen_eff1_rev",
+            "concen_eff2"
+          ],
+          "reverse_coding": "Reverse concen_eff1; 8−item is inferred for 1–7 scale, using existing _rev column requires validation.",
+          "scoring_rule": "D31 literal sum; D03 defines paired subscale without aggregation operator. Source anchors conflict: D03 and D11 1=agree,7=disagree; D31 1=disagree,7=agree. No interaction-probing model specified.",
+          "condition_coding": "not applicable",
+          "mapping_status": "documented",
+          "source_locator": "D03 PDF p. 1; D11 PDF pp. 1–2 §8; D31 corresponding item/composite rows"
+        },
+        {
+          "name": "perceived_ethic_import",
+          "source_columns": [
+            "pie1",
+            "pie2",
+            "pie3",
+            "pie4_rev"
+          ],
+          "reverse_coding": "pie4 reversed; 8−pie4 inferred; existing pie4_rev present",
+          "scoring_rule": "D31 literal sum; D03 gives items but not aggregation. First three items high=important; D11 verbal endpoint order differs.",
+          "condition_coding": "not applicable",
+          "mapping_status": "documented",
+          "source_locator": "D03 PDF pp. 1–2; D11 PDF p. 2 §8; D31 pie rows"
+        },
+        {
+          "name": "age",
+          "source_columns": [
+            "age"
+          ],
+          "reverse_coding": "none documented",
+          "scoring_rule": "recorded demographic variable; no transformation documented",
+          "condition_coding": "not applicable",
+          "mapping_status": "documented",
+          "source_locator": "D31 row age; D01 PDF p. 7"
+        },
+        {
+          "name": "industry",
+          "source_columns": [
+            "industry"
+          ],
+          "reverse_coding": "none documented",
+          "scoring_rule": "recorded demographic variable; no transformation documented",
+          "condition_coding": "not applicable",
+          "mapping_status": "documented",
+          "source_locator": "D31 row industry; D01 PDF p. 7"
+        },
+        {
+          "name": "magnitude1_rev",
+          "source_columns": [
+            "magnitude1"
+          ],
+          "reverse_coding": "reverse item",
+          "scoring_rule": "8−magnitude1 inferred for a seven-point item; existing magnitude1_rev column provided. Arithmetic mapping not explicitly stated.",
+          "condition_coding": "not applicable",
+          "mapping_status": "inferred arithmetic; reverse-item designation documented",
+          "source_locator": "D03 PDF pp. 1–2; D11 PDF p. 2 §8; D31 magnitude1 and magnitude1_rev rows"
+        },
+        {
+          "name": "prob_effect2_rev",
+          "source_columns": [
+            "prob_effect2"
+          ],
+          "reverse_coding": "reverse item",
+          "scoring_rule": "8−prob_effect2 inferred for a seven-point item; existing prob_effect2_rev column provided. Arithmetic mapping not explicitly stated.",
+          "condition_coding": "not applicable",
+          "mapping_status": "inferred arithmetic; reverse-item designation documented",
+          "source_locator": "D03 PDF pp. 1–2; D11 PDF p. 2 §8; D31 prob_effect2 and prob_effect2_rev rows"
+        },
+        {
+          "name": "temp_imm2_rev",
+          "source_columns": [
+            "temp_imm2"
+          ],
+          "reverse_coding": "reverse item",
+          "scoring_rule": "8−temp_imm2 inferred for a seven-point item; existing temp_imm2_rev column provided. Arithmetic mapping not explicitly stated.",
+          "condition_coding": "not applicable",
+          "mapping_status": "inferred arithmetic; reverse-item designation documented",
+          "source_locator": "D03 PDF pp. 1–2; D11 PDF p. 2 §8; D31 temp_imm2 and temp_imm2_rev rows"
+        },
+        {
+          "name": "proxim_eff1_rev",
+          "source_columns": [
+            "proxim_eff1"
+          ],
+          "reverse_coding": "reverse item",
+          "scoring_rule": "8−proxim_eff1 inferred for a seven-point item; existing proxim_eff1_rev column provided. Arithmetic mapping not explicitly stated.",
+          "condition_coding": "not applicable",
+          "mapping_status": "inferred arithmetic; reverse-item designation documented",
+          "source_locator": "D03 PDF pp. 1–2; D11 PDF p. 2 §8; D31 proxim_eff1 and proxim_eff1_rev rows"
+        },
+        {
+          "name": "social_cons2_rev",
+          "source_columns": [
+            "social_cons2"
+          ],
+          "reverse_coding": "reverse item",
+          "scoring_rule": "8−social_cons2 inferred for a seven-point item; existing social_cons2_rev column provided. Arithmetic mapping not explicitly stated.",
+          "condition_coding": "not applicable",
+          "mapping_status": "inferred arithmetic; reverse-item designation documented",
+          "source_locator": "D03 PDF pp. 1–2; D11 PDF p. 2 §8; D31 social_cons2 and social_cons2_rev rows"
+        },
+        {
+          "name": "concen_eff1_rev",
+          "source_columns": [
+            "concen_eff1"
+          ],
+          "reverse_coding": "reverse item",
+          "scoring_rule": "8−concen_eff1 inferred for a seven-point item; existing concen_eff1_rev column provided. Arithmetic mapping not explicitly stated.",
+          "condition_coding": "not applicable",
+          "mapping_status": "inferred arithmetic; reverse-item designation documented",
+          "source_locator": "D03 PDF pp. 1–2; D11 PDF p. 2 §8; D31 concen_eff1 and concen_eff1_rev rows"
+        },
+        {
+          "name": "pie4_rev",
+          "source_columns": [
+            "pie4"
+          ],
+          "reverse_coding": "reverse item",
+          "scoring_rule": "8−pie4 inferred for a seven-point item; existing pie4_rev column provided. Arithmetic mapping not explicitly stated.",
+          "condition_coding": "not applicable",
+          "mapping_status": "inferred arithmetic; reverse-item designation documented",
+          "source_locator": "D03 PDF pp. 1–2; D11 PDF p. 2 §8; D31 pie4 and pie4_rev rows"
+        },
+        {
+          "name": "gender_recode",
+          "source_columns": [
+            "gender",
+            "gender_recode"
+          ],
+          "reverse_coding": "none documented",
+          "scoring_rule": "existing category recode; mapping for values other than female/male not explicitly stated",
+          "condition_coding": "female, male, NA per D31",
+          "mapping_status": "documented",
+          "source_locator": "D31 gender and gender_recode rows; D41 (unpaginated)"
+        }
+      ],
+      "analyses": [
+        {
+          "analysis_id": "S1_descriptives",
+          "claim_ids": [
+            "S1_description"
+          ],
+          "outcome": [
+            "cond_recode",
+            "you_grant",
+            "prom_voice",
+            "proh_voice",
+            "age",
+            "gender",
+            "industry"
+          ],
+          "predictors": [],
+          "estimator": "descriptive summaries; bivariate correlation type unstated",
+          "covariates": [],
+          "contrasts": [],
+          "within_subject_handling": "not applicable",
+          "covariance_method": "unstated",
+          "bootstrap_settings": "not applicable",
+          "software": "unstated",
+          "routine_or_macro": "unstated",
+          "seed": "unstated",
+          "missing_data_rule": "unstated",
+          "output_required": [
+            "sample flow counts",
+            "demographics",
+            "means",
+            "SDs",
+            "pairwise correlations"
+          ],
+          "alpha": "unstated for analysis; power planning uses 0.05 (D01 PDF p. 7)",
+          "tail": "unstated for analysis; power planning described as two-tailed (D01 PDF p. 7)",
+          "direction": "unstated",
+          "source_locator": "D01 PDF p. 7–9 (Table 2; Participants)"
+        },
+        {
+          "analysis_id": "S1_reliability",
+          "claim_ids": [
+            "S1_reliability"
+          ],
+          "outcome": [
+            "loyal_comb",
+            "magnitude",
+            "prob_of_effect",
+            "temp_immediacy",
+            "proximity_effect",
+            "social_consensus",
+            "concentration_of_effect",
+            "perceived_ethic_import"
+          ],
+          "predictors": [],
+          "estimator": "coefficient alpha and two-item correlation; correlation method unstated",
+          "covariates": [],
+          "contrasts": [],
+          "within_subject_handling": "pooling versus condition-specific reliability unstated",
+          "covariance_method": "unstated",
+          "bootstrap_settings": "not applicable",
+          "software": "unstated",
+          "routine_or_macro": "unstated",
+          "seed": "unstated",
+          "missing_data_rule": "unstated",
+          "output_required": [
+            "coefficient alpha",
+            "inter-item correlations"
+          ],
+          "alpha": "unstated for analysis; power planning uses 0.05 (D01 PDF p. 7)",
+          "tail": "unstated for analysis; power planning described as two-tailed (D01 PDF p. 7)",
+          "direction": "unstated",
+          "source_locator": "D01 PDF p. 9 (printed p. 770); D03 PDF p. 1; D03 PDF p. 2"
+        },
+        {
+          "analysis_id": "S1_paired_you_grant",
+          "claim_ids": [
+            "S1_you_grant"
+          ],
+          "outcome": "you_grant",
+          "predictors": [
+            "cond"
+          ],
+          "estimator": "paired-samples t-test",
+          "covariates": [],
+          "contrasts": [
+            {
+              "weights": {
+                "loyal": 1,
+                "control": -1
+              },
+              "pool_over": "wrongdoing"
+            }
+          ],
+          "within_subject_handling": "match loyal/control ratings on part_uid (inferred key); test participant-level differences",
+          "covariance_method": "paired-difference sampling variance; exact SD convention for d unstated",
+          "bootstrap_settings": "not applicable",
+          "software": "unstated",
+          "routine_or_macro": "unstated",
+          "seed": "unstated",
+          "missing_data_rule": "unstated",
+          "output_required": [
+            "estimates",
+            "standard errors",
+            "test statistics",
+            "degrees of freedom",
+            "p values"
+          ],
+          "alpha": "unstated for analysis; power planning uses 0.05 (D01 PDF p. 7)",
+          "tail": "unstated for analysis; power planning described as two-tailed (D01 PDF p. 7)",
+          "direction": "loyal > control",
+          "source_locator": "D01 PDF p. 9 (printed p. 770); D11 PDF p. 1 §5"
+        },
+        {
+          "analysis_id": "S1_mixed_you_grant",
+          "claim_ids": [
+            "S1_interaction_you_grant"
+          ],
+          "outcome": "you_grant",
+          "predictors": [
+            "cond",
+            "wrongdoing",
+            "cond × wrongdoing"
+          ],
+          "estimator": "2 × 7 mixed ANOVA",
+          "covariates": [],
+          "contrasts": [],
+          "within_subject_handling": "relationship repeated within part_uid (inferred key); wrongdoing between participants",
+          "covariance_method": "repeated-measures ANOVA error structure; exact sums-of-squares and software unstated",
+          "bootstrap_settings": "not applicable",
+          "software": "unstated",
+          "routine_or_macro": "unstated",
+          "seed": "unstated",
+          "missing_data_rule": "unstated",
+          "output_required": [
+            "factor main effects (not printed)",
+            "relationship × wrongdoing interaction",
+            "F",
+            "df",
+            "p"
+          ],
+          "alpha": "unstated for analysis; power planning uses 0.05 (D01 PDF p. 7)",
+          "tail": "unstated for analysis; power planning described as two-tailed (D01 PDF p. 7)",
+          "direction": "unstated",
+          "source_locator": "D01 PDF p. 9 (printed p. 770); D11 PDF p. 1 §5"
+        },
+        {
+          "analysis_id": "S1_paired_prom_voice",
+          "claim_ids": [
+            "S1_prom_voice"
+          ],
+          "outcome": "prom_voice",
+          "predictors": [
+            "cond"
+          ],
+          "estimator": "paired-samples t-test",
+          "covariates": [],
+          "contrasts": [
+            {
+              "weights": {
+                "loyal": 1,
+                "control": -1
+              },
+              "pool_over": "wrongdoing"
+            }
+          ],
+          "within_subject_handling": "match loyal/control ratings on part_uid (inferred key); test participant-level differences",
+          "covariance_method": "paired-difference sampling variance; exact SD convention for d unstated",
+          "bootstrap_settings": "not applicable",
+          "software": "unstated",
+          "routine_or_macro": "unstated",
+          "seed": "unstated",
+          "missing_data_rule": "unstated",
+          "output_required": [
+            "estimates",
+            "standard errors",
+            "test statistics",
+            "degrees of freedom",
+            "p values"
+          ],
+          "alpha": "unstated for analysis; power planning uses 0.05 (D01 PDF p. 7)",
+          "tail": "unstated for analysis; power planning described as two-tailed (D01 PDF p. 7)",
+          "direction": "loyal > control",
+          "source_locator": "D01 PDF p. 9 (printed p. 770); D11 PDF p. 1 §5"
+        },
+        {
+          "analysis_id": "S1_mixed_prom_voice",
+          "claim_ids": [
+            "S1_interaction_prom_voice"
+          ],
+          "outcome": "prom_voice",
+          "predictors": [
+            "cond",
+            "wrongdoing",
+            "cond × wrongdoing"
+          ],
+          "estimator": "2 × 7 mixed ANOVA",
+          "covariates": [],
+          "contrasts": [],
+          "within_subject_handling": "relationship repeated within part_uid (inferred key); wrongdoing between participants",
+          "covariance_method": "repeated-measures ANOVA error structure; exact sums-of-squares and software unstated",
+          "bootstrap_settings": "not applicable",
+          "software": "unstated",
+          "routine_or_macro": "unstated",
+          "seed": "unstated",
+          "missing_data_rule": "unstated",
+          "output_required": [
+            "factor main effects (not printed)",
+            "relationship × wrongdoing interaction",
+            "F",
+            "df",
+            "p"
+          ],
+          "alpha": "unstated for analysis; power planning uses 0.05 (D01 PDF p. 7)",
+          "tail": "unstated for analysis; power planning described as two-tailed (D01 PDF p. 7)",
+          "direction": "unstated",
+          "source_locator": "D01 PDF p. 9 (printed p. 770); D11 PDF p. 1 §5"
+        },
+        {
+          "analysis_id": "S1_paired_proh_voice",
+          "claim_ids": [
+            "S1_proh_voice"
+          ],
+          "outcome": "proh_voice",
+          "predictors": [
+            "cond"
+          ],
+          "estimator": "paired-samples t-test",
+          "covariates": [],
+          "contrasts": [
+            {
+              "weights": {
+                "loyal": 1,
+                "control": -1
+              },
+              "pool_over": "wrongdoing"
+            }
+          ],
+          "within_subject_handling": "match loyal/control ratings on part_uid (inferred key); test participant-level differences",
+          "covariance_method": "paired-difference sampling variance; exact SD convention for d unstated",
+          "bootstrap_settings": "not applicable",
+          "software": "unstated",
+          "routine_or_macro": "unstated",
+          "seed": "unstated",
+          "missing_data_rule": "unstated",
+          "output_required": [
+            "estimates",
+            "standard errors",
+            "test statistics",
+            "degrees of freedom",
+            "p values"
+          ],
+          "alpha": "unstated for analysis; power planning uses 0.05 (D01 PDF p. 7)",
+          "tail": "unstated for analysis; power planning described as two-tailed (D01 PDF p. 7)",
+          "direction": "loyal > control",
+          "source_locator": "D01 PDF p. 9 (printed p. 770); D11 PDF p. 1 §5"
+        },
+        {
+          "analysis_id": "S1_mixed_proh_voice",
+          "claim_ids": [
+            "S1_interaction_proh_voice"
+          ],
+          "outcome": "proh_voice",
+          "predictors": [
+            "cond",
+            "wrongdoing",
+            "cond × wrongdoing"
+          ],
+          "estimator": "2 × 7 mixed ANOVA",
+          "covariates": [],
+          "contrasts": [],
+          "within_subject_handling": "relationship repeated within part_uid (inferred key); wrongdoing between participants",
+          "covariance_method": "repeated-measures ANOVA error structure; exact sums-of-squares and software unstated",
+          "bootstrap_settings": "not applicable",
+          "software": "unstated",
+          "routine_or_macro": "unstated",
+          "seed": "unstated",
+          "missing_data_rule": "unstated",
+          "output_required": [
+            "factor main effects (not printed)",
+            "relationship × wrongdoing interaction",
+            "F",
+            "df",
+            "p"
+          ],
+          "alpha": "unstated for analysis; power planning uses 0.05 (D01 PDF p. 7)",
+          "tail": "unstated for analysis; power planning described as two-tailed (D01 PDF p. 7)",
+          "direction": "unstated",
+          "source_locator": "D01 PDF p. 9 (printed p. 770); D11 PDF p. 1 §5"
+        },
+        {
+          "analysis_id": "S1_paired_loyal_comb",
+          "claim_ids": [
+            "S1_loyal_comb"
+          ],
+          "outcome": "loyal_comb",
+          "predictors": [
+            "cond"
+          ],
+          "estimator": "paired-samples t-test",
+          "covariates": [],
+          "contrasts": [
+            {
+              "weights": {
+                "loyal": 1,
+                "control": -1
+              },
+              "pool_over": "wrongdoing"
+            }
+          ],
+          "within_subject_handling": "match loyal/control ratings on part_uid (inferred key); test participant-level differences",
+          "covariance_method": "paired-difference sampling variance; exact SD convention for d unstated",
+          "bootstrap_settings": "not applicable",
+          "software": "unstated",
+          "routine_or_macro": "unstated",
+          "seed": "unstated",
+          "missing_data_rule": "unstated",
+          "output_required": [
+            "estimates",
+            "standard errors",
+            "test statistics",
+            "degrees of freedom",
+            "p values"
+          ],
+          "alpha": "unstated for analysis; power planning uses 0.05 (D01 PDF p. 7)",
+          "tail": "unstated for analysis; power planning described as two-tailed (D01 PDF p. 7)",
+          "direction": "loyal > control",
+          "source_locator": "D01 PDF p. 9 (printed p. 770); D11 PDF p. 1 §5"
+        },
+        {
+          "analysis_id": "S1_gender_loyalty_sexual_harassment_male",
+          "claim_ids": [
+            "S1_gender_loyalty_sexual_harassment_male",
+            "S1_gender_summary"
+          ],
+          "outcome": "you_grant",
+          "predictors": [
+            "cond"
+          ],
+          "estimator": "t-test; appendix does not specify paired versus independent or equal-variance rule",
+          "covariates": [],
+          "contrasts": [
+            {
+              "gender": 2,
+              "wrongdoing_num": 1,
+              "weights": {
+                "loyal": 1,
+                "control": -1
+              }
+            }
+          ],
+          "within_subject_handling": "repeated observations are part of original design; appendix t-test handling is unstated",
+          "covariance_method": "unstated",
+          "bootstrap_settings": "not applicable",
+          "software": "unstated",
+          "routine_or_macro": "unstated",
+          "seed": "unstated",
+          "missing_data_rule": "unstated",
+          "output_required": [
+            "subgroup condition means",
+            "SDs",
+            "t",
+            "df",
+            "p"
+          ],
+          "alpha": "unstated for analysis; power planning uses 0.05 (D01 PDF p. 7)",
+          "tail": "unstated for analysis; power planning described as two-tailed (D01 PDF p. 7)",
+          "direction": "loyal > control",
+          "source_locator": "D03 PDF p. 5 (Exploring Gender Effects)",
+          "sample_subset_source": "D03 PDF pp. 5–6; gender values 1=female,2=male mapped from D31/D32; Study 1 wrongdoing code 1 from D31",
+          "sample_steps_extension": [
+            {
+              "order": 1,
+              "description": "Restrict to reported exploratory subgroup/condition using analysis contrasts.",
+              "variables": [
+                "gender",
+                "cond",
+                "wrongdoing_num"
+              ],
+              "values": "As specified in contrasts; records with other gender categories are not in binary comparisons. Missing gender handling otherwise unstated.",
+              "source_locator": "D03 PDF pp. 5–6; D01 PDF p. 17; D31/D32 gender and condition rows",
+              "mapping_status": "inferred column mapping"
+            }
+          ]
+        },
+        {
+          "analysis_id": "S1_gender_loyalty_sexual_harassment_female",
+          "claim_ids": [
+            "S1_gender_loyalty_sexual_harassment_female",
+            "S1_gender_summary"
+          ],
+          "outcome": "you_grant",
+          "predictors": [
+            "cond"
+          ],
+          "estimator": "t-test; appendix does not specify paired versus independent or equal-variance rule",
+          "covariates": [],
+          "contrasts": [
+            {
+              "gender": 1,
+              "wrongdoing_num": 1,
+              "weights": {
+                "loyal": 1,
+                "control": -1
+              }
+            }
+          ],
+          "within_subject_handling": "repeated observations are part of original design; appendix t-test handling is unstated",
+          "covariance_method": "unstated",
+          "bootstrap_settings": "not applicable",
+          "software": "unstated",
+          "routine_or_macro": "unstated",
+          "seed": "unstated",
+          "missing_data_rule": "unstated",
+          "output_required": [
+            "subgroup condition means",
+            "SDs",
+            "t",
+            "df",
+            "p"
+          ],
+          "alpha": "unstated for analysis; power planning uses 0.05 (D01 PDF p. 7)",
+          "tail": "unstated for analysis; power planning described as two-tailed (D01 PDF p. 7)",
+          "direction": "loyal > control",
+          "source_locator": "D03 PDF p. 5 (Exploring Gender Effects)",
+          "sample_subset_source": "D03 PDF pp. 5–6; gender values 1=female,2=male mapped from D31/D32; Study 1 wrongdoing code 1 from D31",
+          "sample_steps_extension": [
+            {
+              "order": 1,
+              "description": "Restrict to reported exploratory subgroup/condition using analysis contrasts.",
+              "variables": [
+                "gender",
+                "cond",
+                "wrongdoing_num"
+              ],
+              "values": "As specified in contrasts; records with other gender categories are not in binary comparisons. Missing gender handling otherwise unstated.",
+              "source_locator": "D03 PDF pp. 5–6; D01 PDF p. 17; D31/D32 gender and condition rows",
+              "mapping_status": "inferred column mapping"
+            }
+          ]
+        },
+        {
+          "analysis_id": "S1_gender_loyalty_all_wrongdoing_male",
+          "claim_ids": [
+            "S1_gender_loyalty_all_wrongdoing_male",
+            "S1_gender_summary"
+          ],
+          "outcome": "you_grant",
+          "predictors": [
+            "cond"
+          ],
+          "estimator": "t-test; appendix does not specify paired versus independent or equal-variance rule",
+          "covariates": [],
+          "contrasts": [
+            {
+              "gender": 2,
+              "wrongdoing_num": "all assigned scenarios",
+              "weights": {
+                "loyal": 1,
+                "control": -1
+              }
+            }
+          ],
+          "within_subject_handling": "repeated observations are part of original design; appendix t-test handling is unstated",
+          "covariance_method": "unstated",
+          "bootstrap_settings": "not applicable",
+          "software": "unstated",
+          "routine_or_macro": "unstated",
+          "seed": "unstated",
+          "missing_data_rule": "unstated",
+          "output_required": [
+            "subgroup condition means",
+            "SDs",
+            "t",
+            "df",
+            "p"
+          ],
+          "alpha": "unstated for analysis; power planning uses 0.05 (D01 PDF p. 7)",
+          "tail": "unstated for analysis; power planning described as two-tailed (D01 PDF p. 7)",
+          "direction": "loyal > control",
+          "source_locator": "D03 PDF p. 5 (Exploring Gender Effects)",
+          "sample_subset_source": "D03 PDF pp. 5–6; gender values 1=female,2=male mapped from D31/D32; Study 1 wrongdoing code 1 from D31",
+          "sample_steps_extension": [
+            {
+              "order": 1,
+              "description": "Restrict to reported exploratory subgroup/condition using analysis contrasts.",
+              "variables": [
+                "gender",
+                "cond",
+                "wrongdoing_num"
+              ],
+              "values": "As specified in contrasts; records with other gender categories are not in binary comparisons. Missing gender handling otherwise unstated.",
+              "source_locator": "D03 PDF pp. 5–6; D01 PDF p. 17; D31/D32 gender and condition rows",
+              "mapping_status": "inferred column mapping"
+            }
+          ]
+        },
+        {
+          "analysis_id": "S1_gender_loyalty_all_wrongdoing_female",
+          "claim_ids": [
+            "S1_gender_loyalty_all_wrongdoing_female",
+            "S1_gender_summary"
+          ],
+          "outcome": "you_grant",
+          "predictors": [
+            "cond"
+          ],
+          "estimator": "t-test; appendix does not specify paired versus independent or equal-variance rule",
+          "covariates": [],
+          "contrasts": [
+            {
+              "gender": 1,
+              "wrongdoing_num": "all assigned scenarios",
+              "weights": {
+                "loyal": 1,
+                "control": -1
+              }
+            }
+          ],
+          "within_subject_handling": "repeated observations are part of original design; appendix t-test handling is unstated",
+          "covariance_method": "unstated",
+          "bootstrap_settings": "not applicable",
+          "software": "unstated",
+          "routine_or_macro": "unstated",
+          "seed": "unstated",
+          "missing_data_rule": "unstated",
+          "output_required": [
+            "subgroup condition means",
+            "SDs",
+            "t",
+            "df",
+            "p"
+          ],
+          "alpha": "unstated for analysis; power planning uses 0.05 (D01 PDF p. 7)",
+          "tail": "unstated for analysis; power planning described as two-tailed (D01 PDF p. 7)",
+          "direction": "loyal > control",
+          "source_locator": "D03 PDF p. 5 (Exploring Gender Effects)",
+          "sample_subset_source": "D03 PDF pp. 5–6; gender values 1=female,2=male mapped from D31/D32; Study 1 wrongdoing code 1 from D31",
+          "sample_steps_extension": [
+            {
+              "order": 1,
+              "description": "Restrict to reported exploratory subgroup/condition using analysis contrasts.",
+              "variables": [
+                "gender",
+                "cond",
+                "wrongdoing_num"
+              ],
+              "values": "As specified in contrasts; records with other gender categories are not in binary comparisons. Missing gender handling otherwise unstated.",
+              "source_locator": "D03 PDF pp. 5–6; D01 PDF p. 17; D31/D32 gender and condition rows",
+              "mapping_status": "inferred column mapping"
+            }
+          ]
+        },
+        {
+          "analysis_id": "S1_gender_difference_sexual_harassment_loyal",
+          "claim_ids": [
+            "S1_gender_difference_sexual_harassment_loyal",
+            "S1_gender_summary"
+          ],
+          "outcome": "you_grant",
+          "predictors": [
+            "gender"
+          ],
+          "estimator": "between-gender t-test; variance assumption unstated",
+          "covariates": [],
+          "contrasts": [
+            {
+              "subset": {
+                "cond": "loyal",
+                "wrongdoing": "sexual harassment"
+              },
+              "weights": {
+                "male (gender=2)": 1,
+                "female (gender=1)": -1
+              }
+            }
+          ],
+          "within_subject_handling": "one relationship condition per comparison; whether Average is pooled across scenarios or equally weighted scenario means unstated",
+          "covariance_method": "unstated",
+          "bootstrap_settings": "not applicable",
+          "software": "unstated",
+          "routine_or_macro": "unstated",
+          "seed": "unstated",
+          "missing_data_rule": "unstated",
+          "output_required": [
+            "gender-group means",
+            "SDs",
+            "t",
+            "df",
+            "p"
+          ],
+          "alpha": "unstated for analysis; power planning uses 0.05 (D01 PDF p. 7)",
+          "tail": "unstated for analysis; power planning described as two-tailed (D01 PDF p. 7)",
+          "direction": "unstated",
+          "source_locator": "D03 PDF p. 6 (Table 1, sexual harassment, loyal)",
+          "sample_subset_source": "D03 PDF pp. 5–6; gender values 1=female,2=male mapped from D31/D32; Study 1 wrongdoing code 1 from D31",
+          "sample_steps_extension": [
+            {
+              "order": 1,
+              "description": "Restrict to reported exploratory subgroup/condition using analysis contrasts.",
+              "variables": [
+                "gender",
+                "cond",
+                "wrongdoing_num"
+              ],
+              "values": "As specified in contrasts; records with other gender categories are not in binary comparisons. Missing gender handling otherwise unstated.",
+              "source_locator": "D03 PDF pp. 5–6; D01 PDF p. 17; D31/D32 gender and condition rows",
+              "mapping_status": "inferred column mapping"
+            }
+          ]
+        },
+        {
+          "analysis_id": "S1_gender_difference_sexual_harassment_control",
+          "claim_ids": [
+            "S1_gender_difference_sexual_harassment_control",
+            "S1_gender_summary"
+          ],
+          "outcome": "you_grant",
+          "predictors": [
+            "gender"
+          ],
+          "estimator": "between-gender t-test; variance assumption unstated",
+          "covariates": [],
+          "contrasts": [
+            {
+              "subset": {
+                "cond": "control",
+                "wrongdoing": "sexual harassment"
+              },
+              "weights": {
+                "male (gender=2)": 1,
+                "female (gender=1)": -1
+              }
+            }
+          ],
+          "within_subject_handling": "one relationship condition per comparison; whether Average is pooled across scenarios or equally weighted scenario means unstated",
+          "covariance_method": "unstated",
+          "bootstrap_settings": "not applicable",
+          "software": "unstated",
+          "routine_or_macro": "unstated",
+          "seed": "unstated",
+          "missing_data_rule": "unstated",
+          "output_required": [
+            "gender-group means",
+            "SDs",
+            "t",
+            "df",
+            "p"
+          ],
+          "alpha": "unstated for analysis; power planning uses 0.05 (D01 PDF p. 7)",
+          "tail": "unstated for analysis; power planning described as two-tailed (D01 PDF p. 7)",
+          "direction": "unstated",
+          "source_locator": "D03 PDF p. 6 (Table 1, sexual harassment, control)",
+          "sample_subset_source": "D03 PDF pp. 5–6; gender values 1=female,2=male mapped from D31/D32; Study 1 wrongdoing code 1 from D31",
+          "sample_steps_extension": [
+            {
+              "order": 1,
+              "description": "Restrict to reported exploratory subgroup/condition using analysis contrasts.",
+              "variables": [
+                "gender",
+                "cond",
+                "wrongdoing_num"
+              ],
+              "values": "As specified in contrasts; records with other gender categories are not in binary comparisons. Missing gender handling otherwise unstated.",
+              "source_locator": "D03 PDF pp. 5–6; D01 PDF p. 17; D31/D32 gender and condition rows",
+              "mapping_status": "inferred column mapping"
+            }
+          ]
+        },
+        {
+          "analysis_id": "S1_gender_difference_theft_loyal",
+          "claim_ids": [
+            "S1_gender_difference_theft_loyal",
+            "S1_gender_summary"
+          ],
+          "outcome": "you_grant",
+          "predictors": [
+            "gender"
+          ],
+          "estimator": "between-gender t-test; variance assumption unstated",
+          "covariates": [],
+          "contrasts": [
+            {
+              "subset": {
+                "cond": "loyal",
+                "wrongdoing": "theft"
+              },
+              "weights": {
+                "male (gender=2)": 1,
+                "female (gender=1)": -1
+              }
+            }
+          ],
+          "within_subject_handling": "one relationship condition per comparison; whether Average is pooled across scenarios or equally weighted scenario means unstated",
+          "covariance_method": "unstated",
+          "bootstrap_settings": "not applicable",
+          "software": "unstated",
+          "routine_or_macro": "unstated",
+          "seed": "unstated",
+          "missing_data_rule": "unstated",
+          "output_required": [
+            "gender-group means",
+            "SDs",
+            "t",
+            "df",
+            "p"
+          ],
+          "alpha": "unstated for analysis; power planning uses 0.05 (D01 PDF p. 7)",
+          "tail": "unstated for analysis; power planning described as two-tailed (D01 PDF p. 7)",
+          "direction": "unstated",
+          "source_locator": "D03 PDF p. 6 (Table 1, theft, loyal)",
+          "sample_subset_source": "D03 PDF pp. 5–6; gender values 1=female,2=male mapped from D31/D32; Study 1 wrongdoing code 1 from D31",
+          "sample_steps_extension": [
+            {
+              "order": 1,
+              "description": "Restrict to reported exploratory subgroup/condition using analysis contrasts.",
+              "variables": [
+                "gender",
+                "cond",
+                "wrongdoing_num"
+              ],
+              "values": "As specified in contrasts; records with other gender categories are not in binary comparisons. Missing gender handling otherwise unstated.",
+              "source_locator": "D03 PDF pp. 5–6; D01 PDF p. 17; D31/D32 gender and condition rows",
+              "mapping_status": "inferred column mapping"
+            }
+          ]
+        },
+        {
+          "analysis_id": "S1_gender_difference_theft_control",
+          "claim_ids": [
+            "S1_gender_difference_theft_control",
+            "S1_gender_summary"
+          ],
+          "outcome": "you_grant",
+          "predictors": [
+            "gender"
+          ],
+          "estimator": "between-gender t-test; variance assumption unstated",
+          "covariates": [],
+          "contrasts": [
+            {
+              "subset": {
+                "cond": "control",
+                "wrongdoing": "theft"
+              },
+              "weights": {
+                "male (gender=2)": 1,
+                "female (gender=1)": -1
+              }
+            }
+          ],
+          "within_subject_handling": "one relationship condition per comparison; whether Average is pooled across scenarios or equally weighted scenario means unstated",
+          "covariance_method": "unstated",
+          "bootstrap_settings": "not applicable",
+          "software": "unstated",
+          "routine_or_macro": "unstated",
+          "seed": "unstated",
+          "missing_data_rule": "unstated",
+          "output_required": [
+            "gender-group means",
+            "SDs",
+            "t",
+            "df",
+            "p"
+          ],
+          "alpha": "unstated for analysis; power planning uses 0.05 (D01 PDF p. 7)",
+          "tail": "unstated for analysis; power planning described as two-tailed (D01 PDF p. 7)",
+          "direction": "unstated",
+          "source_locator": "D03 PDF p. 6 (Table 1, theft, control)",
+          "sample_subset_source": "D03 PDF pp. 5–6; gender values 1=female,2=male mapped from D31/D32; Study 1 wrongdoing code 1 from D31",
+          "sample_steps_extension": [
+            {
+              "order": 1,
+              "description": "Restrict to reported exploratory subgroup/condition using analysis contrasts.",
+              "variables": [
+                "gender",
+                "cond",
+                "wrongdoing_num"
+              ],
+              "values": "As specified in contrasts; records with other gender categories are not in binary comparisons. Missing gender handling otherwise unstated.",
+              "source_locator": "D03 PDF pp. 5–6; D01 PDF p. 17; D31/D32 gender and condition rows",
+              "mapping_status": "inferred column mapping"
+            }
+          ]
+        },
+        {
+          "analysis_id": "S1_gender_difference_false_advertising_loyal",
+          "claim_ids": [
+            "S1_gender_difference_false_advertising_loyal",
+            "S1_gender_summary"
+          ],
+          "outcome": "you_grant",
+          "predictors": [
+            "gender"
+          ],
+          "estimator": "between-gender t-test; variance assumption unstated",
+          "covariates": [],
+          "contrasts": [
+            {
+              "subset": {
+                "cond": "loyal",
+                "wrongdoing": "false_advertising"
+              },
+              "weights": {
+                "male (gender=2)": 1,
+                "female (gender=1)": -1
+              }
+            }
+          ],
+          "within_subject_handling": "one relationship condition per comparison; whether Average is pooled across scenarios or equally weighted scenario means unstated",
+          "covariance_method": "unstated",
+          "bootstrap_settings": "not applicable",
+          "software": "unstated",
+          "routine_or_macro": "unstated",
+          "seed": "unstated",
+          "missing_data_rule": "unstated",
+          "output_required": [
+            "gender-group means",
+            "SDs",
+            "t",
+            "df",
+            "p"
+          ],
+          "alpha": "unstated for analysis; power planning uses 0.05 (D01 PDF p. 7)",
+          "tail": "unstated for analysis; power planning described as two-tailed (D01 PDF p. 7)",
+          "direction": "unstated",
+          "source_locator": "D03 PDF p. 6 (Table 1, false_advertising, loyal)",
+          "sample_subset_source": "D03 PDF pp. 5–6; gender values 1=female,2=male mapped from D31/D32; Study 1 wrongdoing code 1 from D31",
+          "sample_steps_extension": [
+            {
+              "order": 1,
+              "description": "Restrict to reported exploratory subgroup/condition using analysis contrasts.",
+              "variables": [
+                "gender",
+                "cond",
+                "wrongdoing_num"
+              ],
+              "values": "As specified in contrasts; records with other gender categories are not in binary comparisons. Missing gender handling otherwise unstated.",
+              "source_locator": "D03 PDF pp. 5–6; D01 PDF p. 17; D31/D32 gender and condition rows",
+              "mapping_status": "inferred column mapping"
+            }
+          ]
+        },
+        {
+          "analysis_id": "S1_gender_difference_false_advertising_control",
+          "claim_ids": [
+            "S1_gender_difference_false_advertising_control",
+            "S1_gender_summary"
+          ],
+          "outcome": "you_grant",
+          "predictors": [
+            "gender"
+          ],
+          "estimator": "between-gender t-test; variance assumption unstated",
+          "covariates": [],
+          "contrasts": [
+            {
+              "subset": {
+                "cond": "control",
+                "wrongdoing": "false_advertising"
+              },
+              "weights": {
+                "male (gender=2)": 1,
+                "female (gender=1)": -1
+              }
+            }
+          ],
+          "within_subject_handling": "one relationship condition per comparison; whether Average is pooled across scenarios or equally weighted scenario means unstated",
+          "covariance_method": "unstated",
+          "bootstrap_settings": "not applicable",
+          "software": "unstated",
+          "routine_or_macro": "unstated",
+          "seed": "unstated",
+          "missing_data_rule": "unstated",
+          "output_required": [
+            "gender-group means",
+            "SDs",
+            "t",
+            "df",
+            "p"
+          ],
+          "alpha": "unstated for analysis; power planning uses 0.05 (D01 PDF p. 7)",
+          "tail": "unstated for analysis; power planning described as two-tailed (D01 PDF p. 7)",
+          "direction": "unstated",
+          "source_locator": "D03 PDF p. 6 (Table 1, false_advertising, control)",
+          "sample_subset_source": "D03 PDF pp. 5–6; gender values 1=female,2=male mapped from D31/D32; Study 1 wrongdoing code 1 from D31",
+          "sample_steps_extension": [
+            {
+              "order": 1,
+              "description": "Restrict to reported exploratory subgroup/condition using analysis contrasts.",
+              "variables": [
+                "gender",
+                "cond",
+                "wrongdoing_num"
+              ],
+              "values": "As specified in contrasts; records with other gender categories are not in binary comparisons. Missing gender handling otherwise unstated.",
+              "source_locator": "D03 PDF pp. 5–6; D01 PDF p. 17; D31/D32 gender and condition rows",
+              "mapping_status": "inferred column mapping"
+            }
+          ]
+        },
+        {
+          "analysis_id": "S1_gender_difference_fraud_loyal",
+          "claim_ids": [
+            "S1_gender_difference_fraud_loyal",
+            "S1_gender_summary"
+          ],
+          "outcome": "you_grant",
+          "predictors": [
+            "gender"
+          ],
+          "estimator": "between-gender t-test; variance assumption unstated",
+          "covariates": [],
+          "contrasts": [
+            {
+              "subset": {
+                "cond": "loyal",
+                "wrongdoing": "fraud"
+              },
+              "weights": {
+                "male (gender=2)": 1,
+                "female (gender=1)": -1
+              }
+            }
+          ],
+          "within_subject_handling": "one relationship condition per comparison; whether Average is pooled across scenarios or equally weighted scenario means unstated",
+          "covariance_method": "unstated",
+          "bootstrap_settings": "not applicable",
+          "software": "unstated",
+          "routine_or_macro": "unstated",
+          "seed": "unstated",
+          "missing_data_rule": "unstated",
+          "output_required": [
+            "gender-group means",
+            "SDs",
+            "t",
+            "df",
+            "p"
+          ],
+          "alpha": "unstated for analysis; power planning uses 0.05 (D01 PDF p. 7)",
+          "tail": "unstated for analysis; power planning described as two-tailed (D01 PDF p. 7)",
+          "direction": "unstated",
+          "source_locator": "D03 PDF p. 6 (Table 1, fraud, loyal)",
+          "sample_subset_source": "D03 PDF pp. 5–6; gender values 1=female,2=male mapped from D31/D32; Study 1 wrongdoing code 1 from D31",
+          "sample_steps_extension": [
+            {
+              "order": 1,
+              "description": "Restrict to reported exploratory subgroup/condition using analysis contrasts.",
+              "variables": [
+                "gender",
+                "cond",
+                "wrongdoing_num"
+              ],
+              "values": "As specified in contrasts; records with other gender categories are not in binary comparisons. Missing gender handling otherwise unstated.",
+              "source_locator": "D03 PDF pp. 5–6; D01 PDF p. 17; D31/D32 gender and condition rows",
+              "mapping_status": "inferred column mapping"
+            }
+          ]
+        },
+        {
+          "analysis_id": "S1_gender_difference_fraud_control",
+          "claim_ids": [
+            "S1_gender_difference_fraud_control",
+            "S1_gender_summary"
+          ],
+          "outcome": "you_grant",
+          "predictors": [
+            "gender"
+          ],
+          "estimator": "between-gender t-test; variance assumption unstated",
+          "covariates": [],
+          "contrasts": [
+            {
+              "subset": {
+                "cond": "control",
+                "wrongdoing": "fraud"
+              },
+              "weights": {
+                "male (gender=2)": 1,
+                "female (gender=1)": -1
+              }
+            }
+          ],
+          "within_subject_handling": "one relationship condition per comparison; whether Average is pooled across scenarios or equally weighted scenario means unstated",
+          "covariance_method": "unstated",
+          "bootstrap_settings": "not applicable",
+          "software": "unstated",
+          "routine_or_macro": "unstated",
+          "seed": "unstated",
+          "missing_data_rule": "unstated",
+          "output_required": [
+            "gender-group means",
+            "SDs",
+            "t",
+            "df",
+            "p"
+          ],
+          "alpha": "unstated for analysis; power planning uses 0.05 (D01 PDF p. 7)",
+          "tail": "unstated for analysis; power planning described as two-tailed (D01 PDF p. 7)",
+          "direction": "unstated",
+          "source_locator": "D03 PDF p. 6 (Table 1, fraud, control)",
+          "sample_subset_source": "D03 PDF pp. 5–6; gender values 1=female,2=male mapped from D31/D32; Study 1 wrongdoing code 1 from D31",
+          "sample_steps_extension": [
+            {
+              "order": 1,
+              "description": "Restrict to reported exploratory subgroup/condition using analysis contrasts.",
+              "variables": [
+                "gender",
+                "cond",
+                "wrongdoing_num"
+              ],
+              "values": "As specified in contrasts; records with other gender categories are not in binary comparisons. Missing gender handling otherwise unstated.",
+              "source_locator": "D03 PDF pp. 5–6; D01 PDF p. 17; D31/D32 gender and condition rows",
+              "mapping_status": "inferred column mapping"
+            }
+          ]
+        },
+        {
+          "analysis_id": "S1_gender_difference_bribery_loyal",
+          "claim_ids": [
+            "S1_gender_difference_bribery_loyal",
+            "S1_gender_summary"
+          ],
+          "outcome": "you_grant",
+          "predictors": [
+            "gender"
+          ],
+          "estimator": "between-gender t-test; variance assumption unstated",
+          "covariates": [],
+          "contrasts": [
+            {
+              "subset": {
+                "cond": "loyal",
+                "wrongdoing": "bribery"
+              },
+              "weights": {
+                "male (gender=2)": 1,
+                "female (gender=1)": -1
+              }
+            }
+          ],
+          "within_subject_handling": "one relationship condition per comparison; whether Average is pooled across scenarios or equally weighted scenario means unstated",
+          "covariance_method": "unstated",
+          "bootstrap_settings": "not applicable",
+          "software": "unstated",
+          "routine_or_macro": "unstated",
+          "seed": "unstated",
+          "missing_data_rule": "unstated",
+          "output_required": [
+            "gender-group means",
+            "SDs",
+            "t",
+            "df",
+            "p"
+          ],
+          "alpha": "unstated for analysis; power planning uses 0.05 (D01 PDF p. 7)",
+          "tail": "unstated for analysis; power planning described as two-tailed (D01 PDF p. 7)",
+          "direction": "unstated",
+          "source_locator": "D03 PDF p. 6 (Table 1, bribery, loyal)",
+          "sample_subset_source": "D03 PDF pp. 5–6; gender values 1=female,2=male mapped from D31/D32; Study 1 wrongdoing code 1 from D31",
+          "sample_steps_extension": [
+            {
+              "order": 1,
+              "description": "Restrict to reported exploratory subgroup/condition using analysis contrasts.",
+              "variables": [
+                "gender",
+                "cond",
+                "wrongdoing_num"
+              ],
+              "values": "As specified in contrasts; records with other gender categories are not in binary comparisons. Missing gender handling otherwise unstated.",
+              "source_locator": "D03 PDF pp. 5–6; D01 PDF p. 17; D31/D32 gender and condition rows",
+              "mapping_status": "inferred column mapping"
+            }
+          ]
+        },
+        {
+          "analysis_id": "S1_gender_difference_bribery_control",
+          "claim_ids": [
+            "S1_gender_difference_bribery_control",
+            "S1_gender_summary"
+          ],
+          "outcome": "you_grant",
+          "predictors": [
+            "gender"
+          ],
+          "estimator": "between-gender t-test; variance assumption unstated",
+          "covariates": [],
+          "contrasts": [
+            {
+              "subset": {
+                "cond": "control",
+                "wrongdoing": "bribery"
+              },
+              "weights": {
+                "male (gender=2)": 1,
+                "female (gender=1)": -1
+              }
+            }
+          ],
+          "within_subject_handling": "one relationship condition per comparison; whether Average is pooled across scenarios or equally weighted scenario means unstated",
+          "covariance_method": "unstated",
+          "bootstrap_settings": "not applicable",
+          "software": "unstated",
+          "routine_or_macro": "unstated",
+          "seed": "unstated",
+          "missing_data_rule": "unstated",
+          "output_required": [
+            "gender-group means",
+            "SDs",
+            "t",
+            "df",
+            "p"
+          ],
+          "alpha": "unstated for analysis; power planning uses 0.05 (D01 PDF p. 7)",
+          "tail": "unstated for analysis; power planning described as two-tailed (D01 PDF p. 7)",
+          "direction": "unstated",
+          "source_locator": "D03 PDF p. 6 (Table 1, bribery, control)",
+          "sample_subset_source": "D03 PDF pp. 5–6; gender values 1=female,2=male mapped from D31/D32; Study 1 wrongdoing code 1 from D31",
+          "sample_steps_extension": [
+            {
+              "order": 1,
+              "description": "Restrict to reported exploratory subgroup/condition using analysis contrasts.",
+              "variables": [
+                "gender",
+                "cond",
+                "wrongdoing_num"
+              ],
+              "values": "As specified in contrasts; records with other gender categories are not in binary comparisons. Missing gender handling otherwise unstated.",
+              "source_locator": "D03 PDF pp. 5–6; D01 PDF p. 17; D31/D32 gender and condition rows",
+              "mapping_status": "inferred column mapping"
+            }
+          ]
+        },
+        {
+          "analysis_id": "S1_gender_difference_plagiarism_loyal",
+          "claim_ids": [
+            "S1_gender_difference_plagiarism_loyal",
+            "S1_gender_summary"
+          ],
+          "outcome": "you_grant",
+          "predictors": [
+            "gender"
+          ],
+          "estimator": "between-gender t-test; variance assumption unstated",
+          "covariates": [],
+          "contrasts": [
+            {
+              "subset": {
+                "cond": "loyal",
+                "wrongdoing": "plagiarism"
+              },
+              "weights": {
+                "male (gender=2)": 1,
+                "female (gender=1)": -1
+              }
+            }
+          ],
+          "within_subject_handling": "one relationship condition per comparison; whether Average is pooled across scenarios or equally weighted scenario means unstated",
+          "covariance_method": "unstated",
+          "bootstrap_settings": "not applicable",
+          "software": "unstated",
+          "routine_or_macro": "unstated",
+          "seed": "unstated",
+          "missing_data_rule": "unstated",
+          "output_required": [
+            "gender-group means",
+            "SDs",
+            "t",
+            "df",
+            "p"
+          ],
+          "alpha": "unstated for analysis; power planning uses 0.05 (D01 PDF p. 7)",
+          "tail": "unstated for analysis; power planning described as two-tailed (D01 PDF p. 7)",
+          "direction": "unstated",
+          "source_locator": "D03 PDF p. 6 (Table 1, plagiarism, loyal)",
+          "sample_subset_source": "D03 PDF pp. 5–6; gender values 1=female,2=male mapped from D31/D32; Study 1 wrongdoing code 1 from D31",
+          "sample_steps_extension": [
+            {
+              "order": 1,
+              "description": "Restrict to reported exploratory subgroup/condition using analysis contrasts.",
+              "variables": [
+                "gender",
+                "cond",
+                "wrongdoing_num"
+              ],
+              "values": "As specified in contrasts; records with other gender categories are not in binary comparisons. Missing gender handling otherwise unstated.",
+              "source_locator": "D03 PDF pp. 5–6; D01 PDF p. 17; D31/D32 gender and condition rows",
+              "mapping_status": "inferred column mapping"
+            }
+          ]
+        },
+        {
+          "analysis_id": "S1_gender_difference_plagiarism_control",
+          "claim_ids": [
+            "S1_gender_difference_plagiarism_control",
+            "S1_gender_summary"
+          ],
+          "outcome": "you_grant",
+          "predictors": [
+            "gender"
+          ],
+          "estimator": "between-gender t-test; variance assumption unstated",
+          "covariates": [],
+          "contrasts": [
+            {
+              "subset": {
+                "cond": "control",
+                "wrongdoing": "plagiarism"
+              },
+              "weights": {
+                "male (gender=2)": 1,
+                "female (gender=1)": -1
+              }
+            }
+          ],
+          "within_subject_handling": "one relationship condition per comparison; whether Average is pooled across scenarios or equally weighted scenario means unstated",
+          "covariance_method": "unstated",
+          "bootstrap_settings": "not applicable",
+          "software": "unstated",
+          "routine_or_macro": "unstated",
+          "seed": "unstated",
+          "missing_data_rule": "unstated",
+          "output_required": [
+            "gender-group means",
+            "SDs",
+            "t",
+            "df",
+            "p"
+          ],
+          "alpha": "unstated for analysis; power planning uses 0.05 (D01 PDF p. 7)",
+          "tail": "unstated for analysis; power planning described as two-tailed (D01 PDF p. 7)",
+          "direction": "unstated",
+          "source_locator": "D03 PDF p. 6 (Table 1, plagiarism, control)",
+          "sample_subset_source": "D03 PDF pp. 5–6; gender values 1=female,2=male mapped from D31/D32; Study 1 wrongdoing code 1 from D31",
+          "sample_steps_extension": [
+            {
+              "order": 1,
+              "description": "Restrict to reported exploratory subgroup/condition using analysis contrasts.",
+              "variables": [
+                "gender",
+                "cond",
+                "wrongdoing_num"
+              ],
+              "values": "As specified in contrasts; records with other gender categories are not in binary comparisons. Missing gender handling otherwise unstated.",
+              "source_locator": "D03 PDF pp. 5–6; D01 PDF p. 17; D31/D32 gender and condition rows",
+              "mapping_status": "inferred column mapping"
+            }
+          ]
+        },
+        {
+          "analysis_id": "S1_gender_difference_dishonesty_loyal",
+          "claim_ids": [
+            "S1_gender_difference_dishonesty_loyal",
+            "S1_gender_summary"
+          ],
+          "outcome": "you_grant",
+          "predictors": [
+            "gender"
+          ],
+          "estimator": "between-gender t-test; variance assumption unstated",
+          "covariates": [],
+          "contrasts": [
+            {
+              "subset": {
+                "cond": "loyal",
+                "wrongdoing": "dishonesty"
+              },
+              "weights": {
+                "male (gender=2)": 1,
+                "female (gender=1)": -1
+              }
+            }
+          ],
+          "within_subject_handling": "one relationship condition per comparison; whether Average is pooled across scenarios or equally weighted scenario means unstated",
+          "covariance_method": "unstated",
+          "bootstrap_settings": "not applicable",
+          "software": "unstated",
+          "routine_or_macro": "unstated",
+          "seed": "unstated",
+          "missing_data_rule": "unstated",
+          "output_required": [
+            "gender-group means",
+            "SDs",
+            "t",
+            "df",
+            "p"
+          ],
+          "alpha": "unstated for analysis; power planning uses 0.05 (D01 PDF p. 7)",
+          "tail": "unstated for analysis; power planning described as two-tailed (D01 PDF p. 7)",
+          "direction": "unstated",
+          "source_locator": "D03 PDF p. 6 (Table 1, dishonesty, loyal)",
+          "sample_subset_source": "D03 PDF pp. 5–6; gender values 1=female,2=male mapped from D31/D32; Study 1 wrongdoing code 1 from D31",
+          "sample_steps_extension": [
+            {
+              "order": 1,
+              "description": "Restrict to reported exploratory subgroup/condition using analysis contrasts.",
+              "variables": [
+                "gender",
+                "cond",
+                "wrongdoing_num"
+              ],
+              "values": "As specified in contrasts; records with other gender categories are not in binary comparisons. Missing gender handling otherwise unstated.",
+              "source_locator": "D03 PDF pp. 5–6; D01 PDF p. 17; D31/D32 gender and condition rows",
+              "mapping_status": "inferred column mapping"
+            }
+          ]
+        },
+        {
+          "analysis_id": "S1_gender_difference_dishonesty_control",
+          "claim_ids": [
+            "S1_gender_difference_dishonesty_control",
+            "S1_gender_summary"
+          ],
+          "outcome": "you_grant",
+          "predictors": [
+            "gender"
+          ],
+          "estimator": "between-gender t-test; variance assumption unstated",
+          "covariates": [],
+          "contrasts": [
+            {
+              "subset": {
+                "cond": "control",
+                "wrongdoing": "dishonesty"
+              },
+              "weights": {
+                "male (gender=2)": 1,
+                "female (gender=1)": -1
+              }
+            }
+          ],
+          "within_subject_handling": "one relationship condition per comparison; whether Average is pooled across scenarios or equally weighted scenario means unstated",
+          "covariance_method": "unstated",
+          "bootstrap_settings": "not applicable",
+          "software": "unstated",
+          "routine_or_macro": "unstated",
+          "seed": "unstated",
+          "missing_data_rule": "unstated",
+          "output_required": [
+            "gender-group means",
+            "SDs",
+            "t",
+            "df",
+            "p"
+          ],
+          "alpha": "unstated for analysis; power planning uses 0.05 (D01 PDF p. 7)",
+          "tail": "unstated for analysis; power planning described as two-tailed (D01 PDF p. 7)",
+          "direction": "unstated",
+          "source_locator": "D03 PDF p. 6 (Table 1, dishonesty, control)",
+          "sample_subset_source": "D03 PDF pp. 5–6; gender values 1=female,2=male mapped from D31/D32; Study 1 wrongdoing code 1 from D31",
+          "sample_steps_extension": [
+            {
+              "order": 1,
+              "description": "Restrict to reported exploratory subgroup/condition using analysis contrasts.",
+              "variables": [
+                "gender",
+                "cond",
+                "wrongdoing_num"
+              ],
+              "values": "As specified in contrasts; records with other gender categories are not in binary comparisons. Missing gender handling otherwise unstated.",
+              "source_locator": "D03 PDF pp. 5–6; D01 PDF p. 17; D31/D32 gender and condition rows",
+              "mapping_status": "inferred column mapping"
+            }
+          ]
+        },
+        {
+          "analysis_id": "S1_gender_difference_Average_loyal",
+          "claim_ids": [
+            "S1_gender_difference_Average_loyal",
+            "S1_gender_summary"
+          ],
+          "outcome": "you_grant",
+          "predictors": [
+            "gender"
+          ],
+          "estimator": "between-gender t-test; variance assumption unstated",
+          "covariates": [],
+          "contrasts": [
+            {
+              "subset": {
+                "cond": "loyal",
+                "wrongdoing": "all"
+              },
+              "weights": {
+                "male (gender=2)": 1,
+                "female (gender=1)": -1
+              }
+            }
+          ],
+          "within_subject_handling": "one relationship condition per comparison; whether Average is pooled across scenarios or equally weighted scenario means unstated",
+          "covariance_method": "unstated",
+          "bootstrap_settings": "not applicable",
+          "software": "unstated",
+          "routine_or_macro": "unstated",
+          "seed": "unstated",
+          "missing_data_rule": "unstated",
+          "output_required": [
+            "gender-group means",
+            "SDs",
+            "t",
+            "df",
+            "p"
+          ],
+          "alpha": "unstated for analysis; power planning uses 0.05 (D01 PDF p. 7)",
+          "tail": "unstated for analysis; power planning described as two-tailed (D01 PDF p. 7)",
+          "direction": "unstated",
+          "source_locator": "D03 PDF p. 6 (Table 1, Average, loyal)",
+          "sample_subset_source": "D03 PDF pp. 5–6; gender values 1=female,2=male mapped from D31/D32; Study 1 wrongdoing code 1 from D31",
+          "sample_steps_extension": [
+            {
+              "order": 1,
+              "description": "Restrict to reported exploratory subgroup/condition using analysis contrasts.",
+              "variables": [
+                "gender",
+                "cond",
+                "wrongdoing_num"
+              ],
+              "values": "As specified in contrasts; records with other gender categories are not in binary comparisons. Missing gender handling otherwise unstated.",
+              "source_locator": "D03 PDF pp. 5–6; D01 PDF p. 17; D31/D32 gender and condition rows",
+              "mapping_status": "inferred column mapping"
+            }
+          ]
+        },
+        {
+          "analysis_id": "S1_gender_difference_Average_control",
+          "claim_ids": [
+            "S1_gender_difference_Average_control",
+            "S1_gender_summary"
+          ],
+          "outcome": "you_grant",
+          "predictors": [
+            "gender"
+          ],
+          "estimator": "between-gender t-test; variance assumption unstated",
+          "covariates": [],
+          "contrasts": [
+            {
+              "subset": {
+                "cond": "control",
+                "wrongdoing": "all"
+              },
+              "weights": {
+                "male (gender=2)": 1,
+                "female (gender=1)": -1
+              }
+            }
+          ],
+          "within_subject_handling": "one relationship condition per comparison; whether Average is pooled across scenarios or equally weighted scenario means unstated",
+          "covariance_method": "unstated",
+          "bootstrap_settings": "not applicable",
+          "software": "unstated",
+          "routine_or_macro": "unstated",
+          "seed": "unstated",
+          "missing_data_rule": "unstated",
+          "output_required": [
+            "gender-group means",
+            "SDs",
+            "t",
+            "df",
+            "p"
+          ],
+          "alpha": "unstated for analysis; power planning uses 0.05 (D01 PDF p. 7)",
+          "tail": "unstated for analysis; power planning described as two-tailed (D01 PDF p. 7)",
+          "direction": "unstated",
+          "source_locator": "D03 PDF p. 6 (Table 1, Average, control)",
+          "sample_subset_source": "D03 PDF pp. 5–6; gender values 1=female,2=male mapped from D31/D32; Study 1 wrongdoing code 1 from D31",
+          "sample_steps_extension": [
+            {
+              "order": 1,
+              "description": "Restrict to reported exploratory subgroup/condition using analysis contrasts.",
+              "variables": [
+                "gender",
+                "cond",
+                "wrongdoing_num"
+              ],
+              "values": "As specified in contrasts; records with other gender categories are not in binary comparisons. Missing gender handling otherwise unstated.",
+              "source_locator": "D03 PDF pp. 5–6; D01 PDF p. 17; D31/D32 gender and condition rows",
+              "mapping_status": "inferred column mapping"
+            }
+          ]
+        }
+      ]
+    },
+    "2": {
+      "data_file": "unstated; D42_columns_study2.txt contains column names only",
+      "unit_of_observation": "participant",
+      "design": {
+        "factors": [
+          {
+            "name": "relationship to broker",
+            "column": "cond",
+            "levels": [
+              "loyal_colleague",
+              "control"
+            ],
+            "between_or_within": "between"
+          }
+        ],
+        "assignment_unit": "participant, randomized",
+        "source_locator": "D01 PDF p. 10 (printed p. 771; Procedure); D12 PDF p. 1 §4; D32 row cond; D42 (unpaginated)"
+      },
+      "sample_steps": [
+        {
+          "order": 1,
+          "description": "Recruit U.S.-based full-time employees through Prolific and randomize condition. Eligibility indicators unavailable.",
+          "variables": "unstated",
+          "values": "unstated",
+          "source_locator": "D01 PDF p. 10 (Participants and Procedure)",
+          "mapping_status": "documented"
+        },
+        {
+          "order": 2,
+          "description": "Remove participants failing simple attention checks. Exact checks and missing-check policy not stated in article or preregistration.",
+          "variables": [
+            "comp1",
+            "comp2",
+            "cond"
+          ],
+          "values": "Candidate keep: comp2 == 2 and comp1 == 1 for loyal_colleague or comp1 == 2 for control; inferred from question wording.",
+          "source_locator": "D12 PDF p. 1 §6; D32 rows comp1, comp2, cond; D02 PDF p. 2",
+          "mapping_status": "inferred"
+        }
+      ],
+      "variables": [
+        {
+          "name": "you_grant",
+          "source_columns": [
+            "you_grant"
+          ],
+          "reverse_coding": "none documented",
+          "scoring_rule": "Single item: likelihood of granting the colleague/broker request; 1=extremely unlikely, 7=extremely likely.",
+          "condition_coding": "not applicable",
+          "mapping_status": "documented",
+          "source_locator": "D32 row you_grant; D42 (unpaginated); D01 PDF p. 10"
+        },
+        {
+          "name": "prom_voice",
+          "source_columns": [
+            "prom_voice"
+          ],
+          "reverse_coding": "none documented",
+          "scoring_rule": "Single item: I would speak up publicly in support of the accused; 1=strongly disagree, 7=strongly agree.",
+          "condition_coding": "not applicable",
+          "mapping_status": "documented",
+          "source_locator": "D32 row prom_voice; D42 (unpaginated); D01 PDF p. 10"
+        },
+        {
+          "name": "proh_voice",
+          "source_columns": [
+            "proh_voice"
+          ],
+          "reverse_coding": "none documented",
+          "scoring_rule": "Single item: I would speak up and condemn the accusations made against the accused; 1=strongly disagree, 7=strongly agree.",
+          "condition_coding": "not applicable",
+          "mapping_status": "documented",
+          "source_locator": "D32 row proh_voice; D42 (unpaginated); D01 PDF p. 10"
+        },
+        {
+          "name": "gender",
+          "source_columns": [
+            "gender"
+          ],
+          "reverse_coding": "none documented",
+          "scoring_rule": "single recorded category",
+          "condition_coding": "1=female; 2=male; 3=open-text entry; exploratory binary comparisons retain 1 or 2, inferred from descriptions",
+          "mapping_status": "documented",
+          "source_locator": "D32 row gender; D03 PDF pp. 5–6; D01 PDF p. 17 (printed p. 778)"
+        },
+        {
+          "name": "benev_trust_broker",
+          "source_columns": [
+            "bentrust_broker1",
+            "bentrust_broker2",
+            "bentrust_broker3"
+          ],
+          "reverse_coding": "none documented",
+          "scoring_rule": "D32 gives literal addition; averaging is a candidate inferred from response scale, not explicitly documented. Existing composite column available; missing-item policy unstated.",
+          "condition_coding": "not applicable",
+          "mapping_status": "documented item mapping; aggregation unresolved",
+          "source_locator": "D32 composite row benev_trust_broker; D42 (unpaginated); D01 PDF p. 11"
+        },
+        {
+          "name": "integ_trust_broker",
+          "source_columns": [
+            "inttrust_broker1",
+            "inttrust_broker2",
+            "inttrust_broker3"
+          ],
+          "reverse_coding": "none documented",
+          "scoring_rule": "D32 gives literal addition; averaging is a candidate inferred from response scale, not explicitly documented. Existing composite column available; missing-item policy unstated.",
+          "condition_coding": "not applicable",
+          "mapping_status": "documented item mapping; aggregation unresolved",
+          "source_locator": "D32 composite row integ_trust_broker; D42 (unpaginated); D01 PDF p. 11"
+        },
+        {
+          "name": "val_align_part_broker",
+          "source_columns": [
+            "me_broker_valal1",
+            "me_broker_valal2"
+          ],
+          "reverse_coding": "none documented",
+          "scoring_rule": "D32 gives literal addition; averaging is a candidate inferred from response scale, not explicitly documented. Existing composite column available; missing-item policy unstated.",
+          "condition_coding": "not applicable",
+          "mapping_status": "documented item mapping; aggregation unresolved",
+          "source_locator": "D32 composite row val_align_part_broker; D42 (unpaginated); D01 PDF p. 11"
+        },
+        {
+          "name": "relconcerns_with_broker",
+          "source_columns": [
+            "broker_rep1",
+            "broker_rep2",
+            "broker_rep3"
+          ],
+          "reverse_coding": "none documented",
+          "scoring_rule": "D32 gives literal addition; averaging is a candidate inferred from response scale, not explicitly documented. Existing composite column available; missing-item policy unstated.",
+          "condition_coding": "not applicable",
+          "mapping_status": "documented item mapping; aggregation unresolved",
+          "source_locator": "D32 composite row relconcerns_with_broker; D42 (unpaginated); D01 PDF p. 11",
+          "item_wording": {
+            "broker_rep1": "If I chose not to support the accused: worried about damaging my reputation with broker",
+            "broker_rep2": "If I chose not to support the accused: concerned broker would judge me as disloyal or untrustworthy",
+            "broker_rep3": "If I chose not to support the accused: concerned about harming my relationship with broker"
+          },
+          "item_scale": "1=strongly disagree,7=strongly agree; Study 3 item correspondence inferred from D01 same-measures statement and D32, since D33 item rows absent"
+        },
+        {
+          "name": "cond_recode",
+          "source_columns": [
+            "cond",
+            "cond_recode"
+          ],
+          "reverse_coding": "none documented",
+          "scoring_rule": "existing numeric recode",
+          "condition_coding": "loyal_colleague=1, control=0; cond_num 1=loyal_colleague,2=control",
+          "mapping_status": "documented",
+          "source_locator": "D32 condition rows; D01 PDF p. 11 Table 3"
+        },
+        {
+          "name": "benev_trust_accused",
+          "source_columns": [
+            "bentrust_accused1",
+            "bentrust_accused2",
+            "bentrust_accused3"
+          ],
+          "reverse_coding": "D32 positive wording requires no reversal; D12 §8 gives negative wording for third integrity item, implying reversal if that wording was actually administered (unresolved).",
+          "scoring_rule": "D32 literal sum; averaging not explicitly documented; existing composite available.",
+          "condition_coding": "not applicable",
+          "mapping_status": "documented",
+          "source_locator": "D32 accused-trust rows; D03 PDF p. 2; D12 PDF p. 2 §8"
+        },
+        {
+          "name": "integ_trust_accused",
+          "source_columns": [
+            "inttrust_accused1",
+            "inttrust_accused2",
+            "inttrust_accused3"
+          ],
+          "reverse_coding": "D32 positive wording requires no reversal; D12 §8 gives negative wording for third integrity item, implying reversal if that wording was actually administered (unresolved).",
+          "scoring_rule": "D32 literal sum; averaging not explicitly documented; existing composite available.",
+          "condition_coding": "not applicable",
+          "mapping_status": "documented",
+          "source_locator": "D32 accused-trust rows; D03 PDF p. 2; D12 PDF p. 2 §8"
+        },
+        {
+          "name": "group_cohesion_pre",
+          "source_columns": [
+            "group_cohesion1_pre",
+            "group_cohesion2_pre",
+            "group_cohesion3_pre"
+          ],
+          "reverse_coding": "none documented",
+          "scoring_rule": "D32 literal sum; aggregation otherwise unstated; measured pre-wrongdoing.",
+          "condition_coding": "not applicable",
+          "mapping_status": "documented",
+          "source_locator": "D32 cohesion rows; D03 PDF p. 2; D12 PDF p. 2 §8"
+        },
+        {
+          "name": "group_cohesion_post",
+          "source_columns": [
+            "group_cohesion1_post",
+            "group_cohesion2_post",
+            "group_cohesion3_post"
+          ],
+          "reverse_coding": "none documented",
+          "scoring_rule": "D32 literal sum; aggregation otherwise unstated; measured post-wrongdoing.",
+          "condition_coding": "not applicable",
+          "mapping_status": "documented",
+          "source_locator": "D32 cohesion rows; D03 PDF p. 2; D12 PDF p. 2 §8"
+        },
+        {
+          "name": "accept_risk",
+          "source_columns": [
+            "accept_risk"
+          ],
+          "reverse_coding": "none documented",
+          "scoring_rule": "single item; descriptive/exploratory measurement with no additional reported test",
+          "condition_coding": "not applicable",
+          "mapping_status": "documented",
+          "source_locator": "D32 row accept_risk; D12 PDF p. 2 §8; D03 PDF p. 2"
+        },
+        {
+          "name": "loyal_broker",
+          "source_columns": [
+            "loyal_broker"
+          ],
+          "reverse_coding": "none documented",
+          "scoring_rule": "single item; descriptive/exploratory measurement with no additional reported test",
+          "condition_coding": "not applicable",
+          "mapping_status": "documented",
+          "source_locator": "D32 row loyal_broker; D12 PDF p. 2 §8; D03 PDF p. 2"
+        },
+        {
+          "name": "loyal_accused",
+          "source_columns": [
+            "loyal_accused"
+          ],
+          "reverse_coding": "none documented",
+          "scoring_rule": "single item; descriptive/exploratory measurement with no additional reported test",
+          "condition_coding": "not applicable",
+          "mapping_status": "documented",
+          "source_locator": "D32 row loyal_accused; D12 PDF p. 2 §8; D03 PDF p. 2"
+        },
+        {
+          "name": "age",
+          "source_columns": [
+            "age"
+          ],
+          "reverse_coding": "none documented",
+          "scoring_rule": "recorded demographic variable; no transformation documented",
+          "condition_coding": "not applicable",
+          "mapping_status": "documented",
+          "source_locator": "D32 row age; D01 PDF p. 10"
+        },
+        {
+          "name": "industry",
+          "source_columns": [
+            "industry"
+          ],
+          "reverse_coding": "none documented",
+          "scoring_rule": "recorded demographic variable; no transformation documented",
+          "condition_coding": "not applicable",
+          "mapping_status": "documented",
+          "source_locator": "D32 row industry; D01 PDF p. 10"
+        }
+      ],
+      "analyses": [
+        {
+          "analysis_id": "S2_descriptives",
+          "claim_ids": [
+            "S2_description"
+          ],
+          "outcome": [
+            "cond_recode",
+            "you_grant",
+            "prom_voice",
+            "proh_voice",
+            "benev_trust_broker",
+            "integ_trust_broker",
+            "val_align_part_broker",
+            "relconcerns_with_broker",
+            "age",
+            "gender",
+            "industry"
+          ],
+          "predictors": [],
+          "estimator": "descriptive summaries; bivariate correlation type unstated",
+          "covariates": [],
+          "contrasts": [],
+          "within_subject_handling": "not applicable",
+          "covariance_method": "unstated",
+          "bootstrap_settings": "not applicable",
+          "software": "unstated",
+          "routine_or_macro": "unstated",
+          "seed": "unstated",
+          "missing_data_rule": "unstated",
+          "output_required": [
+            "sample flow counts",
+            "demographics",
+            "means",
+            "SDs",
+            "pairwise correlations"
+          ],
+          "alpha": "unstated for analysis; power planning uses 0.05 (D01 PDF p. 10)",
+          "tail": "unstated for analysis; power planning described as two-tailed (D01 PDF p. 10)",
+          "direction": "unstated",
+          "source_locator": "D01 PDF p. 10–11 (Table 3; Participants)"
+        },
+        {
+          "analysis_id": "S2_reliability",
+          "claim_ids": [
+            "S2_reliability"
+          ],
+          "outcome": [
+            "benev_trust_broker",
+            "val_align_part_broker",
+            "relconcerns_with_broker",
+            "benev_trust_accused",
+            "integ_trust_accused",
+            "group_cohesion_pre",
+            "group_cohesion_post"
+          ],
+          "predictors": [],
+          "estimator": "coefficient alpha and two-item correlation; correlation method unstated",
+          "covariates": [],
+          "contrasts": [],
+          "within_subject_handling": "not applicable",
+          "covariance_method": "unstated",
+          "bootstrap_settings": "not applicable",
+          "software": "unstated",
+          "routine_or_macro": "unstated",
+          "seed": "unstated",
+          "missing_data_rule": "unstated",
+          "output_required": [
+            "coefficient alpha",
+            "inter-item correlations"
+          ],
+          "alpha": "unstated for analysis; power planning uses 0.05 (D01 PDF p. 10)",
+          "tail": "unstated for analysis; power planning described as two-tailed (D01 PDF p. 10)",
+          "direction": "unstated",
+          "source_locator": "D01 PDF p. 11 (printed p. 772); D03 PDF p. 2"
+        },
+        {
+          "analysis_id": "S2_t_you_grant",
+          "claim_ids": [
+            "S2_you_grant"
+          ],
+          "outcome": "you_grant",
+          "predictors": [
+            "cond"
+          ],
+          "estimator": "independent-samples t-test; equal-variance versus Welch unstated",
+          "covariates": [],
+          "contrasts": [
+            {
+              "weights": {
+                "loyal_colleague": 1,
+                "control": -1
+              }
+            }
+          ],
+          "within_subject_handling": "not applicable",
+          "covariance_method": "unstated",
+          "bootstrap_settings": "not applicable",
+          "software": "unstated",
+          "routine_or_macro": "unstated",
+          "seed": "unstated",
+          "missing_data_rule": "unstated",
+          "output_required": [
+            "estimates",
+            "standard errors",
+            "test statistics",
+            "degrees of freedom",
+            "p values"
+          ],
+          "alpha": "unstated for analysis; power planning uses 0.05 (D01 PDF p. 10)",
+          "tail": "unstated for analysis; power planning described as two-tailed (D01 PDF p. 10)",
+          "direction": "loyal > control",
+          "source_locator": "D01 PDF p. 11 (printed p. 772); D12 PDF p. 1 §5"
+        },
+        {
+          "analysis_id": "S2_parallel_you_grant",
+          "claim_ids": [
+            "S2_ind_you_grant_benev_trust_broker",
+            "S2_ind_you_grant_integ_trust_broker",
+            "S2_ind_you_grant_val_align_part_broker",
+            "S2_ind_you_grant_relconcerns_with_broker"
+          ],
+          "outcome": "you_grant",
+          "predictors": [
+            "cond_recode",
+            "benev_trust_broker",
+            "integ_trust_broker",
+            "val_align_part_broker",
+            "relconcerns_with_broker"
+          ],
+          "estimator": "parallel mediation; regression/path estimator and link unstated",
+          "covariates": [],
+          "contrasts": [],
+          "within_subject_handling": "not applicable",
+          "covariance_method": "unstated",
+          "bootstrap_settings": {
+            "resamples": 5000,
+            "resamples_source": "D12 PDF p. 1 §5",
+            "interval": "95% bias-corrected",
+            "interval_source": "D01 PDF p. 11–12 (printed pp. 772–773; Mediation)",
+            "resampling_unit": "unstated"
+          },
+          "software": "unstated",
+          "routine_or_macro": "unstated",
+          "seed": "unstated",
+          "missing_data_rule": "unstated",
+          "output_required": [
+            "simultaneous indirect effect for each mediator",
+            "bootstrap SE",
+            "bias-corrected CI",
+            "p value; computation unstated"
+          ],
+          "alpha": "unstated for analysis; power planning uses 0.05 (D01 PDF p. 10)",
+          "tail": "unstated for analysis; power planning described as two-tailed (D01 PDF p. 10)",
+          "direction": "positive indirect effects hypothesized; integrity included by preregistration",
+          "source_locator": "D01 PDF p. 11–12 (printed pp. 772–773; Mediation); D12 PDF p. 1 §5"
+        },
+        {
+          "analysis_id": "S2_t_prom_voice",
+          "claim_ids": [
+            "S2_prom_voice"
+          ],
+          "outcome": "prom_voice",
+          "predictors": [
+            "cond"
+          ],
+          "estimator": "independent-samples t-test; equal-variance versus Welch unstated",
+          "covariates": [],
+          "contrasts": [
+            {
+              "weights": {
+                "loyal_colleague": 1,
+                "control": -1
+              }
+            }
+          ],
+          "within_subject_handling": "not applicable",
+          "covariance_method": "unstated",
+          "bootstrap_settings": "not applicable",
+          "software": "unstated",
+          "routine_or_macro": "unstated",
+          "seed": "unstated",
+          "missing_data_rule": "unstated",
+          "output_required": [
+            "estimates",
+            "standard errors",
+            "test statistics",
+            "degrees of freedom",
+            "p values"
+          ],
+          "alpha": "unstated for analysis; power planning uses 0.05 (D01 PDF p. 10)",
+          "tail": "unstated for analysis; power planning described as two-tailed (D01 PDF p. 10)",
+          "direction": "loyal > control",
+          "source_locator": "D01 PDF p. 11 (printed p. 772); D12 PDF p. 1 §5"
+        },
+        {
+          "analysis_id": "S2_parallel_prom_voice",
+          "claim_ids": [
+            "S2_ind_prom_voice_benev_trust_broker",
+            "S2_ind_prom_voice_integ_trust_broker",
+            "S2_ind_prom_voice_val_align_part_broker",
+            "S2_ind_prom_voice_relconcerns_with_broker"
+          ],
+          "outcome": "prom_voice",
+          "predictors": [
+            "cond_recode",
+            "benev_trust_broker",
+            "integ_trust_broker",
+            "val_align_part_broker",
+            "relconcerns_with_broker"
+          ],
+          "estimator": "parallel mediation; regression/path estimator and link unstated",
+          "covariates": [],
+          "contrasts": [],
+          "within_subject_handling": "not applicable",
+          "covariance_method": "unstated",
+          "bootstrap_settings": {
+            "resamples": 5000,
+            "resamples_source": "D12 PDF p. 1 §5",
+            "interval": "95% bias-corrected",
+            "interval_source": "D01 PDF p. 11–12 (printed pp. 772–773; Mediation)",
+            "resampling_unit": "unstated"
+          },
+          "software": "unstated",
+          "routine_or_macro": "unstated",
+          "seed": "unstated",
+          "missing_data_rule": "unstated",
+          "output_required": [
+            "simultaneous indirect effect for each mediator",
+            "bootstrap SE",
+            "bias-corrected CI",
+            "p value; computation unstated"
+          ],
+          "alpha": "unstated for analysis; power planning uses 0.05 (D01 PDF p. 10)",
+          "tail": "unstated for analysis; power planning described as two-tailed (D01 PDF p. 10)",
+          "direction": "positive indirect effects hypothesized; integrity included by preregistration",
+          "source_locator": "D01 PDF p. 11–12 (printed pp. 772–773; Mediation); D12 PDF p. 1 §5"
+        },
+        {
+          "analysis_id": "S2_t_proh_voice",
+          "claim_ids": [
+            "S2_proh_voice"
+          ],
+          "outcome": "proh_voice",
+          "predictors": [
+            "cond"
+          ],
+          "estimator": "independent-samples t-test; equal-variance versus Welch unstated",
+          "covariates": [],
+          "contrasts": [
+            {
+              "weights": {
+                "loyal_colleague": 1,
+                "control": -1
+              }
+            }
+          ],
+          "within_subject_handling": "not applicable",
+          "covariance_method": "unstated",
+          "bootstrap_settings": "not applicable",
+          "software": "unstated",
+          "routine_or_macro": "unstated",
+          "seed": "unstated",
+          "missing_data_rule": "unstated",
+          "output_required": [
+            "estimates",
+            "standard errors",
+            "test statistics",
+            "degrees of freedom",
+            "p values"
+          ],
+          "alpha": "unstated for analysis; power planning uses 0.05 (D01 PDF p. 10)",
+          "tail": "unstated for analysis; power planning described as two-tailed (D01 PDF p. 10)",
+          "direction": "loyal > control",
+          "source_locator": "D01 PDF p. 11 (printed p. 772); D12 PDF p. 1 §5"
+        },
+        {
+          "analysis_id": "S2_parallel_proh_voice",
+          "claim_ids": [
+            "S2_ind_proh_voice_benev_trust_broker",
+            "S2_ind_proh_voice_integ_trust_broker",
+            "S2_ind_proh_voice_val_align_part_broker",
+            "S2_ind_proh_voice_relconcerns_with_broker"
+          ],
+          "outcome": "proh_voice",
+          "predictors": [
+            "cond_recode",
+            "benev_trust_broker",
+            "integ_trust_broker",
+            "val_align_part_broker",
+            "relconcerns_with_broker"
+          ],
+          "estimator": "parallel mediation; regression/path estimator and link unstated",
+          "covariates": [],
+          "contrasts": [],
+          "within_subject_handling": "not applicable",
+          "covariance_method": "unstated",
+          "bootstrap_settings": {
+            "resamples": 5000,
+            "resamples_source": "D12 PDF p. 1 §5",
+            "interval": "95% bias-corrected",
+            "interval_source": "D01 PDF p. 11–12 (printed pp. 772–773; Mediation)",
+            "resampling_unit": "unstated"
+          },
+          "software": "unstated",
+          "routine_or_macro": "unstated",
+          "seed": "unstated",
+          "missing_data_rule": "unstated",
+          "output_required": [
+            "simultaneous indirect effect for each mediator",
+            "bootstrap SE",
+            "bias-corrected CI",
+            "p value; computation unstated"
+          ],
+          "alpha": "unstated for analysis; power planning uses 0.05 (D01 PDF p. 10)",
+          "tail": "unstated for analysis; power planning described as two-tailed (D01 PDF p. 10)",
+          "direction": "positive indirect effects hypothesized; integrity included by preregistration",
+          "source_locator": "D01 PDF p. 11–12 (printed pp. 772–773; Mediation); D12 PDF p. 1 §5"
+        },
+        {
+          "analysis_id": "S2_serial_val_align_part_broker",
+          "claim_ids": [
+            "S2_serial_val_align_part_broker"
+          ],
+          "outcome": "you_grant",
+          "predictors": [
+            "cond_recode",
+            "benev_trust_broker",
+            "val_align_part_broker"
+          ],
+          "estimator": "serial path mediation; regression estimator/link unstated",
+          "covariates": [],
+          "contrasts": [],
+          "within_subject_handling": "not applicable",
+          "covariance_method": "unstated",
+          "bootstrap_settings": {
+            "resamples": "unstated specifically for serial model; D12 §5 specifies 5000 for primary mediation",
+            "interval": "95%; bias correction not restated for serial models",
+            "resampling_unit": "unstated"
+          },
+          "software": "unstated",
+          "routine_or_macro": "unstated",
+          "seed": "unstated",
+          "missing_data_rule": "unstated",
+          "output_required": [
+            "serial indirect effect",
+            "SE",
+            "CI endpoints",
+            "p value"
+          ],
+          "alpha": "unstated for analysis; power planning uses 0.05 (D01 PDF p. 10)",
+          "tail": "unstated for analysis; power planning described as two-tailed (D01 PDF p. 10)",
+          "direction": "positive serial indirect effect",
+          "source_locator": "D03 PDF p. 2 (serial model 1); D12 PDF p. 2 §8"
+        },
+        {
+          "analysis_id": "S2_serial_relconcerns_with_broker",
+          "claim_ids": [
+            "S2_serial_relconcerns_with_broker"
+          ],
+          "outcome": "you_grant",
+          "predictors": [
+            "cond_recode",
+            "benev_trust_broker",
+            "relconcerns_with_broker"
+          ],
+          "estimator": "serial path mediation; regression estimator/link unstated",
+          "covariates": [],
+          "contrasts": [],
+          "within_subject_handling": "not applicable",
+          "covariance_method": "unstated",
+          "bootstrap_settings": {
+            "resamples": "unstated specifically for serial model; D12 §5 specifies 5000 for primary mediation",
+            "interval": "95%; bias correction not restated for serial models",
+            "resampling_unit": "unstated"
+          },
+          "software": "unstated",
+          "routine_or_macro": "unstated",
+          "seed": "unstated",
+          "missing_data_rule": "unstated",
+          "output_required": [
+            "serial indirect effect",
+            "SE",
+            "CI endpoints",
+            "p value"
+          ],
+          "alpha": "unstated for analysis; power planning uses 0.05 (D01 PDF p. 10)",
+          "tail": "unstated for analysis; power planning described as two-tailed (D01 PDF p. 10)",
+          "direction": "positive serial indirect effect",
+          "source_locator": "D03 PDF p. 3 (serial model 2); D12 PDF p. 2 §8"
+        },
+        {
+          "analysis_id": "S2_gender_loyalty_sexual_harassment_male",
+          "claim_ids": [
+            "S2_gender_loyalty_sexual_harassment_male"
+          ],
+          "outcome": "you_grant",
+          "predictors": [
+            "cond"
+          ],
+          "estimator": "t-test; appendix does not specify paired versus independent or equal-variance rule",
+          "covariates": [],
+          "contrasts": [
+            {
+              "gender": 2,
+              "wrongdoing_num": "all assigned scenarios",
+              "weights": {
+                "loyal_colleague": 1,
+                "control": -1
+              }
+            }
+          ],
+          "within_subject_handling": "not applicable",
+          "covariance_method": "unstated",
+          "bootstrap_settings": "not applicable",
+          "software": "unstated",
+          "routine_or_macro": "unstated",
+          "seed": "unstated",
+          "missing_data_rule": "unstated",
+          "output_required": [
+            "subgroup condition means",
+            "SDs",
+            "t",
+            "df",
+            "p"
+          ],
+          "alpha": "unstated for analysis; power planning uses 0.05 (D01 PDF p. 10)",
+          "tail": "unstated for analysis; power planning described as two-tailed (D01 PDF p. 10)",
+          "direction": "loyal > control",
+          "source_locator": "D03 PDF p. 6 (Exploring Gender Effects)",
+          "sample_subset_source": "D03 PDF pp. 5–6; gender values 1=female,2=male mapped from D31/D32; Study 1 wrongdoing code 1 from D31",
+          "sample_steps_extension": [
+            {
+              "order": 1,
+              "description": "Restrict to reported exploratory subgroup/condition using analysis contrasts.",
+              "variables": [
+                "gender",
+                "cond"
+              ],
+              "values": "As specified in contrasts; records with other gender categories are not in binary comparisons. Missing gender handling otherwise unstated.",
+              "source_locator": "D03 PDF pp. 5–6; D01 PDF p. 17; D31/D32 gender and condition rows",
+              "mapping_status": "inferred column mapping"
+            }
+          ]
+        },
+        {
+          "analysis_id": "S2_gender_loyalty_sexual_harassment_female",
+          "claim_ids": [
+            "S2_gender_loyalty_sexual_harassment_female"
+          ],
+          "outcome": "you_grant",
+          "predictors": [
+            "cond"
+          ],
+          "estimator": "t-test; appendix does not specify paired versus independent or equal-variance rule",
+          "covariates": [],
+          "contrasts": [
+            {
+              "gender": 1,
+              "wrongdoing_num": "all assigned scenarios",
+              "weights": {
+                "loyal_colleague": 1,
+                "control": -1
+              }
+            }
+          ],
+          "within_subject_handling": "not applicable",
+          "covariance_method": "unstated",
+          "bootstrap_settings": "not applicable",
+          "software": "unstated",
+          "routine_or_macro": "unstated",
+          "seed": "unstated",
+          "missing_data_rule": "unstated",
+          "output_required": [
+            "subgroup condition means",
+            "SDs",
+            "t",
+            "df",
+            "p"
+          ],
+          "alpha": "unstated for analysis; power planning uses 0.05 (D01 PDF p. 10)",
+          "tail": "unstated for analysis; power planning described as two-tailed (D01 PDF p. 10)",
+          "direction": "loyal > control",
+          "source_locator": "D03 PDF p. 6 (Exploring Gender Effects)",
+          "sample_subset_source": "D03 PDF pp. 5–6; gender values 1=female,2=male mapped from D31/D32; Study 1 wrongdoing code 1 from D31",
+          "sample_steps_extension": [
+            {
+              "order": 1,
+              "description": "Restrict to reported exploratory subgroup/condition using analysis contrasts.",
+              "variables": [
+                "gender",
+                "cond"
+              ],
+              "values": "As specified in contrasts; records with other gender categories are not in binary comparisons. Missing gender handling otherwise unstated.",
+              "source_locator": "D03 PDF pp. 5–6; D01 PDF p. 17; D31/D32 gender and condition rows",
+              "mapping_status": "inferred column mapping"
+            }
+          ]
+        },
+        {
+          "analysis_id": "S2_gender_difference_loyal_colleague",
+          "claim_ids": [
+            "S2_gender_difference_loyal_colleague"
+          ],
+          "outcome": "you_grant",
+          "predictors": [
+            "gender"
+          ],
+          "estimator": "between-gender t-test; variance assumption unstated",
+          "covariates": [],
+          "contrasts": [
+            {
+              "subset": {
+                "cond": "loyal_colleague"
+              },
+              "weights": {
+                "male (gender=2)": 1,
+                "female (gender=1)": -1
+              }
+            }
+          ],
+          "within_subject_handling": "not applicable",
+          "covariance_method": "unstated",
+          "bootstrap_settings": "not applicable",
+          "software": "unstated",
+          "routine_or_macro": "unstated",
+          "seed": "unstated",
+          "missing_data_rule": "unstated",
+          "output_required": [
+            "gender-group means",
+            "SDs",
+            "t",
+            "df",
+            "p"
+          ],
+          "alpha": "unstated for analysis; power planning uses 0.05 (D01 PDF p. 10)",
+          "tail": "unstated for analysis; power planning described as two-tailed (D01 PDF p. 10)",
+          "direction": "unstated",
+          "source_locator": "D03 PDF p. 6 (Study 2 Exploring Gender Effects)",
+          "sample_subset_source": "D03 PDF pp. 5–6; gender values 1=female,2=male mapped from D31/D32; Study 1 wrongdoing code 1 from D31",
+          "sample_steps_extension": [
+            {
+              "order": 1,
+              "description": "Restrict to reported exploratory subgroup/condition using analysis contrasts.",
+              "variables": [
+                "gender",
+                "cond"
+              ],
+              "values": "As specified in contrasts; records with other gender categories are not in binary comparisons. Missing gender handling otherwise unstated.",
+              "source_locator": "D03 PDF pp. 5–6; D01 PDF p. 17; D31/D32 gender and condition rows",
+              "mapping_status": "inferred column mapping"
+            }
+          ]
+        },
+        {
+          "analysis_id": "S2_gender_difference_control",
+          "claim_ids": [
+            "S2_gender_difference_control"
+          ],
+          "outcome": "you_grant",
+          "predictors": [
+            "gender"
+          ],
+          "estimator": "between-gender t-test; variance assumption unstated",
+          "covariates": [],
+          "contrasts": [
+            {
+              "subset": {
+                "cond": "control"
+              },
+              "weights": {
+                "male (gender=2)": 1,
+                "female (gender=1)": -1
+              }
+            }
+          ],
+          "within_subject_handling": "not applicable",
+          "covariance_method": "unstated",
+          "bootstrap_settings": "not applicable",
+          "software": "unstated",
+          "routine_or_macro": "unstated",
+          "seed": "unstated",
+          "missing_data_rule": "unstated",
+          "output_required": [
+            "gender-group means",
+            "SDs",
+            "t",
+            "df",
+            "p"
+          ],
+          "alpha": "unstated for analysis; power planning uses 0.05 (D01 PDF p. 10)",
+          "tail": "unstated for analysis; power planning described as two-tailed (D01 PDF p. 10)",
+          "direction": "unstated",
+          "source_locator": "D03 PDF p. 6 (Study 2 Exploring Gender Effects)",
+          "sample_subset_source": "D03 PDF pp. 5–6; gender values 1=female,2=male mapped from D31/D32; Study 1 wrongdoing code 1 from D31",
+          "sample_steps_extension": [
+            {
+              "order": 1,
+              "description": "Restrict to reported exploratory subgroup/condition using analysis contrasts.",
+              "variables": [
+                "gender",
+                "cond"
+              ],
+              "values": "As specified in contrasts; records with other gender categories are not in binary comparisons. Missing gender handling otherwise unstated.",
+              "source_locator": "D03 PDF pp. 5–6; D01 PDF p. 17; D31/D32 gender and condition rows",
+              "mapping_status": "inferred column mapping"
+            }
+          ]
+        }
+      ]
+    },
+    "3": {
+      "data_file": "unstated; D43_columns_study3.txt contains column names only",
+      "unit_of_observation": "participant",
+      "design": {
+        "factors": [
+          {
+            "name": "relationship to broker",
+            "column": "cond_rel",
+            "levels": [
+              "loyal_colleague",
+              "control"
+            ],
+            "between_or_within": "between"
+          },
+          {
+            "name": "broker history",
+            "column": "broker_hist",
+            "levels": [
+              "divisive",
+              "control"
+            ],
+            "between_or_within": "between"
+          }
+        ],
+        "assignment_unit": "participant, randomized to factorial condition",
+        "source_locator": "D01 PDF p. 12–13 (printed pp. 773–774); D13 PDF p. 1 §4; D33 condition rows; D43 (unpaginated)"
+      },
+      "sample_steps": [
+        {
+          "order": 1,
+          "description": "Recruit U.S.-based full-time employees through Prolific and randomize factorial condition. Eligibility indicators unavailable.",
+          "variables": "unstated",
+          "values": "unstated",
+          "source_locator": "D01 PDF p. 12 (Participants and Procedure)",
+          "mapping_status": "documented"
+        },
+        {
+          "order": 2,
+          "description": "Remove participants failing simple attention checks. Which checks were applied and whether all must pass are unstated.",
+          "variables": [
+            "attn_afterscen",
+            "comp1",
+            "comp2",
+            "comp3",
+            "cond_num",
+            "cond_rel",
+            "broker_hist"
+          ],
+          "values": "Candidate correct attn_afterscen by cond_num: 1→1, 2→3, 3→2, 4→4; comp1: loyal_colleague→1, control→2; comp2→2; comp3: control→1, divisive→2. These are inferred answer keys, not an established filter.",
+          "source_locator": "D13 PDF p. 1 §6; D33 check and condition rows; D02 PDF pp. 2–3; D43 (unpaginated)",
+          "mapping_status": "inferred"
+        }
+      ],
+      "variables": [
+        {
+          "name": "you_grant",
+          "source_columns": [
+            "you_grant"
+          ],
+          "reverse_coding": "none documented",
+          "scoring_rule": "Single item: likelihood of granting the colleague/broker request; 1=extremely unlikely, 7=extremely likely.",
+          "condition_coding": "not applicable",
+          "mapping_status": "documented",
+          "source_locator": "D33 row you_grant; D43 (unpaginated); D01 PDF p. 13"
+        },
+        {
+          "name": "prom_voice",
+          "source_columns": [
+            "prom_voice"
+          ],
+          "reverse_coding": "none documented",
+          "scoring_rule": "Single item: I would speak up publicly in support of the accused; 1=strongly disagree, 7=strongly agree.",
+          "condition_coding": "not applicable",
+          "mapping_status": "documented",
+          "source_locator": "D33 row prom_voice; D43 (unpaginated); D01 PDF p. 13"
+        },
+        {
+          "name": "proh_voice",
+          "source_columns": [
+            "proh_voice"
+          ],
+          "reverse_coding": "none documented",
+          "scoring_rule": "Single item: I would speak up and condemn the accusations made against the accused; 1=strongly disagree, 7=strongly agree.",
+          "condition_coding": "not applicable",
+          "mapping_status": "documented",
+          "source_locator": "D33 row proh_voice; D43 (unpaginated); D01 PDF p. 13"
+        },
+        {
+          "name": "gender",
+          "source_columns": [
+            "gender"
+          ],
+          "reverse_coding": "none documented",
+          "scoring_rule": "single recorded category",
+          "condition_coding": "1=female; 2=male; 3=open-text entry; exploratory binary comparisons retain 1 or 2, inferred from descriptions",
+          "mapping_status": "documented",
+          "source_locator": "D33 row gender; D03 PDF pp. 5–6; D01 PDF p. 17 (printed p. 778)"
+        },
+        {
+          "name": "benev_trust_broker",
+          "source_columns": [
+            "bentrust_broker1",
+            "bentrust_broker2",
+            "bentrust_broker3"
+          ],
+          "reverse_coding": "none documented",
+          "scoring_rule": "D33 gives literal addition; averaging is a candidate inferred from response scale, not explicitly documented. Existing composite column available; missing-item policy unstated.",
+          "condition_coding": "not applicable",
+          "mapping_status": "documented item mapping; aggregation unresolved",
+          "source_locator": "D33 composite row benev_trust_broker; D43 (unpaginated); D01 PDF p. 13"
+        },
+        {
+          "name": "integ_trust_broker",
+          "source_columns": [
+            "inttrust_broker1",
+            "inttrust_broker2",
+            "inttrust_broker3"
+          ],
+          "reverse_coding": "none documented",
+          "scoring_rule": "D33 gives literal addition; averaging is a candidate inferred from response scale, not explicitly documented. Existing composite column available; missing-item policy unstated.",
+          "condition_coding": "not applicable",
+          "mapping_status": "documented item mapping; aggregation unresolved",
+          "source_locator": "D33 composite row integ_trust_broker; D43 (unpaginated); D01 PDF p. 13"
+        },
+        {
+          "name": "val_align_part_broker",
+          "source_columns": [
+            "me_broker_valal1",
+            "me_broker_valal2"
+          ],
+          "reverse_coding": "none documented",
+          "scoring_rule": "D33 gives literal addition; averaging is a candidate inferred from response scale, not explicitly documented. Existing composite column available; missing-item policy unstated.",
+          "condition_coding": "not applicable",
+          "mapping_status": "documented item mapping; aggregation unresolved",
+          "source_locator": "D33 composite row val_align_part_broker; D43 (unpaginated); D01 PDF p. 13"
+        },
+        {
+          "name": "relconcerns_with_broker",
+          "source_columns": [
+            "broker_rep1",
+            "broker_rep2",
+            "broker_rep3"
+          ],
+          "reverse_coding": "none documented",
+          "scoring_rule": "D33 gives literal addition; averaging is a candidate inferred from response scale, not explicitly documented. Existing composite column available; missing-item policy unstated.",
+          "condition_coding": "not applicable",
+          "mapping_status": "inferred item mapping",
+          "source_locator": "D33 composite row relconcerns_with_broker; D43 (unpaginated); D01 PDF p. 13; D12 PDF p. 1 §3 and D32 broker_rep rows used as fallback; D33 lacks these item rows",
+          "item_wording": {
+            "broker_rep1": "If I chose not to support the accused: worried about damaging my reputation with broker",
+            "broker_rep2": "If I chose not to support the accused: concerned broker would judge me as disloyal or untrustworthy",
+            "broker_rep3": "If I chose not to support the accused: concerned about harming my relationship with broker"
+          },
+          "item_scale": "1=strongly disagree,7=strongly agree; Study 3 item correspondence inferred from D01 same-measures statement and D32, since D33 item rows absent"
+        },
+        {
+          "name": "cond_rel_recode",
+          "source_columns": [
+            "cond_rel",
+            "cond_rel_recode"
+          ],
+          "reverse_coding": "none documented",
+          "scoring_rule": "existing numeric recode",
+          "condition_coding": "control=0, loyal_colleague=1",
+          "mapping_status": "documented",
+          "source_locator": "D33 condition rows; D01 PDF p. 13 Table 4"
+        },
+        {
+          "name": "cond_brokhist_recode",
+          "source_columns": [
+            "broker_hist",
+            "cond_brokhist_recode"
+          ],
+          "reverse_coding": "none documented",
+          "scoring_rule": "existing numeric recode",
+          "condition_coding": "control=0, divisive=1",
+          "mapping_status": "documented",
+          "source_locator": "D33 condition rows; D01 PDF p. 13 Table 4"
+        },
+        {
+          "name": "age",
+          "source_columns": [
+            "age"
+          ],
+          "reverse_coding": "none documented",
+          "scoring_rule": "recorded demographic variable; no transformation documented",
+          "condition_coding": "not applicable",
+          "mapping_status": "documented",
+          "source_locator": "D33 row age; D01 PDF p. 12"
+        },
+        {
+          "name": "industry",
+          "source_columns": [
+            "industry"
+          ],
+          "reverse_coding": "none documented",
+          "scoring_rule": "recorded demographic variable; no transformation documented",
+          "condition_coding": "not applicable",
+          "mapping_status": "documented",
+          "source_locator": "D33 row industry; D01 PDF p. 12"
+        },
+        {
+          "name": "cond_num",
+          "source_columns": [
+            "cond_num",
+            "cond_rel",
+            "broker_hist"
+          ],
+          "reverse_coding": "none documented",
+          "scoring_rule": "existing factorial condition index",
+          "condition_coding": "1=loyal_colleague/control; 2=control/control; 3=loyal_colleague/divisive; 4=control/divisive",
+          "mapping_status": "documented",
+          "source_locator": "D33 cond_num row; D43 (unpaginated)"
+        }
+      ],
+      "analyses": [
+        {
+          "analysis_id": "S3_descriptives",
+          "claim_ids": [
+            "S3_description"
+          ],
+          "outcome": [
+            "cond_rel_recode",
+            "cond_brokhist_recode",
+            "you_grant",
+            "prom_voice",
+            "proh_voice",
+            "benev_trust_broker",
+            "integ_trust_broker",
+            "val_align_part_broker",
+            "relconcerns_with_broker",
+            "age",
+            "gender",
+            "industry"
+          ],
+          "predictors": [],
+          "estimator": "descriptive summaries; bivariate correlation type unstated",
+          "covariates": [],
+          "contrasts": [],
+          "within_subject_handling": "not applicable",
+          "covariance_method": "unstated",
+          "bootstrap_settings": "not applicable",
+          "software": "unstated",
+          "routine_or_macro": "unstated",
+          "seed": "unstated",
+          "missing_data_rule": "unstated",
+          "output_required": [
+            "sample flow counts",
+            "demographics",
+            "means",
+            "SDs",
+            "pairwise correlations"
+          ],
+          "alpha": "unstated for analysis; power planning uses 0.05 (D01 PDF p. 12)",
+          "tail": "unstated for analysis; power planning described as two-tailed (D01 PDF p. 12)",
+          "direction": "unstated",
+          "source_locator": "D01 PDF p. 12–13 (Table 4; Participants)"
+        },
+        {
+          "analysis_id": "S3_reliability",
+          "claim_ids": [
+            "S3_reliability"
+          ],
+          "outcome": [
+            "benev_trust_broker",
+            "integ_trust_broker",
+            "val_align_part_broker",
+            "relconcerns_with_broker"
+          ],
+          "predictors": [],
+          "estimator": "coefficient alpha and two-item correlation; correlation method unstated",
+          "covariates": [],
+          "contrasts": [],
+          "within_subject_handling": "not applicable",
+          "covariance_method": "unstated",
+          "bootstrap_settings": "not applicable",
+          "software": "unstated",
+          "routine_or_macro": "unstated",
+          "seed": "unstated",
+          "missing_data_rule": "unstated",
+          "output_required": [
+            "coefficient alpha",
+            "inter-item correlations"
+          ],
+          "alpha": "unstated for analysis; power planning uses 0.05 (D01 PDF p. 12)",
+          "tail": "unstated for analysis; power planning described as two-tailed (D01 PDF p. 12)",
+          "direction": "unstated",
+          "source_locator": "D01 PDF p. 13 (printed p. 774)"
+        },
+        {
+          "analysis_id": "S3_anova_you_grant",
+          "claim_ids": [
+            "S3_anova_you_grant_relationship",
+            "S3_anova_you_grant_history",
+            "S3_anova_you_grant_relationship_history"
+          ],
+          "outcome": "you_grant",
+          "predictors": [
+            "cond_rel",
+            "broker_hist",
+            "cond_rel × broker_hist"
+          ],
+          "estimator": "2 × 2 between-subjects factorial ANOVA",
+          "covariates": [],
+          "contrasts": [],
+          "within_subject_handling": "not applicable",
+          "covariance_method": "ordinary factorial ANOVA residual variance inferred from ANOVA description; sums-of-squares type unstated",
+          "bootstrap_settings": "not applicable",
+          "software": "unstated",
+          "routine_or_macro": "unstated",
+          "seed": "unstated",
+          "missing_data_rule": "unstated",
+          "output_required": [
+            "main effects",
+            "interaction",
+            "F",
+            "df",
+            "p",
+            "eta-squared; exact variant unstated"
+          ],
+          "alpha": "unstated for analysis; power planning uses 0.05 (D01 PDF p. 12)",
+          "tail": "unstated for analysis; power planning described as two-tailed (D01 PDF p. 12)",
+          "direction": "unstated",
+          "source_locator": "D01 PDF p. 13 (printed p. 774); D13 PDF p. 1 §5"
+        },
+        {
+          "analysis_id": "S3_contrast_H1_you_grant",
+          "claim_ids": [
+            "S3_H1_you_grant"
+          ],
+          "outcome": "you_grant",
+          "predictors": [
+            "cond_rel",
+            "broker_hist",
+            "cond_rel × broker_hist"
+          ],
+          "estimator": "planned t contrast following factorial ANOVA",
+          "covariates": [],
+          "contrasts": [
+            {
+              "subset": {
+                "broker_hist": "control"
+              },
+              "weights": {
+                "loyal_colleague": 1,
+                "control": -1
+              },
+              "factor": "cond_rel"
+            }
+          ],
+          "within_subject_handling": "not applicable",
+          "covariance_method": "full factorial-model residual error inferred from reported planned-contrast convention; exact software contrast routine unstated",
+          "bootstrap_settings": "not applicable",
+          "software": "unstated",
+          "routine_or_macro": "unstated",
+          "seed": "unstated",
+          "missing_data_rule": "unstated",
+          "output_required": [
+            "cell means",
+            "cell SDs",
+            "contrast",
+            "t",
+            "df",
+            "p",
+            "d; standardizer unstated"
+          ],
+          "alpha": "unstated for analysis; power planning uses 0.05 (D01 PDF p. 12)",
+          "tail": "unstated for analysis; power planning described as two-tailed (D01 PDF p. 12)",
+          "direction": "loyal > control within no-history",
+          "source_locator": "D01 PDF p. 13 (printed p. 774); D13 PDF p. 1 §5"
+        },
+        {
+          "analysis_id": "S3_contrast_H3_you_grant",
+          "claim_ids": [
+            "S3_H3_you_grant"
+          ],
+          "outcome": "you_grant",
+          "predictors": [
+            "cond_rel",
+            "broker_hist",
+            "cond_rel × broker_hist"
+          ],
+          "estimator": "planned t contrast following factorial ANOVA",
+          "covariates": [],
+          "contrasts": [
+            {
+              "subset": {
+                "cond_rel": "loyal_colleague"
+              },
+              "weights": {
+                "control": 1,
+                "divisive": -1
+              },
+              "factor": "broker_hist",
+              "sign_note": "article reports positive t for no-history minus divisive despite presenting divisive first"
+            }
+          ],
+          "within_subject_handling": "not applicable",
+          "covariance_method": "full factorial-model residual error inferred from reported planned-contrast convention; exact software contrast routine unstated",
+          "bootstrap_settings": "not applicable",
+          "software": "unstated",
+          "routine_or_macro": "unstated",
+          "seed": "unstated",
+          "missing_data_rule": "unstated",
+          "output_required": [
+            "cell means",
+            "cell SDs",
+            "contrast",
+            "t",
+            "df",
+            "p",
+            "d; standardizer unstated"
+          ],
+          "alpha": "unstated for analysis; power planning uses 0.05 (D01 PDF p. 12)",
+          "tail": "unstated for analysis; power planning described as two-tailed (D01 PDF p. 12)",
+          "direction": "no-history > divisive within loyal",
+          "source_locator": "D01 PDF p. 13 (printed p. 774); D13 PDF p. 1 §5"
+        },
+        {
+          "analysis_id": "S3_anova_prom_voice",
+          "claim_ids": [
+            "S3_anova_prom_voice_relationship",
+            "S3_anova_prom_voice_history",
+            "S3_anova_prom_voice_relationship_history"
+          ],
+          "outcome": "prom_voice",
+          "predictors": [
+            "cond_rel",
+            "broker_hist",
+            "cond_rel × broker_hist"
+          ],
+          "estimator": "2 × 2 between-subjects factorial ANOVA",
+          "covariates": [],
+          "contrasts": [],
+          "within_subject_handling": "not applicable",
+          "covariance_method": "ordinary factorial ANOVA residual variance inferred from ANOVA description; sums-of-squares type unstated",
+          "bootstrap_settings": "not applicable",
+          "software": "unstated",
+          "routine_or_macro": "unstated",
+          "seed": "unstated",
+          "missing_data_rule": "unstated",
+          "output_required": [
+            "main effects",
+            "interaction",
+            "F",
+            "df",
+            "p",
+            "eta-squared; exact variant unstated"
+          ],
+          "alpha": "unstated for analysis; power planning uses 0.05 (D01 PDF p. 12)",
+          "tail": "unstated for analysis; power planning described as two-tailed (D01 PDF p. 12)",
+          "direction": "unstated",
+          "source_locator": "D01 PDF p. 13 (printed p. 774); D13 PDF p. 1 §5"
+        },
+        {
+          "analysis_id": "S3_contrast_H1_prom_voice",
+          "claim_ids": [
+            "S3_H1_prom_voice"
+          ],
+          "outcome": "prom_voice",
+          "predictors": [
+            "cond_rel",
+            "broker_hist",
+            "cond_rel × broker_hist"
+          ],
+          "estimator": "planned t contrast following factorial ANOVA",
+          "covariates": [],
+          "contrasts": [
+            {
+              "subset": {
+                "broker_hist": "control"
+              },
+              "weights": {
+                "loyal_colleague": 1,
+                "control": -1
+              },
+              "factor": "cond_rel"
+            }
+          ],
+          "within_subject_handling": "not applicable",
+          "covariance_method": "full factorial-model residual error inferred from reported planned-contrast convention; exact software contrast routine unstated",
+          "bootstrap_settings": "not applicable",
+          "software": "unstated",
+          "routine_or_macro": "unstated",
+          "seed": "unstated",
+          "missing_data_rule": "unstated",
+          "output_required": [
+            "cell means",
+            "cell SDs",
+            "contrast",
+            "t",
+            "df",
+            "p",
+            "d; standardizer unstated"
+          ],
+          "alpha": "unstated for analysis; power planning uses 0.05 (D01 PDF p. 12)",
+          "tail": "unstated for analysis; power planning described as two-tailed (D01 PDF p. 12)",
+          "direction": "loyal > control within no-history",
+          "source_locator": "D01 PDF p. 13 (printed p. 774); D13 PDF p. 1 §5"
+        },
+        {
+          "analysis_id": "S3_contrast_H3_prom_voice",
+          "claim_ids": [
+            "S3_H3_prom_voice"
+          ],
+          "outcome": "prom_voice",
+          "predictors": [
+            "cond_rel",
+            "broker_hist",
+            "cond_rel × broker_hist"
+          ],
+          "estimator": "planned t contrast following factorial ANOVA",
+          "covariates": [],
+          "contrasts": [
+            {
+              "subset": {
+                "cond_rel": "loyal_colleague"
+              },
+              "weights": {
+                "control": 1,
+                "divisive": -1
+              },
+              "factor": "broker_hist",
+              "sign_note": "article reports positive t for no-history minus divisive despite presenting divisive first"
+            }
+          ],
+          "within_subject_handling": "not applicable",
+          "covariance_method": "full factorial-model residual error inferred from reported planned-contrast convention; exact software contrast routine unstated",
+          "bootstrap_settings": "not applicable",
+          "software": "unstated",
+          "routine_or_macro": "unstated",
+          "seed": "unstated",
+          "missing_data_rule": "unstated",
+          "output_required": [
+            "cell means",
+            "cell SDs",
+            "contrast",
+            "t",
+            "df",
+            "p",
+            "d; standardizer unstated"
+          ],
+          "alpha": "unstated for analysis; power planning uses 0.05 (D01 PDF p. 12)",
+          "tail": "unstated for analysis; power planning described as two-tailed (D01 PDF p. 12)",
+          "direction": "no-history > divisive within loyal",
+          "source_locator": "D01 PDF p. 13 (printed p. 774); D13 PDF p. 1 §5"
+        },
+        {
+          "analysis_id": "S3_anova_proh_voice",
+          "claim_ids": [
+            "S3_anova_proh_voice_relationship",
+            "S3_anova_proh_voice_history",
+            "S3_anova_proh_voice_relationship_history"
+          ],
+          "outcome": "proh_voice",
+          "predictors": [
+            "cond_rel",
+            "broker_hist",
+            "cond_rel × broker_hist"
+          ],
+          "estimator": "2 × 2 between-subjects factorial ANOVA",
+          "covariates": [],
+          "contrasts": [],
+          "within_subject_handling": "not applicable",
+          "covariance_method": "ordinary factorial ANOVA residual variance inferred from ANOVA description; sums-of-squares type unstated",
+          "bootstrap_settings": "not applicable",
+          "software": "unstated",
+          "routine_or_macro": "unstated",
+          "seed": "unstated",
+          "missing_data_rule": "unstated",
+          "output_required": [
+            "main effects",
+            "interaction",
+            "F",
+            "df",
+            "p",
+            "eta-squared; exact variant unstated"
+          ],
+          "alpha": "unstated for analysis; power planning uses 0.05 (D01 PDF p. 12)",
+          "tail": "unstated for analysis; power planning described as two-tailed (D01 PDF p. 12)",
+          "direction": "unstated",
+          "source_locator": "D01 PDF p. 13–14 (printed pp. 774–775); D13 PDF p. 1 §5"
+        },
+        {
+          "analysis_id": "S3_contrast_H1_proh_voice",
+          "claim_ids": [
+            "S3_H1_proh_voice"
+          ],
+          "outcome": "proh_voice",
+          "predictors": [
+            "cond_rel",
+            "broker_hist",
+            "cond_rel × broker_hist"
+          ],
+          "estimator": "planned t contrast following factorial ANOVA",
+          "covariates": [],
+          "contrasts": [
+            {
+              "subset": {
+                "broker_hist": "control"
+              },
+              "weights": {
+                "loyal_colleague": 1,
+                "control": -1
+              },
+              "factor": "cond_rel"
+            }
+          ],
+          "within_subject_handling": "not applicable",
+          "covariance_method": "full factorial-model residual error inferred from reported planned-contrast convention; exact software contrast routine unstated",
+          "bootstrap_settings": "not applicable",
+          "software": "unstated",
+          "routine_or_macro": "unstated",
+          "seed": "unstated",
+          "missing_data_rule": "unstated",
+          "output_required": [
+            "cell means",
+            "cell SDs",
+            "contrast",
+            "t",
+            "df",
+            "p",
+            "d; standardizer unstated"
+          ],
+          "alpha": "unstated for analysis; power planning uses 0.05 (D01 PDF p. 12)",
+          "tail": "unstated for analysis; power planning described as two-tailed (D01 PDF p. 12)",
+          "direction": "loyal > control within no-history",
+          "source_locator": "D01 PDF p. 13–14 (printed pp. 774–775); D13 PDF p. 1 §5"
+        },
+        {
+          "analysis_id": "S3_contrast_H3_proh_voice",
+          "claim_ids": [
+            "S3_H3_proh_voice"
+          ],
+          "outcome": "proh_voice",
+          "predictors": [
+            "cond_rel",
+            "broker_hist",
+            "cond_rel × broker_hist"
+          ],
+          "estimator": "planned t contrast following factorial ANOVA",
+          "covariates": [],
+          "contrasts": [
+            {
+              "subset": {
+                "cond_rel": "loyal_colleague"
+              },
+              "weights": {
+                "control": 1,
+                "divisive": -1
+              },
+              "factor": "broker_hist",
+              "sign_note": "article reports positive t for no-history minus divisive despite presenting divisive first"
+            }
+          ],
+          "within_subject_handling": "not applicable",
+          "covariance_method": "full factorial-model residual error inferred from reported planned-contrast convention; exact software contrast routine unstated",
+          "bootstrap_settings": "not applicable",
+          "software": "unstated",
+          "routine_or_macro": "unstated",
+          "seed": "unstated",
+          "missing_data_rule": "unstated",
+          "output_required": [
+            "cell means",
+            "cell SDs",
+            "contrast",
+            "t",
+            "df",
+            "p",
+            "d; standardizer unstated"
+          ],
+          "alpha": "unstated for analysis; power planning uses 0.05 (D01 PDF p. 12)",
+          "tail": "unstated for analysis; power planning described as two-tailed (D01 PDF p. 12)",
+          "direction": "no-history > divisive within loyal",
+          "source_locator": "D01 PDF p. 13–14 (printed pp. 774–775); D13 PDF p. 1 §5"
+        },
+        {
+          "analysis_id": "S3_anova_benev_trust_broker",
+          "claim_ids": [
+            "S3_anova_benev_trust_broker_relationship",
+            "S3_anova_benev_trust_broker_history",
+            "S3_anova_benev_trust_broker_relationship_history"
+          ],
+          "outcome": "benev_trust_broker",
+          "predictors": [
+            "cond_rel",
+            "broker_hist",
+            "cond_rel × broker_hist"
+          ],
+          "estimator": "2 × 2 between-subjects factorial ANOVA",
+          "covariates": [],
+          "contrasts": [],
+          "within_subject_handling": "not applicable",
+          "covariance_method": "ordinary factorial ANOVA residual variance inferred from ANOVA description; sums-of-squares type unstated",
+          "bootstrap_settings": "not applicable",
+          "software": "unstated",
+          "routine_or_macro": "unstated",
+          "seed": "unstated",
+          "missing_data_rule": "unstated",
+          "output_required": [
+            "main effects",
+            "interaction",
+            "F",
+            "df",
+            "p",
+            "eta-squared; exact variant unstated"
+          ],
+          "alpha": "unstated for analysis; power planning uses 0.05 (D01 PDF p. 12)",
+          "tail": "unstated for analysis; power planning described as two-tailed (D01 PDF p. 12)",
+          "direction": "unstated",
+          "source_locator": "D03 PDF p. 3; D13 PDF p. 1 §5; D13 PDF p. 2 §8"
+        },
+        {
+          "analysis_id": "S3_contrast_H1_benev_trust_broker",
+          "claim_ids": [
+            "S3_H1_benev_trust_broker"
+          ],
+          "outcome": "benev_trust_broker",
+          "predictors": [
+            "cond_rel",
+            "broker_hist",
+            "cond_rel × broker_hist"
+          ],
+          "estimator": "planned t contrast following factorial ANOVA",
+          "covariates": [],
+          "contrasts": [
+            {
+              "subset": {
+                "broker_hist": "control"
+              },
+              "weights": {
+                "loyal_colleague": 1,
+                "control": -1
+              },
+              "factor": "cond_rel"
+            }
+          ],
+          "within_subject_handling": "not applicable",
+          "covariance_method": "full factorial-model residual error inferred from reported planned-contrast convention; exact software contrast routine unstated",
+          "bootstrap_settings": "not applicable",
+          "software": "unstated",
+          "routine_or_macro": "unstated",
+          "seed": "unstated",
+          "missing_data_rule": "unstated",
+          "output_required": [
+            "cell means",
+            "cell SDs",
+            "contrast",
+            "t",
+            "df",
+            "p",
+            "d; standardizer unstated"
+          ],
+          "alpha": "unstated for analysis; power planning uses 0.05 (D01 PDF p. 12)",
+          "tail": "unstated for analysis; power planning described as two-tailed (D01 PDF p. 12)",
+          "direction": "loyal > control within no-history",
+          "source_locator": "D03 PDF p. 3; D13 PDF p. 1 §5"
+        },
+        {
+          "analysis_id": "S3_contrast_H3_benev_trust_broker",
+          "claim_ids": [
+            "S3_H3_benev_trust_broker"
+          ],
+          "outcome": "benev_trust_broker",
+          "predictors": [
+            "cond_rel",
+            "broker_hist",
+            "cond_rel × broker_hist"
+          ],
+          "estimator": "planned t contrast following factorial ANOVA",
+          "covariates": [],
+          "contrasts": [
+            {
+              "subset": {
+                "cond_rel": "loyal_colleague"
+              },
+              "weights": {
+                "control": 1,
+                "divisive": -1
+              },
+              "factor": "broker_hist",
+              "sign_note": "article reports positive t for no-history minus divisive despite presenting divisive first"
+            }
+          ],
+          "within_subject_handling": "not applicable",
+          "covariance_method": "full factorial-model residual error inferred from reported planned-contrast convention; exact software contrast routine unstated",
+          "bootstrap_settings": "not applicable",
+          "software": "unstated",
+          "routine_or_macro": "unstated",
+          "seed": "unstated",
+          "missing_data_rule": "unstated",
+          "output_required": [
+            "cell means",
+            "cell SDs",
+            "contrast",
+            "t",
+            "df",
+            "p",
+            "d; standardizer unstated"
+          ],
+          "alpha": "unstated for analysis; power planning uses 0.05 (D01 PDF p. 12)",
+          "tail": "unstated for analysis; power planning described as two-tailed (D01 PDF p. 12)",
+          "direction": "no-history > divisive within loyal",
+          "source_locator": "D03 PDF p. 3; D13 PDF p. 1 §5"
+        },
+        {
+          "analysis_id": "S3_anova_integ_trust_broker",
+          "claim_ids": [
+            "S3_anova_integ_trust_broker_relationship",
+            "S3_anova_integ_trust_broker_history",
+            "S3_anova_integ_trust_broker_relationship_history"
+          ],
+          "outcome": "integ_trust_broker",
+          "predictors": [
+            "cond_rel",
+            "broker_hist",
+            "cond_rel × broker_hist"
+          ],
+          "estimator": "2 × 2 between-subjects factorial ANOVA",
+          "covariates": [],
+          "contrasts": [],
+          "within_subject_handling": "not applicable",
+          "covariance_method": "ordinary factorial ANOVA residual variance inferred from ANOVA description; sums-of-squares type unstated",
+          "bootstrap_settings": "not applicable",
+          "software": "unstated",
+          "routine_or_macro": "unstated",
+          "seed": "unstated",
+          "missing_data_rule": "unstated",
+          "output_required": [
+            "main effects",
+            "interaction",
+            "F",
+            "df",
+            "p",
+            "eta-squared; exact variant unstated"
+          ],
+          "alpha": "unstated for analysis; power planning uses 0.05 (D01 PDF p. 12)",
+          "tail": "unstated for analysis; power planning described as two-tailed (D01 PDF p. 12)",
+          "direction": "unstated",
+          "source_locator": "D03 PDF p. 3–4; D13 PDF p. 1 §5; D13 PDF p. 2 §8"
+        },
+        {
+          "analysis_id": "S3_contrast_H1_integ_trust_broker",
+          "claim_ids": [
+            "S3_H1_integ_trust_broker"
+          ],
+          "outcome": "integ_trust_broker",
+          "predictors": [
+            "cond_rel",
+            "broker_hist",
+            "cond_rel × broker_hist"
+          ],
+          "estimator": "planned t contrast following factorial ANOVA",
+          "covariates": [],
+          "contrasts": [
+            {
+              "subset": {
+                "broker_hist": "control"
+              },
+              "weights": {
+                "loyal_colleague": 1,
+                "control": -1
+              },
+              "factor": "cond_rel"
+            }
+          ],
+          "within_subject_handling": "not applicable",
+          "covariance_method": "full factorial-model residual error inferred from reported planned-contrast convention; exact software contrast routine unstated",
+          "bootstrap_settings": "not applicable",
+          "software": "unstated",
+          "routine_or_macro": "unstated",
+          "seed": "unstated",
+          "missing_data_rule": "unstated",
+          "output_required": [
+            "cell means",
+            "cell SDs",
+            "contrast",
+            "t",
+            "df",
+            "p",
+            "d; standardizer unstated"
+          ],
+          "alpha": "unstated for analysis; power planning uses 0.05 (D01 PDF p. 12)",
+          "tail": "unstated for analysis; power planning described as two-tailed (D01 PDF p. 12)",
+          "direction": "loyal > control within no-history",
+          "source_locator": "D03 PDF p. 3–4; D13 PDF p. 1 §5"
+        },
+        {
+          "analysis_id": "S3_contrast_H3_integ_trust_broker",
+          "claim_ids": [
+            "S3_H3_integ_trust_broker"
+          ],
+          "outcome": "integ_trust_broker",
+          "predictors": [
+            "cond_rel",
+            "broker_hist",
+            "cond_rel × broker_hist"
+          ],
+          "estimator": "planned t contrast following factorial ANOVA",
+          "covariates": [],
+          "contrasts": [
+            {
+              "subset": {
+                "cond_rel": "loyal_colleague"
+              },
+              "weights": {
+                "control": 1,
+                "divisive": -1
+              },
+              "factor": "broker_hist",
+              "sign_note": "article reports positive t for no-history minus divisive despite presenting divisive first"
+            }
+          ],
+          "within_subject_handling": "not applicable",
+          "covariance_method": "full factorial-model residual error inferred from reported planned-contrast convention; exact software contrast routine unstated",
+          "bootstrap_settings": "not applicable",
+          "software": "unstated",
+          "routine_or_macro": "unstated",
+          "seed": "unstated",
+          "missing_data_rule": "unstated",
+          "output_required": [
+            "cell means",
+            "cell SDs",
+            "contrast",
+            "t",
+            "df",
+            "p",
+            "d; standardizer unstated"
+          ],
+          "alpha": "unstated for analysis; power planning uses 0.05 (D01 PDF p. 12)",
+          "tail": "unstated for analysis; power planning described as two-tailed (D01 PDF p. 12)",
+          "direction": "no-history > divisive within loyal",
+          "source_locator": "D03 PDF p. 3–4; D13 PDF p. 1 §5"
+        },
+        {
+          "analysis_id": "S3_anova_val_align_part_broker",
+          "claim_ids": [
+            "S3_anova_val_align_part_broker_relationship",
+            "S3_anova_val_align_part_broker_history",
+            "S3_anova_val_align_part_broker_relationship_history"
+          ],
+          "outcome": "val_align_part_broker",
+          "predictors": [
+            "cond_rel",
+            "broker_hist",
+            "cond_rel × broker_hist"
+          ],
+          "estimator": "2 × 2 between-subjects factorial ANOVA",
+          "covariates": [],
+          "contrasts": [],
+          "within_subject_handling": "not applicable",
+          "covariance_method": "ordinary factorial ANOVA residual variance inferred from ANOVA description; sums-of-squares type unstated",
+          "bootstrap_settings": "not applicable",
+          "software": "unstated",
+          "routine_or_macro": "unstated",
+          "seed": "unstated",
+          "missing_data_rule": "unstated",
+          "output_required": [
+            "main effects",
+            "interaction",
+            "F",
+            "df",
+            "p",
+            "eta-squared; exact variant unstated"
+          ],
+          "alpha": "unstated for analysis; power planning uses 0.05 (D01 PDF p. 12)",
+          "tail": "unstated for analysis; power planning described as two-tailed (D01 PDF p. 12)",
+          "direction": "unstated",
+          "source_locator": "D03 PDF p. 4; D13 PDF p. 1 §5; D13 PDF p. 2 §8"
+        },
+        {
+          "analysis_id": "S3_contrast_H1_val_align_part_broker",
+          "claim_ids": [
+            "S3_H1_val_align_part_broker"
+          ],
+          "outcome": "val_align_part_broker",
+          "predictors": [
+            "cond_rel",
+            "broker_hist",
+            "cond_rel × broker_hist"
+          ],
+          "estimator": "planned t contrast following factorial ANOVA",
+          "covariates": [],
+          "contrasts": [
+            {
+              "subset": {
+                "broker_hist": "control"
+              },
+              "weights": {
+                "loyal_colleague": 1,
+                "control": -1
+              },
+              "factor": "cond_rel"
+            }
+          ],
+          "within_subject_handling": "not applicable",
+          "covariance_method": "full factorial-model residual error inferred from reported planned-contrast convention; exact software contrast routine unstated",
+          "bootstrap_settings": "not applicable",
+          "software": "unstated",
+          "routine_or_macro": "unstated",
+          "seed": "unstated",
+          "missing_data_rule": "unstated",
+          "output_required": [
+            "cell means",
+            "cell SDs",
+            "contrast",
+            "t",
+            "df",
+            "p",
+            "d; standardizer unstated"
+          ],
+          "alpha": "unstated for analysis; power planning uses 0.05 (D01 PDF p. 12)",
+          "tail": "unstated for analysis; power planning described as two-tailed (D01 PDF p. 12)",
+          "direction": "loyal > control within no-history",
+          "source_locator": "D03 PDF p. 4; D13 PDF p. 1 §5"
+        },
+        {
+          "analysis_id": "S3_contrast_H3_val_align_part_broker",
+          "claim_ids": [
+            "S3_H3_val_align_part_broker"
+          ],
+          "outcome": "val_align_part_broker",
+          "predictors": [
+            "cond_rel",
+            "broker_hist",
+            "cond_rel × broker_hist"
+          ],
+          "estimator": "planned t contrast following factorial ANOVA",
+          "covariates": [],
+          "contrasts": [
+            {
+              "subset": {
+                "cond_rel": "loyal_colleague"
+              },
+              "weights": {
+                "control": 1,
+                "divisive": -1
+              },
+              "factor": "broker_hist",
+              "sign_note": "article reports positive t for no-history minus divisive despite presenting divisive first"
+            }
+          ],
+          "within_subject_handling": "not applicable",
+          "covariance_method": "full factorial-model residual error inferred from reported planned-contrast convention; exact software contrast routine unstated",
+          "bootstrap_settings": "not applicable",
+          "software": "unstated",
+          "routine_or_macro": "unstated",
+          "seed": "unstated",
+          "missing_data_rule": "unstated",
+          "output_required": [
+            "cell means",
+            "cell SDs",
+            "contrast",
+            "t",
+            "df",
+            "p",
+            "d; standardizer unstated"
+          ],
+          "alpha": "unstated for analysis; power planning uses 0.05 (D01 PDF p. 12)",
+          "tail": "unstated for analysis; power planning described as two-tailed (D01 PDF p. 12)",
+          "direction": "no-history > divisive within loyal",
+          "source_locator": "D03 PDF p. 4; D13 PDF p. 1 §5"
+        },
+        {
+          "analysis_id": "S3_anova_relconcerns_with_broker",
+          "claim_ids": [
+            "S3_anova_relconcerns_with_broker_relationship",
+            "S3_anova_relconcerns_with_broker_history",
+            "S3_anova_relconcerns_with_broker_relationship_history"
+          ],
+          "outcome": "relconcerns_with_broker",
+          "predictors": [
+            "cond_rel",
+            "broker_hist",
+            "cond_rel × broker_hist"
+          ],
+          "estimator": "2 × 2 between-subjects factorial ANOVA",
+          "covariates": [],
+          "contrasts": [],
+          "within_subject_handling": "not applicable",
+          "covariance_method": "ordinary factorial ANOVA residual variance inferred from ANOVA description; sums-of-squares type unstated",
+          "bootstrap_settings": "not applicable",
+          "software": "unstated",
+          "routine_or_macro": "unstated",
+          "seed": "unstated",
+          "missing_data_rule": "unstated",
+          "output_required": [
+            "main effects",
+            "interaction",
+            "F",
+            "df",
+            "p",
+            "eta-squared; exact variant unstated"
+          ],
+          "alpha": "unstated for analysis; power planning uses 0.05 (D01 PDF p. 12)",
+          "tail": "unstated for analysis; power planning described as two-tailed (D01 PDF p. 12)",
+          "direction": "unstated",
+          "source_locator": "D03 PDF p. 4; D13 PDF p. 1 §5; D13 PDF p. 2 §8"
+        },
+        {
+          "analysis_id": "S3_contrast_H1_relconcerns_with_broker",
+          "claim_ids": [
+            "S3_H1_relconcerns_with_broker"
+          ],
+          "outcome": "relconcerns_with_broker",
+          "predictors": [
+            "cond_rel",
+            "broker_hist",
+            "cond_rel × broker_hist"
+          ],
+          "estimator": "planned t contrast following factorial ANOVA",
+          "covariates": [],
+          "contrasts": [
+            {
+              "subset": {
+                "broker_hist": "control"
+              },
+              "weights": {
+                "loyal_colleague": 1,
+                "control": -1
+              },
+              "factor": "cond_rel"
+            }
+          ],
+          "within_subject_handling": "not applicable",
+          "covariance_method": "full factorial-model residual error inferred from reported planned-contrast convention; exact software contrast routine unstated",
+          "bootstrap_settings": "not applicable",
+          "software": "unstated",
+          "routine_or_macro": "unstated",
+          "seed": "unstated",
+          "missing_data_rule": "unstated",
+          "output_required": [
+            "cell means",
+            "cell SDs",
+            "contrast",
+            "t",
+            "df",
+            "p",
+            "d; standardizer unstated"
+          ],
+          "alpha": "unstated for analysis; power planning uses 0.05 (D01 PDF p. 12)",
+          "tail": "unstated for analysis; power planning described as two-tailed (D01 PDF p. 12)",
+          "direction": "loyal > control within no-history",
+          "source_locator": "D03 PDF p. 4; D13 PDF p. 1 §5"
+        },
+        {
+          "analysis_id": "S3_contrast_H3_relconcerns_with_broker",
+          "claim_ids": [
+            "S3_H3_relconcerns_with_broker"
+          ],
+          "outcome": "relconcerns_with_broker",
+          "predictors": [
+            "cond_rel",
+            "broker_hist",
+            "cond_rel × broker_hist"
+          ],
+          "estimator": "planned t contrast following factorial ANOVA",
+          "covariates": [],
+          "contrasts": [
+            {
+              "subset": {
+                "cond_rel": "loyal_colleague"
+              },
+              "weights": {
+                "control": 1,
+                "divisive": -1
+              },
+              "factor": "broker_hist",
+              "sign_note": "article reports positive t for no-history minus divisive despite presenting divisive first"
+            }
+          ],
+          "within_subject_handling": "not applicable",
+          "covariance_method": "full factorial-model residual error inferred from reported planned-contrast convention; exact software contrast routine unstated",
+          "bootstrap_settings": "not applicable",
+          "software": "unstated",
+          "routine_or_macro": "unstated",
+          "seed": "unstated",
+          "missing_data_rule": "unstated",
+          "output_required": [
+            "cell means",
+            "cell SDs",
+            "contrast",
+            "t",
+            "df",
+            "p",
+            "d; standardizer unstated"
+          ],
+          "alpha": "unstated for analysis; power planning uses 0.05 (D01 PDF p. 12)",
+          "tail": "unstated for analysis; power planning described as two-tailed (D01 PDF p. 12)",
+          "direction": "no-history > divisive within loyal",
+          "source_locator": "D03 PDF p. 4; D13 PDF p. 1 §5"
+        }
+      ]
+    },
+    "4": {
+      "data_file": "unstated; D44_columns_study4.txt contains column names only",
+      "unit_of_observation": "participant",
+      "design": {
+        "factors": [],
+        "levels": "not applicable: observational continuous loyalty predictor",
+        "between_or_within": "between people, correlational field study; no randomized treatment",
+        "assignment_unit": "none; broker selected by fraternity president; all eligible actors received individual requests",
+        "source_locator": "D01 PDF p. 14–15 (printed pp. 775–776); D14 PDF p. 1 §4; D02 PDF pp. 3–4"
+      },
+      "sample_steps": [
+        {
+          "order": 1,
+          "description": "Recruit fraternity and choose broker who has sufficient membership duration, no current or former significant authority role, and neither extreme popularity nor obscurity. Selection variables unavailable.",
+          "variables": "unstated",
+          "values": "unstated",
+          "source_locator": "D01 PDF p. 14–15 (Participants; Broker Selection)",
+          "mapping_status": "documented"
+        },
+        {
+          "order": 2,
+          "description": "Eligible actors exclude president, broker, and members familiar with the research. No role or prior-research-familiarity identifiers documented.",
+          "variables": "unstated",
+          "values": "unstated",
+          "source_locator": "D01 PDF p. 14–15 (Participants)",
+          "mapping_status": "documented"
+        },
+        {
+          "order": 3,
+          "description": "Collect individual petition decisions, then subsequent loyalty survey; exclude missing loyalty to requester.",
+          "variables": [
+            "LoyalRequestor"
+          ],
+          "values": "nonmissing; mapping inferred because valid dictionary unavailable",
+          "source_locator": "D14 PDF p. 1 §6; D01 PDF p. 15 (printed p. 776); D44 (unpaginated)",
+          "mapping_status": "inferred"
+        }
+      ],
+      "variables": [
+        {
+          "name": "Signed",
+          "source_columns": [
+            "Signed"
+          ],
+          "reverse_coding": "none documented",
+          "scoring_rule": "1=signed,0=did not sign; binary outcome",
+          "condition_coding": "not applicable",
+          "mapping_status": "inferred; D34 is inapplicable",
+          "source_locator": "D44 column Signed (unpaginated); D01 PDF p. 15 Measures; D14 PDF p. 1 §§3,8; D03 PDF p. 5"
+        },
+        {
+          "name": "LoyalRequestor",
+          "source_columns": [
+            "LoyalRequestor"
+          ],
+          "reverse_coding": "none documented",
+          "scoring_rule": "single loyalty-to-broker item on 1–7 agreement scale",
+          "condition_coding": "not applicable",
+          "mapping_status": "inferred; D34 is inapplicable",
+          "source_locator": "D44 column LoyalRequestor (unpaginated); D01 PDF p. 15 Measures; D14 PDF p. 1 §§3,8; D03 PDF p. 5"
+        },
+        {
+          "name": "KnowRequestor",
+          "source_columns": [
+            "KnowRequestor"
+          ],
+          "reverse_coding": "none documented",
+          "scoring_rule": "knows broker well on 1–7 scale; main article control",
+          "condition_coding": "not applicable",
+          "mapping_status": "inferred; D34 is inapplicable",
+          "source_locator": "D44 column KnowRequestor (unpaginated); D01 PDF p. 15 Measures; D14 PDF p. 1 §§3,8; D03 PDF p. 5"
+        },
+        {
+          "name": "LikeRequestor",
+          "source_columns": [
+            "LikeRequestor"
+          ],
+          "reverse_coding": "none documented",
+          "scoring_rule": "likes broker on 1–7 scale",
+          "condition_coding": "not applicable",
+          "mapping_status": "inferred; D34 is inapplicable",
+          "source_locator": "D44 column LikeRequestor (unpaginated); D01 PDF p. 15 Measures; D14 PDF p. 1 §§3,8; D03 PDF p. 5"
+        },
+        {
+          "name": "TrustRequestor",
+          "source_columns": [
+            "TrustRequestor"
+          ],
+          "reverse_coding": "none documented",
+          "scoring_rule": "trusts broker; preregistered control, not the main article control list",
+          "condition_coding": "not applicable",
+          "mapping_status": "inferred; D34 is inapplicable",
+          "source_locator": "D44 column TrustRequestor (unpaginated); D01 PDF p. 15 Measures; D14 PDF p. 1 §§3,8; D03 PDF p. 5"
+        },
+        {
+          "name": "SemestersRequestor",
+          "source_columns": [
+            "SemestersRequestor"
+          ],
+          "reverse_coding": "none documented",
+          "scoring_rule": "time known broker in semesters according to article; preregistration instead specifies months",
+          "condition_coding": "not applicable",
+          "mapping_status": "inferred; D34 is inapplicable",
+          "source_locator": "D44 column SemestersRequestor (unpaginated); D01 PDF p. 15 Measures; D14 PDF p. 1 §§3,8; D03 PDF p. 5"
+        },
+        {
+          "name": "SignedTrust",
+          "source_columns": [
+            "SignedTrust"
+          ],
+          "reverse_coding": "none documented",
+          "scoring_rule": "candidate perceived trust in accused; exact item wording and scaling unstated",
+          "condition_coding": "not applicable",
+          "mapping_status": "inferred; D34 is inapplicable",
+          "source_locator": "D44 column SignedTrust (unpaginated); D01 PDF p. 15 Measures; D14 PDF p. 1 §§3,8; D03 PDF p. 5"
+        },
+        {
+          "name": "SignedRisk",
+          "source_columns": [
+            "SignedRisk"
+          ],
+          "reverse_coding": "none documented",
+          "scoring_rule": "candidate perceived risk of supporting accused; exact item wording and scaling unstated",
+          "condition_coding": "not applicable",
+          "mapping_status": "inferred; D34 is inapplicable",
+          "source_locator": "D44 column SignedRisk (unpaginated); D01 PDF p. 15 Measures; D14 PDF p. 1 §§3,8; D03 PDF p. 5"
+        },
+        {
+          "name": "LoyaltyHouse",
+          "source_columns": [
+            "LoyalHouse1",
+            "LoyalHouse2",
+            "LoyalHouse3"
+          ],
+          "reverse_coding": "unstated",
+          "scoring_rule": "three-item house loyalty per preregistration; exact item wording, reversal, aggregation, and mapping to LoyaltyHouse unstated; source-column mapping inferred",
+          "condition_coding": "not applicable",
+          "mapping_status": "inferred",
+          "source_locator": "D14 PDF p. 1 §8; D44 (unpaginated); D01 PDF pp. 15–16"
+        },
+        {
+          "name": "StrongLoyaltyRequestor",
+          "source_columns": [
+            "LoyalRequestor",
+            "StrongLoyaltyRequestor"
+          ],
+          "reverse_coding": "none documented",
+          "scoring_rule": "if absolute skewness OR kurtosis exceeds 2 under §4 rule, 1 for loyalty=7 and 0 otherwise; §5 describes skewed AND leptokurtic, unresolved",
+          "condition_coding": "1=7,0=otherwise",
+          "mapping_status": "inferred column mapping; transformation rule documented",
+          "source_locator": "D14 PDF p. 1 §§4–5; D44 (unpaginated)"
+        },
+        {
+          "name": "ExpLoyaltyRequestor",
+          "source_columns": [
+            "LoyalRequestor",
+            "ExpLoyaltyRequestor"
+          ],
+          "reverse_coding": "none documented",
+          "scoring_rule": "exponential transformation preregistered conditionally; base and scaling unstated",
+          "condition_coding": "not applicable",
+          "mapping_status": "inferred",
+          "source_locator": "D14 PDF p. 1 §§4–5; D44 (unpaginated)"
+        },
+        {
+          "name": "StrongLoyaltyHouse",
+          "source_columns": [
+            "LoyaltyHouse",
+            "StrongLoyaltyHouse"
+          ],
+          "reverse_coding": "none documented",
+          "scoring_rule": "analogous strong-loyalty transformation preregistered; composite construction and threshold application unstated",
+          "condition_coding": "not applicable",
+          "mapping_status": "inferred",
+          "source_locator": "D14 PDF p. 1 §8; D44 (unpaginated)"
+        },
+        {
+          "name": "ExpLoyaltyHouse",
+          "source_columns": [
+            "LoyaltyHouse",
+            "ExpLoyaltyHouse"
+          ],
+          "reverse_coding": "none documented",
+          "scoring_rule": "exponential transformation of house loyalty; base and scaling unstated",
+          "condition_coding": "not applicable",
+          "mapping_status": "inferred",
+          "source_locator": "D14 PDF p. 1 §8; D44 (unpaginated)"
+        },
+        {
+          "name": "Age",
+          "source_columns": [
+            "Age"
+          ],
+          "reverse_coding": "none documented",
+          "scoring_rule": "demographic mapping inferred from column name; exact codebook unavailable",
+          "condition_coding": "not applicable",
+          "mapping_status": "inferred",
+          "source_locator": "D44 (unpaginated); D01 PDF p. 15 Participants"
+        },
+        {
+          "name": "Dmale",
+          "source_columns": [
+            "Dmale"
+          ],
+          "reverse_coding": "none documented",
+          "scoring_rule": "demographic mapping inferred from column name; exact codebook unavailable",
+          "condition_coding": "not applicable",
+          "mapping_status": "inferred",
+          "source_locator": "D44 (unpaginated); D01 PDF p. 15 Participants"
+        }
+      ],
+      "analyses": [
+        {
+          "analysis_id": "S4_descriptives",
+          "claim_ids": [
+            "S4_description"
+          ],
+          "outcome": [
+            "Signed",
+            "LoyalRequestor",
+            "KnowRequestor",
+            "LikeRequestor",
+            "SemestersRequestor",
+            "LoyaltyHouse",
+            "Age",
+            "Dmale"
+          ],
+          "predictors": [],
+          "estimator": "descriptive summaries; bivariate correlation type unstated",
+          "covariates": [],
+          "contrasts": [],
+          "within_subject_handling": "not applicable",
+          "covariance_method": "unstated",
+          "bootstrap_settings": "not applicable",
+          "software": "unstated",
+          "routine_or_macro": "unstated",
+          "seed": "unstated",
+          "missing_data_rule": "unstated",
+          "output_required": [
+            "sample flow counts",
+            "demographics",
+            "means",
+            "SDs",
+            "pairwise correlations"
+          ],
+          "alpha": "unstated",
+          "tail": "unstated",
+          "direction": "unstated",
+          "source_locator": "D01 PDF p. 14–16 (Table 5; Participants)"
+        },
+        {
+          "analysis_id": "S4_logit_M1",
+          "claim_ids": [
+            "S4_M1_LoyalRequestor",
+            "S4_M1_fit"
+          ],
+          "outcome": "Signed",
+          "predictors": [
+            "LoyalRequestor"
+          ],
+          "estimator": "binary logistic regression; likelihood fitting implied, exact routine unstated",
+          "covariates": [],
+          "contrasts": [],
+          "within_subject_handling": "not applicable",
+          "covariance_method": "unstated",
+          "bootstrap_settings": "not applicable",
+          "software": "unstated",
+          "routine_or_macro": "unstated",
+          "seed": "unstated",
+          "missing_data_rule": "exclude missing LoyalRequestor per D14; missing outcome/covariate handling unstated",
+          "output_required": [
+            "coefficients",
+            "SE",
+            "p values",
+            "odds ratios",
+            "log likelihood",
+            "McFadden R-squared",
+            "Cox–Snell R-squared"
+          ],
+          "alpha": "unstated",
+          "tail": "unstated",
+          "direction": "positive loyalty slope",
+          "source_locator": "D01 PDF p. 16 (printed p. 777; Table 6 Model 1); D14 PDF p. 1 §5; D01 PDF pp. 15–16"
+        },
+        {
+          "analysis_id": "S4_logit_M2",
+          "claim_ids": [
+            "S4_M2_LoyalRequestor",
+            "S4_M2_KnowRequestor",
+            "S4_M2_LikeRequestor",
+            "S4_M2_SemestersRequestor",
+            "S4_M2_fit"
+          ],
+          "outcome": "Signed",
+          "predictors": [
+            "LoyalRequestor"
+          ],
+          "estimator": "binary logistic regression; likelihood fitting implied, exact routine unstated",
+          "covariates": [
+            "KnowRequestor",
+            "LikeRequestor",
+            "SemestersRequestor"
+          ],
+          "contrasts": [],
+          "within_subject_handling": "not applicable",
+          "covariance_method": "unstated",
+          "bootstrap_settings": "not applicable",
+          "software": "unstated",
+          "routine_or_macro": "unstated",
+          "seed": "unstated",
+          "missing_data_rule": "exclude missing LoyalRequestor per D14; missing outcome/covariate handling unstated",
+          "output_required": [
+            "coefficients",
+            "SE",
+            "p values",
+            "odds ratios",
+            "log likelihood",
+            "McFadden R-squared",
+            "Cox–Snell R-squared"
+          ],
+          "alpha": "unstated",
+          "tail": "unstated",
+          "direction": "positive loyalty slope",
+          "source_locator": "D01 PDF p. 16 (printed p. 777; Table 6 Model 2); D14 PDF p. 1 §5; D01 PDF pp. 15–16"
+        },
+        {
+          "analysis_id": "S4_logit_M3",
+          "claim_ids": [
+            "S4_M3_LoyalRequestor",
+            "S4_M3_KnowRequestor",
+            "S4_M3_LikeRequestor",
+            "S4_M3_SemestersRequestor",
+            "S4_M3_LoyaltyHouse",
+            "S4_M3_fit"
+          ],
+          "outcome": "Signed",
+          "predictors": [
+            "LoyalRequestor"
+          ],
+          "estimator": "binary logistic regression; likelihood fitting implied, exact routine unstated",
+          "covariates": [
+            "KnowRequestor",
+            "LikeRequestor",
+            "SemestersRequestor",
+            "LoyaltyHouse"
+          ],
+          "contrasts": [],
+          "within_subject_handling": "not applicable",
+          "covariance_method": "unstated",
+          "bootstrap_settings": "not applicable",
+          "software": "unstated",
+          "routine_or_macro": "unstated",
+          "seed": "unstated",
+          "missing_data_rule": "exclude missing LoyalRequestor per D14; missing outcome/covariate handling unstated",
+          "output_required": [
+            "coefficients",
+            "SE",
+            "p values",
+            "odds ratios",
+            "log likelihood",
+            "McFadden R-squared",
+            "Cox–Snell R-squared"
+          ],
+          "alpha": "unstated",
+          "tail": "unstated",
+          "direction": "positive loyalty slope",
+          "source_locator": "D01 PDF p. 16 (printed p. 777; Table 6 Model 3); D14 PDF p. 1 §5; D01 PDF pp. 15–16"
+        },
+        {
+          "analysis_id": "S4_mediation_simultaneous",
+          "claim_ids": [
+            "S4_ind_simultaneous_SignedTrust",
+            "S4_ind_simultaneous_SignedRisk",
+            "S4_summary_table_mediation"
+          ],
+          "outcome": "Signed",
+          "predictors": [
+            "unstated",
+            "SignedTrust",
+            "SignedRisk"
+          ],
+          "estimator": "parallel bootstrap mediation; outcome link and path estimator unstated",
+          "covariates": [],
+          "contrasts": [],
+          "within_subject_handling": "not applicable",
+          "covariance_method": "unstated",
+          "bootstrap_settings": {
+            "resamples": "unstated",
+            "interval": "95% bias-corrected",
+            "resampling_unit": "unstated"
+          },
+          "software": "unstated",
+          "routine_or_macro": "unstated",
+          "seed": "unstated",
+          "missing_data_rule": "unstated",
+          "output_required": [
+            "indirect effects",
+            "SEs",
+            "CIs",
+            "p values"
+          ],
+          "alpha": "unstated",
+          "tail": "unstated",
+          "direction": "unstated",
+          "source_locator": "D03 PDF p. 5 (Study 4 mediation); D14 PDF p. 1 §8",
+          "unresolved_predictor_mapping": {
+            "construct": "loyalty exposure",
+            "candidate_source_columns": [
+              "LoyalRequestor",
+              "StrongLoyaltyRequestor"
+            ],
+            "mapping_status": "inferred candidates only; no selected coding",
+            "source_locator": "D03 PDF p. 5 says Loyal vs. Not Loyal; D01 PDF pp. 15–16 continuous loyalty; D14 PDF p. 1 §§4–5; D44 (unpaginated)"
+          }
+        },
+        {
+          "analysis_id": "S4_mediation_independent_SignedTrust",
+          "claim_ids": [
+            "S4_ind_independent_SignedTrust",
+            "S4_summary_table_mediation"
+          ],
+          "outcome": "Signed",
+          "predictors": [
+            "unstated",
+            "SignedTrust"
+          ],
+          "estimator": "single-mediator bootstrap mediation; outcome link and path estimator unstated",
+          "covariates": [],
+          "contrasts": [],
+          "within_subject_handling": "not applicable",
+          "covariance_method": "unstated",
+          "bootstrap_settings": {
+            "resamples": "unstated",
+            "interval": "95% bias-corrected",
+            "resampling_unit": "unstated"
+          },
+          "software": "unstated",
+          "routine_or_macro": "unstated",
+          "seed": "unstated",
+          "missing_data_rule": "unstated",
+          "output_required": [
+            "indirect effect",
+            "SE",
+            "CI",
+            "p"
+          ],
+          "alpha": "unstated",
+          "tail": "unstated",
+          "direction": "unstated",
+          "source_locator": "D03 PDF p. 5 (Study 4 mediation); D14 PDF p. 1 §8",
+          "unresolved_predictor_mapping": {
+            "construct": "loyalty exposure",
+            "candidate_source_columns": [
+              "LoyalRequestor",
+              "StrongLoyaltyRequestor"
+            ],
+            "mapping_status": "inferred candidates only; no selected coding",
+            "source_locator": "D03 PDF p. 5 says Loyal vs. Not Loyal; D01 PDF pp. 15–16 continuous loyalty; D14 PDF p. 1 §§4–5; D44 (unpaginated)"
+          }
+        },
+        {
+          "analysis_id": "S4_mediation_independent_SignedRisk",
+          "claim_ids": [
+            "S4_ind_independent_SignedRisk",
+            "S4_summary_table_mediation"
+          ],
+          "outcome": "Signed",
+          "predictors": [
+            "unstated",
+            "SignedRisk"
+          ],
+          "estimator": "single-mediator bootstrap mediation; outcome link and path estimator unstated",
+          "covariates": [],
+          "contrasts": [],
+          "within_subject_handling": "not applicable",
+          "covariance_method": "unstated",
+          "bootstrap_settings": {
+            "resamples": "unstated",
+            "interval": "95% bias-corrected",
+            "resampling_unit": "unstated"
+          },
+          "software": "unstated",
+          "routine_or_macro": "unstated",
+          "seed": "unstated",
+          "missing_data_rule": "unstated",
+          "output_required": [
+            "indirect effect",
+            "SE",
+            "CI",
+            "p"
+          ],
+          "alpha": "unstated",
+          "tail": "unstated",
+          "direction": "unstated",
+          "source_locator": "D03 PDF p. 5 (Study 4 mediation); D14 PDF p. 1 §8",
+          "unresolved_predictor_mapping": {
+            "construct": "loyalty exposure",
+            "candidate_source_columns": [
+              "LoyalRequestor",
+              "StrongLoyaltyRequestor"
+            ],
+            "mapping_status": "inferred candidates only; no selected coding",
+            "source_locator": "D03 PDF p. 5 says Loyal vs. Not Loyal; D01 PDF pp. 15–16 continuous loyalty; D14 PDF p. 1 §§4–5; D44 (unpaginated)"
+          }
+        }
+      ]
+    }
+  }
+}

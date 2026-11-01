@@ -1,0 +1,19 @@
+Implemented [code/run_all.R](/var/folders/7q/9m3zdcp550d685wgsq9kvf6r0000gn/T/role_642ed105dde3_zPcO/code/run_all.R) and six helpers.
+
+Wrote synthetic checks, sample flow and cell mapping, eight compressed sample-ID files, environment records, implementation notes, and synthetic pipeline outputs under `results/`.
+
+All **25 synthetic checks passed**, including estimator recovery, exact likelihood, numerical derivatives, sandwich covariance, and pipeline execution.
+
+Origin sample counts:
+
+| Step | Rows |
+|---|---:|
+| S1 | 266,592 |
+| S2 | 24,282 |
+| S3 | 22,909 |
+| S4 | 22,766 |
+| S5–S8, each | 21,540 |
+
+All 202 cells were constructed. No complete-case losses or division mismatches occurred.
+
+No required manifest items remain unimplemented. Game deletions are excluded as assigned. **No models were fitted to real data.**

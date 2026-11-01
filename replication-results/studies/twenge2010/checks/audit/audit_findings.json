@@ -1,0 +1,336 @@
+{
+ "auditor": {
+  "model": "claude-opus-5-5 (Claude Code subagent of the coordinator session)",
+  "independence": "not family-independent: same model family as implementation A, Reader A and the coordinator"
+ },
+ "rng": "random.Random(2010)",
+ "checks": [
+  {
+   "id": "T1",
+   "task": "transcription",
+   "check": "random sample of 80 sealed cells (seed 2010) vs independent pdftotext of the article PDF",
+   "result": "pass",
+   "detail": "80/80 match",
+   "evidence": [
+    "checks/audit/transcription_audit.json",
+    "checks/audit/transcription_audit.py"
+   ]
+  },
+  {
+   "id": "T2",
+   "task": "transcription",
+   "check": "all 15 d, 15 latent groups (mean, SD, CI, SE = 60 cells), all 96 Table 2 cells, 6 form Ns",
+   "result": "pass",
+   "detail": "177/177 match",
+   "evidence": [
+    "checks/audit/transcription_audit.json"
+   ]
+  },
+  {
+   "id": "T3",
+   "task": "transcription",
+   "check": "all keyed cells (525) plus unkeyed text targets T007-T009, T529-T534",
+   "result": "pass",
+   "detail": "{'match': 525, 'MISMATCH': 0, 'not_parsed': 0}; unkeyed quotes found verbatim in the PDF text",
+   "evidence": [
+    "checks/audit/transcription_audit.json"
+   ]
+  },
+  {
+   "id": "L1",
+   "task": "lineage",
+   "check": "run data (A, B, C) sha256 = data/derived/extracts sha256 via implementation/manifest/data_key_map.txt",
+   "result": "pass",
+   "detail": "18 run files, 6 distinct hashes, each equal to its extract",
+   "evidence": [
+    "runs/run_20261028T035346Z/A/data",
+    "runs/run_20261028T035346Z/B/data",
+    "runs/run_20261028T035346Z/C/data",
+    "data/derived/extracts"
+   ]
+  },
+  {
+   "id": "L2",
+   "task": "lineage",
+   "check": "extract sidecar extract_sha256 and source_sha256 recomputed; registry/registry.json derived entries equal sidecars (20 extracts)",
+   "result": "pass",
+   "evidence": [
+    "data/derived/extracts/*.json",
+    "registry/registry.json"
+   ]
+  },
+  {
+   "id": "L3",
+   "task": "lineage",
+   "check": "MD5 of the six analysis source files vs ICPSR manifests; provider dataset labels (1976 DS0003/DS0004, 1991 and 2006 DS0004/DS0005 = Form 3/Form 4)",
+   "result": "pass",
+   "evidence": [
+    "data/supplied/ICPSR_07927/07927-manifest.txt",
+    "data/supplied/ICPSR_09871/09871-manifest.txt",
+    "data/supplied/ICPSR_20022/20022-manifest.txt",
+    "registry/registry.json"
+   ]
+  },
+  {
+   "id": "L4",
+   "task": "lineage",
+   "check": "extract values equal source values (pyreadstat) for V4, V5 and the 29 items in the six analysis files",
+   "result": "pass",
+   "detail": "non-missing values identical; where pyreadstat applies .por declared missing values the extract holds codes 0 or 9 only",
+   "evidence": [
+    "checks/audit/extract_content_check.json"
+   ]
+  },
+  {
+   "id": "L5",
+   "task": "lineage",
+   "check": "item-to-variable mapping: manifest variables vs dictionary question wording, all 29 items, all 3 years",
+   "result": "pass",
+   "detail": "29/29 wording match; Form 4 four response categories, Form 3 five, V3227 1 = would want to work; factor membership and the six released items match Table 1 grouping and footnote a",
+   "evidence": [
+    "data/derived/dictionaries",
+    "implementation/manifest/manifest_v1.md",
+    "sealed/targets_v2.json"
+   ]
+  },
+  {
+   "id": "C1",
+   "task": "completeness",
+   "check": "every grid specification (S00-S08, CHK1, CHK2) has output from A, B and C",
+   "result": "pass_with_note",
+   "detail": "36/36 result files; A S04 status 'unavailable' only for d_obs (15 cells, missing-item composites); B and C agree on those cells; all other S04 quantities from all three",
+   "evidence": [
+    "runs/run_20261028T035346Z/comparison/implementation_agreement_summary.json",
+    "runs/run_20261028T035346Z/A/results/S04.json"
+   ]
+  },
+  {
+   "id": "C2",
+   "task": "recomputation",
+   "check": "own code from extracts: n/mean/SD/% for V4236, V4227, V4235, V4233, V4226, V3223 x 3 years; Student t and p (V4236 P3, V3224 P1) and Welch p; S00 multigroup n and V4 hashes; K6/K7 alpha",
+   "result": "pass",
+   "detail": "122 checks, 0 failures",
+   "evidence": [
+    "checks/audit/recompute_audit.json",
+    "checks/audit/recompute_audit.py"
+   ]
+  },
+  {
+   "id": "C3",
+   "task": "recomputation",
+   "check": "d_eq for 15 contrasts from each implementation's reported latent means and factor variances",
+   "result": "pass",
+   "detail": "max abs difference 3.3e-14",
+   "evidence": [
+    "checks/audit/recompute_audit.json"
+   ]
+  },
+  {
+   "id": "C4",
+   "task": "recomputation",
+   "check": "auditor's own multigroup ML fit (M1-M5, 19 items) vs agreed chi-square, df, CFI, delta CFI and 15 d_eq",
+   "result": "pass",
+   "detail": "chi-square relative differences < 2e-9; CFI < 3e-10; d_eq < 4e-6",
+   "evidence": [
+    "checks/audit/sem_audit_lib.py",
+    "checks/audit/recompute_audit.json"
+   ]
+  },
+  {
+   "id": "C5",
+   "task": "scorer",
+   "check": "scorer arithmetic for 15 focal contrasts (interval, derived SE, distance, bands, outcome) and RQ outcomes",
+   "result": "pass",
+   "detail": "15/15 outcomes, SEs and distances reproduced; RQ1-RQ5 reproduced",
+   "evidence": [
+    "checks/audit/scorer_audit.json",
+    "checks/audit/scorer_audit.py"
+   ]
+  },
+  {
+   "id": "C6",
+   "task": "scorer",
+   "check": "scorer arithmetic for item claims V4236, V4230, V4239, V4241, V3227",
+   "result": "pass",
+   "evidence": [
+    "checks/audit/scorer_audit.json"
+   ]
+  },
+  {
+   "id": "C7",
+   "task": "scorer",
+   "check": "code vs rule text: sign criterion",
+   "result": "note",
+   "detail": "scoring_lib.sign_check returns 'grey' for an opposite sign at 2-4 derived SE; rule text says 'otherwise agree'. Affects only K3_P1 subcode (grey_zone:sign,magnitude vs grey_zone:magnitude); outcome unchanged.",
+   "evidence": [
+    "checks/scripts/scoring_lib.py",
+    "sealed/scoring_rules.json"
+   ]
+  },
+  {
+   "id": "C8",
+   "task": "scorer",
+   "check": "code vs rule text: diagnostic delta-CFI rounding band",
+   "result": "note",
+   "detail": "score.py compares delta CFI with .002 directly and does not implement the 'within rounding of the threshold -> indeterminate' band [.0015, .0025]; no reconstructed delta CFI lies in that band (S00 values .00109, .01275, .00292), so no outcome changes.",
+   "evidence": [
+    "checks/scripts/score.py"
+   ]
+  },
+  {
+   "id": "C9",
+   "task": "manifest",
+   "check": "S05 effects coding equivalence",
+   "result": "note",
+   "detail": "S05 M4 has df 478 vs 470 (released intercepts inside the per-group sum-to-zero constraint add 8 constraints); S05 is a more constrained, non-equivalent model, not an identification re-expression",
+   "evidence": [
+    "runs/run_20261028T035346Z/comparison/implementation_agreement_all.csv"
+   ]
+  },
+  {
+   "id": "C10",
+   "task": "N branch",
+   "check": "rows read vs published form N",
+   "result": "note",
+   "detail": "rows exceed published N in all six files (by 22 to 55); simple record filters (any valid item, all items valid) do not reproduce the published N; consistent with the different-vintage regime",
+   "evidence": [
+    "checks/audit/recompute_audit.json",
+    "runs/run_20261028T035346Z/scoring/n_branch.json"
+   ]
+  },
+  {
+   "id": "A1",
+   "task": "adversarial",
+   "claim": "Partial scalar invariance accepted (delta CFI M2-M4 < .002)",
+   "result": "rule-level discrepancy confirmed; substantive discrepancy not supported",
+   "detail": {
+    "manifest_baseline_dcfi": {
+     "S00": 0.0029190173843312026,
+     "S01": 0.002783950017098024,
+     "S02": 0.002920515637885204,
+     "S03": 0.0029584227855551926,
+     "S04": 0.0028269984126217387,
+     "S05": 0.011195978298846367,
+     "S06": 0.0029205156380875934,
+     "CHK2": 0.002919017207672402
+    },
+    "models_compared": "M2 vs M4 in both article and reconstruction; arithmetic, implementations (A closed-form, B lavaan, C own) and auditor fit agree",
+    "article_df_pattern_reproduced_by": "18 indicators with 5 group-specific intercepts (375/401/427/417/427); 15 such variants fitted",
+    "variant_dcfi_manifest_baseline_range": [
+     0.002924442158392049,
+     0.003692425115254805
+    ],
+    "equal_means_variances_baseline_dcfi": 0.0028060685704766053,
+    "article_implied_baseline_noncentrality": {
+     "M1": 61345.320197044384,
+     "M2": 61366.93944353515,
+     "M3": 61374.62686567169,
+     "M4": 61394.221508828225,
+     "M5": 61375.21246458924
+    },
+    "reconstructed_baseline_noncentrality": 31889.480036522382,
+    "dcfi_on_article_baseline_scale_S00": 0.001598592225963553,
+    "dcfi_on_article_baseline_scale_family_B_range": [
+     0.0015330298591467817,
+     0.001879173697414837
+    ],
+    "relative_misfit_dnc_over_configural_nc": {
+     "article": 0.02016633073960165,
+     "reconstruction": 0.02350500976863112
+    },
+    "single_group_baseline_ratio_per_case_article_over_reconstruction": {
+     "1976": 1.9121708190438624,
+     "1991": 1.8459530140234954,
+     "2006": 2.2788771152181138
+    },
+    "single_group_model_chisq_at_published_N_pearson_vs_article": {
+     "1976": [
+      1685.7390823633743,
+      1655.87
+     ],
+     "1991": [
+      1481.1975234076951,
+      1419.08
+     ],
+     "2006": [
+      1453.2861269964014,
+      1451.73
+     ]
+    },
+    "polychoric_input": "ruled out as explanation: polychoric model chi-square about 1.9x the article's"
+   },
+   "evidence": [
+    "checks/audit/recompute_audit.json",
+    "checks/audit/df_consistent_variants_probe.json",
+    "checks/audit/polychoric_baseline_probe.json",
+    "checks/audit/scorer_audit.json"
+   ]
+  },
+  {
+   "id": "A2",
+   "task": "adversarial",
+   "claim": "Security and influence scales: no alpha exceeds .50",
+   "result": "survives narrowly; low materiality",
+   "detail": {
+    "K6_2006": {
+     "S00": 0.518498416725335,
+     "S01_weighted": 0.5090643561939283,
+     "S03_listwise23": 0.5202971459686179,
+     "standardized": 0.5303536647038284,
+     "bootstrap_se": 0.021890629386693686,
+     "share_bootstrap_le_0.505": 0.261,
+     "n_complete": 2394,
+     "published_form4_N_2006": 2406
+    },
+    "all_other_K6_K7_cells_below_0.495": true,
+    "alternative_partitions_S07a_S07b_max_alpha": 0.38790254687010817,
+    "item_assignment": "K6 = V4239 (establish roots) + V4241 (secure future); not listed in the article; both readers agree"
+   },
+   "evidence": [
+    "checks/audit/recompute_audit.json",
+    "checks/audit/scorer_audit.json"
+   ]
+  },
+  {
+   "id": "A3",
+   "task": "adversarial",
+   "claim": "Grey-zone and inconsistent-target focal contrasts (K2_P1, K2_P2, K2_P3, K3_P1, K3_P3)",
+   "result": "no scoring error",
+   "detail": {
+    "distances_in_se": {
+     "K2_P1": 0.48797549929541223,
+     "K2_P2": 2.0084593889710374,
+     "K2_P3": 3.0160179542666374,
+     "K3_P1": 2.253637361956236,
+     "K3_P3": 2.841294933401797
+    },
+    "K2_P1_text_value_distance_in_se": 4.268982772383544,
+    "K3_with_V4229_invariant_19_items": {
+     "K3_P1": -0.04133379117438912,
+     "K3_P2": -0.05983863005588495,
+     "K3_P3": -0.10063530720383777
+    },
+    "K3_with_V4229_invariant_family_B_range": {
+     "K3_P1": [
+      -0.04548476368470256,
+      -0.03911929362201446
+     ],
+     "K3_P2": [
+      -0.06251267493205738,
+      -0.05804597040066383
+     ],
+     "K3_P3": [
+      -0.10450772516620527,
+      -0.09892616126757686
+     ]
+    },
+    "note": "printed altruistic d = -.04, -.06, -.10; the K3 grey zone is explained by the V4229 release label (footnote a vs the article's own two-constrained-indicators rule); labels are frozen, so this is reported, not rescored"
+   },
+   "evidence": [
+    "checks/audit/scorer_audit.json",
+    "checks/audit/k3_constraint_probe.json",
+    "checks/audit/df_consistent_variants_probe.json"
+   ]
+  }
+ ]
+}

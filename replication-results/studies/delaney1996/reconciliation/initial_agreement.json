@@ -1,0 +1,82 @@
+{
+ "claim_tiers": {
+  "matched_units": 15,
+  "agreements": 9,
+  "raw_agreement": 0.6,
+  "pe": 0.17944444444444443,
+  "gwet_ac1": 0.5125253893026405,
+  "unmatched_fable_only": 1,
+  "unmatched_astra_only": 7,
+  "reader_claim_counts": {
+   "fable": 19,
+   "astra": 24
+  },
+  "confusion": {
+   "focal|focal": 4,
+   "focal|identification_inference_diagnostic": 1,
+   "robustness|focal": 2,
+   "robustness|identification_inference_diagnostic": 1,
+   "identification_inference_diagnostic|focal": 2,
+   "robustness|robustness": 2,
+   "nuisance_control|nuisance_control": 1,
+   "descriptive|descriptive": 2
+  }
+ },
+ "spec_labels": {
+  "matched_levels": 46,
+  "agreements": 25,
+  "raw_agreement": 0.5434782608695652,
+  "pe": 0.21778512917454315,
+  "gwet_ac1": 0.4163729735172691,
+  "single_reader_levels": {
+   "fable": 11,
+   "astra": 25
+  },
+  "confusion": {
+   "origin|origin": 12,
+   "uncertain|uncertain": 11,
+   "origin|uncertain": 6,
+   "non_equivalent|uncertain": 3,
+   "equivalent|uncertain": 5,
+   "origin|non_equivalent": 1,
+   "uncertain|origin": 1,
+   "uncertain|equivalent": 2,
+   "origin|equivalent": 1,
+   "uncertain|non_equivalent": 2,
+   "non_equivalent|non_equivalent": 2
+  },
+  "disagreements": [
+   "P05: Common complete-case sample within outcome",
+   "P06: Model-specific complete cases",
+   "P07: Index = mean of available items",
+   "P12: z-score reference: final analysis sample",
+   "P13: z-score reference: all records with the item",
+   "P14: Training: log all three items",
+   "P16: No-training firms: zero count, lowest effectiveness",
+   "P17: No-training firms: skipped items missing, available-item mean",
+   "P24: Age in years unlogged",
+   "P25: log(1+age)",
+   "P26: Hierarchy: log with 96 as 100",
+   "P27: Hierarchy: 96 missing",
+   "P28: Hierarchy: log base 10",
+   "P30: Employment: NEWTOTAL",
+   "P32: Percent managers denominator NEWTOTAL",
+   "P33: Percent managers as proportion (0-1)",
+   "P35: Competition dichotomized",
+   "P36: V41=4 neither: excluded",
+   "P37: V41=4 neither: in omitted category",
+   "P44: Design-weighted WLS",
+   "P46: Interactions: mean-centered"
+  ]
+ },
+ "transcription_tables_3_4": {
+  "cells": 192,
+  "agree": 191,
+  "differ": 1,
+  "note": "Differing cell: Table 3 model 3 F for delta R2 stars; D1 image shows 3.953* (coordinator check of D1 page 15 at 300 dpi); Reader A matches D1."
+ },
+ "axes": {
+  "fable": 22,
+  "astra": 22
+ }
+}

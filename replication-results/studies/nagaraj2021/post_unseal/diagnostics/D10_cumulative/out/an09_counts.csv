@@ -1,0 +1,17 @@
+spec_id,sample,group,n_counties
+S00003,full,treated,1852
+S00003,full,control,1257
+S00003,full,treat_missing,0
+S00003,full,all,3109
+S00003,boundary_B1,treated,1237
+S00003,boundary_B1,control,993
+S00003,boundary_B1,treat_missing,0
+S00003,boundary_B1,all,2230
+S00003,boundary_B2,treated,1237
+S00003,boundary_B2,control,1257
+S00003,boundary_B2,treat_missing,0
+S00003,boundary_B2,all,2494
+S00003,timing,treated,1097
+S00003,timing,control,725
+S00003,timing,treat_missing,0
+S00003,timing,all,1822

@@ -1,0 +1,289 @@
+{
+ "origin": [
+  "AX01.L0",
+  "AX02.L0",
+  "AX03.L0",
+  "AX04.L0",
+  "AX05.L0",
+  "AX06.L0",
+  "AX07.L0",
+  "AX08.L0",
+  "AX09.L0"
+ ],
+ "axes": [
+  {
+   "axis_id": "AX01",
+   "decision": "Analysis sample within each form file / missing-data handling",
+   "category": "sample_construction",
+   "priority_rank": 1,
+   "levels": [
+    {
+     "level_id": "AX01.L0",
+     "description": "Keep all records in the form file; item statistics on available cases per item; CFA and invariance models on cases complete on the 19 retained items (listwise, PRELIS/LISREL default).",
+     "label": "origin",
+     "rationale": "Article reports one n per form and year and says nothing about missing data; listwise deletion is the LISREL 8.7 default when a raw data file is read.",
+     "basis": "article",
+     "source_locator": "P1 PDF p. 10 Method; p. 10 Preliminary Analyses (LISREL 8.7)"
+    },
+    {
+     "level_id": "AX01.L1",
+     "description": "Listwise deletion on all 23 Form 4 items (or all 6 Form 3 items) for every output, including item statistics.",
+     "label": "uncertain",
+     "rationale": "Equally compatible with the single reported n per form; changes item-level n and possibly means.",
+     "basis": "article",
+     "source_locator": "P1 PDF p. 10"
+    },
+    {
+     "level_id": "AX01.L2",
+     "description": "Full-information maximum likelihood for the CFA/invariance models using all cases with at least one valid item.",
+     "label": "uncertain",
+     "rationale": "Available in LISREL 8.7; not described; expected to give similar latent means when missingness is low.",
+     "basis": "methodological_literature",
+     "source_locator": "Enders, C. K., & Bandalos, D. L. (2001). The relative performance of FIML estimation for missing data in SEM. Structural Equation Modeling, 8, 430-457."
+    }
+   ],
+   "compatible_with": "all other axes"
+  },
+  {
+   "axis_id": "AX02",
+   "decision": "Use of the survey sampling weight",
+   "category": "weighting",
+   "priority_rank": 2,
+   "levels": [
+    {
+     "level_id": "AX02.L0",
+     "description": "Unweighted.",
+     "label": "origin",
+     "rationale": "No weighting statement anywhere in the article; LISREL analyses described without weights.",
+     "basis": "article",
+     "source_locator": "P1 PDF pp. 9-10 Method; pp. 14-15 Primary Analyses"
+    },
+    {
+     "level_id": "AX02.L1",
+     "description": "Weight all descriptive statistics, t tests (weighted means/SDs with nominal n) and the CFA covariance matrices by V5.",
+     "label": "uncertain",
+     "rationale": "Provider recommends V5 for all analyses; public weights are bracketed; effect on means expected small but not established in the article.",
+     "basis": "source_documentation",
+     "source_locator": "sources/source_description.md Weights; Kish, L. (1965). Survey sampling. Wiley. (use of design weights for descriptive population estimates)"
+    }
+   ],
+   "compatible_with": "all other axes"
+  },
+  {
+   "axis_id": "AX03",
+   "decision": "Denominator of d for latent mean differences",
+   "category": "estimator",
+   "priority_rank": 5,
+   "levels": [
+    {
+     "level_id": "AX03.L0",
+     "description": "sqrt((SD_earlier^2 + SD_later^2)/2): equal-weight pooled SD of the two groups.",
+     "label": "origin",
+     "rationale": "Formula not stated; this is the standard Cohen d and is the pooled form consistent with the published-record forensic check (forensics.json F01).",
+     "basis": "methodological_literature",
+     "source_locator": "Cohen, J. (1988). Statistical power analysis for the behavioral sciences (2nd ed.). Erlbaum. (d with pooled SD; article cites the 1977 edition); P1 PDF p. 15 'Cohen, 1977'"
+    },
+    {
+     "level_id": "AX03.L1",
+     "description": "df-weighted pooled SD sqrt(((n1-1)SD1^2+(n2-1)SD2^2)/(n1+n2-2)).",
+     "label": "equivalent",
+     "rationale": "With group sizes of similar magnitude the two pooled forms differ negligibly.",
+     "basis": "methodological_literature",
+     "source_locator": "Hedges, L. V., & Olkin, I. (1985). Statistical methods for meta-analysis. Academic Press. (pooled SD weighted by df; small-sample correction g)"
+    },
+    {
+     "level_id": "AX03.L2",
+     "description": "Hedges' g small-sample correction applied to L0 or L1.",
+     "label": "equivalent",
+     "rationale": "Correction factor is essentially 1 for thousands of cases per group.",
+     "basis": "methodological_literature",
+     "source_locator": "Hedges, L. V., & Olkin, I. (1985). Statistical methods for meta-analysis. Academic Press. (pooled SD weighted by df; small-sample correction g)"
+    },
+    {
+     "level_id": "AX03.L3",
+     "description": "SD of the earlier (reference) year only (Glass's delta).",
+     "label": "uncertain",
+     "rationale": "Plausible for a 'baseline' framing (Figure 1 uses the earliest year as zero baseline) but not described; differs when SDs change across years.",
+     "basis": "methodological_literature",
+     "source_locator": "Glass, G. V., McGaw, B., & Smith, M. L. (1981). Meta-analysis in social research. Sage. (control-group SD standardizer); P1 PDF p. 16 Figure 1 note"
+    }
+   ],
+   "compatible_with": "AX04, AX05"
+  },
+  {
+   "axis_id": "AX04",
+   "decision": "Which SD accompanies the latent means (standardizer for d)",
+   "category": "construct_scoring",
+   "priority_rank": 3,
+   "levels": [
+    {
+     "level_id": "AX04.L0",
+     "description": "Model-implied latent SD per group = sqrt(factor variance) under the Model 4 solution with the metric of AX05.",
+     "label": "origin",
+     "rationale": "Table 1 note says the scale rows report latent means; SDs printed under them are most naturally the latent SDs on the same metric; article does not define them.",
+     "basis": "article",
+     "source_locator": "P1 PDF p. 13 Table 1 note; Hancock, G. R. (2001). Effect size, power, and sample size determination for structured means modeling and MIMIC approaches. Psychometrika, 66, 373-388. (latent d standardized by latent SD)"
+    },
+    {
+     "level_id": "AX04.L1",
+     "description": "Observed SD of the unit-weighted mean of the scale items per group (available cases).",
+     "label": "uncertain",
+     "rationale": "Equally compatible with the table layout (item rows print observed SDs); yields a different standardizer and hence different d.",
+     "basis": "article",
+     "source_locator": "P1 PDF pp. 11-13 Table 1 layout"
+    }
+   ],
+   "compatible_with": "AX03, AX05"
+  },
+  {
+   "axis_id": "AX05",
+   "decision": "Identification and scaling of latent means in the multigroup model",
+   "category": "construct_scoring",
+   "priority_rank": 4,
+   "levels": [
+    {
+     "level_id": "AX05.L0",
+     "description": "Marker-variable identification: first-listed item of each factor has loading fixed to 1 and intercept fixed to 0 in every group; latent means free in all groups (latent means on the marker item's metric).",
+     "label": "origin",
+     "rationale": "Latent means are reported for all three groups on the item response metric, which requires a marker/intercept scaling rather than a reference-group zero; the first-listed items are not footnoted as freed intercepts, consistent with their use as markers (observation, not stated).",
+     "basis": "article",
+     "source_locator": "P1 PDF pp. 11-13 Table 1; p. 13 footnote a"
+    },
+    {
+     "level_id": "AX05.L1",
+     "description": "Reference-group identification: earliest-year latent means fixed to 0 and variances to 1; later-group means and variances free; d computed from latent mean differences and latent SDs.",
+     "label": "uncertain",
+     "rationale": "Standard in Vandenberg & Lance sequence; gives the same mean differences as L0 up to the loading scale but the printed per-group means could not be produced directly.",
+     "basis": "methodological_literature",
+     "source_locator": "Vandenberg, R. J., & Lance, C. E. (2000). A review and synthesis of the measurement invariance literature. Organizational Research Methods, 3, 4-70."
+    },
+    {
+     "level_id": "AX05.L2",
+     "description": "Effects-coding identification (loadings average 1, intercepts sum to 0 per factor).",
+     "label": "uncertain",
+     "rationale": "Produces latent means on the average-item metric; plausible given latent means lie near item means, but not described.",
+     "basis": "methodological_literature",
+     "source_locator": "Little, T. D., Slegers, D. W., & Card, N. A. (2006). A non-arbitrary method of identifying and scaling latent variables in SEM. Structural Equation Modeling, 13, 59-72."
+    }
+   ],
+   "compatible_with": "AX03, AX04"
+  },
+  {
+   "axis_id": "AX06",
+   "decision": "CFA estimator and input matrix",
+   "category": "estimator",
+   "priority_rank": 7,
+   "levels": [
+    {
+     "level_id": "AX06.L0",
+     "description": "Normal-theory maximum likelihood on Pearson covariance matrices and means (LISREL 8.7 default).",
+     "label": "origin",
+     "rationale": "LISREL 8.7 named; no estimator stated; ML chi-square differences reported without scaling.",
+     "basis": "article",
+     "source_locator": "P1 PDF p. 10 Preliminary Analyses; p. 14 Table 2"
+    },
+    {
+     "level_id": "AX06.L1",
+     "description": "ML point estimates with Satorra-Bentler scaled chi-square/robust SEs.",
+     "label": "uncertain",
+     "rationale": "Same latent means and d; alters fit statistics and SEs used for the CIs and invariance decisions.",
+     "basis": "methodological_literature",
+     "source_locator": "Satorra, A., & Bentler, P. M. (2001). A scaled difference chi-square test statistic. Psychometrika, 66, 507-514."
+    },
+    {
+     "level_id": "AX06.L2",
+     "description": "Ordinal estimation (polychoric correlations, WLS/DWLS).",
+     "label": "non_equivalent",
+     "rationale": "Changes the latent metric (thresholds instead of intercepts), so latent means and d are not comparable to the reported item-metric means.",
+     "basis": "methodological_literature",
+     "source_locator": "Flora, D. B., & Curran, P. J. (2004). An empirical evaluation of alternative methods of estimation for CFA with ordinal data. Psychological Methods, 9, 466-491."
+    }
+   ],
+   "compatible_with": "all"
+  },
+  {
+   "axis_id": "AX07",
+   "decision": "Item-level t test variant",
+   "category": "inference",
+   "priority_rank": 6,
+   "levels": [
+    {
+     "level_id": "AX07.L0",
+     "description": "Student independent-samples t with pooled variance, two-sided, item-level available n.",
+     "label": "origin",
+     "rationale": "Only 't' is stated; pooled t is the conventional default.",
+     "basis": "article",
+     "source_locator": "P1 PDF p. 13 Table 1 header 't or d'"
+    },
+    {
+     "level_id": "AX07.L1",
+     "description": "Welch unequal-variance t.",
+     "label": "equivalent",
+     "rationale": "With thousands of cases per group and similar SDs, t values are practically identical.",
+     "basis": "methodological_literature",
+     "source_locator": "Welch, B. L. (1947). The generalization of 'Student's' problem when several different population variances are involved. Biometrika, 34, 28-35."
+    },
+    {
+     "level_id": "AX07.L2",
+     "description": "Design-weighted t (V5) with nominal n.",
+     "label": "uncertain",
+     "rationale": "Follows AX02.L1; not described.",
+     "basis": "source_documentation",
+     "source_locator": "sources/source_description.md Weights"
+    }
+   ],
+   "compatible_with": "AX02"
+  },
+  {
+   "axis_id": "AX08",
+   "decision": "Assignment of the four dropped Form 4 items to the security and influence factors in the seven-factor diagnostic model",
+   "category": "construct_scoring",
+   "priority_rank": 8,
+   "levels": [
+    {
+     "level_id": "AX08.L0",
+     "description": "security = {secure future, establish roots}; influence = {participate in decision making, difficult and challenging problems}.",
+     "label": "origin",
+     "rationale": "Follows item content and the cited prior factor structure (Johnson, 2000); not stated item by item.",
+     "basis": "article",
+     "source_locator": "P1 PDF p. 10 Preliminary Analyses (Johnson, 2000); p. 13 Table 1 'Omitted items'"
+    },
+    {
+     "level_id": "AX08.L1",
+     "description": "Any other partition of the four items into two two-item factors.",
+     "label": "uncertain",
+     "rationale": "Not determinable from the article; affects only the seven-factor fit and alphas, not the focal comparisons.",
+     "basis": "article",
+     "source_locator": "P1 PDF p. 10"
+    }
+   ],
+   "compatible_with": "diagnostic only"
+  },
+  {
+   "axis_id": "AX09",
+   "decision": "Which five Form 3 items form the 'work centrality' factor and which is the single 'job stability' indicator",
+   "category": "construct_scoring",
+   "priority_rank": 9,
+   "levels": [
+    {
+     "level_id": "AX09.L0",
+     "description": "Stability indicator = 'stay in the same job for most of my adult life' (V028); centrality = the other four agreement items plus the yes/no enough-money item (V024-V027, V029).",
+     "label": "origin",
+     "rationale": "The article calls the single item a question about job stability, which matches V028's wording; the yes/no item is explicitly listed among the Form 3 questions.",
+     "basis": "article",
+     "source_locator": "P1 PDF p. 10 Method; p. 13 Table 1 'Omitted items' order"
+    },
+    {
+     "level_id": "AX09.L1",
+     "description": "Centrality = the five agreement items V024-V028; the yes/no item V029 excluded from the CFA.",
+     "label": "uncertain",
+     "rationale": "Also consistent with 'five questions ... on a 5-point scale'; diagnostic only.",
+     "basis": "article",
+     "source_locator": "P1 PDF p. 10"
+    }
+   ],
+   "compatible_with": "diagnostic only"
+  }
+ ],
+ "notes": "Alternatives need an article or methodological-literature basis. Explicitly reported items/controls cannot be changed within the equivalent set. Distinct reported outcomes are not interchangeable specifications. Fixed (not open): the 19-item five-factor item assignment; the six freed intercepts; the three survey years and two forms; the sign convention later minus earlier; the top-category percentage definitions; the .002 delta-CFI criterion."
+}

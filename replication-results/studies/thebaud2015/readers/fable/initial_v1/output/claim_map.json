@@ -1,0 +1,484 @@
+[
+  {
+    "claim_id": "C01",
+    "statement": "H1: the gender gap in entrepreneurial activity (nascent or established business ownership) is larger in institutional contexts that mitigate work-family conflict through (a) moderate paid leave for mothers, (b) generous state childcare spending and/or (c) availability of part-time work.",
+    "hypothesis_label": "H1",
+    "direction": "interaction-sign description: negative Female x institution interactions (gap widens with supportive institutions); for paid leave a curvilinear (moderate-length) pattern",
+    "tier": "focal",
+    "estimand": "Cross-level interaction coefficients Paid leave x Female, Paid leave squared x Female, Childcare x Female, Part-time employment x Female in Model 3 (three-level mixed-effects logit)",
+    "scale": "log-odds",
+    "population": "Employed adults aged over 18 and under 55 in 24 high-income countries, GEM APS 2001-2008 (143 country-year surveys)",
+    "support": [
+      {"doc": "MAIN", "page": 8, "table": "text, Hypothesis 1", "column_or_model": null, "row": null},
+      {"doc": "MAIN", "page": 19, "table": "Table 1", "column_or_model": "Model 3", "row": "Institutional effects on the gender gap (4 rows)"},
+      {"doc": "MAIN", "page": 20, "table": "text, Results", "column_or_model": "Model 3", "row": null}
+    ],
+    "notes": "Umbrella claim; the component-specific results are C02-C04."
+  },
+  {
+    "claim_id": "C02",
+    "statement": "Greater public expenditure on childcare is associated with a significantly larger gender gap in the odds of entrepreneurial activity, net of individual- and country-level controls (supports H1b).",
+    "hypothesis_label": "H1",
+    "direction": "negative (Childcare x Female coefficient)",
+    "tier": "focal",
+    "estimand": "Coefficient of Childcare x Female in Model 3",
+    "scale": "log-odds",
+    "population": "Employed adults 18-54 in 24 countries, 2001-2008",
+    "support": [
+      {"doc": "MAIN", "page": 19, "table": "Table 1", "column_or_model": "Model 3", "row": "Childcare x Female"},
+      {"doc": "MAIN", "page": 20, "table": "text", "column_or_model": "Model 3", "row": null},
+      {"doc": "MAIN", "page": 21, "table": "text and Figure 4", "column_or_model": "Model 3 predicted probabilities", "row": null}
+    ],
+    "notes": "Article states that women's probability falls from about two-thirds of men's at zero childcare spending to about half at the highest spending (MAIN p.21)."
+  },
+  {
+    "claim_id": "C03",
+    "statement": "The estimated effects of paid leave (linear and squared) on the gender gap in entrepreneurial activity are negative but small and not significant.",
+    "hypothesis_label": "H1",
+    "direction": "null-effect (point estimates negative for linear term)",
+    "tier": "focal",
+    "estimand": "Coefficients of Paid leave x Female and Paid leave squared x Female in Model 3",
+    "scale": "log-odds",
+    "population": "Employed adults 18-54 in 24 countries, 2001-2008",
+    "support": [
+      {"doc": "MAIN", "page": 19, "table": "Table 1", "column_or_model": "Model 3", "row": "Paid leave x Female; Paid leave squared x Female"},
+      {"doc": "MAIN", "page": 20, "table": "text", "column_or_model": "Model 3", "row": null}
+    ],
+    "notes": "Reported as a non-significant result for H1a."
+  },
+  {
+    "claim_id": "C04",
+    "statement": "The size of the women's part-time labour force is not significantly associated with the gender gap in entrepreneurial activity.",
+    "hypothesis_label": "H1",
+    "direction": "null-effect (point estimate negative)",
+    "tier": "focal",
+    "estimand": "Coefficient of Part-time employment x Female in Model 3",
+    "scale": "log-odds",
+    "population": "Employed adults 18-54 in 24 countries, 2001-2008",
+    "support": [
+      {"doc": "MAIN", "page": 19, "table": "Table 1", "column_or_model": "Model 3", "row": "Part-time employment x Female"},
+      {"doc": "MAIN", "page": 20, "table": "text", "column_or_model": "Model 3", "row": null},
+      {"doc": "MAIN", "page": 28, "table": "text, Discussion", "column_or_model": null, "row": null}
+    ],
+    "notes": "Non-significant result for H1c."
+  },
+  {
+    "claim_id": "C05",
+    "statement": "Across the whole sample women are just over half as likely as men to be engaged in entrepreneurial activity (strong negative gender effect; men's odds about 1.8 times women's).",
+    "hypothesis_label": null,
+    "direction": "negative",
+    "tier": "focal",
+    "estimand": "Coefficient of Female in Model 1 (and Models 2-3)",
+    "scale": "log-odds (text converts to odds ratio)",
+    "population": "Employed adults 18-54 in 24 countries, 2001-2008",
+    "support": [
+      {"doc": "MAIN", "page": 19, "table": "Table 1", "column_or_model": "Model 1", "row": "Female"},
+      {"doc": "MAIN", "page": 18, "table": "text", "column_or_model": "Model 1", "row": null}
+    ],
+    "notes": "Baseline gender gap; not a numbered hypothesis but a central stated finding."
+  },
+  {
+    "claim_id": "C06",
+    "statement": "Middle-aged individuals and those with a postsecondary degree are more likely to be entrepreneurs (age positive, age squared negative, postsecondary positive).",
+    "hypothesis_label": null,
+    "direction": "positive (age, postsecondary); negative (age squared)",
+    "tier": "nuisance_control",
+    "estimand": "Coefficients of Age, Age squared, Postsecondary degree in Model 1",
+    "scale": "log-odds",
+    "population": "Employed adults 18-54 in 24 countries, 2001-2008",
+    "support": [
+      {"doc": "MAIN", "page": 19, "table": "Table 1", "column_or_model": "Model 1", "row": "Age; Age squared; Postsecondary degree or higher"},
+      {"doc": "MAIN", "page": 18, "table": "text", "column_or_model": "Model 1", "row": null}
+    ],
+    "notes": null
+  },
+  {
+    "claim_id": "C07",
+    "statement": "Entrepreneurship is less common in countries with higher GDP and much more common where respondents agree that entrepreneurship is a socially valued (high-status) activity; a one-SD higher status score implies about 1.2 times the odds.",
+    "hypothesis_label": null,
+    "direction": "negative (GDP); positive (social status)",
+    "tier": "nuisance_control",
+    "estimand": "Coefficients of GDP and Social status of entrepreneurship in Model 2 (and Model 3)",
+    "scale": "log-odds (text converts status effect to odds ratio)",
+    "population": "Employed adults 18-54 in 24 countries, 2001-2008",
+    "support": [
+      {"doc": "MAIN", "page": 19, "table": "Table 1", "column_or_model": "Model 2", "row": "GDP; Social status of entrepreneurship"},
+      {"doc": "MAIN", "page": 20, "table": "text", "column_or_model": "Model 2", "row": null},
+      {"doc": "MAIN", "page": 29, "table": "text, Discussion", "column_or_model": null, "row": null}
+    ],
+    "notes": "Country-level predictors are standardized, so coefficients are per SD."
+  },
+  {
+    "claim_id": "C08",
+    "statement": "Adding the country-level variables (Model 2) explains about 44 percent of the between-country variance in entrepreneurial activity rates (change in between-country intercept SD from Model 1 to Model 2).",
+    "hypothesis_label": null,
+    "direction": "none",
+    "tier": "identification_or_inference_diagnostic",
+    "estimand": "Proportional change in squared between-country intercept SD between Model 1 and Model 2",
+    "scale": "other (variance proportion)",
+    "population": "Country level (24 countries)",
+    "support": [
+      {"doc": "MAIN", "page": 19, "table": "Table 1", "column_or_model": "Models 1 and 2", "row": "Between-country intercept s.d."},
+      {"doc": "MAIN", "page": 19, "table": "text and footnote 18", "column_or_model": null, "row": null}
+    ],
+    "notes": null
+  },
+  {
+    "claim_id": "C09",
+    "statement": "Including the gender x institution interactions reduces unexplained between-country variance in the gender effect by about 48 percent, but does not explain survey-level variation in the gender gap.",
+    "hypothesis_label": null,
+    "direction": "none",
+    "tier": "identification_or_inference_diagnostic",
+    "estimand": "Proportional change in squared between-country female SD between Model 2 and Model 3; between-survey female SD unchanged",
+    "scale": "other (variance proportion)",
+    "population": "Country and survey levels",
+    "support": [
+      {"doc": "MAIN", "page": 19, "table": "Table 1", "column_or_model": "Models 2 and 3", "row": "Between-country female s.d.; Between-survey female s.d."},
+      {"doc": "MAIN", "page": 20, "table": "text and footnote 19", "column_or_model": null, "row": null}
+    ],
+    "notes": null
+  },
+  {
+    "claim_id": "C10",
+    "statement": "A likelihood-ratio test comparing empty models with fixed versus random female slope indicates significant between-group variance in the gender gap; ICCs from the unconditional means model are about 6 percent (survey within country) and 5 percent (country).",
+    "hypothesis_label": null,
+    "direction": "none",
+    "tier": "identification_or_inference_diagnostic",
+    "estimand": "LR test of random female slope in unconditional model; ICCs from unconditional means model",
+    "scale": "other",
+    "population": "Employed adults 18-54 in 24 countries, 2001-2008",
+    "support": [
+      {"doc": "MAIN", "page": 18, "table": "footnote 17", "column_or_model": "unconditional means models (not tabulated)", "row": null}
+    ],
+    "notes": "No table; the unconditional models are not printed."
+  },
+  {
+    "claim_id": "C11",
+    "statement": "The childcare x female result is similar when predicting nascent entrepreneurship only (about 3 percent of the sample).",
+    "hypothesis_label": "H1",
+    "direction": "negative (Childcare x Female)",
+    "tier": "robustness",
+    "estimand": "Coefficient of Childcare x Female in Online Appendix Table A3 Model 1 (nascent entrepreneurship outcome)",
+    "scale": "log-odds",
+    "population": "Employed adults 18-54 in 24 countries, 2001-2008",
+    "support": [
+      {"doc": "S1", "page": 3, "table": "Table A3", "column_or_model": "Model 1", "row": "Childcare x Female"},
+      {"doc": "MAIN", "page": 11, "table": "text", "column_or_model": null, "row": null},
+      {"doc": "MAIN", "page": 21, "table": "text", "column_or_model": null, "row": null}
+    ],
+    "notes": "Distinct outcome (nascent only); treated as robustness per the article's framing, not as an interchangeable specification."
+  },
+  {
+    "claim_id": "C12",
+    "statement": "The childcare x female result is robust to including individuals who are not employed (full sample with a 'not employed' control).",
+    "hypothesis_label": "H1",
+    "direction": "negative (Childcare x Female)",
+    "tier": "robustness",
+    "estimand": "Coefficient of Childcare x Female in Online Appendix Table A3 Model 2 (full sample)",
+    "scale": "log-odds",
+    "population": "All adults 18-54 (employed and not employed) in 24 countries, 2001-2008",
+    "support": [
+      {"doc": "S1", "page": 3, "table": "Table A3", "column_or_model": "Model 2", "row": "Childcare x Female"},
+      {"doc": "MAIN", "page": 10, "table": "footnote 2", "column_or_model": null, "row": null},
+      {"doc": "MAIN", "page": 21, "table": "text", "column_or_model": null, "row": null}
+    ],
+    "notes": "S1 note states key findings were similar when employment status was not included as a control."
+  },
+  {
+    "claim_id": "C13",
+    "statement": "The childcare x female result is robust to including entrepreneurial perceptions (self-assessed ability, fear of failure) and knowing an entrepreneur; these perception variables themselves predict entrepreneurship in the expected directions.",
+    "hypothesis_label": "H1",
+    "direction": "negative (Childcare x Female); positive (ability, knows entrepreneur); negative (fear of failure)",
+    "tier": "robustness",
+    "estimand": "Coefficient of Childcare x Female and the three perception coefficients in Online Appendix Table A3 Model 3",
+    "scale": "log-odds",
+    "population": "Employed adults 18-54 in 24 countries, 2001-2008, with perception items observed (random half of non-entrepreneurs 2003-2008)",
+    "support": [
+      {"doc": "S1", "page": 3, "table": "Table A3", "column_or_model": "Model 3", "row": "Childcare x Female; Self-assessed entrepreneurial ability; Fears business failure; Knows another entrepreneur"},
+      {"doc": "MAIN", "page": 11, "table": "text and footnote 5", "column_or_model": null, "row": null},
+      {"doc": "MAIN", "page": 21, "table": "text", "column_or_model": null, "row": null}
+    ],
+    "notes": "Skip pattern in 2003-2008 upwardly biases the share of entrepreneurs in this subsample (MAIN p.11 fn 5)."
+  },
+  {
+    "claim_id": "C14",
+    "statement": "H2: among established business owners, women's relative odds of being motivated by limited employment options are significantly lower in countries with high childcare spending.",
+    "hypothesis_label": "H2",
+    "direction": "negative (Childcare x Female)",
+    "tier": "focal",
+    "estimand": "Coefficient of Childcare x Female in Model 4",
+    "scale": "log-odds",
+    "population": "Established business owners (employed, 18-54) in 24 countries, 2001-2008",
+    "support": [
+      {"doc": "MAIN", "page": 22, "table": "Table 2", "column_or_model": "Model 4", "row": "Childcare x Female"},
+      {"doc": "MAIN", "page": 23, "table": "text", "column_or_model": "Model 4", "row": null},
+      {"doc": "MAIN", "page": 23, "table": "Figure 5 panel A", "column_or_model": "Model 4 predicted probabilities", "row": null}
+    ],
+    "notes": "Predicted probability for women about 9 points lower at highest versus lowest childcare spending (.24 vs .33), MAIN p.24."
+  },
+  {
+    "claim_id": "C15",
+    "statement": "H2: women owners' relative odds of being motivated by limited employment options are significantly lower in countries with high rates of women's part-time work.",
+    "hypothesis_label": "H2",
+    "direction": "negative (Part-time employment x Female)",
+    "tier": "focal",
+    "estimand": "Coefficient of Part-time employment x Female in Model 4",
+    "scale": "log-odds",
+    "population": "Established business owners in 24 countries, 2001-2008",
+    "support": [
+      {"doc": "MAIN", "page": 22, "table": "Table 2", "column_or_model": "Model 4", "row": "Part-time employment x Female"},
+      {"doc": "MAIN", "page": 23, "table": "text", "column_or_model": "Model 4", "row": null},
+      {"doc": "MAIN", "page": 23, "table": "Figure 5 panel B", "column_or_model": "Model 4 predicted probabilities", "row": null}
+    ],
+    "notes": "About 4 points lower (.27 vs .31) at highest vs lowest part-time rate, MAIN p.24; gap reverses sign at high values."
+  },
+  {
+    "claim_id": "C16",
+    "statement": "Paid leave (linear and squared) is not significantly associated with the gender gap in Plan-B motivation among business owners.",
+    "hypothesis_label": "H2",
+    "direction": "null-effect",
+    "tier": "focal",
+    "estimand": "Coefficients of Paid leave x Female and Paid leave squared x Female in Model 4",
+    "scale": "log-odds",
+    "population": "Established business owners in 24 countries, 2001-2008",
+    "support": [
+      {"doc": "MAIN", "page": 22, "table": "Table 2", "column_or_model": "Model 4", "row": "Paid leave x Female; Paid leave squared x Female"}
+    ],
+    "notes": "Not discussed in text beyond the table; inferred from the article singling out childcare and part-time work."
+  },
+  {
+    "claim_id": "C17",
+    "statement": "Among business owners, being motivated by limited employment options is more common among older, less-educated, sole owners with older businesses, and in contexts with lower GDP, higher unemployment, fewer women managers and stronger cultural support for entrepreneurship.",
+    "hypothesis_label": null,
+    "direction": "positive (age, sole owner, business age, unemployment, social status); negative (postsecondary, GDP, percent women managers)",
+    "tier": "nuisance_control",
+    "estimand": "Control coefficients in Model 4",
+    "scale": "log-odds",
+    "population": "Established business owners in 24 countries, 2001-2008",
+    "support": [
+      {"doc": "MAIN", "page": 22, "table": "Table 2", "column_or_model": "Model 4", "row": "Age; Postsecondary; Sole owner; Business age; GDP; Unemployment rate; Social status; Percent women managers"},
+      {"doc": "MAIN", "page": 21, "table": "text", "column_or_model": "Model 4", "row": null},
+      {"doc": "MAIN", "page": 23, "table": "text", "column_or_model": "Model 4", "row": null}
+    ],
+    "notes": null
+  },
+  {
+    "claim_id": "C18",
+    "statement": "H3 (business size): the gender gap in business size is unrelated to childcare or part-time work but is significantly smaller in countries providing longer (moderate) paid leave; the gap is smallest at about 25-30 weeks of FTE paid leave and the effect levels off or reverses at very long leaves.",
+    "hypothesis_label": "H3",
+    "direction": "interaction-sign description: Paid leave x Female positive, Paid leave squared x Female negative; childcare and part-time interactions null",
+    "tier": "focal",
+    "estimand": "Coefficients of Paid leave x Female, Paid leave squared x Female, Childcare x Female, Part-time x Female in Model 5 (three-level linear mixed model of log business size)",
+    "scale": "linear coefficient (log employees + 1)",
+    "population": "Established business owners in 24 countries, 2001-2008",
+    "support": [
+      {"doc": "MAIN", "page": 22, "table": "Table 2", "column_or_model": "Model 5", "row": "Paid leave x Female; Paid leave squared x Female; Childcare x Female; Part-time employment x Female"},
+      {"doc": "MAIN", "page": 24, "table": "text", "column_or_model": "Model 5", "row": null},
+      {"doc": "MAIN", "page": 25, "table": "Figure 6 panel A", "column_or_model": "Model 5 predicted values", "row": null}
+    ],
+    "notes": "Model 5 is the only linear model in the article."
+  },
+  {
+    "claim_id": "C19",
+    "statement": "H3 (growth aspirations): women are significantly less likely to express high-growth aspirations, but the gender gap is significantly smaller in contexts with moderate lengths of paid leave (positive linear, negative squared interaction).",
+    "hypothesis_label": "H3",
+    "direction": "negative (Female); Paid leave x Female positive, Paid leave squared x Female negative",
+    "tier": "focal",
+    "estimand": "Coefficients of Female, Paid leave x Female and Paid leave squared x Female in Model 6",
+    "scale": "log-odds",
+    "population": "Established business owners in 24 countries, 2001-2008",
+    "support": [
+      {"doc": "MAIN", "page": 22, "table": "Table 2", "column_or_model": "Model 6", "row": "Female; Paid leave x Female; Paid leave squared x Female"},
+      {"doc": "MAIN", "page": 24, "table": "text", "column_or_model": "Model 6", "row": null},
+      {"doc": "MAIN", "page": 25, "table": "Figure 6 panel B", "column_or_model": "Model 6 predicted probabilities", "row": null}
+    ],
+    "notes": "Women in contexts with 20-30 weeks of paid leave are described as considerably more likely to express high-growth expectations."
+  },
+  {
+    "claim_id": "C20",
+    "statement": "H3 (innovativeness): women's relative odds of offering a product or service that is new to all customers are higher in countries with a moderate amount of paid leave (strong curvilinear interaction); the gap is virtually nonexistent at 20-30 weeks of paid leave.",
+    "hypothesis_label": "H3",
+    "direction": "negative (Female); Paid leave x Female positive, Paid leave squared x Female negative",
+    "tier": "focal",
+    "estimand": "Coefficients of Female, Paid leave x Female and Paid leave squared x Female in Model 7",
+    "scale": "log-odds",
+    "population": "Established business owners in 24 countries, surveys 2002-2008",
+    "support": [
+      {"doc": "MAIN", "page": 22, "table": "Table 2", "column_or_model": "Model 7", "row": "Female; Paid leave x Female; Paid leave squared x Female"},
+      {"doc": "MAIN", "page": 25, "table": "text", "column_or_model": "Model 7", "row": null},
+      {"doc": "MAIN", "page": 26, "table": "Figure 7 panel A", "column_or_model": "Model 7 predicted probabilities", "row": null}
+    ],
+    "notes": "Outcome available only 2002-2008 (Table 2 note; MAIN p.15 fn 14)."
+  },
+  {
+    "claim_id": "C21",
+    "statement": "H3 (new technology): women's relative odds of using new technology are somewhat higher in countries that generously fund childcare; the interaction is small relative to its SE (marginal), and the gender gap is indiscernible above about 0.4 percent of GDP on childcare.",
+    "hypothesis_label": "H3",
+    "direction": "negative (Female); positive (Childcare x Female), marginal",
+    "tier": "focal",
+    "estimand": "Coefficients of Female and Childcare x Female in Model 8",
+    "scale": "log-odds",
+    "population": "Established business owners in 23 countries (Poland excluded), surveys 2005-2008",
+    "support": [
+      {"doc": "MAIN", "page": 22, "table": "Table 2", "column_or_model": "Model 8", "row": "Female; Childcare x Female"},
+      {"doc": "MAIN", "page": 26, "table": "text", "column_or_model": "Model 8", "row": null},
+      {"doc": "MAIN", "page": 27, "table": "text and Figure 7 panel B", "column_or_model": "Model 8 predicted probabilities", "row": null}
+    ],
+    "notes": "Outcome available only 2005-2008; Poland excluded (Table 2 note)."
+  },
+  {
+    "claim_id": "C22",
+    "statement": "Women business owners run smaller businesses, have lower high-growth aspirations, and are less likely to introduce new products or use new technology than men (negative Female main effects in Models 5-8); the Female main effect in the motivation model is small and positive (marginal).",
+    "hypothesis_label": null,
+    "direction": "negative (Models 5-8); positive marginal (Model 4)",
+    "tier": "descriptive",
+    "estimand": "Coefficient of Female in Models 4-8 (at mean of standardized institution variables)",
+    "scale": "log-odds (Models 4, 6, 7, 8); linear coefficient (Model 5)",
+    "population": "Established business owners in 24 (23 for Model 8) countries",
+    "support": [
+      {"doc": "MAIN", "page": 22, "table": "Table 2", "column_or_model": "Models 4-8", "row": "Female"},
+      {"doc": "MAIN", "page": 24, "table": "text", "column_or_model": "Model 6", "row": null}
+    ],
+    "notes": "Because institution variables are standardized and interacted, Female is the gap at mean institutional values."
+  },
+  {
+    "claim_id": "C23",
+    "statement": "Overall conclusion for H3: models 5-8 offer convergent support that women's representation in growth-oriented entrepreneurship is relatively higher where work-family institutions (moderate paid leave; childcare) mitigate work-family conflict; part-time work is not associated with growth-oriented outcomes.",
+    "hypothesis_label": "H3",
+    "direction": "interaction-sign description (see C18-C21)",
+    "tier": "focal",
+    "estimand": "Pattern across the gender x institution interactions in Models 5-8",
+    "scale": "mixed",
+    "population": "Established business owners",
+    "support": [
+      {"doc": "MAIN", "page": 27, "table": "text", "column_or_model": "Models 5-8", "row": null},
+      {"doc": "MAIN", "page": 28, "table": "text, Discussion", "column_or_model": null, "row": null}
+    ],
+    "notes": "Summary claim; the article notes the pattern differs by outcome (paid leave for size, aspirations, innovation; childcare for technology) and calls it unexpected (MAIN p.29)."
+  },
+  {
+    "claim_id": "C24",
+    "statement": "Descriptive: aggregate entrepreneurial activity rates range from about 6 percent (France) to about 25 percent (Greece); women are underrepresented in every country and their share bears little relation to the aggregate rate.",
+    "hypothesis_label": null,
+    "direction": "none",
+    "tier": "descriptive",
+    "estimand": "Country-level percentage of the workforce engaged in entrepreneurial activity, by gender",
+    "scale": "probability (percent)",
+    "population": "Employed adults 18-54, by country, pooled 2001-2008",
+    "support": [
+      {"doc": "MAIN", "page": 16, "table": "Figure 1 and text", "column_or_model": null, "row": null}
+    ],
+    "notes": "Women's shares cited: France about 36, Belgium 35, New Zealand 46, Greece 35 percent."
+  },
+  {
+    "claim_id": "C25",
+    "statement": "Descriptive: country-specific logistic regressions (adjusting for education, age, survey year) give the largest adjusted gender gaps in Ireland, Iceland and Norway (men at least 10 points higher; Ireland men 0.24 vs women 0.11) and the smallest (under 3 points) in Canada, Spain and Japan.",
+    "hypothesis_label": null,
+    "direction": "none",
+    "tier": "descriptive",
+    "estimand": "Average marginal effect of gender on the probability of entrepreneurial activity from separate per-country logits",
+    "scale": "probability",
+    "population": "Employed adults 18-54, by country, pooled 2001-2008",
+    "support": [
+      {"doc": "MAIN", "page": 17, "table": "Figure 2 and text", "column_or_model": "per-country logistic regressions", "row": null},
+      {"doc": "MAIN", "page": 15, "table": "text, Analytic Strategy", "column_or_model": null, "row": null}
+    ],
+    "notes": null
+  },
+  {
+    "claim_id": "C26",
+    "statement": "Descriptive: country-level gender gaps in the probability of entrepreneurship correlate positively with childcare provision (r = .40), weakly with paid leave (r = .14) and not with women's part-time work (r = -.02).",
+    "hypothesis_label": null,
+    "direction": "positive (childcare); none (part-time)",
+    "tier": "descriptive",
+    "estimand": "Pearson correlations between country-level AME gender gaps and country-mean institution measures (24 countries)",
+    "scale": "other (correlation)",
+    "population": "24 countries",
+    "support": [
+      {"doc": "MAIN", "page": 17, "table": "text", "column_or_model": null, "row": null},
+      {"doc": "MAIN", "page": 18, "table": "Figure 3", "column_or_model": null, "row": null}
+    ],
+    "notes": null
+  },
+  {
+    "claim_id": "C27",
+    "statement": "The three work-family indicators are not strongly correlated (r = .22, -.30, -.25; Cronbach's alpha .3552; factor loadings below |.49|), so an aggregated index would be inappropriate; pooled VIFs for country-level variables are at most 3.07.",
+    "hypothesis_label": null,
+    "direction": "none",
+    "tier": "identification_or_inference_diagnostic",
+    "estimand": "Correlations, alpha and VIFs among survey-level predictors",
+    "scale": "other",
+    "population": "143 country-year surveys",
+    "support": [
+      {"doc": "MAIN", "page": 13, "table": "footnote 10", "column_or_model": null, "row": null},
+      {"doc": "MAIN", "page": 14, "table": "footnote 13", "column_or_model": null, "row": null}
+    ],
+    "notes": null
+  },
+  {
+    "claim_id": "C28",
+    "statement": "Robustness (not shown): results are very similar when policy changes are lagged two years or not lagged; with alternative economic/legal controls (business start-up index, union density, service-sector size); with alternative women's-status indicators; entering macro predictors one at a time; estimating odds ratios; dropping countries with regional heterogeneity; and adding business size as a covariate in Models 6-8.",
+    "hypothesis_label": null,
+    "direction": "none",
+    "tier": "robustness",
+    "estimand": "Unreported alternative specifications described in footnotes",
+    "scale": "mixed",
+    "population": "As in the corresponding main models",
+    "support": [
+      {"doc": "MAIN", "page": 12, "table": "footnote 8", "column_or_model": null, "row": null},
+      {"doc": "MAIN", "page": 13, "table": "footnote 11", "column_or_model": null, "row": null},
+      {"doc": "MAIN", "page": 14, "table": "footnotes 12 and 13", "column_or_model": null, "row": null},
+      {"doc": "MAIN", "page": 15, "table": "footnote 16", "column_or_model": null, "row": null},
+      {"doc": "MAIN", "page": 21, "table": "footnote 21", "column_or_model": null, "row": null},
+      {"doc": "MAIN", "page": 27, "table": "footnote 24", "column_or_model": null, "row": null},
+      {"doc": "MAIN", "page": 31, "table": "footnote 25", "column_or_model": null, "row": null}
+    ],
+    "notes": "No tables; cannot be sealed as targets."
+  },
+  {
+    "claim_id": "C29",
+    "statement": "Robustness (not shown): in women-only subsamples, women are significantly less likely to be Plan-B motivated where childcare spending is more generous, and there is a significant curvilinear effect of paid leave on women's business size, growth aspirations and new product introduction.",
+    "hypothesis_label": null,
+    "direction": "negative (childcare on motivation); curvilinear (paid leave)",
+    "tier": "robustness",
+    "estimand": "Institution main effects in women-only models (not tabulated)",
+    "scale": "mixed",
+    "population": "Women established business owners",
+    "support": [
+      {"doc": "MAIN", "page": 24, "table": "footnote 22", "column_or_model": null, "row": null},
+      {"doc": "MAIN", "page": 26, "table": "footnote 23", "column_or_model": null, "row": null}
+    ],
+    "notes": null
+  },
+  {
+    "claim_id": "C30",
+    "statement": "Descriptive sample facts: 13 percent of the analytic sample are entrepreneurs; 31 percent of established owners report limited employment options as motivation; 17 percent have high-growth aspirations; 22 percent use new technology; 9 percent introduce a brand-new product or service.",
+    "hypothesis_label": null,
+    "direction": "none",
+    "tier": "descriptive",
+    "estimand": "Sample means",
+    "scale": "probability",
+    "population": "Analytic sample; established-owner subsample",
+    "support": [
+      {"doc": "MAIN", "page": 11, "table": "text", "column_or_model": null, "row": null},
+      {"doc": "MAIN", "page": 14, "table": "text", "column_or_model": null, "row": null},
+      {"doc": "MAIN", "page": 15, "table": "text", "column_or_model": null, "row": null},
+      {"doc": "S1", "page": 2, "table": "Table A2", "column_or_model": "Panels A and B", "row": "Entrepreneur; Motivated by limited employment options; High Growth Aspirations; Product/service is new to all customers; Product/service requires new technologies"}
+    ],
+    "notes": "Comparison material only; S1 Table A1 country-level means are likewise documentary."
+  },
+  {
+    "claim_id": "C31",
+    "statement": "In the established-owner models, state childcare spending has a marginal negative main effect on business size and growth aspirations, and GDP has a negative main effect on new technology use.",
+    "hypothesis_label": null,
+    "direction": "negative",
+    "tier": "nuisance_control",
+    "estimand": "Main-effect coefficients of State childcare spending (Models 5, 6) and GDP (Model 8)",
+    "scale": "linear coefficient (Model 5); log-odds (Models 6, 8)",
+    "population": "Established business owners",
+    "support": [
+      {"doc": "MAIN", "page": 22, "table": "Table 2", "column_or_model": "Models 5, 6, 8", "row": "State childcare spending; GDP"}
+    ],
+    "notes": "Not discussed in text; listed because starred in the table."
+  }
+]

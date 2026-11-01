@@ -1,0 +1,17 @@
+{
+  "frozen_utc": "2026-10-27T11:55:00Z",
+  "note": "Frozen before any implementer runs. Article language not stated (no software named in DOC01), so A and B use R per instructions/workflow.md section 4.",
+  "implementers": {
+    "A": {"family": "Anthropic", "model": "claude-fable-5-1", "effort": "high", "fast_mode": false, "language": "R 4.6.1 (/opt/homebrew/bin/Rscript)", "cli": "claude -p --safe-mode --model claude-fable-5-1 --effort high --settings '{\"fastMode\":false,\"autoMemoryEnabled\":false}' --no-session-persistence --tools Read,Write,Edit,Glob,Grep,Bash --allowed-tools <bounded list>"},
+    "B": {"family": "OpenAI", "model": "gpt-6-astra", "effort": "high", "service_tier": "default", "fast_mode": false, "language": "R 4.6.1", "cli": "codex exec --ephemeral --ignore-user-config --skip-git-repo-check -C <staging> -m gpt-6-astra -c model_reasoning_effort=\"high\" -c service_tier=\"default\" -c features.fast_mode=false -s workspace-write"},
+    "C": {"family": "OpenAI", "model": "gpt-6-astra", "effort": "high", "service_tier": "default", "fast_mode": false, "language": "Python 3.13.4 (~/.venv/bin/python)", "cli": "as B"}
+  },
+  "pre_execution_checkers": {
+    "for_A": {"family": "OpenAI", "model": "gpt-6-astra", "sees": "manifest and code only"},
+    "for_B": {"family": "Anthropic", "model": "claude-fable-5-1", "sees": "manifest and code only"},
+    "for_C": {"family": "Anthropic", "model": "claude-fable-5-1", "sees": "manifest and code only"}
+  },
+  "context_rule": "Every implementer and checker is a fresh CLI process in its own neutral staging directory; no implementer sees another implementer's code or any result.",
+  "network": "Codex roles: sandbox workspace-write (network off by default). Claude roles: no WebFetch/WebSearch tools offered; Bash network access is not technically blocked, so isolation for Claude implementers is instruction-plus-tool-list only and is disclosed.",
+  "adversarial_review_limitation": "Both available model families (Anthropic, OpenAI) are used as implementers, so no independent third family is available for adversarial review. Any potential discrepancy therefore cannot receive the fully verified status; this is recorded in advance."
+}

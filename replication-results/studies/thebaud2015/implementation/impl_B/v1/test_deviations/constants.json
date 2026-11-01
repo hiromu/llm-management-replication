@@ -1,0 +1,168 @@
+{
+  "U03": {
+    "method": "unique_surveys",
+    "n_obs": 6512,
+    "n_surveys": 111,
+    "n_countries": 24,
+    "n_units": 111,
+    "sample_hash": "1f8b36bd5e39909bf7543fbd0dce8e2d5a80036f10413a0bf44c58235bc59e95",
+    "variables": {
+      "leave": {
+        "mean": 26.311392113755726,
+        "sd": 13.851076734948455
+      },
+      "childcare": {
+        "mean": 0.45939873585988411,
+        "sd": 0.26535700706284232
+      },
+      "parttime": {
+        "mean": 25.482890407016196,
+        "sd": 7.018657714926646
+      },
+      "gdp": {
+        "mean": 0.90092498518053699,
+        "sd": 0.029891589832920323
+      },
+      "unemp": {
+        "mean": 6.2379345414830922,
+        "sd": 1.4639562580545831
+      },
+      "epl": {
+        "mean": 2.3056077112582907,
+        "sd": 0.56261692157153087
+      },
+      "status": {
+        "mean": 0.49905610814243856,
+        "sd": 0.053356057100451944
+      },
+      "wmgr": {
+        "mean": 29.597331391469677,
+        "sd": 4.2386680853030096
+      },
+      "fert": {
+        "mean": 1.5989429556890926,
+        "sd": 0.17117704907678993
+      }
+    },
+    "leave_sq": "square of standardized leave; no additional standardization",
+    "invalid_variables": [],
+    "centering": {
+      "M3": {
+        "age": 36.337530712530715,
+        "bage": null
+      },
+      "R1": {
+        "age": 36.327082692898863,
+        "bage": null
+      }
+    }
+  },
+  "U09": {
+    "method": "unique_surveys",
+    "n_obs": 6579,
+    "n_surveys": 111,
+    "n_countries": 24,
+    "n_units": 111,
+    "sample_hash": "6ab3e6fc2ebfe2515d0dd4cf6d049cfe9dade3d25f6735547a6b7df31fcb8bf7",
+    "variables": {
+      "leave": {
+        "mean": 26.311392113755726,
+        "sd": 13.851076734948455
+      },
+      "childcare": {
+        "mean": 0.45939873585988411,
+        "sd": 0.26535700706284232
+      },
+      "parttime": {
+        "mean": 25.482890407016196,
+        "sd": 7.018657714926646
+      },
+      "gdp": {
+        "mean": 0.90092498518053699,
+        "sd": 0.029891589832920323
+      },
+      "unemp": {
+        "mean": 6.2379345414830922,
+        "sd": 1.4639562580545831
+      },
+      "epl": {
+        "mean": 2.3056077112582907,
+        "sd": 0.56261692157153087
+      },
+      "status": {
+        "mean": 0.49905610814243856,
+        "sd": 0.053356057100451944
+      },
+      "wmgr": {
+        "mean": 29.597331391469677,
+        "sd": 4.2386680853030096
+      },
+      "fert": {
+        "mean": 1.5989429556890926,
+        "sd": 0.17117704907678993
+      }
+    },
+    "leave_sq": "square of standardized leave; no additional standardization",
+    "invalid_variables": [],
+    "centering": {
+      "M4": {
+        "age": 36.838356164383562,
+        "bage": 1.9923414952976553
+      }
+    }
+  },
+  "U25": {
+    "method": "unique_surveys",
+    "n_obs": 6579,
+    "n_surveys": 111,
+    "n_countries": 24,
+    "n_units": 111,
+    "sample_hash": "6ab3e6fc2ebfe2515d0dd4cf6d049cfe9dade3d25f6735547a6b7df31fcb8bf7",
+    "variables": {
+      "leave": {
+        "mean": 26.311392113755726,
+        "sd": 13.851076734948455
+      },
+      "childcare": {
+        "mean": 0.45939873585988411,
+        "sd": 0.26535700706284232
+      },
+      "parttime": {
+        "mean": 25.482890407016196,
+        "sd": 7.018657714926646
+      },
+      "gdp": {
+        "mean": 0.90092498518053699,
+        "sd": 0.029891589832920323
+      },
+      "unemp": {
+        "mean": 6.2379345414830922,
+        "sd": 1.4639562580545831
+      },
+      "epl": {
+        "mean": 2.3056077112582907,
+        "sd": 0.56261692157153087
+      },
+      "status": {
+        "mean": 0.49905610814243856,
+        "sd": 0.053356057100451944
+      },
+      "wmgr": {
+        "mean": 29.597331391469677,
+        "sd": 4.2386680853030096
+      },
+      "fert": {
+        "mean": 1.5989429556890926,
+        "sd": 0.17117704907678993
+      }
+    },
+    "leave_sq": "square of standardized leave; no additional standardization",
+    "invalid_variables": [],
+    "centering": {
+      "M5": {
+        "age": 36.862903225806448,
+        "bage": 1.9868827046456092
+      }
+    }
+  }
+}

@@ -1,0 +1,5 @@
+# Unmet items
+
+1. Manifest line 12 (String handling: "remove NUL characters and leading/trailing spaces"). code/run.R line 7: `clean` uses `trimws` with its default whitespace class, which strips leading/trailing tabs, carriage returns and line feeds in addition to spaces. This cleaning is applied to every compared field (POW fields at line 92, enlistment fields at lines 96 and 103, rank-table keys at line 130, crosswalk fields at lines 147–148 and 162–163, camp code list at line 114), so any field whose edge characters are tab/CR/LF is cleaned differently from the manifest's rule.
+
+2. Manifest line 96 and grid.json `influence_scope` ("'all' = every camp in the estimation sample; 'first20' = the 20 smallest camp codes"). code/run.R lines 654 and 664–665 define a third scope value `none` and make it the default; line 466 then skips the INFLUENCE family entirely when the scope is `none`. The documented normal invocation in code/NOTES.md line 6 passes `--influence none`, so the INFLUENCE family listed for S000 in grid.json (line 45) is not run and `influence.csv` contains only a header.

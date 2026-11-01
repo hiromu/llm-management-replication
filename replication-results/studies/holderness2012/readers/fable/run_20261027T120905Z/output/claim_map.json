@@ -1,0 +1,504 @@
+{
+  "paper_id": "P-R7M2",
+  "claims": [
+    {
+      "claim_id": "C01",
+      "statement": "Survival probability declines with the Steepness (ordered Gini of rank values) of the POW's captured cohort, in both the simple (camp fixed effects only) and complex (individual and group controls) probit specifications.",
+      "hypothesis_or_direction": "negative (reported); the article's stated null is no relation, with the alternative that hierarchy enhances survival rejected",
+      "tier": "focal",
+      "reported_status": "reported_with_numbers",
+      "estimand": "Probit marginal effect at the means of the independent variables (change in survival probability for an infinitesimal change in Steepness); cluster-robust p-value in parentheses",
+      "population": "U.S. military POWs held by Germany or Japan during WWII with known survival status, in the NARA POW file; civilians, neutral-power and unidentified-power detainees excluded",
+      "unit_of_analysis": "individual POW",
+      "scale": "Outcome: 0/1 survival. Regressor: Steepness index bounded 0-1 (not rescaled).",
+      "model_ids": ["M01", "M02"],
+      "locators": [
+        {"doc_id": "D1", "pdf_page": 9, "journal_page": 1880, "section": "4.4", "table": "Table 4", "column": "Steepness of POW's hierarchy / Captured cohort (both columns)", "row": "Hierarchy", "quote": null},
+        {"doc_id": "D1", "pdf_page": 8, "journal_page": 1879, "section": "4.4", "table": null, "column": null, "row": null, "quote": "The hierarchy coefficients in all Table 4 specifications are negative and at least marginally significant."}
+      ],
+      "notes": "Bold rows in Table 4. Captured-cohort regressions include unreported camp dummies and missing-data dummies; clustered by captured cohort."
+    },
+    {
+      "claim_id": "C02",
+      "statement": "Survival probability declines with the Steepness of the POW's camp cohort (simple: hierarchy plus Japan dummy; complex: full controls including camp size and distance to capital).",
+      "hypothesis_or_direction": "negative (reported); significance only marginal (p = 0.06 and 0.10)",
+      "tier": "focal",
+      "reported_status": "reported_with_numbers",
+      "estimand": "Probit marginal effect at means; cluster-robust p-value (clustered by camp cohort)",
+      "population": "Same as C01",
+      "unit_of_analysis": "individual POW",
+      "scale": "Outcome 0/1; Steepness index 0-1",
+      "model_ids": ["M03", "M04"],
+      "locators": [
+        {"doc_id": "D1", "pdf_page": 9, "journal_page": 1880, "section": "4.4", "table": "Table 4", "column": "Steepness of POW's hierarchy / Camp cohort (both columns)", "row": "Hierarchy", "quote": null},
+        {"doc_id": "D1", "pdf_page": 8, "journal_page": 1879, "section": "4.3", "table": null, "column": null, "row": null, "quote": "We cannot use camp dummy variables when we evaluate camp cohorts, however, because the regression would be overspecified."}
+      ],
+      "notes": "No camp fixed effects in camp-cohort regressions; Japan dummy included instead."
+    },
+    {
+      "claim_id": "C03",
+      "statement": "Survival probability declines with the Sameness (closeness of the cohort rank distribution to the established military hierarchy) of the POW's captured cohort.",
+      "hypothesis_or_direction": "negative (reported)",
+      "tier": "focal",
+      "reported_status": "reported_with_numbers",
+      "estimand": "Probit marginal effect at means; cluster-robust p-value (captured cohort clusters)",
+      "population": "Same as C01",
+      "unit_of_analysis": "individual POW",
+      "scale": "Outcome 0/1; Sameness index rescaled to 0-1 using the constant 1.319",
+      "model_ids": ["M05", "M06"],
+      "locators": [
+        {"doc_id": "D1", "pdf_page": 9, "journal_page": 1880, "section": "4.4", "table": "Table 4", "column": "Sameness of POW's hierarchy / Captured cohort (both columns)", "row": "Hierarchy", "quote": null}
+      ],
+      "notes": ""
+    },
+    {
+      "claim_id": "C04",
+      "statement": "Survival probability declines with the Sameness of the POW's camp cohort.",
+      "hypothesis_or_direction": "negative (reported)",
+      "tier": "focal",
+      "reported_status": "reported_with_numbers",
+      "estimand": "Probit marginal effect at means; cluster-robust p-value (camp cohort clusters)",
+      "population": "Same as C01",
+      "unit_of_analysis": "individual POW",
+      "scale": "Outcome 0/1; Sameness index 0-1",
+      "model_ids": ["M07", "M08"],
+      "locators": [
+        {"doc_id": "D1", "pdf_page": 9, "journal_page": 1880, "section": "4.4", "table": "Table 4", "column": "Sameness of POW's hierarchy / Camp cohort (both columns)", "row": "Hierarchy", "quote": null}
+      ],
+      "notes": ""
+    },
+    {
+      "claim_id": "C05",
+      "statement": "A prisoner from a captured cohort in the top quartile of Steepness is six percentage points less likely to survive than one from the bottom quartile (81% versus 87%), implied by the second Table 4 regression.",
+      "hypothesis_or_direction": "negative",
+      "tier": "focal",
+      "reported_status": "reported_in_text_only",
+      "estimand": "Implied survival probabilities from the complex Steepness captured-cohort probit evaluated at the top- and bottom-quartile values of Steepness (evaluation point for other covariates not stated; presumably at means)",
+      "population": "Same as C01",
+      "unit_of_analysis": "individual POW",
+      "scale": "Probability in percent",
+      "model_ids": ["M02"],
+      "locators": [
+        {"doc_id": "D1", "pdf_page": 8, "journal_page": 1879, "section": "4.4", "table": null, "column": null, "row": null, "quote": "is six percentage points less likely to survive than one from the bottom quartile (81% versus 87%)."},
+        {"doc_id": "D1", "pdf_page": 8, "journal_page": 1879, "section": "footnote 11", "table": null, "column": null, "row": null, "quote": "These implied probabilities come from second regression of Table 4."}
+      ],
+      "notes": "Quartile cut points are not reported; whether quartiles are over POWs or over cohorts is not stated."
+    },
+    {
+      "claim_id": "C06",
+      "statement": "Among controls, age and education are negatively associated with survival and having dependents is positively associated, with the strongest statistical significance.",
+      "hypothesis_or_direction": "age negative, education negative, dependents positive",
+      "tier": "nuisance_control",
+      "reported_status": "reported_with_numbers",
+      "estimand": "Probit marginal effects at means (continuous: infinitesimal change; dummy: discrete change)",
+      "population": "Same as C01",
+      "unit_of_analysis": "individual POW",
+      "scale": "Age in years/100; education in years beyond eighth grade/10; dependents 0/1",
+      "model_ids": ["M02", "M04", "M06", "M08"],
+      "locators": [
+        {"doc_id": "D1", "pdf_page": 8, "journal_page": 1879, "section": "4.4", "table": null, "column": null, "row": null, "quote": "The control variables with the strongest statistical significance are a POW's age and education"},
+        {"doc_id": "D1", "pdf_page": 9, "journal_page": 1880, "section": "4.4", "table": "Table 4", "column": "complex columns", "row": "Age of POW; Education of POW; POW has dependents", "quote": null}
+      ],
+      "notes": ""
+    },
+    {
+      "claim_id": "C07",
+      "statement": "Being held by Japan is associated with a substantially lower survival probability in the camp-cohort regressions.",
+      "hypothesis_or_direction": "negative",
+      "tier": "nuisance_control",
+      "reported_status": "reported_with_numbers",
+      "estimand": "Probit discrete-change marginal effect of the Japan dummy at means",
+      "population": "Same as C01",
+      "unit_of_analysis": "individual POW",
+      "scale": "0/1 dummy",
+      "model_ids": ["M03", "M04", "M07", "M08"],
+      "locators": [
+        {"doc_id": "D1", "pdf_page": 9, "journal_page": 1880, "section": "4.4", "table": "Table 4", "column": "Camp cohort columns", "row": "POW held by Japan", "quote": null}
+      ],
+      "notes": ""
+    },
+    {
+      "claim_id": "C08",
+      "statement": "Survival increases with the size of the prisoner's group (log men in hierarchy positive); positive and significant in captured-cohort complex specifications, positive but insignificant in camp-cohort specifications when the squared term is included.",
+      "hypothesis_or_direction": "positive",
+      "tier": "robustness",
+      "reported_status": "reported_with_numbers",
+      "estimand": "Probit marginal effect at means of ln(cohort size)/10 and its square",
+      "population": "Same as C01",
+      "unit_of_analysis": "individual POW",
+      "scale": "ln(number of POWs in cohort)/10",
+      "model_ids": ["M02", "M04", "M06", "M08", "M34"],
+      "locators": [
+        {"doc_id": "D1", "pdf_page": 3, "journal_page": 1874, "section": "1", "table": null, "column": null, "row": null, "quote": "we find that survival increases with the size of the prisoner's group."},
+        {"doc_id": "D1", "pdf_page": 9, "journal_page": 1880, "section": "4.4", "table": "Table 4", "column": "complex columns", "row": "Men in hierarchy; Men in hierarchy squared", "quote": null},
+        {"doc_id": "D1", "pdf_page": 14, "journal_page": 1885, "section": "6.2", "table": null, "column": null, "row": null, "quote": "in all four cases the term for the log of the number of men in the hierarchy is positive and highly significant (reported in earlier versions"}
+      ],
+      "notes": "The 'all four cases' statement refers to an unreported variant without the squared term (M34)."
+    },
+    {
+      "claim_id": "C09",
+      "statement": "When Steepness and Sameness are included simultaneously, results are fragile: only one measure is significant in three of four specifications and neither is in one (Steepness significant once, Sameness twice), consistent with multicollinearity (correlation 0.91-0.92).",
+      "hypothesis_or_direction": "negative coefficients expected; reported mixed",
+      "tier": "robustness",
+      "reported_status": "reported_with_numbers",
+      "estimand": "Probit coefficients (text) / likely marginal effects (table mirrors Table 4) for both hierarchy measures in one specification; cluster-robust p-values",
+      "population": "Same as C01",
+      "unit_of_analysis": "individual POW",
+      "scale": "Indices 0-1",
+      "model_ids": ["M09", "M10", "M11", "M12"],
+      "locators": [
+        {"doc_id": "D1", "pdf_page": 9, "journal_page": 1880, "section": "4.5", "table": "Table 5", "column": "Panel A (all four columns)", "row": "Steepness of Hierarchy; Sameness of Hierarchy", "quote": null},
+        {"doc_id": "D1", "pdf_page": 9, "journal_page": 1880, "section": "4.5", "table": null, "column": null, "row": null, "quote": "only one of the two coefficients is significant in three of the four specifications; in one specification neither coefficient is significant."}
+      ],
+      "notes": "Table 5 notes say 'Summary of probit regressions'; whether Panel A reports marginal effects or raw coefficients is not stated explicitly (text says 'coefficients')."
+    },
+    {
+      "claim_id": "C10",
+      "statement": "ROC-area incremental tests (Hanley and McNeil 1983): at the camp level both measures add incremental information in both simple and complex specifications; at the captured level, Sameness adds information in the simple specification and Steepness in the complex specification.",
+      "hypothesis_or_direction": "null of no incremental benefit rejected at camp level",
+      "tier": "identification_inference_diagnostic",
+      "reported_status": "reported_with_numbers",
+      "estimand": "p-value of test of difference in area under two correlated ROC curves between a probit with one hierarchy measure and a probit with both",
+      "population": "Same as C01",
+      "unit_of_analysis": "individual POW (prediction scores)",
+      "scale": "p-values",
+      "model_ids": ["M13", "M14", "M15", "M16"],
+      "locators": [
+        {"doc_id": "D1", "pdf_page": 9, "journal_page": 1880, "section": "4.5", "table": "Table 5", "column": "Panel B (all four columns)", "row": "ROC incremental values", "quote": null},
+        {"doc_id": "D1", "pdf_page": 9, "journal_page": 1880, "section": "4.5", "table": null, "column": null, "row": null, "quote": "Panel C shows that when the measures are calculated at the camp level both have incremental information"}
+      ],
+      "notes": "Text refers to 'Panel C' but Table 5 contains only Panels A and B (text/table mismatch recorded in forensics and limitations)."
+    },
+    {
+      "claim_id": "C11",
+      "statement": "Steepness and Sameness are highly correlated: 0.92 at the camp cohort level and 0.91 at the captured cohort level.",
+      "hypothesis_or_direction": null,
+      "tier": "descriptive",
+      "reported_status": "reported_in_text_only",
+      "estimand": "Pearson correlation (type not stated) between the two indices, presumably across POW observations",
+      "population": "Same as C01",
+      "unit_of_analysis": "not stated (POW or cohort)",
+      "scale": "correlation coefficient",
+      "model_ids": ["M25"],
+      "locators": [
+        {"doc_id": "D1", "pdf_page": 8, "journal_page": 1879, "section": "4.5", "table": null, "column": null, "row": null, "quote": "At the camp cohort level the correlation is 0.92; at the captured cohort level the correlation is 0.91."}
+      ],
+      "notes": ""
+    },
+    {
+      "claim_id": "C12",
+      "statement": "The Officer x Hierarchy interaction is negative in all eight specifications and significant in several, so there is no evidence that hierarchy favored officers' survival.",
+      "hypothesis_or_direction": "tested alternative: positive (hierarchy aids officers); reported: negative",
+      "tier": "robustness",
+      "reported_status": "reported_with_numbers",
+      "estimand": "Probit marginal effect at means of the interaction term (as printed; no interaction-specific correction described)",
+      "population": "Same as C01",
+      "unit_of_analysis": "individual POW",
+      "scale": "Officer dummy x index (0-1)",
+      "model_ids": ["M17", "M18", "M19", "M20", "M21", "M22", "M23", "M24"],
+      "locators": [
+        {"doc_id": "D1", "pdf_page": 13, "journal_page": 1884, "section": "6.1", "table": "Table 6", "column": "all eight columns", "row": "Officer x Hierarchy", "quote": null},
+        {"doc_id": "D1", "pdf_page": 12, "journal_page": 1883, "section": "6.1", "table": null, "column": null, "row": null, "quote": "In Table 6 we see that this interactive term in all instances is negative and in several specifications it is significant."}
+      ],
+      "notes": "Secondary hypothesis test (explanation 1 in the introduction). Table 6 N (102,334) differs from Table 4 N (100,464) without explanation."
+    },
+    {
+      "claim_id": "C13",
+      "statement": "Descriptive statistics: the unconditional death rate for POWs held by Japan was 12 times that for Germany, and the execution rate 12 times as well; summary statistics for all POWs, Germany and Japan in Table 1.",
+      "hypothesis_or_direction": null,
+      "tier": "descriptive",
+      "reported_status": "reported_with_numbers",
+      "estimand": "Means, medians, standard deviations, counts and percentages",
+      "population": "U.S. military POWs held by Japan or Germany (after exclusions); number of observations varies with item",
+      "unit_of_analysis": "individual POW; camp; captured cohort",
+      "scale": "as printed in Table 1",
+      "model_ids": ["M25"],
+      "locators": [
+        {"doc_id": "D1", "pdf_page": 6, "journal_page": 1877, "section": "3", "table": "Table 1", "column": "All POWs; Germany; Japan", "row": "all rows", "quote": null},
+        {"doc_id": "D1", "pdf_page": 6, "journal_page": 1877, "section": "3", "table": null, "column": null, "row": null, "quote": "The unconditional probability of dying while being held by Japan was 12 times the probability of dying while being held by Germany."}
+      ],
+      "notes": ""
+    },
+    {
+      "claim_id": "C14",
+      "statement": "Replicating Table 4 separately for Germany and Japan, hierarchy coefficients remain universally negative; significant in all eight German specifications and in the four Japanese captured-cohort specifications.",
+      "hypothesis_or_direction": "negative",
+      "tier": "robustness",
+      "reported_status": "unreported_described",
+      "estimand": "Probit marginal effects as in Table 4, by detaining power",
+      "population": "Germany-only and Japan-only subsamples",
+      "unit_of_analysis": "individual POW",
+      "scale": "as Table 4",
+      "model_ids": ["M26"],
+      "locators": [
+        {"doc_id": "D1", "pdf_page": 10, "journal_page": 1881, "section": "5.1", "table": null, "column": null, "row": null, "quote": "They are significant in all eight of the German specifications and in the four Japanese specifications involving the captured cohorts."}
+      ],
+      "notes": "Reported only in previous versions of the paper (excluded from packet)."
+    },
+    {
+      "claim_id": "C15",
+      "statement": "Social-network alternative: the log of the number of men from the same precapture unit in the cohort ('friends') is negative and significant (largest p-value 0.02) in all eight regressions, and hierarchy coefficients remain negative and at least as significant; friends-based hierarchy measures are insignificant (p around 0.50).",
+      "hypothesis_or_direction": "friends: positive expected under Costa-Kahn; reported negative",
+      "tier": "robustness",
+      "reported_status": "unreported_described",
+      "estimand": "Probit marginal effects",
+      "population": "Same as C01 (unit known for about half of prisoners)",
+      "unit_of_analysis": "individual POW",
+      "scale": "ln(number of men from same precapture unit in cohort)",
+      "model_ids": ["M27", "M28"],
+      "locators": [
+        {"doc_id": "D1", "pdf_page": 10, "journal_page": 1881, "section": "5.2", "table": null, "column": null, "row": null, "quote": "the coefficient for the number of friends is negative and significant (the largest p-value is 0.02)"},
+        {"doc_id": "D1", "pdf_page": 10, "journal_page": 1881, "section": "5.2", "table": null, "column": null, "row": null, "quote": "The friends-based hierarchy measures are insignificant in all instances (p-values around 0.50)."}
+      ],
+      "notes": ""
+    },
+    {
+      "claim_id": "C16",
+      "statement": "Alternative calculations of the hierarchy measures (pay-grade Steepness; Alternative Sameness using squared ratios with 1/10,000 scaling; Sameness with absolute instead of squared deviations) leave the Table 4 conclusions unchanged.",
+      "hypothesis_or_direction": "negative",
+      "tier": "robustness",
+      "reported_status": "unreported_described",
+      "estimand": "Probit marginal effects as in Table 4",
+      "population": "Same as C01",
+      "unit_of_analysis": "individual POW",
+      "scale": "alternative indices",
+      "model_ids": ["M29"],
+      "locators": [
+        {"doc_id": "D1", "pdf_page": 10, "journal_page": 1881, "section": "5.3.1", "table": null, "column": null, "row": null, "quote": "For the Alternative Steepness of a Hierarchy, we use the pay grade of the ranks during World War II."},
+        {"doc_id": "D1", "pdf_page": 11, "journal_page": 1882, "section": "5.3.4", "table": null, "column": null, "row": null, "quote": "The coefficients on the hierarchy measures in all robustness tests remain negative and many have p-values of less than 0.01."}
+      ],
+      "notes": "Pay-grade table is not in the registry (unavailable source)."
+    },
+    {
+      "claim_id": "C17",
+      "statement": "Three different hierarchy measures (number of distinct ranks; sum of rank values; administrative intensity = percent ranked above private) also yield negative hierarchy coefficients in the revised multiple regressions.",
+      "hypothesis_or_direction": "negative",
+      "tier": "robustness",
+      "reported_status": "unreported_described",
+      "estimand": "Probit marginal effects (complex specifications only)",
+      "population": "Same as C01",
+      "unit_of_analysis": "individual POW",
+      "scale": "count; sum; percent",
+      "model_ids": ["M30"],
+      "locators": [
+        {"doc_id": "D1", "pdf_page": 11, "journal_page": 1882, "section": "5.3.2", "table": null, "column": null, "row": null, "quote": "we limit our analyses with these measures to the (revised) multiple regressions of Table 4, where we can control for cohort size."}
+      ],
+      "notes": ""
+    },
+    {
+      "claim_id": "C18",
+      "statement": "Results hold on four subsets: complete-data observations only (multiple regressions), cohorts with at least 50 men, cohorts with at least 100 men, and excluding executions.",
+      "hypothesis_or_direction": "negative",
+      "tier": "robustness",
+      "reported_status": "unreported_described",
+      "estimand": "Probit marginal effects as in Table 4",
+      "population": "Subsets of C01 sample",
+      "unit_of_analysis": "individual POW",
+      "scale": "as Table 4",
+      "model_ids": ["M31"],
+      "locators": [
+        {"doc_id": "D1", "pdf_page": 11, "journal_page": 1882, "section": "5.3.3", "table": null, "column": null, "row": null, "quote": "we limit our analyses to cohorts with at least 50 or (alternatively) 100 men. Lastly, we exclude executions"}
+      ],
+      "notes": ""
+    },
+    {
+      "claim_id": "C19",
+      "statement": "For U.S. Army Air Force personnel held by Germany, only one of eight hierarchy coefficients is positive (simple Sameness, captured cohort, p = 0.56); one is marginally significant negative (complex Steepness captured, p = 0.07) and four highly significant negative (all camp specifications).",
+      "hypothesis_or_direction": "negative or null (endogeneity check)",
+      "tier": "robustness",
+      "reported_status": "reported_in_text_only",
+      "estimand": "Probit marginal effects as in Table 4",
+      "population": "USAAF personnel held by Germany",
+      "unit_of_analysis": "individual POW",
+      "scale": "as Table 4",
+      "model_ids": ["M32"],
+      "locators": [
+        {"doc_id": "D1", "pdf_page": 12, "journal_page": 1883, "section": "5.4", "table": null, "column": null, "row": null, "quote": "Only one of the eight specifications has a hierarchy coefficient that is positive (the simple regression involving the Sameness for a captured cohort), and that has a p-value of 0.56."}
+      ],
+      "notes": "Reported in earlier versions of the paper; only two p-values given in text."
+    },
+    {
+      "claim_id": "C20",
+      "statement": "Interacting hierarchy measures with group size (unreported revision of Table 4) gives an interaction term that is always negative but (highly) significant only for Sameness of the captured cohort.",
+      "hypothesis_or_direction": "negative",
+      "tier": "robustness",
+      "reported_status": "unreported_described",
+      "estimand": "Probit marginal effect of hierarchy x ln(size) interaction",
+      "population": "Same as C01",
+      "unit_of_analysis": "individual POW",
+      "scale": "index x ln(n)/10",
+      "model_ids": ["M33"],
+      "locators": [
+        {"doc_id": "D1", "pdf_page": 14, "journal_page": 1885, "section": "6.2", "table": null, "column": null, "row": null, "quote": "the interactive term is always negative. On the other hand, the term is (highly) significant only with the regressions involving the Sameness"}
+      ],
+      "notes": ""
+    },
+    {
+      "claim_id": "C21",
+      "statement": "Dropping the squared term of log men in hierarchy, the log-size term is positive and highly significant in all four multiple regressions.",
+      "hypothesis_or_direction": "positive",
+      "tier": "robustness",
+      "reported_status": "unreported_described",
+      "estimand": "Probit marginal effect of ln(n)/10 without quadratic",
+      "population": "Same as C01",
+      "unit_of_analysis": "individual POW",
+      "scale": "ln(n)/10",
+      "model_ids": ["M34"],
+      "locators": [
+        {"doc_id": "D1", "pdf_page": 14, "journal_page": 1885, "section": "6.2", "table": null, "column": null, "row": null, "quote": "delete the squared term of the log of the number of men in the hierarchy, in all four cases the term for the log of the number of men in the hierarchy is positive and highly significant"}
+      ],
+      "notes": "Reported in earlier versions only."
+    },
+    {
+      "claim_id": "C22",
+      "statement": "Interacting prisoner pay (instead of officer dummy) with hierarchy measures, and running Table 6 tests separately for Germany and Japan, shows no evidence that an officer's survival was enhanced by hierarchy.",
+      "hypothesis_or_direction": "non-positive",
+      "tier": "robustness",
+      "reported_status": "unreported_described",
+      "estimand": "Probit marginal effects of pay x hierarchy interaction",
+      "population": "Same as C01; and by detaining power",
+      "unit_of_analysis": "individual POW",
+      "scale": "pay (units not stated) x index",
+      "model_ids": ["M35"],
+      "locators": [
+        {"doc_id": "D1", "pdf_page": 12, "journal_page": 1883, "section": "footnote 13", "table": null, "column": null, "row": null, "quote": "We interact a prisoner's pay (instead of the officer dummy) with the hierarchy measures."}
+      ],
+      "notes": "Pay data source not described."
+    },
+    {
+      "claim_id": "C23",
+      "statement": "Prisoners in the most hierarchical groups were 20% less likely to survive than those in the least hierarchical groups.",
+      "hypothesis_or_direction": "negative",
+      "tier": "focal",
+      "reported_status": "reported_in_text_only",
+      "estimand": "Not specified (difference in survival probability between extreme hierarchy groups; definition of 'most/least hierarchical' and which model not stated)",
+      "population": "Same as C01",
+      "unit_of_analysis": "individual POW",
+      "scale": "percent (relative or absolute not stated)",
+      "model_ids": [],
+      "locators": [
+        {"doc_id": "D1", "pdf_page": 3, "journal_page": 1874, "section": "1", "table": null, "column": null, "row": null, "quote": "Prisoners in the most hierarchical groups were 20% less likely to survive than those in the least hierarchical groups."}
+      ],
+      "notes": "Not traceable to any table or to the 81%/87% quartile computation on p. 1879; recorded in limitations."
+    },
+    {
+      "claim_id": "C24",
+      "statement": "Sample construction: from approximately 129,000 records, civilians (779), those detained by neutral powers (2,132) or unidentified powers (3,204), and those with unknown survival (269) are excluded, leaving 122,765 POWs (93,666 Germany, 29,099 Japan).",
+      "hypothesis_or_direction": null,
+      "tier": "descriptive",
+      "reported_status": "reported_with_numbers",
+      "estimand": "record counts",
+      "population": "NARA WWII POW data file",
+      "unit_of_analysis": "record",
+      "scale": "counts",
+      "model_ids": ["M25"],
+      "locators": [
+        {"doc_id": "D1", "pdf_page": 6, "journal_page": 1877, "section": "3", "table": null, "column": null, "row": null, "quote": "we exclude from our analyses civilians (779), those detained by neutral powers (2,132) or by unidentified powers (3,204), and those for whom it is not known"},
+        {"doc_id": "D1", "pdf_page": 6, "journal_page": 1877, "section": "3", "table": "Table 1", "column": "All POWs; Germany; Japan", "row": "Total POWs", "quote": null}
+      ],
+      "notes": "The sum 129,000 - 779 - 2,132 - 3,204 - 269 = 122,616, close to but not equal to 122,765 ('approximately 129,000')."
+    },
+    {
+      "claim_id": "C25",
+      "statement": "Approximately 55% of POWs are matched to the Army Enlistment Records by serial number; unmatched or missing covariates are set to 0 with missing-indicator dummies.",
+      "hypothesis_or_direction": null,
+      "tier": "descriptive",
+      "reported_status": "reported_in_text_only",
+      "estimand": "match rate",
+      "population": "C01 sample",
+      "unit_of_analysis": "individual POW",
+      "scale": "percent",
+      "model_ids": ["M25"],
+      "locators": [
+        {"doc_id": "D1", "pdf_page": 5, "journal_page": 1876, "section": "3", "table": null, "column": null, "row": null, "quote": "We are able to match approximately 55% of the POWs with the Enlistment Database."},
+        {"doc_id": "D1", "pdf_page": 5, "journal_page": 1876, "section": "3", "table": null, "column": null, "row": null, "quote": "we assign missing independent variables as having a value of 0 and create dummy variables that take the value of 1 if the associated variable is missing."}
+      ],
+      "notes": ""
+    },
+    {
+      "claim_id": "C26",
+      "statement": "Older POWs were less likely to survive in the Japanese camps (unreported).",
+      "hypothesis_or_direction": "negative",
+      "tier": "robustness",
+      "reported_status": "unreported_described",
+      "estimand": "not specified",
+      "population": "POWs held by Japan",
+      "unit_of_analysis": "individual POW",
+      "scale": "age",
+      "model_ids": ["M36"],
+      "locators": [
+        {"doc_id": "D1", "pdf_page": 8, "journal_page": 1879, "section": "4.4", "table": null, "column": null, "row": null, "quote": "unreported results showing that older POWs were less likely to survive in the more demanding conditions of the Japanese camps."}
+      ],
+      "notes": ""
+    },
+    {
+      "claim_id": "C27",
+      "statement": "Captured-cohort hierarchy p-values are as small or smaller than the corresponding camp-cohort p-values even though captured coefficients are closer to zero, suggesting camp fixed effects remove camp-associated noise.",
+      "hypothesis_or_direction": null,
+      "tier": "identification_inference_diagnostic",
+      "reported_status": "reported_with_numbers",
+      "estimand": "comparison of Table 4 p-values and marginal effects across cohort definitions",
+      "population": "Same as C01",
+      "unit_of_analysis": "individual POW",
+      "scale": "as Table 4",
+      "model_ids": ["M01", "M02", "M03", "M04", "M05", "M06", "M07", "M08"],
+      "locators": [
+        {"doc_id": "D1", "pdf_page": 8, "journal_page": 1879, "section": "4.4", "table": null, "column": null, "row": null, "quote": "the captured hierarchy p-values are as small or smaller than the corresponding camp hierarchy p-values despite the fact that the captured coefficients tend to be closer to zero."}
+      ],
+      "notes": ""
+    },
+    {
+      "claim_id": "C28",
+      "statement": "Officers had a lower survival rate than enlisted men (officer dummy negative in captured-cohort complex regressions), and officers in more hierarchical groups had lower survival than officers in less hierarchical groups.",
+      "hypothesis_or_direction": "negative",
+      "tier": "robustness",
+      "reported_status": "reported_with_numbers",
+      "estimand": "Probit discrete-change marginal effect of officer dummy; interaction in Table 6",
+      "population": "Same as C01",
+      "unit_of_analysis": "individual POW",
+      "scale": "0/1",
+      "model_ids": ["M02", "M04", "M06", "M08", "M17", "M18", "M19", "M20", "M21", "M22", "M23", "M24"],
+      "locators": [
+        {"doc_id": "D1", "pdf_page": 3, "journal_page": 1874, "section": "1", "table": null, "column": null, "row": null, "quote": "The survival rate of officers was lower than the survival rate of enlisted men"},
+        {"doc_id": "D1", "pdf_page": 9, "journal_page": 1880, "section": "4.4", "table": "Table 4", "column": "complex columns", "row": "POW is officer", "quote": null}
+      ],
+      "notes": "Unconditional officer vs enlisted survival rates are not tabulated."
+    },
+    {
+      "claim_id": "C29",
+      "statement": "Only 3% of POWs were in camps without any officers; less than 1% were in camps with only officers; 46% of POWs are privates.",
+      "hypothesis_or_direction": null,
+      "tier": "descriptive",
+      "reported_status": "reported_in_text_only",
+      "estimand": "shares of POWs",
+      "population": "C01 sample",
+      "unit_of_analysis": "individual POW",
+      "scale": "percent",
+      "model_ids": ["M25"],
+      "locators": [
+        {"doc_id": "D1", "pdf_page": 5, "journal_page": 1876, "section": "footnote 4", "table": null, "column": null, "row": null, "quote": "Only 3% of the POWs in our database were in camps without any officers; less than 1% were in camps with only officers."},
+        {"doc_id": "D1", "pdf_page": 11, "journal_page": 1882, "section": "5.3.2", "table": null, "column": null, "row": null, "quote": "(Forty-six percent of the POWs are privates.)"}
+      ],
+      "notes": ""
+    },
+    {
+      "claim_id": "C30",
+      "statement": "Table 3 illustrates the two indices on six hypothetical groups of 1,000 men; Group C matches the rank distribution of American military POWs (Sameness = 1.00) and the scaling constant 1.319 makes Sameness equal 0 for the least hierarchical (all-generals) group.",
+      "hypothesis_or_direction": null,
+      "tier": "descriptive",
+      "reported_status": "reported_with_numbers",
+      "estimand": "Index values computed from hypothetical rank counts",
+      "population": "hypothetical groups (Group C proxies the POW rank distribution)",
+      "unit_of_analysis": "hypothetical group",
+      "scale": "indices 0-1",
+      "model_ids": [],
+      "locators": [
+        {"doc_id": "D1", "pdf_page": 7, "journal_page": 1878, "section": "4.1.2", "table": "Table 3", "column": "Groups A-F", "row": "Steepness of the Hierarchy; Sameness of the Hierarchy", "quote": null},
+        {"doc_id": "D1", "pdf_page": 7, "journal_page": 1878, "section": "4.1.2", "table": null, "column": null, "row": null, "quote": "We use 1.319 to scale the sum of the squared deviations because that number ensures that the hierarchy measure will equal 0 for the least hierarchical group."}
+      ],
+      "notes": "Design illustration, not an empirical result; useful for verifying the implementation of the formulas (see forensics)."
+    }
+  ],
+  "focal_claim_rationale": "The article's section 4.4 is titled 'Key Empirical Findings' and states that 'Table 4 presents the key empirical findings of the paper' (D1 pdf 8, journal p. 1879). The bolded rows of Table 4 are the hierarchy marginal effects for Steepness and Sameness measured at the captured-cohort and camp-cohort levels (D1 pdf 9, Table 4 notes: 'Slope coefficients and p-values of the hierarchy variables are in bold'). The abstract and summary restate these as the main findings (D1 pdf 2 abstract; pdf 14 section 7). C01-C04 (eight Table 4 columns) are therefore focal; C05 is the article's own magnitude statement derived from Table 4 column 2; C23 is a focal-level magnitude claim in the introduction that cannot be traced to a table. Table 5 and Table 6 test secondary questions (dominance of one measure; officer-favoring hierarchy) and are tiered as robustness/diagnostic.",
+  "paper_level_aggregation_proposal": "Paper-level outcome should rest on C01-C04: the sign (negative) and at least marginal significance (p <= 0.10 as the article's own threshold, 'at least marginally significant', D1 pdf 8) of the eight bolded Table 4 hierarchy marginal effects. Proposed rule: the paper's central finding is reproduced if the hierarchy marginal effects are negative in all eight specifications and conventionally significant (p < 0.05) in at least the four captured-cohort specifications, with the camp-cohort specifications negative and at least marginally significant; magnitudes compared against Table 4 within the sealed targets. Table 6 (C12) and Table 5 (C09, C10) are supporting: C12 is reproduced if all interactions are non-positive; C09/C10 are diagnostics not determining the verdict. Descriptives (C13, C24) serve as sample-identity checks. Unreported claims (C14-C22, C26) cannot be scored against numbers and should be reported qualitatively only."
+}

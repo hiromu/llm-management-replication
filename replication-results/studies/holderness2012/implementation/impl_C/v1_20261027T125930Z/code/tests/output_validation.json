@@ -1,0 +1,26 @@
+{
+  "status": "passed",
+  "empirical_specs": [
+    "S000"
+  ],
+  "empirical_family": "T4",
+  "empirical_models": 8,
+  "empirical_all_converged": true,
+  "all_sample_ids_sorted_unique": true,
+  "roc_and_influence_empirical_outputs_empty": true,
+  "construction_only_specs": 21,
+  "synthetic_checks": 7,
+  "integration": {
+    "status": "passed",
+    "seed": 92741,
+    "synthetic_rows": 15949,
+    "origin_fits": 104,
+    "roc_comparisons": 8,
+    "influence_refits": 96,
+    "friends_others_fits": 10,
+    "expected_failure_continuation": true,
+    "perfect_prediction_camp_drop": true,
+    "friends_membership_subtraction": true,
+    "sorted_sample_ids": true
+  }
+}

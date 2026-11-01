@@ -1,0 +1,527 @@
+{
+  "software": {
+    "python": "3.13.4",
+    "pandas": "2.2.3",
+    "pyarrow": "26.0.0",
+    "numpy": "2.4.2"
+  },
+  "canonical_rendering": "numeric sprintf('%.4f'); missing 'NA'; strings as-is; '|' field sep; '\\n' row sep; sha256 of UTF-8",
+  "pbp": {
+    "2000": {
+      "parquet": {
+        "file": "data/raw/nflverse/pbp_release_20261027T113315Z/play_by_play_2000.parquet",
+        "rows": 45491,
+        "cols": 372,
+        "colnames_sha256": "715686d995c1150f0626164497c7a0d058f1a8112d6e17b803bec7cee339fa11",
+        "key_columns": [
+          "season",
+          "season_type",
+          "week",
+          "game_id",
+          "play_id",
+          "home_team",
+          "away_team",
+          "posteam",
+          "defteam",
+          "qtr",
+          "quarter_seconds_remaining",
+          "game_seconds_remaining",
+          "time",
+          "down",
+          "ydstogo",
+          "yardline_100",
+          "play_type",
+          "posteam_score",
+          "defteam_score"
+        ],
+        "key_sha256": "c193e2bebf03e6fbb19598cf38f7f36b2a3e30aedb6e54c1309a4f48409600e2"
+      },
+      "csv_gz": {
+        "file": "data/raw/nflverse/pbp_release_20261027T113315Z/play_by_play_2000.csv.gz",
+        "rows": 45491,
+        "cols": 372,
+        "colnames_sha256": "715686d995c1150f0626164497c7a0d058f1a8112d6e17b803bec7cee339fa11",
+        "key_columns": [
+          "season",
+          "season_type",
+          "week",
+          "game_id",
+          "play_id",
+          "home_team",
+          "away_team",
+          "posteam",
+          "defteam",
+          "qtr",
+          "quarter_seconds_remaining",
+          "game_seconds_remaining",
+          "time",
+          "down",
+          "ydstogo",
+          "yardline_100",
+          "play_type",
+          "posteam_score",
+          "defteam_score"
+        ],
+        "key_sha256": "c193e2bebf03e6fbb19598cf38f7f36b2a3e30aedb6e54c1309a4f48409600e2"
+      },
+      "parquet_vs_csv_gz_all_columns": {
+        "same_column_order": true,
+        "mismatching_columns": []
+      },
+      "zip2022_vintage_crosscheck": {
+        "file": "data/raw/nflverse/pbp_release_zip2022_20261027T113315Z/play_by_play_2000.zip",
+        "member": "data/play_by_play_2000.csv",
+        "rows": 45492,
+        "cols": 372,
+        "columns_only_in_current": [],
+        "columns_only_in_zip2022": [],
+        "key_sha256": "0d855782e35265e616455eeb69c41d9553d717fc23fce4f9472f211c0893c69e",
+        "key_sha256_equals_current_parquet": false,
+        "mismatching_common_columns_vs_current": "row counts differ; not compared"
+      }
+    },
+    "2001": {
+      "parquet": {
+        "file": "data/raw/nflverse/pbp_release_20261027T113315Z/play_by_play_2001.parquet",
+        "rows": 44969,
+        "cols": 372,
+        "colnames_sha256": "715686d995c1150f0626164497c7a0d058f1a8112d6e17b803bec7cee339fa11",
+        "key_columns": [
+          "season",
+          "season_type",
+          "week",
+          "game_id",
+          "play_id",
+          "home_team",
+          "away_team",
+          "posteam",
+          "defteam",
+          "qtr",
+          "quarter_seconds_remaining",
+          "game_seconds_remaining",
+          "time",
+          "down",
+          "ydstogo",
+          "yardline_100",
+          "play_type",
+          "posteam_score",
+          "defteam_score"
+        ],
+        "key_sha256": "880133a0c000576bed118fe9fc3a6b000f8eb5a643f97384b3cd7049ceef8519"
+      },
+      "csv_gz": {
+        "file": "data/raw/nflverse/pbp_release_20261027T113315Z/play_by_play_2001.csv.gz",
+        "rows": 44969,
+        "cols": 372,
+        "colnames_sha256": "715686d995c1150f0626164497c7a0d058f1a8112d6e17b803bec7cee339fa11",
+        "key_columns": [
+          "season",
+          "season_type",
+          "week",
+          "game_id",
+          "play_id",
+          "home_team",
+          "away_team",
+          "posteam",
+          "defteam",
+          "qtr",
+          "quarter_seconds_remaining",
+          "game_seconds_remaining",
+          "time",
+          "down",
+          "ydstogo",
+          "yardline_100",
+          "play_type",
+          "posteam_score",
+          "defteam_score"
+        ],
+        "key_sha256": "880133a0c000576bed118fe9fc3a6b000f8eb5a643f97384b3cd7049ceef8519"
+      },
+      "parquet_vs_csv_gz_all_columns": {
+        "same_column_order": true,
+        "mismatching_columns": []
+      },
+      "zip2022_vintage_crosscheck": {
+        "file": "data/raw/nflverse/pbp_release_zip2022_20261027T113315Z/play_by_play_2001.zip",
+        "member": "data/play_by_play_2001.csv",
+        "rows": 45694,
+        "cols": 372,
+        "columns_only_in_current": [],
+        "columns_only_in_zip2022": [],
+        "key_sha256": "3fcd2cacde93f084350c84d98c4b250688d2e4910a91a9ff454fcbf038b287c5",
+        "key_sha256_equals_current_parquet": false,
+        "mismatching_common_columns_vs_current": "row counts differ; not compared"
+      }
+    },
+    "2002": {
+      "parquet": {
+        "file": "data/raw/nflverse/pbp_release_20261027T113315Z/play_by_play_2002.parquet",
+        "rows": 47355,
+        "cols": 372,
+        "colnames_sha256": "715686d995c1150f0626164497c7a0d058f1a8112d6e17b803bec7cee339fa11",
+        "key_columns": [
+          "season",
+          "season_type",
+          "week",
+          "game_id",
+          "play_id",
+          "home_team",
+          "away_team",
+          "posteam",
+          "defteam",
+          "qtr",
+          "quarter_seconds_remaining",
+          "game_seconds_remaining",
+          "time",
+          "down",
+          "ydstogo",
+          "yardline_100",
+          "play_type",
+          "posteam_score",
+          "defteam_score"
+        ],
+        "key_sha256": "ddcc478a44898e736b86f38bef0ab7b943e21a84a278182a3314009eaa24fbf6"
+      },
+      "csv_gz": {
+        "file": "data/raw/nflverse/pbp_release_20261027T113315Z/play_by_play_2002.csv.gz",
+        "rows": 47355,
+        "cols": 372,
+        "colnames_sha256": "715686d995c1150f0626164497c7a0d058f1a8112d6e17b803bec7cee339fa11",
+        "key_columns": [
+          "season",
+          "season_type",
+          "week",
+          "game_id",
+          "play_id",
+          "home_team",
+          "away_team",
+          "posteam",
+          "defteam",
+          "qtr",
+          "quarter_seconds_remaining",
+          "game_seconds_remaining",
+          "time",
+          "down",
+          "ydstogo",
+          "yardline_100",
+          "play_type",
+          "posteam_score",
+          "defteam_score"
+        ],
+        "key_sha256": "ddcc478a44898e736b86f38bef0ab7b943e21a84a278182a3314009eaa24fbf6"
+      },
+      "parquet_vs_csv_gz_all_columns": {
+        "same_column_order": true,
+        "mismatching_columns": []
+      },
+      "zip2022_vintage_crosscheck": {
+        "file": "data/raw/nflverse/pbp_release_zip2022_20261027T113315Z/play_by_play_2002.zip",
+        "member": "data/play_by_play_2002.csv",
+        "rows": 48085,
+        "cols": 372,
+        "columns_only_in_current": [],
+        "columns_only_in_zip2022": [],
+        "key_sha256": "03f7f492b35c08c0ad8292e5827e67d2f1080d6c5d05e87e07470572a1c1a987",
+        "key_sha256_equals_current_parquet": false,
+        "mismatching_common_columns_vs_current": "row counts differ; not compared"
+      }
+    },
+    "2003": {
+      "parquet": {
+        "file": "data/raw/nflverse/pbp_release_20261027T113315Z/play_by_play_2003.parquet",
+        "rows": 46811,
+        "cols": 372,
+        "colnames_sha256": "715686d995c1150f0626164497c7a0d058f1a8112d6e17b803bec7cee339fa11",
+        "key_columns": [
+          "season",
+          "season_type",
+          "week",
+          "game_id",
+          "play_id",
+          "home_team",
+          "away_team",
+          "posteam",
+          "defteam",
+          "qtr",
+          "quarter_seconds_remaining",
+          "game_seconds_remaining",
+          "time",
+          "down",
+          "ydstogo",
+          "yardline_100",
+          "play_type",
+          "posteam_score",
+          "defteam_score"
+        ],
+        "key_sha256": "e9308641dcf20f265b8ab566892e36c814f437a45294a88598eb324a1433ff9e"
+      },
+      "csv_gz": {
+        "file": "data/raw/nflverse/pbp_release_20261027T113315Z/play_by_play_2003.csv.gz",
+        "rows": 46811,
+        "cols": 372,
+        "colnames_sha256": "715686d995c1150f0626164497c7a0d058f1a8112d6e17b803bec7cee339fa11",
+        "key_columns": [
+          "season",
+          "season_type",
+          "week",
+          "game_id",
+          "play_id",
+          "home_team",
+          "away_team",
+          "posteam",
+          "defteam",
+          "qtr",
+          "quarter_seconds_remaining",
+          "game_seconds_remaining",
+          "time",
+          "down",
+          "ydstogo",
+          "yardline_100",
+          "play_type",
+          "posteam_score",
+          "defteam_score"
+        ],
+        "key_sha256": "e9308641dcf20f265b8ab566892e36c814f437a45294a88598eb324a1433ff9e"
+      },
+      "parquet_vs_csv_gz_all_columns": {
+        "same_column_order": true,
+        "mismatching_columns": []
+      },
+      "zip2022_vintage_crosscheck": {
+        "file": "data/raw/nflverse/pbp_release_zip2022_20261027T113315Z/play_by_play_2003.zip",
+        "member": "data/play_by_play_2003.csv",
+        "rows": 47602,
+        "cols": 372,
+        "columns_only_in_current": [],
+        "columns_only_in_zip2022": [],
+        "key_sha256": "181dc8d40bd13913b1624364c70a057a1eb3de6b89af7d007798d9e919aff2e4",
+        "key_sha256_equals_current_parquet": false,
+        "mismatching_common_columns_vs_current": "row counts differ; not compared"
+      }
+    },
+    "2004": {
+      "parquet": {
+        "file": "data/raw/nflverse/pbp_release_20261027T113315Z/play_by_play_2004.parquet",
+        "rows": 46705,
+        "cols": 372,
+        "colnames_sha256": "715686d995c1150f0626164497c7a0d058f1a8112d6e17b803bec7cee339fa11",
+        "key_columns": [
+          "season",
+          "season_type",
+          "week",
+          "game_id",
+          "play_id",
+          "home_team",
+          "away_team",
+          "posteam",
+          "defteam",
+          "qtr",
+          "quarter_seconds_remaining",
+          "game_seconds_remaining",
+          "time",
+          "down",
+          "ydstogo",
+          "yardline_100",
+          "play_type",
+          "posteam_score",
+          "defteam_score"
+        ],
+        "key_sha256": "ed5ba999d3318a8cc896f6bf6ef64e0dbfc7efa6c65a3d0fe12c6df9e78d3254"
+      },
+      "csv_gz": {
+        "file": "data/raw/nflverse/pbp_release_20261027T113315Z/play_by_play_2004.csv.gz",
+        "rows": 46705,
+        "cols": 372,
+        "colnames_sha256": "715686d995c1150f0626164497c7a0d058f1a8112d6e17b803bec7cee339fa11",
+        "key_columns": [
+          "season",
+          "season_type",
+          "week",
+          "game_id",
+          "play_id",
+          "home_team",
+          "away_team",
+          "posteam",
+          "defteam",
+          "qtr",
+          "quarter_seconds_remaining",
+          "game_seconds_remaining",
+          "time",
+          "down",
+          "ydstogo",
+          "yardline_100",
+          "play_type",
+          "posteam_score",
+          "defteam_score"
+        ],
+        "key_sha256": "ed5ba999d3318a8cc896f6bf6ef64e0dbfc7efa6c65a3d0fe12c6df9e78d3254"
+      },
+      "parquet_vs_csv_gz_all_columns": {
+        "same_column_order": true,
+        "mismatching_columns": []
+      },
+      "zip2022_vintage_crosscheck": {
+        "file": "data/raw/nflverse/pbp_release_zip2022_20261027T113315Z/play_by_play_2004.zip",
+        "member": "data/play_by_play_2004.csv",
+        "rows": 47470,
+        "cols": 372,
+        "columns_only_in_current": [],
+        "columns_only_in_zip2022": [],
+        "key_sha256": "af57bc84c8c48b47e993c53053e297dff6ede0201f6344f9bc86ba54e3e29f42",
+        "key_sha256_equals_current_parquet": false,
+        "mismatching_common_columns_vs_current": "row counts differ; not compared"
+      }
+    },
+    "2005": {
+      "parquet": {
+        "file": "data/raw/nflverse/pbp_release_20261027T113315Z/play_by_play_2005.parquet",
+        "rows": 46823,
+        "cols": 372,
+        "colnames_sha256": "715686d995c1150f0626164497c7a0d058f1a8112d6e17b803bec7cee339fa11",
+        "key_columns": [
+          "season",
+          "season_type",
+          "week",
+          "game_id",
+          "play_id",
+          "home_team",
+          "away_team",
+          "posteam",
+          "defteam",
+          "qtr",
+          "quarter_seconds_remaining",
+          "game_seconds_remaining",
+          "time",
+          "down",
+          "ydstogo",
+          "yardline_100",
+          "play_type",
+          "posteam_score",
+          "defteam_score"
+        ],
+        "key_sha256": "7bd89dc7fa925f56821795186fde805b45d0f62b6dfb2a7ae1426c0c59ebf673"
+      },
+      "csv_gz": {
+        "file": "data/raw/nflverse/pbp_release_20261027T113315Z/play_by_play_2005.csv.gz",
+        "rows": 46823,
+        "cols": 372,
+        "colnames_sha256": "715686d995c1150f0626164497c7a0d058f1a8112d6e17b803bec7cee339fa11",
+        "key_columns": [
+          "season",
+          "season_type",
+          "week",
+          "game_id",
+          "play_id",
+          "home_team",
+          "away_team",
+          "posteam",
+          "defteam",
+          "qtr",
+          "quarter_seconds_remaining",
+          "game_seconds_remaining",
+          "time",
+          "down",
+          "ydstogo",
+          "yardline_100",
+          "play_type",
+          "posteam_score",
+          "defteam_score"
+        ],
+        "key_sha256": "7bd89dc7fa925f56821795186fde805b45d0f62b6dfb2a7ae1426c0c59ebf673"
+      },
+      "parquet_vs_csv_gz_all_columns": {
+        "same_column_order": true,
+        "mismatching_columns": []
+      },
+      "zip2022_vintage_crosscheck": {
+        "file": "data/raw/nflverse/pbp_release_zip2022_20261027T113315Z/play_by_play_2005.zip",
+        "member": "data/play_by_play_2005.csv",
+        "rows": 47611,
+        "cols": 372,
+        "columns_only_in_current": [],
+        "columns_only_in_zip2022": [],
+        "key_sha256": "51dd10097cff879eb573d74894ec7bedd7e99ce0778d32db8572602c10ebd40d",
+        "key_sha256_equals_current_parquet": false,
+        "mismatching_common_columns_vs_current": "row counts differ; not compared"
+      }
+    }
+  },
+  "games": {
+    "schedules_release_parquet": {
+      "file": "data/raw/nflverse/schedules_release_20261027T113315Z/games.parquet",
+      "rows": 7548,
+      "cols": 46,
+      "colnames_sha256": "c37156686e1589cad00ec290e3aac7c4520c8eb353a414e7181a0ca97190dac1",
+      "key_columns": [
+        "game_id",
+        "season",
+        "game_type",
+        "week",
+        "gameday",
+        "home_team",
+        "away_team",
+        "home_score",
+        "away_score",
+        "roof",
+        "surface",
+        "temp",
+        "wind",
+        "stadium_id"
+      ],
+      "key_sha256": "fcb83919960bda73d373c977175dfd1388a645f2bf7320c2c2da9fae2ba426aa"
+    },
+    "schedules_release_csv": {
+      "file": "data/raw/nflverse/schedules_release_20261027T113315Z/games.csv",
+      "rows": 7548,
+      "cols": 46,
+      "colnames_sha256": "c37156686e1589cad00ec290e3aac7c4520c8eb353a414e7181a0ca97190dac1",
+      "key_columns": [
+        "game_id",
+        "season",
+        "game_type",
+        "week",
+        "gameday",
+        "home_team",
+        "away_team",
+        "home_score",
+        "away_score",
+        "roof",
+        "surface",
+        "temp",
+        "wind",
+        "stadium_id"
+      ],
+      "key_sha256": "fcb83919960bda73d373c977175dfd1388a645f2bf7320c2c2da9fae2ba426aa"
+    },
+    "nfldata_games_csv": {
+      "file": "data/raw/nfldata/games_csv_20261027T113315Z/games.csv",
+      "rows": 7548,
+      "cols": 46,
+      "colnames_sha256": "c37156686e1589cad00ec290e3aac7c4520c8eb353a414e7181a0ca97190dac1",
+      "key_columns": [
+        "game_id",
+        "season",
+        "game_type",
+        "week",
+        "gameday",
+        "home_team",
+        "away_team",
+        "home_score",
+        "away_score",
+        "roof",
+        "surface",
+        "temp",
+        "wind",
+        "stadium_id"
+      ],
+      "key_sha256": "fcb83919960bda73d373c977175dfd1388a645f2bf7320c2c2da9fae2ba426aa"
+    },
+    "release_parquet_vs_release_csv_mismatching_columns": [],
+    "seasons_2000_2005_release_vs_nfldata": {
+      "rows_release": 1586,
+      "rows_nfldata": 1586,
+      "same_columns": true,
+      "mismatching_columns": []
+    }
+  }
+}

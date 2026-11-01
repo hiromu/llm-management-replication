@@ -1,0 +1,8 @@
+{"implementation": "C", "round": 1,
+ "items": [
+  {"item": 1, "review": "No effect: raw byte scan found no tab/CR/LF/VT/FF inside fields (same as B item 1).", "status": "reviewed_no_effect"},
+  {"item": 2, "review": "False positive: manifest line 20 names code_lists/pow_CAMP_cl1277.csv; the execution directory contains the identical frozen code_lists/ folder.", "status": "reviewed_false_positive"},
+  {"item": 3, "review": "Manifest wording 'after removing spaces from both sides' is ambiguous (edge spaces versus all spaces on both the table and the field). Collapsing interior spaces creates no conflicting rank values within the table (verified). It can change matching only for data values whose interior spacing differs from every table label; any resulting divergence from B will appear in the implementation comparison and be audited. Recorded as a manifest ambiguity, not an implementation error.", "status": "manifest_ambiguity_monitored"},
+  {"item": 4, "review": "No effect: only codes 359 and 510 have more than one crosswalk row (entry ids 359a/359b, 510a/510b), for which lexicographic and intended order coincide.", "status": "reviewed_no_effect"},
+  {"item": 5, "review": "Affects only reported marginal effects of camp dummies, which are not scored; means of all regressors enter the scored effects in the same way.", "status": "reviewed_no_effect_on_scored_quantities"}],
+ "decision": "Code v1 of implementation C accepted for frozen execution without modification."}

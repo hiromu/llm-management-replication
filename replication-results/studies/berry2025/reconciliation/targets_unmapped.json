@@ -1,0 +1,570 @@
+{
+ "fable_unmapped": [
+  [
+   "T1.044",
+   "C1.10",
+   "proportion",
+   "female"
+  ],
+  [
+   "T1.045",
+   "C1.10",
+   "proportion",
+   "male"
+  ],
+  [
+   "T1.046",
+   "C1.10",
+   "proportion",
+   "nonbinary"
+  ],
+  [
+   "T1.049",
+   "C1.10",
+   "count",
+   "industries represented"
+  ],
+  [
+   "T1.050",
+   "C1.10",
+   "n_target",
+   "preregistered target sample size"
+  ],
+  [
+   "T1.051",
+   "C1.10",
+   "n_target",
+   "per between-subjects condition from power analysis (80% power)"
+  ],
+  [
+   "T1.136",
+   "C1.12",
+   "n_range",
+   "D03 Table 1 cell sizes"
+  ],
+  [
+   "T2.084",
+   "C2.20",
+   "n_recruited",
+   "recruited from Prolific"
+  ],
+  [
+   "T2.085",
+   "C2.20",
+   "n_excluded",
+   "failed attention checks"
+  ],
+  [
+   "T2.087",
+   "C2.20",
+   "proportion",
+   "female"
+  ],
+  [
+   "T2.088",
+   "C2.20",
+   "proportion",
+   "male"
+  ],
+  [
+   "T2.089",
+   "C2.20",
+   "proportion",
+   "nonbinary"
+  ],
+  [
+   "T2.092",
+   "C2.20",
+   "count",
+   "industries represented"
+  ],
+  [
+   "T2.093",
+   "C2.20",
+   "n_target",
+   "minimum from power analysis (80% power per D01; 99% printed in D12 Q7, corrected by D22)"
+  ],
+  [
+   "T2.094",
+   "C2.20",
+   "n_target",
+   "recruitment target (100 per cell)"
+  ],
+  [
+   "T3.109",
+   "C3.18",
+   "n_recruited",
+   "recruited from Prolific"
+  ],
+  [
+   "T3.110",
+   "C3.18",
+   "n_excluded",
+   "failed basic attention checks"
+  ],
+  [
+   "T3.112",
+   "C3.18",
+   "proportion",
+   "female"
+  ],
+  [
+   "T3.113",
+   "C3.18",
+   "proportion",
+   "male"
+  ],
+  [
+   "T3.114",
+   "C3.18",
+   "proportion",
+   "nonbinary"
+  ],
+  [
+   "T3.117",
+   "C3.18",
+   "count",
+   "industries represented"
+  ],
+  [
+   "T3.118",
+   "C3.18",
+   "n_target",
+   "per cell from power analysis (80% power)"
+  ],
+  [
+   "T3.119",
+   "C3.18",
+   "n_target",
+   "recruitment target (100 per cell)"
+  ],
+  [
+   "T4.030",
+   "C4.04",
+   "count",
+   "participants who signed"
+  ],
+  [
+   "T4.031",
+   "C4.04",
+   "proportion",
+   "participants who signed"
+  ],
+  [
+   "T4.032",
+   "C4.04",
+   "proportion",
+   "eligible non-completers who signed (2 of 10)"
+  ],
+  [
+   "T4.064",
+   "C4.08",
+   "count",
+   "fraternities approached (one agreed)"
+  ],
+  [
+   "T4.065",
+   "C4.08",
+   "n_eligible",
+   "eligible fraternity members who received the request"
+  ],
+  [
+   "T4.067",
+   "C4.08",
+   "n_excluded",
+   "eligible brothers who did not complete the follow-up survey"
+  ],
+  [
+   "T4.068",
+   "C4.08",
+   "proportion",
+   "male"
+  ],
+  [
+   "T4.071",
+   "C4.08",
+   "n_target",
+   "preregistered target from 1-2 fraternities"
+  ],
+  [
+   "T0.001",
+   "C1.10",
+   "n_total_all_studies",
+   "Table 1 total participants across 11 studies"
+  ]
+ ],
+ "astra_unmapped": [
+  [
+   "T0002",
+   "S1_description",
+   "percentage",
+   "female"
+  ],
+  [
+   "T0003",
+   "S1_description",
+   "percentage",
+   "male"
+  ],
+  [
+   "T0004",
+   "S1_description",
+   "percentage",
+   "nonbinary"
+  ],
+  [
+   "T0007",
+   "S1_description",
+   "count",
+   "industries represented"
+  ],
+  [
+   "T0008",
+   "S1_description",
+   "n_planned",
+   "target participants"
+  ],
+  [
+   "T0009",
+   "S1_description",
+   "n_planned",
+   "per between-subject condition"
+  ],
+  [
+   "T0010",
+   "S1_description",
+   "power",
+   "planning percent"
+  ],
+  [
+   "T0011",
+   "S1_description",
+   "alpha",
+   "power analysis significance level"
+  ],
+  [
+   "T0012",
+   "S2_description",
+   "n_recruited",
+   "recruited"
+  ],
+  [
+   "T0013",
+   "S2_description",
+   "n_excluded",
+   "attention failure"
+  ],
+  [
+   "T0015",
+   "S2_description",
+   "percentage",
+   "female"
+  ],
+  [
+   "T0016",
+   "S2_description",
+   "percentage",
+   "male"
+  ],
+  [
+   "T0017",
+   "S2_description",
+   "percentage",
+   "nonbinary"
+  ],
+  [
+   "T0020",
+   "S2_description",
+   "count",
+   "industries represented"
+  ],
+  [
+   "T0021",
+   "S2_description",
+   "n_planned",
+   "minimum power-analysis participants"
+  ],
+  [
+   "T0022",
+   "S2_description",
+   "n_planned",
+   "per cell target"
+  ],
+  [
+   "T0023",
+   "S2_description",
+   "power",
+   "planning percent"
+  ],
+  [
+   "T0024",
+   "S2_description",
+   "alpha",
+   "power analysis significance level"
+  ],
+  [
+   "T0025",
+   "S3_description",
+   "n_recruited",
+   "recruited"
+  ],
+  [
+   "T0026",
+   "S3_description",
+   "n_excluded",
+   "attention failure"
+  ],
+  [
+   "T0028",
+   "S3_description",
+   "percentage",
+   "female"
+  ],
+  [
+   "T0029",
+   "S3_description",
+   "percentage",
+   "male"
+  ],
+  [
+   "T0030",
+   "S3_description",
+   "percentage",
+   "nonbinary"
+  ],
+  [
+   "T0033",
+   "S3_description",
+   "count",
+   "industries represented"
+  ],
+  [
+   "T0034",
+   "S3_description",
+   "n_planned",
+   "minimum per cell power-analysis"
+  ],
+  [
+   "T0035",
+   "S3_description",
+   "n_planned",
+   "per cell target"
+  ],
+  [
+   "T0036",
+   "S3_description",
+   "power",
+   "planning percent"
+  ],
+  [
+   "T0037",
+   "S3_description",
+   "alpha",
+   "power analysis significance level"
+  ],
+  [
+   "T0038",
+   "S4_description",
+   "count",
+   "fraternities approached"
+  ],
+  [
+   "T0039",
+   "S4_description",
+   "count",
+   "fraternities participating"
+  ],
+  [
+   "T0040",
+   "S4_description",
+   "count",
+   "fraternities declining"
+  ],
+  [
+   "T0041",
+   "S4_description",
+   "count",
+   "research-familiar excluded members"
+  ],
+  [
+   "T0042",
+   "S4_description",
+   "n_eligible",
+   "eligible actors"
+  ],
+  [
+   "T0046",
+   "S4_description",
+   "count",
+   "signers among participants"
+  ],
+  [
+   "T0047",
+   "S4_description",
+   "percentage",
+   "signers among participants"
+  ],
+  [
+   "T0048",
+   "S4_description",
+   "n_excluded",
+   "eligible survey nonrespondents"
+  ],
+  [
+   "T0049",
+   "S4_description",
+   "count",
+   "signers among survey nonrespondents"
+  ],
+  [
+   "T0050",
+   "S4_description",
+   "percentage",
+   "signers among survey nonrespondents"
+  ],
+  [
+   "T0051",
+   "S2_description",
+   "power",
+   "preregistration planning percent"
+  ],
+  [
+   "T0052",
+   "S2_description",
+   "power",
+   "deviation report corrected planning percent"
+  ],
+  [
+   "T0053",
+   "S4_description",
+   "n_planned",
+   "target participants"
+  ],
+  [
+   "T0054",
+   "S4_description",
+   "count",
+   "target fraternities"
+  ],
+  [
+   "T0517",
+   "S1_description",
+   "n_by_cell_range",
+   "gender \u00d7 relationship \u00d7 wrongdoing cells"
+  ],
+  [
+   "T0528",
+   "S2_ind_you_grant_benev_trust_broker",
+   "confidence_level",
+   "reported indirect-effect interval"
+  ],
+  [
+   "T0529",
+   "S2_ind_you_grant_integ_trust_broker",
+   "confidence_level",
+   "reported indirect-effect interval"
+  ],
+  [
+   "T0530",
+   "S2_ind_you_grant_val_align_part_broker",
+   "confidence_level",
+   "reported indirect-effect interval"
+  ],
+  [
+   "T0531",
+   "S2_ind_you_grant_relconcerns_with_broker",
+   "confidence_level",
+   "reported indirect-effect interval"
+  ],
+  [
+   "T0532",
+   "S2_ind_prom_voice_benev_trust_broker",
+   "confidence_level",
+   "reported indirect-effect interval"
+  ],
+  [
+   "T0533",
+   "S2_ind_prom_voice_integ_trust_broker",
+   "confidence_level",
+   "reported indirect-effect interval"
+  ],
+  [
+   "T0534",
+   "S2_ind_prom_voice_val_align_part_broker",
+   "confidence_level",
+   "reported indirect-effect interval"
+  ],
+  [
+   "T0535",
+   "S2_ind_prom_voice_relconcerns_with_broker",
+   "confidence_level",
+   "reported indirect-effect interval"
+  ],
+  [
+   "T0536",
+   "S2_ind_proh_voice_benev_trust_broker",
+   "confidence_level",
+   "reported indirect-effect interval"
+  ],
+  [
+   "T0537",
+   "S2_ind_proh_voice_integ_trust_broker",
+   "confidence_level",
+   "reported indirect-effect interval"
+  ],
+  [
+   "T0538",
+   "S2_ind_proh_voice_val_align_part_broker",
+   "confidence_level",
+   "reported indirect-effect interval"
+  ],
+  [
+   "T0539",
+   "S2_ind_proh_voice_relconcerns_with_broker",
+   "confidence_level",
+   "reported indirect-effect interval"
+  ],
+  [
+   "T0540",
+   "S2_serial_val_align_part_broker",
+   "confidence_level",
+   "reported indirect-effect interval"
+  ],
+  [
+   "T0541",
+   "S2_serial_relconcerns_with_broker",
+   "confidence_level",
+   "reported indirect-effect interval"
+  ],
+  [
+   "T0542",
+   "S4_ind_simultaneous_SignedTrust",
+   "confidence_level",
+   "reported indirect-effect interval"
+  ],
+  [
+   "T0543",
+   "S4_ind_simultaneous_SignedRisk",
+   "confidence_level",
+   "reported indirect-effect interval"
+  ],
+  [
+   "T0544",
+   "S4_ind_independent_SignedTrust",
+   "confidence_level",
+   "reported indirect-effect interval"
+  ],
+  [
+   "T0545",
+   "S4_ind_independent_SignedRisk",
+   "confidence_level",
+   "reported indirect-effect interval"
+  ],
+  [
+   "T0546",
+   "S1_description",
+   "n_recruited",
+   "article calls this recruited sample"
+  ]
+ ]
+}

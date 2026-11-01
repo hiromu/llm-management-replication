@@ -1,0 +1,764 @@
+{
+  "claims": [
+    {
+      "claim_id": "C01",
+      "statement": "Steeper hierarchies are associated with lower survival in both captured and camp cohorts.",
+      "hypothesis_or_direction": "negative",
+      "tier": "focal",
+      "reported_status": "reported_with_numbers",
+      "estimand": "Probit marginal change in survival probability, evaluated at covariate means",
+      "population": "American military POWs held by Germany or Japan with known survival status",
+      "unit_of_analysis": "Individual POW",
+      "scale": "Survival indicator; hierarchy index on its stated scale",
+      "model_ids": [
+        "M01",
+        "M02",
+        "M03",
+        "M04"
+      ],
+      "locators": [
+        {
+          "doc_id": "D1",
+          "pdf_page": 9,
+          "journal_page": null,
+          "section": "4.4",
+          "table": "4",
+          "column": null,
+          "row": null,
+          "quote": null
+        }
+      ],
+      "notes": ""
+    },
+    {
+      "claim_id": "C02",
+      "statement": "Hierarchy shapes closer to the reference military hierarchy are associated with lower survival.",
+      "hypothesis_or_direction": "negative",
+      "tier": "focal",
+      "reported_status": "reported_with_numbers",
+      "estimand": "Probit marginal change in survival probability, evaluated at covariate means",
+      "population": "American military POWs held by Germany or Japan with known survival status",
+      "unit_of_analysis": "Individual POW",
+      "scale": "Survival indicator; hierarchy index on its stated scale",
+      "model_ids": [
+        "M05",
+        "M06",
+        "M07",
+        "M08"
+      ],
+      "locators": [
+        {
+          "doc_id": "D1",
+          "pdf_page": 9,
+          "journal_page": null,
+          "section": "4.4",
+          "table": "4",
+          "column": null,
+          "row": null,
+          "quote": null
+        }
+      ],
+      "notes": ""
+    },
+    {
+      "claim_id": "C03",
+      "statement": "The predicted survival contrast across high versus low captured-cohort steepness is practically important.",
+      "hypothesis_or_direction": "negative",
+      "tier": "focal",
+      "reported_status": "reported_with_numbers",
+      "estimand": "Predicted survival probabilities and their difference for upper versus lower quartile groups",
+      "population": "American military POWs held by Germany or Japan with known survival status",
+      "unit_of_analysis": "Individual POW",
+      "scale": "Survival indicator; hierarchy index on its stated scale",
+      "model_ids": [
+        "M02"
+      ],
+      "locators": [
+        {
+          "doc_id": "D1",
+          "pdf_page": 8,
+          "journal_page": null,
+          "section": "4.4",
+          "table": null,
+          "column": null,
+          "row": null,
+          "quote": null
+        },
+        {
+          "doc_id": "D1",
+          "pdf_page": 3,
+          "journal_page": null,
+          "section": "1",
+          "table": null,
+          "column": null,
+          "row": null,
+          "quote": null
+        }
+      ],
+      "notes": "The introduction separately claims a 20% survival reduction without identifying its model or comparison. Preserve as a distinct target, not the same contrast."
+    },
+    {
+      "claim_id": "C04",
+      "statement": "Joint inclusion produces fragile individual hierarchy coefficients; ROC tests suggest incremental predictive information from both measures at camp level, and specification-dependent redundancy at captured level.",
+      "hypothesis_or_direction": null,
+      "tier": "identification_inference_diagnostic",
+      "reported_status": "reported_with_numbers",
+      "estimand": "Joint probit marginal effects; paired ROC-area comparison p-values",
+      "population": "American military POWs held by Germany or Japan with known survival status",
+      "unit_of_analysis": "Individual POW",
+      "scale": "Survival indicator; hierarchy index on its stated scale",
+      "model_ids": [
+        "M09",
+        "M10",
+        "M11",
+        "M12"
+      ],
+      "locators": [
+        {
+          "doc_id": "D1",
+          "pdf_page": 9,
+          "journal_page": null,
+          "section": "4.5",
+          "table": "5",
+          "column": null,
+          "row": null,
+          "quote": null
+        }
+      ],
+      "notes": "Text refers to Panel C although the table contains only Panels A and B."
+    },
+    {
+      "claim_id": "C05",
+      "statement": "Age and education are negatively associated with survival, and having dependents is positively associated.",
+      "hypothesis_or_direction": "age/education negative; dependents positive",
+      "tier": "nuisance_control",
+      "reported_status": "reported_with_numbers",
+      "estimand": "Probit marginal change in survival probability, evaluated at covariate means",
+      "population": "American military POWs held by Germany or Japan with known survival status",
+      "unit_of_analysis": "Individual POW",
+      "scale": "Survival indicator; hierarchy index on its stated scale",
+      "model_ids": [
+        "M02",
+        "M04",
+        "M06",
+        "M08"
+      ],
+      "locators": [
+        {
+          "doc_id": "D1",
+          "pdf_page": 8,
+          "journal_page": null,
+          "section": "4.4",
+          "table": "4",
+          "column": null,
+          "row": null,
+          "quote": null
+        }
+      ],
+      "notes": ""
+    },
+    {
+      "claim_id": "C06",
+      "statement": "The hierarchy-survival association persists when Germany and Japan are estimated separately.",
+      "hypothesis_or_direction": "negative",
+      "tier": "robustness",
+      "reported_status": "reported_with_numbers",
+      "estimand": "Probit marginal change in survival probability, evaluated at covariate means",
+      "population": "American military POWs held by Germany or Japan with known survival status",
+      "unit_of_analysis": "Individual POW",
+      "scale": "Survival indicator; hierarchy index on its stated scale",
+      "model_ids": [
+        "M21"
+      ],
+      "locators": [
+        {
+          "doc_id": "D1",
+          "pdf_page": 10,
+          "journal_page": null,
+          "section": "5.1",
+          "table": null,
+          "column": null,
+          "row": null,
+          "quote": null
+        }
+      ],
+      "notes": "Coefficients and complete tables are unavailable; significance counts are stated in prose."
+    },
+    {
+      "claim_id": "C07",
+      "statement": "More fellow prisoners from the same precapture unit predict lower survival; hierarchy coefficients remain negative when this friends measure is included.",
+      "hypothesis_or_direction": "negative",
+      "tier": "robustness",
+      "reported_status": "reported_with_numbers",
+      "estimand": "Probit marginal change in survival probability, evaluated at covariate means",
+      "population": "American military POWs held by Germany or Japan with known survival status",
+      "unit_of_analysis": "Individual POW",
+      "scale": "Survival indicator; hierarchy index on its stated scale",
+      "model_ids": [
+        "M22"
+      ],
+      "locators": [
+        {
+          "doc_id": "D1",
+          "pdf_page": 10,
+          "journal_page": null,
+          "section": "5.2",
+          "table": null,
+          "column": null,
+          "row": null,
+          "quote": null
+        }
+      ],
+      "notes": "Largest friends p-value reported, individual estimates absent."
+    },
+    {
+      "claim_id": "C08",
+      "statement": "Hierarchy measured only among friends does not significantly predict survival.",
+      "hypothesis_or_direction": null,
+      "tier": "robustness",
+      "reported_status": "reported_with_numbers",
+      "estimand": "Probit marginal change in survival probability, evaluated at covariate means",
+      "population": "American military POWs held by Germany or Japan with known survival status",
+      "unit_of_analysis": "Individual POW",
+      "scale": "Survival indicator; hierarchy index on its stated scale",
+      "model_ids": [
+        "M23"
+      ],
+      "locators": [
+        {
+          "doc_id": "D1",
+          "pdf_page": 10,
+          "journal_page": null,
+          "section": "5.2",
+          "table": null,
+          "column": null,
+          "row": null,
+          "quote": null
+        }
+      ],
+      "notes": "Approximate p-values only."
+    },
+    {
+      "claim_id": "C09",
+      "statement": "Alternative hierarchy measures and restricted samples leave hierarchy coefficients negative, many highly significant.",
+      "hypothesis_or_direction": "negative",
+      "tier": "robustness",
+      "reported_status": "reported_with_numbers",
+      "estimand": "Probit marginal change in survival probability, evaluated at covariate means",
+      "population": "American military POWs held by Germany or Japan with known survival status",
+      "unit_of_analysis": "Individual POW",
+      "scale": "Survival indicator; hierarchy index on its stated scale",
+      "model_ids": [
+        "M24",
+        "M25"
+      ],
+      "locators": [
+        {
+          "doc_id": "D1",
+          "pdf_page": 11,
+          "journal_page": null,
+          "section": "5.3",
+          "table": null,
+          "column": null,
+          "row": null,
+          "quote": null
+        }
+      ],
+      "notes": "Includes pay-based steepness, ratio and absolute-deviation sameness, rank counts, rank sums, administrative intensity, complete cases, minimum group sizes, and exclusion of executions."
+    },
+    {
+      "claim_id": "C10",
+      "statement": "German-held Army Air Force subsample offers no evidence that hierarchy improves survival and is proposed as a check against capture-related endogeneity.",
+      "hypothesis_or_direction": "predominantly negative",
+      "tier": "identification_inference_diagnostic",
+      "reported_status": "reported_with_numbers",
+      "estimand": "Probit marginal change in survival probability, evaluated at covariate means",
+      "population": "American military POWs held by Germany or Japan with known survival status",
+      "unit_of_analysis": "Individual POW",
+      "scale": "Survival indicator; hierarchy index on its stated scale",
+      "model_ids": [
+        "M26"
+      ],
+      "locators": [
+        {
+          "doc_id": "D1",
+          "pdf_page": 12,
+          "journal_page": null,
+          "section": "5.4",
+          "table": null,
+          "column": null,
+          "row": null,
+          "quote": null
+        }
+      ],
+      "notes": "An observational restriction, not a randomized design or an instrument. Only two exact printed p-values are supplied."
+    },
+    {
+      "claim_id": "C11",
+      "statement": "Officer-by-hierarchy interactions are negative throughout and sometimes significant, contrary to the hypothesis that stronger hierarchies protect officers.",
+      "hypothesis_or_direction": "negative",
+      "tier": "focal",
+      "reported_status": "reported_with_numbers",
+      "estimand": "Displayed probit marginal quantity for the product of officer indicator and hierarchy",
+      "population": "American military POWs held by Germany or Japan with known survival status",
+      "unit_of_analysis": "Individual POW",
+      "scale": "Survival indicator; hierarchy index on its stated scale",
+      "model_ids": [
+        "M13",
+        "M14",
+        "M15",
+        "M16",
+        "M17",
+        "M18",
+        "M19",
+        "M20"
+      ],
+      "locators": [
+        {
+          "doc_id": "D1",
+          "pdf_page": 13,
+          "journal_page": null,
+          "section": "6.1",
+          "table": "6",
+          "column": null,
+          "row": null,
+          "quote": null
+        }
+      ],
+      "notes": "This displayed product-regressor effect need not equal the difference in hierarchy marginal effects between officers and others."
+    },
+    {
+      "claim_id": "C12",
+      "statement": "Pay interactions and country-specific officer analyses also do not support preferential survival through hierarchy.",
+      "hypothesis_or_direction": "no protective effect",
+      "tier": "robustness",
+      "reported_status": "unreported_described",
+      "estimand": "Probit marginal change in survival probability, evaluated at covariate means",
+      "population": "American military POWs held by Germany or Japan with known survival status",
+      "unit_of_analysis": "Individual POW",
+      "scale": "Survival indicator; hierarchy index on its stated scale",
+      "model_ids": [
+        "M27"
+      ],
+      "locators": [
+        {
+          "doc_id": "D1",
+          "pdf_page": 12,
+          "journal_page": null,
+          "section": "6.1 footnote 13",
+          "table": null,
+          "column": null,
+          "row": null,
+          "quote": null
+        }
+      ],
+      "notes": ""
+    },
+    {
+      "claim_id": "C13",
+      "statement": "Without the squared group-size term, group size positively predicts survival in the four controlled models.",
+      "hypothesis_or_direction": "positive",
+      "tier": "robustness",
+      "reported_status": "reported_in_text_only",
+      "estimand": "Probit marginal change in survival probability, evaluated at covariate means",
+      "population": "American military POWs held by Germany or Japan with known survival status",
+      "unit_of_analysis": "Individual POW",
+      "scale": "Survival indicator; hierarchy index on its stated scale",
+      "model_ids": [
+        "M28"
+      ],
+      "locators": [
+        {
+          "doc_id": "D1",
+          "pdf_page": 14,
+          "journal_page": null,
+          "section": "6.2",
+          "table": null,
+          "column": null,
+          "row": null,
+          "quote": null
+        }
+      ],
+      "notes": ""
+    },
+    {
+      "claim_id": "C14",
+      "statement": "Hierarchy-by-group-size interactions are negative; significance is reported only for captured-cohort sameness, consistent with but not establishing a conflict with trade.",
+      "hypothesis_or_direction": "negative",
+      "tier": "robustness",
+      "reported_status": "reported_in_text_only",
+      "estimand": "Probit marginal change in survival probability, evaluated at covariate means",
+      "population": "American military POWs held by Germany or Japan with known survival status",
+      "unit_of_analysis": "Individual POW",
+      "scale": "Survival indicator; hierarchy index on its stated scale",
+      "model_ids": [
+        "M29"
+      ],
+      "locators": [
+        {
+          "doc_id": "D1",
+          "pdf_page": 14,
+          "journal_page": null,
+          "section": "6.2",
+          "table": null,
+          "column": null,
+          "row": null,
+          "quote": null
+        }
+      ],
+      "notes": ""
+    },
+    {
+      "claim_id": "C15",
+      "statement": "Inflexible battlefield hierarchies may impede beneficial exchange during captivity.",
+      "hypothesis_or_direction": "hypothesized harmful effect",
+      "tier": "focal",
+      "reported_status": "reported_in_text_only",
+      "estimand": "Mechanism interpretation, not a separately identified causal effect",
+      "population": "American military POWs held by Germany or Japan with known survival status",
+      "unit_of_analysis": "Individual POW",
+      "scale": "Survival indicator; hierarchy index on its stated scale",
+      "model_ids": [],
+      "locators": [
+        {
+          "doc_id": "D1",
+          "pdf_page": 14,
+          "journal_page": null,
+          "section": "6.2; 7",
+          "table": null,
+          "column": null,
+          "row": null,
+          "quote": null
+        },
+        {
+          "doc_id": "D1",
+          "pdf_page": 2,
+          "journal_page": null,
+          "section": "Abstract",
+          "table": null,
+          "column": null,
+          "row": null,
+          "quote": null
+        },
+        {
+          "doc_id": "D1",
+          "pdf_page": 15,
+          "journal_page": null,
+          "section": "7",
+          "table": null,
+          "column": null,
+          "row": null,
+          "quote": null
+        }
+      ],
+      "notes": "Trade and Red Cross food-shipment data are unavailable; anecdotes and indirect patterns do not identify the mechanism."
+    },
+    {
+      "claim_id": "C16",
+      "statement": "Mortality and reported execution are much higher under Japanese than German detention; table reports demographics and group characteristics.",
+      "hypothesis_or_direction": null,
+      "tier": "descriptive",
+      "reported_status": "reported_with_numbers",
+      "estimand": "Means, medians, standard deviations, percentages and counts",
+      "population": "American military POWs held by Germany or Japan with known survival status",
+      "unit_of_analysis": "Individual POW",
+      "scale": "Survival indicator; hierarchy index on its stated scale",
+      "model_ids": [
+        "D01"
+      ],
+      "locators": [
+        {
+          "doc_id": "D1",
+          "pdf_page": 6,
+          "journal_page": null,
+          "section": "3",
+          "table": "1",
+          "column": null,
+          "row": null,
+          "quote": null
+        }
+      ],
+      "notes": "Execution status includes ship-sinking deaths and deaths while escaping; summary denominators vary by item."
+    },
+    {
+      "claim_id": "C17",
+      "statement": "The two hierarchy measures behave differently for six hypothetical rank distributions.",
+      "hypothesis_or_direction": null,
+      "tier": "descriptive",
+      "reported_status": "reported_with_numbers",
+      "estimand": "Deterministic functions of fictional rank counts",
+      "population": "American military POWs held by Germany or Japan with known survival status",
+      "unit_of_analysis": "Individual POW",
+      "scale": "Survival indicator; hierarchy index on its stated scale",
+      "model_ids": [
+        "D02"
+      ],
+      "locators": [
+        {
+          "doc_id": "D1",
+          "pdf_page": 7,
+          "journal_page": null,
+          "section": "4.1",
+          "table": "3",
+          "column": null,
+          "row": null,
+          "quote": null
+        }
+      ],
+      "notes": "Printed examples are not empirical data and must not become implementer input."
+    },
+    {
+      "claim_id": "C18",
+      "statement": "Camp-level and captured-level hierarchy measures are highly correlated.",
+      "hypothesis_or_direction": null,
+      "tier": "identification_inference_diagnostic",
+      "reported_status": "reported_with_numbers",
+      "estimand": "Correlation of steepness and sameness",
+      "population": "American military POWs held by Germany or Japan with known survival status",
+      "unit_of_analysis": "Individual POW",
+      "scale": "Survival indicator; hierarchy index on its stated scale",
+      "model_ids": [],
+      "locators": [
+        {
+          "doc_id": "D1",
+          "pdf_page": 8,
+          "journal_page": null,
+          "section": "4.5",
+          "table": null,
+          "column": null,
+          "row": null,
+          "quote": null
+        }
+      ],
+      "notes": "Weighting and exact sample not specified."
+    },
+    {
+      "claim_id": "C19",
+      "statement": "The POW and enlistment sources provide broad coverage but imperfect linkage and incomplete covariates.",
+      "hypothesis_or_direction": null,
+      "tier": "descriptive",
+      "reported_status": "reported_with_numbers",
+      "estimand": "Coverage, linkage percentages and sample exclusion counts",
+      "population": "American military POWs held by Germany or Japan with known survival status",
+      "unit_of_analysis": "Individual POW",
+      "scale": "Survival indicator; hierarchy index on its stated scale",
+      "model_ids": [
+        "D01"
+      ],
+      "locators": [
+        {
+          "doc_id": "D1",
+          "pdf_page": 5,
+          "journal_page": null,
+          "section": "3",
+          "table": null,
+          "column": null,
+          "row": null,
+          "quote": null
+        }
+      ],
+      "notes": "Source counts are approximate; exclusion order and overlap are undocumented."
+    },
+    {
+      "claim_id": "C20",
+      "statement": "Coordination and rapid command could help survival, whereas organizational rigidity could obstruct adaptation.",
+      "hypothesis_or_direction": "competing theoretical predictions",
+      "tier": "focal",
+      "reported_status": "reported_in_text_only",
+      "estimand": "Motivating hypotheses, not separate estimates",
+      "population": "American military POWs held by Germany or Japan with known survival status",
+      "unit_of_analysis": "Individual POW",
+      "scale": "Survival indicator; hierarchy index on its stated scale",
+      "model_ids": [],
+      "locators": [
+        {
+          "doc_id": "D1",
+          "pdf_page": 2,
+          "journal_page": null,
+          "section": "1",
+          "table": null,
+          "column": null,
+          "row": null,
+          "quote": null
+        }
+      ],
+      "notes": ""
+    },
+    {
+      "claim_id": "C21",
+      "statement": "The introduction states that officers survive less often than enlisted men.",
+      "hypothesis_or_direction": "negative",
+      "tier": "descriptive",
+      "reported_status": "reported_in_text_only",
+      "estimand": "Unspecified survival comparison by officer status",
+      "population": "American military POWs held by Germany or Japan with known survival status",
+      "unit_of_analysis": "Individual POW",
+      "scale": "Survival indicator; hierarchy index on its stated scale",
+      "model_ids": [],
+      "locators": [
+        {
+          "doc_id": "D1",
+          "pdf_page": 3,
+          "journal_page": null,
+          "section": "1",
+          "table": null,
+          "column": null,
+          "row": null,
+          "quote": null
+        }
+      ],
+      "notes": "No unconditional rank-specific survival table is supplied; Table 4 officer controls are conditional."
+    },
+    {
+      "claim_id": "C22",
+      "statement": "Older prisoners were less likely to survive under the more demanding Japanese conditions.",
+      "hypothesis_or_direction": "negative",
+      "tier": "nuisance_control",
+      "reported_status": "unreported_described",
+      "estimand": "Probit marginal change in survival probability, evaluated at covariate means",
+      "population": "American military POWs held by Germany or Japan with known survival status",
+      "unit_of_analysis": "Individual POW",
+      "scale": "Survival indicator; hierarchy index on its stated scale",
+      "model_ids": [
+        "M30"
+      ],
+      "locators": [
+        {
+          "doc_id": "D1",
+          "pdf_page": 8,
+          "journal_page": null,
+          "section": "4.4",
+          "table": null,
+          "column": null,
+          "row": null,
+          "quote": null
+        }
+      ],
+      "notes": "No exact model or age-by-regime interaction specification is supplied."
+    },
+    {
+      "claim_id": "C23",
+      "statement": "Captured-cohort hierarchy p-values are no larger than corresponding camp-model p-values even though captured effects tend to be closer to zero.",
+      "hypothesis_or_direction": null,
+      "tier": "identification_inference_diagnostic",
+      "reported_status": "reported_with_numbers",
+      "estimand": "Cross-specification comparison of displayed effects and rounded p-values",
+      "population": "American military POWs held by Germany or Japan with known survival status",
+      "unit_of_analysis": "Individual POW",
+      "scale": "Survival indicator; hierarchy index on its stated scale",
+      "model_ids": [
+        "M01",
+        "M02",
+        "M03",
+        "M04",
+        "M05",
+        "M06",
+        "M07",
+        "M08"
+      ],
+      "locators": [
+        {
+          "doc_id": "D1",
+          "pdf_page": 8,
+          "journal_page": null,
+          "section": "4.4",
+          "table": "4",
+          "column": null,
+          "row": null,
+          "quote": null
+        }
+      ],
+      "notes": "The article attributes this pattern to camp fixed effects removing noise. This is an interpretation, not a formal test of equality across specifications."
+    }
+  ],
+  "focal_claim_rationale": {
+    "description": "The abstract and summary emphasize the adverse hierarchy-survival relationship. Keep steepness and sameness separately assessable. Officer favoritism is a central tested explanation; the market mechanism is explicitly interpretive.",
+    "locators": [
+      {
+        "doc_id": "D1",
+        "pdf_page": 2,
+        "journal_page": null,
+        "section": "Abstract",
+        "table": null,
+        "column": null,
+        "row": null,
+        "quote": null
+      },
+      {
+        "doc_id": "D1",
+        "pdf_page": 8,
+        "journal_page": null,
+        "section": "4.4",
+        "table": null,
+        "column": null,
+        "row": null,
+        "quote": null
+      },
+      {
+        "doc_id": "D1",
+        "pdf_page": 12,
+        "journal_page": null,
+        "section": "6.1",
+        "table": null,
+        "column": null,
+        "row": null,
+        "quote": null
+      },
+      {
+        "doc_id": "D1",
+        "pdf_page": 14,
+        "journal_page": null,
+        "section": "7",
+        "table": null,
+        "column": null,
+        "row": null,
+        "quote": null
+      },
+      {
+        "doc_id": "D1",
+        "pdf_page": 15,
+        "journal_page": null,
+        "section": "7",
+        "table": null,
+        "column": null,
+        "row": null,
+        "quote": null
+      }
+    ]
+  },
+  "paper_level_aggregation_proposal": {
+    "description": "Report the core direction and inference for C01 and C02 across the eight Table 4 specifications, separately for captured/camp and simple/controlled models. Report C03 magnitude, C11 officer evidence and C15 mechanism limitations separately. Do not invent a numerical pass fraction or turn lack of significance into proof of no effect; the article supplies no paper-level scoring rule.",
+    "locators": [
+      {
+        "doc_id": "D1",
+        "pdf_page": 9,
+        "journal_page": null,
+        "section": "4.4",
+        "table": "4",
+        "column": null,
+        "row": null,
+        "quote": null
+      },
+      {
+        "doc_id": "D1",
+        "pdf_page": 13,
+        "journal_page": null,
+        "section": "6.1",
+        "table": "6",
+        "column": null,
+        "row": null,
+        "quote": null
+      },
+      {
+        "doc_id": "D1",
+        "pdf_page": 14,
+        "journal_page": null,
+        "section": "7",
+        "table": null,
+        "column": null,
+        "row": null,
+        "quote": null
+      }
+    ]
+  }
+}

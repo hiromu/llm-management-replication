@@ -1,0 +1,6 @@
+impl_A_v3 rc 0 sec 224 {"modelUsage": ["claude-fable-5-1"], "is_error": false, "num_turns": 19, "total_cost_usd": 2.0412135000000005}
+ 
+checker_A_v3 rc 0 sec 72 {"models_in_events": [], "effort_in_events": [], "service_tier_in_events": []}
+ 
+recheck: General rules — each quantity uses complete cases on the variables it involves: input/code/analysis.R:633-638 restricts PM2/SI2 a and total to complete cases on the entire mediation model; :660-662 similarly restricts SM2 a1 and d21; :1022-1026 similarly restricts MED4 a, excluding rows missing variables those individual quantities do not involve.
+

@@ -1,0 +1,40 @@
+{
+  "packet_version": "v1",
+  "study_id": "deephouse1999",
+  "frozen_utc": "2026-10-27T11:45:00Z",
+  "documents": [
+    {
+      "doc_id": "DOC01",
+      "order": 1,
+      "role": "main_article",
+      "citation": "Deephouse, D. L. (1999). To be different, or to be the same? It's a question (and theory) of strategic balance. Strategic Management Journal, 20(2), 147-166.",
+      "doi": "10.1002/(SICI)1097-0266(199902)20:2<147::AID-SMJ11>3.0.CO;2-Q",
+      "source_file": "papers/journal_collection/SMJ/SMJ_1999_Deephouse.pdf",
+      "source_sha256": "62eecc5b46b382896f2d660380b409de714b31faf8be5da2de505e27d16112e4",
+      "pdf_pages": 20,
+      "page_mapping": "PDF page k corresponds to printed journal page 146+k (PDF p1 = p.147, PDF p20 = p.166)",
+      "identity_checks": {
+        "pdf_metadata_title": "To be different, or to be the same? It's a question (and theory) of strategic balance",
+        "pdf_metadata_subject": "Strategic Management Journal 1999.20:147-166",
+        "crossref_title_author_match": true,
+        "publisher_page_match": true
+      },
+      "derived_reading_copies": {
+        "text_layout": "sources/packet_v1/DOC01_main_article_text_layout.txt (pdftotext -layout, poppler); equation symbols partly garbled (summation and multiplication glyphs)",
+        "page_images": "sources/packet_v1/pages/DOC01_p01.png ... DOC01_p20.png (PyMuPDF 1.27.1, 150 dpi)",
+        "hashes": "sources/packet_v1_SHA256SUMS.txt"
+      },
+      "redactions": "none applied by this study; library catalog lists no code removals for this paper",
+      "watermarks": "Publisher download stamp in page margins (institutional download line); not content"
+    }
+  ],
+  "supplements": [],
+  "supplement_search": "logs/supplement_and_package_search.json: no local catalog match; publisher page lists no Supporting Information; Crossref shows no corrections or updates",
+  "known_gaps": [
+    "Estimates with the 11 asset-strategy variables as controls are described as available from the author and are not in the published record (DOC01 PDF p10-11 / pp.156-157).",
+    "No appendix, codebook or supplement exists in the published record found by this study."
+  ],
+  "embedded_data_disclosure": "DOC01 Table 1 prints means, standard deviations and correlations; these are printed data and are excluded as empirical inputs. Published results may be used only as sealed targets or publication diagnostics.",
+  "embedded_code": "none observed",
+  "identical_for_both_readers": true
+}

@@ -1,0 +1,32 @@
+PAPER_K7 grid implementation, repair round v1.2 complete (2026-10-28).
+
+Inputs applied: spec_amendment_v1_1.md (A1-A10, unchanged amendment) and checker_items.md (3 items).
+All three checker items were accepted and fixed; none was judged mistaken.
+
+Changes (confined to regression.py and pipeline.py):
+- Checker item 1 (A5/A10): regression._check_non_dummy_columns no longer raises a residual-df error
+  at the dummy-resolution stage. A rank-deficient non-dummy design, including one with no more rows
+  than non-dummy columns, is reported with its all-zero / collinear reason; the residual-df check is
+  left to fit_linear, after the permitted industry-dummy drops. Applies to reported models, nested
+  restricted models and every influence refit.
+- Checker item 2 (A6): pipeline.influence_rows emits one influence row per estimation-sample record
+  (term NA) when the original model fails, via the new _orig_failed_row, instead of one row per
+  record per term; and emits no row for an empty estimation sample (the stray deleted_V1 = NA row is
+  gone). Per-deletion failures inside a successful model still list every term.
+- Checker item 3 (section 6): pipeline.run_spec reports k and n_industry_dummies from the resolved
+  column names when the fit fails after a successful dummy resolution; _stat_row accepts them without
+  a successful fit. Both stay NA only when resolution failed or the sample was empty.
+- run_grid.py: implementation_version bumped to v1.2.
+
+Tests: 91 tests across six files, all passing (code/dev_out/test_log_v1_2.txt). New file
+code/tests/test_v1_2.py (16 tests) covers the three checker items, HC3 with a leverage-one row
+(OLS and WLS) and copy-rule validity. Two v1.1 assertions were updated in place to the amended
+behaviour (the "too few rows" reason and the failed-origin influence row count).
+
+Full grid on synthetic data/survey.csv: code/dev_out/v1_2/ (all six output files; 38 specs; 32
+recorded failures, all the D05 empty-sample artefact; log code/dev_out/v1_2_log.txt). On the
+synthetic file every failure is an empty-sample model, so k/n_industry_dummies are NA there and the
+checker-item-3 path is exercised by the unit tests. Synthetic results not interpreted.
+
+README: code/README.md, section "v1.2 changes" lists, for each amendment item and checker item,
+what changed; the superseded v1.1 descriptions (C9, A5, interpretation 33) are flagged.

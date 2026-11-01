@@ -1,0 +1,1692 @@
+{
+  "schema_version": 1,
+  "study": {
+    "short": "Deephouse",
+    "year": 1999,
+    "journal": "Strategic Management Journal",
+    "code": "SMJ",
+    "title": "Strategic balance & bank performance",
+    "topic": "Bank-year financial records",
+    "outcome": "indeterminate",
+    "summary": "The focal curvature is close, but its first-order term differs and the reconstructed sample is larger. Sample and market-area definitions remain unresolved.",
+    "sample": "1,255–1,260 bank-years rebuilt · 960 published",
+    "blocker": "Commercial-bank and metropolitan-area filters remain unresolved.",
+    "id": "deephouse1999",
+    "citation": "Deephouse (1999). To Be Different, or to Be the Same?. Strategic Management Journal.",
+    "doi": null,
+    "paper_outcomes": {
+      "study": "indeterminate",
+      "common": "indeterminate",
+      "lenient": "indeterminate"
+    },
+    "tables": [
+      "Table 2",
+      "Text"
+    ],
+    "claims": {
+      "common": {
+        "H2": "indeterminate",
+        "H3": "indeterminate"
+      },
+      "lenient": {
+        "H2": "indeterminate",
+        "H3": "indeterminate"
+      }
+    },
+    "provenance": "studies/deephouse1999/scoring/common_v1/terms.csv",
+    "stages": [
+      {
+        "name": "Sources",
+        "available": true,
+        "path": "studies/deephouse1999/registry"
+      },
+      {
+        "name": "Read",
+        "available": true,
+        "path": "studies/deephouse1999/readers"
+      },
+      {
+        "name": "Reconcile",
+        "available": true,
+        "path": "studies/deephouse1999/reconciliation"
+      },
+      {
+        "name": "Implement",
+        "available": true,
+        "path": "studies/deephouse1999/implementation"
+      },
+      {
+        "name": "Score",
+        "available": true,
+        "path": "studies/deephouse1999/scoring"
+      },
+      {
+        "name": "Review",
+        "available": true,
+        "path": "studies/deephouse1999/checks"
+      }
+    ]
+  },
+  "terms": [
+    {
+      "table": "Table 2",
+      "tier": "lower",
+      "claim": "",
+      "term": "M1 intercept",
+      "origins": "O_A / O_B",
+      "published": "0.929",
+      "published_se": "0.169",
+      "reconstructed": "0.838893867348085 / 0.87259992447825",
+      "distance_se": "0.529 / 0.33",
+      "n_gap": "0.312",
+      "v1_outcome": "consistent / consistent",
+      "common": "indeterminate",
+      "lenient": "consistent",
+      "id": "deephouse1999:0",
+      "outcomes": {
+        "study": "consistent",
+        "common": "indeterminate",
+        "lenient": "consistent"
+      },
+      "published_values": [
+        0.929
+      ],
+      "reconstructed_values": [
+        0.838893867348085,
+        0.87259992447825
+      ],
+      "summary_published": "0.929",
+      "summary_reconstructed": "0.839 / 0.873",
+      "comparison_source": "studies/deephouse1999/scoring/run_v1/term_scores.csv",
+      "comparison_source_rows": [
+        2,
+        3
+      ],
+      "distances": [
+        0.529,
+        0.33
+      ],
+      "sample_gap": [
+        0.312
+      ],
+      "scale": "reported scale",
+      "source": "studies/deephouse1999/scoring/common_v1/terms.csv",
+      "source_row": 2
+    },
+    {
+      "table": "Table 2",
+      "tier": "lower",
+      "claim": "",
+      "term": "M1 MS",
+      "origins": "O_A / O_B",
+      "published": "-0.576",
+      "published_se": "0.138",
+      "reconstructed": "-0.573962374543251 / -0.718699680471839",
+      "distance_se": "0.0111 / 1.03",
+      "n_gap": "0.312",
+      "v1_outcome": "consistent / consistent",
+      "common": "indeterminate",
+      "lenient": "consistent",
+      "id": "deephouse1999:1",
+      "outcomes": {
+        "study": "consistent",
+        "common": "indeterminate",
+        "lenient": "consistent"
+      },
+      "published_values": [
+        -0.576
+      ],
+      "reconstructed_values": [
+        -0.573962374543251,
+        -0.718699680471839
+      ],
+      "summary_published": "-0.576",
+      "summary_reconstructed": "-0.574 / -0.719",
+      "comparison_source": "studies/deephouse1999/scoring/run_v1/term_scores.csv",
+      "comparison_source_rows": [
+        4,
+        5
+      ],
+      "distances": [
+        0.0111,
+        1.03
+      ],
+      "sample_gap": [
+        0.312
+      ],
+      "scale": "reported scale",
+      "source": "studies/deephouse1999/scoring/common_v1/terms.csv",
+      "source_row": 3
+    },
+    {
+      "table": "Table 2",
+      "tier": "lower",
+      "claim": "",
+      "term": "M1 TER",
+      "origins": "O_A / O_B",
+      "published": "-9.948",
+      "published_se": "2",
+      "reconstructed": "-9.00188202184642 / -9.02712233486594",
+      "distance_se": "0.472 / 0.46",
+      "n_gap": "0.312",
+      "v1_outcome": "consistent / consistent",
+      "common": "indeterminate",
+      "lenient": "consistent",
+      "id": "deephouse1999:2",
+      "outcomes": {
+        "study": "consistent",
+        "common": "indeterminate",
+        "lenient": "consistent"
+      },
+      "published_values": [
+        -9.948
+      ],
+      "reconstructed_values": [
+        -9.00188202184642,
+        -9.02712233486594
+      ],
+      "summary_published": "-9.95",
+      "summary_reconstructed": "-9 / -9.03",
+      "comparison_source": "studies/deephouse1999/scoring/run_v1/term_scores.csv",
+      "comparison_source_rows": [
+        6,
+        7
+      ],
+      "distances": [
+        0.472,
+        0.46
+      ],
+      "sample_gap": [
+        0.312
+      ],
+      "scale": "reported scale",
+      "source": "studies/deephouse1999/scoring/common_v1/terms.csv",
+      "source_row": 4
+    },
+    {
+      "table": "Table 2",
+      "tier": "lower",
+      "claim": "",
+      "term": "M1 RMG",
+      "origins": "O_A / O_B",
+      "published": "0.014",
+      "published_se": "0.004",
+      "reconstructed": "0.0067292416341005 / 0.0098649573060312",
+      "distance_se": "1.5 / 0.808",
+      "n_gap": "0.312",
+      "v1_outcome": "discrepant_candidate / consistent",
+      "common": "indeterminate",
+      "lenient": "indeterminate",
+      "id": "deephouse1999:3",
+      "outcomes": {
+        "study": "indeterminate",
+        "common": "indeterminate",
+        "lenient": "indeterminate"
+      },
+      "published_values": [
+        0.014
+      ],
+      "reconstructed_values": [
+        0.0067292416341005,
+        0.0098649573060312
+      ],
+      "summary_published": "0.014",
+      "summary_reconstructed": "0.00673 / 0.00986",
+      "comparison_source": "studies/deephouse1999/scoring/run_v1/term_scores.csv",
+      "comparison_source_rows": [
+        8,
+        9
+      ],
+      "distances": [
+        1.5,
+        0.808
+      ],
+      "sample_gap": [
+        0.312
+      ],
+      "scale": "reported scale",
+      "source": "studies/deephouse1999/scoring/common_v1/terms.csv",
+      "source_row": 5
+    },
+    {
+      "table": "Table 2",
+      "tier": "lower",
+      "claim": "",
+      "term": "M1 lag",
+      "origins": "O_A / O_B",
+      "published": "0.369",
+      "published_se": "0.028",
+      "reconstructed": "0.399423811563927 / 0.391469644742413",
+      "distance_se": "1.05 / 0.771",
+      "n_gap": "0.312",
+      "v1_outcome": "consistent / consistent",
+      "common": "indeterminate",
+      "lenient": "consistent",
+      "id": "deephouse1999:4",
+      "outcomes": {
+        "study": "consistent",
+        "common": "indeterminate",
+        "lenient": "consistent"
+      },
+      "published_values": [
+        0.369
+      ],
+      "reconstructed_values": [
+        0.399423811563927,
+        0.391469644742413
+      ],
+      "summary_published": "0.369",
+      "summary_reconstructed": "0.399 / 0.391",
+      "comparison_source": "studies/deephouse1999/scoring/run_v1/term_scores.csv",
+      "comparison_source_rows": [
+        10,
+        11
+      ],
+      "distances": [
+        1.05,
+        0.771
+      ],
+      "sample_gap": [
+        0.312
+      ],
+      "scale": "reported scale",
+      "source": "studies/deephouse1999/scoring/common_v1/terms.csv",
+      "source_row": 6
+    },
+    {
+      "table": "Table 2",
+      "tier": "lower",
+      "claim": "",
+      "term": "M2 intercept",
+      "origins": "O_A / O_B",
+      "published": "1.164",
+      "published_se": "0.172",
+      "reconstructed": "0.923256101797428 / 0.906446703507969",
+      "distance_se": "1.39 / 1.49",
+      "n_gap": "0.312",
+      "v1_outcome": "consistent / consistent",
+      "common": "indeterminate",
+      "lenient": "consistent",
+      "id": "deephouse1999:5",
+      "outcomes": {
+        "study": "consistent",
+        "common": "indeterminate",
+        "lenient": "consistent"
+      },
+      "published_values": [
+        1.164
+      ],
+      "reconstructed_values": [
+        0.923256101797428,
+        0.906446703507969
+      ],
+      "summary_published": "1.16",
+      "summary_reconstructed": "0.923 / 0.906",
+      "comparison_source": "studies/deephouse1999/scoring/run_v1/term_scores.csv",
+      "comparison_source_rows": [
+        12,
+        13
+      ],
+      "distances": [
+        1.39,
+        1.49
+      ],
+      "sample_gap": [
+        0.312
+      ],
+      "scale": "reported scale",
+      "source": "studies/deephouse1999/scoring/common_v1/terms.csv",
+      "source_row": 7
+    },
+    {
+      "table": "Table 2",
+      "tier": "focal",
+      "claim": "H2",
+      "term": "M2 SD",
+      "origins": "O_A / O_B",
+      "published": "-0.02",
+      "published_se": "0.004",
+      "reconstructed": "-0.0140238971861205 / -0.0061318245975546",
+      "distance_se": "1.22 / 2.97",
+      "n_gap": "0.312",
+      "v1_outcome": "consistent / discrepant_candidate",
+      "common": "indeterminate",
+      "lenient": "indeterminate",
+      "id": "deephouse1999:6",
+      "outcomes": {
+        "study": "indeterminate",
+        "common": "indeterminate",
+        "lenient": "indeterminate"
+      },
+      "published_values": [
+        -0.02
+      ],
+      "reconstructed_values": [
+        -0.0140238971861205,
+        -0.0061318245975546
+      ],
+      "summary_published": "-0.02",
+      "summary_reconstructed": "-0.014 / -0.00613",
+      "comparison_source": "studies/deephouse1999/scoring/run_v1/term_scores.csv",
+      "comparison_source_rows": [
+        14,
+        15
+      ],
+      "distances": [
+        1.22,
+        2.97
+      ],
+      "sample_gap": [
+        0.312
+      ],
+      "scale": "reported scale",
+      "source": "studies/deephouse1999/scoring/common_v1/terms.csv",
+      "source_row": 8
+    },
+    {
+      "table": "Table 2",
+      "tier": "lower",
+      "claim": "",
+      "term": "M2 MS",
+      "origins": "O_A / O_B",
+      "published": "-0.093",
+      "published_se": "0.161",
+      "reconstructed": "-0.182437430077985 / -0.584766719738228",
+      "distance_se": "0.551 / 3.04",
+      "n_gap": "0.312",
+      "v1_outcome": "consistent / discrepant_candidate",
+      "common": "indeterminate",
+      "lenient": "indeterminate",
+      "id": "deephouse1999:7",
+      "outcomes": {
+        "study": "indeterminate",
+        "common": "indeterminate",
+        "lenient": "indeterminate"
+      },
+      "published_values": [
+        -0.093
+      ],
+      "reconstructed_values": [
+        -0.182437430077985,
+        -0.584766719738228
+      ],
+      "summary_published": "-0.093",
+      "summary_reconstructed": "-0.182 / -0.585",
+      "comparison_source": "studies/deephouse1999/scoring/run_v1/term_scores.csv",
+      "comparison_source_rows": [
+        16,
+        17
+      ],
+      "distances": [
+        0.551,
+        3.04
+      ],
+      "sample_gap": [
+        0.312
+      ],
+      "scale": "reported scale",
+      "source": "studies/deephouse1999/scoring/common_v1/terms.csv",
+      "source_row": 9
+    },
+    {
+      "table": "Table 2",
+      "tier": "lower",
+      "claim": "",
+      "term": "M2 TER",
+      "origins": "O_A / O_B",
+      "published": "-10.601",
+      "published_se": "1.97",
+      "reconstructed": "-8.61501091109973 / -8.80493460735225",
+      "distance_se": "1.01 / 0.909",
+      "n_gap": "0.312",
+      "v1_outcome": "consistent / consistent",
+      "common": "indeterminate",
+      "lenient": "consistent",
+      "id": "deephouse1999:8",
+      "outcomes": {
+        "study": "consistent",
+        "common": "indeterminate",
+        "lenient": "consistent"
+      },
+      "published_values": [
+        -10.601
+      ],
+      "reconstructed_values": [
+        -8.61501091109973,
+        -8.80493460735225
+      ],
+      "summary_published": "-10.6",
+      "summary_reconstructed": "-8.62 / -8.8",
+      "comparison_source": "studies/deephouse1999/scoring/run_v1/term_scores.csv",
+      "comparison_source_rows": [
+        18,
+        19
+      ],
+      "distances": [
+        1.01,
+        0.909
+      ],
+      "sample_gap": [
+        0.312
+      ],
+      "scale": "reported scale",
+      "source": "studies/deephouse1999/scoring/common_v1/terms.csv",
+      "source_row": 10
+    },
+    {
+      "table": "Table 2",
+      "tier": "lower",
+      "claim": "",
+      "term": "M2 RMG",
+      "origins": "O_A / O_B",
+      "published": "0.016",
+      "published_se": "0.004",
+      "reconstructed": "0.0092366638498403 / 0.0105311668355493",
+      "distance_se": "1.39 / 1.1",
+      "n_gap": "0.312",
+      "v1_outcome": "grey / consistent",
+      "common": "indeterminate",
+      "lenient": "indeterminate",
+      "id": "deephouse1999:9",
+      "outcomes": {
+        "study": "indeterminate",
+        "common": "indeterminate",
+        "lenient": "indeterminate"
+      },
+      "published_values": [
+        0.016
+      ],
+      "reconstructed_values": [
+        0.0092366638498403,
+        0.0105311668355493
+      ],
+      "summary_published": "0.016",
+      "summary_reconstructed": "0.00924 / 0.0105",
+      "comparison_source": "studies/deephouse1999/scoring/run_v1/term_scores.csv",
+      "comparison_source_rows": [
+        20,
+        21
+      ],
+      "distances": [
+        1.39,
+        1.1
+      ],
+      "sample_gap": [
+        0.312
+      ],
+      "scale": "reported scale",
+      "source": "studies/deephouse1999/scoring/common_v1/terms.csv",
+      "source_row": 11
+    },
+    {
+      "table": "Table 2",
+      "tier": "lower",
+      "claim": "",
+      "term": "M2 lag",
+      "origins": "O_A / O_B",
+      "published": "0.361",
+      "published_se": "0.027",
+      "reconstructed": "0.399563278982612 / 0.391727396280443",
+      "distance_se": "1.38 / 1.1",
+      "n_gap": "0.312",
+      "v1_outcome": "consistent / consistent",
+      "common": "indeterminate",
+      "lenient": "consistent",
+      "id": "deephouse1999:10",
+      "outcomes": {
+        "study": "consistent",
+        "common": "indeterminate",
+        "lenient": "consistent"
+      },
+      "published_values": [
+        0.361
+      ],
+      "reconstructed_values": [
+        0.399563278982612,
+        0.391727396280443
+      ],
+      "summary_published": "0.361",
+      "summary_reconstructed": "0.4 / 0.392",
+      "comparison_source": "studies/deephouse1999/scoring/run_v1/term_scores.csv",
+      "comparison_source_rows": [
+        22,
+        23
+      ],
+      "distances": [
+        1.38,
+        1.1
+      ],
+      "sample_gap": [
+        0.312
+      ],
+      "scale": "reported scale",
+      "source": "studies/deephouse1999/scoring/common_v1/terms.csv",
+      "source_row": 12
+    },
+    {
+      "table": "Table 2",
+      "tier": "lower",
+      "claim": "",
+      "term": "M3 intercept",
+      "origins": "O_A / O_B",
+      "published": "0.511",
+      "published_se": "0.171",
+      "reconstructed": "0.0253149914601446 / 0.228820326368882",
+      "distance_se": "2.83 / 1.64",
+      "n_gap": "0.312",
+      "v1_outcome": "discrepant_candidate / discrepant_candidate",
+      "common": "indeterminate",
+      "lenient": "indeterminate",
+      "id": "deephouse1999:11",
+      "outcomes": {
+        "study": "candidate",
+        "common": "indeterminate",
+        "lenient": "indeterminate"
+      },
+      "published_values": [
+        0.511
+      ],
+      "reconstructed_values": [
+        0.0253149914601446,
+        0.228820326368882
+      ],
+      "summary_published": "0.511",
+      "summary_reconstructed": "0.0253 / 0.229",
+      "comparison_source": "studies/deephouse1999/scoring/run_v1/term_scores.csv",
+      "comparison_source_rows": [
+        24,
+        25
+      ],
+      "distances": [
+        2.83,
+        1.64
+      ],
+      "sample_gap": [
+        0.312
+      ],
+      "scale": "reported scale",
+      "source": "studies/deephouse1999/scoring/common_v1/terms.csv",
+      "source_row": 13
+    },
+    {
+      "table": "Table 2",
+      "tier": "focal",
+      "claim": "H3",
+      "term": "M3 SD2",
+      "origins": "O_A / O_B",
+      "published": "-0.006",
+      "published_se": "0.001",
+      "reconstructed": "-0.0042915887272662 / -0.0039315325811052",
+      "distance_se": "0.806 / 1.05",
+      "n_gap": "0.312",
+      "v1_outcome": "consistent / consistent",
+      "common": "indeterminate",
+      "lenient": "consistent",
+      "id": "deephouse1999:12",
+      "outcomes": {
+        "study": "consistent",
+        "common": "indeterminate",
+        "lenient": "consistent"
+      },
+      "published_values": [
+        -0.006
+      ],
+      "reconstructed_values": [
+        -0.0042915887272662,
+        -0.0039315325811052
+      ],
+      "summary_published": "-0.006",
+      "summary_reconstructed": "-0.00429 / -0.00393",
+      "comparison_source": "studies/deephouse1999/scoring/run_v1/term_scores.csv",
+      "comparison_source_rows": [
+        26,
+        27
+      ],
+      "distances": [
+        0.806,
+        1.05
+      ],
+      "sample_gap": [
+        0.312
+      ],
+      "scale": "reported scale",
+      "source": "studies/deephouse1999/scoring/common_v1/terms.csv",
+      "source_row": 14
+    },
+    {
+      "table": "Table 2",
+      "tier": "focal",
+      "claim": "H3",
+      "term": "M3 SD",
+      "origins": "O_A / O_B",
+      "published": "0.17",
+      "published_se": "0.017",
+      "reconstructed": "0.111637374385453 / 0.100304803944891",
+      "distance_se": "3.31 / 3.95",
+      "n_gap": "0.312",
+      "v1_outcome": "discrepant_candidate / discrepant_candidate",
+      "common": "indeterminate",
+      "lenient": "indeterminate",
+      "id": "deephouse1999:13",
+      "outcomes": {
+        "study": "candidate",
+        "common": "indeterminate",
+        "lenient": "indeterminate"
+      },
+      "published_values": [
+        0.17
+      ],
+      "reconstructed_values": [
+        0.111637374385453,
+        0.100304803944891
+      ],
+      "summary_published": "0.17",
+      "summary_reconstructed": "0.112 / 0.1",
+      "comparison_source": "studies/deephouse1999/scoring/run_v1/term_scores.csv",
+      "comparison_source_rows": [
+        28,
+        29
+      ],
+      "distances": [
+        3.31,
+        3.95
+      ],
+      "sample_gap": [
+        0.312
+      ],
+      "scale": "reported scale",
+      "source": "studies/deephouse1999/scoring/common_v1/terms.csv",
+      "source_row": 15
+    },
+    {
+      "table": "Table 2",
+      "tier": "lower",
+      "claim": "",
+      "term": "M3 MS",
+      "origins": "O_A / O_B",
+      "published": "-0.457",
+      "published_se": "0.155",
+      "reconstructed": "-0.380555617513779 / -0.771399913369744",
+      "distance_se": "0.488 / 2.02",
+      "n_gap": "0.312",
+      "v1_outcome": "grey / grey",
+      "common": "indeterminate",
+      "lenient": "indeterminate",
+      "id": "deephouse1999:14",
+      "outcomes": {
+        "study": "indeterminate",
+        "common": "indeterminate",
+        "lenient": "indeterminate"
+      },
+      "published_values": [
+        -0.457
+      ],
+      "reconstructed_values": [
+        -0.380555617513779,
+        -0.771399913369744
+      ],
+      "summary_published": "-0.457",
+      "summary_reconstructed": "-0.381 / -0.771",
+      "comparison_source": "studies/deephouse1999/scoring/run_v1/term_scores.csv",
+      "comparison_source_rows": [
+        30,
+        31
+      ],
+      "distances": [
+        0.488,
+        2.02
+      ],
+      "sample_gap": [
+        0.312
+      ],
+      "scale": "reported scale",
+      "source": "studies/deephouse1999/scoring/common_v1/terms.csv",
+      "source_row": 16
+    },
+    {
+      "table": "Table 2",
+      "tier": "lower",
+      "claim": "",
+      "term": "M3 TER",
+      "origins": "O_A / O_B",
+      "published": "-15.387",
+      "published_se": "1.9",
+      "reconstructed": "-5.93045398470335 / -7.12078421481191",
+      "distance_se": "4.99 / 4.36",
+      "n_gap": "0.312",
+      "v1_outcome": "discrepant_candidate / discrepant_candidate",
+      "common": "indeterminate",
+      "lenient": "indeterminate",
+      "id": "deephouse1999:15",
+      "outcomes": {
+        "study": "candidate",
+        "common": "indeterminate",
+        "lenient": "indeterminate"
+      },
+      "published_values": [
+        -15.387
+      ],
+      "reconstructed_values": [
+        -5.93045398470335,
+        -7.12078421481191
+      ],
+      "summary_published": "-15.4",
+      "summary_reconstructed": "-5.93 / -7.12",
+      "comparison_source": "studies/deephouse1999/scoring/run_v1/term_scores.csv",
+      "comparison_source_rows": [
+        32,
+        33
+      ],
+      "distances": [
+        4.99,
+        4.36
+      ],
+      "sample_gap": [
+        0.312
+      ],
+      "scale": "reported scale",
+      "source": "studies/deephouse1999/scoring/common_v1/terms.csv",
+      "source_row": 17
+    },
+    {
+      "table": "Table 2",
+      "tier": "lower",
+      "claim": "",
+      "term": "M3 RMG",
+      "origins": "O_A / O_B",
+      "published": "0.018",
+      "published_se": "0.003",
+      "reconstructed": "0.0069815424499352 / 0.0105020463627217",
+      "distance_se": "3.01 / 2",
+      "n_gap": "0.312",
+      "v1_outcome": "discrepant_candidate / grey",
+      "common": "indeterminate",
+      "lenient": "indeterminate",
+      "id": "deephouse1999:16",
+      "outcomes": {
+        "study": "indeterminate",
+        "common": "indeterminate",
+        "lenient": "indeterminate"
+      },
+      "published_values": [
+        0.018
+      ],
+      "reconstructed_values": [
+        0.0069815424499352,
+        0.0105020463627217
+      ],
+      "summary_published": "0.018",
+      "summary_reconstructed": "0.00698 / 0.0105",
+      "comparison_source": "studies/deephouse1999/scoring/run_v1/term_scores.csv",
+      "comparison_source_rows": [
+        34,
+        35
+      ],
+      "distances": [
+        3.01,
+        2.0
+      ],
+      "sample_gap": [
+        0.312
+      ],
+      "scale": "reported scale",
+      "source": "studies/deephouse1999/scoring/common_v1/terms.csv",
+      "source_row": 18
+    },
+    {
+      "table": "Table 2",
+      "tier": "lower",
+      "claim": "",
+      "term": "M3 lag",
+      "origins": "O_A / O_B",
+      "published": "0.403",
+      "published_se": "0.026",
+      "reconstructed": "0.465728713560492 / 0.428668606040279",
+      "distance_se": "2.35 / 0.95",
+      "n_gap": "0.312",
+      "v1_outcome": "grey / consistent",
+      "common": "indeterminate",
+      "lenient": "indeterminate",
+      "id": "deephouse1999:17",
+      "outcomes": {
+        "study": "indeterminate",
+        "common": "indeterminate",
+        "lenient": "indeterminate"
+      },
+      "published_values": [
+        0.403
+      ],
+      "reconstructed_values": [
+        0.465728713560492,
+        0.428668606040279
+      ],
+      "summary_published": "0.403",
+      "summary_reconstructed": "0.466 / 0.429",
+      "comparison_source": "studies/deephouse1999/scoring/run_v1/term_scores.csv",
+      "comparison_source_rows": [
+        36,
+        37
+      ],
+      "distances": [
+        2.35,
+        0.95
+      ],
+      "sample_gap": [
+        0.312
+      ],
+      "scale": "reported scale",
+      "source": "studies/deephouse1999/scoring/common_v1/terms.csv",
+      "source_row": 19
+    },
+    {
+      "table": "Text",
+      "tier": "lower",
+      "claim": "",
+      "term": "M3_SQ SD2",
+      "origins": "O_A / O_B",
+      "published": "-0.001",
+      "published_se": "0.0001",
+      "reconstructed": "-0.0006399497396669 / -0.0003731319481398",
+      "distance_se": "0 / 0.846",
+      "n_gap": "0.312",
+      "v1_outcome": "consistent / consistent",
+      "common": "indeterminate",
+      "lenient": "consistent",
+      "id": "deephouse1999:18",
+      "outcomes": {
+        "study": "consistent",
+        "common": "indeterminate",
+        "lenient": "consistent"
+      },
+      "published_values": [
+        -0.001
+      ],
+      "reconstructed_values": [
+        -0.0006399497396669,
+        -0.0003731319481398
+      ],
+      "summary_published": "-0.001",
+      "summary_reconstructed": "-0.00064 / -0.000373",
+      "comparison_source": "studies/deephouse1999/scoring/run_v1/term_scores.csv",
+      "comparison_source_rows": [
+        38,
+        39
+      ],
+      "distances": [
+        0.0,
+        0.846
+      ],
+      "sample_gap": [
+        0.312
+      ],
+      "scale": "reported scale",
+      "source": "studies/deephouse1999/scoring/common_v1/terms.csv",
+      "source_row": 20
+    }
+  ],
+  "displays": [
+    {
+      "id": "table_1",
+      "kind": "table",
+      "title": "Table 2",
+      "subtitle": "1–18 / 18 estimates",
+      "row_label": "Estimate",
+      "columns": [
+        "Origin O_A",
+        "Origin O_B"
+      ],
+      "rows": [
+        {
+          "label": "Model 1 · intercept",
+          "term": "M1 intercept",
+          "cells": [
+            {
+              "estimate": 0.838893867348085,
+              "published": 0.929,
+              "se": 0.109518128729176,
+              "published_se": 0.169,
+              "source_row": 2,
+              "saved_outcome": "consistent / consistent",
+              "scale": "reported scale",
+              "delta": -0.09010613265191503,
+              "distance_se": 0.5331723825557102,
+              "distance_band": "close"
+            },
+            {
+              "estimate": 0.87259992447825,
+              "published": 0.929,
+              "se": 0.108872527133549,
+              "published_se": 0.169,
+              "source_row": 3,
+              "saved_outcome": "consistent / consistent",
+              "scale": "reported scale",
+              "delta": -0.05640007552175008,
+              "distance_se": 0.3337282575251484,
+              "distance_band": "close"
+            }
+          ]
+        },
+        {
+          "label": "Model 1 · MS",
+          "term": "M1 MS",
+          "cells": [
+            {
+              "estimate": -0.573962374543251,
+              "published": -0.576,
+              "se": 0.127460811314528,
+              "published_se": 0.138,
+              "source_row": 4,
+              "saved_outcome": "consistent / consistent",
+              "scale": "reported scale",
+              "delta": 0.002037625456748904,
+              "distance_se": 0.014765401860499301,
+              "distance_band": "close"
+            },
+            {
+              "estimate": -0.718699680471839,
+              "published": -0.576,
+              "se": 0.117792704678864,
+              "published_se": 0.138,
+              "source_row": 5,
+              "saved_outcome": "consistent / consistent",
+              "scale": "reported scale",
+              "delta": -0.142699680471839,
+              "distance_se": 1.0340556555930362,
+              "distance_band": "moderate"
+            }
+          ]
+        },
+        {
+          "label": "Model 1 · TER",
+          "term": "M1 TER",
+          "cells": [
+            {
+              "estimate": -9.00188202184642,
+              "published": -9.948,
+              "se": 1.26019911919065,
+              "published_se": 2.0,
+              "source_row": 6,
+              "saved_outcome": "consistent / consistent",
+              "scale": "reported scale",
+              "delta": 0.9461179781535805,
+              "distance_se": 0.4730589890767902,
+              "distance_band": "close"
+            },
+            {
+              "estimate": -9.02712233486594,
+              "published": -9.948,
+              "se": 1.25497985048581,
+              "published_se": 2.0,
+              "source_row": 7,
+              "saved_outcome": "consistent / consistent",
+              "scale": "reported scale",
+              "delta": 0.9208776651340607,
+              "distance_se": 0.46043883256703033,
+              "distance_band": "close"
+            }
+          ]
+        },
+        {
+          "label": "Model 1 · RMG",
+          "term": "M1 RMG",
+          "cells": [
+            {
+              "estimate": 0.0067292416341005,
+              "published": 0.014,
+              "se": 0.0036485701682299,
+              "published_se": 0.004,
+              "source_row": 8,
+              "saved_outcome": "discrepant_candidate / consistent",
+              "scale": "reported scale",
+              "delta": -0.0072707583658995,
+              "distance_se": 1.817689591474875,
+              "distance_band": "moderate"
+            },
+            {
+              "estimate": 0.0098649573060312,
+              "published": 0.014,
+              "se": 0.0032537106057197,
+              "published_se": 0.004,
+              "source_row": 9,
+              "saved_outcome": "discrepant_candidate / consistent",
+              "scale": "reported scale",
+              "delta": -0.004135042693968801,
+              "distance_se": 1.0337606734922002,
+              "distance_band": "moderate"
+            }
+          ]
+        },
+        {
+          "label": "Model 1 · lag",
+          "term": "M1 lag",
+          "cells": [
+            {
+              "estimate": 0.399423811563927,
+              "published": 0.369,
+              "se": 0.0215101119974679,
+              "published_se": 0.028,
+              "source_row": 10,
+              "saved_outcome": "consistent / consistent",
+              "scale": "reported scale",
+              "delta": 0.030423811563926983,
+              "distance_se": 1.086564698711678,
+              "distance_band": "moderate"
+            },
+            {
+              "estimate": 0.391469644742413,
+              "published": 0.369,
+              "se": 0.0218106465684829,
+              "published_se": 0.028,
+              "source_row": 11,
+              "saved_outcome": "consistent / consistent",
+              "scale": "reported scale",
+              "delta": 0.02246964474241303,
+              "distance_se": 0.8024873122290368,
+              "distance_band": "close"
+            }
+          ]
+        },
+        {
+          "label": "Model 2 · intercept",
+          "term": "M2 intercept",
+          "cells": [
+            {
+              "estimate": 0.923256101797428,
+              "published": 1.164,
+              "se": 0.110559825115472,
+              "published_se": 0.172,
+              "source_row": 12,
+              "saved_outcome": "consistent / consistent",
+              "scale": "reported scale",
+              "delta": -0.24074389820257192,
+              "distance_se": 1.399673826759139,
+              "distance_band": "moderate"
+            },
+            {
+              "estimate": 0.906446703507969,
+              "published": 1.164,
+              "se": 0.110576064862481,
+              "published_se": 0.172,
+              "source_row": 13,
+              "saved_outcome": "consistent / consistent",
+              "scale": "reported scale",
+              "delta": -0.25755329649203096,
+              "distance_se": 1.4974028865815754,
+              "distance_band": "moderate"
+            }
+          ]
+        },
+        {
+          "label": "Model 2 · SD",
+          "term": "M2 SD",
+          "cells": [
+            {
+              "estimate": -0.0140238971861205,
+              "published": -0.02,
+              "se": 0.0032883425676192,
+              "published_se": 0.004,
+              "source_row": 14,
+              "saved_outcome": "consistent / discrepant_candidate",
+              "scale": "reported scale",
+              "delta": 0.005976102813879501,
+              "distance_se": 1.4940257034698752,
+              "distance_band": "moderate"
+            },
+            {
+              "estimate": -0.0061318245975546,
+              "published": -0.02,
+              "se": 0.0035870427148341,
+              "published_se": 0.004,
+              "source_row": 15,
+              "saved_outcome": "consistent / discrepant_candidate",
+              "scale": "reported scale",
+              "delta": 0.0138681754024454,
+              "distance_se": 3.4670438506113497,
+              "distance_band": "large"
+            }
+          ]
+        },
+        {
+          "label": "Model 2 · MS",
+          "term": "M2 MS",
+          "cells": [
+            {
+              "estimate": -0.182437430077985,
+              "published": -0.093,
+              "se": 0.156380870539021,
+              "published_se": 0.161,
+              "source_row": 16,
+              "saved_outcome": "consistent / discrepant_candidate",
+              "scale": "reported scale",
+              "delta": -0.08943743007798499,
+              "distance_se": 0.5555119880620185,
+              "distance_band": "close"
+            },
+            {
+              "estimate": -0.584766719738228,
+              "published": -0.093,
+              "se": 0.141394508921063,
+              "published_se": 0.161,
+              "source_row": 17,
+              "saved_outcome": "consistent / discrepant_candidate",
+              "scale": "reported scale",
+              "delta": -0.49176671973822805,
+              "distance_se": 3.0544516753927207,
+              "distance_band": "large"
+            }
+          ]
+        },
+        {
+          "label": "Model 2 · TER",
+          "term": "M2 TER",
+          "cells": [
+            {
+              "estimate": -8.61501091109973,
+              "published": -10.601,
+              "se": 1.25494014427716,
+              "published_se": 1.97,
+              "source_row": 18,
+              "saved_outcome": "consistent / consistent",
+              "scale": "reported scale",
+              "delta": 1.9859890889002703,
+              "distance_se": 1.008116288781863,
+              "distance_band": "moderate"
+            },
+            {
+              "estimate": -8.80493460735225,
+              "published": -10.601,
+              "se": 1.26073402895156,
+              "published_se": 1.97,
+              "source_row": 19,
+              "saved_outcome": "consistent / consistent",
+              "scale": "reported scale",
+              "delta": 1.7960653926477512,
+              "distance_se": 0.9117083211409904,
+              "distance_band": "close"
+            }
+          ]
+        },
+        {
+          "label": "Model 2 · RMG",
+          "term": "M2 RMG",
+          "cells": [
+            {
+              "estimate": 0.0092366638498403,
+              "published": 0.016,
+              "se": 0.0036712244733691,
+              "published_se": 0.004,
+              "source_row": 20,
+              "saved_outcome": "grey / consistent",
+              "scale": "reported scale",
+              "delta": -0.006763336150159701,
+              "distance_se": 1.6908340375399251,
+              "distance_band": "moderate"
+            },
+            {
+              "estimate": 0.0105311668355493,
+              "published": 0.016,
+              "se": 0.0032744867324456,
+              "published_se": 0.004,
+              "source_row": 21,
+              "saved_outcome": "grey / consistent",
+              "scale": "reported scale",
+              "delta": -0.005468833164450701,
+              "distance_se": 1.367208291112675,
+              "distance_band": "moderate"
+            }
+          ]
+        },
+        {
+          "label": "Model 2 · lag",
+          "term": "M2 lag",
+          "cells": [
+            {
+              "estimate": 0.399563278982612,
+              "published": 0.361,
+              "se": 0.0213643363917817,
+              "published_se": 0.027,
+              "source_row": 22,
+              "saved_outcome": "consistent / consistent",
+              "scale": "reported scale",
+              "delta": 0.038563278982612026,
+              "distance_se": 1.4282695919485935,
+              "distance_band": "moderate"
+            },
+            {
+              "estimate": 0.391727396280443,
+              "published": 0.361,
+              "se": 0.021794417910981,
+              "published_se": 0.027,
+              "source_row": 23,
+              "saved_outcome": "consistent / consistent",
+              "scale": "reported scale",
+              "delta": 0.03072739628044302,
+              "distance_se": 1.1380517140904822,
+              "distance_band": "moderate"
+            }
+          ]
+        },
+        {
+          "label": "Model 3 · intercept",
+          "term": "M3 intercept",
+          "cells": [
+            {
+              "estimate": 0.0253149914601446,
+              "published": 0.511,
+              "se": 0.153278276071919,
+              "published_se": 0.171,
+              "source_row": 24,
+              "saved_outcome": "discrepant_candidate / discrepant_candidate",
+              "scale": "reported scale",
+              "delta": -0.4856850085398554,
+              "distance_se": 2.8402632078354118,
+              "distance_band": "large"
+            },
+            {
+              "estimate": 0.228820326368882,
+              "published": 0.511,
+              "se": 0.155496923773038,
+              "published_se": 0.171,
+              "source_row": 25,
+              "saved_outcome": "discrepant_candidate / discrepant_candidate",
+              "scale": "reported scale",
+              "delta": -0.282179673631118,
+              "distance_se": 1.6501735300065379,
+              "distance_band": "moderate"
+            }
+          ]
+        },
+        {
+          "label": "Model 3 · SD2",
+          "term": "M3 SD2",
+          "cells": [
+            {
+              "estimate": -0.0042915887272662,
+              "published": -0.006,
+              "se": 0.0005211288623367,
+              "published_se": 0.001,
+              "source_row": 26,
+              "saved_outcome": "consistent / consistent",
+              "scale": "reported scale",
+              "delta": 0.0017084112727338,
+              "distance_se": 1.7084112727338,
+              "distance_band": "moderate"
+            },
+            {
+              "estimate": -0.0039315325811052,
+              "published": -0.006,
+              "se": 0.0006434088722433,
+              "published_se": 0.001,
+              "source_row": 27,
+              "saved_outcome": "consistent / consistent",
+              "scale": "reported scale",
+              "delta": 0.0020684674188948,
+              "distance_se": 2.0684674188948,
+              "distance_band": "large"
+            }
+          ]
+        },
+        {
+          "label": "Model 3 · SD",
+          "term": "M3 SD",
+          "cells": [
+            {
+              "estimate": 0.111637374385453,
+              "published": 0.17,
+              "se": 0.0155918516220517,
+              "published_se": 0.017,
+              "source_row": 28,
+              "saved_outcome": "discrepant_candidate / discrepant_candidate",
+              "scale": "reported scale",
+              "delta": -0.05836262561454701,
+              "distance_se": 3.433095624385118,
+              "distance_band": "large"
+            },
+            {
+              "estimate": 0.100304803944891,
+              "published": 0.17,
+              "se": 0.0177739971331678,
+              "published_se": 0.017,
+              "source_row": 29,
+              "saved_outcome": "discrepant_candidate / discrepant_candidate",
+              "scale": "reported scale",
+              "delta": -0.06969519605510902,
+              "distance_se": 4.099717415006412,
+              "distance_band": "large"
+            }
+          ]
+        },
+        {
+          "label": "Model 3 · MS",
+          "term": "M3 MS",
+          "cells": [
+            {
+              "estimate": -0.380555617513779,
+              "published": -0.457,
+              "se": 0.154261475539931,
+              "published_se": 0.155,
+              "source_row": 30,
+              "saved_outcome": "grey / grey",
+              "scale": "reported scale",
+              "delta": 0.07644438248622104,
+              "distance_se": 0.49318956442723255,
+              "distance_band": "close"
+            },
+            {
+              "estimate": -0.771399913369744,
+              "published": -0.457,
+              "se": 0.142688770920048,
+              "published_se": 0.155,
+              "source_row": 31,
+              "saved_outcome": "grey / grey",
+              "scale": "reported scale",
+              "delta": -0.314399913369744,
+              "distance_se": 2.028386537869316,
+              "distance_band": "large"
+            }
+          ]
+        },
+        {
+          "label": "Model 3 · TER",
+          "term": "M3 TER",
+          "cells": [
+            {
+              "estimate": -5.93045398470335,
+              "published": -15.387,
+              "se": 1.26549259132964,
+              "published_se": 1.9,
+              "source_row": 32,
+              "saved_outcome": "discrepant_candidate / discrepant_candidate",
+              "scale": "reported scale",
+              "delta": 9.45654601529665,
+              "distance_se": 4.977129481735079,
+              "distance_band": "large"
+            },
+            {
+              "estimate": -7.12078421481191,
+              "published": -15.387,
+              "se": 1.27298058499983,
+              "published_se": 1.9,
+              "source_row": 33,
+              "saved_outcome": "discrepant_candidate / discrepant_candidate",
+              "scale": "reported scale",
+              "delta": 8.266215785188091,
+              "distance_se": 4.350639886941101,
+              "distance_band": "large"
+            }
+          ]
+        },
+        {
+          "label": "Model 3 · RMG",
+          "term": "M3 RMG",
+          "cells": [
+            {
+              "estimate": 0.0069815424499352,
+              "published": 0.018,
+              "se": 0.0035876248288309,
+              "published_se": 0.003,
+              "source_row": 34,
+              "saved_outcome": "discrepant_candidate / grey",
+              "scale": "reported scale",
+              "delta": -0.011018457550064798,
+              "distance_se": 3.6728191833549326,
+              "distance_band": "large"
+            },
+            {
+              "estimate": 0.0105020463627217,
+              "published": 0.018,
+              "se": 0.0032278717729511,
+              "published_se": 0.003,
+              "source_row": 35,
+              "saved_outcome": "discrepant_candidate / grey",
+              "scale": "reported scale",
+              "delta": -0.0074979536372782995,
+              "distance_se": 2.4993178790927666,
+              "distance_band": "large"
+            }
+          ]
+        },
+        {
+          "label": "Model 3 · lag",
+          "term": "M3 lag",
+          "cells": [
+            {
+              "estimate": 0.465728713560492,
+              "published": 0.403,
+              "se": 0.0223136175932762,
+              "published_se": 0.026,
+              "source_row": 36,
+              "saved_outcome": "grey / consistent",
+              "scale": "reported scale",
+              "delta": 0.06272871356049198,
+              "distance_se": 2.4126428292496915,
+              "distance_band": "large"
+            },
+            {
+              "estimate": 0.428668606040279,
+              "published": 0.403,
+              "se": 0.0223185290671825,
+              "published_se": 0.026,
+              "source_row": 37,
+              "saved_outcome": "grey / consistent",
+              "scale": "reported scale",
+              "delta": 0.025668606040278985,
+              "distance_se": 0.9872540784722686,
+              "distance_band": "close"
+            }
+          ]
+        }
+      ],
+      "source": {
+        "path": "studies/deephouse1999/scoring/common_v1/terms.csv",
+        "sha256": "850eabb79ec0fb390a96055634989c4b1f86db67ad04d13263278c2073e0c2bb"
+      },
+      "note": "Saved estimates on their reported display scale; Unavailable reconstructed SEs remain missing. Multiple origins remain separate. Descriptive cell distances do not replace the saved scoring rules.",
+      "original": {
+        "sha256": "62eecc5b46b382896f2d660380b409de714b31faf8be5da2de505e27d16112e4",
+        "page": 12,
+        "y": 0,
+        "locator_source": "studies/deephouse1999/readers/astra/initial_v1/out/sealed_targets.json"
+      },
+      "agreement": {
+        "within_one_se": 10,
+        "compared": 36
+      },
+      "sample": [],
+      "published_sample": null
+    },
+    {
+      "id": "table_2",
+      "kind": "table",
+      "title": "Text",
+      "subtitle": "1–1 / 1 estimates",
+      "row_label": "Estimate",
+      "columns": [
+        "Origin O_A",
+        "Origin O_B"
+      ],
+      "rows": [
+        {
+          "label": "M3 SQ SD2",
+          "term": "M3_SQ SD2",
+          "cells": [
+            {
+              "estimate": -0.0006399497396669,
+              "published": -0.001,
+              "se": 0.0001092159205674,
+              "published_se": 0.0001,
+              "source_row": 38,
+              "saved_outcome": "consistent / consistent",
+              "scale": "reported scale",
+              "delta": 0.0003600502603331,
+              "distance_se": 3.600502603331,
+              "distance_band": "large"
+            },
+            {
+              "estimate": -0.0003731319481398,
+              "published": -0.001,
+              "se": 0.0001295713311404,
+              "published_se": 0.0001,
+              "source_row": 39,
+              "saved_outcome": "consistent / consistent",
+              "scale": "reported scale",
+              "delta": 0.0006268680518602,
+              "distance_se": 6.268680518601999,
+              "distance_band": "large"
+            }
+          ]
+        }
+      ],
+      "source": {
+        "path": "studies/deephouse1999/scoring/common_v1/terms.csv",
+        "sha256": "850eabb79ec0fb390a96055634989c4b1f86db67ad04d13263278c2073e0c2bb"
+      },
+      "note": "Saved estimates on their reported display scale; Unavailable reconstructed SEs remain missing. Multiple origins remain separate. Descriptive cell distances do not replace the saved scoring rules.",
+      "agreement": {
+        "within_one_se": 0,
+        "compared": 2
+      },
+      "sample": [],
+      "published_sample": null
+    },
+    {
+      "id": "reconstruction_diagnostics",
+      "kind": "figure",
+      "title": "Reconstruction & influence",
+      "asset": "studies/deephouse1999/reports/figure_reconstruction_influence.png",
+      "source": {
+        "path": "studies/deephouse1999/reports/figure_reconstruction_influence.png",
+        "sha256": "e13db86633ca27cce1d35664a6dad14dca3f2a9267d1a45b9712c830827b71de"
+      },
+      "note": "Archived reconstruction diagnostic; not a reconstruction of an original article figure."
+    }
+  ],
+  "report": "# Replication report: Deephouse (1999), \"To be different, or to be the same?\"\n\nStudy deephouse1999. Strategic Management Journal 20(2): 147-166. Coordinator session e8c50fbe-47ce-48c1-8aa1-bd531593c98a, 27 October 2026.\n\n## Findings and scope\n\nThe paper-level outcome is indeterminate. The primary focal claim (H3, strategic balance: a concave relation between strategic deviation and relative ROA, Table 2 Model 3) is indeterminate because the reconstructed first-order strategic-deviation term lies outside the frozen magnitude band at both reader origins while the reconstructed sample is 31 percent larger than the published one. The secondary focal claim (H2, conformity: negative linear term, Model 2) is indeterminate because it reproduces at one reader origin and not at the other. No claim is classified as discrepant: every discrepancy candidate falls to indeterminate under the frozen sample-size rule, and no human confirmation of a discrepancy has been requested.\n\nWhat did reproduce, from public Call Report data rebuilt independently by three implementations that agree to about 1e-13:\n\n- The curvature term itself. The Model 3 coefficient on strategic deviation squared is negative and significant at p < .001 at both origins (published -0.006, SE 0.001; reconstructed -0.0043 and -0.0039), within 0.8 and 1.0 published standard errors.\n- The sign and significance pattern of Model 3 (positive first-order term, negative squared term) and the F tests showing that adding the squared term improves fit over Models 1 and 2 (p < .001 at both origins).\n- The robustness model without the first-order term (published -0.001, SE 0.0001; reconstructed -0.00064 and -0.00037, both significant).\n- Most Model 1 and Model 2 controls.\n\nWhat did not: the Model 3 first-order term is smaller (0.112 and 0.100 against 0.170, 3.3 and 4.0 published SEs away), so the reconstructed curve is about 30 percent flatter with a turning point near 13 rather than 14; the Model 3 expense-ratio coefficient (about -6 to -7 against -15.4) and intercept differ; the Model 2 linear term is p = .088 at one origin.\n\nScope limits. Reconstructed N is 1,260 and 1,255 bank-years against 960 published. A post hoc audit diagnostic suggests the frozen market definition (the 1983 OMB metropolitan area, including four outer counties) is broader than the author's; this diagnostic is not part of the scored results (see Limitations). Two further sensitivities, both labelled non-equivalent before execution, matter for interpretation: with bank-clustered standard errors the Model 3 squared term is p = .075 and .155, and unweighted OLS reverses its sign.\n\n## Data and construction\n\nAll empirical inputs were acquired afresh from public providers on 27 October 2026 (provenance, hashes and failed attempts: registry/source_registry.json; acquisition log: logs/source_acquisition_log.md).\n\n- Federal Reserve Bank of Chicago commercial bank Call Report archive, all 41 quarterly files 1983Q4-1993Q4 (national), and the Federal Reserve MDRM item dictionary.\n- FDIC BankFind API: institutions, structure-change history and financials for Minnesota and Wisconsin.\n- FRED/ALFRED and BLS price indexes (CPI-U national and Minneapolis-St. Paul, GDP deflator vintages).\n- Census/OMB metropolitan-area county definitions (1981, 1983, 1990, 1993, 1999).\n- Not obtained: the FFIEC National Information Center bulk download (CAPTCHA, not bypassed) and BLS flat files (HTTP 403; the same series came from the BLS API and FRED).\n\nNo author replication package exists (logs/supplement_and_package_search.json); the publisher page lists no supporting information and Crossref no corrections. Printed article values (Table 1 moments and correlations) were never used as inputs.\n\nVariables were built from the regulatory items: relative ROA (net income over the mean of quarterly RC-K average assets, minus the unweighted market mean, x100), its one-year lag, strategic deviation (sum over eleven asset-share categories of absolute z-scores against the market mean and SD), its square, deposit market share, total expense ratio and real growth of market deposits. Estimation is WLS with market-share weights on bank-years 1985-1992, deleting Norwest Bank Minneapolis in 1987 (RSSD 995151) as the article does.\n\n## Published versus reconstructed focal estimates\n\nTwo origins exist because the readers chose different default codings (see Reader agreement). Reconstructed values are identical across implementations A, B and C at both origins. Two-sided p from conventional WLS.\n\n| Model, term | Published (SE) | O_A estimate (SE), p | O_B estimate (SE), p | Term outcome O_A / O_B |\n| --- | --- | --- | --- | --- |\n| M2, strategic deviation | -0.020 (0.004) *** | -0.0140 (0.0033), 2e-5 | -0.0061 (0.0036), 0.088 | consistent / discrepancy candidate |\n| M3, strategic deviation | 0.170 (0.017) *** | 0.1116 (0.0156), 1e-12 | 0.1003 (0.0178), 2e-8 | discrepancy candidate (magnitude 3.3 SE) / discrepancy candidate (4.0 SE) |\n| M3, strategic deviation squared | -0.006 (0.001) *** | -0.0043 (0.0005), 4e-16 | -0.0039 (0.0006), 1e-9 | consistent / consistent |\n| M3 without first-order term, squared | -0.001 (0.0001), \"significant\" | -0.00064 (0.00011), 6e-9 | -0.00037 (0.00013), 0.004 | consistent / consistent |\n| F test M3 vs M2 | 134.1, p < .001 | 67.8, p = 4e-16 | 37.3, p = 1e-9 | significance agrees |\n| N | 960 | 1,260 | 1,255 | outside tolerance (+31%) |\n\nClaim-level outcomes (scoring/run_v1/claim_outcomes.csv):\n\n- H3 strategic balance (primary focal; Model 3 SD^2 and SD scored jointly): indeterminate, reason codes sample_construction_N_outside_tolerance and discrepancy_not_confirmed.\n- H2 conformity over H1 differentiation (secondary focal): indeterminate, origin_label_sensitive.\n- Model 3 without first-order term (robustness): consistent, with an N coverage qualification.\n- Controls: 7 of 15 consistent (with coverage qualification); Model 3 expense ratio and intercept indeterminate after discrepancy candidacy (the intercept is also label-sensitive: 3 uncertain readings are consistent); 6 others indeterminate (5 origin label-sensitive, 1 grey zone).\n- F tests: M3 vs M1 and M3 vs M2 consistent; M2 vs M1 indeterminate (origin label-sensitive).\n\nPaper-level outcome under the frozen aggregation rule (the primary focal claim decides; indeterminate focal evidence makes the paper indeterminate): indeterminate. Fragility: not assessed, because the readers' only equivalent alternatives were algebraic re-expressions. Fragile inference: not assessable, because no assignment-level clustering applies and no alternative benchmark was declared.\n\n## Figure: public-source reconstruction and influence checks\n\n![Reconstruction and influence checks](figure_reconstruction_influence.png)\n\nLeft: published WLS coefficient (cross), reconstructed coefficient at each origin (dot or square) and the minimum-to-maximum coefficient over all leave-one-bank-year-out refits (line); outcome is relative ROA x 100, null value 0. Right: reconstructed two-sided p and the full range of deletion p values on a log scale; the shaded region is the published inequality p < .001 and the dashed line is .05. Values: reports/figure_reconstruction_influence.csv; script: reports/make_figure.py; vector: reports/figure_reconstruction_influence.svg.\n\nWhat it supports: the squared term stays negative and below p = .05 in every one of 1,260 and 1,255 single-row deletions, and the Model 3 first-order term stays positive and significant; the deletion range for the squared term reaches the published value only at O_B, and no deletion brings the Model 3 first-order term up to its published value (closest: 0.163 at O_B). What it cannot establish: deletion ranges are influence ranges, not confidence intervals, and are not equivalent specifications, so the figure cannot show fragility. Whole-bank deletion (secondary diagnostic) is more severe: dropping one bank (First Bank, about 30 percent of the WLS weight) removes the O_A curvature result (p = 0.47), and Model 2 at O_B crosses .05 in nearly every deletion because its full-sample p is already .088.\n\n## One worked example: the Model 3 squared term\n\nThe article states Hypothesis 3 (DOC01 p10) and the Model 3 equation (p11) and prints the coefficient -0.006 (0.001) *** in Table 2 (p12). Both readers transcribed it identically and mapped the eleven asset categories (p9-10) to Call Report items. They disagreed on what \"other assets\" means: Reader A summed the remaining balance-sheet lines (RCFD2150+2130+2155+2143+2160), Reader B used the literal other-assets line (RCFD2160). The reconciliation rules kept both as alternative origins (grid axis R14). The implementers, who never saw the article or any target, coded both; A, B and C produced the same sample hash and coefficients (-0.004292 at O_A) to 1e-13. The frozen scorer placed the estimate 0.81 published SEs from the rounding interval of -0.006, with matching sign and p band, so the term is consistent at both origins. Because the frozen rule scores H3 jointly with the first-order term, which falls 3.3-4.0 SEs away, and because N is outside tolerance, the claim outcome is indeterminate.\n\n## Counts of model settings and refits\n\nPer implementation (identical counts across A, B and C): 164 specification ids, of which 52 are duplicates of an origin level (recorded, not refitted). The 112 fitted settings are 2 origins, 84 uncertain one-at-a-time deviations (74 uncertain levels plus 10 levels that are the other reader's origin choice), 22 non-equivalent sensitivity settings and 4 algebraic checks; each with four models (446 fitted models plus 2 not-applicable centred checks). After removing identical realized samples and estimates, the uncertain set has 72 distinct settings per focal term. Algebraic checks (weight rescaling, centred polynomial) reproduce the origins exactly and are not counted as alternatives. Influence: 5,030 leave-one-bank-year-out and 780 leave-one-bank-out refits per implementation, no failures.\n\nUncertain-set dispersion (72 distinct settings; separate from the formal outcome):\n\n| Term | Share with published sign | Share p < .05 in hypothesised direction | Median | Min to max | Published |\n| --- | --- | --- | --- | --- | --- |\n| M2 SD | 1.00 | 0.67 | -0.012 | -0.093 to -0.002 | -0.020 |\n| M3 SD | 0.99 | 0.96 | 0.106 | -0.014 to 0.238 | 0.170 |\n| M3 SD^2 | 0.99 | 0.97 | -0.0041 | -0.0090 to 0.0002 | -0.006 |\n\nNon-equivalent settings (18 distinct) are reported separately in reports/exports/multiverse_summary.csv; notably unweighted OLS gives a convex fit and bank-clustered SEs make the curvature term non-significant.\n\n## Readers, reconciliation and implementations\n\nReaders (separate CLI processes, neutral staging folders, identical frozen packet and source descriptions): Reader A claude-fable-5-1, High effort, fast mode off (model confirmed by CLI metadata); Reader B gpt-6-astra, High effort, default service tier, fast mode off (codex exec does not report the model or effort; the CLI accepted the requested model). Title-only memorization probes, sealed before reading, showed both models knew the design and the qualitative inverted-U result but no coefficients or N.\n\nInitial agreement, before any reconciliation (reconciliation/initial_agreement.json): claim tiers 14/17 matched claims (raw 0.82, Gwet AC1 0.78); claim directions 12/17 (0.71, AC1 0.64); specification labels 25/31 matched levels (0.81, AC1 0.76). Transcription of Table 2 and the text statistics agreed exactly. The readers disagreed on five origin choices (bank record filter, average-asset quarter coverage, other-assets definition, missing-item treatment, domestic versus consolidated deposits), which the frozen rules kept as two origins; three label disagreements became uncertain; weight rescaling and centring were reclassified as algebraic checks. Decisions: reconciliation/decisions_v1.md.\n\nImplementations: A claude-fable-5-1 in R; B gpt-6-astra in R; C gpt-6-astra in Python 3.13. Each saw only the target-free manifest, data and dictionary. Pre-execution checkers from the other family returned unmet items over up to three rounds; one manifest clarification (v1.1, issued to all implementers before any fit) settled ambiguities. B and C ended with no unmet items; A was frozen with seven open checker items affecting only non-origin levels (checks/open_checker_items_at_freeze.md). Execution ran under a macOS sandbox denying network access and writes outside the run folder. Agreement: all three identical at both origins; B and C agree on all 164 settings; A differs on two levels (pro-forma merger lags, explicit loan components), which were scored on the B-C pair and audited.\n\n## Audit and adversarial review\n\nAn auditor (Anthropic model, coordinator subagent) re-checked transcription against the page image, traced three bank-years from raw files, re-estimated all origin models and rebuilt the O_A sample from the extract (exact), confirmed completeness and re-derived every scored outcome (checks/audit_v1/audit_report.md). It found one scorer scope error: the label-sensitivity check was applied only to focal and robustness claims; the corrected scorer (v1.1; v1 outputs preserved as *_v1_superseded) adds a label-sensitive code to the Model 3 intercept and changes no outcome. The adversarial pass found no transcription, coding, unit or definition error behind any discrepancy candidate; the Model 3 intercept gap is explained arithmetically by the slope gaps, the H2 gap by the other-assets coding, and the H3 and expense-ratio gaps remain unresolved and consistent with a sample-construction difference. No model family independent of both implementer families was available, so a discrepancy could not have been fully verified in any case.\n\n## Supplements\n\nNone. The publication packet (sources/publication_packet.json, v1) contains only the main article (DOC01, 20 pages, SHA-256 62eecc5b...). No local supplement, no publisher supporting information and no correction were found after a documented search. Gap: estimates with the eleven asset-strategy controls are described as available from the author (DOC01 p10-11) and are not public. No redactions or embedded code.\n\n## Limitations\n\n- Sample construction. N is 31 percent above the published value at both origins and across every grid setting except one degenerate variant. A post hoc audit diagnostic restricted the market to the seven-county Twin Cities area: it gives N = 974 and exactly 159 banks (the article's count, not used to choose the restriction), with market-share moments matching Table 1, Model 2 consistent, the Model 3 first-order term in the grey zone (2.4 SE) and the Model 3 expense ratio and intercept still different. Because it was chosen after results were seen, it is descriptive only and does not enter any outcome (checks/audit_v1/a7d_posthoc_7county_summary.json). A seven-county market level could only be evaluated as a separately versioned, pre-registered amendment.\n- Weight concentration. Market-share weights put about 57 percent of the weight on three banks, so results depend on a few institutions; this is a property of the published design.\n- Calibration. Scoring constants are provisional and uncalibrated; no corpus calibration, human double-coding or human-reproduced comparison was performed (outside this session).\n- Isolation. Codex roles ran with network disabled; Claude roles relied on tool lists and instructions for network isolation. Frozen execution was sandboxed. Reads were not technically restricted.\n- Independence. The coordinator, Reader A, implementer A, three checkers and the auditor are Anthropic models; Reader B, implementers B and C and one checker are OpenAI models.\n- Privacy note. Eight early data-acquisition requests carried the user's account handle in the User-Agent string.\n\nTechnical details: reports/technical_supplement.md. Machine-readable outputs: reports/exports/.\n",
+  "metadata": {
+    "study_id": "deephouse1999",
+    "citation": "Deephouse (1999). To Be Different, or to Be the Same?. Strategic Management Journal.",
+    "journal": "Strategic Management Journal",
+    "paper_path_from_project_root": "papers/journal_collection/SMJ/SMJ_1999_Deephouse.pdf",
+    "paper_sha256": "62eecc5b46b382896f2d660380b409de714b31faf8be5da2de505e27d16112e4",
+    "status": "completed_indeterminate",
+    "data_policy": "All empirical inputs must be newly acquired from publicly available source datasets or public primary records and independently constructed. No printed article data or author-provided replication packages. Published results may be extracted only as sealed comparison targets or publication diagnostics.",
+    "reader_runs": 2,
+    "model_fits": "3 implementations x 448 model settings + 8715 influence refits each (run_v1)",
+    "session_scope": "deephouse1999 only; other papers require a separate session",
+    "public_source_eligibility": "verified: Call Reports (Chicago Fed archive), FDIC BankFind, FRED/BLS, Census MSA files acquired 2026-10-27",
+    "author_package_availability": "none found (logs/supplement_and_package_search.json)",
+    "paper_id": "SMJ_1999_Deephouse",
+    "supplement_catalog_from_project_root": "papers/supplements/catalog.json",
+    "supplements": [],
+    "local_supplement_status": "no_local_match",
+    "external_supplement_availability": "none found after documented search",
+    "memorization_probes": 2,
+    "paper_outcome": "indeterminate (primary focal H3 indeterminate: first-order term magnitude outside band at both origins; N 1255-1260 vs 960)",
+    "coordinator_session": "e8c50fbe-47ce-48c1-8aa1-bd531593c98a",
+    "report": "reports/replication_report.md",
+    "pending": [
+      "human review (no discrepant verdict requested)",
+      "corpus calibration (out of session scope)"
+    ]
+  },
+  "paper_record": {
+    "rule": "../../scoring_rules_common_v1.json",
+    "status": "post hoc",
+    "study_rule_paper": "indeterminate",
+    "paper": {
+      "common": "indeterminate",
+      "lenient": "indeterminate"
+    },
+    "claims": {
+      "common": {
+        "H2": "indeterminate",
+        "H3": "indeterminate"
+      },
+      "lenient": {
+        "H2": "indeterminate",
+        "H3": "indeterminate"
+      }
+    },
+    "terms_by_table": {
+      "common": {
+        "Table 2": {
+          "consistent": 0,
+          "indeterminate": 18,
+          "candidate": 0,
+          "total": 18
+        },
+        "Text": {
+          "consistent": 0,
+          "indeterminate": 1,
+          "candidate": 0,
+          "total": 1
+        }
+      },
+      "lenient": {
+        "Table 2": {
+          "consistent": 8,
+          "indeterminate": 10,
+          "candidate": 0,
+          "total": 18
+        },
+        "Text": {
+          "consistent": 1,
+          "indeterminate": 0,
+          "candidate": 0,
+          "total": 1
+        }
+      }
+    }
+  },
+  "execution": {
+    "status": "completed",
+    "source": "archived execution; no new fitting"
+  },
+  "blockers": [],
+  "issues": {
+    "sample": {
+      "title": "Bank and market-area filters",
+      "text": "The commercial-bank and market-area filters remain unresolved. The rebuilt sample contains more bank-years than the published sample.",
+      "values": [
+        [
+          "Rebuilt",
+          "1,260"
+        ],
+        [
+          "Published",
+          "960"
+        ]
+      ],
+      "measure": "Bank-years",
+      "pages": "3–4",
+      "page": 3,
+      "source": "Historical research review; original PDF not distributed"
+    }
+  },
+  "provenance": {
+    "kind": "archive",
+    "adapter_version": 4,
+    "sources": [
+      {
+        "path": "studies/deephouse1999/STUDY.json",
+        "sha256": "e691675e5d8db7a000c65fa59765e613cfced7f38f89dbc29da163d7bc221860"
+      },
+      {
+        "path": "studies/deephouse1999/readers/astra/initial_v1/out/sealed_targets.json",
+        "sha256": "2c2126432ca1dbba88fd3c4905e8de80b134d8c9331a86ab819dcf37366e8ffc"
+      },
+      {
+        "path": "studies/deephouse1999/reports/replication_report.md",
+        "sha256": "f98be96663cfc92cd9e280f721b4a230bba48626af3ed3594c58d0bc8cc42052"
+      },
+      {
+        "path": "studies/deephouse1999/scoring/common_v1/terms.csv",
+        "sha256": "850eabb79ec0fb390a96055634989c4b1f86db67ad04d13263278c2073e0c2bb"
+      },
+      {
+        "path": "studies/deephouse1999/scoring/run_v1/term_scores.csv",
+        "sha256": "b500d246955a25922e5e1e8c2132f75a535702e0a09a4d7b715aacc73394f1e7"
+      }
+    ]
+  }
+}

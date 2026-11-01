@@ -1,0 +1,1389 @@
+{
+ "version": "v1",
+ "sealed": true,
+ "scale_note": "Table 5 values are odds ratios with parenthesised SEs (scale of SE not stated; both readers note delta-method odds-ratio SEs as the likely convention). Table 6 values are marginal effects on the probability scale with SEs.",
+ "significance_key": "+ p<0.10; * p<0.05; ** p<0.01 (both readers; tail not stated)",
+ "n_keys": 81,
+ "n_both": 81,
+ "n_disagree": 0,
+ "disagreements": [],
+ "targets": {
+  "T5|M1|df": {
+   "key": "T5|M1|df",
+   "fable_id": "T12",
+   "astra_id": "T11",
+   "value": "13",
+   "published_se": null,
+   "stars": "none",
+   "quantity": "other",
+   "agree_value": true,
+   "agree_se": true,
+   "agree_stars": true,
+   "source": {
+    "doc": "D01",
+    "pdf_page": 11,
+    "where": "Table 5, Model 1, row df"
+   }
+  },
+  "T5|M1|home_field": {
+   "key": "T5|M1|home_field",
+   "fable_id": "T6",
+   "astra_id": "T6",
+   "value": "1.019",
+   "published_se": 0.049,
+   "stars": "none",
+   "quantity": "odds_ratio",
+   "agree_value": true,
+   "agree_se": true,
+   "agree_stars": true,
+   "source": {
+    "doc": "D01",
+    "pdf_page": 11,
+    "where": "Table 5, Model 1, row Home-field advantage"
+   }
+  },
+  "T5|M1|loglik": {
+   "key": "T5|M1|loglik",
+   "fable_id": "T10",
+   "astra_id": "T9",
+   "value": "-5959.1881",
+   "published_se": null,
+   "stars": "none",
+   "quantity": "log_likelihood",
+   "agree_value": true,
+   "agree_se": true,
+   "agree_stars": true,
+   "source": {
+    "doc": "D01",
+    "pdf_page": 11,
+    "where": "Table 5, Model 1, row Log likelihood (LL)"
+   }
+  },
+  "T5|M1|lr_chi2": {
+   "key": "T5|M1|lr_chi2",
+   "fable_id": "T11",
+   "astra_id": "T10",
+   "value": "3045.63",
+   "published_se": null,
+   "stars": "**",
+   "quantity": "chi2",
+   "agree_value": true,
+   "agree_se": true,
+   "agree_stars": true,
+   "source": {
+    "doc": "D01",
+    "pdf_page": 11,
+    "where": "Table 5, Model 1, row LR chi2"
+   }
+  },
+  "T5|M1|minutes_remaining": {
+   "key": "T5|M1|minutes_remaining",
+   "fable_id": "T8",
+   "astra_id": "T8",
+   "value": "0.946",
+   "published_se": 0.002,
+   "stars": "**",
+   "quantity": "odds_ratio",
+   "agree_value": true,
+   "agree_se": true,
+   "agree_stars": true,
+   "source": {
+    "doc": "D01",
+    "pdf_page": 11,
+    "where": "Table 5, Model 1, row Minutes remaining; also text PDF page 10 right column '(0.946, p < 0.01)'"
+   }
+  },
+  "T5|M1|same_conference": {
+   "key": "T5|M1|same_conference",
+   "fable_id": "T5",
+   "astra_id": "T5",
+   "value": "1.008",
+   "published_se": 0.05,
+   "stars": "none",
+   "quantity": "odds_ratio",
+   "agree_value": true,
+   "agree_se": true,
+   "agree_stars": true,
+   "source": {
+    "doc": "D01",
+    "pdf_page": 11,
+    "where": "Table 5, Model 1, row Same conference"
+   }
+  },
+  "T5|M1|same_division": {
+   "key": "T5|M1|same_division",
+   "fable_id": "T4",
+   "astra_id": "T4",
+   "value": "0.969",
+   "published_se": 0.054,
+   "stars": "none",
+   "quantity": "odds_ratio",
+   "agree_value": true,
+   "agree_se": true,
+   "agree_stars": true,
+   "source": {
+    "doc": "D01",
+    "pdf_page": 11,
+    "where": "Table 5, Model 1, row Same division"
+   }
+  },
+  "T5|M1|total_points": {
+   "key": "T5|M1|total_points",
+   "fable_id": "T1",
+   "astra_id": "T1",
+   "value": "0.941",
+   "published_se": 0.003,
+   "stars": "**",
+   "quantity": "odds_ratio",
+   "agree_value": true,
+   "agree_se": true,
+   "agree_stars": true,
+   "source": {
+    "doc": "D01",
+    "pdf_page": 11,
+    "where": "Table 5, Model 1, row Total points"
+   }
+  },
+  "T5|M1|week": {
+   "key": "T5|M1|week",
+   "fable_id": "T7",
+   "astra_id": "T7",
+   "value": "1.020",
+   "published_se": 0.005,
+   "stars": "**",
+   "quantity": "odds_ratio",
+   "agree_value": true,
+   "agree_se": true,
+   "agree_stars": true,
+   "source": {
+    "doc": "D01",
+    "pdf_page": 11,
+    "where": "Table 5, Model 1, row Week of season"
+   }
+  },
+  "T5|M1|yards_first_down": {
+   "key": "T5|M1|yards_first_down",
+   "fable_id": "T2",
+   "astra_id": "T2",
+   "value": "0.826",
+   "published_se": 0.006,
+   "stars": "**",
+   "quantity": "odds_ratio",
+   "agree_value": true,
+   "agree_se": true,
+   "agree_stars": true,
+   "source": {
+    "doc": "D01",
+    "pdf_page": 11,
+    "where": "Table 5, Model 1, row Yards to go for 1st down"
+   }
+  },
+  "T5|M1|yards_touchdown": {
+   "key": "T5|M1|yards_touchdown",
+   "fable_id": "T3",
+   "astra_id": "T3",
+   "value": "0.976",
+   "published_se": 0.001,
+   "stars": "**",
+   "quantity": "odds_ratio",
+   "agree_value": true,
+   "agree_se": true,
+   "agree_stars": true,
+   "source": {
+    "doc": "D01",
+    "pdf_page": 11,
+    "where": "Table 5, Model 1, row Yards to go for touchdown"
+   }
+  },
+  "T5|M2|below_indicator": {
+   "key": "T5|M2|below_indicator",
+   "fable_id": "T24",
+   "astra_id": "T23",
+   "value": "1.120",
+   "published_se": 0.11,
+   "stars": "none",
+   "quantity": "odds_ratio",
+   "agree_value": true,
+   "agree_se": true,
+   "agree_stars": true,
+   "source": {
+    "doc": "D01",
+    "pdf_page": 11,
+    "where": "Table 5, Model 2, row Indicator variable"
+   }
+  },
+  "T5|M2|delta_lr_chi2": {
+   "key": "T5|M2|delta_lr_chi2",
+   "fable_id": "T29",
+   "astra_id": "T27",
+   "value": "168.87",
+   "published_se": null,
+   "stars": "**",
+   "quantity": "chi2",
+   "agree_value": true,
+   "agree_se": true,
+   "agree_stars": true,
+   "source": {
+    "doc": "D01",
+    "pdf_page": 11,
+    "where": "Table 5, Model 2, row delta LR chi2; text PDF page 10 'delta LR chi2 = 168.87, p < 0.01'"
+   }
+  },
+  "T5|M2|df": {
+   "key": "T5|M2|df",
+   "fable_id": "T28",
+   "astra_id": "T26",
+   "value": "17",
+   "published_se": null,
+   "stars": "none",
+   "quantity": "other",
+   "agree_value": true,
+   "agree_se": true,
+   "agree_stars": true,
+   "source": {
+    "doc": "D01",
+    "pdf_page": 11,
+    "where": "Table 5, Model 2, row df"
+   }
+  },
+  "T5|M2|home_field": {
+   "key": "T5|M2|home_field",
+   "fable_id": "T18",
+   "astra_id": "T17",
+   "value": "1.177",
+   "published_se": 0.059,
+   "stars": "**",
+   "quantity": "odds_ratio",
+   "agree_value": true,
+   "agree_se": true,
+   "agree_stars": true,
+   "source": {
+    "doc": "D01",
+    "pdf_page": 11,
+    "where": "Table 5, Model 2, row Home-field advantage"
+   }
+  },
+  "T5|M2|loglik": {
+   "key": "T5|M2|loglik",
+   "fable_id": "T26",
+   "astra_id": "T24",
+   "value": "-5604.5008",
+   "published_se": null,
+   "stars": "none",
+   "quantity": "log_likelihood",
+   "agree_value": true,
+   "agree_se": true,
+   "agree_stars": true,
+   "source": {
+    "doc": "D01",
+    "pdf_page": 11,
+    "where": "Table 5, Model 2, row Log likelihood (LL)"
+   }
+  },
+  "T5|M2|lr_chi2": {
+   "key": "T5|M2|lr_chi2",
+   "fable_id": "T27",
+   "astra_id": "T25",
+   "value": "3755.00",
+   "published_se": null,
+   "stars": "**",
+   "quantity": "chi2",
+   "agree_value": true,
+   "agree_se": true,
+   "agree_stars": true,
+   "source": {
+    "doc": "D01",
+    "pdf_page": 11,
+    "where": "Table 5, Model 2, row LR chi2; text PDF page 10 'LR chi2 = 3,755.00, p < 0.01'"
+   }
+  },
+  "T5|M2|minutes_remaining": {
+   "key": "T5|M2|minutes_remaining",
+   "fable_id": "T20",
+   "astra_id": "T19",
+   "value": "0.975",
+   "published_se": 0.002,
+   "stars": "**",
+   "quantity": "odds_ratio",
+   "agree_value": true,
+   "agree_se": true,
+   "agree_stars": true,
+   "source": {
+    "doc": "D01",
+    "pdf_page": 11,
+    "where": "Table 5, Model 2, row Minutes remaining"
+   }
+  },
+  "T5|M2|perf_above": {
+   "key": "T5|M2|perf_above",
+   "fable_id": "T23",
+   "astra_id": "T22",
+   "value": "0.994",
+   "published_se": 0.007,
+   "stars": "none",
+   "quantity": "odds_ratio",
+   "agree_value": true,
+   "agree_se": true,
+   "agree_stars": true,
+   "source": {
+    "doc": "D01",
+    "pdf_page": 11,
+    "where": "Table 5, Model 2, row Performance (>aspiration)"
+   }
+  },
+  "T5|M2|perf_below": {
+   "key": "T5|M2|perf_below",
+   "fable_id": "T21",
+   "astra_id": "T20",
+   "value": "0.883",
+   "published_se": 0.008,
+   "stars": "**",
+   "quantity": "odds_ratio",
+   "agree_value": true,
+   "agree_se": true,
+   "agree_stars": true,
+   "source": {
+    "doc": "D01",
+    "pdf_page": 11,
+    "where": "Table 5, Model 2, row Performance (<=aspiration); text PDF page 10 'odds ratio for P <= AL = 0.883, p < 0.01'"
+   }
+  },
+  "T5|M2|perf_below_sq": {
+   "key": "T5|M2|perf_below_sq",
+   "fable_id": "T22",
+   "astra_id": "T21",
+   "value": "0.999",
+   "published_se": 0.0,
+   "stars": "**",
+   "quantity": "odds_ratio",
+   "agree_value": true,
+   "agree_se": true,
+   "agree_stars": true,
+   "source": {
+    "doc": "D01",
+    "pdf_page": 11,
+    "where": "Table 5, Model 2, row Performance^2 (<=aspiration); text PDF page 10 'odds ratio for P^2 <= AL = 0.999, p < 0.01'"
+   }
+  },
+  "T5|M2|same_conference": {
+   "key": "T5|M2|same_conference",
+   "fable_id": "T17",
+   "astra_id": "T16",
+   "value": "0.997",
+   "published_se": 0.051,
+   "stars": "none",
+   "quantity": "odds_ratio",
+   "agree_value": true,
+   "agree_se": true,
+   "agree_stars": true,
+   "source": {
+    "doc": "D01",
+    "pdf_page": 11,
+    "where": "Table 5, Model 2, row Same conference"
+   }
+  },
+  "T5|M2|same_division": {
+   "key": "T5|M2|same_division",
+   "fable_id": "T16",
+   "astra_id": "T15",
+   "value": "1.025",
+   "published_se": 0.059,
+   "stars": "none",
+   "quantity": "odds_ratio",
+   "agree_value": true,
+   "agree_se": true,
+   "agree_stars": true,
+   "source": {
+    "doc": "D01",
+    "pdf_page": 11,
+    "where": "Table 5, Model 2, row Same division"
+   }
+  },
+  "T5|M2|total_points": {
+   "key": "T5|M2|total_points",
+   "fable_id": "T13",
+   "astra_id": "T12",
+   "value": "1.007",
+   "published_se": 0.005,
+   "stars": "none",
+   "quantity": "odds_ratio",
+   "agree_value": true,
+   "agree_se": true,
+   "agree_stars": true,
+   "source": {
+    "doc": "D01",
+    "pdf_page": 11,
+    "where": "Table 5, Model 2, row Total points"
+   }
+  },
+  "T5|M2|week": {
+   "key": "T5|M2|week",
+   "fable_id": "T19",
+   "astra_id": "T18",
+   "value": "1.023",
+   "published_se": 0.005,
+   "stars": "**",
+   "quantity": "odds_ratio",
+   "agree_value": true,
+   "agree_se": true,
+   "agree_stars": true,
+   "source": {
+    "doc": "D01",
+    "pdf_page": 11,
+    "where": "Table 5, Model 2, row Week of season"
+   }
+  },
+  "T5|M2|yards_first_down": {
+   "key": "T5|M2|yards_first_down",
+   "fable_id": "T14",
+   "astra_id": "T13",
+   "value": "0.813",
+   "published_se": 0.006,
+   "stars": "**",
+   "quantity": "odds_ratio",
+   "agree_value": true,
+   "agree_se": true,
+   "agree_stars": true,
+   "source": {
+    "doc": "D01",
+    "pdf_page": 11,
+    "where": "Table 5, Model 2, row Yards to go for 1st down"
+   }
+  },
+  "T5|M2|yards_touchdown": {
+   "key": "T5|M2|yards_touchdown",
+   "fable_id": "T15",
+   "astra_id": "T14",
+   "value": "0.973",
+   "published_se": 0.001,
+   "stars": "**",
+   "quantity": "odds_ratio",
+   "agree_value": true,
+   "agree_se": true,
+   "agree_stars": true,
+   "source": {
+    "doc": "D01",
+    "pdf_page": 11,
+    "where": "Table 5, Model 2, row Yards to go for touchdown"
+   }
+  },
+  "T5|M3|below_indicator": {
+   "key": "T5|M3|below_indicator",
+   "fable_id": "T41",
+   "astra_id": "T39",
+   "value": "0.857",
+   "published_se": 0.092,
+   "stars": "none",
+   "quantity": "odds_ratio",
+   "agree_value": true,
+   "agree_se": true,
+   "agree_stars": true,
+   "source": {
+    "doc": "D01",
+    "pdf_page": 11,
+    "where": "Table 5, Model 3, row Indicator variable"
+   }
+  },
+  "T5|M3|delta_lr_chi2": {
+   "key": "T5|M3|delta_lr_chi2",
+   "fable_id": "T49",
+   "astra_id": "T46",
+   "value": "544.05",
+   "published_se": null,
+   "stars": "**",
+   "quantity": "chi2",
+   "agree_value": true,
+   "agree_se": true,
+   "agree_stars": true,
+   "source": {
+    "doc": "D01",
+    "pdf_page": 11,
+    "where": "Table 5, Model 3, row delta LR chi2; text PDF page 11 'delta LR chi2 = 544.05, p < 0.01'"
+   }
+  },
+  "T5|M3|df": {
+   "key": "T5|M3|df",
+   "fable_id": "T48",
+   "astra_id": "T45",
+   "value": "20",
+   "published_se": null,
+   "stars": "none",
+   "quantity": "other",
+   "agree_value": true,
+   "agree_se": true,
+   "agree_stars": true,
+   "source": {
+    "doc": "D01",
+    "pdf_page": 11,
+    "where": "Table 5, Model 3, row df"
+   }
+  },
+  "T5|M3|home_field": {
+   "key": "T5|M3|home_field",
+   "fable_id": "T35",
+   "astra_id": "T33",
+   "value": "1.167",
+   "published_se": 0.06,
+   "stars": "**",
+   "quantity": "odds_ratio",
+   "agree_value": true,
+   "agree_se": true,
+   "agree_stars": true,
+   "source": {
+    "doc": "D01",
+    "pdf_page": 11,
+    "where": "Table 5, Model 3, row Home-field advantage"
+   }
+  },
+  "T5|M3|loglik": {
+   "key": "T5|M3|loglik",
+   "fable_id": "T46",
+   "astra_id": "T43",
+   "value": "-5341.1916",
+   "published_se": null,
+   "stars": "none",
+   "quantity": "log_likelihood",
+   "agree_value": true,
+   "agree_se": true,
+   "agree_stars": true,
+   "source": {
+    "doc": "D01",
+    "pdf_page": 11,
+    "where": "Table 5, Model 3, row Log likelihood (LL)"
+   }
+  },
+  "T5|M3|lr_chi2": {
+   "key": "T5|M3|lr_chi2",
+   "fable_id": "T47",
+   "astra_id": "T44",
+   "value": "4281.62",
+   "published_se": null,
+   "stars": "**",
+   "quantity": "chi2",
+   "agree_value": true,
+   "agree_se": true,
+   "agree_stars": true,
+   "source": {
+    "doc": "D01",
+    "pdf_page": 11,
+    "where": "Table 5, Model 3, row LR chi2; text PDF page 11 'LR chi2 = 4,281.62, p < 0.01'"
+   }
+  },
+  "T5|M3|minutes_remaining": {
+   "key": "T5|M3|minutes_remaining",
+   "fable_id": "T37",
+   "astra_id": "T35",
+   "value": "1.019",
+   "published_se": 0.003,
+   "stars": "**",
+   "quantity": "odds_ratio",
+   "agree_value": true,
+   "agree_se": true,
+   "agree_stars": true,
+   "source": {
+    "doc": "D01",
+    "pdf_page": 11,
+    "where": "Table 5, Model 3, row Minutes remaining"
+   }
+  },
+  "T5|M3|perf_above": {
+   "key": "T5|M3|perf_above",
+   "fable_id": "T40",
+   "astra_id": "T38",
+   "value": "1.038",
+   "published_se": 0.01,
+   "stars": "**",
+   "quantity": "odds_ratio",
+   "agree_value": true,
+   "agree_se": true,
+   "agree_stars": true,
+   "source": {
+    "doc": "D01",
+    "pdf_page": 11,
+    "where": "Table 5, Model 3, row Performance (>aspiration)"
+   }
+  },
+  "T5|M3|perf_above_x_min": {
+   "key": "T5|M3|perf_above_x_min",
+   "fable_id": "T44",
+   "astra_id": "T42",
+   "value": "0.998",
+   "published_se": 0.0,
+   "stars": "**",
+   "quantity": "odds_ratio",
+   "agree_value": true,
+   "agree_se": true,
+   "agree_stars": true,
+   "source": {
+    "doc": "D01",
+    "pdf_page": 11,
+    "where": "Table 5, Model 3, row Performance (>aspiration) x Minutes remaining; text PDF page 11 'odds ratio for P > AL = 0.998, p < 0.01'"
+   }
+  },
+  "T5|M3|perf_below": {
+   "key": "T5|M3|perf_below",
+   "fable_id": "T38",
+   "astra_id": "T36",
+   "value": "0.669",
+   "published_se": 0.012,
+   "stars": "**",
+   "quantity": "odds_ratio",
+   "agree_value": true,
+   "agree_se": true,
+   "agree_stars": true,
+   "source": {
+    "doc": "D01",
+    "pdf_page": 11,
+    "where": "Table 5, Model 3, row Performance (<=aspiration)"
+   }
+  },
+  "T5|M3|perf_below_sq": {
+   "key": "T5|M3|perf_below_sq",
+   "fable_id": "T39",
+   "astra_id": "T37",
+   "value": "0.993",
+   "published_se": 0.001,
+   "stars": "**",
+   "quantity": "odds_ratio",
+   "agree_value": true,
+   "agree_se": true,
+   "agree_stars": true,
+   "source": {
+    "doc": "D01",
+    "pdf_page": 11,
+    "where": "Table 5, Model 3, row Performance^2 (<=aspiration)"
+   }
+  },
+  "T5|M3|perf_below_sq_x_min": {
+   "key": "T5|M3|perf_below_sq_x_min",
+   "fable_id": "T43",
+   "astra_id": "T41",
+   "value": "1.000",
+   "published_se": 0.0,
+   "stars": "**",
+   "quantity": "odds_ratio",
+   "agree_value": true,
+   "agree_se": true,
+   "agree_stars": true,
+   "source": {
+    "doc": "D01",
+    "pdf_page": 11,
+    "where": "Table 5, Model 3, row Performance^2 (<=aspiration) x Minutes remaining; text PDF page 11 'odds ratio for P^2 <= AL = 1.000, p < 0.01'"
+   }
+  },
+  "T5|M3|perf_below_x_min": {
+   "key": "T5|M3|perf_below_x_min",
+   "fable_id": "T42",
+   "astra_id": "T40",
+   "value": "1.011",
+   "published_se": 0.001,
+   "stars": "**",
+   "quantity": "odds_ratio",
+   "agree_value": true,
+   "agree_se": true,
+   "agree_stars": true,
+   "source": {
+    "doc": "D01",
+    "pdf_page": 11,
+    "where": "Table 5, Model 3, row Performance (<=aspiration) x Minutes remaining; text PDF page 11 'odds ratio for P <= AL = 1.011, p < 0.01'"
+   }
+  },
+  "T5|M3|same_conference": {
+   "key": "T5|M3|same_conference",
+   "fable_id": "T34",
+   "astra_id": "T32",
+   "value": "0.999",
+   "published_se": 0.052,
+   "stars": "none",
+   "quantity": "odds_ratio",
+   "agree_value": true,
+   "agree_se": true,
+   "agree_stars": true,
+   "source": {
+    "doc": "D01",
+    "pdf_page": 11,
+    "where": "Table 5, Model 3, row Same conference"
+   }
+  },
+  "T5|M3|same_division": {
+   "key": "T5|M3|same_division",
+   "fable_id": "T33",
+   "astra_id": "T31",
+   "value": "1.046",
+   "published_se": 0.062,
+   "stars": "none",
+   "quantity": "odds_ratio",
+   "agree_value": true,
+   "agree_se": true,
+   "agree_stars": true,
+   "source": {
+    "doc": "D01",
+    "pdf_page": 11,
+    "where": "Table 5, Model 3, row Same division"
+   }
+  },
+  "T5|M3|total_points": {
+   "key": "T5|M3|total_points",
+   "fable_id": "T30",
+   "astra_id": "T28",
+   "value": "1.014",
+   "published_se": 0.005,
+   "stars": "**",
+   "quantity": "odds_ratio",
+   "agree_value": true,
+   "agree_se": true,
+   "agree_stars": true,
+   "source": {
+    "doc": "D01",
+    "pdf_page": 11,
+    "where": "Table 5, Model 3, row Total points"
+   }
+  },
+  "T5|M3|week": {
+   "key": "T5|M3|week",
+   "fable_id": "T36",
+   "astra_id": "T34",
+   "value": "1.026",
+   "published_se": 0.005,
+   "stars": "**",
+   "quantity": "odds_ratio",
+   "agree_value": true,
+   "agree_se": true,
+   "agree_stars": true,
+   "source": {
+    "doc": "D01",
+    "pdf_page": 11,
+    "where": "Table 5, Model 3, row Week of season"
+   }
+  },
+  "T5|M3|yards_first_down": {
+   "key": "T5|M3|yards_first_down",
+   "fable_id": "T31",
+   "astra_id": "T29",
+   "value": "0.801",
+   "published_se": 0.006,
+   "stars": "**",
+   "quantity": "odds_ratio",
+   "agree_value": true,
+   "agree_se": true,
+   "agree_stars": true,
+   "source": {
+    "doc": "D01",
+    "pdf_page": 11,
+    "where": "Table 5, Model 3, row Yards to go for 1st down"
+   }
+  },
+  "T5|M3|yards_touchdown": {
+   "key": "T5|M3|yards_touchdown",
+   "fable_id": "T32",
+   "astra_id": "T30",
+   "value": "0.972",
+   "published_se": 0.001,
+   "stars": "**",
+   "quantity": "odds_ratio",
+   "agree_value": true,
+   "agree_se": true,
+   "agree_stars": true,
+   "source": {
+    "doc": "D01",
+    "pdf_page": 11,
+    "where": "Table 5, Model 3, row Yards to go for touchdown"
+   }
+  },
+  "T6|all|gap-14": {
+   "key": "T6|all|gap-14",
+   "fable_id": "T53",
+   "astra_id": "T49",
+   "value": "-0.0039",
+   "published_se": 0.0005,
+   "stars": "**",
+   "quantity": "marginal_effect",
+   "agree_value": true,
+   "agree_se": true,
+   "agree_stars": true,
+   "source": {
+    "doc": "D01",
+    "pdf_page": 12,
+    "where": "Table 6, row All quarters, column -14; text PDF page 12 'marginal effect at -14 points = -0.0039'"
+   }
+  },
+  "T6|all|gap-28": {
+   "key": "T6|all|gap-28",
+   "fable_id": "T52",
+   "astra_id": "T48",
+   "value": "-0.0044",
+   "published_se": 0.0028,
+   "stars": "none",
+   "quantity": "marginal_effect",
+   "agree_value": true,
+   "agree_se": true,
+   "agree_stars": true,
+   "source": {
+    "doc": "D01",
+    "pdf_page": 12,
+    "where": "Table 6, row All quarters, column -28"
+   }
+  },
+  "T6|all|gap-42": {
+   "key": "T6|all|gap-42",
+   "fable_id": "T51",
+   "astra_id": "T47",
+   "value": "-0.0026",
+   "published_se": 0.0062,
+   "stars": "none",
+   "quantity": "marginal_effect",
+   "agree_value": true,
+   "agree_se": true,
+   "agree_stars": true,
+   "source": {
+    "doc": "D01",
+    "pdf_page": 12,
+    "where": "Table 6, row All quarters, column -42"
+   }
+  },
+  "T6|all|gap0": {
+   "key": "T6|all|gap0",
+   "fable_id": "T54",
+   "astra_id": "T50",
+   "value": "-0.0022",
+   "published_se": 0.0003,
+   "stars": "**",
+   "quantity": "marginal_effect",
+   "agree_value": true,
+   "agree_se": true,
+   "agree_stars": true,
+   "source": {
+    "doc": "D01",
+    "pdf_page": 12,
+    "where": "Table 6, row All quarters, column 0"
+   }
+  },
+  "T6|all|gap14": {
+   "key": "T6|all|gap14",
+   "fable_id": "T55",
+   "astra_id": "T51",
+   "value": "-0.0006",
+   "published_se": 0.0002,
+   "stars": "**",
+   "quantity": "marginal_effect",
+   "agree_value": true,
+   "agree_se": true,
+   "agree_stars": true,
+   "source": {
+    "doc": "D01",
+    "pdf_page": 12,
+    "where": "Table 6, row All quarters, column 14"
+   }
+  },
+  "T6|all|gap28": {
+   "key": "T6|all|gap28",
+   "fable_id": "T56",
+   "astra_id": "T52",
+   "value": "-0.0004",
+   "published_se": 0.0001,
+   "stars": "**",
+   "quantity": "marginal_effect",
+   "agree_value": true,
+   "agree_se": true,
+   "agree_stars": true,
+   "source": {
+    "doc": "D01",
+    "pdf_page": 12,
+    "where": "Table 6, row All quarters, column 28"
+   }
+  },
+  "T6|all|gap42": {
+   "key": "T6|all|gap42",
+   "fable_id": "T57",
+   "astra_id": "T53",
+   "value": "-0.0003",
+   "published_se": 0.0,
+   "stars": "**",
+   "quantity": "marginal_effect",
+   "agree_value": true,
+   "agree_se": true,
+   "agree_stars": true,
+   "source": {
+    "doc": "D01",
+    "pdf_page": 12,
+    "where": "Table 6, row All quarters, column 42"
+   }
+  },
+  "T6|q1|gap-14": {
+   "key": "T6|q1|gap-14",
+   "fable_id": "T60",
+   "astra_id": "T56",
+   "value": "0.0004",
+   "published_se": 0.0001,
+   "stars": "**",
+   "quantity": "marginal_effect",
+   "agree_value": true,
+   "agree_se": true,
+   "agree_stars": true,
+   "source": {
+    "doc": "D01",
+    "pdf_page": 12,
+    "where": "Table 6, row 1st quarter, column -14; text PDF page 13 '(at -14 points, marginal effect = 0.0004, p < .01)'"
+   }
+  },
+  "T6|q1|gap-28": {
+   "key": "T6|q1|gap-28",
+   "fable_id": "T59",
+   "astra_id": "T55",
+   "value": "-0.0011",
+   "published_se": 0.0009,
+   "stars": "none",
+   "quantity": "marginal_effect",
+   "agree_value": true,
+   "agree_se": true,
+   "agree_stars": true,
+   "source": {
+    "doc": "D01",
+    "pdf_page": 12,
+    "where": "Table 6, row 1st quarter, column -28"
+   }
+  },
+  "T6|q1|gap-42": {
+   "key": "T6|q1|gap-42",
+   "fable_id": "T58",
+   "astra_id": "T54",
+   "value": "-0.0163",
+   "published_se": 0.0213,
+   "stars": "none",
+   "quantity": "marginal_effect",
+   "agree_value": true,
+   "agree_se": true,
+   "agree_stars": true,
+   "source": {
+    "doc": "D01",
+    "pdf_page": 12,
+    "where": "Table 6, row 1st quarter, column -42"
+   }
+  },
+  "T6|q1|gap0": {
+   "key": "T6|q1|gap0",
+   "fable_id": "T61",
+   "astra_id": "T57",
+   "value": "0.0066",
+   "published_se": 0.0014,
+   "stars": "**",
+   "quantity": "marginal_effect",
+   "agree_value": true,
+   "agree_se": true,
+   "agree_stars": true,
+   "source": {
+    "doc": "D01",
+    "pdf_page": 12,
+    "where": "Table 6, row 1st quarter, column 0"
+   }
+  },
+  "T6|q1|gap14": {
+   "key": "T6|q1|gap14",
+   "fable_id": "T62",
+   "astra_id": "T58",
+   "value": "-0.0013",
+   "published_se": 0.0002,
+   "stars": "**",
+   "quantity": "marginal_effect",
+   "agree_value": true,
+   "agree_se": true,
+   "agree_stars": true,
+   "source": {
+    "doc": "D01",
+    "pdf_page": 12,
+    "where": "Table 6, row 1st quarter, column 14"
+   }
+  },
+  "T6|q1|gap28": {
+   "key": "T6|q1|gap28",
+   "fable_id": "T63",
+   "astra_id": "T59",
+   "value": "-0.0005",
+   "published_se": 0.0001,
+   "stars": "**",
+   "quantity": "marginal_effect",
+   "agree_value": true,
+   "agree_se": true,
+   "agree_stars": true,
+   "source": {
+    "doc": "D01",
+    "pdf_page": 12,
+    "where": "Table 6, row 1st quarter, column 28"
+   }
+  },
+  "T6|q1|gap42": {
+   "key": "T6|q1|gap42",
+   "fable_id": "T64",
+   "astra_id": "T60",
+   "value": "-0.0002",
+   "published_se": 0.0001,
+   "stars": "*",
+   "quantity": "marginal_effect",
+   "agree_value": true,
+   "agree_se": true,
+   "agree_stars": true,
+   "source": {
+    "doc": "D01",
+    "pdf_page": 12,
+    "where": "Table 6, row 1st quarter, column 42"
+   }
+  },
+  "T6|q2|gap-14": {
+   "key": "T6|q2|gap-14",
+   "fable_id": "T67",
+   "astra_id": "T63",
+   "value": "-0.0009",
+   "published_se": 0.0003,
+   "stars": "*",
+   "quantity": "marginal_effect",
+   "agree_value": true,
+   "agree_se": true,
+   "agree_stars": true,
+   "source": {
+    "doc": "D01",
+    "pdf_page": 12,
+    "where": "Table 6, row 2nd quarter, column -14"
+   }
+  },
+  "T6|q2|gap-28": {
+   "key": "T6|q2|gap-28",
+   "fable_id": "T66",
+   "astra_id": "T62",
+   "value": "-0.0031",
+   "published_se": 0.0022,
+   "stars": "none",
+   "quantity": "marginal_effect",
+   "agree_value": true,
+   "agree_se": true,
+   "agree_stars": true,
+   "source": {
+    "doc": "D01",
+    "pdf_page": 12,
+    "where": "Table 6, row 2nd quarter, column -28"
+   }
+  },
+  "T6|q2|gap-42": {
+   "key": "T6|q2|gap-42",
+   "fable_id": "T65",
+   "astra_id": "T61",
+   "value": "-0.0099",
+   "published_se": 0.0111,
+   "stars": "none",
+   "quantity": "marginal_effect",
+   "agree_value": true,
+   "agree_se": true,
+   "agree_stars": true,
+   "source": {
+    "doc": "D01",
+    "pdf_page": 12,
+    "where": "Table 6, row 2nd quarter, column -42"
+   }
+  },
+  "T6|q2|gap0": {
+   "key": "T6|q2|gap0",
+   "fable_id": "T68",
+   "astra_id": "T64",
+   "value": "0.0001",
+   "published_se": 0.0005,
+   "stars": "none",
+   "quantity": "marginal_effect",
+   "agree_value": true,
+   "agree_se": true,
+   "agree_stars": true,
+   "source": {
+    "doc": "D01",
+    "pdf_page": 12,
+    "where": "Table 6, row 2nd quarter, column 0"
+   }
+  },
+  "T6|q2|gap14": {
+   "key": "T6|q2|gap14",
+   "fable_id": "T69",
+   "astra_id": "T65",
+   "value": "-0.0009",
+   "published_se": 0.0002,
+   "stars": "**",
+   "quantity": "marginal_effect",
+   "agree_value": true,
+   "agree_se": true,
+   "agree_stars": true,
+   "source": {
+    "doc": "D01",
+    "pdf_page": 12,
+    "where": "Table 6, row 2nd quarter, column 14"
+   }
+  },
+  "T6|q2|gap28": {
+   "key": "T6|q2|gap28",
+   "fable_id": "T70",
+   "astra_id": "T66",
+   "value": "-0.0005",
+   "published_se": 0.0,
+   "stars": "**",
+   "quantity": "marginal_effect",
+   "agree_value": true,
+   "agree_se": true,
+   "agree_stars": true,
+   "source": {
+    "doc": "D01",
+    "pdf_page": 12,
+    "where": "Table 6, row 2nd quarter, column 28"
+   }
+  },
+  "T6|q2|gap42": {
+   "key": "T6|q2|gap42",
+   "fable_id": "T71",
+   "astra_id": "T67",
+   "value": "-0.0003",
+   "published_se": 0.0001,
+   "stars": "**",
+   "quantity": "marginal_effect",
+   "agree_value": true,
+   "agree_se": true,
+   "agree_stars": true,
+   "source": {
+    "doc": "D01",
+    "pdf_page": 12,
+    "where": "Table 6, row 2nd quarter, column 42"
+   }
+  },
+  "T6|q3|gap-14": {
+   "key": "T6|q3|gap-14",
+   "fable_id": "T74",
+   "astra_id": "T70",
+   "value": "-0.0098",
+   "published_se": 0.0008,
+   "stars": "**",
+   "quantity": "marginal_effect",
+   "agree_value": true,
+   "agree_se": true,
+   "agree_stars": true,
+   "source": {
+    "doc": "D01",
+    "pdf_page": 12,
+    "where": "Table 6, row 3rd quarter, column -14"
+   }
+  },
+  "T6|q3|gap-28": {
+   "key": "T6|q3|gap-28",
+   "fable_id": "T73",
+   "astra_id": "T69",
+   "value": "-0.0047",
+   "published_se": 0.0028,
+   "stars": "+",
+   "quantity": "marginal_effect",
+   "agree_value": true,
+   "agree_se": true,
+   "agree_stars": true,
+   "source": {
+    "doc": "D01",
+    "pdf_page": 12,
+    "where": "Table 6, row 3rd quarter, column -28"
+   }
+  },
+  "T6|q3|gap-42": {
+   "key": "T6|q3|gap-42",
+   "fable_id": "T72",
+   "astra_id": "T68",
+   "value": "0.0068",
+   "published_se": 0.0031,
+   "stars": "*",
+   "quantity": "marginal_effect",
+   "agree_value": true,
+   "agree_se": true,
+   "agree_stars": true,
+   "source": {
+    "doc": "D01",
+    "pdf_page": 12,
+    "where": "Table 6, row 3rd quarter, column -42"
+   }
+  },
+  "T6|q3|gap0": {
+   "key": "T6|q3|gap0",
+   "fable_id": "T75",
+   "astra_id": "T71",
+   "value": "-0.0036",
+   "published_se": 0.0002,
+   "stars": "**",
+   "quantity": "marginal_effect",
+   "agree_value": true,
+   "agree_se": true,
+   "agree_stars": true,
+   "source": {
+    "doc": "D01",
+    "pdf_page": 12,
+    "where": "Table 6, row 3rd quarter, column 0"
+   }
+  },
+  "T6|q3|gap14": {
+   "key": "T6|q3|gap14",
+   "fable_id": "T76",
+   "astra_id": "T72",
+   "value": "-0.0003",
+   "published_se": 0.0002,
+   "stars": "none",
+   "quantity": "marginal_effect",
+   "agree_value": true,
+   "agree_se": true,
+   "agree_stars": true,
+   "source": {
+    "doc": "D01",
+    "pdf_page": 12,
+    "where": "Table 6, row 3rd quarter, column 14"
+   }
+  },
+  "T6|q3|gap28": {
+   "key": "T6|q3|gap28",
+   "fable_id": "T77",
+   "astra_id": "T73",
+   "value": "-0.0002",
+   "published_se": 0.0001,
+   "stars": "+",
+   "quantity": "marginal_effect",
+   "agree_value": true,
+   "agree_se": true,
+   "agree_stars": true,
+   "source": {
+    "doc": "D01",
+    "pdf_page": 12,
+    "where": "Table 6, row 3rd quarter, column 28"
+   }
+  },
+  "T6|q3|gap42": {
+   "key": "T6|q3|gap42",
+   "fable_id": "T78",
+   "astra_id": "T74",
+   "value": "-0.0002",
+   "published_se": 0.0001,
+   "stars": "*",
+   "quantity": "marginal_effect",
+   "agree_value": true,
+   "agree_se": true,
+   "agree_stars": true,
+   "source": {
+    "doc": "D01",
+    "pdf_page": 12,
+    "where": "Table 6, row 3rd quarter, column 42"
+   }
+  },
+  "T6|q4|gap-14": {
+   "key": "T6|q4|gap-14",
+   "fable_id": "T81",
+   "astra_id": "T77",
+   "value": "-0.0352",
+   "published_se": 0.0016,
+   "stars": "**",
+   "quantity": "marginal_effect",
+   "agree_value": true,
+   "agree_se": true,
+   "agree_stars": true,
+   "source": {
+    "doc": "D01",
+    "pdf_page": 12,
+    "where": "Table 6, row 4th quarter, column -14"
+   }
+  },
+  "T6|q4|gap-28": {
+   "key": "T6|q4|gap-28",
+   "fable_id": "T80",
+   "astra_id": "T76",
+   "value": "0.0002",
+   "published_se": 0.0026,
+   "stars": "none",
+   "quantity": "marginal_effect",
+   "agree_value": true,
+   "agree_se": true,
+   "agree_stars": true,
+   "source": {
+    "doc": "D01",
+    "pdf_page": 12,
+    "where": "Table 6, row 4th quarter, column -28"
+   }
+  },
+  "T6|q4|gap-42": {
+   "key": "T6|q4|gap-42",
+   "fable_id": "T79",
+   "astra_id": "T75",
+   "value": "0.0353",
+   "published_se": 0.002,
+   "stars": "**",
+   "quantity": "marginal_effect",
+   "agree_value": true,
+   "agree_se": true,
+   "agree_stars": true,
+   "source": {
+    "doc": "D01",
+    "pdf_page": 12,
+    "where": "Table 6, row 4th quarter, column -42"
+   }
+  },
+  "T6|q4|gap0": {
+   "key": "T6|q4|gap0",
+   "fable_id": "T82",
+   "astra_id": "T78",
+   "value": "-0.0055",
+   "published_se": 0.0004,
+   "stars": "**",
+   "quantity": "marginal_effect",
+   "agree_value": true,
+   "agree_se": true,
+   "agree_stars": true,
+   "source": {
+    "doc": "D01",
+    "pdf_page": 12,
+    "where": "Table 6, row 4th quarter, column 0"
+   }
+  },
+  "T6|q4|gap14": {
+   "key": "T6|q4|gap14",
+   "fable_id": "T83",
+   "astra_id": "T79",
+   "value": "0.0005",
+   "published_se": 0.0002,
+   "stars": "*",
+   "quantity": "marginal_effect",
+   "agree_value": true,
+   "agree_se": true,
+   "agree_stars": true,
+   "source": {
+    "doc": "D01",
+    "pdf_page": 12,
+    "where": "Table 6, row 4th quarter, column 14"
+   }
+  },
+  "T6|q4|gap28": {
+   "key": "T6|q4|gap28",
+   "fable_id": "T84",
+   "astra_id": "T80",
+   "value": "0.0006",
+   "published_se": 0.0004,
+   "stars": "+",
+   "quantity": "marginal_effect",
+   "agree_value": true,
+   "agree_se": true,
+   "agree_stars": true,
+   "source": {
+    "doc": "D01",
+    "pdf_page": 12,
+    "where": "Table 6, row 4th quarter, column 28"
+   }
+  },
+  "T6|q4|gap42": {
+   "key": "T6|q4|gap42",
+   "fable_id": "T85",
+   "astra_id": "T81",
+   "value": "0.0008",
+   "published_se": 0.0006,
+   "stars": "none",
+   "quantity": "marginal_effect",
+   "agree_value": true,
+   "agree_se": true,
+   "agree_stars": true,
+   "source": {
+    "doc": "D01",
+    "pdf_page": 12,
+    "where": "Table 6, row 4th quarter, column 42"
+   }
+  }
+ }
+}

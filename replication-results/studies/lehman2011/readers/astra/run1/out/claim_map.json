@@ -1,0 +1,567 @@
+{
+  "paper_id": "P01",
+  "claims": [
+    {
+      "claim_id": "C1",
+      "type": "stated_finding",
+      "statement": "Deadline proximity moderates the performance–risk relationship within a performance period; the hypotheses receive support.",
+      "hypothesis_label": null,
+      "predicted_direction": "specific pattern (stronger relationships near the deadline)",
+      "estimand": "Joint pattern of performance-related marginal effects across time in Model 3",
+      "population": "Offensive-team fourth-down decisions in NFL regular-season games, 2000–2005; regulation only and excluding the last two minutes.",
+      "scale": "probability",
+      "tier": "focal",
+      "supporting_results": [
+        "T54",
+        "T56",
+        "T58",
+        "T75",
+        "T77",
+        "T79"
+      ],
+      "paper_reports_supported": "partial",
+      "source": [
+        {
+          "doc": "D01",
+          "pdf_page": 1,
+          "where": "Abstract"
+        },
+        {
+          "doc": "D01",
+          "pdf_page": 12,
+          "where": "Results / H1B not supported"
+        },
+        {
+          "doc": "D01",
+          "pdf_page": 13,
+          "where": "Results / strong H2 and weak H3 support"
+        }
+      ]
+    },
+    {
+      "claim_id": "C2",
+      "type": "hypothesis",
+      "statement": "Below aspirations, the performance–risk relationship is inverted U-shaped.",
+      "hypothesis_label": "H1A",
+      "predicted_direction": "specific pattern (positive slope far below and negative slope nearer aspiration)",
+      "estimand": "Model 2 below-aspiration linear and squared terms and derivative of probability over performance",
+      "population": "Offensive-team fourth-down decisions in NFL regular-season games, 2000–2005; regulation only and excluding the last two minutes.",
+      "scale": "probability",
+      "tier": "focal",
+      "supporting_results": [
+        "T20",
+        "T21",
+        "T47",
+        "T48",
+        "T49",
+        "T50"
+      ],
+      "paper_reports_supported": "yes",
+      "source": [
+        {
+          "doc": "D01",
+          "pdf_page": 4,
+          "where": "Hypothesis 1A"
+        },
+        {
+          "doc": "D01",
+          "pdf_page": 10,
+          "where": "Results / H1"
+        },
+        {
+          "doc": "D01",
+          "pdf_page": 12,
+          "where": "Results / H1 conclusion"
+        }
+      ]
+    },
+    {
+      "claim_id": "C3",
+      "type": "hypothesis",
+      "statement": "Above aspirations, the performance–risk relationship is positive.",
+      "hypothesis_label": "H1B",
+      "predicted_direction": "positive",
+      "estimand": "Model 2 above-aspiration slope and probability derivative",
+      "population": "Offensive-team fourth-down decisions in NFL regular-season games, 2000–2005; regulation only and excluding the last two minutes.",
+      "scale": "probability",
+      "tier": "focal",
+      "supporting_results": [
+        "T22",
+        "T51",
+        "T52",
+        "T53"
+      ],
+      "paper_reports_supported": "no",
+      "source": [
+        {
+          "doc": "D01",
+          "pdf_page": 4,
+          "where": "Hypothesis 1B"
+        },
+        {
+          "doc": "D01",
+          "pdf_page": 12,
+          "where": "Results / H1 conclusion"
+        }
+      ]
+    },
+    {
+      "claim_id": "C4",
+      "type": "hypothesis",
+      "statement": "Below aspirations, the inverted U-shaped performance–risk relationship strengthens as deadlines approach.",
+      "hypothesis_label": "H2",
+      "predicted_direction": "specific pattern (more positive far below and more negative near aspiration as remaining time decreases)",
+      "estimand": "Model 3 interactions and time-specific derivatives of probability with respect to performance",
+      "population": "Offensive-team fourth-down decisions in NFL regular-season games, 2000–2005; regulation only and excluding the last two minutes.",
+      "scale": "probability",
+      "tier": "focal",
+      "supporting_results": [
+        "T40",
+        "T41",
+        "T54",
+        "T55",
+        "T56",
+        "T57",
+        "T61",
+        "T62",
+        "T63",
+        "T64",
+        "T68",
+        "T69",
+        "T70",
+        "T71",
+        "T75",
+        "T76",
+        "T77",
+        "T78"
+      ],
+      "paper_reports_supported": "yes",
+      "source": [
+        {
+          "doc": "D01",
+          "pdf_page": 7,
+          "where": "Hypothesis 2"
+        },
+        {
+          "doc": "D01",
+          "pdf_page": 11,
+          "where": "Table 5 / Model 3"
+        },
+        {
+          "doc": "D01",
+          "pdf_page": 12,
+          "where": "Table 6"
+        },
+        {
+          "doc": "D01",
+          "pdf_page": 13,
+          "where": "Results / H2"
+        }
+      ]
+    },
+    {
+      "claim_id": "C5",
+      "type": "hypothesis",
+      "statement": "Above aspirations, the positive performance–risk relationship strengthens as deadlines approach.",
+      "hypothesis_label": "H3",
+      "predicted_direction": "specific pattern (more positive slope as remaining time decreases)",
+      "estimand": "Model 3 above-aspiration interaction and time-specific probability derivatives",
+      "population": "Offensive-team fourth-down decisions in NFL regular-season games, 2000–2005; regulation only and excluding the last two minutes.",
+      "scale": "probability",
+      "tier": "focal",
+      "supporting_results": [
+        "T38",
+        "T42",
+        "T58",
+        "T59",
+        "T60",
+        "T65",
+        "T66",
+        "T67",
+        "T72",
+        "T73",
+        "T74",
+        "T79",
+        "T80",
+        "T81"
+      ],
+      "paper_reports_supported": "yes",
+      "source": [
+        {
+          "doc": "D01",
+          "pdf_page": 7,
+          "where": "Hypothesis 3"
+        },
+        {
+          "doc": "D01",
+          "pdf_page": 13,
+          "where": "Results / explicitly weak support"
+        }
+      ]
+    },
+    {
+      "claim_id": "C6",
+      "type": "descriptive_claim",
+      "statement": "Going for it is nonroutine, and failed conversions commonly transfer possession; punts and field goals are treated as less risky.",
+      "hypothesis_label": null,
+      "predicted_direction": null,
+      "estimand": "Published action and outcome frequencies, sealed in sealed_N_branch.json",
+      "population": "Offensive-team fourth-down decisions in NFL regular-season games, 2000–2005; regulation only and excluding the last two minutes.",
+      "scale": "other (descriptive frequencies)",
+      "tier": "descriptive",
+      "supporting_results": [],
+      "paper_reports_supported": "yes",
+      "source": [
+        {
+          "doc": "D01",
+          "pdf_page": 8,
+          "where": "Study Context / third reason and Risk Taking"
+        }
+      ]
+    },
+    {
+      "claim_id": "C7",
+      "type": "robustness_claim",
+      "statement": "Using quarters remaining rather than minutes remaining yields consistent results.",
+      "hypothesis_label": null,
+      "predicted_direction": "specific pattern (qualitatively unchanged)",
+      "estimand": "Same conceptual analysis with a coarsened deadline measure; coefficients not supplied",
+      "population": "Offensive-team fourth-down decisions in NFL regular-season games, 2000–2005; regulation only and excluding the last two minutes.",
+      "scale": "other (unreported robustness effects)",
+      "tier": "robustness",
+      "supporting_results": [],
+      "paper_reports_supported": "yes",
+      "source": [
+        {
+          "doc": "D01",
+          "pdf_page": 9,
+          "where": "Deadline Proximity"
+        }
+      ]
+    },
+    {
+      "claim_id": "C8",
+      "type": "descriptive_claim",
+      "statement": "Most games include a conversion attempt, and conversion attempts become more frequent later in the game.",
+      "hypothesis_label": null,
+      "predicted_direction": "specific pattern (increasing attempt frequency across quarters)",
+      "estimand": "Game-average attempts and quarter-specific attempt proportions; count targets held only in sealed_N_branch.json",
+      "population": "Offensive-team fourth-down decisions in NFL regular-season games, 2000–2005; regulation only and excluding the last two minutes.",
+      "scale": "other (mean and proportions)",
+      "tier": "descriptive",
+      "supporting_results": [
+        "T134"
+      ],
+      "paper_reports_supported": "yes",
+      "source": [
+        {
+          "doc": "D01",
+          "pdf_page": 10,
+          "where": "Results / opening paragraph; Tables 2–3"
+        }
+      ]
+    },
+    {
+      "claim_id": "C9",
+      "type": "stated_finding",
+      "statement": "Conversion attempts are more likely with fewer yards needed for a first down, fewer yards to the end zone, and fewer minutes remaining.",
+      "hypothesis_label": null,
+      "predicted_direction": "negative",
+      "estimand": "Model 1 distance and remaining-time coefficients",
+      "population": "Offensive-team fourth-down decisions in NFL regular-season games, 2000–2005; regulation only and excluding the last two minutes.",
+      "scale": "odds ratio",
+      "tier": "nuisance_control",
+      "supporting_results": [
+        "T2",
+        "T3",
+        "T8"
+      ],
+      "paper_reports_supported": "yes",
+      "source": [
+        {
+          "doc": "D01",
+          "pdf_page": 10,
+          "where": "Results / Model 1"
+        }
+      ]
+    },
+    {
+      "claim_id": "C10",
+      "type": "stated_finding",
+      "statement": "The hypothesis models fit satisfactorily and improve significantly over the preceding models.",
+      "hypothesis_label": null,
+      "predicted_direction": null,
+      "estimand": "Overall and incremental likelihood-ratio tests for Models 2 and 3",
+      "population": "Offensive-team fourth-down decisions in NFL regular-season games, 2000–2005; regulation only and excluding the last two minutes.",
+      "scale": "other (likelihood-ratio chi-square)",
+      "tier": "identification_inference_diagnostic",
+      "supporting_results": [
+        "T9",
+        "T24",
+        "T43",
+        "T10",
+        "T25",
+        "T44",
+        "T27",
+        "T46",
+        "T11",
+        "T26",
+        "T45"
+      ],
+      "paper_reports_supported": "yes",
+      "source": [
+        {
+          "doc": "D01",
+          "pdf_page": 10,
+          "where": "Results / Model 2 fit"
+        },
+        {
+          "doc": "D01",
+          "pdf_page": 11,
+          "where": "Results / Model 3 fit; Table 5"
+        }
+      ]
+    },
+    {
+      "claim_id": "C11",
+      "type": "stated_finding",
+      "statement": "Performance effects below and above aspirations differ significantly, indicating sensitivity to the aspiration level.",
+      "hypothesis_label": null,
+      "predicted_direction": "nonzero",
+      "estimand": "Unspecified contrast between below- and above-aspiration terms in Model 2",
+      "population": "Offensive-team fourth-down decisions in NFL regular-season games, 2000–2005; regulation only and excluding the last two minutes.",
+      "scale": "other (chi-square test)",
+      "tier": "identification_inference_diagnostic",
+      "supporting_results": [
+        "T135"
+      ],
+      "paper_reports_supported": "yes",
+      "source": [
+        {
+          "doc": "D01",
+          "pdf_page": 10,
+          "where": "Results / last paragraph"
+        }
+      ]
+    },
+    {
+      "claim_id": "C12",
+      "type": "stated_finding",
+      "statement": "All-game marginal effects support the below-aspiration hypothesis but not the above-aspiration hypothesis.",
+      "hypothesis_label": null,
+      "predicted_direction": "specific pattern (H1A supported; H1B unsupported)",
+      "estimand": "Model 2 marginal effects across the stated performance grid",
+      "population": "Offensive-team fourth-down decisions in NFL regular-season games, 2000–2005; regulation only and excluding the last two minutes.",
+      "scale": "probability",
+      "tier": "focal",
+      "supporting_results": [
+        "T47",
+        "T48",
+        "T49",
+        "T50",
+        "T51",
+        "T52",
+        "T53"
+      ],
+      "paper_reports_supported": "yes",
+      "source": [
+        {
+          "doc": "D01",
+          "pdf_page": 12,
+          "where": "Results / first paragraph"
+        }
+      ]
+    },
+    {
+      "claim_id": "C13",
+      "type": "stated_finding",
+      "statement": "An inverted U-shaped relationship emerges and strengthens as the game progresses.",
+      "hypothesis_label": null,
+      "predicted_direction": "specific pattern (late positive slopes at large shortfalls and negative slopes at smaller shortfalls)",
+      "estimand": "Time-varying below-aspiration slopes and predicted probability surface, Model 3",
+      "population": "Offensive-team fourth-down decisions in NFL regular-season games, 2000–2005; regulation only and excluding the last two minutes.",
+      "scale": "probability",
+      "tier": "focal",
+      "supporting_results": [
+        "T54",
+        "T56",
+        "T61",
+        "T63",
+        "T68",
+        "T70",
+        "T75",
+        "T77"
+      ],
+      "paper_reports_supported": "yes",
+      "source": [
+        {
+          "doc": "D01",
+          "pdf_page": 12,
+          "where": "Table 6; Figure 2"
+        },
+        {
+          "doc": "D01",
+          "pdf_page": 13,
+          "where": "Results; Figure 3"
+        }
+      ]
+    },
+    {
+      "claim_id": "C14",
+      "type": "stated_finding",
+      "statement": "Above aspirations, slopes are negative early and positive late; the evidence for deadline moderation is weak.",
+      "hypothesis_label": null,
+      "predicted_direction": "specific pattern (negative early, positive late)",
+      "estimand": "Model 3 above-aspiration marginal effects by quarter",
+      "population": "Offensive-team fourth-down decisions in NFL regular-season games, 2000–2005; regulation only and excluding the last two minutes.",
+      "scale": "probability",
+      "tier": "focal",
+      "supporting_results": [
+        "T58",
+        "T59",
+        "T60",
+        "T65",
+        "T66",
+        "T67",
+        "T79",
+        "T80",
+        "T81"
+      ],
+      "paper_reports_supported": "yes",
+      "source": [
+        {
+          "doc": "D01",
+          "pdf_page": 13,
+          "where": "Results / H3 discussion and Figure 3"
+        }
+      ]
+    },
+    {
+      "claim_id": "C15",
+      "type": "stated_finding",
+      "statement": "Unexpectedly, risk taking increases with performance just below aspirations early in the game.",
+      "hypothesis_label": null,
+      "predicted_direction": "positive",
+      "estimand": "Model 3 first-quarter marginal effect at performance minus aspiration of −14",
+      "population": "Offensive-team fourth-down decisions in NFL regular-season games, 2000–2005; regulation only and excluding the last two minutes.",
+      "scale": "probability",
+      "tier": "focal",
+      "supporting_results": [
+        "T56"
+      ],
+      "paper_reports_supported": "yes",
+      "source": [
+        {
+          "doc": "D01",
+          "pdf_page": 13,
+          "where": "Results / unexpected finding; Discussion"
+        }
+      ]
+    },
+    {
+      "claim_id": "C16",
+      "type": "stated_finding",
+      "statement": "Seven-point improvements in performance imply changes in conversion likelihood whose size depends on performance and time remaining.",
+      "hypothesis_label": null,
+      "predicted_direction": "specific pattern (negative at modest shortfalls, positive at large late shortfalls)",
+      "estimand": "Reported multiples of local probability derivatives; not necessarily exact finite probability changes",
+      "population": "Offensive-team fourth-down decisions in NFL regular-season games, 2000–2005; regulation only and excluding the last two minutes.",
+      "scale": "probability",
+      "tier": "focal",
+      "supporting_results": [
+        "T136",
+        "T137",
+        "T138",
+        "T139",
+        "T49",
+        "T63",
+        "T77",
+        "T75"
+      ],
+      "paper_reports_supported": "yes",
+      "source": [
+        {
+          "doc": "D01",
+          "pdf_page": 11,
+          "where": "Results / seven-point example begins"
+        },
+        {
+          "doc": "D01",
+          "pdf_page": 12,
+          "where": "Results / examples"
+        },
+        {
+          "doc": "D01",
+          "pdf_page": 13,
+          "where": "Results / continuation"
+        }
+      ]
+    },
+    {
+      "claim_id": "C17",
+      "type": "stated_finding",
+      "statement": "Patterns are consistent with attention shifting from aspirations early to survival or slack later.",
+      "hypothesis_label": null,
+      "predicted_direction": "specific pattern (proposed attentional mechanism)",
+      "estimand": "Interpretation of Model 3; attention itself is not observed",
+      "population": "Offensive-team fourth-down decisions in NFL regular-season games, 2000–2005; regulation only and excluding the last two minutes.",
+      "scale": "other (mechanism interpretation, not an identified mediation effect)",
+      "tier": "identification_inference_diagnostic",
+      "supporting_results": [],
+      "paper_reports_supported": "yes",
+      "source": [
+        {
+          "doc": "D01",
+          "pdf_page": 13,
+          "where": "Discussion / second paragraph"
+        },
+        {
+          "doc": "D01",
+          "pdf_page": 14,
+          "where": "Limitations / focus of attention not measured"
+        }
+      ]
+    },
+    {
+      "claim_id": "C18",
+      "type": "robustness_claim",
+      "statement": "Using an alternative aspiration level based on recently held point spreads produces qualitatively consistent results.",
+      "hypothesis_label": null,
+      "predicted_direction": "specific pattern (qualitatively unchanged)",
+      "estimand": "Unreported alternative-aspiration model; lookback definition and estimates unavailable",
+      "population": "Offensive-team fourth-down decisions in NFL regular-season games, 2000–2005; regulation only and excluding the last two minutes.",
+      "scale": "other (unreported robustness effects)",
+      "tier": "robustness",
+      "supporting_results": [],
+      "paper_reports_supported": "yes",
+      "source": [
+        {
+          "doc": "D01",
+          "pdf_page": 16,
+          "where": "Endnote 4"
+        }
+      ]
+    },
+    {
+      "claim_id": "C19",
+      "type": "robustness_claim",
+      "statement": "Separate conversion-versus-kick and conversion-versus-punt analyses within and outside field-goal range produce qualitatively consistent results.",
+      "hypothesis_label": null,
+      "predicted_direction": "specific pattern (qualitatively unchanged)",
+      "estimand": "Unreported outcome-choice and field-position restricted models; cutoff unavailable",
+      "population": "Offensive-team fourth-down decisions in NFL regular-season games, 2000–2005; regulation only and excluding the last two minutes.",
+      "scale": "other (unreported robustness effects)",
+      "tier": "robustness",
+      "supporting_results": [],
+      "paper_reports_supported": "yes",
+      "source": [
+        {
+          "doc": "D01",
+          "pdf_page": 16,
+          "where": "Endnote 4"
+        }
+      ]
+    }
+  ],
+  "focal_claims_rationale": "The four formal hypotheses concern probability shape and deadline moderation (D01 PDF pp. 4 and 7); the article explicitly emphasizes marginal effects over isolated interaction coefficients (D01 PDF p. 11, Results). C1 and C12–C16 record the corresponding empirical summaries and exceptions. Context frequencies, control effects, fit tests, and narrative robustness are separate tiers. Prior-literature assertions and managerial suggestions are not treated as additional fitted empirical claims. Claims are ordered by first statement; later repeats are linked rather than duplicated."
+}

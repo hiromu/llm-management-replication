@@ -1,0 +1,25 @@
+{
+  "observation_unit": "Work establishment interview record in the 1991 National Organizations Survey (one record per GSS nominator; establishments named by several nominators appear as duplicated records with V3 = 0).",
+  "sampling_unit": "Establishment, entered through a hypernetwork design: employed respondents (and working spouses) of the 1991 General Social Survey named their employers, so establishments were selected with probability proportional to their number of employees (D1 p5; source description).",
+  "assignment_unit": "Not applicable (observational cross-section); HRM practices are establishment-level informant reports, not assigned.",
+  "clusters": "None used by the article. Potential dependence: duplicated establishment records (same interview copied to several nominators) and industries (two-digit SIC groups, absorbed by dummies rather than clustered). The article reports no clustering.",
+  "native_se_method": "Conventional OLS standard errors (footnote a 'standard errors in parentheses'); no robust, clustered or design-based correction is mentioned. One-tailed t-tests at .10/.05/.01; residual degrees of freedom not printed. Joint tests are incremental F-tests on R2 changes (footnotes c, d).",
+  "software": "Not stated anywhere in D1 or D2.",
+  "first_stage": "not applicable (no instrumental variables; the authors state 'appropriate instrumental variables were unavailable', D1 p19)",
+  "unavailable_sources": [
+    "Authors' two-digit SIC assignment for each establishment: the public NOS file contains only 1980 Census industry codes (V43/INDUSTRY); the article does not say how SIC codes were obtained.",
+    "Item list for the union pressure index (alpha reported, items never listed).",
+    "Recode rule for the decentralized decision making items (NOS multi-category locus codes to the article's 1-5 scale).",
+    "Complementarity count-variable regressions and their dummy/spline transformations ('results not shown', D1 p17).",
+    "Subgroup analyses by for-profit/nonprofit status ('available upon request', D1 p18).",
+    "The set of interaction subsets the authors 'experimented extensively' with (D1 p17).",
+    "Sample-construction account from responding organizations to the analysis samples (no attrition table; no missing-data rule).",
+    "Degrees of freedom for F-tests; software; any appendix (none exists per the packet search)."
+  ],
+  "vintage_fallbacks": [
+    "Data vintage: the authors cite the 1993 University of Minnesota/ICPSR release of the NOS (D1 p21 reference list); the available file is ICPSR 6240 V1 (second ICPSR release, November 1994; version date 2006-01-18). The file-creation documentation records that six cases were re-designated as duplicates late in processing, so record counts and duplicate flags may differ from the authors' copy. Fallback: use DS0002 as released and record the duplicate handling (axis A01).",
+    "Industry classification: no SIC variable exists in the release; fallback is the study-local transcription of the 1980 Census industry classification with 1972 SIC equivalents (census1980_industry_sic1972.csv), applied to V43/INDUSTRY (axis A17). The authors' 1972-vs-1987 SIC edition is not stated; the 1980 Census list prints 1972 SIC equivalents.",
+    "Missing-value declarations: the NOS technical manual states the original SPSS-X file declared no missing values; the ICPSR .por declares user-missing codes for most variables but leaves 997 (application counts) and 4 'varies/depends' (training effectiveness) undeclared. Fallback: apply the dictionary's substantive/non-substantive distinctions explicitly rather than relying on file declarations.",
+    "Weights: WEIGHT is documented as RAWWGT rescaled to the distinct-establishment count; the article uses none. Fallback: unweighted (axis A19 L0)."
+  ]
+}

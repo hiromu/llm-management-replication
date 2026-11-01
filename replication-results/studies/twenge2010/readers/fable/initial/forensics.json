@@ -1,0 +1,460 @@
+{
+ "findings": [
+  {
+   "finding_id": "F01",
+   "check": "Scale-level d recomputed from printed latent means and SDs: d = (M_later - M_earlier)/sqrt((SD1^2+SD2^2)/2)",
+   "inputs_locators": [
+    {
+     "doc_id": "P1",
+     "pdf_page": 11,
+     "table": "Table 1",
+     "row": "scale rows",
+     "column": "M, SD, t or d"
+    },
+    {
+     "doc_id": "P1",
+     "pdf_page": 12,
+     "table": "Table 1",
+     "row": "scale rows",
+     "column": "M, SD, t or d"
+    }
+   ],
+   "computation": "All 15 printed d values (5 scales x 3 pairs) fall inside the interval obtained by varying each mean and SD over +/-0.005. Point recomputations: Leisure .350/.224/.571; Intrinsic -.048/-.155/-.202; Altruistic -.042/-.055/-.097; Social -.100/-.175/-.277; Extrinsic .388/-.128/.261 (order: 76v91, 91v06, 76v06).",
+   "result": "consistent",
+   "rounding_interval_used": "means and SDs +/-0.005; printed d +/-0.005",
+   "notes": "Establishes the sign convention later minus earlier and that the printed SDs are the standardizer. Also consistent with the df-weighted pooled SD given similar n."
+  },
+  {
+   "finding_id": "F02",
+   "check": "95% CI of latent means recomputed as M +/- 1.96 SE",
+   "inputs_locators": [
+    {
+     "doc_id": "P1",
+     "pdf_page": 11,
+     "table": "Table 1",
+     "row": "scale rows",
+     "column": "% v. imp. columns"
+    },
+    {
+     "doc_id": "P1",
+     "pdf_page": 12,
+     "table": "Table 1",
+     "row": "scale rows",
+     "column": "% v. imp. columns"
+    }
+   ],
+   "computation": "All 15 printed intervals match M +/- 1.96*SE within rounding (e.g., Leisure 1976: 2.36 +/- 1.96*.017 = 2.327-2.393 -> 2.33-2.39).",
+   "result": "consistent",
+   "rounding_interval_used": "M +/-0.005, SE +/-0.0005, bounds +/-0.005",
+   "notes": ""
+  },
+  {
+   "finding_id": "F03",
+   "check": "Printed SE vs printed SD: SE*sqrt(form n) compared with SD",
+   "inputs_locators": [
+    {
+     "doc_id": "P1",
+     "pdf_page": 11,
+     "table": "Table 1",
+     "row": "scale rows",
+     "column": "SD and SE"
+    },
+    {
+     "doc_id": "P1",
+     "pdf_page": 10,
+     "table": "Method text",
+     "row": "n per form",
+     "column": ""
+    }
+   ],
+   "computation": "SE*sqrt(n) = .98/.96/.98 (Leisure), .75/.70/.74 (Intrinsic), .92/.91/.79 (Altruistic), .92/.91/.93 (Social), .92/.96/.83 (Extrinsic) versus printed SDs .67-.73, .41-.48, .71-.74, .67-.70, .68-.71.",
+   "result": "not_checkable",
+   "rounding_interval_used": "n/a",
+   "notes": "The SE is not SD/sqrt(n) of the printed SD, so the SD and SE are different quantities (SE from the latent-mean estimate, SD undefined in the article). Not an inconsistency, but shows the SD definition is open (AX04)."
+  },
+  {
+   "finding_id": "F04",
+   "check": "Item-level t recomputed from printed means, SDs and form n (pooled-variance t, later minus earlier)",
+   "inputs_locators": [
+    {
+     "doc_id": "P1",
+     "pdf_page": 11,
+     "table": "Table 1",
+     "row": "item rows",
+     "column": "M, SD, t"
+    },
+    {
+     "doc_id": "P1",
+     "pdf_page": 12,
+     "table": "Table 1",
+     "row": "item rows",
+     "column": "M, SD, t"
+    },
+    {
+     "doc_id": "P1",
+     "pdf_page": 13,
+     "table": "Table 1",
+     "row": "item rows",
+     "column": "M, SD, t"
+    },
+    {
+     "doc_id": "P1",
+     "pdf_page": 10,
+     "table": "Method",
+     "row": "n per form",
+     "column": ""
+    }
+   ],
+   "computation": "82 of 87 printed t values fall inside the whole-rounding interval (means and SDs +/-0.005) using form n as item n. Exceptions: 'forget about after work day' 1991 vs 2006 printed .54 vs recomputed -.77 (interval -1.03 to -.51; sign and magnitude differ); same item 1976 vs 2006 printed -1.92 vs recomputed +1.84 (interval 1.57 to 2.11; sign reversed, magnitude matches); 'would you want to work' all three pairs printed -3.81/-2.04/-5.92 vs recomputed +3.54/+2.36/+5.98 (intervals 2.62-4.48, 1.55-3.18, 5.07-6.91; sign reversed on the 1-2 coding, magnitudes match).",
+   "result": "inconsistent_beyond_rounding",
+   "rounding_interval_used": "means and SDs +/-0.005; item n assumed equal to form n (item n unknown, which affects magnitude but not sign)",
+   "notes": "For the yes/no item the printed negative signs follow the direction of the percentage wanting to work (decreasing), not the 1-2 mean (increasing). For the 'forget about' item, the 1991 vs 2006 entry cannot be reconciled by sign alone."
+  },
+  {
+   "finding_id": "F05",
+   "check": "Stars vs printed t (two-sided normal approximation, large df)",
+   "inputs_locators": [
+    {
+     "doc_id": "P1",
+     "pdf_page": 12,
+     "table": "Table 1",
+     "row": "A job that provides you with a chance to earn a good deal of money",
+     "column": "1991 vs. 2006 t"
+    }
+   ],
+   "computation": "t = -2.37 gives p = .018, which merits * (p < .05), but *** (p < .001) is printed. All other 86 star assignments agree with the printed t at the .05/.01/.001 thresholds (including borderline cases -1.93 and -1.92 without stars, p = .054/.055).",
+   "result": "inconsistent_beyond_rounding",
+   "rounding_interval_used": "t +/-0.005",
+   "notes": "Single star-level discrepancy."
+  },
+  {
+   "finding_id": "F06",
+   "check": "Mean vs percentage bounds for each item and year (Form 4: 4p+1(1-p) <= M <= 4p+3(1-p); Form 3 agree items: 4p+1(1-p) <= M <= 5p+3(1-p); yes/no item: M = 1 + (1-p), SD = sqrt(p(1-p)))",
+   "inputs_locators": [
+    {
+     "doc_id": "P1",
+     "pdf_page": 11,
+     "table": "Table 1",
+     "row": "all item rows",
+     "column": "M and % v. imp."
+    },
+    {
+     "doc_id": "P1",
+     "pdf_page": 12,
+     "table": "Table 1",
+     "row": "all item rows",
+     "column": "M and % v. imp."
+    },
+    {
+     "doc_id": "P1",
+     "pdf_page": 13,
+     "table": "Table 1",
+     "row": "all item rows",
+     "column": "M and % v. imp."
+    }
+   ],
+   "computation": "All 87 item-year means lie within the bounds implied by the printed percentage. For the yes/no item the implied means 1.227/1.270/1.297 and SDs .419/.444/.457 match the printed 1.23/1.27/1.30 and .42/.44/.46, confirming the percentage column is the share answering 'would want to work' and the mean is on the 1-2 coding.",
+   "result": "consistent",
+   "rounding_interval_used": "M +/-0.005, percentage +/-0.05",
+   "notes": "Also confirms a 4-point maximum for Form 4 items (e.g., mean 3.85 with 87.8% in the top category is impossible on a 1-5 scale unless the top category were 5, which would give a minimum mean of 4.51), contradicting the article's '5-point' description."
+  },
+  {
+   "finding_id": "F07",
+   "check": "Table 2 nested-model arithmetic: delta df and delta chi-square vs differences of printed rows; delta CFI vs printed CFIs",
+   "inputs_locators": [
+    {
+     "doc_id": "P1",
+     "pdf_page": 14,
+     "table": "Table 2",
+     "row": "Multigroup invariance rows",
+     "column": "df, c2, CFI"
+    }
+   ],
+   "computation": "Delta df 26/26/16/10 equal the row differences (401-375, 427-401, 417-401, 427-417). Delta chi-square: 4150.52-4110.93 = 39.59 (printed 39.58); 4539.10-4150.52 = 388.58 (printed 388.59); 4241.86-4150.52 = 91.34 (printed 91.34); 4760.09-4241.86 = 518.23 (printed 518.24). Delta CFI: .0002 (printed .0002); .0059 (printed .0060); .0012 (printed .0012); .0083 (printed .0080).",
+   "result": "consistent",
+   "rounding_interval_used": "chi-square +/-0.005 each -> difference +/-0.01; CFI +/-0.00005 each -> difference +/-0.0001; printed delta CFI .0060 and .0080 read as 3-decimal values .006 and .008 (text PDF p. 15 prints .006 and .008)",
+   "notes": "The .0083 vs .0080 difference exceeds 4-decimal rounding but is consistent if the printed delta CFI is a 3-decimal value padded with a zero."
+  },
+  {
+   "finding_id": "F08",
+   "check": "Significance of metric-invariance chi-square difference: chi-square(26) = 39.58",
+   "inputs_locators": [
+    {
+     "doc_id": "P1",
+     "pdf_page": 14,
+     "table": "Table 2",
+     "row": "Delta Model 1 vs. Model 2",
+     "column": "c2"
+    },
+    {
+     "doc_id": "P1",
+     "pdf_page": 15,
+     "table": "Primary Analyses text",
+     "row": "'nonsignificant decrement in model fit (Dc2 = 39.58, ns)'",
+     "column": ""
+    }
+   ],
+   "computation": "Upper-tail p for chi-square = 39.58 on 26 df is .043 (critical value at .05 = 38.885). Over the rounding interval 39.575-39.585, p is .043 either way.",
+   "result": "inconsistent_beyond_rounding",
+   "rounding_interval_used": "chi-square +/-0.005",
+   "notes": "Text calls the test 'ns'; at alpha = .05 it is significant. The delta CFI criterion (.0002 < .002) still supports metric invariance, which is the criterion the authors rely on. Other delta tests: 388.59 (26 df) p < 1e-60 printed ** (p < .01, consistent as inequality); 91.34 (16 df) p = 1.4e-12 printed * (consistent as inequality, understated); 518.24 (10 df) p < 1e-100 printed ** and 'p < .05' in text (consistent as inequality)."
+  },
+  {
+   "finding_id": "F09",
+   "check": "Single-group CFA df vs described model structure",
+   "inputs_locators": [
+    {
+     "doc_id": "P1",
+     "pdf_page": 14,
+     "table": "Table 2",
+     "row": "1976/1991/2006 administration rows",
+     "column": "df"
+    },
+    {
+     "doc_id": "P1",
+     "pdf_page": 10,
+     "table": "Preliminary Analyses text",
+     "row": "",
+     "column": ""
+    }
+   ],
+   "computation": "Form 3 two-factor: 6 indicators -> 21 moments; 5 free loadings (or 4 + variance), 5 error variances, 2 factor variances, 1 covariance -> df 9 (printed 9). Form 4 seven-factor: 276 moments - (16 loadings + 23 errors + 28 var/cov) = 209 (printed 209). Five-factor: 190 - (14 + 19 + 15) = 142 (printed 142).",
+   "result": "consistent",
+   "rounding_interval_used": "exact integers",
+   "notes": "Confirms 23 and 19 items and the factor counts."
+  },
+  {
+   "finding_id": "F10",
+   "check": "Multigroup df vs described structure",
+   "inputs_locators": [
+    {
+     "doc_id": "P1",
+     "pdf_page": 14,
+     "table": "Table 2",
+     "row": "Model 1-5 rows",
+     "column": "df"
+    }
+   ],
+   "computation": "Three-group configural model of the 19-item five-factor structure with mean structure gives 3*142 = 426 df under marker identification (intercepts free, latent means fixed to 0), not the printed 375 (difference 51). Metric constraints across three groups on 14 free loadings give delta df 28, printed 26; full scalar (19 intercepts x 2 minus 10 latent means) gives 28, printed 26; partial scalar (13 intercepts x 2 minus 10) gives 16, printed 16; mean invariance gives 10, printed 10.",
+   "result": "not_checkable",
+   "rounding_interval_used": "exact integers",
+   "notes": "Printed configural df and two of four delta df could not be reproduced from the model as described; could reflect an undescribed parameterization (e.g., additional free parameters or a different marker scheme). Recorded as a documentation gap, not a verdict."
+  },
+  {
+   "finding_id": "F11",
+   "check": "RMSEA recomputed from chi-square, df and form n: sqrt((chi2-df)/(df*(n-1)))",
+   "inputs_locators": [
+    {
+     "doc_id": "P1",
+     "pdf_page": 14,
+     "table": "Table 2",
+     "row": "single-group rows",
+     "column": "c2, df, RMSEA"
+    },
+    {
+     "doc_id": "P1",
+     "pdf_page": 10,
+     "table": "Method",
+     "row": "n per form",
+     "column": ""
+    }
+   ],
+   "computation": "Form 4 models: .056/.057 (1976), .060/.060 (1991), .061/.062 (2006) vs printed .06 - consistent. Form 3: .087 (1976, printed .09), .117 (1991, printed .12), .133 (2006, printed .14).",
+   "result": "inconsistent_beyond_rounding",
+   "rounding_interval_used": "chi-square +/-0.005; RMSEA printed to 2 decimals (+/-0.005)",
+   "notes": "The 2006 Form 3 value .133 rounds to .13, not .14; .14 would require an analysis n of roughly 2,180 rather than 2,432, suggesting the CFA n is smaller than the form n (listwise deletion). Minor; could also reflect a different RMSEA formula."
+  },
+  {
+   "finding_id": "F12",
+   "check": "Total N vs sum of form Ns",
+   "inputs_locators": [
+    {
+     "doc_id": "P1",
+     "pdf_page": 10,
+     "table": "Method text",
+     "row": "",
+     "column": ""
+    },
+    {
+     "doc_id": "P1",
+     "pdf_page": 1,
+     "table": "Abstract",
+     "row": "",
+     "column": ""
+    }
+   ],
+   "computation": "3,284+3,296+2,563+2,526+2,432+2,406 = 16,507 (printed 16,507).",
+   "result": "consistent",
+   "rounding_interval_used": "exact",
+   "notes": ""
+  },
+  {
+   "finding_id": "F13",
+   "check": "Text percentages vs Table 1",
+   "inputs_locators": [
+    {
+     "doc_id": "P1",
+     "pdf_page": 16,
+     "table": "Results text RQ1",
+     "row": "",
+     "column": ""
+    },
+    {
+     "doc_id": "P1",
+     "pdf_page": 11,
+     "table": "Table 1",
+     "row": "",
+     "column": ""
+    },
+    {
+     "doc_id": "P1",
+     "pdf_page": 12,
+     "table": "Table 1",
+     "row": "",
+     "column": ""
+    }
+   ],
+   "computation": "'Almost twice as many' very-important vacation: 31.3/17.3 = 1.81; easy pace: 14.9/8.9 = 1.67; 'nearly half' time for other things: 44.6; '23% ... 34%' vs 23.1/33.9; 'three fourths ... 63%' vs 74.0/62.5.",
+   "result": "consistent",
+   "rounding_interval_used": "percentages as printed",
+   "notes": "'Almost twice' for the easy-pace item (ratio 1.67) is a loose description."
+  },
+  {
+   "finding_id": "F14",
+   "check": "Text d values vs Table 1 d values",
+   "inputs_locators": [
+    {
+     "doc_id": "P1",
+     "pdf_page": 15,
+     "table": "Results text",
+     "row": "",
+     "column": ""
+    },
+    {
+     "doc_id": "P1",
+     "pdf_page": 16,
+     "table": "Results text",
+     "row": "",
+     "column": ""
+    },
+    {
+     "doc_id": "P1",
+     "pdf_page": 17,
+     "table": "Results text",
+     "row": "",
+     "column": ""
+    },
+    {
+     "doc_id": "P1",
+     "pdf_page": 11,
+     "table": "Table 1",
+     "row": "scale rows",
+     "column": "t or d"
+    },
+    {
+     "doc_id": "P1",
+     "pdf_page": 12,
+     "table": "Table 1",
+     "row": "scale rows",
+     "column": "t or d"
+    }
+   ],
+   "computation": "Leisure .22/.57/.35, Extrinsic .39/-.13/.26, Intrinsic -.16/-.20, Social -.18/-.28/-.10 match. Intrinsic 1976 vs 1991 printed as 'd = .05' in text (PDF p. 16) vs '-.05' in Table 1.",
+   "result": "inconsistent_beyond_rounding",
+   "rounding_interval_used": "exact",
+   "notes": "Sign omitted in text; magnitude matches. Altruistic d values appear only in Table 1."
+  },
+  {
+   "finding_id": "F15",
+   "check": "Latent means vs first-listed item means per factor",
+   "inputs_locators": [
+    {
+     "doc_id": "P1",
+     "pdf_page": 11,
+     "table": "Table 1",
+     "row": "scale and item rows",
+     "column": "M"
+    },
+    {
+     "doc_id": "P1",
+     "pdf_page": 12,
+     "table": "Table 1",
+     "row": "scale and item rows",
+     "column": "M"
+    }
+   ],
+   "computation": "Leisure latent 2.36/2.60/2.76 vs vacation item 2.35/2.60/2.77; Intrinsic 3.85/3.83/3.76 vs interesting 3.85/3.82/3.77; Altruistic 3.30/3.27/3.23 vs helpful 3.32/3.26/3.21; Social 3.35/3.28/3.16 vs make friends 3.38/3.28/3.12; Extrinsic 2.63/2.90/2.81 vs status 2.63/2.92/2.79.",
+   "result": "not_checkable",
+   "rounding_interval_used": "n/a",
+   "notes": "Latent means track the first-listed item of each factor to within about 0.03, consistent with marker-variable scaling on that item (AX05.L0). Observation only."
+  },
+  {
+   "finding_id": "F16",
+   "check": "Partial invariance rule vs freed items",
+   "inputs_locators": [
+    {
+     "doc_id": "P1",
+     "pdf_page": 13,
+     "table": "Table 1 footnote a",
+     "row": "",
+     "column": ""
+    },
+    {
+     "doc_id": "P1",
+     "pdf_page": 15,
+     "table": "Primary Analyses text",
+     "row": "'at least two of the manifest indicators per latent factor'",
+     "column": ""
+    }
+   ],
+   "computation": "Six items freed: two leisure, one intrinsic, one altruistic, two extrinsic. Altruistic has two items, so only one constrained intercept remains.",
+   "result": "inconsistent_beyond_rounding",
+   "rounding_interval_used": "n/a",
+   "notes": "Internal contradiction between the stated rule and the freed set; does not affect arithmetic."
+  },
+  {
+   "finding_id": "F17",
+   "check": "Response-scale description vs source dictionaries",
+   "inputs_locators": [
+    {
+     "doc_id": "P1",
+     "pdf_page": 10,
+     "table": "Method text",
+     "row": "'5-point Likert-type scale ranging from not important to very important'",
+     "column": ""
+    },
+    {
+     "source": "sources/dictionaries 1976_DS0004, 1991_DS0005, 2006_DS0005 value labels"
+    }
+   ],
+   "computation": "Dictionaries list four categories (1 Not important ... 4 Very important) in all three years; F06 shows printed means require a 4-point maximum.",
+   "result": "inconsistent_beyond_rounding",
+   "rounding_interval_used": "n/a",
+   "notes": "Article text error; Table 1 values are on the 4-point scale. Form 3 anchors are 'Disagree'...'Agree', not 'strongly'."
+  },
+  {
+   "finding_id": "F18",
+   "check": "Reliability estimates promised in Table 1",
+   "inputs_locators": [
+    {
+     "doc_id": "P1",
+     "pdf_page": 10,
+     "table": "Preliminary Analyses text",
+     "row": "'Reliability estimates for the remaining scales are reported in Table 1'",
+     "column": ""
+    },
+    {
+     "doc_id": "P1",
+     "pdf_page": 11,
+     "table": "Table 1",
+     "row": "",
+     "column": ""
+    }
+   ],
+   "computation": "Table 1 contains no alpha or reliability column.",
+   "result": "inconsistent_beyond_rounding",
+   "rounding_interval_used": "n/a",
+   "notes": "Missing reported quantity; no target can be sealed for retained-scale alphas."
+  }
+ ]
+}

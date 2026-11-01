@@ -1,0 +1,4 @@
+C as run (unmodified data)     vs out_C: max|d est/se/hc3| = 4.441e-16, max|d R2| = 5.551e-17, unmatched coef rows = 0
+C as run (unmodified data)     vs out_A: max|d est/se/hc3| = 8.188e-02, max|d R2| = 1.717e-03, unmatched coef rows = 0
+C with V233==0 set missing     vs out_C: max|d est/se/hc3| = 8.188e-02, max|d R2| = 1.717e-03, unmatched coef rows = 0
+C with V233==0 set missing     vs out_A: max|d est/se/hc3| = 1.346e-11, max|d R2| = 1.388e-15, unmatched coef rows = 0

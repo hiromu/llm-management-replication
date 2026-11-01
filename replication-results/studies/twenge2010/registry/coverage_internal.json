@@ -1,0 +1,753 @@
+{
+ "note": "Coordinator-only. Contains row and non-missing counts; never give to readers or implementers as targets.",
+ "files": {
+  "1976_DS0001": {
+   "rows": 3347,
+   "columns": 603,
+   "weight_missing_or_declared_missing": 0,
+   "work_item_nonmissing": {}
+  },
+  "1976_DS0002": {
+   "rows": 3353,
+   "columns": 316,
+   "weight_missing_or_declared_missing": 0,
+   "work_item_nonmissing": {}
+  },
+  "1976_DS0003": {
+   "rows": 3314,
+   "columns": 305,
+   "weight_missing_or_declared_missing": 0,
+   "work_item_nonmissing": {
+    "V3222": {
+     "nonmissing": 3284,
+     "sysmis": 0,
+     "declared_missing_codes": 30,
+     "nonmissing_codes_outside_labelled_values": 0
+    },
+    "V3223": {
+     "nonmissing": 3283,
+     "sysmis": 0,
+     "declared_missing_codes": 31,
+     "nonmissing_codes_outside_labelled_values": 0
+    },
+    "V3224": {
+     "nonmissing": 3287,
+     "sysmis": 0,
+     "declared_missing_codes": 27,
+     "nonmissing_codes_outside_labelled_values": 0
+    },
+    "V3225": {
+     "nonmissing": 3298,
+     "sysmis": 0,
+     "declared_missing_codes": 16,
+     "nonmissing_codes_outside_labelled_values": 0
+    },
+    "V3226": {
+     "nonmissing": 3291,
+     "sysmis": 0,
+     "declared_missing_codes": 23,
+     "nonmissing_codes_outside_labelled_values": 0
+    },
+    "V3227": {
+     "nonmissing": 3203,
+     "sysmis": 0,
+     "declared_missing_codes": 111,
+     "nonmissing_codes_outside_labelled_values": 0
+    }
+   }
+  },
+  "1976_DS0004": {
+   "rows": 3341,
+   "columns": 272,
+   "weight_missing_or_declared_missing": 0,
+   "work_item_nonmissing": {
+    "V4225": {
+     "nonmissing": 3322,
+     "sysmis": 0,
+     "declared_missing_codes": 19,
+     "nonmissing_codes_outside_labelled_values": 0
+    },
+    "V4226": {
+     "nonmissing": 3289,
+     "sysmis": 0,
+     "declared_missing_codes": 52,
+     "nonmissing_codes_outside_labelled_values": 0
+    },
+    "V4227": {
+     "nonmissing": 3307,
+     "sysmis": 0,
+     "declared_missing_codes": 34,
+     "nonmissing_codes_outside_labelled_values": 0
+    },
+    "V4228": {
+     "nonmissing": 3317,
+     "sysmis": 0,
+     "declared_missing_codes": 24,
+     "nonmissing_codes_outside_labelled_values": 0
+    },
+    "V4229": {
+     "nonmissing": 3317,
+     "sysmis": 0,
+     "declared_missing_codes": 24,
+     "nonmissing_codes_outside_labelled_values": 0
+    },
+    "V4230": {
+     "nonmissing": 3318,
+     "sysmis": 0,
+     "declared_missing_codes": 23,
+     "nonmissing_codes_outside_labelled_values": 0
+    },
+    "V4231": {
+     "nonmissing": 3315,
+     "sysmis": 0,
+     "declared_missing_codes": 26,
+     "nonmissing_codes_outside_labelled_values": 0
+    },
+    "V4232": {
+     "nonmissing": 3308,
+     "sysmis": 0,
+     "declared_missing_codes": 33,
+     "nonmissing_codes_outside_labelled_values": 0
+    },
+    "V4233": {
+     "nonmissing": 3312,
+     "sysmis": 0,
+     "declared_missing_codes": 29,
+     "nonmissing_codes_outside_labelled_values": 0
+    },
+    "V4234": {
+     "nonmissing": 3318,
+     "sysmis": 0,
+     "declared_missing_codes": 23,
+     "nonmissing_codes_outside_labelled_values": 0
+    },
+    "V4235": {
+     "nonmissing": 3290,
+     "sysmis": 0,
+     "declared_missing_codes": 51,
+     "nonmissing_codes_outside_labelled_values": 0
+    },
+    "V4236": {
+     "nonmissing": 3315,
+     "sysmis": 0,
+     "declared_missing_codes": 26,
+     "nonmissing_codes_outside_labelled_values": 0
+    },
+    "V4237": {
+     "nonmissing": 3311,
+     "sysmis": 0,
+     "declared_missing_codes": 30,
+     "nonmissing_codes_outside_labelled_values": 0
+    },
+    "V4238": {
+     "nonmissing": 3310,
+     "sysmis": 0,
+     "declared_missing_codes": 31,
+     "nonmissing_codes_outside_labelled_values": 0
+    },
+    "V4239": {
+     "nonmissing": 3306,
+     "sysmis": 0,
+     "declared_missing_codes": 35,
+     "nonmissing_codes_outside_labelled_values": 0
+    },
+    "V4240": {
+     "nonmissing": 3309,
+     "sysmis": 0,
+     "declared_missing_codes": 32,
+     "nonmissing_codes_outside_labelled_values": 0
+    },
+    "V4241": {
+     "nonmissing": 3309,
+     "sysmis": 0,
+     "declared_missing_codes": 32,
+     "nonmissing_codes_outside_labelled_values": 0
+    },
+    "V4242": {
+     "nonmissing": 3318,
+     "sysmis": 0,
+     "declared_missing_codes": 23,
+     "nonmissing_codes_outside_labelled_values": 0
+    },
+    "V4243": {
+     "nonmissing": 3305,
+     "sysmis": 0,
+     "declared_missing_codes": 36,
+     "nonmissing_codes_outside_labelled_values": 0
+    },
+    "V4244": {
+     "nonmissing": 3309,
+     "sysmis": 0,
+     "declared_missing_codes": 32,
+     "nonmissing_codes_outside_labelled_values": 0
+    },
+    "V4245": {
+     "nonmissing": 3311,
+     "sysmis": 0,
+     "declared_missing_codes": 30,
+     "nonmissing_codes_outside_labelled_values": 0
+    },
+    "V4246": {
+     "nonmissing": 3299,
+     "sysmis": 0,
+     "declared_missing_codes": 42,
+     "nonmissing_codes_outside_labelled_values": 0
+    },
+    "V4247": {
+     "nonmissing": 3302,
+     "sysmis": 0,
+     "declared_missing_codes": 39,
+     "nonmissing_codes_outside_labelled_values": 0
+    },
+    "V4263": {
+     "nonmissing": 3291,
+     "sysmis": 0,
+     "declared_missing_codes": 50,
+     "nonmissing_codes_outside_labelled_values": 0
+    }
+   }
+  },
+  "1976_DS0005": {
+   "rows": 3322,
+   "columns": 280,
+   "weight_missing_or_declared_missing": 0,
+   "work_item_nonmissing": {}
+  },
+  "1976_DS0006": {
+   "rows": 16677,
+   "columns": 116,
+   "weight_missing_or_declared_missing": 0,
+   "work_item_nonmissing": {}
+  },
+  "1991_DS0001": {
+   "rows": 15483,
+   "columns": 111,
+   "weight_missing_or_declared_missing": 0,
+   "work_item_nonmissing": {}
+  },
+  "1991_DS0002": {
+   "rows": 2584,
+   "columns": 585,
+   "weight_missing_or_declared_missing": 0,
+   "work_item_nonmissing": {}
+  },
+  "1991_DS0003": {
+   "rows": 2560,
+   "columns": 329,
+   "weight_missing_or_declared_missing": 0,
+   "work_item_nonmissing": {}
+  },
+  "1991_DS0004": {
+   "rows": 2585,
+   "columns": 363,
+   "weight_missing_or_declared_missing": 0,
+   "work_item_nonmissing": {
+    "V3222": {
+     "nonmissing": 2563,
+     "sysmis": 0,
+     "declared_missing_codes": 22,
+     "nonmissing_codes_outside_labelled_values": 0
+    },
+    "V3223": {
+     "nonmissing": 2563,
+     "sysmis": 0,
+     "declared_missing_codes": 22,
+     "nonmissing_codes_outside_labelled_values": 0
+    },
+    "V3224": {
+     "nonmissing": 2566,
+     "sysmis": 0,
+     "declared_missing_codes": 19,
+     "nonmissing_codes_outside_labelled_values": 0
+    },
+    "V3225": {
+     "nonmissing": 2572,
+     "sysmis": 0,
+     "declared_missing_codes": 13,
+     "nonmissing_codes_outside_labelled_values": 0
+    },
+    "V3226": {
+     "nonmissing": 2567,
+     "sysmis": 0,
+     "declared_missing_codes": 18,
+     "nonmissing_codes_outside_labelled_values": 0
+    },
+    "V3227": {
+     "nonmissing": 2516,
+     "sysmis": 0,
+     "declared_missing_codes": 69,
+     "nonmissing_codes_outside_labelled_values": 0
+    }
+   }
+  },
+  "1991_DS0005": {
+   "rows": 2556,
+   "columns": 294,
+   "weight_missing_or_declared_missing": 0,
+   "work_item_nonmissing": {
+    "V4225": {
+     "nonmissing": 2542,
+     "sysmis": 0,
+     "declared_missing_codes": 14,
+     "nonmissing_codes_outside_labelled_values": 0
+    },
+    "V4226": {
+     "nonmissing": 2534,
+     "sysmis": 0,
+     "declared_missing_codes": 22,
+     "nonmissing_codes_outside_labelled_values": 0
+    },
+    "V4227": {
+     "nonmissing": 2530,
+     "sysmis": 0,
+     "declared_missing_codes": 26,
+     "nonmissing_codes_outside_labelled_values": 0
+    },
+    "V4228": {
+     "nonmissing": 2534,
+     "sysmis": 0,
+     "declared_missing_codes": 22,
+     "nonmissing_codes_outside_labelled_values": 0
+    },
+    "V4229": {
+     "nonmissing": 2538,
+     "sysmis": 0,
+     "declared_missing_codes": 18,
+     "nonmissing_codes_outside_labelled_values": 0
+    },
+    "V4230": {
+     "nonmissing": 2543,
+     "sysmis": 0,
+     "declared_missing_codes": 13,
+     "nonmissing_codes_outside_labelled_values": 0
+    },
+    "V4231": {
+     "nonmissing": 2539,
+     "sysmis": 0,
+     "declared_missing_codes": 17,
+     "nonmissing_codes_outside_labelled_values": 0
+    },
+    "V4232": {
+     "nonmissing": 2536,
+     "sysmis": 0,
+     "declared_missing_codes": 20,
+     "nonmissing_codes_outside_labelled_values": 0
+    },
+    "V4233": {
+     "nonmissing": 2531,
+     "sysmis": 0,
+     "declared_missing_codes": 25,
+     "nonmissing_codes_outside_labelled_values": 0
+    },
+    "V4234": {
+     "nonmissing": 2534,
+     "sysmis": 0,
+     "declared_missing_codes": 22,
+     "nonmissing_codes_outside_labelled_values": 0
+    },
+    "V4235": {
+     "nonmissing": 2527,
+     "sysmis": 0,
+     "declared_missing_codes": 29,
+     "nonmissing_codes_outside_labelled_values": 0
+    },
+    "V4236": {
+     "nonmissing": 2535,
+     "sysmis": 0,
+     "declared_missing_codes": 21,
+     "nonmissing_codes_outside_labelled_values": 0
+    },
+    "V4237": {
+     "nonmissing": 2532,
+     "sysmis": 0,
+     "declared_missing_codes": 24,
+     "nonmissing_codes_outside_labelled_values": 0
+    },
+    "V4238": {
+     "nonmissing": 2528,
+     "sysmis": 0,
+     "declared_missing_codes": 28,
+     "nonmissing_codes_outside_labelled_values": 0
+    },
+    "V4239": {
+     "nonmissing": 2537,
+     "sysmis": 0,
+     "declared_missing_codes": 19,
+     "nonmissing_codes_outside_labelled_values": 0
+    },
+    "V4240": {
+     "nonmissing": 2533,
+     "sysmis": 0,
+     "declared_missing_codes": 23,
+     "nonmissing_codes_outside_labelled_values": 0
+    },
+    "V4241": {
+     "nonmissing": 2525,
+     "sysmis": 0,
+     "declared_missing_codes": 31,
+     "nonmissing_codes_outside_labelled_values": 0
+    },
+    "V4242": {
+     "nonmissing": 2528,
+     "sysmis": 0,
+     "declared_missing_codes": 28,
+     "nonmissing_codes_outside_labelled_values": 0
+    },
+    "V4243": {
+     "nonmissing": 2519,
+     "sysmis": 0,
+     "declared_missing_codes": 37,
+     "nonmissing_codes_outside_labelled_values": 0
+    },
+    "V4244": {
+     "nonmissing": 2520,
+     "sysmis": 0,
+     "declared_missing_codes": 36,
+     "nonmissing_codes_outside_labelled_values": 0
+    },
+    "V4245": {
+     "nonmissing": 2526,
+     "sysmis": 0,
+     "declared_missing_codes": 30,
+     "nonmissing_codes_outside_labelled_values": 0
+    },
+    "V4246": {
+     "nonmissing": 2529,
+     "sysmis": 0,
+     "declared_missing_codes": 27,
+     "nonmissing_codes_outside_labelled_values": 0
+    },
+    "V4247": {
+     "nonmissing": 2528,
+     "sysmis": 0,
+     "declared_missing_codes": 28,
+     "nonmissing_codes_outside_labelled_values": 0
+    },
+    "V4263": {
+     "nonmissing": 2524,
+     "sysmis": 0,
+     "declared_missing_codes": 32,
+     "nonmissing_codes_outside_labelled_values": 0
+    }
+   }
+  },
+  "1991_DS0006": {
+   "rows": 2593,
+   "columns": 320,
+   "weight_missing_or_declared_missing": 0,
+   "work_item_nonmissing": {}
+  },
+  "1991_DS0007": {
+   "rows": 2605,
+   "columns": 372,
+   "weight_missing_or_declared_missing": 0,
+   "work_item_nonmissing": {}
+  },
+  "2006_DS0001": {
+   "rows": 14814,
+   "columns": 185,
+   "weight_missing_or_declared_missing": 0,
+   "work_item_nonmissing": {}
+  },
+  "2006_DS0002": {
+   "rows": 2475,
+   "columns": 618,
+   "weight_missing_or_declared_missing": 0,
+   "work_item_nonmissing": {}
+  },
+  "2006_DS0003": {
+   "rows": 2460,
+   "columns": 332,
+   "weight_missing_or_declared_missing": 0,
+   "work_item_nonmissing": {}
+  },
+  "2006_DS0004": {
+   "rows": 2456,
+   "columns": 357,
+   "weight_missing_or_declared_missing": 0,
+   "work_item_nonmissing": {
+    "V3222": {
+     "nonmissing": 2432,
+     "sysmis": 0,
+     "declared_missing_codes": 24,
+     "nonmissing_codes_outside_labelled_values": 0
+    },
+    "V3223": {
+     "nonmissing": 2430,
+     "sysmis": 0,
+     "declared_missing_codes": 26,
+     "nonmissing_codes_outside_labelled_values": 0
+    },
+    "V3224": {
+     "nonmissing": 2424,
+     "sysmis": 0,
+     "declared_missing_codes": 32,
+     "nonmissing_codes_outside_labelled_values": 0
+    },
+    "V3225": {
+     "nonmissing": 2426,
+     "sysmis": 0,
+     "declared_missing_codes": 30,
+     "nonmissing_codes_outside_labelled_values": 0
+    },
+    "V3226": {
+     "nonmissing": 2425,
+     "sysmis": 0,
+     "declared_missing_codes": 31,
+     "nonmissing_codes_outside_labelled_values": 0
+    },
+    "V3227": {
+     "nonmissing": 2350,
+     "sysmis": 0,
+     "declared_missing_codes": 106,
+     "nonmissing_codes_outside_labelled_values": 0
+    }
+   }
+  },
+  "2006_DS0005": {
+   "rows": 2461,
+   "columns": 270,
+   "weight_missing_or_declared_missing": 0,
+   "work_item_nonmissing": {
+    "V4225": {
+     "nonmissing": 2412,
+     "sysmis": 0,
+     "declared_missing_codes": 49,
+     "nonmissing_codes_outside_labelled_values": 0
+    },
+    "V4226": {
+     "nonmissing": 2407,
+     "sysmis": 0,
+     "declared_missing_codes": 54,
+     "nonmissing_codes_outside_labelled_values": 0
+    },
+    "V4227": {
+     "nonmissing": 2400,
+     "sysmis": 0,
+     "declared_missing_codes": 61,
+     "nonmissing_codes_outside_labelled_values": 0
+    },
+    "V4228": {
+     "nonmissing": 2411,
+     "sysmis": 0,
+     "declared_missing_codes": 50,
+     "nonmissing_codes_outside_labelled_values": 0
+    },
+    "V4229": {
+     "nonmissing": 2405,
+     "sysmis": 0,
+     "declared_missing_codes": 56,
+     "nonmissing_codes_outside_labelled_values": 0
+    },
+    "V4230": {
+     "nonmissing": 2409,
+     "sysmis": 0,
+     "declared_missing_codes": 52,
+     "nonmissing_codes_outside_labelled_values": 0
+    },
+    "V4231": {
+     "nonmissing": 2408,
+     "sysmis": 0,
+     "declared_missing_codes": 53,
+     "nonmissing_codes_outside_labelled_values": 0
+    },
+    "V4232": {
+     "nonmissing": 2408,
+     "sysmis": 0,
+     "declared_missing_codes": 53,
+     "nonmissing_codes_outside_labelled_values": 0
+    },
+    "V4233": {
+     "nonmissing": 2409,
+     "sysmis": 0,
+     "declared_missing_codes": 52,
+     "nonmissing_codes_outside_labelled_values": 0
+    },
+    "V4234": {
+     "nonmissing": 2408,
+     "sysmis": 0,
+     "declared_missing_codes": 53,
+     "nonmissing_codes_outside_labelled_values": 0
+    },
+    "V4235": {
+     "nonmissing": 2402,
+     "sysmis": 0,
+     "declared_missing_codes": 59,
+     "nonmissing_codes_outside_labelled_values": 0
+    },
+    "V4236": {
+     "nonmissing": 2412,
+     "sysmis": 0,
+     "declared_missing_codes": 49,
+     "nonmissing_codes_outside_labelled_values": 0
+    },
+    "V4237": {
+     "nonmissing": 2405,
+     "sysmis": 0,
+     "declared_missing_codes": 56,
+     "nonmissing_codes_outside_labelled_values": 0
+    },
+    "V4238": {
+     "nonmissing": 2406,
+     "sysmis": 0,
+     "declared_missing_codes": 55,
+     "nonmissing_codes_outside_labelled_values": 0
+    },
+    "V4239": {
+     "nonmissing": 2407,
+     "sysmis": 0,
+     "declared_missing_codes": 54,
+     "nonmissing_codes_outside_labelled_values": 0
+    },
+    "V4240": {
+     "nonmissing": 2408,
+     "sysmis": 0,
+     "declared_missing_codes": 53,
+     "nonmissing_codes_outside_labelled_values": 0
+    },
+    "V4241": {
+     "nonmissing": 2400,
+     "sysmis": 0,
+     "declared_missing_codes": 61,
+     "nonmissing_codes_outside_labelled_values": 0
+    },
+    "V4242": {
+     "nonmissing": 2394,
+     "sysmis": 0,
+     "declared_missing_codes": 67,
+     "nonmissing_codes_outside_labelled_values": 0
+    },
+    "V4243": {
+     "nonmissing": 2391,
+     "sysmis": 0,
+     "declared_missing_codes": 70,
+     "nonmissing_codes_outside_labelled_values": 0
+    },
+    "V4244": {
+     "nonmissing": 2390,
+     "sysmis": 0,
+     "declared_missing_codes": 71,
+     "nonmissing_codes_outside_labelled_values": 0
+    },
+    "V4245": {
+     "nonmissing": 2387,
+     "sysmis": 0,
+     "declared_missing_codes": 74,
+     "nonmissing_codes_outside_labelled_values": 0
+    },
+    "V4246": {
+     "nonmissing": 2396,
+     "sysmis": 0,
+     "declared_missing_codes": 65,
+     "nonmissing_codes_outside_labelled_values": 0
+    },
+    "V4247": {
+     "nonmissing": 2392,
+     "sysmis": 0,
+     "declared_missing_codes": 69,
+     "nonmissing_codes_outside_labelled_values": 0
+    },
+    "V4263": {
+     "nonmissing": 2394,
+     "sysmis": 0,
+     "declared_missing_codes": 67,
+     "nonmissing_codes_outside_labelled_values": 0
+    }
+   }
+  },
+  "2006_DS0006": {
+   "rows": 2479,
+   "columns": 327,
+   "weight_missing_or_declared_missing": 0,
+   "work_item_nonmissing": {}
+  },
+  "2006_DS0007": {
+   "rows": 2483,
+   "columns": 332,
+   "weight_missing_or_declared_missing": 0,
+   "work_item_nonmissing": {}
+  }
+ },
+ "loader_user_missing_cells": {
+  "1976_DS0001": {
+   "cells_holding_declared_user_missing_codes": 1120155,
+   "variables_with_declared_user_missing_codes_present": 582
+  },
+  "1976_DS0002": {
+   "cells_holding_declared_user_missing_codes": 133226,
+   "variables_with_declared_user_missing_codes_present": 292
+  },
+  "1976_DS0003": {
+   "cells_holding_declared_user_missing_codes": 201230,
+   "variables_with_declared_user_missing_codes_present": 295
+  },
+  "1976_DS0004": {
+   "cells_holding_declared_user_missing_codes": 120520,
+   "variables_with_declared_user_missing_codes_present": 262
+  },
+  "1976_DS0005": {
+   "cells_holding_declared_user_missing_codes": 114455,
+   "variables_with_declared_user_missing_codes_present": 270
+  },
+  "1976_DS0006": {
+   "cells_holding_declared_user_missing_codes": 326183,
+   "variables_with_declared_user_missing_codes_present": 106
+  },
+  "1991_DS0001": {
+   "cells_holding_declared_user_missing_codes": 227667,
+   "variables_with_declared_user_missing_codes_present": 101
+  },
+  "1991_DS0002": {
+   "cells_holding_declared_user_missing_codes": 766054,
+   "variables_with_declared_user_missing_codes_present": 575
+  },
+  "1991_DS0003": {
+   "cells_holding_declared_user_missing_codes": 85553,
+   "variables_with_declared_user_missing_codes_present": 319
+  },
+  "1991_DS0004": {
+   "cells_holding_declared_user_missing_codes": 137455,
+   "variables_with_declared_user_missing_codes_present": 353
+  },
+  "1991_DS0005": {
+   "cells_holding_declared_user_missing_codes": 93615,
+   "variables_with_declared_user_missing_codes_present": 284
+  },
+  "1991_DS0006": {
+   "cells_holding_declared_user_missing_codes": 85561,
+   "variables_with_declared_user_missing_codes_present": 310
+  },
+  "1991_DS0007": {
+   "cells_holding_declared_user_missing_codes": 124150,
+   "variables_with_declared_user_missing_codes_present": 362
+  },
+  "2006_DS0001": {
+   "cells_holding_declared_user_missing_codes": 1143172,
+   "variables_with_declared_user_missing_codes_present": 176
+  },
+  "2006_DS0002": {
+   "cells_holding_declared_user_missing_codes": 716577,
+   "variables_with_declared_user_missing_codes_present": 609
+  },
+  "2006_DS0003": {
+   "cells_holding_declared_user_missing_codes": 73182,
+   "variables_with_declared_user_missing_codes_present": 323
+  },
+  "2006_DS0004": {
+   "cells_holding_declared_user_missing_codes": 79257,
+   "variables_with_declared_user_missing_codes_present": 348
+  },
+  "2006_DS0005": {
+   "cells_holding_declared_user_missing_codes": 64411,
+   "variables_with_declared_user_missing_codes_present": 261
+  },
+  "2006_DS0006": {
+   "cells_holding_declared_user_missing_codes": 92074,
+   "variables_with_declared_user_missing_codes_present": 318
+  },
+  "2006_DS0007": {
+   "cells_holding_declared_user_missing_codes": 111044,
+   "variables_with_declared_user_missing_codes_present": 323
+  }
+ }
+}

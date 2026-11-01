@@ -1,0 +1,1 @@
+1. Section 8, run-ID argument ("a list of run IDs (or "all", or "influence")"; run IDs in order: ORIGIN, deviations, influence): the script's "all" covers ORIGIN and the deviations but excludes the influence runs (run.R line 301), and "all,influence" is rejected as an unknown run ID (run.R lines 300-302), so the full ordered set of section 8 cannot be requested with "all".

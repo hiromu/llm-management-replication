@@ -1,0 +1,63 @@
+{
+ "family_outcomes": {
+  "H1": "consistent",
+  "H2": "indeterminate",
+  "H3": "consistent"
+ },
+ "family_claim_outcomes": {
+  "H1": {
+   "consistent": 10
+  },
+  "H2": {
+   "consistent": 8,
+   "indeterminate": 1
+  },
+  "H3": {
+   "consistent": 3
+  }
+ },
+ "paper_outcome": "indeterminate",
+ "scoring_sample": {
+  "1": "D1_key",
+  "2": "D2_none",
+  "3": "D3_all",
+  "4": "D4_loyal"
+ },
+ "by_tier": {
+  "uncertain": {
+   "consistent": 11,
+   "indeterminate": 1
+  },
+  "robustness": {
+   "consistent": 29,
+   "indeterminate": 2
+  },
+  "descriptive": {
+   "consistent": 6,
+   "indeterminate": 2
+  },
+  "nuisance": {
+   "consistent": 7
+  },
+  "focal": {
+   "consistent": 21,
+   "indeterminate": 1
+  },
+  "identification_or_inference_diagnostic": {
+   "consistent": 4
+  }
+ },
+ "label_sensitive": [
+  "S4.med.sim.SignedRisk",
+  "S4.med.ind.SignedRisk"
+ ],
+ "print_matches": {
+  "total": 512,
+  "match": 395
+ },
+ "implementations": [
+  "A",
+  "B",
+  "C"
+ ]
+}

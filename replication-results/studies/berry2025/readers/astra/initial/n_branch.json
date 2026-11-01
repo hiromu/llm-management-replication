@@ -1,0 +1,602 @@
+[
+  {
+    "analysis_id": "S1_descriptives",
+    "study": 1,
+    "n_total": "530",
+    "n_by_condition": null,
+    "n_excluded": null,
+    "locator": "D01 PDF p. 7–9 (Table 2; Participants); stated study sample, not per-variable completeness; Study 4 exclusions are eligible survey nonrespondents"
+  },
+  {
+    "analysis_id": "S2_descriptives",
+    "study": 2,
+    "n_total": "186",
+    "n_by_condition": null,
+    "n_excluded": "14",
+    "locator": "D01 PDF p. 10–11 (Table 3; Participants); stated study sample, not per-variable completeness; Study 4 exclusions are eligible survey nonrespondents"
+  },
+  {
+    "analysis_id": "S3_descriptives",
+    "study": 3,
+    "n_total": "286",
+    "n_by_condition": null,
+    "n_excluded": "114",
+    "locator": "D01 PDF p. 12–13 (Table 4; Participants); stated study sample, not per-variable completeness; Study 4 exclusions are eligible survey nonrespondents"
+  },
+  {
+    "analysis_id": "S4_descriptives",
+    "study": 4,
+    "n_total": "50",
+    "n_by_condition": null,
+    "n_excluded": "10",
+    "locator": "D01 PDF p. 14–16 (Table 5; Participants); stated study sample, not per-variable completeness; Study 4 exclusions are eligible survey nonrespondents"
+  },
+  {
+    "analysis_id": "S1_reliability",
+    "study": 1,
+    "n_total": null,
+    "n_by_condition": null,
+    "n_excluded": null,
+    "locator": "D01 PDF p. 9 (printed p. 770); D03 PDF p. 1; D03 PDF p. 2; reliability-specific sample size not printed"
+  },
+  {
+    "analysis_id": "S2_reliability",
+    "study": 2,
+    "n_total": null,
+    "n_by_condition": null,
+    "n_excluded": null,
+    "locator": "D01 PDF p. 11 (printed p. 772); D03 PDF p. 2; reliability-specific sample size not printed"
+  },
+  {
+    "analysis_id": "S3_reliability",
+    "study": 3,
+    "n_total": null,
+    "n_by_condition": null,
+    "n_excluded": null,
+    "locator": "D01 PDF p. 13 (printed p. 774); reliability-specific sample size not printed"
+  },
+  {
+    "analysis_id": "S1_paired_you_grant",
+    "study": 1,
+    "n_total": "530",
+    "n_by_condition": {
+      "loyal": "530",
+      "control": "530",
+      "basis": "same participants in both conditions; study count and paired-test df"
+    },
+    "n_excluded": null,
+    "locator": "D01 PDF p. 9 (printed p. 770); D01 PDF p. 7 Participants"
+  },
+  {
+    "analysis_id": "S1_mixed_you_grant",
+    "study": 1,
+    "n_total": "530",
+    "n_by_condition": null,
+    "n_excluded": null,
+    "locator": "D01 PDF p. 7 (Participants); D01 PDF p. 9 (printed p. 770)"
+  },
+  {
+    "analysis_id": "S1_paired_prom_voice",
+    "study": 1,
+    "n_total": "530",
+    "n_by_condition": {
+      "loyal": "530",
+      "control": "530",
+      "basis": "same participants in both conditions; study count and paired-test df"
+    },
+    "n_excluded": null,
+    "locator": "D01 PDF p. 9 (printed p. 770); D01 PDF p. 7 Participants"
+  },
+  {
+    "analysis_id": "S1_mixed_prom_voice",
+    "study": 1,
+    "n_total": "530",
+    "n_by_condition": null,
+    "n_excluded": null,
+    "locator": "D01 PDF p. 7 (Participants); D01 PDF p. 9 (printed p. 770)"
+  },
+  {
+    "analysis_id": "S1_paired_proh_voice",
+    "study": 1,
+    "n_total": "530",
+    "n_by_condition": {
+      "loyal": "530",
+      "control": "530",
+      "basis": "same participants in both conditions; study count and paired-test df"
+    },
+    "n_excluded": null,
+    "locator": "D01 PDF p. 9 (printed p. 770); D01 PDF p. 7 Participants"
+  },
+  {
+    "analysis_id": "S1_mixed_proh_voice",
+    "study": 1,
+    "n_total": "530",
+    "n_by_condition": null,
+    "n_excluded": null,
+    "locator": "D01 PDF p. 7 (Participants); D01 PDF p. 9 (printed p. 770)"
+  },
+  {
+    "analysis_id": "S1_paired_loyal_comb",
+    "study": 1,
+    "n_total": "530",
+    "n_by_condition": {
+      "loyal": "530",
+      "control": "530",
+      "basis": "same participants in both conditions; study count and paired-test df"
+    },
+    "n_excluded": null,
+    "locator": "D01 PDF p. 9 (printed p. 770); D01 PDF p. 7 Participants"
+  },
+  {
+    "analysis_id": "S2_t_you_grant",
+    "study": 2,
+    "n_total": "186",
+    "n_by_condition": null,
+    "n_excluded": "14",
+    "locator": "D01 PDF p. 10 (study analytic sample; analysis-specific complete-case N not separately printed); D01 PDF p. 11 (printed p. 772)"
+  },
+  {
+    "analysis_id": "S2_parallel_you_grant",
+    "study": 2,
+    "n_total": "186",
+    "n_by_condition": null,
+    "n_excluded": "14",
+    "locator": "D01 PDF p. 10 (study-level analytic N; model-specific N unstated)"
+  },
+  {
+    "analysis_id": "S2_t_prom_voice",
+    "study": 2,
+    "n_total": "186",
+    "n_by_condition": null,
+    "n_excluded": "14",
+    "locator": "D01 PDF p. 10 (study analytic sample; analysis-specific complete-case N not separately printed); D01 PDF p. 11 (printed p. 772)"
+  },
+  {
+    "analysis_id": "S2_parallel_prom_voice",
+    "study": 2,
+    "n_total": "186",
+    "n_by_condition": null,
+    "n_excluded": "14",
+    "locator": "D01 PDF p. 10 (study-level analytic N; model-specific N unstated)"
+  },
+  {
+    "analysis_id": "S2_t_proh_voice",
+    "study": 2,
+    "n_total": "186",
+    "n_by_condition": null,
+    "n_excluded": "14",
+    "locator": "D01 PDF p. 10 (study analytic sample; analysis-specific complete-case N not separately printed); D01 PDF p. 11 (printed p. 772)"
+  },
+  {
+    "analysis_id": "S2_parallel_proh_voice",
+    "study": 2,
+    "n_total": "186",
+    "n_by_condition": null,
+    "n_excluded": "14",
+    "locator": "D01 PDF p. 10 (study-level analytic N; model-specific N unstated)"
+  },
+  {
+    "analysis_id": "S2_serial_val_align_part_broker",
+    "study": 2,
+    "n_total": "186",
+    "n_by_condition": null,
+    "n_excluded": "14",
+    "locator": "D01 PDF p. 10 (study-level analytic N; serial-model-specific N unstated)"
+  },
+  {
+    "analysis_id": "S2_serial_relconcerns_with_broker",
+    "study": 2,
+    "n_total": "186",
+    "n_by_condition": null,
+    "n_excluded": "14",
+    "locator": "D01 PDF p. 10 (study-level analytic N; serial-model-specific N unstated)"
+  },
+  {
+    "analysis_id": "S3_anova_you_grant",
+    "study": 3,
+    "n_total": "286",
+    "n_by_condition": null,
+    "n_excluded": "114",
+    "locator": "D01 PDF p. 12 (analytic sample); D01 PDF p. 13 (printed p. 774)"
+  },
+  {
+    "analysis_id": "S3_contrast_H1_you_grant",
+    "study": 3,
+    "n_total": "286",
+    "n_by_condition": null,
+    "n_excluded": "114",
+    "locator": "D01 PDF p. 12 (parent factorial model analytic sample; contrast-cell Ns not printed); D01 PDF p. 13 (printed p. 774)"
+  },
+  {
+    "analysis_id": "S3_contrast_H3_you_grant",
+    "study": 3,
+    "n_total": "286",
+    "n_by_condition": null,
+    "n_excluded": "114",
+    "locator": "D01 PDF p. 12 (parent factorial model analytic sample; contrast-cell Ns not printed); D01 PDF p. 13 (printed p. 774)"
+  },
+  {
+    "analysis_id": "S3_anova_prom_voice",
+    "study": 3,
+    "n_total": "286",
+    "n_by_condition": null,
+    "n_excluded": "114",
+    "locator": "D01 PDF p. 12 (analytic sample); D01 PDF p. 13 (printed p. 774)"
+  },
+  {
+    "analysis_id": "S3_contrast_H1_prom_voice",
+    "study": 3,
+    "n_total": "286",
+    "n_by_condition": null,
+    "n_excluded": "114",
+    "locator": "D01 PDF p. 12 (parent factorial model analytic sample; contrast-cell Ns not printed); D01 PDF p. 13 (printed p. 774)"
+  },
+  {
+    "analysis_id": "S3_contrast_H3_prom_voice",
+    "study": 3,
+    "n_total": "286",
+    "n_by_condition": null,
+    "n_excluded": "114",
+    "locator": "D01 PDF p. 12 (parent factorial model analytic sample; contrast-cell Ns not printed); D01 PDF p. 13 (printed p. 774)"
+  },
+  {
+    "analysis_id": "S3_anova_proh_voice",
+    "study": 3,
+    "n_total": "286",
+    "n_by_condition": null,
+    "n_excluded": "114",
+    "locator": "D01 PDF p. 12 (analytic sample); D01 PDF p. 13–14 (printed pp. 774–775)"
+  },
+  {
+    "analysis_id": "S3_contrast_H1_proh_voice",
+    "study": 3,
+    "n_total": "286",
+    "n_by_condition": null,
+    "n_excluded": "114",
+    "locator": "D01 PDF p. 12 (parent factorial model analytic sample; contrast-cell Ns not printed); D01 PDF p. 13–14 (printed pp. 774–775)"
+  },
+  {
+    "analysis_id": "S3_contrast_H3_proh_voice",
+    "study": 3,
+    "n_total": "286",
+    "n_by_condition": null,
+    "n_excluded": "114",
+    "locator": "D01 PDF p. 12 (parent factorial model analytic sample; contrast-cell Ns not printed); D01 PDF p. 13–14 (printed pp. 774–775)"
+  },
+  {
+    "analysis_id": "S3_anova_benev_trust_broker",
+    "study": 3,
+    "n_total": "286",
+    "n_by_condition": null,
+    "n_excluded": "114",
+    "locator": "D01 PDF p. 12 (analytic sample); D03 PDF p. 3"
+  },
+  {
+    "analysis_id": "S3_contrast_H1_benev_trust_broker",
+    "study": 3,
+    "n_total": "286",
+    "n_by_condition": null,
+    "n_excluded": "114",
+    "locator": "D01 PDF p. 12 (parent factorial model analytic sample; contrast-cell Ns not printed); D03 PDF p. 3"
+  },
+  {
+    "analysis_id": "S3_contrast_H3_benev_trust_broker",
+    "study": 3,
+    "n_total": "286",
+    "n_by_condition": null,
+    "n_excluded": "114",
+    "locator": "D01 PDF p. 12 (parent factorial model analytic sample; contrast-cell Ns not printed); D03 PDF p. 3"
+  },
+  {
+    "analysis_id": "S3_anova_integ_trust_broker",
+    "study": 3,
+    "n_total": "286",
+    "n_by_condition": null,
+    "n_excluded": "114",
+    "locator": "D01 PDF p. 12 (analytic sample); D03 PDF p. 3–4"
+  },
+  {
+    "analysis_id": "S3_contrast_H1_integ_trust_broker",
+    "study": 3,
+    "n_total": "286",
+    "n_by_condition": null,
+    "n_excluded": "114",
+    "locator": "D01 PDF p. 12 (parent factorial model analytic sample; contrast-cell Ns not printed); D03 PDF p. 3–4"
+  },
+  {
+    "analysis_id": "S3_contrast_H3_integ_trust_broker",
+    "study": 3,
+    "n_total": "286",
+    "n_by_condition": null,
+    "n_excluded": "114",
+    "locator": "D01 PDF p. 12 (parent factorial model analytic sample; contrast-cell Ns not printed); D03 PDF p. 3–4"
+  },
+  {
+    "analysis_id": "S3_anova_val_align_part_broker",
+    "study": 3,
+    "n_total": "286",
+    "n_by_condition": null,
+    "n_excluded": "114",
+    "locator": "D01 PDF p. 12 (analytic sample); D03 PDF p. 4"
+  },
+  {
+    "analysis_id": "S3_contrast_H1_val_align_part_broker",
+    "study": 3,
+    "n_total": "286",
+    "n_by_condition": null,
+    "n_excluded": "114",
+    "locator": "D01 PDF p. 12 (parent factorial model analytic sample; contrast-cell Ns not printed); D03 PDF p. 4"
+  },
+  {
+    "analysis_id": "S3_contrast_H3_val_align_part_broker",
+    "study": 3,
+    "n_total": "286",
+    "n_by_condition": null,
+    "n_excluded": "114",
+    "locator": "D01 PDF p. 12 (parent factorial model analytic sample; contrast-cell Ns not printed); D03 PDF p. 4"
+  },
+  {
+    "analysis_id": "S3_anova_relconcerns_with_broker",
+    "study": 3,
+    "n_total": "286",
+    "n_by_condition": null,
+    "n_excluded": "114",
+    "locator": "D01 PDF p. 12 (analytic sample); D03 PDF p. 4"
+  },
+  {
+    "analysis_id": "S3_contrast_H1_relconcerns_with_broker",
+    "study": 3,
+    "n_total": "286",
+    "n_by_condition": null,
+    "n_excluded": "114",
+    "locator": "D01 PDF p. 12 (parent factorial model analytic sample; contrast-cell Ns not printed); D03 PDF p. 4"
+  },
+  {
+    "analysis_id": "S3_contrast_H3_relconcerns_with_broker",
+    "study": 3,
+    "n_total": "286",
+    "n_by_condition": null,
+    "n_excluded": "114",
+    "locator": "D01 PDF p. 12 (parent factorial model analytic sample; contrast-cell Ns not printed); D03 PDF p. 4"
+  },
+  {
+    "analysis_id": "S4_logit_M1",
+    "study": 4,
+    "n_total": "50",
+    "n_by_condition": null,
+    "n_excluded": "10",
+    "locator": "D01 PDF p. 15 (study analytic participants; per-model complete-case N not separately printed)"
+  },
+  {
+    "analysis_id": "S4_logit_M2",
+    "study": 4,
+    "n_total": "50",
+    "n_by_condition": null,
+    "n_excluded": "10",
+    "locator": "D01 PDF p. 15 (study analytic participants; per-model complete-case N not separately printed)"
+  },
+  {
+    "analysis_id": "S4_logit_M3",
+    "study": 4,
+    "n_total": "50",
+    "n_by_condition": null,
+    "n_excluded": "10",
+    "locator": "D01 PDF p. 15 (study analytic participants; per-model complete-case N not separately printed)"
+  },
+  {
+    "analysis_id": "S4_mediation_simultaneous",
+    "study": 4,
+    "n_total": "50",
+    "n_by_condition": null,
+    "n_excluded": "10",
+    "locator": "D01 PDF p. 15 (study-level analytic N; mediation-specific N unstated); D03 PDF p. 5 (Study 4 mediation)"
+  },
+  {
+    "analysis_id": "S4_mediation_independent_SignedTrust",
+    "study": 4,
+    "n_total": "50",
+    "n_by_condition": null,
+    "n_excluded": "10",
+    "locator": "D01 PDF p. 15 (study-level analytic N; mediation-specific N unstated); D03 PDF p. 5 (Study 4 mediation)"
+  },
+  {
+    "analysis_id": "S4_mediation_independent_SignedRisk",
+    "study": 4,
+    "n_total": "50",
+    "n_by_condition": null,
+    "n_excluded": "10",
+    "locator": "D01 PDF p. 15 (study-level analytic N; mediation-specific N unstated); D03 PDF p. 5 (Study 4 mediation)"
+  },
+  {
+    "analysis_id": "S1_gender_loyalty_sexual_harassment_male",
+    "study": 1,
+    "n_total": null,
+    "n_by_condition": null,
+    "n_excluded": null,
+    "locator": "D03 PDF p. 5 (Exploring Gender Effects); subgroup N not stated; do not back-calculate from df"
+  },
+  {
+    "analysis_id": "S1_gender_loyalty_sexual_harassment_female",
+    "study": 1,
+    "n_total": null,
+    "n_by_condition": null,
+    "n_excluded": null,
+    "locator": "D03 PDF p. 5 (Exploring Gender Effects); subgroup N not stated; do not back-calculate from df"
+  },
+  {
+    "analysis_id": "S1_gender_loyalty_all_wrongdoing_male",
+    "study": 1,
+    "n_total": null,
+    "n_by_condition": null,
+    "n_excluded": null,
+    "locator": "D03 PDF p. 5 (Exploring Gender Effects); subgroup N not stated; do not back-calculate from df"
+  },
+  {
+    "analysis_id": "S1_gender_loyalty_all_wrongdoing_female",
+    "study": 1,
+    "n_total": null,
+    "n_by_condition": null,
+    "n_excluded": null,
+    "locator": "D03 PDF p. 5 (Exploring Gender Effects); subgroup N not stated; do not back-calculate from df"
+  },
+  {
+    "analysis_id": "S2_gender_loyalty_sexual_harassment_male",
+    "study": 2,
+    "n_total": null,
+    "n_by_condition": null,
+    "n_excluded": null,
+    "locator": "D03 PDF p. 6 (Exploring Gender Effects); subgroup N not stated; do not back-calculate from df"
+  },
+  {
+    "analysis_id": "S2_gender_loyalty_sexual_harassment_female",
+    "study": 2,
+    "n_total": null,
+    "n_by_condition": null,
+    "n_excluded": null,
+    "locator": "D03 PDF p. 6 (Exploring Gender Effects); subgroup N not stated; do not back-calculate from df"
+  },
+  {
+    "analysis_id": "S1_gender_difference_sexual_harassment_loyal",
+    "study": 1,
+    "n_total": null,
+    "n_by_condition": null,
+    "n_excluded": null,
+    "locator": "D03 PDF p. 6 (Table 1, sexual harassment, loyal); only a range across cells is printed, no analysis-specific N"
+  },
+  {
+    "analysis_id": "S1_gender_difference_sexual_harassment_control",
+    "study": 1,
+    "n_total": null,
+    "n_by_condition": null,
+    "n_excluded": null,
+    "locator": "D03 PDF p. 6 (Table 1, sexual harassment, control); only a range across cells is printed, no analysis-specific N"
+  },
+  {
+    "analysis_id": "S1_gender_difference_theft_loyal",
+    "study": 1,
+    "n_total": null,
+    "n_by_condition": null,
+    "n_excluded": null,
+    "locator": "D03 PDF p. 6 (Table 1, theft, loyal); only a range across cells is printed, no analysis-specific N"
+  },
+  {
+    "analysis_id": "S1_gender_difference_theft_control",
+    "study": 1,
+    "n_total": null,
+    "n_by_condition": null,
+    "n_excluded": null,
+    "locator": "D03 PDF p. 6 (Table 1, theft, control); only a range across cells is printed, no analysis-specific N"
+  },
+  {
+    "analysis_id": "S1_gender_difference_false_advertising_loyal",
+    "study": 1,
+    "n_total": null,
+    "n_by_condition": null,
+    "n_excluded": null,
+    "locator": "D03 PDF p. 6 (Table 1, false_advertising, loyal); only a range across cells is printed, no analysis-specific N"
+  },
+  {
+    "analysis_id": "S1_gender_difference_false_advertising_control",
+    "study": 1,
+    "n_total": null,
+    "n_by_condition": null,
+    "n_excluded": null,
+    "locator": "D03 PDF p. 6 (Table 1, false_advertising, control); only a range across cells is printed, no analysis-specific N"
+  },
+  {
+    "analysis_id": "S1_gender_difference_fraud_loyal",
+    "study": 1,
+    "n_total": null,
+    "n_by_condition": null,
+    "n_excluded": null,
+    "locator": "D03 PDF p. 6 (Table 1, fraud, loyal); only a range across cells is printed, no analysis-specific N"
+  },
+  {
+    "analysis_id": "S1_gender_difference_fraud_control",
+    "study": 1,
+    "n_total": null,
+    "n_by_condition": null,
+    "n_excluded": null,
+    "locator": "D03 PDF p. 6 (Table 1, fraud, control); only a range across cells is printed, no analysis-specific N"
+  },
+  {
+    "analysis_id": "S1_gender_difference_bribery_loyal",
+    "study": 1,
+    "n_total": null,
+    "n_by_condition": null,
+    "n_excluded": null,
+    "locator": "D03 PDF p. 6 (Table 1, bribery, loyal); only a range across cells is printed, no analysis-specific N"
+  },
+  {
+    "analysis_id": "S1_gender_difference_bribery_control",
+    "study": 1,
+    "n_total": null,
+    "n_by_condition": null,
+    "n_excluded": null,
+    "locator": "D03 PDF p. 6 (Table 1, bribery, control); only a range across cells is printed, no analysis-specific N"
+  },
+  {
+    "analysis_id": "S1_gender_difference_plagiarism_loyal",
+    "study": 1,
+    "n_total": null,
+    "n_by_condition": null,
+    "n_excluded": null,
+    "locator": "D03 PDF p. 6 (Table 1, plagiarism, loyal); only a range across cells is printed, no analysis-specific N"
+  },
+  {
+    "analysis_id": "S1_gender_difference_plagiarism_control",
+    "study": 1,
+    "n_total": null,
+    "n_by_condition": null,
+    "n_excluded": null,
+    "locator": "D03 PDF p. 6 (Table 1, plagiarism, control); only a range across cells is printed, no analysis-specific N"
+  },
+  {
+    "analysis_id": "S1_gender_difference_dishonesty_loyal",
+    "study": 1,
+    "n_total": null,
+    "n_by_condition": null,
+    "n_excluded": null,
+    "locator": "D03 PDF p. 6 (Table 1, dishonesty, loyal); only a range across cells is printed, no analysis-specific N"
+  },
+  {
+    "analysis_id": "S1_gender_difference_dishonesty_control",
+    "study": 1,
+    "n_total": null,
+    "n_by_condition": null,
+    "n_excluded": null,
+    "locator": "D03 PDF p. 6 (Table 1, dishonesty, control); only a range across cells is printed, no analysis-specific N"
+  },
+  {
+    "analysis_id": "S1_gender_difference_Average_loyal",
+    "study": 1,
+    "n_total": null,
+    "n_by_condition": null,
+    "n_excluded": null,
+    "locator": "D03 PDF p. 6 (Table 1, Average, loyal); only a range across cells is printed, no analysis-specific N"
+  },
+  {
+    "analysis_id": "S1_gender_difference_Average_control",
+    "study": 1,
+    "n_total": null,
+    "n_by_condition": null,
+    "n_excluded": null,
+    "locator": "D03 PDF p. 6 (Table 1, Average, control); only a range across cells is printed, no analysis-specific N"
+  },
+  {
+    "analysis_id": "S2_gender_difference_loyal_colleague",
+    "study": 2,
+    "n_total": null,
+    "n_by_condition": null,
+    "n_excluded": null,
+    "locator": "D03 PDF p. 6 (Study 2 Exploring Gender Effects); subgroup N not printed"
+  },
+  {
+    "analysis_id": "S2_gender_difference_control",
+    "study": 2,
+    "n_total": null,
+    "n_by_condition": null,
+    "n_excluded": null,
+    "locator": "D03 PDF p. 6 (Study 2 Exploring Gender Effects); subgroup N not printed"
+  }
+]

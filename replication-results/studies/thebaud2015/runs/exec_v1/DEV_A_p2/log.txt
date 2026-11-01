@@ -1,0 +1,9 @@
+04:20:49 - reading inputs from data/derived 
+04:20:54 - gem_extract rows: 713933; country_year rows: 264 
+04:20:54 - run U03: preparing data 
+04:34:05 - run U03 model M3: status=ok n=340666 (788.0s) 
+05:08:19 - run U03 model R1: status=ok n=338042 (2053.7s) 
+05:08:19 - done: 52 result rows written to runs/exec_v1/DEV_A_p2 
+real 2850.85
+user 2544.01
+sys 14.93

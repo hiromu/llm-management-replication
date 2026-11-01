@@ -1,0 +1,14 @@
+{
+  "frozen_before_implementation": true,
+  "design": "full three-implementation design",
+  "implementations": {
+    "A": {"family": "Anthropic (family 1)", "model": "claude-fable-5-1", "effort": "high", "speed": "normal", "language": "R 4.6.1 + lavaan 0.7.3", "cli": "claude -p --safe-mode ... (same flags as Reader A, tools Read/Write/Edit/Glob/Grep/Bash with Bash limited to Rscript, python, ls)"},
+    "B": {"family": "OpenAI (family 2)", "model": "gpt-6-astra", "effort": "high", "speed": "default service tier", "language": "R 4.6.1 + lavaan 0.7.3", "cli": "codex exec --ephemeral --ignore-user-config ... -s workspace-write (network disabled by sandbox)"},
+    "C": {"family": "OpenAI (family 2)", "model": "gpt-6-astra", "effort": "high", "speed": "default service tier", "language": "Python 3.13 (numpy, scipy, pandas, statsmodels, semopy 2.3.11 available)", "cli": "codex exec as for B"}
+  },
+  "rationale": "Article software is LISREL (not R or Stata), so A and B use R; C uses Python. A and B are cross-family. C uses family 2 so that the Python implementation is independent of A's family; C shares family with B (recorded).",
+  "checkers": {"A": "gpt-6-astra (cross-family)", "B": "claude-fable-5-1 (cross-family)", "C": "claude-fable-5-1 (cross-family)"},
+  "inputs": "manifest_v1.md, six renamed extracts, six summary-free dictionaries, software notes; no publication, targets, scoring rules, other implementations or results",
+  "network": "Codex roles: sandbox without network. Claude role: no web tools; Rscript/python could reach the network in principle (instruction-only isolation, disclosed). Frozen execution is rerun by the coordinator under a macOS sandbox profile denying network.",
+  "influence_designation": "Full leave-one-out run with implementation A; fallback B then C only if A cannot run the mode; first 200 deletions cross-checked with C"
+}

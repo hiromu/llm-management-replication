@@ -1,0 +1,211 @@
+{
+  "checks": [
+    {
+      "check_id": "F1",
+      "what": "Table 3 quarter rows sum to the All row (total fourth downs and conversion attempts)",
+      "inputs": ["T116", "T119", "T122", "T125", "T128", "T117", "T120", "T123", "T126", "T129"],
+      "calculation": "5,280 + 6,532 + 5,267 + 5,524 = 22,603 (printed All = 22,603). 323 + 552 + 468 + 1,042 = 2,385 (printed All = 2,385).",
+      "rounding_interval_used": "integers; none",
+      "result": "consistent",
+      "note": "Table 3 totals also equal the stated final analysis N and the N of Table 1 and Table 5."
+    },
+    {
+      "check_id": "F2",
+      "what": "Table 3 percentages equal conversion attempts divided by total fourth downs",
+      "inputs": ["T118", "T121", "T124", "T127", "T130"],
+      "calculation": "323/5,280 = 6.117%; 552/6,532 = 8.451%; 468/5,267 = 8.886%; 1,042/5,524 = 18.863%; 2,385/22,603 = 10.552%.",
+      "rounding_interval_used": "printed to 2 decimals (+/- 0.005)",
+      "result": "consistent",
+      "note": "All five agree after rounding."
+    },
+    {
+      "check_id": "F3",
+      "what": "Table 2 frequencies sum to the game count; implied total attempts match Table 3; mean attempts per game and share of games with at least one attempt match the text",
+      "inputs": ["T163", "T164", "T165", "T166", "T167", "T168", "T169", "T170", "T171", "T181", "T172", "T173", "T129"],
+      "calculation": "352+474+382+167+99+33+7+5+1 = 1,520 games. Sum of (attempts x games) = 0+474+764+501+396+165+42+35+8 = 2,385 = Table 3 All attempts. 2,385/1,520 = 1.569 (printed 1.57). Games with >= 1 attempt = 1,168; 1,168/1,520 = 76.84% (printed 76.84%). Row percentages 352/1,520 = 23.16, 474/1,520 = 31.18, 382/1,520 = 25.13, 167/1,520 = 10.99, 99/1,520 = 6.51, 33/1,520 = 2.17, 7/1,520 = 0.46, 5/1,520 = 0.33, 1/1,520 = 0.07 all match.",
+      "rounding_interval_used": "integers for counts; +/- 0.005 for percentages and the mean",
+      "result": "consistent",
+      "note": "Table 2 is computed on the same 2,385 attempts as the final analysis sample, so its game-level counts refer to the post-exclusion data."
+    },
+    {
+      "check_id": "F4",
+      "what": "Table 4 above-aspiration quarter Ns sum to the All row, and each quarter's below + above N equals Table 3's total fourth downs for that quarter",
+      "inputs": ["T136", "T137", "T138", "T139", "T140", "T131", "T132", "T133", "T134", "T116", "T119", "T122", "T125"],
+      "calculation": "Above: 751 + 2,231 + 2,171 + 2,461 = 7,614, but printed All = 7,714 (difference 100). Quarter 2: 4,201 + 2,231 = 6,432, but Table 3 quarter 2 = 6,532 (difference 100). Quarter 1: 4,529 + 751 = 5,280 (matches). Quarter 3: 3,096 + 2,171 = 5,267 (matches). Quarter 4: 3,063 + 2,461 = 5,524 (matches).",
+      "rounding_interval_used": "integers; none",
+      "result": "inconsistent",
+      "note": "A single entry, the quarter-2 above-aspiration N (T137, printed 2,231), is 100 short of what both the column total and the Table 3 row total require. The printed value is retained as is; the All row (7,714) and the Table 3 row are mutually consistent."
+    },
+    {
+      "check_id": "F5",
+      "what": "Table 4 below-aspiration quarter Ns sum to the All row, and both All Ns sum to the analysis N",
+      "inputs": ["T131", "T132", "T133", "T134", "T135", "T140", "T183"],
+      "calculation": "4,529 + 4,201 + 3,096 + 3,063 = 14,889 (printed 14,889). 14,889 + 7,714 = 22,603 (analysis N).",
+      "rounding_interval_used": "integers; none",
+      "result": "consistent",
+      "note": "Confirms that the Table 4 All rows refer to the final analysis sample."
+    },
+    {
+      "check_id": "F6",
+      "what": "Table 4 All-row means equal the N-weighted averages of the quarter means",
+      "inputs": ["T141", "T142", "T143", "T144", "T145", "T146", "T147", "T148", "T149", "T150", "T131", "T132", "T133", "T134", "T136", "T137", "T138", "T139"],
+      "calculation": "Below: (4,529 x -2.91 + 4,201 x -7.04 + 3,096 x -9.78 + 3,063 x -11.12) / 14,889 = -107,093.9 / 14,889 = -7.193 (printed -7.19). Above with printed Ns: (751 x 4.96 + 2,231 x 6.67 + 2,171 x 9.37 + 2,461 x 10.71) / 7,614 = 65,305.3 / 7,614 = 8.577 (printed 8.55). Above with the quarter-2 N that would reconcile F4 (2,331): 65,972.3 / 7,714 = 8.552 (printed 8.55).",
+      "rounding_interval_used": "quarter means +/- 0.005 (propagates to about +/- 0.005 in the weighted mean); integers for N",
+      "result": "inconsistent",
+      "note": "The below-aspiration All mean is consistent. The above-aspiration All mean is inconsistent with the printed quarter-2 N but consistent with a quarter-2 N of 2,331, which also resolves F4. This supports a misprint in T137 rather than in the All row; the value is not corrected here."
+    },
+    {
+      "check_id": "F7",
+      "what": "Table 1 means of the two spline pieces (over the full sample, zeros included) equal Table 4 sums divided by the analysis N",
+      "inputs": ["T92", "T94", "T145", "T150", "T135", "T140", "T183"],
+      "calculation": "Below piece: -7.19 x 14,889 / 22,603 = -4.736 (printed -4.74). Above piece: 8.55 x 7,714 / 22,603 = 2.918 (printed 2.92). Using the alternative above sum from F6 with printed Ns (65,305.3 / 22,603 = 2.889) would give 2.89, which does not match.",
+      "rounding_interval_used": "All-row means +/- 0.005 (propagates to about +/- 0.003); printed Table 1 means +/- 0.005",
+      "result": "consistent",
+      "note": "Consistent under the 7,714 reading of the above-aspiration total, again pointing to T137 as the misprinted cell."
+    },
+    {
+      "check_id": "F8",
+      "what": "Table 1 mean and SD of risk taking agree with the Table 3 proportion of conversion attempts",
+      "inputs": ["T90", "T91", "T129", "T128"],
+      "calculation": "p = 2,385 / 22,603 = 0.10552 (printed mean 0.11). SD of a binary variable = sqrt(p(1-p)) = sqrt(0.10552 x 0.89448) = 0.3072 (printed 0.307).",
+      "rounding_interval_used": "+/- 0.005 for the mean, +/- 0.0005 for the SD",
+      "result": "consistent",
+      "note": "The n-1 correction changes the SD by less than 0.00001."
+    },
+    {
+      "check_id": "F9",
+      "what": "Log-likelihoods and LR chi-squares of Models 1-3 imply a common null log-likelihood",
+      "inputs": ["T10", "T11", "T26", "T27", "T46", "T47"],
+      "calculation": "Implied null LL = LL - LRchi2/2. Model 1: -5,959.1881 - 1,522.815 = -7,482.003. Model 2: -5,604.5008 - 1,877.500 = -7,482.001. Model 3: -5,341.1916 - 2,140.810 = -7,482.002. Spread 0.002.",
+      "rounding_interval_used": "LR chi2 printed to 2 decimals (+/- 0.005, i.e. +/- 0.0025 in LL); LL printed to 4 decimals",
+      "result": "consistent",
+      "note": "All three models are tested against the same null log-likelihood of about -7,482.00, so the LL and LR chi2 rows are internally coherent."
+    },
+    {
+      "check_id": "F10",
+      "what": "Model 2 delta LR chi2 equals twice the log-likelihood improvement over Model 1 (equivalently the difference of the LR chi2 values)",
+      "inputs": ["T10", "T26", "T11", "T27", "T29"],
+      "calculation": "2 x (-5,604.5008 - (-5,959.1881)) = 2 x 354.6873 = 709.37. LR chi2 difference: 3,755.00 - 3,045.63 = 709.37. Printed delta LR chi2 = 168.87.",
+      "rounding_interval_used": "LL to 4 decimals (+/- 0.00005), LR chi2 to 2 decimals; the maximum rounding effect on the computed value is below 0.01",
+      "result": "inconsistent",
+      "note": "The printed delta LR chi2 (168.87) differs from the value implied by the printed log-likelihoods (709.37) by about 540. Both values exceed any conventional critical value at 4 degrees of freedom, so the qualitative conclusion (significant improvement) is unaffected, but the printed statistic is not the LR test of Model 2 against Model 1 as labelled. See F12 for an identity with another printed statistic."
+    },
+    {
+      "check_id": "F11",
+      "what": "Model 3 delta LR chi2 equals twice the log-likelihood improvement over Model 2",
+      "inputs": ["T26", "T46", "T27", "T47", "T49"],
+      "calculation": "2 x (-5,341.1916 - (-5,604.5008)) = 2 x 263.3092 = 526.62. LR chi2 difference: 4,281.62 - 3,755.00 = 526.62. Printed delta LR chi2 = 544.05.",
+      "rounding_interval_used": "LL to 4 decimals; LR chi2 to 2 decimals; rounding effect below 0.01",
+      "result": "inconsistent",
+      "note": "Printed 544.05 versus implied 526.62 (difference about 17.4). Qualitative conclusion unaffected at 3 degrees of freedom. The origin of the printed value cannot be determined from the published record."
+    },
+    {
+      "check_id": "F12",
+      "what": "Identity between the text's chi-square for the below-vs-above difference test and the Model 2 delta LR chi2",
+      "inputs": ["T50", "T29"],
+      "calculation": "Text (PDF page 10): 'significantly different from each other (chi2 = 168.87, p < 0.01)'. Table 5 and text: delta LR chi2 for Model 2 = 168.87. The two numbers are identical to two decimals.",
+      "rounding_interval_used": "not applicable",
+      "result": "inconsistent",
+      "note": "Two different tests (a block LR test with 4 degrees of freedom and a test of equality between performance terms) are reported with the same statistic. Combined with F10, the most economical reading is that 168.87 is the statistic of one test that has been labelled twice, but the published record does not say which. Recorded as a table/text identity inconsistency, not a verdict."
+    },
+    {
+      "check_id": "F13",
+      "what": "Degrees of freedom progression across models and implied fixed-effects implementation",
+      "inputs": ["T12", "T28", "T48"],
+      "calculation": "df: 13 -> 17 (+4 = three spline terms + indicator) -> 20 (+3 interaction terms). Model 1 df = 13 = 8 listed regressors + 5. Six seasons give 5 season dummies; 32 teams would add 31 dummies if entered as dummies.",
+      "rounding_interval_used": "integers; none",
+      "result": "consistent",
+      "note": "The df pattern is consistent with season dummies entered as regressors and team effects conditioned out (conditional fixed-effects logit) or otherwise not counted; it is not consistent with team dummies counted in the LR test. Supports the origin estimator in the manifest. Interpretive, not a published statement."
+    },
+    {
+      "check_id": "F14",
+      "what": "Unconditional (pooled) null log-likelihood from Table 3 counts versus the null log-likelihood implied by Table 5",
+      "inputs": ["T128", "T129", "T10", "T11"],
+      "calculation": "Pooled Bernoulli null: 2,385 x ln(0.10552) + 20,218 x ln(0.89448) = -5,363.6 - 2,254.5 = -7,618.1. Implied null from F9: about -7,482.0. Difference about 136.",
+      "rounding_interval_used": "integers for counts; implied null +/- 0.003",
+      "result": "consistent",
+      "note": "The implied null is less negative than the pooled null, as expected when the LR test is computed against a conditional (fixed-effects) null likelihood rather than a pooled one. Consistent with the stated fixed-effects estimator; it would be inconsistent with a pooled logit with dummies (whose null LL would be the pooled value)."
+    },
+    {
+      "check_id": "F15",
+      "what": "Table 5 odds ratios, standard errors and stars are mutually consistent (z = ln(OR) / (SE/OR), treating the parenthesised value as the delta-method SE of the odds ratio)",
+      "inputs": ["T1", "T2", "T3", "T4", "T5", "T6", "T7", "T8", "T13", "T14", "T15", "T16", "T17", "T18", "T19", "T20", "T21", "T22", "T23", "T24", "T30", "T31", "T32", "T33", "T34", "T35", "T36", "T37", "T38", "T39", "T40", "T41", "T42", "T43", "T44"],
+      "calculation": "Examples: T1 z = ln(0.941)/(0.003/0.941) = -19.1 (**). T6 z = 0.39 (none). T7 z = 4.0 (**). T13 z = 1.40 (none; upper rounding bound 1.67 would allow '+', lower bound 1.19 does not, so 'none' is within the interval). T18 z = 3.25 (**). T23 z = -0.85 (none). T24 z = 1.15 (none). T30 z = 2.82 (interval 2.47 to 3.25, spans * and **; printed ** within interval). T35 z = 3.00 (interval 2.97 to 3.03, **). T38 z = -22.4. T39 z = -7.0 (interval -4.6 to -14). T40 z = 3.87. T41 z = -1.44 (interval -1.37 to -1.51, none). T42 z = 11.1. T44: OR in [0.9975, 0.9985] and SE < 0.0005 imply |z| > 3.0, so ** is consistent. T22 (0.999, SE 0.000): |z| only bounded below by about 1, cannot be assessed. T43 (1.000, SE 0.000): cannot be assessed. All remaining rows have |z| > 12 or clearly non-significant z, matching their stars.",
+      "rounding_interval_used": "OR +/- 0.0005; SE +/- 0.0005 (SE printed 0.000 treated as < 0.0005); two-tailed normal critical values 1.645, 1.960, 2.576",
+      "result": "consistent",
+      "note": "No row contradicts its stars within rounding intervals. Two rows (T22, T43) cannot be assessed because the printed SE is 0.000. The check assumes two-tailed tests and that the parenthesised values are SEs of the odds ratios; both assumptions are consistent with the stated software output."
+    },
+    {
+      "check_id": "F16",
+      "what": "Table 6 marginal effects, standard errors and stars are mutually consistent (z = ME / SE)",
+      "inputs": ["T51", "T52", "T53", "T54", "T55", "T56", "T57", "T58", "T59", "T60", "T61", "T62", "T63", "T64", "T65", "T66", "T67", "T68", "T69", "T70", "T71", "T72", "T73", "T74", "T75", "T76", "T77", "T78", "T79", "T80", "T81", "T82", "T83", "T84", "T85"],
+      "calculation": "Nominal z and interval checks for the borderline cells: T67 (-0.0009/0.0003 = 3.0; interval 2.43-3.8; printed * requires z < 2.576, feasible). T77 (-0.0002/0.0001 = 2.0; interval 1.0-5.0; printed + feasible). T84 (0.0006/0.0004 = 1.5; interval 1.22-1.86; printed + feasible). T64 and T78 (z = 2.0; * feasible). T83 (z = 2.5; * feasible). T55 (z = 3.0; interval 2.2-4.3; ** feasible). T71 (z = 3.0; interval 1.67-7; ** feasible). T60 (z = 4.0; interval 2.33-9; **). T76 (z = 1.5; interval 1.0-2.33; none feasible). T72 (z = 2.19; interval 2.14-2.25; *). T73 (z = 1.68; interval 1.63-1.73; +). T85 (z = 1.33; interval 1.15-1.55; none). T66 (z = 1.41; upper bound 1.47; none). T59 (z = 1.22; upper bound 1.35; none). T57 and T70 (SE printed 0.0000, so |z| > 5; ** consistent). All other cells have |z| >= 4 with ** or |z| < 1.3 with no star.",
+      "rounding_interval_used": "ME +/- 0.00005; SE +/- 0.00005; two-tailed critical values 1.645, 1.960, 2.576",
+      "result": "consistent",
+      "note": "Every cell's star is attainable within its rounding interval. Several cells are only consistent at the edge of the interval (T67, T77, T84), which is expected given four-decimal rounding of small quantities."
+    },
+    {
+      "check_id": "F17",
+      "what": "Text translations of marginal effects into seven-point changes",
+      "inputs": ["T86", "T53", "T87", "T67", "T88", "T81", "T89", "T79"],
+      "calculation": "7 x 0.0039 = 0.0273 (text 2.73%). 7 x 0.0009 = 0.0063 (text 0.63%). 7 x 0.0352 = 0.2464 (text 24.64%). 7 x 0.0353 = 0.2471 (text 24.71%).",
+      "rounding_interval_used": "ME +/- 0.00005 (gives +/- 0.035 percentage points)",
+      "result": "consistent",
+      "note": "The text values are seven times the printed point marginal effects, expressed as percentage points of probability (the text says 'lower'/'higher' in percent, which reads as absolute probability change, not relative). They are linear extrapolations of a point derivative over a seven-point interval, not recomputed differences in predicted probability."
+    },
+    {
+      "check_id": "F18",
+      "what": "Sample-size arithmetic across exclusions",
+      "inputs": ["T180", "T182", "T183"],
+      "calculation": "23,965 - 1,362 = 22,603, equal to the stated final N.",
+      "rounding_interval_used": "integers; none",
+      "result": "consistent",
+      "note": "The whole gap between original and final sample is accounted for by the last-two-minutes removal (endnote 3). The overtime exclusion (endnote 2) therefore removed zero plays from the 'original' count, implying overtime plays were never in it or that the stated original count already excludes them. The paper does not say."
+    },
+    {
+      "check_id": "F19",
+      "what": "Game count consistent with the league schedule structure stated in the paper",
+      "inputs": ["T181"],
+      "calculation": "Two seasons with 31 teams: 31 x 16 / 2 = 248 games each (496). Four seasons with 32 teams: 32 x 16 / 2 = 256 games each (1,024). Total 1,520, equal to the printed game count. With 32 teams in all six seasons the total would be 1,536.",
+      "rounding_interval_used": "integers; none",
+      "result": "consistent",
+      "note": "The printed game count equals the complete regular-season schedule only if the first two seasons had 31 teams, which matches the data description (expansion franchise from 2002). The paper's repeated phrase 'the 32 NFL teams' (PDF pages 1, 3, 9, 13) is therefore loose for the 2000 and 2001 seasons but the sample itself is the full schedule. The public source lacks two 2000 games, so the replication cannot reach this count."
+    },
+    {
+      "check_id": "F20",
+      "what": "Table 1 means and correlation of the same-division and same-conference indicators are consistent with a nested definition (division games are a subset of conference games)",
+      "inputs": ["T104", "T106", "T115"],
+      "calculation": "For binary indicators with means p1 = 0.75 (row 8, 'Same division'), p2 = 0.42 (row 9, 'Same conference') and correlation r = 0.19: P(both = 1) = p1 p2 + r sqrt(p1(1-p1)p2(1-p2)) = 0.315 + 0.19 x 0.2137 = 0.356. Hence P(division = 1, conference = 0) = 0.75 - 0.356 = 0.394, which must be 0 under nesting. With the labels swapped (division 0.42, conference 0.75): P(division = 1, conference = 0) = 0.42 - 0.356 = 0.064, also non-zero; nesting would require r = sqrt(0.42 x 0.25 / (0.75 x 0.58)) = 0.49. Mutually exclusive coding is impossible since the means sum above 1.",
+      "rounding_interval_used": "means +/- 0.005; correlation +/- 0.005 (changes P(both) by less than 0.004)",
+      "result": "inconsistent",
+      "note": "The printed descriptives cannot arise from the natural nested definitions under either labelling, nor from a mutually exclusive coding. Separately, 0.75 matches the typical share of intra-conference games in the league schedule format and 0.42 matches the blended share of intra-division games across the pre- and post-2002 alignments, suggesting that rows (8) and (9) of Table 1 may be labelled the wrong way round; whether Table 5's rows are similarly affected cannot be determined. No correction is applied; see manifest open_questions and spec_space axis A4."
+    },
+    {
+      "check_id": "F21",
+      "what": "Table 6 'All quarters' marginal effects are derivable from Table 5 Model 2 odds ratios under the origin convention (analytic derivative times p(1-p) at a common baseline)",
+      "inputs": ["T21", "T22", "T23", "T24", "T53", "T54", "T55"],
+      "calculation": "Implied p(1-p) = ME / (derivative of the linear predictor). At performance 14 (above branch): -0.0006 / ln(0.994) = 0.10. At performance 0 (below branch): -0.0022 / ln(0.883) = 0.018. At performance -14: derivative = ln(0.883) + 2 x 14 x |ln(0.999)| = -0.124 + 0.028 = -0.096 (range -0.082 to -0.110 given the rounding of 0.999), implied p(1-p) = 0.035 to 0.047. The model's own odds ratios imply that the probability at performance 14 should be lower than at 0 (odds multiplied by about 0.92 and divided by the indicator's 1.12), whereas the implied p(1-p) values move the opposite way; and the ratio of implied baselines between -14 and 0 does not match the odds ratio the coefficients imply between those points.",
+      "rounding_interval_used": "OR +/- 0.0005 (the squared-term OR of 0.999 contributes most of the uncertainty); ME +/- 0.00005",
+      "result": "cannot_assess",
+      "note": "A simple reconstruction does not reproduce the relative magnitudes across evaluation points, which indicates that the authors' evaluation conventions (treatment of the group effect, covariate values, whether the spline pieces move jointly, derivative versus discrete change) differ from the origin assumption or that the marginal effects were computed per spline variable rather than for 'performance' as a whole. Because none of these conventions is published, no inconsistency is declared. Implementers should treat Table 6 magnitudes as sensitive to unstated conventions."
+    },
+    {
+      "check_id": "F22",
+      "what": "Table 4 range of performance matches the stated definition",
+      "inputs": ["T161", "T162"],
+      "calculation": "If own-minus-opponent score ranges from -49 to +49 in the sample, performance = that difference minus 1 ranges from -50 to 48, as printed and as explained in the Table 4 Notes.",
+      "rounding_interval_used": "integers; none",
+      "result": "consistent",
+      "note": "Confirms the 'minus one' convention in the performance variable."
+    },
+    {
+      "check_id": "F23",
+      "what": "Table identities: sample sizes and game counts quoted in the abstract, introduction, data section, discussion and table notes agree",
+      "inputs": ["T183", "T181", "T9", "T25", "T45", "T128"],
+      "calculation": "22,603 plays and 1,520 games appear on PDF pages 1, 3, 8, 10 (Table 1 note, Table 2 note, Table 3), 11 (Table 5) and 13; all identical.",
+      "rounding_interval_used": "integers; none",
+      "result": "consistent",
+      "note": "No discrepancy in the headline counts across the article."
+    }
+  ]
+}

@@ -1,0 +1,16 @@
+claim,model,terms,outcome,term_outcomes,adversarial_review_claude,adversarial_review_astra,fully_verified_discrepancy,implementations
+F01,M3,female:leave;female:leave_sq,indeterminate:grey_zone,indeterminate:grey_zone;consistent,,,,A (R lme4) scored; B (R lme4) agrees on all ORIGIN terms
+F02,M3,female:childcare,consistent,consistent,,,,A (R lme4) scored; B (R lme4) agrees on all ORIGIN terms
+F03,M3,female:parttime,indeterminate:grey_zone,indeterminate:grey_zone,,,,A (R lme4) scored; B (R lme4) agrees on all ORIGIN terms
+F04,M1,female,consistent,consistent,,,,A (R lme4) scored; B (R lme4) agrees on all ORIGIN terms
+F05,M4,female:childcare,discrepant_candidate,discrepant_candidate,(a) plan-B coding,"(d) U09 plausible, undocumented",withheld: no family-independent adversarial review,A (R lme4) scored; B (R lme4) agrees on all ORIGIN terms
+F06,M4,female:parttime,discrepant_candidate,discrepant_candidate,(c) survives,(d) unresolved; U18 two-year lag within criteria,withheld: no family-independent adversarial review,A (R lme4) scored; B (R lme4) agrees on all ORIGIN terms
+F07,M4,female:leave;female:leave_sq,indeterminate:grey_zone,indeterminate:grey_zone;indeterminate:grey_zone,,,,A (R lme4) scored; B (R lme4) agrees on all ORIGIN terms
+F08,M5,female:leave;female:leave_sq,indeterminate:incomplete_coverage,indeterminate:incomplete_coverage;indeterminate:incomplete_coverage,,,,A (R lme4) scored; B (R lme4) agrees on all ORIGIN terms
+F09,M6,female:leave;female:leave_sq,discrepant_candidate,discrepant_candidate;discrepant_candidate,(d) unresolved,(d) unresolved,withheld: no family-independent adversarial review,A (R lme4) scored; B (R lme4) agrees on all ORIGIN terms
+F10,M7,female:leave;female:leave_sq,indeterminate:incomplete_coverage,indeterminate:incomplete_coverage;indeterminate:incomplete_coverage,,,,A (R lme4) scored; B (R lme4) agrees on all ORIGIN terms
+F11,M8,female:childcare,indeterminate:grey_zone,indeterminate:grey_zone,,,,A (R lme4) scored; B (R lme4) agrees on all ORIGIN terms
+R01,R1,female:childcare,discrepant_candidate,discrepant_candidate,(b) childcare concept differs,not reviewed,withheld: no family-independent adversarial review,A (R lme4) scored; B (R lme4) agrees on all ORIGIN terms
+R02,R2,female:childcare,indeterminate:grey_zone,indeterminate:grey_zone,,,,A (R lme4) scored; B (R lme4) agrees on all ORIGIN terms
+R03,R3,female:childcare,consistent,consistent,,,,A (R lme4) scored; B (R lme4) agrees on all ORIGIN terms
+F12,M5-M8,null interactions,indeterminate:incomplete_coverage,indeterminate:incomplete_coverage;indeterminate:incomplete_coverage;discrepant_candidate;discrepant_candidate;indeterminate:incomplete_coverage;indeterminate:incomplete_coverage;discrepant_candidate;indeterminate:grey_zone;indeterminate:grey_zone,,,,A (R lme4) scored; B (R lme4) agrees on all ORIGIN terms

@@ -1,0 +1,18 @@
+{
+  "reader_runs": [
+    {"role": "reader_a", "staging_dir": "/var/folders/7q/9m3zdcp550d685wgsq9kvf6r0000gn/T//role_r7a_bcZZgE",
+     "cli": "~/.local/bin/claude 2.1.270",
+     "command": "claude -p --safe-mode --model claude-fable-5-1 --effort high --settings '{\"fastMode\":false,\"autoMemoryEnabled\":false}' --no-session-persistence --tools Read,Write,Edit,Glob,Grep,Bash --allowedTools Read Write Edit Glob Grep 'Bash(~/.venv/bin/python:*)' 'Bash(python3:*)' 'Bash(ls:*)' 'Bash(pdftotext:*)' --output-format json '<instruction to read PROMPT.md>'",
+     "requested": {"model": "claude-fable-5-1", "effort": "high", "speed": "normal", "fast_mode": false},
+     "isolation": "No WebFetch/WebSearch tools; --safe-mode disables CLAUDE.md, skills, plugins, hooks, MCP. File-system confinement to the staging dir is instruction-only (Read tool could technically read absolute paths); disclosed."},
+    {"role": "reader_b", "staging_dir": "/var/folders/7q/9m3zdcp550d685wgsq9kvf6r0000gn/T//role_r3x_5sLwXx",
+     "cli": "~/.local/bin/codex codex-cli 0.164.0",
+     "command": "codex exec --ephemeral --ignore-user-config --skip-git-repo-check -C <staging> -m gpt-6-astra -c model_reasoning_effort=\"high\" -c service_tier=\"default\" -c features.fast_mode=false -s workspace-write -o last_message.txt '<instruction to read PROMPT.md>'",
+     "requested": {"model": "gpt-6-astra", "effort": "high", "speed": "normal/default service tier", "fast_mode": false},
+     "isolation": "workspace-write sandbox (writes confined to staging dir; network disabled by Codex sandbox default); reads outside staging are technically possible, confinement is instruction-only for reads; global ~/.codex/AGENTS.md loads (Python path, Markdown math, Gmail rules only)."}
+  ],
+  "identical_inputs": "readers/reader_input_manifest.sha256 (48 files; diff of A and B staging hashes empty)",
+  "packet": "sources/publication/publication_packet.json (twenge2010_packet_v1, main article only)",
+  "schema": "readers/schema/reader_output_schema.json (frozen before launch)",
+  "launched_utc": "see launch_start_utc.txt in each staging dir, copied back with outputs"
+}

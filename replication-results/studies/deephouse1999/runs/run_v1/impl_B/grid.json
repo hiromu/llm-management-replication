@@ -1,0 +1,562 @@
+{
+ "origins": {
+  "O_A": {
+   "R01": "R01.fixed1983",
+   "R02": "R02.charter_entity",
+   "R03": "R03.as_reported",
+   "R04": "R04.lag_only",
+   "R05": "R05.min2_fallback",
+   "R06": "R06.rck_mean",
+   "R07": "R07.net_income",
+   "R08": "R08.year_end",
+   "R09": "R09.all_market",
+   "R10": "R10.delete_named",
+   "R11": "R11.excl_accept",
+   "R12": "R12.production",
+   "R13": "R13.gross_residual",
+   "R14": "R14.broad",
+   "R15": "R15.zero_if_not_collected",
+   "R16": "R16.consolidated",
+   "R17": "R17.sample_sd",
+   "R18": "R18.domestic",
+   "R19": "R19.commercial",
+   "R20": "R20.cpi_annual",
+   "R21": "R21.commercial",
+   "R22": "R22.none",
+   "R23": "R23.conventional",
+   "R24": "R24.raw",
+   "R25": "R25.wls",
+   "R26": "R26.raw"
+  },
+  "O_B": {
+   "R01": "R01.fixed1983",
+   "R02": "R02.charter",
+   "R03": "R03.as_reported",
+   "R04": "R04.lag_only",
+   "R05": "R05.all4",
+   "R06": "R06.rck_mean",
+   "R07": "R07.net_income",
+   "R08": "R08.year_end",
+   "R09": "R09.all_market",
+   "R10": "R10.delete_named",
+   "R11": "R11.excl_accept",
+   "R12": "R12.production",
+   "R13": "R13.gross_residual",
+   "R14": "R14.literal",
+   "R15": "R15.missing",
+   "R16": "R16.consolidated",
+   "R17": "R17.sample_sd",
+   "R18": "R18.consolidated",
+   "R19": "R19.commercial",
+   "R20": "R20.cpi_annual",
+   "R21": "R21.commercial",
+   "R22": "R22.none",
+   "R23": "R23.conventional",
+   "R24": "R24.raw",
+   "R25": "R25.wls",
+   "R26": "R26.raw"
+  }
+ },
+ "axes": [
+  {
+   "axis": "R01",
+   "decision": "Market geography",
+   "levels": [
+    {
+     "id": "R01.fixed1983",
+     "rule": "Bank-year in market if county_fips5 (RSSD9210 2-digit + RSSD9150 3-digit, zero padded) at its Q4 record of year t is in the county list of area_code 5120 for definition_vintage 1983-06-27 (both states)."
+    },
+    {
+     "id": "R01.rssdmsa",
+     "rule": "Bank-year in market if RSSD9180 == 5120 on its Q4 record of year t."
+    },
+    {
+     "id": "R01.mnonly",
+     "rule": "As R01.fixed1983 but only counties with state FIPS 27."
+    },
+    {
+     "id": "R01.dynamic",
+     "rule": "As R01.fixed1983 but use, for year t, the latest definition_vintage dated on or before December 31 of year t."
+    }
+   ]
+  },
+  {
+   "axis": "R02",
+   "decision": "Which records are commercial banks",
+   "levels": [
+    {
+     "id": "R02.charter_entity",
+     "rule": "RSSD9048 == 200 and CALL8786 in {1,2} and RSSD9331 == 1."
+    },
+    {
+     "id": "R02.charter",
+     "rule": "RSSD9048 == 200 and CALL8786 in {1,2}; RSSD9331 not used as a filter."
+    },
+    {
+     "id": "R02.entity",
+     "rule": "RSSD9331 == 1 and CALL8786 in {1,2}; RSSD9048 not used."
+    },
+    {
+     "id": "R02.no_special",
+     "rule": "Base filter of the active origin, additionally excluding records whose RSSD9425 marks a special-purpose bank type (bankers' bank, credit-card bank, trust-only); see data dictionary for codes."
+    },
+    {
+     "id": "R02.add_savings",
+     "rule": "Base filter of the active origin, additionally admitting RSSD9048 == 300 (savings banks filing Call Reports)."
+    }
+   ]
+  },
+  {
+   "axis": "R03",
+   "decision": "Mergers and continuity",
+   "levels": [
+    {
+     "id": "R03.as_reported",
+     "rule": "Each RSSD9001 is its own unit; lag is same RSSD9001 at t-1; no predecessor aggregation; no merger-year exclusion."
+    },
+    {
+     "id": "R03.drop_merger_years",
+     "rule": "Drop bank-year (i,t) and (i,t+1) when fdic_structure_events shows an event with effective year t in which bank i (CERT = RSSD9050) is the acquirer/survivor of a merger or absorption of another institution (CHANGECODE_DESC indicates merger, absorption or consolidation)."
+    },
+    {
+     "id": "R03.continuity",
+     "rule": "If bank i has no record at t-1 under its RSSD9001 but FDIC events show a pure legal continuation (charter conversion, name change or reorganisation with the same CERT, not an absorption), use the predecessor RSSD9001's t-1 relative ROA as the lag; otherwise missing."
+    },
+    {
+     "id": "R03.proforma",
+     "rule": "For survivors of a merger in year t, build t-1 lag from summed predecessor income and average assets."
+    }
+   ]
+  },
+  {
+   "axis": "R04",
+   "decision": "New banks and partial-year income",
+   "levels": [
+    {
+     "id": "R04.lag_only",
+     "rule": "A bank-year enters if its lag exists; income used as reported (no annualisation)."
+    },
+    {
+     "id": "R04.full_prior_year",
+     "rule": "Additionally require the bank's opening date (FDIC institutions ESTYMD via CERT, or first appearance in the Call files) to be before January 1 of year t-1."
+    },
+    {
+     "id": "R04.annualise",
+     "rule": "For a bank's first calendar year, annualise net income and expenses by 12 / months in operation before forming ROA and the expense ratio."
+    }
+   ]
+  },
+  {
+   "axis": "R05",
+   "decision": "Quarter coverage for average assets",
+   "levels": [
+    {
+     "id": "R05.min2_fallback",
+     "rule": "Mean of available RCFD3368 over the year's quarterly records (RCON3368 if RCFD3368 missing), at least two quarters; if none available, mean of RCFD2170 from Q4 of t-1 through Q4 of t (available points)."
+    },
+    {
+     "id": "R05.all4",
+     "rule": "Require RCFD3368 at all four quarters of year t; otherwise average assets missing."
+    },
+    {
+     "id": "R05.any",
+     "rule": "Mean of all available RCFD3368 in year t if at least one quarter."
+    }
+   ]
+  },
+  {
+   "axis": "R06",
+   "decision": "Average-assets formula",
+   "levels": [
+    {
+     "id": "R06.rck_mean",
+     "rule": "Mean of quarterly RC-K average total assets (item 3368), coverage per R05."
+    },
+    {
+     "id": "R06.rck_days",
+     "rule": "Calendar-day weighted mean of the four quarterly 3368 values (days in each quarter of year t)."
+    },
+    {
+     "id": "R06.five_point",
+     "rule": "Mean of RCFD2170 at Q4 t-1, Q1, Q2, Q3, Q4 of t (require all five)."
+    },
+    {
+     "id": "R06.two_point",
+     "rule": "Mean of RCFD2170 at Q4 t-1 and Q4 t (require both)."
+    },
+    {
+     "id": "R06.fdic_roa",
+     "rule": "ROA = FDIC financials field ROA / 100 at REPDTE = Dec 31 of t, matched by CERT = RSSD9050; expense ratio keeps R06.rck_mean denominators."
+    }
+   ]
+  },
+  {
+   "axis": "R07",
+   "decision": "Income measure",
+   "levels": [
+    {
+     "id": "R07.net_income",
+     "rule": "RIAD4340 at Q4 of t."
+    },
+    {
+     "id": "R07.before_extraordinary",
+     "rule": "RIAD4300 at Q4 of t."
+    }
+   ]
+  },
+  {
+   "axis": "R08",
+   "decision": "Timing of stock variables (asset shares, deposits)",
+   "levels": [
+    {
+     "id": "R08.year_end",
+     "rule": "Q4 record of year t."
+    },
+    {
+     "id": "R08.mean_of_quarter_shares",
+     "rule": "Each asset share and each bank's deposits = mean over the available quarterly records of year t of the quarterly share / amount."
+    },
+    {
+     "id": "R08.ratio_of_means",
+     "rule": "Share = (mean of quarterly item amounts) / (mean of quarterly RCFD2170) within year t."
+    }
+   ]
+  },
+  {
+   "axis": "R09",
+   "decision": "Reference population for market means, SDs, mean ROA and market totals",
+   "levels": [
+    {
+     "id": "R09.all_market",
+     "rule": "All market banks in year t (after R01-R02), available-case for each concept, unweighted; computed before lag, missingness and outlier attrition."
+    },
+    {
+     "id": "R09.analytic",
+     "rule": "Only bank-years in the final estimation sample of year t (iterate once: build sample with R09.all_market, then recompute benchmarks on that sample and rebuild variables, keeping the same rows)."
+    },
+    {
+     "id": "R09.joint_complete",
+     "rule": "Market banks in year t with all eleven shares, ROA and deposits non-missing; one common set for all benchmarks."
+    },
+    {
+     "id": "R09.weighted_roa",
+     "rule": "Market-average ROA weighted by average assets (other benchmarks as origin)."
+    }
+   ]
+  },
+  {
+   "axis": "R10",
+   "decision": "Outlier handling",
+   "levels": [
+    {
+     "id": "R10.delete_named",
+     "rule": "Delete the regression row RSSD9001 == 995151, year 1987, after all variables are built; it still serves as a lag for 1988 and in benchmarks."
+    },
+    {
+     "id": "R10.max_rstudent",
+     "rule": "Instead of the named row, fit M1, M2 and M3 on the undeleted sample; delete the row with the largest externally studentized residual if it is the same row in all three, else delete each model's own maximum."
+    },
+    {
+     "id": "R10.suppress_lag",
+     "rule": "As origin, and also set the 1988 lag of RSSD9001 995151 to missing."
+    },
+    {
+     "id": "R10.before_benchmarks",
+     "rule": "Remove RSSD9001 995151 year 1987 from the market population before 1987 benchmarks are computed, then rebuild; its 1988 lag is missing."
+    },
+    {
+     "id": "R10.none",
+     "rule": "No outlier deletion."
+    }
+   ]
+  },
+  {
+   "axis": "R11",
+   "decision": "Commercial loans item",
+   "levels": [
+    {
+     "id": "R11.excl_accept",
+     "rule": "RCFD1766."
+    },
+    {
+     "id": "R11.incl_accept",
+     "rule": "RCFD1600; other-loans residual subtracts RCFD1600 instead of RCFD1766."
+    }
+   ]
+  },
+  {
+   "axis": "R12",
+   "decision": "Agricultural loans item",
+   "levels": [
+    {
+     "id": "R12.production",
+     "rule": "RCFD1590."
+    },
+    {
+     "id": "R12.plus_farmland",
+     "rule": "RCFD1590 + RCON1420; real estate loans = RCFD1410 - RCON1420."
+    }
+   ]
+  },
+  {
+   "axis": "R13",
+   "decision": "Other loans and leases",
+   "levels": [
+    {
+     "id": "R13.gross_residual",
+     "rule": "RCFD1400 - commercial - real estate - individuals - agriculture (items per R11/R12)."
+    },
+    {
+     "id": "R13.components",
+     "rule": "Explicit sum of available component items (lease financing RCFD2165, loans to depository institutions, loans to purchase securities, obligations of states and political subdivisions, loans to foreign governments, all other loans) using the item list in sources/call_item_candidates.json; missing components count as missing (origin_B rule) or zero if not collected that quarter (origin_A rule), per R15."
+    },
+    {
+     "id": "R13.net_unearned",
+     "rule": "Gross residual minus unearned income RCFD2123."
+    },
+    {
+     "id": "R13.net_allowance",
+     "rule": "Gross residual minus RCFD2123 and minus allowance RCFD3123."
+    }
+   ]
+  },
+  {
+   "axis": "R14",
+   "decision": "Other assets",
+   "levels": [
+    {
+     "id": "R14.broad",
+     "rule": "RCFD2150 + RCFD2130 + RCFD2155 + RCFD2143 + RCFD2160."
+    },
+    {
+     "id": "R14.literal",
+     "rule": "RCFD2160."
+    },
+    {
+     "id": "R14.residual",
+     "rule": "RCFD2170 minus the sum of the other ten category amounts."
+    }
+   ]
+  },
+  {
+   "axis": "R15",
+   "decision": "Missing component items",
+   "levels": [
+    {
+     "id": "R15.zero_if_not_collected",
+     "rule": "If an item is missing for a bank while the item is not collected in that quarter (call_item_presence_by_quarter: in_file == 0 or any_nonmissing_mnwi == 0), treat as 0; if collected that quarter but missing for this bank, the bank-year's dependent quantity is missing."
+    },
+    {
+     "id": "R15.missing",
+     "rule": "Provider missing stays missing; any missing input makes the dependent quantity missing."
+    },
+    {
+     "id": "R15.identity_fill",
+     "rule": "As R15.missing, but fill a missing total from a complete set of components when the dictionary shows an exact identity (e.g. RCFD0010 = RCFD0081 + RCFD0071)."
+    }
+   ]
+  },
+  {
+   "axis": "R16",
+   "decision": "Consolidation scope of balance-sheet stocks",
+   "levels": [
+    {
+     "id": "R16.consolidated",
+     "rule": "RCFD items for assets, quarterly averages and categories."
+    },
+    {
+     "id": "R16.domestic",
+     "rule": "Same-code RCON items for every stock and quarterly-average item (RIAD unchanged)."
+    }
+   ]
+  },
+  {
+   "axis": "R17",
+   "decision": "Standard deviation in z-scores",
+   "levels": [
+    {
+     "id": "R17.sample_sd",
+     "rule": "n-1 denominator over the reference population; a category with SD 0 in a year contributes 0."
+    },
+    {
+     "id": "R17.population_sd",
+     "rule": "n denominator."
+    },
+    {
+     "id": "R17.zero_sd_missing",
+     "rule": "A category with SD 0 in a year makes strategic deviation missing for that year."
+    }
+   ]
+  },
+  {
+   "axis": "R18",
+   "decision": "Deposit item (market share and market totals)",
+   "levels": [
+    {
+     "id": "R18.domestic",
+     "rule": "RCON2200."
+    },
+    {
+     "id": "R18.consolidated",
+     "rule": "RCFD2200."
+    }
+   ]
+  },
+  {
+   "axis": "R19",
+   "decision": "Market-share denominator population",
+   "levels": [
+    {
+     "id": "R19.commercial",
+     "rule": "Sum over market commercial banks (R09 population)."
+    },
+    {
+     "id": "R19.all_insured",
+     "rule": "Sum of FDIC financials DEP at Dec 31 of t over all FDIC-insured institutions whose STCNTY is in the market county list (including savings institutions); numerator unchanged."
+    }
+   ]
+  },
+  {
+   "axis": "R20",
+   "decision": "Price deflator for real market deposits",
+   "levels": [
+    {
+     "id": "R20.cpi_annual",
+     "rule": "FRED CPIAUCNS annual average."
+    },
+    {
+     "id": "R20.cpi_december",
+     "rule": "FRED CPIAUCNS December value."
+    },
+    {
+     "id": "R20.local_cpi",
+     "rule": "FRED CUUSA211SA0 annual (Minneapolis-St. Paul)."
+    },
+    {
+     "id": "R20.gdp_current",
+     "rule": "FRED A191RD3A086NBEA annual, current vintage."
+    },
+    {
+     "id": "R20.gdp_historical",
+     "rule": "ALFRED GDPDEF vintage 1999-01-01, annual mean of quarterly values."
+    }
+   ]
+  },
+  {
+   "axis": "R21",
+   "decision": "Deposit aggregate for market growth",
+   "levels": [
+    {
+     "id": "R21.commercial",
+     "rule": "Sum of the R18 deposit item over market commercial banks."
+    },
+    {
+     "id": "R21.all_insured",
+     "rule": "Sum of FDIC DEP at Dec 31 over all FDIC-insured institutions in market counties."
+    }
+   ]
+  },
+  {
+   "axis": "R22",
+   "decision": "Fixed effects",
+   "levels": [
+    {
+     "id": "R22.none",
+     "rule": "Pooled, no fixed effects."
+    },
+    {
+     "id": "R22.year",
+     "rule": "Add year indicators (real market growth is then collinear and is dropped; report)."
+    },
+    {
+     "id": "R22.bank",
+     "rule": "Add bank indicators."
+    }
+   ]
+  },
+  {
+   "axis": "R23",
+   "decision": "Covariance estimator",
+   "levels": [
+    {
+     "id": "R23.conventional",
+     "rule": "Conventional WLS covariance."
+    },
+    {
+     "id": "R23.cluster_bank",
+     "rule": "CR1 cluster-robust by RSSD9001 (small-sample factor G/(G-1)*(N-1)/(N-K))."
+    },
+    {
+     "id": "R23.hc1",
+     "rule": "HC1 on the weighted regression."
+    }
+   ]
+  },
+  {
+   "axis": "R24",
+   "decision": "Weight scaling (algebraic check)",
+   "levels": [
+    {
+     "id": "R24.raw",
+     "rule": "w = market share."
+    },
+    {
+     "id": "R24.mean1",
+     "rule": "w / mean(w) in the estimation sample; coefficients and SEs must be identical, SSE scales.",
+     "check": true
+    }
+   ]
+  },
+  {
+   "axis": "R25",
+   "decision": "Estimator",
+   "levels": [
+    {
+     "id": "R25.wls",
+     "rule": "WLS, weights per R24."
+    },
+    {
+     "id": "R25.ols",
+     "rule": "Unweighted OLS."
+    },
+    {
+     "id": "R25.wls_ar1",
+     "rule": "WLS with first-order autoregressive errors within bank (Prais-Winsten on the sqrt(w)-transformed panel, rho estimated from within-bank consecutive residuals)."
+    }
+   ]
+  },
+  {
+   "axis": "R26",
+   "decision": "Polynomial basis (algebraic check)",
+   "levels": [
+    {
+     "id": "R26.raw",
+     "rule": "Raw SD and SD^2."
+    },
+    {
+     "id": "R26.centered",
+     "rule": "Centered (SD - mean SD in the estimation sample), back-transformed to the raw basis; must reproduce raw coefficients.",
+     "check": true
+    }
+   ]
+  }
+ ],
+ "models": {
+  "M1": "y ~ market_share + total_expense_ratio + real_market_growth + lag",
+  "M2": "M1 + SD",
+  "M3": "M2 + SD^2",
+  "M3_SQ": "M1 + SD^2 (first-order term omitted)"
+ },
+ "run_order": [
+  "1. O_A and O_B, all four models.",
+  "2. One-at-a-time deviations from O_A for every level of every axis that differs from O_A's level (levels marked check=true excluded); then the same from O_B. Record a level identical to the origin's level as duplicate.",
+  "3. Checks (levels with check=true) at both origins.",
+  "4. Influence diagnostics per manifest section 5."
+ ],
+ "compatibility": [
+  "R10.max_rstudent replaces R10.delete_named.",
+  "R06.fdic_roa changes only the ROA numerator/denominator source; the expense ratio keeps the R05/R06 origin denominator.",
+  "R22.year: drop real_market_growth (collinear with year indicators) and report this.",
+  "R13.components uses the R15 level of the active origin."
+ ]
+}

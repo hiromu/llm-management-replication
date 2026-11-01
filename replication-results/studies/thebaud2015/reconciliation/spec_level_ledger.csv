@@ -1,0 +1,71 @@
+level_key,decision,description,fable_level,fable_label,fable_origin,astra_level,astra_label,astra_origin,match_status,label_agree,origin_agree
+LF_employed,labour-force restriction,"Employed only, GEMWORK 1-2",A1.0,equivalent,True,S02_1,uncertain,True,matched,False,True
+LF_plus_unemployed,labour-force restriction,Employed plus unemployed job seekers,A1.1,uncertain,False,S02_2,uncertain,False,matched,True,True
+LF_full_sample,labour-force restriction,Full sample with not-employed control,A1.2,non_equivalent,False,S02_3,non_equivalent,False,matched,True,True
+AGE_18_54,age bounds,Ages 18-54 inclusive,A2.0,equivalent,True,S01_2,uncertain,False,matched,False,False
+AGE_19_54,age bounds,"Ages 19-54 (literal over 18, under 55)",A2.1,uncertain,False,S01_1,uncertain,True,matched,True,False
+CY_roster,country-year inclusion,Exactly the country-years listed in S1 Table A1,A3.0,equivalent,True,,,,fable_only,,
+CY_all_available,country-year inclusion,All 2001-2008 country-years for the 24 countries,A3.1,uncertain,False,,,,fable_only,,
+DK_missing,screening item DK,Don't know / refused as missing,A4.0,equivalent,True,,,,fable_only,,
+DK_as_no,screening item DK,Don't know treated as no,A4.1,uncertain,False,,,,fable_only,,
+OUT_screening,entrepreneurial-activity construction,"BSTART=1 and no wages >3 months, or OWNMGE=1",A5.0,equivalent,True,S04_2,uncertain,False,matched,False,False
+OUT_transforms_all,entrepreneurial-activity construction,SUBOANWT or OMBABYBT or OMESTBBT,A5.1,uncertain,False,,,,fable_only,,
+OUT_suboanwt_ownmge,entrepreneurial-activity construction,SUBOANWT (nascent) or OWNMGE=1 (owner),,,,S04_1,uncertain,True,astra_only,,
+OUT_nascent_only,entrepreneurial-activity construction,Nascent only,A5.2,non_equivalent,False,,,,fable_only,,
+OUT_tea,entrepreneurial-activity construction,TEA alone,,,,S04_3,non_equivalent,False,astra_only,,
+OWN_ownmge,owner subsample,All current owner-managers OWNMGE=1,A6.0,equivalent,True,S03_1,uncertain,True,matched,False,True
+OWN_omown_corrob,owner subsample,OWNMGE=1 corroborated by OMOWN,,,,S03_2,uncertain,False,astra_only,,
+OWN_omestbbt,owner subsample,OMESTBBT only (>42 months payments),A6.1,uncertain,False,S03_3,non_equivalent,False,matched,False,True
+MOT_omreason2,Plan-B coding,"OMREASON=2 -> 1, other substantive -> 0",A7.0,equivalent,True,S14_1,uncertain,True,matched,False,True
+MOT_omwhy,Plan-B coding,OMWHY=-1 -> 1,A7.1,equivalent,False,,,,fable_only,,
+MOT_omreason23,Plan-B coding,"OMREASON in {2,3} -> 1",A7.2,uncertain,False,S14_2,uncertain,False,matched,True,True
+TECH_12,new-technology coding,"OMNEWT_5 in {1,2} -> 1",A8.0,equivalent,True,,,,fable_only,,
+TECH_1,new-technology coding,OMNEWT_5 = 1 only,A8.1,non_equivalent,False,,,,fable_only,,
+BAGE_log1p,business-age transform,log(years + 1),A9.0,uncertain,True,S16_2,non_equivalent,False,matched,False,False
+BAGE_log_drop0,business-age transform,"log(years), zero-year cases missing",A9.1,uncertain,False,S16_1,uncertain,True,matched,True,False
+PT_common_total,part-time measure,"Common definition, women in total employment",A10.0,equivalent,True,S10_4,non_equivalent,False,matched,False,False
+PT_national,part-time measure,National definitions,A10.1,uncertain,False,S10_3,uncertain,False,matched,True,True
+PT_common_employees,part-time measure,"Common definition, women employees",A10.2,uncertain,False,S10_2,uncertain,False,matched,True,True
+PT_employees_unresolved,part-time measure,"Female employees, hours definition unresolved",,,,S10_1,uncertain,True,astra_only,,
+STD_sq_of_z,standardization and square,z-score across analytic country-years; square of standardized leave,A11.0,equivalent,True,S12_2,equivalent,False,matched,True,False
+STD_country_means,standardization and square,z-score across 24 country means,A11.1,uncertain,False,,,,fable_only,,
+STD_z_of_sq,standardization and square,square raw leave then standardize separately,A11.2,uncertain,False,S12_1,uncertain,True,matched,True,False
+STD_age_sq_recentred,standardization and square,centre age-squared again,,,,S12_3,equivalent,False,astra_only,,
+STD_pop_country_years,standardization population,each country-year counted once,,,,S13_1,uncertain,True,astra_only,,
+STD_pop_individuals,standardization population,pooled individual rows,,,,S13_2,equivalent,False,astra_only,,
+STD_pop_model_specific,standardization population,outcome-specific country-year subset,,,,S13_3,equivalent,False,astra_only,,
+LAG_1,leave lag,one-year lag,A12.0,equivalent,True,S08_1,equivalent,True,matched,True,True
+LAG_0,leave lag,no lag,A12.1,equivalent,False,S08_2,non_equivalent,False,matched,False,True
+LAG_2,leave lag,two-year lag,A12.2,equivalent,False,S08_3,non_equivalent,False,matched,False,True
+CC_interp,childcare missing years,"linear interpolation between 2005 and 2007, carry endpoints",A13.0,uncertain,True,S09_2,uncertain,False,matched,True,False
+CC_hist_unresolved,childcare missing years,"historical concept, algorithm unresolved",,,,S09_1,uncertain,True,astra_only,,
+CC_nearest,childcare missing years,nearest-year value,,,,S09_3,uncertain,False,astra_only,,
+CC_annual_current,childcare missing years,current annual ECEC series directly,A13.1,uncertain,False,S09_4,non_equivalent,False,matched,False,True
+RE_unstructured,random-effects covariance,intercept-slope covariance estimated,A14.0,uncertain,True,S19_2,uncertain,False,matched,True,False
+RE_independent,random-effects covariance,independent intercept and slope,A14.1,uncertain,False,S19_3,uncertain,False,matched,True,True
+RE_country_fe,random-effects covariance,country fixed effects,,,,S19_4,non_equivalent,False,astra_only,,
+W_none,weights,unweighted,A15.0,equivalent,True,S18_1,uncertain,True,matched,False,True
+W_survey,weights,weighted (WEIGHT_L or WEIGHT_A),A15.1,uncertain,False,S18_2,uncertain,False,matched,True,True
+EST_aghq,likelihood approximation,adaptive Gauss-Hermite quadrature,A16.0,equivalent,True,S21_2,uncertain,False,matched,False,False
+EST_aghq_more,likelihood approximation,AGHQ with more points,A16.1,equivalent,False,,,,fable_only,,
+EST_laplace,likelihood approximation,Laplace approximation,A16.2,uncertain,False,S21_3,uncertain,False,matched,True,True
+EST_reml,likelihood approximation,REML for linear model,,,,S21_4,uncertain,False,astra_only,,
+STAT_carry_back,status 2001-2002,carry back each country's earliest available status,A17.0,uncertain,True,S06_3,non_equivalent,False,matched,False,False
+STAT_drop_0102,status 2001-2002,drop 2001-2002 surveys,A17.1,non_equivalent,False,S06_2,non_equivalent,False,matched,True,True
+STAT_unresolved,status 2001-2002,"retain control, values unresolved",,,,S06_1,uncertain,True,astra_only,,
+STATPOP_all,status mean population,all valid respondents in country-year,,,,S07_1,uncertain,True,astra_only,,
+STATPOP_analytic,status mean population,analytic respondents only,,,,S07_2,uncertain,False,astra_only,,
+STATPOP_weighted,status mean population,design-weighted with routing adjustment,,,,S07_3,uncertain,False,astra_only,,
+GROW_additional,growth threshold,additional employees > 5,A18.0,equivalent,True,S15_1,equivalent,True,matched,True,True
+GROW_total,growth threshold,total expected employees > 5,A18.1,uncertain,False,S15_2,non_equivalent,False,matched,False,True
+MISS_model_cc,missing values,complete cases per model,,,,S05_1,uncertain,True,astra_only,,
+MISS_family_cc,missing values,common complete-case sample per family,,,,S05_2,uncertain,False,astra_only,,
+GDP_index,GDP control,UNDP GDP index,,,,S11_1,uncertain,True,astra_only,,
+GDP_pc_undp,GDP control,UNDP GDP per capita PPP,,,,S11_2,uncertain,False,astra_only,,
+GDP_wdi,GDP control,current WDI GDP per capita PPP,,,,S11_3,non_equivalent,False,astra_only,,
+SOLE_omown,sole owner,OMOWN all vs part,,,,S17_1,uncertain,True,astra_only,,
+SOLE_omowners,sole owner,OMOWNERS=1,,,,S17_2,uncertain,False,astra_only,,
+VCOV_model,native covariance,model-based,,,,S20_1,uncertain,True,astra_only,,
+VCOV_cluster,native covariance,country-cluster sandwich,,,,S20_2,non_equivalent,False,astra_only,,
+A3M2_no_fert,fertility in A3 M2,omit fertility,,,,S22_1,uncertain,True,astra_only,,
+A3M2_fert,fertility in A3 M2,include fertility,,,,S22_2,uncertain,False,astra_only,,

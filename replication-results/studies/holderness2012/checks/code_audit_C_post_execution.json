@@ -1,0 +1,5 @@
+{"date": "2026-10-28", "trigger": "two-of-three rule: A and B agree on all 32 core terms and on sample ids of all 266 comparable models; C differs on 10 core terms",
+ "finding": "C removes all spaces (including interior spaces) from GRADE_ALPHA before table lookup; A and B remove edge spaces only (manifest line 37: 'compared after removing spaces from both sides' is ambiguous). 708 POW records (e.g. 'TEC 5' 306, 'LT C' 268, 'TEC 4' 117, 'TEC 3' 11, 'LTCOL' 5, 'S  G' 1) map through the GRADE_ALPHA table only under C's reading; under A/B they fall back to GRADE_CODE. No record matches only under the edge-trim reading.",
+ "classification": "manifest ambiguity (coordinator-authored wording), not an implementation error. Same sample rows; different rank values for about 0.5 percent of records.",
+ "handling": "Score on the agreeing A-B pair per frozen rule. C's estimates are reported as an additional, post hoc identified rank-label reading (uncertain; not part of the frozen grid and not used to change any outcome). Other C-only differences: complete-case family N differs by 6 rows (A=B); recorded.",
+ "agreement_summary": "scoring/implementation_agreement.json"}

@@ -1,0 +1,6 @@
+probe fable 0
+probe astra 0
+reader_astra rc 0 sec 855 {"models_in_events": [], "effort_in_events": [], "service_tier_in_events": []} 
+astra files ['claim_map.json', 'documentation_assessment.json', 'forensics.json', 'manifest.json', 'n_branch.json', 'specification_space.json', 'targets.json']
+reader_fable rc 0 sec 2253 {"modelUsage": ["claude-fable-5-1"], "is_error": false, "num_turns": 43, "total_cost_usd": 18.570380999999998} 
+fable files ['claim_map.json', 'documentation_assessment.json', 'forensics.json', 'manifest.json', 'n_branch.json', 'specification_space.json', 'targets.json']

@@ -1,0 +1,13 @@
+{
+  "name": "replication-console",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "start": "python3 server.py",
+    "vendor:pdf": "node --input-type=commonjs -e \"const fs=require('node:fs'),src='node_modules/pdfjs-dist/',dest='static/vendor/pdfjs/'; fs.mkdirSync(dest,{recursive:true}); for(const name of ['pdf.min.mjs','pdf.worker.min.mjs']) fs.copyFileSync(src+'build/'+name,dest+name); for(const name of ['cmaps','standard_fonts','wasm']) fs.cpSync(src+name,dest+name,{recursive:true}); fs.copyFileSync(src+'LICENSE',dest+'LICENSE'); fs.writeFileSync(dest+'VERSION',require('./'+src+'package.json').version+'\\n');\"",
+    "postinstall": "npm run vendor:pdf"
+  },
+  "dependencies": {
+    "pdfjs-dist": "6.4.299"
+  }
+}

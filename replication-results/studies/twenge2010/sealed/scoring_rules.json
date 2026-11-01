@@ -1,0 +1,70 @@
+{
+  "version": "twenge2010_scoring_v1",
+  "status": "provisional, uncalibrated; frozen before empirical execution",
+  "calibration": "No real-paper calibration available. Constants chosen from sampling-theory reasoning stated below; synthetic rule tests in checks/scoring_tests are the only calibration performed. Not validated error rates.",
+  "scorer": "code: checks/scripts/score.py (written before outputs are read)",
+  "implementation_agreement": {
+    "compare_first": "implementations are compared with each other before any comparison with targets",
+    "fields": {
+      "analysis_n": "exact equality",
+      "sample_v4_hash": "exact equality",
+      "d_eq": "absolute difference <= 0.002",
+      "latent_mean": "absolute difference <= 0.002",
+      "item_mean_sd": "absolute difference <= 1e-6",
+      "item_t": "absolute difference <= 1e-4",
+      "chi_square": "relative difference <= 1e-3",
+      "fit_indices_rmsea_cfi_tli_srmr": "absolute difference <= 0.001"
+    },
+    "rule": "A quantity is implementation-agreed if at least two of three implementations agree within tolerance; scoring uses the mean of the agreeing pair (they agree within tolerance, so this is not averaging contradictory results); the third goes to code audit. No agreeing pair: indeterminate, sub-code implementation_disagreement."
+  },
+  "rounding": "Each published value v printed with k decimals is the interval [v - 0.5*10^-k, v + 0.5*10^-k]. Distances are measured from the reconstructed value to the nearest point of this interval (0 if inside). Differences of published values use interval arithmetic (endpoints combined).",
+  "focal_latent_contrasts": {
+    "estimand": "d_eq = (latent mean later - latent mean earlier) / sqrt((psi_earlier + psi_later)/2) from model M4, specification S00; scale: standardized mean difference; null value 0; sign: later minus earlier",
+    "sign_criterion": "Assessable if the published rounding interval excludes 0. Mismatch if the reconstructed d_eq has the opposite sign and its distance to the interval exceeds the magnitude grey bound; otherwise agree. Not assessable if the interval contains 0.",
+    "magnitude_criterion": {
+      "unit": "derived SE of d (adaptation; the article prints no SE for d): se_d = sqrt((n1+n2)/(n1*n2) + d_pub^2/(2*(n1+n2))) with n1, n2 the published Form 4 Ns of the two years from the sealed N branch and d_pub the printed value. This is a derived-SE check, not a published-SE check.",
+      "regime": "different_vintage_public_reconstruction (public confidentiality-modified weights, release vintages that may differ from the authors', undocumented missing-data handling)",
+      "bands": {"agree": "distance <= 2 se_d", "grey": "2 se_d < distance <= 4 se_d", "mismatch": "distance > 4 se_d"},
+      "justification": "Two SE corresponds to ordinary sampling-level disagreement between nearly identical samples; the extra width up to 4 SE reflects documented vintage and weighting differences of public reconstructions. Same-data bands would be 1/2/3 SE; not applicable here."
+    },
+    "inference_criterion": "not audited: SEM benchmark retains native inference (scoring.md). Native two-sided Wald z of the latent contrast is reported descriptively against the article's significance wording.",
+    "relative_effect": "reported alongside: (d_rec - d_pub)/|d_pub| when |d_pub| >= 0.10"
+  },
+  "item_level_claims": {
+    "estimand": "mean difference later - earlier on native item coding",
+    "sign_criterion": "as for focal contrasts, using the interval of (mean_later - mean_earlier) from printed means",
+    "magnitude_criterion": {
+      "unit": "derived SE from printed SDs and published form Ns: se = sqrt(sd_a^2/n_a + sd_b^2/n_b) (adaptation; no published SE)",
+      "bands": {"agree": "<= 2", "grey": "(2, 4]", "mismatch": "> 4"}
+    },
+    "inference_criterion": {
+      "benchmark": "native independent-samples Student t (no assignment-level clusters exist in the public files; none invented)",
+      "bands": ["p < .01", ".01 <= p < .05", ".05 <= p < .10", "p >= .10"],
+      "published_mapping": "*** or ** -> band 1 (p < .01; *** retained as a separate inequality check p < .001); * -> band 2; no star -> set {band 3, band 4}",
+      "rule": "band distance = minimum distance between reconstructed band and published band set. Distance >= 2 is an inference mismatch; distance 1 is never sufficient. For a published significance claim, a stronger reconstructed band is not a failure. Exact printed inequalities (p < .001) are recorded as separate checks."
+    }
+  },
+  "diagnostic_claims": {
+    "rule": "Each diagnostic claim is scored on its stated decision (e.g. delta CFI below or above .002; chi-square difference significant at .05; RMSEA/CFI adequacy as the article states its cutoffs). Consistent if the reconstructed decision matches; discrepant_provisional if opposite with the reconstructed statistic outside the rounding interval of the decision threshold; indeterminate if the article's decision rule is not stated or the statistic lies within rounding of the threshold. Fit-index magnitudes are reported descriptively (no SE)."
+  },
+  "claim_outcome_precedence": [
+    "not_attemptable: core input absent or all implementations fail at the origin",
+    "indeterminate/implementation_disagreement: no agreeing pair at the origin",
+    "discrepant_provisional: agreeing implementations mismatch on sign, two-or-more inference bands (item claims), or magnitude band 'mismatch'; requires adversarial review and human confirmation before any unqualified discrepant claim",
+    "indeterminate/grey_zone: any criterion in the grey band and none mismatched",
+    "indeterminate/inconsistent_targets: published record internally inconsistent for this cell (e.g. text vs table sign) and the outcome depends on which value is used",
+    "consistent: all assessable criteria agree"
+  ],
+  "fragility": "Equivalent set after reconciliation is empty: fragile and fragile-inference outcomes are not assessable; specification fragility not assessed. Uncertain branches are reported separately and never change the primary outcome.",
+  "label_sensitivity": "Each claim is also scored under co-origin S01 (weighted). If the outcome differs from S00, the claim is flagged label_sensitive and both outcomes are preserved for a human-sourced decision.",
+  "missingness_failure_policy": "Failed or unavailable specifications are retained with reasons and never count as agreement. Missing targets leave a criterion unassessed.",
+  "paper_aggregation": {
+    "focal_structure": "Five research-question claims RQ1-RQ5 (leisure K1, extrinsic K5, intrinsic K2, altruistic K3, social K4), each defined by its three contrasts P1-P3.",
+    "rq_rule": "RQ consistent if all three contrasts consistent; RQ discrepant_provisional if any contrast has a sign mismatch or at least two contrasts are discrepant_provisional; otherwise, if any contrast is indeterminate or discrepant_provisional, RQ indeterminate (sub-code mixed or the contrast sub-code).",
+    "paper_rule": "Any indeterminate RQ makes the paper indeterminate (scoring.md). Otherwise: fully reproduced if all five RQs consistent and no lower-tier claim is discrepant_provisional; partially reproduced if all RQs consistent and some lower-tier claim is discrepant_provisional; not reproduced if at least three RQs are discrepant_provisional; mixed_focal (reported separately, not forced into a category) if one or two RQs are discrepant_provisional and the rest consistent.",
+    "sensitivity": "Report whether adding the work-centrality item set (tier uncertain) as a focal claim would change the paper outcome."
+  },
+  "benchmark_inference_policy": "Linear item comparisons: native independent-sample inference (no clusters available, few-cluster bootstrap not applicable). SEM latent contrasts: native, not audited.",
+  "n_branch": "Sealed published Ns are compared by code with rows read per file (form N). Exact match required for 'match'; differences are reported, not tuned. Model and item Ns are not published.",
+  "compute_budget": "Three implementations (one repair round each after checker review; further runtime repairs rechecked); grid S00-S08, CHK1-CHK2 per implementation; full influence run with implementation A (fallback order A, B, C only if A cannot run the mode); first 200 deletions cross-checked with implementation C."
+}

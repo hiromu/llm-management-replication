@@ -1,0 +1,21 @@
+{
+ "study_id": "delaney1996",
+ "role": "source-acquisition",
+ "note": "No login to or download from ICPSR was attempted. All entries below are public, unauthenticated requests.",
+ "entries": [
+  {"time_utc": "2026-10-28T03:38Z", "action": "web_search", "query": "census.gov 1980 Census industry classification codes SIC equivalents crosswalk", "result": "success; pointed to IPUMS forum, NLS attachment (1980 Census codes with SIC), CDC crosswalk; no census.gov file in results", "used": false},
+  {"time_utc": "2026-10-28T03:38Z", "action": "web_search", "query": "www2.census.gov industry-occupation 1990 census industrial classification system SIC 1987 equivalents pdf", "result": "success; census.gov working-paper tables and archived SIC pages", "used": false},
+  {"time_utc": "2026-10-28T03:38Z", "action": "web_fetch", "url": "https://census.gov/content/dam/Census/library/working-papers/2003/demo/techtab01.pdf", "result": "fetched (HTTP 200) but content was compressed PDF not readable by the fetch tool; not saved into the study; the fetch tool cached a binary copy under the Claude session tool-results directory outside the study", "used": false, "status": "unusable_content"},
+  {"time_utc": "2026-10-28T03:38Z", "action": "web_search", "query": "\"1980 Census of Population\" \"Classified Index of Industries and Occupations\" pdf", "result": "success; only library catalog records and the NLS attachment; the Census Classified Index (PHC80-R4) itself not found online", "used": false, "status": "not_found_online"},
+  {"time_utc": "2026-10-28T03:39Z", "action": "web_search", "query": "1980 census alphabetical index of industries and occupations PHC80-R3 (domains: census.gov, govinfo.gov, bls.gov, hathitrust.org)", "result": "success; Census Bureau code-lists page identified", "used": true},
+  {"time_utc": "2026-10-28T03:39Z", "action": "web_fetch", "url": "https://www.census.gov/topics/employment/industry-occupation/guidance/code-lists.html", "result": "success; listed official 1980 and 1990 code-list PDFs", "used": true},
+  {"time_utc": "2026-10-28T03:39:24Z", "action": "download", "url": "https://www2.census.gov/programs-surveys/demo/guidance/industry-occupation/1980-industry-occupation-code-list.pdf", "result": "HTTP 200, 1466750 bytes", "saved_to": "data/raw/census_io_1980_industry_occupation_code_list/", "used": true},
+  {"time_utc": "2026-10-28T03:39:25Z", "action": "download", "url": "https://www2.census.gov/programs-surveys/demo/guidance/industry-occupation/1990-census-sic-codes.pdf", "result": "HTTP 200, 647216 bytes", "saved_to": "data/raw/census_io_1990_census_sic_codes/", "used": "reference only"},
+  {"time_utc": "2026-10-28T03:39:27Z", "action": "download", "url": "https://www2.census.gov/programs-surveys/demo/guidance/industry-occupation/changes-1980-ind-and-occ-classification.pdf", "result": "HTTP 200, 432543 bytes", "saved_to": "data/raw/census_io_changes_1980_ind_and_occ_classification/", "used": "reference only"}
+ ],
+ "local_tool_failures": [
+  {"time_utc": "2026-10-28T03:32Z", "tool": "foreign::read.spss (R foreign 0.8.92)", "target": "data/supplied/ICPSR_06240/DS0002/06240-0002-Data.por", "error": "file ... is not in any supported SPSS format", "resolution": "haven::read_por and an independent Python parser used instead"},
+  {"time_utc": "2026-10-28T03:31Z", "tool": "pyreadstat.read_por(user_missing=True)", "error": "unexpected keyword argument 'user_missing' (option not available for .por)", "resolution": "pyreadstat used only for the user-missing-to-NaN comparison"},
+  {"time_utc": "2026-10-28T03:50Z", "tool": "rm (scratchpad cleanup)", "target": "session scratchpad haven_export/haven_user_na_true.csv and haven_user_na_false.csv (temporary full-data exports used for the loader check)", "error": "permission denied by the session permission system", "resolution": "NOT resolved: two temporary full-data CSV copies remain in the session scratchpad outside the study folder; the user or coordinator should delete them"}
+ ]
+}

@@ -1,0 +1,150 @@
+{
+  "paper_id": "P-OPAQUE-01",
+  "note": "Sealed publication diagnostics computed only from printed values in DOC01. Whole rounding intervals (printed value +/- half a unit in the last printed digit) are used before declaring a mismatch. Critical values used: two-tailed normal/t with large df: 1.96 (0.05), 2.576 (0.01), 3.291 (0.001); critical |r| at n = 960: 0.063 (0.05), 0.083 (0.01), 0.106 (0.001). These are not analyses of registry data.",
+  "records": [
+    {
+      "check_id": "FX01",
+      "description": "Delta SSE rows of Table 2 equal differences of printed SSE values.",
+      "inputs": {"SSE_M1": "2.978 (DOC01 p12 Table 2)", "SSE_M2": "2.886", "SSE_M3": "2.530", "dSSE_M2_vs_M1": "0.092", "dSSE_M3_vs_M1": "0.448", "dSSE_M3_vs_M2": "0.356"},
+      "calculation": "2.978-2.886 = 0.092; 2.978-2.530 = 0.448; 2.886-2.530 = 0.356.",
+      "result": "consistent",
+      "notes": "Exact agreement at three decimals."
+    },
+    {
+      "check_id": "FX02",
+      "description": "F statistic for Model 2 vs Model 1 recomputed from printed SSE and df.",
+      "inputs": {"dSSE": "0.092", "SSE_M2": "2.886", "df": "1,954 (DOC01 p12 text)", "F_printed": "30.4"},
+      "calculation": "F = (0.092/1)/(2.886/954) = 30.41. Rounding interval: dSSE in [0.091, 0.093], SSE_M2 in [2.8855, 2.8865] gives F in [30.07, 30.75].",
+      "result": "consistent",
+      "notes": "Denominator df 954 = 960 - 6 parameters (intercept + 5 regressors) matches n = 960."
+    },
+    {
+      "check_id": "FX03",
+      "description": "F statistic for Model 3 vs Model 1 recomputed.",
+      "inputs": {"dSSE": "0.448", "SSE_M3": "2.530", "df": "2,953 (DOC01 p13 text)", "F_printed": "84.4"},
+      "calculation": "F = (0.448/2)/(2.530/953) = 84.37. Rounding interval: dSSE in [0.447, 0.449], SSE_M3 in [2.5295, 2.5305] gives F in [84.17, 84.58].",
+      "result": "consistent",
+      "notes": "Denominator df 953 = 960 - 7 parameters matches n = 960."
+    },
+    {
+      "check_id": "FX04",
+      "description": "F statistic for Model 3 vs Model 2 recomputed.",
+      "inputs": {"dSSE": "0.356", "SSE_M3": "2.530", "df": "1,953 (DOC01 p13 text)", "F_printed": "134.1"},
+      "calculation": "F = (0.356/1)/(2.530/953) = 134.10. Rounding interval: dSSE in [0.355, 0.357] gives F in [133.7, 134.5].",
+      "result": "consistent",
+      "notes": null
+    },
+    {
+      "check_id": "FX05",
+      "description": "N and residual degrees of freedom consistency across Table 1, Table 2 and text.",
+      "inputs": {"n_Table1": "960", "n_Table2": "960", "df_den_M2": "954", "df_den_M3": "953", "k_M1": "5", "k_M2": "6", "k_M3": "7"},
+      "calculation": "960 - 6 = 954; 960 - 7 = 953 (Model 1 implied df 955, not printed).",
+      "result": "consistent",
+      "notes": "All three models share n = 960 (Table 2 note a)."
+    },
+    {
+      "check_id": "FX06",
+      "description": "Coefficient/SE ratios versus printed stars, Table 2 Model 1.",
+      "inputs": {"Intercept": "0.929 (0.169) ***", "Market Share": "-0.576 (0.138) ***", "Total Expense Ratio": "-9.948 (2.001) ***", "Real Market Growth": "0.014 (0.004) ***", "Relative ROA(t-1)": "0.369 (0.028) ***"},
+      "calculation": "t = 5.50; -4.17; -4.97; 3.50 (interval [0.0135/0.0045, 0.0145/0.0035] = [3.00, 4.14]); 13.2.",
+      "result": "consistent",
+      "notes": "Real Market Growth: the point ratio 3.50 exceeds 3.291; the lower end of the rounding interval (3.00) would give ** rather than ***, so *** is consistent but not guaranteed by the printed precision."
+    },
+    {
+      "check_id": "FX07",
+      "description": "Coefficient/SE ratios versus printed stars, Table 2 Model 2.",
+      "inputs": {"Intercept": "1.164 (0.172) ***", "Strategic Deviation": "-0.020 (0.004) ***", "Market Share": "-0.093 (0.161) no star", "Total Expense Ratio": "-10.601 (1.974) ***", "Real Market Growth": "0.016 (0.004) ***", "Relative ROA(t-1)": "0.361 (0.027) ***"},
+      "calculation": "t = 6.77; -5.00 (interval [-5.86, -4.33]); -0.58 (n.s.); -5.37; 4.00 (interval [3.44, 4.71]); 13.4.",
+      "result": "consistent",
+      "notes": null
+    },
+    {
+      "check_id": "FX08",
+      "description": "Coefficient/SE ratios versus printed stars, Table 2 Model 3.",
+      "inputs": {"Intercept": "0.511 (0.171) **", "Strategic Deviation^2": "-0.006 (0.001) ***", "Strategic Deviation": "0.170 (0.017) ***", "Market Share": "-0.457 (0.155) **", "Total Expense Ratio": "-15.387 (1.895) ***", "Real Market Growth": "0.018 (0.003) ***", "Relative ROA(t-1)": "0.403 (0.026) ***"},
+      "calculation": "t = 2.99 (interval [2.98, 3.00]; p about 0.003, ** correct, not ***); -6.0 (interval [-13, -3.67]); 10.0; -2.95 (interval [-2.96, -2.94]; p about 0.003, ** correct); -8.12; 6.0 (interval [4.9, 7.4]); 15.5.",
+      "result": "consistent",
+      "notes": "Both ** entries fall strictly between the 0.01 and 0.001 thresholds across their whole rounding intervals."
+    },
+    {
+      "check_id": "FX09",
+      "description": "Robustness model without the linear term: coefficient, SE, significance statement and SSE ordering.",
+      "inputs": {"beta": "-0.001", "SE": "0.0001", "SSE": "2.803", "SSE_M2": "2.886", "SSE_M3": "2.530", "source": "DOC01 p13"},
+      "calculation": "t = -10 (interval [-0.0015/0.00005, -0.0005/0.00015] = [-30, -3.3]); 2.530 < 2.803 < 2.886.",
+      "result": "consistent",
+      "notes": "Text states the fit was 'better than Model 2 but worse than Model 3'; SSE ordering agrees. The squared-term coefficient (-0.001) is about one sixth of the Model 3 value (-0.006), as expected when the collinear linear term is dropped."
+    },
+    {
+      "check_id": "FX10",
+      "description": "Table 1 identity: mean of Strategic Deviation^2 should equal mean^2 + ((n-1)/n) * SD^2 of Strategic Deviation.",
+      "inputs": {"mean_SD": "7.640", "sd_SD": "2.932", "mean_SD2": "66.956", "n": "960"},
+      "calculation": "7.640^2 + (959/960) * 2.932^2 = 58.370 + 8.588 = 66.957. Rounding interval of the right-hand side: [66.947, 66.968].",
+      "result": "consistent",
+      "notes": "Printed 66.956 lies inside the interval. (With a population-SD convention the identity is mean^2 + SD^2 = 66.966, also inside the interval.)"
+    },
+    {
+      "check_id": "FX11",
+      "description": "Table 1 correlation stars versus critical |r| at n = 960.",
+      "inputs": {"r_values": "0.62***, -0.12***, -0.14***, -0.14***, -0.17***, 0.95***, -0.04, -0.08**, 0.49***, 0.41***, -0.45***, -0.40***, 0.09**, 0.13***, -0.03, 0.01, -0.01, 0.00, 0.00, -0.02, 0.08*", "critical_r": "0.063 (0.05), 0.083 (0.01), 0.106 (0.001)"},
+      "calculation": "All |r| >= 0.12 carry *** (>= 0.106): consistent. |r| <= 0.04 carry no star (< 0.063): consistent. -0.08** : interval [0.075, 0.085] straddles 0.083, ** possible. 0.09** : interval [0.085, 0.095] is above 0.083 and below 0.106: ** correct. 0.08* : interval [0.075, 0.085] straddles 0.083, * possible.",
+      "result": "consistent",
+      "notes": "The two printed 0.08 values carry different stars (** for market share vs lagged relative ROA; * for real market growth vs total expense ratio). Both are consistent within rounding (one is at least 0.083 in absolute value and the other below it), so this is not a mismatch, but it shows the values differ in the third decimal."
+    },
+    {
+      "check_id": "FX12",
+      "description": "Durbin h statement versus normal critical value.",
+      "inputs": {"h": "< 1.28 for all models (DOC01 p11)", "critical": "1.96 two-tailed 0.05"},
+      "calculation": "1.28 < 1.96.",
+      "result": "consistent",
+      "notes": "Labelled N.S. in the text; consistent."
+    },
+    {
+      "check_id": "FX13",
+      "description": "Turning point of the Model 3 quadratic relative to the printed distribution of strategic deviation.",
+      "inputs": {"b_sq": "-0.006 (interval [-0.0065, -0.0055])", "b_lin": "0.170 (interval [0.1695, 0.1705])", "mean_SD": "7.640", "sd_SD": "2.932"},
+      "calculation": "Turning point = -b_lin/(2*b_sq) = 14.2, interval [13.0, 15.5]; this is 1.8 to 2.7 sample SDs above the mean of strategic deviation.",
+      "result": "not_checkable",
+      "notes": "The article states the inverted U lies within the sample range (DOC01 p13) but prints no maximum of strategic deviation. A turning point about two SDs above the mean of a non-negative skewed index is plausible but cannot be verified from the published record."
+    },
+    {
+      "check_id": "FX14",
+      "description": "Scale of the printed SSE relative to the outcome variance (weight-scale plausibility).",
+      "inputs": {"SSE_M1": "2.978", "n": "960", "sd_relROA_raw": "0.007 (Table 1; x100 = 0.7)", "mean_market_share": "0.008 (Table 1)", "max_|r|_with_outcome": "0.62 (lagged outcome)"},
+      "calculation": "If weights had mean one, SSE would be about n times the residual variance; with outcome SD 0.7 (x100 units) and R^2 well below 1, SSE would be on the order of 10^2, not 3. Dividing the printed SSE by the mean market share: 2.978/0.008 = 372, implying residual variance about 0.39 and residual SD about 0.62, i.e. a weighted R^2 of roughly 0.2 against outcome SD 0.7.",
+      "result": "consistent",
+      "notes": "The SSE magnitude is consistent with weights equal to the raw market-share proportion (mean about 0.008), as the text implies. Weak plausibility check only; it does not determine the weight definition and is not used to choose a specification."
+    },
+    {
+      "check_id": "FX15",
+      "description": "Mean market share versus observations per year.",
+      "inputs": {"mean_market_share": "0.008 (interval [0.0075, 0.0085])", "n": "960", "years": "8"},
+      "calculation": "If shares sum to one over the banks in each year's denominator, the sample mean share is 1/(banks in denominator) only when the sample equals the denominator population; 1/0.008 = 125 (interval [118, 133]) versus 960/8 = 120 bank-years per year.",
+      "result": "consistent",
+      "notes": "Consistent with denominators that cover roughly the sample banks or slightly more (a few excluded banks with small deposits). Not determinative for axis V2."
+    },
+    {
+      "check_id": "FX16",
+      "description": "Table 2 n versus text counts of banks and years.",
+      "inputs": {"banks": "159 (DOC01 p9)", "years": "8", "n": "960"},
+      "calculation": "159 x 8 = 1272 potential bank-years; 960 observed implies about 312 bank-years lost to foundings, mergers, failures, the lag requirement and one deletion (about 25 percent).",
+      "result": "not_checkable",
+      "notes": "No year-by-year counts are printed. 'Independent banks' is read as separately chartered banks (the deleted outlier is a holding-company affiliate, so the term cannot mean independent of holding companies)."
+    },
+    {
+      "check_id": "FX17",
+      "description": "Sign consistency between Table 1 correlations and Table 2 coefficients.",
+      "inputs": {"r(SD, relROA)": "-0.14***", "b_SD_M2": "-0.020***", "r(TER, relROA)": "-0.45***", "b_TER": "negative ***", "r(lag, relROA)": "0.62***", "b_lag": "positive ***", "r(MS, relROA)": "-0.04 n.s.", "b_MS_M1": "-0.576***"},
+      "calculation": "Signs of bivariate correlations agree with the partial coefficients for SD, TER and the lag; market share is n.s. bivariately but strongly negative in the weighted multivariate model.",
+      "result": "consistent",
+      "notes": "The market-share discrepancy between an n.s. unweighted correlation and a *** weighted coefficient is not an inconsistency (weights emphasize large banks; expense ratio and lag are partialled out), but it flags that the market-share result depends on the weighting."
+    },
+    {
+      "check_id": "FX18",
+      "description": "Relative ROA means in Table 1.",
+      "inputs": {"mean_relROA": "0.000", "mean_relROA_lag": "0.000", "sd": "0.007 both"},
+      "calculation": "By construction the market-year mean of relative ROA is zero over the reference population; the sample mean is exactly zero only if the reference population equals the sample (axis V2.b) and approximately zero otherwise.",
+      "result": "not_checkable",
+      "notes": "Three-decimal printing cannot distinguish the two readings."
+    }
+  ]
+}

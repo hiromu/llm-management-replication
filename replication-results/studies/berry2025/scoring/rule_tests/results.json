@@ -1,0 +1,30 @@
+[
+ {
+  "test": "sign flip gives discrepant_candidate",
+  "pass": true
+ },
+ {
+  "test": "3 SE shift gives discrepant_candidate",
+  "pass": true
+ },
+ {
+  "test": "0.6 SE shift is grey, indeterminate",
+  "pass": true
+ },
+ {
+  "test": "large F shift is out",
+  "pass": true
+ },
+ {
+  "test": "two-band p change is out",
+  "pass": true
+ },
+ {
+  "test": "unreachable N marked n_unmatched",
+  "pass": true
+ },
+ {
+  "test": "N equal to alternative selects it by code",
+  "pass": true
+ }
+]

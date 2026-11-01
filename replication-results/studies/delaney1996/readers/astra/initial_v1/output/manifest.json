@@ -1,0 +1,2084 @@
+{
+  "paper_id": "PAPER_K7",
+  "data": {
+    "source_id": "icpsr06240_ds0002",
+    "unit": "GSS-nominated work establishment record; duplicate nominations may represent the same establishment",
+    "id_variable": "V1",
+    "locator": {
+      "doc_id": "D1",
+      "pdf_page": 5,
+      "where": "Methods/Data"
+    },
+    "source_notes": "Use supplied dictionary and source description. V1 identifies records; it is not established as a unique establishment cluster ID. V3=0 marks copied interviews."
+  },
+  "sample_steps": [
+    {
+      "step": 1,
+      "rule": "Load the public establishment interview file, preserving source codes and routing flags. No article instruction selects telephone over mail or imposes employment/age thresholds.",
+      "source_variables": [
+        "V1",
+        "V3",
+        "V8",
+        "V9",
+        "V17"
+      ],
+      "locator": {
+        "doc_id": "D1",
+        "pdf_page": 6,
+        "where": "Data"
+      }
+    },
+    {
+      "step": 2,
+      "rule": "Resolve duplicated-nomination policy before constructing standard scores: retain all source records or restrict V3!=0. Neither policy is documented by the article; A01. Preserve original row identity.",
+      "source_variables": [
+        "V1",
+        "V3",
+        "DUP",
+        "NUMOBS"
+      ],
+      "locator": {
+        "doc_id": "D1",
+        "pdf_page": 5,
+        "where": "Sampling design"
+      }
+    },
+    {
+      "step": 3,
+      "rule": "Create routed occupation and decision blocks, recode documented nonresponse separately from structural skips, and resolve item-level completeness and skip policies A03–A05. Do not use listwise deletion of every source column because alternate routes are structurally blank.",
+      "source_variables": [
+        "V79",
+        "V114",
+        "V145",
+        "V17",
+        "V44",
+        "V349"
+      ],
+      "locator": {
+        "doc_id": "D1",
+        "pdf_page": 7,
+        "where": "Measures continuing p8"
+      }
+    },
+    {
+      "step": 4,
+      "rule": "Construct outcomes, HRM practices and controls per variable definitions after resolving coding axes. Choose and record the standardization reference population before any z scores; perform logarithms before z scores where specified. Map industry codes without treating Census as SIC.",
+      "source_variables": [
+        "V43",
+        "INDUSTRY",
+        "V16",
+        "V23",
+        "V32",
+        "NEWTOTAL"
+      ],
+      "locator": {
+        "doc_id": "D1",
+        "pdf_page": 7,
+        "where": "Measures; controls pp11–12"
+      }
+    },
+    {
+      "step": 5,
+      "rule": "Organizational-performance population includes for-profit and nonprofit establishments. Market-performance population is profit-making in prose (V8=1); Table 1 instead says publicly held (V8=1 and V9=4). Keep A02 open. Do not require market items for organizational models.",
+      "source_variables": [
+        "V8",
+        "V9",
+        "V289",
+        "V290",
+        "V291",
+        "V292",
+        "V293",
+        "V294",
+        "V295",
+        "V296",
+        "V297",
+        "V298",
+        "V299"
+      ],
+      "locator": {
+        "doc_id": "D1",
+        "pdf_page": 7,
+        "where": "Dependent variables; conflicting footnote p10"
+      }
+    },
+    {
+      "step": 6,
+      "rule": "Apply the chosen missingness/sample policy to constructed variables needed by each equation. Common within-outcome complete cases across all practices versus equation-specific complete cases is unresolved (A04). Lock the same sample for each nested F comparison and construct interaction terms. No stopping rule based on an expected sample count is permitted.",
+      "source_variables": [],
+      "locator": {
+        "doc_id": "D1",
+        "pdf_page": 15,
+        "where": "Table 3 footnotes; Table 4 p17"
+      }
+    }
+  ],
+  "variables": [
+    {
+      "var_id": "org_perf",
+      "construct": "Perceived organizational performance",
+      "role": "outcome",
+      "source_variables": [
+        "V289",
+        "V290",
+        "V291",
+        "V292",
+        "V293",
+        "V294",
+        "V295"
+      ],
+      "item_coding": "For valid codes 1–4 use 5−x, giving worse=1 through much better=4. Q.75a–g: quality, new products, attraction, retention, customer satisfaction, management relations, employee relations.",
+      "missing_value_rule": "7,8,9 and system missing are missing; item completeness rule unresolved.",
+      "transformation": "Reverse code; combine seven items",
+      "scale_construction": "Arithmetic mean is closest-described interpretation of the stated scale, but aggregation operator is not explicitly named.",
+      "locator": {
+        "doc_id": "D1",
+        "pdf_page": 7,
+        "where": "Dependent variables; Table 1 p9"
+      },
+      "ambiguities": "Minimum valid items, equal weighting and complete versus available-item mean are not specified. A04."
+    },
+    {
+      "var_id": "market_perf",
+      "construct": "Perceived market performance",
+      "role": "outcome",
+      "source_variables": [
+        "V296",
+        "V297",
+        "V298",
+        "V299"
+      ],
+      "item_coding": "For valid codes 1–4 use 5−x. Q.76a–d: marketing, sales growth, profitability, market share.",
+      "missing_value_rule": "7,8,9 and system missing are missing. Outside the eligible universe is structurally missing, never a low performance value.",
+      "transformation": "Reverse code; combine four items",
+      "scale_construction": "Arithmetic mean is provisional; exact operator not explicit.",
+      "locator": {
+        "doc_id": "D1",
+        "pdf_page": 7,
+        "where": "Dependent variables; Table 1 p9"
+      },
+      "ambiguities": "Profit-making universe in prose conflicts with publicly held only in Table 1 footnote a (D1 p10); A02. Minimum valid items A04."
+    },
+    {
+      "var_id": "staff",
+      "construct": "Staffing selectivity",
+      "role": "hrm_practice",
+      "source_variables": [
+        "V62",
+        "V97",
+        "V131",
+        "V50",
+        "V85",
+        "V119",
+        "V79",
+        "V114",
+        "V44",
+        "V349"
+      ],
+      "item_coding": "Applications per opening for CORE, GSS and managers; V50/V85/V119 identify outside-hiring skips, V79/V114 and occupational variables help distinguish same-occupation routes.",
+      "missing_value_rule": "998/999 and 997 are missing. 995 is a substantive category declared missing by the release; no numerical value is justified. Structural skips and zero counts require explicit branches.",
+      "transformation": "Log each application count, standardize each logged item, then average.",
+      "scale_construction": "Mean of three item z scores.",
+      "locator": {
+        "doc_id": "D1",
+        "pdf_page": 7,
+        "where": "Independent variables; Table 1 pp9–10"
+      },
+      "ambiguities": "Log base, zero handling, code 995 (large number of applications), same-occupation reuse, z-score reference sample and denominator not specified. A03,A05,A07,A08."
+    },
+    {
+      "var_id": "training",
+      "construct": "Training extent/effectiveness",
+      "role": "hrm_practice",
+      "source_variables": [
+        "V145",
+        "V157",
+        "V172"
+      ],
+      "item_coding": "V145: yes=1/no=2 in source; orient yes higher, but original recoding not documented (0/1 or 1/2 branches). V172 valid 1–3 becomes 4−x; V157 is number trained.",
+      "missing_value_rule": "V145/V172 8,9 and V157 99998,99999 missing; V172=4 outside the described effectiveness range. Do not infer effectiveness for no-training establishments.",
+      "transformation": "Text: standardize the three measures and average. Table 1 footnote b: standard scores of logged values for all three.",
+      "scale_construction": "Mean of three item z scores after selected transformations.",
+      "locator": {
+        "doc_id": "D1",
+        "pdf_page": 7,
+        "where": "Training paragraph; Table 1 pp9–10"
+      },
+      "ambiguities": "Log all items versus unlogged standardization unresolved. Binary zero cannot be logged. No-training effectiveness and count skips, V172=4 varies/depends, V157=99996 top code require decisions. A05,A06,A08,A16."
+    },
+    {
+      "var_id": "incentive",
+      "construct": "Incentive compensation",
+      "role": "hrm_practice",
+      "source_variables": [
+        "V209",
+        "V222",
+        "V235",
+        "V79",
+        "V114",
+        "V44",
+        "V349"
+      ],
+      "item_coding": "Job performance importance for managers, CORE and GSS. Source 1=very important,2=somewhat,3=not; orient higher importance with 4−x.",
+      "missing_value_rule": "7 where used, 8,9 and system missing; structural same-occupation routing unresolved.",
+      "transformation": "Reverse coding; aggregate three items",
+      "scale_construction": "Equal-item arithmetic mean is provisional; operator not stated.",
+      "locator": {
+        "doc_id": "D1",
+        "pdf_page": 8,
+        "where": "Incentive compensation; Table 1 p10"
+      },
+      "ambiguities": "No explicit raw-to-analysis coding or aggregation rule. The direction follows construct definition; occupational skips unresolved. A03,A04."
+    },
+    {
+      "var_id": "grievance",
+      "construct": "Formal grievance procedure",
+      "role": "hrm_practice",
+      "source_variables": [
+        "V270"
+      ],
+      "item_coding": "1→1 yes; 2→0 no.",
+      "missing_value_rule": "7,8,9 and system missing; no recode of not-applicable to no without an explicit branch.",
+      "transformation": "Indicator",
+      "scale_construction": "Single item.",
+      "locator": {
+        "doc_id": "D1",
+        "pdf_page": 8,
+        "where": "Grievance paragraph"
+      },
+      "ambiguities": "Structural not-applicable handling not explained."
+    },
+    {
+      "var_id": "decentral",
+      "construct": "Decentralized decision making",
+      "role": "hrm_practice",
+      "source_variables": [
+        "V17",
+        "V271",
+        "V272",
+        "V273",
+        "V274",
+        "V275",
+        "V276",
+        "V277",
+        "V278",
+        "V279",
+        "V280",
+        "V281",
+        "V282",
+        "V283",
+        "V284",
+        "V285",
+        "V286"
+      ],
+      "item_coding": "For each of eight decisions choose Q.72a (V271–V278) when V17=1, or Q.72b (V279–V286) when V17=2. These are routed versions, not sixteen separate items. Source codes: 1 head,2 below,3 above/larger organization,4 head+below,5 head+above,6 depends.",
+      "missing_value_rule": "7,8,9 and system missing; 6 depends needs a rule. Unselected routing block is structural, not item nonresponse.",
+      "transformation": "Map to stated 1–5 scale with higher values meaning decisions lower in hierarchy; exact map unavailable.",
+      "scale_construction": "Eight-item scale; arithmetic mean provisional.",
+      "locator": {
+        "doc_id": "D1",
+        "pdf_page": 8,
+        "where": "Decentralized decision making; Table 1 p10"
+      },
+      "ambiguities": "Cannot implement the stated five-point ordering uniquely from the supplied codes. Do not use source numeric order as decentralization. CEO meaning (establishment versus parent) and mixed responses unresolved. A09."
+    },
+    {
+      "var_id": "ilm",
+      "construct": "Internal labor market",
+      "role": "hrm_practice",
+      "source_variables": [
+        "V67",
+        "V76",
+        "V102",
+        "V111",
+        "V136",
+        "V79",
+        "V114",
+        "V44",
+        "V349"
+      ],
+      "item_coding": "Five yes/no items: CORE internal fill and promotion above CORE, GSS internal fill and promotion, managerial internal fill. Valid source 1=yes,2=no becomes 3−x (yes=2,no=1).",
+      "missing_value_rule": "8,9 and system missing; distinguish absence of an occupation from same-occupation skips.",
+      "transformation": "Reverse coding",
+      "scale_construction": "Five-item mean provisional.",
+      "locator": {
+        "doc_id": "D1",
+        "pdf_page": 8,
+        "where": "Internal labor market; Table 1 p10"
+      },
+      "ambiguities": "Aggregation/minimum item count, occupational reuse or omission unresolved. A03,A04."
+    },
+    {
+      "var_id": "hierarchy",
+      "construct": "Vertical hierarchy",
+      "role": "hrm_practice",
+      "source_variables": [
+        "V261"
+      ],
+      "item_coding": "Count includes lowest and highest levels. Code 96 denotes 100 levels or more, not literally 96.",
+      "missing_value_rule": "98,99 and system missing; nonpositive logarithm undefined.",
+      "transformation": "Log count per Table 1 footnote c; prose simply describes count.",
+      "scale_construction": "Single transformed count.",
+      "locator": {
+        "doc_id": "D1",
+        "pdf_page": 10,
+        "where": "Table 1 footnote c; prose p8"
+      },
+      "ambiguities": "Log base and handling nonpositive counts/top code unresolved; raw-count branch reflects prose only. A10,A16."
+    },
+    {
+      "var_id": "nonprofit",
+      "construct": "Nonprofit organization",
+      "role": "control",
+      "source_variables": [
+        "V8"
+      ],
+      "item_coding": "Source 1=for-profit,2=nonprofit. Prose calls this a dummy; analysis origin uses I(V8=2).",
+      "missing_value_rule": "Source declares no special missing codes; require valid 1/2.",
+      "transformation": "Indicator; retain source 1/2 coding as equivalent offset branch.",
+      "scale_construction": "Single indicator.",
+      "locator": {
+        "doc_id": "D1",
+        "pdf_page": 11,
+        "where": "Control variables"
+      },
+      "ambiguities": "Exact dummy encoding not stated. Included in organizational outcome models only, absent in market table. A11."
+    },
+    {
+      "var_id": "subsidiary",
+      "construct": "Part of another organization",
+      "role": "control",
+      "source_variables": [
+        "V17",
+        "V21"
+      ],
+      "item_coding": "Closest broad interpretation: I(V17=1). V21=2 identifies wholly owned subsidiary specifically; article does not distinguish subsidiary from other affiliated forms.",
+      "missing_value_rule": "V17 valid 1/2; V21 8/9 missing. V21 structural skip for independent establishment should not remove the independent reference group.",
+      "transformation": "Indicator",
+      "scale_construction": "Single indicator.",
+      "locator": {
+        "doc_id": "D1",
+        "pdf_page": 11,
+        "where": "Control variables"
+      },
+      "ambiguities": "Broad affiliation versus narrow legal subsidiary unresolved; original reference category not explicit. A11."
+    },
+    {
+      "var_id": "employment",
+      "construct": "Log of total employment",
+      "role": "control",
+      "source_variables": [
+        "V23",
+        "V32",
+        "NEWFULL",
+        "NEWPART",
+        "NEWTOTAL"
+      ],
+      "item_coding": "Total full-time plus part-time establishment employment; raw total V23+V32 or release-assigned NEWTOTAL. Do not use larger-organization V339 as the same unit.",
+      "missing_value_rule": "V23/V32/NEWFULL/NEWPART 99998,99999 missing; NEWTOTAL no declared codes. Never set unknown employment to zero.",
+      "transformation": "Natural logarithm of total employment",
+      "scale_construction": "Single transformed total.",
+      "locator": {
+        "doc_id": "D1",
+        "pdf_page": 11,
+        "where": "Control variables"
+      },
+      "ambiguities": "Article does not specify raw versus assigned counts, missing part-time counts or zero treatment. A12."
+    },
+    {
+      "var_id": "age",
+      "construct": "Firm age",
+      "role": "control",
+      "source_variables": [
+        "V16"
+      ],
+      "item_coding": "Age=1991−V16, establishment founding year.",
+      "missing_value_rule": "9998,9999 and system missing; zero/negative age cannot enter ordinary log.",
+      "transformation": "Log age in regression row labels; age in years in prose. Natural log is provisional by analogy to employment, not expressly stated.",
+      "scale_construction": "Single transformed age.",
+      "locator": {
+        "doc_id": "D1",
+        "pdf_page": 11,
+        "where": "Control variables; regression rows pp14,16"
+      },
+      "ambiguities": "Level versus log contradiction; zero-age treatment and log base unresolved. A10."
+    },
+    {
+      "var_id": "managers",
+      "construct": "Manager employment share",
+      "role": "control",
+      "source_variables": [
+        "V115",
+        "V114",
+        "V45",
+        "V80",
+        "V44",
+        "V349",
+        "V23",
+        "V32",
+        "NEWTOTAL"
+      ],
+      "item_coding": "Numerator V115 for distinct manager occupation. V114=3 indicates no managers; same-as-CORE/GSS route may require corresponding V45/V80, but mapping is not specified. Denominator total employment as defined above.",
+      "missing_value_rule": "Count codes 99998/99999 missing; V114 8/9 missing. Routing-coded absence can justify zero only when explicitly no managers, not an unspecified skip.",
+      "transformation": "Prose says percentage: 100×manager count / total. Fraction versus percentage retained as scale branch.",
+      "scale_construction": "Ratio.",
+      "locator": {
+        "doc_id": "D1",
+        "pdf_page": 12,
+        "where": "Percent managers paragraph"
+      },
+      "ambiguities": "No explicit numerator, denominator or same-occupation rule; A03,A12,A13. Do not use printed descriptive values to select units."
+    },
+    {
+      "var_id": "union",
+      "construct": "Union pressure",
+      "role": "control",
+      "source_variables": [
+        "V220",
+        "V233",
+        "V300"
+      ],
+      "item_coding": "Candidate items: union negotiations importance for CORE/GSS (V220,V233) and anticipated union-relations problem (V300). All valid 1–3 reverse as 4−x if included so greater is more pressure.",
+      "missing_value_rule": "V220 8/9; V233/V300 7/8/9; system and occupational skips unresolved.",
+      "transformation": "Exact item set and aggregation unknown.",
+      "scale_construction": "Index described, but item list and item count are not printed. Candidate source variables are not a confirmed mapping.",
+      "locator": {
+        "doc_id": "D1",
+        "pdf_page": 12,
+        "where": "Union pressure paragraph"
+      },
+      "ambiguities": "No unique implementation. Candidate sets {V220,V233} and {V220,V233,V300} are uncertain, neither established. No union-negotiations manager item appears in Q.61. A14."
+    },
+    {
+      "var_id": "product",
+      "construct": "Produces only a product",
+      "role": "control",
+      "source_variables": [
+        "V41"
+      ],
+      "item_coding": "I(V41=1) among valid categories 1–3; both is the omitted regression category.",
+      "missing_value_rule": "8/9/system missing; 4 neither unresolved. Do not silently combine neither with both.",
+      "transformation": "Indicator",
+      "scale_construction": "Single indicator.",
+      "locator": {
+        "doc_id": "D1",
+        "pdf_page": 12,
+        "where": "Product/service paragraph"
+      },
+      "ambiguities": "V41=4 neither is not part of the specified reference; exclude versus separate treatment unresolved. A15."
+    },
+    {
+      "var_id": "service",
+      "construct": "Delivers only a service",
+      "role": "control",
+      "source_variables": [
+        "V41"
+      ],
+      "item_coding": "I(V41=2) among valid categories 1–3; both is the omitted regression category.",
+      "missing_value_rule": "8/9/system missing; 4 neither unresolved. Do not silently combine neither with both.",
+      "transformation": "Indicator",
+      "scale_construction": "Single indicator.",
+      "locator": {
+        "doc_id": "D1",
+        "pdf_page": 12,
+        "where": "Product/service paragraph"
+      },
+      "ambiguities": "V41=4 neither is not part of the specified reference; exclude versus separate treatment unresolved. A15."
+    },
+    {
+      "var_id": "both",
+      "construct": "Both product and service",
+      "role": "other",
+      "source_variables": [
+        "V41"
+      ],
+      "item_coding": "I(V41=3) among valid categories 1–3; both is the omitted regression category.",
+      "missing_value_rule": "8/9/system missing; 4 neither unresolved. Do not silently combine neither with both.",
+      "transformation": "Indicator",
+      "scale_construction": "Single indicator.",
+      "locator": {
+        "doc_id": "D1",
+        "pdf_page": 12,
+        "where": "Product/service paragraph"
+      },
+      "ambiguities": "V41=4 neither is not part of the specified reference; exclude versus separate treatment unresolved. A15."
+    },
+    {
+      "var_id": "competition",
+      "construct": "Market competition / competitive pressure",
+      "role": "control",
+      "source_variables": [
+        "V328"
+      ],
+      "item_coding": "Valid 1=none,2=very little,3=moderate,4=great deal.",
+      "missing_value_rule": "7,8,9 and system missing.",
+      "transformation": "Ordinal 1–4 score as explicitly described; any dichotomization remains undocumented.",
+      "scale_construction": "Single score.",
+      "locator": {
+        "doc_id": "D1",
+        "pdf_page": 12,
+        "where": "Market competition paragraph"
+      },
+      "ambiguities": "Table labeling does not specify a different coding. A15 preserves unknown alternative cutoff without inferring one from results."
+    },
+    {
+      "var_id": "industry",
+      "construct": "Industry fixed effects",
+      "role": "control",
+      "source_variables": [
+        "V43",
+        "INDUSTRY"
+      ],
+      "item_coding": "Both are Census 1980 industry codes, not SIC. Match supplied census1980_industry_sic1972.csv by census1980_code; exact singleton SIC2 mappings are possible; multi-group, unspecified and unmatched mappings require resolution.",
+      "missing_value_rule": "INDUSTRY −999 missing; V43 no declared missing code. Unmapped or multi-valued crosswalk rows must be flagged, not assigned arbitrarily.",
+      "transformation": "Categorical two-digit SIC dummies with one omitted group",
+      "scale_construction": "Article states 33 industry dummy variables; omitted group and actual mapping not supplied.",
+      "locator": {
+        "doc_id": "D1",
+        "pdf_page": 12,
+        "where": "Final control-variable paragraph"
+      },
+      "ambiguities": "SIC vintage, collapse rules, unresolved mappings and outcome-specific absent categories unknown. Never truncate Census codes to obtain SIC. A17."
+    },
+    {
+      "var_id": "tr_staff",
+      "construct": "training × staff",
+      "role": "interaction",
+      "source_variables": [
+        "V145",
+        "V157",
+        "V172",
+        "V62",
+        "V97",
+        "V131",
+        "V50",
+        "V85",
+        "V119",
+        "V79",
+        "V114",
+        "V44",
+        "V349"
+      ],
+      "item_coding": "Product of constructed training and staff.",
+      "missing_value_rule": "Missing if either constructed constituent is missing; use same sample as corresponding nested model.",
+      "transformation": "Multiply constituent scales; retain both main effects.",
+      "scale_construction": "Two-way interaction.",
+      "locator": {
+        "doc_id": "D1",
+        "pdf_page": 17,
+        "where": "Interaction discussion; Tables 3/4 pp14,16"
+      },
+      "ambiguities": "Centering unstated; changes main-effect interpretation, not interaction fit under complete hierarchy. A18."
+    },
+    {
+      "var_id": "gr_incent",
+      "construct": "grievance × incentive",
+      "role": "interaction",
+      "source_variables": [
+        "V270",
+        "V209",
+        "V222",
+        "V235",
+        "V79",
+        "V114",
+        "V44",
+        "V349"
+      ],
+      "item_coding": "Product of constructed grievance and incentive.",
+      "missing_value_rule": "Missing if either constructed constituent is missing; use same sample as corresponding nested model.",
+      "transformation": "Multiply constituent scales; retain both main effects.",
+      "scale_construction": "Two-way interaction.",
+      "locator": {
+        "doc_id": "D1",
+        "pdf_page": 17,
+        "where": "Interaction discussion; Tables 3/4 pp14,16"
+      },
+      "ambiguities": "Centering unstated; changes main-effect interpretation, not interaction fit under complete hierarchy. A18."
+    },
+    {
+      "var_id": "ilm_dec",
+      "construct": "ilm × decentral",
+      "role": "interaction",
+      "source_variables": [
+        "V67",
+        "V76",
+        "V102",
+        "V111",
+        "V136",
+        "V79",
+        "V114",
+        "V44",
+        "V349",
+        "V17",
+        "V271",
+        "V272",
+        "V273",
+        "V274",
+        "V275",
+        "V276",
+        "V277",
+        "V278",
+        "V279",
+        "V280",
+        "V281",
+        "V282",
+        "V283",
+        "V284",
+        "V285",
+        "V286"
+      ],
+      "item_coding": "Product of constructed ilm and decentral.",
+      "missing_value_rule": "Missing if either constructed constituent is missing; use same sample as corresponding nested model.",
+      "transformation": "Multiply constituent scales; retain both main effects.",
+      "scale_construction": "Two-way interaction.",
+      "locator": {
+        "doc_id": "D1",
+        "pdf_page": 17,
+        "where": "Interaction discussion; Tables 3/4 pp14,16"
+      },
+      "ambiguities": "Centering unstated; changes main-effect interpretation, not interaction fit under complete hierarchy. A18."
+    },
+    {
+      "var_id": "hier_dec",
+      "construct": "hierarchy × decentral",
+      "role": "interaction",
+      "source_variables": [
+        "V261",
+        "V17",
+        "V271",
+        "V272",
+        "V273",
+        "V274",
+        "V275",
+        "V276",
+        "V277",
+        "V278",
+        "V279",
+        "V280",
+        "V281",
+        "V282",
+        "V283",
+        "V284",
+        "V285",
+        "V286"
+      ],
+      "item_coding": "Product of constructed hierarchy and decentral.",
+      "missing_value_rule": "Missing if either constructed constituent is missing; use same sample as corresponding nested model.",
+      "transformation": "Multiply constituent scales; retain both main effects.",
+      "scale_construction": "Two-way interaction.",
+      "locator": {
+        "doc_id": "D1",
+        "pdf_page": 17,
+        "where": "Interaction discussion; Tables 3/4 pp14,16"
+      },
+      "ambiguities": "Centering unstated; changes main-effect interpretation, not interaction fit under complete hierarchy. A18."
+    },
+    {
+      "var_id": "above_count",
+      "construct": "Count of practices above sample medians",
+      "role": "other",
+      "source_variables": [
+        "V62",
+        "V97",
+        "V131",
+        "V50",
+        "V85",
+        "V119",
+        "V79",
+        "V114",
+        "V44",
+        "V349",
+        "V145",
+        "V157",
+        "V172",
+        "V209",
+        "V222",
+        "V235",
+        "V270",
+        "V17",
+        "V271",
+        "V272",
+        "V273",
+        "V274",
+        "V275",
+        "V276",
+        "V277",
+        "V278",
+        "V279",
+        "V280",
+        "V281",
+        "V282",
+        "V283",
+        "V284",
+        "V285",
+        "V286",
+        "V67",
+        "V76",
+        "V102",
+        "V111",
+        "V136",
+        "V261"
+      ],
+      "item_coding": "For each of seven HRM measures form I(x>its sample median); sum indicators. Exactly equal to median does not qualify.",
+      "missing_value_rule": "Minimum valid practices and missing-count rule unspecified; missing is not below-median by default.",
+      "transformation": "Count from 0 to 7",
+      "scale_construction": "Sum across all seven practices.",
+      "locator": {
+        "doc_id": "D1",
+        "pdf_page": 11,
+        "where": "Measures of complementarity"
+      },
+      "ambiguities": "Reference sample for medians, missing practice count handling and whether all seven enter the control block unresolved. A19."
+    }
+  ],
+  "models": [
+    {
+      "model_id": "M1_staff",
+      "outcome": "org_perf",
+      "regressors": [
+        "staff"
+      ],
+      "controls": [
+        "nonprofit",
+        "subsidiary",
+        "employment",
+        "age",
+        "managers",
+        "union",
+        "product",
+        "service",
+        "competition"
+      ],
+      "industry_effects": "Two-digit SIC categorical intercept effects, article specifies 33 indicators. Mapping and reference unresolved (A17). Include an intercept.",
+      "interactions": [],
+      "estimator": "Multiple linear regression; OLS closest-described origin, not explicitly named.",
+      "weights": null,
+      "covariance": null,
+      "sample": "Step 6 organizational sample",
+      "statistics_to_report": [
+        "coef",
+        "se",
+        "t",
+        "p_one_tailed",
+        "R2",
+        "F",
+        "deltaR2",
+        "F_deltaR2",
+        "N"
+      ],
+      "locator": {
+        "doc_id": "D1",
+        "pdf_page": 14,
+        "where": "Table 3, column 1; staff; footnote b on following page"
+      },
+      "implementation_status": "reported table equation"
+    },
+    {
+      "model_id": "M1_training",
+      "outcome": "org_perf",
+      "regressors": [
+        "training"
+      ],
+      "controls": [
+        "nonprofit",
+        "subsidiary",
+        "employment",
+        "age",
+        "managers",
+        "union",
+        "product",
+        "service",
+        "competition"
+      ],
+      "industry_effects": "Two-digit SIC categorical intercept effects, article specifies 33 indicators. Mapping and reference unresolved (A17). Include an intercept.",
+      "interactions": [],
+      "estimator": "Multiple linear regression; OLS closest-described origin, not explicitly named.",
+      "weights": null,
+      "covariance": null,
+      "sample": "Step 6 organizational sample",
+      "statistics_to_report": [
+        "coef",
+        "se",
+        "t",
+        "p_one_tailed",
+        "R2",
+        "F",
+        "deltaR2",
+        "F_deltaR2",
+        "N"
+      ],
+      "locator": {
+        "doc_id": "D1",
+        "pdf_page": 14,
+        "where": "Table 3, column 1; training; footnote b on following page"
+      },
+      "implementation_status": "reported table equation"
+    },
+    {
+      "model_id": "M1_incentive",
+      "outcome": "org_perf",
+      "regressors": [
+        "incentive"
+      ],
+      "controls": [
+        "nonprofit",
+        "subsidiary",
+        "employment",
+        "age",
+        "managers",
+        "union",
+        "product",
+        "service",
+        "competition"
+      ],
+      "industry_effects": "Two-digit SIC categorical intercept effects, article specifies 33 indicators. Mapping and reference unresolved (A17). Include an intercept.",
+      "interactions": [],
+      "estimator": "Multiple linear regression; OLS closest-described origin, not explicitly named.",
+      "weights": null,
+      "covariance": null,
+      "sample": "Step 6 organizational sample",
+      "statistics_to_report": [
+        "coef",
+        "se",
+        "t",
+        "p_one_tailed",
+        "R2",
+        "F",
+        "deltaR2",
+        "F_deltaR2",
+        "N"
+      ],
+      "locator": {
+        "doc_id": "D1",
+        "pdf_page": 14,
+        "where": "Table 3, column 1; incentive; footnote b on following page"
+      },
+      "implementation_status": "reported table equation"
+    },
+    {
+      "model_id": "M1_grievance",
+      "outcome": "org_perf",
+      "regressors": [
+        "grievance"
+      ],
+      "controls": [
+        "nonprofit",
+        "subsidiary",
+        "employment",
+        "age",
+        "managers",
+        "union",
+        "product",
+        "service",
+        "competition"
+      ],
+      "industry_effects": "Two-digit SIC categorical intercept effects, article specifies 33 indicators. Mapping and reference unresolved (A17). Include an intercept.",
+      "interactions": [],
+      "estimator": "Multiple linear regression; OLS closest-described origin, not explicitly named.",
+      "weights": null,
+      "covariance": null,
+      "sample": "Step 6 organizational sample",
+      "statistics_to_report": [
+        "coef",
+        "se",
+        "t",
+        "p_one_tailed",
+        "R2",
+        "F",
+        "deltaR2",
+        "F_deltaR2",
+        "N"
+      ],
+      "locator": {
+        "doc_id": "D1",
+        "pdf_page": 14,
+        "where": "Table 3, column 1; grievance; footnote b on following page"
+      },
+      "implementation_status": "reported table equation"
+    },
+    {
+      "model_id": "M1_decentral",
+      "outcome": "org_perf",
+      "regressors": [
+        "decentral"
+      ],
+      "controls": [
+        "nonprofit",
+        "subsidiary",
+        "employment",
+        "age",
+        "managers",
+        "union",
+        "product",
+        "service",
+        "competition"
+      ],
+      "industry_effects": "Two-digit SIC categorical intercept effects, article specifies 33 indicators. Mapping and reference unresolved (A17). Include an intercept.",
+      "interactions": [],
+      "estimator": "Multiple linear regression; OLS closest-described origin, not explicitly named.",
+      "weights": null,
+      "covariance": null,
+      "sample": "Step 6 organizational sample",
+      "statistics_to_report": [
+        "coef",
+        "se",
+        "t",
+        "p_one_tailed",
+        "R2",
+        "F",
+        "deltaR2",
+        "F_deltaR2",
+        "N"
+      ],
+      "locator": {
+        "doc_id": "D1",
+        "pdf_page": 14,
+        "where": "Table 3, column 1; decentral; footnote b on following page"
+      },
+      "implementation_status": "reported table equation"
+    },
+    {
+      "model_id": "M1_ilm",
+      "outcome": "org_perf",
+      "regressors": [
+        "ilm"
+      ],
+      "controls": [
+        "nonprofit",
+        "subsidiary",
+        "employment",
+        "age",
+        "managers",
+        "union",
+        "product",
+        "service",
+        "competition"
+      ],
+      "industry_effects": "Two-digit SIC categorical intercept effects, article specifies 33 indicators. Mapping and reference unresolved (A17). Include an intercept.",
+      "interactions": [],
+      "estimator": "Multiple linear regression; OLS closest-described origin, not explicitly named.",
+      "weights": null,
+      "covariance": null,
+      "sample": "Step 6 organizational sample",
+      "statistics_to_report": [
+        "coef",
+        "se",
+        "t",
+        "p_one_tailed",
+        "R2",
+        "F",
+        "deltaR2",
+        "F_deltaR2",
+        "N"
+      ],
+      "locator": {
+        "doc_id": "D1",
+        "pdf_page": 14,
+        "where": "Table 3, column 1; ilm; footnote b on following page"
+      },
+      "implementation_status": "reported table equation"
+    },
+    {
+      "model_id": "M1_hierarchy",
+      "outcome": "org_perf",
+      "regressors": [
+        "hierarchy"
+      ],
+      "controls": [
+        "nonprofit",
+        "subsidiary",
+        "employment",
+        "age",
+        "managers",
+        "union",
+        "product",
+        "service",
+        "competition"
+      ],
+      "industry_effects": "Two-digit SIC categorical intercept effects, article specifies 33 indicators. Mapping and reference unresolved (A17). Include an intercept.",
+      "interactions": [],
+      "estimator": "Multiple linear regression; OLS closest-described origin, not explicitly named.",
+      "weights": null,
+      "covariance": null,
+      "sample": "Step 6 organizational sample",
+      "statistics_to_report": [
+        "coef",
+        "se",
+        "t",
+        "p_one_tailed",
+        "R2",
+        "F",
+        "deltaR2",
+        "F_deltaR2",
+        "N"
+      ],
+      "locator": {
+        "doc_id": "D1",
+        "pdf_page": 14,
+        "where": "Table 3, column 1; hierarchy; footnote b on following page"
+      },
+      "implementation_status": "reported table equation"
+    },
+    {
+      "model_id": "M2",
+      "outcome": "org_perf",
+      "regressors": [
+        "staff",
+        "training",
+        "incentive",
+        "grievance",
+        "decentral",
+        "ilm"
+      ],
+      "controls": [
+        "nonprofit",
+        "subsidiary",
+        "employment",
+        "age",
+        "managers",
+        "union",
+        "product",
+        "service",
+        "competition"
+      ],
+      "industry_effects": "Two-digit SIC categorical intercept effects, article specifies 33 indicators. Mapping and reference unresolved (A17). Include an intercept.",
+      "interactions": [],
+      "estimator": "Multiple linear regression; OLS closest-described origin, not explicitly named.",
+      "weights": null,
+      "covariance": null,
+      "sample": "Step 6 organizational sample",
+      "statistics_to_report": [
+        "coef",
+        "se",
+        "t",
+        "p_one_tailed",
+        "R2",
+        "F",
+        "deltaR2",
+        "F_deltaR2",
+        "N"
+      ],
+      "locator": {
+        "doc_id": "D1",
+        "pdf_page": 14,
+        "where": "Table 3, model 2"
+      },
+      "implementation_status": "reported table equation"
+    },
+    {
+      "model_id": "M3",
+      "outcome": "org_perf",
+      "regressors": [
+        "staff",
+        "training",
+        "incentive",
+        "grievance",
+        "decentral",
+        "hierarchy"
+      ],
+      "controls": [
+        "nonprofit",
+        "subsidiary",
+        "employment",
+        "age",
+        "managers",
+        "union",
+        "product",
+        "service",
+        "competition"
+      ],
+      "industry_effects": "Two-digit SIC categorical intercept effects, article specifies 33 indicators. Mapping and reference unresolved (A17). Include an intercept.",
+      "interactions": [],
+      "estimator": "Multiple linear regression; OLS closest-described origin, not explicitly named.",
+      "weights": null,
+      "covariance": null,
+      "sample": "Step 6 organizational sample",
+      "statistics_to_report": [
+        "coef",
+        "se",
+        "t",
+        "p_one_tailed",
+        "R2",
+        "F",
+        "deltaR2",
+        "F_deltaR2",
+        "N"
+      ],
+      "locator": {
+        "doc_id": "D1",
+        "pdf_page": 14,
+        "where": "Table 3, model 3"
+      },
+      "implementation_status": "reported table equation"
+    },
+    {
+      "model_id": "M4",
+      "outcome": "org_perf",
+      "regressors": [
+        "staff",
+        "training",
+        "incentive",
+        "grievance",
+        "decentral",
+        "ilm",
+        "tr_staff",
+        "gr_incent",
+        "ilm_dec"
+      ],
+      "controls": [
+        "nonprofit",
+        "subsidiary",
+        "employment",
+        "age",
+        "managers",
+        "union",
+        "product",
+        "service",
+        "competition"
+      ],
+      "industry_effects": "Two-digit SIC categorical intercept effects, article specifies 33 indicators. Mapping and reference unresolved (A17). Include an intercept.",
+      "interactions": [
+        "tr_staff",
+        "gr_incent",
+        "ilm_dec"
+      ],
+      "estimator": "Multiple linear regression; OLS closest-described origin, not explicitly named.",
+      "weights": null,
+      "covariance": null,
+      "sample": "Step 6 organizational sample",
+      "statistics_to_report": [
+        "coef",
+        "se",
+        "t",
+        "p_one_tailed",
+        "R2",
+        "F",
+        "deltaR2",
+        "F_deltaR2",
+        "N"
+      ],
+      "locator": {
+        "doc_id": "D1",
+        "pdf_page": 14,
+        "where": "Table 3, model 4"
+      },
+      "implementation_status": "reported table equation"
+    },
+    {
+      "model_id": "M5",
+      "outcome": "org_perf",
+      "regressors": [
+        "staff",
+        "training",
+        "incentive",
+        "grievance",
+        "decentral",
+        "hierarchy",
+        "tr_staff",
+        "gr_incent",
+        "hier_dec"
+      ],
+      "controls": [
+        "nonprofit",
+        "subsidiary",
+        "employment",
+        "age",
+        "managers",
+        "union",
+        "product",
+        "service",
+        "competition"
+      ],
+      "industry_effects": "Two-digit SIC categorical intercept effects, article specifies 33 indicators. Mapping and reference unresolved (A17). Include an intercept.",
+      "interactions": [
+        "tr_staff",
+        "gr_incent",
+        "hier_dec"
+      ],
+      "estimator": "Multiple linear regression; OLS closest-described origin, not explicitly named.",
+      "weights": null,
+      "covariance": null,
+      "sample": "Step 6 organizational sample",
+      "statistics_to_report": [
+        "coef",
+        "se",
+        "t",
+        "p_one_tailed",
+        "R2",
+        "F",
+        "deltaR2",
+        "F_deltaR2",
+        "N"
+      ],
+      "locator": {
+        "doc_id": "D1",
+        "pdf_page": 14,
+        "where": "Table 3, model 5"
+      },
+      "implementation_status": "reported table equation"
+    },
+    {
+      "model_id": "M6_staff",
+      "outcome": "market_perf",
+      "regressors": [
+        "staff"
+      ],
+      "controls": [
+        "subsidiary",
+        "employment",
+        "age",
+        "managers",
+        "union",
+        "product",
+        "service",
+        "competition"
+      ],
+      "industry_effects": "Two-digit SIC categorical intercept effects, article specifies 33 indicators. Mapping and reference unresolved (A17). Include an intercept.",
+      "interactions": [],
+      "estimator": "Multiple linear regression; OLS closest-described origin, not explicitly named.",
+      "weights": null,
+      "covariance": null,
+      "sample": "Step 6 market sample",
+      "statistics_to_report": [
+        "coef",
+        "se",
+        "t",
+        "p_one_tailed",
+        "R2",
+        "F",
+        "deltaR2",
+        "F_deltaR2",
+        "N"
+      ],
+      "locator": {
+        "doc_id": "D1",
+        "pdf_page": 16,
+        "where": "Table 4, column 6; staff; footnote b on following page"
+      },
+      "implementation_status": "reported table equation"
+    },
+    {
+      "model_id": "M6_training",
+      "outcome": "market_perf",
+      "regressors": [
+        "training"
+      ],
+      "controls": [
+        "subsidiary",
+        "employment",
+        "age",
+        "managers",
+        "union",
+        "product",
+        "service",
+        "competition"
+      ],
+      "industry_effects": "Two-digit SIC categorical intercept effects, article specifies 33 indicators. Mapping and reference unresolved (A17). Include an intercept.",
+      "interactions": [],
+      "estimator": "Multiple linear regression; OLS closest-described origin, not explicitly named.",
+      "weights": null,
+      "covariance": null,
+      "sample": "Step 6 market sample",
+      "statistics_to_report": [
+        "coef",
+        "se",
+        "t",
+        "p_one_tailed",
+        "R2",
+        "F",
+        "deltaR2",
+        "F_deltaR2",
+        "N"
+      ],
+      "locator": {
+        "doc_id": "D1",
+        "pdf_page": 16,
+        "where": "Table 4, column 6; training; footnote b on following page"
+      },
+      "implementation_status": "reported table equation"
+    },
+    {
+      "model_id": "M6_incentive",
+      "outcome": "market_perf",
+      "regressors": [
+        "incentive"
+      ],
+      "controls": [
+        "subsidiary",
+        "employment",
+        "age",
+        "managers",
+        "union",
+        "product",
+        "service",
+        "competition"
+      ],
+      "industry_effects": "Two-digit SIC categorical intercept effects, article specifies 33 indicators. Mapping and reference unresolved (A17). Include an intercept.",
+      "interactions": [],
+      "estimator": "Multiple linear regression; OLS closest-described origin, not explicitly named.",
+      "weights": null,
+      "covariance": null,
+      "sample": "Step 6 market sample",
+      "statistics_to_report": [
+        "coef",
+        "se",
+        "t",
+        "p_one_tailed",
+        "R2",
+        "F",
+        "deltaR2",
+        "F_deltaR2",
+        "N"
+      ],
+      "locator": {
+        "doc_id": "D1",
+        "pdf_page": 16,
+        "where": "Table 4, column 6; incentive; footnote b on following page"
+      },
+      "implementation_status": "reported table equation"
+    },
+    {
+      "model_id": "M6_grievance",
+      "outcome": "market_perf",
+      "regressors": [
+        "grievance"
+      ],
+      "controls": [
+        "subsidiary",
+        "employment",
+        "age",
+        "managers",
+        "union",
+        "product",
+        "service",
+        "competition"
+      ],
+      "industry_effects": "Two-digit SIC categorical intercept effects, article specifies 33 indicators. Mapping and reference unresolved (A17). Include an intercept.",
+      "interactions": [],
+      "estimator": "Multiple linear regression; OLS closest-described origin, not explicitly named.",
+      "weights": null,
+      "covariance": null,
+      "sample": "Step 6 market sample",
+      "statistics_to_report": [
+        "coef",
+        "se",
+        "t",
+        "p_one_tailed",
+        "R2",
+        "F",
+        "deltaR2",
+        "F_deltaR2",
+        "N"
+      ],
+      "locator": {
+        "doc_id": "D1",
+        "pdf_page": 16,
+        "where": "Table 4, column 6; grievance; footnote b on following page"
+      },
+      "implementation_status": "reported table equation"
+    },
+    {
+      "model_id": "M6_decentral",
+      "outcome": "market_perf",
+      "regressors": [
+        "decentral"
+      ],
+      "controls": [
+        "subsidiary",
+        "employment",
+        "age",
+        "managers",
+        "union",
+        "product",
+        "service",
+        "competition"
+      ],
+      "industry_effects": "Two-digit SIC categorical intercept effects, article specifies 33 indicators. Mapping and reference unresolved (A17). Include an intercept.",
+      "interactions": [],
+      "estimator": "Multiple linear regression; OLS closest-described origin, not explicitly named.",
+      "weights": null,
+      "covariance": null,
+      "sample": "Step 6 market sample",
+      "statistics_to_report": [
+        "coef",
+        "se",
+        "t",
+        "p_one_tailed",
+        "R2",
+        "F",
+        "deltaR2",
+        "F_deltaR2",
+        "N"
+      ],
+      "locator": {
+        "doc_id": "D1",
+        "pdf_page": 16,
+        "where": "Table 4, column 6; decentral; footnote b on following page"
+      },
+      "implementation_status": "reported table equation"
+    },
+    {
+      "model_id": "M6_ilm",
+      "outcome": "market_perf",
+      "regressors": [
+        "ilm"
+      ],
+      "controls": [
+        "subsidiary",
+        "employment",
+        "age",
+        "managers",
+        "union",
+        "product",
+        "service",
+        "competition"
+      ],
+      "industry_effects": "Two-digit SIC categorical intercept effects, article specifies 33 indicators. Mapping and reference unresolved (A17). Include an intercept.",
+      "interactions": [],
+      "estimator": "Multiple linear regression; OLS closest-described origin, not explicitly named.",
+      "weights": null,
+      "covariance": null,
+      "sample": "Step 6 market sample",
+      "statistics_to_report": [
+        "coef",
+        "se",
+        "t",
+        "p_one_tailed",
+        "R2",
+        "F",
+        "deltaR2",
+        "F_deltaR2",
+        "N"
+      ],
+      "locator": {
+        "doc_id": "D1",
+        "pdf_page": 16,
+        "where": "Table 4, column 6; ilm; footnote b on following page"
+      },
+      "implementation_status": "reported table equation"
+    },
+    {
+      "model_id": "M6_hierarchy",
+      "outcome": "market_perf",
+      "regressors": [
+        "hierarchy"
+      ],
+      "controls": [
+        "subsidiary",
+        "employment",
+        "age",
+        "managers",
+        "union",
+        "product",
+        "service",
+        "competition"
+      ],
+      "industry_effects": "Two-digit SIC categorical intercept effects, article specifies 33 indicators. Mapping and reference unresolved (A17). Include an intercept.",
+      "interactions": [],
+      "estimator": "Multiple linear regression; OLS closest-described origin, not explicitly named.",
+      "weights": null,
+      "covariance": null,
+      "sample": "Step 6 market sample",
+      "statistics_to_report": [
+        "coef",
+        "se",
+        "t",
+        "p_one_tailed",
+        "R2",
+        "F",
+        "deltaR2",
+        "F_deltaR2",
+        "N"
+      ],
+      "locator": {
+        "doc_id": "D1",
+        "pdf_page": 16,
+        "where": "Table 4, column 6; hierarchy; footnote b on following page"
+      },
+      "implementation_status": "reported table equation"
+    },
+    {
+      "model_id": "M7",
+      "outcome": "market_perf",
+      "regressors": [
+        "staff",
+        "training",
+        "incentive",
+        "grievance",
+        "decentral",
+        "ilm"
+      ],
+      "controls": [
+        "subsidiary",
+        "employment",
+        "age",
+        "managers",
+        "union",
+        "product",
+        "service",
+        "competition"
+      ],
+      "industry_effects": "Two-digit SIC categorical intercept effects, article specifies 33 indicators. Mapping and reference unresolved (A17). Include an intercept.",
+      "interactions": [],
+      "estimator": "Multiple linear regression; OLS closest-described origin, not explicitly named.",
+      "weights": null,
+      "covariance": null,
+      "sample": "Step 6 market sample",
+      "statistics_to_report": [
+        "coef",
+        "se",
+        "t",
+        "p_one_tailed",
+        "R2",
+        "F",
+        "deltaR2",
+        "F_deltaR2",
+        "N"
+      ],
+      "locator": {
+        "doc_id": "D1",
+        "pdf_page": 16,
+        "where": "Table 4, model 7"
+      },
+      "implementation_status": "reported table equation"
+    },
+    {
+      "model_id": "M8",
+      "outcome": "market_perf",
+      "regressors": [
+        "staff",
+        "training",
+        "incentive",
+        "grievance",
+        "decentral",
+        "hierarchy"
+      ],
+      "controls": [
+        "subsidiary",
+        "employment",
+        "age",
+        "managers",
+        "union",
+        "product",
+        "service",
+        "competition"
+      ],
+      "industry_effects": "Two-digit SIC categorical intercept effects, article specifies 33 indicators. Mapping and reference unresolved (A17). Include an intercept.",
+      "interactions": [],
+      "estimator": "Multiple linear regression; OLS closest-described origin, not explicitly named.",
+      "weights": null,
+      "covariance": null,
+      "sample": "Step 6 market sample",
+      "statistics_to_report": [
+        "coef",
+        "se",
+        "t",
+        "p_one_tailed",
+        "R2",
+        "F",
+        "deltaR2",
+        "F_deltaR2",
+        "N"
+      ],
+      "locator": {
+        "doc_id": "D1",
+        "pdf_page": 16,
+        "where": "Table 4, model 8"
+      },
+      "implementation_status": "reported table equation"
+    },
+    {
+      "model_id": "M9",
+      "outcome": "market_perf",
+      "regressors": [
+        "staff",
+        "training",
+        "incentive",
+        "grievance",
+        "decentral",
+        "ilm",
+        "tr_staff",
+        "gr_incent",
+        "ilm_dec"
+      ],
+      "controls": [
+        "subsidiary",
+        "employment",
+        "age",
+        "managers",
+        "union",
+        "product",
+        "service",
+        "competition"
+      ],
+      "industry_effects": "Two-digit SIC categorical intercept effects, article specifies 33 indicators. Mapping and reference unresolved (A17). Include an intercept.",
+      "interactions": [
+        "tr_staff",
+        "gr_incent",
+        "ilm_dec"
+      ],
+      "estimator": "Multiple linear regression; OLS closest-described origin, not explicitly named.",
+      "weights": null,
+      "covariance": null,
+      "sample": "Step 6 market sample",
+      "statistics_to_report": [
+        "coef",
+        "se",
+        "t",
+        "p_one_tailed",
+        "R2",
+        "F",
+        "deltaR2",
+        "F_deltaR2",
+        "N"
+      ],
+      "locator": {
+        "doc_id": "D1",
+        "pdf_page": 16,
+        "where": "Table 4, model 9"
+      },
+      "implementation_status": "reported table equation"
+    },
+    {
+      "model_id": "M10",
+      "outcome": "market_perf",
+      "regressors": [
+        "staff",
+        "training",
+        "incentive",
+        "grievance",
+        "decentral",
+        "hierarchy",
+        "tr_staff",
+        "gr_incent",
+        "hier_dec"
+      ],
+      "controls": [
+        "subsidiary",
+        "employment",
+        "age",
+        "managers",
+        "union",
+        "product",
+        "service",
+        "competition"
+      ],
+      "industry_effects": "Two-digit SIC categorical intercept effects, article specifies 33 indicators. Mapping and reference unresolved (A17). Include an intercept.",
+      "interactions": [
+        "tr_staff",
+        "gr_incent",
+        "hier_dec"
+      ],
+      "estimator": "Multiple linear regression; OLS closest-described origin, not explicitly named.",
+      "weights": null,
+      "covariance": null,
+      "sample": "Step 6 market sample",
+      "statistics_to_report": [
+        "coef",
+        "se",
+        "t",
+        "p_one_tailed",
+        "R2",
+        "F",
+        "deltaR2",
+        "F_deltaR2",
+        "N"
+      ],
+      "locator": {
+        "doc_id": "D1",
+        "pdf_page": 16,
+        "where": "Table 4, model 10"
+      },
+      "implementation_status": "reported table equation"
+    },
+    {
+      "model_id": "U_count_org_perf",
+      "outcome": "org_perf",
+      "regressors": [
+        "staff",
+        "training",
+        "incentive",
+        "grievance",
+        "decentral",
+        "ilm",
+        "hierarchy",
+        "above_count"
+      ],
+      "controls": [
+        "nonprofit",
+        "subsidiary",
+        "employment",
+        "age",
+        "managers",
+        "union",
+        "product",
+        "service",
+        "competition"
+      ],
+      "industry_effects": "Two-digit SIC categorical intercept effects, article specifies 33 indicators. Mapping and reference unresolved (A17). Include an intercept.",
+      "interactions": [],
+      "estimator": "Multiple linear regression; OLS closest-described origin, not explicitly named.",
+      "weights": null,
+      "covariance": null,
+      "sample": "Step 6 organizational sample",
+      "statistics_to_report": [
+        "coef",
+        "se",
+        "t",
+        "p_one_tailed",
+        "R2",
+        "F",
+        "deltaR2",
+        "F_deltaR2",
+        "N"
+      ],
+      "locator": {
+        "doc_id": "D1",
+        "pdf_page": 17,
+        "where": "Unshown count-variable analysis"
+      },
+      "implementation_status": "Narratively reported; all-seven-main-effects interpretation provisional; exact equation unavailable."
+    },
+    {
+      "model_id": "U_threshold_org_perf",
+      "outcome": "org_perf",
+      "regressors": [
+        "staff",
+        "training",
+        "incentive",
+        "grievance",
+        "decentral",
+        "ilm",
+        "hierarchy"
+      ],
+      "controls": [
+        "nonprofit",
+        "subsidiary",
+        "employment",
+        "age",
+        "managers",
+        "union",
+        "product",
+        "service",
+        "competition"
+      ],
+      "industry_effects": "Two-digit SIC categorical intercept effects, article specifies 33 indicators. Mapping and reference unresolved (A17). Include an intercept.",
+      "interactions": [],
+      "estimator": "Multiple linear regression; OLS closest-described origin, not explicitly named.",
+      "weights": null,
+      "covariance": null,
+      "sample": "Step 6 organizational sample",
+      "statistics_to_report": [
+        "coef",
+        "se",
+        "t",
+        "p_one_tailed",
+        "R2",
+        "F",
+        "deltaR2",
+        "F_deltaR2",
+        "N"
+      ],
+      "locator": {
+        "doc_id": "D1",
+        "pdf_page": 17,
+        "where": "Unshown individual above-median dummy analysis"
+      },
+      "implementation_status": "Incomplete: add individual above-median indicators; exact grouping and conditioning unspecified."
+    },
+    {
+      "model_id": "U_spline_org_perf",
+      "outcome": "org_perf",
+      "regressors": [
+        "staff",
+        "training",
+        "incentive",
+        "grievance",
+        "decentral",
+        "ilm",
+        "hierarchy"
+      ],
+      "controls": [
+        "nonprofit",
+        "subsidiary",
+        "employment",
+        "age",
+        "managers",
+        "union",
+        "product",
+        "service",
+        "competition"
+      ],
+      "industry_effects": "Two-digit SIC categorical intercept effects, article specifies 33 indicators. Mapping and reference unresolved (A17). Include an intercept.",
+      "interactions": [],
+      "estimator": "Multiple linear regression; OLS closest-described origin, not explicitly named.",
+      "weights": null,
+      "covariance": null,
+      "sample": "Step 6 organizational sample",
+      "statistics_to_report": [
+        "coef",
+        "se",
+        "t",
+        "p_one_tailed",
+        "R2",
+        "F",
+        "deltaR2",
+        "F_deltaR2",
+        "N"
+      ],
+      "locator": {
+        "doc_id": "D1",
+        "pdf_page": 17,
+        "where": "Unshown spline analysis"
+      },
+      "implementation_status": "Incomplete: spline basis, knots, order and exact equation unavailable; no automatic implementation."
+    },
+    {
+      "model_id": "U_count_market_perf",
+      "outcome": "market_perf",
+      "regressors": [
+        "staff",
+        "training",
+        "incentive",
+        "grievance",
+        "decentral",
+        "ilm",
+        "hierarchy",
+        "above_count"
+      ],
+      "controls": [
+        "subsidiary",
+        "employment",
+        "age",
+        "managers",
+        "union",
+        "product",
+        "service",
+        "competition"
+      ],
+      "industry_effects": "Two-digit SIC categorical intercept effects, article specifies 33 indicators. Mapping and reference unresolved (A17). Include an intercept.",
+      "interactions": [],
+      "estimator": "Multiple linear regression; OLS closest-described origin, not explicitly named.",
+      "weights": null,
+      "covariance": null,
+      "sample": "Step 6 market sample",
+      "statistics_to_report": [
+        "coef",
+        "se",
+        "t",
+        "p_one_tailed",
+        "R2",
+        "F",
+        "deltaR2",
+        "F_deltaR2",
+        "N"
+      ],
+      "locator": {
+        "doc_id": "D1",
+        "pdf_page": 17,
+        "where": "Unshown count-variable analysis"
+      },
+      "implementation_status": "Narratively reported; all-seven-main-effects interpretation provisional; exact equation unavailable."
+    },
+    {
+      "model_id": "U_threshold_market_perf",
+      "outcome": "market_perf",
+      "regressors": [
+        "staff",
+        "training",
+        "incentive",
+        "grievance",
+        "decentral",
+        "ilm",
+        "hierarchy"
+      ],
+      "controls": [
+        "subsidiary",
+        "employment",
+        "age",
+        "managers",
+        "union",
+        "product",
+        "service",
+        "competition"
+      ],
+      "industry_effects": "Two-digit SIC categorical intercept effects, article specifies 33 indicators. Mapping and reference unresolved (A17). Include an intercept.",
+      "interactions": [],
+      "estimator": "Multiple linear regression; OLS closest-described origin, not explicitly named.",
+      "weights": null,
+      "covariance": null,
+      "sample": "Step 6 market sample",
+      "statistics_to_report": [
+        "coef",
+        "se",
+        "t",
+        "p_one_tailed",
+        "R2",
+        "F",
+        "deltaR2",
+        "F_deltaR2",
+        "N"
+      ],
+      "locator": {
+        "doc_id": "D1",
+        "pdf_page": 17,
+        "where": "Unshown individual above-median dummy analysis"
+      },
+      "implementation_status": "Incomplete: add individual above-median indicators; exact grouping and conditioning unspecified."
+    },
+    {
+      "model_id": "U_spline_market_perf",
+      "outcome": "market_perf",
+      "regressors": [
+        "staff",
+        "training",
+        "incentive",
+        "grievance",
+        "decentral",
+        "ilm",
+        "hierarchy"
+      ],
+      "controls": [
+        "subsidiary",
+        "employment",
+        "age",
+        "managers",
+        "union",
+        "product",
+        "service",
+        "competition"
+      ],
+      "industry_effects": "Two-digit SIC categorical intercept effects, article specifies 33 indicators. Mapping and reference unresolved (A17). Include an intercept.",
+      "interactions": [],
+      "estimator": "Multiple linear regression; OLS closest-described origin, not explicitly named.",
+      "weights": null,
+      "covariance": null,
+      "sample": "Step 6 market sample",
+      "statistics_to_report": [
+        "coef",
+        "se",
+        "t",
+        "p_one_tailed",
+        "R2",
+        "F",
+        "deltaR2",
+        "F_deltaR2",
+        "N"
+      ],
+      "locator": {
+        "doc_id": "D1",
+        "pdf_page": 17,
+        "where": "Unshown spline analysis"
+      },
+      "implementation_status": "Incomplete: spline basis, knots, order and exact equation unavailable; no automatic implementation."
+    },
+    {
+      "model_id": "U_subgroups",
+      "outcome": "org_perf",
+      "regressors": [
+        "staff",
+        "training",
+        "incentive",
+        "grievance",
+        "decentral",
+        "ilm",
+        "hierarchy"
+      ],
+      "controls": [
+        "nonprofit",
+        "subsidiary",
+        "employment",
+        "age",
+        "managers",
+        "union",
+        "product",
+        "service",
+        "competition"
+      ],
+      "industry_effects": "Two-digit SIC categorical intercept effects, article specifies 33 indicators. Mapping and reference unresolved (A17). Include an intercept.",
+      "interactions": [],
+      "estimator": "Multiple linear regression; OLS closest-described origin, not explicitly named.",
+      "weights": null,
+      "covariance": null,
+      "sample": "Step 6 organizational sample",
+      "statistics_to_report": [
+        "coef",
+        "se",
+        "t",
+        "p_one_tailed",
+        "R2",
+        "F",
+        "deltaR2",
+        "F_deltaR2",
+        "N"
+      ],
+      "locator": {
+        "doc_id": "D1",
+        "pdf_page": 18,
+        "where": "Subgroup robustness paragraph"
+      },
+      "implementation_status": "Incomplete: for-profit and nonprofit subgroup fits; exact HRM block and inference not reported; nonprofit control is constant within each group and must be omitted there."
+    }
+  ],
+  "inference": {
+    "tail_rule": "Table notes specify one-tailed tests. H1/H2 alternatives are positive. For nuisance controls and negative slopes no prespecified test direction is given; do not silently use absolute t for positive hypotheses. Report signed t and directional p, with test-direction ambiguity recorded.",
+    "alpha_levels": [
+      0.1,
+      0.05,
+      0.01
+    ],
+    "joint_tests": "For M2/M3/M7/M8 compare against intercept + listed controls + industry effects on exactly the same rows: joint null is six HRM slopes zero. For M4/M5/M9/M10 compare against corresponding M2/M3/M7/M8: joint null is three interaction slopes zero. F uses its upper tail, not half a two-sided p. Report full-model F as well. Single-practice families have no one shared full-model statistic.",
+    "locator": {
+      "doc_id": "D1",
+      "pdf_page": 15,
+      "where": "Table 3 footnotes; Table 4 p17"
+    }
+  },
+  "software_defaults": null,
+  "missingness": "Neither item-level nor model-level missingness, imputation, sample restriction sequence, or duplicate handling is documented. Declared release missings are not sufficient for substantive coding; honor question wording and record chosen axes. No empirical target matching is an admissible resolution.",
+  "unresolved_items": [
+    "A01 duplicate nominations; no original establishment grouping key identified.",
+    "A02 profit-making versus publicly held eligibility.",
+    "A03 occupational skips: reuse, available-item construction or exclusion; manager numerator routing.",
+    "A04 item completeness, mean versus other scale aggregation, model-common versus equation-specific cases.",
+    "A05 training no-use skips and exceptional category values.",
+    "A06 log versus raw training items; binary recode before log.",
+    "A07 staffing nonpositive counts, special large-application category, log base.",
+    "A08 standardization reference sample, timing and SD divisor.",
+    "A09 complete five-level decision-authority mapping unavailable.",
+    "A10 age level/log conflict; hierarchy log base and nonpositive handling.",
+    "A11 nonprofit/subsidiary coding and subsidiary construct scope.",
+    "A12 total employment raw versus release-assigned values and manager denominator.",
+    "A13 managers fraction versus percentage.",
+    "A14 union-pressure item set and construction not identifiable.",
+    "A15 competition coding and product/service neither category.",
+    "A16 top-coded training participation and hierarchy count treatment.",
+    "A17 SIC vintage/crosswalk, unmatched industries, reference category and effective dummy rank.",
+    "A18 centering of interactions.",
+    "A19 median reference and unreported threshold/spline/subgroup equations.",
+    "A20 weights and covariance correction; neither reported.",
+    "A21 exact estimator/software/default df convention not stated; OLS is a provisional linear-regression interpretation.",
+    "A22 control-tail direction and any multiplicity adjustment unspecified."
+  ],
+  "locator": {
+    "doc_id": "D1",
+    "pdf_page": 11,
+    "where": "Methods/regression and controls; detailed locators in variables and models"
+  },
+  "field_locators": {
+    "software_defaults": {
+      "doc_id": "D1",
+      "pdf_page": 11,
+      "where": "Regression methods: software not stated"
+    },
+    "missingness": {
+      "doc_id": "D1",
+      "pdf_page": 7,
+      "where": "Measures and table footnotes pp15,17: missingness not stated"
+    },
+    "unresolved_items": {
+      "doc_id": "D1",
+      "pdf_page": 7,
+      "where": "Methods pp7–12; exploratory results pp17–18"
+    }
+  }
+}

@@ -1,0 +1,479 @@
+{
+  "per_study": {
+    "1": {
+      "specificity": {
+        "score": 4,
+        "reason": "Mixed design, paired tests, item sets, and within-person key are documented or mapped; exact attention filter, scoring, gender-test dependence, and software are unresolved. D01 PDF pp. 7–9; D03 PDF pp. 1–2,5–6; D11; D31; D41."
+      },
+      "precision": {
+        "score": 2,
+        "reason": "Mixed design, paired tests, item sets, and within-person key are documented or mapped; exact attention filter, scoring, gender-test dependence, and software are unresolved. D01 PDF pp. 7–9; D03 PDF pp. 1–2,5–6; D11; D31; D41."
+      },
+      "exhaustiveness": {
+        "score": 3,
+        "reason": "Mixed design, paired tests, item sets, and within-person key are documented or mapped; exact attention filter, scoring, gender-test dependence, and software are unresolved. D01 PDF pp. 7–9; D03 PDF pp. 1–2,5–6; D11; D31; D41."
+      }
+    },
+    "2": {
+      "specificity": {
+        "score": 4,
+        "reason": "Clear outcomes, primary mediator set, and serial paths; software, path/link estimator, aggregation, missingness, and exact exclusion implementation absent. Independent mediator results preregistered but not individually reported. D01 PDF pp. 10–12; D03 PDF pp. 2–3,6; D12; D32."
+      },
+      "precision": {
+        "score": 2,
+        "reason": "Clear outcomes, primary mediator set, and serial paths; software, path/link estimator, aggregation, missingness, and exact exclusion implementation absent. Independent mediator results preregistered but not individually reported. D01 PDF pp. 10–12; D03 PDF pp. 2–3,6; D12; D32."
+      },
+      "exhaustiveness": {
+        "score": 3,
+        "reason": "Clear outcomes, primary mediator set, and serial paths; software, path/link estimator, aggregation, missingness, and exact exclusion implementation absent. Independent mediator results preregistered but not individually reported. D01 PDF pp. 10–12; D03 PDF pp. 2–3,6; D12; D32."
+      }
+    },
+    "3": {
+      "specificity": {
+        "score": 4,
+        "reason": "Factorial models and simple comparisons specified; exact attention filter, sums-of-squares/contrast variance, and scoring unresolved; three mediator item rows missing. D01 PDF pp. 12–14; D03 PDF pp. 3–4; D13; D33; D43."
+      },
+      "precision": {
+        "score": 2,
+        "reason": "Factorial models and simple comparisons specified; exact attention filter, sums-of-squares/contrast variance, and scoring unresolved; three mediator item rows missing. D01 PDF pp. 12–14; D03 PDF pp. 3–4; D13; D33; D43."
+      },
+      "exhaustiveness": {
+        "score": 3,
+        "reason": "Factorial models and simple comparisons specified; exact attention filter, sums-of-squares/contrast variance, and scoring unresolved; three mediator item rows missing. D01 PDF pp. 12–14; D03 PDF pp. 3–4; D13; D33; D43."
+      }
+    },
+    "4": {
+      "specificity": {
+        "score": 3,
+        "reason": "Main binary regression and fixed control lists clear; valid dictionary absent, house-score items/scoring unknown, mediation exposure/link unspecified, preregistered conditional transformations unresolved. D01 PDF pp. 14–16; D03 PDF p. 5; D14; D34; D44."
+      },
+      "precision": {
+        "score": 1,
+        "reason": "Main binary regression and fixed control lists clear; valid dictionary absent, house-score items/scoring unknown, mediation exposure/link unspecified, preregistered conditional transformations unresolved. D01 PDF pp. 14–16; D03 PDF p. 5; D14; D34; D44."
+      },
+      "exhaustiveness": {
+        "score": 2,
+        "reason": "Main binary regression and fixed control lists clear; valid dictionary absent, house-score items/scoring unknown, mediation exposure/link unspecified, preregistered conditional transformations unresolved. D01 PDF pp. 14–16; D03 PDF p. 5; D14; D34; D44."
+      }
+    }
+  },
+  "choices": [
+    {
+      "choice": "Paired tests following a mixed-design interaction screen in Study 1",
+      "default_common_or_rare": "common component methods; screen-then-collapse is a consequential conditional workflow",
+      "justified": "Yes: preregistration anticipates no wrongdoing interaction, then pools; choice rationale documented, not evidence of optimality.",
+      "locator": "D11 PDF p. 1 §5; D01 PDF p. 9"
+    },
+    {
+      "choice": "Within-person naming of a loyal and unrelated colleague with randomized order",
+      "default_common_or_rare": "distinctive design; conventional counterbalancing",
+      "justified": "Yes: isolates relationship comparison and samples wrongdoing contexts.",
+      "locator": "D01 PDF p. 7 Procedure; D11 PDF p. 1 §§2,4"
+    },
+    {
+      "choice": "Attention-check exclusions and batch replacement",
+      "default_common_or_rare": "common online-survey practice; exact implementation unknown",
+      "justified": "Partly: preregistered and intended to screen inattention; exact key/aggregation unstated.",
+      "locator": "D01 PDF p. 7 Transparency; D11–D13 PDF p. 1 §6"
+    },
+    {
+      "choice": "Simultaneous mediation with benevolence, integrity, values, and relational concerns",
+      "default_common_or_rare": "common bootstrap mediation structure",
+      "justified": "Yes for hypothesized mechanisms; integrity included by preregistration despite absent theory.",
+      "locator": "D01 PDF pp. 10–12; D12 PDF p. 1 §§2–5"
+    },
+    {
+      "choice": "Bootstrap bias-corrected intervals",
+      "default_common_or_rare": "common described choice",
+      "justified": "No comparison or justification of interval type is stated.",
+      "locator": "D01 PDF pp. 11–12; D03 PDF p. 5"
+    },
+    {
+      "choice": "Study 3 planned simple comparisons alongside factorial interaction tests",
+      "default_common_or_rare": "common for prespecified simple hypotheses",
+      "justified": "Yes: H1 and H3 are defined as specific simple comparisons, not solely interaction tests.",
+      "locator": "D01 PDF p. 7 H3, pp. 13–14; D13 PDF p. 1 §5"
+    },
+    {
+      "choice": "Separate private petitions in field study",
+      "default_common_or_rare": "distinctive field implementation",
+      "justified": "Yes: explicitly intended to reduce peer effects.",
+      "locator": "D01 PDF p. 15 Broker’s Request; D02 PDF pp. 3–4"
+    },
+    {
+      "choice": "Conditional dichotomization or exponentiation of loyalty",
+      "default_common_or_rare": "uncommon/nondefault functional-form strategy",
+      "justified": "Rationale supplied: expected negative skew/leptokurtosis; trigger wording and exponent base remain ambiguous.",
+      "locator": "D14 PDF p. 1 §§4–5"
+    },
+    {
+      "choice": "No documented clustering adjustment in fraternity study",
+      "default_common_or_rare": "native method unknown, cannot classify as confirmed default",
+      "justified": "No SE/clustering justification supplied; private petition links address peer visibility rather than specifying covariance.",
+      "locator": "D01 PDF pp. 14–16; D14 PDF p. 1"
+    }
+  ],
+  "unusualness_overall": "Mixed: experimental designs and named tests are conventional; the within-person loyalty manipulation and fraternity petition context are distinctive. Documentation gaps in scoring, exclusions, mediation links, and software prevent a firm assessment of implementation unusualness. This is a documentation judgment, not a replication verdict (D01 PDF pp. 7–16; D03 PDF pp. 1–6; D11–D14).",
+  "unavailable_or_appendix_only": [
+    {
+      "study": 1,
+      "item": "Moral-intensity items, item correlations, ethical-importance reliability",
+      "status": "appendix_only details; available in packet",
+      "locator": "D03 PDF pp. 1–2"
+    },
+    {
+      "study": 2,
+      "item": "Accused trust, risk acceptance, group-cohesion measures/reliabilities and serial mediation",
+      "status": "appendix_only details; available in packet",
+      "locator": "D03 PDF pp. 2–3"
+    },
+    {
+      "study": 3,
+      "item": "Mediator factorial analyses and simple contrasts",
+      "status": "appendix_only details; available in packet",
+      "locator": "D03 PDF pp. 3–4"
+    },
+    {
+      "study": 4,
+      "item": "Trust/risk independent and simultaneous mediation",
+      "status": "appendix_only details; available in packet",
+      "locator": "D03 PDF p. 5"
+    },
+    {
+      "study": "1–2",
+      "item": "Detailed gender t-tests and subgroup means/SDs",
+      "status": "appendix_only details; available in packet",
+      "locator": "D03 PDF pp. 5–7 Table 1"
+    },
+    {
+      "study": "1–4",
+      "item": "Moderated mediation index",
+      "status": "No in-scope index reported or specified; no target invented. Conditional-indirect wording alone does not identify moderated mediation.",
+      "locator": "D01 PDF pp. 11–14; D03 PDF pp. 2–5"
+    },
+    {
+      "study": 2,
+      "item": "Integrity-based trust in broker reliability",
+      "status": "Not printed in Study 2 method; do not borrow Study 3 coefficient.",
+      "locator": "D01 PDF p. 11 Integrity-Based Trust"
+    },
+    {
+      "study": "1–3",
+      "item": "Numerical SEM error-bar values in figures",
+      "status": "Figures show bars but do not print individual numeric SEs; not digitized or estimated.",
+      "locator": "D01 PDF pp. 10,12,14 Figures 1–3"
+    },
+    {
+      "study": 2,
+      "item": "Preregistered independent primary-mediator models",
+      "status": "D12 says independent and simultaneous; separate primary single-mediator results absent in permitted record.",
+      "locator": "D12 PDF p. 1 §5; D01 PDF pp. 11–12"
+    },
+    {
+      "study": 4,
+      "item": "Preregistered strong/exponential loyalty, chi-square, and house-loyalty-as-exposure results",
+      "status": "Columns suggest constructs exist; no in-scope result or distribution-trigger diagnostics reported. Cannot infer execution.",
+      "locator": "D14 PDF p. 1 §§4–5,8; D44; D01 PDF pp. 15–16"
+    },
+    {
+      "study": 1,
+      "item": "Reverse-item dictionary endpoint typos",
+      "status": "D31 reverse rows prob_effect2_rev through concen_eff1_rev start with inconsistent numeric labels while listing the reverse scale. Preserve as metadata conflicts, not valid alternate numerical codebooks.",
+      "locator": "D31 reverse rows; D03 PDF p. 1; D11 PDF p. 2 §8"
+    },
+    {
+      "study": "1–4",
+      "item": "Unmodeled columns and data cleaning provenance",
+      "status": "Columns alone do not identify whether data were already filtered or how all deposited derived variables were constructed. Unreported outcomes are not invented; all documented scored constructs used here are mapped.",
+      "locator": "D31–D34 and D41–D44 (unpaginated); D01 PDF p. 7 data-deposit statement"
+    }
+  ],
+  "inference_fields": {
+    "observation_unit": {
+      "1": "participant × relationship-condition rating; inferred long layout from part_uid and cond",
+      "2": "participant",
+      "3": "participant",
+      "4": "participant"
+    },
+    "sampling_unit": {
+      "1": "employee recruited through Prolific; workplace clusters unavailable",
+      "2": "employee recruited through Prolific; workplace clusters unavailable",
+      "3": "employee recruited through Prolific; workplace clusters unavailable",
+      "4": "fraternity first, eligible member second; selected fraternity was willing to participate"
+    },
+    "assignment_unit": {
+      "1": "participant; wrongdoing assignment and order of within-person relationship conditions randomized",
+      "2": "participant, randomized",
+      "3": "participant, randomized to factorial condition",
+      "4": "none; broker selected by fraternity president; all eligible actors received individual requests"
+    },
+    "clusters": {
+      "1": "participant for repeated ratings; part_uid inferred as linkage key; workplace clustering not documented",
+      "2": "no repeated outcome records described; no workplace clusters documented",
+      "3": "no repeated outcome records described; no workplace clusters documented",
+      "4": "members share one fraternity and one broker; no cluster adjustment documented"
+    },
+    "native_se_method_and_software": {
+      "1": "software/routine/version unstated. Paired t and mixed ANOVA specified; gender t dependence handling unclear.",
+      "2": "software/routine/version unstated. Independent t and bootstrap mediation specified; variance pooling and path-fitting routine unstated.",
+      "3": "software/routine/version unstated. Factorial ANOVA and planned t contrasts; pooled full-model variance is inferred, exact routine unstated.",
+      "4": "software/routine/version unstated. Logistic regression SE type and mediation link/SE routine unstated."
+    },
+    "first_stage_strength": {
+      "1": "not applicable; no instrumental-variable analysis",
+      "2": "not applicable; no instrumental-variable analysis",
+      "3": "not applicable; no instrumental-variable analysis",
+      "4": "not applicable; no instrumental-variable analysis"
+    },
+    "source_locator": {
+      "1": "D01 PDF p. 7 (printed p. 768; Procedure); D11 PDF p. 1 §4; D31 rows cond, wrongdoing; D41 (unpaginated); D03 PDF pp. 5–6",
+      "2": "D01 PDF p. 10 (printed p. 771; Procedure); D12 PDF p. 1 §4; D32 row cond; D42 (unpaginated); D03 PDF pp. 2–3,6",
+      "3": "D01 PDF p. 12–13 (printed pp. 773–774); D13 PDF p. 1 §4; D33 condition rows; D43 (unpaginated); D03 PDF pp. 3–4",
+      "4": "D01 PDF p. 14–15 (printed pp. 775–776); D14 PDF p. 1 §4; D02 PDF pp. 3–4; D03 PDF pp. 5"
+    }
+  },
+  "preregistration_vs_article_differences": [
+    {
+      "study": 1,
+      "issue": "Hypothesis numbering",
+      "preregistration": "D11 H1=request granting; H2=both voice outcomes.",
+      "article_or_other_source": "Article H1 includes all support outcomes; H2a–c are mechanisms.",
+      "locator": "D11 PDF p. 1 §2; D01 PDF pp. 4–6,9"
+    },
+    {
+      "study": 2,
+      "issue": "Hypothesis numbering and integrity mediator",
+      "preregistration": "D12 H1=request; H2=voice; H3a–d=four mediators including integrity.",
+      "article_or_other_source": "Article H1 includes support/voice; H2a–c excludes theorized integrity role but includes its preregistered test.",
+      "locator": "D12 PDF p. 1 §2; D01 PDF pp. 6,10–12"
+    },
+    {
+      "study": 2,
+      "issue": "Power typo",
+      "preregistration": "D12 prints 99% power for the planning sample.",
+      "article_or_other_source": "D22 explicitly corrects to 80%; article uses 80%. Preserve both records.",
+      "locator": "D12 PDF p. 1 §7; D22 unpaginated bullet; D01 PDF p. 10"
+    },
+    {
+      "study": 2,
+      "issue": "Independent mediation reporting",
+      "preregistration": "D12 promises independent and simultaneous mediator effects.",
+      "article_or_other_source": "Main article reports simultaneous effects; D03 serial models do not supply the missing primary independent models.",
+      "locator": "D12 PDF p. 1 §5; D01 PDF pp. 11–12; D03 PDF pp. 2–3"
+    },
+    {
+      "study": 3,
+      "issue": "Hypothesis numbering",
+      "preregistration": "D13 H1=loyal vs control within no-history; H2=divisive vs no-history within loyal.",
+      "article_or_other_source": "Article calls these H1 and H3.",
+      "locator": "D13 PDF p. 1 §§2,5; D01 PDF pp. 13–14"
+    },
+    {
+      "study": 3,
+      "issue": "Exploratory integrity measurement",
+      "preregistration": "D13 §8 lists benevolence, values, and reputation only.",
+      "article_or_other_source": "Article and D33 additionally include integrity trust.",
+      "locator": "D13 PDF p. 2 §8; D01 PDF p. 13; D03 PDF pp. 3–4; D33"
+    },
+    {
+      "study": 4,
+      "issue": "Control construct",
+      "preregistration": "D14 specifies liking, trusting requester, and duration.",
+      "article_or_other_source": "Published models use knowing, liking, and duration; TrustRequestor and KnowRequestor are distinct D44 names.",
+      "locator": "D14 PDF p. 1 §8; D01 PDF pp. 15–16 Table 6; D44"
+    },
+    {
+      "study": 4,
+      "issue": "Duration units",
+      "preregistration": "D14 specifies months known.",
+      "article_or_other_source": "Article specifies semesters and D44 has SemestersRequestor.",
+      "locator": "D14 PDF p. 1 §8; D01 PDF p. 15; D44"
+    },
+    {
+      "study": 4,
+      "issue": "Conditional transformations",
+      "preregistration": "D14 §4 trigger absolute skewness OR kurtosis >2; §5 says negatively skewed AND leptokurtic; strong and exponential alternatives specified.",
+      "article_or_other_source": "Article reports continuous loyalty regressions, but no trigger diagnostics; D03 mediation says Loyal vs Not Loyal.",
+      "locator": "D14 PDF p. 1 §§4–5; D01 PDF pp. 15–16; D03 PDF p. 5"
+    },
+    {
+      "study": 4,
+      "issue": "House-loyalty role",
+      "preregistration": "D14 repeats analyses using house loyalty as exposure, with transformations.",
+      "article_or_other_source": "Article adds house loyalty as a control in Model 3; standalone house-exposure model absent.",
+      "locator": "D14 PDF p. 1 §8; D01 PDF p. 16 Table 6"
+    },
+    {
+      "study": 4,
+      "issue": "Field scenario",
+      "preregistration": "Preregistration refers to financial misconduct of requester’s friend.",
+      "article_or_other_source": "D01 describes misappropriation of on-campus college-group funds; D02 specifies friend treasurer in another fraternity not at focal institution, misreporting to nationals. Distinct contextual details retained.",
+      "locator": "D14 PDF p. 1 §2; D01 PDF p. 15 Procedure; D02 PDF pp. 3–4"
+    },
+    {
+      "study": 1,
+      "issue": "Moral intensity and ethical-importance anchors",
+      "preregistration": "D11 moral intensity: 1=agree,7=disagree; importance endpoint order high-to-low.",
+      "article_or_other_source": "D03 agrees on moral-intensity anchors but D31 reverses them; D03/D31 importance first three items high=important.",
+      "locator": "D11 PDF p. 2 §8; D03 PDF pp. 1–2; D31 item rows"
+    },
+    {
+      "study": 2,
+      "issue": "Accused integrity item polarity",
+      "preregistration": "D12 third accused-integrity item says actions/behaviors not very consistent.",
+      "article_or_other_source": "D32 uses positive consistent-with-words wording; D03 refers to same scale as broker.",
+      "locator": "D12 PDF p. 2 §8; D32 inttrust_accused3; D03 PDF p. 2"
+    }
+  ],
+  "wider_space": [
+    {
+      "choice": "Study 1 treatment of wrongdoing",
+      "alternatives": [
+        "mixed ANOVA with wrongdoing retained",
+        "paired relationship comparison collapsed across wrongdoing"
+      ],
+      "default_common_or_rare": "Both explicitly named; conditional workflow",
+      "justified": "Preplanned screening and pooling; not an invitation to select by significance. Wider grid is not enabled for execution.",
+      "locator": "D11 PDF p. 1 §5; D01 PDF p. 9"
+    },
+    {
+      "choice": "Study 2 mediator arrangement",
+      "alternatives": [
+        "independent mediator models",
+        "simultaneous four-mediator model",
+        "two specified serial models"
+      ],
+      "default_common_or_rare": "Common alternative questions; different estimands",
+      "justified": "All preregistered; only simultaneous primary and serial models reported in permitted record. Wider grid is not enabled for execution.",
+      "locator": "D12 PDF p. 1 §5,p. 2 §8; D03 PDF pp. 2–3"
+    },
+    {
+      "choice": "Study 4 loyalty exposure",
+      "alternatives": [
+        "continuous requester loyalty",
+        "thresholded strong requester loyalty",
+        "exponential requester loyalty",
+        "house loyalty as alternative exposure"
+      ],
+      "default_common_or_rare": "Transformations unusual; continuous logistic predictor conventional",
+      "justified": "Preregistered distributional rationale; trigger and actual execution not reported. Wider grid is not enabled for execution.",
+      "locator": "D14 PDF p. 1 §§4–5,8"
+    },
+    {
+      "choice": "Study 4 adjustment list",
+      "alternatives": [
+        "published knowing/liking/duration list",
+        "preregistered trusting/liking/duration list",
+        "published additional house-loyalty adjustment"
+      ],
+      "default_common_or_rare": "Explicit lists, not free equivalent choices",
+      "justified": "Each list sourced; control substitution unexplained. Wider grid is not enabled for execution.",
+      "locator": "D14 PDF p. 1 §8; D01 PDF pp. 15–16 Table 6"
+    }
+  ],
+  "structural_counts": {
+    "per_study": {
+      "1": {
+        "n_conditions": 14,
+        "n_outcomes": 4,
+        "n_mediators": 0,
+        "n_covariates": 0,
+        "n_exclusion_rules": 1,
+        "n_analyses": 29
+      },
+      "2": {
+        "n_conditions": 2,
+        "n_outcomes": 3,
+        "n_mediators": 4,
+        "n_covariates": 0,
+        "n_exclusion_rules": 1,
+        "n_analyses": 14
+      },
+      "3": {
+        "n_conditions": 4,
+        "n_outcomes": 7,
+        "n_mediators": 4,
+        "n_covariates": 0,
+        "n_exclusion_rules": 1,
+        "n_analyses": 23
+      },
+      "4": {
+        "n_conditions": 0,
+        "n_outcomes": 1,
+        "n_mediators": 2,
+        "n_covariates": 4,
+        "n_exclusion_rules": 4,
+        "n_analyses": 7
+      }
+    }
+  },
+  "unavailable_source_fallbacks": [
+    {
+      "item": "Separate workflow reader-stage rules, coordinator frozen output schema, and newly prepared source-description document",
+      "study": "all",
+      "why_unavailable": "Not present in enumerated ./input or workspace inventory.",
+      "fallback": "Use assignment text as governing schema; asked coordinator via user-input tool. No outside packet accessed.",
+      "label": "uncertain"
+    },
+    {
+      "item": "Valid Study 4 data dictionary",
+      "study": 4,
+      "why_unavailable": "D34 has no overlap with D44 and assignment says it duplicates a supplemental dictionary. Do not repurpose it.",
+      "fallback": "Use D01 PDF pp. 14–16, D03 PDF p. 5, D14 PDF p. 1 and D44 names; all semantic column mappings marked inferred.",
+      "label": "uncertain"
+    },
+    {
+      "item": "Study 3 broker_rep1–3 dictionary rows",
+      "study": 3,
+      "why_unavailable": "D43 lists columns but D33 omits individual item descriptions.",
+      "fallback": "D33 composite names the columns; D01 PDF p. 13 says same measures as Study 2; D12 PDF p. 1 §3 and D32 provide candidate wording. Inferred cross-study mapping, not a reconstructed dictionary.",
+      "label": "uncertain"
+    },
+    {
+      "item": "Raw data-file names and analysis code",
+      "study": "all",
+      "why_unavailable": "Only column files supplied; D01 PDF p. 7 says data and scripts exist externally, but these are not in frozen packet.",
+      "fallback": "Data file names unstated; no code reconstructed and no remote repository accessed.",
+      "label": "uncertain"
+    },
+    {
+      "item": "Native software, macro, version, seed, missing-data rules",
+      "study": "all",
+      "why_unavailable": "Not specified for in-scope analyses in D01/D03/D11–D14.",
+      "fallback": "Record unstated; no vintage/default imputation and no automatically chosen replacement software.",
+      "label": "uncertain"
+    },
+    {
+      "item": "Exact attention-check exclusion algorithms and destroyed records",
+      "study": "1–3",
+      "why_unavailable": "D11–D13 PDF p. 1 §6 describes only simple attention checks; excluded data destroyed per preregistrations.",
+      "fallback": "Candidate answer keys from D31–D33 marked inferred; do not assert that each listed check was used.",
+      "label": "uncertain"
+    },
+    {
+      "item": "Study 4 house-loyalty item wording and scoring",
+      "study": 4,
+      "why_unavailable": "D14 PDF p. 1 §8 cites prior work but full items not supplied; D34 is inapplicable.",
+      "fallback": "D44 LoyalHouse1–3 mapped tentatively to LoyaltyHouse; aggregation and reversal remain unstated. No prior study consulted.",
+      "label": "uncertain"
+    },
+    {
+      "item": "Model-specific N and condition counts",
+      "study": "all",
+      "why_unavailable": "Most primary analyses report study-level sample only; reliability and gender-subgroup counts absent.",
+      "fallback": "Use sealed n_branch conventions; do not infer N from rounded degrees of freedom or condition means.",
+      "label": "uncertain"
+    }
+  ],
+  "scope_and_conventions": {
+    "scope": "Only Studies 1–4. D03 PDF pp. 1–7 through the gender-summary paragraph are in scope. Studies S1–S7 and their results are excluded.",
+    "page_convention": "D01 PDF pages count from first article page, which is printed p. 762. D02/D03 printed pages match PDF pages. D11–D14 are cited by PDF page and question. CSV/TXT/DOCX have no PDF pagination; row names/sections replace nonexistent page references.",
+    "no_result_selection": "No data rows, estimates from data, web sources, other reader outputs, or author code used. Candidate interpretations are sourced, not chosen by fit.",
+    "bootstrap_terminology": "D01 calls primary mediation conditional indirect effects, but no moderator or index of moderated mediation is specified for Studies 1–4. Do not create such a model from that phrase.",
+    "target_free_boundary": "manifest includes methodological/design constants, source pages, and output types, but no published estimates, test values, effect sizes, p values, sample sizes, or hypothesis outcomes. Alpha/tail for power calculations are distinguished from test conventions.",
+    "N_convention": "n_branch carries explicitly stated study analytic N for primary full-sample models, with locator caveats when model-specific completeness is unstated; subgroup and reliability N remain null. Planned-contrast N refers to parent factorial model, not the two contrasted cells. Study 4 n_excluded counts eligible nonrespondents, not an unknown overall roster.",
+    "structural_count_convention": "Conditions count design cells, including within-person levels; observational Study 4 has no assigned conditions. Outcomes count distinct substantive tested dependent measures, including manipulation check/mediator ANOVAs but excluding demographic summaries and reliability diagnostics. Mediators count constructs in mediation models for Study 2, measured proposed mechanisms for Study 3, and two reported mediators for Study 4. Covariates count distinct published regression controls; exclusion_rules count documented exclusion criteria, not inferred answer-key subconditions. n_analyses counts manifest entries, including descriptives and reliability. Counts are reader-constructed design inventory, not published sample sizes.",
+    "preservation": "The first complete seven outputs and their SHA-256 hashes are preserved in first_complete_output before subsequent reader self-audit changes; no coordinator feedback or other-reader input used.",
+    "open_axes": "No covariance/clustering axis is supplied because the frozen packet gives no sourced competing method. Explicit published control lists and distinct reported joint/independent mediation models are fixed analyses or wider-space descriptions, not open equivalent axes."
+  }
+}

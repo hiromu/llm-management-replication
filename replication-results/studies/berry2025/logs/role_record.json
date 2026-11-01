@@ -1,0 +1,16 @@
+{
+ "requested": {
+  "reader_a": "claude-fable-5-1 high standard",
+  "reader_b": "gpt-6-astra high default",
+  "implementer_A": "claude-fable-5-1 high R",
+  "implementer_B": "gpt-6-astra high R",
+  "implementer_C": "gpt-6-astra high Python",
+  "checker_of_A": "gpt-6-astra high",
+  "checker_of_B_C": "claude-fable-5-1 high"
+ },
+ "launch_tests": {
+  "fable": "modelUsage reported claude-fable-5-1, service_tier standard; outer seatbelt denied a project read with EPERM",
+  "astra": "command ran under native workspace-write; tool network 000; write confined to staging. Global ~/.codex/AGENTS.md loads despite --ignore-user-config (model answered yes). Event stream reports no model, effort or tier, so these are requested settings, unverified by metadata."
+ },
+ "barrier_note": "Nesting Codex inside an outer seatbelt fails with sandbox_apply: Operation not permitted, so Astra roles have no enforced read barrier; neutral path, scrubbed environment and event-log audit instead. Fable roles have the enforced read barrier but no Bash."
+}
