@@ -1,5 +1,7 @@
 # Replication Console
 
+https://github.com/user-attachments/assets/3ba32ba1-b9cc-4a6d-9974-290e402a1803
+
 Replication Console connects paper-level replication attempts to inspectable evidence. It launches a research workflow from an uploaded article, records its execution, and presents the saved tables and figures beside the source PDF. Across studies brings documented barriers together so researchers can examine recurring gaps in sample definitions, variable construction and reporting.
 
 The contribution is a common, auditable interface between research execution and evidence review: structured outputs, explicit scientific verdicts, source hashes and logs. Numerical agreement is descriptive; it does not determine a paper's overall verdict.
