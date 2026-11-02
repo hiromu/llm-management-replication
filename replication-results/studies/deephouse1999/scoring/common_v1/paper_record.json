@@ -1,0 +1,49 @@
+{
+  "rule": "../../scoring_rules_common_v1.json",
+  "status": "post hoc",
+  "study_rule_paper": "indeterminate",
+  "paper": {
+    "common": "indeterminate",
+    "lenient": "indeterminate"
+  },
+  "claims": {
+    "common": {
+      "H2": "indeterminate",
+      "H3": "indeterminate"
+    },
+    "lenient": {
+      "H2": "indeterminate",
+      "H3": "indeterminate"
+    }
+  },
+  "terms_by_table": {
+    "common": {
+      "Table 2": {
+        "consistent": 0,
+        "indeterminate": 18,
+        "candidate": 0,
+        "total": 18
+      },
+      "Text": {
+        "consistent": 0,
+        "indeterminate": 1,
+        "candidate": 0,
+        "total": 1
+      }
+    },
+    "lenient": {
+      "Table 2": {
+        "consistent": 8,
+        "indeterminate": 10,
+        "candidate": 0,
+        "total": 18
+      },
+      "Text": {
+        "consistent": 1,
+        "indeterminate": 0,
+        "candidate": 0,
+        "total": 1
+      }
+    }
+  }
+}

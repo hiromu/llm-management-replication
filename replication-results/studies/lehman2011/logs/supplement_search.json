@@ -1,0 +1,125 @@
+{
+  "study_id": "lehman2011",
+  "doi": "10.1287/orsc.1100.0626",
+  "recorded_by": "documentary-source role (coordinator subagent, Claude Opus 5.5); study lehman2011; DOI 10.1287/orsc.1100.0626",
+  "search_window_utc": [
+    "2026-10-27T11:30:58Z",
+    "2026-10-27T11:38:27Z"
+  ],
+  "searches": [
+    {
+      "where": "Crossref REST API, work record",
+      "query_or_url": "https://api.crossref.org/works/10.1287/orsc.1100.0626",
+      "utc": "2026-10-27T11:30:58Z",
+      "outcome": "HTTP 200. journal-article, Organization Science 22(6):1613-1630, published-print 2011-12. relation = {} (empty); update-to and updated-by absent; no assertion; only link is the publisher VOR PDF for similarity checking. No supplement, erratum, correction or retraction relation recorded."
+    },
+    {
+      "where": "Crossref REST API, update notices",
+      "query_or_url": "https://api.crossref.org/works?filter=updates:10.1287/orsc.1100.0626",
+      "utc": "2026-10-27T11:31:05Z",
+      "outcome": "HTTP 200, total-results 0: no Crossmark update (erratum/correction/retraction) deposited against this DOI."
+    },
+    {
+      "where": "INFORMS PubsOnline article page (live)",
+      "query_or_url": "https://pubsonline.informs.org/doi/10.1287/orsc.1100.0626",
+      "utc": "2026-10-27T11:31:12Z",
+      "outcome": "Blocked: HTTP 403 Cloudflare 'Just a moment...' bot-check page via curl and via WebFetch. Not bypassed."
+    },
+    {
+      "where": "INFORMS PubsOnline supplemental-material URL (live)",
+      "query_or_url": "https://pubsonline.informs.org/doi/suppl/10.1287/orsc.1100.0626",
+      "utc": "2026-10-27T11:31:12Z",
+      "outcome": "Blocked: HTTP 403 Cloudflare bot-check. Not bypassed."
+    },
+    {
+      "where": "INFORMS PubsOnline abstract page (live)",
+      "query_or_url": "https://pubsonline.informs.org/doi/abs/10.1287/orsc.1100.0626",
+      "utc": "2026-10-27T11:31:12Z",
+      "outcome": "Blocked: HTTP 403 Cloudflare bot-check."
+    },
+    {
+      "where": "INFORMS PubsOnline fpi / references / site search (live)",
+      "query_or_url": "https://pubsonline.informs.org/doi/fpi/10.1287/orsc.1100.0626 ; https://pubsonline.informs.org/doi/references/10.1287/orsc.1100.0626 ; https://pubsonline.informs.org/action/doSearch?AllField=orsc.1100.0626",
+      "utc": "2026-10-27T11:36:09Z",
+      "outcome": "Blocked: all HTTP 403 Cloudflare bot-check."
+    },
+    {
+      "where": "Internet Archive Wayback availability API",
+      "query_or_url": "https://archive.org/wayback/available?url=pubsonline.informs.org/doi/10.1287/orsc.1100.0626",
+      "utc": "2026-10-27T11:31:30Z",
+      "outcome": "Snapshots exist: 20231117062130 and 20231118010755 (both HTTP 200 captures of the article landing page). Wayback CDX prefix query for doi/* returned an 'Internet Archive: Temporarily Offline' page at 11:31:30Z and again at 11:38:27Z; exact-URL CDX query succeeded at 11:38:27Z."
+    },
+    {
+      "where": "Wayback snapshot of INFORMS article landing page (2023-11-18)",
+      "query_or_url": "http://web.archive.org/web/20231118010755/https://pubsonline.informs.org/doi/10.1287/orsc.1100.0626",
+      "utc": "2026-10-27T11:32:19Z",
+      "outcome": "HTTP 200, 120,268 bytes. Page shows 'Published Online: February 14, 2011', Copyright 2011 INFORMS. Scanned for 'upplement', 'e-companion', 'ecompanion', 'rratum', 'orrection', 'Online Appendix', 'suppl': zero matches. Article links present are only epdf, pdf, citation tools, alerts; no /doi/suppl/ link. Indicates no Supplemental Material tab as of Nov 2023."
+    },
+    {
+      "where": "Wayback availability API, supplemental URL",
+      "query_or_url": "https://archive.org/wayback/available?url=pubsonline.informs.org/doi/suppl/10.1287/orsc.1100.0626",
+      "utc": "2026-10-27T11:38:27Z",
+      "outcome": "archived_snapshots empty: no archived supplemental-material page."
+    },
+    {
+      "where": "Supplied article PDF text (sources/text/ORSC_2011_Lehman.layout.txt, extracted from the supplied 19-page PDF)",
+      "query_or_url": "grep -i 'e-companion|ecompanion|online appendix|supplement|available (from|upon|on request)|appendix'",
+      "utc": "2026-10-27T11:32:40Z",
+      "outcome": "Only matches are references to the printed Appendix on NFL rules (inside the article). No mention of an e-companion, online appendix or supplemental material."
+    },
+    {
+      "where": "Web search",
+      "query_or_url": "Lehman Hahn Ramanujam Alge 2011 \"performance-risk relationship\" deadline proximity Organization Science",
+      "utc": "2026-10-27T11:31:20Z",
+      "outcome": "Results: RePEc/IDEAS record, Purdue-hosted copy of the article PDF, Vanderbilt Business news story, SUFE newsletter, Lehman's Purdue dissertation record (docs.lib.purdue.edu/dissertations/AAI3291115). No supplement, e-companion or erratum."
+    },
+    {
+      "where": "Web search",
+      "query_or_url": "\"performance-risk relationship\" \"deadline proximity\" supplemental material e-companion",
+      "utc": "2026-10-27T11:33:00Z",
+      "outcome": "No e-companion or supplemental file located. INFORMS fpi and references pages appear in results (both Cloudflare-blocked when fetched)."
+    },
+    {
+      "where": "Web search",
+      "query_or_url": "\"Lehman\" \"Deadline Proximity\" Organization Science erratum OR correction OR corrigendum",
+      "utc": "2026-10-27T11:33:00Z",
+      "outcome": "No erratum, correction or corrigendum for this article. Only generic policy pages (incl. INFORMS post-publication corrections policy)."
+    },
+    {
+      "where": "Crossref REST API, Organization Science errata search",
+      "query_or_url": "https://api.crossref.org/works?query.bibliographic=erratum correction Lehman deadline proximity performance-risk&filter=issn:1047-7039,from-pub-date:2011-01-01 ; https://api.crossref.org/works?filter=issn:1047-7039,from-pub-date:2011-01-01,until-pub-date:2014-12-31&query.title=erratum",
+      "utc": "2026-10-27T11:37:22Z",
+      "outcome": "Two ORSC 'Erratum' notices surfaced (10.1287/orsc.1120.0774 and 10.1287/orsc.2015.0997). Checked: 1120.0774 corrects the title of Ahuja, Soda and Zaheer (2012); 2015.0997 corrects Table 3 of Vasudeva, Spencer and Teegen (2013) (read from Wayback snapshot 20211127142355). Neither concerns this article."
+    },
+    {
+      "where": "RePEc/IDEAS article record",
+      "query_or_url": "https://ideas.repec.org/a/inm/ororsc/v22y2011i6p1613-1630.html",
+      "utc": "2026-10-27T11:35:15Z",
+      "outcome": "HTTP 200. Bibliographic record only. The word 'Corrections' appears solely as RePEc's generic metadata-correction link; no erratum and no supplement listed."
+    },
+    {
+      "where": "Purdue-hosted PDF found by web search",
+      "query_or_url": "https://apps.it.purdue.edu/sites/Home/DirectoryApi/Files/db991f29-6462-4230-969b-aad1fb92e842/Download",
+      "utc": "2026-10-27T11:35:32Z",
+      "outcome": "HTTP 200 application/pdf, 896,323 bytes, 18 pages, sha256 802545abb90158f9967d20e35ce899e91d6f289481428fcaa7819456f49f618e. It is another copy of the article itself (header carries the DOI and 2011 INFORMS copyright), not a supplement; no supplement/e-companion text inside. Fetched to the session scratchpad only for identification; not placed in sources/supplements and not part of the reader packet. Differs in hash/page count from the supplied PDF (sha256 93278fe5...c8d3, 19 pages)."
+    }
+  ],
+  "supplements_found": [],
+  "errata_or_corrections": [],
+  "unavailable_or_blocked": [
+    {
+      "what": "Live INFORMS PubsOnline pages for this DOI (landing, abs, suppl, fpi, references, site search)",
+      "reason": "Cloudflare bot-check returns HTTP 403 to non-interactive clients; not bypassed per rules.",
+      "mitigation": "Used Wayback captures of 2023-11-17/18 for the landing page and Crossref metadata; no Wayback capture exists of the /doi/suppl/ URL."
+    },
+    {
+      "what": "Wayback CDX prefix listing",
+      "reason": "Internet Archive returned 'Temporarily Offline' for prefix CDX queries at 11:31Z and 11:38Z.",
+      "mitigation": "Availability API and exact-URL CDX query worked."
+    }
+  ],
+  "residual_uncertainty": "The live INFORMS page could not be viewed, so a supplement added after November 2023 cannot be excluded with certainty; however Crossref has no relation or update, the article text does not mention an e-companion, and no supplemental URL was ever archived.",
+  "files_downloaded_to_sources_supplements": [],
+  "timing_note": "utc values for web-search and local-grep rows are approximate (within about one minute); API and curl rows carry the logged timestamps.",
+  "conclusion": "not_found_after_documented_search"
+}

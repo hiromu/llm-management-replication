@@ -1,0 +1,34 @@
+M6_common_U14_altleave_default N=27333
+                                         label model     n            term
+female          M6_common_U14_altleave_default    M6 27333          female
+female:leave    M6_common_U14_altleave_default    M6 27333    female:leave
+female:leave_sq M6_common_U14_altleave_default    M6 27333 female:leave_sq
+female:parttime M6_common_U14_altleave_default    M6 27333 female:parttime
+                   estimate         se            p    loglik singular
+female          -0.79482921 0.06384770 1.419089e-35 -7967.015    FALSE
+female:leave     0.03669972 0.14086281 7.944510e-01 -7967.015    FALSE
+female:leave_sq  0.02914038 0.13604108 8.303889e-01 -7967.015    FALSE
+female:parttime -0.14961240 0.06527344 2.190063e-02 -7967.015    FALSE
+                cpu_seconds warnings
+female              200.402         
+female:leave        200.402         
+female:leave_sq     200.402         
+female:parttime     200.402         
+completed M6_common_U14_altleave_default CPU=200.402
+M6_FAULT_missing1_U14_default N=34856
+                                        label model     n            term
+female          M6_FAULT_missing1_U14_default    M6 34856          female
+female:leave    M6_FAULT_missing1_U14_default    M6 34856    female:leave
+female:leave_sq M6_FAULT_missing1_U14_default    M6 34856 female:leave_sq
+female:parttime M6_FAULT_missing1_U14_default    M6 34856 female:parttime
+                   estimate         se            p    loglik singular
+female          -0.37717435 0.05315468 1.286166e-12 -17347.04    FALSE
+female:leave     0.11913611 0.10757473 2.680895e-01 -17347.04    FALSE
+female:leave_sq -0.04139703 0.09330614 6.572820e-01 -17347.04    FALSE
+female:parttime -0.07365275 0.05224036 1.585745e-01 -17347.04    FALSE
+                cpu_seconds warnings
+female              188.385         
+female:leave        188.385         
+female:leave_sq     188.385         
+female:parttime     188.385         
+completed M6_FAULT_missing1_U14_default CPU=188.385

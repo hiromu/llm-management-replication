@@ -1,0 +1,66 @@
+{
+  "schema_version": 1,
+  "study_id": "twenge2010",
+  "prepared_by": "source/data role (fresh context), 2026-10-28",
+  "article": {
+    "path_from_project_root": "papers/journal_collection/JOM/JOM_2010_Twenge.pdf",
+    "sha256": "b556175cc775fe710cca7f8e83c571c4fe8b4bb7ebb7a0878939e6eb36f0042e",
+    "sha256_verified": true,
+    "page_convention": "pdf_page is the 1-based PDF page; journal_page = pdf_page + 1116 (PDF page 1 = journal page 1117)."
+  },
+  "scope_note": "This file records which original data sources the article says it used, with locators. It deliberately contains no printed results, sample sizes or other numbers from the article, and no choices of sample, items, indices, weights or exclusions.",
+  "requirements": [
+    {
+      "id": "SRC-1",
+      "source": "Monitoring the Future (MTF), annual cross-sectional survey of U.S. high school seniors (12th grade), University of Michigan ISR",
+      "survey_years": [1976, 1991, 2006],
+      "population": "high school seniors (graduating classes of the survey year)",
+      "article_locators": [
+        {"pdf_page": 1, "journal_page": 1117, "where": "abstract: nationally representative sample of U.S. high school seniors in the three survey years"},
+        {"pdf_page": 9, "journal_page": 1125, "where": "Method, first paragraph: MTF data collection, multistage sampling of schools then students, school replacement, spring administration, questionnaire forms"},
+        {"pdf_page": 10, "journal_page": 1126, "where": "Method, second paragraph: three data collection years, 15 years apart; 2006 described as the most recent year available when the analyses were performed"}
+      ],
+      "matching_supplied_bundles": ["icpsr07927 (1976, V4)", "icpsr09871 (1991, V1)", "icpsr20022 (2006, V3)"],
+      "status": "covered by supplied bundles"
+    },
+    {
+      "id": "SRC-2",
+      "source": "MTF questionnaire Form 3 respondents, each survey year",
+      "content_required": "the leisure-time-and-work agree/disagree statements (work-centrality statements and a job-stability statement) and the yes/no question on whether the respondent would want to work given enough money",
+      "article_locators": [
+        {"pdf_page": 10, "journal_page": 1126, "where": "Method: Forms 3 and 4 are the forms used; Form 3 content and response formats"},
+        {"pdf_page": 10, "journal_page": 1126, "where": "Results, Preliminary Analyses: Form 3 items"},
+        {"pdf_page": 12, "journal_page": 1128, "where": "Table 1, 'Omitted items' block (item wordings), continued on pdf page 13"},
+        {"pdf_page": 13, "journal_page": 1129, "where": "Table 1 continued (item wordings)"}
+      ],
+      "provider_datasets": {"1976": "ICPSR 7927 DS0003 (Form 3 Questionnaire)", "1991": "ICPSR 9871 DS0004 (Form 3 Data)", "2006": "ICPSR 20022 DS0004 (Form 3 Data)"},
+      "status": "covered by supplied bundles"
+    },
+    {
+      "id": "SRC-3",
+      "source": "MTF questionnaire Form 4 respondents, each survey year",
+      "content_required": "the battery rating the importance of job characteristics ('Different people may look for different things in their work...')",
+      "article_locators": [
+        {"pdf_page": 10, "journal_page": 1126, "where": "Method: Form 4 job-characteristics battery and its response format"},
+        {"pdf_page": 10, "journal_page": 1126, "where": "Results, Preliminary Analyses: Form 4 items and factor structure"},
+        {"pdf_page": 11, "journal_page": 1127, "where": "Table 1 (item wordings), continued on pdf pages 12-13"}
+      ],
+      "provider_datasets": {"1976": "ICPSR 7927 DS0004 (Form 4 Questionnaire)", "1991": "ICPSR 9871 DS0005 (Form 4 Data)", "2006": "ICPSR 20022 DS0005 (Form 4 Data)"},
+      "status": "covered by supplied bundles"
+    },
+    {
+      "id": "DOC-1",
+      "source": "MTF design documentation cited by the article (Johnston et al., 2006; www.monitoringthefuture.org)",
+      "role": "documentary description of sampling, participation and replacement procedures; not an empirical input",
+      "article_locators": [{"pdf_page": 9, "journal_page": 1125, "where": "Method, first paragraph"}],
+      "status": "equivalent design documentation present in the supplied ICPSR codebooks and description-citation files; the cited ISR volume itself was not acquired (not an empirical input)"
+    }
+  ],
+  "other_empirical_sources_needed": "None identified. The article names no census, population, school-level or other external data. LISREL 8.7 (pdf page 10) is software, not a data source. Prior work cited for the factor structure (Johnson, 2000) is methodological literature, not a data input.",
+  "not_identified_in_article_text_by_source_role": [
+    "whether sampling weights were used",
+    "treatment of missing item responses",
+    "any respondent exclusions beyond membership in Form 3 or Form 4 samples"
+  ],
+  "not_identified_note": "Listed only so readers and the coordinator check them independently; the source role makes no assumption about them."
+}

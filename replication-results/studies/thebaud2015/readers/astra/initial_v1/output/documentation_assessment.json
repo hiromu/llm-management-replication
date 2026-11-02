@@ -1,0 +1,731 @@
+{
+  "choices": [
+    {
+      "choice": "Restrict to industrialized/high-income, high-human-development contexts and selected survey years. Common theory-defined scope, but exact roster exclusions lack a full accounting.",
+      "assessment": "common",
+      "justified": "partly",
+      "locator": [
+        {
+          "doc": "MAIN",
+          "page": 10,
+          "section": "Sample"
+        }
+      ]
+    },
+    {
+      "choice": "Restrict to younger working-age labor-force respondents. Author explains employment restriction, but age endpoints and labor-force coding remain ambiguous.",
+      "assessment": "common",
+      "justified": "partly",
+      "locator": [
+        {
+          "doc": "MAIN",
+          "page": 10,
+          "section": "Sample and footnote 2"
+        }
+      ]
+    },
+    {
+      "choice": "Pool repeated cross-sections and fit country/survey intercepts and female slopes. Explicitly justified by nested dependence and cross-level gender-gap hypotheses.",
+      "assessment": "common",
+      "justified": "yes",
+      "locator": [
+        {
+          "doc": "MAIN",
+          "page": 15,
+          "section": "Analytic Strategy"
+        },
+        {
+          "doc": "MAIN",
+          "page": 18,
+          "section": "Footnote 17"
+        }
+      ]
+    },
+    {
+      "choice": "Use individual female-by-institution interactions rather than only institutional main effects. Directly tests the stated gender-gap hypotheses.",
+      "assessment": "common",
+      "justified": "yes",
+      "locator": [
+        {
+          "doc": "MAIN",
+          "page": 8,
+          "section": "H1"
+        },
+        {
+          "doc": "MAIN",
+          "page": 9,
+          "section": "H2/H3"
+        },
+        {
+          "doc": "MAIN",
+          "page": 15,
+          "section": "Analytic Strategy"
+        }
+      ]
+    },
+    {
+      "choice": "Construct an annual FTE paid-leave measure from heterogeneous policy documents and lag policy changes. This bespoke source harmonization is uncommon and incompletely specified.",
+      "assessment": "rare",
+      "justified": "partly",
+      "locator": [
+        {
+          "doc": "MAIN",
+          "page": 12,
+          "section": "Paid leave and footnotes 6–8"
+        }
+      ]
+    },
+    {
+      "choice": "Quadratic leave and age effects. Theories of long-leave disadvantages and age profiles are supplied.",
+      "assessment": "common",
+      "justified": "yes",
+      "locator": [
+        {
+          "doc": "MAIN",
+          "page": 11,
+          "section": "Age"
+        },
+        {
+          "doc": "MAIN",
+          "page": 12,
+          "section": "Leave squared"
+        }
+      ]
+    },
+    {
+      "choice": "Childcare expenditure proxy with unreported missing-year imputation. Proxy rationale is supplied; imputation algorithm is not.",
+      "assessment": "common",
+      "justified": "partly",
+      "locator": [
+        {
+          "doc": "MAIN",
+          "page": 12,
+          "section": "Childcare and footnote 9"
+        }
+      ]
+    },
+    {
+      "choice": "Part-time prevalence as proxy for policy support. Rationale is given, but prevalence also reflects labor-market composition and its precise series definition is absent.",
+      "assessment": "common",
+      "justified": "partly",
+      "locator": [
+        {
+          "doc": "MAIN",
+          "page": 12,
+          "section": "Part-time employment"
+        }
+      ]
+    },
+    {
+      "choice": "Use separate work–family indicators rather than one index. The article supplies conceptual and reported empirical reasons.",
+      "assessment": "common",
+      "justified": "yes",
+      "locator": [
+        {
+          "doc": "MAIN",
+          "page": 6,
+          "section": "Institutional approaches"
+        },
+        {
+          "doc": "MAIN",
+          "page": 13,
+          "section": "Footnote 10"
+        }
+      ]
+    },
+    {
+      "choice": "Standardize macro predictors and center continuous regressors. Conventional interpretation/collinearity rationale, with reference distribution and polynomial order unstated.",
+      "assessment": "common",
+      "justified": "partly",
+      "locator": [
+        {
+          "doc": "MAIN",
+          "page": 11,
+          "section": "Footnote 4"
+        },
+        {
+          "doc": "MAIN",
+          "page": 14,
+          "section": "Standardization and footnote 13"
+        },
+        {
+          "doc": "MAIN",
+          "page": 15,
+          "section": "Footnote 15"
+        }
+      ]
+    },
+    {
+      "choice": "Use four distinct growth indicators, including a log-size linear model and binary aspirations/innovation/technology models. Multiple dimensions are substantively motivated.",
+      "assessment": "common",
+      "justified": "yes",
+      "locator": [
+        {
+          "doc": "MAIN",
+          "page": 14,
+          "section": "Growth orientation"
+        },
+        {
+          "doc": "MAIN",
+          "page": 15,
+          "section": "Analytic Strategy"
+        }
+      ]
+    },
+    {
+      "choice": "Exclude perception covariates from primary models because of questionnaire-dependent selection; report an adjusted sensitivity analysis. Explicit rationale.",
+      "assessment": "common",
+      "justified": "yes",
+      "locator": [
+        {
+          "doc": "MAIN",
+          "page": 11,
+          "section": "Footnote 5"
+        },
+        {
+          "doc": "S1",
+          "page": 3,
+          "section": "Table A3 Model 3"
+        }
+      ]
+    },
+    {
+      "choice": "Include context controls, fertility proxy and owner-specific controls. Roles explained, but original measures/year mapping and individual parenthood are unavailable.",
+      "assessment": "common",
+      "justified": "partly",
+      "locator": [
+        {
+          "doc": "MAIN",
+          "page": 13,
+          "section": "Controls"
+        },
+        {
+          "doc": "MAIN",
+          "page": 14,
+          "section": "Controls"
+        },
+        {
+          "doc": "MAIN",
+          "page": 15,
+          "section": "Owner controls"
+        }
+      ]
+    },
+    {
+      "choice": "Interpret fixed-part predictions with other variables set to means. Conventional conditional predictions; not population-averaged predictions over random effects.",
+      "assessment": "common",
+      "justified": "yes",
+      "locator": [
+        {
+          "doc": "MAIN",
+          "page": 21,
+          "section": "Footnote 20"
+        }
+      ]
+    },
+    {
+      "choice": "Report significance categories without software, exact p values, tails, covariance method or complete test settings. A common reporting convention, insufficiently justified for precise replication.",
+      "assessment": "common",
+      "justified": "no",
+      "locator": [
+        {
+          "doc": "MAIN",
+          "page": 19,
+          "section": "Table 1 note"
+        },
+        {
+          "doc": "MAIN",
+          "page": 22,
+          "section": "Table 2 note"
+        },
+        {
+          "doc": "S1",
+          "page": 3,
+          "section": "Table A3 note"
+        }
+      ]
+    },
+    {
+      "choice": "Treat total entrepreneurship and owner-only outcomes as connected evidence of selection. Substantive rationale supplied, but the associational design cannot identify the mediation pathway.",
+      "assessment": "common",
+      "justified": "partly",
+      "locator": [
+        {
+          "doc": "MAIN",
+          "page": 27,
+          "section": "Discussion"
+        },
+        {
+          "doc": "MAIN",
+          "page": 31,
+          "section": "Associational limitation"
+        }
+      ]
+    },
+    {
+      "choice": "Structural-count convention: 11 numbered regression specifications (8 MAIN, 3 S1), excluding the country-specific descriptive regression family and unprinted checks. Seven distinct outcomes include nascent entrepreneurship. Nine macro constructs = three institutional measures plus six macro controls; squared leave is an additional term, not a new construct. Four distinct female interaction terms per full template. Sixteen distinct nuisance-control entries across all tables count age and age squared separately and year as one factor, plus education, sole ownership, business age, not employed, three perceptions and six macro controls; intercept, female and institutional main effects are excluded.",
+      "assessment": "common",
+      "justified": "yes",
+      "locator": [
+        {
+          "doc": "MAIN",
+          "page": 19,
+          "section": "Table 1"
+        },
+        {
+          "doc": "MAIN",
+          "page": 22,
+          "section": "Table 2"
+        },
+        {
+          "doc": "S1",
+          "page": 3,
+          "section": "Table A3"
+        },
+        {
+          "doc": "MAIN",
+          "page": 15,
+          "section": "Descriptive country regressions"
+        }
+      ]
+    }
+  ],
+  "structural_counts": {
+    "n_models": 11,
+    "n_outcomes": 7,
+    "n_country_level_predictors": 9,
+    "n_interactions": 4,
+    "n_controls": 16
+  },
+  "unusualness_rating": {
+    "rating": "moderate",
+    "reason": "Most modeling choices are common, but bespoke historical policy construction, cross-level nonlinear interactions and selective survey routing make exact reconstruction unusually dependent on undocumented choices. This is a judgment of documented design, not a verdict on results."
+  },
+  "documentation_scores": {
+    "specificity": {
+      "score": 3,
+      "reason": "Clear hypotheses, variable concepts, nesting and tables, but missing source versions, key eligibility codes, weights and algorithms."
+    },
+    "precision": {
+      "score": 2,
+      "reason": "Employment, owner-duration, GDP concept, polynomial transformations and source-year mapping are ambiguous; confirmed transcription anomalies further complicate numerical comparison."
+    },
+    "exhaustiveness": {
+      "score": 2,
+      "reason": "No code, complete construction dictionary, policy series, missingness flow, software/integration settings or full tables for prose robustness checks."
+    }
+  },
+  "wider_space": [
+    {
+      "choice": "Alternative macro controls: start-up legal burden, union density, service-sector size; women’s labor participation, wage gap, parliamentary representation, field segregation or gender ideology.",
+      "assessment": "common",
+      "label": "non_equivalent",
+      "rationale": "Explicit prose-only robustness families, but they change the control set and some sources are unavailable.",
+      "basis": [
+        {
+          "doc": "MAIN",
+          "page": 13,
+          "section": "Footnote 11"
+        },
+        {
+          "doc": "MAIN",
+          "page": 14,
+          "section": "Footnote 12"
+        }
+      ],
+      "enabled": false
+    },
+    {
+      "choice": "Add log business size to aspirations/innovation/technology models.",
+      "assessment": "common",
+      "label": "non_equivalent",
+      "rationale": "Explicit reported sensitivity; size can be on the proposed pathway, so conditional estimand changes.",
+      "basis": [
+        {
+          "doc": "MAIN",
+          "page": 27,
+          "section": "Footnote 24"
+        }
+      ],
+      "enabled": false
+    },
+    {
+      "choice": "Women-only owner models.",
+      "assessment": "common",
+      "label": "non_equivalent",
+      "rationale": "Explicit robustness check targets within-women associations rather than gender interactions.",
+      "basis": [
+        {
+          "doc": "MAIN",
+          "page": 24,
+          "section": "Footnote 22"
+        },
+        {
+          "doc": "MAIN",
+          "page": 26,
+          "section": "Footnote 23"
+        }
+      ],
+      "enabled": false
+    },
+    {
+      "choice": "Exclude countries with regionally heterogeneous policy provision.",
+      "assessment": "common",
+      "label": "non_equivalent",
+      "rationale": "Author discusses dropping one or more specific countries; exact combinations and estimates unavailable.",
+      "basis": [
+        {
+          "doc": "MAIN",
+          "page": 31,
+          "section": "Footnote 25"
+        }
+      ],
+      "enabled": false
+    },
+    {
+      "choice": "Childcare enrollment instead of spending, on covered countries.",
+      "assessment": "common",
+      "label": "non_equivalent",
+      "rationale": "Discussed as alternative indicator with different coverage and construct. Source PF3_2 supplies age-group enrollment.",
+      "basis": [
+        {
+          "doc": "MAIN",
+          "page": 12,
+          "section": "Footnote 9"
+        },
+        "sources/oecd_sources.md: PF3_2"
+      ],
+      "enabled": false
+    },
+    {
+      "choice": "Country fixed effects and country-cluster sensitivity inference.",
+      "assessment": "common",
+      "label": "non_equivalent",
+      "rationale": "Predominantly cross-sectional policy variation and nested sampling motivate examining inference/identification sensitivity, but these are not article-estimated specifications.",
+      "basis": [
+        {
+          "doc": "MAIN",
+          "page": 15,
+          "section": "Analytic Strategy"
+        },
+        {
+          "doc": "MAIN",
+          "page": 31,
+          "section": "Cross-sectional limitation"
+        }
+      ],
+      "enabled": false
+    },
+    {
+      "choice": "Current-source ECEC spending, raw paid-duration leave, and WDI-based economic development proxies.",
+      "assessment": "common",
+      "label": "non_equivalent",
+      "rationale": "Sourced feasibility fallbacks must disclose changed concepts/vintages; not validated by numerical match.",
+      "basis": [
+        {
+          "doc": "MAIN",
+          "page": 12,
+          "section": "Policy measures"
+        },
+        {
+          "doc": "MAIN",
+          "page": 13,
+          "section": "GDP"
+        },
+        "sources/oecd_sources.md",
+        "sources/leave_policy_documents.md",
+        "sources/undp_worldbank_gem_sources.md"
+      ],
+      "enabled": false
+    }
+  ],
+  "unavailable_source_fallbacks": [
+    {
+      "item": "GEM vintage and France 2003 work/education",
+      "unavailable_or_unclear": "Article release unspecified; listed harmonized file has no substantive France 2003 GEMWORK/GEMEDUC.",
+      "proposed_fallback": "Use supplied ICPSR V6 with documented code maps; request original France 2003 covariate release from coordinator. If unavailable, drop this survey only as a changed-sample sensitivity. The listed original 2001/2002 files cannot repair 2003.",
+      "equivalence": "uncertain",
+      "basis": [
+        {
+          "doc": "MAIN",
+          "page": 10,
+          "section": "Sample"
+        },
+        {
+          "doc": "MAIN",
+          "page": 11,
+          "section": "Controls"
+        },
+        {
+          "doc": "S1",
+          "page": 1,
+          "section": "France roster"
+        },
+        "sources/icpsr20320_gem_aps.md: coverage"
+      ],
+      "status": "Off until coordinator records the source/concept decision; never choose by numerical agreement."
+    },
+    {
+      "item": "GEM status in 2001/2002",
+      "unavailable_or_unclear": "NBSTATUS absent in harmonized and original listed files; not even the listed original national file supplies it.",
+      "proposed_fallback": "Prefer a status-adjusted analysis confined to observed NBSTATUS years, labeled changed population. A secondary back-carry of the first observed country-specific mean is a strong temporal-stability sensitivity only. Request the original author’s aggregation/imputation source; do not use Table A1 country means or replace missing with zero.",
+      "equivalence": "non_equivalent",
+      "basis": [
+        {
+          "doc": "MAIN",
+          "page": 13,
+          "section": "Status control"
+        },
+        {
+          "doc": "MAIN",
+          "page": 14,
+          "section": "Status control"
+        },
+        "sources/icpsr20320_gem_aps.md: NBSTATUS",
+        "sources/undp_worldbank_gem_sources.md: gem_aps_original"
+      ],
+      "status": "Off until coordinator records the source/concept decision; never choose by numerical agreement."
+    },
+    {
+      "item": "Annual FTE mother-leave series",
+      "unavailable_or_unclear": "No acquired complete annual FTE series; CEPR is a cross-section, ILO editions partial, PF2.5 durations lack payment rates.",
+      "proposed_fallback": "Reconstruct only historical spells supported by CEPR leave chapters, archived ILO legal effective dates and OECD PF2.5 entitlement changes. Multiply documented duration by documented contemporary replacement rate and apply reported lag. For unsupported spells retain missing and request evidence. As a separately labeled fallback use PF2.5 Total_paid durations, recognizing they are not FTE; never apply current PF2.1 rates backward.",
+      "equivalence": "uncertain",
+      "basis": [
+        {
+          "doc": "MAIN",
+          "page": 12,
+          "section": "Leave and footnotes 6–8"
+        },
+        "sources/leave_policy_documents.md",
+        "sources/oecd_sources.md: PF2.1/PF2.5"
+      ],
+      "status": "Off until coordinator records the source/concept decision; never choose by numerical agreement."
+    },
+    {
+      "item": "Country leave gaps",
+      "unavailable_or_unclear": "CEPR omits Czech Republic, Iceland and Poland; ILO substantive pages/editions are incomplete.",
+      "proposed_fallback": "Czech Republic and Iceland can draw on available ILO pages only when historical legal spells are explicit. For Canada/France consult earlier ILO edition plus CEPR. Poland lacks a complete payment-rate source in the described collection; PF2.5 paid-duration series is a non-FTE sensitivity, not a source of invented replacement rates. France PF2.5 birth-order-dependent text needs an explicitly documented family case.",
+      "equivalence": "uncertain",
+      "basis": [
+        {
+          "doc": "MAIN",
+          "page": 12,
+          "section": "Custom leave construction"
+        },
+        "sources/leave_policy_documents.md: country coverage",
+        "sources/oecd_sources.md: PF2.5"
+      ],
+      "status": "Off until coordinator records the source/concept decision; never choose by numerical agreement."
+    },
+    {
+      "item": "Historical childcare-only spending and imputation",
+      "unavailable_or_unclear": "Current PF3.1 series is broader ECEC; cited vintage and original imputation algorithm absent.",
+      "proposed_fallback": "Request archived childcare-only component and coding notes. If unavailable, use current PF3.1 Time-series ECEC percent GDP or oecd_socx_family TP521, EXPEND_SOURCE=ES10, UNIT_MEASURE=PT_B1GQ as explicitly broader proxies. Do not call these exact reconstructions or borrow published country summaries.",
+      "equivalence": "non_equivalent",
+      "basis": [
+        {
+          "doc": "MAIN",
+          "page": 12,
+          "section": "Childcare/footnote 9"
+        },
+        "sources/oecd_sources.md: oecd_family_database and oecd_socx_family"
+      ],
+      "status": "Off until coordinator records the source/concept decision; never choose by numerical agreement."
+    },
+    {
+      "item": "Part-time incidence definition/coverage",
+      "unavailable_or_unclear": "Hours definition, denominator age and vintage ambiguous; common employee series lacks Japan, total-employed series has other gaps.",
+      "proposed_fallback": "Choose a documented employee series from oecd_ftpt; national definitions provide an available source family but exact employee/age coverage must be verified. LMF_1_6 PT_Women is an alternative source after denominator checks. Keep common-definition restricted-sample analysis separate; never splice national/common values without country-specific notes.",
+      "equivalence": "uncertain",
+      "basis": [
+        {
+          "doc": "MAIN",
+          "page": 12,
+          "section": "Part-time measure"
+        },
+        {
+          "doc": "S1",
+          "page": 1,
+          "section": "Table A1 note ‡"
+        },
+        "sources/oecd_sources.md: oecd_ftpt, LMF_1_6"
+      ],
+      "status": "Off until coordinator records the source/concept decision; never choose by numerical agreement."
+    },
+    {
+      "item": "GDP index versus GDP per capita; HDR gap",
+      "unavailable_or_unclear": "MAIN/S1 concept mismatch; HDR 2010 no longer prints GDP index; indicator reference years differ from publication years.",
+      "proposed_fallback": "Use relevant historical HDR GDP-index cells mapped to reference years where available. A fully sourced alternative is WDI NY.GDP.PCAP.PP.CD; if constructing the old index apply the HDR technical-notes log goalpost formula and bounds, explicitly marking current-vintage data. Do not use the GNI-based income index as equivalent.",
+      "equivalence": "uncertain",
+      "basis": [
+        {
+          "doc": "MAIN",
+          "page": 13,
+          "section": "GDP"
+        },
+        {
+          "doc": "S1",
+          "page": 1,
+          "section": "GDP index"
+        },
+        "sources/undp_worldbank_gem_sources.md: undp_hdr and worldbank_wdi_gdppc"
+      ],
+      "status": "Off until coordinator records the source/concept decision; never choose by numerical agreement."
+    },
+    {
+      "item": "Employment protection overall historical index",
+      "unavailable_or_unclear": "Available OECD extract has only component series and incomplete Iceland years, not the exact cited composite.",
+      "proposed_fallback": "Request historical overall-index formula/vintage from coordinator. Use VERSION1 EPL_R, EPL_OV and EPL_T only with externally documented original composite weights; no weights can be inferred here. A sensitivity using separate regular/temporary components is sourced but changes the control vector and remains outside the equivalent set; missing Iceland years stay missing.",
+      "equivalence": "non_equivalent",
+      "basis": [
+        {
+          "doc": "MAIN",
+          "page": 13,
+          "section": "EPL"
+        },
+        "sources/oecd_sources.md: oecd_epl"
+      ],
+      "status": "Off until coordinator records the source/concept decision; never choose by numerical agreement."
+    },
+    {
+      "item": "Unemployment missing country-years",
+      "unavailable_or_unclear": "Annual harmonised source lacks Switzerland in study years and early Iceland observations; adjustment and age universe unspecified.",
+      "proposed_fallback": "Investigate oecd_lfs_indicators MEASURE=UNE_RATE, SEX=_T, AGE=Y15T64 as a documented alternative source, retaining source-specific flags and noting changed age scope. Its exact unemployment coverage is not certified by the dictionary, so request missing values if needed rather than assuming availability.",
+      "equivalence": "uncertain",
+      "basis": [
+        {
+          "doc": "MAIN",
+          "page": 13,
+          "section": "Unemployment"
+        },
+        "sources/oecd_sources.md: oecd_unemployment and oecd_lfs_indicators"
+      ],
+      "status": "Off until coordinator records the source/concept decision; never choose by numerical agreement."
+    },
+    {
+      "item": "Women managers/officials share reference-year gaps",
+      "unavailable_or_unclear": "Historical HDR supplies this indicator through 2009 reports only; current OECD managers series covers later years.",
+      "proposed_fallback": "Use historical HDR female legislators/senior officials/managers rows for their stated reference years. Nearest-year carry of observed historical values is an explicitly assumed fallback with retained donor years, not confirmed author practice. If gaps remain, request archival matching indicators; do not extrapolate backward from the current OECD managers series.",
+      "equivalence": "uncertain",
+      "basis": [
+        {
+          "doc": "MAIN",
+          "page": 14,
+          "section": "Women’s status control"
+        },
+        "sources/undp_worldbank_gem_sources.md: undp_hdr",
+        "sources/oecd_sources.md: LMF_1_6"
+      ],
+      "status": "Off until coordinator records the source/concept decision; never choose by numerical agreement."
+    },
+    {
+      "item": "Fertility current vintage",
+      "unavailable_or_unclear": "Article’s OECD Family Database vintage differs from available release.",
+      "proposed_fallback": "Use SF_2_1_Fertility_rates.xlsx, Total Fertility Rates, for the survey reference year, flagging a vintage substitution. Preserve a source/version log; no known conceptual change is documented here, but revision equivalence cannot be guaranteed.",
+      "equivalence": "uncertain",
+      "basis": [
+        {
+          "doc": "MAIN",
+          "page": 14,
+          "section": "Fertility"
+        },
+        "sources/oecd_sources.md: SF_2_1"
+      ],
+      "status": "Off until coordinator records the source/concept decision; never choose by numerical agreement."
+    },
+    {
+      "item": "Employee full-time measure",
+      "unavailable_or_unclear": "Available owner job count does not distinguish full-time/part-time; MAIN methods and limitations differ.",
+      "proposed_fallback": "Use OMNOWJOB headcount in log(count+1), consistent with the later limitation, labeled headcount rather than FTE employment. No listed source supports exact full-time counts.",
+      "equivalence": "uncertain",
+      "basis": [
+        {
+          "doc": "MAIN",
+          "page": 14,
+          "section": "Business size"
+        },
+        {
+          "doc": "MAIN",
+          "page": 31,
+          "section": "Employee-hours limitation"
+        },
+        {
+          "doc": "MAIN",
+          "page": 32,
+          "section": "Employee-hours continuation"
+        },
+        "sources/icpsr20320_gem_aps.md: OMNOWJOB"
+      ],
+      "status": "Off until coordinator records the source/concept decision; never choose by numerical agreement."
+    },
+    {
+      "item": "Business first-payment year coding",
+      "unavailable_or_unclear": "OMWAGEYR mixes calendar and category schemes and includes open-ended/no-profit categories.",
+      "proposed_fallback": "Use the documented scheme-specific map, preserve interval-censored/unknown dates, and restrict to resolved positive ages for the literal log. Obtain country-year coding metadata for ambiguous cases. A log(1+age) sensitivity handles same-year cases but changes the predictor; no invented age for before-1990 category.",
+      "equivalence": "uncertain",
+      "basis": [
+        {
+          "doc": "MAIN",
+          "page": 15,
+          "section": "Business age"
+        },
+        "sources/icpsr20320_gem_aps.md: OMWAGEYR"
+      ],
+      "status": "Off until coordinator records the source/concept decision; never choose by numerical agreement."
+    },
+    {
+      "item": "Entrepreneurial perceptions routing",
+      "unavailable_or_unclear": "Later survey screens induce nonrandom analytical inclusion by entrepreneurial status.",
+      "proposed_fallback": "Keep perception controls confined to their reported robustness branch and document valid-response sampling; an additional explicitly weighted routing analysis may be considered using design information, but article-native correction is not specified.",
+      "equivalence": "uncertain",
+      "basis": [
+        {
+          "doc": "MAIN",
+          "page": 11,
+          "section": "Footnote 5"
+        },
+        {
+          "doc": "S1",
+          "page": 3,
+          "section": "Table A3 Model 3"
+        },
+        "sources/icpsr20320_gem_aps.md: harmonization and weights"
+      ],
+      "status": "Off until coordinator records the source/concept decision; never choose by numerical agreement."
+    },
+    {
+      "item": "Unavailable optional gender-ideology and academic-field segregation measures",
+      "unavailable_or_unclear": "ISSP 2002 and Charles–Bradley field segregation not acquired; service-sector size and gender wage gap also absent.",
+      "proposed_fallback": "Leave these particular checks unavailable. For separately labeled alternative-control checks use sourced female labor-force participation (oecd_lfs_indicators LF_RATE, SEX=F, AGE=Y15T64) or female parliamentary representation in historical undp_hdr. They measure different dimensions and cannot stand in as recovered ideology/segregation data.",
+      "equivalence": "non_equivalent",
+      "basis": [
+        {
+          "doc": "MAIN",
+          "page": 14,
+          "section": "Footnote 12"
+        },
+        "sources/README.md",
+        "sources/undp_worldbank_gem_sources.md: Not acquired",
+        "sources/oecd_sources.md: oecd_lfs_indicators"
+      ],
+      "status": "Off until coordinator records the source/concept decision; never choose by numerical agreement."
+    },
+    {
+      "item": "Optional start-up regulation and union-density checks",
+      "unavailable_or_unclear": "Original constructed regulation index unspecified, historical DB begins after early sample years, union series incomplete.",
+      "proposed_fallback": "Use worldbank_doing_business procedures/time/cost columns only with documented reference-year mapping and explicit new index construction; use oecd_union_density TUD for observed years. Both are wider-space checks with changed coverage, not replacements for listed primary controls.",
+      "equivalence": "non_equivalent",
+      "basis": [
+        {
+          "doc": "MAIN",
+          "page": 13,
+          "section": "Footnote 11"
+        },
+        "sources/undp_worldbank_gem_sources.md: worldbank_doing_business",
+        "sources/oecd_sources.md: oecd_union_density"
+      ],
+      "status": "Off until coordinator records the source/concept decision; never choose by numerical agreement."
+    }
+  ]
+}

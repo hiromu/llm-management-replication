@@ -1,0 +1,73 @@
+[
+  {
+    "count_id": "N_population",
+    "value": 159,
+    "unit": "independent banks",
+    "scope": "Twin Cities; exact reference year / distinct-ever interpretation not stated",
+    "source": "DOC01 p9 Sample and data"
+  },
+  {
+    "count_id": "N_analysis",
+    "value": 960,
+    "unit": "bank-years",
+    "scope": "1985–1992 after accounting for foundings, mergers, failures, lagged outcome and deletion",
+    "source": "DOC01 p9 Sample and data"
+  },
+  {
+    "count_id": "N_T1",
+    "value": 960,
+    "unit": "observations",
+    "scope": "Table 1",
+    "source": "DOC01 p12 Table 1 note"
+  },
+  {
+    "count_id": "N_M1",
+    "value": 960,
+    "unit": "observations",
+    "scope": "M1",
+    "source": "DOC01 p12 Table 2 note"
+  },
+  {
+    "count_id": "N_M2",
+    "value": 960,
+    "unit": "observations",
+    "scope": "M2",
+    "source": "DOC01 p12 Table 2 note"
+  },
+  {
+    "count_id": "N_M3",
+    "value": 960,
+    "unit": "observations",
+    "scope": "M3",
+    "source": "DOC01 p12 Table 2 note"
+  },
+  {
+    "count_id": "N_deleted",
+    "value": 1,
+    "unit": "bank-year",
+    "scope": "Norwest Bank Minneapolis N.A., 1987",
+    "source": "DOC01 p9 Sample and data; DOC01 p11 Analysis outlier"
+  },
+  {
+    "count_id": "N_years",
+    "value": null,
+    "printed_period": "1985–92",
+    "unit": "years",
+    "scope": "No explicit numerical count of years printed; endpoints retained without inserting a derived count",
+    "source": "DOC01 p9 Sample and data"
+  },
+  {
+    "count_id": "N_entry_exit_breakdown",
+    "value": null,
+    "unit": "banks or observations",
+    "scope": "foundings, mergers, failures, lag losses separately unreported",
+    "source": "DOC01 p9 Sample and data"
+  },
+  {
+    "count_id": "N_M3_SQ",
+    "value": null,
+    "unit": "observations",
+    "scope": "No explicit N in robustness paragraph",
+    "source": "DOC01 p13 Results collinearity diagnostic"
+  }
+]

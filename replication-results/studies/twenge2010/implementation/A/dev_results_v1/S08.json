@@ -1,0 +1,804 @@
+{
+  "spec_id": "S08",
+  "manifest": "PAPER_X version 1",
+  "change_from_S00": "Form 3 one-factor model on V3222-V3226 (V3222, V3223 reversed), V3227 excluded",
+  "status": "ok",
+  "reason": null,
+  "timestamp_utc": "2026-10-28T03:27:56Z",
+  "software": {
+    "R": "R version 4.6.1 (2026-06-24)",
+    "platform": "aarch64-apple-darwin25.6.0",
+    "packages": {
+      "lavaan": "0.7.3",
+      "data.table": "1.18.6.1",
+      "jsonlite": "2.0.0",
+      "numDeriv": "2016.8.1.1",
+      "sandwich": "3.1.3",
+      "readr": "2.2.0"
+    },
+    "sessionInfo": "R version 4.6.1 (2026-06-24)\nPlatform: aarch64-apple-darwin25.6.0\nRunning under: macOS Tahoe 26.6.2\n\nMatrix products: default\nBLAS:   /opt/homebrew/Cellar/openblas/0.3.34/lib/libopenblasp-r0.3.34.dylib \nLAPACK: /opt/homebrew/Cellar/r/4.6.1_1/lib/R/lib/libRlapack.dylib;  LAPACK version 3.12.1\n\nlocale:\n[1] C\n\ntime zone: Asia/Tokyo\ntzcode source: internal\n\nattached base packages:\n[1] stats     graphics  grDevices utils     datasets  methods   base     \n\nother attached packages:\n[1] lavaan_0.7-3        jsonlite_2.0.0      data.table_1.18.6.1\n\nloaded via a namespace (and not attached):\n [1] MASS_7.3-66       compiler_4.6.1    parallel_4.6.1    tools_4.6.1      \n [5] R.methodsS3_1.8.2 mnormt_2.1.2      pbivnorm_0.6.0    R.utils_2.13.0   \n [9] stats4_4.6.1      R.oo_1.27.1       quadprog_1.5-8   "
+  },
+  "rows_read": {
+    "y1976_f3": 3314,
+    "y1991_f3": 2585,
+    "y2006_f3": 2456,
+    "y1976_f4": 3341,
+    "y1991_f4": 2556,
+    "y2006_f4": 2461
+  },
+  "estimation_options": {
+    "likelihood": "wishart",
+    "estimator": "ML",
+    "missing": "listwise",
+    "information": "expected",
+    "divisor": "n-1",
+    "input_type": "moments",
+    "cg_rule": "n-1"
+  },
+  "conventions": {
+    "V4_hash": "SHA-256 (hex) of the ascending V4 values joined by '\\n' (no trailing newline), UTF-8",
+    "form3_reversals": {
+      "V3222_r": "6 - V3222",
+      "V3223_r": "6 - V3223",
+      "V3227_r": "3 - V3227"
+    },
+    "optimizer": "lavaan nlminb, rel.tol 1e-10, iter.max 10000",
+    "chi_square": "sum_g c_g F_g evaluated from lavaan implied moments and the sample moments (manifest formula); for FIML/MLR specs chi-square and baseline from lavaan",
+    "baseline": "free means and variances, zero covariances per group: F_g = sum log s_ii - log|S_g| (closed form) unless FIML/MLR",
+    "percentages": "0-100 scale"
+  },
+  "deviations": [],
+  "coefficient_alpha": {
+    "alpha": {
+      "S08_one_factor": {
+        "items": ["V3224", "V3225", "V3226", "V3222_r", "V3223_r"],
+        "1976": {
+          "k": 5,
+          "n": 3237,
+          "alpha": 0.499823835890865
+        },
+        "1991": {
+          "k": 5,
+          "n": 2539,
+          "alpha": 0.53649505873939
+        },
+        "2006": {
+          "k": 5,
+          "n": 2403,
+          "alpha": 0.487352856173526
+        }
+      }
+    },
+    "samples": {
+      "S08_one_factor": {
+        "1976": {
+          "n": 3237,
+          "sha256_V4": "5c25cc8ed7a1f19f81b2c658fe42367ef7978f474be729eb958e777880f534c0"
+        },
+        "1991": {
+          "n": 2539,
+          "sha256_V4": "5b785ada8bfe0fe7246b8c5e5117ec631837351d62f20e80baebf5947771d4e1"
+        },
+        "2006": {
+          "n": 2403,
+          "sha256_V4": "0daf268f8f68a219f110468009530de9e5e93d3a2b01a2c40e724d2ddd9947ae"
+        }
+      }
+    }
+  },
+  "single_group": {
+    "form3_one_factor": {
+      "model": "S08 Form 3 one factor",
+      "items": ["V3224", "V3225", "V3226", "V3222_r", "V3223_r"],
+      "factors": {
+        "C1": ["V3224", "V3225", "V3226", "V3222_r", "V3223_r"]
+      },
+      "markers": {
+        "C1": "V3224"
+      },
+      "syntax": "C1 =~ 1*V3224 + L_V3225_g1*V3225 + L_V3226_g1*V3226 + L_V3222_r_g1*V3222_r + L_V3223_r_g1*V3223_r\nC1 ~ 0*1\nC1 ~~ P_C1_g1*C1\nV3224 ~ N_V3224_g1*1\nV3224 ~~ E_V3224_g1*V3224\nV3225 ~ N_V3225_g1*1\nV3225 ~~ E_V3225_g1*V3225\nV3226 ~ N_V3226_g1*1\nV3226 ~~ E_V3226_g1*V3226\nV3222_r ~ N_V3222_r_g1*1\nV3222_r ~~ E_V3222_r_g1*V3222_r\nV3223_r ~ N_V3223_r_g1*1\nV3223_r ~~ E_V3223_r_g1*V3223_r",
+      "by_year": {
+        "1976": {
+          "sample": {
+            "n": 3237,
+            "sha256_V4": "5c25cc8ed7a1f19f81b2c658fe42367ef7978f474be729eb958e777880f534c0"
+          },
+          "convergence": {
+            "status": "converged",
+            "converged": true,
+            "iterations": 36,
+            "objective": 0.0334332981420671,
+            "optimizer": "nlminb",
+            "control": {
+              "rel.tol": 1e-10,
+              "iter.max": 10000,
+              "eval.max": 20000
+            },
+            "error": null,
+            "warnings": [],
+            "seconds": 0.0229999999999997,
+            "npar": 15
+          },
+          "fit": {
+            "chisq": 216.380305575458,
+            "df": 5,
+            "pvalue": 8.85658464095615e-45,
+            "npar": 15,
+            "sample_moments_per_group": 20,
+            "n_groups": 1,
+            "sum_cg": 3236,
+            "N": 3237,
+            "rmsea": 0.114299150351356,
+            "cfi": 0.802465417719866,
+            "tli": 0.604930835439731,
+            "srmr": 0.0560300948129096,
+            "baseline_chisq": 1080.09265484303,
+            "baseline_df": 10,
+            "F_g": {
+              "1976": 0.0668665962841342
+            },
+            "srmr_g": {
+              "1976": 0.0560300948129096
+            },
+            "chisq_source": "manifest",
+            "lavaan_fitmeasures": {
+              "chisq": 216.380305575458,
+              "df": 5,
+              "pvalue": 0,
+              "npar": 15,
+              "baseline.chisq": 1080.09265484303,
+              "baseline.df": 10,
+              "cfi": 0.802465417719866,
+              "tli": 0.604930835439731,
+              "rmsea": 0.114299150351356,
+              "srmr": 0.0485234854844305,
+              "srmr_bentler": 0.0485234854844305,
+              "srmr_bentler_nomean": 0.0560300948129096,
+              "srmr_mplus": 0.0485234875102234,
+              "srmr_mplus_nomean": 0.0560300971507665
+            }
+          },
+          "parameters": [
+            {
+              "lhs": "C1",
+              "op": "=~",
+              "rhs": "V3224",
+              "label": "",
+              "est": 1,
+              "se": 0,
+              "z": null,
+              "pvalue": null
+            },
+            {
+              "lhs": "C1",
+              "op": "=~",
+              "rhs": "V3225",
+              "label": "L_V3225_g1",
+              "est": 0.683304168000285,
+              "se": 0.049986998043293,
+              "z": 13.6696380008354,
+              "pvalue": 0
+            },
+            {
+              "lhs": "C1",
+              "op": "=~",
+              "rhs": "V3226",
+              "label": "L_V3226_g1",
+              "est": 0.682132452011768,
+              "se": 0.0632025530025818,
+              "z": 10.7927990184812,
+              "pvalue": 0
+            },
+            {
+              "lhs": "C1",
+              "op": "=~",
+              "rhs": "V3222_r",
+              "label": "L_V3222_r_g1",
+              "est": 0.933078289705232,
+              "se": 0.0734662831936742,
+              "z": 12.7007689669752,
+              "pvalue": 0
+            },
+            {
+              "lhs": "C1",
+              "op": "=~",
+              "rhs": "V3223_r",
+              "label": "L_V3223_r_g1",
+              "est": 0.846450103666115,
+              "se": 0.0678434478859003,
+              "z": 12.4765195467318,
+              "pvalue": 0
+            },
+            {
+              "lhs": "C1",
+              "op": "~1",
+              "rhs": "",
+              "label": "",
+              "est": 0,
+              "se": 0,
+              "z": null,
+              "pvalue": null
+            },
+            {
+              "lhs": "C1",
+              "op": "~~",
+              "rhs": "C1",
+              "label": "P_C1_g1",
+              "est": 0.398497424390508,
+              "se": 0.0373169615820096,
+              "z": 10.6787210827642,
+              "pvalue": 0
+            },
+            {
+              "lhs": "V3224",
+              "op": "~1",
+              "rhs": "",
+              "label": "N_V3224_g1",
+              "est": 3.94006796416435,
+              "se": 0.0203542379102212,
+              "z": 193.574821201524,
+              "pvalue": 0
+            },
+            {
+              "lhs": "V3224",
+              "op": "~~",
+              "rhs": "V3224",
+              "label": "E_V3224_g1",
+              "est": 0.942161198540944,
+              "se": 0.0371340812207742,
+              "z": 25.3718731571542,
+              "pvalue": 0
+            },
+            {
+              "lhs": "V3225",
+              "op": "~1",
+              "rhs": "",
+              "label": "N_V3225_g1",
+              "est": 4.39697250540624,
+              "se": 0.0153485155731579,
+              "z": 286.475423922809,
+              "pvalue": 0
+            },
+            {
+              "lhs": "V3225",
+              "op": "~~",
+              "rhs": "V3225",
+              "label": "E_V3225_g1",
+              "est": 0.576266671489357,
+              "se": 0.020023943782302,
+              "z": 28.7788798128113,
+              "pvalue": 0
+            },
+            {
+              "lhs": "V3226",
+              "op": "~1",
+              "rhs": "",
+              "label": "N_V3226_g1",
+              "est": 3.43589743589744,
+              "se": 0.0249945319325481,
+              "z": 137.465964362517,
+              "pvalue": 0
+            },
+            {
+              "lhs": "V3226",
+              "op": "~~",
+              "rhs": "V3226",
+              "label": "E_V3226_g1",
+              "est": 1.83619264607316,
+              "se": 0.0499108240908193,
+              "z": 36.7894676059038,
+              "pvalue": 0
+            },
+            {
+              "lhs": "V3222_r",
+              "op": "~1",
+              "rhs": "",
+              "label": "N_V3222_r_g1",
+              "est": 2.63144887241273,
+              "se": 0.0261692330066608,
+              "z": 100.555062952856,
+              "pvalue": 0
+            },
+            {
+              "lhs": "V3222_r",
+              "op": "~~",
+              "rhs": "V3222_r",
+              "label": "E_V3222_r_g1",
+              "est": 1.86916001209414,
+              "se": 0.0552899881923099,
+              "z": 33.8064823886889,
+              "pvalue": 0
+            },
+            {
+              "lhs": "V3223_r",
+              "op": "~1",
+              "rhs": "",
+              "label": "N_V3223_r_g1",
+              "est": 3.78591288229842,
+              "se": 0.0245720182704211,
+              "z": 154.074152177225,
+              "pvalue": 0
+            },
+            {
+              "lhs": "V3223_r",
+              "op": "~~",
+              "rhs": "V3223_r",
+              "label": "E_V3223_r_g1",
+              "est": 1.66833073980527,
+              "se": 0.0486053325044984,
+              "z": 34.3240268884255,
+              "pvalue": 0
+            }
+          ]
+        },
+        "1991": {
+          "sample": {
+            "n": 2539,
+            "sha256_V4": "5b785ada8bfe0fe7246b8c5e5117ec631837351d62f20e80baebf5947771d4e1"
+          },
+          "convergence": {
+            "status": "converged",
+            "converged": true,
+            "iterations": 35,
+            "objective": 0.0560837613335261,
+            "optimizer": "nlminb",
+            "control": {
+              "rel.tol": 1e-10,
+              "iter.max": 10000,
+              "eval.max": 20000
+            },
+            "error": null,
+            "warnings": [],
+            "seconds": 0.0199999999999996,
+            "npar": 15
+          },
+          "fit": {
+            "chisq": 284.681172528972,
+            "df": 5,
+            "pvalue": 1.96423889934444e-59,
+            "npar": 15,
+            "sample_moments_per_group": 20,
+            "n_groups": 1,
+            "sum_cg": 2538,
+            "N": 2539,
+            "rmsea": 0.148457042611999,
+            "cfi": 0.75049564166007,
+            "tli": 0.500991283320141,
+            "srmr": 0.0698921474088451,
+            "baseline_chisq": 1130.94704232753,
+            "baseline_df": 10,
+            "F_g": {
+              "1991": 0.11216752266705
+            },
+            "srmr_g": {
+              "1991": 0.0698921474088451
+            },
+            "chisq_source": "manifest",
+            "lavaan_fitmeasures": {
+              "chisq": 284.681172528978,
+              "df": 5,
+              "pvalue": 0,
+              "npar": 15,
+              "baseline.chisq": 1130.94704232753,
+              "baseline.df": 10,
+              "cfi": 0.750495641660064,
+              "tli": 0.500991283320128,
+              "rmsea": 0.148457042612001,
+              "srmr": 0.0605283751811065,
+              "srmr_bentler": 0.0605283751811065,
+              "srmr_bentler_nomean": 0.0698921474088451,
+              "srmr_mplus": 0.0605283845333285,
+              "srmr_mplus_nomean": 0.069892158197054
+            }
+          },
+          "parameters": [
+            {
+              "lhs": "C1",
+              "op": "=~",
+              "rhs": "V3224",
+              "label": "",
+              "est": 1,
+              "se": 0,
+              "z": null,
+              "pvalue": null
+            },
+            {
+              "lhs": "C1",
+              "op": "=~",
+              "rhs": "V3225",
+              "label": "L_V3225_g1",
+              "est": 0.748530485790562,
+              "se": 0.0539339186123563,
+              "z": 13.8786593863231,
+              "pvalue": 0
+            },
+            {
+              "lhs": "C1",
+              "op": "=~",
+              "rhs": "V3226",
+              "label": "L_V3226_g1",
+              "est": 0.645409235977242,
+              "se": 0.0644843041001106,
+              "z": 10.0087803533594,
+              "pvalue": 0
+            },
+            {
+              "lhs": "C1",
+              "op": "=~",
+              "rhs": "V3222_r",
+              "label": "L_V3222_r_g1",
+              "est": 0.936083798692877,
+              "se": 0.0734345716169508,
+              "z": 12.7471813082219,
+              "pvalue": 0
+            },
+            {
+              "lhs": "C1",
+              "op": "=~",
+              "rhs": "V3223_r",
+              "label": "L_V3223_r_g1",
+              "est": 0.939099048461521,
+              "se": 0.073730052966367,
+              "z": 12.7369913716175,
+              "pvalue": 0
+            },
+            {
+              "lhs": "C1",
+              "op": "~1",
+              "rhs": "",
+              "label": "",
+              "est": 0,
+              "se": 0,
+              "z": null,
+              "pvalue": null
+            },
+            {
+              "lhs": "C1",
+              "op": "~~",
+              "rhs": "C1",
+              "label": "P_C1_g1",
+              "est": 0.409090182061265,
+              "se": 0.0396341919374188,
+              "z": 10.3216481039201,
+              "pvalue": 0
+            },
+            {
+              "lhs": "V3224",
+              "op": "~1",
+              "rhs": "",
+              "label": "N_V3224_g1",
+              "est": 3.80070894052777,
+              "se": 0.0229784944673043,
+              "z": 165.402870320148,
+              "pvalue": 0
+            },
+            {
+              "lhs": "V3224",
+              "op": "~~",
+              "rhs": "V3224",
+              "label": "E_V3224_g1",
+              "est": 0.931002263801957,
+              "se": 0.0390097646375864,
+              "z": 23.8658774912199,
+              "pvalue": 0
+            },
+            {
+              "lhs": "V3225",
+              "op": "~1",
+              "rhs": "",
+              "label": "N_V3225_g1",
+              "est": 4.36392280425364,
+              "se": 0.0172904631088715,
+              "z": 252.389006400562,
+              "pvalue": 0
+            },
+            {
+              "lhs": "V3225",
+              "op": "~~",
+              "rhs": "V3225",
+              "label": "E_V3225_g1",
+              "est": 0.529548405574805,
+              "se": 0.0220319220717991,
+              "z": 24.0355064732472,
+              "pvalue": 0
+            },
+            {
+              "lhs": "V3226",
+              "op": "~1",
+              "rhs": "",
+              "label": "N_V3226_g1",
+              "est": 3.61677825915715,
+              "se": 0.0277662411611186,
+              "z": 130.258115895851,
+              "pvalue": 0
+            },
+            {
+              "lhs": "V3226",
+              "op": "~~",
+              "rhs": "V3226",
+              "label": "E_V3226_g1",
+              "est": 1.78629923206935,
+              "se": 0.0538464028170485,
+              "z": 33.1739752075655,
+              "pvalue": 0
+            },
+            {
+              "lhs": "V3222_r",
+              "op": "~1",
+              "rhs": "",
+              "label": "N_V3222_r_g1",
+              "est": 2.53170539582513,
+              "se": 0.0280058267875751,
+              "z": 90.3992378096236,
+              "pvalue": 0
+            },
+            {
+              "lhs": "V3222_r",
+              "op": "~~",
+              "rhs": "V3222_r",
+              "label": "E_V3222_r_g1",
+              "est": 1.63215378636883,
+              "se": 0.0546307014188788,
+              "z": 29.8761272320916,
+              "pvalue": 0
+            },
+            {
+              "lhs": "V3223_r",
+              "op": "~1",
+              "rhs": "",
+              "label": "N_V3223_r_g1",
+              "est": 3.58605750295392,
+              "se": 0.0281379144860532,
+              "z": 127.445746014026,
+              "pvalue": 0
+            },
+            {
+              "lhs": "V3223_r",
+              "op": "~~",
+              "rhs": "V3223_r",
+              "label": "E_V3223_r_g1",
+              "est": 1.64866227933575,
+              "se": 0.0551434852069044,
+              "z": 29.8976800822397,
+              "pvalue": 0
+            }
+          ]
+        },
+        "2006": {
+          "sample": {
+            "n": 2403,
+            "sha256_V4": "0daf268f8f68a219f110468009530de9e5e93d3a2b01a2c40e724d2ddd9947ae"
+          },
+          "convergence": {
+            "status": "converged",
+            "converged": true,
+            "iterations": 73,
+            "objective": 0.0714345735839306,
+            "optimizer": "nlminb",
+            "control": {
+              "rel.tol": 1e-10,
+              "iter.max": 10000,
+              "eval.max": 20000
+            },
+            "error": null,
+            "warnings": [],
+            "seconds": 0.0219999999999985,
+            "npar": 15
+          },
+          "fit": {
+            "chisq": 343.1716914972,
+            "df": 5,
+            "pvalue": 5.16524634238409e-72,
+            "npar": 15,
+            "sample_moments_per_group": 20,
+            "n_groups": 1,
+            "sum_cg": 2402,
+            "N": 2403,
+            "rmsea": 0.167801995518577,
+            "cfi": 0.641779300111506,
+            "tli": 0.283558600223013,
+            "srmr": 0.0916036882407557,
+            "baseline_chisq": 954.031686617959,
+            "baseline_df": 10,
+            "F_g": {
+              "2006": 0.14286914716786
+            },
+            "srmr_g": {
+              "2006": 0.0916036882407557
+            },
+            "chisq_source": "manifest",
+            "lavaan_fitmeasures": {
+              "chisq": 343.171691497202,
+              "df": 5,
+              "pvalue": 0,
+              "npar": 15,
+              "baseline.chisq": 954.031686617959,
+              "baseline.df": 10,
+              "cfi": 0.641779300111504,
+              "tli": 0.283558600223008,
+              "rmsea": 0.167801995518578,
+              "srmr": 0.0793311210968443,
+              "srmr_bentler": 0.0793311210968443,
+              "srmr_bentler_nomean": 0.0916036882407558,
+              "srmr_mplus": 0.0793311209950041,
+              "srmr_mplus_nomean": 0.0916036881231384
+            }
+          },
+          "parameters": [
+            {
+              "lhs": "C1",
+              "op": "=~",
+              "rhs": "V3224",
+              "label": "",
+              "est": 1,
+              "se": 0,
+              "z": null,
+              "pvalue": null
+            },
+            {
+              "lhs": "C1",
+              "op": "=~",
+              "rhs": "V3225",
+              "label": "L_V3225_g1",
+              "est": 0.915461456529954,
+              "se": 0.129922541136735,
+              "z": 7.04620959935265,
+              "pvalue": 1.83852932877926e-12
+            },
+            {
+              "lhs": "C1",
+              "op": "=~",
+              "rhs": "V3226",
+              "label": "L_V3226_g1",
+              "est": 0.698691558001267,
+              "se": 0.143313458104453,
+              "z": 4.8752682912168,
+              "pvalue": 1.08660672748506e-06
+            },
+            {
+              "lhs": "C1",
+              "op": "=~",
+              "rhs": "V3222_r",
+              "label": "L_V3222_r_g1",
+              "est": 2.75701672613719,
+              "se": 0.320480956894071,
+              "z": 8.60274742330001,
+              "pvalue": 0
+            },
+            {
+              "lhs": "C1",
+              "op": "=~",
+              "rhs": "V3223_r",
+              "label": "L_V3223_r_g1",
+              "est": 3.4436909551872,
+              "se": 0.421563255158405,
+              "z": 8.16885938954336,
+              "pvalue": 2.22044604925031e-16
+            },
+            {
+              "lhs": "C1",
+              "op": "~1",
+              "rhs": "",
+              "label": "",
+              "est": 0,
+              "se": 0,
+              "z": null,
+              "pvalue": null
+            },
+            {
+              "lhs": "C1",
+              "op": "~~",
+              "rhs": "C1",
+              "label": "P_C1_g1",
+              "est": 0.0760421554595977,
+              "se": 0.0160195558220361,
+              "z": 4.74683295244654,
+              "pvalue": 2.06626463783444e-06
+            },
+            {
+              "lhs": "V3224",
+              "op": "~1",
+              "rhs": "",
+              "label": "N_V3224_g1",
+              "est": 3.63753641281731,
+              "se": 0.022470832253428,
+              "z": 161.878134810178,
+              "pvalue": 0
+            },
+            {
+              "lhs": "V3224",
+              "op": "~~",
+              "rhs": "V3224",
+              "label": "E_V3224_g1",
+              "est": 1.1368196463328,
+              "se": 0.0344081890870987,
+              "z": 33.0392175959951,
+              "pvalue": 0
+            },
+            {
+              "lhs": "V3225",
+              "op": "~1",
+              "rhs": "",
+              "label": "N_V3225_g1",
+              "est": 4.2026633374948,
+              "se": 0.0191882443522227,
+              "z": 219.022817322418,
+              "pvalue": 0
+            },
+            {
+              "lhs": "V3225",
+              "op": "~~",
+              "rhs": "V3225",
+              "label": "E_V3225_g1",
+              "est": 0.820660683841845,
+              "se": 0.0250464147808116,
+              "z": 32.7655950372013,
+              "pvalue": 0
+            },
+            {
+              "lhs": "V3226",
+              "op": "~1",
+              "rhs": "",
+              "label": "N_V3226_g1",
+              "est": 3.6013316687474,
+              "se": 0.0265208262445471,
+              "z": 135.792589398977,
+              "pvalue": 0
+            },
+            {
+              "lhs": "V3226",
+              "op": "~~",
+              "rhs": "V3226",
+              "label": "E_V3226_g1",
+              "est": 1.65233535680259,
+              "se": 0.0484156295821199,
+              "z": 34.1281394265459,
+              "pvalue": 0
+            },
+            {
+              "lhs": "V3222_r",
+              "op": "~1",
+              "rhs": "",
+              "label": "N_V3222_r_g1",
+              "est": 2.55763628797337,
+              "se": 0.0271942120690367,
+              "z": 94.0507590909571,
+              "pvalue": 0
+            },
+            {
+              "lhs": "V3222_r",
+              "op": "~~",
+              "rhs": "V3222_r",
+              "label": "E_V3222_r_g1",
+              "est": 1.19833229552873,
+              "se": 0.0650793347448234,
+              "z": 18.4134072701788,
+              "pvalue": 0
+            },
+            {
+              "lhs": "V3223_r",
+              "op": "~1",
+              "rhs": "",
+              "label": "N_V3223_r_g1",
+              "est": 3.25717852684145,
+              "se": 0.0285992687004861,
+              "z": 113.890273242759,
+              "pvalue": 0
+            },
+            {
+              "lhs": "V3223_r",
+              "op": "~~",
+              "rhs": "V3223_r",
+              "label": "E_V3223_r_g1",
+              "est": 1.06285496091185,
+              "se": 0.0906290211408425,
+              "z": 11.727534376214,
+              "pvalue": 0
+            }
+          ]
+        }
+      }
+    }
+  },
+  "elapsed_seconds": 0.0919999999999987
+}

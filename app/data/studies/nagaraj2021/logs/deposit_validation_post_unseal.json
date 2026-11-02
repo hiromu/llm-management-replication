@@ -1,0 +1,561 @@
+{
+ "checked_utc": "2026-11-01T05:07:47.073537+00:00",
+ "files": [
+  {
+   "path": "/Readme.txt",
+   "stored_at": "sealed/author_package/Readme.txt",
+   "sealed": true,
+   "exists": true,
+   "sha256": "9acdc28556240d0618d5ba47410a729344deb3497ebadfa60419929d618e69e2",
+   "matches_receipt": true,
+   "matches_osf": true
+  },
+  {
+   "path": "/rawdata/google_trends.csv",
+   "stored_at": "data/raw/osf_a47e9/rawdata/google_trends.csv",
+   "sealed": false,
+   "exists": true,
+   "sha256": "90c05c7fe6be51a5b96babbad25c0b08c737fd629c731edd551d65e4960d33d3",
+   "matches_receipt": true,
+   "matches_osf": true
+  },
+  {
+   "path": "/rawdata/amenitycheck.csv",
+   "stored_at": "data/raw/osf_a47e9/rawdata/amenitycheck.csv",
+   "sealed": false,
+   "exists": true,
+   "sha256": "59232b2c43f2fa3e14da07537cc9906cdc1f87af6e52dcbf7f837ce7881c1981",
+   "matches_receipt": true,
+   "matches_osf": true
+  },
+  {
+   "path": "/rawdata/boundary-counties.csv",
+   "stored_at": "data/raw/osf_a47e9/rawdata/boundary-counties.csv",
+   "sealed": false,
+   "exists": true,
+   "sha256": "01b38a16118fd8a811233d1ac51416f370e0e0ca720d2d25c28627fbbb903518",
+   "matches_receipt": true,
+   "matches_osf": true
+  },
+  {
+   "path": "/rawdata/distance.csv",
+   "stored_at": "data/raw/osf_a47e9/rawdata/distance.csv",
+   "sealed": false,
+   "exists": true,
+   "sha256": "b36cb40ebda9b60bee1b60077e0db5de420ae3081dc5337495500b846b12080d",
+   "matches_receipt": true,
+   "matches_osf": true
+  },
+  {
+   "path": "/rawdata/county_lookup.csv",
+   "stored_at": "data/raw/osf_a47e9/rawdata/county_lookup.csv",
+   "sealed": false,
+   "exists": true,
+   "sha256": "034bb2c911e89b7b4072ffab6646a2e8ceefc3f2196c325cad5687066c23ee7c",
+   "matches_receipt": true,
+   "matches_osf": true
+  },
+  {
+   "path": "/rawdata/osm-events.csv",
+   "stored_at": "data/raw/osf_a47e9/rawdata/osm-events.csv",
+   "sealed": false,
+   "exists": true,
+   "sha256": "d19ebc8f8f789cff2fcaeba0af6c4a1014ebca745f399cc854459d0f2a1eec0a",
+   "matches_receipt": true,
+   "matches_osf": true
+  },
+  {
+   "path": "/rawdata/land_area.csv",
+   "stored_at": "data/raw/osf_a47e9/rawdata/land_area.csv",
+   "sealed": false,
+   "exists": true,
+   "sha256": "0cb74d1430f4bb34f7397a9442796e65ed8ef89956fcfecabaee09427baa5640",
+   "matches_receipt": true,
+   "matches_osf": true
+  },
+  {
+   "path": "/rawdata/maptimes.csv",
+   "stored_at": "data/raw/osf_a47e9/rawdata/maptimes.csv",
+   "sealed": false,
+   "exists": true,
+   "sha256": "7efa2de984649cb4c9fa5f55915bdbb01012a500fe14133dc725118570904e6d",
+   "matches_receipt": true,
+   "matches_osf": true
+  },
+  {
+   "path": "/rawdata/timing.xlsx",
+   "stored_at": "data/raw/osf_a47e9/rawdata/timing.xlsx",
+   "sealed": false,
+   "exists": true,
+   "sha256": "1df0aae7baaa7db05225f9fce80f2b3b99dd025639ba337bebfb5a4b46523aae",
+   "matches_receipt": true,
+   "matches_osf": true
+  },
+  {
+   "path": "/rawdata/tiger_osm_2018.csv",
+   "stored_at": "data/raw/osf_a47e9/rawdata/tiger_osm_2018.csv",
+   "sealed": false,
+   "exists": true,
+   "sha256": "4a2398abe79c02dcb8467fda6e3d7970ee6c3c57c0528bb76f132df4faa0c344",
+   "matches_receipt": true,
+   "matches_osf": true
+  },
+  {
+   "path": "/rawdata/tiger_census_2008q2.csv",
+   "stored_at": "data/raw/osf_a47e9/rawdata/tiger_census_2008q2.csv",
+   "sealed": false,
+   "exists": true,
+   "sha256": "dda022558d4e2595607fbb0fd2a3bc2e9759c43c2fc35adc443db0b5e2a1ab8c",
+   "matches_receipt": true,
+   "matches_osf": true
+  },
+  {
+   "path": "/rawdata/quarterly.csv",
+   "stored_at": "data/raw/osf_a47e9/rawdata/quarterly.csv",
+   "sealed": false,
+   "exists": true,
+   "sha256": "31ca141484d87de291c04bacf72a710358c09e3edb03cb849afee6858ff7ac7b",
+   "matches_receipt": true,
+   "matches_osf": true
+  },
+  {
+   "path": "/rawdata/acs5year.dta",
+   "stored_at": "data/raw/osf_a47e9/rawdata/acs5year.dta",
+   "sealed": false,
+   "exists": true,
+   "sha256": "0458f24a1825da2900c6513340208cd47ff6fa610ed742a199a11247cc639155",
+   "matches_receipt": true,
+   "matches_osf": true
+  },
+  {
+   "path": "/rawdata/h12.csv",
+   "stored_at": "data/raw/osf_a47e9/rawdata/h12.csv",
+   "sealed": false,
+   "exists": true,
+   "sha256": "f5a870c79c91b570c984b4cb8df953788abf03550fbef47a3a40ecf26ab29563",
+   "matches_receipt": true,
+   "matches_osf": true
+  },
+  {
+   "path": "/scripts/main.do",
+   "stored_at": "sealed/author_package/scripts/main.do",
+   "sealed": true,
+   "exists": true,
+   "sha256": "c8950624d4972c5f792e7cb5071a30863852eebfb920424943244d1e47731021",
+   "matches_receipt": true,
+   "matches_osf": true
+  },
+  {
+   "path": "/scripts/ado/ddchart_year.ado",
+   "stored_at": "sealed/author_package/scripts/ado/ddchart_year.ado",
+   "sealed": true,
+   "exists": true,
+   "sha256": "9c35d285f4b67c91e575d8fe93e0ab9d3c52f773c92a787756ad79afa2c23da5",
+   "matches_receipt": true,
+   "matches_osf": true
+  },
+  {
+   "path": "/scripts/ado/add_bordertiming.ado",
+   "stored_at": "sealed/author_package/scripts/ado/add_bordertiming.ado",
+   "sealed": true,
+   "exists": true,
+   "sha256": "457210df9c5067d388e7e629b83e09e62656d5f03e17bd0fa766a6cd53c76c47",
+   "matches_receipt": true,
+   "matches_osf": true
+  },
+  {
+   "path": "/scripts/ado/declare_global.ado",
+   "stored_at": "sealed/author_package/scripts/ado/declare_global.ado",
+   "sealed": true,
+   "exists": true,
+   "sha256": "a91a8c9ea0d24634a8875a62b3f4dcc595f845371b1d1c414eef0280bb49b2e3",
+   "matches_receipt": true,
+   "matches_osf": true
+  },
+  {
+   "path": "/scripts/ado/est_with_controls.ado",
+   "stored_at": "sealed/author_package/scripts/ado/est_with_controls.ado",
+   "sealed": true,
+   "exists": true,
+   "sha256": "ef39349414097e69c4c7e07781c63f0c7ab677c5a7eaf2346f46757ab33cac3d",
+   "matches_receipt": true,
+   "matches_osf": true
+  },
+  {
+   "path": "/scripts/ado/ddchart_cross.ado",
+   "stored_at": "sealed/author_package/scripts/ado/ddchart_cross.ado",
+   "sealed": true,
+   "exists": true,
+   "sha256": "48e0f9012c3e1c931999eb021a780ff195fc3d24752e954e58c80b44c538488e",
+   "matches_receipt": true,
+   "matches_osf": true
+  },
+  {
+   "path": "/scripts/ado/make_border.ado",
+   "stored_at": "sealed/author_package/scripts/ado/make_border.ado",
+   "sealed": true,
+   "exists": true,
+   "sha256": "5be1a5a3bef6723ef2333d3926a24916bcdc7feed6d127add1f7c6f4d5cad753",
+   "matches_receipt": true,
+   "matches_osf": true
+  },
+  {
+   "path": "/scripts/ado/labelvar.ado",
+   "stored_at": "sealed/author_package/scripts/ado/labelvar.ado",
+   "sealed": true,
+   "exists": true,
+   "sha256": "95a7d56bd3a1d1db05dec67e6b6a405dd6bf5913d973143bde2cc84d10234abe",
+   "matches_receipt": true,
+   "matches_osf": true
+  },
+  {
+   "path": "/scripts/ado/make_meanline.ado",
+   "stored_at": "sealed/author_package/scripts/ado/make_meanline.ado",
+   "sealed": true,
+   "exists": true,
+   "sha256": "d5a9e172eb6b240c5e48d4e9a1d169f2da84dc9051fbe34b1610ed6841141853",
+   "matches_receipt": true,
+   "matches_osf": true
+  },
+  {
+   "path": "/scripts/ado/make_directions.ado",
+   "stored_at": "sealed/author_package/scripts/ado/make_directions.ado",
+   "sealed": true,
+   "exists": true,
+   "sha256": "321b61f4fce8537e0a4a55291d0d387d98782edbbbc919566ee8172a1f2c194b",
+   "matches_receipt": true,
+   "matches_osf": true
+  },
+  {
+   "path": "/scripts/ado/make_panel.ado",
+   "stored_at": "sealed/author_package/scripts/ado/make_panel.ado",
+   "sealed": true,
+   "exists": true,
+   "sha256": "0e40b63a96965affe7215f2f9e1a84368743959c3082e684e28a2ce720410f23",
+   "matches_receipt": true,
+   "matches_osf": true
+  },
+  {
+   "path": "/scripts/ado/make_summary.ado",
+   "stored_at": "sealed/author_package/scripts/ado/make_summary.ado",
+   "sealed": true,
+   "exists": true,
+   "sha256": "c85ec597ed6595b94e30fb88206f88a62f49d84156de282e65050cdcf1990d27",
+   "matches_receipt": true,
+   "matches_osf": true
+  },
+  {
+   "path": "/scripts/ado/make_timing.ado",
+   "stored_at": "sealed/author_package/scripts/ado/make_timing.ado",
+   "sealed": true,
+   "exists": true,
+   "sha256": "2c474c0c6ccfb6e670d5e45f6b40d8eb910062aab236d37f72cc0f9246ef0046",
+   "matches_receipt": true,
+   "matches_osf": true
+  },
+  {
+   "path": "/scripts/ado/make_trendline.ado",
+   "stored_at": "sealed/author_package/scripts/ado/make_trendline.ado",
+   "sealed": true,
+   "exists": true,
+   "sha256": "309a72c46e4fe967ab2b046f07fc87538fc456a9d1f905187561c0eb0fb16b62",
+   "matches_receipt": true,
+   "matches_osf": true
+  },
+  {
+   "path": "/scripts/ado/mc_make_acs.ado",
+   "stored_at": "sealed/author_package/scripts/ado/mc_make_acs.ado",
+   "sealed": true,
+   "exists": true,
+   "sha256": "044e744731e28ccb53fd3796d3945f2364a72c4df15aa55a0f8019f4542e3171",
+   "matches_receipt": true,
+   "matches_osf": true
+  },
+  {
+   "path": "/scripts/ado/plot_urban.ado",
+   "stored_at": "sealed/author_package/scripts/ado/plot_urban.ado",
+   "sealed": true,
+   "exists": true,
+   "sha256": "cfa15681df99130e6b3d5e5a468f06cf2118c0a65ebe8f5f19b8639e92ae4076",
+   "matches_receipt": true,
+   "matches_osf": true
+  },
+  {
+   "path": "/scripts/ado/merge_covar.ado",
+   "stored_at": "sealed/author_package/scripts/ado/merge_covar.ado",
+   "sealed": true,
+   "exists": true,
+   "sha256": "fbd6eb377759db105f1e493c87361cef7783ab0dca5d34f0ddb07bd203c6bd48",
+   "matches_receipt": true,
+   "matches_osf": true
+  },
+  {
+   "path": "/scripts/ado/plot_users.ado",
+   "stored_at": "sealed/author_package/scripts/ado/plot_users.ado",
+   "sealed": true,
+   "exists": true,
+   "sha256": "28a69268cb77f4ed1a2749f3c709078e38e80cf54f99165e4cd828effc9460e2",
+   "matches_receipt": true,
+   "matches_osf": true
+  },
+  {
+   "path": "/scripts/ado/reg_crossec_robust.ado",
+   "stored_at": "sealed/author_package/scripts/ado/reg_crossec_robust.ado",
+   "sealed": true,
+   "exists": true,
+   "sha256": "8dc83ba74f160ca1ed43e9369745c9fde24057fb409246e35d9b0e47b97981c9",
+   "matches_receipt": true,
+   "matches_osf": true
+  },
+  {
+   "path": "/scripts/ado/reg_crossec.ado",
+   "stored_at": "sealed/author_package/scripts/ado/reg_crossec.ado",
+   "sealed": true,
+   "exists": true,
+   "sha256": "f78c22cceb460647785e5398010e1651bd4cdbecd390a58d3b1d5a29dda88752",
+   "matches_receipt": true,
+   "matches_osf": true
+  },
+  {
+   "path": "/scripts/ado/reg_governance.ado",
+   "stored_at": "sealed/author_package/scripts/ado/reg_governance.ado",
+   "sealed": true,
+   "exists": true,
+   "sha256": "8a03d7f847600941f189d3f7afabdc28a97e527e30dcce7456ee5a76ac226cd3",
+   "matches_receipt": true,
+   "matches_osf": true
+  },
+  {
+   "path": "/scripts/ado/reg_dd.ado",
+   "stored_at": "sealed/author_package/scripts/ado/reg_dd.ado",
+   "sealed": true,
+   "exists": true,
+   "sha256": "14052e262bcaf701961fe8b75648dddef7534a78ea9f5eeb9af5dc6949f96c47",
+   "matches_receipt": true,
+   "matches_osf": true
+  },
+  {
+   "path": "/scripts/ado/reg_iv.ado",
+   "stored_at": "sealed/author_package/scripts/ado/reg_iv.ado",
+   "sealed": true,
+   "exists": true,
+   "sha256": "48fd36e9678a560337747924b323f7e3f6d6e59ee040fe8d45a903284eb8ed11",
+   "matches_receipt": true,
+   "matches_osf": true
+  },
+  {
+   "path": "/scripts/ado/reg_morerobust.ado",
+   "stored_at": "sealed/author_package/scripts/ado/reg_morerobust.ado",
+   "sealed": true,
+   "exists": true,
+   "sha256": "02377d31d0a06a82e69ab01e9f9e3940f9d3b03ac583a2fad636dd2e96fc0266",
+   "matches_receipt": true,
+   "matches_osf": true
+  },
+  {
+   "path": "/scripts/ado/reg_node_ownership.ado",
+   "stored_at": "sealed/author_package/scripts/ado/reg_node_ownership.ado",
+   "sealed": true,
+   "exists": true,
+   "sha256": "3e94b8fa4ec9e569016b9a5bd4e85e14cab8b9704351e7e7426e5574dc806461",
+   "matches_receipt": true,
+   "matches_osf": true
+  },
+  {
+   "path": "/scripts/ado/reg_quality.ado",
+   "stored_at": "sealed/author_package/scripts/ado/reg_quality.ado",
+   "sealed": true,
+   "exists": true,
+   "sha256": "079e5e5f648ac286eacfe57cee3a0ecba1f1e71a280eb27bbf63347608213123",
+   "matches_receipt": true,
+   "matches_osf": true
+  },
+  {
+   "path": "/scripts/ado/reg_robust.ado",
+   "stored_at": "sealed/author_package/scripts/ado/reg_robust.ado",
+   "sealed": true,
+   "exists": true,
+   "sha256": "bf730f5d5d0f4a8d6af97bbd1be867d69cad790732c997870c70980a1158629d",
+   "matches_receipt": true,
+   "matches_osf": true
+  },
+  {
+   "path": "/scripts/ado/sample_summary.ado",
+   "stored_at": "sealed/author_package/scripts/ado/sample_summary.ado",
+   "sealed": true,
+   "exists": true,
+   "sha256": "20be2b5d36aeaa4194e134c6ab049a1431e2a346773c8ad1f76a2aa5d92cb0ab",
+   "matches_receipt": true,
+   "matches_osf": true
+  },
+  {
+   "path": "/scripts/ado/t_test_table.ado",
+   "stored_at": "sealed/author_package/scripts/ado/t_test_table.ado",
+   "sealed": true,
+   "exists": true,
+   "sha256": "0d6234569872231cd6b55b0e2703342be8ad658d0e25f3860b8d8b9101610ac4",
+   "matches_receipt": true,
+   "matches_osf": true
+  },
+  {
+   "path": "/scripts/ssc/livreg2.mlib",
+   "stored_at": "sealed/author_package/scripts/ssc/livreg2.mlib",
+   "sealed": true,
+   "exists": true,
+   "sha256": "a2e917496f21c00c428b43ff77f6036f9e5b9889c867bcff33fbf2a494d84161",
+   "matches_receipt": true,
+   "matches_osf": true
+  },
+  {
+   "path": "/scripts/ssc/coefplot.ado",
+   "stored_at": "sealed/author_package/scripts/ssc/coefplot.ado",
+   "sealed": true,
+   "exists": true,
+   "sha256": "6c32952b33775d24e3674879232caa827d45baa8e7235204e29fa1e54c91fc22",
+   "matches_receipt": true,
+   "matches_osf": true
+  },
+  {
+   "path": "/scripts/ssc/estout.ado",
+   "stored_at": "sealed/author_package/scripts/ssc/estout.ado",
+   "sealed": true,
+   "exists": true,
+   "sha256": "2d584a6e994271ced96814786dc1a1ce3704303d90b38f7284e36231d1344762",
+   "matches_receipt": true,
+   "matches_osf": true
+  },
+  {
+   "path": "/scripts/ssc/estpost.ado",
+   "stored_at": "sealed/author_package/scripts/ssc/estpost.ado",
+   "sealed": true,
+   "exists": true,
+   "sha256": "c8898b0fd92743fddc8f06ac5d9f3d00b39bdb2a2c6ff1c53c9466bf17ff7f8f",
+   "matches_receipt": true,
+   "matches_osf": true
+  },
+  {
+   "path": "/scripts/ssc/eststo.ado",
+   "stored_at": "sealed/author_package/scripts/ssc/eststo.ado",
+   "sealed": true,
+   "exists": true,
+   "sha256": "8abde23b7a1085ea415d83cbe8be34e31236fd180dc4386b7b6435b06c69cd3a",
+   "matches_receipt": true,
+   "matches_osf": true
+  },
+  {
+   "path": "/scripts/ssc/estadd.ado",
+   "stored_at": "sealed/author_package/scripts/ssc/estadd.ado",
+   "sealed": true,
+   "exists": true,
+   "sha256": "215bb477394db489bdcb4dcf44011863ebb11d34b730503969b084b87c4f18ea",
+   "matches_receipt": true,
+   "matches_osf": true
+  },
+  {
+   "path": "/scripts/ssc/esttab.ado",
+   "stored_at": "sealed/author_package/scripts/ssc/esttab.ado",
+   "sealed": true,
+   "exists": true,
+   "sha256": "3d5fc6ee3370ea231be9710a36c3d5c9dff8d6cb9e39a5e405be0aaeaaff8135",
+   "matches_receipt": true,
+   "matches_osf": true
+  },
+  {
+   "path": "/scripts/ssc/ivreg2.ado",
+   "stored_at": "sealed/author_package/scripts/ssc/ivreg2.ado",
+   "sealed": true,
+   "exists": true,
+   "sha256": "712924e086bdf7869c8ba660441f21dad10025282cca269cbdd9248cdbf185dc",
+   "matches_receipt": true,
+   "matches_osf": true
+  },
+  {
+   "path": "/scripts/ssc/ivreg2_p.ado",
+   "stored_at": "sealed/author_package/scripts/ssc/ivreg2_p.ado",
+   "sealed": true,
+   "exists": true,
+   "sha256": "1965a9a48e21b199ca0f73ee2b0cbf3c1e660ae197c5515313a14276fcca838d",
+   "matches_receipt": true,
+   "matches_osf": true
+  },
+  {
+   "path": "/scripts/ssc/parmcip.ado",
+   "stored_at": "sealed/author_package/scripts/ssc/parmcip.ado",
+   "sealed": true,
+   "exists": true,
+   "sha256": "5d89dd435fe9f904312ca85235f5e4766b2b05883945c748128ff92b718323e1",
+   "matches_receipt": true,
+   "matches_osf": true
+  },
+  {
+   "path": "/scripts/ssc/parmest.ado",
+   "stored_at": "sealed/author_package/scripts/ssc/parmest.ado",
+   "sealed": true,
+   "exists": true,
+   "sha256": "cb9a1fca3a6fcf3e670e5a85ce630e900d8787e9a4a16a6d91e10eee9b045551",
+   "matches_receipt": true,
+   "matches_osf": true
+  },
+  {
+   "path": "/scripts/ssc/parmby.ado",
+   "stored_at": "sealed/author_package/scripts/ssc/parmby.ado",
+   "sealed": true,
+   "exists": true,
+   "sha256": "a11dfca413e44288e91bb5e56ed4bb88f5e6c13a76c208aab688d514164eb43a",
+   "matches_receipt": true,
+   "matches_osf": true
+  },
+  {
+   "path": "/scripts/ssc/ranktest.ado",
+   "stored_at": "sealed/author_package/scripts/ssc/ranktest.ado",
+   "sealed": true,
+   "exists": true,
+   "sha256": "ef787ede422a307c95622d2853742d99b2e00eac4b0515cf421f152b706854aa",
+   "matches_receipt": true,
+   "matches_osf": true
+  },
+  {
+   "path": "/scripts/ssc/vincenty.ado",
+   "stored_at": "sealed/author_package/scripts/ssc/vincenty.ado",
+   "sealed": true,
+   "exists": true,
+   "sha256": "014872fc08cd73f4955472b5130629982e844ec2e0ba01c94b5baebdba5d548d",
+   "matches_receipt": true,
+   "matches_osf": true
+  },
+  {
+   "path": "/writing/figures_and_tables.tex",
+   "stored_at": "sealed/author_package/writing/figures_and_tables.tex",
+   "sealed": true,
+   "exists": true,
+   "sha256": "6fb6660fcec8aa06009e63bdddc385c8ee71883be42070723c2383e667532956",
+   "matches_receipt": true,
+   "matches_osf": true
+  },
+  {
+   "path": "/writing/appendix.pdf",
+   "stored_at": "data/raw/osf_a47e9/writing/appendix.pdf",
+   "sealed": false,
+   "exists": true,
+   "sha256": "a78ad8e9ba394d351c94d1b46bace6cdc3c13ef0fd6686b7fe1117e24f5bea30",
+   "matches_receipt": true,
+   "matches_osf": true
+  },
+  {
+   "path": "census_tiger2010",
+   "stored_at": "data/raw/census_tiger2010/tl_2010_us_county10.zip",
+   "sealed": false,
+   "exists": true,
+   "sha256": "467463b260ef4b5f6a00e0fb59fb6537c5533ff58fa3bb3e9780ba538c09f04b",
+   "matches_receipt": true,
+   "matches_osf": null
+  }
+ ],
+ "summary": {
+  "total": 61,
+  "missing": 0,
+  "mismatch_receipt": 0,
+  "sealed": 45,
+  "sealed_mismatch": 0
+ }
+}

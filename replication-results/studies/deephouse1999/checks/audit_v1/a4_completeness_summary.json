@@ -1,0 +1,461 @@
+{
+ "impl_A": {
+  "expected_specs": 112,
+  "expected_spec_models": 448,
+  "missing": [],
+  "extra_spec_ids": [
+   "O_A__R01.fixed1983",
+   "O_A__R02.charter_entity",
+   "O_A__R03.as_reported",
+   "O_A__R04.lag_only",
+   "O_A__R05.min2_fallback",
+   "O_A__R06.rck_mean",
+   "O_A__R07.net_income",
+   "O_A__R08.year_end",
+   "O_A__R09.all_market",
+   "O_A__R10.delete_named",
+   "O_A__R11.excl_accept",
+   "O_A__R12.production",
+   "O_A__R13.gross_residual",
+   "O_A__R14.broad",
+   "O_A__R15.zero_if_not_collected",
+   "O_A__R16.consolidated",
+   "O_A__R17.sample_sd",
+   "O_A__R18.domestic",
+   "O_A__R19.commercial",
+   "O_A__R20.cpi_annual",
+   "O_A__R21.commercial",
+   "O_A__R22.none",
+   "O_A__R23.conventional",
+   "O_A__R24.raw",
+   "O_A__R25.wls",
+   "O_A__R26.raw",
+   "O_B__R01.fixed1983",
+   "O_B__R02.charter",
+   "O_B__R03.as_reported",
+   "O_B__R04.lag_only",
+   "O_B__R05.all4",
+   "O_B__R06.rck_mean",
+   "O_B__R07.net_income",
+   "O_B__R08.year_end",
+   "O_B__R09.all_market",
+   "O_B__R10.delete_named",
+   "O_B__R11.excl_accept",
+   "O_B__R12.production",
+   "O_B__R13.gross_residual",
+   "O_B__R14.literal",
+   "O_B__R15.missing",
+   "O_B__R16.consolidated",
+   "O_B__R17.sample_sd",
+   "O_B__R18.consolidated",
+   "O_B__R19.commercial",
+   "O_B__R20.cpi_annual",
+   "O_B__R21.commercial",
+   "O_B__R22.none",
+   "O_B__R23.conventional",
+   "O_B__R24.raw",
+   "O_B__R25.wls",
+   "O_B__R26.raw"
+  ],
+  "status_counts": {
+   "ok": 446,
+   "not_applicable": 2
+  },
+  "influence": {
+   "O_A|M2|bank_year|SD": {
+    "expected": 1260,
+    "fits": 1260,
+    "unique_ids": 1260,
+    "ok": 1260,
+    "not_ok": 0
+   },
+   "O_A|M2|bank|SD": {
+    "expected": 195,
+    "fits": 195,
+    "unique_ids": 195,
+    "ok": 195,
+    "not_ok": 0
+   },
+   "O_A|M3|bank_year|SD2": {
+    "expected": 1260,
+    "fits": 1260,
+    "unique_ids": 1260,
+    "ok": 1260,
+    "not_ok": 0
+   },
+   "O_A|M3|bank_year|SD": {
+    "expected": 1260,
+    "fits": 1260,
+    "unique_ids": 1260,
+    "ok": 1260,
+    "not_ok": 0
+   },
+   "O_A|M3|bank|SD2": {
+    "expected": 195,
+    "fits": 195,
+    "unique_ids": 195,
+    "ok": 195,
+    "not_ok": 0
+   },
+   "O_A|M3|bank|SD": {
+    "expected": 195,
+    "fits": 195,
+    "unique_ids": 195,
+    "ok": 195,
+    "not_ok": 0
+   },
+   "O_B|M2|bank_year|SD": {
+    "expected": 1255,
+    "fits": 1255,
+    "unique_ids": 1255,
+    "ok": 1255,
+    "not_ok": 0
+   },
+   "O_B|M2|bank|SD": {
+    "expected": 195,
+    "fits": 195,
+    "unique_ids": 195,
+    "ok": 195,
+    "not_ok": 0
+   },
+   "O_B|M3|bank_year|SD2": {
+    "expected": 1255,
+    "fits": 1255,
+    "unique_ids": 1255,
+    "ok": 1255,
+    "not_ok": 0
+   },
+   "O_B|M3|bank_year|SD": {
+    "expected": 1255,
+    "fits": 1255,
+    "unique_ids": 1255,
+    "ok": 1255,
+    "not_ok": 0
+   },
+   "O_B|M3|bank|SD2": {
+    "expected": 195,
+    "fits": 195,
+    "unique_ids": 195,
+    "ok": 195,
+    "not_ok": 0
+   },
+   "O_B|M3|bank|SD": {
+    "expected": 195,
+    "fits": 195,
+    "unique_ids": 195,
+    "ok": 195,
+    "not_ok": 0
+   }
+  },
+  "influence_terms_present": [
+   "SD",
+   "SD2"
+  ]
+ },
+ "impl_B": {
+  "expected_specs": 112,
+  "expected_spec_models": 448,
+  "missing": [],
+  "extra_spec_ids": [
+   "O_A__R01.fixed1983",
+   "O_A__R02.charter_entity",
+   "O_A__R03.as_reported",
+   "O_A__R04.lag_only",
+   "O_A__R05.min2_fallback",
+   "O_A__R06.rck_mean",
+   "O_A__R07.net_income",
+   "O_A__R08.year_end",
+   "O_A__R09.all_market",
+   "O_A__R10.delete_named",
+   "O_A__R11.excl_accept",
+   "O_A__R12.production",
+   "O_A__R13.gross_residual",
+   "O_A__R14.broad",
+   "O_A__R15.zero_if_not_collected",
+   "O_A__R16.consolidated",
+   "O_A__R17.sample_sd",
+   "O_A__R18.domestic",
+   "O_A__R19.commercial",
+   "O_A__R20.cpi_annual",
+   "O_A__R21.commercial",
+   "O_A__R22.none",
+   "O_A__R23.conventional",
+   "O_A__R24.raw",
+   "O_A__R25.wls",
+   "O_A__R26.raw",
+   "O_B__R01.fixed1983",
+   "O_B__R02.charter",
+   "O_B__R03.as_reported",
+   "O_B__R04.lag_only",
+   "O_B__R05.all4",
+   "O_B__R06.rck_mean",
+   "O_B__R07.net_income",
+   "O_B__R08.year_end",
+   "O_B__R09.all_market",
+   "O_B__R10.delete_named",
+   "O_B__R11.excl_accept",
+   "O_B__R12.production",
+   "O_B__R13.gross_residual",
+   "O_B__R14.literal",
+   "O_B__R15.missing",
+   "O_B__R16.consolidated",
+   "O_B__R17.sample_sd",
+   "O_B__R18.consolidated",
+   "O_B__R19.commercial",
+   "O_B__R20.cpi_annual",
+   "O_B__R21.commercial",
+   "O_B__R22.none",
+   "O_B__R23.conventional",
+   "O_B__R24.raw",
+   "O_B__R25.wls",
+   "O_B__R26.raw"
+  ],
+  "status_counts": {
+   "ok": 446,
+   "not_applicable": 2
+  },
+  "influence": {
+   "O_A|M2|bank_year|SD": {
+    "expected": 1260,
+    "fits": 1260,
+    "unique_ids": 1260,
+    "ok": 1260,
+    "not_ok": 0
+   },
+   "O_A|M2|bank|SD": {
+    "expected": 195,
+    "fits": 195,
+    "unique_ids": 195,
+    "ok": 195,
+    "not_ok": 0
+   },
+   "O_A|M3|bank_year|SD2": {
+    "expected": 1260,
+    "fits": 1260,
+    "unique_ids": 1260,
+    "ok": 1260,
+    "not_ok": 0
+   },
+   "O_A|M3|bank_year|SD": {
+    "expected": 1260,
+    "fits": 1260,
+    "unique_ids": 1260,
+    "ok": 1260,
+    "not_ok": 0
+   },
+   "O_A|M3|bank|SD2": {
+    "expected": 195,
+    "fits": 195,
+    "unique_ids": 195,
+    "ok": 195,
+    "not_ok": 0
+   },
+   "O_A|M3|bank|SD": {
+    "expected": 195,
+    "fits": 195,
+    "unique_ids": 195,
+    "ok": 195,
+    "not_ok": 0
+   },
+   "O_B|M2|bank_year|SD": {
+    "expected": 1255,
+    "fits": 1255,
+    "unique_ids": 1255,
+    "ok": 1255,
+    "not_ok": 0
+   },
+   "O_B|M2|bank|SD": {
+    "expected": 195,
+    "fits": 195,
+    "unique_ids": 195,
+    "ok": 195,
+    "not_ok": 0
+   },
+   "O_B|M3|bank_year|SD2": {
+    "expected": 1255,
+    "fits": 1255,
+    "unique_ids": 1255,
+    "ok": 1255,
+    "not_ok": 0
+   },
+   "O_B|M3|bank_year|SD": {
+    "expected": 1255,
+    "fits": 1255,
+    "unique_ids": 1255,
+    "ok": 1255,
+    "not_ok": 0
+   },
+   "O_B|M3|bank|SD2": {
+    "expected": 195,
+    "fits": 195,
+    "unique_ids": 195,
+    "ok": 195,
+    "not_ok": 0
+   },
+   "O_B|M3|bank|SD": {
+    "expected": 195,
+    "fits": 195,
+    "unique_ids": 195,
+    "ok": 195,
+    "not_ok": 0
+   }
+  },
+  "influence_terms_present": [
+   "SD",
+   "SD2"
+  ]
+ },
+ "impl_C": {
+  "expected_specs": 112,
+  "expected_spec_models": 448,
+  "missing": [],
+  "extra_spec_ids": [
+   "O_A__R01.fixed1983",
+   "O_A__R02.charter_entity",
+   "O_A__R03.as_reported",
+   "O_A__R04.lag_only",
+   "O_A__R05.min2_fallback",
+   "O_A__R06.rck_mean",
+   "O_A__R07.net_income",
+   "O_A__R08.year_end",
+   "O_A__R09.all_market",
+   "O_A__R10.delete_named",
+   "O_A__R11.excl_accept",
+   "O_A__R12.production",
+   "O_A__R13.gross_residual",
+   "O_A__R14.broad",
+   "O_A__R15.zero_if_not_collected",
+   "O_A__R16.consolidated",
+   "O_A__R17.sample_sd",
+   "O_A__R18.domestic",
+   "O_A__R19.commercial",
+   "O_A__R20.cpi_annual",
+   "O_A__R21.commercial",
+   "O_A__R22.none",
+   "O_A__R23.conventional",
+   "O_A__R24.raw",
+   "O_A__R25.wls",
+   "O_A__R26.raw",
+   "O_B__R01.fixed1983",
+   "O_B__R02.charter",
+   "O_B__R03.as_reported",
+   "O_B__R04.lag_only",
+   "O_B__R05.all4",
+   "O_B__R06.rck_mean",
+   "O_B__R07.net_income",
+   "O_B__R08.year_end",
+   "O_B__R09.all_market",
+   "O_B__R10.delete_named",
+   "O_B__R11.excl_accept",
+   "O_B__R12.production",
+   "O_B__R13.gross_residual",
+   "O_B__R14.literal",
+   "O_B__R15.missing",
+   "O_B__R16.consolidated",
+   "O_B__R17.sample_sd",
+   "O_B__R18.consolidated",
+   "O_B__R19.commercial",
+   "O_B__R20.cpi_annual",
+   "O_B__R21.commercial",
+   "O_B__R22.none",
+   "O_B__R23.conventional",
+   "O_B__R24.raw",
+   "O_B__R25.wls",
+   "O_B__R26.raw"
+  ],
+  "status_counts": {
+   "ok": 446,
+   "not_applicable": 2
+  },
+  "influence": {
+   "O_A|M2|bank_year|SD": {
+    "expected": 1260,
+    "fits": 1260,
+    "unique_ids": 1260,
+    "ok": 1260,
+    "not_ok": 0
+   },
+   "O_A|M2|bank|SD": {
+    "expected": 195,
+    "fits": 195,
+    "unique_ids": 195,
+    "ok": 195,
+    "not_ok": 0
+   },
+   "O_A|M3|bank_year|SD2": {
+    "expected": 1260,
+    "fits": 1260,
+    "unique_ids": 1260,
+    "ok": 1260,
+    "not_ok": 0
+   },
+   "O_A|M3|bank_year|SD": {
+    "expected": 1260,
+    "fits": 1260,
+    "unique_ids": 1260,
+    "ok": 1260,
+    "not_ok": 0
+   },
+   "O_A|M3|bank|SD2": {
+    "expected": 195,
+    "fits": 195,
+    "unique_ids": 195,
+    "ok": 195,
+    "not_ok": 0
+   },
+   "O_A|M3|bank|SD": {
+    "expected": 195,
+    "fits": 195,
+    "unique_ids": 195,
+    "ok": 195,
+    "not_ok": 0
+   },
+   "O_B|M2|bank_year|SD": {
+    "expected": 1255,
+    "fits": 1255,
+    "unique_ids": 1255,
+    "ok": 1255,
+    "not_ok": 0
+   },
+   "O_B|M2|bank|SD": {
+    "expected": 195,
+    "fits": 195,
+    "unique_ids": 195,
+    "ok": 195,
+    "not_ok": 0
+   },
+   "O_B|M3|bank_year|SD2": {
+    "expected": 1255,
+    "fits": 1255,
+    "unique_ids": 1255,
+    "ok": 1255,
+    "not_ok": 0
+   },
+   "O_B|M3|bank_year|SD": {
+    "expected": 1255,
+    "fits": 1255,
+    "unique_ids": 1255,
+    "ok": 1255,
+    "not_ok": 0
+   },
+   "O_B|M3|bank|SD2": {
+    "expected": 195,
+    "fits": 195,
+    "unique_ids": 195,
+    "ok": 195,
+    "not_ok": 0
+   },
+   "O_B|M3|bank|SD": {
+    "expected": 195,
+    "fits": 195,
+    "unique_ids": 195,
+    "ok": 195,
+    "not_ok": 0
+   }
+  },
+  "influence_terms_present": [
+   "SD",
+   "SD2"
+  ]
+ }
+}

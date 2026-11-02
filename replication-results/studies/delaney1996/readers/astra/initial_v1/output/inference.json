@@ -1,0 +1,136 @@
+{
+  "observation_unit": "Work establishment, described in article as organization/firm; public records are nominations and may duplicate a single interview.",
+  "sampling_unit": "GSS respondent and working-spouse employer nominations through a national adult/person sample; establishment inclusion proportional to employment.",
+  "assignment_unit": "Not applicable: observational cross-section, no randomized assignment.",
+  "clusters": null,
+  "native_se_method": null,
+  "software": null,
+  "first_stage": "not applicable",
+  "unavailable_sources": [
+    {
+      "item": "Exact author estimation file, source-variable crosswalk, sample exclusions and missingness rules",
+      "status": "not supplied / not reported",
+      "locator": {
+        "doc_id": "D1",
+        "pdf_page": 6,
+        "where": "Data and measures"
+      }
+    },
+    {
+      "item": "Complementarity count regressions, individual-threshold/spline details and complete interaction search",
+      "status": "results not shown",
+      "locator": {
+        "doc_id": "D1",
+        "pdf_page": 17,
+        "where": "Results"
+      }
+    },
+    {
+      "item": "Profit/nonprofit subgroup analyses",
+      "status": "available upon request; not supplied",
+      "locator": {
+        "doc_id": "D1",
+        "pdf_page": 18,
+        "where": "Discussion paragraph 1"
+      }
+    },
+    {
+      "item": "Supplement, appendix or correction",
+      "status": "none in frozen packet; packet reports none found after documented search; publisher HTTP 403; underlying search log not supplied",
+      "locator": {
+        "doc_id": "D1",
+        "pdf_page": 20,
+        "where": "End of discussion followed by References; packet/publication_packet.json supplies search status"
+      }
+    },
+    {
+      "item": "Native software, SE correction, weighting and cluster definition",
+      "status": "not stated",
+      "locator": {
+        "doc_id": "D1",
+        "pdf_page": 15,
+        "where": "Table 3 notes; Table 4 p17"
+      }
+    }
+  ],
+  "vintage_fallbacks": [
+    {
+      "item": "Empirical file",
+      "fallback": "Supplied source describes ICPSR06240 V1 DS0002 release; whether identical to authors’ working vintage is unknown. No data acquired or estimated by reader.",
+      "locator": {
+        "doc_id": "D1",
+        "pdf_page": 21,
+        "where": "Data-file reference; source/nos1991_source_description.md"
+      }
+    },
+    {
+      "item": "Industry classification",
+      "fallback": "Supplied Census 1980 to SIC1972 transcription is a candidate mapping only; article says two-digit SIC without vintage. Ambiguous and unspecified categories unresolved.",
+      "locator": {
+        "doc_id": "D1",
+        "pdf_page": 12,
+        "where": "Industry controls"
+      }
+    },
+    {
+      "item": "Missing-code declarations",
+      "fallback": "Release declarations differ from original archived SPSS-X documentation; dictionary semantic labels must be considered, with no inferred author defaults.",
+      "locator": {
+        "doc_id": "D1",
+        "pdf_page": 7,
+        "where": "Measures; source dictionary General notes"
+      }
+    },
+    {
+      "item": "Native inference",
+      "fallback": "Conventional full-rank OLS t/F calculations used only as conditional forensic checks. Not claimed as documented native method.",
+      "locator": {
+        "doc_id": "D1",
+        "pdf_page": 15,
+        "where": "Regression table notes"
+      }
+    }
+  ],
+  "locator": {
+    "doc_id": "D1",
+    "pdf_page": 5,
+    "where": "Methods/Data"
+  },
+  "field_locators": {
+    "observation_unit": {
+      "doc_id": "D1",
+      "pdf_page": 5,
+      "where": "Methods/Data"
+    },
+    "sampling_unit": {
+      "doc_id": "D1",
+      "pdf_page": 5,
+      "where": "Methods/Data"
+    },
+    "assignment_unit": {
+      "doc_id": "D1",
+      "pdf_page": 19,
+      "where": "Simultaneity limitation"
+    },
+    "clusters": {
+      "doc_id": "D1",
+      "pdf_page": 15,
+      "where": "Table notes: method unspecified"
+    },
+    "native_se_method": {
+      "doc_id": "D1",
+      "pdf_page": 15,
+      "where": "Table note a reports SE but no formula"
+    },
+    "software": {
+      "doc_id": "D1",
+      "pdf_page": 11,
+      "where": "Multiple regression mentioned without package"
+    },
+    "first_stage": {
+      "doc_id": "D1",
+      "pdf_page": 19,
+      "where": "No suitable instrumental variables"
+    }
+  }
+}

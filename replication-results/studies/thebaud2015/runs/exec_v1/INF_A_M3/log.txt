@@ -1,0 +1,30 @@
+04:20:49 - reading inputs from data/derived 
+04:20:54 - gem_extract rows: 713933; country_year rows: 264 
+04:20:54 - influence: preparing origin data 
+04:37:25 - influence M3 minus AUS: status=ok n=336813 (987.5s) 
+04:50:04 - influence M3 minus AUT: status=ok n=340035 (759.0s) 
+05:03:31 - influence M3 minus BEL: status=ok n=331221 (806.5s) 
+05:17:26 - influence M3 minus CAN: status=ok n=337828 (835.0s) 
+05:33:06 - influence M3 minus CHE: status=ok n=336697 (940.7s) 
+05:47:16 - influence M3 minus DEU: status=ok n=318512 (849.9s) 
+05:58:03 - influence M3 minus DNK: status=ok n=328391 (646.9s) 
+06:08:59 - influence M3 minus ESP: status=ok n=265157 (656.2s) 
+06:21:23 - influence M3 minus FIN: status=ok n=334916 (743.3s) 
+06:32:21 - influence M3 minus FRA: status=ok n=338979 (658.3s) 
+06:40:35 - influence M3 minus GBR: status=ok n=259705 (494.4s) 
+06:55:11 - influence M3 minus GRC: status=ok n=336612 (876.1s) 
+07:08:14 - influence M3 minus IRL: status=ok n=334706 (782.4s) 
+07:17:21 - influence M3 minus ISL: status=ok n=333754 (547.6s) 
+07:25:58 - influence M3 minus ITA: status=ok n=336183 (516.6s) 
+07:34:32 - influence M3 minus JPN: status=ok n=335327 (513.5s) 
+07:46:19 - influence M3 minus NLD: status=ok n=330736 (707.4s) 
+07:56:17 - influence M3 minus NOR: status=ok n=336727 (598.1s) 
+08:07:10 - influence M3 minus NZL: status=ok n=339681 (652.7s) 
+08:17:37 - influence M3 minus POL: status=ok n=339958 (627.1s) 
+08:27:10 - influence M3 minus PRT: status=ok n=339650 (573.4s) 
+08:37:19 - influence M3 minus SWE: status=ok n=321139 (608.4s) 
+08:52:51 - influence M3 minus USA: status=ok n=327421 (931.8s) 
+08:52:51 - done: 598 result rows written to runs/exec_v1/INF_A_M3 
+real 16322.41
+user 15595.74
+sys 79.49

@@ -1,0 +1,6 @@
+Implemented [code/analyze.py](code/analyze.py), [README.md](README.md), and [code/TESTS.md](code/TESTS.md); outputs are in `results/`.
+
+- All 12 specifications completed; synthetic tests passed.
+- No unavailable items or declared deviations. FIML defaults are documented.
+- S07a/S07b covariance admissibility warnings are retained.
+- Five influence deletions succeeded, averaging **0.08484 seconds per deletion**.

@@ -1,0 +1,6 @@
+PAPER_K7 v1 implementation complete (R, 2026-10-28).
+- code/run_grid.R + code/k7_lib.R implement every rule of implementation_spec.md for grid_v1.json.
+- Tests: 193 passed, 0 failed (code/dev_out/test_results.txt).
+- Full grid on synthetic data: 38 specs, 888/912 models ok; D05 (item_rule L1) fails with recorded reason
+  (empty sample on the permuted synthetic file). Outputs in code/dev_out/full_run/.
+- Interpretations documented in code/README.md.

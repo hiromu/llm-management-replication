@@ -1,0 +1,7 @@
+{"test": "known_probit_coefficients", "status": "passed", "n": 60000, "truth": [-0.25, 0.7, -0.45], "recovered": [-0.253643035336078, 0.6994023733131636, -0.45580497051969565], "max_abs_error": 0.00580497051969564, "tolerance": 0.035}
+{"test": "marginal_effects_and_delta_finite_differences", "status": "passed", "max_me_error": 4.1609771184170086e-12, "max_jacobian_error": 2.020595341600817e-07, "max_se_error": 5.333785813195491e-10}
+{"test": "cluster_sandwich_direct_tiny_example", "status": "passed", "max_abs_error": 1.1102230246251565e-16, "clusters": 4, "correction": 1.3333333333333333}
+{"test": "handmade_hierarchy_groups", "status": "passed", "single_rank_steepness": 0.0, "matching_reference_sameness": 1.0, "ranks_1_9_steepness": 0.3999999999999999, "empty_group_missing": true}
+{"test": "delong_identical_and_direct_paired_with_ties", "status": "passed", "identical_z": 0.0, "identical_p": 1.0, "paired_z": 0.8660254037844385, "nearly_identical_z": 0.7071076247367378}
+{"test": "model_family_inventory", "status": "passed", "T4": 8, "T5": 4, "T6": 8, "R_cc": 4, "R_n50": 8, "R_n100": 8, "R_noexec": 8, "R_ger": 8, "R_jap": 8, "R_aaf": 8, "R_nosq": 4, "R_alt": 14, "R_friends": 10, "R_int": 4}
+{"test": "cleaning_and_duplicate_linkage", "status": "passed", "pow_rows_preserved": 6, "duplicate_rules": 3, "blank_serial_exact_matching": true}

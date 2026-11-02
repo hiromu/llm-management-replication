@@ -1,0 +1,671 @@
+# k7_lib.R -- functions for implementation specification PAPER_K7 v1.
+# Sourced by run_grid.R and by the tests in code/tests/.
+# Base R + stats only (jsonlite is used by run_grid.R for I/O).
+
+HRM_TERMS <- c("STAFF", "TRAIN", "INCENT", "GRIEV", "DECENT", "ILM", "VHIER")
+ORG_CONTROLS <- c("NONPROF", "SUBSID", "LOGEMP", "LOGAGE", "PCTMGR", "UNION",
+                  "PRODUCT", "SERVICE", "COMPET")
+MKT_CONTROLS <- setdiff(ORG_CONTROLS, "NONPROF")
+
+AXES <- c("records", "market_sample", "market_requires_pop", "case_scope",
+          "item_rule", "staff_coding", "z_reference", "train_log", "no_training",
+          "decision_map", "union_items", "subsidiary", "age", "hierarchy",
+          "employment", "pct_managers", "competition", "neither", "industry",
+          "weights", "centering")
+
+# ---------------------------------------------------------------------------
+# Metadata / missing codes
+# ---------------------------------------------------------------------------
+
+#' Build a named list var -> list(values = numeric, ranges = list(c(lo, hi)))
+parse_metadata <- function(meta) {
+  vars <- meta$variables
+  out <- list()
+  for (v in vars) {
+    vals <- unlist(v$declared_missing_values)
+    vals <- if (length(vals)) suppressWarnings(as.numeric(vals)) else numeric(0)
+    rngs <- lapply(v$declared_missing_ranges, function(r) {
+      lo <- r$low; hi <- r$high
+      lo <- if (is.character(lo) && toupper(lo) %in% c("LO", "LOWEST")) -Inf else as.numeric(lo)
+      hi <- if (is.character(hi) && toupper(hi) %in% c("HI", "HIGHEST")) Inf else as.numeric(hi)
+      c(lo, hi)
+    })
+    out[[v$name]] <- list(values = vals, ranges = rngs)
+  }
+  out
+}
+
+#' Apply declared missing codes of variable `name` to numeric vector x.
+#' `keep` = codes that must NOT be treated as missing (level-specific rules).
+#' `extra` = additional codes that are missing although not declared.
+apply_missing <- function(x, name, mis, keep = numeric(0), extra = numeric(0)) {
+  x <- suppressWarnings(as.numeric(x))
+  m <- mis[[name]]
+  codes <- c(if (!is.null(m)) m$values else numeric(0), extra)
+  codes <- setdiff(codes, keep)
+  if (length(codes)) x[x %in% codes] <- NA
+  if (!is.null(m)) for (r in m$ranges) x[!is.na(x) & x >= r[1] & x <= r[2] & !(x %in% keep)] <- NA
+  x
+}
+
+# ---------------------------------------------------------------------------
+# Elementary coding helpers
+# ---------------------------------------------------------------------------
+
+#' Reverse a 1..k item: k+1-x. Values outside 1..k become missing.
+reverse_item <- function(x, k) {
+  x <- as.numeric(x)
+  x[!is.na(x) & (x < 1 | x > k | x != round(x))] <- NA
+  k + 1 - x
+}
+
+#' Natural log; values <= 0 give NA.
+safe_log <- function(x) {
+  x <- as.numeric(x)
+  out <- rep(NA_real_, length(x))
+  ok <- !is.na(x) & x > 0
+  out[ok] <- log(x[ok])
+  out
+}
+
+#' Index of items under item_rule (matrix rows = records).
+#' L0 and L2: mean of valid items (>= 1 valid). L1: all items must be valid.
+make_index <- function(items, item_rule) {
+  items <- as.matrix(items)
+  nvalid <- rowSums(!is.na(items))
+  if (item_rule == "L1") {
+    out <- rowMeans(items)
+    out[nvalid < ncol(items)] <- NA
+  } else {
+    out <- rowMeans(items, na.rm = TRUE)
+    out[nvalid == 0] <- NA
+  }
+  as.numeric(out)
+}
+
+#' Standard score over reference rows (logical), using rows with a valid value.
+#' pop_sd: divide by n instead of n-1.
+zscore <- function(x, ref = NULL, pop_sd = FALSE) {
+  x <- as.numeric(x)
+  if (is.null(ref)) ref <- rep(TRUE, length(x))
+  v <- x[ref & !is.na(x)]
+  n <- length(v)
+  if (n < 2) return(rep(NA_real_, length(x)))
+  m <- mean(v)
+  s <- sqrt(sum((v - m)^2) / (if (pop_sd) n else n - 1))
+  if (!is.finite(s) || s == 0) return(rep(NA_real_, length(x)))
+  (x - m) / s
+}
+
+# ---------------------------------------------------------------------------
+# Industry crosswalk
+# ---------------------------------------------------------------------------
+
+#' Returns list(first = named chr, nlisted = named int) keyed by integer code as character.
+parse_crosswalk <- function(cw) {
+  code <- as.character(as.integer(cw$census1980_code))
+  field <- trimws(as.character(cw$sic2_from_printed))
+  field[is.na(field)] <- ""
+  parts <- lapply(field, function(f) {
+    if (f == "") return(character(0))
+    p <- trimws(unlist(strsplit(f, "[;,]")))
+    p[p != ""]
+  })
+  first <- vapply(parts, function(p) if (length(p)) p[1] else NA_character_, "")
+  nlisted <- vapply(parts, length, 1L)
+  names(first) <- code; names(nlisted) <- code
+  list(first = first, nlisted = nlisted)
+}
+
+#' Industry group per row. industry L0: first listed; empty/not found -> "UNCL".
+#' L1: multiple listed, empty or not found -> NA. V43 missing -> NA.
+industry_group <- function(v43, cwp, level) {
+  v43 <- suppressWarnings(as.numeric(v43))
+  key <- ifelse(is.na(v43), NA_character_, as.character(as.integer(v43)))
+  found <- !is.na(key) & key %in% names(cwp$first)
+  first <- rep(NA_character_, length(v43)); nl <- rep(0L, length(v43))
+  first[found] <- cwp$first[key[found]]
+  nl[found] <- cwp$nlisted[key[found]]
+  if (level == "L0") {
+    out <- first
+    out[!is.na(key) & (!found | is.na(first))] <- "UNCL"
+  } else if (level == "L1") {
+    out <- first
+    out[!found | nl != 1] <- NA
+  } else stop("unknown industry level ", level)
+  out
+}
+
+# ---------------------------------------------------------------------------
+# Variable construction
+# ---------------------------------------------------------------------------
+
+num <- function(d, v) suppressWarnings(as.numeric(d[[v]]))
+
+#' Build all derived variables for one spec. Returns a data.frame (record frame).
+#' STAFF/TRAIN items are returned transformed but NOT yet standardized
+#' (columns staff_i1..3, train_i1..3); use add_z_indices().
+build_frame <- function(d, s, mis, cwp, check = NULL) {
+  g <- function(v, keep = numeric(0), extra = numeric(0)) apply_missing(d[[v]], v, mis, keep, extra)
+  n <- nrow(d)
+  f <- data.frame(V1 = num(d, "V1"))
+
+  # --- record frame ---
+  V3 <- num(d, "V3")
+  keep_row <- if (s$records == "L1") !(!is.na(V3) & V3 == 0) else rep(TRUE, n)
+  f$keep_row <- keep_row
+
+  # --- outcomes ---
+  pop_items <- matrix(sapply(paste0("V", 289:295), function(v) reverse_item(g(v), 4)), nrow = n)
+  pmp_items <- matrix(sapply(paste0("V", 296:299), function(v) reverse_item(g(v), 4)), nrow = n)
+  f$POP <- make_index(pop_items, s$item_rule)
+  f$PMP <- make_index(pmp_items, s$item_rule)
+
+  # --- raw items subject to the copy rule ---
+  # staff counts: 997/998/999 always missing; 995 missing except staff_coding L2
+  staff_keep <- if (s$staff_coding == "L2") 995 else numeric(0)
+  V62  <- g("V62",  keep = staff_keep, extra = 997)
+  V97  <- g("V97",  keep = staff_keep, extra = 997)
+  V131 <- g("V131", keep = staff_keep, extra = 997)
+  V67 <- g("V67"); V76 <- g("V76"); V102 <- g("V102"); V111 <- g("V111"); V136 <- g("V136")
+  V209 <- g("V209"); V222 <- g("V222"); V235 <- g("V235")
+
+  if (s$item_rule == "L2") {
+    V79_raw <- num(d, "V79")
+    V114_raw <- num(d, "V114")
+    # GSS = CORE: V79 == 2, or V79 system-missing while the CORE item is valid
+    gss_same <- function(core) (!is.na(V79_raw) & V79_raw == 2) | (is.na(V79_raw) & !is.na(core))
+    cp <- function(gss, core) { m <- gss_same(core); gss[m] <- core[m]; gss }
+    V97  <- cp(V97,  V62)
+    V102 <- cp(V102, V67)
+    V111 <- cp(V111, V76)
+    V235 <- cp(V235, V222)
+    # manager same: V114 == 2 or V114 system-missing
+    mgr_same <- (!is.na(V114_raw) & V114_raw == 2) | is.na(V114_raw)
+    cpm <- function(mgr, core, gss) { m <- mgr_same; src <- ifelse(is.na(core), gss, core); mgr[m] <- src[m]; mgr }
+    V131 <- cpm(V131, V62, V97)
+    V136 <- cpm(V136, V67, V102)
+    V209 <- cpm(V209, V222, V235)
+  }
+
+  # --- STAFF items (transformed, not standardized) ---
+  staff_tr <- function(x) {
+    out <- rep(NA_real_, n)
+    special <- !is.na(x) & x >= 995 & x <= 999
+    if (s$staff_coding == "L0") {
+      ok <- !is.na(x) & !special & x >= 1
+      out[ok] <- log(x[ok])
+    } else if (s$staff_coding == "L1") {
+      ok <- !is.na(x) & !special & x >= 0
+      out[ok] <- log1p(x[ok])
+    } else if (s$staff_coding == "L2") {
+      ok <- !is.na(x) & !special & x >= 1
+      out[ok] <- log(x[ok])
+      out[!is.na(x) & x == 995] <- log(995)
+    } else stop("unknown staff_coding ", s$staff_coding)
+    out
+  }
+  f$staff_i1 <- staff_tr(V62); f$staff_i2 <- staff_tr(V97); f$staff_i3 <- staff_tr(V131)
+
+  # --- TRAIN items ---
+  V145 <- g("V145")
+  t145 <- ifelse(!is.na(V145) & V145 == 1, 2, ifelse(!is.na(V145) & V145 == 2, 1, NA))
+  V157 <- g("V157")
+  V157[!is.na(V157) & V157 == 99996] <- 100000
+  V172 <- g("V172", extra = 4)
+  t172 <- reverse_item(V172, 3)
+  no_tr <- !is.na(V145) & V145 == 2
+  if (s$no_training == "L0") {
+    V157[no_tr] <- NA; t172[no_tr] <- NA
+  } else if (s$no_training == "L1") {
+    V157[no_tr] <- 0; t172[no_tr] <- 1
+  } else if (s$no_training == "L2") {
+    V157[no_tr] <- 0; t172[no_tr] <- NA
+  } else stop("unknown no_training ", s$no_training)
+  log157 <- function(x) {
+    if (s$no_training == "L0") safe_log(x) else { out <- rep(NA_real_, n); ok <- !is.na(x) & x >= 0; out[ok] <- log1p(x[ok]); out }
+  }
+  if (s$train_log == "L0") {
+    f$train_i1 <- safe_log(t145); f$train_i2 <- log157(V157); f$train_i3 <- safe_log(t172)
+  } else if (s$train_log == "L1") {
+    f$train_i1 <- t145; f$train_i2 <- log157(V157); f$train_i3 <- t172
+  } else if (s$train_log == "L2") {
+    f$train_i1 <- t145; f$train_i2 <- V157; f$train_i3 <- t172
+  } else stop("unknown train_log ", s$train_log)
+
+  # --- INCENT ---
+  f$INCENT <- make_index(cbind(reverse_item(V209, 3), reverse_item(V222, 3), reverse_item(V235, 3)), s$item_rule)
+
+  # --- GRIEV ---
+  V270 <- g("V270")
+  f$GRIEV <- ifelse(!is.na(V270) & V270 == 1, 1, ifelse(!is.na(V270) & V270 == 2, 0, NA))
+
+  # --- DECENT ---
+  V17 <- num(d, "V17")
+  dmap <- if (s$decision_map == "L0") c("1" = 3, "2" = 5, "3" = 1, "4" = 4, "5" = 2) else
+          if (s$decision_map == "L1") c("1" = 1, "2" = 5, "3" = 3, "4" = 4, "5" = 2) else stop("unknown decision_map")
+  dec_items <- matrix(NA_real_, n, 8)
+  for (j in 1:8) {
+    a <- g(paste0("V", 270 + j)); b <- g(paste0("V", 278 + j))
+    raw <- ifelse(!is.na(V17) & V17 == 1, a, ifelse(!is.na(V17) & V17 == 2, b, NA))
+    raw[!is.na(raw) & !(raw %in% 1:5)] <- NA   # code 6 "depends" (and anything else) missing
+    dec_items[, j] <- unname(dmap[as.character(raw)])
+  }
+  f$DECENT <- make_index(dec_items, s$item_rule)
+
+  # --- ILM ---
+  f$ILM <- make_index(cbind(reverse_item(V67, 2), reverse_item(V76, 2), reverse_item(V102, 2),
+                            reverse_item(V111, 2), reverse_item(V136, 2)), s$item_rule)
+
+  # --- VHIER ---
+  V261 <- g("V261")
+  if (s$hierarchy == "L0") { V261[!is.na(V261) & V261 == 96] <- 100; f$VHIER <- safe_log(V261) }
+  else if (s$hierarchy == "L1") { V261[!is.na(V261) & V261 == 96] <- NA; f$VHIER <- safe_log(V261) }
+  else if (s$hierarchy == "L2") { V261[!is.na(V261) & V261 == 96] <- 100; f$VHIER <- V261 }
+  else stop("unknown hierarchy ", s$hierarchy)
+  if (identical(check, "hierarchy_log10")) {
+    V261c <- g("V261"); V261c[!is.na(V261c) & V261c == 96] <- 100
+    f$VHIER <- safe_log(V261c) / log(10)
+  }
+
+  # --- controls ---
+  V8 <- num(d, "V8"); V9 <- g("V9")
+  f$V8 <- V8; f$V9 <- V9
+  f$NONPROF <- ifelse(!is.na(V8) & V8 == 2, 1, ifelse(!is.na(V8) & V8 == 1, 0, NA))
+
+  V21 <- g("V21")
+  if (s$subsidiary == "L0") {
+    f$SUBSID <- ifelse(is.na(V17), NA, ifelse(V17 == 1, 1, 0))
+  } else {
+    sub <- ifelse(!is.na(V21), ifelse(V21 == 2, 1, 0), NA)
+    if (s$subsidiary == "L2") sub <- ifelse(!is.na(V21), ifelse(V21 %in% c(1, 2, 3), 1, 0), NA)
+    sub[!is.na(V17) & V17 == 2] <- 0
+    f$SUBSID <- sub
+  }
+
+  V23 <- g("V23"); V32 <- g("V32"); NEWTOTAL <- g("NEWTOTAL")
+  f$LOGEMP <- switch(s$employment,
+                     L0 = safe_log(V23 + V32),
+                     L1 = safe_log(NEWTOTAL),
+                     L2 = safe_log(V23),
+                     stop("unknown employment"))
+
+  V16 <- g("V16"); age <- 1991 - V16
+  f$LOGAGE <- switch(s$age,
+                     L0 = safe_log(age),
+                     L1 = { o <- rep(NA_real_, n); ok <- !is.na(age) & age >= 0; o[ok] <- log1p(age[ok]); o },
+                     L2 = age,
+                     stop("unknown age"))
+
+  V114 <- g("V114"); V115 <- g("V115")
+  numer <- ifelse(!is.na(V114) & V114 == 1, V115, ifelse(!is.na(V114) & V114 == 3, 0, NA))
+  if (s$pct_managers == "L1") numer[!is.na(V114) & V114 == 3] <- NA
+  denom <- if (s$pct_managers == "L2") NEWTOTAL else V23 + V32
+  denom[!is.na(denom) & denom == 0] <- NA
+  f$PCTMGR <- 100 * numer / denom
+  if (identical(check, "pct_proportion")) f$PCTMGR <- f$PCTMGR / 100
+
+  V220 <- g("V220"); V233 <- g("V233"); V300 <- g("V300"); V166 <- g("V166")
+  u_items <- cbind(reverse_item(V220, 3), reverse_item(V233, 3))
+  if (s$union_items %in% c("L1", "L2")) u_items <- cbind(u_items, reverse_item(V300, 3))
+  if (s$union_items == "L2") {
+    # V166 yes gives 3, no gives 1: these are the final (already reversed-scale) values,
+    # aligned with the other items where 3 = "very important" after reversal.
+    v166 <- ifelse(!is.na(V166) & V166 == 1, 3, ifelse(!is.na(V166) & V166 == 2, 1, NA))
+    u_items <- cbind(u_items, v166)
+  }
+  if (!s$union_items %in% c("L0", "L1", "L2")) stop("unknown union_items")
+  f$UNION <- make_index(u_items, s$item_rule)
+
+  V41 <- g("V41")
+  f$PRODUCT <- ifelse(is.na(V41), NA, ifelse(V41 == 1, 1, ifelse(V41 %in% c(2, 3), 0, NA)))
+  f$SERVICE <- ifelse(is.na(V41), NA, ifelse(V41 == 2, 1, ifelse(V41 %in% c(1, 3), 0, NA)))
+  if (s$neither == "L1") {
+    f$PRODUCT[!is.na(V41) & V41 == 4] <- 0; f$SERVICE[!is.na(V41) & V41 == 4] <- 0
+  } else if (s$neither != "L0") stop("unknown neither")
+
+  V328 <- g("V328")
+  V328[!is.na(V328) & !(V328 %in% 1:4)] <- NA
+  f$COMPET <- switch(s$competition,
+                     L0 = V328,
+                     L1 = ifelse(is.na(V328), NA, as.numeric(V328 == 4)),
+                     L2 = ifelse(is.na(V328), NA, as.numeric(V328 >= 3)),
+                     stop("unknown competition"))
+
+  # --- industry ---
+  f$IND <- industry_group(d[["V43"]], cwp, s$industry)
+
+  # --- weight ---
+  W <- g("WEIGHT")
+  W[!is.na(W) & W <= 0] <- NA
+  f$WEIGHT <- W
+
+  f[keep_row, , drop = FALSE]
+}
+
+#' Add standardized STAFF/TRAIN items and indices.
+#' ref: logical vector over rows of f (reference sample) or NULL (all rows).
+#' Rows outside ref keep L0 values (all-rows, sample SD).
+add_z_indices <- function(f, item_rule, ref = NULL, pop_sd = FALSE) {
+  for (idx in c("staff", "train")) {
+    cols <- paste0(idx, "_i", 1:3)
+    z <- sapply(cols, function(cn) {
+      z0 <- zscore(f[[cn]], NULL, FALSE)
+      if (is.null(ref)) return(zscore(f[[cn]], NULL, pop_sd))
+      zr <- zscore(f[[cn]], ref, pop_sd)
+      ifelse(ref, zr, z0)
+    })
+    z <- matrix(z, nrow = nrow(f))
+    for (j in 1:3) f[[paste0(idx, "_z", j)]] <- z[, j]
+    f[[toupper(idx)]] <- make_index(z, item_rule)
+  }
+  f
+}
+
+#' Common complete-case sample of a family (case_scope L0 definition).
+family_filter <- function(f, family, s) {
+  ok <- rep(TRUE, nrow(f))
+  if (family == "mkt") {
+    ok <- ok & !is.na(f$V8) & f$V8 == 1
+    if (s$market_sample == "L1") ok <- ok & !is.na(f$V9) & f$V9 == 4
+    if (s$market_requires_pop == "L1") ok <- ok & !is.na(f$POP)
+  }
+  if (s$weights == "L1") ok <- ok & !is.na(f$WEIGHT)
+  ok
+}
+
+family_outcome <- function(family) if (family == "org") "POP" else "PMP"
+family_controls <- function(family) if (family == "org") ORG_CONTROLS else MKT_CONTROLS
+
+complete_rows <- function(f, vars) {
+  ok <- rep(TRUE, nrow(f))
+  for (v in vars) ok <- ok & !is.na(f[[v]])
+  ok
+}
+
+family_sample_L0 <- function(f, family, s) {
+  family_filter(f, family, s) &
+    complete_rows(f, c(family_outcome(family), HRM_TERMS, family_controls(family), "IND"))
+}
+
+# ---------------------------------------------------------------------------
+# Models
+# ---------------------------------------------------------------------------
+
+model_list <- function(family) {
+  p <- if (family == "org") "org" else "mkt"
+  m <- list()
+  m[[paste0(p, "_base")]] <- list(hrm = character(0), int = character(0))
+  single <- if (family == "org") "M1" else "M6"
+  for (h in HRM_TERMS) m[[paste0(p, "_", single, "_", h)]] <- list(hrm = h, int = character(0))
+  A <- c("STAFF", "TRAIN", "INCENT", "GRIEV", "DECENT", "ILM")
+  B <- c("STAFF", "TRAIN", "INCENT", "GRIEV", "DECENT", "VHIER")
+  ids <- if (family == "org") c("M2", "M3", "M4", "M5") else c("M7", "M8", "M9", "M10")
+  m[[paste0(p, "_", ids[1])]] <- list(hrm = A, int = character(0))
+  m[[paste0(p, "_", ids[2])]] <- list(hrm = B, int = character(0))
+  m[[paste0(p, "_", ids[3])]] <- list(hrm = A, int = c("TRAIN_x_STAFF", "GRIEV_x_INCENT", "ILM_x_DECENT"))
+  m[[paste0(p, "_", ids[4])]] <- list(hrm = B, int = c("TRAIN_x_STAFF", "GRIEV_x_INCENT", "VHIER_x_DECENT"))
+  m
+}
+
+nested_pairs <- function(family) {
+  if (family == "org") list(
+    list(test_id = "org_HRM_A", full = "org_M2", restricted = "org_base"),
+    list(test_id = "org_HRM_B", full = "org_M3", restricted = "org_base"),
+    list(test_id = "org_INT_A", full = "org_M4", restricted = "org_M2"),
+    list(test_id = "org_INT_B", full = "org_M5", restricted = "org_M3"))
+  else list(
+    list(test_id = "mkt_HRM_A", full = "mkt_M7", restricted = "mkt_base"),
+    list(test_id = "mkt_HRM_B", full = "mkt_M8", restricted = "mkt_base"),
+    list(test_id = "mkt_INT_A", full = "mkt_M9", restricted = "mkt_M7"),
+    list(test_id = "mkt_INT_B", full = "mkt_M10", restricted = "mkt_M8"))
+}
+
+#' Choose industry dummy columns for a family given the group vector of the
+#' family sample. Returns character vector of groups to enter (reference omitted).
+#' alt = TRUE: omit the smallest group (ties: highest code) [CHK_industry_ref_alt].
+industry_dummy_groups <- function(groups, alt = FALSE) {
+  groups <- groups[!is.na(groups)]
+  if (!length(groups)) return(character(0))
+  tab <- table(groups)
+  codes <- names(tab); cnt <- as.integer(tab)
+  ord_codes <- order(codes)  # lexical: "01" < "99" < "UNCL"
+  if (!alt) {
+    cand <- which(cnt == max(cnt))
+    ref <- codes[cand][order(codes[cand])][1]            # ties: lowest code
+  } else {
+    cand <- which(cnt == min(cnt))
+    ref <- codes[cand][order(codes[cand], decreasing = TRUE)][1]  # ties: highest code
+  }
+  setdiff(codes[ord_codes], ref)
+}
+
+#' Build the design matrix for a model on rows `rows` of frame f.
+#' dummy_groups: industry groups entering as IND_<group> dummies.
+#' centering L1: interactions use components centered at the estimation-sample mean.
+build_design <- function(f, rows, hrm, int, controls, dummy_groups, centering = "L0") {
+  fr <- f[rows, , drop = FALSE]
+  X <- matrix(1, nrow(fr), 1, dimnames = list(NULL, "(Intercept)"))
+  for (h in hrm) { X <- cbind(X, fr[[h]]); colnames(X)[ncol(X)] <- h }
+  for (term in int) {
+    parts <- strsplit(term, "_x_")[[1]]
+    a <- fr[[parts[1]]]; b <- fr[[parts[2]]]
+    if (centering == "L1") { a <- a - mean(a); b <- b - mean(b) }
+    X <- cbind(X, a * b); colnames(X)[ncol(X)] <- term
+  }
+  for (cn in controls) { X <- cbind(X, fr[[cn]]); colnames(X)[ncol(X)] <- cn }
+  for (gname in dummy_groups) {
+    X <- cbind(X, as.numeric(!is.na(fr$IND) & fr$IND == gname)); colnames(X)[ncol(X)] <- paste0("IND_", gname)
+  }
+  X
+}
+
+#' OLS / WLS fit with conventional and HC3 inference.
+#' Drops all-zero columns and aliased (collinear) columns, recording them.
+fit_model <- function(X, y, w = NULL) {
+  res <- list(status = "failed", error = NA_character_, dropped = character(0))
+  tryCatch({
+    if (is.null(w)) w <- rep(1, length(y))
+    if (any(is.na(X)) || any(is.na(y)) || any(is.na(w))) stop("missing values in design, outcome or weights")
+    n <- nrow(X)
+    dropped <- character(0)
+    # all-zero columns (never the intercept)
+    zero <- apply(X, 2, function(col) all(col == 0)) & colnames(X) != "(Intercept)"
+    if (any(zero)) { dropped <- c(dropped, paste0(colnames(X)[zero], " (all zero)")); X <- X[, !zero, drop = FALSE] }
+    if (n <= ncol(X)) stop(sprintf("n (%d) <= number of parameters (%d)", n, ncol(X)))
+    fit <- lm.wfit(X, y, w)
+    aliased <- is.na(fit$coefficients)
+    if (any(aliased)) {
+      dropped <- c(dropped, paste0(colnames(X)[aliased], " (collinear)"))
+      X <- X[, !aliased, drop = FALSE]
+      fit <- lm.wfit(X, y, w)
+      if (any(is.na(fit$coefficients))) stop("rank deficiency persists after dropping aliased columns")
+    }
+    k <- ncol(X)
+    beta <- fit$coefficients
+    e <- y - as.vector(X %*% beta)
+    df <- n - k
+    if (df <= 0) stop("no residual degrees of freedom")
+    sw <- sqrt(w)
+    Xw <- X * sw; ew <- e * sw
+    XtX_inv <- chol2inv(chol(crossprod(Xw)))
+    ssr <- sum(ew^2)
+    sigma2 <- ssr / df
+    V <- sigma2 * XtX_inv
+    se <- sqrt(diag(V))
+    h <- rowSums((Xw %*% XtX_inv) * Xw)
+    meat <- crossprod(Xw * (ew / (1 - h)))
+    V3 <- XtX_inv %*% meat %*% XtX_inv
+    se3 <- sqrt(diag(V3))
+    t <- beta / se; t3 <- beta / se3
+    ybar <- sum(w * y) / sum(w)
+    sst <- sum(w * (y - ybar)^2)
+    r2 <- 1 - ssr / sst
+    adj <- 1 - (1 - r2) * (n - 1) / df
+    f_df1 <- k - 1
+    fstat <- if (f_df1 > 0) (r2 / f_df1) / ((1 - r2) / df) else NA_real_
+    fp <- if (f_df1 > 0) pf(fstat, f_df1, df, lower.tail = FALSE) else NA_real_
+    coefs <- data.frame(
+      term = colnames(X), estimate = beta, se = se, t = t, df = df,
+      p_two = 2 * pt(-abs(t), df), p_upper = pt(t, df, lower.tail = FALSE), p_lower = pt(t, df),
+      se_hc3 = se3, t_hc3 = t3, p_two_hc3 = 2 * pt(-abs(t3), df),
+      p_upper_hc3 = pt(t3, df, lower.tail = FALSE), p_lower_hc3 = pt(t3, df),
+      stringsAsFactors = FALSE, row.names = NULL)
+    res <- list(status = "ok", error = NA_character_, dropped = dropped, coefs = coefs,
+                n = n, k = k, df = df, ssr = ssr, sst = sst, r2 = r2, adj_r2 = adj,
+                f = fstat, f_df1 = f_df1, f_df2 = df, f_p = fp,
+                n_ind = sum(grepl("^IND_", colnames(X))), terms = colnames(X))
+    NULL
+  }, error = function(e) res$error <<- conditionMessage(e))
+  res
+}
+
+#' Nested F test from two fits on identical rows (weighted SSR for WLS).
+nested_f <- function(full, restricted) {
+  df1 <- full$k - restricted$k
+  df2 <- full$df
+  if (df1 <= 0) return(list(delta_r2 = full$r2 - restricted$r2, f = NA_real_, df1 = df1, df2 = df2, p = NA_real_))
+  fstat <- ((restricted$ssr - full$ssr) / df1) / (full$ssr / df2)
+  list(delta_r2 = full$r2 - restricted$r2, f = fstat, df1 = df1, df2 = df2,
+       p = pf(fstat, df1, df2, lower.tail = FALSE))
+}
+
+# ---------------------------------------------------------------------------
+# Running one specification
+# ---------------------------------------------------------------------------
+
+#' samples.csv rows (robust to an empty sample).
+sample_rows <- function(spec_id, family, model_id, v1) {
+  data.frame(spec_id = rep(spec_id, length(v1)), family = rep(family, length(v1)),
+             model_id = rep(model_id, length(v1)), V1 = v1, stringsAsFactors = FALSE)
+}
+
+#' Run one spec. Returns list(coefficients, model_stats, nested_tests, samples,
+#' designs (for influence), error).
+run_spec <- function(d, spec, mis, cwp) {
+  s <- spec$settings
+  check <- if (!is.null(spec$check)) spec$check else NULL
+  spec_id <- spec$spec_id
+  out <- list(coefficients = list(), model_stats = list(), nested_tests = list(),
+              samples = list(), designs = list(), error = NA_character_)
+  pop_sd <- s$z_reference == "L3"
+
+  f0 <- build_frame(d, s, mis, cwp, check)
+  f0 <- add_z_indices(f0, s$item_rule, NULL, pop_sd)
+  S <- list(org = family_sample_L0(f0, "org", s), mkt = family_sample_L0(f0, "mkt", s))
+
+  frames <- list(org = f0, mkt = f0)
+  if (s$z_reference == "L1") {
+    fz <- add_z_indices(f0, s$item_rule, S$org, pop_sd); frames <- list(org = fz, mkt = fz)
+  } else if (s$z_reference == "L2") {
+    frames <- list(org = add_z_indices(f0, s$item_rule, S$org, pop_sd),
+                   mkt = add_z_indices(f0, s$item_rule, S$mkt, pop_sd))
+  } else if (!s$z_reference %in% c("L0", "L3")) stop("unknown z_reference ", s$z_reference)
+
+  for (family in c("org", "mkt")) {
+    f <- frames[[family]]
+    ycol <- family_outcome(family); controls <- family_controls(family)
+    models <- model_list(family)
+    fits <- list(); rows_of <- list()
+
+    if (s$case_scope == "L0") {
+      fam_rows <- S[[family]]
+      dummy_groups <- industry_dummy_groups(f$IND[fam_rows], alt = identical(check, "industry_ref_alt"))
+      out$samples[[length(out$samples) + 1]] <- sample_rows(spec_id, family, "ALL", f$V1[fam_rows])
+    } else if (s$case_scope == "L1") {
+      base_rows <- family_filter(f, family, s) & complete_rows(f, c(ycol, controls, "IND"))
+      dummy_groups <- industry_dummy_groups(f$IND[base_rows], alt = identical(check, "industry_ref_alt"))
+    } else stop("unknown case_scope ", s$case_scope)
+
+    for (mid in names(models)) {
+      m <- models[[mid]]
+      rows <- if (s$case_scope == "L0") S[[family]] else
+        family_filter(f, family, s) & complete_rows(f, c(ycol, m$hrm, controls, "IND"))
+      rows_of[[mid]] <- rows
+      if (s$case_scope == "L1") out$samples[[length(out$samples) + 1]] <- sample_rows(spec_id, family, mid, f$V1[rows])
+      fit <- tryCatch({
+        X <- build_design(f, rows, m$hrm, m$int, controls, dummy_groups, s$centering)
+        y <- f[[ycol]][rows]
+        w <- if (s$weights == "L1") f$WEIGHT[rows] else NULL
+        fit <- fit_model(X, y, w)
+        # keep the design actually estimated (after any column drops) for the influence refits
+        fit$X <- if (fit$status == "ok") X[, fit$terms, drop = FALSE] else X
+        fit$y <- y; fit$w <- w; fit$V1 <- f$V1[rows]
+        fit
+      }, error = function(e) list(status = "failed", error = conditionMessage(e), dropped = character(0)))
+      fits[[mid]] <- fit
+      out$model_stats[[length(out$model_stats) + 1]] <- data.frame(
+        spec_id = spec_id, family = family, model_id = mid, status = fit$status, error = fit$error,
+        n = if (fit$status == "ok") fit$n else sum(rows), k = if (fit$status == "ok") fit$k else NA,
+        n_industry_dummies = if (fit$status == "ok") fit$n_ind else NA,
+        dropped_columns = if (length(fit$dropped)) paste(fit$dropped, collapse = "; ") else NA,
+        r2 = if (fit$status == "ok") fit$r2 else NA, adj_r2 = if (fit$status == "ok") fit$adj_r2 else NA,
+        f = if (fit$status == "ok") fit$f else NA, f_df1 = if (fit$status == "ok") fit$f_df1 else NA,
+        f_df2 = if (fit$status == "ok") fit$f_df2 else NA, f_p = if (fit$status == "ok") fit$f_p else NA,
+        stringsAsFactors = FALSE)
+      if (fit$status == "ok") {
+        out$coefficients[[length(out$coefficients) + 1]] <- cbind(
+          data.frame(spec_id = spec_id, family = family, model_id = mid, stringsAsFactors = FALSE), fit$coefs)
+      }
+    }
+
+    # nested tests: restricted model refitted on the full model's rows
+    for (np in nested_pairs(family)) {
+      full <- fits[[np$full]]
+      row_tmpl <- data.frame(spec_id = spec_id, family = family, test_id = np$test_id,
+                             full_model = np$full, restricted_model = np$restricted,
+                             n = NA, delta_r2 = NA, f = NA, df1 = NA, df2 = NA, p = NA, stringsAsFactors = FALSE)
+      if (full$status != "ok") { out$nested_tests[[length(out$nested_tests) + 1]] <- row_tmpl; next }
+      rm <- models[[np$restricted]]
+      rfit <- tryCatch({
+        Xr <- build_design(f, rows_of[[np$full]], rm$hrm, rm$int, controls, dummy_groups, s$centering)
+        fit_model(Xr, full$y, full$w)
+      }, error = function(e) list(status = "failed", error = conditionMessage(e)))
+      if (rfit$status != "ok") { out$nested_tests[[length(out$nested_tests) + 1]] <- row_tmpl; next }
+      nf <- nested_f(full, rfit)
+      row_tmpl$n <- full$n; row_tmpl$delta_r2 <- nf$delta_r2; row_tmpl$f <- nf$f
+      row_tmpl$df1 <- nf$df1; row_tmpl$df2 <- nf$df2; row_tmpl$p <- nf$p
+      out$nested_tests[[length(out$nested_tests) + 1]] <- row_tmpl
+    }
+    out$designs[[family]] <- fits
+  }
+  out
+}
+
+# ---------------------------------------------------------------------------
+# Influence diagnostic (leave-one-out refits on fixed design)
+# ---------------------------------------------------------------------------
+
+#' Leave-one-out refits of one fitted model (fit = element of run_spec()$designs).
+#' Returns a data.frame with model_id, deleted_V1, term, estimate, se, p_upper, p_two, status, note.
+influence_loo <- function(fit, model_id, report_terms) {
+  rows <- list()
+  if (is.null(fit) || fit$status != "ok") {
+    return(data.frame(model_id = model_id, deleted_V1 = NA, term = NA, estimate = NA, se = NA,
+                      p_upper = NA, p_two = NA, status = "failed",
+                      note = paste("base model not fitted:", fit$error), stringsAsFactors = FALSE))
+  }
+  X <- fit$X; y <- fit$y; w <- fit$w; V1 <- fit$V1
+  n <- nrow(X)
+  for (i in seq_len(n)) {
+    Xi <- X[-i, , drop = FALSE]; yi <- y[-i]; wi <- if (is.null(w)) NULL else w[-i]
+    r <- fit_model(Xi, yi, wi)
+    if (r$status == "ok") {
+      keep <- r$coefs$term %in% report_terms
+      cf <- r$coefs[keep, , drop = FALSE]
+      note <- if (length(r$dropped)) paste("dropped:", paste(r$dropped, collapse = "; ")) else NA_character_
+      missing_terms <- setdiff(report_terms, cf$term)
+      rows[[length(rows) + 1]] <- data.frame(
+        model_id = model_id, deleted_V1 = V1[i], term = cf$term, estimate = cf$estimate, se = cf$se,
+        p_upper = cf$p_upper, p_two = cf$p_two, status = "ok", note = note, stringsAsFactors = FALSE)
+      if (length(missing_terms)) rows[[length(rows) + 1]] <- data.frame(
+        model_id = model_id, deleted_V1 = V1[i], term = missing_terms, estimate = NA, se = NA,
+        p_upper = NA, p_two = NA, status = "ok", note = "term dropped in refit", stringsAsFactors = FALSE)
+    } else {
+      rows[[length(rows) + 1]] <- data.frame(
+        model_id = model_id, deleted_V1 = V1[i], term = NA, estimate = NA, se = NA,
+        p_upper = NA, p_two = NA, status = "failed", note = r$error, stringsAsFactors = FALSE)
+    }
+  }
+  do.call(rbind, rows)
+}

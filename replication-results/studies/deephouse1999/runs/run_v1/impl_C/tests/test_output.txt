@@ -1,0 +1,30 @@
+test_analytic_rebuild_drops_and_logs_undefined_rows_without_reiteration (test_analysis.ConstructionTests.test_analytic_rebuild_drops_and_logs_undefined_rows_without_reiteration) ... ok
+test_analytic_reference_includes_exact_1984_lag_sources_and_fits (test_analysis.ConstructionTests.test_analytic_reference_includes_exact_1984_lag_sources_and_fits) ... ok
+test_construct_only_cannot_fit_even_residual_outlier (test_analysis.ConstructionTests.test_construct_only_cannot_fit_even_residual_outlier) ... ok
+test_day_weighted_assets_require_four_quarters_at_both_origins (test_analysis.ConstructionTests.test_day_weighted_assets_require_four_quarters_at_both_origins) ... ok
+test_lags_do_not_skip_gaps_or_cross_entries (test_analysis.ConstructionTests.test_lags_do_not_skip_gaps_or_cross_entries) ... ok
+test_market_growth_uses_calendar_predecessor_across_missing_years (test_analysis.ConstructionTests.test_market_growth_uses_calendar_predecessor_across_missing_years) ... ok
+test_merger_proforma_and_event_confirmed_continuity (test_analysis.ConstructionTests.test_merger_proforma_and_event_confirmed_continuity) ... ok
+test_missingness_zero_rule_and_identity (test_analysis.ConstructionTests.test_missingness_zero_rule_and_identity) ... ok
+test_optional_county_file_only_needed_for_name_lookups (test_analysis.ConstructionTests.test_optional_county_file_only_needed_for_name_lookups) ... ok
+test_quarter_coverage_income_and_named_outlier_lag (test_analysis.ConstructionTests.test_quarter_coverage_income_and_named_outlier_lag) ... ok
+test_sample_hash_bytes_format_sort_and_empty (test_analysis.ConstructionTests.test_sample_hash_bytes_format_sort_and_empty) ... ok
+test_special_codes_and_savings_keep_other_origin_filters (test_analysis.ConstructionTests.test_special_codes_and_savings_keep_other_origin_filters) ... ok
+test_stock_timing_day_weights_annualisation_and_record_priority (test_analysis.ConstructionTests.test_stock_timing_day_weights_annualisation_and_record_priority) ... ok
+test_strategic_deviation_hand_market (test_analysis.ConstructionTests.test_strategic_deviation_hand_market) ... ok
+test_ar1_transform_and_matrix_solution_across_gaps (test_analysis.MatrixTests.test_ar1_transform_and_matrix_solution_across_gaps) ... ok
+test_centered_basis_backtransform_and_square_only_not_applicable (test_analysis.MatrixTests.test_centered_basis_backtransform_and_square_only_not_applicable) ... ok
+test_external_studentization_matches_actual_deletions (test_analysis.MatrixTests.test_external_studentization_matches_actual_deletions) ... ok
+test_rank_failure_and_different_sample_f_rejected (test_analysis.MatrixTests.test_rank_failure_and_different_sample_f_rejected) ... ok
+test_robust_covariance_direct_sandwich (test_analysis.MatrixTests.test_robust_covariance_direct_sandwich) ... ok
+test_weight_rescaling_invariance_all_covariances (test_analysis.MatrixTests.test_weight_rescaling_invariance_all_covariances) ... ok
+test_wls_and_all_nested_f_against_direct_matrix (test_analysis.MatrixTests.test_wls_and_all_nested_f_against_direct_matrix) ... ok
+test_year_effects_drop_rmg_and_bank_effects_count_k (test_analysis.MatrixTests.test_year_effects_drop_rmg_and_bank_effects_count_k) ... ok
+test_entire_grid_outputs_checks_and_all_influence_deletions (test_analysis.PipelineTests.test_entire_grid_outputs_checks_and_all_influence_deletions) ... ok
+test_influence_failures_are_retained (test_analysis.PipelineTests.test_influence_failures_are_retained) ... ok
+test_unavailable_inputs_and_runtime_errors_have_distinct_statuses (test_analysis.PipelineTests.test_unavailable_inputs_and_runtime_errors_have_distinct_statuses) ... ok
+
+----------------------------------------------------------------------
+Ran 25 tests in 20.615s
+
+OK

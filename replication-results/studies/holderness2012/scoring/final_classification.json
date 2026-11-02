@@ -1,0 +1,118 @@
+{
+  "date": "2026-10-28",
+  "focal": {
+    "claims": "Table 4: Steepness and Sameness x captured and camp cohorts (8 coefficients, 4 claims)",
+    "outcome": "consistent (4 of 4 claims)",
+    "qualifications": [
+      "Sameness claims label-sensitive: S005 (strict rank labels) for captured simple; S008 (complete-covariate group members) for camp simple and full",
+      "magnitude criterion not audited (no published SEs)",
+      "specification fragility not assessed (no substantive equivalent alternatives)",
+      "N 100,672 (captured) and 101,993 (camp) versus published 100,464"
+    ],
+    "adversarial": "survives as consistent"
+  },
+  "uncertain_focal_T6": {
+    "outcome": "consistent (4 of 4 claims)",
+    "note": "focal status uncertain (reader disagreement); paper outcome identical with or without it"
+  },
+  "lower_tier_formal_flags_after_review": [
+    {
+      "targets": [
+        "T006",
+        "T033",
+        "T081",
+        "T114"
+      ],
+      "item": "length of captivity sign, captured full models (Tables 4 and 6)",
+      "classification": "indeterminate:label_sensitive",
+      "basis": "frozen branches S008/S005 reproduce the printed sign (T4); adversarial review unresolved; both estimates p > 0.7"
+    },
+    {
+      "targets": [
+        "T018",
+        "T045",
+        "T096",
+        "T129"
+      ],
+      "item": "men in hierarchy sign, camp full models",
+      "classification": "indeterminate:label_sensitive",
+      "basis": "branches S004 and S019 reproduce the printed sign (T4); linear term of an uncentred quadratic; adversarial review unresolved"
+    },
+    {
+      "targets": [
+        "T019",
+        "T046",
+        "T130"
+      ],
+      "item": "men squared sign, camp full models",
+      "classification": "not discrepant: overturned in adversarial review as a probable scale artifact (unverified inference about the article's scaling); T046 also label-sensitive (S004)",
+      "basis": "scoring/adversarial_review.json item 1c"
+    },
+    {
+      "targets": [
+        "T061"
+      ],
+      "item": "Table 5 Panel A camp simple Sameness sign (published -0.01, p 0.95; reconstructed 0.039, p 0.84)",
+      "classification": "discrepant (adversarial review not model-family independent; weak: both estimates nonsignificant)",
+      "basis": "adversarial item 1e"
+    }
+  ],
+  "recorded_contradictions_of_nonsignificance": [
+    "T057 Table 5 Panel A captured simple Sameness (0.27 -> 0.04)",
+    "T058 Table 5 Panel A captured full Steepness (0.14 -> 0.06)",
+    "T076 Table 6 captured full Officer x Steepness (0.20 -> 0.07)",
+    "T088 Table 6 camp simple Steepness main effect (0.12 -> 0.06)"
+  ],
+  "text_only_robustness_claims": [
+    {
+      "claim": "same-unit hierarchy measures insignificant (p about 0.50)",
+      "classification": "discrepant (review not family-independent) (A, B, C agree; all readings p <= 0.01)"
+    },
+    {
+      "claim": "all robustness hierarchy coefficients negative",
+      "classification": "discrepant (review not family-independent) (administrative intensity camp models positive, p 0.003; sum of ranks camp full positive, p 0.023)"
+    },
+    {
+      "claim": "hierarchy x size interaction significant only for captured Sameness",
+      "classification": "indeterminate: interpretation-sensitive (frozen reading p 0.13; alternative model reading p 0.007 but other signs change)"
+    },
+    {
+      "claim": "Table 5 Panel B ROC: captured simple Steepness 0.13",
+      "classification": "indeterminate: test-method (DeLong fallback 0.0001; Hanley-McNeil approximation 0.06-0.21)"
+    },
+    {
+      "claim": "Table 5 Panel B ROC: camp full Steepness 0.00",
+      "classification": "discrepant (review not family-independent) (DeLong 0.58; H-M approximation 0.92-0.98)"
+    },
+    {
+      "claim": "Germany-only: all negative, all 8 significant",
+      "classification": "largely consistent: 8 of 8 negative, 7 of 8 p < 0.10 (captured simple Sameness p 0.29)"
+    },
+    {
+      "claim": "Japan-only: negative, significant in the 4 captured specifications",
+      "classification": "consistent: 8 of 8 negative; captured p 0.012, 0.013, 0.045, 0.081"
+    },
+    {
+      "claim": "friends coefficient negative and significant in all 8 (largest p 0.02); hierarchy at least as significant",
+      "classification": "consistent in direction: friends negative in all 6 fitted specifications, largest p 0.028"
+    },
+    {
+      "claim": "without the squared size term, size positive and highly significant in all four",
+      "classification": "consistent: p 0.002 to 0.005"
+    },
+    {
+      "claim": "subsets (complete data, n>=50, n>=100, no executions): hierarchy negative",
+      "classification": "consistent in sign (28 of 28 Steepness/Sameness coefficients negative across the four subset families); significance weaker in camp full Steepness"
+    },
+    {
+      "claim": "Air Force in Germany",
+      "classification": "indeterminate: implementation disagreement (A recomputes groups within the subsample after a checker item; B and C keep parent groups) and quasi-separation"
+    }
+  ],
+  "paper_level": "Partially reproduced: the four focal Table 4 claims are consistent; four lower-tier items (one Table 5 coefficient sign and three text-only robustness statements) are discrepant after a same-family adversarial review. Not fully verified: the review lacked an independent model family.",
+  "adversarial_review": {
+    "file": "reports/adversarial_review.md",
+    "model_family": "Anthropic (same as implementer A and Reader A): not independent",
+    "items": null
+  }
+}

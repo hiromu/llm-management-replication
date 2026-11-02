@@ -1,0 +1,7 @@
+Implemented in `code/run_grid.R`; all 38 specifications ran and all six outputs are in `code/dev_out/full_grid/`.
+
+- Passed 239 unit checks and 5,642 output checks.
+- Recorded D05’s 24 model failures from no complete cases, plus undefined HC3 warnings.
+- Wrote `code/README.md` with instructions and interpretations, and `code/DONE.txt`.
+
+Synthetic results were not interpreted.

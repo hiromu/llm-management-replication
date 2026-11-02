@@ -1,0 +1,626 @@
+{
+  "choices": [
+    {
+      "choice": "Binary survival probit",
+      "classification": "common",
+      "justification_status": "justified",
+      "locators": [
+        {
+          "doc_id": "D1",
+          "pdf_page": 8,
+          "journal_page": null,
+          "section": "4.4",
+          "table": null,
+          "column": null,
+          "row": null,
+          "quote": null
+        }
+      ],
+      "rationale": "Binary outcome; no death times for a hazard analysis."
+    },
+    {
+      "choice": "Marginal effects at means rather than averaged effects",
+      "classification": "common",
+      "justification_status": "unclear",
+      "locators": [
+        {
+          "doc_id": "D1",
+          "pdf_page": 8,
+          "journal_page": null,
+          "section": "4.4",
+          "table": null,
+          "column": null,
+          "row": null,
+          "quote": null
+        }
+      ],
+      "rationale": "Evaluation point is explicit but no substantive reason for it is given."
+    },
+    {
+      "choice": "Camp indicators for within-camp captured-cohort comparisons",
+      "classification": "common",
+      "justification_status": "justified",
+      "locators": [
+        {
+          "doc_id": "D1",
+          "pdf_page": 8,
+          "journal_page": null,
+          "section": "4.3",
+          "table": null,
+          "column": null,
+          "row": null,
+          "quote": null
+        }
+      ],
+      "rationale": "Addresses documented between-camp heterogeneity."
+    },
+    {
+      "choice": "Clustering at the hierarchy group",
+      "classification": "common",
+      "justification_status": "justified",
+      "locators": [
+        {
+          "doc_id": "D1",
+          "pdf_page": 8,
+          "journal_page": null,
+          "section": "4.4",
+          "table": null,
+          "column": null,
+          "row": null,
+          "quote": null
+        }
+      ],
+      "rationale": "Within-group errors are explicitly acknowledged; dependence across captured cohorts in one camp remains unaddressed."
+    },
+    {
+      "choice": "Zeros plus missing-covariate indicators",
+      "classification": "common",
+      "justification_status": "unclear",
+      "locators": [
+        {
+          "doc_id": "D1",
+          "pdf_page": 5,
+          "journal_page": null,
+          "section": "3",
+          "table": null,
+          "column": null,
+          "row": null,
+          "quote": null
+        }
+      ],
+      "rationale": "Stated goal is retaining unmatched prisoners; the claim that this avoids coefficient distortion is not established for all missingness mechanisms."
+    },
+    {
+      "choice": "Ordinal-rank Gini",
+      "classification": "rare",
+      "justification_status": "justified",
+      "locators": [
+        {
+          "doc_id": "D1",
+          "pdf_page": 6,
+          "journal_page": null,
+          "section": "4.1.1",
+          "table": null,
+          "column": null,
+          "row": null,
+          "quote": null
+        }
+      ],
+      "rationale": "Unusual substantive application with an explicit formula and rationale; arbitrary cardinal rank distances remain a limitation."
+    },
+    {
+      "choice": "Squared-share sameness against POW population",
+      "classification": "rare",
+      "justification_status": "justified",
+      "locators": [
+        {
+          "doc_id": "D1",
+          "pdf_page": 6,
+          "journal_page": null,
+          "section": "4.1.2 footnote 9",
+          "table": null,
+          "column": null,
+          "row": null,
+          "quote": null
+        }
+      ],
+      "rationale": "Author-designed measure; fallback benchmark chosen because full troop rank shares unavailable."
+    },
+    {
+      "choice": "Scaled natural-log group size with square",
+      "classification": "common",
+      "justification_status": "justified",
+      "locators": [
+        {
+          "doc_id": "D1",
+          "pdf_page": 8,
+          "journal_page": null,
+          "section": "4.3",
+          "table": null,
+          "column": null,
+          "row": null,
+          "quote": null
+        }
+      ],
+      "rationale": "Nonlinear size relation explicitly anticipated; square scaling unspecified."
+    },
+    {
+      "choice": "Capital distance as camp governance control",
+      "classification": "rare",
+      "justification_status": "unclear",
+      "locators": [
+        {
+          "doc_id": "D1",
+          "pdf_page": 8,
+          "journal_page": null,
+          "section": "4.3",
+          "table": null,
+          "column": null,
+          "row": null,
+          "quote": null
+        }
+      ],
+      "rationale": "Agency rationale given, but distance proxy does not identify governance and exact construction is absent."
+    },
+    {
+      "choice": "Two cohort definitions and power-specific checks",
+      "classification": "common",
+      "justification_status": "justified",
+      "locators": [
+        {
+          "doc_id": "D1",
+          "pdf_page": 8,
+          "journal_page": null,
+          "section": "4.2; 4.3",
+          "table": null,
+          "column": null,
+          "row": null,
+          "quote": null
+        }
+      ],
+      "rationale": "Different social relations and detention regimes motivate separate families."
+    },
+    {
+      "choice": "Paired ROC incremental-information tests for correlated hierarchy measures",
+      "classification": "rare",
+      "justification_status": "justified",
+      "locators": [
+        {
+          "doc_id": "D1",
+          "pdf_page": 9,
+          "journal_page": null,
+          "section": "4.5",
+          "table": null,
+          "column": null,
+          "row": null,
+          "quote": null
+        }
+      ],
+      "rationale": "Motivated by overlapping predictors; predictive discrimination is not a causal effect test."
+    },
+    {
+      "choice": "Officer interaction checks",
+      "classification": "common",
+      "justification_status": "justified",
+      "locators": [
+        {
+          "doc_id": "D1",
+          "pdf_page": 12,
+          "journal_page": null,
+          "section": "6.1",
+          "table": null,
+          "column": null,
+          "row": null,
+          "quote": null
+        }
+      ],
+      "rationale": "Directly motivated competing explanation; probability-scale interaction convention unclear."
+    },
+    {
+      "choice": "Air-service subgroup as endogeneity diagnostic",
+      "classification": "common",
+      "justification_status": "unclear",
+      "locators": [
+        {
+          "doc_id": "D1",
+          "pdf_page": 11,
+          "journal_page": null,
+          "section": "5.4",
+          "table": null,
+          "column": null,
+          "row": null,
+          "quote": null
+        }
+      ],
+      "rationale": "Historical argument motivates selection; it does not establish exogenous hierarchy assignment."
+    },
+    {
+      "choice": "Complete-case, minimum-size and death-category restrictions",
+      "classification": "common",
+      "justification_status": "justified",
+      "locators": [
+        {
+          "doc_id": "D1",
+          "pdf_page": 11,
+          "journal_page": null,
+          "section": "5.3.3",
+          "table": null,
+          "column": null,
+          "row": null,
+          "quote": null
+        }
+      ],
+      "rationale": "Named sensitivity checks; detailed samples unreported."
+    }
+  ],
+  "structural_counts": {
+    "documented_decisions": 14,
+    "undocumented_decisions": 21,
+    "axes_with_alternatives": 17
+  },
+  "counting_rule": "Documented decisions count the listed broad analysis choices. Undocumented decisions count the separately listed unresolved implementation items below. These sets need not be disjoint: a documented high-level choice can have missing details. Axes count listed decisions with multiple levels, not independent executable combinations.",
+  "undocumented_inventory": [
+    {
+      "item": "Record identity, duplicate resolution and linkage normalization",
+      "locators": [
+        {
+          "doc_id": "D1",
+          "pdf_page": 5,
+          "journal_page": null,
+          "section": "3",
+          "table": null,
+          "column": null,
+          "row": null,
+          "quote": null
+        }
+      ]
+    },
+    {
+      "item": "Unknown or nonstandard service statuses",
+      "locators": [
+        {
+          "doc_id": "D1",
+          "pdf_page": 6,
+          "journal_page": null,
+          "section": "3",
+          "table": null,
+          "column": null,
+          "row": null,
+          "quote": null
+        }
+      ]
+    },
+    {
+      "item": "Full detailed rank mapping",
+      "locators": [
+        {
+          "doc_id": "D1",
+          "pdf_page": 6,
+          "journal_page": null,
+          "section": "4.1.1",
+          "table": null,
+          "column": null,
+          "row": null,
+          "quote": null
+        }
+      ]
+    },
+    {
+      "item": "True entry date and initial camp identification",
+      "locators": [
+        {
+          "doc_id": "D1",
+          "pdf_page": 7,
+          "journal_page": null,
+          "section": "Table 2",
+          "table": null,
+          "column": null,
+          "row": null,
+          "quote": null
+        }
+      ]
+    },
+    {
+      "item": "Group composition construction order",
+      "locators": [
+        {
+          "doc_id": "D1",
+          "pdf_page": 7,
+          "journal_page": null,
+          "section": "4.2",
+          "table": null,
+          "column": null,
+          "row": null,
+          "quote": null
+        }
+      ]
+    },
+    {
+      "item": "Sameness reference selection stage",
+      "locators": [
+        {
+          "doc_id": "D1",
+          "pdf_page": 6,
+          "journal_page": null,
+          "section": "4.1.2",
+          "table": null,
+          "column": null,
+          "row": null,
+          "quote": null
+        }
+      ]
+    },
+    {
+      "item": "Recomputation in restricted samples",
+      "locators": [
+        {
+          "doc_id": "D1",
+          "pdf_page": 11,
+          "journal_page": null,
+          "section": "5.3.3",
+          "table": null,
+          "column": null,
+          "row": null,
+          "quote": null
+        }
+      ]
+    },
+    {
+      "item": "Height/weight field vintage",
+      "locators": [
+        {
+          "doc_id": "D1",
+          "pdf_page": 5,
+          "journal_page": null,
+          "section": "3",
+          "table": null,
+          "column": null,
+          "row": null,
+          "quote": null
+        }
+      ]
+    },
+    {
+      "item": "Birth-century and invalid-age policy",
+      "locators": [
+        {
+          "doc_id": "D1",
+          "pdf_page": 7,
+          "journal_page": null,
+          "section": "Table 2",
+          "table": null,
+          "column": null,
+          "row": null,
+          "quote": null
+        }
+      ]
+    },
+    {
+      "item": "Postgraduate years",
+      "locators": [
+        {
+          "doc_id": "D1",
+          "pdf_page": 7,
+          "journal_page": null,
+          "section": "Table 2",
+          "table": null,
+          "column": null,
+          "row": null,
+          "quote": null
+        }
+      ]
+    },
+    {
+      "item": "Married/dependent mapping",
+      "locators": [
+        {
+          "doc_id": "D1",
+          "pdf_page": 7,
+          "journal_page": null,
+          "section": "Table 2",
+          "table": null,
+          "column": null,
+          "row": null,
+          "quote": null
+        }
+      ]
+    },
+    {
+      "item": "Distance coordinates and formula",
+      "locators": [
+        {
+          "doc_id": "D1",
+          "pdf_page": 7,
+          "journal_page": null,
+          "section": "Table 2",
+          "table": null,
+          "column": null,
+          "row": null,
+          "quote": null
+        }
+      ]
+    },
+    {
+      "item": "Missingness scope and nonlinear ordering",
+      "locators": [
+        {
+          "doc_id": "D1",
+          "pdf_page": 5,
+          "journal_page": null,
+          "section": "3",
+          "table": null,
+          "column": null,
+          "row": null,
+          "quote": null
+        }
+      ]
+    },
+    {
+      "item": "Size-square rescaling",
+      "locators": [
+        {
+          "doc_id": "D1",
+          "pdf_page": 8,
+          "journal_page": null,
+          "section": "4.3",
+          "table": null,
+          "column": null,
+          "row": null,
+          "quote": null
+        }
+      ]
+    },
+    {
+      "item": "Friends zero counts and missing units",
+      "locators": [
+        {
+          "doc_id": "D1",
+          "pdf_page": 10,
+          "journal_page": null,
+          "section": "5.2",
+          "table": null,
+          "column": null,
+          "row": null,
+          "quote": null
+        }
+      ]
+    },
+    {
+      "item": "Nonlinear interaction reporting",
+      "locators": [
+        {
+          "doc_id": "D1",
+          "pdf_page": 13,
+          "journal_page": null,
+          "section": "Table 6",
+          "table": null,
+          "column": null,
+          "row": null,
+          "quote": null
+        }
+      ]
+    },
+    {
+      "item": "Software, convergence and perfect prediction",
+      "locators": [
+        {
+          "doc_id": "D1",
+          "pdf_page": 8,
+          "journal_page": null,
+          "section": "4.4",
+          "table": null,
+          "column": null,
+          "row": null,
+          "quote": null
+        }
+      ]
+    },
+    {
+      "item": "Cluster small-sample and reference distribution",
+      "locators": [
+        {
+          "doc_id": "D1",
+          "pdf_page": 8,
+          "journal_page": null,
+          "section": "4.4",
+          "table": null,
+          "column": null,
+          "row": null,
+          "quote": null
+        }
+      ]
+    },
+    {
+      "item": "ROC ties, sample and dependence adjustment",
+      "locators": [
+        {
+          "doc_id": "D1",
+          "pdf_page": 9,
+          "journal_page": null,
+          "section": "4.5",
+          "table": null,
+          "column": null,
+          "row": null,
+          "quote": null
+        }
+      ]
+    },
+    {
+      "item": "Quartile cutoffs and probability contrast evaluation",
+      "locators": [
+        {
+          "doc_id": "D1",
+          "pdf_page": 8,
+          "journal_page": null,
+          "section": "4.4",
+          "table": null,
+          "column": null,
+          "row": null,
+          "quote": null
+        }
+      ]
+    },
+    {
+      "item": "Descriptive aggregation weights and denominators",
+      "locators": [
+        {
+          "doc_id": "D1",
+          "pdf_page": 6,
+          "journal_page": null,
+          "section": "Table 1",
+          "table": null,
+          "column": null,
+          "row": null,
+          "quote": null
+        }
+      ]
+    }
+  ],
+  "holistic_unusualness": 3,
+  "rationale": {
+    "description": "Moderately unusual measurement, conventional regression framework. Novel hierarchy indices, a POW proxy benchmark and paired ROC checks make the design less routine; probit, group clustering, fixed effects and explicit sensitivity analyses are familiar. Classification is a reader judgment, not an empirical frequency claim or a replication verdict. No option is called unjustified merely because implementation detail is missing. Wider grid remains off.",
+    "locators": [
+      {
+        "doc_id": "D1",
+        "pdf_page": 6,
+        "journal_page": null,
+        "section": "4.1",
+        "table": null,
+        "column": null,
+        "row": null,
+        "quote": null
+      },
+      {
+        "doc_id": "D1",
+        "pdf_page": 8,
+        "journal_page": null,
+        "section": "4.3; 4.4",
+        "table": null,
+        "column": null,
+        "row": null,
+        "quote": null
+      },
+      {
+        "doc_id": "D1",
+        "pdf_page": 9,
+        "journal_page": null,
+        "section": "4.5",
+        "table": null,
+        "column": null,
+        "row": null,
+        "quote": null
+      },
+      {
+        "doc_id": "D1",
+        "pdf_page": 10,
+        "journal_page": null,
+        "section": "5.3",
+        "table": null,
+        "column": null,
+        "row": null,
+        "quote": null
+      }
+    ]
+  },
+  "wider_grid_enabled": false
+}

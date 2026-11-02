@@ -1,0 +1,234 @@
+{
+  "study_id": "twenge2010",
+  "paper_id": "JOM_2010_Twenge",
+  "doi": "10.1177/0149206309352246",
+  "role": "eligibility and documentary-source role (coordinator subagent, Claude Opus 5.5)",
+  "search_date_utc": "2026-10-28",
+  "criterion": "Paper eligible only if no publicly available author-provided replication data or code package exists (project CLAUDE.md, Package selection requirement).",
+  "distinction": "Monitoring the Future 12th-grade surveys (ICPSR 7927, 9871, 20022) are original public source data distributed by ICPSR and are not an author replication package. ICPSR bibliography links between the article and these studies are citation links, not a deposit by the authors.",
+  "search_log": [
+    {
+      "date": "2026-10-28",
+      "id": 1,
+      "channel": "Crossref REST API",
+      "query": "https://api.crossref.org/works/10.1177/0149206309352246",
+      "outcome": "Record found: journal-article, JOM 36(5):1117-1142, online 2010-03-01, print 2010-09. relation is empty; no update-to/updated-by/assertion; no supplementary-material or data links. Links only to publisher VOR PDF."
+    },
+    {
+      "date": "2026-10-28",
+      "id": 2,
+      "channel": "Crossref REST API",
+      "query": "https://api.crossref.org/works?filter=relation.object:10.1177/0149206309352246",
+      "outcome": "total-results 0; no Crossref works declare a relation (e.g., dataset, software, correction) to this DOI."
+    },
+    {
+      "date": "2026-10-28",
+      "id": 3,
+      "channel": "Publisher (SAGE)",
+      "query": "https://journals.sagepub.com/doi/10.1177/0149206309352246",
+      "outcome": "HTTP 403 Forbidden to automated fetch; page content (including supplementary-material tab) not viewable. Not logged in; no workaround attempted."
+    },
+    {
+      "date": "2026-10-28",
+      "id": 4,
+      "channel": "Publisher (SAGE)",
+      "query": "https://journals.sagepub.com/doi/suppl/10.1177/0149206309352246",
+      "outcome": "HTTP 403 Forbidden; could not be inspected."
+    },
+    {
+      "date": "2026-10-28",
+      "id": 5,
+      "channel": "DataCite REST API",
+      "query": "https://api.datacite.org/dois?query=\"Generational Differences in Work Values\"",
+      "outcome": "9 records; none by Twenge, Campbell, Hoffman or Lance; none a data/code package for this article (unrelated theses, articles, figshare collection on nurses)."
+    },
+    {
+      "date": "2026-10-28",
+      "id": 6,
+      "channel": "DataCite REST API",
+      "query": "https://api.datacite.org/dois?query=relatedIdentifiers.relatedIdentifier:\"10.1177/0149206309352246\"",
+      "outcome": "Matches are ICPSR Monitoring the Future original study records (ICPSR 7927 V1-V3, ICPSR 20022 V2 and archival) that list this article as a citing/documenting publication (ICPSR bibliography links). These are the original public source datasets, not an author replication package. Output truncated after ~100k chars; visible matches all ICPSR MTF study records."
+    },
+    {
+      "date": "2026-10-28",
+      "id": 7,
+      "channel": "ICPSR Bibliography of Data-related Literature",
+      "query": "https://www.icpsr.umich.edu/web/ICPSR/search/publications?q=\"Generational Differences in Work Values\"",
+      "outcome": "1 bibliography record for this article, linked to ICPSR studies 7927 (MTF 1976), 9871 (MTF 1991), 20022 (MTF 2006). No replication dataset or code deposit indicated; only citation export, DOI and Google Scholar links."
+    },
+    {
+      "date": "2026-10-28",
+      "id": 8,
+      "channel": "openICPSR",
+      "query": "https://www.openicpsr.org/openicpsr/search/studies?...q=Twenge ; https://www.openicpsr.org/openicpsr/search/studies?q=generational%20work%20values",
+      "outcome": "HTTP 500 on both attempts; openICPSR search not reachable by automated fetch. The ICPSR bibliography record (entry 7) and web searches did not reveal any openICPSR project for this article."
+    },
+    {
+      "date": "2026-10-28",
+      "id": 9,
+      "channel": "Zenodo REST API",
+      "query": "https://zenodo.org/api/records?q=\"Generational Differences in Work Values\" Twenge",
+      "outcome": "Visible results (13 records, response truncated) unrelated; article appears only as a cited reference in other works."
+    },
+    {
+      "date": "2026-10-28",
+      "id": 10,
+      "channel": "Zenodo REST API",
+      "query": "https://zenodo.org/api/records?q=creators.name:Twenge AND title:\"work values\"",
+      "outcome": "0 hits."
+    },
+    {
+      "date": "2026-10-28",
+      "id": 11,
+      "channel": "Harvard Dataverse search API",
+      "query": "https://dataverse.harvard.edu/api/search?q=\"Generational Differences in Work Values\"",
+      "outcome": "total_count 1: unrelated interview dataset (Ghura & Chaudhry, doi:10.7910/DVN/1UAN7A) that cites the article. Not a package for this article."
+    },
+    {
+      "date": "2026-10-28",
+      "id": 12,
+      "channel": "OSF API",
+      "query": "https://api.osf.io/v2/search/?q=Twenge generational work values",
+      "outcome": "HTTP 404 (endpoint retired)."
+    },
+    {
+      "date": "2026-10-28",
+      "id": 13,
+      "channel": "OSF API",
+      "query": "https://api.osf.io/v2/nodes/?filter[title]=work values",
+      "outcome": "6 public nodes; none mentions Twenge, generational differences or Monitoring the Future; none is a package for this article."
+    },
+    {
+      "date": "2026-10-28",
+      "id": 14,
+      "channel": "figshare API",
+      "query": "https://api.figshare.com/v2/articles?search_for=\"Generational Differences in Work Values\"",
+      "outcome": "GET endpoint ignored the search term and returned recent unrelated items; none related. POST search via curl was blocked by the session permission policy, so figshare coverage relies on DataCite (entry 5, which indexes figshare DOIs) and web searches."
+    },
+    {
+      "date": "2026-10-28",
+      "id": 15,
+      "channel": "GitHub search API",
+      "query": "https://api.github.com/search/repositories?q=twenge+work+values",
+      "outcome": "total_count 0."
+    },
+    {
+      "date": "2026-10-28",
+      "id": 16,
+      "channel": "GitHub search API",
+      "query": "https://api.github.com/search/repositories?q=\"monitoring the future\" work values",
+      "outcome": "total_count 0."
+    },
+    {
+      "date": "2026-10-28",
+      "id": 17,
+      "channel": "OpenAlex API",
+      "query": "https://api.openalex.org/works/doi:10.1177/0149206309352246",
+      "outcome": "is_retracted false; oa_status closed; locations: publisher DOI landing page and Kennesaw State DigitalCommons record (submittedVersion, no file); no dataset/code links."
+    },
+    {
+      "date": "2026-10-28",
+      "id": 18,
+      "channel": "Semantic Scholar API",
+      "query": "https://api.semanticscholar.org/graph/v1/paper/DOI:10.1177/0149206309352246",
+      "outcome": "Record found; openAccessPdf CLOSED; no data/code fields."
+    },
+    {
+      "date": "2026-10-28",
+      "id": 19,
+      "channel": "Author website (Twenge)",
+      "query": "https://www.jeantwenge.com/research/",
+      "outcome": "Article listed with DOI link only; no data, code, syntax or supplementary material offered."
+    },
+    {
+      "date": "2026-10-28",
+      "id": 20,
+      "channel": "Author institutional repository (Campbell)",
+      "query": "https://digitalcommons.kennesaw.edu/facpubs/732",
+      "outcome": "Metadata-only record; no attached files (no full text, data, code or supplements)."
+    },
+    {
+      "date": "2026-10-28",
+      "id": 21,
+      "channel": "Author profile (Campbell, bepress)",
+      "query": "https://works.bepress.com/stacy_campbell/1",
+      "outcome": "302 redirect to a generic Elsevier Digital Commons redirect page; not followed further. Same record as entry 20 per search snippets."
+    },
+    {
+      "date": "2026-10-28",
+      "id": 22,
+      "channel": "Web search",
+      "query": "Twenge Campbell Hoffman Lance 2010 \"Generational differences in work values\" replication data code",
+      "outcome": "Only bibliographic records, press summaries, and article/manuscript copies (UGA psychology CV-folder .docx; Psychology Today hosted PDF). No data/code package."
+    },
+    {
+      "date": "2026-10-28",
+      "id": 23,
+      "channel": "Web search",
+      "query": "Twenge 2010 Journal of Management work values Monitoring the Future openICPSR OR dataverse OR osf.io OR github replication",
+      "outcome": "No repository deposit found; only bibliographic/press items."
+    },
+    {
+      "date": "2026-10-28",
+      "id": 24,
+      "channel": "Web search",
+      "query": "Jean Twenge data availability Monitoring the Future work values 1976 1991 2006 syntax",
+      "outcome": "Only MTF series pages at ICPSR (original source data) and other papers; no author package."
+    },
+    {
+      "date": "2026-10-28",
+      "id": 25,
+      "channel": "Web search",
+      "query": "jeantwenge.com research articles work values data",
+      "outcome": "Twenge CV 2025 PDF and unrelated items; no package."
+    },
+    {
+      "date": "2026-10-28",
+      "id": 26,
+      "channel": "Web search",
+      "query": "\"Twenge\" \"Lance\" \"Hoffman\" 2010 work values reanalysis OR replication Monitoring the Future generational",
+      "outcome": "No replication package or reanalysis deposit found."
+    },
+    {
+      "date": "2026-10-28",
+      "id": 27,
+      "channel": "Web search",
+      "query": "Brian J. Hoffman University of Georgia OR Charles E. Lance data code \"work values\" generational Monitoring the Future materials",
+      "outcome": "No Hoffman/Lance materials; results were ICPSR MTF study pages and an unrelated Wray-Lake et al. (2011) article."
+    }
+  ],
+  "article_statement": "The article contains no data-availability, code-availability or supplementary-material statement; it cites the MTF data via ICPSR (Johnston, Bachman & O'Malley 2006, 2nd ICPSR ed.) and www.monitoringthefuture.org (PDF pp. 9 and 24, journal pp. 1125 and 1140).",
+  "items_found_not_packages": [
+    {
+      "url": "https://www.icpsr.umich.edu/web/ICPSR/studies/7927",
+      "description": "MTF 1976 original public source data (ICPSR); original source, not a package"
+    },
+    {
+      "url": "https://www.icpsr.umich.edu/web/ICPSR/studies/9871",
+      "description": "MTF 1991 original public source data (ICPSR); original source, not a package"
+    },
+    {
+      "url": "https://www.icpsr.umich.edu/web/ICPSR/studies/20022",
+      "description": "MTF 2006 original public source data (ICPSR); original source, not a package"
+    },
+    {
+      "url": "https://www.psychology.uga.edu/sites/default/files/CVs/Generational%20Differences%20in%20Work%20Values-%20Leisure%20and%20Extrinsic%20Values%20Increasing%2C%20Social%2C%20and%20Intrinsic%20Values%20Decreasing-3%20%281%29.docx",
+      "description": "Manuscript copy of the article hosted in a UGA psychology CV folder (seen in search results only; not opened or downloaded). Documentary copy, not data/code."
+    },
+    {
+      "url": "https://cdn2.psychologytoday.com/assets/attachments/4330/genworkvaluesjom.pdf",
+      "description": "Hosted copy of the article PDF (seen in search results only; not opened or downloaded). Documentary copy, not data/code."
+    }
+  ],
+  "packages_found": [],
+  "limitations": [
+    "SAGE article and supplementary-material pages returned HTTP 403 to automated fetch; publisher-side supplementary listing could not be inspected directly. Crossref, OpenAlex and Semantic Scholar metadata show no supplementary/data links.",
+    "openICPSR search returned HTTP 500; covered indirectly via the ICPSR bibliography record and DataCite related-identifier search.",
+    "figshare keyword search via GET did not filter; POST search was blocked by session permissions; covered indirectly via DataCite (which indexes figshare DOIs) and web search.",
+    "OSF full-text search endpoint is retired (404); title-filter node search used instead.",
+    "Google Scholar was not queried directly (automated access not supported); equivalent web searches were used.",
+    "Some API responses were truncated by the fetch tool after ~100k characters; visible portions contained no package."
+  ],
+  "conclusion": "none_found_after_documented_search",
+  "conclusion_note": "No publicly available author-provided replication data or code package was found. The paper meets the package selection criterion on current evidence, subject to the listed access limitations. Nothing was downloaded."
+}

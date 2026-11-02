@@ -1,0 +1,14 @@
+{
+  "frozen": "2026-10-27 (design; prompts frozen later with the manifest)",
+  "design": "full three-implementation design",
+  "implementers": {
+    "A": {"family": "Anthropic", "model": "claude-fable-5-1", "effort": "high", "fast_mode": false, "language": "R (article software unstated; protocol default R)", "cli": "claude -p --safe-mode, tools Read/Write/Edit/Glob/Grep/Bash, neutral staging dir"},
+    "B": {"family": "OpenAI", "model": "gpt-6-astra", "effort": "high", "service_tier": "default", "fast_mode": false, "language": "R", "cli": "codex exec --ephemeral --ignore-user-config, workspace-write sandbox (no network)"},
+    "C": {"family": "OpenAI", "model": "gpt-6-astra", "effort": "high", "service_tier": "default", "fast_mode": false, "language": "Python 3.13 (statsmodels)", "cli": "codex exec, separate fresh process and staging dir"}
+  },
+  "checkers": {"for_A": "gpt-6-astra (codex, read-only sandbox)", "for_B": "claude-fable-5-1 (claude --safe-mode, read-only tools)", "for_C": "claude-fable-5-1 (claude --safe-mode, read-only tools)"},
+  "notes": [
+    "Implementers are fresh contexts that never see the article, targets, scoring rules, other implementations or results; the same model IDs as the readers are used but in separate processes with no shared context.",
+    "Only two model families (Anthropic, OpenAI) are available. Both are used in implementation, so no model family independent of the implementation families is available for adversarial review; any potential discrepancy therefore cannot receive the fully verified status and requires human confirmation."
+  ]
+}

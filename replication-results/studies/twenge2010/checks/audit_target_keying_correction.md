@@ -1,0 +1,6 @@
+# Correction of a coordinator target-keying error (before any report)
+
+When: 2026-10-28, after the first scoring pass of run_20261028T035346Z.
+What: checks/scripts/build_sealed_targets.py (v1) keyed the published Table 1 row "A job that offers a reasonably predictable, secure future" to V4239 and "A job that allows you to establish roots in a community..." to V4241. The source dictionaries (all three years) define V4239 = establish roots (A08o) and V4241 = secure future (A08q). Both readers mapped these items correctly (Reader A V015/V017, Reader B V027/V028); the error was the coordinator's keying of sealed targets only.
+How detected: the first scoring pass flagged both items as discrepant_provisional with mean differences that matched the other row. The correction itself rests on the source wording, verified by a script that checks every one of the 29 target keys against its variable's dictionary wording (27 matched; these 2 were the only failures).
+Effect: no change to data, manifest, implementations, runs, tolerances or scoring rules. Targets re-keyed as sealed/targets_v2.json; v1 and the first scoring output are preserved (sealed/targets_v1_superseded_keying_error.json, runs/run_20261028T035346Z/scoring_v1_superseded_keying_error/). The security-scale alpha diagnostic is unaffected (same two items).

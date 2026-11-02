@@ -1,0 +1,34 @@
+{
+ "published_sealed": {
+  "original_fourth_down_decisions": 23965,
+  "removed_last_two_minutes": 1362,
+  "analysis_N": 22603,
+  "games": 1520
+ },
+ "reconstructed_origin_flow": {
+  "S1": 266592,
+  "S2": 24282,
+  "S3": 22909,
+  "S4": 22766,
+  "S5": 21540,
+  "S6": 21540,
+  "S7": 21540,
+  "S8": 21540
+ },
+ "pre_two_minute_rows (S4)": 22766,
+ "removed_by_S5": 1226,
+ "analysis_N": 21540,
+ "rel_diff_pre_two_minute": -0.050031295639474234,
+ "rel_diff_removed": -0.09985315712187959,
+ "rel_diff_analysis_N": -0.04702915542184666,
+ "games_in_sample": 1518,
+ "games_published": 1520,
+ "games_missing_from_source": [
+  "2000_03_SD_KC",
+  "2000_06_BUF_MIA"
+ ],
+ "reader_N_branch_files": [
+  "readers/fable/run1/out/sealed_N_branch.json",
+  "readers/astra/run1/out/sealed_N_branch.json"
+ ]
+}

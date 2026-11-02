@@ -1,0 +1,13 @@
+TEST known_parameter_recovery: PASS {'max_mean_error': np.float64(0.01775157595344934), 'max_loading_error': np.float64(0.006809569131467574), 'max_covariance_error': np.float64(0.02598584478605115), 'chi2': np.float64(479.5617431885912), 'df': 470}
+TEST analytic_likelihood_gradient: PASS {'maximum_absolute_error': np.float64(3.3390127097162985e-10)}
+TEST moment_derivatives: PASS {'maximum_absolute_error': np.float64(2.6324720181492012e-11)}
+TEST expected_information_SE: PASS {'maximum_SE_ratio_error': np.float64(0.003969473727613249)}
+TEST reference_mean_variance_identification: PASS {'maximum_d_eq_difference': np.float64(5.803355171418723e-09), 'chi2_difference': np.float64(1.7456613932154141e-10)}
+TEST alternate_markers: PASS {'maximum_d_eq_difference': np.float64(8.564232448216025e-09)}
+TEST effects_coding_equalities: PASS {'maximum_constraint_residual': np.float64(2.220446049250313e-16), 'df': 478}
+TEST FIML_complete_data_equivalence: PASS {'chi2_difference': np.float64(1.0857093002414331e-11), 'max_parameter_difference': np.float64(0.0)}
+TEST FIML_missing_data_recovery: PASS {'maximum_mean_error': np.float64(0.03445499683338804), 'chi2': np.float64(479.7877626301488)}
+TEST weighted_moments: PASS {'mean': array([2.9, 2.5]), 'covariance': array([[ 1.18666667, -0.86666667],
+       [-0.86666667,  1.66666667]])}
+TEST robust_covariance: PASS {'minimum_covariance_eigenvalue': np.float64(4.181356561037471e-05), 'method': 'Huber-White observed-information sandwich; Yuan-Bentler Mplus T2* correction', 'scaling_factor': np.float64(1.0015485666047297), 'scaled_chi_square': np.float64(496.5743958153991), 'scaled_p': np.float64(0.1914433988297807), 'h1_trace': np.float64(627.4803821996102), 'h0_trace': np.float64(156.75255589538722), 'observed_hessian_central_difference_relative_step': 0.0001, 'scaling_formula': '(trace(H1_inverse J1) - trace(H0_inverse J0)) / df; H0 observed, H1 saturated normal information', 'score_meat': 'sum of individual score outer products; no degrees-of-freedom adjustment'}
+TEST deletion_moments: PASS {'deleted_index': 5}

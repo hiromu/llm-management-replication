@@ -1,0 +1,17 @@
+{
+  "version": "v1",
+  "frozen_before_fitting": true,
+  "estimand_and_scale": "WLS coefficients (outcome: relative ROA x 100; regressor: strategic deviation in summed absolute z-score units and its square). Null value 0.",
+  "focal_rows_fixed_order": [
+    {"row": 1, "id": "M2_SD", "model": "M2", "term": "SD", "claim": "H1/H2 linear test"},
+    {"row": 2, "id": "M3_SD", "model": "M3", "term": "SD", "claim": "H3 first-order term"},
+    {"row": 3, "id": "M3_SD2", "model": "M3", "term": "SD2", "claim": "H3 curvature (primary focal)"}
+  ],
+  "deletion_unit_primary": "bank-year (single regression row)",
+  "justification_primary": "The unit of analysis and of the article's own outlier procedure is the bank-year (one bank-year was identified by studentized deleted residuals and removed). Leave-one-row-out therefore probes the same kind of influence the article screened for.",
+  "deletion_unit_secondary": "bank (all rows of one RSSD9001)",
+  "justification_secondary": "Bank-years of one bank share a lagged outcome and persistent strategy, so whole-bank deletion shows dependence on a single institution. Reported separately; not shown as the figure's primary range.",
+  "scope": "Both base configurations O_A and O_B; models M2 and M3; every eligible row or bank, no selection by effect size. Variables, benchmarks and lags are not rebuilt after deletion (pure influence on the fitted regression).",
+  "inference_in_figure": "Two-sided p from conventional WLS t statistic; the hypothesised directions are H1 positive / H2 negative for M2_SD and negative for M3_SD2. Threshold drawn at 0.05 (the article's least stringent star level). p values below 1e-300 are plotted at 1e-300 and flagged.",
+  "status": "Influence ranges are diagnostics, not confidence intervals, and do not enter the equivalent-specification set."
+}

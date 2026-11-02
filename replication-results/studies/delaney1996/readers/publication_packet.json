@@ -1,0 +1,40 @@
+{
+  "record": "publication_packet",
+  "version": "v1",
+  "frozen_utc": "2026-10-28T03:40:00Z",
+  "study_id": "delaney1996",
+  "documents_in_order": [
+    {
+      "doc_id": "D1",
+      "role": "main article (primary; journal print scan via JSTOR, from shared library)",
+      "source_path_from_project_root": "papers/journal_collection/AMJ/AMJ_1996_DELANEY.pdf",
+      "packet_path": "readers/packet_v1/D1_article_library/D1_article_library.pdf",
+      "sha256": "d2ec15a6fd3be26ef46211947312557f6240577168695ae2d68abc255f166b1c",
+      "pdf_pages": 22,
+      "page_mapping": "PDF page 1 is a JSTOR cover sheet; PDF page 2 = journal page 949; PDF page 22 = journal page 969",
+      "identity_checks": {"title": "match", "authors": "John T. Delaney; Mark A. Huselid", "journal": "Academy of Management Journal 39(4): 949-969, August 1996", "doi": "10.5465/256718 (alternate 10.2307/256718, JSTOR stable 256718)", "sha256_matches_STUDY_json": true},
+      "known_gaps": "The embedded OCR text layer is clipped at the right margin on many pages; the page images are complete. Readers must use page images (PNG, 150 dpi) or the PDF rendering, not the text layer alone, for tables.",
+      "redactions": "none known"
+    },
+    {
+      "doc_id": "D2",
+      "role": "alternate version of main article (author-hosted retypeset copy); not a supplement",
+      "source_url": "https://www.markhuselid.com/pdfs/articles/1996_AMJ_Delaney_Huselid.pdf",
+      "retrieved_utc": "2026-10-28T03:30:06Z",
+      "packet_path": "readers/packet_v1/D2_article_author_copy/D2_article_author_copy.pdf",
+      "sha256": "bc006eff604167cb4673f633deee87f3a74a26a85fcdb9a767b674a68873c112",
+      "pdf_pages": 21,
+      "pdf_metadata": "author Mark Huselid; Acrobat PDFWriter 2.01 for Windows; created 1997-02-17",
+      "identity_checks": {"title": "match", "authors": "match", "journal_volume_pages": "match (39(4): 949-969)", "content": "retypeset; same tables visually spot-checked for one table; full equivalence not verified"},
+      "known_gaps": "Retypeset copy may contain transcription differences relative to D1; contradictions must be reported, not silently resolved.",
+      "redactions": "none"
+    }
+  ],
+  "supplements": [],
+  "supplement_search": "logs/eligibility/package_and_supplement_search.json (no supplement, appendix or correction found; publisher page inaccessible: HTTP 403)",
+  "unpublished_materials_referenced_in_article": ["complementarity count-variable models 'results not shown'", "subgroup analyses 'available upon request'"],
+  "embedded_data_disclosure": "D1/D2 Table 2 prints means, standard deviations and a correlation matrix; Table 1 prints item means. These are printed data: excluded as empirical inputs, permitted only as sealed targets or publication diagnostics.",
+  "removed_code": "none; no code or code links in either document",
+  "derived_files": "Per document: full PDF copy, per-page PNG images at 150 dpi, and a text extraction made with PyMuPDF 1.27.1 in this session",
+  "hash_list": "readers/packet_v1/PACKET_SHA256SUMS.txt"
+}

@@ -1,0 +1,35 @@
+test_all_camps_safe_distinct_filenames (__main__.InfluenceRegressionTests.test_all_camps_safe_distinct_filenames) ... ok
+test_first20_failure_does_not_abort_or_change_original_results (__main__.InfluenceRegressionTests.test_first20_failure_does_not_abort_or_change_original_results) ... 2026-10-27 22:56:13 S000 T4__cap__simple__steepness delete '/91': failed; RuntimeError: injected deletion failure
+ok
+test_repeated_sample_id_write_failure_is_recorded (__main__.InfluenceRegressionTests.test_repeated_sample_id_write_failure_is_recorded) ... 2026-10-27 22:56:13 SYNTH_IDS_FAILURE T4__camp__simple__steepness: failed; OSError: injected ID write failure; sample IDs: OSError: injected ID write failure; seconds=0.000
+Traceback (most recent call last):
+  File "/private/var/folders/7q/9m3zdcp550d685wgsq9kvf6r0000gn/T/role_im_y9CzNr/code/run.py", line 610, in run_fit
+    out.ids(spec, model_id, d.record_seq)
+    ~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "~/.pyenv/versions/3.13.4/lib/python3.13/unittest/mock.py", line 1169, in __call__
+    return self._mock_call(*args, **kwargs)
+           ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "~/.pyenv/versions/3.13.4/lib/python3.13/unittest/mock.py", line 1173, in _mock_call
+    return self._execute_mock_call(*args, **kwargs)
+           ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "~/.pyenv/versions/3.13.4/lib/python3.13/unittest/mock.py", line 1228, in _execute_mock_call
+    raise effect
+  File "/private/var/folders/7q/9m3zdcp550d685wgsq9kvf6r0000gn/T/role_im_y9CzNr/code/run.py", line 569, in run_fit
+    out.ids(spec, model_id, d.record_seq)
+    ~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "~/.pyenv/versions/3.13.4/lib/python3.13/unittest/mock.py", line 1169, in __call__
+    return self._mock_call(*args, **kwargs)
+           ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "~/.pyenv/versions/3.13.4/lib/python3.13/unittest/mock.py", line 1173, in _mock_call
+    return self._execute_mock_call(*args, **kwargs)
+           ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "~/.pyenv/versions/3.13.4/lib/python3.13/unittest/mock.py", line 1228, in _execute_mock_call
+    raise effect
+OSError: injected ID write failure
+
+ok
+
+----------------------------------------------------------------------
+Ran 3 tests in 0.308s
+
+OK

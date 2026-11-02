@@ -1,0 +1,150 @@
+#!/usr/bin/env Rscript
+# Entry script for manifest P01 (neutral, target-free), v1.
+# Usage (from the project directory):  Rscript code/run_all.R --stage synthetic|sample|full [--cores N]
+# Reads only data/, writes to results/.
+
+args <- commandArgs(trailingOnly = TRUE)
+get_arg <- function(name, default) {
+  i <- which(args == name)
+  if (length(i) && i < length(args)) return(args[i + 1])
+  kv <- grep(paste0("^", name, "="), args, value = TRUE)
+  if (length(kv)) return(sub(paste0("^", name, "="), "", kv[1]))
+  default
+}
+stage <- get_arg("--stage", "full")
+cores_arg <- get_arg("--cores", "auto")
+if (!stage %in% c("synthetic", "sample", "full")) stop("--stage must be synthetic, sample or full")
+nc <- tryCatch(parallel::detectCores(), error = function(e) NA)
+cores <- if (cores_arg == "auto") max(1L, min(8L, as.integer(if (is.na(nc)) 1 else nc %/% 2))) else max(1L, as.integer(cores_arg))
+
+# locate project directory (parent of code/)
+script_path <- sub("^--file=", "", grep("^--file=", commandArgs(FALSE), value = TRUE))
+proj <- if (length(script_path)) normalizePath(file.path(dirname(script_path), "..")) else getwd()
+setwd(proj)
+code_dir <- file.path(proj, "code"); results_dir <- file.path(proj, "results")
+dir.create(results_dir, showWarnings = FALSE); dir.create(file.path(results_dir, "samples"), showWarnings = FALSE)
+
+suppressPackageStartupMessages({ library(survival); library(nanoparquet) })
+for (f in c("lib_clogit.R", "lib_data.R", "lib_fit.R", "lib_relogit.R", "lib_synthetic.R", "lib_grid.R")) source(file.path(code_dir, f))
+
+NOTES <- new.env(); NOTES$items <- character(0)
+NOTES$add <- function(x) NOTES$items <- c(NOTES$items, x)
+
+t_start <- Sys.time()
+write_env <- function(end = NULL) {
+  si <- Sys.info()
+  lines <- c(sprintf("stage: %s", stage), sprintf("start: %s", format(t_start, "%Y-%m-%dT%H:%M:%S%z")),
+             if (!is.null(end)) sprintf("end: %s", format(end, "%Y-%m-%dT%H:%M:%S%z")) else "end: (running)",
+             if (!is.null(end)) sprintf("elapsed_minutes: %.1f", as.numeric(end - t_start, units = "mins")),
+             sprintf("cores (influence-loop socket workers; --cores, default auto = min(8, detectCores()/2)): %d (detectCores = %s)", cores, as.character(nc)),
+             sprintf("R: %s", R.version.string), sprintf("platform: %s", R.version$platform),
+             sprintf("OS: %s %s %s", si["sysname"], si["release"], si["machine"]),
+             sprintf("survival: %s", as.character(packageVersion("survival"))),
+             sprintf("nanoparquet: %s", as.character(packageVersion("nanoparquet"))),
+             sprintf("stats/tools: %s", as.character(packageVersion("stats"))),
+             sprintf("BLAS: %s", extSoftVersion()["BLAS"]), sprintf("LAPACK: %s", La_version()),
+             "language: R", "seed for synthetic data: 20261027 (base R default RNG, Mersenne-Twister)")
+  writeLines(lines, file.path(results_dir, "environment.txt"))
+}
+write_env()
+
+write_notes <- function() {
+  static <- c(
+    "# Implementation notes (code/run_all.R)",
+    "",
+    sprintf("Stage run: %s. Generated %s.", stage, format(Sys.time(), "%Y-%m-%dT%H:%M:%S%z")),
+    "",
+    "## Estimators",
+    "- U7 = 0 and U7 = 2 (exact conditional logit): own R implementation in code/lib_clogit.R (`cl_fit`). The exact conditional likelihood is evaluated through prefix/suffix recursions of the elementary symmetric polynomials with per-stratum exponential tilting; score and observed information are analytic; Newton-Raphson with step halving; convergence when max |score| < 1e-7 and the relative LL change < 1e-11. survival::clogit(method = 'exact') maximises the same likelihood but is several times slower at the stratum sizes here (about 700 plays with about 80 attempts per team); the synthetic stage verifies equality of LL, coefficients and SEs with survival::clogit / coxph(ties = 'exact') and with a direct enumeration of all subsets on a small case (results/synthetic_checks.md). The native covariance is the inverse of the observed information at the MLE.",
+    "- Groups with no variation in y are removed before the U7 = 0/2 fits (they contribute nothing to the conditional likelihood) and counted in n_groups_dropped. The null conditional LL is -sum_g log C(n_g, d_g) over the groups used, which equals the conditional LL at beta = 0.",
+    "- Columns that are collinear within strata (aliased) would be dropped with NA estimates; none were expected in the grid.",
+    "- U7 = 1: stats::glm.fit, binomial logit, intercept + regressors + team dummies (alphabetically first team omitted), epsilon = 1e-12. Native covariance = inverse Fisher information (observed = expected for the canonical link). The null is intercept + team dummies only.",
+    "- Benchmark covariance: CR1 cluster-robust sandwich by game_id, factor G/(G-1) x (N-1)/(N-K), K = all estimated parameters including intercept and team dummies; two-sided normal p.",
+    "- N1: own adaptive Gauss-Hermite implementation (12 points; per-team mode and curvature re-estimated at every likelihood evaluation; regressors standardised internally and transformed back), optimised by BFGS with the analytic quadrature gradient followed by Newton polishing; SEs from the inverse of the numerically differentiated Hessian of the marginal log-likelihood. The synthetic stage checks the gradient numerically and the sensitivity to 20 quadrature points. sigma_u is reported with a delta-method SE from ln_sigma_u; rho = sigma_u^2/(sigma_u^2 + pi^2/3). The N1 null model is intercept + random intercept only. Marginal effects for N1 use the index without the intercept and with the random effect set to 0 (same index convention as U7 = 0/1).",
+    "",
+    "## Samples and variables",
+    "- S5 with a missing game_seconds_remaining would drop the row (the condition is not satisfied); S2 drops rows with missing down; S4 drops missing qtr.",
+    "- S3b (U1 = 1): a no_play row is a non-attempt if punt_attempt == 1 or field_goal_attempt == 1, otherwise an attempt if pass == 1 or rush == 1, otherwise dropped. Missing flags count as 0.",
+    "- Sample files: results/samples/<sha256>.csv.gz, header game_id,play_id, rows sorted in C-locale byte order of the 'game_id|play_id' string (play_id printed as an integer). The hash is SHA-256 (tools::sha256sum) of the sorted 'game_id|play_id' lines joined by newline with a trailing newline.",
+    "- sample_flow.csv has one block per distinct realised sample (hash) and U8 level, with the U1..U6 levels of the first cell that produced it; S8 is recorded as the common complete-case count plus rows for the number dropped, the model-specific complete-case counts and a flag row (rows = 1 if they differ). Under U8 = 1 the M1 variable list includes below_indicator, so the U8 = 1 cell has its own S8 block (same row set and hash as the origin). An extra row records the same_division vs games.div_game disagreement count. results/sample_cells.csv maps every U1..U6 (and U8) combination built to its hash.",
+    "- The row set depends on U1, U2, U3 only (U4-U6 change variable definitions without creating missing values), so there are at most 8 distinct samples.",
+    "- same_conference, same_division: from the alignment table for the season; home_field: posteam_type == 'home' (U6 = 1 sets 0 in games with games.location == 'Neutral').",
+    "",
+    "## Grid, outputs",
+    "- A `step` column was added to coefs.csv, margins.csv and tests.csv (in addition to specs.csv) because step-3 duplicates of step-1/2 cells carry the same spec_id; duplicate rows are flagged in specs.csv (duplicate_of = 'step k: <spec_id>') and are re-fitted, not copied.",
+    "- Marginal effects use estimation-sample means over the rows actually used by the fit (after dropping non-varying groups for U7 = 0/2). M2 minutes_eval is the estimation-sample mean of minutes (U4 = 1: of floored minutes). For U7 = 1 fits the index excludes the intercept and team dummies. margins.csv carries z_native = effect / se_native (manifest section 4) in addition to the listed columns. U9a is computed from the U7 = 1 fit of the same cell (for U7 = 0/2 cells that counterpart is fitted on demand and cached; the same combination is fitted again in step 3). Benchmark columns (se_bench, p_bench) are filled only for U7 = 1 cells, including their U9a rows; for U7 = 0/2 cells every benchmark column, including on the U9a rows, is empty (grid.json benchmark_inference).",
+    "- U9b at d uses the branch rule for d and for d + 1 separately (d = 0 -> d + 1 = 1 is on the above branch).",
+    "- nonequiv.csv and algebraic_checks.csv are long files with run_id and record (spec/coef/margin/test/check) followed by the union, in order, of the full specs.csv, coefs.csv, margins.csv and tests.csv column sets (including step, U1..U8, me_variant_set and duplicate_of); columns not applicable to a record type are empty. N1/N2 rows carry the origin U levels and step 4, N4 rows U7 = 1 and step 4, K1/K2 rows the origin levels and step 5. N2 includes all marginal-effect variants with quarters_remaining in {4,3,2,1} (M3) and the sample mean of quarters_remaining (M2); its U9a uses a U7 = 1 fit with quarters_remaining (no benchmark columns, as N2 is a U7 = 0 run). N4 reports the team-clustered CR1 covariance in the se_bench/p_bench columns (coefficients and ME0).",
+    "- N1 iterations = BFGS iterations (accepted quasi-Newton steps; optim's gradient-evaluation count minus the initial evaluation) plus Newton polishing steps; the number of objective-function evaluations is given separately in the routine string.",
+    "- K1/K2: the 'check' records hold the LL differences and (K2) both home-field coefficients. K1 and K2 are run independently; a failure in one is recorded and does not stop the other.",
+    "- Failure handling (manifest sections 7 and 9): every fit is attempted; an exception anywhere in a model's fit, benchmark covariance or marginal effects is recorded with the actual error message in the spec row's status/error (grid, N1/N2/N4, K1/K2) or in influence.csv's status/error, and execution continues with the remaining models, cells and units. A failed N1 null fit leaves null_loglik empty and is noted in the error field of the N1 spec rows; the N1 models are still fitted.",
+    "- influence.csv: estimate/se_native/p_native from the U7 = 0 refit; se_bench/p_bench from the game-clustered CR1 covariance of the U7 = 1 refit (p_bench uses the U7 = 1 estimate); a benchmark-covariance failure is recorded in the error column. Refits are warm-started from the origin estimates (details in the run-specific notes). Units: team, season and game. Every unit is run; failures are recorded with status/error.",
+    "- The full stage runs the synthetic checks (results/synthetic_checks.md) before loading the data and fitting anything (manifest section 10); a failed check is logged and noted here but does not stop the empirical run.",
+    "- The influence loop runs on a socket cluster (parallel::makeCluster/parLapplyLB; separate R processes, deterministic and identical to a serial run). Optional argument --cores N sets the worker count; default auto = min(8, detectCores()/2); falls back to serial if a cluster cannot be started. All other steps run serially in compute_order.",
+    "- Grid fits are cold-started (beta = 0 for U7 = 0/2; glm default for U7 = 1); the conditional and unconditional log-likelihoods are concave so the start does not affect the solution.",
+    "- Not executed (grid.json 'unavailable'): spread-based reference point and field-goal-range submodels.",
+    "",
+    "## Repair round (changes made after the independent check; nothing else was changed)",
+    "- S8 / U8: build_sample takes U8; under U8 = 1 the M1 model-specific complete-case count and the difference flag include below_indicator. The sample cache is keyed by U1..U6 and U8, sample_flow.csv and sample_cells.csv have a U8 column, and the sample stage builds the U8 = 1 cell.",
+    "- ME0 z statistic: margins.csv (and the margin records of nonequiv.csv) now report z_native for every marginal-effect row, including U9a.",
+    "- Benchmark columns: U9a rows of U7 = 0 and U7 = 2 cells (and of N2) no longer carry the U7 = 1 counterpart's benchmark SE/p; benchmark columns are filled only on U7 = 1 fits.",
+    "- N1 iterations: BFGS iterations plus Newton polishing steps instead of objective-function evaluation counts (which are now reported in the routine string).",
+    "- Failure handling: per-model error capture in the grid cells (a failure in one model no longer abandons the cell's remaining models or tests; a sample-construction failure records every model of the cell), per-model capture in N1/N2/N4 with the actual error message (no generic 're_fit error'), N1 continues after a null-fit failure, K1 and K2 are isolated from each other, and influence benchmark-covariance errors are written to the error column instead of being dropped.",
+    "- nonequiv.csv / algebraic_checks.csv: columns are now run_id, record and the complete specs/coefs/margins/tests column sets (step, U1..U8, me_variant_set and duplicate_of included).",
+    "- Full stage: the synthetic checks are run and synthetic_checks.md written before the data are loaded and any empirical model is fitted.",
+    "",
+    "## Repair round 2 (changes made after the second independent check; nothing else was changed)",
+    "- Step 1 benchmark inference (grid.json compute_order[0], benchmark_inference): step 1 now consists of the origin cell (U7 = 0) followed by its benchmark cell, the U7 = 1 fits of M1, M2 and M3 sharing all other levels, with the game-clustered CR1 covariance for the coefficients and (delta method) for every marginal-effect variant of step 1. These fits are written to specs.csv/coefs.csv/margins.csv/tests.csv with step = 1 and the U7 = 1 spec_id. The origin cell's U9a counterpart (M2, M3) is fitted on demand with its benchmark covariance and the benchmark cell reports that same fit rather than fitting it twice within step 1; M1 is fitted in the benchmark cell. The step-2 U7 = 1 deviation cell (and its step-3 recurrence) is still fitted and now carries duplicate_of = 'step 1: <spec_id>'; duplicate flagging is applied at every step to the first occurrence of a spec_id.",
+    "- Influence status: a row's status is 'ok' only when the U7 = 0 refit, the U7 = 1 refit and its game-clustered covariance all succeeded; otherwise it is the U7 = 0 status if that fit failed or did not converge, else the U7 = 1 status (failed/not_converged), else 'failed' for a benchmark-covariance error. The error column names the failing part.",
+    "- Influence n_obs: the number of observations used by the U7 = 0 refit that produced the estimate (after dropping groups with invariant y), no longer the row count of the deletion sample. The U7 = 1 benchmark refit uses every row of the deletion sample, so its N can exceed n_obs when a team's y is invariant after the deletion.",
+    "- Synthetic checks: every check runs in its own error handler; an exception is recorded in synthetic_checks.md as FAIL with the message and the remaining checks still run. An exception outside the checks is caught in run_all.R, written to synthetic_checks.md and to these notes, and the stage continues (sample stage unaffected; full stage proceeds to the empirical work and still writes implementation_notes.md).",
+    "",
+    "## Run-specific notes")
+  writeLines(c(static, if (length(NOTES$items)) paste0("- ", NOTES$items) else "- (none)"), file.path(results_dir, "implementation_notes.md"))
+}
+
+do_synthetic_checks <- function() {
+  out <- file.path(results_dir, "synthetic_checks.md")
+  # Each check inside run_synthetic_checks already catches its own exceptions (recorded as FAIL with the message);
+  # this handler covers an exception outside the checks (e.g. writing the file). In every case the run continues
+  # (manifest section 10: record why and continue) and the failure is written to implementation_notes.md.
+  st <- tryCatch(run_synthetic_checks(out), error = function(e) e)
+  if (inherits(st, "error")) {
+    msg <- err_msg(st)
+    log_msg("WARNING: synthetic checks aborted with an exception: %s", msg)
+    NOTES$add(sprintf("WARNING: the synthetic check routine aborted with an exception (%s); no check result is available. The run continued as instructed (manifest section 10).", msg))
+    tryCatch(writeLines(c("# Synthetic checks", "", sprintf("The check routine aborted with an exception: %s", msg), "", "Overall: NOT COMPLETED"), out), error = function(e) NULL)
+    return(invisible(NULL))
+  }
+  NOTES$add(sprintf("Synthetic checks (results/synthetic_checks.md): %s.", paste(sprintf("%s=%s", names(st), ifelse(unlist(st), "PASS", "FAIL")), collapse = ", ")))
+  print(unlist(st))
+  if (!all(unlist(st))) {
+    log_msg("WARNING: %d synthetic check(s) FAILED: %s", sum(!unlist(st)), paste(names(st)[!unlist(st)], collapse = ", "))
+    NOTES$add(sprintf("WARNING: synthetic check(s) failed before the empirical run: %s. The empirical run continued as instructed (manifest section 10: record and continue); treat the affected estimator's results with caution.",
+                      paste(names(st)[!unlist(st)], collapse = ", ")))
+  }
+  st
+}
+
+if (stage == "synthetic") {
+  log_msg("synthetic checks")
+  do_synthetic_checks()
+} else {
+  if (stage == "full") {
+    # manifest section 10: the estimators are checked on synthetic data before the empirical run
+    log_msg("synthetic checks (manifest section 10) before the empirical run")
+    do_synthetic_checks()
+  }
+  log_msg("loading raw data")
+  raw <- load_raw(file.path(proj, "data"))
+  log_msg("play-by-play rows: %d; games rows: %d; alignment rows: %d", nrow(raw$pbp), nrow(raw$games), nrow(raw$align))
+  if (stage == "sample") {
+    run_sample_stage(raw, results_dir)
+  } else {
+    run_full(raw, results_dir, cores = cores, code_dir = code_dir)
+  }
+}
+t_end <- Sys.time()
+write_env(t_end)
+write_notes()
+log_msg("done (%s) in %.1f minutes", stage, as.numeric(t_end - t_start, units = "mins"))

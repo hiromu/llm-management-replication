@@ -1,0 +1,32 @@
+{
+ "H1": {
+  "outcome": "indeterminate",
+  "reason": "label_sensitive; sample_reconstruction (6/10 primary cells)",
+  "n_primary": 10
+ },
+ "H2": {
+  "outcome": "indeterminate",
+  "reason": "sample_reconstruction (4/4 primary cells)",
+  "n_primary": 4
+ },
+ "lower_tier_discrepant_cells": 19,
+ "paper": "indeterminate",
+ "outcome_counts": {
+  "indeterminate": 143,
+  "descriptive_only": 24,
+  "discrepant_candidate_pending_human_review": 23,
+  "not_attemptable": 2
+ },
+ "scored_with": "A",
+ "origin_agreeing_pairs": [
+  "A-B"
+ ],
+ "family_n": {
+  "org": 361,
+  "mkt": 239
+ },
+ "sealed_n": {
+  "org": 590,
+  "mkt": 373
+ }
+}

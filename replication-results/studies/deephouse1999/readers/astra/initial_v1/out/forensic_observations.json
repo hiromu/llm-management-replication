@@ -1,0 +1,1505 @@
+[
+  {
+    "check_id": "F_T2_M1_0",
+    "description": "Coefficient/SE/significance compatibility over complete printed rounding intervals",
+    "inputs": [
+      {
+        "target_id": "T2_M1_0",
+        "coefficient": "0.929",
+        "SE": "0.169",
+        "stars": "***",
+        "source": "DOC01 p12 Table 2 M1 Intercept"
+      }
+    ],
+    "calculation": {
+      "absolute_t_interval": [
+        5.477876106194691,
+        5.516320474777448
+      ],
+      "two_sided_t_p_interval_derived_not_published": [
+        4.4575991614179264e-08,
+        5.506007935770692e-08
+      ],
+      "df_assumed_from_printed_model_and_N": 955,
+      "rounding": "half unit in last printed decimal; closed conservative bounds"
+    },
+    "result": "consistent",
+    "notes": "Conventional two-sided t inference used only as a conditional diagnostic; native tails/software unreported. Star checks test stated upper threshold, not exact p or mandatory exclusive bins. No star assessed only for compatibility with nonsignificance.",
+    "source": "DOC01 p12 Table 2 M1 Intercept"
+  },
+  {
+    "check_id": "F_T2_M1_3",
+    "description": "Coefficient/SE/significance compatibility over complete printed rounding intervals",
+    "inputs": [
+      {
+        "target_id": "T2_M1_3",
+        "coefficient": "-0.576",
+        "SE": "0.138",
+        "stars": "***",
+        "source": "DOC01 p12 Table 2 M1 Market Share"
+      }
+    ],
+    "calculation": {
+      "absolute_t_interval": [
+        4.155234657039711,
+        4.1927272727272715
+      ],
+      "two_sided_t_p_interval_derived_not_published": [
+        3.01232823055819e-05,
+        3.5409926020987795e-05
+      ],
+      "df_assumed_from_printed_model_and_N": 955,
+      "rounding": "half unit in last printed decimal; closed conservative bounds"
+    },
+    "result": "consistent",
+    "notes": "Conventional two-sided t inference used only as a conditional diagnostic; native tails/software unreported. Star checks test stated upper threshold, not exact p or mandatory exclusive bins. No star assessed only for compatibility with nonsignificance.",
+    "source": "DOC01 p12 Table 2 M1 Market Share"
+  },
+  {
+    "check_id": "F_T2_M1_4",
+    "description": "Coefficient/SE/significance compatibility over complete printed rounding intervals",
+    "inputs": [
+      {
+        "target_id": "T2_M1_4",
+        "coefficient": "-9.948",
+        "SE": "2.001",
+        "stars": "***",
+        "source": "DOC01 p12 Table 2 M1 Total Expense Ratio"
+      }
+    ],
+    "calculation": {
+      "absolute_t_interval": [
+        4.9700224831376465,
+        4.9730067483129226
+      ],
+      "two_sided_t_p_interval_derived_not_published": [
+        7.813673918138219e-07,
+        7.931812595851074e-07
+      ],
+      "df_assumed_from_printed_model_and_N": 955,
+      "rounding": "half unit in last printed decimal; closed conservative bounds"
+    },
+    "result": "consistent",
+    "notes": "Conventional two-sided t inference used only as a conditional diagnostic; native tails/software unreported. Star checks test stated upper threshold, not exact p or mandatory exclusive bins. No star assessed only for compatibility with nonsignificance.",
+    "source": "DOC01 p12 Table 2 M1 Total Expense Ratio"
+  },
+  {
+    "check_id": "F_T2_M1_5",
+    "description": "Coefficient/SE/significance compatibility over complete printed rounding intervals",
+    "inputs": [
+      {
+        "target_id": "T2_M1_5",
+        "coefficient": "0.014",
+        "SE": "0.004",
+        "stars": "***",
+        "source": "DOC01 p12 Table 2 M1 Real Market Growth"
+      }
+    ],
+    "calculation": {
+      "absolute_t_interval": [
+        2.9999999999999996,
+        4.142857142857143
+      ],
+      "two_sided_t_p_interval_derived_not_published": [
+        3.734107823440488e-05,
+        0.002769883478553758
+      ],
+      "df_assumed_from_printed_model_and_N": 955,
+      "rounding": "half unit in last printed decimal; closed conservative bounds"
+    },
+    "result": "consistent",
+    "notes": "Conventional two-sided t inference used only as a conditional diagnostic; native tails/software unreported. Star checks test stated upper threshold, not exact p or mandatory exclusive bins. No star assessed only for compatibility with nonsignificance.",
+    "source": "DOC01 p12 Table 2 M1 Real Market Growth"
+  },
+  {
+    "check_id": "F_T2_M1_6",
+    "description": "Coefficient/SE/significance compatibility over complete printed rounding intervals",
+    "inputs": [
+      {
+        "target_id": "T2_M1_6",
+        "coefficient": "0.369",
+        "SE": "0.028",
+        "stars": "***",
+        "source": "DOC01 p12 Table 2 M1 Relative ROAt−1"
+      }
+    ],
+    "calculation": {
+      "absolute_t_interval": [
+        12.929824561403509,
+        13.436363636363636
+      ],
+      "two_sided_t_p_interval_derived_not_published": [
+        7.979504054698748e-38,
+        2.340971066142392e-35
+      ],
+      "df_assumed_from_printed_model_and_N": 955,
+      "rounding": "half unit in last printed decimal; closed conservative bounds"
+    },
+    "result": "consistent",
+    "notes": "Conventional two-sided t inference used only as a conditional diagnostic; native tails/software unreported. Star checks test stated upper threshold, not exact p or mandatory exclusive bins. No star assessed only for compatibility with nonsignificance.",
+    "source": "DOC01 p12 Table 2 M1 Relative ROAt−1"
+  },
+  {
+    "check_id": "F_T2_M2_0",
+    "description": "Coefficient/SE/significance compatibility over complete printed rounding intervals",
+    "inputs": [
+      {
+        "target_id": "T2_M2_0",
+        "coefficient": "1.164",
+        "SE": "0.172",
+        "stars": "***",
+        "source": "DOC01 p12 Table 2 M2 Intercept"
+      }
+    ],
+    "calculation": {
+      "absolute_t_interval": [
+        6.744927536231884,
+        6.790087463556851
+      ],
+      "two_sided_t_p_interval_derived_not_published": [
+        1.9679980576179478e-11,
+        2.6504801943650316e-11
+      ],
+      "df_assumed_from_printed_model_and_N": 954,
+      "rounding": "half unit in last printed decimal; closed conservative bounds"
+    },
+    "result": "consistent",
+    "notes": "Conventional two-sided t inference used only as a conditional diagnostic; native tails/software unreported. Star checks test stated upper threshold, not exact p or mandatory exclusive bins. No star assessed only for compatibility with nonsignificance.",
+    "source": "DOC01 p12 Table 2 M2 Intercept"
+  },
+  {
+    "check_id": "F_T2_M2_2",
+    "description": "Coefficient/SE/significance compatibility over complete printed rounding intervals",
+    "inputs": [
+      {
+        "target_id": "T2_M2_2",
+        "coefficient": "-0.020",
+        "SE": "0.004",
+        "stars": "***",
+        "source": "DOC01 p12 Table 2 M2 Strategic Deviation"
+      }
+    ],
+    "calculation": {
+      "absolute_t_interval": [
+        4.333333333333333,
+        5.857142857142858
+      ],
+      "two_sided_t_p_interval_derived_not_published": [
+        6.476228181675267e-09,
+        1.624398741576397e-05
+      ],
+      "df_assumed_from_printed_model_and_N": 954,
+      "rounding": "half unit in last printed decimal; closed conservative bounds"
+    },
+    "result": "consistent",
+    "notes": "Conventional two-sided t inference used only as a conditional diagnostic; native tails/software unreported. Star checks test stated upper threshold, not exact p or mandatory exclusive bins. No star assessed only for compatibility with nonsignificance.",
+    "source": "DOC01 p12 Table 2 M2 Strategic Deviation"
+  },
+  {
+    "check_id": "F_T2_M2_3",
+    "description": "Coefficient/SE/significance compatibility over complete printed rounding intervals",
+    "inputs": [
+      {
+        "target_id": "T2_M2_3",
+        "coefficient": "-0.093",
+        "SE": "0.161",
+        "stars": null,
+        "source": "DOC01 p12 Table 2 M2 Market Share"
+      }
+    ],
+    "calculation": {
+      "absolute_t_interval": [
+        0.5727554179566563,
+        0.5825545171339563
+      ],
+      "two_sided_t_p_interval_derived_not_published": [
+        0.5603308886081161,
+        0.5669452686551002
+      ],
+      "df_assumed_from_printed_model_and_N": 954,
+      "rounding": "half unit in last printed decimal; closed conservative bounds"
+    },
+    "result": "consistent",
+    "notes": "Conventional two-sided t inference used only as a conditional diagnostic; native tails/software unreported. Star checks test stated upper threshold, not exact p or mandatory exclusive bins. No star assessed only for compatibility with nonsignificance.",
+    "source": "DOC01 p12 Table 2 M2 Market Share"
+  },
+  {
+    "check_id": "F_T2_M2_4",
+    "description": "Coefficient/SE/significance compatibility over complete printed rounding intervals",
+    "inputs": [
+      {
+        "target_id": "T2_M2_4",
+        "coefficient": "-10.601",
+        "SE": "1.974",
+        "stars": "***",
+        "source": "DOC01 p12 Table 2 M2 Total Expense Ratio"
+      }
+    ],
+    "calculation": {
+      "absolute_t_interval": [
+        5.3687009369460625,
+        5.371928046617685
+      ],
+      "two_sided_t_p_interval_derived_not_published": [
+        9.790884111648847e-08,
+        9.962432701746395e-08
+      ],
+      "df_assumed_from_printed_model_and_N": 954,
+      "rounding": "half unit in last printed decimal; closed conservative bounds"
+    },
+    "result": "consistent",
+    "notes": "Conventional two-sided t inference used only as a conditional diagnostic; native tails/software unreported. Star checks test stated upper threshold, not exact p or mandatory exclusive bins. No star assessed only for compatibility with nonsignificance.",
+    "source": "DOC01 p12 Table 2 M2 Total Expense Ratio"
+  },
+  {
+    "check_id": "F_T2_M2_5",
+    "description": "Coefficient/SE/significance compatibility over complete printed rounding intervals",
+    "inputs": [
+      {
+        "target_id": "T2_M2_5",
+        "coefficient": "0.016",
+        "SE": "0.004",
+        "stars": "***",
+        "source": "DOC01 p12 Table 2 M2 Real Market Growth"
+      }
+    ],
+    "calculation": {
+      "absolute_t_interval": [
+        3.444444444444444,
+        4.714285714285714
+      ],
+      "two_sided_t_p_interval_derived_not_published": [
+        2.7867119345644075e-06,
+        0.0005971442895258615
+      ],
+      "df_assumed_from_printed_model_and_N": 954,
+      "rounding": "half unit in last printed decimal; closed conservative bounds"
+    },
+    "result": "consistent",
+    "notes": "Conventional two-sided t inference used only as a conditional diagnostic; native tails/software unreported. Star checks test stated upper threshold, not exact p or mandatory exclusive bins. No star assessed only for compatibility with nonsignificance.",
+    "source": "DOC01 p12 Table 2 M2 Real Market Growth"
+  },
+  {
+    "check_id": "F_T2_M2_6",
+    "description": "Coefficient/SE/significance compatibility over complete printed rounding intervals",
+    "inputs": [
+      {
+        "target_id": "T2_M2_6",
+        "coefficient": "0.361",
+        "SE": "0.027",
+        "stars": "***",
+        "source": "DOC01 p12 Table 2 M2 Relative ROAt−1"
+      }
+    ],
+    "calculation": {
+      "absolute_t_interval": [
+        13.10909090909091,
+        13.641509433962264
+      ],
+      "two_sided_t_p_interval_derived_not_published": [
+        7.723707624413005e-39,
+        3.209321809672694e-36
+      ],
+      "df_assumed_from_printed_model_and_N": 954,
+      "rounding": "half unit in last printed decimal; closed conservative bounds"
+    },
+    "result": "consistent",
+    "notes": "Conventional two-sided t inference used only as a conditional diagnostic; native tails/software unreported. Star checks test stated upper threshold, not exact p or mandatory exclusive bins. No star assessed only for compatibility with nonsignificance.",
+    "source": "DOC01 p12 Table 2 M2 Relative ROAt−1"
+  },
+  {
+    "check_id": "F_T2_M3_0",
+    "description": "Coefficient/SE/significance compatibility over complete printed rounding intervals",
+    "inputs": [
+      {
+        "target_id": "T2_M3_0",
+        "coefficient": "0.511",
+        "SE": "0.171",
+        "stars": "**",
+        "source": "DOC01 p12 Table 2 M3 Intercept"
+      }
+    ],
+    "calculation": {
+      "absolute_t_interval": [
+        2.9766763848396502,
+        2.9999999999999996
+      ],
+      "two_sided_t_p_interval_derived_not_published": [
+        0.002770031569724266,
+        0.0029875730116248455
+      ],
+      "df_assumed_from_printed_model_and_N": 953,
+      "rounding": "half unit in last printed decimal; closed conservative bounds"
+    },
+    "result": "consistent",
+    "notes": "Conventional two-sided t inference used only as a conditional diagnostic; native tails/software unreported. Star checks test stated upper threshold, not exact p or mandatory exclusive bins. No star assessed only for compatibility with nonsignificance.",
+    "source": "DOC01 p12 Table 2 M3 Intercept"
+  },
+  {
+    "check_id": "F_T2_M3_1",
+    "description": "Coefficient/SE/significance compatibility over complete printed rounding intervals",
+    "inputs": [
+      {
+        "target_id": "T2_M3_1",
+        "coefficient": "-0.006",
+        "SE": "0.001",
+        "stars": "***",
+        "source": "DOC01 p12 Table 2 M3 Strategic Deviation²"
+      }
+    ],
+    "calculation": {
+      "absolute_t_interval": [
+        3.6666666666666665,
+        13.0
+      ],
+      "two_sided_t_p_interval_derived_not_published": [
+        1.0888696479341647e-35,
+        0.00025932005884082723
+      ],
+      "df_assumed_from_printed_model_and_N": 953,
+      "rounding": "half unit in last printed decimal; closed conservative bounds"
+    },
+    "result": "consistent",
+    "notes": "Conventional two-sided t inference used only as a conditional diagnostic; native tails/software unreported. Star checks test stated upper threshold, not exact p or mandatory exclusive bins. No star assessed only for compatibility with nonsignificance.",
+    "source": "DOC01 p12 Table 2 M3 Strategic Deviation²"
+  },
+  {
+    "check_id": "F_T2_M3_2",
+    "description": "Coefficient/SE/significance compatibility over complete printed rounding intervals",
+    "inputs": [
+      {
+        "target_id": "T2_M3_2",
+        "coefficient": "0.170",
+        "SE": "0.017",
+        "stars": "***",
+        "source": "DOC01 p12 Table 2 M3 Strategic Deviation"
+      }
+    ],
+    "calculation": {
+      "absolute_t_interval": [
+        9.685714285714285,
+        10.333333333333334
+      ],
+      "two_sided_t_p_interval_derived_not_published": [
+        8.50333397240213e-24,
+        3.1747162227289814e-21
+      ],
+      "df_assumed_from_printed_model_and_N": 953,
+      "rounding": "half unit in last printed decimal; closed conservative bounds"
+    },
+    "result": "consistent",
+    "notes": "Conventional two-sided t inference used only as a conditional diagnostic; native tails/software unreported. Star checks test stated upper threshold, not exact p or mandatory exclusive bins. No star assessed only for compatibility with nonsignificance.",
+    "source": "DOC01 p12 Table 2 M3 Strategic Deviation"
+  },
+  {
+    "check_id": "F_T2_M3_3",
+    "description": "Coefficient/SE/significance compatibility over complete printed rounding intervals",
+    "inputs": [
+      {
+        "target_id": "T2_M3_3",
+        "coefficient": "-0.457",
+        "SE": "0.155",
+        "stars": "**",
+        "source": "DOC01 p12 Table 2 M3 Market Share"
+      }
+    ],
+    "calculation": {
+      "absolute_t_interval": [
+        2.9356913183279745,
+        2.9611650485436893
+      ],
+      "two_sided_t_p_interval_derived_not_published": [
+        0.0031407751758271893,
+        0.0034080038317535716
+      ],
+      "df_assumed_from_printed_model_and_N": 953,
+      "rounding": "half unit in last printed decimal; closed conservative bounds"
+    },
+    "result": "consistent",
+    "notes": "Conventional two-sided t inference used only as a conditional diagnostic; native tails/software unreported. Star checks test stated upper threshold, not exact p or mandatory exclusive bins. No star assessed only for compatibility with nonsignificance.",
+    "source": "DOC01 p12 Table 2 M3 Market Share"
+  },
+  {
+    "check_id": "F_T2_M3_4",
+    "description": "Coefficient/SE/significance compatibility over complete printed rounding intervals",
+    "inputs": [
+      {
+        "target_id": "T2_M3_4",
+        "coefficient": "-15.387",
+        "SE": "1.895",
+        "stars": "***",
+        "source": "DOC01 p12 Table 2 M3 Total Expense Ratio"
+      }
+    ],
+    "calculation": {
+      "absolute_t_interval": [
+        8.117383276180428,
+        8.12219583003431
+      ],
+      "two_sided_t_p_interval_derived_not_published": [
+        1.4099265633264604e-15,
+        1.463196835916661e-15
+      ],
+      "df_assumed_from_printed_model_and_N": 953,
+      "rounding": "half unit in last printed decimal; closed conservative bounds"
+    },
+    "result": "consistent",
+    "notes": "Conventional two-sided t inference used only as a conditional diagnostic; native tails/software unreported. Star checks test stated upper threshold, not exact p or mandatory exclusive bins. No star assessed only for compatibility with nonsignificance.",
+    "source": "DOC01 p12 Table 2 M3 Total Expense Ratio"
+  },
+  {
+    "check_id": "F_T2_M3_5",
+    "description": "Coefficient/SE/significance compatibility over complete printed rounding intervals",
+    "inputs": [
+      {
+        "target_id": "T2_M3_5",
+        "coefficient": "0.018",
+        "SE": "0.003",
+        "stars": "***",
+        "source": "DOC01 p12 Table 2 M3 Real Market Growth"
+      }
+    ],
+    "calculation": {
+      "absolute_t_interval": [
+        4.999999999999999,
+        7.3999999999999995
+      ],
+      "two_sided_t_p_interval_derived_not_published": [
+        2.987064021697164e-13,
+        6.821897245418974e-07
+      ],
+      "df_assumed_from_printed_model_and_N": 953,
+      "rounding": "half unit in last printed decimal; closed conservative bounds"
+    },
+    "result": "consistent",
+    "notes": "Conventional two-sided t inference used only as a conditional diagnostic; native tails/software unreported. Star checks test stated upper threshold, not exact p or mandatory exclusive bins. No star assessed only for compatibility with nonsignificance.",
+    "source": "DOC01 p12 Table 2 M3 Real Market Growth"
+  },
+  {
+    "check_id": "F_T2_M3_6",
+    "description": "Coefficient/SE/significance compatibility over complete printed rounding intervals",
+    "inputs": [
+      {
+        "target_id": "T2_M3_6",
+        "coefficient": "0.403",
+        "SE": "0.026",
+        "stars": "***",
+        "source": "DOC01 p12 Table 2 M3 Relative ROAt−1"
+      }
+    ],
+    "calculation": {
+      "absolute_t_interval": [
+        15.188679245283021,
+        15.823529411764708
+      ],
+      "two_sided_t_p_interval_derived_not_published": [
+        2.9964039037561806e-50,
+        8.023176782355563e-47
+      ],
+      "df_assumed_from_printed_model_and_N": 953,
+      "rounding": "half unit in last printed decimal; closed conservative bounds"
+    },
+    "result": "consistent",
+    "notes": "Conventional two-sided t inference used only as a conditional diagnostic; native tails/software unreported. Star checks test stated upper threshold, not exact p or mandatory exclusive bins. No star assessed only for compatibility with nonsignificance.",
+    "source": "DOC01 p12 Table 2 M3 Relative ROAt−1"
+  },
+  {
+    "check_id": "F_T1_r_2_1",
+    "description": "Correlation stars under conventional Pearson inference, accounting for rounding",
+    "inputs": [
+      {
+        "correlation": "0.62",
+        "stars": "***",
+        "n": 960,
+        "source": "DOC01 p12 Table 1 row 2 column 1"
+      }
+    ],
+    "calculation": {
+      "abs_r_interval": [
+        0.615,
+        0.625
+      ],
+      "two_sided_p_interval_derived_not_published": [
+        3.752323663429251e-105,
+        5.91368269177295e-101
+      ]
+    },
+    "result": "consistent",
+    "notes": "Conditional on ordinary Pearson t test with full printed N. Tails, dependence adjustments and pairwise effective N not independently stated. No-star cells are not exact p values.",
+    "source": "DOC01 p12 Table 1 Relative ROAt−1 with Relative ROA"
+  },
+  {
+    "check_id": "F_T1_r_3_1",
+    "description": "Correlation stars under conventional Pearson inference, accounting for rounding",
+    "inputs": [
+      {
+        "correlation": "−0.12",
+        "stars": "***",
+        "n": 960,
+        "source": "DOC01 p12 Table 1 row 3 column 1"
+      }
+    ],
+    "calculation": {
+      "abs_r_interval": [
+        0.11499999999999999,
+        0.125
+      ],
+      "two_sided_p_interval_derived_not_published": [
+        0.00010310042892415935,
+        0.000356499445327334
+      ]
+    },
+    "result": "consistent",
+    "notes": "Conditional on ordinary Pearson t test with full printed N. Tails, dependence adjustments and pairwise effective N not independently stated. No-star cells are not exact p values.",
+    "source": "DOC01 p12 Table 1 Strategic Deviation² with Relative ROA"
+  },
+  {
+    "check_id": "F_T1_r_3_2",
+    "description": "Correlation stars under conventional Pearson inference, accounting for rounding",
+    "inputs": [
+      {
+        "correlation": "−0.14",
+        "stars": "***",
+        "n": 960,
+        "source": "DOC01 p12 Table 1 row 3 column 2"
+      }
+    ],
+    "calculation": {
+      "abs_r_interval": [
+        0.135,
+        0.14500000000000002
+      ],
+      "two_sided_p_interval_derived_not_published": [
+        6.46245071620195e-06,
+        2.7095493236447573e-05
+      ]
+    },
+    "result": "consistent",
+    "notes": "Conditional on ordinary Pearson t test with full printed N. Tails, dependence adjustments and pairwise effective N not independently stated. No-star cells are not exact p values.",
+    "source": "DOC01 p12 Table 1 Strategic Deviation² with Relative ROAt−1"
+  },
+  {
+    "check_id": "F_T1_r_4_1",
+    "description": "Correlation stars under conventional Pearson inference, accounting for rounding",
+    "inputs": [
+      {
+        "correlation": "−0.14",
+        "stars": "***",
+        "n": 960,
+        "source": "DOC01 p12 Table 1 row 4 column 1"
+      }
+    ],
+    "calculation": {
+      "abs_r_interval": [
+        0.135,
+        0.14500000000000002
+      ],
+      "two_sided_p_interval_derived_not_published": [
+        6.46245071620195e-06,
+        2.7095493236447573e-05
+      ]
+    },
+    "result": "consistent",
+    "notes": "Conditional on ordinary Pearson t test with full printed N. Tails, dependence adjustments and pairwise effective N not independently stated. No-star cells are not exact p values.",
+    "source": "DOC01 p12 Table 1 Strategic Deviation with Relative ROA"
+  },
+  {
+    "check_id": "F_T1_r_4_2",
+    "description": "Correlation stars under conventional Pearson inference, accounting for rounding",
+    "inputs": [
+      {
+        "correlation": "−0.17",
+        "stars": "***",
+        "n": 960,
+        "source": "DOC01 p12 Table 1 row 4 column 2"
+      }
+    ],
+    "calculation": {
+      "abs_r_interval": [
+        0.165,
+        0.17500000000000002
+      ],
+      "two_sided_p_interval_derived_not_published": [
+        4.834897938075696e-08,
+        2.733484511099973e-07
+      ]
+    },
+    "result": "consistent",
+    "notes": "Conditional on ordinary Pearson t test with full printed N. Tails, dependence adjustments and pairwise effective N not independently stated. No-star cells are not exact p values.",
+    "source": "DOC01 p12 Table 1 Strategic Deviation with Relative ROAt−1"
+  },
+  {
+    "check_id": "F_T1_r_4_3",
+    "description": "Correlation stars under conventional Pearson inference, accounting for rounding",
+    "inputs": [
+      {
+        "correlation": "0.95",
+        "stars": "***",
+        "n": 960,
+        "source": "DOC01 p12 Table 1 row 4 column 3"
+      }
+    ],
+    "calculation": {
+      "abs_r_interval": [
+        0.945,
+        0.955
+      ],
+      "two_sided_p_interval_derived_not_published": [
+        0.0,
+        0.0
+      ]
+    },
+    "result": "consistent",
+    "notes": "Conditional on ordinary Pearson t test with full printed N. Tails, dependence adjustments and pairwise effective N not independently stated. No-star cells are not exact p values.",
+    "source": "DOC01 p12 Table 1 Strategic Deviation with Strategic Deviation²"
+  },
+  {
+    "check_id": "F_T1_r_5_1",
+    "description": "Correlation stars under conventional Pearson inference, accounting for rounding",
+    "inputs": [
+      {
+        "correlation": "−0.04",
+        "stars": null,
+        "n": 960,
+        "source": "DOC01 p12 Table 1 row 5 column 1"
+      }
+    ],
+    "calculation": {
+      "abs_r_interval": [
+        0.035,
+        0.045
+      ],
+      "two_sided_p_interval_derived_not_published": [
+        0.16357043837859478,
+        0.27865115212091407
+      ]
+    },
+    "result": "consistent",
+    "notes": "Conditional on ordinary Pearson t test with full printed N. Tails, dependence adjustments and pairwise effective N not independently stated. No-star cells are not exact p values.",
+    "source": "DOC01 p12 Table 1 Market Share with Relative ROA"
+  },
+  {
+    "check_id": "F_T1_r_5_2",
+    "description": "Correlation stars under conventional Pearson inference, accounting for rounding",
+    "inputs": [
+      {
+        "correlation": "−0.08",
+        "stars": "**",
+        "n": 960,
+        "source": "DOC01 p12 Table 1 row 5 column 2"
+      }
+    ],
+    "calculation": {
+      "abs_r_interval": [
+        0.075,
+        0.085
+      ],
+      "two_sided_p_interval_derived_not_published": [
+        0.008414538703096648,
+        0.020123550507822045
+      ]
+    },
+    "result": "consistent",
+    "notes": "Conditional on ordinary Pearson t test with full printed N. Tails, dependence adjustments and pairwise effective N not independently stated. No-star cells are not exact p values.",
+    "source": "DOC01 p12 Table 1 Market Share with Relative ROAt−1"
+  },
+  {
+    "check_id": "F_T1_r_5_3",
+    "description": "Correlation stars under conventional Pearson inference, accounting for rounding",
+    "inputs": [
+      {
+        "correlation": "0.49",
+        "stars": "***",
+        "n": 960,
+        "source": "DOC01 p12 Table 1 row 5 column 3"
+      }
+    ],
+    "calculation": {
+      "abs_r_interval": [
+        0.485,
+        0.495
+      ],
+      "two_sided_p_interval_derived_not_published": [
+        1.757345893267589e-60,
+        8.641271153569608e-58
+      ]
+    },
+    "result": "consistent",
+    "notes": "Conditional on ordinary Pearson t test with full printed N. Tails, dependence adjustments and pairwise effective N not independently stated. No-star cells are not exact p values.",
+    "source": "DOC01 p12 Table 1 Market Share with Strategic Deviation²"
+  },
+  {
+    "check_id": "F_T1_r_5_4",
+    "description": "Correlation stars under conventional Pearson inference, accounting for rounding",
+    "inputs": [
+      {
+        "correlation": "0.41",
+        "stars": "***",
+        "n": 960,
+        "source": "DOC01 p12 Table 1 row 5 column 4"
+      }
+    ],
+    "calculation": {
+      "abs_r_interval": [
+        0.40499999999999997,
+        0.415
+      ],
+      "two_sided_p_interval_derived_not_published": [
+        2.957621380792996e-41,
+        3.4040735755101967e-39
+      ]
+    },
+    "result": "consistent",
+    "notes": "Conditional on ordinary Pearson t test with full printed N. Tails, dependence adjustments and pairwise effective N not independently stated. No-star cells are not exact p values.",
+    "source": "DOC01 p12 Table 1 Market Share with Strategic Deviation"
+  },
+  {
+    "check_id": "F_T1_r_6_1",
+    "description": "Correlation stars under conventional Pearson inference, accounting for rounding",
+    "inputs": [
+      {
+        "correlation": "−0.45",
+        "stars": "***",
+        "n": 960,
+        "source": "DOC01 p12 Table 1 row 6 column 1"
+      }
+    ],
+    "calculation": {
+      "abs_r_interval": [
+        0.445,
+        0.455
+      ],
+      "two_sided_p_interval_derived_not_published": [
+        3.1384490003699916e-50,
+        7.14510149267084e-48
+      ]
+    },
+    "result": "consistent",
+    "notes": "Conditional on ordinary Pearson t test with full printed N. Tails, dependence adjustments and pairwise effective N not independently stated. No-star cells are not exact p values.",
+    "source": "DOC01 p12 Table 1 Total Expense Ratio with Relative ROA"
+  },
+  {
+    "check_id": "F_T1_r_6_2",
+    "description": "Correlation stars under conventional Pearson inference, accounting for rounding",
+    "inputs": [
+      {
+        "correlation": "−0.40",
+        "stars": "***",
+        "n": 960,
+        "source": "DOC01 p12 Table 1 row 6 column 2"
+      }
+    ],
+    "calculation": {
+      "abs_r_interval": [
+        0.395,
+        0.405
+      ],
+      "two_sided_p_interval_derived_not_published": [
+        3.4040735755101967e-39,
+        3.3419747882443327e-37
+      ]
+    },
+    "result": "consistent",
+    "notes": "Conditional on ordinary Pearson t test with full printed N. Tails, dependence adjustments and pairwise effective N not independently stated. No-star cells are not exact p values.",
+    "source": "DOC01 p12 Table 1 Total Expense Ratio with Relative ROAt−1"
+  },
+  {
+    "check_id": "F_T1_r_6_3",
+    "description": "Correlation stars under conventional Pearson inference, accounting for rounding",
+    "inputs": [
+      {
+        "correlation": "0.09",
+        "stars": "**",
+        "n": 960,
+        "source": "DOC01 p12 Table 1 row 6 column 3"
+      }
+    ],
+    "calculation": {
+      "abs_r_interval": [
+        0.08499999999999999,
+        0.095
+      ],
+      "two_sided_p_interval_derived_not_published": [
+        0.003216022392360481,
+        0.008414538703096656
+      ]
+    },
+    "result": "consistent",
+    "notes": "Conditional on ordinary Pearson t test with full printed N. Tails, dependence adjustments and pairwise effective N not independently stated. No-star cells are not exact p values.",
+    "source": "DOC01 p12 Table 1 Total Expense Ratio with Strategic Deviation²"
+  },
+  {
+    "check_id": "F_T1_r_6_4",
+    "description": "Correlation stars under conventional Pearson inference, accounting for rounding",
+    "inputs": [
+      {
+        "correlation": "0.13",
+        "stars": "***",
+        "n": 960,
+        "source": "DOC01 p12 Table 1 row 6 column 4"
+      }
+    ],
+    "calculation": {
+      "abs_r_interval": [
+        0.125,
+        0.135
+      ],
+      "two_sided_p_interval_derived_not_published": [
+        2.7095493236447573e-05,
+        0.00010310042892415935
+      ]
+    },
+    "result": "consistent",
+    "notes": "Conditional on ordinary Pearson t test with full printed N. Tails, dependence adjustments and pairwise effective N not independently stated. No-star cells are not exact p values.",
+    "source": "DOC01 p12 Table 1 Total Expense Ratio with Strategic Deviation"
+  },
+  {
+    "check_id": "F_T1_r_6_5",
+    "description": "Correlation stars under conventional Pearson inference, accounting for rounding",
+    "inputs": [
+      {
+        "correlation": "−0.03",
+        "stars": null,
+        "n": 960,
+        "source": "DOC01 p12 Table 1 row 6 column 5"
+      }
+    ],
+    "calculation": {
+      "abs_r_interval": [
+        0.024999999999999998,
+        0.034999999999999996
+      ],
+      "two_sided_p_interval_derived_not_published": [
+        0.2786511521209142,
+        0.43910325170498543
+      ]
+    },
+    "result": "consistent",
+    "notes": "Conditional on ordinary Pearson t test with full printed N. Tails, dependence adjustments and pairwise effective N not independently stated. No-star cells are not exact p values.",
+    "source": "DOC01 p12 Table 1 Total Expense Ratio with Market Share"
+  },
+  {
+    "check_id": "F_T1_r_7_1",
+    "description": "Correlation stars under conventional Pearson inference, accounting for rounding",
+    "inputs": [
+      {
+        "correlation": "0.01",
+        "stars": null,
+        "n": 960,
+        "source": "DOC01 p12 Table 1 row 7 column 1"
+      }
+    ],
+    "calculation": {
+      "abs_r_interval": [
+        0.005,
+        0.015
+      ],
+      "two_sided_p_interval_derived_not_published": [
+        0.6425197926697013,
+        0.87704327460972
+      ]
+    },
+    "result": "consistent",
+    "notes": "Conditional on ordinary Pearson t test with full printed N. Tails, dependence adjustments and pairwise effective N not independently stated. No-star cells are not exact p values.",
+    "source": "DOC01 p12 Table 1 Real Market Growth (%) with Relative ROA"
+  },
+  {
+    "check_id": "F_T1_r_7_2",
+    "description": "Correlation stars under conventional Pearson inference, accounting for rounding",
+    "inputs": [
+      {
+        "correlation": "−0.01",
+        "stars": null,
+        "n": 960,
+        "source": "DOC01 p12 Table 1 row 7 column 2"
+      }
+    ],
+    "calculation": {
+      "abs_r_interval": [
+        0.005,
+        0.015
+      ],
+      "two_sided_p_interval_derived_not_published": [
+        0.6425197926697013,
+        0.87704327460972
+      ]
+    },
+    "result": "consistent",
+    "notes": "Conditional on ordinary Pearson t test with full printed N. Tails, dependence adjustments and pairwise effective N not independently stated. No-star cells are not exact p values.",
+    "source": "DOC01 p12 Table 1 Real Market Growth (%) with Relative ROAt−1"
+  },
+  {
+    "check_id": "F_T1_r_7_3",
+    "description": "Correlation stars under conventional Pearson inference, accounting for rounding",
+    "inputs": [
+      {
+        "correlation": "0.00",
+        "stars": null,
+        "n": 960,
+        "source": "DOC01 p12 Table 1 row 7 column 3"
+      }
+    ],
+    "calculation": {
+      "abs_r_interval": [
+        0,
+        0.005
+      ],
+      "two_sided_p_interval_derived_not_published": [
+        0.87704327460972,
+        1.0
+      ]
+    },
+    "result": "consistent",
+    "notes": "Conditional on ordinary Pearson t test with full printed N. Tails, dependence adjustments and pairwise effective N not independently stated. No-star cells are not exact p values.",
+    "source": "DOC01 p12 Table 1 Real Market Growth (%) with Strategic Deviation²"
+  },
+  {
+    "check_id": "F_T1_r_7_4",
+    "description": "Correlation stars under conventional Pearson inference, accounting for rounding",
+    "inputs": [
+      {
+        "correlation": "0.00",
+        "stars": null,
+        "n": 960,
+        "source": "DOC01 p12 Table 1 row 7 column 4"
+      }
+    ],
+    "calculation": {
+      "abs_r_interval": [
+        0,
+        0.005
+      ],
+      "two_sided_p_interval_derived_not_published": [
+        0.87704327460972,
+        1.0
+      ]
+    },
+    "result": "consistent",
+    "notes": "Conditional on ordinary Pearson t test with full printed N. Tails, dependence adjustments and pairwise effective N not independently stated. No-star cells are not exact p values.",
+    "source": "DOC01 p12 Table 1 Real Market Growth (%) with Strategic Deviation"
+  },
+  {
+    "check_id": "F_T1_r_7_5",
+    "description": "Correlation stars under conventional Pearson inference, accounting for rounding",
+    "inputs": [
+      {
+        "correlation": "−0.02",
+        "stars": null,
+        "n": 960,
+        "source": "DOC01 p12 Table 1 row 7 column 5"
+      }
+    ],
+    "calculation": {
+      "abs_r_interval": [
+        0.015,
+        0.025
+      ],
+      "two_sided_p_interval_derived_not_published": [
+        0.43910325170498554,
+        0.6425197926697013
+      ]
+    },
+    "result": "consistent",
+    "notes": "Conditional on ordinary Pearson t test with full printed N. Tails, dependence adjustments and pairwise effective N not independently stated. No-star cells are not exact p values.",
+    "source": "DOC01 p12 Table 1 Real Market Growth (%) with Market Share"
+  },
+  {
+    "check_id": "F_T1_r_7_6",
+    "description": "Correlation stars under conventional Pearson inference, accounting for rounding",
+    "inputs": [
+      {
+        "correlation": "0.08",
+        "stars": "*",
+        "n": 960,
+        "source": "DOC01 p12 Table 1 row 7 column 6"
+      }
+    ],
+    "calculation": {
+      "abs_r_interval": [
+        0.075,
+        0.085
+      ],
+      "two_sided_p_interval_derived_not_published": [
+        0.008414538703096648,
+        0.020123550507822045
+      ]
+    },
+    "result": "consistent",
+    "notes": "Conditional on ordinary Pearson t test with full printed N. Tails, dependence adjustments and pairwise effective N not independently stated. No-star cells are not exact p values.",
+    "source": "DOC01 p12 Table 1 Real Market Growth (%) with Total Expense Ratio"
+  },
+  {
+    "check_id": "F_SSE_M2_M1",
+    "description": "Nested F arithmetic, Δ SSE and printed degrees of freedom",
+    "inputs": [
+      {
+        "model": "M1",
+        "SSE": 2.978,
+        "source": "DOC01 p12 Table 2 SSE"
+      },
+      {
+        "model": "M2",
+        "SSE": 2.886,
+        "delta_SSE": 0.092,
+        "source": "DOC01 p12 Table 2 SSE and Δ SSE"
+      },
+      {
+        "F": 30.4,
+        "df": [
+          1,
+          954
+        ],
+        "source": "DOC01 p12 Results F-test"
+      }
+    ],
+    "calculation": {
+      "F_at_printed_centers": 30.411642411642436,
+      "feasible_F_interval_joint_SSE_delta_rounding": [
+        30.241122466655085,
+        30.582221452087964
+      ],
+      "printed_F_interval": [
+        30.349999999999998,
+        30.45
+      ],
+      "residual_df": "960 - 6",
+      "F_upper_tail_p_interval_derived_not_published": [
+        4.1319002525372736e-08,
+        4.899503490222719e-08
+      ]
+    },
+    "result": "consistent",
+    "notes": "All models include intercept. F and delta intervals overlap. Printed significance is an inequality, not an exact probability.",
+    "source": "DOC01 p12 Results and Table 2"
+  },
+  {
+    "check_id": "F_SSE_M3_M1",
+    "description": "Nested F arithmetic, Δ SSE and printed degrees of freedom",
+    "inputs": [
+      {
+        "model": "M1",
+        "SSE": 2.978,
+        "source": "DOC01 p12 Table 2 SSE"
+      },
+      {
+        "model": "M3",
+        "SSE": 2.53,
+        "delta_SSE": 0.448,
+        "source": "DOC01 p12 Table 2 SSE and Δ SSE"
+      },
+      {
+        "F": 84.4,
+        "df": [
+          2,
+          953
+        ],
+        "source": "DOC01 p13 Results F-test"
+      }
+    ],
+    "calculation": {
+      "F_at_printed_centers": 84.37628458498031,
+      "feasible_F_interval_joint_SSE_delta_rounding": [
+        84.26546137127046,
+        84.48715161099035
+      ],
+      "printed_F_interval": [
+        84.35000000000001,
+        84.45
+      ],
+      "residual_df": "960 - 7",
+      "F_upper_tail_p_interval_derived_not_published": [
+        1.6630694718393043e-34,
+        2.007730335512452e-34
+      ]
+    },
+    "result": "consistent",
+    "notes": "All models include intercept. F and delta intervals overlap. Printed significance is an inequality, not an exact probability.",
+    "source": "DOC01 p13 Results and Table 2"
+  },
+  {
+    "check_id": "F_SSE_M3_M2",
+    "description": "Nested F arithmetic, Δ SSE and printed degrees of freedom",
+    "inputs": [
+      {
+        "model": "M2",
+        "SSE": 2.886,
+        "source": "DOC01 p12 Table 2 SSE"
+      },
+      {
+        "model": "M3",
+        "SSE": 2.53,
+        "delta_SSE": 0.356,
+        "source": "DOC01 p12 Table 2 SSE and Δ SSE"
+      },
+      {
+        "F": 134.1,
+        "df": [
+          1,
+          953
+        ],
+        "source": "DOC01 p13 Results F-test"
+      }
+    ],
+    "calculation": {
+      "F_at_printed_centers": 134.09802371541514,
+      "feasible_F_interval_joint_SSE_delta_rounding": [
+        133.88322465915832,
+        134.3129076892667
+      ],
+      "printed_F_interval": [
+        134.04999999999998,
+        134.15
+      ],
+      "residual_df": "960 - 7",
+      "F_upper_tail_p_interval_derived_not_published": [
+        3.7849157071582374e-29,
+        4.5756329090988153e-29
+      ]
+    },
+    "result": "consistent",
+    "notes": "All models include intercept. F and delta intervals overlap. Printed significance is an inequality, not an exact probability.",
+    "source": "DOC01 p13 Results and Table 2"
+  },
+  {
+    "check_id": "F_N",
+    "description": "N, regressor counts and residual df",
+    "inputs": [
+      {
+        "n": 960,
+        "source": "DOC01 p12 Tables 1 and 2 notes"
+      },
+      {
+        "model_df": {
+          "M2": 954,
+          "M3": 953
+        },
+        "source": "DOC01 p12 Results F; DOC01 p13 Results F"
+      }
+    ],
+    "calculation": {
+      "parameter_counts_including_intercept": {
+        "M1": 5,
+        "M2": 6,
+        "M3": 7
+      },
+      "calculated_residual_df": {
+        "M1": 955,
+        "M2": 954,
+        "M3": 953
+      }
+    },
+    "result": "consistent",
+    "notes": "No complete bank-entry/exit flow table exists. The independent-bank count is not a balanced panel requirement.",
+    "source": "DOC01 p12 Table 2 and Results; DOC01 p13 Results"
+  },
+  {
+    "check_id": "F_FLOW",
+    "description": "Population-to-analysis count reconciliation",
+    "inputs": [
+      {
+        "banks": 159,
+        "observations": 960,
+        "years_text": "1985–92",
+        "deleted_observation": 1,
+        "source": "DOC01 p9 Sample and data"
+      }
+    ],
+    "calculation": null,
+    "result": "not_checkable",
+    "notes": "The reference date for the bank count and losses for entry, merger, failure and lags are not given; multiplying a putative fixed population by years would impose a balanced panel not claimed.",
+    "source": "DOC01 p9 Sample and data"
+  },
+  {
+    "check_id": "F_MOMENT",
+    "description": "Mean of squared strategic deviation versus mean and SD of strategic deviation",
+    "inputs": [
+      {
+        "mean_D": "7.640",
+        "SD_D": "2.932",
+        "mean_D2": "66.956",
+        "n": 960,
+        "source": "DOC01 p12 Table 1 rows 3–4 and note"
+      }
+    ],
+    "calculation": {
+      "identity": "mean(D²)=mean(D)²+(n-1)/n*sample_SD(D)²; population-SD variant factor=1",
+      "sample_SD_center_result": 66.95726918333332,
+      "feasible_moment_intervals": {
+        "sample_SD": [
+          66.94670073723958,
+          66.96783862890624
+        ],
+        "population_SD": [
+          66.9556525,
+          66.97679649999999
+        ]
+      },
+      "printed_mean_D2_interval": [
+        66.9555,
+        66.9565
+      ]
+    },
+    "result": "consistent",
+    "notes": "Printed intervals overlap for both SD conventions; this check does not identify which annual norm SD divisor was used. Table 1 pooled SD is distinct from annual strategy-standardization SDs.",
+    "source": "DOC01 p12 Table 1 rows 3–4"
+  },
+  {
+    "check_id": "F_T2_LINEAR",
+    "description": "M2 D coefficient t² versus M2/M1 F",
+    "inputs": [
+      {
+        "F": 30.4,
+        "source": "DOC01 p12 Results F-test"
+      },
+      {
+        "coefficient_SE_source": "DOC01 p12 Table 2 focal coefficient/SE"
+      }
+    ],
+    "calculation": {
+      "t_squared_rounding_interval": [
+        18.777777777777782,
+        34.3061224489796
+      ],
+      "printed_F_interval": [
+        30.349999999999998,
+        30.45
+      ]
+    },
+    "result": "consistent",
+    "notes": "Rounded coefficient/SE point ratio alone would be misleading, particularly for the coarsely printed quadratic SE.",
+    "source": "DOC01 p12 Results; DOC01 p12 Table 2"
+  },
+  {
+    "check_id": "F_T2_QUADRATIC",
+    "description": "M3 D² coefficient t² versus M3/M2 F",
+    "inputs": [
+      {
+        "F": 134.1,
+        "source": "DOC01 p13 Results F-test"
+      },
+      {
+        "coefficient_SE_source": "DOC01 p12 Table 2 focal coefficient/SE"
+      }
+    ],
+    "calculation": {
+      "t_squared_rounding_interval": [
+        13.444444444444443,
+        169.0
+      ],
+      "printed_F_interval": [
+        134.04999999999998,
+        134.15
+      ]
+    },
+    "result": "consistent",
+    "notes": "Rounded coefficient/SE point ratio alone would be misleading, particularly for the coarsely printed quadratic SE.",
+    "source": "DOC01 p13 Results; DOC01 p12 Table 2"
+  },
+  {
+    "check_id": "F_ROBUST_FIT",
+    "description": "Squared-only diagnostic fit lies between M2 and M3",
+    "inputs": [
+      {
+        "SSE_M3_SQ": "2.803",
+        "source": "DOC01 p13 Results collinearity diagnostic"
+      },
+      {
+        "SSE_M2": "2.886",
+        "SSE_M3": "2.530",
+        "source": "DOC01 p12 Table 2"
+      }
+    ],
+    "calculation": {
+      "ordering": "2.530 < 2.803 < 2.886",
+      "intervals": [
+        [
+          2.5294999999999996,
+          2.5305
+        ],
+        [
+          2.8024999999999998,
+          2.8035
+        ],
+        [
+          2.8855,
+          2.8865000000000003
+        ]
+      ]
+    },
+    "result": "consistent",
+    "notes": "Ordering survives rounding. M3_SQ and M2 are not nested; do not compute their difference as a one-df nested F.",
+    "source": "DOC01 p13 Results collinearity diagnostic"
+  },
+  {
+    "check_id": "F_ROBUST_T",
+    "description": "Squared-only coefficient/SE and implied baseline nested F",
+    "inputs": [
+      {
+        "coefficient": "−0.001",
+        "SE": "0.0001",
+        "SSE": "2.803",
+        "source": "DOC01 p13 Results collinearity diagnostic"
+      },
+      {
+        "SSE_M1": "2.978",
+        "source": "DOC01 p12 Table 2"
+      }
+    ],
+    "calculation": {
+      "absolute_t_interval": [
+        3.3333333333333335,
+        30.0
+      ],
+      "implied_F_at_centers_if_same_N_and_covariance": 59.56118444523734
+    },
+    "result": "consistent",
+    "notes": "Conditional on same sample and conventional WLS, implied sqrt(F) lies in broad t interval. Diagnostic N and exact significance level are unreported, so no unconditional identity is claimed.",
+    "source": "DOC01 p13 Results collinearity diagnostic"
+  },
+  {
+    "check_id": "F_PEAK",
+    "description": "Claim of an inverted U within observed strategic-deviation range",
+    "inputs": [
+      {
+        "b_D": "0.170",
+        "b_D2": "−0.006",
+        "source": "DOC01 p12 Table 2 M3"
+      },
+      {
+        "in_range_claim": true,
+        "source": "DOC01 p13 Results opening paragraph"
+      }
+    ],
+    "calculation": {
+      "turning_point_from_rounded_coefficients": 14.166666666666668,
+      "turning_point_rounding_interval": [
+        13.03846153846154,
+        15.500000000000002
+      ]
+    },
+    "result": "not_checkable",
+    "notes": "Concavity is sign-consistent across rounding intervals. The sample minimum and maximum are not printed, so full in-range assertion and endpoint slope tests cannot be checked. This diagnostic never guides specification selection.",
+    "source": "DOC01 p13 Results inverted-U statement"
+  },
+  {
+    "check_id": "F_ZERO",
+    "description": "Prose zero-deviation characterization versus equation",
+    "inputs": [
+      {
+        "equation": "D_i=sum_a abs((P_ai-M(P_a))/SD(P_a))",
+        "claim": "Strategic deviation equals zero if and only if all firms have the same strategy.",
+        "source": "DOC01 p10 Equation and following paragraph"
+      }
+    ],
+    "calculation": {
+      "reason": "For positive SDs, D_i=0 requires the focal bank to equal each mean, not all other banks to be identical. If every bank is identical then all SD denominators vanish, leaving the displayed formula undefined without an extra convention."
+    },
+    "result": "inconsistent_beyond_rounding",
+    "notes": "Logical/formula inconsistency, not evidence of any numerical-estimate mismatch. Origin supplies and labels a zero-SD operational convention.",
+    "source": "DOC01 p10 Equation and following paragraph"
+  },
+  {
+    "check_id": "F_H",
+    "description": "Durbin h bound and absence-of-autocorrelation conclusion",
+    "inputs": [
+      {
+        "bound": "less than 1.28 (N.S.)",
+        "source": "DOC01 p11 Analysis autocorrelation"
+      }
+    ],
+    "calculation": null,
+    "result": "not_checkable",
+    "notes": "A one-sided upper bound does not constrain large negative h; perhaps the author intended magnitudes, but that is not printed. No exact values, residual-series construction, denominator variance or two-sided decision rule supplied.",
+    "source": "DOC01 p11 Analysis autocorrelation"
+  },
+  {
+    "check_id": "F_CONDITION",
+    "description": "Collinearity conclusion and reported condition number",
+    "inputs": [
+      {
+        "maximum": "35.0",
+        "concern_threshold": "30",
+        "source": "DOC01 p13 Results collinearity final paragraph"
+      }
+    ],
+    "calculation": {
+      "comparison": "35.0 > 30"
+    },
+    "result": "not_checkable",
+    "notes": "Author explicitly notes exceedance and combines several diagnostics. This is not an arithmetical contradiction. Scaling, intercept treatment and spectrum definition are absent.",
+    "source": "DOC01 p13 Results collinearity"
+  },
+  {
+    "check_id": "F_SCALE",
+    "description": "Table 1 unscaled outcome versus Table 2 multiplied outcome",
+    "inputs": [
+      {
+        "Table_1_ROA_mean": "0.000",
+        "Table_1_ROA_SD": "0.007",
+        "source": "DOC01 p12 Table 1"
+      },
+      {
+        "scaling": "relative ROA and lag multiplied by 100",
+        "source": "DOC01 p11 Results"
+      }
+    ],
+    "calculation": {
+      "rule": "With both y and lag multiplied by 100, slopes on other unscaled regressors and intercept scale by 100; lag coefficient remains invariant."
+    },
+    "result": "consistent",
+    "notes": "Descriptive and estimation scales are explicitly different. Raw regression inputs are not reconstructed from table statistics.",
+    "source": "DOC01 p11 Results scaling; DOC01 p12 tables"
+  },
+  {
+    "check_id": "F_MEAN_ZERO",
+    "description": "Zero rounded centered-outcome means",
+    "inputs": [
+      {
+        "mean_relative_ROA": "0.000",
+        "mean_lag": "0.000",
+        "source": "DOC01 p12 Table 1"
+      }
+    ],
+    "calculation": {
+      "each_printed_interval": [
+        -0.0005,
+        0.0005
+      ]
+    },
+    "result": "not_checkable",
+    "notes": "Unweighted within-year centering gives zero only over its reference set; analytic selection and lag availability can alter pooled means. Rounded zeros do not identify the reference sample or weighting.",
+    "source": "DOC01 p12 Table 1"
+  },
+  {
+    "check_id": "F_P16_WORDING",
+    "description": "Similarity wording and legitimacy interpretation",
+    "inputs": [
+      {
+        "wording": "moderate amounts of strategic similarity increased performance, larger amounts reduced it; explanation invokes loss of legitimacy",
+        "source": "DOC01 p16 First full paragraph"
+      },
+      {
+        "theoretical_order": "high similarity costly through competition; low similarity costly through legitimacy challenges",
+        "source": "DOC01 p8 Thought experiments"
+      }
+    ],
+    "calculation": null,
+    "result": "not_checkable",
+    "notes": "Possible similarity/differentiation wording slip: the legitimacy explanation attaches to excessive differentiation in theory, while the sentence says larger similarity. Preserve wording; do not silently correct.",
+    "source": "DOC01 p16 Discussion"
+  },
+  {
+    "check_id": "F_R2",
+    "description": "GLS transformation claim about R-squared",
+    "inputs": [
+      {
+        "claim": "GLS transformation negates interpretability of R-squared goodness of fit measures",
+        "source": "DOC01 p11 WLS paragraph"
+      }
+    ],
+    "calculation": null,
+    "result": "not_checkable",
+    "notes": "Weighted or transformed-scale R-squared can be defined, though interpretation differs. No published R-squared or calculation convention is present; do not manufacture a target.",
+    "source": "DOC01 p11 WLS paragraph"
+  }
+]

@@ -1,0 +1,210 @@
+{
+ "n_tests": 34,
+ "n_failed": 0,
+ "tests": [
+  {
+   "test": "interval",
+   "got": "(0.345, 0.355)",
+   "want": "(0.345, 0.355)",
+   "ok": true
+  },
+  {
+   "test": "distance inside",
+   "got": "0.0",
+   "want": "0.0",
+   "ok": true
+  },
+  {
+   "test": "magnitude agree",
+   "got": "agree",
+   "want": "agree",
+   "ok": true
+  },
+  {
+   "test": "magnitude grey",
+   "got": "grey",
+   "want": "grey",
+   "ok": true
+  },
+  {
+   "test": "magnitude mismatch",
+   "got": "mismatch",
+   "want": "mismatch",
+   "ok": true
+  },
+  {
+   "test": "magnitude no se",
+   "got": "not_assessable",
+   "want": "not_assessable",
+   "ok": true
+  },
+  {
+   "test": "sign NA when interval spans zero",
+   "got": "not_assessable",
+   "want": "not_assessable",
+   "ok": true
+  },
+  {
+   "test": "sign agree",
+   "got": "agree",
+   "want": "agree",
+   "ok": true
+  },
+  {
+   "test": "sign mismatch far",
+   "got": "mismatch",
+   "want": "mismatch",
+   "ok": true
+  },
+  {
+   "test": "sign opposite but within 2se",
+   "got": "agree",
+   "want": "agree",
+   "ok": true
+  },
+  {
+   "test": "planted inconsistent sign -.05 vs .05 (within 4 SE -> agree per rule text)",
+   "got": "agree",
+   "want": "agree",
+   "ok": true
+  },
+  {
+   "test": "p band",
+   "got": "[1, 2, 3, 4]",
+   "want": "[1, 2, 3, 4]",
+   "ok": true
+  },
+  {
+   "test": "inference *** vs p=.2",
+   "got": "mismatch",
+   "want": "mismatch",
+   "ok": true
+  },
+  {
+   "test": "inference * vs p=.07 adjacent",
+   "got": "agree",
+   "want": "agree",
+   "ok": true
+  },
+  {
+   "test": "inference ns vs p=.001",
+   "got": "mismatch",
+   "want": "mismatch",
+   "ok": true
+  },
+  {
+   "test": "inference ns vs p=.03 adjacent",
+   "got": "agree",
+   "want": "agree",
+   "ok": true
+  },
+  {
+   "test": "inference * vs stronger p",
+   "got": "('agree', 0)",
+   "want": "('agree', 0)",
+   "ok": true
+  },
+  {
+   "test": "null data: p=.6 vs ns",
+   "got": "agree",
+   "want": "agree",
+   "ok": true
+  },
+  {
+   "test": "outcome consistent",
+   "got": "consistent",
+   "want": "consistent",
+   "ok": true
+  },
+  {
+   "test": "outcome impl disagreement",
+   "got": "indeterminate",
+   "want": "indeterminate",
+   "ok": true
+  },
+  {
+   "test": "outcome grey",
+   "got": "indeterminate",
+   "want": "indeterminate",
+   "ok": true
+  },
+  {
+   "test": "outcome discrepant",
+   "got": "discrepant_provisional",
+   "want": "discrepant_provisional",
+   "ok": true
+  },
+  {
+   "test": "outcome unreachable target",
+   "got": "discrepant_provisional",
+   "want": "discrepant_provisional",
+   "ok": true
+  },
+  {
+   "test": "outcome all NA",
+   "got": "indeterminate",
+   "want": "indeterminate",
+   "ok": true
+  },
+  {
+   "test": "outcome not attemptable",
+   "got": "not_attemptable",
+   "want": "not_attemptable",
+   "ok": true
+  },
+  {
+   "test": "rq consistent",
+   "got": "consistent",
+   "want": "consistent",
+   "ok": true
+  },
+  {
+   "test": "rq one discrepant magnitude",
+   "got": "indeterminate",
+   "want": "indeterminate",
+   "ok": true
+  },
+  {
+   "test": "rq sign mismatch",
+   "got": "discrepant_provisional",
+   "want": "discrepant_provisional",
+   "ok": true
+  },
+  {
+   "test": "rq two discrepant",
+   "got": "discrepant_provisional",
+   "want": "discrepant_provisional",
+   "ok": true
+  },
+  {
+   "test": "paper full",
+   "got": "fully_reproduced",
+   "want": "fully_reproduced",
+   "ok": true
+  },
+  {
+   "test": "paper partial",
+   "got": "partially_reproduced",
+   "want": "partially_reproduced",
+   "ok": true
+  },
+  {
+   "test": "paper indeterminate",
+   "got": "indeterminate",
+   "want": "indeterminate",
+   "ok": true
+  },
+  {
+   "test": "paper mixed",
+   "got": "mixed_focal",
+   "want": "mixed_focal",
+   "ok": true
+  },
+  {
+   "test": "paper not reproduced",
+   "got": "not_reproduced",
+   "want": "not_reproduced",
+   "ok": true
+  }
+ ]
+}

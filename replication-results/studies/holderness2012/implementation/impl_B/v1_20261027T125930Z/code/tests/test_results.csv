@@ -1,0 +1,10 @@
+test,passed,detail,seconds
+known_probit_coefficients,TRUE,max absolute error 0.00914005; max standardized error 0.76658; n=60000,0.051
+marginal_effects_and_delta_finite_differences,TRUE,ME error 1.62e-12; Jacobian error 2.03e-07; delta SE error 3.12e-08,0.00800000000000001
+cluster_covariance_direct_sandwich,TRUE,max covariance error 2.78e-17,0
+handmade_hierarchy_groups,TRUE,"single rank S=0; one member S=0; matching shares M=1; ranks 1,9 S=0.4; empty group missing",0.00800000000000001
+delong_identical_and_tied_predictors,TRUE,"identical z=0, p=1; tied brute-force z error 8.88e-16",0.00700000000000001
+NUL_safe_Parquet_pages,TRUE,"NUL at beginning/middle/end removed; spaces, empty strings and null values preserved",0.025
+duplicate_linkage_and_missing_design,TRUE,duplicate unmatched/first/combine; missing regressor zero replacement and indicator,0.04
+coordinate_selection_and_capital_override,TRUE,lowest entry selected; eligible capital km=1; unknown/no row missing; malformed degree missing; absent degree falls back,0.013
+all_families_on_synthetic_data,TRUE,"104 synthetic models, 8 paired ROC comparisons, 96 leave-camp-out fits; constant-outcome failure recorded",2.019

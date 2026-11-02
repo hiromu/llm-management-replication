@@ -1,0 +1,3064 @@
+{
+ "paper_id": "PX02",
+ "data_files": [
+  {
+   "file": "quarterly.csv",
+   "doc_id": "D51",
+   "delimiter": "tab",
+   "unit_of_observation": "county-quarter (D03: 'county-quarter level contributions to OpenStreetMap'; pre-computed from OSM history files)",
+   "key_columns": [
+    "geoid",
+    "quarter"
+   ],
+   "other_columns": [
+    "totaltigerall",
+    "totalowneredit",
+    "totaltaga",
+    "totaltagv2a",
+    "totaltagb",
+    "totaltagv2b",
+    "totaltagh",
+    "totaltagv2h",
+    "totalversion2",
+    "totalversion3",
+    "totalversion4plus",
+    "totalchange",
+    "totalcontrib",
+    "totalusers",
+    "totalnewusers",
+    "totalpctcontrib25",
+    "totalpctcontrib50",
+    "totalpctcontrib75",
+    "totalpctcontrib99",
+    "totaloldusers_active",
+    "totaloldfocused1",
+    "totaloldfocused5",
+    "totalpctcontrib10",
+    "totalpctcontrib90"
+   ],
+   "merge": "geoid = county 5-digit FIPS (inferred) -> county_lookup.FIPS, acs5year.geo_fips, distance.fips, timing FIPS; quarter coding unstated (may be a Stata quarterly date integer or text; inspect - inferred)",
+   "notes": "Bot and DaveHansenTiger edits were dropped upstream (D01 p.10; D03 '(**)'); cannot be re-applied from aggregates. Whether every county-quarter is present (balanced) is unstated."
+  },
+  {
+   "file": "county_lookup.csv",
+   "doc_id": "D44",
+   "delimiter": "comma",
+   "unit_of_observation": "county (D03: treatment status by county coded from a published MTAIP progress map)",
+   "key_columns": [
+    "FIPS",
+    "STATE_FIPS",
+    "CNTY_FIPS"
+   ],
+   "other_columns": [
+    "NAME",
+    "STATE_NAME",
+    "area",
+    "population",
+    "treat"
+   ],
+   "merge": "FIPS is county key (FIPS = STATE_FIPS||CNTY_FIPS inferred); treat is the Treatment indicator (inferred mapping, D01 p.10 Sec 2.4.2)",
+   "notes": "Whether the file already excludes Massachusetts and equals the article's analysis universe is unstated."
+  },
+  {
+   "file": "acs5year.dta",
+   "doc_id": "D41",
+   "delimiter": "Stata dta",
+   "unit_of_observation": "county-year (inferred from acsyear); D03 says ACS 5-year data for years 2005-2011",
+   "key_columns": [
+    "geo_fips",
+    "acsyear"
+   ],
+   "other_columns": [
+    "geo_state",
+    "population (SE_T001_001)",
+    "popdensity (SE_T002_002)",
+    "area (SE_T003_001)",
+    "popmales (SE_T004_002)",
+    "households (SE_T017_001)",
+    "unemploymentrate (SE_T033_006)",
+    "income_householdmedian (SE_T057_001)",
+    "income_medianearnings (SE_T066_001)",
+    "income_percapita (SE_T083_001)",
+    "popeduc",
+    "popyoungmales"
+   ],
+   "merge": "geo_fips -> county FIPS; acsyear -> calendar year of panel (inferred). D41 second column gives the original source label (Geo_FIPS, SE_T001_001, ...)",
+   "notes": "Coverage conflict: D03 2005-2011 vs D01 p.11 'ACS five-year estimates from 2009 to 2014' vs Table 1 changes '2014 and 2005' (D01 p.8)."
+  },
+  {
+   "file": "boundary-counties.csv",
+   "doc_id": "D43",
+   "delimiter": "comma",
+   "unit_of_observation": "focal county with its list of bordering counties (D03: author's calculations)",
+   "key_columns": [
+    "source county"
+   ],
+   "other_columns": [
+    " border counties (header has a leading space)"
+   ],
+   "merge": "'source county' -> county FIPS (inferred); format of the border-county list (delimited string vs long rows) unstated",
+   "notes": "Contiguity rule (shared edge vs point) unstated."
+  },
+  {
+   "file": "distance.csv",
+   "doc_id": "D45",
+   "delimiter": "tab",
+   "unit_of_observation": "address pair (origin-destination) within a county",
+   "key_columns": [
+    "fips",
+    "origin_lat",
+    "origin_lon",
+    "dest_lat",
+    "dest_lon"
+   ],
+   "other_columns": [
+    "ggl_distance",
+    "osrm_distance"
+   ],
+   "merge": "fips -> county FIPS; no pair identifier column; distance units unstated",
+   "notes": "Crow-flies distance control must be computed from coordinates (formula and unit unstated)."
+  },
+  {
+   "file": "timing.xslx (spelled so in D03)",
+   "doc_id": "D54",
+   "delimiter": "Excel",
+   "unit_of_observation": "county (scheduled MTAIP update timing)",
+   "key_columns": [
+    "FIPS"
+   ],
+   "other_columns": [
+    "ID",
+    "County",
+    "SB Selected",
+    "Thread",
+    "Sch SB Delivery"
+   ],
+   "merge": "FIPS -> county FIPS; 'Sch SB Delivery' read as scheduled southbound delivery date to Harris (inferred from D01 p.8, p.4 'southbound')",
+   "notes": "Which date column defines 'scheduled to be updated' is inferred."
+  },
+  {
+   "file": "google_trends.csv",
+   "doc_id": "D46",
+   "delimiter": "comma",
+   "unit_of_observation": "state (rows) x quarter (wide columns Data_2005_Q1 ... Data_2014_Q4)",
+   "key_columns": [
+    "States/Quarter"
+   ],
+   "other_columns": [
+    "Data_YYYY_Qq"
+   ],
+   "merge": "state name -> county_lookup.STATE_NAME (inferred); used only in appendix Table D.5 (out of scope)",
+   "notes": "Article says county-level popularity (D01 p.17) and D02 p.13 says 'county in a given year'; file is state x quarter."
+  },
+  {
+   "file": "land_area.csv",
+   "doc_id": "D48",
+   "delimiter": "tab",
+   "unit_of_observation": "county",
+   "key_columns": [
+    "geoid"
+   ],
+   "other_columns": [
+    "Areaname",
+    "land_area"
+   ],
+   "merge": "geoid -> county FIPS (inferred)",
+   "notes": "Use in in-scope analyses unstated."
+  },
+  {
+   "file": "maptimes.csv",
+   "doc_id": "D49",
+   "delimiter": "tab",
+   "unit_of_observation": "maptime chapter (located to county)",
+   "key_columns": [
+    "fips"
+   ],
+   "other_columns": [
+    "location",
+    "title",
+    "name",
+    "state_name",
+    "state_fips",
+    "cnty_fips"
+   ],
+   "merge": "fips -> county",
+   "notes": "Appendix Table D.7 only (out of scope)."
+  },
+  {
+   "file": "osm-events.csv",
+   "doc_id": "D50",
+   "delimiter": "tab",
+   "unit_of_observation": "OSM in-person event (located to county)",
+   "key_columns": [
+    "fips"
+   ],
+   "other_columns": [
+    "field_1",
+    "field_4",
+    "field_3",
+    "name",
+    "state_name",
+    "state_fips",
+    "cnty_fips"
+   ],
+   "merge": "fips -> county",
+   "notes": "Appendix Table D.7 only (out of scope)."
+  },
+  {
+   "file": "h12.csv",
+   "doc_id": "D47",
+   "delimiter": "tab, no header row",
+   "unit_of_observation": "object-level edit activity in Florida (D03)",
+   "key_columns": [
+    "column 1 (integer, unlabeled)"
+   ],
+   "other_columns": [
+    "column 2 date_or_timestamp_text",
+    "column 3 text",
+    "column 4 text",
+    "column 5 integer"
+   ],
+   "merge": "unstated",
+   "notes": "Appendix Table D.6 only (out of scope); column semantics undocumented."
+  },
+  {
+   "file": "amenitycheck.csv",
+   "doc_id": "D42",
+   "delimiter": "tab",
+   "unit_of_observation": "restaurant (InfoUSA vs OSM match score)",
+   "key_columns": [
+    "_id"
+   ],
+   "other_columns": [
+    "v5",
+    "v6",
+    "v79"
+   ],
+   "merge": "unstated",
+   "notes": "Appendix B Table B.1 only (out of scope); columns unlabeled."
+  },
+  {
+   "file": "tiger_census_2008q2",
+   "doc_id": "D52",
+   "delimiter": "comma",
+   "unit_of_observation": "county",
+   "key_columns": [
+    "fips"
+   ],
+   "other_columns": [
+    "county",
+    "state",
+    "residential-count",
+    "residential-length",
+    "secondary-count",
+    "secondary-length",
+    "primary-count",
+    "primary-length",
+    "motorway-count",
+    "motorway-length"
+   ],
+   "merge": "fips -> county",
+   "notes": "Used for Pct. Seeded in appendix Table D.2 (out of scope)."
+  },
+  {
+   "file": "tiger_osm_2018",
+   "doc_id": "D53",
+   "delimiter": "comma",
+   "unit_of_observation": "county",
+   "key_columns": [
+    "fips"
+   ],
+   "other_columns": [
+    "county",
+    "state",
+    "length",
+    "count"
+   ],
+   "merge": "fips -> county",
+   "notes": "Denominator of Pct. Seeded (appendix Table D.2, out of scope)."
+  },
+  {
+   "file": "TIGER/Line 2010 county attribute table (D60)",
+   "doc_id": "D60",
+   "delimiter": "n/a",
+   "unit_of_observation": "county",
+   "key_columns": [
+    "GEOID10",
+    "STATEFP10",
+    "COUNTYFP10"
+   ],
+   "other_columns": [
+    "NAME10",
+    "NAMELSAD10",
+    "ALAND10",
+    "AWATER10",
+    "INTPTLAT10",
+    "INTPTLON10",
+    "..."
+   ],
+   "merge": "GEOID10 -> county FIPS",
+   "notes": "Attribute fields only listed; polygon geometry not described, so contiguity cannot be rebuilt from D60 alone."
+  }
+ ],
+ "analyses": [
+  {
+   "analysis_id": "A01",
+   "claim_ids": [
+    "C_T1_contrib",
+    "C_T1_followon",
+    "C_T1_contributors",
+    "C_T1_error",
+    "C_T1_owner",
+    "C_T1_balance",
+    "C_T1_income"
+   ],
+   "table_or_figure": "Table 1",
+   "sample_steps": [
+    {
+     "step": 1,
+     "description": "Load county_lookup.csv; Treatment = treat",
+     "columns": [
+      "FIPS",
+      "treat"
+     ],
+     "values": "treat in {0,1}",
+     "source_locator": "D01 p.10 (journal p.4917); Sec 2.4.2; D03"
+    },
+    {
+     "step": 2,
+     "description": "Exclude Massachusetts (not seeded with TIGER)",
+     "columns": [
+      "STATE_FIPS",
+      "STATE_NAME"
+     ],
+     "values": "STATE_NAME == 'Massachusetts' dropped (STATE_FIPS 25; code inferred)",
+     "source_locator": "D01 p.5 (journal p.4912); Sec 2.2.2; Figure 1 note p.7"
+    },
+    {
+     "step": 3,
+     "description": "Keep only counties for which TIGER was incorporated into OSM (the article's county universe); whether county_lookup already equals this universe is unstated",
+     "columns": [
+      "FIPS"
+     ],
+     "values": "unstated",
+     "source_locator": "D01 p.5 (journal p.4912); Sec 2.2.2"
+    },
+    {
+     "step": 4,
+     "description": "Merge quarterly.csv on county key",
+     "columns": [
+      "geoid",
+      "FIPS"
+     ],
+     "values": "geoid == FIPS (inferred format harmonisation, e.g. 5-digit zero-padded)",
+     "source_locator": "D03; D51 (inferred)"
+    },
+    {
+     "step": 5,
+     "description": "Restrict to quarters 2005Q2 through 2014Q4",
+     "columns": [
+      "quarter"
+     ],
+     "values": "2005Q2 <= quarter <= 2014Q4",
+     "source_locator": "D01 p.11 (journal p.4918); Sec 2.4.5; Table 2 note p.12"
+    },
+    {
+     "step": 6,
+     "description": "Balance panel: every county x every quarter; county-quarters absent from quarterly.csv set to zero (inferred from 'balanced panel'; rule unstated)",
+     "columns": [
+      "geoid",
+      "quarter"
+     ],
+     "values": "unstated (zero-fill inferred)",
+     "source_locator": "D01 p.12 (journal p.4919); Table 2 note"
+    },
+    {
+     "step": 7,
+     "description": "Merge time-varying ACS controls by county and calendar year (inferred)",
+     "columns": [
+      "geo_fips",
+      "acsyear"
+     ],
+     "values": "acsyear == year(quarter) (inferred); rule for panel years lacking an ACS row unstated",
+     "source_locator": "D01 p.13 (journal p.4920); Sec 3.2.1 'county-quarter control variables'"
+    },
+    {
+     "description": "Collapse to treatment and control groups; outcome means appear to be per county-quarter ('on average in a quarter', D01 p.12) although table title says county level",
+     "columns": [
+      "treat"
+     ],
+     "values": "group by treat",
+     "source_locator": "D01 p.8 (journal p.4915); Table 1; D01 p.12 (journal p.4919); Sec 3.1",
+     "step": 8
+    },
+    {
+     "description": "Error-Score row from distance.csv; aggregation (pair-level mean vs county mean) unstated",
+     "columns": [
+      "fips",
+      "osrm_distance",
+      "ggl_distance"
+     ],
+     "values": "unstated",
+     "source_locator": "D01 p.8 (journal p.4915); Table 1",
+     "step": 9
+    },
+    {
+     "description": "Control rows: per-county change between 2014 and 2005 of ACS variable",
+     "columns": [
+      "population",
+      "households",
+      "unemploymentrate or unemployed count (unstated)",
+      "popeduc",
+      "popyoungmales",
+      "income_percapita",
+      "acsyear"
+     ],
+     "values": "value(acsyear=2014) - value(acsyear=2005); D41 coverage per D03 is 2005-2011 (conflict)",
+     "source_locator": "D01 p.8 (journal p.4915); Table 1 note",
+     "step": 10
+    }
+   ],
+   "variables": [
+    {
+     "name": "Contributions",
+     "source_columns": [
+      "totalcontrib"
+     ],
+     "transformation": "count of all edits per county-quarter (mapping inferred)",
+     "source_locator": "D01 p.10 (journal p.4917); Sec 2.4.1"
+    },
+    {
+     "name": "Follow-on Contributions",
+     "source_columns": [
+      "totaltaga",
+      "totaltagb",
+      "totaltagh",
+      "totaltagv2a",
+      "totaltagv2b",
+      "totaltagv2h"
+     ],
+     "transformation": "sum of (a) tags added to existing streets (one-way, speed limit, access), (b) building creations/modifications, (c) amenity creations/modifications; exact column combination unstated (inferred: a=amenity, b=building, h=highway tags; v2 = tag on existing object)",
+     "source_locator": "D01 p.10 (journal p.4917); Sec 2.4.1"
+    },
+    {
+     "name": "Contributors",
+     "source_columns": [
+      "totalusers"
+     ],
+     "transformation": "number of unique user IDs editing in county-quarter (mapping inferred); same user in several counties counted in each (D01 p.25 endnote 19)",
+     "source_locator": "D01 p.10 (journal p.4917); Sec 2.4.1"
+    },
+    {
+     "name": "Owner-Contributions",
+     "source_columns": [
+      "totalowneredit"
+     ],
+     "transformation": "count (mapping inferred)",
+     "source_locator": "D01 p.10 (journal p.4917); Sec 2.4.1"
+    },
+    {
+     "name": "Error-Score",
+     "source_columns": [
+      "osrm_distance",
+      "ggl_distance"
+     ],
+     "transformation": "|osrm_distance - ggl_distance| in raw units (unlogged, inferred from row label)",
+     "source_locator": "D01 p.10 (journal p.4917); Sec 2.4.3"
+    },
+    {
+     "name": "Delta controls",
+     "source_columns": [
+      "population",
+      "households",
+      "unemploymentrate",
+      "popeduc",
+      "popyoungmales",
+      "income_percapita"
+     ],
+     "transformation": "2014 value minus 2005 value; 'Unemployed Pop.' implies a count while D41 has unemploymentrate (unresolved)",
+     "source_locator": "D01 p.8 (journal p.4915); Table 1 note"
+    }
+   ],
+   "estimator": "difference in group means with p-value; test unstated (two-sample t-test inferred)",
+   "dependent_variable": "each row variable",
+   "regressors": [
+    "treat"
+   ],
+   "controls": [],
+   "fixed_effects": [],
+   "weights": "unstated (none inferred)",
+   "cluster_or_se_method": "unstated",
+   "event_time_or_period_definitions": "Outcome rows: county-quarter values (period unstated: full panel or post period); controls: change 2005 to 2014",
+   "software": "unstated",
+   "alpha": "unstated; text uses 95% level (D01 p.12)",
+   "tail_direction": "unstated",
+   "missing_data_rule": "unstated",
+   "output_required": "For each row: treatment mean, control mean, difference, p-value; group sizes"
+  },
+  {
+   "analysis_id": "A02",
+   "claim_ids": [
+    "C_T2_median",
+    "C_T2_sample",
+    "C_T2_owner",
+    "C_T2_other"
+   ],
+   "table_or_figure": "Table 2",
+   "sample_steps": [
+    {
+     "step": 1,
+     "description": "Load county_lookup.csv; Treatment = treat",
+     "columns": [
+      "FIPS",
+      "treat"
+     ],
+     "values": "treat in {0,1}",
+     "source_locator": "D01 p.10 (journal p.4917); Sec 2.4.2; D03"
+    },
+    {
+     "step": 2,
+     "description": "Exclude Massachusetts (not seeded with TIGER)",
+     "columns": [
+      "STATE_FIPS",
+      "STATE_NAME"
+     ],
+     "values": "STATE_NAME == 'Massachusetts' dropped (STATE_FIPS 25; code inferred)",
+     "source_locator": "D01 p.5 (journal p.4912); Sec 2.2.2; Figure 1 note p.7"
+    },
+    {
+     "step": 3,
+     "description": "Keep only counties for which TIGER was incorporated into OSM (the article's county universe); whether county_lookup already equals this universe is unstated",
+     "columns": [
+      "FIPS"
+     ],
+     "values": "unstated",
+     "source_locator": "D01 p.5 (journal p.4912); Sec 2.2.2"
+    },
+    {
+     "step": 4,
+     "description": "Merge quarterly.csv on county key",
+     "columns": [
+      "geoid",
+      "FIPS"
+     ],
+     "values": "geoid == FIPS (inferred format harmonisation, e.g. 5-digit zero-padded)",
+     "source_locator": "D03; D51 (inferred)"
+    },
+    {
+     "step": 5,
+     "description": "Restrict to quarters 2005Q2 through 2014Q4",
+     "columns": [
+      "quarter"
+     ],
+     "values": "2005Q2 <= quarter <= 2014Q4",
+     "source_locator": "D01 p.11 (journal p.4918); Sec 2.4.5; Table 2 note p.12"
+    },
+    {
+     "step": 6,
+     "description": "Balance panel: every county x every quarter; county-quarters absent from quarterly.csv set to zero (inferred from 'balanced panel'; rule unstated)",
+     "columns": [
+      "geoid",
+      "quarter"
+     ],
+     "values": "unstated (zero-fill inferred)",
+     "source_locator": "D01 p.12 (journal p.4919); Table 2 note"
+    },
+    {
+     "step": 7,
+     "description": "Merge time-varying ACS controls by county and calendar year (inferred)",
+     "columns": [
+      "geo_fips",
+      "acsyear"
+     ],
+     "values": "acsyear == year(quarter) (inferred); rule for panel years lacking an ACS row unstated",
+     "source_locator": "D01 p.13 (journal p.4920); Sec 3.2.1 'county-quarter control variables'"
+    }
+   ],
+   "variables": [
+    {
+     "name": "Contributions",
+     "source_columns": [
+      "totalcontrib"
+     ],
+     "transformation": "count of all edits per county-quarter (mapping inferred)",
+     "source_locator": "D01 p.10 (journal p.4917); Sec 2.4.1"
+    },
+    {
+     "name": "Follow-on Contributions",
+     "source_columns": [
+      "totaltaga",
+      "totaltagb",
+      "totaltagh",
+      "totaltagv2a",
+      "totaltagv2b",
+      "totaltagv2h"
+     ],
+     "transformation": "sum of (a) tags added to existing streets (one-way, speed limit, access), (b) building creations/modifications, (c) amenity creations/modifications; exact column combination unstated (inferred: a=amenity, b=building, h=highway tags; v2 = tag on existing object)",
+     "source_locator": "D01 p.10 (journal p.4917); Sec 2.4.1"
+    },
+    {
+     "name": "Contributors",
+     "source_columns": [
+      "totalusers"
+     ],
+     "transformation": "number of unique user IDs editing in county-quarter (mapping inferred); same user in several counties counted in each (D01 p.25 endnote 19)",
+     "source_locator": "D01 p.10 (journal p.4917); Sec 2.4.1"
+    },
+    {
+     "name": "Distant Follow-on",
+     "source_columns": [
+      "totaltagb",
+      "totaltagv2b",
+      "totaltaga (?)"
+     ],
+     "transformation": "buildings (D01 p.10) or buildings+amenities (D01 p.19, p.22); mapping inferred/uncertain",
+     "source_locator": "D01 p.10 (journal p.4917); Sec 2.4.1; D01 p.19 (journal p.4926); Table 7 note"
+    },
+    {
+     "name": "Incremental Follow-On",
+     "source_columns": [
+      "totaltagh",
+      "totaltagv2h"
+     ],
+     "transformation": "tags on street information (speed limit, one-way, access); mapping inferred",
+     "source_locator": "D01 p.10 (journal p.4917); Sec 2.4.1"
+    },
+    {
+     "name": "New Contributors",
+     "source_columns": [
+      "totalnewusers"
+     ],
+     "transformation": "users editing in the county for the first time (mapping inferred)",
+     "source_locator": "D01 p.10 (journal p.4917); Sec 2.4.1"
+    },
+    {
+     "name": "Old Contributors",
+     "source_columns": [
+      "totaloldusers_active"
+     ],
+     "transformation": "active users with at least one edit before seeding (mapping inferred)",
+     "source_locator": "D01 p.10 (journal p.4917); Sec 2.4.1"
+    },
+    {
+     "name": "High Ownership Contributions",
+     "source_columns": [
+      "totaloldfocused1"
+     ],
+     "transformation": "contributions of old contributors whose edits are mostly within a 0.1 x 0.1 degree box (mapping inferred)",
+     "source_locator": "D01 p.10 (journal p.4917); Sec 2.4.1; endnote 21 D01 p.25 (journal p.4932)"
+    },
+    {
+     "name": "Low Ownership Contributions",
+     "source_columns": [
+      "totaloldfocused5",
+      "totaloldfocused1"
+     ],
+     "transformation": "contributions of old contributors with diffuse edits (outside 0.1 degree box), excluding users more diffuse than 0.5 degree; candidate: totaloldfocused5 - totaloldfocused1 or totaloldfocused5 (uncertain)",
+     "source_locator": "D01 p.10 (journal p.4917); Sec 2.4.1; endnote 21 D01 p.25 (journal p.4932)"
+    },
+    {
+     "name": "Owner-Contributions",
+     "source_columns": [
+      "totalowneredit"
+     ],
+     "transformation": "follow-on contributions to an object by its creator (mapping inferred)",
+     "source_locator": "D01 p.10 (journal p.4917); Sec 2.4.1"
+    },
+    {
+     "name": "Treat",
+     "source_columns": [
+      "treat"
+     ],
+     "transformation": "indicator",
+     "source_locator": "D01 p.10 (journal p.4917)"
+    },
+    {
+     "name": "Post",
+     "source_columns": [
+      "quarter"
+     ],
+     "transformation": "1 if quarter >= 2008Q1",
+     "source_locator": "D01 p.13 (journal p.4920)"
+    },
+    {
+     "name": "Year",
+     "source_columns": [
+      "quarter"
+     ],
+     "transformation": "calendar year",
+     "source_locator": "D01 p.12 (journal p.4919)"
+    },
+    {
+     "name": "Quarter",
+     "source_columns": [
+      "quarter"
+     ],
+     "transformation": "integer quarter index (Stata %tq-style coding inferred from Table 2 range)",
+     "source_locator": "D01 p.12 (journal p.4919)"
+    },
+    {
+     "name": "Population, Households, Population Density, Per-Capita Income",
+     "source_columns": [
+      "population",
+      "households",
+      "popdensity",
+      "income_percapita"
+     ],
+     "transformation": "levels",
+     "source_locator": "D01 p.12 (journal p.4919)"
+    }
+   ],
+   "estimator": "summary statistics (mean, SD, median, min, max) over county-quarters",
+   "dependent_variable": null,
+   "regressors": [],
+   "controls": [],
+   "fixed_effects": [],
+   "weights": "none",
+   "cluster_or_se_method": null,
+   "event_time_or_period_definitions": "2005Q2-2014Q4",
+   "software": "unstated",
+   "alpha": null,
+   "tail_direction": null,
+   "missing_data_rule": "balanced panel (zero-fill inferred)",
+   "output_required": "Mean, SD, median, min, max per variable; number of observations, counties, quarters"
+  },
+  {
+   "analysis_id": "A03",
+   "claim_ids": [
+    "C_F1_a",
+    "C_F1_b"
+   ],
+   "table_or_figure": "Figure 1",
+   "sample_steps": [
+    {
+     "step": 1,
+     "description": "Load county_lookup.csv; Treatment = treat",
+     "columns": [
+      "FIPS",
+      "treat"
+     ],
+     "values": "treat in {0,1}",
+     "source_locator": "D01 p.10 (journal p.4917); Sec 2.4.2; D03"
+    },
+    {
+     "step": 2,
+     "description": "Exclude Massachusetts (not seeded with TIGER)",
+     "columns": [
+      "STATE_FIPS",
+      "STATE_NAME"
+     ],
+     "values": "STATE_NAME == 'Massachusetts' dropped (STATE_FIPS 25; code inferred)",
+     "source_locator": "D01 p.5 (journal p.4912); Sec 2.2.2; Figure 1 note p.7"
+    },
+    {
+     "step": 3,
+     "description": "Keep only counties for which TIGER was incorporated into OSM (the article's county universe); whether county_lookup already equals this universe is unstated",
+     "columns": [
+      "FIPS"
+     ],
+     "values": "unstated",
+     "source_locator": "D01 p.5 (journal p.4912); Sec 2.2.2"
+    }
+   ],
+   "variables": [
+    {
+     "name": "Treatment",
+     "source_columns": [
+      "treat"
+     ],
+     "transformation": "binary category",
+     "source_locator": "D01 p.7 (journal p.4914); Figure 1 note"
+    }
+   ],
+   "estimator": "choropleth map",
+   "dependent_variable": null,
+   "regressors": [],
+   "controls": [],
+   "fixed_effects": [],
+   "weights": null,
+   "cluster_or_se_method": null,
+   "event_time_or_period_definitions": null,
+   "software": "unstated",
+   "alpha": null,
+   "tail_direction": null,
+   "missing_data_rule": "Massachusetts shown as excluded",
+   "output_required": "County map of the contiguous US shading treated vs control counties (legend: Control Counties, Treated Counties); panel (b) is an illustrative image pair, not reproducible from deposited data"
+  },
+  {
+   "analysis_id": "A04",
+   "claim_ids": [
+    "C_F2_a",
+    "C_F2_b"
+   ],
+   "table_or_figure": "Figure 2",
+   "sample_steps": [
+    {
+     "step": 1,
+     "description": "Load county_lookup.csv; Treatment = treat",
+     "columns": [
+      "FIPS",
+      "treat"
+     ],
+     "values": "treat in {0,1}",
+     "source_locator": "D01 p.10 (journal p.4917); Sec 2.4.2; D03"
+    },
+    {
+     "step": 2,
+     "description": "Exclude Massachusetts (not seeded with TIGER)",
+     "columns": [
+      "STATE_FIPS",
+      "STATE_NAME"
+     ],
+     "values": "STATE_NAME == 'Massachusetts' dropped (STATE_FIPS 25; code inferred)",
+     "source_locator": "D01 p.5 (journal p.4912); Sec 2.2.2; Figure 1 note p.7"
+    },
+    {
+     "step": 3,
+     "description": "Keep only counties for which TIGER was incorporated into OSM (the article's county universe); whether county_lookup already equals this universe is unstated",
+     "columns": [
+      "FIPS"
+     ],
+     "values": "unstated",
+     "source_locator": "D01 p.5 (journal p.4912); Sec 2.2.2"
+    },
+    {
+     "description": "Panel (a): Boundary sample: keep counties that border at least one county of the opposite treatment status; drop counties completely surrounded by counties of only one type",
+     "columns": [
+      "source county",
+      " border counties",
+      "treat"
+     ],
+     "values": "keep if any(treat[border] != treat[source]) (inferred operationalisation)",
+     "source_locator": "D01 p.8 (journal p.4915); Sec 2.3.3; D01 p.2 (journal p.4909); Introduction: 'only those treatment counties that share a border with at least one control county'; D01 p.9 (journal p.4916); Figure 2 note",
+     "step": 4
+    },
+    {
+     "description": "Panel (b): Timing sample: keep counties scheduled to be updated (sent to Harris) in calendar years 2005 or 2006",
+     "columns": [
+      "FIPS",
+      "Sch SB Delivery"
+     ],
+     "values": "year(Sch SB Delivery) in {2005, 2006} (column mapping inferred)",
+     "source_locator": "D01 p.8 (journal p.4915); Sec 2.3.3; D01 p.9 (journal p.4916); Figure 2 note",
+     "step": 5
+    }
+   ],
+   "variables": [
+    {
+     "name": "Treatment",
+     "source_columns": [
+      "treat"
+     ],
+     "transformation": "binary category",
+     "source_locator": "D01 p.9 (journal p.4916)"
+    }
+   ],
+   "estimator": "choropleth maps",
+   "dependent_variable": null,
+   "regressors": [],
+   "controls": [],
+   "fixed_effects": [],
+   "weights": null,
+   "cluster_or_se_method": null,
+   "event_time_or_period_definitions": "timing sample by scheduled update year",
+   "software": "unstated",
+   "alpha": null,
+   "tail_direction": null,
+   "missing_data_rule": "excluded counties left blank",
+   "output_required": "Two county maps: (a) boundary-sample counties, (b) timing-sample counties, each shaded by treated/control; excluded counties unshaded; report county counts by group"
+  },
+  {
+   "analysis_id": "A05",
+   "claim_ids": [
+    "C_F3_a",
+    "C_F3_b"
+   ],
+   "table_or_figure": "Figure 3",
+   "sample_steps": [
+    {
+     "step": 1,
+     "description": "Load county_lookup.csv; Treatment = treat",
+     "columns": [
+      "FIPS",
+      "treat"
+     ],
+     "values": "treat in {0,1}",
+     "source_locator": "D01 p.10 (journal p.4917); Sec 2.4.2; D03"
+    },
+    {
+     "step": 2,
+     "description": "Exclude Massachusetts (not seeded with TIGER)",
+     "columns": [
+      "STATE_FIPS",
+      "STATE_NAME"
+     ],
+     "values": "STATE_NAME == 'Massachusetts' dropped (STATE_FIPS 25; code inferred)",
+     "source_locator": "D01 p.5 (journal p.4912); Sec 2.2.2; Figure 1 note p.7"
+    },
+    {
+     "step": 3,
+     "description": "Keep only counties for which TIGER was incorporated into OSM (the article's county universe); whether county_lookup already equals this universe is unstated",
+     "columns": [
+      "FIPS"
+     ],
+     "values": "unstated",
+     "source_locator": "D01 p.5 (journal p.4912); Sec 2.2.2"
+    },
+    {
+     "step": 4,
+     "description": "Merge quarterly.csv on county key",
+     "columns": [
+      "geoid",
+      "FIPS"
+     ],
+     "values": "geoid == FIPS (inferred format harmonisation, e.g. 5-digit zero-padded)",
+     "source_locator": "D03; D51 (inferred)"
+    },
+    {
+     "step": 5,
+     "description": "Restrict to quarters 2005Q2 through 2014Q4",
+     "columns": [
+      "quarter"
+     ],
+     "values": "2005Q2 <= quarter <= 2014Q4",
+     "source_locator": "D01 p.11 (journal p.4918); Sec 2.4.5; Table 2 note p.12"
+    },
+    {
+     "step": 6,
+     "description": "Balance panel: every county x every quarter; county-quarters absent from quarterly.csv set to zero (inferred from 'balanced panel'; rule unstated)",
+     "columns": [
+      "geoid",
+      "quarter"
+     ],
+     "values": "unstated (zero-fill inferred)",
+     "source_locator": "D01 p.12 (journal p.4919); Table 2 note"
+    }
+   ],
+   "variables": [
+    {
+     "source_columns": [
+      "totalcontrib"
+     ],
+     "transformation": "count of all edits per county-quarter (mapping inferred)",
+     "source_locator": "D01 p.10 (journal p.4917); Sec 2.4.1",
+     "name": "Contributions"
+    },
+    {
+     "source_columns": [
+      "totaltaga",
+      "totaltagb",
+      "totaltagh",
+      "totaltagv2a",
+      "totaltagv2b",
+      "totaltagv2h"
+     ],
+     "transformation": "sum of (a) tags added to existing streets (one-way, speed limit, access), (b) building creations/modifications, (c) amenity creations/modifications; exact column combination unstated (inferred: a=amenity, b=building, h=highway tags; v2 = tag on existing object)",
+     "source_locator": "D01 p.10 (journal p.4917); Sec 2.4.1",
+     "name": "Follow-on Contributions"
+    }
+   ],
+   "estimator": "group means over time",
+   "dependent_variable": "(a) contributions; (b) follow-on contributions",
+   "regressors": [],
+   "controls": [],
+   "fixed_effects": [],
+   "weights": "unstated",
+   "cluster_or_se_method": null,
+   "event_time_or_period_definitions": "note says by quarter; plotted points appear annual 2005-2014; vertical line at TIGER import (2007Q4)",
+   "software": "unstated",
+   "alpha": null,
+   "tail_direction": null,
+   "missing_data_rule": "unstated",
+   "output_required": "For treatment and control groups separately, by period: (i) logged mean outcome (log of mean vs mean of log unstated) and (ii) cumulative sum up to the period (cumulative of group mean inferred); panels (a) contributions and (b) follow-on contributions"
+  },
+  {
+   "analysis_id": "A06",
+   "claim_ids": [
+    "C_T3_1",
+    "C_T3_2",
+    "C_T3_3",
+    "C_T3_4",
+    "C_T3_5",
+    "C_T3_6",
+    "C_TXT_intro",
+    "C_TXT_333",
+    "C_TXT_abstract"
+   ],
+   "table_or_figure": "Table 3",
+   "sample_steps": [
+    {
+     "step": 1,
+     "description": "Load county_lookup.csv; Treatment = treat",
+     "columns": [
+      "FIPS",
+      "treat"
+     ],
+     "values": "treat in {0,1}",
+     "source_locator": "D01 p.10 (journal p.4917); Sec 2.4.2; D03"
+    },
+    {
+     "step": 2,
+     "description": "Exclude Massachusetts (not seeded with TIGER)",
+     "columns": [
+      "STATE_FIPS",
+      "STATE_NAME"
+     ],
+     "values": "STATE_NAME == 'Massachusetts' dropped (STATE_FIPS 25; code inferred)",
+     "source_locator": "D01 p.5 (journal p.4912); Sec 2.2.2; Figure 1 note p.7"
+    },
+    {
+     "step": 3,
+     "description": "Keep only counties for which TIGER was incorporated into OSM (the article's county universe); whether county_lookup already equals this universe is unstated",
+     "columns": [
+      "FIPS"
+     ],
+     "values": "unstated",
+     "source_locator": "D01 p.5 (journal p.4912); Sec 2.2.2"
+    },
+    {
+     "step": 4,
+     "description": "Merge quarterly.csv on county key",
+     "columns": [
+      "geoid",
+      "FIPS"
+     ],
+     "values": "geoid == FIPS (inferred format harmonisation, e.g. 5-digit zero-padded)",
+     "source_locator": "D03; D51 (inferred)"
+    },
+    {
+     "step": 5,
+     "description": "Restrict to quarters 2005Q2 through 2014Q4",
+     "columns": [
+      "quarter"
+     ],
+     "values": "2005Q2 <= quarter <= 2014Q4",
+     "source_locator": "D01 p.11 (journal p.4918); Sec 2.4.5; Table 2 note p.12"
+    },
+    {
+     "step": 6,
+     "description": "Balance panel: every county x every quarter; county-quarters absent from quarterly.csv set to zero (inferred from 'balanced panel'; rule unstated)",
+     "columns": [
+      "geoid",
+      "quarter"
+     ],
+     "values": "unstated (zero-fill inferred)",
+     "source_locator": "D01 p.12 (journal p.4919); Table 2 note"
+    },
+    {
+     "step": 7,
+     "description": "Merge time-varying ACS controls by county and calendar year (inferred)",
+     "columns": [
+      "geo_fips",
+      "acsyear"
+     ],
+     "values": "acsyear == year(quarter) (inferred); rule for panel years lacking an ACS row unstated",
+     "source_locator": "D01 p.13 (journal p.4920); Sec 3.2.1 'county-quarter control variables'"
+    }
+   ],
+   "variables": [
+    {
+     "name": "Contributions",
+     "source_columns": [
+      "totalcontrib"
+     ],
+     "transformation": "count of all edits per county-quarter (mapping inferred)",
+     "source_locator": "D01 p.10 (journal p.4917); Sec 2.4.1"
+    },
+    {
+     "name": "Follow-on Contributions",
+     "source_columns": [
+      "totaltaga",
+      "totaltagb",
+      "totaltagh",
+      "totaltagv2a",
+      "totaltagv2b",
+      "totaltagv2h"
+     ],
+     "transformation": "sum of (a) tags added to existing streets (one-way, speed limit, access), (b) building creations/modifications, (c) amenity creations/modifications; exact column combination unstated (inferred: a=amenity, b=building, h=highway tags; v2 = tag on existing object)",
+     "source_locator": "D01 p.10 (journal p.4917); Sec 2.4.1"
+    },
+    {
+     "name": "Contributors",
+     "source_columns": [
+      "totalusers"
+     ],
+     "transformation": "number of unique user IDs editing in county-quarter (mapping inferred); same user in several counties counted in each (D01 p.25 endnote 19)",
+     "source_locator": "D01 p.10 (journal p.4917); Sec 2.4.1"
+    },
+    {
+     "name": "Treat_i",
+     "source_columns": [
+      "treat"
+     ],
+     "transformation": "1 if county updated by MTAIP in 2006 TIGER",
+     "source_locator": "D01 p.10 (journal p.4917); D01 p.13 (journal p.4920)"
+    },
+    {
+     "name": "Post_t",
+     "source_columns": [
+      "quarter"
+     ],
+     "transformation": "1 for quarters after December 2007 (2008Q1 onward)",
+     "source_locator": "D01 p.13 (journal p.4920); D01 p.5 (journal p.4912); full TIGER map present from 2008Q1"
+    },
+    {
+     "name": "Post_t x Treat_i",
+     "source_columns": [
+      "treat",
+      "quarter"
+     ],
+     "transformation": "product",
+     "source_locator": "D01 p.13 (journal p.4920)"
+    },
+    {
+     "name": "log outcome",
+     "source_columns": [
+      "outcome"
+     ],
+     "transformation": "Log-OLS: Table 3 note says 'one added to the dependent variable for all zero values' (D01 p.14); cross-sectional equation uses Ln(Y+1) (D01 p.15)",
+     "source_locator": "D01 p.14 (journal p.4921); Table 3 note"
+    }
+   ],
+   "estimator": "OLS with county and quarter fixed effects on log outcome ('Log-OLS')",
+   "dependent_variable": "cols (1)-(2) Total Contributions; (3)-(4) Follow-on Contributions; (5)-(6) Contributors",
+   "regressors": [
+    "Post_t x Treat_i"
+   ],
+   "controls": {
+    "cols (1),(3),(5)": [],
+    "cols (2),(4),(6)": [
+     "population",
+     "popdensity",
+     "households",
+     "unemploymentrate",
+     "income_householdmedian ('Household Income')",
+     "income_medianearnings ('Median Income')",
+     "income_percapita",
+     "popeduc ('Educ. Population')",
+     "popmales / popyoungmales ('Male Pop(18-44)' and 'Young Pop.'; label-to-column assignment uncertain)"
+    ],
+    "source": "Ten controls listed in D02 p.11; Table D.3 and D02 p.12; Table D.4: Population, Pop. Density, Male Pop(18-44), Households, Unemployment Rate, Household Income, Median Income, Educ. Population, Young Pop., Per-Capita Income; mapping to D41 columns inferred. Text D01 p.15 'set of 10 controls, including population, unemployment, population density, and the percent of males'. Conflicting nine-variable list in D01 p.11 Sec 2.4.4 (area, population, housing units, earnings, median age, males 18-44, college educated, IT workers, highly educated). Transformation (levels/logs/shares) unstated."
+   },
+   "fixed_effects": [
+    "county",
+    "quarter"
+   ],
+   "weights": "unstated (none inferred)",
+   "cluster_or_se_method": "unstated for Table 3 (Figure 4 note uses county clustering for the event study; inferred candidate: cluster by county)",
+   "event_time_or_period_definitions": "Post = 2008Q1-2014Q4; pre = 2005Q2-2007Q4",
+   "software": "unstated",
+   "alpha": "0.10/0.05/0.01 star thresholds (Table 3 note)",
+   "tail_direction": "two-sided inferred; hypothesis predicts beta1 < 0 (D01 p.13)",
+   "missing_data_rule": "balanced panel; zero outcomes handled by adding one (see log rule)",
+   "output_required": "Coefficient and SE on Post x Treat, N, per column"
+  },
+  {
+   "analysis_id": "A07",
+   "claim_ids": [
+    "C_F4_fo",
+    "C_F4_users"
+   ],
+   "table_or_figure": "Figure 4",
+   "sample_steps": [
+    {
+     "step": 1,
+     "description": "Load county_lookup.csv; Treatment = treat",
+     "columns": [
+      "FIPS",
+      "treat"
+     ],
+     "values": "treat in {0,1}",
+     "source_locator": "D01 p.10 (journal p.4917); Sec 2.4.2; D03"
+    },
+    {
+     "step": 2,
+     "description": "Exclude Massachusetts (not seeded with TIGER)",
+     "columns": [
+      "STATE_FIPS",
+      "STATE_NAME"
+     ],
+     "values": "STATE_NAME == 'Massachusetts' dropped (STATE_FIPS 25; code inferred)",
+     "source_locator": "D01 p.5 (journal p.4912); Sec 2.2.2; Figure 1 note p.7"
+    },
+    {
+     "step": 3,
+     "description": "Keep only counties for which TIGER was incorporated into OSM (the article's county universe); whether county_lookup already equals this universe is unstated",
+     "columns": [
+      "FIPS"
+     ],
+     "values": "unstated",
+     "source_locator": "D01 p.5 (journal p.4912); Sec 2.2.2"
+    },
+    {
+     "step": 4,
+     "description": "Merge quarterly.csv on county key",
+     "columns": [
+      "geoid",
+      "FIPS"
+     ],
+     "values": "geoid == FIPS (inferred format harmonisation, e.g. 5-digit zero-padded)",
+     "source_locator": "D03; D51 (inferred)"
+    },
+    {
+     "step": 5,
+     "description": "Restrict to quarters 2005Q2 through 2014Q4",
+     "columns": [
+      "quarter"
+     ],
+     "values": "2005Q2 <= quarter <= 2014Q4",
+     "source_locator": "D01 p.11 (journal p.4918); Sec 2.4.5; Table 2 note p.12"
+    },
+    {
+     "step": 6,
+     "description": "Balance panel: every county x every quarter; county-quarters absent from quarterly.csv set to zero (inferred from 'balanced panel'; rule unstated)",
+     "columns": [
+      "geoid",
+      "quarter"
+     ],
+     "values": "unstated (zero-fill inferred)",
+     "source_locator": "D01 p.12 (journal p.4919); Table 2 note"
+    },
+    {
+     "description": "Aggregate county-quarters to county-years 2005-2014 (aggregation by sum inferred)",
+     "columns": [
+      "geoid",
+      "quarter"
+     ],
+     "values": "year(quarter)",
+     "source_locator": "D01 p.14 (journal p.4921); D01 p.15 (journal p.4922); Figure 4 note",
+     "step": 7
+    }
+   ],
+   "variables": [
+    {
+     "source_columns": [
+      "totaltaga",
+      "totaltagb",
+      "totaltagh",
+      "totaltagv2a",
+      "totaltagv2b",
+      "totaltagv2h"
+     ],
+     "transformation": "sum of (a) tags added to existing streets (one-way, speed limit, access), (b) building creations/modifications, (c) amenity creations/modifications; exact column combination unstated (inferred: a=amenity, b=building, h=highway tags; v2 = tag on existing object)",
+     "source_locator": "D01 p.10 (journal p.4917); Sec 2.4.1",
+     "name": "Follow-on Contributions"
+    },
+    {
+     "source_columns": [
+      "totalusers"
+     ],
+     "transformation": "number of unique user IDs editing in county-quarter (mapping inferred); same user in several counties counted in each (D01 p.25 endnote 19)",
+     "source_locator": "D01 p.10 (journal p.4917); Sec 2.4.1",
+     "name": "Contributors (annual aggregation of a unique-user count unstated)"
+    },
+    {
+     "name": "Treat_i x 1(year = z)",
+     "source_columns": [
+      "treat",
+      "quarter"
+     ],
+     "transformation": "interaction for each year; omitted reference year not stated in text (plot shows 2007 normalised to zero)",
+     "source_locator": "D01 p.14 (journal p.4921); D01 p.15 (journal p.4922); Figure 4 (read from plot)"
+    }
+   ],
+   "estimator": "OLS with county and year fixed effects on log outcome (Log-OLS)",
+   "dependent_variable": "log follow-on contributions; log contributors (county-year)",
+   "regressors": [
+    "Treat x year indicators"
+   ],
+   "controls": [],
+   "fixed_effects": [
+    "county",
+    "year"
+   ],
+   "weights": "unstated",
+   "cluster_or_se_method": "clustered at county level (Figure 4 note)",
+   "event_time_or_period_definitions": "z = years relative to TIGER inclusion; text says 'for every quarter before and after 2007' but note says county-year",
+   "software": "unstated",
+   "alpha": "95% confidence intervals",
+   "tail_direction": "two-sided (CI)",
+   "missing_data_rule": "unstated",
+   "output_required": "Plot of beta_t and 95% CI by year 2005-2014 for follow-on contributions and contributors"
+  },
+  {
+   "analysis_id": "A08",
+   "claim_ids": [
+    "C_T4_1",
+    "C_T4_2",
+    "C_T4_3",
+    "C_T4_4",
+    "C_T4_5",
+    "C_T4_6",
+    "C_TXT_333"
+   ],
+   "table_or_figure": "Table 4",
+   "sample_steps": [
+    {
+     "step": 1,
+     "description": "Load county_lookup.csv; Treatment = treat",
+     "columns": [
+      "FIPS",
+      "treat"
+     ],
+     "values": "treat in {0,1}",
+     "source_locator": "D01 p.10 (journal p.4917); Sec 2.4.2; D03"
+    },
+    {
+     "step": 2,
+     "description": "Exclude Massachusetts (not seeded with TIGER)",
+     "columns": [
+      "STATE_FIPS",
+      "STATE_NAME"
+     ],
+     "values": "STATE_NAME == 'Massachusetts' dropped (STATE_FIPS 25; code inferred)",
+     "source_locator": "D01 p.5 (journal p.4912); Sec 2.2.2; Figure 1 note p.7"
+    },
+    {
+     "step": 3,
+     "description": "Keep only counties for which TIGER was incorporated into OSM (the article's county universe); whether county_lookup already equals this universe is unstated",
+     "columns": [
+      "FIPS"
+     ],
+     "values": "unstated",
+     "source_locator": "D01 p.5 (journal p.4912); Sec 2.2.2"
+    },
+    {
+     "step": 4,
+     "description": "Aggregate quarterly.csv (merged on geoid==FIPS, inferred) to one row per county: sum of quarterly counts over 2008Q1-2014Q4 ('2008-2014' outcome) and over 2014Q1-2014Q4 ('2014' outcome)",
+     "columns": [
+      "geoid",
+      "quarter",
+      "outcome columns"
+     ],
+     "values": "post-seeding quarters 2008Q1-2014Q4; year 2014",
+     "source_locator": "D01 p.10 (journal p.4917); Sec 2.4.1; D01 p.15 (journal p.4922); Table 4 note"
+    },
+    {
+     "step": 5,
+     "description": "Counties with no OSM rows get zero totals (inferred; unstated)",
+     "columns": [
+      "geoid"
+     ],
+     "values": "unstated",
+     "source_locator": "unstated"
+    },
+    {
+     "step": 6,
+     "description": "Merge ACS controls; year of control values for the cross-section unstated",
+     "columns": [
+      "geo_fips",
+      "acsyear"
+     ],
+     "values": "unstated",
+     "source_locator": "D01 p.15 (journal p.4922); Sec 3.3.1"
+    },
+    {
+     "step": 7,
+     "description": "Build quartile (four equal groups by percentile rank) indicators for population density, household income and per-capita income",
+     "columns": [
+      "popdensity",
+      "income_householdmedian",
+      "income_percapita"
+     ],
+     "values": "4 groups each; reference year and sample over which quartiles are computed unstated",
+     "source_locator": "D01 p.15 (journal p.4922); Sec 3.3.1; conflicting list D02 p.11; Table D.3 note, D02 p.12; Table D.4 note (population instead of population density)"
+    }
+   ],
+   "variables": [
+    {
+     "name": "Y_i (2008-2014)",
+     "source_columns": [
+      "totalcontrib",
+      "follow-on columns",
+      "totalusers"
+     ],
+     "transformation": "sum over 2008Q1-2014Q4 per county; contributors summed across quarters (unique users over the period not available in deposit)",
+     "source_locator": "D01 p.10 (journal p.4917); D01 p.15 (journal p.4922); Table 4 note"
+    },
+    {
+     "name": "Y_i (2014)",
+     "source_columns": [
+      "same"
+     ],
+     "transformation": "sum over 2014 quarters",
+     "source_locator": "D01 p.15 (journal p.4922); Table 4 note"
+    },
+    {
+     "name": "ln(Y_i+1)",
+     "source_columns": [
+      "Y_i"
+     ],
+     "transformation": "natural log of Y+1",
+     "source_locator": "D01 p.15 (journal p.4922); equation"
+    },
+    {
+     "name": "Treat_i",
+     "source_columns": [
+      "treat"
+     ],
+     "transformation": "indicator",
+     "source_locator": "D01 p.15 (journal p.4922)"
+    },
+    {
+     "name": "quartile FEs",
+     "source_columns": [
+      "popdensity",
+      "income_householdmedian",
+      "income_percapita"
+     ],
+     "transformation": "four equal groups by percentile rank, separate additive FE sets gamma1-gamma3",
+     "source_locator": "D01 p.15 (journal p.4922)"
+    }
+   ],
+   "estimator": "OLS of ln(Y_i+1) on Treat_i, 10 controls and three sets of quartile fixed effects",
+   "dependent_variable": "ln(1+) Total Contributions, Follow-on Contributions, Contributors; each for 2008-2014 cumulative and 2014",
+   "regressors": [
+    "Treat_i"
+   ],
+   "controls": {
+    "all columns": [
+     "population",
+     "popdensity",
+     "households",
+     "unemploymentrate",
+     "income_householdmedian ('Household Income')",
+     "income_medianearnings ('Median Income')",
+     "income_percapita",
+     "popeduc ('Educ. Population')",
+     "popmales / popyoungmales ('Male Pop(18-44)' and 'Young Pop.'; label-to-column assignment uncertain)"
+    ],
+    "source": "Ten controls listed in D02 p.11; Table D.3 and D02 p.12; Table D.4: Population, Pop. Density, Male Pop(18-44), Households, Unemployment Rate, Household Income, Median Income, Educ. Population, Young Pop., Per-Capita Income; mapping to D41 columns inferred. Text D01 p.15 'set of 10 controls, including population, unemployment, population density, and the percent of males'. Conflicting nine-variable list in D01 p.11 Sec 2.4.4 (area, population, housing units, earnings, median age, males 18-44, college educated, IT workers, highly educated). Transformation (levels/logs/shares) unstated."
+   },
+   "fixed_effects": [
+    "population-density quartile",
+    "household-income quartile",
+    "per-capita-income quartile"
+   ],
+   "weights": "unstated (none inferred)",
+   "cluster_or_se_method": "heteroskedasticity-robust SE (Table 4 note); variant (HC1 etc.) unstated",
+   "event_time_or_period_definitions": "2008-2014 = post-seeding cumulative; 2014 = last year",
+   "software": "unstated",
+   "alpha": "stars printed; legend only in Table 3 note (0.10/0.05/0.01)",
+   "tail_direction": "two-sided inferred; negative effect hypothesised",
+   "missing_data_rule": "unstated",
+   "output_required": "Coefficient and robust SE on Treat, N, per column"
+  },
+  {
+   "analysis_id": "A09",
+   "claim_ids": [
+    "C_F5"
+   ],
+   "table_or_figure": "Figure 5",
+   "sample_steps": [
+    {
+     "step": 1,
+     "description": "Load county_lookup.csv; Treatment = treat",
+     "columns": [
+      "FIPS",
+      "treat"
+     ],
+     "values": "treat in {0,1}",
+     "source_locator": "D01 p.10 (journal p.4917); Sec 2.4.2; D03"
+    },
+    {
+     "step": 2,
+     "description": "Exclude Massachusetts (not seeded with TIGER)",
+     "columns": [
+      "STATE_FIPS",
+      "STATE_NAME"
+     ],
+     "values": "STATE_NAME == 'Massachusetts' dropped (STATE_FIPS 25; code inferred)",
+     "source_locator": "D01 p.5 (journal p.4912); Sec 2.2.2; Figure 1 note p.7"
+    },
+    {
+     "step": 3,
+     "description": "Keep only counties for which TIGER was incorporated into OSM (the article's county universe); whether county_lookup already equals this universe is unstated",
+     "columns": [
+      "FIPS"
+     ],
+     "values": "unstated",
+     "source_locator": "D01 p.5 (journal p.4912); Sec 2.2.2"
+    },
+    {
+     "description": "For each calendar year 2005-2014, aggregate follow-on contributions per county in that year (sum inferred)",
+     "columns": [
+      "geoid",
+      "quarter",
+      "follow-on columns"
+     ],
+     "values": "year in 2005..2014 (2005 only Q2-Q4 in panel)",
+     "source_locator": "D01 p.16 (journal p.4923)",
+     "step": 4
+    }
+   ],
+   "variables": [
+    {
+     "name": "ln(Y_i+1)",
+     "source_columns": [
+      "Y_i"
+     ],
+     "transformation": "natural log of Y+1",
+     "source_locator": "D01 p.15 (journal p.4922); equation"
+    },
+    {
+     "name": "Treat_i",
+     "source_columns": [
+      "treat"
+     ],
+     "transformation": "indicator",
+     "source_locator": "D01 p.15 (journal p.4922)"
+    },
+    {
+     "name": "quartile FEs",
+     "source_columns": [
+      "popdensity",
+      "income_householdmedian",
+      "income_percapita"
+     ],
+     "transformation": "four equal groups by percentile rank, separate additive FE sets gamma1-gamma3",
+     "source_locator": "D01 p.15 (journal p.4922)"
+    }
+   ],
+   "estimator": "Ten separate cross-sectional OLS regressions (one per year) with the Table 4 specification",
+   "dependent_variable": "ln(follow-on contributions in year + 1) (log inferred from baseline)",
+   "regressors": [
+    "Treat_i"
+   ],
+   "controls": {
+    "all": [
+     "population",
+     "popdensity",
+     "households",
+     "unemploymentrate",
+     "income_householdmedian ('Household Income')",
+     "income_medianearnings ('Median Income')",
+     "income_percapita",
+     "popeduc ('Educ. Population')",
+     "popmales / popyoungmales ('Male Pop(18-44)' and 'Young Pop.'; label-to-column assignment uncertain)"
+    ],
+    "source": "Ten controls listed in D02 p.11; Table D.3 and D02 p.12; Table D.4: Population, Pop. Density, Male Pop(18-44), Households, Unemployment Rate, Household Income, Median Income, Educ. Population, Young Pop., Per-Capita Income; mapping to D41 columns inferred. Text D01 p.15 'set of 10 controls, including population, unemployment, population density, and the percent of males'. Conflicting nine-variable list in D01 p.11 Sec 2.4.4 (area, population, housing units, earnings, median age, males 18-44, college educated, IT workers, highly educated). Transformation (levels/logs/shares) unstated."
+   },
+   "fixed_effects": [
+    "population-density quartile",
+    "household-income quartile",
+    "per-capita-income quartile"
+   ],
+   "weights": "unstated",
+   "cluster_or_se_method": "heteroskedasticity-robust SE (Figure 5 note)",
+   "event_time_or_period_definitions": "calendar years 2005-2014; control values by year unstated",
+   "software": "unstated",
+   "alpha": "95% CI",
+   "tail_direction": "two-sided (CI)",
+   "missing_data_rule": "unstated",
+   "output_required": "Plot of Treat coefficient and 95% CI by year 2005-2014 (follow-on contributions)"
+  },
+  {
+   "analysis_id": "A10",
+   "claim_ids": [
+    "C_T5A_1",
+    "C_T5A_2"
+   ],
+   "table_or_figure": "Table 5 Panel A",
+   "sample_steps": [
+    {
+     "step": 1,
+     "description": "Load county_lookup.csv; Treatment = treat",
+     "columns": [
+      "FIPS",
+      "treat"
+     ],
+     "values": "treat in {0,1}",
+     "source_locator": "D01 p.10 (journal p.4917); Sec 2.4.2; D03"
+    },
+    {
+     "step": 2,
+     "description": "Exclude Massachusetts (not seeded with TIGER)",
+     "columns": [
+      "STATE_FIPS",
+      "STATE_NAME"
+     ],
+     "values": "STATE_NAME == 'Massachusetts' dropped (STATE_FIPS 25; code inferred)",
+     "source_locator": "D01 p.5 (journal p.4912); Sec 2.2.2; Figure 1 note p.7"
+    },
+    {
+     "step": 3,
+     "description": "Keep only counties for which TIGER was incorporated into OSM (the article's county universe); whether county_lookup already equals this universe is unstated",
+     "columns": [
+      "FIPS"
+     ],
+     "values": "unstated",
+     "source_locator": "D01 p.5 (journal p.4912); Sec 2.2.2"
+    },
+    {
+     "step": 4,
+     "description": "Merge quarterly.csv on county key",
+     "columns": [
+      "geoid",
+      "FIPS"
+     ],
+     "values": "geoid == FIPS (inferred format harmonisation, e.g. 5-digit zero-padded)",
+     "source_locator": "D03; D51 (inferred)"
+    },
+    {
+     "step": 5,
+     "description": "Restrict to quarters 2005Q2 through 2014Q4",
+     "columns": [
+      "quarter"
+     ],
+     "values": "2005Q2 <= quarter <= 2014Q4",
+     "source_locator": "D01 p.11 (journal p.4918); Sec 2.4.5; Table 2 note p.12"
+    },
+    {
+     "step": 6,
+     "description": "Balance panel: every county x every quarter; county-quarters absent from quarterly.csv set to zero (inferred from 'balanced panel'; rule unstated)",
+     "columns": [
+      "geoid",
+      "quarter"
+     ],
+     "values": "unstated (zero-fill inferred)",
+     "source_locator": "D01 p.12 (journal p.4919); Table 2 note"
+    },
+    {
+     "step": 7,
+     "description": "Merge time-varying ACS controls by county and calendar year (inferred)",
+     "columns": [
+      "geo_fips",
+      "acsyear"
+     ],
+     "values": "acsyear == year(quarter) (inferred); rule for panel years lacking an ACS row unstated",
+     "source_locator": "D01 p.13 (journal p.4920); Sec 3.2.1 'county-quarter control variables'"
+    },
+    {
+     "description": "Assign counties to four equal groups by population density",
+     "columns": [
+      "popdensity"
+     ],
+     "values": "quartiles; reference year unstated",
+     "source_locator": "D01 p.17 (journal p.4924)",
+     "step": 8
+    }
+   ],
+   "variables": [
+    {
+     "source_columns": [
+      "totaltaga",
+      "totaltagb",
+      "totaltagh",
+      "totaltagv2a",
+      "totaltagv2b",
+      "totaltagv2h"
+     ],
+     "transformation": "sum of (a) tags added to existing streets (one-way, speed limit, access), (b) building creations/modifications, (c) amenity creations/modifications; exact column combination unstated (inferred: a=amenity, b=building, h=highway tags; v2 = tag on existing object)",
+     "source_locator": "D01 p.10 (journal p.4917); Sec 2.4.1",
+     "name": "Follow-on"
+    },
+    {
+     "source_columns": [
+      "totalusers"
+     ],
+     "transformation": "number of unique user IDs editing in county-quarter (mapping inferred); same user in several counties counted in each (D01 p.25 endnote 19)",
+     "source_locator": "D01 p.10 (journal p.4917); Sec 2.4.1",
+     "name": "Contributors"
+    },
+    {
+     "name": "Post x Treat",
+     "source_columns": [
+      "treat",
+      "quarter"
+     ],
+     "transformation": "as Table 3",
+     "source_locator": "D01 p.17 (journal p.4924); Table 5 note"
+    }
+   ],
+   "estimator": "OLS with county and quarter fixed effects on log outcome ('Log-OLS')",
+   "dependent_variable": "log Follow-on; log Contributors",
+   "regressors": [
+    "Post x Treat"
+   ],
+   "controls": {
+    "value": "unstated whether Table 3 controls included ('similar to that in Table 3'; no Controls row)",
+    "candidate": [
+     "population",
+     "popdensity",
+     "households",
+     "unemploymentrate",
+     "income_householdmedian ('Household Income')",
+     "income_medianearnings ('Median Income')",
+     "income_percapita",
+     "popeduc ('Educ. Population')",
+     "popmales / popyoungmales ('Male Pop(18-44)' and 'Young Pop.'; label-to-column assignment uncertain)"
+    ]
+   },
+   "fixed_effects": [
+    "county",
+    "population-density-group x quarter (text) OR quarter FE + group-specific time trends (note); table row says Quarter FE Yes"
+   ],
+   "weights": "unstated",
+   "cluster_or_se_method": "unstated (as A06)",
+   "event_time_or_period_definitions": "Post = 2008Q1 onward",
+   "software": "unstated",
+   "alpha": "stars printed (legend only in Table 3)",
+   "tail_direction": "two-sided inferred",
+   "missing_data_rule": "balanced panel",
+   "output_required": "Coefficient and SE on Post x Treat and N for Follow-on and Contributors"
+  },
+  {
+   "analysis_id": "A11",
+   "claim_ids": [
+    "C_T5A_3",
+    "C_T5A_4"
+   ],
+   "table_or_figure": "Table 5 Panel A",
+   "sample_steps": [
+    {
+     "step": 1,
+     "description": "Load county_lookup.csv; Treatment = treat",
+     "columns": [
+      "FIPS",
+      "treat"
+     ],
+     "values": "treat in {0,1}",
+     "source_locator": "D01 p.10 (journal p.4917); Sec 2.4.2; D03"
+    },
+    {
+     "step": 2,
+     "description": "Exclude Massachusetts (not seeded with TIGER)",
+     "columns": [
+      "STATE_FIPS",
+      "STATE_NAME"
+     ],
+     "values": "STATE_NAME == 'Massachusetts' dropped (STATE_FIPS 25; code inferred)",
+     "source_locator": "D01 p.5 (journal p.4912); Sec 2.2.2; Figure 1 note p.7"
+    },
+    {
+     "step": 3,
+     "description": "Keep only counties for which TIGER was incorporated into OSM (the article's county universe); whether county_lookup already equals this universe is unstated",
+     "columns": [
+      "FIPS"
+     ],
+     "values": "unstated",
+     "source_locator": "D01 p.5 (journal p.4912); Sec 2.2.2"
+    },
+    {
+     "step": 4,
+     "description": "Merge quarterly.csv on county key",
+     "columns": [
+      "geoid",
+      "FIPS"
+     ],
+     "values": "geoid == FIPS (inferred format harmonisation, e.g. 5-digit zero-padded)",
+     "source_locator": "D03; D51 (inferred)"
+    },
+    {
+     "step": 5,
+     "description": "Restrict to quarters 2005Q2 through 2014Q4",
+     "columns": [
+      "quarter"
+     ],
+     "values": "2005Q2 <= quarter <= 2014Q4",
+     "source_locator": "D01 p.11 (journal p.4918); Sec 2.4.5; Table 2 note p.12"
+    },
+    {
+     "step": 6,
+     "description": "Balance panel: every county x every quarter; county-quarters absent from quarterly.csv set to zero (inferred from 'balanced panel'; rule unstated)",
+     "columns": [
+      "geoid",
+      "quarter"
+     ],
+     "values": "unstated (zero-fill inferred)",
+     "source_locator": "D01 p.12 (journal p.4919); Table 2 note"
+    },
+    {
+     "step": 7,
+     "description": "Merge time-varying ACS controls by county and calendar year (inferred)",
+     "columns": [
+      "geo_fips",
+      "acsyear"
+     ],
+     "values": "acsyear == year(quarter) (inferred); rule for panel years lacking an ACS row unstated",
+     "source_locator": "D01 p.13 (journal p.4920); Sec 3.2.1 'county-quarter control variables'"
+    },
+    {
+     "description": "Placebo: replace treat with a randomly assigned county-level treatment indicator",
+     "columns": [
+      "treat"
+     ],
+     "values": "random assignment mechanism, share and seed unstated",
+     "source_locator": "D01 p.17 (journal p.4924); Table 5 note",
+     "step": 8
+    }
+   ],
+   "variables": [
+    {
+     "source_columns": [
+      "totaltaga",
+      "totaltagb",
+      "totaltagh",
+      "totaltagv2a",
+      "totaltagv2b",
+      "totaltagv2h"
+     ],
+     "transformation": "sum of (a) tags added to existing streets (one-way, speed limit, access), (b) building creations/modifications, (c) amenity creations/modifications; exact column combination unstated (inferred: a=amenity, b=building, h=highway tags; v2 = tag on existing object)",
+     "source_locator": "D01 p.10 (journal p.4917); Sec 2.4.1",
+     "name": "Follow-on"
+    },
+    {
+     "source_columns": [
+      "totalusers"
+     ],
+     "transformation": "number of unique user IDs editing in county-quarter (mapping inferred); same user in several counties counted in each (D01 p.25 endnote 19)",
+     "source_locator": "D01 p.10 (journal p.4917); Sec 2.4.1",
+     "name": "Contributors"
+    },
+    {
+     "name": "Post x Treat",
+     "source_columns": [
+      "treat",
+      "quarter"
+     ],
+     "transformation": "as Table 3; Treat replaced by random placebo assignment",
+     "source_locator": "D01 p.17 (journal p.4924); Table 5 note"
+    }
+   ],
+   "estimator": "OLS with county and quarter fixed effects on log outcome ('Log-OLS')",
+   "dependent_variable": "log Follow-on; log Contributors",
+   "regressors": [
+    "Post x Treat"
+   ],
+   "controls": {
+    "value": "unstated whether Table 3 controls included ('similar to that in Table 3'; no Controls row)",
+    "candidate": [
+     "population",
+     "popdensity",
+     "households",
+     "unemploymentrate",
+     "income_householdmedian ('Household Income')",
+     "income_medianearnings ('Median Income')",
+     "income_percapita",
+     "popeduc ('Educ. Population')",
+     "popmales / popyoungmales ('Male Pop(18-44)' and 'Young Pop.'; label-to-column assignment uncertain)"
+    ]
+   },
+   "fixed_effects": [
+    "county",
+    "quarter"
+   ],
+   "weights": "unstated",
+   "cluster_or_se_method": "unstated (as A06)",
+   "event_time_or_period_definitions": "Post = 2008Q1 onward",
+   "software": "unstated",
+   "alpha": "stars printed (legend only in Table 3)",
+   "tail_direction": "two-sided inferred",
+   "missing_data_rule": "balanced panel",
+   "output_required": "Coefficient and SE on Post x Treat and N for Follow-on and Contributors"
+  },
+  {
+   "analysis_id": "A12",
+   "claim_ids": [
+    "C_T5A_5",
+    "C_T5A_6"
+   ],
+   "table_or_figure": "Table 5 Panel A",
+   "sample_steps": [
+    {
+     "step": 1,
+     "description": "Load county_lookup.csv; Treatment = treat",
+     "columns": [
+      "FIPS",
+      "treat"
+     ],
+     "values": "treat in {0,1}",
+     "source_locator": "D01 p.10 (journal p.4917); Sec 2.4.2; D03"
+    },
+    {
+     "step": 2,
+     "description": "Exclude Massachusetts (not seeded with TIGER)",
+     "columns": [
+      "STATE_FIPS",
+      "STATE_NAME"
+     ],
+     "values": "STATE_NAME == 'Massachusetts' dropped (STATE_FIPS 25; code inferred)",
+     "source_locator": "D01 p.5 (journal p.4912); Sec 2.2.2; Figure 1 note p.7"
+    },
+    {
+     "step": 3,
+     "description": "Keep only counties for which TIGER was incorporated into OSM (the article's county universe); whether county_lookup already equals this universe is unstated",
+     "columns": [
+      "FIPS"
+     ],
+     "values": "unstated",
+     "source_locator": "D01 p.5 (journal p.4912); Sec 2.2.2"
+    },
+    {
+     "step": 4,
+     "description": "Merge quarterly.csv on county key",
+     "columns": [
+      "geoid",
+      "FIPS"
+     ],
+     "values": "geoid == FIPS (inferred format harmonisation, e.g. 5-digit zero-padded)",
+     "source_locator": "D03; D51 (inferred)"
+    },
+    {
+     "step": 5,
+     "description": "Restrict to quarters 2005Q2 through 2014Q4",
+     "columns": [
+      "quarter"
+     ],
+     "values": "2005Q2 <= quarter <= 2014Q4",
+     "source_locator": "D01 p.11 (journal p.4918); Sec 2.4.5; Table 2 note p.12"
+    },
+    {
+     "step": 6,
+     "description": "Balance panel: every county x every quarter; county-quarters absent from quarterly.csv set to zero (inferred from 'balanced panel'; rule unstated)",
+     "columns": [
+      "geoid",
+      "quarter"
+     ],
+     "values": "unstated (zero-fill inferred)",
+     "source_locator": "D01 p.12 (journal p.4919); Table 2 note"
+    },
+    {
+     "step": 7,
+     "description": "Merge time-varying ACS controls by county and calendar year (inferred)",
+     "columns": [
+      "geo_fips",
+      "acsyear"
+     ],
+     "values": "acsyear == year(quarter) (inferred); rule for panel years lacking an ACS row unstated",
+     "source_locator": "D01 p.13 (journal p.4920); Sec 3.2.1 'county-quarter control variables'"
+    },
+    {
+     "description": "Boundary sample: keep counties that border at least one county of the opposite treatment status; drop counties completely surrounded by counties of only one type",
+     "columns": [
+      "source county",
+      " border counties",
+      "treat"
+     ],
+     "values": "keep if any(treat[border] != treat[source]) (inferred operationalisation)",
+     "source_locator": "D01 p.8 (journal p.4915); Sec 2.3.3; D01 p.2 (journal p.4909); Introduction: 'only those treatment counties that share a border with at least one control county'; D01 p.9 (journal p.4916); Figure 2 note",
+     "step": 8
+    }
+   ],
+   "variables": [
+    {
+     "source_columns": [
+      "totaltaga",
+      "totaltagb",
+      "totaltagh",
+      "totaltagv2a",
+      "totaltagv2b",
+      "totaltagv2h"
+     ],
+     "transformation": "sum of (a) tags added to existing streets (one-way, speed limit, access), (b) building creations/modifications, (c) amenity creations/modifications; exact column combination unstated (inferred: a=amenity, b=building, h=highway tags; v2 = tag on existing object)",
+     "source_locator": "D01 p.10 (journal p.4917); Sec 2.4.1",
+     "name": "Follow-on"
+    },
+    {
+     "source_columns": [
+      "totalusers"
+     ],
+     "transformation": "number of unique user IDs editing in county-quarter (mapping inferred); same user in several counties counted in each (D01 p.25 endnote 19)",
+     "source_locator": "D01 p.10 (journal p.4917); Sec 2.4.1",
+     "name": "Contributors"
+    },
+    {
+     "name": "Post x Treat",
+     "source_columns": [
+      "treat",
+      "quarter"
+     ],
+     "transformation": "as Table 3; boundary sample",
+     "source_locator": "D01 p.17 (journal p.4924); Table 5 note"
+    }
+   ],
+   "estimator": "OLS with county and quarter fixed effects on log outcome ('Log-OLS')",
+   "dependent_variable": "log Follow-on; log Contributors",
+   "regressors": [
+    "Post x Treat"
+   ],
+   "controls": {
+    "value": "unstated whether Table 3 controls included ('similar to that in Table 3'; no Controls row)",
+    "candidate": [
+     "population",
+     "popdensity",
+     "households",
+     "unemploymentrate",
+     "income_householdmedian ('Household Income')",
+     "income_medianearnings ('Median Income')",
+     "income_percapita",
+     "popeduc ('Educ. Population')",
+     "popmales / popyoungmales ('Male Pop(18-44)' and 'Young Pop.'; label-to-column assignment uncertain)"
+    ]
+   },
+   "fixed_effects": [
+    "county",
+    "quarter"
+   ],
+   "weights": "unstated",
+   "cluster_or_se_method": "unstated (as A06)",
+   "event_time_or_period_definitions": "Post = 2008Q1 onward",
+   "software": "unstated",
+   "alpha": "stars printed (legend only in Table 3)",
+   "tail_direction": "two-sided inferred",
+   "missing_data_rule": "balanced panel",
+   "output_required": "Coefficient and SE on Post x Treat and N for Follow-on and Contributors"
+  },
+  {
+   "analysis_id": "A13",
+   "claim_ids": [
+    "C_T5A_7",
+    "C_T5A_8"
+   ],
+   "table_or_figure": "Table 5 Panel A",
+   "sample_steps": [
+    {
+     "step": 1,
+     "description": "Load county_lookup.csv; Treatment = treat",
+     "columns": [
+      "FIPS",
+      "treat"
+     ],
+     "values": "treat in {0,1}",
+     "source_locator": "D01 p.10 (journal p.4917); Sec 2.4.2; D03"
+    },
+    {
+     "step": 2,
+     "description": "Exclude Massachusetts (not seeded with TIGER)",
+     "columns": [
+      "STATE_FIPS",
+      "STATE_NAME"
+     ],
+     "values": "STATE_NAME == 'Massachusetts' dropped (STATE_FIPS 25; code inferred)",
+     "source_locator": "D01 p.5 (journal p.4912); Sec 2.2.2; Figure 1 note p.7"
+    },
+    {
+     "step": 3,
+     "description": "Keep only counties for which TIGER was incorporated into OSM (the article's county universe); whether county_lookup already equals this universe is unstated",
+     "columns": [
+      "FIPS"
+     ],
+     "values": "unstated",
+     "source_locator": "D01 p.5 (journal p.4912); Sec 2.2.2"
+    },
+    {
+     "step": 4,
+     "description": "Merge quarterly.csv on county key",
+     "columns": [
+      "geoid",
+      "FIPS"
+     ],
+     "values": "geoid == FIPS (inferred format harmonisation, e.g. 5-digit zero-padded)",
+     "source_locator": "D03; D51 (inferred)"
+    },
+    {
+     "step": 5,
+     "description": "Restrict to quarters 2005Q2 through 2014Q4",
+     "columns": [
+      "quarter"
+     ],
+     "values": "2005Q2 <= quarter <= 2014Q4",
+     "source_locator": "D01 p.11 (journal p.4918); Sec 2.4.5; Table 2 note p.12"
+    },
+    {
+     "step": 6,
+     "description": "Balance panel: every county x every quarter; county-quarters absent from quarterly.csv set to zero (inferred from 'balanced panel'; rule unstated)",
+     "columns": [
+      "geoid",
+      "quarter"
+     ],
+     "values": "unstated (zero-fill inferred)",
+     "source_locator": "D01 p.12 (journal p.4919); Table 2 note"
+    },
+    {
+     "step": 7,
+     "description": "Merge time-varying ACS controls by county and calendar year (inferred)",
+     "columns": [
+      "geo_fips",
+      "acsyear"
+     ],
+     "values": "acsyear == year(quarter) (inferred); rule for panel years lacking an ACS row unstated",
+     "source_locator": "D01 p.13 (journal p.4920); Sec 3.2.1 'county-quarter control variables'"
+    },
+    {
+     "description": "Timing sample: keep counties scheduled to be updated (sent to Harris) in calendar years 2005 or 2006",
+     "columns": [
+      "FIPS",
+      "Sch SB Delivery"
+     ],
+     "values": "year(Sch SB Delivery) in {2005, 2006} (column mapping inferred)",
+     "source_locator": "D01 p.8 (journal p.4915); Sec 2.3.3; D01 p.9 (journal p.4916); Figure 2 note",
+     "step": 8
+    }
+   ],
+   "variables": [
+    {
+     "source_columns": [
+      "totaltaga",
+      "totaltagb",
+      "totaltagh",
+      "totaltagv2a",
+      "totaltagv2b",
+      "totaltagv2h"
+     ],
+     "transformation": "sum of (a) tags added to existing streets (one-way, speed limit, access), (b) building creations/modifications, (c) amenity creations/modifications; exact column combination unstated (inferred: a=amenity, b=building, h=highway tags; v2 = tag on existing object)",
+     "source_locator": "D01 p.10 (journal p.4917); Sec 2.4.1",
+     "name": "Follow-on"
+    },
+    {
+     "source_columns": [
+      "totalusers"
+     ],
+     "transformation": "number of unique user IDs editing in county-quarter (mapping inferred); same user in several counties counted in each (D01 p.25 endnote 19)",
+     "source_locator": "D01 p.10 (journal p.4917); Sec 2.4.1",
+     "name": "Contributors"
+    },
+    {
+     "name": "Post x Treat",
+     "source_columns": [
+      "treat",
+      "quarter"
+     ],
+     "transformation": "as Table 3; timing sample",
+     "source_locator": "D01 p.17 (journal p.4924); Table 5 note"
+    }
+   ],
+   "estimator": "OLS with county and quarter fixed effects on log outcome ('Log-OLS')",
+   "dependent_variable": "log Follow-on; log Contributors",
+   "regressors": [
+    "Post x Treat"
+   ],
+   "controls": {
+    "value": "unstated whether Table 3 controls included ('similar to that in Table 3'; no Controls row)",
+    "candidate": [
+     "population",
+     "popdensity",
+     "households",
+     "unemploymentrate",
+     "income_householdmedian ('Household Income')",
+     "income_medianearnings ('Median Income')",
+     "income_percapita",
+     "popeduc ('Educ. Population')",
+     "popmales / popyoungmales ('Male Pop(18-44)' and 'Young Pop.'; label-to-column assignment uncertain)"
+    ]
+   },
+   "fixed_effects": [
+    "county",
+    "quarter"
+   ],
+   "weights": "unstated",
+   "cluster_or_se_method": "unstated (as A06)",
+   "event_time_or_period_definitions": "Post = 2008Q1 onward",
+   "software": "unstated",
+   "alpha": "stars printed (legend only in Table 3)",
+   "tail_direction": "two-sided inferred",
+   "missing_data_rule": "balanced panel",
+   "output_required": "Coefficient and SE on Post x Treat and N for Follow-on and Contributors"
+  },
+  {
+   "analysis_id": "A14",
+   "claim_ids": [
+    "C_T5B_1",
+    "C_T5B_2",
+    "C_T5B_3",
+    "C_T5B_4"
+   ],
+   "table_or_figure": "Table 5 Panel B",
+   "sample_steps": [
+    {
+     "step": 1,
+     "description": "Load county_lookup.csv; Treatment = treat",
+     "columns": [
+      "FIPS",
+      "treat"
+     ],
+     "values": "treat in {0,1}",
+     "source_locator": "D01 p.10 (journal p.4917); Sec 2.4.2; D03"
+    },
+    {
+     "step": 2,
+     "description": "Exclude Massachusetts (not seeded with TIGER)",
+     "columns": [
+      "STATE_FIPS",
+      "STATE_NAME"
+     ],
+     "values": "STATE_NAME == 'Massachusetts' dropped (STATE_FIPS 25; code inferred)",
+     "source_locator": "D01 p.5 (journal p.4912); Sec 2.2.2; Figure 1 note p.7"
+    },
+    {
+     "step": 3,
+     "description": "Keep only counties for which TIGER was incorporated into OSM (the article's county universe); whether county_lookup already equals this universe is unstated",
+     "columns": [
+      "FIPS"
+     ],
+     "values": "unstated",
+     "source_locator": "D01 p.5 (journal p.4912); Sec 2.2.2"
+    },
+    {
+     "step": 4,
+     "description": "Aggregate quarterly.csv (merged on geoid==FIPS, inferred) to one row per county: sum of quarterly counts over 2008Q1-2014Q4 ('2008-2014' outcome) and over 2014Q1-2014Q4 ('2014' outcome)",
+     "columns": [
+      "geoid",
+      "quarter",
+      "outcome columns"
+     ],
+     "values": "post-seeding quarters 2008Q1-2014Q4; year 2014",
+     "source_locator": "D01 p.10 (journal p.4917); Sec 2.4.1; D01 p.15 (journal p.4922); Table 4 note"
+    },
+    {
+     "step": 5,
+     "description": "Counties with no OSM rows get zero totals (inferred; unstated)",
+     "columns": [
+      "geoid"
+     ],
+     "values": "unstated",
+     "source_locator": "unstated"
+    },
+    {
+     "step": 6,
+     "description": "Merge ACS controls; year of control values for the cross-section unstated",
+     "columns": [
+      "geo_fips",
+      "acsyear"
+     ],
+     "values": "unstated",
+     "source_locator": "D01 p.15 (journal p.4922); Sec 3.3.1"
+    },
+    {
+     "step": 7,
+     "description": "Build quartile (four equal groups by percentile rank) indicators for population density, household income and per-capita income",
+     "columns": [
+      "popdensity",
+      "income_householdmedian",
+      "income_percapita"
+     ],
+     "values": "4 groups each; reference year and sample over which quartiles are computed unstated",
+     "source_locator": "D01 p.15 (journal p.4922); Sec 3.3.1; conflicting list D02 p.11; Table D.3 note, D02 p.12; Table D.4 note (population instead of population density)"
+    },
+    {
+     "description": "Boundary sample: keep counties that border at least one county of the opposite treatment status; drop counties completely surrounded by counties of only one type",
+     "columns": [
+      "source county",
+      " border counties",
+      "treat"
+     ],
+     "values": "keep if any(treat[border] != treat[source]) (inferred operationalisation)",
+     "source_locator": "D01 p.8 (journal p.4915); Sec 2.3.3; D01 p.2 (journal p.4909); Introduction: 'only those treatment counties that share a border with at least one control county'; D01 p.9 (journal p.4916); Figure 2 note",
+     "step": 8
+    }
+   ],
+   "variables": [
+    {
+     "name": "Y_i (2008-2014)",
+     "source_columns": [
+      "totalcontrib",
+      "follow-on columns",
+      "totalusers"
+     ],
+     "transformation": "sum over 2008Q1-2014Q4 per county; contributors summed across quarters (unique users over the period not available in deposit)",
+     "source_locator": "D01 p.10 (journal p.4917); D01 p.15 (journal p.4922); Table 4 note"
+    },
+    {
+     "name": "Y_i (2014)",
+     "source_columns": [
+      "same"
+     ],
+     "transformation": "sum over 2014 quarters",
+     "source_locator": "D01 p.15 (journal p.4922); Table 4 note"
+    },
+    {
+     "name": "ln(Y_i+1)",
+     "source_columns": [
+      "Y_i"
+     ],
+     "transformation": "natural log of Y+1",
+     "source_locator": "D01 p.15 (journal p.4922); equation"
+    },
+    {
+     "name": "Treat_i",
+     "source_columns": [
+      "treat"
+     ],
+     "transformation": "indicator",
+     "source_locator": "D01 p.15 (journal p.4922)"
+    },
+    {
+     "name": "quartile FEs",
+     "source_columns": [
+      "popdensity",
+      "income_householdmedian",
+      "income_percapita"
+     ],
+     "transformation": "four equal groups by percentile rank, separate additive FE sets gamma1-gamma3",
+     "source_locator": "D01 p.15 (journal p.4922)"
+    }
+   ],
+   "estimator": "OLS of ln(Y_i+1) on Treat_i, 10 controls and three sets of quartile fixed effects",
+   "dependent_variable": "ln(1+) follow-on and contributors ('users'), 2008-2014 and 2014",
+   "regressors": [
+    "Treat_i"
+   ],
+   "controls": {
+    "all": [
+     "population",
+     "popdensity",
+     "households",
+     "unemploymentrate",
+     "income_householdmedian ('Household Income')",
+     "income_medianearnings ('Median Income')",
+     "income_percapita",
+     "popeduc ('Educ. Population')",
+     "popmales / popyoungmales ('Male Pop(18-44)' and 'Young Pop.'; label-to-column assignment uncertain)"
+    ],
+    "source": "Ten controls listed in D02 p.11; Table D.3 and D02 p.12; Table D.4: Population, Pop. Density, Male Pop(18-44), Households, Unemployment Rate, Household Income, Median Income, Educ. Population, Young Pop., Per-Capita Income; mapping to D41 columns inferred. Text D01 p.15 'set of 10 controls, including population, unemployment, population density, and the percent of males'. Conflicting nine-variable list in D01 p.11 Sec 2.4.4 (area, population, housing units, earnings, median age, males 18-44, college educated, IT workers, highly educated). Transformation (levels/logs/shares) unstated."
+   },
+   "fixed_effects": [
+    "population-density quartile",
+    "household-income quartile",
+    "per-capita-income quartile"
+   ],
+   "weights": "unstated",
+   "cluster_or_se_method": "as Table 4 (heteroskedasticity-robust) inferred from 'same specification as in Table 4'",
+   "event_time_or_period_definitions": "as Table 4",
+   "software": "unstated",
+   "alpha": "stars printed",
+   "tail_direction": "two-sided inferred",
+   "missing_data_rule": "unstated; whether quartiles recomputed within subsample unstated",
+   "output_required": "Coefficient and SE on Treat and N for boundary-sample columns (Table 5B columns labelled (1)-(4))"
+  },
+  {
+   "analysis_id": "A15",
+   "claim_ids": [
+    "C_T5B_5",
+    "C_T5B_6",
+    "C_T5B_7",
+    "C_T5B_8"
+   ],
+   "table_or_figure": "Table 5 Panel B",
+   "sample_steps": [
+    {
+     "step": 1,
+     "description": "Load county_lookup.csv; Treatment = treat",
+     "columns": [
+      "FIPS",
+      "treat"
+     ],
+     "values": "treat in {0,1}",
+     "source_locator": "D01 p.10 (journal p.4917); Sec 2.4.2; D03"
+    },
+    {
+     "step": 2,
+     "description": "Exclude Massachusetts (not seeded with TIGER)",
+     "columns": [
+      "STATE_FIPS",
+      "STATE_NAME"
+     ],
+     "values": "STATE_NAME == 'Massachusetts' dropped (STATE_FIPS 25; code inferred)",
+     "source_locator": "D01 p.5 (journal p.4912); Sec 2.2.2; Figure 1 note p.7"
+    },
+    {
+     "step": 3,
+     "description": "Keep only counties for which TIGER was incorporated into OSM (the article's county universe); whether county_lookup already equals this universe is unstated",
+     "columns": [
+      "FIPS"
+     ],
+     "values": "unstated",
+     "source_locator": "D01 p.5 (journal p.4912); Sec 2.2.2"
+    },
+    {
+     "step": 4,
+     "description": "Aggregate quarterly.csv (merged on geoid==FIPS, inferred) to one row per county: sum of quarterly counts over 2008Q1-2014Q4 ('2008-2014' outcome) and over 2014Q1-2014Q4 ('2014' outcome)",
+     "columns": [
+      "geoid",
+      "quarter",
+      "outcome columns"
+     ],
+     "values": "post-seeding quarters 2008Q1-2014Q4; year 2014",
+     "source_locator": "D01 p.10 (journal p.4917); Sec 2.4.1; D01 p.15 (journal p.4922); Table 4 note"
+    },
+    {
+     "step": 5,
+     "description": "Counties with no OSM rows get zero totals (inferred; unstated)",
+     "columns": [
+      "geoid"
+     ],
+     "values": "unstated",
+     "source_locator": "unstated"
+    },
+    {
+     "step": 6,
+     "description": "Merge ACS controls; year of control values for the cross-section unstated",
+     "columns": [
+      "geo_fips",
+      "acsyear"
+     ],
+     "values": "unstated",
+     "source_locator": "D01 p.15 (journal p.4922); Sec 3.3.1"
+    },
+    {
+     "step": 7,
+     "description": "Build quartile (four equal groups by percentile rank) indicators for population density, household income and per-capita income",
+     "columns": [
+      "popdensity",
+      "income_householdmedian",
+      "income_percapita"
+     ],
+     "values": "4 groups each; reference year and sample over which quartiles are computed unstated",
+     "source_locator": "D01 p.15 (journal p.4922); Sec 3.3.1; conflicting list D02 p.11; Table D.3 note, D02 p.12; Table D.4 note (population instead of population density)"
+    },
+    {
+     "description": "Timing sample: keep counties scheduled to be updated (sent to Harris) in calendar years 2005 or 2006",
+     "columns": [
+      "FIPS",
+      "Sch SB Delivery"
+     ],
+     "values": "year(Sch SB Delivery) in {2005, 2006} (column mapping inferred)",
+     "source_locator": "D01 p.8 (journal p.4915); Sec 2.3.3; D01 p.9 (journal p.4916); Figure 2 note",
+     "step": 8
+    }
+   ],
+   "variables": [
+    {
+     "name": "Y_i (2008-2014)",
+     "source_columns": [
+      "totalcontrib",
+      "follow-on columns",
+      "totalusers"
+     ],
+     "transformation": "sum over 2008Q1-2014Q4 per county; contributors summed across quarters (unique users over the period not available in deposit)",
+     "source_locator": "D01 p.10 (journal p.4917); D01 p.15 (journal p.4922); Table 4 note"
+    },
+    {
+     "name": "Y_i (2014)",
+     "source_columns": [
+      "same"
+     ],
+     "transformation": "sum over 2014 quarters",
+     "source_locator": "D01 p.15 (journal p.4922); Table 4 note"
+    },
+    {
+     "name": "ln(Y_i+1)",
+     "source_columns": [
+      "Y_i"
+     ],
+     "transformation": "natural log of Y+1",
+     "source_locator": "D01 p.15 (journal p.4922); equation"
+    },
+    {
+     "name": "Treat_i",
+     "source_columns": [
+      "treat"
+     ],
+     "transformation": "indicator",
+     "source_locator": "D01 p.15 (journal p.4922)"
+    },
+    {
+     "name": "quartile FEs",
+     "source_columns": [
+      "popdensity",
+      "income_householdmedian",
+      "income_percapita"
+     ],
+     "transformation": "four equal groups by percentile rank, separate additive FE sets gamma1-gamma3",
+     "source_locator": "D01 p.15 (journal p.4922)"
+    }
+   ],
+   "estimator": "OLS of ln(Y_i+1) on Treat_i, 10 controls and three sets of quartile fixed effects",
+   "dependent_variable": "ln(1+) follow-on and contributors ('users'), 2008-2014 and 2014",
+   "regressors": [
+    "Treat_i"
+   ],
+   "controls": {
+    "all": [
+     "population",
+     "popdensity",
+     "households",
+     "unemploymentrate",
+     "income_householdmedian ('Household Income')",
+     "income_medianearnings ('Median Income')",
+     "income_percapita",
+     "popeduc ('Educ. Population')",
+     "popmales / popyoungmales ('Male Pop(18-44)' and 'Young Pop.'; label-to-column assignment uncertain)"
+    ],
+    "source": "Ten controls listed in D02 p.11; Table D.3 and D02 p.12; Table D.4: Population, Pop. Density, Male Pop(18-44), Households, Unemployment Rate, Household Income, Median Income, Educ. Population, Young Pop., Per-Capita Income; mapping to D41 columns inferred. Text D01 p.15 'set of 10 controls, including population, unemployment, population density, and the percent of males'. Conflicting nine-variable list in D01 p.11 Sec 2.4.4 (area, population, housing units, earnings, median age, males 18-44, college educated, IT workers, highly educated). Transformation (levels/logs/shares) unstated."
+   },
+   "fixed_effects": [
+    "population-density quartile",
+    "household-income quartile",
+    "per-capita-income quartile"
+   ],
+   "weights": "unstated",
+   "cluster_or_se_method": "as Table 4 (heteroskedasticity-robust) inferred from 'same specification as in Table 4'",
+   "event_time_or_period_definitions": "as Table 4",
+   "software": "unstated",
+   "alpha": "stars printed",
+   "tail_direction": "two-sided inferred",
+   "missing_data_rule": "unstated; whether quartiles recomputed within subsample unstated",
+   "output_required": "Coefficient and SE on Treat and N for timing-sample columns (Table 5B columns labelled (5)-(8))"
+  },
+  {
+   "analysis_id": "A16",
+   "claim_ids": [
+    "C_T6_1",
+    "C_T6_2",
+    "C_T6_3",
+    "C_T6_dist_1",
+    "C_T6_dist_2",
+    "C_T6_dist_3",
+    "C_TXT_intro"
+   ],
+   "table_or_figure": "Table 6",
+   "sample_steps": [
+    {
+     "step": 1,
+     "description": "Load county_lookup.csv; Treatment = treat",
+     "columns": [
+      "FIPS",
+      "treat"
+     ],
+     "values": "treat in {0,1}",
+     "source_locator": "D01 p.10 (journal p.4917); Sec 2.4.2; D03"
+    },
+    {
+     "step": 2,
+     "description": "Exclude Massachusetts (not seeded with TIGER)",
+     "columns": [
+      "STATE_FIPS",
+      "STATE_NAME"
+     ],
+     "values": "STATE_NAME == 'Massachusetts' dropped (STATE_FIPS 25; code inferred)",
+     "source_locator": "D01 p.5 (journal p.4912); Sec 2.2.2; Figure 1 note p.7"
+    },
+    {
+     "step": 3,
+     "description": "Keep only counties for which TIGER was incorporated into OSM (the article's county universe); whether county_lookup already equals this universe is unstated",
+     "columns": [
+      "FIPS"
+     ],
+     "values": "unstated",
+     "source_locator": "D01 p.5 (journal p.4912); Sec 2.2.2"
+    },
+    {
+     "description": "Load distance.csv address pairs (author pre-sampled up to 50 random OpenAddresses pairs per county with address data)",
+     "columns": [
+      "fips",
+      "origin_lat",
+      "origin_lon",
+      "dest_lat",
+      "dest_lon",
+      "ggl_distance",
+      "osrm_distance"
+     ],
+     "values": "all rows",
+     "source_locator": "D01 p.11 (journal p.4918); Sec 2.4.3",
+     "step": 4
+    },
+    {
+     "description": "Drop pairs with missing routing distance or zero/undefined log error (rule unstated)",
+     "columns": [
+      "ggl_distance",
+      "osrm_distance"
+     ],
+     "values": "unstated",
+     "source_locator": "unstated",
+     "step": 5
+    },
+    {
+     "description": "Merge county controls and quartile FEs on fips",
+     "columns": [
+      "fips"
+     ],
+     "values": "",
+     "source_locator": "D01 p.18 (journal p.4925)",
+     "step": 6
+    },
+    {
+     "description": "Columns (2),(3): restrict to boundary / timing sample",
+     "columns": [
+      "see boundary and timing steps"
+     ],
+     "values": "as A12/A13",
+     "source_locator": "D01 p.18 (journal p.4925)",
+     "step": 7
+    }
+   ],
+   "variables": [
+    {
+     "name": "Error-Score_ij",
+     "source_columns": [
+      "osrm_distance",
+      "ggl_distance"
+     ],
+     "transformation": "absolute value of difference in route length OSRM vs Google; natural log; zero handling unstated",
+     "source_locator": "D01 p.10 (journal p.4917); Sec 2.4.3; D01 p.18 (journal p.4925); Table 6 note"
+    },
+    {
+     "name": "distance_ij",
+     "source_columns": [
+      "origin_lat",
+      "origin_lon",
+      "dest_lat",
+      "dest_lon"
+     ],
+     "transformation": "geodesic (as the crow flies) distance; formula and unit unstated",
+     "source_locator": "D01 p.18 (journal p.4925); Table 6 note"
+    },
+    {
+     "name": "Treat_i",
+     "source_columns": [
+      "treat"
+     ],
+     "transformation": "indicator",
+     "source_locator": "D01 p.18 (journal p.4925)"
+    }
+   ],
+   "estimator": "linear regression (OLS) at county-address-pair level",
+   "dependent_variable": "Ln(Error-Score_ij)",
+   "regressors": [
+    "Treat_i",
+    "distance_ij"
+   ],
+   "controls": {
+    "all": [
+     "population",
+     "popdensity",
+     "households",
+     "unemploymentrate",
+     "income_householdmedian ('Household Income')",
+     "income_medianearnings ('Median Income')",
+     "income_percapita",
+     "popeduc ('Educ. Population')",
+     "popmales / popyoungmales ('Male Pop(18-44)' and 'Young Pop.'; label-to-column assignment uncertain)"
+    ],
+    "source": "Ten controls listed in D02 p.11; Table D.3 and D02 p.12; Table D.4: Population, Pop. Density, Male Pop(18-44), Households, Unemployment Rate, Household Income, Median Income, Educ. Population, Young Pop., Per-Capita Income; mapping to D41 columns inferred. Text D01 p.15 'set of 10 controls, including population, unemployment, population density, and the percent of males'. Conflicting nine-variable list in D01 p.11 Sec 2.4.4 (area, population, housing units, earnings, median age, males 18-44, college educated, IT workers, highly educated). Transformation (levels/logs/shares) unstated."
+   },
+   "fixed_effects": [
+    "population-density quartile",
+    "household-income quartile",
+    "per-capita-income quartile"
+   ],
+   "weights": "unstated",
+   "cluster_or_se_method": "unstated (baseline cross-section uses heteroskedasticity-robust SE; clustering by county not stated)",
+   "event_time_or_period_definitions": "routing queried as of early 2017 (D01 p.18); D01 p.11 also says 'as of 2017'",
+   "software": "unstated",
+   "alpha": "stars printed",
+   "tail_direction": "two-sided inferred",
+   "missing_data_rule": "unstated",
+   "output_required": "Coefficients and SEs on Treat and Distance and N for full, boundary and timing samples"
+  },
+  {
+   "analysis_id": "A17",
+   "claim_ids": [
+    "C_T7_1",
+    "C_T7_2",
+    "C_T7_3",
+    "C_T7_4",
+    "C_T7_5",
+    "C_T7_6",
+    "C_T7_7"
+   ],
+   "table_or_figure": "Table 7",
+   "sample_steps": [
+    {
+     "step": 1,
+     "description": "Load county_lookup.csv; Treatment = treat",
+     "columns": [
+      "FIPS",
+      "treat"
+     ],
+     "values": "treat in {0,1}",
+     "source_locator": "D01 p.10 (journal p.4917); Sec 2.4.2; D03"
+    },
+    {
+     "step": 2,
+     "description": "Exclude Massachusetts (not seeded with TIGER)",
+     "columns": [
+      "STATE_FIPS",
+      "STATE_NAME"
+     ],
+     "values": "STATE_NAME == 'Massachusetts' dropped (STATE_FIPS 25; code inferred)",
+     "source_locator": "D01 p.5 (journal p.4912); Sec 2.2.2; Figure 1 note p.7"
+    },
+    {
+     "step": 3,
+     "description": "Keep only counties for which TIGER was incorporated into OSM (the article's county universe); whether county_lookup already equals this universe is unstated",
+     "columns": [
+      "FIPS"
+     ],
+     "values": "unstated",
+     "source_locator": "D01 p.5 (journal p.4912); Sec 2.2.2"
+    },
+    {
+     "step": 4,
+     "description": "Merge quarterly.csv on county key",
+     "columns": [
+      "geoid",
+      "FIPS"
+     ],
+     "values": "geoid == FIPS (inferred format harmonisation, e.g. 5-digit zero-padded)",
+     "source_locator": "D03; D51 (inferred)"
+    },
+    {
+     "step": 5,
+     "description": "Restrict to quarters 2005Q2 through 2014Q4",
+     "columns": [
+      "quarter"
+     ],
+     "values": "2005Q2 <= quarter <= 2014Q4",
+     "source_locator": "D01 p.11 (journal p.4918); Sec 2.4.5; Table 2 note p.12"
+    },
+    {
+     "step": 6,
+     "description": "Balance panel: every county x every quarter; county-quarters absent from quarterly.csv set to zero (inferred from 'balanced panel'; rule unstated)",
+     "columns": [
+      "geoid",
+      "quarter"
+     ],
+     "values": "unstated (zero-fill inferred)",
+     "source_locator": "D01 p.12 (journal p.4919); Table 2 note"
+    },
+    {
+     "step": 7,
+     "description": "Merge time-varying ACS controls by county and calendar year (inferred)",
+     "columns": [
+      "geo_fips",
+      "acsyear"
+     ],
+     "values": "acsyear == year(quarter) (inferred); rule for panel years lacking an ACS row unstated",
+     "source_locator": "D01 p.13 (journal p.4920); Sec 3.2.1 'county-quarter control variables'"
+    }
+   ],
+   "variables": [
+    {
+     "name": "Distant",
+     "source_columns": [
+      "totaltagb",
+      "totaltagv2b",
+      "totaltaga (?)"
+     ],
+     "transformation": "see A02; inferred",
+     "source_locator": "D01 p.19 (journal p.4926); Table 7 note"
+    },
+    {
+     "name": "Incremental",
+     "source_columns": [
+      "totaltagh",
+      "totaltagv2h"
+     ],
+     "transformation": "see A02; inferred",
+     "source_locator": "D01 p.19 (journal p.4926)"
+    },
+    {
+     "name": "Old",
+     "source_columns": [
+      "totaloldusers_active"
+     ],
+     "transformation": "inferred",
+     "source_locator": "D01 p.19 (journal p.4926)"
+    },
+    {
+     "name": "New",
+     "source_columns": [
+      "totalnewusers"
+     ],
+     "transformation": "inferred",
+     "source_locator": "D01 p.19 (journal p.4926)"
+    },
+    {
+     "name": "High ownership",
+     "source_columns": [
+      "totaloldfocused1"
+     ],
+     "transformation": "inferred",
+     "source_locator": "D01 p.19 (journal p.4926)"
+    },
+    {
+     "name": "Low ownership",
+     "source_columns": [
+      "totaloldfocused5",
+      "totaloldfocused1"
+     ],
+     "transformation": "inferred, uncertain",
+     "source_locator": "D01 p.19 (journal p.4926)"
+    },
+    {
+     "name": "Owner-Contributions",
+     "source_columns": [
+      "totalowneredit"
+     ],
+     "transformation": "inferred",
+     "source_locator": "D01 p.19 (journal p.4926)"
+    },
+    {
+     "name": "log outcome",
+     "source_columns": [],
+     "transformation": "Log-OLS: Table 3 note says 'one added to the dependent variable for all zero values' (D01 p.14); cross-sectional equation uses Ln(Y+1) (D01 p.15)",
+     "source_locator": "D01 p.19 (journal p.4926); Table 7 note 'Log-OLS'"
+    }
+   ],
+   "estimator": "OLS with county and quarter fixed effects on log outcome ('Log-OLS')",
+   "dependent_variable": "seven outcomes as listed",
+   "regressors": [
+    "Post x Treat"
+   ],
+   "controls": {
+    "all": [
+     "population",
+     "popdensity",
+     "households",
+     "unemploymentrate",
+     "income_householdmedian ('Household Income')",
+     "income_medianearnings ('Median Income')",
+     "income_percapita",
+     "popeduc ('Educ. Population')",
+     "popmales / popyoungmales ('Male Pop(18-44)' and 'Young Pop.'; label-to-column assignment uncertain)"
+    ],
+    "source": "Ten controls listed in D02 p.11; Table D.3 and D02 p.12; Table D.4: Population, Pop. Density, Male Pop(18-44), Households, Unemployment Rate, Household Income, Median Income, Educ. Population, Young Pop., Per-Capita Income; mapping to D41 columns inferred. Text D01 p.15 'set of 10 controls, including population, unemployment, population density, and the percent of males'. Conflicting nine-variable list in D01 p.11 Sec 2.4.4 (area, population, housing units, earnings, median age, males 18-44, college educated, IT workers, highly educated). Transformation (levels/logs/shares) unstated."
+   },
+   "fixed_effects": [
+    "county",
+    "quarter"
+   ],
+   "weights": "unstated",
+   "cluster_or_se_method": "unstated (as A06)",
+   "event_time_or_period_definitions": "Post = 2008Q1 onward; old contributors = edited before seeding (pre-2008)",
+   "software": "unstated",
+   "alpha": "stars printed",
+   "tail_direction": "Predictions 1-4 directional (D01 p.22); two-sided inferred",
+   "missing_data_rule": "balanced panel",
+   "output_required": "Coefficient and SE on Post x Treat and N for each of the seven outcomes"
+  },
+  {
+   "analysis_id": "A18",
+   "claim_ids": [
+    "C_F6_a"
+   ],
+   "table_or_figure": "Figure 6 (a)",
+   "sample_steps": [
+    {
+     "step": 1,
+     "description": "Load county_lookup.csv; Treatment = treat",
+     "columns": [
+      "FIPS",
+      "treat"
+     ],
+     "values": "treat in {0,1}",
+     "source_locator": "D01 p.10 (journal p.4917); Sec 2.4.2; D03"
+    },
+    {
+     "step": 2,
+     "description": "Exclude Massachusetts (not seeded with TIGER)",
+     "columns": [
+      "STATE_FIPS",
+      "STATE_NAME"
+     ],
+     "values": "STATE_NAME == 'Massachusetts' dropped (STATE_FIPS 25; code inferred)",
+     "source_locator": "D01 p.5 (journal p.4912); Sec 2.2.2; Figure 1 note p.7"
+    },
+    {
+     "step": 3,
+     "description": "Keep only counties for which TIGER was incorporated into OSM (the article's county universe); whether county_lookup already equals this universe is unstated",
+     "columns": [
+      "FIPS"
+     ],
+     "values": "unstated",
+     "source_locator": "D01 p.5 (journal p.4912); Sec 2.2.2"
+    },
+    {
+     "step": 4,
+     "description": "Merge quarterly.csv on county key",
+     "columns": [
+      "geoid",
+      "FIPS"
+     ],
+     "values": "geoid == FIPS (inferred format harmonisation, e.g. 5-digit zero-padded)",
+     "source_locator": "D03; D51 (inferred)"
+    },
+    {
+     "step": 5,
+     "description": "Restrict to quarters 2005Q2 through 2014Q4",
+     "columns": [
+      "quarter"
+     ],
+     "values": "2005Q2 <= quarter <= 2014Q4",
+     "source_locator": "D01 p.11 (journal p.4918); Sec 2.4.5; Table 2 note p.12"
+    },
+    {
+     "step": 6,
+     "description": "Balance panel: every county x every quarter; county-quarters absent from quarterly.csv set to zero (inferred from 'balanced panel'; rule unstated)",
+     "columns": [
+      "geoid",
+      "quarter"
+     ],
+     "values": "unstated (zero-fill inferred)",
+     "source_locator": "D01 p.12 (journal p.4919); Table 2 note"
+    },
+    {
+     "step": 7,
+     "description": "Merge time-varying ACS controls by county and calendar year (inferred)",
+     "columns": [
+      "geo_fips",
+      "acsyear"
+     ],
+     "values": "acsyear == year(quarter) (inferred); rule for panel years lacking an ACS row unstated",
+     "source_locator": "D01 p.13 (journal p.4920); Sec 3.2.1 'county-quarter control variables'"
+    },
+    {
+     "description": "Assign counties to deciles of population density; estimate separately within each decile",
+     "columns": [
+      "popdensity"
+     ],
+     "values": "deciles 1-10; reference year unstated",
+     "source_locator": "D01 p.19 (journal p.4926); D01 p.20 (journal p.4927); Figure 6 note",
+     "step": 8
+    }
+   ],
+   "variables": [
+    {
+     "source_columns": [
+      "totaltaga",
+      "totaltagb",
+      "totaltagh",
+      "totaltagv2a",
+      "totaltagv2b",
+      "totaltagv2h"
+     ],
+     "transformation": "sum of (a) tags added to existing streets (one-way, speed limit, access), (b) building creations/modifications, (c) amenity creations/modifications; exact column combination unstated (inferred: a=amenity, b=building, h=highway tags; v2 = tag on existing object)",
+     "source_locator": "D01 p.10 (journal p.4917); Sec 2.4.1",
+     "name": "Follow-on"
+    },
+    {
+     "source_columns": [
+      "totalusers"
+     ],
+     "transformation": "number of unique user IDs editing in county-quarter (mapping inferred); same user in several counties counted in each (D01 p.25 endnote 19)",
+     "source_locator": "D01 p.10 (journal p.4917); Sec 2.4.1",
+     "name": "Contributors"
+    }
+   ],
+   "estimator": "unstated: separate regressions per density decile (panel DiD Post x Treat with county and quarter FE inferred as 'baseline'; cross-sectional alternative possible)",
+   "dependent_variable": "log follow-on contributions; log contributors (inferred)",
+   "regressors": [
+    "Post x Treat (inferred)"
+   ],
+   "controls": "unstated",
+   "fixed_effects": "unstated",
+   "weights": "unstated",
+   "cluster_or_se_method": "unstated; interval level unstated",
+   "event_time_or_period_definitions": "unstated",
+   "software": "unstated",
+   "alpha": "unstated",
+   "tail_direction": null,
+   "missing_data_rule": "unstated",
+   "output_required": "Coefficient and interval for each density decile 1-10, for follow-on contributions and contributors"
+  },
+  {
+   "analysis_id": "A19",
+   "claim_ids": [
+    "C_F6_b"
+   ],
+   "table_or_figure": "Figure 6 (b)",
+   "sample_steps": [
+    {
+     "step": 1,
+     "description": "Load county_lookup.csv; Treatment = treat",
+     "columns": [
+      "FIPS",
+      "treat"
+     ],
+     "values": "treat in {0,1}",
+     "source_locator": "D01 p.10 (journal p.4917); Sec 2.4.2; D03"
+    },
+    {
+     "step": 2,
+     "description": "Exclude Massachusetts (not seeded with TIGER)",
+     "columns": [
+      "STATE_FIPS",
+      "STATE_NAME"
+     ],
+     "values": "STATE_NAME == 'Massachusetts' dropped (STATE_FIPS 25; code inferred)",
+     "source_locator": "D01 p.5 (journal p.4912); Sec 2.2.2; Figure 1 note p.7"
+    },
+    {
+     "step": 3,
+     "description": "Keep only counties for which TIGER was incorporated into OSM (the article's county universe); whether county_lookup already equals this universe is unstated",
+     "columns": [
+      "FIPS"
+     ],
+     "values": "unstated",
+     "source_locator": "D01 p.5 (journal p.4912); Sec 2.2.2"
+    },
+    {
+     "step": 4,
+     "description": "Merge quarterly.csv on county key",
+     "columns": [
+      "geoid",
+      "FIPS"
+     ],
+     "values": "geoid == FIPS (inferred format harmonisation, e.g. 5-digit zero-padded)",
+     "source_locator": "D03; D51 (inferred)"
+    },
+    {
+     "step": 5,
+     "description": "Restrict to quarters 2005Q2 through 2014Q4",
+     "columns": [
+      "quarter"
+     ],
+     "values": "2005Q2 <= quarter <= 2014Q4",
+     "source_locator": "D01 p.11 (journal p.4918); Sec 2.4.5; Table 2 note p.12"
+    },
+    {
+     "step": 6,
+     "description": "Balance panel: every county x every quarter; county-quarters absent from quarterly.csv set to zero (inferred from 'balanced panel'; rule unstated)",
+     "columns": [
+      "geoid",
+      "quarter"
+     ],
+     "values": "unstated (zero-fill inferred)",
+     "source_locator": "D01 p.12 (journal p.4919); Table 2 note"
+    },
+    {
+     "step": 7,
+     "description": "Merge time-varying ACS controls by county and calendar year (inferred)",
+     "columns": [
+      "geo_fips",
+      "acsyear"
+     ],
+     "values": "acsyear == year(quarter) (inferred); rule for panel years lacking an ACS row unstated",
+     "source_locator": "D01 p.13 (journal p.4920); Sec 3.2.1 'county-quarter control variables'"
+    }
+   ],
+   "variables": [
+    {
+     "name": "New contributors reaching percentile p",
+     "source_columns": [
+      "totalpctcontrib10",
+      "totalpctcontrib25",
+      "totalpctcontrib50",
+      "totalpctcontrib75",
+      "totalpctcontrib90",
+      "totalpctcontrib99"
+     ],
+     "transformation": "number of new contributors in county-quarter who go on to reach at least percentile p of total lifetime contributions in the county (mapping inferred; percentile reference population unstated); log (inferred)",
+     "source_locator": "D01 p.19 (journal p.4926); D01 p.20 (journal p.4927); Figure 6 note"
+    }
+   ],
+   "estimator": "unstated (panel DiD Post x Treat inferred)",
+   "dependent_variable": "six outcomes, p in {10,25,50,75,90,99}",
+   "regressors": [
+    "Post x Treat (inferred)"
+   ],
+   "controls": "unstated",
+   "fixed_effects": "unstated",
+   "weights": "unstated",
+   "cluster_or_se_method": "unstated; interval level unstated",
+   "event_time_or_period_definitions": "unstated",
+   "software": "unstated",
+   "alpha": "unstated",
+   "tail_direction": null,
+   "missing_data_rule": "unstated",
+   "output_required": "Coefficient and interval for each percentile threshold"
+  }
+ ],
+ "notes": "All column-to-concept mappings marked 'inferred' come from matching D03/D41-D54 names to article definitions; none is stated by the author. Page numbers are PDF pages; D01 PDF page = journal page minus 4907."
+}

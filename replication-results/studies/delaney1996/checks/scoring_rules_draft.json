@@ -1,0 +1,59 @@
+{
+  "record": "scoring_rules",
+  "version": "draft_0 (to be frozen as v1 before empirical fitting)",
+  "status": "provisional; not calibrated on real papers",
+  "scorer": "deterministic code (checks/score.py), not a model self-rating",
+  "implementation_agreement": {
+    "sample_identity": "identical sorted list of respondent IDs in the estimation sample",
+    "coef_abs_tol": 1e-6,
+    "se_abs_tol": 1e-6,
+    "r2_abs_tol": 1e-6,
+    "rule": "Compare A, B and C pairwise on sample identity, N and origin estimates before any target comparison. Two agreeing implementations permit scoring on that pair; the third goes to code audit. No agreeing pair -> indeterminate/implementer_disagreement.",
+    "justification": "Same OLS problem on the same numeric file is deterministic up to floating-point error; 1e-6 is far above double-precision round-off for these magnitudes and far below printed precision (0.001)."
+  },
+  "rounding": {
+    "coefficients_and_se": "printed to 3 decimals; published interval = printed value +/- 0.0005",
+    "r2_and_f": "printed to 3 decimals; interval +/- 0.0005",
+    "star_bands": {"dagger": "p < .10 one-tailed", "*": "p < .05 one-tailed", "**": "p < .01 one-tailed", "none": "p >= .10 one-tailed"}
+  },
+  "sign": "Reconstructed sign compared with published sign when the published interval excludes zero; if the published interval includes zero, sign criterion is not assessable for that cell.",
+  "inference": {
+    "bands": ["p<.01", ".01<=p<.05", ".05<=p<.10", "p>=.10"],
+    "tail": "one-tailed in the hypothesized (positive) direction for HRM-practice claims, per the article's stated tests; controls and two-sided claims use the article's printed rule",
+    "band_difference": "integer distance between published star band and reconstructed band",
+    "discrepancy_criterion": "band change of 2 or more (adjacent-band change never sufficient)",
+    "positive_claim_rule": "For a claim of positive significance, a stronger reconstructed band is not a failure. For a claim of non-significance, a reconstructed significant result in either direction is recorded as contradicting it."
+  },
+  "magnitude": {
+    "unit": "published SE",
+    "distance": "max(0, |recon - published_interval_nearest_point|) / published_se",
+    "bands_same_release_independent_construction": {"within": "<= 1.0", "moderate": "1.0 - 2.0", "large": "> 2.0"},
+    "discrepancy_criterion": "large (> 2.0 published SEs)",
+    "justification": "Same public NOS release but independently constructed multi-item scales and an incompletely documented sample rule; differences up to two sampling SEs are treated as within reconstruction noise. Provisional, not calibrated.",
+    "relative_difference": "also reported as (recon - published)/|published| when |published| >= 0.01",
+    "missing_published_se": "magnitude criterion not audited"
+  },
+  "n_tolerance": {
+    "match": "|N_recon - N_pub| / N_pub <= 0.02",
+    "near": "0.02 - 0.05",
+    "mismatch": "> 0.05",
+    "consequence": "N mismatch makes the origin sample criterion unmet: the claim cannot be classified consistent; it becomes indeterminate/sample_reconstruction unless the discrepant rule is met at the origin and at every equivalent reading, in which case it is a discrepant candidate requiring adversarial review and human confirmation."
+  },
+  "benchmark_inference": {
+    "native": "classical OLS SEs (article's apparent method)",
+    "benchmark_adaptation": "Organizations are the sampling and observation unit; no assignment-level clustering applies, so no clusters are invented. Declared adaptation: HC3 heteroskedasticity-consistent SEs (Long & Ervin 2000, The American Statistician 54:217-224) as the benchmark for linear models. Wild cluster bootstrap not applicable (no clusters). Few-cluster threshold not applicable.",
+    "fragile_inference": "Coefficient reproduces (magnitude within 1.0 SE, same sign, band difference <= 1 under native SEs) but the HC3 benchmark band is 2 or more bands weaker than the published band, or crosses from p<.05 to p>=.10."
+  },
+  "equivalent_set_summary": {
+    "report": ["sign agreement share", "share significant at one-tailed .05 in hypothesized direction", "median estimate", "min-max", "published estimate percentile position"],
+    "stability_rule_fragile": "Origin matches, and among substantive equivalent specifications either sign agreement share < 0.80 or (for a claim of positive significance) the share significant at one-tailed .05 < 0.50",
+    "uncertain_set": "reported separately; does not enter the fragility rule",
+    "no_equivalent_alternatives": "specification fragility not assessed"
+  },
+  "outcome_precedence": ["not_attemptable", "indeterminate", "discrepant", "fragile", "fragile_inference", "consistent"],
+  "grey_zone": "Benefit of uncertainty goes to indeterminate. Discrepant requires: implementations agree; origin outside tolerance on sign, a >=2-band inference change, or large magnitude; the same holds at every equivalent reading; survives adversarial review; human confirmation recorded. Without human confirmation the record reads discrepant_candidate_pending_human_review.",
+  "missingness_failure": "Failed fits are retained with reasons; a claim whose origin model fails in all implementations is not_attemptable for that scope.",
+  "paper_aggregation": "to be set from reconciled focal designation before execution",
+  "compute_budget": "to be set before execution",
+  "calibration_status": "Synthetic rule tests only; no planted-error, null-data, unreachable-target or human-reproduced calibration arms performed in this session."
+}

@@ -1,0 +1,5 @@
+{"implementation": "B", "round": 1,
+ "items": [
+  {"item": 1, "finding": "trimws strips tab/CR/LF in addition to spaces", "review": "No effect on data: a byte scan of both raw files found 0 records with tab, CR, LF, VT or FF inside fields; supplied CSV tables contain none. Recorded as no-effect deviation; no code change required.", "status": "reviewed_no_effect"},
+  {"item": 2, "finding": "influence scope 'none' default", "review": "False positive relative to the frozen package: SOFTWARE.md specifies --influence all|first20|none. Execution invokes B with --influence first20 per the frozen budget.", "status": "reviewed_false_positive"}],
+ "decision": "Code v1 of implementation B accepted for frozen execution without modification."}

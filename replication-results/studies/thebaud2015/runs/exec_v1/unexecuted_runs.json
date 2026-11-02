@@ -1,0 +1,14 @@
+{
+  "recorded_utc": "2026-10-28T01:33:27Z",
+  "basis": "User instruction in session at 2026-10-28T01:33Z: 'A and B are enough. Stop C and finalize the project.' The frozen budget otherwise allowed C to run until the 30 h cap.",
+  "implementation_C": {
+    "ORIGIN": "started 2026-10-27T17:13:49Z; terminated by the user at 2026-10-28T01:35:54Z (exit 143, SIGTERM) after 30,125 s while fitting R1. results.csv is written only at the end, so no estimates were saved. The flushed log shows M1-M8 fitted and converged with n, countries and surveys identical to A and B (M1 345,570/24/142; M2-M4, M6 as A; M7 32,890/23/125; M8 19,944/22/70). This counts as a partial sample-identity check only, not an estimate agreement check.",
+    "deviations": "not executed (U01-U20, U22-U26, N01)",
+    "influence": "not executed (M3-M8)"
+  },
+  "implementation_B": {
+    "deviations_and_influence": "not executed; frozen budget ran B on deviations only if time remained after A and C"
+  },
+  "implementation_A": "all registered runs executed (ORIGIN, 113 deviation fits, 137 influence refits); U21 unavailable",
+  "consequence": "Scoring rests on the agreeing A-B pair (276/276 ORIGIN terms). The deviation grid and influence refits rest on A alone and have no second-implementation check."
+}

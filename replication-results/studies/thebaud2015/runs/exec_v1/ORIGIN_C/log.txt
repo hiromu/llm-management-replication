@@ -1,0 +1,83 @@
+
+[26940] signal 15: Terminated: 15
+in expression starting at <project>/studies/thebaud2015/implementation/impl_C/v1/run.jl:980
+__psynch_cvwait at /usr/lib/system/libsystem_kernel.dylib (unknown line)
+unknown function (ip: 0x0) at (unknown file)
+_setindex! at ./array.jl:1003 [inlined]
+setindex! at ./array.jl:997 [inlined]
+mul! at ~/.julia/packages/MixedModels/aZvvB/src/remat.jl:366
+mul! at /Users/julia/.julia/scratchspaces/a66863c6-20e8-4ff4-8a62-49f30b1f605e/agent-cache/default-honeycrisp-HL2F7YQ3XH.0/build/default-honeycrisp-HL2F7YQ3XH-0/julialang/julia-release-1-dot-12/usr/share/julia/stdlib/v1.12/LinearAlgebra/src/matmul.jl:265
+unknown function (ip: 0x13d540063) at (unknown file)
+updateA! at ~/.julia/packages/MixedModels/aZvvB/src/linearmixedmodel.jl:1464
+reweight! at ~/.julia/packages/MixedModels/aZvvB/src/linearmixedmodel.jl:1168
+unknown function (ip: 0x13d5284bb) at (unknown file)
+deviance! at ~/.julia/packages/MixedModels/aZvvB/src/generalizedlinearmixedmodel.jl:143
+deviance! at ~/.julia/packages/MixedModels/aZvvB/src/generalizedlinearmixedmodel.jl:141 [inlined]
+#pirls!#121 at ~/.julia/packages/MixedModels/aZvvB/src/generalizedlinearmixedmodel.jl:649
+pirls! at ~/.julia/packages/MixedModels/aZvvB/src/generalizedlinearmixedmodel.jl:614 [inlined]
+#_objective!#120 at ~/.julia/packages/MixedModels/aZvvB/src/generalizedlinearmixedmodel.jl:571
+_objective! at ~/.julia/packages/MixedModels/aZvvB/src/generalizedlinearmixedmodel.jl:568 [inlined]
+obj at ~/.julia/packages/MixedModels/aZvvB/src/MixedModelsNLoptExt.jl:72
+nlopt_callback_wrapper at ~/.julia/packages/NLopt/wMgqN/src/NLopt.jl:522
+jlcapi_nlopt_callback_wrapper_27205 at ~/.julia/compiled/v1.12/MixedModels/tBiYK_UIOMS.dylib (unknown line)
+newuoa at ~/.julia/artifacts/acfc7f82c055179bb7d033614e3519cbff3bdfae/lib/libnlopt.1.1.0.dylib (unknown line)
+nlopt_optimize at ~/.julia/artifacts/acfc7f82c055179bb7d033614e3519cbff3bdfae/lib/libnlopt.1.1.0.dylib (unknown line)
+nlopt_optimize at ~/.julia/packages/NLopt/wMgqN/src/libnlopt.jl:182 [inlined]
+optimize! at ~/.julia/packages/NLopt/wMgqN/src/NLopt.jl:849
+optimize at ~/.julia/packages/NLopt/wMgqN/src/NLopt.jl:863
+jfptr_optimize_27246 at ~/.julia/compiled/v1.12/MixedModels/tBiYK_UIOMS.dylib (unknown line)
+#optimize!#3 at ~/.julia/packages/MixedModels/aZvvB/src/MixedModelsNLoptExt.jl:89
+optimize! at ~/.julia/packages/MixedModels/aZvvB/src/MixedModelsNLoptExt.jl:61 [inlined]
+#optimize!#45 at ~/.julia/packages/MixedModels/aZvvB/src/optsummary.jl:181
+optimize! at ~/.julia/packages/MixedModels/aZvvB/src/optsummary.jl:181 [inlined]
+#fit!#99 at ~/.julia/packages/MixedModels/aZvvB/src/generalizedlinearmixedmodel.jl:292
+fit! at ~/.julia/packages/MixedModels/aZvvB/src/generalizedlinearmixedmodel.jl:251
+unknown function (ip: 0x13d5b07fb) at (unknown file)
+#fit#96 at ~/.julia/packages/MixedModels/aZvvB/src/generalizedlinearmixedmodel.jl:187
+fit at ~/.julia/packages/MixedModels/aZvvB/src/generalizedlinearmixedmodel.jl:174
+unknown function (ip: 0x168b6461f) at (unknown file)
+#fit#95 at ~/.julia/packages/MixedModels/aZvvB/src/generalizedlinearmixedmodel.jl:171
+unknown function (ip: 0x168aec4d7) at (unknown file)
+fit at ~/.julia/packages/MixedModels/aZvvB/src/generalizedlinearmixedmodel.jl:163
+unknown function (ip: 0x168ae44cf) at (unknown file)
+fit_mixed at <project>/studies/thebaud2015/implementation/impl_C/v1/run.jl:583
+fit_and_record! at <project>/studies/thebaud2015/implementation/impl_C/v1/run.jl:719
+run_models! at <project>/studies/thebaud2015/implementation/impl_C/v1/run.jl:799
+unknown function (ip: 0x13c7b94b3) at (unknown file)
+main at <project>/studies/thebaud2015/implementation/impl_C/v1/run.jl:943
+unknown function (ip: 0x11359ae83) at (unknown file)
+jl_apply at /Users/julia/.julia/scratchspaces/a66863c6-20e8-4ff4-8a62-49f30b1f605e/agent-cache/default-honeycrisp-HL2F7YQ3XH.0/build/default-honeycrisp-HL2F7YQ3XH-0/julialang/julia-release-1-dot-12/src/./julia.h:2391 [inlined]
+do_call at /Users/julia/.julia/scratchspaces/a66863c6-20e8-4ff4-8a62-49f30b1f605e/agent-cache/default-honeycrisp-HL2F7YQ3XH.0/build/default-honeycrisp-HL2F7YQ3XH-0/julialang/julia-release-1-dot-12/src/interpreter.c:123
+eval_stmt_value at /Users/julia/.julia/scratchspaces/a66863c6-20e8-4ff4-8a62-49f30b1f605e/agent-cache/default-honeycrisp-HL2F7YQ3XH.0/build/default-honeycrisp-HL2F7YQ3XH-0/julialang/julia-release-1-dot-12/src/interpreter.c:194
+eval_body at /Users/julia/.julia/scratchspaces/a66863c6-20e8-4ff4-8a62-49f30b1f605e/agent-cache/default-honeycrisp-HL2F7YQ3XH.0/build/default-honeycrisp-HL2F7YQ3XH-0/julialang/julia-release-1-dot-12/src/interpreter.c:689
+jl_interpret_toplevel_thunk at /Users/julia/.julia/scratchspaces/a66863c6-20e8-4ff4-8a62-49f30b1f605e/agent-cache/default-honeycrisp-HL2F7YQ3XH.0/build/default-honeycrisp-HL2F7YQ3XH-0/julialang/julia-release-1-dot-12/src/interpreter.c:898
+jl_toplevel_eval_flex at /Users/julia/.julia/scratchspaces/a66863c6-20e8-4ff4-8a62-49f30b1f605e/agent-cache/default-honeycrisp-HL2F7YQ3XH.0/build/default-honeycrisp-HL2F7YQ3XH-0/julialang/julia-release-1-dot-12/src/toplevel.c:1035
+jl_toplevel_eval_flex at /Users/julia/.julia/scratchspaces/a66863c6-20e8-4ff4-8a62-49f30b1f605e/agent-cache/default-honeycrisp-HL2F7YQ3XH.0/build/default-honeycrisp-HL2F7YQ3XH-0/julialang/julia-release-1-dot-12/src/toplevel.c:975
+ijl_toplevel_eval at /Users/julia/.julia/scratchspaces/a66863c6-20e8-4ff4-8a62-49f30b1f605e/agent-cache/default-honeycrisp-HL2F7YQ3XH.0/build/default-honeycrisp-HL2F7YQ3XH-0/julialang/julia-release-1-dot-12/src/toplevel.c:1047 [inlined]
+ijl_toplevel_eval_in at /Users/julia/.julia/scratchspaces/a66863c6-20e8-4ff4-8a62-49f30b1f605e/agent-cache/default-honeycrisp-HL2F7YQ3XH.0/build/default-honeycrisp-HL2F7YQ3XH-0/julialang/julia-release-1-dot-12/src/toplevel.c:1092
+eval at ./boot.jl:489
+include_string at ./loading.jl:2874
+_include at ./loading.jl:2934
+include at ./Base.jl:306
+exec_options at ./client.jl:317
+_start at ./client.jl:550
+jfptr__start_29115.1 at ~/.julia/juliaup/julia-1.12.6+0.aarch64.apple.darwin14/Julia-1.12.app/Contents/Resources/julia/lib/julia/sys.dylib (unknown line)
+jl_apply at /Users/julia/.julia/scratchspaces/a66863c6-20e8-4ff4-8a62-49f30b1f605e/agent-cache/default-honeycrisp-HL2F7YQ3XH.0/build/default-honeycrisp-HL2F7YQ3XH-0/julialang/julia-release-1-dot-12/src/./julia.h:2391 [inlined]
+true_main at /Users/julia/.julia/scratchspaces/a66863c6-20e8-4ff4-8a62-49f30b1f605e/agent-cache/default-honeycrisp-HL2F7YQ3XH.0/build/default-honeycrisp-HL2F7YQ3XH-0/julialang/julia-release-1-dot-12/src/jlapi.c:971
+jl_repl_entrypoint at /Users/julia/.julia/scratchspaces/a66863c6-20e8-4ff4-8a62-49f30b1f605e/agent-cache/default-honeycrisp-HL2F7YQ3XH.0/build/default-honeycrisp-HL2F7YQ3XH-0/julialang/julia-release-1-dot-12/src/jlapi.c:1139
+unknown function (ip: 0x0) at (unknown file)
+Allocations: 263985062 (Pool: 263983437; Big: 1625); GC: 159
+[ Info: run ids: ORIGIN
+[ Info: read gem_extract: 713933 rows; country_year_inputs: 264 rows
+[ Info: ORIGIN M1: n=345570 countries=24 surveys=142 converged=true singular=false (2253.8s)
+[ Info: ORIGIN M2: n=342734 countries=23 surveys=139 converged=true singular=false (8760.5s)
+[ Info: ORIGIN M3: n=342734 countries=23 surveys=139 converged=true singular=false (10997.5s)
+[ Info: ORIGIN M4: n=31520 countries=23 surveys=139 converged=true singular=false (836.6s)
+[ Info: ORIGIN M5: n=33626 countries=23 surveys=139 converged=true singular=true (1.5s)
+[ Info: ORIGIN M6: n=29961 countries=23 surveys=139 converged=true singular=false (536.7s)
+[ Info: ORIGIN M7: n=32890 countries=23 surveys=125 converged=true singular=false (836.5s)
+[ Info: ORIGIN M8: n=19944 countries=22 surveys=70 converged=true singular=false (331.5s)
+time: command terminated abnormally
+real 30124.54
+user 227007.22
+sys 95900.36

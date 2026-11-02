@@ -1,0 +1,114 @@
+{
+ "packet_version": "v1",
+ "frozen_utc": "2026-10-27T11:45:21+00:00",
+ "paper_id": "ORSC_2011_Lehman",
+ "documents": [
+  {
+   "doc_id": "D01",
+   "order": 1,
+   "role": "main article",
+   "file": "packet/docs/D01_article.pdf",
+   "citation": "Lehman, Hahn, Ramanujam and Alge (2011), Organization Science 22(6): 1613-1630, doi:10.1287/orsc.1100.0626",
+   "sha256": "93278fe5f7ad8a54cb4808305f6b8725ae968944fd6e9cda75e8089047e6c8d3",
+   "pdf_pages": 19,
+   "page_mapping": "PDF pages 1-18 = journal pages 1613-1630 (journal page = PDF page + 1612). PDF page 19 is a database copyright notice, not article content.",
+   "version": "Version of record (issue 22(6), Nov-Dec 2011); first published online in Articles in Advance 14 Feb 2011",
+   "identity_checks": {
+    "title": "matches",
+    "authors": "matches",
+    "doi": "matches (printed on PDF page 1)",
+    "appendix": "printed Appendix (NFL rules) on PDF pages 15-16 region; no reference to an online appendix or e-companion"
+   },
+   "preparation_or_redaction": "supplied library copy; no redaction recorded",
+   "text_extraction": {
+    "tool": "pdftotext 26.10.0 -layout, one file per PDF page",
+    "files": [
+     {
+      "file": "packet/text/pages/ORSC_2011_Lehman_p01.txt",
+      "sha256": "938ec17265427967ab1bce7762c2ccceb056326ce30fc082b50075f7c74f4460"
+     },
+     {
+      "file": "packet/text/pages/ORSC_2011_Lehman_p02.txt",
+      "sha256": "23ddd9ff294b123cf65aa3d9f236970d732e8983547312862d366d1457e8be51"
+     },
+     {
+      "file": "packet/text/pages/ORSC_2011_Lehman_p03.txt",
+      "sha256": "e8ba2ce85551b1a5d77f1573afe8ed9c8c97ba189b1b4957c3011bf75c50ddae"
+     },
+     {
+      "file": "packet/text/pages/ORSC_2011_Lehman_p04.txt",
+      "sha256": "6b1a06259c4ddf4528987689e3b11d15fecb6b44ca4ad53f37e3bc8051e3b054"
+     },
+     {
+      "file": "packet/text/pages/ORSC_2011_Lehman_p05.txt",
+      "sha256": "664668a3342458f4f9b3dc3fd3b76c3b1e9068bd2dc83baa88429b9e8c2bc99d"
+     },
+     {
+      "file": "packet/text/pages/ORSC_2011_Lehman_p06.txt",
+      "sha256": "b3cae9682cb317888195dddaf3d774bb42de27d9317d956586e3a8117852e4d9"
+     },
+     {
+      "file": "packet/text/pages/ORSC_2011_Lehman_p07.txt",
+      "sha256": "02aa0dfa7336326cd8b9d7d6bfbbc4cab5ff7f8a4395121fbc37f8e206506f83"
+     },
+     {
+      "file": "packet/text/pages/ORSC_2011_Lehman_p08.txt",
+      "sha256": "bd76e97e943b6092206e360c6d9b2c7ef9dc8b89db3f81bec28053a5caf3739d"
+     },
+     {
+      "file": "packet/text/pages/ORSC_2011_Lehman_p09.txt",
+      "sha256": "10193dee2a3d40334b91f211888f0e5ee737d0414cd529bc7f414cc7fe36ee5a"
+     },
+     {
+      "file": "packet/text/pages/ORSC_2011_Lehman_p10.txt",
+      "sha256": "b6b4265bfe9dcbac55e39c18fa1ae588289216539810883646e5d12051b4b58b"
+     },
+     {
+      "file": "packet/text/pages/ORSC_2011_Lehman_p11.txt",
+      "sha256": "67528b4eec4a9944cde03e0428c784c09c4eb4c6771f25756ad8fc2e6d2bc37e"
+     },
+     {
+      "file": "packet/text/pages/ORSC_2011_Lehman_p12.txt",
+      "sha256": "cacb403ec9edf600d943f47ecf8cd78ef64fc533c415349dbda49419af8da161"
+     },
+     {
+      "file": "packet/text/pages/ORSC_2011_Lehman_p13.txt",
+      "sha256": "f3f25a68cb9384d1523365d8884fd4309956f5b69ea26bc50d7d979c7363159a"
+     },
+     {
+      "file": "packet/text/pages/ORSC_2011_Lehman_p14.txt",
+      "sha256": "b0ac56deba028d2e295ba56beb3b463b618a69d1b52e5e4660f9bece73ed67af"
+     },
+     {
+      "file": "packet/text/pages/ORSC_2011_Lehman_p15.txt",
+      "sha256": "4167607e69c485ff378eeef62e0781d98759ba22fb3fcb8956d2caf40149a0a5"
+     },
+     {
+      "file": "packet/text/pages/ORSC_2011_Lehman_p16.txt",
+      "sha256": "1f2822e02e502e020cb67d5613c10d678c7e5de768adcfb650d6de818b9f0e72"
+     },
+     {
+      "file": "packet/text/pages/ORSC_2011_Lehman_p17.txt",
+      "sha256": "897a3194e912c712c6abbf9532fe55dece2e27493c1eb17acbc7363450dc1885"
+     },
+     {
+      "file": "packet/text/pages/ORSC_2011_Lehman_p18.txt",
+      "sha256": "81aa8267425ed003dbb6171b4a05ca6f2e8aab717a6d708dc5ed9f0595fe75da"
+     },
+     {
+      "file": "packet/text/pages/ORSC_2011_Lehman_p19.txt",
+      "sha256": "1028434b8ee205e4815600d501107d0031137473558e5ac37fa455347783a420"
+     }
+    ]
+   }
+  }
+ ],
+ "supplements_included": [],
+ "supplement_search": "logs/supplement_search.json: not_found_after_documented_search (Crossref relations empty, no errata; live INFORMS page blocked by bot check; archived 2023-11-18 page shows no supplemental material)",
+ "known_gaps": [
+  "Live INFORMS supplemental-material tab could not be checked (HTTP 403); a supplement added after Nov 2023 cannot be completely excluded.",
+  "A different copy of the article (18 pages, different hash) found on a Purdue server was excluded; the supplied library PDF is the packet version."
+ ],
+ "embedded_data_or_code": "none known before reading; readers must report any",
+ "readers": "identical packet for Reader A (claude-fable-5-1) and Reader B (gpt-6-astra)"
+}

@@ -1,0 +1,65 @@
+{
+  "rule": "../../scoring_rules_common_v1.json",
+  "status": "post hoc",
+  "study_rule_paper": "partially reproduced",
+  "paper": {
+    "common": "consistent",
+    "lenient": "consistent"
+  },
+  "claims": {
+    "common": {
+      "steepness, cap": "consistent",
+      "steepness, camp": "consistent",
+      "sameness, cap": "consistent",
+      "sameness, camp": "consistent"
+    },
+    "lenient": {
+      "steepness, cap": "consistent",
+      "steepness, camp": "consistent",
+      "sameness, cap": "consistent",
+      "sameness, camp": "consistent"
+    }
+  },
+  "terms_by_table": {
+    "common": {
+      "Table 4": {
+        "consistent": 44,
+        "indeterminate": 2,
+        "candidate": 0,
+        "total": 46
+      },
+      "Table 5": {
+        "consistent": 7,
+        "indeterminate": 1,
+        "candidate": 0,
+        "total": 8
+      },
+      "Table 6": {
+        "consistent": 54,
+        "indeterminate": 4,
+        "candidate": 0,
+        "total": 58
+      }
+    },
+    "lenient": {
+      "Table 4": {
+        "consistent": 44,
+        "indeterminate": 2,
+        "candidate": 0,
+        "total": 46
+      },
+      "Table 5": {
+        "consistent": 7,
+        "indeterminate": 1,
+        "candidate": 0,
+        "total": 8
+      },
+      "Table 6": {
+        "consistent": 54,
+        "indeterminate": 4,
+        "candidate": 0,
+        "total": 58
+      }
+    }
+  }
+}

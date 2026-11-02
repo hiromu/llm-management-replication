@@ -1,0 +1,86 @@
+[
+  {
+    "path": "data/derived/country_codes.csv",
+    "expected": "694a24d4ffbb61752b223f575b71fa6bf266f0daf78d4f32309616ed6c79515c",
+    "observed": "694a24d4ffbb61752b223f575b71fa6bf266f0daf78d4f32309616ed6c79515c",
+    "match": true
+  },
+  {
+    "path": "data/derived/country_year_inputs.csv",
+    "expected": "100122411753639c4db44f0cc53cb7a01c62b010c3ca32e2620962c51c687114",
+    "observed": "100122411753639c4db44f0cc53cb7a01c62b010c3ca32e2620962c51c687114",
+    "match": true
+  },
+  {
+    "path": "data/derived/country_year_lineage.csv",
+    "expected": "14ff39b7564273e48409191aaae01f618d4e4a60096ffd42f451ae7784297723",
+    "observed": "14ff39b7564273e48409191aaae01f618d4e4a60096ffd42f451ae7784297723",
+    "match": true
+  },
+  {
+    "path": "data/derived/gem_extract.csv",
+    "expected": "805814b164f957f0e6083659784e05c24bc00a202afe697a2fa8bd00c530c2df",
+    "observed": "805814b164f957f0e6083659784e05c24bc00a202afe697a2fa8bd00c530c2df",
+    "match": true
+  },
+  {
+    "path": "registry/construction/hdr_parsed_rows.csv",
+    "expected": "d0431486c4d8145ca45c67ce587804fa8de4c16f663c7dbe1eddea3bba1ae9ae",
+    "observed": "d0431486c4d8145ca45c67ce587804fa8de4c16f663c7dbe1eddea3bba1ae9ae",
+    "match": true
+  },
+  {
+    "path": "registry/construction/leave_inputs_audit.json",
+    "expected": "c01f03459aed46feab3585f1ca55ba206d17676ea2795b1eab4138f879554008",
+    "observed": "c01f03459aed46feab3585f1ca55ba206d17676ea2795b1eab4138f879554008",
+    "match": true
+  },
+  {
+    "path": "reconciliation/frozen/manifest_neutral.md",
+    "expected": "bfe7608c31cb3a7311c356d441ff94ab3f8e0e419488e239b9998746141d7f4a",
+    "observed": "bfe7608c31cb3a7311c356d441ff94ab3f8e0e419488e239b9998746141d7f4a",
+    "match": true
+  },
+  {
+    "path": "reconciliation/frozen/scoring_rules.json",
+    "expected": "5b76afc82d8493bf13d8ea06107a18cac7b6a1dc1dbec3322e9cbfd47795b806",
+    "observed": "5b76afc82d8493bf13d8ea06107a18cac7b6a1dc1dbec3322e9cbfd47795b806",
+    "match": true
+  },
+  {
+    "path": "implementation/role_record.json",
+    "expected": "60da449ff4d9e8f38c534cfea7c66f57d21a51fbb2d4a58417e337fd801a6e6b",
+    "observed": "60da449ff4d9e8f38c534cfea7c66f57d21a51fbb2d4a58417e337fd801a6e6b",
+    "match": true
+  },
+  {
+    "path": "checks/score.py",
+    "expected": "24f8b52401b659834fb60ad210cbe26060691f37eac7afde3e36caf45ec6d5ba",
+    "observed": "24f8b52401b659834fb60ad210cbe26060691f37eac7afde3e36caf45ec6d5ba",
+    "match": true
+  },
+  {
+    "path": "checks/compare_implementations.py",
+    "expected": "f94100d36ab39035e0093875a53574d6ec09e450a825d9fa09d28eab35749640",
+    "observed": "f94100d36ab39035e0093875a53574d6ec09e450a825d9fa09d28eab35749640",
+    "match": true
+  },
+  {
+    "path": "reconciliation/frozen/scoring_rules_addendum_v1_1.md",
+    "expected": "831905350e2d341b23b2259f9e740848621bededf55c3085441e9699bb86c201",
+    "observed": "831905350e2d341b23b2259f9e740848621bededf55c3085441e9699bb86c201",
+    "match": true
+  },
+  {
+    "path": "reconciliation/frozen/scoring_rules_addendum_v1_2.md",
+    "expected": "063b103cf24364d2269faaafbff145be8e35a851760a4cd3575b366a8428aab9",
+    "observed": "063b103cf24364d2269faaafbff145be8e35a851760a4cd3575b366a8428aab9",
+    "match": true
+  },
+  {
+    "path": "checks/versions/score_v1_1.py",
+    "expected": "ca65a539a9da270267f5380b7a830018b311d26944f081eb10da1d111a21e213",
+    "observed": "ca65a539a9da270267f5380b7a830018b311d26944f081eb10da1d111a21e213",
+    "match": true
+  }
+]

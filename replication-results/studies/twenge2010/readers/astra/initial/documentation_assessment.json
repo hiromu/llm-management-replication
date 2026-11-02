@@ -1,0 +1,194 @@
+{
+  "choices": [
+    {
+      "choice": "Compare the selected repeated cross-sections at the same life stage",
+      "commonness": "common",
+      "justified_in_article": true,
+      "locator": {
+        "doc_id": "P1",
+        "pdf_page": 10,
+        "section_or_table": "Method"
+      },
+      "rationale": "Explicit design rationale; cannot separate birth-cohort from calendar-period changes."
+    },
+    {
+      "choice": "Fit CFA and multigroup measurement-invariance models before latent-mean comparisons",
+      "commonness": "common",
+      "justified_in_article": true,
+      "locator": {
+        "doc_id": "P1",
+        "pdf_page": 14,
+        "section_or_table": "Primary Analyses"
+      },
+      "rationale": "Article gives a comparability rationale and cites measurement-invariance literature."
+    },
+    {
+      "choice": "Use a partial scalar model and CFI change criterion",
+      "commonness": "common",
+      "justified_in_article": true,
+      "locator": {
+        "doc_id": "P1",
+        "pdf_page": 15,
+        "section_or_table": "Primary Analyses"
+      },
+      "rationale": "Rationale stated; exact implementation constraints remain incomplete."
+    },
+    {
+      "choice": "Use latent means instead of observed item averages",
+      "commonness": "common",
+      "justified_in_article": true,
+      "locator": {
+        "doc_id": "P1",
+        "pdf_page": 15,
+        "section_or_table": "Primary Analyses"
+      },
+      "rationale": "Explicit model-based comparison; scaling is not documented."
+    },
+    {
+      "choice": "Discard security and influence from final scales after reliability review",
+      "commonness": "common",
+      "justified_in_article": true,
+      "locator": {
+        "doc_id": "P1",
+        "pdf_page": 10,
+        "section_or_table": "Preliminary Analyses"
+      },
+      "rationale": "Explicit psychometric rationale, with retained/rejected list fixed for replication."
+    },
+    {
+      "choice": "Keep Form 3 items as individual outcomes rather than a total scale",
+      "commonness": "common",
+      "justified_in_article": true,
+      "locator": {
+        "doc_id": "P1",
+        "pdf_page": 10,
+        "section_or_table": "Preliminary Analyses"
+      },
+      "rationale": "Explicit measurement-fit rationale."
+    },
+    {
+      "choice": "Report standardized effect sizes and individual confidence intervals",
+      "commonness": "common",
+      "justified_in_article": true,
+      "locator": {
+        "doc_id": "P1",
+        "pdf_page": 15,
+        "section_or_table": "Primary Analyses"
+      },
+      "rationale": "Rationale given, effect-size denominator omitted."
+    },
+    {
+      "choice": "Choose individual partial-scalar releases",
+      "commonness": "common",
+      "justified_in_article": false,
+      "locator": {
+        "doc_id": "P1",
+        "pdf_page": 13,
+        "section_or_table": "Table 1 footnote a"
+      },
+      "rationale": "The released items are marked but selection process and group pattern are not explained."
+    },
+    {
+      "choice": "Treat public-file observations as independent for model inference, if that is what was done",
+      "commonness": "default",
+      "justified_in_article": false,
+      "locator": {
+        "doc_id": "P1",
+        "pdf_page": 15,
+        "section_or_table": "Primary Analyses"
+      },
+      "rationale": "Only a possible software convention, not a confirmed documented method; clustered sampling is acknowledged separately."
+    },
+    {
+      "choice": "Use weights, missing-data handling and test settings that are not documented",
+      "commonness": "default",
+      "justified_in_article": false,
+      "locator": {
+        "doc_id": "P1",
+        "pdf_page": 10,
+        "section_or_table": "Method and Preliminary Analyses"
+      },
+      "rationale": "No actual undocumented setting can be assigned empirical commonness from this packet; default label denotes unresolved software convention, not known practice."
+    }
+  ],
+  "structural_counts": {
+    "n_open_decisions": 14,
+    "n_undocumented_items": 16,
+    "n_spec_levels": 29,
+    "n_final_constructs": 5,
+    "n_final_items": 19,
+    "n_descriptive_items": 29,
+    "n_selected_form_year_sources": 6
+  },
+  "undocumented_items": [
+    "Analysis-specific exclusions and complete-case sample counts",
+    "Missing-item handling in CFA and descriptive analyses",
+    "Weight use and normalization",
+    "Design-based covariance adjustment",
+    "Fitting function and covariance normalization",
+    "Factor marker and intercept-origin constraints",
+    "Latent SD definition and d denominator",
+    "Exact group-specific intercept-release matrix",
+    "Residual covariance/cross-loading structure",
+    "Item-test tail, df and variance assumption",
+    "Pairwise latent test procedure and multiplicity",
+    "Descriptive weighted-variance convention",
+    "Reliability alpha type and actual retained-scale values",
+    "Preliminary security/influence item allocation",
+    "Exact source release actually used by authors",
+    "Optimizer, convergence settings and information-matrix SE option"
+  ],
+  "unusualness_rating": "3/5: the broad CFA/invariance workflow is conventional, but the incomplete latent scaling/release documentation and internal reporting tensions make the documented implementation harder to recover. This is a qualitative assessment within the packet, not an externally benchmarked rarity score or replication verdict.",
+  "documentation_scores": {
+    "specificity": "3/5",
+    "precision": "2/5",
+    "exhaustiveness": "2/5",
+    "rationale": "Years, forms, substantive item list, software version and broad nested sequence are stated. Sample construction, weight/covariance choices, d formula, factor origins and pairwise tests are incomplete; scale coding and some table arithmetic conflict. Scores describe reproducibility of the record, not empirical truth.",
+    "locators": [
+      {
+        "doc_id": "P1",
+        "pdf_page": 9,
+        "section_or_table": "Method"
+      },
+      {
+        "doc_id": "P1",
+        "pdf_page": 10,
+        "section_or_table": "Method and Preliminary Analyses"
+      },
+      {
+        "doc_id": "P1",
+        "pdf_page": 13,
+        "section_or_table": "Table 1 notes"
+      },
+      {
+        "doc_id": "P1",
+        "pdf_page": 14,
+        "section_or_table": "Table 2"
+      },
+      {
+        "doc_id": "P1",
+        "pdf_page": 15,
+        "section_or_table": "Primary Analyses"
+      }
+    ]
+  },
+  "wider_space": [],
+  "wider_space_status": "off; not authorized for execution",
+  "locators": [
+    {
+      "doc_id": "P1",
+      "pdf_page": 10,
+      "section_or_table": "Preliminary Analyses"
+    },
+    {
+      "doc_id": "P1",
+      "pdf_page": 14,
+      "section_or_table": "Primary Analyses"
+    },
+    {
+      "doc_id": "P1",
+      "pdf_page": 15,
+      "section_or_table": "Primary Analyses"
+    }
+  ]
+}

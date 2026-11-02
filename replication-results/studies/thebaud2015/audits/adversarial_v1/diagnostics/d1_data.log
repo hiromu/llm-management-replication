@@ -1,0 +1,141 @@
+Roster surveys absent from M1: FRA_2003 
+Roster surveys absent from M3: CZE_2006 FRA_2002 FRA_2003 FRA_2004 
+     survey leave childcare  parttime       gdp    unemp      epl    status
+     <char> <num>     <num>     <num>     <num>    <num>    <num>     <num>
+1: CZE_2006    NA     0.308  5.094509 0.9141433 7.133333 3.638889 0.4608270
+2: FRA_2002    NA     1.205 24.019552 0.9425434 8.633333 2.662698 0.4666283
+3: FRA_2003    NA     1.205 23.439514 0.9406130 8.508333 2.789683 0.4666283
+4: FRA_2004    NA     1.205 23.692442 0.9458726 8.883333 2.789683 0.6938776
+    wmgr     fert
+   <num>    <num>
+1:    30 1.327948
+2:    37 1.881000
+3:    37 1.891000
+4:    37 1.915000
+steps1-3 rows: 355713  missing postsec: 9917  missing activity: 232 
+rows before step3 (steps1-2): 462395 
+          pearson spearman  n
+leave       0.823    0.758 23
+childcare   0.790    0.721 23
+parttime    0.999    0.998 23
+gdp         0.961    0.867 23
+unemp       0.988    0.933 23
+epl         0.846    0.833 23
+status      0.973    0.959 23
+wmgr        0.986    0.976 23
+fert        0.999    0.992 23
+Key: <iso3>
+      iso3 childcare_ours childcare_A1 leave_ours leave_A1 pt_ours parttime_A1
+    <char>          <num>        <num>      <num>    <num>   <num>       <num>
+ 1:    AUS           0.38        0.180        0.0     0.00    37.6       37.59
+ 2:    AUT           0.29        0.300       30.2    16.00    31.1       31.11
+ 3:    BEL           0.61        0.230       13.9    13.90    34.4       34.45
+ 4:    CAN           0.20        0.000       25.2    27.50    26.0       25.95
+ 5:    CHE           0.23        0.090        2.8     2.80    46.1       44.20
+ 6:    CZE             NA        0.140         NA    62.80      NA        5.09
+ 7:    DEU           0.37        0.070       41.2    36.00    37.4       37.36
+ 8:    DNK           1.33        0.690       19.0    19.40    23.2       23.11
+ 9:    ESP           0.43        0.440       19.3    16.00    18.8       19.27
+10:    FIN           0.89        0.730       29.1    29.00    14.9       14.32
+11:    FRA           1.14        0.360       21.4    19.80    23.1       23.32
+12:    GBR           0.74        0.380        7.6     9.93    38.0       38.18
+13:    GRC           0.00        0.130       13.2    33.50    12.6       12.64
+14:    IRL           0.28        0.260       15.2    16.70    34.0       34.05
+15:    ISL           1.24        0.600       20.8    20.60    26.1       26.08
+16:    ITA           0.51        0.150       25.1    25.10    28.1       28.29
+17:    JPN           0.31        0.230       26.0    26.00    31.6       31.66
+18:    NLD           0.53        0.140       16.0    16.00    60.0       60.01
+19:    NOR           0.80        0.520       39.0    38.00    32.9       32.75
+20:    NZL           0.65        0.080        9.4    10.50    34.2       34.27
+21:    POL           0.28        0.000       20.7    39.10    14.6       14.58
+22:    PRT           0.36        0.003       23.8    15.00     8.6        8.62
+23:    SWE           1.24        0.580       39.8    39.70    19.8       19.81
+24:    USA           0.34        0.080        0.0     0.00    18.2       18.24
+      iso3 childcare_ours childcare_A1 leave_ours leave_A1 pt_ours parttime_A1
+    <char>          <num>        <num>      <num>    <num>   <num>       <num>
+leave: mean 19.89 sd 12.08; z^2 mean 0.993 sd 1.694; cor(z, z^2) 0.227; cor(z, z(raw^2)) 0.912
+owners steps1-3: 52520 
+owners complete on covariates: 34856 
+                                        sample     n published
+                                        <char> <int>     <num>
+1:                                       planb 31520     28775
+2:                                        size 33626     28775
+3:                                      growth 29961     28775
+4:                           newprod (2002-08) 32890     27107
+5:                           newtech (2005-08) 19944     17498
+6:                    common planb&size&growth 27289     28775
+7: common planb&size&growth, 2002-08 & newprod 25899     27107
+8: common planb&size&growth, 2005-08 & newtech 15451     17498
+9:         common all five outcomes (any year)    NA        NA
+                             set    female      age   postsec     planb
+                          <char>     <num>    <num>     <num>     <num>
+1: owners complete on covariates 0.3667661 41.00141 0.4519451 0.1798223
+2:      common planb&size&growth 0.3632966 40.92546 0.4575470 0.1769577
+3:          published Table A2 B 0.3700000 41.31000 0.4400000 0.3100000
+   size_mean  size_sd     growth    newprod   newtech      sole bage_mean
+       <num>    <num>      <num>      <num>     <num>     <num>     <num>
+1:  1.130396 1.135589 0.09632522 0.09401034 0.2337545 0.6027657  1.822438
+2:  1.115345 1.123235 0.09952728 0.09309240 0.2253576 0.6048225  1.798391
+3:  1.080000 1.070000 0.17000000 0.09000000 0.2200000 0.6200000  2.010000
+     bage_sd     n
+       <num> <num>
+1: 0.8924585 34856
+2: 0.8943277 27289
+3: 0.9200000 28775
+Key: <year>
+    year     common published
+   <int>      <num>     <num>
+1:  2001 0.03990619      0.04
+2:  2002 0.09018286      0.09
+3:  2003 0.11876580      0.11
+4:  2004 0.16794313      0.18
+5:  2005 0.14199861      0.14
+6:  2006 0.18117190      0.18
+7:  2007 0.14009308      0.14
+8:  2008 0.11993844      0.12
+   OMREASON     N
+      <num> <int>
+1:        1 22716
+2:        2  6245
+3:        3  4975
+4:        4  1075
+5:        6    28
+6:       NA 17481
+     year has_reason     N
+    <int>     <lgcl> <int>
+ 1:  2001       TRUE  1578
+ 2:  2001      FALSE   991
+ 3:  2002      FALSE  1916
+ 4:  2002       TRUE  3444
+ 5:  2003       TRUE  4295
+ 6:  2003      FALSE  2069
+ 7:  2004       TRUE  5796
+ 8:  2004      FALSE  2155
+ 9:  2005       TRUE  4588
+10:  2005      FALSE  1847
+11:  2006       TRUE  6295
+12:  2006      FALSE  2387
+13:  2007      FALSE  3752
+14:  2007       TRUE  4988
+15:  2008      FALSE  2364
+16:  2008       TRUE  4055
+growth by definitions among covariate-complete owners:
+       origin total_gt5 n_growth
+        <num>     <num>    <int>
+1: 0.09632522 0.2664702    29961
+50% 75% 90% 95% 99% 
+  2   6  18  30 200 
+   female     growth
+    <num>      <num>
+1:      1 0.06222141
+2:      0 0.11609026
+    year     growth     n
+   <int>      <num> <int>
+1:  2001 0.13031915  1128
+2:  2002 0.13220600  2602
+3:  2003 0.10169492  3422
+4:  2004 0.08119478  4754
+5:  2005 0.08779443  4203
+6:  2006 0.09541644  5607
+7:  2007 0.10311804  4490
+8:  2008 0.07829561  3755

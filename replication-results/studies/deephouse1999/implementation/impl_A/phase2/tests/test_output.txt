@@ -1,0 +1,112 @@
+
+== (a) WLS estimates, SEs, SSE, condition index and F tests vs direct matrix computation ==
+PASS : WLS coefficients equal (X'WX)^-1 X'Wy 
+PASS : WLS SEs equal sqrt(diag(s2 (X'WX)^-1)), s2 = SSE_w/(N-K) 
+PASS : weighted SSE equals sum w e^2 
+PASS : N, K, df_resid 
+PASS : two-sided p from t(df_resid) 
+PASS : matches lm(weights=) coefficients and SEs 
+PASS : largest condition index of unit-length-scaled weighted design 
+PASS : externally studentized residuals match rstudent(lm) 
+PASS : nested F and upper-tail p equal anova() on weighted lm 
+PASS : HC1 SEs equal direct sandwich with N/(N-K) 
+PASS : CR1 cluster-by-bank SEs equal direct formula with G/(G-1)*(N-1)/(N-K) 
+PASS : covariance choice leaves coefficients unchanged 
+PASS : rank-deficient design raises an error 
+PASS : t and p vectors carry term names 
+PASS : N = K + 1 fits with df_resid = 1 and finite inference 
+PASS : N = K is rejected 
+PASS : missing values raise an explicit error 
+
+== (b) strategic deviation on a hand-made market ==
+PASS : benchmarks: means, sample SDs, zero SD, mean ROA, market deposits 
+PASS : SD = sum |z| over categories, zero-SD category contributes 0 (sample sd) 
+PASS : SD2 = raw square 
+PASS : population SD uses n denominator 
+PASS : SD with population SD 
+PASS : one observation: population SD = 0, sample SD missing; none: missing 
+PASS : zero-SD category makes SD missing under R17.zero_sd_missing 
+PASS : missing share makes only that bank's SD missing; benchmarks available-case 
+PASS : asset-weighted market ROA 
+PASS : joint-complete population excludes incomplete bank from all benchmarks 
+PASS : analytic reference population restricts benchmarks to the given keys 
+
+== (c) lag construction across gaps and entries ==
+PASS : y = 100*(ROA - same-year market mean) 
+PASS : first year of a bank: lag missing 
+PASS : consecutive years: lag is previous-year y computed with t-1 benchmarks 
+PASS : gap year: no gap-skipping, lag missing 
+PASS : entrant: lag missing 
+PASS : t-1 row outside the market population gives no lag 
+PASS : t-1 y missing gives missing lag with reason 
+PASS : lag merge keeps one row per bank-year 
+
+== (d) sample hash format ==
+PASS : hash is 64 lowercase hex characters 
+PASS : hash equals SHA-256 of sorted, newline-terminated 'RSSD9001,year' lines 
+PASS : hash independent of row order 
+PASS : hash changes when the sample changes 
+PASS : integers formatted without decimals or spaces 
+
+== (e) weight rescaling leaves coefficients and SEs unchanged ==
+PASS : w/mean(w): identical coefficients and SEs 
+PASS : SSE scales by 1/mean(w) 
+PASS : t, p and condition index unchanged 
+PASS : R24.mean1 via fit_model: same coefficients/SEs, SSE scaled 
+
+== (f) estimation layer: models, checks, FE, covariance, AR(1), outlier rule, influence ==
+PASS : four models fitted; one row per term 
+PASS : regressor order as specified 
+PASS : four nested F tests with finite F and valid p 
+PASS : F = ((SSE_r - SSE_u)/q)/(SSE_u/(N-K_u)) 
+PASS : same rows (hash) for all models within a specification 
+PASS : R26.centered back-transformed M1 equals raw basis 
+PASS : R26.centered back-transformed M2 equals raw basis 
+PASS : R26.centered back-transformed M3 equals raw basis 
+PASS : R26.centered M3_SQ: status not_applicable, not fitted (amendment C6) 
+PASS : R26.centered: M3_SQ_vs_M1 F test empty, the other three present 
+PASS : R26.centered M1: nothing to centre, equals raw fit 
+PASS : build_design refuses a centred M3_SQ design 
+PASS : centred->raw identity holds in lm as well 
+PASS : R22.year: RMG dropped, 7 year indicators, reported in message 
+PASS : R22.bank: bank indicators in K and every coefficient listed with inference 
+PASS : cluster-robust: same estimates, different SEs 
+PASS : SSE-based F unchanged under non-conventional covariance 
+PASS : R25.ols equals unweighted lm 
+PASS : R25.wls_ar1 fits with |rho| < 1 and reports rho 
+PASS : Prais-Winsten transform (gaps/entries treated as first observations) reproduced directly 
+PASS : AR(1): reported SSE_w = sum w e^2 of the original regression; transformed SSE kept separately 
+PASS : AR(1): nested F uses the reported SSE_w 
+PASS : WLS without AR(1): reported and transformed SSE coincide 
+PASS : R10.max_rstudent: exactly one row deleted per model 
+PASS : influence: one row per deletion x term for M2 (SD) and M3 (SD2, SD) 
+PASS : influence: N reflects deleted rows 
+PASS : influence: leave-one-out estimate equals a direct refit 
+PASS : influence: two-sided p reported for every successful fit and equals the direct refit 
+PASS : too-small sample: failures recorded with messages 
+PASS : unavailable() raises a condition of class unavailable/error 
+PASS : R02.no_special without the RSSD9425 column is unavailable 
+PASS : R02.no_special excludes RSSD9425 in {1,2,4,9}; missing counts as 0; logged 
+PASS : origin filter ignores RSSD9425; S1 log carries post-deduplication counts 
+PASS : a deflator series absent from the inputs is unavailable, not failed 
+PASS : need_input reports the load error as unavailable 
+PASS : ordinary errors are not unavailable 
+
+== (g) record-level helpers: R15 rules, category identities, timing ==
+PASS : zero_if_not_collected: missing & not collected -> 0 
+PASS : R15.missing: stays missing 
+PASS : zero_if_not_collected: collected but missing for the bank stays missing 
+PASS : zero_if_not_collected: item without presence metadata is not zero-filled (no evidence) and is counted 
+PASS : zero_if_not_collected: column absent from file and from presence metadata stays missing 
+PASS : zero_if_not_collected without the presence file is unavailable 
+PASS : identity_fill: 0010 = 0081 + 0071 
+PASS : R08.year_end uses Q4 
+PASS : R08.mean_of_quarter_shares 
+PASS : R08.ratio_of_means 
+PASS : R08.ratio_of_means: numerator and denominator averaged separately over their own available quarters 
+PASS : back_transform (SD centred): a - b1 m + b2 m^2, b2, b1 - 2 b2 m; named p 
+PASS : back_transform refuses a centred SD2 without the SD term 
+PASS : back_transform without centring is the identity 
+PASS : RMG: missing for the first year and after a gap in the benchmark years 
+
+96 passed, 0 failed

@@ -1,0 +1,40 @@
+{
+  "spec_id": "S01",
+  "status": "failed",
+  "reason": "FileNotFoundError: [Errno 2] No such file or directory: '<project>/studies/twenge2010/runs/run_20261028T035304Z/C/dictionaries/y1976_f3.dictionary.json'",
+  "software": {
+    "python": "3.13.4",
+    "numpy": "2.4.2",
+    "scipy": "1.16.3",
+    "pandas": "2.2.3",
+    "statsmodels": "0.14.6",
+    "semopy": "2.3.11",
+    "numdifftools": "0.9.42"
+  },
+  "rows_read_per_file": {},
+  "defaults": {
+    "estimator": "custom normal-theory maximum likelihood; scipy.optimize L-BFGS-B plus Fisher scoring refinement",
+    "optimizer": {
+      "ftol": 1e-13,
+      "gtol": 1e-08,
+      "maxiter": 12000,
+      "maxls": 60,
+      "maxcor": 40,
+      "maximum_fisher_refinements": 200
+    },
+    "normalization": "n-1",
+    "standard_errors": "expected normal information with c_g multipliers",
+    "variance_constraints": "unbounded covariance and residual parameters; implied covariance must be positive definite; inadmissibility reported",
+    "V4_hash_format": "numeric ascending order, integral values in decimal without .0, UTF-8 newline separators, no terminal newline",
+    "nonfinite_output": "JSON null; model errors and inadmissibility reported separately",
+    "weighted_model_covariance": "normalize sample weights to n, then divide weighted cross products by n-1",
+    "FIML_saturated": "unrestricted MVN EM; maximum 20000 iterations; maximum absolute moment change <1e-10",
+    "FIML_SRMR": "unrestricted saturated normal ML covariance from EM; nominal group n weighting",
+    "FIML_d_obs": "unit-weighted scores require all items in a factor; SD skips undefined scores (pandas-style skipna default); those sample hashes are reported",
+    "fit_index_conventions": "manifest formulas; mean residuals excluded from SRMR; ordinary unscaled indices and differences",
+    "confidence_interval_multiplier": 1.96
+  },
+  "deviations": [],
+  "traceback": "Traceback (most recent call last):\n  File \"<project>/studies/twenge2010/runs/run_20261028T035304Z/C/code/analyze.py\", line 671, in run_spec\n    data = Data(spec)\n  File \"<project>/studies/twenge2010/runs/run_20261028T035304Z/C/code/analyze.py\", line 534, in __init__\n    dictionary = json.loads((ROOT/'dictionaries'/f'{key}.dictionary.json').read_text())\n                            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^\n  File \"~/.pyenv/versions/3.13.4/lib/python3.13/pathlib/_local.py\", line 546, in read_text\n    return PathBase.read_text(self, encoding, errors, newline)\n           ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"~/.pyenv/versions/3.13.4/lib/python3.13/pathlib/_abc.py\", line 632, in read_text\n    with self.open(mode='r', encoding=encoding, errors=errors, newline=newline) as f:\n         ~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"~/.pyenv/versions/3.13.4/lib/python3.13/pathlib/_local.py\", line 537, in open\n    return io.open(self, mode, buffering, encoding, errors, newline)\n           ~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nFileNotFoundError: [Errno 2] No such file or directory: '<project>/studies/twenge2010/runs/run_20261028T035304Z/C/dictionaries/y1976_f3.dictionary.json'\n",
+  "seconds": 0.015935208008158952
+}

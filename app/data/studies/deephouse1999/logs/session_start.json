@@ -1,0 +1,40 @@
+{
+  "study_id": "deephouse1999",
+  "paper_id": "SMJ_1999_Deephouse",
+  "recorded_utc": "2026-10-27T11:30:00Z",
+  "coordinator_session": {
+    "claude_code_session_id": "e8c50fbe-47ce-48c1-8aa1-bd531593c98a",
+    "desktop_session_id": "local_8b5949cc-074c-4ab7-a546-85d899021fb3",
+    "claude_code_version": "2.1.270",
+    "model_requested": "claude-opus-5-5",
+    "model_reported": "claude-opus-5-5",
+    "effort_requested": "high",
+    "effort_reported": "high",
+    "fast_mode_requested": false,
+    "fast_mode_reported": "off",
+    "verification_source": "desktop app session metadata (get_session self); /status and /memory not runnable in the desktop Code tab",
+    "permission_mode": "auto"
+  },
+  "loaded_instruction_files": [
+    "CLAUDE.md (project root)",
+    "studies/deephouse1999/CLAUDE.md"
+  ],
+  "global_claude_md": "~/.claude/CLAUDE.md exists on disk; excluded by claudeMdExcludes and not observed in session context",
+  "auto_memory": "disabled in settings; no memory content observed in session context",
+  "other_context_disclosed": "Desktop-app system context (tool lists, built-in skills, MCP server instructions, user email) is injected by the host and is not a project instruction file.",
+  "article": {
+    "path_from_project_root": "papers/journal_collection/SMJ/SMJ_1999_Deephouse.pdf",
+    "sha256_expected": "62eecc5b46b382896f2d660380b409de714b31faf8be5da2de505e27d16112e4",
+    "sha256_observed": "62eecc5b46b382896f2d660380b409de714b31faf8be5da2de505e27d16112e4",
+    "match": true
+  },
+  "local_supplement_matches": 0,
+  "cli_tools": {
+    "claude": {"path": "~/.local/bin/claude", "version": "2.1.270", "flags_present": ["-p", "--safe-mode", "--model", "--effort", "--settings", "--no-session-persistence", "--tools", "--allowed-tools"]},
+    "codex": {"path": "~/.local/bin/codex", "version": "codex-cli 0.164.0", "flags_present": ["--ephemeral", "--ignore-user-config", "--skip-git-repo-check", "-C", "-m", "-c", "-s"]},
+    "codex_global_agents_md": "~/.codex/AGENTS.md exists (1416 bytes); whether it loads under --ignore-user-config is to be checked at reader launch"
+  },
+  "python": "~/.venv/bin/python 3.13.4",
+  "reader_model_access": "not verified; no connectivity or reader calls made before research authorization",
+  "research_authorized": false
+}

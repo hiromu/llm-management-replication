@@ -1,0 +1,458 @@
+[
+  {
+    "obs_id": "O01",
+    "locator": [
+      {
+        "doc": "MAIN",
+        "page": 14,
+        "section": "Established business owners, opening paragraph"
+      },
+      {
+        "doc": "S1",
+        "page": 1,
+        "section": "Table A1"
+      },
+      {
+        "doc": "S1",
+        "page": 2,
+        "section": "Table A2 Panel B"
+      }
+    ],
+    "check": "MAIN/S1 table identity",
+    "finding": "MAIN directs the reader to Panel B of Online Appendix table A1 for owner descriptives; S1 Table A1 contains country-level variables and owner descriptives are Table A2 Panel B. Confirmed against PDFs.",
+    "uses_rounding_intervals": false,
+    "severity": "minor"
+  },
+  {
+    "obs_id": "O02",
+    "locator": [
+      {
+        "doc": "MAIN",
+        "page": 19,
+        "section": "Table 1 Model 2, Age squared, S.E."
+      }
+    ],
+    "check": "SE sign",
+    "finding": "The PDF prints –.001 as the standard error for Age squared in Model 2. Its full ordinary rounding interval [-.0015,-.0005] is negative, so it cannot be a nonnegative standard error. Preserved verbatim; no correction inferred.",
+    "uses_rounding_intervals": true,
+    "severity": "potential_inconsistency"
+  },
+  {
+    "obs_id": "O03",
+    "locator": [
+      {
+        "doc": "S1",
+        "page": 3,
+        "section": "Table A3 Model 3, Log likelihood and AIC"
+      }
+    ],
+    "check": "AIC identity",
+    "finding": "Printed log likelihood is -99719.09 and AIC is 19950. Under AIC=-2 log L+2k with nonnegative k, -2 log L lies in [199438.17,199438.19], while AIC rounded to an integer lies in [19949.5,19950.5]. No overlap is possible even at k=0. Exact intended AIC is unknown and not repaired.",
+    "uses_rounding_intervals": true,
+    "severity": "potential_inconsistency"
+  },
+  {
+    "obs_id": "O04",
+    "locator": [
+      {
+        "doc": "S1",
+        "page": 3,
+        "section": "Table A3 Model 1, Log likelihood and AIC"
+      }
+    ],
+    "check": "AIC identity with integer parameter count",
+    "finding": "With log likelihood -47721.01 (interval [-47721.015,-47721.005]) and AIC 95506.07 (interval [95506.065,95506.075]), implied k=(AIC+2 log L)/2 lies in [32.0175,32.0325], which contains no integer. This is inconsistent with conventional integer-parameter AIC at the printed precision; software/definition is not stated.",
+    "uses_rounding_intervals": true,
+    "severity": "potential_inconsistency"
+  },
+  {
+    "obs_id": "O05",
+    "locator": [
+      {
+        "doc": "MAIN",
+        "page": 22,
+        "section": "Table 2 Model 5, all coefficient rows, random effects, log likelihood and AIC"
+      },
+      {
+        "doc": "MAIN",
+        "page": 15,
+        "section": "Linear mixed model"
+      }
+    ],
+    "check": "AIC penalty versus model structure",
+    "finding": "For log likelihood -41141.37 and AIC 82338.74, rounding intervals imply k in [27.9925,28.0075], compatible with 28. There are 28 printed fixed coefficients alone; random variances and a linear-model residual variance require additional parameters under ordinary marginal ML AIC. Hence the pair is difficult to reconcile with the described full mixed model. ML/REML choice and AIC convention are undocumented, so this remains a conditional diagnostic, not a claimed correction.",
+    "uses_rounding_intervals": true,
+    "severity": "potential_inconsistency"
+  },
+  {
+    "obs_id": "O06",
+    "locator": [
+      {
+        "doc": "S1",
+        "page": 3,
+        "section": "Table A3 Model 2, Fertility rate and fit statistics"
+      },
+      {
+        "doc": "MAIN",
+        "page": 14,
+        "section": "Fertility control"
+      }
+    ],
+    "check": "Printed term list and AIC accounting",
+    "finding": "The Model 2 fertility cell is blank, unlike Models 1 and 3 and MAIN’s general controls description. Log likelihood -140933.12 and AIC 281932.2 imply k in [32.95,33.01], allowing 33. The 26 printed fixed terms plus two unrestricted 2-by-2 random covariance matrices would give 32 parameters, so an additional unprinted term is possible; fertility is one possibility, not established fact. Covariance and AIC conventions are unstated. Do not infer the fitted term from numerical fit alone.",
+    "uses_rounding_intervals": true,
+    "severity": "potential_inconsistency"
+  },
+  {
+    "obs_id": "O07",
+    "locator": [
+      {
+        "doc": "MAIN",
+        "page": 22,
+        "section": "Table 2 Model 6, Intercept"
+      }
+    ],
+    "check": "Coefficient/SE versus absent significance marker",
+    "finding": "The intercept is printed –1.12 (.09) without a marker. Full rounding intervals give |b|/SE between 1.115/.095 and 1.125/.085, i.e. greater than 11 throughout. Under a conventional normal Wald test it would be highly significant. However, no-star is not an exact p or a nonsignificance assertion, and neither test nor tail is stated; this is a possible missing annotation only.",
+    "uses_rounding_intervals": true,
+    "severity": "minor"
+  },
+  {
+    "obs_id": "O08",
+    "locator": [
+      {
+        "doc": "MAIN",
+        "page": 19,
+        "section": "Table 1 Model 3, Childcare × Female"
+      },
+      {
+        "doc": "MAIN",
+        "page": 22,
+        "section": "Table 2 Model 4, Female; Model 5, Age"
+      },
+      {
+        "doc": "S1",
+        "page": 3,
+        "section": "Table A3 Model 1, Social status of entrepreneurship"
+      }
+    ],
+    "check": "Whole-rounding-interval star checks",
+    "finding": "Apparently marginal coefficient/SE ratios do not establish contradictions: M3 childcare intervals permit |z| from .095/.045 to .105/.035 (about 2.11–3.00), including the two-sided 1% cutoff; M4 female permits about 1.57–2.60, including the one-dot category; M5 Age permits about 1.00–5.00, including three-dot significance; A3_M1 status permits about 1.18–1.67, including the two-sided 10% cutoff. No mismatch is declared for these cells. Tail/test conventions remain unreported.",
+    "uses_rounding_intervals": true,
+    "severity": "none"
+  },
+  {
+    "obs_id": "O09",
+    "locator": [
+      {
+        "doc": "MAIN",
+        "page": 22,
+        "section": "Table 2 Model 6, Age squared"
+      }
+    ],
+    "check": "Small-number coefficient/SE versus stars",
+    "finding": "Age squared is –.0004•• (.0001). Full intervals permit |z| from .00035/.00015 to .00045/.00005 (about 2.33–9). Thus the printed two-dot category is possible near the lower end under a conventional two-sided normal test, despite the ratio of printed midpoints being larger. No internal inconsistency established.",
+    "uses_rounding_intervals": true,
+    "severity": "none"
+  },
+  {
+    "obs_id": "O10",
+    "locator": [
+      {
+        "doc": "S1",
+        "page": 1,
+        "section": "Table A1, Women’s part-time employment S.D., range and Mean N"
+      }
+    ],
+    "check": "SD/range scale consistency",
+    "finding": "The part-time S.D. is printed 0.23 while the range is 5.09–60.58 for N=143 survey-level observations. Even taking the closest endpoints allowed by rounding (5.095 and 60.575), any unweighted distribution containing those endpoints has population SD at least 55.480/sqrt(2×143), over 3.28; a sample SD is no smaller. This cannot be the printed SD on the same percentage scale. A different weighting/scale is not documented; do not substitute an inferred SD.",
+    "uses_rounding_intervals": true,
+    "severity": "potential_inconsistency"
+  },
+  {
+    "obs_id": "O11",
+    "locator": [
+      {
+        "doc": "MAIN",
+        "page": 13,
+        "section": "GDP per capita definition"
+      },
+      {
+        "doc": "S1",
+        "page": 1,
+        "section": "Table A1 GDP index header"
+      }
+    ],
+    "check": "MAIN/S1 measurement identity",
+    "finding": "MAIN describes GDP per capita, whereas the supplement labels GDP index. The source dictionary distinguishes a logged/bounded index from raw PPP GDP per capita. They are not merely unit conversions; both readings are retained as uncertain, without choosing from observed values.",
+    "uses_rounding_intervals": false,
+    "severity": "potential_inconsistency"
+  },
+  {
+    "obs_id": "O12",
+    "locator": [
+      {
+        "doc": "MAIN",
+        "page": 14,
+        "section": "Business size measurement"
+      },
+      {
+        "doc": "MAIN",
+        "page": 31,
+        "section": "Limitations, last paragraph"
+      },
+      {
+        "doc": "MAIN",
+        "page": 32,
+        "section": "Limitations continuation"
+      }
+    ],
+    "check": "Internal employee-measure contradiction",
+    "finding": "Methods call business size the log of full-time employees plus one; limitations explicitly state that full-time versus part-time status is unknown. The available OMNOWJOB dictionary supplies headcount, not FTE/full-time employees. The origin therefore labels headcount and flags that choice rather than fabricating hours.",
+    "uses_rounding_intervals": false,
+    "severity": "potential_inconsistency"
+  },
+  {
+    "obs_id": "O13",
+    "locator": [
+      {
+        "doc": "MAIN",
+        "page": 10,
+        "section": "Labor force restriction and footnote 2"
+      },
+      {
+        "doc": "S1",
+        "page": 3,
+        "section": "Table A3 Model 2 note †"
+      }
+    ],
+    "check": "Sample terminology",
+    "finding": "MAIN says in the labor force but its footnote and S1 contrast the primary sample with people who are not employed. Labor force includes unemployed job seekers, so employment-only and labor-force inclusion are not the same rule. The packet does not settle the coding.",
+    "uses_rounding_intervals": false,
+    "severity": "potential_inconsistency"
+  },
+  {
+    "obs_id": "O14",
+    "locator": [
+      {
+        "doc": "MAIN",
+        "page": 11,
+        "section": "Entrepreneurial activity definition and footnote 3"
+      },
+      {
+        "doc": "MAIN",
+        "page": 14,
+        "section": "Established business owners"
+      }
+    ],
+    "check": "Owner/nascent definition versus source labels",
+    "finding": "MAIN defines an established owner through current ownership/management without the source’s more-than-42-month cutoff. It quotes a start-up screen but also adds an active/payment-duration nascent definition. Harmonized OMESTBBT and SUBOANWT cannot be assumed to be the exact author variables; no empirical count matching is used to resolve this.",
+    "uses_rounding_intervals": false,
+    "severity": "minor"
+  },
+  {
+    "obs_id": "O15",
+    "locator": [
+      {
+        "doc": "MAIN",
+        "page": 14,
+        "section": "High-growth aspirations"
+      },
+      {
+        "doc": "MAIN",
+        "page": 24,
+        "section": "Model 6 discussion"
+      }
+    ],
+    "check": "Additional versus total future jobs",
+    "finding": "Methods explicitly define more than five additional employees; results say hire more than five employees. The closest implementation uses future minus current count, while total future count is recorded as non-equivalent. No coding script is present to settle the looser wording.",
+    "uses_rounding_intervals": false,
+    "severity": "minor"
+  },
+  {
+    "obs_id": "O16",
+    "locator": [
+      {
+        "doc": "MAIN",
+        "page": 19,
+        "section": "Table 1 N rows"
+      },
+      {
+        "doc": "MAIN",
+        "page": 22,
+        "section": "Table 2 N rows and notes"
+      },
+      {
+        "doc": "S1",
+        "page": 2,
+        "section": "Table A2 N rows and notes"
+      },
+      {
+        "doc": "S1",
+        "page": 3,
+        "section": "Table A3 N rows"
+      }
+    ],
+    "check": "N and outcome-window consistency",
+    "finding": "Table 1 and A2 total-sample N agree at 354,143; A3 nascent model uses the same N. Table 2 M4–M6 and A2 owner panel agree at 28,775; M7/A2 innovation N is 27,107 and M8/A2 technology N is 17,498. A3 full-sample N is larger and perception-adjusted N smaller, consistent directionally with their descriptions. Equal Ns do not disclose missing-data handling; per-model country and survey counts are absent.",
+    "uses_rounding_intervals": false,
+    "severity": "none"
+  },
+  {
+    "obs_id": "O17",
+    "locator": [
+      {
+        "doc": "MAIN",
+        "page": 19,
+        "section": "Table 1 random SDs; footnote 18"
+      },
+      {
+        "doc": "MAIN",
+        "page": 20,
+        "section": "Footnote 19"
+      }
+    ],
+    "check": "Variance reduction transforms",
+    "finding": "The prose reductions use squared printed SDs, not SD differences. Whole rounding intervals for .3842/.2878 admit the printed intercept-variance reduction 0.439, and intervals for .1951/.1405 admit the printed female-variance reduction 0.481. No contradiction established. These are published-summary arithmetic checks, not analysis of data.",
+    "uses_rounding_intervals": true,
+    "severity": "none"
+  },
+  {
+    "obs_id": "O18",
+    "locator": [
+      {
+        "doc": "MAIN",
+        "page": 18,
+        "section": "Baseline gender odds interpretation"
+      },
+      {
+        "doc": "MAIN",
+        "page": 19,
+        "section": "Table 1 Model 1 Female"
+      }
+    ],
+    "check": "Odds transformations",
+    "finding": "The printed female coefficient –.57 permits exp(b) rounding to 0.57. The prose reciprocal 1/0.57=1.75 and broad about-1.8 description are compatible with rounding uncertainty of the underlying coefficient/odds ratio. These quantities are odds ratios, not female/male probability ratios.",
+    "uses_rounding_intervals": true,
+    "severity": "none"
+  },
+  {
+    "obs_id": "O19",
+    "locator": [
+      {
+        "doc": "MAIN",
+        "page": 22,
+        "section": "Table 2 M6/M8 random effects"
+      },
+      {
+        "doc": "MAIN",
+        "page": 18,
+        "section": "Footnote 17"
+      }
+    ],
+    "check": "Boundary random effects and missing test details",
+    "finding": "Several SDs print zero or near zero. For example .0000 denotes a nonnegative SD interval up to roughly .00005, not an exact zero established by printing alone. Boundary-aware LR inference, convergence, covariance correlations, Hessian diagnostics, test df and full empty-model output are absent. Their adequacy cannot be adjudicated from the table.",
+    "uses_rounding_intervals": true,
+    "severity": "minor"
+  },
+  {
+    "obs_id": "O20",
+    "locator": [
+      {
+        "doc": "MAIN",
+        "page": 19,
+        "section": "Table 1 note *"
+      },
+      {
+        "doc": "S1",
+        "page": 3,
+        "section": "Table A3 note *"
+      }
+    ],
+    "check": "Table-layout note",
+    "finding": "Both notes say SEs are in parentheses, but these tables display separate Coef./S.E. columns without parentheses. Table 2 actually uses parentheses. PDF layout was checked so the separate columns were transcribed correctly.",
+    "uses_rounding_intervals": false,
+    "severity": "minor"
+  },
+  {
+    "obs_id": "O21",
+    "locator": [
+      {
+        "doc": "S1",
+        "page": 1,
+        "section": "Table A1 survey roster"
+      },
+      {
+        "doc": "MAIN",
+        "page": 10,
+        "section": "Sample survey count"
+      }
+    ],
+    "check": "Survey-year roster count",
+    "finding": "Expanding the printed inclusive year ranges and listed individual years gives 143 country-year entries, agreeing with the stated survey count. This checks document structure only and does not establish source availability or individual sample sizes.",
+    "uses_rounding_intervals": false,
+    "severity": "none"
+  },
+  {
+    "obs_id": "O22",
+    "locator": [
+      {
+        "doc": "S1",
+        "page": 1,
+        "section": "France roster"
+      },
+      {
+        "doc": "MAIN",
+        "page": 11,
+        "section": "Employment and education controls"
+      },
+      {
+        "doc": "MAIN",
+        "page": 13,
+        "section": "Status control"
+      }
+    ],
+    "check": "Reported design versus supplied-source coverage",
+    "finding": "The roster includes France 2003 while the supplied dictionary says its work and education items lack substantive responses. Status responses are absent in 2001–2002 in both listed GEM sources even though those years enter status-controlled models. These are source/version or undocumented-processing gaps, not evidence from raw data and not established MAIN/S1 numerical contradictions.",
+    "uses_rounding_intervals": false,
+    "severity": "potential_inconsistency"
+  },
+  {
+    "obs_id": "O23",
+    "locator": [
+      {
+        "doc": "S1",
+        "page": 2,
+        "section": "Table A2 survey-year proportions"
+      }
+    ],
+    "check": "Rounded proportions",
+    "finding": "Each printed two-decimal year share represents a rounding interval of width .01. In each panel, the sum of all eight intervals contains 1, so displayed shares need not sum exactly to 1 and do not establish an inconsistency.",
+    "uses_rounding_intervals": true,
+    "severity": "none"
+  },
+  {
+    "obs_id": "O24",
+    "locator": [
+      {
+        "doc": "MAIN",
+        "page": 21,
+        "section": "Footnote 20"
+      },
+      {
+        "doc": "MAIN",
+        "page": 25,
+        "section": "Figure 6 Panel A"
+      },
+      {
+        "doc": "MAIN",
+        "page": 22,
+        "section": "Table 2 Model 5"
+      }
+    ],
+    "check": "Predicted-value scale",
+    "finding": "The business-size model is on a log(count+1) scale despite a table header referring to employees and a plot axis labeled Business Size. No inverse-log or smearing correction is reported; exact headcount predictions must not be inferred from these displayed values. Other figures show fixed-part conditional probabilities, not random-effects-integrated population means.",
+    "uses_rounding_intervals": false,
+    "severity": "minor"
+  }
+]

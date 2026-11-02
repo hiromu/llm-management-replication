@@ -1,0 +1,40 @@
+{
+  "study_id": "lehman2011",
+  "citation": "Lehman, D. W., Hahn, J., Ramanujam, R., and Alge, B. J. (2011). The Dynamics of the Performance\u2013Risk Relationship Within a Performance Period: The Moderating Role of Deadline Proximity. Organization Science, 22(6), 1613\u20131630.",
+  "journal": "Organization Science",
+  "paper_path_from_project_root": "papers/journal_collection/ORSC/ORSC_2011_Lehman.pdf",
+  "paper_sha256": "93278fe5f7ad8a54cb4808305f6b8725ae968944fd6e9cda75e8089047e6c8d3",
+  "status": "completed",
+  "data_policy": "All empirical inputs must be newly acquired from publicly available source datasets or public primary records and independently constructed. No printed article data or author-provided replication packages. Published results may be extracted only as sealed comparison targets or publication diagnostics.",
+  "reader_runs": 2,
+  "model_fits": "604/604/621 grid fits (A/B/C) + non-equivalent runs + influence refits; see reports/technical_supplement.md",
+  "session_scope": "lehman2011 only; other papers require a separate session",
+  "public_source_eligibility": "eligible: nflverse play-by-play and schedules 2000-2005 (two 2000 games missing)",
+  "author_package_availability": "no_package_found_after_documented_search (logs/package_availability.json)",
+  "doi": "10.1287/orsc.1100.0626",
+  "paper_id": "ORSC_2011_Lehman",
+  "supplement_catalog_from_project_root": "papers/supplements/catalog.json",
+  "supplements": [],
+  "local_supplement_status": "no_local_match",
+  "external_supplement_availability": "not_found_after_documented_search (logs/supplement_search.json); live INFORMS page blocked",
+  "coordinator_session_id": "854f82b1-fa2c-409c-9663-ea33f56d31cd",
+  "outcome_summary": {
+    "claims": {
+      "H1A": "consistent",
+      "H1B": "consistent",
+      "H2": "consistent",
+      "H3": "consistent"
+    },
+    "paper": "consistent (all four focal claims consistent); comparability mapping 'partially reproduced'; driven by two nonsignificant lower-tier Model 1 cells with adversarial verdict uncertain",
+    "fragility": "not assessed (empty equivalent set)",
+    "N": "21,540 reconstructed vs 22,603 published (-4.7%, moderate)"
+  },
+  "reports": [
+    "reports/replication_report.md",
+    "reports/technical_supplement.md",
+    "reports/figure_reconstruction_influence.svg",
+    "reports/figure_reconstruction_influence.png",
+    "reports/figure_reconstruction_influence.csv"
+  ],
+  "completed_utc": "2026-10-27T15:25:42+00:00"
+}

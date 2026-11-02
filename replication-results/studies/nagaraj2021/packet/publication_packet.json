@@ -1,0 +1,179 @@
+{
+ "version": "frozen_v1",
+ "study_id": "nagaraj2021",
+ "order": [
+  "D01_article.pdf",
+  "D02_online_appendix.pdf",
+  "D03_deposit_data_notes.txt",
+  "D41_columns_acs5year.txt",
+  "D42_columns_amenitycheck.txt",
+  "D43_columns_boundary-counties.txt",
+  "D44_columns_county_lookup.txt",
+  "D45_columns_distance.txt",
+  "D46_columns_google_trends.txt",
+  "D47_columns_h12.txt",
+  "D48_columns_land_area.txt",
+  "D49_columns_maptimes.txt",
+  "D50_columns_osm-events.txt",
+  "D51_columns_quarterly.txt",
+  "D52_columns_tiger_census_2008q2.txt",
+  "D53_columns_tiger_osm_2018.txt",
+  "D54_columns_timing.txt",
+  "D60_tiger_fields.txt"
+ ],
+ "documents": [
+  {
+   "id": "D01_article.pdf",
+   "source": "packet/nagaraj2021.pdf",
+   "role": "the article",
+   "sha256": "37edb30371dcda769e00f0beab6d68c91a6b4a2f22d753f0e482a01e23af4f41",
+   "text_form": "D01_article.txt"
+  },
+  {
+   "id": "D02_online_appendix.pdf",
+   "source": "data/raw/osf_a47e9/writing/appendix.pdf",
+   "role": "online appendix, deposit copy; out of scope as targets",
+   "sha256": "a78ad8e9ba394d351c94d1b46bace6cdc3c13ef0fd6686b7fe1117e24f5bea30",
+   "text_form": "D02_online_appendix.txt"
+  },
+  {
+   "id": "D03_deposit_data_notes.txt",
+   "source": "packet/deposit_data_notes.txt",
+   "role": "Rawdata section of the deposit Readme",
+   "sha256": "43df4ff00ff7a8b01da7ea606d1f7ff0e9d6daf98db5b74e501d183598f89372",
+   "text_form": null
+  },
+  {
+   "id": "D41_columns_acs5year.txt",
+   "source": "data/raw/osf_a47e9/rawdata/acs5year.dta",
+   "role": "column names only",
+   "sha256": "92c965a1d576a5c049cc9bee59be0dcc5c9a582532a111829e9ddf977b649754",
+   "text_form": null
+  },
+  {
+   "id": "D42_columns_amenitycheck.txt",
+   "source": "data/raw/osf_a47e9/rawdata/amenitycheck.csv",
+   "role": "column names only",
+   "sha256": "6d87fcf0835f2be496e5be6cf6b4acafb3b8e576ba803978721f115b4a55e9d4",
+   "text_form": null
+  },
+  {
+   "id": "D43_columns_boundary-counties.txt",
+   "source": "data/raw/osf_a47e9/rawdata/boundary-counties.csv",
+   "role": "column names only",
+   "sha256": "25661f700488c357bb05c2f40fcc77d0374d43a32ed5a9984e4b43d7e3587a0a",
+   "text_form": null
+  },
+  {
+   "id": "D44_columns_county_lookup.txt",
+   "source": "data/raw/osf_a47e9/rawdata/county_lookup.csv",
+   "role": "column names only",
+   "sha256": "7e8aab3cc242a2a5953b4ffb1fc5e227382b5d42fd2b3e856a91a75da12c2bef",
+   "text_form": null
+  },
+  {
+   "id": "D45_columns_distance.txt",
+   "source": "data/raw/osf_a47e9/rawdata/distance.csv",
+   "role": "column names only",
+   "sha256": "dc5bb7c75770d871f003b565c18171ac083ddeea5e4a71cf66ca5bc9370c6fab",
+   "text_form": null
+  },
+  {
+   "id": "D46_columns_google_trends.txt",
+   "source": "data/raw/osf_a47e9/rawdata/google_trends.csv",
+   "role": "column names only",
+   "sha256": "f9b7638f710b7c46f18b6b8fca6726671d2bf92ff3109b781447aae8a5caf20a",
+   "text_form": null
+  },
+  {
+   "id": "D47_columns_h12.txt",
+   "source": "data/raw/osf_a47e9/rawdata/h12.csv",
+   "role": "column count and types only",
+   "sha256": "f0b9ccf8b04ff51c391211a782563100443b883b306d011a5b1d0b9c071af30e",
+   "text_form": null
+  },
+  {
+   "id": "D48_columns_land_area.txt",
+   "source": "data/raw/osf_a47e9/rawdata/land_area.csv",
+   "role": "column names only",
+   "sha256": "504dd0beee8bbadc8b67ea4c520b6356c8adedbf8e99ed8cb9bcfea54be816a7",
+   "text_form": null
+  },
+  {
+   "id": "D49_columns_maptimes.txt",
+   "source": "data/raw/osf_a47e9/rawdata/maptimes.csv",
+   "role": "column names only",
+   "sha256": "e253eea46c3b18b9b215493eced663ffe9281b5f88b579819c6a4d78f15b4e40",
+   "text_form": null
+  },
+  {
+   "id": "D50_columns_osm-events.txt",
+   "source": "data/raw/osf_a47e9/rawdata/osm-events.csv",
+   "role": "column names only",
+   "sha256": "7ae5b941c9c3f8a2401edb57d33e999bb348fc65491a23ccc181da78cf1cd7e3",
+   "text_form": null
+  },
+  {
+   "id": "D51_columns_quarterly.txt",
+   "source": "data/raw/osf_a47e9/rawdata/quarterly.csv",
+   "role": "column names only",
+   "sha256": "95562a0deae13f77078a135495475a88b8a9b7a5e0d1c9b95d9348e69302e849",
+   "text_form": null
+  },
+  {
+   "id": "D52_columns_tiger_census_2008q2.txt",
+   "source": "data/raw/osf_a47e9/rawdata/tiger_census_2008q2.csv",
+   "role": "column names only",
+   "sha256": "13cdceb49ad1a10c54de132b20f3a6adfab712c5268f736bd8b11bc8cb5f9202",
+   "text_form": null
+  },
+  {
+   "id": "D53_columns_tiger_osm_2018.txt",
+   "source": "data/raw/osf_a47e9/rawdata/tiger_osm_2018.csv",
+   "role": "column names only",
+   "sha256": "1d1c051e33c8029c11d2882051db7fa26da28e8645fd8286d105792c09c620c1",
+   "text_form": null
+  },
+  {
+   "id": "D54_columns_timing.txt",
+   "source": "data/raw/osf_a47e9/rawdata/timing.xlsx",
+   "role": "column names only",
+   "sha256": "7b38095dd828f9c2fa7992cfda5d29c67d9612c2bd038576fa0e2135dae77f9a",
+   "text_form": null
+  },
+  {
+   "id": "D60_tiger_fields.txt",
+   "source": "data/raw/census_tiger2010/tl_2010_us_county10.zip",
+   "role": "field names only",
+   "sha256": "0d04b6148b727d47f369d0a8cb39ea38a963b5bd8370b905d917d1805b991626",
+   "text_form": null
+  }
+ ],
+ "all_files_sha256": {
+  "D01_article.pdf": "37edb30371dcda769e00f0beab6d68c91a6b4a2f22d753f0e482a01e23af4f41",
+  "D01_article.txt": "eb779826903268d0a47e9640d336b166512186caab1373c811550fe77d622447",
+  "D02_online_appendix.pdf": "a78ad8e9ba394d351c94d1b46bace6cdc3c13ef0fd6686b7fe1117e24f5bea30",
+  "D02_online_appendix.txt": "d9cf49f639029a81e25a98ea38be599d8b50a0571a387ce65ba6518af4d4cbed",
+  "D03_deposit_data_notes.txt": "43df4ff00ff7a8b01da7ea606d1f7ff0e9d6daf98db5b74e501d183598f89372",
+  "D41_columns_acs5year.txt": "92c965a1d576a5c049cc9bee59be0dcc5c9a582532a111829e9ddf977b649754",
+  "D42_columns_amenitycheck.txt": "6d87fcf0835f2be496e5be6cf6b4acafb3b8e576ba803978721f115b4a55e9d4",
+  "D43_columns_boundary-counties.txt": "25661f700488c357bb05c2f40fcc77d0374d43a32ed5a9984e4b43d7e3587a0a",
+  "D44_columns_county_lookup.txt": "7e8aab3cc242a2a5953b4ffb1fc5e227382b5d42fd2b3e856a91a75da12c2bef",
+  "D45_columns_distance.txt": "dc5bb7c75770d871f003b565c18171ac083ddeea5e4a71cf66ca5bc9370c6fab",
+  "D46_columns_google_trends.txt": "f9b7638f710b7c46f18b6b8fca6726671d2bf92ff3109b781447aae8a5caf20a",
+  "D47_columns_h12.txt": "f0b9ccf8b04ff51c391211a782563100443b883b306d011a5b1d0b9c071af30e",
+  "D48_columns_land_area.txt": "504dd0beee8bbadc8b67ea4c520b6356c8adedbf8e99ed8cb9bcfea54be816a7",
+  "D49_columns_maptimes.txt": "e253eea46c3b18b9b215493eced663ffe9281b5f88b579819c6a4d78f15b4e40",
+  "D50_columns_osm-events.txt": "7ae5b941c9c3f8a2401edb57d33e999bb348fc65491a23ccc181da78cf1cd7e3",
+  "D51_columns_quarterly.txt": "95562a0deae13f77078a135495475a88b8a9b7a5e0d1c9b95d9348e69302e849",
+  "D52_columns_tiger_census_2008q2.txt": "13cdceb49ad1a10c54de132b20f3a6adfab712c5268f736bd8b11bc8cb5f9202",
+  "D53_columns_tiger_osm_2018.txt": "1d1c051e33c8029c11d2882051db7fa26da28e8645fd8286d105792c09c620c1",
+  "D54_columns_timing.txt": "7b38095dd828f9c2fa7992cfda5d29c67d9612c2bd038576fa0e2135dae77f9a",
+  "D60_tiger_fields.txt": "0d04b6148b727d47f369d0a8cb39ea38a963b5bd8370b905d917d1805b991626"
+ },
+ "known_gaps": [
+  "The deposit has no variable dictionary; D03 describes files, not columns.",
+  "h12.csv has no header row."
+ ],
+ "note": "Text forms are mechanical conversions; PDF page numbers come from the PDFs."
+}

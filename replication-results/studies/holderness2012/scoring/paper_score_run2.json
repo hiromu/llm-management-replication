@@ -1,0 +1,230 @@
+{
+  "claims": [
+    {
+      "family": "T4",
+      "measure": "sameness",
+      "group": "camp",
+      "tier": "focal",
+      "coefficients": 2,
+      "outcome": "consistent",
+      "label_sensitive": true
+    },
+    {
+      "family": "T4",
+      "measure": "sameness",
+      "group": "cap",
+      "tier": "focal",
+      "coefficients": 2,
+      "outcome": "consistent",
+      "label_sensitive": true
+    },
+    {
+      "family": "T4",
+      "measure": "steepness",
+      "group": "camp",
+      "tier": "focal",
+      "coefficients": 2,
+      "outcome": "consistent",
+      "label_sensitive": false
+    },
+    {
+      "family": "T4",
+      "measure": "steepness",
+      "group": "cap",
+      "tier": "focal",
+      "coefficients": 2,
+      "outcome": "consistent",
+      "label_sensitive": false
+    },
+    {
+      "family": "T6",
+      "measure": "sameness",
+      "group": "camp",
+      "tier": "uncertain_focal",
+      "coefficients": 2,
+      "outcome": "consistent",
+      "label_sensitive": false
+    },
+    {
+      "family": "T6",
+      "measure": "sameness",
+      "group": "cap",
+      "tier": "uncertain_focal",
+      "coefficients": 2,
+      "outcome": "consistent",
+      "label_sensitive": false
+    },
+    {
+      "family": "T6",
+      "measure": "steepness",
+      "group": "camp",
+      "tier": "uncertain_focal",
+      "coefficients": 2,
+      "outcome": "consistent",
+      "label_sensitive": false
+    },
+    {
+      "family": "T6",
+      "measure": "steepness",
+      "group": "cap",
+      "tier": "uncertain_focal",
+      "coefficients": 2,
+      "outcome": "consistent",
+      "label_sensitive": false
+    }
+  ],
+  "paper_outcome_T4_focal": "fully reproduced on focal claims, provisional: lower-tier potential discrepancies unconfirmed (mapping becomes partially reproduced if any is confirmed after adversarial review and human confirmation)",
+  "paper_outcome_with_T6_focal": "fully reproduced on focal claims, provisional: lower-tier potential discrepancies unconfirmed (mapping becomes partially reproduced if any is confirmed after adversarial review and human confirmation)",
+  "lower_tier_potential_discrepancies": [
+    {
+      "family": "T4",
+      "measure": "steepness",
+      "group": "cap",
+      "spec": "full",
+      "term": "length",
+      "printed_value": "0.01",
+      "printed_p": "0.82",
+      "rec_me": -0.00101711765269,
+      "rec_p": 0.704544517167522
+    },
+    {
+      "family": "T4",
+      "measure": "steepness",
+      "group": "camp",
+      "spec": "full",
+      "term": "men",
+      "printed_value": "0.11",
+      "printed_p": "0.62",
+      "rec_me": -0.0581713320868669,
+      "rec_p": 0.793981347542603
+    },
+    {
+      "family": "T4",
+      "measure": "steepness",
+      "group": "camp",
+      "spec": "full",
+      "term": "men_sq",
+      "printed_value": "-0.00",
+      "printed_p": "0.96",
+      "rec_me": 0.104739374862898,
+      "rec_p": 0.56621771168219
+    },
+    {
+      "family": "T4",
+      "measure": "sameness",
+      "group": "cap",
+      "spec": "full",
+      "term": "length",
+      "printed_value": "0.01",
+      "printed_p": "0.79",
+      "rec_me": -0.000691419383215,
+      "rec_p": 0.799762146801982
+    },
+    {
+      "family": "T4",
+      "measure": "sameness",
+      "group": "camp",
+      "spec": "full",
+      "term": "men",
+      "printed_value": "0.15",
+      "printed_p": "0.41",
+      "rec_me": -0.01038778446101,
+      "rec_p": 0.958469576347554
+    },
+    {
+      "family": "T4",
+      "measure": "sameness",
+      "group": "camp",
+      "spec": "full",
+      "term": "men_sq",
+      "printed_value": "-0.00",
+      "printed_p": "0.76",
+      "rec_me": 0.0622235809497211,
+      "rec_p": 0.705579519295487
+    },
+    {
+      "family": "T5",
+      "measure": "both",
+      "group": "cap",
+      "spec": "simple",
+      "term": "sameness",
+      "printed_value": "0.02",
+      "printed_p": "0.27",
+      "rec_me": 0.0351049828654997,
+      "rec_p": 0.0404770415144281
+    },
+    {
+      "family": "T5",
+      "measure": "both",
+      "group": "camp",
+      "spec": "simple",
+      "term": "sameness",
+      "printed_value": "-0.01",
+      "printed_p": "0.95",
+      "rec_me": 0.0391534856631021,
+      "rec_p": 0.842473076304395
+    },
+    {
+      "family": "T6",
+      "measure": "steepness",
+      "group": "cap",
+      "spec": "full",
+      "term": "length",
+      "printed_value": "0.01",
+      "printed_p": "0.77",
+      "rec_me": -0.000652517404081,
+      "rec_p": 0.807608772664056
+    },
+    {
+      "family": "T6",
+      "measure": "steepness",
+      "group": "camp",
+      "spec": "full",
+      "term": "men",
+      "printed_value": "0.09",
+      "printed_p": "0.64",
+      "rec_me": -0.0531594327740521,
+      "rec_p": 0.805135108775928
+    },
+    {
+      "family": "T6",
+      "measure": "sameness",
+      "group": "cap",
+      "spec": "full",
+      "term": "length",
+      "printed_value": "0.01",
+      "printed_p": "0.80",
+      "rec_me": -0.0007859505833976,
+      "rec_p": 0.773285076228737
+    },
+    {
+      "family": "T6",
+      "measure": "sameness",
+      "group": "camp",
+      "spec": "full",
+      "term": "men",
+      "printed_value": "0.13",
+      "printed_p": "0.45",
+      "rec_me": -0.0097190599009037,
+      "rec_p": 0.960754304269872
+    },
+    {
+      "family": "T6",
+      "measure": "sameness",
+      "group": "camp",
+      "spec": "full",
+      "term": "men_sq",
+      "printed_value": "-0.00",
+      "printed_p": "0.84",
+      "rec_me": 0.0627498514226425,
+      "rec_p": 0.700608420545079
+    }
+  ],
+  "implementations_scored": [
+    "A",
+    "B",
+    "C"
+  ],
+  "magnitude_criterion": "not audited (no published SEs)",
+  "specification_fragility": "not assessed (no substantive equivalent alternatives)"
+}

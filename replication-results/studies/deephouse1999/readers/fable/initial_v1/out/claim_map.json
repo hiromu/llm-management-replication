@@ -1,0 +1,245 @@
+[
+  {
+    "claim_id": "C1",
+    "statement": "Hypothesis 1 (Differentiation): strategic deviation is positively related to relative ROA. Tested by the first-order strategic deviation term in Model 2; the article reports the coefficient is negative, so H1 is not supported (H2 supported over H1).",
+    "hypothesis_label": "H1",
+    "tier": "focal",
+    "supporting_locations": [
+      "DOC01 p12 Table 2 Model 2 row Strategic Deviation",
+      "DOC01 p12 Results text, Model 2 paragraph"
+    ],
+    "estimand": "WLS coefficient on Strategic Deviation (first-order, linear) in Model 2; outcome relative ROA multiplied by 100 prior to estimation; weights from market share (error variance assumed inversely proportional to market share).",
+    "population": "Bank-years of commercial banks competing in the Minneapolis-St. Paul (Twin Cities) metropolitan market, 1985-1992, Call Report data.",
+    "direction_claimed": "positive",
+    "source": "DOC01 p10 Hypotheses (Hypothesis 1); DOC01 p11 Analysis ('Model 2 added the first-order strategic deviation term, testing Hypothesis 1 vs. Hypothesis 2'); DOC01 p12 Table 2"
+  },
+  {
+    "claim_id": "C2",
+    "statement": "Hypothesis 2 (Conformity): strategic deviation is negatively related to relative ROA. Supported: the Model 2 coefficient on strategic deviation is negative and significant (p < 0.001).",
+    "hypothesis_label": "H2",
+    "tier": "focal",
+    "supporting_locations": [
+      "DOC01 p12 Table 2 Model 2 row Strategic Deviation",
+      "DOC01 p12 Results text, Model 2 paragraph"
+    ],
+    "estimand": "WLS coefficient on Strategic Deviation in Model 2 (same scale and weights as C1).",
+    "population": "Same as C1.",
+    "direction_claimed": "negative",
+    "source": "DOC01 p10 Hypotheses (Hypothesis 2); DOC01 p12 Table 2 Model 2; DOC01 p12 Results text ('The coefficient on strategic deviation was negative and strongly significant (p < 0.001). This result supported Hypothesis 2 over Hypothesis 1')"
+  },
+  {
+    "claim_id": "C2b",
+    "statement": "Adding the first-order strategic deviation term (Model 2) improves fit over the control-only Model 1: change in weighted sum of squared errors 0.092, F = 30.4, d.f. = 1,954, p < 0.001.",
+    "hypothesis_label": "H2",
+    "tier": "focal",
+    "supporting_locations": [
+      "DOC01 p12 Table 2 row 'Delta Sum of squared errors over Model 1', Model 2 column",
+      "DOC01 p12 Results text ('The change in the sum of squared errors was 0.092 (F = 30.4, d.f. = 1,954)')"
+    ],
+    "estimand": "Nested-model F test computed from weighted sums of squared errors of Model 2 vs Model 1 (numerator df 1, denominator df 954).",
+    "population": "Same as C1.",
+    "direction_claimed": "other: improvement in fit (positive F significant)",
+    "source": "DOC01 p11 Analysis ('Models 1, 2, and 3 were compared using F-tests computed with sums of squared errors'); DOC01 p12 Results text and Table 2"
+  },
+  {
+    "claim_id": "C3",
+    "statement": "Hypothesis 3 (Strategic balance): a curvilinear, concave-down relationship between strategic deviation and relative ROA. Supported: Model 3 coefficient on squared strategic deviation is negative and significant (p < 0.001).",
+    "hypothesis_label": "H3",
+    "tier": "focal",
+    "supporting_locations": [
+      "DOC01 p12 Table 2 Model 3 row Strategic Deviation^2",
+      "DOC01 p12 Table 2 Model 3 row Strategic Deviation",
+      "DOC01 p13 Results text, Model 3 paragraph"
+    ],
+    "estimand": "WLS coefficient on Strategic Deviation squared (b1) in Model 3, with the first-order term (b2) also included; outcome relative ROA x100; weights from market share.",
+    "population": "Same as C1.",
+    "direction_claimed": "concave_down",
+    "source": "DOC01 p10 Hypotheses (Hypothesis 3); DOC01 p11 Analysis ('Hypothesis 3 would have greater credence over Hypotheses 1 and 2 if the coefficient of this term is negative and significant and its inclusion improves the fit of the model'); DOC01 p13 Results"
+  },
+  {
+    "claim_id": "C3b",
+    "statement": "Adding the squared strategic deviation term (Model 3) improves fit over both Model 1 (delta SSE 0.448, F = 84.4, d.f. = 2,953, p < 0.001) and Model 2 (delta SSE 0.356, F = 134.1, d.f. = 1,953, p < 0.001).",
+    "hypothesis_label": "H3",
+    "tier": "focal",
+    "supporting_locations": [
+      "DOC01 p12 Table 2 rows 'Delta Sum of squared errors over Model 1' and 'over Model 2', Model 3 column",
+      "DOC01 p13 Results text, Model 3 paragraph"
+    ],
+    "estimand": "Nested-model F tests from weighted SSE: Model 3 vs Model 1 (df 2,953) and Model 3 vs Model 2 (df 1,953).",
+    "population": "Same as C1.",
+    "direction_claimed": "other: improvement in fit (significant F)",
+    "source": "DOC01 p13 Results ('Compared to the baseline model, the change in the sum of squared errors was 0.448 ... (F = 84.4, d.f. = 2,953). Compared to Model 2, the change ... was 0.356 ... (F = 134.1, d.f. = 1,953)')"
+  },
+  {
+    "claim_id": "C3c",
+    "statement": "Analysis of the estimated Model 3 function indicates an inverted U-shape between strategic deviation and performance within the range of strategic deviation observed for banks in the sample (i.e., the turning point lies inside the sample range).",
+    "hypothesis_label": "H3",
+    "tier": "identification_inference_diagnostic",
+    "supporting_locations": [
+      "DOC01 p13 Results text ('Analysis of the estimated function indicated the relationship ... has an inverted U-shape in the range of strategic deviation for banks in this sample')"
+    ],
+    "estimand": "Location of the maximum of the fitted quadratic, -b2/(2*b1) from Model 3, relative to the observed range of strategic deviation. No numeric turning point or range is printed.",
+    "population": "Same as C1.",
+    "direction_claimed": "concave_down",
+    "source": "DOC01 p13 Results, first paragraph"
+  },
+  {
+    "claim_id": "C4",
+    "statement": "Market share (control) was expected to have a positive coefficient but is significantly negative in Models 1 and 3 and not significant in Model 2.",
+    "hypothesis_label": null,
+    "tier": "nuisance_control",
+    "supporting_locations": [
+      "DOC01 p12 Table 2 row Market Share, Models 1-3",
+      "DOC01 p12 and p13 Results text"
+    ],
+    "estimand": "WLS coefficient on Market Share (deposit share, proportion) in Models 1, 2, 3.",
+    "population": "Same as C1.",
+    "direction_claimed": "negative",
+    "source": "DOC01 p10 Control variables (expected positive); DOC01 p12 Results ('its sign was opposite of what was expected'); DOC01 p13 ('market share had a significantly negative impact on relative ROA, in contrast to expectations')"
+  },
+  {
+    "claim_id": "C5",
+    "statement": "Total expense ratio (control) has a negative and significant (p < 0.001) coefficient in all three models, as expected.",
+    "hypothesis_label": null,
+    "tier": "nuisance_control",
+    "supporting_locations": [
+      "DOC01 p12 Table 2 row Total Expense Ratio, Models 1-3"
+    ],
+    "estimand": "WLS coefficient on Total Expense Ratio ((interest + noninterest expense)/average assets, proportion) in Models 1-3.",
+    "population": "Same as C1.",
+    "direction_claimed": "negative",
+    "source": "DOC01 p10 Control variables (Total expense ratio, expected negative); DOC01 p12-13 Results"
+  },
+  {
+    "claim_id": "C6",
+    "statement": "Real market growth (control) has a positive and significant (p < 0.001) coefficient in all three models, as expected.",
+    "hypothesis_label": null,
+    "tier": "nuisance_control",
+    "supporting_locations": [
+      "DOC01 p12 Table 2 row Real Market Growth, Models 1-3"
+    ],
+    "estimand": "WLS coefficient on Real Market Growth (annual percent change in real total market deposits, in percent) in Models 1-3.",
+    "population": "Same as C1.",
+    "direction_claimed": "positive",
+    "source": "DOC01 p10 Control variables (Market growth of deposits, expected positive); DOC01 p12-13 Results"
+  },
+  {
+    "claim_id": "C7",
+    "statement": "Lagged relative ROA (control) has a positive and significant (p < 0.001) coefficient in all three models, as expected.",
+    "hypothesis_label": null,
+    "tier": "nuisance_control",
+    "supporting_locations": [
+      "DOC01 p12 Table 2 row Relative ROA(t-1), Models 1-3"
+    ],
+    "estimand": "WLS coefficient on Relative ROA(t-1) (x100) in Models 1-3.",
+    "population": "Same as C1.",
+    "direction_claimed": "positive",
+    "source": "DOC01 p10 Control variables (Lagged dependent variable, expected positive); DOC01 p12-13 Results"
+  },
+  {
+    "claim_id": "C8",
+    "statement": "Robustness to collinearity: Model 3 re-estimated without the first-order strategic deviation term gives a negative, significant squared-term coefficient (beta = -0.001, S.E. = 0.0001) and SSE = 2.803, better than Model 2 but worse than Model 3.",
+    "hypothesis_label": "H3",
+    "tier": "robustness",
+    "supporting_locations": [
+      "DOC01 p13 Results text, collinearity paragraph"
+    ],
+    "estimand": "WLS coefficient on Strategic Deviation squared in a Model 3 variant that omits the linear term (controls retained); weighted SSE of that model.",
+    "population": "Same as C1.",
+    "direction_claimed": "negative",
+    "source": "DOC01 p13 Results ('Second, Model 3 was estimated without the first-order term. The estimated coefficient for the squared term remained negative and significant (beta = -0.001, S.E.(beta) = 0.0001). ... (S.S.E. = 2.803)')"
+  },
+  {
+    "claim_id": "C9",
+    "statement": "Collinearity diagnostics: correlation between strategic deviation and its square is 0.95; Model 3 largest condition number 35.0 (slightly above the 30 threshold); standard errors and estimates not large; conclusion that collinearity is not serious.",
+    "hypothesis_label": null,
+    "tier": "identification_inference_diagnostic",
+    "supporting_locations": [
+      "DOC01 p12 Table 1 correlation (3,4) = 0.95",
+      "DOC01 p13 Results text, collinearity paragraph"
+    ],
+    "estimand": "Pearson correlation between SD and SD^2 (n = 960); largest condition number of the Model 3 regressor matrix (Belsley, Kuh and Welsch method).",
+    "population": "Same as C1.",
+    "direction_claimed": "none",
+    "source": "DOC01 p11 Results first paragraph (0.95 correlation); DOC01 p13 ('The largest condition number (35.0) was slightly greater than the 30 suggested by Judge et al.')"
+  },
+  {
+    "claim_id": "C10",
+    "statement": "Models including the 11 asset-strategy proportions as additional controls suffered serious collinearity (condition numbers exceeded 234); results for strategic deviation were consistent with those reported; estimates not reported (available from author).",
+    "hypothesis_label": null,
+    "tier": "robustness",
+    "supporting_locations": [
+      "DOC01 p10-11 Control variables, final paragraph"
+    ],
+    "estimand": "Unreported WLS estimates with the 11 asset-strategy proportions added as controls; only the condition number (>234) and the qualitative consistency are stated.",
+    "population": "Same as C1.",
+    "direction_claimed": "other: qualitatively consistent with reported results",
+    "source": "DOC01 p10 ('A final set of control variables comprising the 11 asset strategies was considered ... Estimates using them are not reported here (but are available from the author)'); DOC01 p11 ('Condition numbers exceeded 234 ... Results for strategic deviation using these strategy variables were consistent with the results reported')"
+  },
+  {
+    "claim_id": "C11",
+    "statement": "Autocorrelation diagnostic: first-order autocorrelation assumed; Durbin's h-statistics for all models were less than 1.28 (not significant), so autocorrelation was judged not a problem and OLS-type estimators consistent; no autocorrelation correction applied to the reported models.",
+    "hypothesis_label": null,
+    "tier": "identification_inference_diagnostic",
+    "supporting_locations": [
+      "DOC01 p11 Analysis, autocorrelation paragraph"
+    ],
+    "estimand": "Durbin h statistic (asymptotically standard normal) for each of Models 1-3, computed with missing values inserted between banks so autocorrelation is not defined across banks.",
+    "population": "Same as C1.",
+    "direction_claimed": "none",
+    "source": "DOC01 p11 Analysis ('For all models, Durbin's h-statistics were less than 1.28 (N.S.) ... Kennedy (1992: 140-141) noted that OLS estimators are usually the most appropriate estimator in this case')"
+  },
+  {
+    "claim_id": "C12",
+    "statement": "Heteroscedasticity diagnostic: OLS residual plots showed a 'megaphone opening left' shape against market share, implying error variance inversely proportional to market share; weighted least squares was therefore used and reported.",
+    "hypothesis_label": null,
+    "tier": "identification_inference_diagnostic",
+    "supporting_locations": [
+      "DOC01 p11 Analysis, heteroscedasticity paragraph"
+    ],
+    "estimand": "Qualitative residual-plot diagnostic; implies WLS weights proportional to market share.",
+    "population": "Same as C1.",
+    "direction_claimed": "none",
+    "source": "DOC01 p11 Analysis ('The megaphone opening left shape of the residual plot vs. market share suggested that the error variance was inversely proportional to market share. Weighted least-squares estimation ... was used ... These are reported in the results')"
+  },
+  {
+    "claim_id": "C13",
+    "statement": "Outlier: Norwest Bank Minneapolis, N.A., in 1987 had the highest studentized deleted residual in all three WLS models (minimum 21.8 in Model 2, about 50 percent higher than the second highest) and was deleted; the principal effect of deletion was to improve the significance of the control variables.",
+    "hypothesis_label": null,
+    "tier": "identification_inference_diagnostic",
+    "supporting_locations": [
+      "DOC01 p11 Analysis, outlier paragraph",
+      "DOC01 p9 Sample and data ('the deletion of one outlying value')"
+    ],
+    "estimand": "Studentized deleted residual of the named bank-year from WLS estimates of Models 1-3.",
+    "population": "Same as C1.",
+    "direction_claimed": "none",
+    "source": "DOC01 p11 Analysis ('One outlying observation stood out ... Norwest Bank Minneapolis, N.A., in 1987 ... Its minimum value was 21.8 in Model 2 ... this observation was deleted')"
+  },
+  {
+    "claim_id": "C14",
+    "statement": "Descriptive statistics (Table 1): means, standard deviations and correlations of the seven analysis variables, n = 960.",
+    "hypothesis_label": null,
+    "tier": "descriptive",
+    "supporting_locations": [
+      "DOC01 p12 Table 1"
+    ],
+    "estimand": "Sample means, SDs and Pearson correlations over the 960 bank-year observations (relative ROA in raw ratio units, not x100).",
+    "population": "Same as C1.",
+    "direction_claimed": "none",
+    "source": "DOC01 p12 Table 1; DOC01 p11 Results ('Table 1 presents the means, standard deviations, and correlations among the variables')"
+  },
+  {
+    "claim_id": "C15",
+    "statement": "Sample description: 159 independent banks in the Twin Cities; after foundings, mergers, failures, lagged dependent variables and deletion of one outlier, 960 bank-year observations for 1985-92.",
+    "hypothesis_label": null,
+    "tier": "descriptive",
+    "supporting_locations": [
+      "DOC01 p9 Sample and data"
+    ],
+    "estimand": "Counts of banks and of analysis observations.",
+    "population": "Commercial banks in the Minneapolis-St. Paul metropolitan area, 1985-1992.",
+    "direction_claimed": "none",
+    "source": "DOC01 p9 Research design, Sample and data"
+  }
+]

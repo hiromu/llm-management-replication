@@ -1,0 +1,3181 @@
+{
+  "claims": [
+    {
+      "claim_id": "C01",
+      "statement": "Research Question 1: Which generation most values leisure rewards and regards work as less central?",
+      "hypothesis_label": "RQ1",
+      "direction_claimed": "other",
+      "tier": "focal",
+      "estimand": "Pairwise latent mean contrasts and standardized differences, later survey year minus earlier year.",
+      "effect_scale_and_null": "Latent mean difference or standardized d; null 0.",
+      "population": "U.S. high school seniors in 1976, 1991 and 2006; Form 4 (1976 DS0004, 1991/2006 DS0005).",
+      "comparison_units": "1976 vs. 1991; 1991 vs. 2006; 1976 vs. 2006",
+      "supporting_results": [
+        {
+          "doc_id": "P1",
+          "pdf_page": 7,
+          "table": "Research questions",
+          "column": "all three years and pairwise contrasts",
+          "row": "RQ1"
+        },
+        {
+          "doc_id": "P1",
+          "pdf_page": 11,
+          "table": "Table 1",
+          "column": "all three years and pairwise contrasts",
+          "row": "leisure rewards"
+        }
+      ],
+      "target_ids": [
+        "T001",
+        "T002",
+        "T003",
+        "T004",
+        "T005",
+        "T006",
+        "T007",
+        "T008",
+        "T009",
+        "T010",
+        "T011",
+        "T012",
+        "T013",
+        "T014",
+        "T015",
+        "T016",
+        "T017",
+        "T018",
+        "T019",
+        "T020",
+        "T021",
+        "T022",
+        "T023",
+        "T024",
+        "T025",
+        "T026",
+        "T027",
+        "T028",
+        "T029",
+        "T030",
+        "T031",
+        "T032",
+        "T033",
+        "T034",
+        "T035",
+        "T036",
+        "T037",
+        "T038",
+        "T039",
+        "T040",
+        "T041",
+        "T042",
+        "T043",
+        "T044",
+        "T045",
+        "T046",
+        "T047",
+        "T048",
+        "T229",
+        "T230",
+        "T231",
+        "T232",
+        "T233",
+        "T234",
+        "T235",
+        "T236",
+        "T237",
+        "T238",
+        "T239",
+        "T240",
+        "T241",
+        "T242",
+        "T243",
+        "T244",
+        "T245",
+        "T246",
+        "T247",
+        "T248",
+        "T249",
+        "T250",
+        "T251",
+        "T252",
+        "T253",
+        "T254",
+        "T255",
+        "T256",
+        "T257",
+        "T258",
+        "T259",
+        "T260",
+        "T261",
+        "T262",
+        "T263",
+        "T264",
+        "T265",
+        "T266",
+        "T267",
+        "T268",
+        "T269",
+        "T270",
+        "T271",
+        "T272",
+        "T273",
+        "T274",
+        "T275",
+        "T276",
+        "T277",
+        "T278",
+        "T279",
+        "T280",
+        "T281",
+        "T282",
+        "T283",
+        "T284",
+        "T285",
+        "T286",
+        "T287",
+        "T288",
+        "T349",
+        "T350",
+        "T351",
+        "T352",
+        "T353",
+        "T354",
+        "T355",
+        "T356",
+        "T357",
+        "T358",
+        "T359",
+        "T360",
+        "T361",
+        "T362",
+        "T363",
+        "T557",
+        "T594"
+      ],
+      "notes": "Exploratory question, not a directional hypothesis. P1 pp. 7–9 explicitly decline speculative directional hypotheses; competing background conjectures are not fitted hypotheses."
+    },
+    {
+      "claim_id": "C02",
+      "statement": "Leisure rewards: 1991 versus 1976 is reported significantly higher.",
+      "hypothesis_label": "RQ1",
+      "direction_claimed": "increase",
+      "tier": "focal",
+      "estimand": "Pairwise latent mean contrasts and standardized differences, later survey year minus earlier year.",
+      "effect_scale_and_null": "Latent mean difference or standardized d; null 0.",
+      "population": "U.S. high school seniors in 1976, 1991 and 2006; Form 4 (1976 DS0004, 1991/2006 DS0005).",
+      "comparison_units": "1976 vs. 1991",
+      "supporting_results": [
+        {
+          "doc_id": "P1",
+          "pdf_page": 11,
+          "table": "Table 1",
+          "column": "1976 vs. 1991 t or d",
+          "row": "leisure rewards"
+        },
+        {
+          "doc_id": "P1",
+          "pdf_page": 15,
+          "table": "Results",
+          "column": "all three years and pairwise contrasts",
+          "row": "RQ1"
+        }
+      ],
+      "target_ids": [
+        "T349",
+        "T350",
+        "T351",
+        "T352",
+        "T353",
+        "T354",
+        "T355",
+        "T356",
+        "T357",
+        "T358",
+        "T359",
+        "T360",
+        "T361",
+        "T546"
+      ],
+      "notes": "No exact pairwise latent-contrast p, SE or test statistic is printed. Nonsignificance is not an equivalence test."
+    },
+    {
+      "claim_id": "C03",
+      "statement": "Leisure rewards: 2006 versus 1991 is reported significantly higher.",
+      "hypothesis_label": "RQ1",
+      "direction_claimed": "increase",
+      "tier": "focal",
+      "estimand": "Pairwise latent mean contrasts and standardized differences, later survey year minus earlier year.",
+      "effect_scale_and_null": "Latent mean difference or standardized d; null 0.",
+      "population": "U.S. high school seniors in 1976, 1991 and 2006; Form 4 (1976 DS0004, 1991/2006 DS0005).",
+      "comparison_units": "1991 vs. 2006",
+      "supporting_results": [
+        {
+          "doc_id": "P1",
+          "pdf_page": 11,
+          "table": "Table 1",
+          "column": "1991 vs. 2006 t or d",
+          "row": "leisure rewards"
+        },
+        {
+          "doc_id": "P1",
+          "pdf_page": 15,
+          "table": "Results",
+          "column": "all three years and pairwise contrasts",
+          "row": "RQ1"
+        }
+      ],
+      "target_ids": [
+        "T349",
+        "T350",
+        "T351",
+        "T352",
+        "T353",
+        "T354",
+        "T355",
+        "T356",
+        "T357",
+        "T358",
+        "T359",
+        "T360",
+        "T362",
+        "T547"
+      ],
+      "notes": "No exact pairwise latent-contrast p, SE or test statistic is printed. Nonsignificance is not an equivalence test."
+    },
+    {
+      "claim_id": "C04",
+      "statement": "Leisure rewards: 2006 versus 1976 is reported significantly higher.",
+      "hypothesis_label": "RQ1",
+      "direction_claimed": "increase",
+      "tier": "focal",
+      "estimand": "Pairwise latent mean contrasts and standardized differences, later survey year minus earlier year.",
+      "effect_scale_and_null": "Latent mean difference or standardized d; null 0.",
+      "population": "U.S. high school seniors in 1976, 1991 and 2006; Form 4 (1976 DS0004, 1991/2006 DS0005).",
+      "comparison_units": "1976 vs. 2006",
+      "supporting_results": [
+        {
+          "doc_id": "P1",
+          "pdf_page": 11,
+          "table": "Table 1",
+          "column": "1976 vs. 2006 t or d",
+          "row": "leisure rewards"
+        },
+        {
+          "doc_id": "P1",
+          "pdf_page": 15,
+          "table": "Results",
+          "column": "all three years and pairwise contrasts",
+          "row": "RQ1"
+        }
+      ],
+      "target_ids": [
+        "T349",
+        "T350",
+        "T351",
+        "T352",
+        "T353",
+        "T354",
+        "T355",
+        "T356",
+        "T357",
+        "T358",
+        "T359",
+        "T360",
+        "T363",
+        "T548",
+        "T557"
+      ],
+      "notes": "No exact pairwise latent-contrast p, SE or test statistic is printed. Nonsignificance is not an equivalence test."
+    },
+    {
+      "claim_id": "C05",
+      "statement": "Research Question 2: Which generation most values extrinsic rewards?",
+      "hypothesis_label": "RQ2",
+      "direction_claimed": "other",
+      "tier": "focal",
+      "estimand": "Pairwise latent mean contrasts and standardized differences, later survey year minus earlier year.",
+      "effect_scale_and_null": "Latent mean difference or standardized d; null 0.",
+      "population": "U.S. high school seniors in 1976, 1991 and 2006; Form 4 (1976 DS0004, 1991/2006 DS0005).",
+      "comparison_units": "1976 vs. 1991; 1991 vs. 2006; 1976 vs. 2006",
+      "supporting_results": [
+        {
+          "doc_id": "P1",
+          "pdf_page": 8,
+          "table": "Research questions",
+          "column": "all three years and pairwise contrasts",
+          "row": "RQ2"
+        },
+        {
+          "doc_id": "P1",
+          "pdf_page": 12,
+          "table": "Table 1",
+          "column": "all three years and pairwise contrasts",
+          "row": "extrinsic rewards"
+        }
+      ],
+      "target_ids": [
+        "T181",
+        "T182",
+        "T183",
+        "T184",
+        "T185",
+        "T186",
+        "T187",
+        "T188",
+        "T189",
+        "T190",
+        "T191",
+        "T192",
+        "T193",
+        "T194",
+        "T195",
+        "T196",
+        "T197",
+        "T198",
+        "T199",
+        "T200",
+        "T201",
+        "T202",
+        "T203",
+        "T204",
+        "T205",
+        "T206",
+        "T207",
+        "T208",
+        "T209",
+        "T210",
+        "T211",
+        "T212",
+        "T213",
+        "T214",
+        "T215",
+        "T216",
+        "T217",
+        "T218",
+        "T219",
+        "T220",
+        "T221",
+        "T222",
+        "T223",
+        "T224",
+        "T225",
+        "T226",
+        "T227",
+        "T228",
+        "T409",
+        "T410",
+        "T411",
+        "T412",
+        "T413",
+        "T414",
+        "T415",
+        "T416",
+        "T417",
+        "T418",
+        "T419",
+        "T420",
+        "T421",
+        "T422",
+        "T423",
+        "T558"
+      ],
+      "notes": "Exploratory question, not a directional hypothesis. P1 pp. 7–9 explicitly decline speculative directional hypotheses; competing background conjectures are not fitted hypotheses."
+    },
+    {
+      "claim_id": "C06",
+      "statement": "Extrinsic rewards: 1991 versus 1976 is reported significantly higher.",
+      "hypothesis_label": "RQ2",
+      "direction_claimed": "increase",
+      "tier": "focal",
+      "estimand": "Pairwise latent mean contrasts and standardized differences, later survey year minus earlier year.",
+      "effect_scale_and_null": "Latent mean difference or standardized d; null 0.",
+      "population": "U.S. high school seniors in 1976, 1991 and 2006; Form 4 (1976 DS0004, 1991/2006 DS0005).",
+      "comparison_units": "1976 vs. 1991",
+      "supporting_results": [
+        {
+          "doc_id": "P1",
+          "pdf_page": 12,
+          "table": "Table 1",
+          "column": "1976 vs. 1991 t or d",
+          "row": "extrinsic rewards"
+        },
+        {
+          "doc_id": "P1",
+          "pdf_page": 16,
+          "table": "Results",
+          "column": "all three years and pairwise contrasts",
+          "row": "RQ2"
+        }
+      ],
+      "target_ids": [
+        "T409",
+        "T410",
+        "T411",
+        "T412",
+        "T413",
+        "T414",
+        "T415",
+        "T416",
+        "T417",
+        "T418",
+        "T419",
+        "T420",
+        "T421",
+        "T549"
+      ],
+      "notes": "No exact pairwise latent-contrast p, SE or test statistic is printed. Nonsignificance is not an equivalence test."
+    },
+    {
+      "claim_id": "C07",
+      "statement": "Extrinsic rewards are reported lower in 2006 than in 1991; the narrative describes a reversal but does not explicitly give significance for this contrast.",
+      "hypothesis_label": "RQ2",
+      "direction_claimed": "decrease",
+      "tier": "focal",
+      "estimand": "Pairwise latent mean contrasts and standardized differences, later survey year minus earlier year.",
+      "effect_scale_and_null": "Latent mean difference or standardized d; null 0.",
+      "population": "U.S. high school seniors in 1976, 1991 and 2006; Form 4 (1976 DS0004, 1991/2006 DS0005).",
+      "comparison_units": "1991 vs. 2006",
+      "supporting_results": [
+        {
+          "doc_id": "P1",
+          "pdf_page": 12,
+          "table": "Table 1",
+          "column": "1991 vs. 2006 t or d",
+          "row": "extrinsic rewards"
+        },
+        {
+          "doc_id": "P1",
+          "pdf_page": 16,
+          "table": "Results",
+          "column": "all three years and pairwise contrasts",
+          "row": "RQ2"
+        }
+      ],
+      "target_ids": [
+        "T409",
+        "T410",
+        "T411",
+        "T412",
+        "T413",
+        "T414",
+        "T415",
+        "T416",
+        "T417",
+        "T418",
+        "T419",
+        "T420",
+        "T422",
+        "T550"
+      ],
+      "notes": "P1 p.16 explicitly calls the other two extrinsic contrasts significant, but does not use that word for this contrast. No exact p, contrast SE or test statistic is printed; do not infer significance from the point estimate."
+    },
+    {
+      "claim_id": "C08",
+      "statement": "Extrinsic rewards: 2006 versus 1976 is reported significantly higher.",
+      "hypothesis_label": "RQ2",
+      "direction_claimed": "increase",
+      "tier": "focal",
+      "estimand": "Pairwise latent mean contrasts and standardized differences, later survey year minus earlier year.",
+      "effect_scale_and_null": "Latent mean difference or standardized d; null 0.",
+      "population": "U.S. high school seniors in 1976, 1991 and 2006; Form 4 (1976 DS0004, 1991/2006 DS0005).",
+      "comparison_units": "1976 vs. 2006",
+      "supporting_results": [
+        {
+          "doc_id": "P1",
+          "pdf_page": 12,
+          "table": "Table 1",
+          "column": "1976 vs. 2006 t or d",
+          "row": "extrinsic rewards"
+        },
+        {
+          "doc_id": "P1",
+          "pdf_page": 16,
+          "table": "Results",
+          "column": "all three years and pairwise contrasts",
+          "row": "RQ2"
+        }
+      ],
+      "target_ids": [
+        "T409",
+        "T410",
+        "T411",
+        "T412",
+        "T413",
+        "T414",
+        "T415",
+        "T416",
+        "T417",
+        "T418",
+        "T419",
+        "T420",
+        "T423",
+        "T551",
+        "T558"
+      ],
+      "notes": "No exact pairwise latent-contrast p, SE or test statistic is printed. Nonsignificance is not an equivalence test."
+    },
+    {
+      "claim_id": "C09",
+      "statement": "Research Question 3: Which generation most values intrinsic rewards?",
+      "hypothesis_label": "RQ3",
+      "direction_claimed": "other",
+      "tier": "focal",
+      "estimand": "Pairwise latent mean contrasts and standardized differences, later survey year minus earlier year.",
+      "effect_scale_and_null": "Latent mean difference or standardized d; null 0.",
+      "population": "U.S. high school seniors in 1976, 1991 and 2006; Form 4 (1976 DS0004, 1991/2006 DS0005).",
+      "comparison_units": "1976 vs. 1991; 1991 vs. 2006; 1976 vs. 2006",
+      "supporting_results": [
+        {
+          "doc_id": "P1",
+          "pdf_page": 8,
+          "table": "Research questions",
+          "column": "all three years and pairwise contrasts",
+          "row": "RQ3"
+        },
+        {
+          "doc_id": "P1",
+          "pdf_page": 11,
+          "table": "Table 1",
+          "column": "all three years and pairwise contrasts",
+          "row": "intrinsic rewards"
+        }
+      ],
+      "target_ids": [
+        "T049",
+        "T050",
+        "T051",
+        "T052",
+        "T053",
+        "T054",
+        "T055",
+        "T056",
+        "T057",
+        "T058",
+        "T059",
+        "T060",
+        "T061",
+        "T062",
+        "T063",
+        "T064",
+        "T065",
+        "T066",
+        "T067",
+        "T068",
+        "T069",
+        "T070",
+        "T071",
+        "T072",
+        "T073",
+        "T074",
+        "T075",
+        "T076",
+        "T077",
+        "T078",
+        "T079",
+        "T080",
+        "T081",
+        "T082",
+        "T083",
+        "T084",
+        "T085",
+        "T086",
+        "T087",
+        "T088",
+        "T089",
+        "T090",
+        "T091",
+        "T092",
+        "T093",
+        "T094",
+        "T095",
+        "T096",
+        "T097",
+        "T098",
+        "T099",
+        "T100",
+        "T101",
+        "T102",
+        "T103",
+        "T104",
+        "T105",
+        "T106",
+        "T107",
+        "T108",
+        "T109",
+        "T110",
+        "T111",
+        "T112",
+        "T113",
+        "T114",
+        "T115",
+        "T116",
+        "T117",
+        "T118",
+        "T119",
+        "T120",
+        "T121",
+        "T122",
+        "T123",
+        "T124",
+        "T125",
+        "T126",
+        "T127",
+        "T128",
+        "T129",
+        "T130",
+        "T131",
+        "T132",
+        "T364",
+        "T365",
+        "T366",
+        "T367",
+        "T368",
+        "T369",
+        "T370",
+        "T371",
+        "T372",
+        "T373",
+        "T374",
+        "T375",
+        "T376",
+        "T377",
+        "T378"
+      ],
+      "notes": "Exploratory question, not a directional hypothesis. P1 pp. 7–9 explicitly decline speculative directional hypotheses; competing background conjectures are not fitted hypotheses."
+    },
+    {
+      "claim_id": "C10",
+      "statement": "Intrinsic rewards: 1991 versus 1976 is reported not significantly different.",
+      "hypothesis_label": "RQ3",
+      "direction_claimed": "no_difference",
+      "tier": "focal",
+      "estimand": "Pairwise latent mean contrasts and standardized differences, later survey year minus earlier year.",
+      "effect_scale_and_null": "Latent mean difference or standardized d; null 0.",
+      "population": "U.S. high school seniors in 1976, 1991 and 2006; Form 4 (1976 DS0004, 1991/2006 DS0005).",
+      "comparison_units": "1976 vs. 1991",
+      "supporting_results": [
+        {
+          "doc_id": "P1",
+          "pdf_page": 11,
+          "table": "Table 1",
+          "column": "1976 vs. 1991 t or d",
+          "row": "intrinsic rewards"
+        },
+        {
+          "doc_id": "P1",
+          "pdf_page": 16,
+          "table": "Results",
+          "column": "all three years and pairwise contrasts",
+          "row": "RQ3"
+        }
+      ],
+      "target_ids": [
+        "T364",
+        "T365",
+        "T366",
+        "T367",
+        "T368",
+        "T369",
+        "T370",
+        "T371",
+        "T372",
+        "T373",
+        "T374",
+        "T375",
+        "T376",
+        "T544"
+      ],
+      "notes": "No exact pairwise latent-contrast p, SE or test statistic is printed. Nonsignificance is not an equivalence test. Narrative prints positive .05 whereas the table prints −.05."
+    },
+    {
+      "claim_id": "C11",
+      "statement": "Intrinsic rewards: 2006 versus 1991 is reported significantly lower.",
+      "hypothesis_label": "RQ3",
+      "direction_claimed": "decrease",
+      "tier": "focal",
+      "estimand": "Pairwise latent mean contrasts and standardized differences, later survey year minus earlier year.",
+      "effect_scale_and_null": "Latent mean difference or standardized d; null 0.",
+      "population": "U.S. high school seniors in 1976, 1991 and 2006; Form 4 (1976 DS0004, 1991/2006 DS0005).",
+      "comparison_units": "1991 vs. 2006",
+      "supporting_results": [
+        {
+          "doc_id": "P1",
+          "pdf_page": 11,
+          "table": "Table 1",
+          "column": "1991 vs. 2006 t or d",
+          "row": "intrinsic rewards"
+        },
+        {
+          "doc_id": "P1",
+          "pdf_page": 17,
+          "table": "Results",
+          "column": "all three years and pairwise contrasts",
+          "row": "RQ3"
+        }
+      ],
+      "target_ids": [
+        "T364",
+        "T365",
+        "T366",
+        "T367",
+        "T368",
+        "T369",
+        "T370",
+        "T371",
+        "T372",
+        "T373",
+        "T374",
+        "T375",
+        "T377",
+        "T552"
+      ],
+      "notes": "No exact pairwise latent-contrast p, SE or test statistic is printed. Nonsignificance is not an equivalence test."
+    },
+    {
+      "claim_id": "C12",
+      "statement": "Intrinsic rewards: 2006 versus 1976 is reported significantly lower.",
+      "hypothesis_label": "RQ3",
+      "direction_claimed": "decrease",
+      "tier": "focal",
+      "estimand": "Pairwise latent mean contrasts and standardized differences, later survey year minus earlier year.",
+      "effect_scale_and_null": "Latent mean difference or standardized d; null 0.",
+      "population": "U.S. high school seniors in 1976, 1991 and 2006; Form 4 (1976 DS0004, 1991/2006 DS0005).",
+      "comparison_units": "1976 vs. 2006",
+      "supporting_results": [
+        {
+          "doc_id": "P1",
+          "pdf_page": 11,
+          "table": "Table 1",
+          "column": "1976 vs. 2006 t or d",
+          "row": "intrinsic rewards"
+        },
+        {
+          "doc_id": "P1",
+          "pdf_page": 17,
+          "table": "Results",
+          "column": "all three years and pairwise contrasts",
+          "row": "RQ3"
+        }
+      ],
+      "target_ids": [
+        "T364",
+        "T365",
+        "T366",
+        "T367",
+        "T368",
+        "T369",
+        "T370",
+        "T371",
+        "T372",
+        "T373",
+        "T374",
+        "T375",
+        "T378",
+        "T553"
+      ],
+      "notes": "No exact pairwise latent-contrast p, SE or test statistic is printed. Nonsignificance is not an equivalence test."
+    },
+    {
+      "claim_id": "C13",
+      "statement": "Research Question 4: Which generation most values altruistic rewards?",
+      "hypothesis_label": "RQ4",
+      "direction_claimed": "other",
+      "tier": "focal",
+      "estimand": "Pairwise latent mean contrasts and standardized differences, later survey year minus earlier year.",
+      "effect_scale_and_null": "Latent mean difference or standardized d; null 0.",
+      "population": "U.S. high school seniors in 1976, 1991 and 2006; Form 4 (1976 DS0004, 1991/2006 DS0005).",
+      "comparison_units": "1976 vs. 1991; 1991 vs. 2006; 1976 vs. 2006",
+      "supporting_results": [
+        {
+          "doc_id": "P1",
+          "pdf_page": 9,
+          "table": "Research questions",
+          "column": "all three years and pairwise contrasts",
+          "row": "RQ4"
+        },
+        {
+          "doc_id": "P1",
+          "pdf_page": 12,
+          "table": "Table 1",
+          "column": "all three years and pairwise contrasts",
+          "row": "altruistic rewards"
+        }
+      ],
+      "target_ids": [
+        "T133",
+        "T134",
+        "T135",
+        "T136",
+        "T137",
+        "T138",
+        "T139",
+        "T140",
+        "T141",
+        "T142",
+        "T143",
+        "T144",
+        "T145",
+        "T146",
+        "T147",
+        "T148",
+        "T149",
+        "T150",
+        "T151",
+        "T152",
+        "T153",
+        "T154",
+        "T155",
+        "T156",
+        "T379",
+        "T380",
+        "T381",
+        "T382",
+        "T383",
+        "T384",
+        "T385",
+        "T386",
+        "T387",
+        "T388",
+        "T389",
+        "T390",
+        "T391",
+        "T392",
+        "T393"
+      ],
+      "notes": "Exploratory question, not a directional hypothesis. P1 pp. 7–9 explicitly decline speculative directional hypotheses; competing background conjectures are not fitted hypotheses."
+    },
+    {
+      "claim_id": "C14",
+      "statement": "Altruistic rewards: 1991 versus 1976 is reported not significantly different.",
+      "hypothesis_label": "RQ4",
+      "direction_claimed": "no_difference",
+      "tier": "focal",
+      "estimand": "Pairwise latent mean contrasts and standardized differences, later survey year minus earlier year.",
+      "effect_scale_and_null": "Latent mean difference or standardized d; null 0.",
+      "population": "U.S. high school seniors in 1976, 1991 and 2006; Form 4 (1976 DS0004, 1991/2006 DS0005).",
+      "comparison_units": "1976 vs. 1991",
+      "supporting_results": [
+        {
+          "doc_id": "P1",
+          "pdf_page": 12,
+          "table": "Table 1",
+          "column": "1976 vs. 1991 t or d",
+          "row": "altruistic rewards"
+        },
+        {
+          "doc_id": "P1",
+          "pdf_page": 17,
+          "table": "Results",
+          "column": "all three years and pairwise contrasts",
+          "row": "RQ4"
+        }
+      ],
+      "target_ids": [
+        "T379",
+        "T380",
+        "T381",
+        "T382",
+        "T383",
+        "T384",
+        "T385",
+        "T386",
+        "T387",
+        "T388",
+        "T389",
+        "T390",
+        "T391"
+      ],
+      "notes": "No exact pairwise latent-contrast p, SE or test statistic is printed. Nonsignificance is not an equivalence test."
+    },
+    {
+      "claim_id": "C15",
+      "statement": "Altruistic rewards: 2006 versus 1991 is reported not significantly different.",
+      "hypothesis_label": "RQ4",
+      "direction_claimed": "no_difference",
+      "tier": "focal",
+      "estimand": "Pairwise latent mean contrasts and standardized differences, later survey year minus earlier year.",
+      "effect_scale_and_null": "Latent mean difference or standardized d; null 0.",
+      "population": "U.S. high school seniors in 1976, 1991 and 2006; Form 4 (1976 DS0004, 1991/2006 DS0005).",
+      "comparison_units": "1991 vs. 2006",
+      "supporting_results": [
+        {
+          "doc_id": "P1",
+          "pdf_page": 12,
+          "table": "Table 1",
+          "column": "1991 vs. 2006 t or d",
+          "row": "altruistic rewards"
+        },
+        {
+          "doc_id": "P1",
+          "pdf_page": 17,
+          "table": "Results",
+          "column": "all three years and pairwise contrasts",
+          "row": "RQ4"
+        }
+      ],
+      "target_ids": [
+        "T379",
+        "T380",
+        "T381",
+        "T382",
+        "T383",
+        "T384",
+        "T385",
+        "T386",
+        "T387",
+        "T388",
+        "T389",
+        "T390",
+        "T392"
+      ],
+      "notes": "No exact pairwise latent-contrast p, SE or test statistic is printed. Nonsignificance is not an equivalence test."
+    },
+    {
+      "claim_id": "C16",
+      "statement": "Altruistic rewards: 2006 versus 1976 is reported not significantly different.",
+      "hypothesis_label": "RQ4",
+      "direction_claimed": "no_difference",
+      "tier": "focal",
+      "estimand": "Pairwise latent mean contrasts and standardized differences, later survey year minus earlier year.",
+      "effect_scale_and_null": "Latent mean difference or standardized d; null 0.",
+      "population": "U.S. high school seniors in 1976, 1991 and 2006; Form 4 (1976 DS0004, 1991/2006 DS0005).",
+      "comparison_units": "1976 vs. 2006",
+      "supporting_results": [
+        {
+          "doc_id": "P1",
+          "pdf_page": 12,
+          "table": "Table 1",
+          "column": "1976 vs. 2006 t or d",
+          "row": "altruistic rewards"
+        },
+        {
+          "doc_id": "P1",
+          "pdf_page": 17,
+          "table": "Results",
+          "column": "all three years and pairwise contrasts",
+          "row": "RQ4"
+        }
+      ],
+      "target_ids": [
+        "T379",
+        "T380",
+        "T381",
+        "T382",
+        "T383",
+        "T384",
+        "T385",
+        "T386",
+        "T387",
+        "T388",
+        "T389",
+        "T390",
+        "T393"
+      ],
+      "notes": "No exact pairwise latent-contrast p, SE or test statistic is printed. Nonsignificance is not an equivalence test."
+    },
+    {
+      "claim_id": "C17",
+      "statement": "Research Question 5: Which generation most values social rewards?",
+      "hypothesis_label": "RQ5",
+      "direction_claimed": "other",
+      "tier": "focal",
+      "estimand": "Pairwise latent mean contrasts and standardized differences, later survey year minus earlier year.",
+      "effect_scale_and_null": "Latent mean difference or standardized d; null 0.",
+      "population": "U.S. high school seniors in 1976, 1991 and 2006; Form 4 (1976 DS0004, 1991/2006 DS0005).",
+      "comparison_units": "1976 vs. 1991; 1991 vs. 2006; 1976 vs. 2006",
+      "supporting_results": [
+        {
+          "doc_id": "P1",
+          "pdf_page": 9,
+          "table": "Research questions",
+          "column": "all three years and pairwise contrasts",
+          "row": "RQ5"
+        },
+        {
+          "doc_id": "P1",
+          "pdf_page": 12,
+          "table": "Table 1",
+          "column": "all three years and pairwise contrasts",
+          "row": "social rewards"
+        }
+      ],
+      "target_ids": [
+        "T157",
+        "T158",
+        "T159",
+        "T160",
+        "T161",
+        "T162",
+        "T163",
+        "T164",
+        "T165",
+        "T166",
+        "T167",
+        "T168",
+        "T169",
+        "T170",
+        "T171",
+        "T172",
+        "T173",
+        "T174",
+        "T175",
+        "T176",
+        "T177",
+        "T178",
+        "T179",
+        "T180",
+        "T394",
+        "T395",
+        "T396",
+        "T397",
+        "T398",
+        "T399",
+        "T400",
+        "T401",
+        "T402",
+        "T403",
+        "T404",
+        "T405",
+        "T406",
+        "T407",
+        "T408"
+      ],
+      "notes": "Exploratory question, not a directional hypothesis. P1 pp. 7–9 explicitly decline speculative directional hypotheses; competing background conjectures are not fitted hypotheses."
+    },
+    {
+      "claim_id": "C18",
+      "statement": "Social rewards: 1991 versus 1976 is reported not significantly different.",
+      "hypothesis_label": "RQ5",
+      "direction_claimed": "no_difference",
+      "tier": "focal",
+      "estimand": "Pairwise latent mean contrasts and standardized differences, later survey year minus earlier year.",
+      "effect_scale_and_null": "Latent mean difference or standardized d; null 0.",
+      "population": "U.S. high school seniors in 1976, 1991 and 2006; Form 4 (1976 DS0004, 1991/2006 DS0005).",
+      "comparison_units": "1976 vs. 1991",
+      "supporting_results": [
+        {
+          "doc_id": "P1",
+          "pdf_page": 12,
+          "table": "Table 1",
+          "column": "1976 vs. 1991 t or d",
+          "row": "social rewards"
+        },
+        {
+          "doc_id": "P1",
+          "pdf_page": 17,
+          "table": "Results",
+          "column": "all three years and pairwise contrasts",
+          "row": "RQ5"
+        }
+      ],
+      "target_ids": [
+        "T394",
+        "T395",
+        "T396",
+        "T397",
+        "T398",
+        "T399",
+        "T400",
+        "T401",
+        "T402",
+        "T403",
+        "T404",
+        "T405",
+        "T406",
+        "T554"
+      ],
+      "notes": "No exact pairwise latent-contrast p, SE or test statistic is printed. Nonsignificance is not an equivalence test."
+    },
+    {
+      "claim_id": "C19",
+      "statement": "Social rewards: 2006 versus 1991 is reported significantly lower.",
+      "hypothesis_label": "RQ5",
+      "direction_claimed": "decrease",
+      "tier": "focal",
+      "estimand": "Pairwise latent mean contrasts and standardized differences, later survey year minus earlier year.",
+      "effect_scale_and_null": "Latent mean difference or standardized d; null 0.",
+      "population": "U.S. high school seniors in 1976, 1991 and 2006; Form 4 (1976 DS0004, 1991/2006 DS0005).",
+      "comparison_units": "1991 vs. 2006",
+      "supporting_results": [
+        {
+          "doc_id": "P1",
+          "pdf_page": 12,
+          "table": "Table 1",
+          "column": "1991 vs. 2006 t or d",
+          "row": "social rewards"
+        },
+        {
+          "doc_id": "P1",
+          "pdf_page": 17,
+          "table": "Results",
+          "column": "all three years and pairwise contrasts",
+          "row": "RQ5"
+        }
+      ],
+      "target_ids": [
+        "T394",
+        "T395",
+        "T396",
+        "T397",
+        "T398",
+        "T399",
+        "T400",
+        "T401",
+        "T402",
+        "T403",
+        "T404",
+        "T405",
+        "T407",
+        "T555"
+      ],
+      "notes": "No exact pairwise latent-contrast p, SE or test statistic is printed. Nonsignificance is not an equivalence test."
+    },
+    {
+      "claim_id": "C20",
+      "statement": "Social rewards: 2006 versus 1976 is reported significantly lower.",
+      "hypothesis_label": "RQ5",
+      "direction_claimed": "decrease",
+      "tier": "focal",
+      "estimand": "Pairwise latent mean contrasts and standardized differences, later survey year minus earlier year.",
+      "effect_scale_and_null": "Latent mean difference or standardized d; null 0.",
+      "population": "U.S. high school seniors in 1976, 1991 and 2006; Form 4 (1976 DS0004, 1991/2006 DS0005).",
+      "comparison_units": "1976 vs. 2006",
+      "supporting_results": [
+        {
+          "doc_id": "P1",
+          "pdf_page": 12,
+          "table": "Table 1",
+          "column": "1976 vs. 2006 t or d",
+          "row": "social rewards"
+        },
+        {
+          "doc_id": "P1",
+          "pdf_page": 17,
+          "table": "Results",
+          "column": "all three years and pairwise contrasts",
+          "row": "RQ5"
+        }
+      ],
+      "target_ids": [
+        "T394",
+        "T395",
+        "T396",
+        "T397",
+        "T398",
+        "T399",
+        "T400",
+        "T401",
+        "T402",
+        "T403",
+        "T404",
+        "T405",
+        "T408",
+        "T556"
+      ],
+      "notes": "No exact pairwise latent-contrast p, SE or test statistic is printed. Nonsignificance is not an equivalence test."
+    },
+    {
+      "claim_id": "C21",
+      "statement": "Published item results for More than two weeks vacation: means, dispersion, endorsement and three pairwise tests are reported.",
+      "hypothesis_label": null,
+      "direction_claimed": "mixed",
+      "tier": "descriptive",
+      "estimand": "Per-year observed-item mean, SD and top-category/agreement proportion; between-year observed-item mean differences (later minus earlier on native coding), with exceptions in printed test signs retained.",
+      "effect_scale_and_null": "Original item units (1–4, 1–5 or binary 1–2), percentage 0–100; mean/proportion difference null 0; t null 0.",
+      "population": "U.S. high school seniors, survey years 1976/1991/2006, Form 4.",
+      "comparison_units": "1976 vs. 1991; 1991 vs. 2006; 1976 vs. 2006",
+      "supporting_results": [
+        {
+          "doc_id": "P1",
+          "pdf_page": 11,
+          "table": "Table 1",
+          "column": "all three years and pairwise contrasts",
+          "row": "More than two weeks vacation"
+        }
+      ],
+      "target_ids": [
+        "T001",
+        "T002",
+        "T003",
+        "T004",
+        "T005",
+        "T006",
+        "T007",
+        "T008",
+        "T009",
+        "T010",
+        "T011",
+        "T012"
+      ],
+      "notes": "Includes individually significant items even where the latent construct is described as nonsignificant."
+    },
+    {
+      "claim_id": "C22",
+      "statement": "Published item results for Time for other things in life: means, dispersion, endorsement and three pairwise tests are reported.",
+      "hypothesis_label": null,
+      "direction_claimed": "mixed",
+      "tier": "descriptive",
+      "estimand": "Per-year observed-item mean, SD and top-category/agreement proportion; between-year observed-item mean differences (later minus earlier on native coding), with exceptions in printed test signs retained.",
+      "effect_scale_and_null": "Original item units (1–4, 1–5 or binary 1–2), percentage 0–100; mean/proportion difference null 0; t null 0.",
+      "population": "U.S. high school seniors, survey years 1976/1991/2006, Form 4.",
+      "comparison_units": "1976 vs. 1991; 1991 vs. 2006; 1976 vs. 2006",
+      "supporting_results": [
+        {
+          "doc_id": "P1",
+          "pdf_page": 11,
+          "table": "Table 1",
+          "column": "all three years and pairwise contrasts",
+          "row": "Time for other things in life"
+        }
+      ],
+      "target_ids": [
+        "T013",
+        "T014",
+        "T015",
+        "T016",
+        "T017",
+        "T018",
+        "T019",
+        "T020",
+        "T021",
+        "T022",
+        "T023",
+        "T024"
+      ],
+      "notes": "Includes individually significant items even where the latent construct is described as nonsignificant."
+    },
+    {
+      "claim_id": "C23",
+      "statement": "Published item results for Easy pace; work slowly: means, dispersion, endorsement and three pairwise tests are reported.",
+      "hypothesis_label": null,
+      "direction_claimed": "mixed",
+      "tier": "descriptive",
+      "estimand": "Per-year observed-item mean, SD and top-category/agreement proportion; between-year observed-item mean differences (later minus earlier on native coding), with exceptions in printed test signs retained.",
+      "effect_scale_and_null": "Original item units (1–4, 1–5 or binary 1–2), percentage 0–100; mean/proportion difference null 0; t null 0.",
+      "population": "U.S. high school seniors, survey years 1976/1991/2006, Form 4.",
+      "comparison_units": "1976 vs. 1991; 1991 vs. 2006; 1976 vs. 2006",
+      "supporting_results": [
+        {
+          "doc_id": "P1",
+          "pdf_page": 11,
+          "table": "Table 1",
+          "column": "all three years and pairwise contrasts",
+          "row": "Easy pace; work slowly"
+        }
+      ],
+      "target_ids": [
+        "T025",
+        "T026",
+        "T027",
+        "T028",
+        "T029",
+        "T030",
+        "T031",
+        "T032",
+        "T033",
+        "T034",
+        "T035",
+        "T036"
+      ],
+      "notes": "Includes individually significant items even where the latent construct is described as nonsignificant."
+    },
+    {
+      "claim_id": "C24",
+      "statement": "Published item results for Free from supervision: means, dispersion, endorsement and three pairwise tests are reported.",
+      "hypothesis_label": null,
+      "direction_claimed": "mixed",
+      "tier": "descriptive",
+      "estimand": "Per-year observed-item mean, SD and top-category/agreement proportion; between-year observed-item mean differences (later minus earlier on native coding), with exceptions in printed test signs retained.",
+      "effect_scale_and_null": "Original item units (1–4, 1–5 or binary 1–2), percentage 0–100; mean/proportion difference null 0; t null 0.",
+      "population": "U.S. high school seniors, survey years 1976/1991/2006, Form 4.",
+      "comparison_units": "1976 vs. 1991; 1991 vs. 2006; 1976 vs. 2006",
+      "supporting_results": [
+        {
+          "doc_id": "P1",
+          "pdf_page": 11,
+          "table": "Table 1",
+          "column": "all three years and pairwise contrasts",
+          "row": "Free from supervision"
+        }
+      ],
+      "target_ids": [
+        "T037",
+        "T038",
+        "T039",
+        "T040",
+        "T041",
+        "T042",
+        "T043",
+        "T044",
+        "T045",
+        "T046",
+        "T047",
+        "T048"
+      ],
+      "notes": "Includes individually significant items even where the latent construct is described as nonsignificant."
+    },
+    {
+      "claim_id": "C25",
+      "statement": "Published item results for Interesting work: means, dispersion, endorsement and three pairwise tests are reported.",
+      "hypothesis_label": null,
+      "direction_claimed": "mixed",
+      "tier": "descriptive",
+      "estimand": "Per-year observed-item mean, SD and top-category/agreement proportion; between-year observed-item mean differences (later minus earlier on native coding), with exceptions in printed test signs retained.",
+      "effect_scale_and_null": "Original item units (1–4, 1–5 or binary 1–2), percentage 0–100; mean/proportion difference null 0; t null 0.",
+      "population": "U.S. high school seniors, survey years 1976/1991/2006, Form 4.",
+      "comparison_units": "1976 vs. 1991; 1991 vs. 2006; 1976 vs. 2006",
+      "supporting_results": [
+        {
+          "doc_id": "P1",
+          "pdf_page": 11,
+          "table": "Table 1",
+          "column": "all three years and pairwise contrasts",
+          "row": "Interesting work"
+        }
+      ],
+      "target_ids": [
+        "T049",
+        "T050",
+        "T051",
+        "T052",
+        "T053",
+        "T054",
+        "T055",
+        "T056",
+        "T057",
+        "T058",
+        "T059",
+        "T060"
+      ],
+      "notes": "Includes individually significant items even where the latent construct is described as nonsignificant."
+    },
+    {
+      "claim_id": "C26",
+      "statement": "Published item results for Learn new things and skills: means, dispersion, endorsement and three pairwise tests are reported.",
+      "hypothesis_label": null,
+      "direction_claimed": "mixed",
+      "tier": "descriptive",
+      "estimand": "Per-year observed-item mean, SD and top-category/agreement proportion; between-year observed-item mean differences (later minus earlier on native coding), with exceptions in printed test signs retained.",
+      "effect_scale_and_null": "Original item units (1–4, 1–5 or binary 1–2), percentage 0–100; mean/proportion difference null 0; t null 0.",
+      "population": "U.S. high school seniors, survey years 1976/1991/2006, Form 4.",
+      "comparison_units": "1976 vs. 1991; 1991 vs. 2006; 1976 vs. 2006",
+      "supporting_results": [
+        {
+          "doc_id": "P1",
+          "pdf_page": 11,
+          "table": "Table 1",
+          "column": "all three years and pairwise contrasts",
+          "row": "Learn new things and skills"
+        }
+      ],
+      "target_ids": [
+        "T061",
+        "T062",
+        "T063",
+        "T064",
+        "T065",
+        "T066",
+        "T067",
+        "T068",
+        "T069",
+        "T070",
+        "T071",
+        "T072"
+      ],
+      "notes": "Includes individually significant items even where the latent construct is described as nonsignificant."
+    },
+    {
+      "claim_id": "C27",
+      "statement": "Published item results for Skills will not go out of date: means, dispersion, endorsement and three pairwise tests are reported.",
+      "hypothesis_label": null,
+      "direction_claimed": "mixed",
+      "tier": "descriptive",
+      "estimand": "Per-year observed-item mean, SD and top-category/agreement proportion; between-year observed-item mean differences (later minus earlier on native coding), with exceptions in printed test signs retained.",
+      "effect_scale_and_null": "Original item units (1–4, 1–5 or binary 1–2), percentage 0–100; mean/proportion difference null 0; t null 0.",
+      "population": "U.S. high school seniors, survey years 1976/1991/2006, Form 4.",
+      "comparison_units": "1976 vs. 1991; 1991 vs. 2006; 1976 vs. 2006",
+      "supporting_results": [
+        {
+          "doc_id": "P1",
+          "pdf_page": 11,
+          "table": "Table 1",
+          "column": "all three years and pairwise contrasts",
+          "row": "Skills will not go out of date"
+        }
+      ],
+      "target_ids": [
+        "T073",
+        "T074",
+        "T075",
+        "T076",
+        "T077",
+        "T078",
+        "T079",
+        "T080",
+        "T081",
+        "T082",
+        "T083",
+        "T084"
+      ],
+      "notes": "Includes individually significant items even where the latent construct is described as nonsignificant."
+    },
+    {
+      "claim_id": "C28",
+      "statement": "Published item results for See results of work: means, dispersion, endorsement and three pairwise tests are reported.",
+      "hypothesis_label": null,
+      "direction_claimed": "mixed",
+      "tier": "descriptive",
+      "estimand": "Per-year observed-item mean, SD and top-category/agreement proportion; between-year observed-item mean differences (later minus earlier on native coding), with exceptions in printed test signs retained.",
+      "effect_scale_and_null": "Original item units (1–4, 1–5 or binary 1–2), percentage 0–100; mean/proportion difference null 0; t null 0.",
+      "population": "U.S. high school seniors, survey years 1976/1991/2006, Form 4.",
+      "comparison_units": "1976 vs. 1991; 1991 vs. 2006; 1976 vs. 2006",
+      "supporting_results": [
+        {
+          "doc_id": "P1",
+          "pdf_page": 11,
+          "table": "Table 1",
+          "column": "all three years and pairwise contrasts",
+          "row": "See results of work"
+        }
+      ],
+      "target_ids": [
+        "T085",
+        "T086",
+        "T087",
+        "T088",
+        "T089",
+        "T090",
+        "T091",
+        "T092",
+        "T093",
+        "T094",
+        "T095",
+        "T096"
+      ],
+      "notes": "Includes individually significant items even where the latent construct is described as nonsignificant."
+    },
+    {
+      "claim_id": "C29",
+      "statement": "Published item results for Uses skills and abilities: means, dispersion, endorsement and three pairwise tests are reported.",
+      "hypothesis_label": null,
+      "direction_claimed": "mixed",
+      "tier": "descriptive",
+      "estimand": "Per-year observed-item mean, SD and top-category/agreement proportion; between-year observed-item mean differences (later minus earlier on native coding), with exceptions in printed test signs retained.",
+      "effect_scale_and_null": "Original item units (1–4, 1–5 or binary 1–2), percentage 0–100; mean/proportion difference null 0; t null 0.",
+      "population": "U.S. high school seniors, survey years 1976/1991/2006, Form 4.",
+      "comparison_units": "1976 vs. 1991; 1991 vs. 2006; 1976 vs. 2006",
+      "supporting_results": [
+        {
+          "doc_id": "P1",
+          "pdf_page": 11,
+          "table": "Table 1",
+          "column": "all three years and pairwise contrasts",
+          "row": "Uses skills and abilities"
+        }
+      ],
+      "target_ids": [
+        "T097",
+        "T098",
+        "T099",
+        "T100",
+        "T101",
+        "T102",
+        "T103",
+        "T104",
+        "T105",
+        "T106",
+        "T107",
+        "T108"
+      ],
+      "notes": "Includes individually significant items even where the latent construct is described as nonsignificant."
+    },
+    {
+      "claim_id": "C30",
+      "statement": "Published item results for No need to pretend to be someone else: means, dispersion, endorsement and three pairwise tests are reported.",
+      "hypothesis_label": null,
+      "direction_claimed": "mixed",
+      "tier": "descriptive",
+      "estimand": "Per-year observed-item mean, SD and top-category/agreement proportion; between-year observed-item mean differences (later minus earlier on native coding), with exceptions in printed test signs retained.",
+      "effect_scale_and_null": "Original item units (1–4, 1–5 or binary 1–2), percentage 0–100; mean/proportion difference null 0; t null 0.",
+      "population": "U.S. high school seniors, survey years 1976/1991/2006, Form 4.",
+      "comparison_units": "1976 vs. 1991; 1991 vs. 2006; 1976 vs. 2006",
+      "supporting_results": [
+        {
+          "doc_id": "P1",
+          "pdf_page": 11,
+          "table": "Table 1",
+          "column": "all three years and pairwise contrasts",
+          "row": "No need to pretend to be someone else"
+        }
+      ],
+      "target_ids": [
+        "T109",
+        "T110",
+        "T111",
+        "T112",
+        "T113",
+        "T114",
+        "T115",
+        "T116",
+        "T117",
+        "T118",
+        "T119",
+        "T120"
+      ],
+      "notes": "Includes individually significant items even where the latent construct is described as nonsignificant."
+    },
+    {
+      "claim_id": "C31",
+      "statement": "Published item results for Chance to be creative: means, dispersion, endorsement and three pairwise tests are reported.",
+      "hypothesis_label": null,
+      "direction_claimed": "mixed",
+      "tier": "descriptive",
+      "estimand": "Per-year observed-item mean, SD and top-category/agreement proportion; between-year observed-item mean differences (later minus earlier on native coding), with exceptions in printed test signs retained.",
+      "effect_scale_and_null": "Original item units (1–4, 1–5 or binary 1–2), percentage 0–100; mean/proportion difference null 0; t null 0.",
+      "population": "U.S. high school seniors, survey years 1976/1991/2006, Form 4.",
+      "comparison_units": "1976 vs. 1991; 1991 vs. 2006; 1976 vs. 2006",
+      "supporting_results": [
+        {
+          "doc_id": "P1",
+          "pdf_page": 11,
+          "table": "Table 1",
+          "column": "all three years and pairwise contrasts",
+          "row": "Chance to be creative"
+        }
+      ],
+      "target_ids": [
+        "T121",
+        "T122",
+        "T123",
+        "T124",
+        "T125",
+        "T126",
+        "T127",
+        "T128",
+        "T129",
+        "T130",
+        "T131",
+        "T132"
+      ],
+      "notes": "Includes individually significant items even where the latent construct is described as nonsignificant."
+    },
+    {
+      "claim_id": "C32",
+      "statement": "Published item results for Directly helpful to others: means, dispersion, endorsement and three pairwise tests are reported.",
+      "hypothesis_label": null,
+      "direction_claimed": "mixed",
+      "tier": "descriptive",
+      "estimand": "Per-year observed-item mean, SD and top-category/agreement proportion; between-year observed-item mean differences (later minus earlier on native coding), with exceptions in printed test signs retained.",
+      "effect_scale_and_null": "Original item units (1–4, 1–5 or binary 1–2), percentage 0–100; mean/proportion difference null 0; t null 0.",
+      "population": "U.S. high school seniors, survey years 1976/1991/2006, Form 4.",
+      "comparison_units": "1976 vs. 1991; 1991 vs. 2006; 1976 vs. 2006",
+      "supporting_results": [
+        {
+          "doc_id": "P1",
+          "pdf_page": 12,
+          "table": "Table 1",
+          "column": "all three years and pairwise contrasts",
+          "row": "Directly helpful to others"
+        }
+      ],
+      "target_ids": [
+        "T133",
+        "T134",
+        "T135",
+        "T136",
+        "T137",
+        "T138",
+        "T139",
+        "T140",
+        "T141",
+        "T142",
+        "T143",
+        "T144"
+      ],
+      "notes": "Includes individually significant items even where the latent construct is described as nonsignificant."
+    },
+    {
+      "claim_id": "C33",
+      "statement": "Published item results for Worthwhile to society: means, dispersion, endorsement and three pairwise tests are reported.",
+      "hypothesis_label": null,
+      "direction_claimed": "mixed",
+      "tier": "descriptive",
+      "estimand": "Per-year observed-item mean, SD and top-category/agreement proportion; between-year observed-item mean differences (later minus earlier on native coding), with exceptions in printed test signs retained.",
+      "effect_scale_and_null": "Original item units (1–4, 1–5 or binary 1–2), percentage 0–100; mean/proportion difference null 0; t null 0.",
+      "population": "U.S. high school seniors, survey years 1976/1991/2006, Form 4.",
+      "comparison_units": "1976 vs. 1991; 1991 vs. 2006; 1976 vs. 2006",
+      "supporting_results": [
+        {
+          "doc_id": "P1",
+          "pdf_page": 12,
+          "table": "Table 1",
+          "column": "all three years and pairwise contrasts",
+          "row": "Worthwhile to society"
+        }
+      ],
+      "target_ids": [
+        "T145",
+        "T146",
+        "T147",
+        "T148",
+        "T149",
+        "T150",
+        "T151",
+        "T152",
+        "T153",
+        "T154",
+        "T155",
+        "T156"
+      ],
+      "notes": "Includes individually significant items even where the latent construct is described as nonsignificant."
+    },
+    {
+      "claim_id": "C34",
+      "statement": "Published item results for Make friends: means, dispersion, endorsement and three pairwise tests are reported.",
+      "hypothesis_label": null,
+      "direction_claimed": "mixed",
+      "tier": "descriptive",
+      "estimand": "Per-year observed-item mean, SD and top-category/agreement proportion; between-year observed-item mean differences (later minus earlier on native coding), with exceptions in printed test signs retained.",
+      "effect_scale_and_null": "Original item units (1–4, 1–5 or binary 1–2), percentage 0–100; mean/proportion difference null 0; t null 0.",
+      "population": "U.S. high school seniors, survey years 1976/1991/2006, Form 4.",
+      "comparison_units": "1976 vs. 1991; 1991 vs. 2006; 1976 vs. 2006",
+      "supporting_results": [
+        {
+          "doc_id": "P1",
+          "pdf_page": 12,
+          "table": "Table 1",
+          "column": "all three years and pairwise contrasts",
+          "row": "Make friends"
+        }
+      ],
+      "target_ids": [
+        "T157",
+        "T158",
+        "T159",
+        "T160",
+        "T161",
+        "T162",
+        "T163",
+        "T164",
+        "T165",
+        "T166",
+        "T167",
+        "T168"
+      ],
+      "notes": "Includes individually significant items even where the latent construct is described as nonsignificant."
+    },
+    {
+      "claim_id": "C35",
+      "statement": "Published item results for Contact with many people: means, dispersion, endorsement and three pairwise tests are reported.",
+      "hypothesis_label": null,
+      "direction_claimed": "mixed",
+      "tier": "descriptive",
+      "estimand": "Per-year observed-item mean, SD and top-category/agreement proportion; between-year observed-item mean differences (later minus earlier on native coding), with exceptions in printed test signs retained.",
+      "effect_scale_and_null": "Original item units (1–4, 1–5 or binary 1–2), percentage 0–100; mean/proportion difference null 0; t null 0.",
+      "population": "U.S. high school seniors, survey years 1976/1991/2006, Form 4.",
+      "comparison_units": "1976 vs. 1991; 1991 vs. 2006; 1976 vs. 2006",
+      "supporting_results": [
+        {
+          "doc_id": "P1",
+          "pdf_page": 12,
+          "table": "Table 1",
+          "column": "all three years and pairwise contrasts",
+          "row": "Contact with many people"
+        }
+      ],
+      "target_ids": [
+        "T169",
+        "T170",
+        "T171",
+        "T172",
+        "T173",
+        "T174",
+        "T175",
+        "T176",
+        "T177",
+        "T178",
+        "T179",
+        "T180"
+      ],
+      "notes": "Includes individually significant items even where the latent construct is described as nonsignificant."
+    },
+    {
+      "claim_id": "C36",
+      "statement": "Published item results for High status and prestige: means, dispersion, endorsement and three pairwise tests are reported.",
+      "hypothesis_label": null,
+      "direction_claimed": "mixed",
+      "tier": "descriptive",
+      "estimand": "Per-year observed-item mean, SD and top-category/agreement proportion; between-year observed-item mean differences (later minus earlier on native coding), with exceptions in printed test signs retained.",
+      "effect_scale_and_null": "Original item units (1–4, 1–5 or binary 1–2), percentage 0–100; mean/proportion difference null 0; t null 0.",
+      "population": "U.S. high school seniors, survey years 1976/1991/2006, Form 4.",
+      "comparison_units": "1976 vs. 1991; 1991 vs. 2006; 1976 vs. 2006",
+      "supporting_results": [
+        {
+          "doc_id": "P1",
+          "pdf_page": 12,
+          "table": "Table 1",
+          "column": "all three years and pairwise contrasts",
+          "row": "High status and prestige"
+        }
+      ],
+      "target_ids": [
+        "T181",
+        "T182",
+        "T183",
+        "T184",
+        "T185",
+        "T186",
+        "T187",
+        "T188",
+        "T189",
+        "T190",
+        "T191",
+        "T192"
+      ],
+      "notes": "Includes individually significant items even where the latent construct is described as nonsignificant."
+    },
+    {
+      "claim_id": "C37",
+      "statement": "Published item results for Looked up to and respected: means, dispersion, endorsement and three pairwise tests are reported.",
+      "hypothesis_label": null,
+      "direction_claimed": "mixed",
+      "tier": "descriptive",
+      "estimand": "Per-year observed-item mean, SD and top-category/agreement proportion; between-year observed-item mean differences (later minus earlier on native coding), with exceptions in printed test signs retained.",
+      "effect_scale_and_null": "Original item units (1–4, 1–5 or binary 1–2), percentage 0–100; mean/proportion difference null 0; t null 0.",
+      "population": "U.S. high school seniors, survey years 1976/1991/2006, Form 4.",
+      "comparison_units": "1976 vs. 1991; 1991 vs. 2006; 1976 vs. 2006",
+      "supporting_results": [
+        {
+          "doc_id": "P1",
+          "pdf_page": 12,
+          "table": "Table 1",
+          "column": "all three years and pairwise contrasts",
+          "row": "Looked up to and respected"
+        }
+      ],
+      "target_ids": [
+        "T193",
+        "T194",
+        "T195",
+        "T196",
+        "T197",
+        "T198",
+        "T199",
+        "T200",
+        "T201",
+        "T202",
+        "T203",
+        "T204"
+      ],
+      "notes": "Includes individually significant items even where the latent construct is described as nonsignificant."
+    },
+    {
+      "claim_id": "C38",
+      "statement": "Published item results for Earn a good deal of money: means, dispersion, endorsement and three pairwise tests are reported.",
+      "hypothesis_label": null,
+      "direction_claimed": "mixed",
+      "tier": "descriptive",
+      "estimand": "Per-year observed-item mean, SD and top-category/agreement proportion; between-year observed-item mean differences (later minus earlier on native coding), with exceptions in printed test signs retained.",
+      "effect_scale_and_null": "Original item units (1–4, 1–5 or binary 1–2), percentage 0–100; mean/proportion difference null 0; t null 0.",
+      "population": "U.S. high school seniors, survey years 1976/1991/2006, Form 4.",
+      "comparison_units": "1976 vs. 1991; 1991 vs. 2006; 1976 vs. 2006",
+      "supporting_results": [
+        {
+          "doc_id": "P1",
+          "pdf_page": 12,
+          "table": "Table 1",
+          "column": "all three years and pairwise contrasts",
+          "row": "Earn a good deal of money"
+        }
+      ],
+      "target_ids": [
+        "T205",
+        "T206",
+        "T207",
+        "T208",
+        "T209",
+        "T210",
+        "T211",
+        "T212",
+        "T213",
+        "T214",
+        "T215",
+        "T216"
+      ],
+      "notes": "Includes individually significant items even where the latent construct is described as nonsignificant."
+    },
+    {
+      "claim_id": "C39",
+      "statement": "Published item results for Advancement and promotion: means, dispersion, endorsement and three pairwise tests are reported.",
+      "hypothesis_label": null,
+      "direction_claimed": "mixed",
+      "tier": "descriptive",
+      "estimand": "Per-year observed-item mean, SD and top-category/agreement proportion; between-year observed-item mean differences (later minus earlier on native coding), with exceptions in printed test signs retained.",
+      "effect_scale_and_null": "Original item units (1–4, 1–5 or binary 1–2), percentage 0–100; mean/proportion difference null 0; t null 0.",
+      "population": "U.S. high school seniors, survey years 1976/1991/2006, Form 4.",
+      "comparison_units": "1976 vs. 1991; 1991 vs. 2006; 1976 vs. 2006",
+      "supporting_results": [
+        {
+          "doc_id": "P1",
+          "pdf_page": 12,
+          "table": "Table 1",
+          "column": "all three years and pairwise contrasts",
+          "row": "Advancement and promotion"
+        }
+      ],
+      "target_ids": [
+        "T217",
+        "T218",
+        "T219",
+        "T220",
+        "T221",
+        "T222",
+        "T223",
+        "T224",
+        "T225",
+        "T226",
+        "T227",
+        "T228"
+      ],
+      "notes": "Includes individually significant items even where the latent construct is described as nonsignificant."
+    },
+    {
+      "claim_id": "C40",
+      "statement": "Published item results for Work is only making a living: means, dispersion, endorsement and three pairwise tests are reported.",
+      "hypothesis_label": null,
+      "direction_claimed": "mixed",
+      "tier": "descriptive",
+      "estimand": "Per-year observed-item mean, SD and top-category/agreement proportion; between-year observed-item mean differences (later minus earlier on native coding), with exceptions in printed test signs retained.",
+      "effect_scale_and_null": "Original item units (1–4, 1–5 or binary 1–2), percentage 0–100; mean/proportion difference null 0; t null 0.",
+      "population": "U.S. high school seniors, survey years 1976/1991/2006, Form 3.",
+      "comparison_units": "1976 vs. 1991; 1991 vs. 2006; 1976 vs. 2006",
+      "supporting_results": [
+        {
+          "doc_id": "P1",
+          "pdf_page": 12,
+          "table": "Table 1",
+          "column": "all three years and pairwise contrasts",
+          "row": "Work is only making a living"
+        }
+      ],
+      "target_ids": [
+        "T229",
+        "T230",
+        "T231",
+        "T232",
+        "T233",
+        "T234",
+        "T235",
+        "T236",
+        "T237",
+        "T238",
+        "T239",
+        "T240"
+      ],
+      "notes": "Includes individually significant items even where the latent construct is described as nonsignificant."
+    },
+    {
+      "claim_id": "C41",
+      "statement": "Published item results for Work central to life: means, dispersion, endorsement and three pairwise tests are reported.",
+      "hypothesis_label": null,
+      "direction_claimed": "mixed",
+      "tier": "descriptive",
+      "estimand": "Per-year observed-item mean, SD and top-category/agreement proportion; between-year observed-item mean differences (later minus earlier on native coding), with exceptions in printed test signs retained.",
+      "effect_scale_and_null": "Original item units (1–4, 1–5 or binary 1–2), percentage 0–100; mean/proportion difference null 0; t null 0.",
+      "population": "U.S. high school seniors, survey years 1976/1991/2006, Form 3.",
+      "comparison_units": "1976 vs. 1991; 1991 vs. 2006; 1976 vs. 2006",
+      "supporting_results": [
+        {
+          "doc_id": "P1",
+          "pdf_page": 12,
+          "table": "Table 1",
+          "column": "all three years and pairwise contrasts",
+          "row": "Work central to life"
+        }
+      ],
+      "target_ids": [
+        "T241",
+        "T242",
+        "T243",
+        "T244",
+        "T245",
+        "T246",
+        "T247",
+        "T248",
+        "T249",
+        "T250",
+        "T251",
+        "T252"
+      ],
+      "notes": "Includes individually significant items even where the latent construct is described as nonsignificant."
+    },
+    {
+      "claim_id": "C42",
+      "statement": "Published item results for Best effort including overtime: means, dispersion, endorsement and three pairwise tests are reported.",
+      "hypothesis_label": null,
+      "direction_claimed": "mixed",
+      "tier": "descriptive",
+      "estimand": "Per-year observed-item mean, SD and top-category/agreement proportion; between-year observed-item mean differences (later minus earlier on native coding), with exceptions in printed test signs retained.",
+      "effect_scale_and_null": "Original item units (1–4, 1–5 or binary 1–2), percentage 0–100; mean/proportion difference null 0; t null 0.",
+      "population": "U.S. high school seniors, survey years 1976/1991/2006, Form 3.",
+      "comparison_units": "1976 vs. 1991; 1991 vs. 2006; 1976 vs. 2006",
+      "supporting_results": [
+        {
+          "doc_id": "P1",
+          "pdf_page": 12,
+          "table": "Table 1",
+          "column": "all three years and pairwise contrasts",
+          "row": "Best effort including overtime"
+        }
+      ],
+      "target_ids": [
+        "T253",
+        "T254",
+        "T255",
+        "T256",
+        "T257",
+        "T258",
+        "T259",
+        "T260",
+        "T261",
+        "T262",
+        "T263",
+        "T264"
+      ],
+      "notes": "Includes individually significant items even where the latent construct is described as nonsignificant."
+    },
+    {
+      "claim_id": "C43",
+      "statement": "Published item results for Forget work after the work day: means, dispersion, endorsement and three pairwise tests are reported.",
+      "hypothesis_label": null,
+      "direction_claimed": "mixed",
+      "tier": "descriptive",
+      "estimand": "Per-year observed-item mean, SD and top-category/agreement proportion; between-year observed-item mean differences (later minus earlier on native coding), with exceptions in printed test signs retained.",
+      "effect_scale_and_null": "Original item units (1–4, 1–5 or binary 1–2), percentage 0–100; mean/proportion difference null 0; t null 0.",
+      "population": "U.S. high school seniors, survey years 1976/1991/2006, Form 3.",
+      "comparison_units": "1976 vs. 1991; 1991 vs. 2006; 1976 vs. 2006",
+      "supporting_results": [
+        {
+          "doc_id": "P1",
+          "pdf_page": 13,
+          "table": "Table 1",
+          "column": "all three years and pairwise contrasts",
+          "row": "Forget work after the work day"
+        }
+      ],
+      "target_ids": [
+        "T265",
+        "T266",
+        "T267",
+        "T268",
+        "T269",
+        "T270",
+        "T271",
+        "T272",
+        "T273",
+        "T274",
+        "T275",
+        "T276"
+      ],
+      "notes": "Includes individually significant items even where the latent construct is described as nonsignificant."
+    },
+    {
+      "claim_id": "C44",
+      "statement": "Published item results for Want to work if financially comfortable: means, dispersion, endorsement and three pairwise tests are reported.",
+      "hypothesis_label": null,
+      "direction_claimed": "mixed",
+      "tier": "descriptive",
+      "estimand": "Per-year observed-item mean, SD and top-category/agreement proportion; between-year observed-item mean differences (later minus earlier on native coding), with exceptions in printed test signs retained.",
+      "effect_scale_and_null": "Original item units (1–4, 1–5 or binary 1–2), percentage 0–100; mean/proportion difference null 0; t null 0.",
+      "population": "U.S. high school seniors, survey years 1976/1991/2006, Form 3.",
+      "comparison_units": "1976 vs. 1991; 1991 vs. 2006; 1976 vs. 2006",
+      "supporting_results": [
+        {
+          "doc_id": "P1",
+          "pdf_page": 13,
+          "table": "Table 1",
+          "column": "all three years and pairwise contrasts",
+          "row": "Want to work if financially comfortable"
+        }
+      ],
+      "target_ids": [
+        "T277",
+        "T278",
+        "T279",
+        "T280",
+        "T281",
+        "T282",
+        "T283",
+        "T284",
+        "T285",
+        "T286",
+        "T287",
+        "T288"
+      ],
+      "notes": "Includes individually significant items even where the latent construct is described as nonsignificant."
+    },
+    {
+      "claim_id": "C45",
+      "statement": "Published item results for Difficult and challenging problems: means, dispersion, endorsement and three pairwise tests are reported.",
+      "hypothesis_label": null,
+      "direction_claimed": "mixed",
+      "tier": "descriptive",
+      "estimand": "Per-year observed-item mean, SD and top-category/agreement proportion; between-year observed-item mean differences (later minus earlier on native coding), with exceptions in printed test signs retained.",
+      "effect_scale_and_null": "Original item units (1–4, 1–5 or binary 1–2), percentage 0–100; mean/proportion difference null 0; t null 0.",
+      "population": "U.S. high school seniors, survey years 1976/1991/2006, Form 4.",
+      "comparison_units": "1976 vs. 1991; 1991 vs. 2006; 1976 vs. 2006",
+      "supporting_results": [
+        {
+          "doc_id": "P1",
+          "pdf_page": 13,
+          "table": "Table 1",
+          "column": "all three years and pairwise contrasts",
+          "row": "Difficult and challenging problems"
+        }
+      ],
+      "target_ids": [
+        "T289",
+        "T290",
+        "T291",
+        "T292",
+        "T293",
+        "T294",
+        "T295",
+        "T296",
+        "T297",
+        "T298",
+        "T299",
+        "T300"
+      ],
+      "notes": "This is an item-level descriptive result, not a substitute latent outcome. Native coding is specified in manifest. Security/influence grouping of omitted items is inferred from wording and remains open for the preliminary CFA."
+    },
+    {
+      "claim_id": "C46",
+      "statement": "Published item results for Participate in decisions: means, dispersion, endorsement and three pairwise tests are reported.",
+      "hypothesis_label": null,
+      "direction_claimed": "mixed",
+      "tier": "descriptive",
+      "estimand": "Per-year observed-item mean, SD and top-category/agreement proportion; between-year observed-item mean differences (later minus earlier on native coding), with exceptions in printed test signs retained.",
+      "effect_scale_and_null": "Original item units (1–4, 1–5 or binary 1–2), percentage 0–100; mean/proportion difference null 0; t null 0.",
+      "population": "U.S. high school seniors, survey years 1976/1991/2006, Form 4.",
+      "comparison_units": "1976 vs. 1991; 1991 vs. 2006; 1976 vs. 2006",
+      "supporting_results": [
+        {
+          "doc_id": "P1",
+          "pdf_page": 13,
+          "table": "Table 1",
+          "column": "all three years and pairwise contrasts",
+          "row": "Participate in decisions"
+        }
+      ],
+      "target_ids": [
+        "T301",
+        "T302",
+        "T303",
+        "T304",
+        "T305",
+        "T306",
+        "T307",
+        "T308",
+        "T309",
+        "T310",
+        "T311",
+        "T312"
+      ],
+      "notes": "This is an item-level descriptive result, not a substitute latent outcome. Native coding is specified in manifest. Security/influence grouping of omitted items is inferred from wording and remains open for the preliminary CFA."
+    },
+    {
+      "claim_id": "C47",
+      "statement": "Published item results for Predictable secure future: means, dispersion, endorsement and three pairwise tests are reported.",
+      "hypothesis_label": null,
+      "direction_claimed": "mixed",
+      "tier": "descriptive",
+      "estimand": "Per-year observed-item mean, SD and top-category/agreement proportion; between-year observed-item mean differences (later minus earlier on native coding), with exceptions in printed test signs retained.",
+      "effect_scale_and_null": "Original item units (1–4, 1–5 or binary 1–2), percentage 0–100; mean/proportion difference null 0; t null 0.",
+      "population": "U.S. high school seniors, survey years 1976/1991/2006, Form 4.",
+      "comparison_units": "1976 vs. 1991; 1991 vs. 2006; 1976 vs. 2006",
+      "supporting_results": [
+        {
+          "doc_id": "P1",
+          "pdf_page": 13,
+          "table": "Table 1",
+          "column": "all three years and pairwise contrasts",
+          "row": "Predictable secure future"
+        }
+      ],
+      "target_ids": [
+        "T313",
+        "T314",
+        "T315",
+        "T316",
+        "T317",
+        "T318",
+        "T319",
+        "T320",
+        "T321",
+        "T322",
+        "T323",
+        "T324"
+      ],
+      "notes": "This is an item-level descriptive result, not a substitute latent outcome. Native coding is specified in manifest. Security/influence grouping of omitted items is inferred from wording and remains open for the preliminary CFA."
+    },
+    {
+      "claim_id": "C48",
+      "statement": "Published item results for Roots in a community without moving: means, dispersion, endorsement and three pairwise tests are reported.",
+      "hypothesis_label": null,
+      "direction_claimed": "mixed",
+      "tier": "descriptive",
+      "estimand": "Per-year observed-item mean, SD and top-category/agreement proportion; between-year observed-item mean differences (later minus earlier on native coding), with exceptions in printed test signs retained.",
+      "effect_scale_and_null": "Original item units (1–4, 1–5 or binary 1–2), percentage 0–100; mean/proportion difference null 0; t null 0.",
+      "population": "U.S. high school seniors, survey years 1976/1991/2006, Form 4.",
+      "comparison_units": "1976 vs. 1991; 1991 vs. 2006; 1976 vs. 2006",
+      "supporting_results": [
+        {
+          "doc_id": "P1",
+          "pdf_page": 13,
+          "table": "Table 1",
+          "column": "all three years and pairwise contrasts",
+          "row": "Roots in a community without moving"
+        }
+      ],
+      "target_ids": [
+        "T325",
+        "T326",
+        "T327",
+        "T328",
+        "T329",
+        "T330",
+        "T331",
+        "T332",
+        "T333",
+        "T334",
+        "T335",
+        "T336"
+      ],
+      "notes": "This is an item-level descriptive result, not a substitute latent outcome. Native coding is specified in manifest. Security/influence grouping of omitted items is inferred from wording and remains open for the preliminary CFA."
+    },
+    {
+      "claim_id": "C49",
+      "statement": "Published item results for Same job for most adult life: means, dispersion, endorsement and three pairwise tests are reported.",
+      "hypothesis_label": null,
+      "direction_claimed": "mixed",
+      "tier": "descriptive",
+      "estimand": "Per-year observed-item mean, SD and top-category/agreement proportion; between-year observed-item mean differences (later minus earlier on native coding), with exceptions in printed test signs retained.",
+      "effect_scale_and_null": "Original item units (1–4, 1–5 or binary 1–2), percentage 0–100; mean/proportion difference null 0; t null 0.",
+      "population": "U.S. high school seniors, survey years 1976/1991/2006, Form 3.",
+      "comparison_units": "1976 vs. 1991; 1991 vs. 2006; 1976 vs. 2006",
+      "supporting_results": [
+        {
+          "doc_id": "P1",
+          "pdf_page": 13,
+          "table": "Table 1",
+          "column": "all three years and pairwise contrasts",
+          "row": "Same job for most adult life"
+        }
+      ],
+      "target_ids": [
+        "T337",
+        "T338",
+        "T339",
+        "T340",
+        "T341",
+        "T342",
+        "T343",
+        "T344",
+        "T345",
+        "T346",
+        "T347",
+        "T348"
+      ],
+      "notes": "Includes individually significant items even where the latent construct is described as nonsignificant."
+    },
+    {
+      "claim_id": "C50",
+      "statement": "The two-factor Form 3 model fits inadequately in every year; work centrality is not analyzed as a total scale because fit and internal consistency are poor.",
+      "hypothesis_label": null,
+      "direction_claimed": "other",
+      "tier": "identification_inference_diagnostic",
+      "estimand": "CFA fit, nested-model chi-square and CFI changes, or internal consistency as specified; comparability is an interpretation of these diagnostics.",
+      "effect_scale_and_null": "Chi-square fit/difference statistic, df and dimensionless fit indices; equality constraints define the null. Reliability alpha is descriptive, no null specified.",
+      "population": "U.S. high school seniors in 1976, 1991 and 2006; Form 3 (1976 DS0003, 1991/2006 DS0004).",
+      "comparison_units": "Within-year measurement diagnostics, evaluated separately for each administration.",
+      "supporting_results": [
+        {
+          "doc_id": "P1",
+          "pdf_page": 10,
+          "table": "Preliminary/Primary analyses",
+          "column": "all three years and pairwise contrasts",
+          "row": "Form 3: 2 factor"
+        },
+        {
+          "doc_id": "P1",
+          "pdf_page": 14,
+          "table": "Table 2",
+          "column": "all three years and pairwise contrasts",
+          "row": "Form 3: 2 factor"
+        }
+      ],
+      "target_ids": [
+        "T424",
+        "T425",
+        "T426",
+        "T427",
+        "T428",
+        "T429",
+        "T442",
+        "T443",
+        "T444",
+        "T445",
+        "T446",
+        "T447",
+        "T460",
+        "T461",
+        "T462",
+        "T463",
+        "T464",
+        "T465",
+        "T600",
+        "T601",
+        "T602",
+        "T603",
+        "T604"
+      ],
+      "notes": "No model syntax or sample-specific analysis N provided; measurement diagnostics do not isolate period from birth-cohort effects."
+    },
+    {
+      "claim_id": "C51",
+      "statement": "The seven-factor Form 4 model has adequate fit in each year.",
+      "hypothesis_label": null,
+      "direction_claimed": "other",
+      "tier": "identification_inference_diagnostic",
+      "estimand": "CFA fit, nested-model chi-square and CFI changes, or internal consistency as specified; comparability is an interpretation of these diagnostics.",
+      "effect_scale_and_null": "Chi-square fit/difference statistic, df and dimensionless fit indices; equality constraints define the null. Reliability alpha is descriptive, no null specified.",
+      "population": "U.S. high school seniors in 1976, 1991 and 2006; Form 4 (1976 DS0004, 1991/2006 DS0005).",
+      "comparison_units": "Within-year measurement diagnostics, evaluated separately for each administration.",
+      "supporting_results": [
+        {
+          "doc_id": "P1",
+          "pdf_page": 10,
+          "table": "Preliminary/Primary analyses",
+          "column": "all three years and pairwise contrasts",
+          "row": "Form 4: 7 factor"
+        },
+        {
+          "doc_id": "P1",
+          "pdf_page": 14,
+          "table": "Table 2",
+          "column": "all three years and pairwise contrasts",
+          "row": "Form 4: 7 factor"
+        }
+      ],
+      "target_ids": [
+        "T430",
+        "T431",
+        "T432",
+        "T433",
+        "T434",
+        "T435",
+        "T448",
+        "T449",
+        "T450",
+        "T451",
+        "T452",
+        "T453",
+        "T466",
+        "T467",
+        "T468",
+        "T469",
+        "T470",
+        "T471",
+        "T598"
+      ],
+      "notes": "No model syntax or sample-specific analysis N provided; measurement diagnostics do not isolate period from birth-cohort effects."
+    },
+    {
+      "claim_id": "C52",
+      "statement": "Security and influence scales have poor internal consistency in every year; none of their coefficient alphas exceeds .50.",
+      "hypothesis_label": null,
+      "direction_claimed": "other",
+      "tier": "identification_inference_diagnostic",
+      "estimand": "CFA fit, nested-model chi-square and CFI changes, or internal consistency as specified; comparability is an interpretation of these diagnostics.",
+      "effect_scale_and_null": "Chi-square fit/difference statistic, df and dimensionless fit indices; equality constraints define the null. Reliability alpha is descriptive, no null specified.",
+      "population": "U.S. high school seniors in 1976, 1991 and 2006; Form 4 (1976 DS0004, 1991/2006 DS0005).",
+      "comparison_units": "Within-year measurement diagnostics, evaluated separately for each administration.",
+      "supporting_results": [
+        {
+          "doc_id": "P1",
+          "pdf_page": 10,
+          "table": "Preliminary/Primary analyses",
+          "column": "all three years and pairwise contrasts",
+          "row": "Security and influence reliability"
+        },
+        {
+          "doc_id": "P1",
+          "pdf_page": 14,
+          "table": "Table 2",
+          "column": "all three years and pairwise contrasts",
+          "row": "Security and influence reliability"
+        }
+      ],
+      "target_ids": [
+        "T566",
+        "T567",
+        "T568",
+        "T569",
+        "T570",
+        "T571"
+      ],
+      "notes": "No model syntax or sample-specific analysis N provided; measurement diagnostics do not isolate period from birth-cohort effects."
+    },
+    {
+      "claim_id": "C53",
+      "statement": "The five-factor Form 4 model with the remaining 19 items is adopted after adequate fit across years.",
+      "hypothesis_label": null,
+      "direction_claimed": "other",
+      "tier": "identification_inference_diagnostic",
+      "estimand": "CFA fit, nested-model chi-square and CFI changes, or internal consistency as specified; comparability is an interpretation of these diagnostics.",
+      "effect_scale_and_null": "Chi-square fit/difference statistic, df and dimensionless fit indices; equality constraints define the null. Reliability alpha is descriptive, no null specified.",
+      "population": "U.S. high school seniors in 1976, 1991 and 2006; Form 4 (1976 DS0004, 1991/2006 DS0005).",
+      "comparison_units": "Within-year measurement diagnostics, evaluated separately for each administration.",
+      "supporting_results": [
+        {
+          "doc_id": "P1",
+          "pdf_page": 10,
+          "table": "Preliminary/Primary analyses",
+          "column": "all three years and pairwise contrasts",
+          "row": "Form 4: 5 factor"
+        },
+        {
+          "doc_id": "P1",
+          "pdf_page": 14,
+          "table": "Table 2",
+          "column": "all three years and pairwise contrasts",
+          "row": "Form 4: 5 factor"
+        }
+      ],
+      "target_ids": [
+        "T436",
+        "T437",
+        "T438",
+        "T439",
+        "T440",
+        "T441",
+        "T454",
+        "T455",
+        "T456",
+        "T457",
+        "T458",
+        "T459",
+        "T472",
+        "T473",
+        "T474",
+        "T475",
+        "T476",
+        "T477",
+        "T572",
+        "T573",
+        "T574",
+        "T575",
+        "T576",
+        "T577",
+        "T578",
+        "T579",
+        "T580",
+        "T581",
+        "T582",
+        "T583",
+        "T584",
+        "T585",
+        "T586",
+        "T597"
+      ],
+      "notes": "No model syntax or sample-specific analysis N provided; measurement diagnostics do not isolate period from birth-cohort effects."
+    },
+    {
+      "claim_id": "C54",
+      "statement": "Configural invariance supports a common structure across the three groups.",
+      "hypothesis_label": null,
+      "direction_claimed": "other",
+      "tier": "identification_inference_diagnostic",
+      "estimand": "CFA fit, nested-model chi-square and CFI changes, or internal consistency as specified; comparability is an interpretation of these diagnostics.",
+      "effect_scale_and_null": "Chi-square fit/difference statistic, df and dimensionless fit indices; equality constraints define the null. Reliability alpha is descriptive, no null specified.",
+      "population": "U.S. high school seniors in 1976, 1991 and 2006; Form 4 (1976 DS0004, 1991/2006 DS0005).",
+      "comparison_units": "Joint three-group nested-model comparisons, not three independent pairwise item tests.",
+      "supporting_results": [
+        {
+          "doc_id": "P1",
+          "pdf_page": 15,
+          "table": "Preliminary/Primary analyses",
+          "column": "all three years and pairwise contrasts",
+          "row": "Model 1: configural inv"
+        },
+        {
+          "doc_id": "P1",
+          "pdf_page": 14,
+          "table": "Table 2",
+          "column": "all three years and pairwise contrasts",
+          "row": "Model 1: configural inv"
+        }
+      ],
+      "target_ids": [
+        "T478",
+        "T479",
+        "T480",
+        "T481",
+        "T482",
+        "T483"
+      ],
+      "notes": "No model syntax or sample-specific analysis N provided; measurement diagnostics do not isolate period from birth-cohort effects."
+    },
+    {
+      "claim_id": "C55",
+      "statement": "Metric invariance is supported by a nonsignificant chi-square decrement and small change in CFI.",
+      "hypothesis_label": null,
+      "direction_claimed": "other",
+      "tier": "identification_inference_diagnostic",
+      "estimand": "CFA fit, nested-model chi-square and CFI changes, or internal consistency as specified; comparability is an interpretation of these diagnostics.",
+      "effect_scale_and_null": "Chi-square fit/difference statistic, df and dimensionless fit indices; equality constraints define the null. Reliability alpha is descriptive, no null specified.",
+      "population": "U.S. high school seniors in 1976, 1991 and 2006; Form 4 (1976 DS0004, 1991/2006 DS0005).",
+      "comparison_units": "Joint three-group nested-model comparisons, not three independent pairwise item tests.",
+      "supporting_results": [
+        {
+          "doc_id": "P1",
+          "pdf_page": 15,
+          "table": "Preliminary/Primary analyses",
+          "column": "all three years and pairwise contrasts",
+          "row": "Delta Model 1 vs. Model 2"
+        },
+        {
+          "doc_id": "P1",
+          "pdf_page": 14,
+          "table": "Table 2",
+          "column": "all three years and pairwise contrasts",
+          "row": "Delta Model 1 vs. Model 2"
+        }
+      ],
+      "target_ids": [
+        "T484",
+        "T485",
+        "T486",
+        "T487",
+        "T488",
+        "T489",
+        "T490",
+        "T491",
+        "T492",
+        "T493",
+        "T494",
+        "T495",
+        "T559",
+        "T560"
+      ],
+      "notes": "No model syntax or sample-specific analysis N provided; measurement diagnostics do not isolate period from birth-cohort effects."
+    },
+    {
+      "claim_id": "C56",
+      "statement": "Full scalar invariance is not supported.",
+      "hypothesis_label": null,
+      "direction_claimed": "other",
+      "tier": "identification_inference_diagnostic",
+      "estimand": "CFA fit, nested-model chi-square and CFI changes, or internal consistency as specified; comparability is an interpretation of these diagnostics.",
+      "effect_scale_and_null": "Chi-square fit/difference statistic, df and dimensionless fit indices; equality constraints define the null. Reliability alpha is descriptive, no null specified.",
+      "population": "U.S. high school seniors in 1976, 1991 and 2006; Form 4 (1976 DS0004, 1991/2006 DS0005).",
+      "comparison_units": "Joint three-group nested-model comparisons, not three independent pairwise item tests.",
+      "supporting_results": [
+        {
+          "doc_id": "P1",
+          "pdf_page": 15,
+          "table": "Preliminary/Primary analyses",
+          "column": "all three years and pairwise contrasts",
+          "row": "Delta Model 2 vs. Model 3"
+        },
+        {
+          "doc_id": "P1",
+          "pdf_page": 14,
+          "table": "Table 2",
+          "column": "all three years and pairwise contrasts",
+          "row": "Delta Model 2 vs. Model 3"
+        }
+      ],
+      "target_ids": [
+        "T496",
+        "T497",
+        "T498",
+        "T499",
+        "T500",
+        "T501",
+        "T502",
+        "T503",
+        "T504",
+        "T505",
+        "T506",
+        "T507",
+        "T561",
+        "T562"
+      ],
+      "notes": "No model syntax or sample-specific analysis N provided; measurement diagnostics do not isolate period from birth-cohort effects."
+    },
+    {
+      "claim_id": "C57",
+      "statement": "Partial scalar invariance is accepted despite a significant chi-square decrement because change in CFI is below the stated threshold.",
+      "hypothesis_label": null,
+      "direction_claimed": "other",
+      "tier": "identification_inference_diagnostic",
+      "estimand": "CFA fit, nested-model chi-square and CFI changes, or internal consistency as specified; comparability is an interpretation of these diagnostics.",
+      "effect_scale_and_null": "Chi-square fit/difference statistic, df and dimensionless fit indices; equality constraints define the null. Reliability alpha is descriptive, no null specified.",
+      "population": "U.S. high school seniors in 1976, 1991 and 2006; Form 4 (1976 DS0004, 1991/2006 DS0005).",
+      "comparison_units": "Joint three-group nested-model comparisons, not three independent pairwise item tests.",
+      "supporting_results": [
+        {
+          "doc_id": "P1",
+          "pdf_page": 15,
+          "table": "Preliminary/Primary analyses",
+          "column": "all three years and pairwise contrasts",
+          "row": "Delta Model 2 vs. Model 4"
+        },
+        {
+          "doc_id": "P1",
+          "pdf_page": 14,
+          "table": "Table 2",
+          "column": "all three years and pairwise contrasts",
+          "row": "Delta Model 2 vs. Model 4"
+        }
+      ],
+      "target_ids": [
+        "T508",
+        "T509",
+        "T510",
+        "T511",
+        "T512",
+        "T513",
+        "T514",
+        "T515",
+        "T516",
+        "T517",
+        "T518",
+        "T519",
+        "T563",
+        "T564",
+        "T593",
+        "T596"
+      ],
+      "notes": "No model syntax or sample-specific analysis N provided; measurement diagnostics do not isolate period from birth-cohort effects."
+    },
+    {
+      "claim_id": "C58",
+      "statement": "Equality of all five latent means across generations is rejected.",
+      "hypothesis_label": null,
+      "direction_claimed": "other",
+      "tier": "identification_inference_diagnostic",
+      "estimand": "CFA fit, nested-model chi-square and CFI changes, or internal consistency as specified; comparability is an interpretation of these diagnostics.",
+      "effect_scale_and_null": "Chi-square fit/difference statistic, df and dimensionless fit indices; equality constraints define the null. Reliability alpha is descriptive, no null specified.",
+      "population": "U.S. high school seniors in 1976, 1991 and 2006; Form 4 (1976 DS0004, 1991/2006 DS0005).",
+      "comparison_units": "Joint three-group nested-model comparisons, not three independent pairwise item tests.",
+      "supporting_results": [
+        {
+          "doc_id": "P1",
+          "pdf_page": 15,
+          "table": "Preliminary/Primary analyses",
+          "column": "all three years and pairwise contrasts",
+          "row": "Delta Model 4 vs. Model 5"
+        },
+        {
+          "doc_id": "P1",
+          "pdf_page": 14,
+          "table": "Table 2",
+          "column": "all three years and pairwise contrasts",
+          "row": "Delta Model 4 vs. Model 5"
+        }
+      ],
+      "target_ids": [
+        "T520",
+        "T521",
+        "T522",
+        "T523",
+        "T524",
+        "T525",
+        "T526",
+        "T527",
+        "T528",
+        "T529",
+        "T530",
+        "T531",
+        "T545",
+        "T565",
+        "T595"
+      ],
+      "notes": "No model syntax or sample-specific analysis N provided; measurement diagnostics do not isolate period from birth-cohort effects."
+    },
+    {
+      "claim_id": "C59",
+      "statement": "The authors infer comparable interpretation of work-value items across generations from the invariance analyses.",
+      "hypothesis_label": null,
+      "direction_claimed": "other",
+      "tier": "identification_inference_diagnostic",
+      "estimand": "CFA fit, nested-model chi-square and CFI changes, or internal consistency as specified; comparability is an interpretation of these diagnostics.",
+      "effect_scale_and_null": "Chi-square fit/difference statistic, df and dimensionless fit indices; equality constraints define the null. Reliability alpha is descriptive, no null specified.",
+      "population": "U.S. high school seniors in 1976, 1991 and 2006; Form 4 (1976 DS0004, 1991/2006 DS0005).",
+      "comparison_units": "Joint three-group nested-model comparisons, not three independent pairwise item tests.",
+      "supporting_results": [
+        {
+          "doc_id": "P1",
+          "pdf_page": 19,
+          "table": "Discussion",
+          "column": "all three years and pairwise contrasts",
+          "row": "Measurement invariance interpretation"
+        },
+        {
+          "doc_id": "P1",
+          "pdf_page": 14,
+          "table": "Table 2",
+          "column": "all three years and pairwise contrasts",
+          "row": "Measurement invariance interpretation"
+        }
+      ],
+      "target_ids": [],
+      "notes": "No model syntax or sample-specific analysis N provided; measurement diagnostics do not isolate period from birth-cohort effects.",
+      "target_availability": "No numerical result is separately published for this design assertion or interpretive extrapolation; do not manufacture a target."
+    },
+    {
+      "claim_id": "C60",
+      "statement": "The study reports a total sample of 16,507 across three years and two forms.",
+      "hypothesis_label": null,
+      "direction_claimed": "other",
+      "tier": "descriptive",
+      "estimand": "Reported respondent count by year and questionnaire form, plus total.",
+      "effect_scale_and_null": "Counts, no hypothesis null.",
+      "population": "U.S. high school seniors, 1976/1991/2006, Forms 3 and 4.",
+      "comparison_units": "Six year/form cells and their aggregate total.",
+      "supporting_results": [
+        {
+          "doc_id": "P1",
+          "pdf_page": 10,
+          "table": "Method",
+          "column": "all three years and pairwise contrasts",
+          "row": "Sample sizes"
+        },
+        {
+          "doc_id": "P1",
+          "pdf_page": 1,
+          "table": "Abstract",
+          "column": "all three years and pairwise contrasts",
+          "row": "Sample size"
+        }
+      ],
+      "target_ids": [
+        "T532",
+        "T533",
+        "T534",
+        "T535",
+        "T536",
+        "T537",
+        "T538",
+        "T539",
+        "T587",
+        "T588",
+        "T589",
+        "T590"
+      ],
+      "notes": ""
+    },
+    {
+      "claim_id": "C61",
+      "statement": "Almost twice as many respondents rate vacation time very important in 2006 as in 1976.",
+      "hypothesis_label": null,
+      "direction_claimed": "mixed",
+      "tier": "descriptive",
+      "estimand": "Year-specific item endorsement and observed-item comparisons; no work-centrality total score is analyzed.",
+      "effect_scale_and_null": "Observed item mean and endorsement percentage; difference null 0, or ratio null 1 for approximately doubled endorsement.",
+      "population": "U.S. high school seniors in 1976, 1991 and 2006; Form 4 (1976 DS0004, 1991/2006 DS0005).",
+      "comparison_units": "1976 vs. 1991; 1991 vs. 2006; 1976 vs. 2006",
+      "supporting_results": [
+        {
+          "doc_id": "P1",
+          "pdf_page": 16,
+          "table": "Results",
+          "column": "all three years and pairwise contrasts",
+          "row": "vacation"
+        },
+        {
+          "doc_id": "P1",
+          "pdf_page": 11,
+          "table": "Table 1",
+          "column": "all three years and pairwise contrasts",
+          "row": "More than two weeks vacation"
+        }
+      ],
+      "target_ids": [
+        "T001",
+        "T002",
+        "T003",
+        "T004",
+        "T005",
+        "T006",
+        "T007",
+        "T008",
+        "T009",
+        "T010",
+        "T011",
+        "T012"
+      ],
+      "notes": ""
+    },
+    {
+      "claim_id": "C62",
+      "statement": "Almost twice as many respondents want a slow-paced job in 2006 as in 1976.",
+      "hypothesis_label": null,
+      "direction_claimed": "mixed",
+      "tier": "descriptive",
+      "estimand": "Year-specific item endorsement and observed-item comparisons; no work-centrality total score is analyzed.",
+      "effect_scale_and_null": "Observed item mean and endorsement percentage; difference null 0, or ratio null 1 for approximately doubled endorsement.",
+      "population": "U.S. high school seniors in 1976, 1991 and 2006; Form 4 (1976 DS0004, 1991/2006 DS0005).",
+      "comparison_units": "1976 vs. 1991; 1991 vs. 2006; 1976 vs. 2006",
+      "supporting_results": [
+        {
+          "doc_id": "P1",
+          "pdf_page": 16,
+          "table": "Results",
+          "column": "all three years and pairwise contrasts",
+          "row": "pace"
+        },
+        {
+          "doc_id": "P1",
+          "pdf_page": 11,
+          "table": "Table 1",
+          "column": "all three years and pairwise contrasts",
+          "row": "Easy pace; work slowly"
+        }
+      ],
+      "target_ids": [
+        "T025",
+        "T026",
+        "T027",
+        "T028",
+        "T029",
+        "T030",
+        "T031",
+        "T032",
+        "T033",
+        "T034",
+        "T035",
+        "T036"
+      ],
+      "notes": ""
+    },
+    {
+      "claim_id": "C63",
+      "statement": "Nearly half of 2006 respondents want time for other things.",
+      "hypothesis_label": null,
+      "direction_claimed": "mixed",
+      "tier": "descriptive",
+      "estimand": "Year-specific item endorsement and observed-item comparisons; no work-centrality total score is analyzed.",
+      "effect_scale_and_null": "Observed item mean and endorsement percentage; difference null 0, or ratio null 1 for approximately doubled endorsement.",
+      "population": "U.S. high school seniors in 1976, 1991 and 2006; Form 4 (1976 DS0004, 1991/2006 DS0005).",
+      "comparison_units": "1976 vs. 1991; 1991 vs. 2006; 1976 vs. 2006",
+      "supporting_results": [
+        {
+          "doc_id": "P1",
+          "pdf_page": 16,
+          "table": "Results",
+          "column": "all three years and pairwise contrasts",
+          "row": "time"
+        },
+        {
+          "doc_id": "P1",
+          "pdf_page": 11,
+          "table": "Table 1",
+          "column": "all three years and pairwise contrasts",
+          "row": "Time for other things in life"
+        }
+      ],
+      "target_ids": [
+        "T013",
+        "T014",
+        "T015",
+        "T016",
+        "T017",
+        "T018",
+        "T019",
+        "T020",
+        "T021",
+        "T022",
+        "T023",
+        "T024"
+      ],
+      "notes": ""
+    },
+    {
+      "claim_id": "C64",
+      "statement": "Work centrality and willingness to work overtime decline, while willingness to stop working if financially comfortable increases.",
+      "hypothesis_label": null,
+      "direction_claimed": "mixed",
+      "tier": "focal",
+      "estimand": "Year-specific item endorsement and observed-item comparisons; no work-centrality total score is analyzed.",
+      "effect_scale_and_null": "Native agreement/binary item means and percentages; difference null 0. No centrality composite is fitted as a final outcome.",
+      "population": "U.S. high school seniors in 1976, 1991 and 2006; Form 3.",
+      "comparison_units": "1976 vs. 1991; 1991 vs. 2006; 1976 vs. 2006",
+      "supporting_results": [
+        {
+          "doc_id": "P1",
+          "pdf_page": 16,
+          "table": "Results",
+          "column": "all three years and pairwise contrasts",
+          "row": "centrality"
+        },
+        {
+          "doc_id": "P1",
+          "pdf_page": 12,
+          "table": "Table 1",
+          "column": "all three years and pairwise contrasts",
+          "row": "Work is only making a living"
+        },
+        {
+          "doc_id": "P1",
+          "pdf_page": 12,
+          "table": "Table 1",
+          "column": "all three years and pairwise contrasts",
+          "row": "Work central to life"
+        },
+        {
+          "doc_id": "P1",
+          "pdf_page": 12,
+          "table": "Table 1",
+          "column": "all three years and pairwise contrasts",
+          "row": "Best effort including overtime"
+        },
+        {
+          "doc_id": "P1",
+          "pdf_page": 13,
+          "table": "Table 1",
+          "column": "all three years and pairwise contrasts",
+          "row": "Want to work if financially comfortable"
+        }
+      ],
+      "target_ids": [
+        "T229",
+        "T230",
+        "T231",
+        "T232",
+        "T233",
+        "T234",
+        "T235",
+        "T236",
+        "T237",
+        "T238",
+        "T239",
+        "T240",
+        "T241",
+        "T242",
+        "T243",
+        "T244",
+        "T245",
+        "T246",
+        "T247",
+        "T248",
+        "T249",
+        "T250",
+        "T251",
+        "T252",
+        "T253",
+        "T254",
+        "T255",
+        "T256",
+        "T257",
+        "T258",
+        "T259",
+        "T260",
+        "T261",
+        "T262",
+        "T263",
+        "T264",
+        "T277",
+        "T278",
+        "T279",
+        "T280",
+        "T281",
+        "T282",
+        "T283",
+        "T284",
+        "T285",
+        "T286",
+        "T287",
+        "T288",
+        "T540",
+        "T541",
+        "T542",
+        "T543"
+      ],
+      "notes": ""
+    },
+    {
+      "claim_id": "C65",
+      "statement": "GenMe places slightly less emphasis on being directly helpful than Boomers.",
+      "hypothesis_label": null,
+      "direction_claimed": "mixed",
+      "tier": "descriptive",
+      "estimand": "Year-specific item endorsement and observed-item comparisons; no work-centrality total score is analyzed.",
+      "effect_scale_and_null": "Observed item mean and endorsement percentage; difference null 0, or ratio null 1 for approximately doubled endorsement.",
+      "population": "U.S. high school seniors in 1976, 1991 and 2006; Form 4 (1976 DS0004, 1991/2006 DS0005).",
+      "comparison_units": "1976 vs. 1991; 1991 vs. 2006; 1976 vs. 2006",
+      "supporting_results": [
+        {
+          "doc_id": "P1",
+          "pdf_page": 17,
+          "table": "Results",
+          "column": "all three years and pairwise contrasts",
+          "row": "help"
+        },
+        {
+          "doc_id": "P1",
+          "pdf_page": 12,
+          "table": "Table 1",
+          "column": "all three years and pairwise contrasts",
+          "row": "Directly helpful to others"
+        }
+      ],
+      "target_ids": [
+        "T133",
+        "T134",
+        "T135",
+        "T136",
+        "T137",
+        "T138",
+        "T139",
+        "T140",
+        "T141",
+        "T142",
+        "T143",
+        "T144"
+      ],
+      "notes": ""
+    },
+    {
+      "claim_id": "C66",
+      "statement": "Intrinsic rewards are reported as most highly valued across all generations; leisure has the largest change; changes are characterized as small to moderate.",
+      "hypothesis_label": null,
+      "direction_claimed": "mixed",
+      "tier": "descriptive",
+      "estimand": "Ordering of reported latent means and magnitudes of standardized contrasts; no formal rank test.",
+      "effect_scale_and_null": "Latent mean difference or standardized d; null 0.",
+      "population": "U.S. high school seniors in 1976, 1991 and 2006; Form 4 (1976 DS0004, 1991/2006 DS0005).",
+      "comparison_units": "1976 vs. 1991; 1991 vs. 2006; 1976 vs. 2006",
+      "supporting_results": [
+        {
+          "doc_id": "P1",
+          "pdf_page": 17,
+          "table": "Main Findings",
+          "column": "all three years and pairwise contrasts",
+          "row": "Largest change"
+        },
+        {
+          "doc_id": "P1",
+          "pdf_page": 20,
+          "table": "Implications",
+          "column": "all three years and pairwise contrasts",
+          "row": "Intrinsic rewards"
+        },
+        {
+          "doc_id": "P1",
+          "pdf_page": 22,
+          "table": "Limitations",
+          "column": "all three years and pairwise contrasts",
+          "row": "Small to moderate effects"
+        }
+      ],
+      "target_ids": [
+        "T349",
+        "T353",
+        "T357",
+        "T361",
+        "T362",
+        "T363",
+        "T364",
+        "T368",
+        "T372",
+        "T376",
+        "T377",
+        "T378",
+        "T379",
+        "T383",
+        "T387",
+        "T391",
+        "T392",
+        "T393",
+        "T394",
+        "T398",
+        "T402",
+        "T406",
+        "T407",
+        "T408",
+        "T409",
+        "T413",
+        "T417",
+        "T421",
+        "T422",
+        "T423"
+      ],
+      "notes": ""
+    },
+    {
+      "claim_id": "C67",
+      "statement": "The time-lag design is claimed to remove age confounding and reveal generational differences, while the introduction also allows a period interpretation.",
+      "hypothesis_label": null,
+      "direction_claimed": "other",
+      "tier": "identification_inference_diagnostic",
+      "estimand": "Year/cohort contrasts among seniors at a similar life stage; a separate cohort causal effect is not identified.",
+      "effect_scale_and_null": "Identification assertion; no numeric null.",
+      "population": "Sampled U.S. high school seniors in 1976, 1991 and 2006, Forms 3 and 4; extrapolations to the working population are interpretive.",
+      "comparison_units": "1976 vs. 1991; 1991 vs. 2006; 1976 vs. 2006",
+      "supporting_results": [
+        {
+          "doc_id": "P1",
+          "pdf_page": 3,
+          "table": "Introduction",
+          "column": "all three years and pairwise contrasts",
+          "row": "Time-lag design"
+        },
+        {
+          "doc_id": "P1",
+          "pdf_page": 17,
+          "table": "Discussion",
+          "column": "all three years and pairwise contrasts",
+          "row": "Contribution"
+        },
+        {
+          "doc_id": "P1",
+          "pdf_page": 22,
+          "table": "Limitations",
+          "column": "all three years and pairwise contrasts",
+          "row": "Same-age comparison"
+        }
+      ],
+      "target_ids": [],
+      "notes": "No causal coefficient or formal age adjustment is reported. Survey year and cohort move together; ages are described as mostly 17 or 18, not an exact-age restriction.",
+      "target_availability": "No numerical result is separately published for this design assertion or interpretive extrapolation; do not manufacture a target."
+    },
+    {
+      "claim_id": "C68",
+      "statement": "The discussion extrapolates the observed preferences to recruitment, retention, leisure policies, intrinsic/altruistic incentives, teams and organizational fit; it also interprets combined leisure/extrinsic preferences as entitlement.",
+      "hypothesis_label": null,
+      "direction_claimed": "other",
+      "tier": "descriptive",
+      "estimand": "Unestimated managerial and psychological implications, not effects of tested workplace interventions.",
+      "effect_scale_and_null": "No estimated effect or statistical null for these extrapolations.",
+      "population": "Sampled U.S. high school seniors in 1976, 1991 and 2006, Forms 3 and 4; extrapolations to the working population are interpretive.",
+      "comparison_units": "Unestimated policy and psychological implications across cohort descriptions.",
+      "supporting_results": [
+        {
+          "doc_id": "P1",
+          "pdf_page": 18,
+          "table": "Discussion",
+          "column": "all three years and pairwise contrasts",
+          "row": "Entitlement interpretation"
+        },
+        {
+          "doc_id": "P1",
+          "pdf_page": 19,
+          "table": "Implications",
+          "column": "all three years and pairwise contrasts",
+          "row": "Recruitment and leisure"
+        },
+        {
+          "doc_id": "P1",
+          "pdf_page": 20,
+          "table": "Implications",
+          "column": "all three years and pairwise contrasts",
+          "row": "Policies and rewards"
+        },
+        {
+          "doc_id": "P1",
+          "pdf_page": 21,
+          "table": "Implications",
+          "column": "all three years and pairwise contrasts",
+          "row": "Teams and organizational fit"
+        }
+      ],
+      "target_ids": [],
+      "notes": "No intervention, entitlement, performance, recruitment, retention or fit outcome is measured. Explanations involving technology, economic pressures and socialization are conjectural, not tested mediators.",
+      "target_availability": "No numerical result is separately published for this design assertion or interpretive extrapolation; do not manufacture a target."
+    },
+    {
+      "claim_id": "C69",
+      "statement": "The discussion suggests that modest mean shifts can produce two- or three-fold differences in extreme-tail counts under normal distributions.",
+      "hypothesis_label": null,
+      "direction_claimed": "other",
+      "tier": "descriptive",
+      "estimand": "Hypothetical normal-tail probability ratio, threshold and variance assumptions not specified.",
+      "effect_scale_and_null": "Tail-probability ratio; no change ratio 1.",
+      "population": "U.S. high school seniors in 1976, 1991 and 2006; Form 4 (1976 DS0004, 1991/2006 DS0005).",
+      "comparison_units": "1976 vs. 1991; 1991 vs. 2006; 1976 vs. 2006",
+      "supporting_results": [
+        {
+          "doc_id": "P1",
+          "pdf_page": 22,
+          "table": "Limitations",
+          "column": "all three years and pairwise contrasts",
+          "row": "Extremes of the distribution"
+        }
+      ],
+      "target_ids": [
+        "T591",
+        "T592"
+      ],
+      "notes": "Illustration, not an empirical tail-count analysis."
+    },
+    {
+      "claim_id": "C70",
+      "statement": "Extrinsic rewards are described as the only non-monotonic work-value trend; leisure increases steadily and intrinsic, altruistic and social point estimates decline across the three administrations.",
+      "hypothesis_label": null,
+      "direction_claimed": "mixed",
+      "tier": "descriptive",
+      "estimand": "Ordering of the three published latent mean point estimates per construct; the discussion uses linear to mean a consistent direction, not a fitted linear-trend coefficient.",
+      "effect_scale_and_null": "Latent mean difference or standardized d; null 0.",
+      "population": "U.S. high school seniors in 1976, 1991 and 2006; Form 4 (1976 DS0004, 1991/2006 DS0005).",
+      "comparison_units": "1976 vs. 1991; 1991 vs. 2006; 1976 vs. 2006",
+      "supporting_results": [
+        {
+          "doc_id": "P1",
+          "pdf_page": 18,
+          "table": "Main Findings",
+          "column": "all three years and pairwise contrasts",
+          "row": "Linear trend description"
+        },
+        {
+          "doc_id": "P1",
+          "pdf_page": 11,
+          "table": "Table 1",
+          "column": "all three years and pairwise contrasts",
+          "row": "Leisure/intrinsic"
+        },
+        {
+          "doc_id": "P1",
+          "pdf_page": 12,
+          "table": "Table 1",
+          "column": "all three years and pairwise contrasts",
+          "row": "Altruistic/social/extrinsic"
+        }
+      ],
+      "target_ids": [
+        "T349",
+        "T353",
+        "T357",
+        "T364",
+        "T368",
+        "T372",
+        "T379",
+        "T383",
+        "T387",
+        "T394",
+        "T398",
+        "T402",
+        "T409",
+        "T413",
+        "T417",
+        "T599"
+      ],
+      "notes": "No linear-trend regression, quadratic contrast or slope is published. Monotonic point estimates need not imply significant adjacent differences."
+    }
+  ],
+  "scope": "Current-study research questions, reported findings and unestimated interpretive assertions; background literature results are not replication targets."
+}

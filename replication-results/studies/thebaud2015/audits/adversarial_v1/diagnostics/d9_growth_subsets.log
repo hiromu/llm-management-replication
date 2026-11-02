@@ -1,0 +1,7 @@
+                           subset     n     growth raw_female_logOR
+                           <char> <int>      <num>            <num>
+1:                  common sample 27289 0.09952728       -0.6828195
+2: employers only (OMNOWJOB >= 1) 18679 0.13100273       -0.6181618
+3:                  OMNOWJOB >= 2 13886 0.16721878       -0.5822708
+4:    new businesses OMBABYBT = 1  7342 0.14750749       -0.6768273
+5:       established OMESTBBT = 1 20209 0.08219110       -0.7170548

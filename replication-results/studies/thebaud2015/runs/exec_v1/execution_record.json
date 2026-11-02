@@ -1,0 +1,31 @@
+{
+  "execution_id": "exec_v1",
+  "frozen_utc": "2026-10-27T17:13:47+00:00",
+  "inputs": {
+    "data/derived/gem_extract.csv": "805814b164f957f0e6083659784e05c24bc00a202afe697a2fa8bd00c530c2df",
+    "data/derived/country_year_inputs.csv": "100122411753639c4db44f0cc53cb7a01c62b010c3ca32e2620962c51c687114",
+    "implementation/impl_A/v1/run.R": "04aa42dba0acf22ce1a4bc6e602961d5bfc8fa55549184a16298c5b6368b1793",
+    "implementation/impl_B/v1/run.R": "f45995b007511d79cf4b0e9190bd989b89649bd8ff166af314b16e89be4fa3f9",
+    "implementation/impl_C/v1/run.jl": "095cc87daa5c57fa9577b2aea20a988a8b6ffb96e34aa351dcea4de5202b97e5",
+    "reconciliation/frozen/manifest_neutral.md": "bfe7608c31cb3a7311c356d441ff94ab3f8e0e419488e239b9998746141d7f4a",
+    "reconciliation/frozen/scoring_rules.json": "5b76afc82d8493bf13d8ea06107a18cac7b6a1dc1dbec3322e9cbfd47795b806",
+    "runs/isolation_test/nonet.sb": "b9d083e65a732108dcd92ab52e8cff31f879a4371126c28db29e2bdccda3888f",
+    "runs/exec_v1/run_one.sh": "7800e6ea7b5ccecb991968ea1f61d4732fe2fea8d1f0d4065fea5dc759937b54"
+  },
+  "environment": {
+    "R": "4.6.1 lme4 2.1.0",
+    "Julia": "1.12.6 MixedModels 5.9.1 GLM 1.9.5",
+    "os": "26.6.2",
+    "cpus": 16
+  },
+  "isolation": "sandbox-exec network deny (runs/isolation_test/result.md); file-system not isolated",
+  "order": "ORIGIN (A, B, C concurrently), then deviations in manifest order, N01, then influence; independent run IDs may run in parallel processes, which does not change results",
+  "notes": "Sample identity for pairs including B uses equal counts because B hashes string-sorted IDs (decided on synthetic data before execution).",
+  "completion": {
+    "recorded_utc": "2026-10-28T01:33:27Z",
+    "A": "ORIGIN, 113 deviation fits, 137 influence refits, all exit 0",
+    "B": "ORIGIN exit 0; deviations not run (budget rule)",
+    "C": "ORIGIN terminated by the user at 2026-10-28T01:35:54Z (exit 143) while fitting R1; no estimates saved; log shows M1-M8 sample counts identical to A and B; deviations and influence not executed",
+    "details": "runs/exec_v1/unexecuted_runs.json"
+  }
+}

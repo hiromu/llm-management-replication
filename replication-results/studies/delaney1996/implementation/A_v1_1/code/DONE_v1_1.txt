@@ -1,0 +1,11 @@
+PAPER_K7 v1.1 repair round complete (R, 2026-10-28).
+- code/k7_lib.R and code/run_grid.R updated for spec_amendment_v1_1.md (A1-A10) and checker_items.md (1-11).
+  Changed: items 1, 2, 4, 5, 6, 7, 8, 9 (A1, A2, A4, A5, A6, A7, A8, A9, A10).
+  Unchanged with reasons in README: items 3 (A4 confirms SUBSID missing when V17 is system-missing),
+  10 (A6 allows null in JSON), 11 (A3 confirms log10 of the recoded count).
+- New output columns: model_stats.csv n_leverage_one (A1); nested_tests.csv status, error (A5/A6).
+- Tests: 263 passed, 0 failed (code/dev_out/test_results.txt), including HC3 with a leverage-one row
+  (OLS and WLS) and the copy-rule validity rule at all three staff_coding levels.
+- Full grid on synthetic data: code/dev_out/v1_1/ (38 specs; 888/912 models ok; D05 fails with recorded
+  reason, empty sample on the permuted file; no non-finite HC3; only IND_ dummies ever dropped).
+- README.md section "v1.1 changes" lists every amendment and checker item.

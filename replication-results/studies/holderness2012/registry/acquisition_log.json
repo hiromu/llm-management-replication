@@ -1,0 +1,4112 @@
+{
+ "study_id": "holderness2012",
+ "written_utc": "2026-10-27T12:07:29.449075+00:00",
+ "role": "fresh source-acquisition role (Claude Code subagent)",
+ "sources": {
+  "nara_pow_rg389": {
+   "provider": "U.S. National Archives and Records Administration (NARA), Electronic Records, College Park",
+   "title": "World War II Prisoners of War Data File, 12/7/1941 - 11/19/1946",
+   "naid": "1263907",
+   "series_naid": "583428",
+   "record_group": "389",
+   "accession": "NN3-389-98-999",
+   "catalog_url": "https://catalog.archives.gov/id/1263907",
+   "access_conditions": "Access restriction: Unrestricted; use restriction: Unrestricted (NARA catalog). U.S. federal records, public domain.",
+   "vintage": "Data file manifest prepared 10/14/2021 (WWIIPOW_TSS.pdf); file POW.MERGED2.txt; S3 last-modified 2021-10-14; documentation package prepared 7/5/2011; unprocessed punchcards PDF prepared 5/2/2012.",
+   "record_count": {
+    "raw_file_records": 143374,
+    "documented_in_TSS": 143374,
+    "record_length_with_crlf": 82
+   }
+  },
+  "nara_asnf_rg64": {
+   "provider": "U.S. National Archives and Records Administration (NARA), Electronic Records, College Park",
+   "title": "Electronic Army Serial Number Merged File, ca. 1938 - 1946",
+   "naid": "1263923",
+   "series_naid": "604357",
+   "record_group": "64",
+   "accession": "NN3-064-03-008",
+   "catalog_url": "https://catalog.archives.gov/id/1263923",
+   "access_conditions": "Access restriction: Unrestricted; use restriction: Unrestricted (NARA catalog). U.S. federal records, public domain.",
+   "vintage": "Data file manifest prepared 12/16/2010 (ASNF_TSS.pdf); ASNEF.FIN.DAT dated 2010-10-13 inside ZIP; S3 last-modified 2015-11-25; basic documentation prepared 6/6/2011; code lists 1/13/2011.",
+   "record_count": {
+    "raw_file_records": 9200232,
+    "documented_in_TSS": 9200232,
+    "record_length_with_crlf": 91,
+    "aad_enlistment_table_dt893_documented": 8706394
+   },
+   "derived_from_archive": {
+    "archive": "data/raw/nara_asnf_rg64/ASNEF.FIN.zip",
+    "extracted": "data/raw/nara_asnf_rg64/extracted/ASNEF.FIN.DAT",
+    "method": "unzip -n (Info-ZIP); zip integrity test passed"
+   }
+  },
+  "aad_pow_dt3159": {
+   "provider": "NARA Access to Archival Databases (AAD), https://aad.archives.gov/aad/",
+   "title": "AAD documentation for World War II Prisoners of War Data File (series s=644, table dt=3159): series description, data layout, field details/notes, code lists (CSV), FAQ",
+   "naid": "1263907",
+   "access_conditions": "Public web pages and CSV downloads; no login.",
+   "vintage": "Live AAD pages as retrieved on the acquisition date.",
+   "note": "Field-detail pages include sample record values and notes pages include some counts; they are raw documentation and are not passed to readers."
+  },
+  "aad_asnf_dt893_dt929": {
+   "provider": "NARA Access to Archival Databases (AAD), https://aad.archives.gov/aad/",
+   "title": "AAD documentation for Electronic Army Serial Number Merged File (series s=3360; tables dt=893 enlistment, dt=929 reserve corps): series description, data layouts, field details/notes, code lists (CSV), FAQ",
+   "naid": "1263923",
+   "access_conditions": "Public web pages and CSV downloads; no login.",
+   "vintage": "Live AAD pages as retrieved on the acquisition date.",
+   "note": "AAD layout pages state table record counts and notes pages include counts of invalid values; raw documentation not passed to readers. AAD county code list cl_2057 is empty."
+  },
+  "geonames_dump": {
+   "provider": "GeoNames, https://download.geonames.org/export/dump/",
+   "title": "GeoNames gazetteer daily dump: country files, cities500, countryInfo, admin1CodesASCII, readme",
+   "access_conditions": "Creative Commons Attribution 4.0 License (GeoNames readme).",
+   "vintage": "Daily dump; server Last-Modified 2026-10-27 (see per-file headers)."
+  },
+  "nara_catalog_metadata": {
+   "provider": "NARA Catalog public search proxy, https://catalog.archives.gov/proxy/records/search",
+   "title": "Catalog description JSON for NAIDs 1263907, 1263923, 583428, 604357 and descendants of 583428",
+   "access_conditions": "Public; no login or API key.",
+   "vintage": "Retrieved at the time in fetched_utc.txt (catalog ingest dated 2026-06-04 in the records).",
+   "queries": [
+    "?naId=1263907&allowLegacyOrgNames=true",
+    "?naId=1263923&allowLegacyOrgNames=true",
+    "?naId=583428&allowLegacyOrgNames=true",
+    "?naId=604357&allowLegacyOrgNames=true",
+    "?ancestorNaId=583428&allowLegacyOrgNames=true&limit=100"
+   ],
+   "transport": "curl (manual command), user agent 'Mozilla/5.0 (academic replication)'"
+  }
+ },
+ "files": [
+  {
+   "source_key": "aad_column_detail_dt3159_c11660.html",
+   "file": "data/raw/aad_pow_dt3159/aad_column_detail_dt3159_c11660.html",
+   "bytes": 6367,
+   "sha256": "5d12b4262c0f745fa8ed3935d4fd046b88644e3cf9aa917c60e77358ad896967",
+   "write_protected": true,
+   "url": "https://aad.archives.gov/aad/popup-column-detail.jsp?c_id=11660&dt=3159",
+   "acquired_utc": "2026-10-27T11:36:00.422478+00:00",
+   "http_status": 200,
+   "response_headers": {
+    "content-type": "text/html;charset=ISO-8859-1"
+   },
+   "provider_sha256_match": null
+  },
+  {
+   "source_key": "aad_column_detail_dt3159_c11661.html",
+   "file": "data/raw/aad_pow_dt3159/aad_column_detail_dt3159_c11661.html",
+   "bytes": 6373,
+   "sha256": "84b65e5684cfd344a70e9436c25745a44125a9ae24e0044b9973f09b9a8c01da",
+   "write_protected": true,
+   "url": "https://aad.archives.gov/aad/popup-column-detail.jsp?c_id=11661&dt=3159",
+   "acquired_utc": "2026-10-27T11:36:03.993239+00:00",
+   "http_status": 200,
+   "response_headers": {
+    "content-type": "text/html;charset=ISO-8859-1"
+   },
+   "provider_sha256_match": null
+  },
+  {
+   "source_key": "aad_column_detail_dt3159_c11662.html",
+   "file": "data/raw/aad_pow_dt3159/aad_column_detail_dt3159_c11662.html",
+   "bytes": 7421,
+   "sha256": "b7d512434b257c6bb4a06343a4f6288b5d2aa5a2484c4c0e96a4efe039f9f5b9",
+   "write_protected": true,
+   "url": "https://aad.archives.gov/aad/popup-column-detail.jsp?c_id=11662&dt=3159",
+   "acquired_utc": "2026-10-27T11:36:07.551664+00:00",
+   "http_status": 200,
+   "response_headers": {
+    "content-type": "text/html;charset=ISO-8859-1"
+   },
+   "provider_sha256_match": null
+  },
+  {
+   "source_key": "aad_column_detail_dt3159_c11663.html",
+   "file": "data/raw/aad_pow_dt3159/aad_column_detail_dt3159_c11663.html",
+   "bytes": 5623,
+   "sha256": "6df065e9df46a864834f768a3e2d14d42fa3a8dd764de01b83d00359c74ca9e3",
+   "write_protected": true,
+   "url": "https://aad.archives.gov/aad/popup-column-detail.jsp?c_id=11663&dt=3159",
+   "acquired_utc": "2026-10-27T11:36:14.568000+00:00",
+   "http_status": 200,
+   "response_headers": {
+    "content-type": "text/html;charset=ISO-8859-1"
+   },
+   "provider_sha256_match": null
+  },
+  {
+   "source_key": "aad_column_detail_dt3159_c11664.html",
+   "file": "data/raw/aad_pow_dt3159/aad_column_detail_dt3159_c11664.html",
+   "bytes": 5755,
+   "sha256": "49a43887be93b50fd26d3b6a90a759492ca5ffb11f54287c3d90f5d5da125338",
+   "write_protected": true,
+   "url": "https://aad.archives.gov/aad/popup-column-detail.jsp?c_id=11664&dt=3159",
+   "acquired_utc": "2026-10-27T11:36:18.071447+00:00",
+   "http_status": 200,
+   "response_headers": {
+    "content-type": "text/html;charset=ISO-8859-1"
+   },
+   "provider_sha256_match": null
+  },
+  {
+   "source_key": "aad_column_detail_dt3159_c11665.html",
+   "file": "data/raw/aad_pow_dt3159/aad_column_detail_dt3159_c11665.html",
+   "bytes": 6026,
+   "sha256": "bdb892be7fc59b5079345423fea3b003f8eebe465814d8fb70b92be9f905727c",
+   "write_protected": true,
+   "url": "https://aad.archives.gov/aad/popup-column-detail.jsp?c_id=11665&dt=3159",
+   "acquired_utc": "2026-10-27T11:36:21.571899+00:00",
+   "http_status": 200,
+   "response_headers": {
+    "content-type": "text/html;charset=ISO-8859-1"
+   },
+   "provider_sha256_match": null
+  },
+  {
+   "source_key": "aad_column_detail_dt3159_c11666.html",
+   "file": "data/raw/aad_pow_dt3159/aad_column_detail_dt3159_c11666.html",
+   "bytes": 4522,
+   "sha256": "62350b4222c032aefaff749f83d2b65bdb43072be6734e14b9163b6ca3aacd89",
+   "write_protected": true,
+   "url": "https://aad.archives.gov/aad/popup-column-detail.jsp?c_id=11666&dt=3159",
+   "acquired_utc": "2026-10-27T11:36:32.211973+00:00",
+   "http_status": 200,
+   "response_headers": {
+    "content-type": "text/html;charset=ISO-8859-1"
+   },
+   "provider_sha256_match": null
+  },
+  {
+   "source_key": "aad_column_detail_dt3159_c11667.html",
+   "file": "data/raw/aad_pow_dt3159/aad_column_detail_dt3159_c11667.html",
+   "bytes": 6631,
+   "sha256": "4433d5fc2ed9b48821b123bb1f21ee260e64451034f521a62b3d186d0f3512d0",
+   "write_protected": true,
+   "url": "https://aad.archives.gov/aad/popup-column-detail.jsp?c_id=11667&dt=3159",
+   "acquired_utc": "2026-10-27T11:36:35.791079+00:00",
+   "http_status": 200,
+   "response_headers": {
+    "content-type": "text/html;charset=ISO-8859-1"
+   },
+   "provider_sha256_match": null
+  },
+  {
+   "source_key": "aad_column_detail_dt3159_c11668.html",
+   "file": "data/raw/aad_pow_dt3159/aad_column_detail_dt3159_c11668.html",
+   "bytes": 6804,
+   "sha256": "1ec8ebae08c668c068b8b09e3a39c55e0c479ca1a07c1621daa4e40a2f1d8cf1",
+   "write_protected": true,
+   "url": "https://aad.archives.gov/aad/popup-column-detail.jsp?c_id=11668&dt=3159",
+   "acquired_utc": "2026-10-27T11:36:42.851439+00:00",
+   "http_status": 200,
+   "response_headers": {
+    "content-type": "text/html;charset=ISO-8859-1"
+   },
+   "provider_sha256_match": null
+  },
+  {
+   "source_key": "aad_column_detail_dt3159_c11669.html",
+   "file": "data/raw/aad_pow_dt3159/aad_column_detail_dt3159_c11669.html",
+   "bytes": 6489,
+   "sha256": "8f07ebb78f501ad23a59ddc1e5b89955f6a8782d98517daa2b4065a52291a079",
+   "write_protected": true,
+   "url": "https://aad.archives.gov/aad/popup-column-detail.jsp?c_id=11669&dt=3159",
+   "acquired_utc": "2026-10-27T11:36:49.974543+00:00",
+   "http_status": 200,
+   "response_headers": {
+    "content-type": "text/html;charset=ISO-8859-1"
+   },
+   "provider_sha256_match": null
+  },
+  {
+   "source_key": "aad_column_detail_dt3159_c11670.html",
+   "file": "data/raw/aad_pow_dt3159/aad_column_detail_dt3159_c11670.html",
+   "bytes": 6034,
+   "sha256": "464e7b938d224bc620f7c939e039447cffdf03e1c028133d1c2f9e762f5417fd",
+   "write_protected": true,
+   "url": "https://aad.archives.gov/aad/popup-column-detail.jsp?c_id=11670&dt=3159",
+   "acquired_utc": "2026-10-27T11:36:53.509696+00:00",
+   "http_status": 200,
+   "response_headers": {
+    "content-type": "text/html;charset=ISO-8859-1"
+   },
+   "provider_sha256_match": null
+  },
+  {
+   "source_key": "aad_column_detail_dt3159_c11671.html",
+   "file": "data/raw/aad_pow_dt3159/aad_column_detail_dt3159_c11671.html",
+   "bytes": 4139,
+   "sha256": "7c5aaef91bf73f6205926797d7f527a9557bf10d42fa02b6de79c29168809a7e",
+   "write_protected": true,
+   "url": "https://aad.archives.gov/aad/popup-column-detail.jsp?c_id=11671&dt=3159",
+   "acquired_utc": "2026-10-27T11:37:04.136453+00:00",
+   "http_status": 200,
+   "response_headers": {
+    "content-type": "text/html;charset=ISO-8859-1"
+   },
+   "provider_sha256_match": null
+  },
+  {
+   "source_key": "aad_column_detail_dt3159_c11672.html",
+   "file": "data/raw/aad_pow_dt3159/aad_column_detail_dt3159_c11672.html",
+   "bytes": 3887,
+   "sha256": "f73d4f35947394c8e74fa632adfc51085f479b5d42bbe8bd2cf266cf5e0fdc7e",
+   "write_protected": true,
+   "url": "https://aad.archives.gov/aad/popup-column-detail.jsp?c_id=11672&dt=3159",
+   "acquired_utc": "2026-10-27T11:37:11.199566+00:00",
+   "http_status": 200,
+   "response_headers": {
+    "content-type": "text/html;charset=ISO-8859-1"
+   },
+   "provider_sha256_match": null
+  },
+  {
+   "source_key": "aad_column_detail_dt3159_c11673.html",
+   "file": "data/raw/aad_pow_dt3159/aad_column_detail_dt3159_c11673.html",
+   "bytes": 7107,
+   "sha256": "93daf05fdee0d6a3ce2137d8a2c5faebcff2a5d41ec2807228f093080e8f47d0",
+   "write_protected": true,
+   "url": "https://aad.archives.gov/aad/popup-column-detail.jsp?c_id=11673&dt=3159",
+   "acquired_utc": "2026-10-27T11:37:14.698437+00:00",
+   "http_status": 200,
+   "response_headers": {
+    "content-type": "text/html;charset=ISO-8859-1"
+   },
+   "provider_sha256_match": null
+  },
+  {
+   "source_key": "aad_column_detail_dt3159_c11674.html",
+   "file": "data/raw/aad_pow_dt3159/aad_column_detail_dt3159_c11674.html",
+   "bytes": 5175,
+   "sha256": "8b83d26cf96c034fed46ce4b210dd284be0414123aaab3344108bbdffc2733df",
+   "write_protected": true,
+   "url": "https://aad.archives.gov/aad/popup-column-detail.jsp?c_id=11674&dt=3159",
+   "acquired_utc": "2026-10-27T11:37:34.150135+00:00",
+   "http_status": 200,
+   "response_headers": {
+    "content-type": "text/html;charset=ISO-8859-1"
+   },
+   "provider_sha256_match": null
+  },
+  {
+   "source_key": "aad_column_detail_dt3159_c11675.html",
+   "file": "data/raw/aad_pow_dt3159/aad_column_detail_dt3159_c11675.html",
+   "bytes": 7122,
+   "sha256": "7a9b9607430bcc260c5b619f327d3eafc6ce843a1996f0bfff4dc58abd9334b6",
+   "write_protected": true,
+   "url": "https://aad.archives.gov/aad/popup-column-detail.jsp?c_id=11675&dt=3159",
+   "acquired_utc": "2026-10-27T11:35:56.754569+00:00",
+   "http_status": 200,
+   "response_headers": {
+    "content-type": "text/html;charset=ISO-8859-1"
+   },
+   "provider_sha256_match": null
+  },
+  {
+   "source_key": "aad_column_detail_dt3159_c11676.html",
+   "file": "data/raw/aad_pow_dt3159/aad_column_detail_dt3159_c11676.html",
+   "bytes": 4214,
+   "sha256": "147658c43c96f83e02e70c4f02661c1dd1da1b380666438a753734590528c8d9",
+   "write_protected": true,
+   "url": "https://aad.archives.gov/aad/popup-column-detail.jsp?c_id=11676&dt=3159",
+   "acquired_utc": "2026-10-27T11:37:07.690004+00:00",
+   "http_status": 200,
+   "response_headers": {
+    "content-type": "text/html;charset=ISO-8859-1"
+   },
+   "provider_sha256_match": null
+  },
+  {
+   "source_key": "aad_column_detail_dt3159_c11677.html",
+   "file": "data/raw/aad_pow_dt3159/aad_column_detail_dt3159_c11677.html",
+   "bytes": 7150,
+   "sha256": "92de3e75001b7410517f1075978b4f0769d173efcccf4eba66b073130bb23468",
+   "write_protected": true,
+   "url": "https://aad.archives.gov/aad/popup-column-detail.jsp?c_id=11677&dt=3159",
+   "acquired_utc": "2026-10-27T11:36:46.411954+00:00",
+   "http_status": 200,
+   "response_headers": {
+    "content-type": "text/html;charset=ISO-8859-1"
+   },
+   "provider_sha256_match": null
+  },
+  {
+   "source_key": "aad_column_detail_dt3159_c11678.html",
+   "file": "data/raw/aad_pow_dt3159/aad_column_detail_dt3159_c11678.html",
+   "bytes": 7165,
+   "sha256": "3e6de4d588d18e4b6b1d7113d29ebf4a98543f9992836aa23c262d18650b3394",
+   "write_protected": true,
+   "url": "https://aad.archives.gov/aad/popup-column-detail.jsp?c_id=11678&dt=3159",
+   "acquired_utc": "2026-10-27T11:36:39.309830+00:00",
+   "http_status": 200,
+   "response_headers": {
+    "content-type": "text/html;charset=ISO-8859-1"
+   },
+   "provider_sha256_match": null
+  },
+  {
+   "source_key": "aad_column_detail_dt3159_c11679.html",
+   "file": "data/raw/aad_pow_dt3159/aad_column_detail_dt3159_c11679.html",
+   "bytes": 3880,
+   "sha256": "5c66e89f98b20ee6df508a5fb941e5d96092ae24ee5ee8321a0a3b036558e228",
+   "write_protected": true,
+   "url": "https://aad.archives.gov/aad/popup-column-detail.jsp?c_id=11679&dt=3159",
+   "acquired_utc": "2026-10-27T11:36:11.060530+00:00",
+   "http_status": 200,
+   "response_headers": {
+    "content-type": "text/html;charset=ISO-8859-1"
+   },
+   "provider_sha256_match": null
+  },
+  {
+   "source_key": "aad_column_detail_dt3159_c11680.html",
+   "file": "data/raw/aad_pow_dt3159/aad_column_detail_dt3159_c11680.html",
+   "bytes": 4998,
+   "sha256": "277223a79fc4f64578e4993cace4f81d52e4009f5e471a996ff4f97e22dbe46e",
+   "write_protected": true,
+   "url": "https://aad.archives.gov/aad/popup-column-detail.jsp?c_id=11680&dt=3159",
+   "acquired_utc": "2026-10-27T11:37:28.459085+00:00",
+   "http_status": 200,
+   "response_headers": {
+    "content-type": "text/html;charset=ISO-8859-1"
+   },
+   "provider_sha256_match": null
+  },
+  {
+   "source_key": "aad_column_detail_dt3159_c16529.html",
+   "file": "data/raw/aad_pow_dt3159/aad_column_detail_dt3159_c16529.html",
+   "bytes": 5669,
+   "sha256": "ffd61052093648063ee68f2a698da54353850707901b193d2f56b367bc14b043",
+   "write_protected": true,
+   "url": "https://aad.archives.gov/aad/popup-column-detail.jsp?c_id=16529&dt=3159",
+   "acquired_utc": "2026-10-27T11:36:25.101408+00:00",
+   "http_status": 200,
+   "response_headers": {
+    "content-type": "text/html;charset=ISO-8859-1"
+   },
+   "provider_sha256_match": null
+  },
+  {
+   "source_key": "aad_column_detail_dt3159_c16530.html",
+   "file": "data/raw/aad_pow_dt3159/aad_column_detail_dt3159_c16530.html",
+   "bytes": 4131,
+   "sha256": "179d363edc5f524a70e10fa59b23bc51d3efdd1c2424a49cf0157d42cdc8fee6",
+   "write_protected": true,
+   "url": "https://aad.archives.gov/aad/popup-column-detail.jsp?c_id=16530&dt=3159",
+   "acquired_utc": "2026-10-27T11:36:28.644499+00:00",
+   "http_status": 200,
+   "response_headers": {
+    "content-type": "text/html;charset=ISO-8859-1"
+   },
+   "provider_sha256_match": null
+  },
+  {
+   "source_key": "aad_column_detail_dt3159_c16531.html",
+   "file": "data/raw/aad_pow_dt3159/aad_column_detail_dt3159_c16531.html",
+   "bytes": 5439,
+   "sha256": "46f698b07247dabc7e19a5678f1bc4426cab5c0069a4a315e69eaeaf94cf088d",
+   "write_protected": true,
+   "url": "https://aad.archives.gov/aad/popup-column-detail.jsp?c_id=16531&dt=3159",
+   "acquired_utc": "2026-10-27T11:36:57.035263+00:00",
+   "http_status": 200,
+   "response_headers": {
+    "content-type": "text/html;charset=ISO-8859-1"
+   },
+   "provider_sha256_match": null
+  },
+  {
+   "source_key": "aad_column_detail_dt3159_c16532.html",
+   "file": "data/raw/aad_pow_dt3159/aad_column_detail_dt3159_c16532.html",
+   "bytes": 4312,
+   "sha256": "3a13682e51f2d0446276d7c30b7f41f6bc8cd77d4a2a6969959e4c96832fc286",
+   "write_protected": true,
+   "url": "https://aad.archives.gov/aad/popup-column-detail.jsp?c_id=16532&dt=3159",
+   "acquired_utc": "2026-10-27T11:37:00.583045+00:00",
+   "http_status": 200,
+   "response_headers": {
+    "content-type": "text/html;charset=ISO-8859-1"
+   },
+   "provider_sha256_match": null
+  },
+  {
+   "source_key": "aad_data_layout_dt3159.html",
+   "file": "data/raw/aad_pow_dt3159/aad_data_layout_dt3159.html",
+   "bytes": 20970,
+   "sha256": "5f3767d9e3fc9efed9353ff02078257082662ed5b799feb026fa94b4e9071e1d",
+   "write_protected": true,
+   "url": "https://aad.archives.gov/aad/popup-data-layout.jsp?dl=276&dt=3159",
+   "acquired_utc": "2026-10-27T11:42:54.885743+00:00",
+   "http_status": 200,
+   "response_headers": {
+    "content-type": "text/html;charset=ISO-8859-1"
+   },
+   "provider_sha256_match": null
+  },
+  {
+   "source_key": "aad_fileunit_info_s644_f645.html",
+   "file": "data/raw/aad_pow_dt3159/aad_fileunit_info_s644_f645.html",
+   "bytes": 4280,
+   "sha256": "da05089075bad56a3a9277be1309f0744ed68904767e4a1e6f6f8a01b519ad53",
+   "write_protected": true,
+   "url": "https://aad.archives.gov/aad/popup-fileunit-info.jsp?s=644&f=645",
+   "acquired_utc": "2026-10-27T11:35:52.370354+00:00",
+   "http_status": 200,
+   "response_headers": {
+    "content-type": "text/html;charset=ISO-8859-1"
+   },
+   "provider_sha256_match": null
+  },
+  {
+   "source_key": "aad_notes_dt3159_c11660.html",
+   "file": "data/raw/aad_pow_dt3159/aad_notes_dt3159_c11660.html",
+   "bytes": 2378,
+   "sha256": "60a7b0c2faa21100766720308e0855d44ea91dfc0a733909ea79c5136402f0e8",
+   "write_protected": true,
+   "url": "https://aad.archives.gov/aad/popup-notes.jsp?c_id=11660&dt=3159",
+   "acquired_utc": "2026-10-27T11:36:02.191918+00:00",
+   "http_status": 200,
+   "response_headers": {
+    "content-type": "text/html;charset=ISO-8859-1"
+   },
+   "provider_sha256_match": null
+  },
+  {
+   "source_key": "aad_notes_dt3159_c11661.html",
+   "file": "data/raw/aad_pow_dt3159/aad_notes_dt3159_c11661.html",
+   "bytes": 2436,
+   "sha256": "6444768158bb8056d43002978ec45d00e52ba52a97d8164e8d3b55c8d27894cf",
+   "write_protected": true,
+   "url": "https://aad.archives.gov/aad/popup-notes.jsp?c_id=11661&dt=3159",
+   "acquired_utc": "2026-10-27T11:36:05.775833+00:00",
+   "http_status": 200,
+   "response_headers": {
+    "content-type": "text/html;charset=ISO-8859-1"
+   },
+   "provider_sha256_match": null
+  },
+  {
+   "source_key": "aad_notes_dt3159_c11662.html",
+   "file": "data/raw/aad_pow_dt3159/aad_notes_dt3159_c11662.html",
+   "bytes": 2302,
+   "sha256": "44a7fa217b6958e9086a5a9e01935c7f9688f7d5c361e5db9ccb7af1ee6ea907",
+   "write_protected": true,
+   "url": "https://aad.archives.gov/aad/popup-notes.jsp?c_id=11662&dt=3159",
+   "acquired_utc": "2026-10-27T11:36:09.311980+00:00",
+   "http_status": 200,
+   "response_headers": {
+    "content-type": "text/html;charset=ISO-8859-1"
+   },
+   "provider_sha256_match": null
+  },
+  {
+   "source_key": "aad_notes_dt3159_c11663.html",
+   "file": "data/raw/aad_pow_dt3159/aad_notes_dt3159_c11663.html",
+   "bytes": 2306,
+   "sha256": "e8d2c44902e51dee0aaba8df09b8b2ded4b91a1faadbaf21e6eeecf64ebe7b3f",
+   "write_protected": true,
+   "url": "https://aad.archives.gov/aad/popup-notes.jsp?c_id=11663&dt=3159",
+   "acquired_utc": "2026-10-27T11:36:16.302497+00:00",
+   "http_status": 200,
+   "response_headers": {
+    "content-type": "text/html;charset=ISO-8859-1"
+   },
+   "provider_sha256_match": null
+  },
+  {
+   "source_key": "aad_notes_dt3159_c11664.html",
+   "file": "data/raw/aad_pow_dt3159/aad_notes_dt3159_c11664.html",
+   "bytes": 2311,
+   "sha256": "e25795e4a392937a218a5fa30fa8d4e6709f30667b2b197404dd5318ec5ac082",
+   "write_protected": true,
+   "url": "https://aad.archives.gov/aad/popup-notes.jsp?c_id=11664&dt=3159",
+   "acquired_utc": "2026-10-27T11:36:19.812661+00:00",
+   "http_status": 200,
+   "response_headers": {
+    "content-type": "text/html;charset=ISO-8859-1"
+   },
+   "provider_sha256_match": null
+  },
+  {
+   "source_key": "aad_notes_dt3159_c11665.html",
+   "file": "data/raw/aad_pow_dt3159/aad_notes_dt3159_c11665.html",
+   "bytes": 2313,
+   "sha256": "c78ee76269be145e02bf24353ee5a737ee3535d44748a75f6073c46674c991b4",
+   "write_protected": true,
+   "url": "https://aad.archives.gov/aad/popup-notes.jsp?c_id=11665&dt=3159",
+   "acquired_utc": "2026-10-27T11:36:23.340666+00:00",
+   "http_status": 200,
+   "response_headers": {
+    "content-type": "text/html;charset=ISO-8859-1"
+   },
+   "provider_sha256_match": null
+  },
+  {
+   "source_key": "aad_notes_dt3159_c11666.html",
+   "file": "data/raw/aad_pow_dt3159/aad_notes_dt3159_c11666.html",
+   "bytes": 2309,
+   "sha256": "b4d5de20468424b4acc9cb6797bb7be80575aba280710019a225944408ee37a2",
+   "write_protected": true,
+   "url": "https://aad.archives.gov/aad/popup-notes.jsp?c_id=11666&dt=3159",
+   "acquired_utc": "2026-10-27T11:36:33.968104+00:00",
+   "http_status": 200,
+   "response_headers": {
+    "content-type": "text/html;charset=ISO-8859-1"
+   },
+   "provider_sha256_match": null
+  },
+  {
+   "source_key": "aad_notes_dt3159_c11667.html",
+   "file": "data/raw/aad_pow_dt3159/aad_notes_dt3159_c11667.html",
+   "bytes": 2786,
+   "sha256": "73a74003930fdab287da64740e73961296b05a3104cf0127b046d4e50eee5cfa",
+   "write_protected": true,
+   "url": "https://aad.archives.gov/aad/popup-notes.jsp?c_id=11667&dt=3159",
+   "acquired_utc": "2026-10-27T11:36:37.547296+00:00",
+   "http_status": 200,
+   "response_headers": {
+    "content-type": "text/html;charset=ISO-8859-1"
+   },
+   "provider_sha256_match": null
+  },
+  {
+   "source_key": "aad_notes_dt3159_c11668.html",
+   "file": "data/raw/aad_pow_dt3159/aad_notes_dt3159_c11668.html",
+   "bytes": 3038,
+   "sha256": "14c853ccbfd6fde02cad25558348444441e1cba66e4ca91a49d18fc432a36231",
+   "write_protected": true,
+   "url": "https://aad.archives.gov/aad/popup-notes.jsp?c_id=11668&dt=3159",
+   "acquired_utc": "2026-10-27T11:36:44.615293+00:00",
+   "http_status": 200,
+   "response_headers": {
+    "content-type": "text/html;charset=ISO-8859-1"
+   },
+   "provider_sha256_match": null
+  },
+  {
+   "source_key": "aad_notes_dt3159_c11669.html",
+   "file": "data/raw/aad_pow_dt3159/aad_notes_dt3159_c11669.html",
+   "bytes": 2296,
+   "sha256": "50a442447c8f852ed9e0f326826cdcb74c1c32dce120eac3335a6cef5fb77f75",
+   "write_protected": true,
+   "url": "https://aad.archives.gov/aad/popup-notes.jsp?c_id=11669&dt=3159",
+   "acquired_utc": "2026-10-27T11:36:51.731183+00:00",
+   "http_status": 200,
+   "response_headers": {
+    "content-type": "text/html;charset=ISO-8859-1"
+   },
+   "provider_sha256_match": null
+  },
+  {
+   "source_key": "aad_notes_dt3159_c11670.html",
+   "file": "data/raw/aad_pow_dt3159/aad_notes_dt3159_c11670.html",
+   "bytes": 2320,
+   "sha256": "579b1275c801cc1695d9c6f6fdee671481e9b885741d76b0c190d454b620b568",
+   "write_protected": true,
+   "url": "https://aad.archives.gov/aad/popup-notes.jsp?c_id=11670&dt=3159",
+   "acquired_utc": "2026-10-27T11:36:55.269034+00:00",
+   "http_status": 200,
+   "response_headers": {
+    "content-type": "text/html;charset=ISO-8859-1"
+   },
+   "provider_sha256_match": null
+  },
+  {
+   "source_key": "aad_notes_dt3159_c11671.html",
+   "file": "data/raw/aad_pow_dt3159/aad_notes_dt3159_c11671.html",
+   "bytes": 2611,
+   "sha256": "4d32d77633bbf9fb4abab5b6b44dd01e534c9bc21754aaac45dffd99d551d2a4",
+   "write_protected": true,
+   "url": "https://aad.archives.gov/aad/popup-notes.jsp?c_id=11671&dt=3159",
+   "acquired_utc": "2026-10-27T11:37:05.921211+00:00",
+   "http_status": 200,
+   "response_headers": {
+    "content-type": "text/html;charset=ISO-8859-1"
+   },
+   "provider_sha256_match": null
+  },
+  {
+   "source_key": "aad_notes_dt3159_c11672.html",
+   "file": "data/raw/aad_pow_dt3159/aad_notes_dt3159_c11672.html",
+   "bytes": 2307,
+   "sha256": "5cc032cd154d47b3e21903808a939fdbb2a469b3bb2bef0d1107745652c4284d",
+   "write_protected": true,
+   "url": "https://aad.archives.gov/aad/popup-notes.jsp?c_id=11672&dt=3159",
+   "acquired_utc": "2026-10-27T11:37:12.932368+00:00",
+   "http_status": 200,
+   "response_headers": {
+    "content-type": "text/html;charset=ISO-8859-1"
+   },
+   "provider_sha256_match": null
+  },
+  {
+   "source_key": "aad_notes_dt3159_c11673.html",
+   "file": "data/raw/aad_pow_dt3159/aad_notes_dt3159_c11673.html",
+   "bytes": 2419,
+   "sha256": "1459e5176beb99828713bdfa18ba750d7566f29990c92ea4118433d787a9db38",
+   "write_protected": true,
+   "url": "https://aad.archives.gov/aad/popup-notes.jsp?c_id=11673&dt=3159",
+   "acquired_utc": "2026-10-27T11:37:16.451786+00:00",
+   "http_status": 200,
+   "response_headers": {
+    "content-type": "text/html;charset=ISO-8859-1"
+   },
+   "provider_sha256_match": null
+  },
+  {
+   "source_key": "aad_notes_dt3159_c11674.html",
+   "file": "data/raw/aad_pow_dt3159/aad_notes_dt3159_c11674.html",
+   "bytes": 3068,
+   "sha256": "4a5ea3ef80b96be5116a1a6a6e4a8e6885f020fa9d7439fe8c29cf56c95432df",
+   "write_protected": true,
+   "url": "https://aad.archives.gov/aad/popup-notes.jsp?c_id=11674&dt=3159",
+   "acquired_utc": "2026-10-27T11:37:35.913523+00:00",
+   "http_status": 200,
+   "response_headers": {
+    "content-type": "text/html;charset=ISO-8859-1"
+   },
+   "provider_sha256_match": null
+  },
+  {
+   "source_key": "aad_notes_dt3159_c11675.html",
+   "file": "data/raw/aad_pow_dt3159/aad_notes_dt3159_c11675.html",
+   "bytes": 3278,
+   "sha256": "4c72515c5efa462b1982179f040c430639852e74bbd0393a46753b7ec702322d",
+   "write_protected": true,
+   "url": "https://aad.archives.gov/aad/popup-notes.jsp?c_id=11675&dt=3159",
+   "acquired_utc": "2026-10-27T11:35:58.625524+00:00",
+   "http_status": 200,
+   "response_headers": {
+    "content-type": "text/html;charset=ISO-8859-1"
+   },
+   "provider_sha256_match": null
+  },
+  {
+   "source_key": "aad_notes_dt3159_c11676.html",
+   "file": "data/raw/aad_pow_dt3159/aad_notes_dt3159_c11676.html",
+   "bytes": 2697,
+   "sha256": "d24ab33d87058c14d04109aea79c426611d83b0cd07703183e9b07220e2661b0",
+   "write_protected": true,
+   "url": "https://aad.archives.gov/aad/popup-notes.jsp?c_id=11676&dt=3159",
+   "acquired_utc": "2026-10-27T11:37:09.443550+00:00",
+   "http_status": 200,
+   "response_headers": {
+    "content-type": "text/html;charset=ISO-8859-1"
+   },
+   "provider_sha256_match": null
+  },
+  {
+   "source_key": "aad_notes_dt3159_c11677.html",
+   "file": "data/raw/aad_pow_dt3159/aad_notes_dt3159_c11677.html",
+   "bytes": 2908,
+   "sha256": "40f91686336a6a0afe70faaf36eace986a3ae9619338d64408bb6be4a2efbf41",
+   "write_protected": true,
+   "url": "https://aad.archives.gov/aad/popup-notes.jsp?c_id=11677&dt=3159",
+   "acquired_utc": "2026-10-27T11:36:48.195945+00:00",
+   "http_status": 200,
+   "response_headers": {
+    "content-type": "text/html;charset=ISO-8859-1"
+   },
+   "provider_sha256_match": null
+  },
+  {
+   "source_key": "aad_notes_dt3159_c11678.html",
+   "file": "data/raw/aad_pow_dt3159/aad_notes_dt3159_c11678.html",
+   "bytes": 2924,
+   "sha256": "627baca99617997b926c027d28cac7d005a4e2756c8634313389c63c311ebfc4",
+   "write_protected": true,
+   "url": "https://aad.archives.gov/aad/popup-notes.jsp?c_id=11678&dt=3159",
+   "acquired_utc": "2026-10-27T11:36:41.064647+00:00",
+   "http_status": 200,
+   "response_headers": {
+    "content-type": "text/html;charset=ISO-8859-1"
+   },
+   "provider_sha256_match": null
+  },
+  {
+   "source_key": "aad_notes_dt3159_c11679.html",
+   "file": "data/raw/aad_pow_dt3159/aad_notes_dt3159_c11679.html",
+   "bytes": 2304,
+   "sha256": "fe05c3fb5542adfe45b75d6baeac749052bb56e76b1cbd4cc2d28256562a1501",
+   "write_protected": true,
+   "url": "https://aad.archives.gov/aad/popup-notes.jsp?c_id=11679&dt=3159",
+   "acquired_utc": "2026-10-27T11:36:12.792494+00:00",
+   "http_status": 200,
+   "response_headers": {
+    "content-type": "text/html;charset=ISO-8859-1"
+   },
+   "provider_sha256_match": null
+  },
+  {
+   "source_key": "aad_notes_dt3159_c11680.html",
+   "file": "data/raw/aad_pow_dt3159/aad_notes_dt3159_c11680.html",
+   "bytes": 3393,
+   "sha256": "97861fe5c1edd178e4e07b4752d4f0e3e944d331a927eb27415eb5d1bbc315c7",
+   "write_protected": true,
+   "url": "https://aad.archives.gov/aad/popup-notes.jsp?c_id=11680&dt=3159",
+   "acquired_utc": "2026-10-27T11:37:30.236304+00:00",
+   "http_status": 200,
+   "response_headers": {
+    "content-type": "text/html;charset=ISO-8859-1"
+   },
+   "provider_sha256_match": null
+  },
+  {
+   "source_key": "aad_notes_dt3159_c16529.html",
+   "file": "data/raw/aad_pow_dt3159/aad_notes_dt3159_c16529.html",
+   "bytes": 2315,
+   "sha256": "172d62aa58cfa1e27184f478ed07c278bf579df68d976c3925631956bea479f7",
+   "write_protected": true,
+   "url": "https://aad.archives.gov/aad/popup-notes.jsp?c_id=16529&dt=3159",
+   "acquired_utc": "2026-10-27T11:36:26.882669+00:00",
+   "http_status": 200,
+   "response_headers": {
+    "content-type": "text/html;charset=ISO-8859-1"
+   },
+   "provider_sha256_match": null
+  },
+  {
+   "source_key": "aad_notes_dt3159_c16530.html",
+   "file": "data/raw/aad_pow_dt3159/aad_notes_dt3159_c16530.html",
+   "bytes": 2313,
+   "sha256": "d3a32a81b3d648981404068d9a003d276426ea58b0e0907263641453a2065e5e",
+   "write_protected": true,
+   "url": "https://aad.archives.gov/aad/popup-notes.jsp?c_id=16530&dt=3159",
+   "acquired_utc": "2026-10-27T11:36:30.429169+00:00",
+   "http_status": 200,
+   "response_headers": {
+    "content-type": "text/html;charset=ISO-8859-1"
+   },
+   "provider_sha256_match": null
+  },
+  {
+   "source_key": "aad_notes_dt3159_c16531.html",
+   "file": "data/raw/aad_pow_dt3159/aad_notes_dt3159_c16531.html",
+   "bytes": 2322,
+   "sha256": "c59136fe34f09aaca82a5013e12cde9cd23e36f58c9def14a29c7113f20c790b",
+   "write_protected": true,
+   "url": "https://aad.archives.gov/aad/popup-notes.jsp?c_id=16531&dt=3159",
+   "acquired_utc": "2026-10-27T11:36:58.812172+00:00",
+   "http_status": 200,
+   "response_headers": {
+    "content-type": "text/html;charset=ISO-8859-1"
+   },
+   "provider_sha256_match": null
+  },
+  {
+   "source_key": "aad_notes_dt3159_c16532.html",
+   "file": "data/raw/aad_pow_dt3159/aad_notes_dt3159_c16532.html",
+   "bytes": 2482,
+   "sha256": "4df700ca77c6b39d4b4d02aba8e5b94acdfb985283447459c325c3af396dfae6",
+   "write_protected": true,
+   "url": "https://aad.archives.gov/aad/popup-notes.jsp?c_id=16532&dt=3159",
+   "acquired_utc": "2026-10-27T11:37:02.354640+00:00",
+   "http_status": 200,
+   "response_headers": {
+    "content-type": "text/html;charset=ISO-8859-1"
+   },
+   "provider_sha256_match": null
+  },
+  {
+   "source_key": "aad_series_description_s644.html",
+   "file": "data/raw/aad_pow_dt3159/aad_series_description_s644.html",
+   "bytes": 22141,
+   "sha256": "619f845a482ebd2e76d8fbb32105b66b56c5d331f98d4f0ca6304c94a1b08a97",
+   "write_protected": true,
+   "url": "https://aad.archives.gov/aad/series-description.jsp?s=644",
+   "acquired_utc": "2026-10-27T11:35:46.874617+00:00",
+   "http_status": 200,
+   "response_headers": {
+    "content-type": "text/html;charset=ISO-8859-1"
+   },
+   "provider_sha256_match": null
+  },
+  {
+   "source_key": "aad_show_more_fields_dt3159.html",
+   "file": "data/raw/aad_pow_dt3159/aad_show_more_fields_dt3159.html",
+   "bytes": 26386,
+   "sha256": "05d69b883ac42ae37144f2fc5b0705c4344a0547a62e84bdecc3d88601d9191c",
+   "write_protected": true,
+   "url": "https://aad.archives.gov/aad/show-more-fields.jsp?dt=3159&dl=276&tf=F&cat=all&bc=&sc=11675",
+   "acquired_utc": "2026-10-27T11:35:48.815670+00:00",
+   "http_status": 200,
+   "response_headers": {
+    "content-type": "text/html;charset=ISO-8859-1"
+   },
+   "provider_sha256_match": null
+  },
+  {
+   "source_key": "aad_tech_info_s644.html",
+   "file": "data/raw/aad_pow_dt3159/aad_tech_info_s644.html",
+   "bytes": 6899,
+   "sha256": "a7f447d1dc906af551cf999f87b9be18e11936bfd959b9cbfac756db6557ffdf",
+   "write_protected": true,
+   "url": "https://aad.archives.gov/aad/popup-tech-info.jsp?s=644",
+   "acquired_utc": "2026-10-27T11:35:50.599212+00:00",
+   "http_status": 200,
+   "response_headers": {
+    "content-type": "text/html;charset=ISO-8859-1"
+   },
+   "provider_sha256_match": null
+  },
+  {
+   "source_key": "cl_1268.csv",
+   "file": "data/raw/aad_pow_dt3159/cl_1268.csv",
+   "bytes": 289,
+   "sha256": "0c533dee9397e545cb274502c9d4186ebebe10f3db58b5762bdc5f39c37bfecd",
+   "write_protected": true,
+   "url": "https://aad.archives.gov/aad/Download/cl_1268.csv",
+   "acquired_utc": "2026-10-27T11:37:48.043193+00:00",
+   "http_status": 200,
+   "response_headers": {
+    "content-type": "application/excel",
+    "content-length": "289",
+    "etag": "W/\"289-1719449993000\"",
+    "last-modified": "Thu, 27 Jun 2024 00:59:53 GMT"
+   },
+   "provider_sha256_match": null
+  },
+  {
+   "source_key": "cl_1269.csv",
+   "file": "data/raw/aad_pow_dt3159/cl_1269.csv",
+   "bytes": 1521,
+   "sha256": "eb81490a932fccb15d8c2859b929fa6502bd2ba81dd33d2aabf76f3ba950c8fa",
+   "write_protected": true,
+   "url": "https://aad.archives.gov/aad/Download/cl_1269.csv",
+   "acquired_utc": "2026-10-27T11:37:44.546816+00:00",
+   "http_status": 200,
+   "response_headers": {
+    "content-type": "application/excel",
+    "content-length": "1521",
+    "etag": "W/\"1521-1718607804000\"",
+    "last-modified": "Mon, 17 Jun 2024 07:03:24 GMT"
+   },
+   "provider_sha256_match": null
+  },
+  {
+   "source_key": "cl_1270.csv",
+   "file": "data/raw/aad_pow_dt3159/cl_1270.csv",
+   "bytes": 2580,
+   "sha256": "a9b3fcb639440af5deadccc1251b023d795c314d9d8a77226327840a384f7b00",
+   "write_protected": true,
+   "url": "https://aad.archives.gov/aad/Download/cl_1270.csv",
+   "acquired_utc": "2026-10-27T11:37:42.806541+00:00",
+   "http_status": 200,
+   "response_headers": {
+    "content-type": "application/excel",
+    "content-length": "2580",
+    "etag": "W/\"2580-1721343201000\"",
+    "last-modified": "Thu, 18 Jul 2024 22:53:21 GMT"
+   },
+   "provider_sha256_match": null
+  },
+  {
+   "source_key": "cl_1271.csv",
+   "file": "data/raw/aad_pow_dt3159/cl_1271.csv",
+   "bytes": 1219,
+   "sha256": "92d56c5f4d0ad3294db75db8a4b53e91208e2fc7c45667dff9f2dba7d927f7f0",
+   "write_protected": true,
+   "url": "https://aad.archives.gov/aad/Download/cl_1271.csv",
+   "acquired_utc": "2026-10-27T11:37:49.759482+00:00",
+   "http_status": 200,
+   "response_headers": {
+    "content-type": "application/excel",
+    "content-length": "1219",
+    "etag": "W/\"1219-1793060295778\"",
+    "last-modified": "Tue, 27 Oct 2026 00:18:15 GMT"
+   },
+   "provider_sha256_match": null
+  },
+  {
+   "source_key": "cl_1272.csv",
+   "file": "data/raw/aad_pow_dt3159/cl_1272.csv",
+   "bytes": 54,
+   "sha256": "912f6793af4d7de0836400a31f662910b5aea763343622e42c2d74d49c17a4d7",
+   "write_protected": true,
+   "url": "https://aad.archives.gov/aad/Download/cl_1272.csv",
+   "acquired_utc": "2026-10-27T11:38:00.128878+00:00",
+   "http_status": 200,
+   "response_headers": {
+    "content-type": "application/excel",
+    "content-length": "54",
+    "etag": "W/\"54-1792996979900\"",
+    "last-modified": "Mon, 26 Oct 2026 06:42:59 GMT"
+   },
+   "provider_sha256_match": null
+  },
+  {
+   "source_key": "cl_1273.csv",
+   "file": "data/raw/aad_pow_dt3159/cl_1273.csv",
+   "bytes": 3154,
+   "sha256": "b2553bc6ad16236669ef4646654f3f51ae056d6d534593cc087cb8d9f05a6ded",
+   "write_protected": true,
+   "url": "https://aad.archives.gov/aad/Download/cl_1273.csv",
+   "acquired_utc": "2026-10-27T11:37:54.960795+00:00",
+   "http_status": 200,
+   "response_headers": {
+    "content-type": "application/excel",
+    "content-length": "3154",
+    "etag": "W/\"3154-1793100275925\"",
+    "last-modified": "Tue, 27 Oct 2026 11:24:35 GMT"
+   },
+   "provider_sha256_match": null
+  },
+  {
+   "source_key": "cl_1275.csv",
+   "file": "data/raw/aad_pow_dt3159/cl_1275.csv",
+   "bytes": 10126,
+   "sha256": "9adb929580c5a83cc030469fdffc7717c76403dba0218161d496d236e810c8f6",
+   "write_protected": true,
+   "url": "https://aad.archives.gov/aad/Download/cl_1275.csv",
+   "acquired_utc": "2026-10-27T11:37:37.632050+00:00",
+   "http_status": 200,
+   "response_headers": {
+    "content-type": "application/excel",
+    "content-length": "10126",
+    "etag": "W/\"10126-1722813308000\"",
+    "last-modified": "Sun, 04 Aug 2024 23:15:08 GMT"
+   },
+   "provider_sha256_match": null
+  },
+  {
+   "source_key": "cl_1276.csv",
+   "file": "data/raw/aad_pow_dt3159/cl_1276.csv",
+   "bytes": 780,
+   "sha256": "735a3d1c5992a1b2ac930fde94cfc6168698bd03c867574a2ff4d4704d8c7d32",
+   "write_protected": true,
+   "url": "https://aad.archives.gov/aad/Download/cl_1276.csv",
+   "acquired_utc": "2026-10-27T11:38:05.526324+00:00",
+   "http_status": 200,
+   "response_headers": {
+    "content-type": "application/excel",
+    "content-length": "780",
+    "etag": "W/\"780-1720098494000\"",
+    "last-modified": "Thu, 04 Jul 2024 13:08:14 GMT"
+   },
+   "provider_sha256_match": null
+  },
+  {
+   "source_key": "cl_1277.csv",
+   "file": "data/raw/aad_pow_dt3159/cl_1277.csv",
+   "bytes": 30062,
+   "sha256": "e4da86bb19d1dc72d9d0fbb5d9cbfaab4f22b97bdb44d0bd47883d775fd3962c",
+   "write_protected": true,
+   "url": "https://aad.archives.gov/aad/Download/cl_1277.csv",
+   "acquired_utc": "2026-10-27T11:38:02.052807+00:00",
+   "http_status": 200,
+   "response_headers": {
+    "content-type": "application/excel",
+    "content-length": "30062",
+    "etag": "W/\"30062-1793100922559\"",
+    "last-modified": "Tue, 27 Oct 2026 11:35:22 GMT"
+   },
+   "provider_sha256_match": null
+  },
+  {
+   "source_key": "cl_1278.csv",
+   "file": "data/raw/aad_pow_dt3159/cl_1278.csv",
+   "bytes": 136,
+   "sha256": "0878157b411e198adaf77de470fc1a8a56d65b2ec44b9f7047c38b4554c3de4d",
+   "write_protected": true,
+   "url": "https://aad.archives.gov/aad/Download/cl_1278.csv",
+   "acquired_utc": "2026-10-27T11:37:41.070544+00:00",
+   "http_status": 200,
+   "response_headers": {
+    "content-type": "application/excel",
+    "content-length": "136",
+    "etag": "W/\"136-1792996948026\"",
+    "last-modified": "Mon, 26 Oct 2026 06:42:28 GMT"
+   },
+   "provider_sha256_match": null
+  },
+  {
+   "source_key": "cl_1279.csv",
+   "file": "data/raw/aad_pow_dt3159/cl_1279.csv",
+   "bytes": 2411,
+   "sha256": "4d7fb24400b0bd3fa0e9c5f61b9cae20da538d79bb1648e403e5c517d0b06ddb",
+   "write_protected": true,
+   "url": "https://aad.archives.gov/aad/Download/cl_1279.csv",
+   "acquired_utc": "2026-10-27T11:37:39.352241+00:00",
+   "http_status": 200,
+   "response_headers": {
+    "content-type": "application/excel",
+    "content-length": "2411",
+    "etag": "W/\"2411-1720052665000\"",
+    "last-modified": "Thu, 04 Jul 2024 00:24:25 GMT"
+   },
+   "provider_sha256_match": null
+  },
+  {
+   "source_key": "cl_1280.csv",
+   "file": "data/raw/aad_pow_dt3159/cl_1280.csv",
+   "bytes": 362,
+   "sha256": "1f5bde1c7254635c4d3b0fafdc6dd1b18f628d3d917c062f1d317e465fd74b5e",
+   "write_protected": true,
+   "url": "https://aad.archives.gov/aad/Download/cl_1280.csv",
+   "acquired_utc": "2026-10-27T11:37:58.408517+00:00",
+   "http_status": 200,
+   "response_headers": {
+    "content-type": "application/excel",
+    "content-length": "362",
+    "etag": "W/\"362-1793024596915\"",
+    "last-modified": "Mon, 26 Oct 2026 14:23:16 GMT"
+   },
+   "provider_sha256_match": null
+  },
+  {
+   "source_key": "cl_1281.csv",
+   "file": "data/raw/aad_pow_dt3159/cl_1281.csv",
+   "bytes": 97,
+   "sha256": "f4f91472a4440521f5259316fa6de73ae21dc5b9959273e22cbbfb98ad3c7b97",
+   "write_protected": true,
+   "url": "https://aad.archives.gov/aad/Download/cl_1281.csv",
+   "acquired_utc": "2026-10-27T11:37:56.679453+00:00",
+   "http_status": 200,
+   "response_headers": {
+    "content-type": "application/excel",
+    "content-length": "97",
+    "etag": "W/\"97-1721765099000\"",
+    "last-modified": "Tue, 23 Jul 2024 20:04:59 GMT"
+   },
+   "provider_sha256_match": null
+  },
+  {
+   "source_key": "cl_1475.csv",
+   "file": "data/raw/aad_pow_dt3159/cl_1475.csv",
+   "bytes": 258,
+   "sha256": "946c995f2609ad2fc65481f00562acad063340ccabb74ca0541767da71e6ea0b",
+   "write_protected": true,
+   "url": "https://aad.archives.gov/aad/Download/cl_1475.csv",
+   "acquired_utc": "2026-10-27T11:38:03.800521+00:00",
+   "http_status": 200,
+   "response_headers": {
+    "content-type": "application/excel",
+    "content-length": "258",
+    "etag": "W/\"258-1717131209000\"",
+    "last-modified": "Fri, 31 May 2024 04:53:29 GMT"
+   },
+   "provider_sha256_match": null
+  },
+  {
+   "source_key": "cl_1606.csv",
+   "file": "data/raw/aad_pow_dt3159/cl_1606.csv",
+   "bytes": 106,
+   "sha256": "06c63c78168ef35acdbb2435551f0776cbf7b4c84701f0a653bd0bb233a55bca",
+   "write_protected": true,
+   "url": "https://aad.archives.gov/aad/Download/cl_1606.csv",
+   "acquired_utc": "2026-10-27T11:37:46.307153+00:00",
+   "http_status": 200,
+   "response_headers": {
+    "content-type": "application/excel",
+    "content-length": "106",
+    "etag": "W/\"106-1718136545000\"",
+    "last-modified": "Tue, 11 Jun 2024 20:09:05 GMT"
+   },
+   "provider_sha256_match": null
+  },
+  {
+   "source_key": "cl_1959.csv",
+   "file": "data/raw/aad_pow_dt3159/cl_1959.csv",
+   "bytes": 6290,
+   "sha256": "22626b380f659dc6af511cce532815605392a13cd81a6ea31123ec0705421624",
+   "write_protected": true,
+   "url": "https://aad.archives.gov/aad/Download/cl_1959.csv",
+   "acquired_utc": "2026-10-27T11:37:51.482327+00:00",
+   "http_status": 200,
+   "response_headers": {
+    "content-type": "application/excel",
+    "content-length": "6290",
+    "etag": "W/\"6290-1721215370000\"",
+    "last-modified": "Wed, 17 Jul 2024 11:22:50 GMT"
+   },
+   "provider_sha256_match": null
+  },
+  {
+   "source_key": "cl_1960.csv",
+   "file": "data/raw/aad_pow_dt3159/cl_1960.csv",
+   "bytes": 3354,
+   "sha256": "fddb5d5c73df7f1e75dc98b92e8052f379dca04973b25d4220a3f7abb0587e7e",
+   "write_protected": true,
+   "url": "https://aad.archives.gov/aad/Download/cl_1960.csv",
+   "acquired_utc": "2026-10-27T11:37:53.201217+00:00",
+   "http_status": 200,
+   "response_headers": {
+    "content-type": "application/excel",
+    "content-length": "3354",
+    "etag": "W/\"3354-1722608973000\"",
+    "last-modified": "Fri, 02 Aug 2024 14:29:33 GMT"
+   },
+   "provider_sha256_match": null
+  },
+  {
+   "source_key": "rg389_wwii_pow_faq_revised.pdf",
+   "file": "data/raw/aad_pow_dt3159/rg389_wwii_pow_faq_revised.pdf",
+   "bytes": 143972,
+   "sha256": "ee9723d454c2cfc3e5f89a8ab75ad142b68e23614fa8fcc1f7049464ead1f468",
+   "write_protected": true,
+   "url": "https://aad.archives.gov/aad/content/aad_docs/rg389_wwii_pow_faq_revised.pdf",
+   "acquired_utc": "2026-10-27T11:35:55.002868+00:00",
+   "http_status": 200,
+   "response_headers": {
+    "content-type": "application/pdf",
+    "content-length": "143972",
+    "etag": "W/\"143972-1591086906000\"",
+    "last-modified": "Tue, 02 Jun 2020 08:35:06 GMT"
+   },
+   "provider_sha256_match": null
+  },
+  {
+   "source_key": "catalog_descendants_of_naid_583428.json",
+   "file": "data/raw/nara_catalog_metadata/catalog_descendants_of_naid_583428.json",
+   "bytes": 33704,
+   "sha256": "4000c3cb9ff0bbe5496070b8725685abf35ea1b1b5dbe3d56533266ef5482d02",
+   "write_protected": false,
+   "url": null,
+   "acquired_utc": null,
+   "http_status": null,
+   "response_headers": null,
+   "provider_sha256_match": null
+  },
+  {
+   "source_key": "catalog_record_naid_1263907.json",
+   "file": "data/raw/nara_catalog_metadata/catalog_record_naid_1263907.json",
+   "bytes": 5788,
+   "sha256": "cf91b767ed4e8360c6fe1253639f6b727eada93cb51ea329f1a9ed865923558b",
+   "write_protected": false,
+   "url": null,
+   "acquired_utc": null,
+   "http_status": null,
+   "response_headers": null,
+   "provider_sha256_match": null
+  },
+  {
+   "source_key": "catalog_record_naid_1263923.json",
+   "file": "data/raw/nara_catalog_metadata/catalog_record_naid_1263923.json",
+   "bytes": 7482,
+   "sha256": "04e64104185b4a770215d4862a2f001169fa59ea63d4e9368babae7fe526538a",
+   "write_protected": false,
+   "url": null,
+   "acquired_utc": null,
+   "http_status": null,
+   "response_headers": null,
+   "provider_sha256_match": null
+  },
+  {
+   "source_key": "catalog_record_naid_583428.json",
+   "file": "data/raw/nara_catalog_metadata/catalog_record_naid_583428.json",
+   "bytes": 10116,
+   "sha256": "8969523dd0f08e8b8205b0a44a8fbc51ef3beaf7afd43c9f292426c785320062",
+   "write_protected": false,
+   "url": null,
+   "acquired_utc": null,
+   "http_status": null,
+   "response_headers": null,
+   "provider_sha256_match": null
+  },
+  {
+   "source_key": "catalog_record_naid_604357.json",
+   "file": "data/raw/nara_catalog_metadata/catalog_record_naid_604357.json",
+   "bytes": 9409,
+   "sha256": "d2e9a3dac6b33a15daea14905774618f654bb6992eb4a901fbc4a4c0cef28a90",
+   "write_protected": false,
+   "url": null,
+   "acquired_utc": null,
+   "http_status": null,
+   "response_headers": null,
+   "provider_sha256_match": null
+  },
+  {
+   "source_key": "fetched_utc.txt",
+   "file": "data/raw/nara_catalog_metadata/fetched_utc.txt",
+   "bytes": 21,
+   "sha256": "2f168ece36e711da1c033d52e2ba9302027d0d8b9b0391ea68d13a5011429a12",
+   "write_protected": false,
+   "url": null,
+   "acquired_utc": null,
+   "http_status": null,
+   "response_headers": null,
+   "provider_sha256_match": null
+  },
+  {
+   "source_key": "aad_column_detail_dt893_c24979.html",
+   "file": "data/raw/aad_asnf_dt893_dt929/aad_column_detail_dt893_c24979.html",
+   "bytes": 4027,
+   "sha256": "71d7640aea9ad74ba0c782d9af061f23eb29d71a8f8d00155a0d0f78dafb99b0",
+   "write_protected": true,
+   "url": "https://aad.archives.gov/aad/popup-column-detail.jsp?c_id=24979&dt=893",
+   "acquired_utc": "2026-10-27T11:39:16.114435+00:00",
+   "http_status": 200,
+   "response_headers": {
+    "content-type": "text/html;charset=ISO-8859-1"
+   },
+   "provider_sha256_match": null
+  },
+  {
+   "source_key": "aad_column_detail_dt893_c24980.html",
+   "file": "data/raw/aad_asnf_dt893_dt929/aad_column_detail_dt893_c24980.html",
+   "bytes": 3971,
+   "sha256": "d39b2e93fd7bda72aff89ac4fe1de708692a6e814d4c2adfac627fb321b8a569",
+   "write_protected": true,
+   "url": "https://aad.archives.gov/aad/popup-column-detail.jsp?c_id=24980&dt=893",
+   "acquired_utc": "2026-10-27T11:39:19.659578+00:00",
+   "http_status": 200,
+   "response_headers": {
+    "content-type": "text/html;charset=ISO-8859-1"
+   },
+   "provider_sha256_match": null
+  },
+  {
+   "source_key": "aad_column_detail_dt893_c24981.html",
+   "file": "data/raw/aad_asnf_dt893_dt929/aad_column_detail_dt893_c24981.html",
+   "bytes": 4234,
+   "sha256": "9aa44214b3cfc09626f03c5afb6b3d7853c5d63f3ab183f8ea7f5bc3ae813f78",
+   "write_protected": true,
+   "url": "https://aad.archives.gov/aad/popup-column-detail.jsp?c_id=24981&dt=893",
+   "acquired_utc": "2026-10-27T11:39:23.210377+00:00",
+   "http_status": 200,
+   "response_headers": {
+    "content-type": "text/html;charset=ISO-8859-1"
+   },
+   "provider_sha256_match": null
+  },
+  {
+   "source_key": "aad_column_detail_dt893_c24982.html",
+   "file": "data/raw/aad_asnf_dt893_dt929/aad_column_detail_dt893_c24982.html",
+   "bytes": 4756,
+   "sha256": "92a661ec53dbfa109a56316ad6177b32ab951edc21b85ffa3d09efebcc411f70",
+   "write_protected": true,
+   "url": "https://aad.archives.gov/aad/popup-column-detail.jsp?c_id=24982&dt=893",
+   "acquired_utc": "2026-10-27T11:39:26.733189+00:00",
+   "http_status": 200,
+   "response_headers": {
+    "content-type": "text/html;charset=ISO-8859-1"
+   },
+   "provider_sha256_match": null
+  },
+  {
+   "source_key": "aad_column_detail_dt893_c24983.html",
+   "file": "data/raw/aad_asnf_dt893_dt929/aad_column_detail_dt893_c24983.html",
+   "bytes": 4255,
+   "sha256": "fdd86a655619344c1472a506eb6104c08dae25291b83f9e61f7946d2183cc1d2",
+   "write_protected": true,
+   "url": "https://aad.archives.gov/aad/popup-column-detail.jsp?c_id=24983&dt=893",
+   "acquired_utc": "2026-10-27T11:39:30.275028+00:00",
+   "http_status": 200,
+   "response_headers": {
+    "content-type": "text/html;charset=ISO-8859-1"
+   },
+   "provider_sha256_match": null
+  },
+  {
+   "source_key": "aad_column_detail_dt893_c24984.html",
+   "file": "data/raw/aad_asnf_dt893_dt929/aad_column_detail_dt893_c24984.html",
+   "bytes": 4680,
+   "sha256": "9cc3576737b3361b48372bfe41a9631cff18b799298ddb479971949eabd65dac",
+   "write_protected": true,
+   "url": "https://aad.archives.gov/aad/popup-column-detail.jsp?c_id=24984&dt=893",
+   "acquired_utc": "2026-10-27T11:39:33.807836+00:00",
+   "http_status": 200,
+   "response_headers": {
+    "content-type": "text/html;charset=ISO-8859-1"
+   },
+   "provider_sha256_match": null
+  },
+  {
+   "source_key": "aad_column_detail_dt893_c24985.html",
+   "file": "data/raw/aad_asnf_dt893_dt929/aad_column_detail_dt893_c24985.html",
+   "bytes": 3950,
+   "sha256": "b8027535b6545ba177291147948d348df3b0baa49ae98d71e0b2a46f42038eea",
+   "write_protected": true,
+   "url": "https://aad.archives.gov/aad/popup-column-detail.jsp?c_id=24985&dt=893",
+   "acquired_utc": "2026-10-27T11:39:37.373661+00:00",
+   "http_status": 200,
+   "response_headers": {
+    "content-type": "text/html;charset=ISO-8859-1"
+   },
+   "provider_sha256_match": null
+  },
+  {
+   "source_key": "aad_column_detail_dt893_c24986.html",
+   "file": "data/raw/aad_asnf_dt893_dt929/aad_column_detail_dt893_c24986.html",
+   "bytes": 4575,
+   "sha256": "730d5c0e00c703fda4bbf1046791b6e3e50eab09c2cd5638b62b15bc540aaf31",
+   "write_protected": true,
+   "url": "https://aad.archives.gov/aad/popup-column-detail.jsp?c_id=24986&dt=893",
+   "acquired_utc": "2026-10-27T11:39:40.883361+00:00",
+   "http_status": 200,
+   "response_headers": {
+    "content-type": "text/html;charset=ISO-8859-1"
+   },
+   "provider_sha256_match": null
+  },
+  {
+   "source_key": "aad_column_detail_dt893_c24987.html",
+   "file": "data/raw/aad_asnf_dt893_dt929/aad_column_detail_dt893_c24987.html",
+   "bytes": 4002,
+   "sha256": "265c42ce42130f7238af5611ef4ab9f83a6be4fd24f830f20bdb1e36db93878a",
+   "write_protected": true,
+   "url": "https://aad.archives.gov/aad/popup-column-detail.jsp?c_id=24987&dt=893",
+   "acquired_utc": "2026-10-27T11:39:44.406446+00:00",
+   "http_status": 200,
+   "response_headers": {
+    "content-type": "text/html;charset=ISO-8859-1"
+   },
+   "provider_sha256_match": null
+  },
+  {
+   "source_key": "aad_column_detail_dt893_c24988.html",
+   "file": "data/raw/aad_asnf_dt893_dt929/aad_column_detail_dt893_c24988.html",
+   "bytes": 4015,
+   "sha256": "1576d7eb2b0c6726db91d84a964220e1bbf0d21be6153b389fedf0d6d7f103a1",
+   "write_protected": true,
+   "url": "https://aad.archives.gov/aad/popup-column-detail.jsp?c_id=24988&dt=893",
+   "acquired_utc": "2026-10-27T11:39:48.001265+00:00",
+   "http_status": 200,
+   "response_headers": {
+    "content-type": "text/html;charset=ISO-8859-1"
+   },
+   "provider_sha256_match": null
+  },
+  {
+   "source_key": "aad_column_detail_dt893_c24989.html",
+   "file": "data/raw/aad_asnf_dt893_dt929/aad_column_detail_dt893_c24989.html",
+   "bytes": 3980,
+   "sha256": "a594a16b861b1019cabf131894d0d451b7f9a808e98a7badeba2d117e11b5a88",
+   "write_protected": true,
+   "url": "https://aad.archives.gov/aad/popup-column-detail.jsp?c_id=24989&dt=893",
+   "acquired_utc": "2026-10-27T11:39:51.548525+00:00",
+   "http_status": 200,
+   "response_headers": {
+    "content-type": "text/html;charset=ISO-8859-1"
+   },
+   "provider_sha256_match": null
+  },
+  {
+   "source_key": "aad_column_detail_dt893_c24990.html",
+   "file": "data/raw/aad_asnf_dt893_dt929/aad_column_detail_dt893_c24990.html",
+   "bytes": 4128,
+   "sha256": "0b0a4e054ac55dd49ffbc5aa6f27ea7b57281e591bd6117bcdd0f64ff0ec9a61",
+   "write_protected": true,
+   "url": "https://aad.archives.gov/aad/popup-column-detail.jsp?c_id=24990&dt=893",
+   "acquired_utc": "2026-10-27T11:39:55.137008+00:00",
+   "http_status": 200,
+   "response_headers": {
+    "content-type": "text/html;charset=ISO-8859-1"
+   },
+   "provider_sha256_match": null
+  },
+  {
+   "source_key": "aad_column_detail_dt893_c24991.html",
+   "file": "data/raw/aad_asnf_dt893_dt929/aad_column_detail_dt893_c24991.html",
+   "bytes": 4335,
+   "sha256": "101e31e3d4671d8e159cb313d677942804ba4edb75e9465a643c63b1281dc27a",
+   "write_protected": true,
+   "url": "https://aad.archives.gov/aad/popup-column-detail.jsp?c_id=24991&dt=893",
+   "acquired_utc": "2026-10-27T11:39:58.725752+00:00",
+   "http_status": 200,
+   "response_headers": {
+    "content-type": "text/html;charset=ISO-8859-1"
+   },
+   "provider_sha256_match": null
+  },
+  {
+   "source_key": "aad_column_detail_dt893_c24992.html",
+   "file": "data/raw/aad_asnf_dt893_dt929/aad_column_detail_dt893_c24992.html",
+   "bytes": 4062,
+   "sha256": "d217c4ed1669953ae98402127bf32f942b67358568fc4a138358353da4cd479a",
+   "write_protected": true,
+   "url": "https://aad.archives.gov/aad/popup-column-detail.jsp?c_id=24992&dt=893",
+   "acquired_utc": "2026-10-27T11:40:02.338640+00:00",
+   "http_status": 200,
+   "response_headers": {
+    "content-type": "text/html;charset=ISO-8859-1"
+   },
+   "provider_sha256_match": null
+  },
+  {
+   "source_key": "aad_column_detail_dt893_c24993.html",
+   "file": "data/raw/aad_asnf_dt893_dt929/aad_column_detail_dt893_c24993.html",
+   "bytes": 4195,
+   "sha256": "464895f4805222ce55f4b55f76ea58629f30bc4698d1e3e2e2ad8b3efc6fc6bc",
+   "write_protected": true,
+   "url": "https://aad.archives.gov/aad/popup-column-detail.jsp?c_id=24993&dt=893",
+   "acquired_utc": "2026-10-27T11:40:05.977827+00:00",
+   "http_status": 200,
+   "response_headers": {
+    "content-type": "text/html;charset=ISO-8859-1"
+   },
+   "provider_sha256_match": null
+  },
+  {
+   "source_key": "aad_column_detail_dt893_c24994.html",
+   "file": "data/raw/aad_asnf_dt893_dt929/aad_column_detail_dt893_c24994.html",
+   "bytes": 5030,
+   "sha256": "c7b3a7c1906cefab6d44ca89ddf7dcf96b9de85aca4a290274065c087422a7f5",
+   "write_protected": true,
+   "url": "https://aad.archives.gov/aad/popup-column-detail.jsp?c_id=24994&dt=893",
+   "acquired_utc": "2026-10-27T11:40:09.551684+00:00",
+   "http_status": 200,
+   "response_headers": {
+    "content-type": "text/html;charset=ISO-8859-1"
+   },
+   "provider_sha256_match": null
+  },
+  {
+   "source_key": "aad_column_detail_dt893_c24995.html",
+   "file": "data/raw/aad_asnf_dt893_dt929/aad_column_detail_dt893_c24995.html",
+   "bytes": 8814,
+   "sha256": "c50c521e3b942ec7df305d5f031224d6c1319a46bd391cfd205e3e78053e683a",
+   "write_protected": true,
+   "url": "https://aad.archives.gov/aad/popup-column-detail.jsp?c_id=24995&dt=893",
+   "acquired_utc": "2026-10-27T11:40:13.707157+00:00",
+   "http_status": 200,
+   "response_headers": {
+    "content-type": "text/html;charset=ISO-8859-1"
+   },
+   "provider_sha256_match": null
+  },
+  {
+   "source_key": "aad_column_detail_dt893_c24996.html",
+   "file": "data/raw/aad_asnf_dt893_dt929/aad_column_detail_dt893_c24996.html",
+   "bytes": 6368,
+   "sha256": "bbdab790032d34ae9d34fbe42016fd5b1d14c7b81a272af76a0244ebae933bc2",
+   "write_protected": true,
+   "url": "https://aad.archives.gov/aad/popup-column-detail.jsp?c_id=24996&dt=893",
+   "acquired_utc": "2026-10-27T11:40:18.277862+00:00",
+   "http_status": 200,
+   "response_headers": {
+    "content-type": "text/html;charset=ISO-8859-1"
+   },
+   "provider_sha256_match": null
+  },
+  {
+   "source_key": "aad_column_detail_dt893_c24997.html",
+   "file": "data/raw/aad_asnf_dt893_dt929/aad_column_detail_dt893_c24997.html",
+   "bytes": 5144,
+   "sha256": "b7ba96e8e4413c104ec6c53ebb3189c3d591b855334a24c40db12949a7828190",
+   "write_protected": true,
+   "url": "https://aad.archives.gov/aad/popup-column-detail.jsp?c_id=24997&dt=893",
+   "acquired_utc": "2026-10-27T11:40:22.883056+00:00",
+   "http_status": 200,
+   "response_headers": {
+    "content-type": "text/html;charset=ISO-8859-1"
+   },
+   "provider_sha256_match": null
+  },
+  {
+   "source_key": "aad_column_detail_dt893_c24998.html",
+   "file": "data/raw/aad_asnf_dt893_dt929/aad_column_detail_dt893_c24998.html",
+   "bytes": 5400,
+   "sha256": "2a7e9744b93c9ee2ee563ab890b7a703bd046784e64404b103103594cf13d1da",
+   "write_protected": true,
+   "url": "https://aad.archives.gov/aad/popup-column-detail.jsp?c_id=24998&dt=893",
+   "acquired_utc": "2026-10-27T11:40:27.448902+00:00",
+   "http_status": 200,
+   "response_headers": {
+    "content-type": "text/html;charset=ISO-8859-1"
+   },
+   "provider_sha256_match": null
+  },
+  {
+   "source_key": "aad_column_detail_dt893_c24999.html",
+   "file": "data/raw/aad_asnf_dt893_dt929/aad_column_detail_dt893_c24999.html",
+   "bytes": 4143,
+   "sha256": "8252338a0488cda82917820ac5af5985f2c1199c9d889010ddc61c30f2c05154",
+   "write_protected": true,
+   "url": "https://aad.archives.gov/aad/popup-column-detail.jsp?c_id=24999&dt=893",
+   "acquired_utc": "2026-10-27T11:40:32.134964+00:00",
+   "http_status": 200,
+   "response_headers": {
+    "content-type": "text/html;charset=ISO-8859-1"
+   },
+   "provider_sha256_match": null
+  },
+  {
+   "source_key": "aad_column_detail_dt893_c25000.html",
+   "file": "data/raw/aad_asnf_dt893_dt929/aad_column_detail_dt893_c25000.html",
+   "bytes": 4158,
+   "sha256": "76877f7986e4ed5a03619198d6c1215ff9fdfbb74633d93955f6fd7b39870123",
+   "write_protected": true,
+   "url": "https://aad.archives.gov/aad/popup-column-detail.jsp?c_id=25000&dt=893",
+   "acquired_utc": "2026-10-27T11:40:36.795624+00:00",
+   "http_status": 200,
+   "response_headers": {
+    "content-type": "text/html;charset=ISO-8859-1"
+   },
+   "provider_sha256_match": null
+  },
+  {
+   "source_key": "aad_column_detail_dt893_c25001.html",
+   "file": "data/raw/aad_asnf_dt893_dt929/aad_column_detail_dt893_c25001.html",
+   "bytes": 4023,
+   "sha256": "9182816eec0d04ab70e7d7b3ed9524bea282bf2f2017ddad9210cdcebd621e69",
+   "write_protected": true,
+   "url": "https://aad.archives.gov/aad/popup-column-detail.jsp?c_id=25001&dt=893",
+   "acquired_utc": "2026-10-27T11:40:41.407663+00:00",
+   "http_status": 200,
+   "response_headers": {
+    "content-type": "text/html;charset=ISO-8859-1"
+   },
+   "provider_sha256_match": null
+  },
+  {
+   "source_key": "aad_column_detail_dt893_c25002.html",
+   "file": "data/raw/aad_asnf_dt893_dt929/aad_column_detail_dt893_c25002.html",
+   "bytes": 4368,
+   "sha256": "40fad76db3bdbfc16ebf393c55491b70f60ba4cf65a985ca251ffafd2cbfbb73",
+   "write_protected": true,
+   "url": "https://aad.archives.gov/aad/popup-column-detail.jsp?c_id=25002&dt=893",
+   "acquired_utc": "2026-10-27T11:40:46.060610+00:00",
+   "http_status": 200,
+   "response_headers": {
+    "content-type": "text/html;charset=ISO-8859-1"
+   },
+   "provider_sha256_match": null
+  },
+  {
+   "source_key": "aad_column_detail_dt893_c25003.html",
+   "file": "data/raw/aad_asnf_dt893_dt929/aad_column_detail_dt893_c25003.html",
+   "bytes": 4308,
+   "sha256": "c22aa1996cce21d331daf44d50b395956cf33b67f707e7a57db95eeecc8f0108",
+   "write_protected": true,
+   "url": "https://aad.archives.gov/aad/popup-column-detail.jsp?c_id=25003&dt=893",
+   "acquired_utc": "2026-10-27T11:40:50.689455+00:00",
+   "http_status": 200,
+   "response_headers": {
+    "content-type": "text/html;charset=ISO-8859-1"
+   },
+   "provider_sha256_match": null
+  },
+  {
+   "source_key": "aad_column_detail_dt893_c25004.html",
+   "file": "data/raw/aad_asnf_dt893_dt929/aad_column_detail_dt893_c25004.html",
+   "bytes": 4319,
+   "sha256": "bc10c689414ca302bb7bc76bd8fff5b43cf15c7ea08ea3f80330f0011364d027",
+   "write_protected": true,
+   "url": "https://aad.archives.gov/aad/popup-column-detail.jsp?c_id=25004&dt=893",
+   "acquired_utc": "2026-10-27T11:40:55.276740+00:00",
+   "http_status": 200,
+   "response_headers": {
+    "content-type": "text/html;charset=ISO-8859-1"
+   },
+   "provider_sha256_match": null
+  },
+  {
+   "source_key": "aad_column_detail_dt929_c25005.html",
+   "file": "data/raw/aad_asnf_dt893_dt929/aad_column_detail_dt929_c25005.html",
+   "bytes": 7033,
+   "sha256": "68a52bcbfabd4d5cedbcb734aba4a1e61c4f809e8e8d50734588d2c2c1899dca",
+   "write_protected": true,
+   "url": "https://aad.archives.gov/aad/popup-column-detail.jsp?c_id=25005&dt=929",
+   "acquired_utc": "2026-10-27T11:40:58.866512+00:00",
+   "http_status": 200,
+   "response_headers": {
+    "content-type": "text/html;charset=ISO-8859-1"
+   },
+   "provider_sha256_match": null
+  },
+  {
+   "source_key": "aad_column_detail_dt929_c25006.html",
+   "file": "data/raw/aad_asnf_dt893_dt929/aad_column_detail_dt929_c25006.html",
+   "bytes": 8868,
+   "sha256": "c3ba90ac3ccb719270a073e71e0657ab2379d9b64ec25ed88b18dafd82c8184b",
+   "write_protected": true,
+   "url": "https://aad.archives.gov/aad/popup-column-detail.jsp?c_id=25006&dt=929",
+   "acquired_utc": "2026-10-27T11:41:02.387651+00:00",
+   "http_status": 200,
+   "response_headers": {
+    "content-type": "text/html;charset=ISO-8859-1"
+   },
+   "provider_sha256_match": null
+  },
+  {
+   "source_key": "aad_column_detail_dt929_c25007.html",
+   "file": "data/raw/aad_asnf_dt893_dt929/aad_column_detail_dt929_c25007.html",
+   "bytes": 7056,
+   "sha256": "1834b11d2f209c3d0802013093df1b0b6257a235584fd21c6ea8d8ff70fa2200",
+   "write_protected": true,
+   "url": "https://aad.archives.gov/aad/popup-column-detail.jsp?c_id=25007&dt=929",
+   "acquired_utc": "2026-10-27T11:41:05.982294+00:00",
+   "http_status": 200,
+   "response_headers": {
+    "content-type": "text/html;charset=ISO-8859-1"
+   },
+   "provider_sha256_match": null
+  },
+  {
+   "source_key": "aad_column_detail_dt929_c25008.html",
+   "file": "data/raw/aad_asnf_dt893_dt929/aad_column_detail_dt929_c25008.html",
+   "bytes": 6331,
+   "sha256": "da62ef5eee7dc854e5761db2f9cb63a078627adedd1c9d6ecea5bd5c1b3abbb7",
+   "write_protected": true,
+   "url": "https://aad.archives.gov/aad/popup-column-detail.jsp?c_id=25008&dt=929",
+   "acquired_utc": "2026-10-27T11:41:09.532257+00:00",
+   "http_status": 200,
+   "response_headers": {
+    "content-type": "text/html;charset=ISO-8859-1"
+   },
+   "provider_sha256_match": null
+  },
+  {
+   "source_key": "aad_column_detail_dt929_c25009.html",
+   "file": "data/raw/aad_asnf_dt893_dt929/aad_column_detail_dt929_c25009.html",
+   "bytes": 5595,
+   "sha256": "2e70669b72ffbeed0e4af67afc51fabd956f97447acdf2dce07f1abeb27e82fb",
+   "write_protected": true,
+   "url": "https://aad.archives.gov/aad/popup-column-detail.jsp?c_id=25009&dt=929",
+   "acquired_utc": "2026-10-27T11:41:13.107627+00:00",
+   "http_status": 200,
+   "response_headers": {
+    "content-type": "text/html;charset=ISO-8859-1"
+   },
+   "provider_sha256_match": null
+  },
+  {
+   "source_key": "aad_column_detail_dt929_c25010.html",
+   "file": "data/raw/aad_asnf_dt893_dt929/aad_column_detail_dt929_c25010.html",
+   "bytes": 6747,
+   "sha256": "7ed36a006d2dd0ce3dc08c9530d4893f25bfcc31858c2b2e9859e64bf0b2cda4",
+   "write_protected": true,
+   "url": "https://aad.archives.gov/aad/popup-column-detail.jsp?c_id=25010&dt=929",
+   "acquired_utc": "2026-10-27T11:41:16.626194+00:00",
+   "http_status": 200,
+   "response_headers": {
+    "content-type": "text/html;charset=ISO-8859-1"
+   },
+   "provider_sha256_match": null
+  },
+  {
+   "source_key": "aad_column_detail_dt929_c25011.html",
+   "file": "data/raw/aad_asnf_dt893_dt929/aad_column_detail_dt929_c25011.html",
+   "bytes": 6220,
+   "sha256": "e9ef96862e156076f1a55af802ad248c37c1a0a0fee407908250c92d3b76402b",
+   "write_protected": true,
+   "url": "https://aad.archives.gov/aad/popup-column-detail.jsp?c_id=25011&dt=929",
+   "acquired_utc": "2026-10-27T11:41:20.137263+00:00",
+   "http_status": 200,
+   "response_headers": {
+    "content-type": "text/html;charset=ISO-8859-1"
+   },
+   "provider_sha256_match": null
+  },
+  {
+   "source_key": "aad_column_detail_dt929_c25012.html",
+   "file": "data/raw/aad_asnf_dt893_dt929/aad_column_detail_dt929_c25012.html",
+   "bytes": 5614,
+   "sha256": "07ad8f5402fa4649aeb0a5bac7f857e6c23ffc28f74a93cf94d275ec1fa35461",
+   "write_protected": true,
+   "url": "https://aad.archives.gov/aad/popup-column-detail.jsp?c_id=25012&dt=929",
+   "acquired_utc": "2026-10-27T11:41:23.707171+00:00",
+   "http_status": 200,
+   "response_headers": {
+    "content-type": "text/html;charset=ISO-8859-1"
+   },
+   "provider_sha256_match": null
+  },
+  {
+   "source_key": "aad_column_detail_dt929_c25013.html",
+   "file": "data/raw/aad_asnf_dt893_dt929/aad_column_detail_dt929_c25013.html",
+   "bytes": 4917,
+   "sha256": "b8bd5b6629005a6d07ea5c224d3667201dcd4b62f53a257bc84d464b446288cd",
+   "write_protected": true,
+   "url": "https://aad.archives.gov/aad/popup-column-detail.jsp?c_id=25013&dt=929",
+   "acquired_utc": "2026-10-27T11:41:27.240070+00:00",
+   "http_status": 200,
+   "response_headers": {
+    "content-type": "text/html;charset=ISO-8859-1"
+   },
+   "provider_sha256_match": null
+  },
+  {
+   "source_key": "aad_column_detail_dt929_c25014.html",
+   "file": "data/raw/aad_asnf_dt893_dt929/aad_column_detail_dt929_c25014.html",
+   "bytes": 4354,
+   "sha256": "8a35f4c739f2975e9801acf80be18d159c643bb8f104f9c1ebca00374f3772e6",
+   "write_protected": true,
+   "url": "https://aad.archives.gov/aad/popup-column-detail.jsp?c_id=25014&dt=929",
+   "acquired_utc": "2026-10-27T11:41:30.809642+00:00",
+   "http_status": 200,
+   "response_headers": {
+    "content-type": "text/html;charset=ISO-8859-1"
+   },
+   "provider_sha256_match": null
+  },
+  {
+   "source_key": "aad_column_detail_dt929_c25015.html",
+   "file": "data/raw/aad_asnf_dt893_dt929/aad_column_detail_dt929_c25015.html",
+   "bytes": 5941,
+   "sha256": "21b736b4bb265ca56566daab0f08dc01d9e14ad0273ca2accff1a728a85c2379",
+   "write_protected": true,
+   "url": "https://aad.archives.gov/aad/popup-column-detail.jsp?c_id=25015&dt=929",
+   "acquired_utc": "2026-10-27T11:41:34.350519+00:00",
+   "http_status": 200,
+   "response_headers": {
+    "content-type": "text/html;charset=ISO-8859-1"
+   },
+   "provider_sha256_match": null
+  },
+  {
+   "source_key": "aad_column_detail_dt929_c25016.html",
+   "file": "data/raw/aad_asnf_dt893_dt929/aad_column_detail_dt929_c25016.html",
+   "bytes": 5970,
+   "sha256": "1d2fb659c4114f5b0533f5831591d8270f3a770343c6ff61e5ebe086a9587544",
+   "write_protected": true,
+   "url": "https://aad.archives.gov/aad/popup-column-detail.jsp?c_id=25016&dt=929",
+   "acquired_utc": "2026-10-27T11:41:37.880955+00:00",
+   "http_status": 200,
+   "response_headers": {
+    "content-type": "text/html;charset=ISO-8859-1"
+   },
+   "provider_sha256_match": null
+  },
+  {
+   "source_key": "aad_column_detail_dt929_c25017.html",
+   "file": "data/raw/aad_asnf_dt893_dt929/aad_column_detail_dt929_c25017.html",
+   "bytes": 3976,
+   "sha256": "b2a96231d7927dcad4b46995973d45cbf7fae6a1916fe48edcf2b404dc409830",
+   "write_protected": true,
+   "url": "https://aad.archives.gov/aad/popup-column-detail.jsp?c_id=25017&dt=929",
+   "acquired_utc": "2026-10-27T11:41:41.415230+00:00",
+   "http_status": 200,
+   "response_headers": {
+    "content-type": "text/html;charset=ISO-8859-1"
+   },
+   "provider_sha256_match": null
+  },
+  {
+   "source_key": "aad_column_detail_dt929_c25018.html",
+   "file": "data/raw/aad_asnf_dt893_dt929/aad_column_detail_dt929_c25018.html",
+   "bytes": 5235,
+   "sha256": "9d662fcc484b829fe1afef77a20767685041d549bf994c23ec68785a28f4bd22",
+   "write_protected": true,
+   "url": "https://aad.archives.gov/aad/popup-column-detail.jsp?c_id=25018&dt=929",
+   "acquired_utc": "2026-10-27T11:41:44.942801+00:00",
+   "http_status": 200,
+   "response_headers": {
+    "content-type": "text/html;charset=ISO-8859-1"
+   },
+   "provider_sha256_match": null
+  },
+  {
+   "source_key": "aad_column_detail_dt929_c25019.html",
+   "file": "data/raw/aad_asnf_dt893_dt929/aad_column_detail_dt929_c25019.html",
+   "bytes": 4903,
+   "sha256": "0450f9fd3a139cf5c6d2983b20b7df8cbebc99579a795f19bb2e0a4e05a6d3f0",
+   "write_protected": true,
+   "url": "https://aad.archives.gov/aad/popup-column-detail.jsp?c_id=25019&dt=929",
+   "acquired_utc": "2026-10-27T11:41:48.445661+00:00",
+   "http_status": 200,
+   "response_headers": {
+    "content-type": "text/html;charset=ISO-8859-1"
+   },
+   "provider_sha256_match": null
+  },
+  {
+   "source_key": "aad_column_detail_dt929_c25020.html",
+   "file": "data/raw/aad_asnf_dt893_dt929/aad_column_detail_dt929_c25020.html",
+   "bytes": 5022,
+   "sha256": "868463b5479dd7f8759434014ee7db1b3db9b59665cf0b0b9c6c3fedd8118768",
+   "write_protected": true,
+   "url": "https://aad.archives.gov/aad/popup-column-detail.jsp?c_id=25020&dt=929",
+   "acquired_utc": "2026-10-27T11:41:52.007226+00:00",
+   "http_status": 200,
+   "response_headers": {
+    "content-type": "text/html;charset=ISO-8859-1"
+   },
+   "provider_sha256_match": null
+  },
+  {
+   "source_key": "aad_column_detail_dt929_c25021.html",
+   "file": "data/raw/aad_asnf_dt893_dt929/aad_column_detail_dt929_c25021.html",
+   "bytes": 6198,
+   "sha256": "2a693efe3c42b72b5d3c8a0f59b70e5f9231d10cc8898ffde74cf2dd0af4aeed",
+   "write_protected": true,
+   "url": "https://aad.archives.gov/aad/popup-column-detail.jsp?c_id=25021&dt=929",
+   "acquired_utc": "2026-10-27T11:41:55.586831+00:00",
+   "http_status": 200,
+   "response_headers": {
+    "content-type": "text/html;charset=ISO-8859-1"
+   },
+   "provider_sha256_match": null
+  },
+  {
+   "source_key": "aad_column_detail_dt929_c25022.html",
+   "file": "data/raw/aad_asnf_dt893_dt929/aad_column_detail_dt929_c25022.html",
+   "bytes": 8588,
+   "sha256": "88e901a91c3844033436e2d10890ea85149d44eee82f1481e5afbb5a4e467f89",
+   "write_protected": true,
+   "url": "https://aad.archives.gov/aad/popup-column-detail.jsp?c_id=25022&dt=929",
+   "acquired_utc": "2026-10-27T11:41:59.154347+00:00",
+   "http_status": 200,
+   "response_headers": {
+    "content-type": "text/html;charset=ISO-8859-1"
+   },
+   "provider_sha256_match": null
+  },
+  {
+   "source_key": "aad_column_detail_dt929_c25023.html",
+   "file": "data/raw/aad_asnf_dt893_dt929/aad_column_detail_dt929_c25023.html",
+   "bytes": 6274,
+   "sha256": "9004241078d78046d3e933c8a31749dfc6d771a6c71f3eaa292e5d2c1b147b98",
+   "write_protected": true,
+   "url": "https://aad.archives.gov/aad/popup-column-detail.jsp?c_id=25023&dt=929",
+   "acquired_utc": "2026-10-27T11:42:02.728186+00:00",
+   "http_status": 200,
+   "response_headers": {
+    "content-type": "text/html;charset=ISO-8859-1"
+   },
+   "provider_sha256_match": null
+  },
+  {
+   "source_key": "aad_column_detail_dt929_c25024.html",
+   "file": "data/raw/aad_asnf_dt893_dt929/aad_column_detail_dt929_c25024.html",
+   "bytes": 7267,
+   "sha256": "da66feed354c5e3d0ec354a2eeca7295fd866129033133a68c2c0c7d8456cbe7",
+   "write_protected": true,
+   "url": "https://aad.archives.gov/aad/popup-column-detail.jsp?c_id=25024&dt=929",
+   "acquired_utc": "2026-10-27T11:42:06.295150+00:00",
+   "http_status": 200,
+   "response_headers": {
+    "content-type": "text/html;charset=ISO-8859-1"
+   },
+   "provider_sha256_match": null
+  },
+  {
+   "source_key": "aad_column_detail_dt929_c25025.html",
+   "file": "data/raw/aad_asnf_dt893_dt929/aad_column_detail_dt929_c25025.html",
+   "bytes": 7768,
+   "sha256": "2463caa01b58847645722987aec86cf7374c477b066fc09e71c5807fd972e586",
+   "write_protected": true,
+   "url": "https://aad.archives.gov/aad/popup-column-detail.jsp?c_id=25025&dt=929",
+   "acquired_utc": "2026-10-27T11:42:09.843327+00:00",
+   "http_status": 200,
+   "response_headers": {
+    "content-type": "text/html;charset=ISO-8859-1"
+   },
+   "provider_sha256_match": null
+  },
+  {
+   "source_key": "aad_column_detail_dt929_c25026.html",
+   "file": "data/raw/aad_asnf_dt893_dt929/aad_column_detail_dt929_c25026.html",
+   "bytes": 5771,
+   "sha256": "1c00bd4819bb834523072b90921a2821fda0a639cd65de226e53579eae40f493",
+   "write_protected": true,
+   "url": "https://aad.archives.gov/aad/popup-column-detail.jsp?c_id=25026&dt=929",
+   "acquired_utc": "2026-10-27T11:42:13.392077+00:00",
+   "http_status": 200,
+   "response_headers": {
+    "content-type": "text/html;charset=ISO-8859-1"
+   },
+   "provider_sha256_match": null
+  },
+  {
+   "source_key": "aad_column_detail_dt929_c25027.html",
+   "file": "data/raw/aad_asnf_dt893_dt929/aad_column_detail_dt929_c25027.html",
+   "bytes": 6758,
+   "sha256": "48a836cf8aed15ed0d1e0c08648eb7541391a6b122067e951193d08331dca98a",
+   "write_protected": true,
+   "url": "https://aad.archives.gov/aad/popup-column-detail.jsp?c_id=25027&dt=929",
+   "acquired_utc": "2026-10-27T11:42:16.945474+00:00",
+   "http_status": 200,
+   "response_headers": {
+    "content-type": "text/html;charset=ISO-8859-1"
+   },
+   "provider_sha256_match": null
+  },
+  {
+   "source_key": "aad_column_detail_dt929_c25028.html",
+   "file": "data/raw/aad_asnf_dt893_dt929/aad_column_detail_dt929_c25028.html",
+   "bytes": 5938,
+   "sha256": "3d73ff5c241c4d35305e0d0734096c53b33f9f1dae09f16e2dfefbc0a697b2d4",
+   "write_protected": true,
+   "url": "https://aad.archives.gov/aad/popup-column-detail.jsp?c_id=25028&dt=929",
+   "acquired_utc": "2026-10-27T11:42:20.498248+00:00",
+   "http_status": 200,
+   "response_headers": {
+    "content-type": "text/html;charset=ISO-8859-1"
+   },
+   "provider_sha256_match": null
+  },
+  {
+   "source_key": "aad_column_detail_dt929_c25029.html",
+   "file": "data/raw/aad_asnf_dt893_dt929/aad_column_detail_dt929_c25029.html",
+   "bytes": 6887,
+   "sha256": "670383d68efc7160d3149ca6607c36cb46f2816274540e007ced78683f5651ae",
+   "write_protected": true,
+   "url": "https://aad.archives.gov/aad/popup-column-detail.jsp?c_id=25029&dt=929",
+   "acquired_utc": "2026-10-27T11:42:24.032988+00:00",
+   "http_status": 200,
+   "response_headers": {
+    "content-type": "text/html;charset=ISO-8859-1"
+   },
+   "provider_sha256_match": null
+  },
+  {
+   "source_key": "aad_data_layout_dt893.html",
+   "file": "data/raw/aad_asnf_dt893_dt929/aad_data_layout_dt893.html",
+   "bytes": 22354,
+   "sha256": "4ac5f429b6fbe6a5b7a3c9403874c1404ea6c3adad5d02d7eb17635dfd7e3f2f",
+   "write_protected": true,
+   "url": "https://aad.archives.gov/aad/popup-data-layout.jsp?dl=1176&dt=893",
+   "acquired_utc": "2026-10-27T11:39:10.770019+00:00",
+   "http_status": 200,
+   "response_headers": {
+    "content-type": "text/html;charset=ISO-8859-1"
+   },
+   "provider_sha256_match": null
+  },
+  {
+   "source_key": "aad_data_layout_dt929.html",
+   "file": "data/raw/aad_asnf_dt893_dt929/aad_data_layout_dt929.html",
+   "bytes": 21500,
+   "sha256": "8619830593f176f162b36ce7b32e36ca9b529e0a9699f01222f177b28fa586cc",
+   "write_protected": true,
+   "url": "https://aad.archives.gov/aad/popup-data-layout.jsp?dl=1177&dt=929",
+   "acquired_utc": "2026-10-27T11:39:12.544152+00:00",
+   "http_status": 200,
+   "response_headers": {
+    "content-type": "text/html;charset=ISO-8859-1"
+   },
+   "provider_sha256_match": null
+  },
+  {
+   "source_key": "aad_notes_dt893_c24979.html",
+   "file": "data/raw/aad_asnf_dt893_dt929/aad_notes_dt893_c24979.html",
+   "bytes": 2541,
+   "sha256": "178fd67d7e1eddfb60364e3c2caaa5efe9b3cee6476b5077f9dadf24adf2e1f5",
+   "write_protected": true,
+   "url": "https://aad.archives.gov/aad/popup-notes.jsp?c_id=24979&dt=893",
+   "acquired_utc": "2026-10-27T11:39:17.857048+00:00",
+   "http_status": 200,
+   "response_headers": {
+    "content-type": "text/html;charset=ISO-8859-1"
+   },
+   "provider_sha256_match": null
+  },
+  {
+   "source_key": "aad_notes_dt893_c24980.html",
+   "file": "data/raw/aad_asnf_dt893_dt929/aad_notes_dt893_c24980.html",
+   "bytes": 2503,
+   "sha256": "57ba925b31407356a4655bbcb45d2333ca69c02f5cf72ca69a67a239fb96f42e",
+   "write_protected": true,
+   "url": "https://aad.archives.gov/aad/popup-notes.jsp?c_id=24980&dt=893",
+   "acquired_utc": "2026-10-27T11:39:21.453350+00:00",
+   "http_status": 200,
+   "response_headers": {
+    "content-type": "text/html;charset=ISO-8859-1"
+   },
+   "provider_sha256_match": null
+  },
+  {
+   "source_key": "aad_notes_dt893_c24981.html",
+   "file": "data/raw/aad_asnf_dt893_dt929/aad_notes_dt893_c24981.html",
+   "bytes": 2759,
+   "sha256": "c88fc981095a033bef4ec74ebceeb37aea6572303be1bbb275594df00531e467",
+   "write_protected": true,
+   "url": "https://aad.archives.gov/aad/popup-notes.jsp?c_id=24981&dt=893",
+   "acquired_utc": "2026-10-27T11:39:24.948948+00:00",
+   "http_status": 200,
+   "response_headers": {
+    "content-type": "text/html;charset=ISO-8859-1"
+   },
+   "provider_sha256_match": null
+  },
+  {
+   "source_key": "aad_notes_dt893_c24982.html",
+   "file": "data/raw/aad_asnf_dt893_dt929/aad_notes_dt893_c24982.html",
+   "bytes": 3018,
+   "sha256": "dcab53802eaf7f87939dc6da7bd167a379d8c86016537025be42137a12502769",
+   "write_protected": true,
+   "url": "https://aad.archives.gov/aad/popup-notes.jsp?c_id=24982&dt=893",
+   "acquired_utc": "2026-10-27T11:39:28.473253+00:00",
+   "http_status": 200,
+   "response_headers": {
+    "content-type": "text/html;charset=ISO-8859-1"
+   },
+   "provider_sha256_match": null
+  },
+  {
+   "source_key": "aad_notes_dt893_c24983.html",
+   "file": "data/raw/aad_asnf_dt893_dt929/aad_notes_dt893_c24983.html",
+   "bytes": 2657,
+   "sha256": "d88c2c1c87e9d6f1c3d0695fc96e05a701a7a42b8e7b22a7cc7dff0209408ab0",
+   "write_protected": true,
+   "url": "https://aad.archives.gov/aad/popup-notes.jsp?c_id=24983&dt=893",
+   "acquired_utc": "2026-10-27T11:39:32.019335+00:00",
+   "http_status": 200,
+   "response_headers": {
+    "content-type": "text/html;charset=ISO-8859-1"
+   },
+   "provider_sha256_match": null
+  },
+  {
+   "source_key": "aad_notes_dt893_c24984.html",
+   "file": "data/raw/aad_asnf_dt893_dt929/aad_notes_dt893_c24984.html",
+   "bytes": 3179,
+   "sha256": "da39f7f1def6652f39b32e5fa19c68c4dcb166819715db7896fbf1dd0a58c1dc",
+   "write_protected": true,
+   "url": "https://aad.archives.gov/aad/popup-notes.jsp?c_id=24984&dt=893",
+   "acquired_utc": "2026-10-27T11:39:35.583482+00:00",
+   "http_status": 200,
+   "response_headers": {
+    "content-type": "text/html;charset=ISO-8859-1"
+   },
+   "provider_sha256_match": null
+  },
+  {
+   "source_key": "aad_notes_dt893_c24985.html",
+   "file": "data/raw/aad_asnf_dt893_dt929/aad_notes_dt893_c24985.html",
+   "bytes": 2468,
+   "sha256": "ee6240ec96c49f5cedc346740ccefe2763a067f43c8b5d8f7f0afdc7715a1f22",
+   "write_protected": true,
+   "url": "https://aad.archives.gov/aad/popup-notes.jsp?c_id=24985&dt=893",
+   "acquired_utc": "2026-10-27T11:39:39.129950+00:00",
+   "http_status": 200,
+   "response_headers": {
+    "content-type": "text/html;charset=ISO-8859-1"
+   },
+   "provider_sha256_match": null
+  },
+  {
+   "source_key": "aad_notes_dt893_c24986.html",
+   "file": "data/raw/aad_asnf_dt893_dt929/aad_notes_dt893_c24986.html",
+   "bytes": 3074,
+   "sha256": "cadec8866d9bc73b5199ee16aa6f2e0169e186792c2b1f4e7ab50b92247bb1c0",
+   "write_protected": true,
+   "url": "https://aad.archives.gov/aad/popup-notes.jsp?c_id=24986&dt=893",
+   "acquired_utc": "2026-10-27T11:39:42.611861+00:00",
+   "http_status": 200,
+   "response_headers": {
+    "content-type": "text/html;charset=ISO-8859-1"
+   },
+   "provider_sha256_match": null
+  },
+  {
+   "source_key": "aad_notes_dt893_c24987.html",
+   "file": "data/raw/aad_asnf_dt893_dt929/aad_notes_dt893_c24987.html",
+   "bytes": 2533,
+   "sha256": "81d0d119484c395767b579a07ddf0d1f85bb27f8ac757df43a3ab5b71e0de18d",
+   "write_protected": true,
+   "url": "https://aad.archives.gov/aad/popup-notes.jsp?c_id=24987&dt=893",
+   "acquired_utc": "2026-10-27T11:39:46.182342+00:00",
+   "http_status": 200,
+   "response_headers": {
+    "content-type": "text/html;charset=ISO-8859-1"
+   },
+   "provider_sha256_match": null
+  },
+  {
+   "source_key": "aad_notes_dt893_c24988.html",
+   "file": "data/raw/aad_asnf_dt893_dt929/aad_notes_dt893_c24988.html",
+   "bytes": 2545,
+   "sha256": "405620e0057dbc77bdc5d94d481d8935aa609e8afac3b308ef58a553803ecd60",
+   "write_protected": true,
+   "url": "https://aad.archives.gov/aad/popup-notes.jsp?c_id=24988&dt=893",
+   "acquired_utc": "2026-10-27T11:39:49.740001+00:00",
+   "http_status": 200,
+   "response_headers": {
+    "content-type": "text/html;charset=ISO-8859-1"
+   },
+   "provider_sha256_match": null
+  },
+  {
+   "source_key": "aad_notes_dt893_c24989.html",
+   "file": "data/raw/aad_asnf_dt893_dt929/aad_notes_dt893_c24989.html",
+   "bytes": 2514,
+   "sha256": "80f08ca7b79c163940f4717caa35da7a1882cc8f4bf8a0bcb918c485e9890344",
+   "write_protected": true,
+   "url": "https://aad.archives.gov/aad/popup-notes.jsp?c_id=24989&dt=893",
+   "acquired_utc": "2026-10-27T11:39:53.312546+00:00",
+   "http_status": 200,
+   "response_headers": {
+    "content-type": "text/html;charset=ISO-8859-1"
+   },
+   "provider_sha256_match": null
+  },
+  {
+   "source_key": "aad_notes_dt893_c24990.html",
+   "file": "data/raw/aad_asnf_dt893_dt929/aad_notes_dt893_c24990.html",
+   "bytes": 2649,
+   "sha256": "c4f0382788c951f7532fb3770db403dce2a1130666186c87850741cfe2d37852",
+   "write_protected": true,
+   "url": "https://aad.archives.gov/aad/popup-notes.jsp?c_id=24990&dt=893",
+   "acquired_utc": "2026-10-27T11:39:56.928975+00:00",
+   "http_status": 200,
+   "response_headers": {
+    "content-type": "text/html;charset=ISO-8859-1"
+   },
+   "provider_sha256_match": null
+  },
+  {
+   "source_key": "aad_notes_dt893_c24991.html",
+   "file": "data/raw/aad_asnf_dt893_dt929/aad_notes_dt893_c24991.html",
+   "bytes": 2829,
+   "sha256": "97c94cb591251690a948564f06059c149a9d49d93698b9bcd73c2b8b88397bda",
+   "write_protected": true,
+   "url": "https://aad.archives.gov/aad/popup-notes.jsp?c_id=24991&dt=893",
+   "acquired_utc": "2026-10-27T11:40:00.494470+00:00",
+   "http_status": 200,
+   "response_headers": {
+    "content-type": "text/html;charset=ISO-8859-1"
+   },
+   "provider_sha256_match": null
+  },
+  {
+   "source_key": "aad_notes_dt893_c24992.html",
+   "file": "data/raw/aad_asnf_dt893_dt929/aad_notes_dt893_c24992.html",
+   "bytes": 2583,
+   "sha256": "74435bde068946f9480783b47449fe34410fbd30459665325815122215105c64",
+   "write_protected": true,
+   "url": "https://aad.archives.gov/aad/popup-notes.jsp?c_id=24992&dt=893",
+   "acquired_utc": "2026-10-27T11:40:04.174748+00:00",
+   "http_status": 200,
+   "response_headers": {
+    "content-type": "text/html;charset=ISO-8859-1"
+   },
+   "provider_sha256_match": null
+  },
+  {
+   "source_key": "aad_notes_dt893_c24993.html",
+   "file": "data/raw/aad_asnf_dt893_dt929/aad_notes_dt893_c24993.html",
+   "bytes": 2716,
+   "sha256": "8b2599968c5c4e88d29b2f72a91b8444d336b28e3960324338c98e4c4c97a747",
+   "write_protected": true,
+   "url": "https://aad.archives.gov/aad/popup-notes.jsp?c_id=24993&dt=893",
+   "acquired_utc": "2026-10-27T11:40:07.748703+00:00",
+   "http_status": 200,
+   "response_headers": {
+    "content-type": "text/html;charset=ISO-8859-1"
+   },
+   "provider_sha256_match": null
+  },
+  {
+   "source_key": "aad_notes_dt893_c24994.html",
+   "file": "data/raw/aad_asnf_dt893_dt929/aad_notes_dt893_c24994.html",
+   "bytes": 3172,
+   "sha256": "e01c3bf903684c62942174396ffccbc75ece32d7879c9097256c1be489affa7b",
+   "write_protected": true,
+   "url": "https://aad.archives.gov/aad/popup-notes.jsp?c_id=24994&dt=893",
+   "acquired_utc": "2026-10-27T11:40:11.317461+00:00",
+   "http_status": 200,
+   "response_headers": {
+    "content-type": "text/html;charset=ISO-8859-1"
+   },
+   "provider_sha256_match": null
+  },
+  {
+   "source_key": "aad_notes_dt893_c24995.html",
+   "file": "data/raw/aad_asnf_dt893_dt929/aad_notes_dt893_c24995.html",
+   "bytes": 4634,
+   "sha256": "81b75fa993363528033aebc30c1747a418c8482eff11ffaa0c4e35de25e8f61a",
+   "write_protected": true,
+   "url": "https://aad.archives.gov/aad/popup-notes.jsp?c_id=24995&dt=893",
+   "acquired_utc": "2026-10-27T11:40:15.448273+00:00",
+   "http_status": 200,
+   "response_headers": {
+    "content-type": "text/html;charset=ISO-8859-1"
+   },
+   "provider_sha256_match": null
+  },
+  {
+   "source_key": "aad_notes_dt893_c24996.html",
+   "file": "data/raw/aad_asnf_dt893_dt929/aad_notes_dt893_c24996.html",
+   "bytes": 4884,
+   "sha256": "9e39338286ce08ae577d8e57d59ede34c911d72193c616110009b2996cbe7bcb",
+   "write_protected": true,
+   "url": "https://aad.archives.gov/aad/popup-notes.jsp?c_id=24996&dt=893",
+   "acquired_utc": "2026-10-27T11:40:20.034196+00:00",
+   "http_status": 200,
+   "response_headers": {
+    "content-type": "text/html;charset=ISO-8859-1"
+   },
+   "provider_sha256_match": null
+  },
+  {
+   "source_key": "aad_notes_dt893_c24997.html",
+   "file": "data/raw/aad_asnf_dt893_dt929/aad_notes_dt893_c24997.html",
+   "bytes": 3060,
+   "sha256": "d43d89fd93ba88ce68da08a3cd772dcdc7ab3ec73c6200ef4036c38558083d5f",
+   "write_protected": true,
+   "url": "https://aad.archives.gov/aad/popup-notes.jsp?c_id=24997&dt=893",
+   "acquired_utc": "2026-10-27T11:40:24.666595+00:00",
+   "http_status": 200,
+   "response_headers": {
+    "content-type": "text/html;charset=ISO-8859-1"
+   },
+   "provider_sha256_match": null
+  },
+  {
+   "source_key": "aad_notes_dt893_c24998.html",
+   "file": "data/raw/aad_asnf_dt893_dt929/aad_notes_dt893_c24998.html",
+   "bytes": 3926,
+   "sha256": "f8ceb61558a6e73647ff0aa6c89dc240d919010799866fa292b561d3530dc3d6",
+   "write_protected": true,
+   "url": "https://aad.archives.gov/aad/popup-notes.jsp?c_id=24998&dt=893",
+   "acquired_utc": "2026-10-27T11:40:29.234107+00:00",
+   "http_status": 200,
+   "response_headers": {
+    "content-type": "text/html;charset=ISO-8859-1"
+   },
+   "provider_sha256_match": null
+  },
+  {
+   "source_key": "aad_notes_dt893_c24999.html",
+   "file": "data/raw/aad_asnf_dt893_dt929/aad_notes_dt893_c24999.html",
+   "bytes": 2652,
+   "sha256": "c138e0bbea76c1d65d9a815725debb98d12294579a2578d0c2acd0355dd756f1",
+   "write_protected": true,
+   "url": "https://aad.archives.gov/aad/popup-notes.jsp?c_id=24999&dt=893",
+   "acquired_utc": "2026-10-27T11:40:33.917868+00:00",
+   "http_status": 200,
+   "response_headers": {
+    "content-type": "text/html;charset=ISO-8859-1"
+   },
+   "provider_sha256_match": null
+  },
+  {
+   "source_key": "aad_notes_dt893_c25000.html",
+   "file": "data/raw/aad_asnf_dt893_dt929/aad_notes_dt893_c25000.html",
+   "bytes": 2664,
+   "sha256": "6cdde04811ed5bae2a4f132d4d5e5e13262058bf30cdf43ff763b54f9b448eea",
+   "write_protected": true,
+   "url": "https://aad.archives.gov/aad/popup-notes.jsp?c_id=25000&dt=893",
+   "acquired_utc": "2026-10-27T11:40:38.530445+00:00",
+   "http_status": 200,
+   "response_headers": {
+    "content-type": "text/html;charset=ISO-8859-1"
+   },
+   "provider_sha256_match": null
+  },
+  {
+   "source_key": "aad_notes_dt893_c25001.html",
+   "file": "data/raw/aad_asnf_dt893_dt929/aad_notes_dt893_c25001.html",
+   "bytes": 2533,
+   "sha256": "4f7692f74429dbf0b349095002298e27dd178e3066f52fcf535d6cb80d9880de",
+   "write_protected": true,
+   "url": "https://aad.archives.gov/aad/popup-notes.jsp?c_id=25001&dt=893",
+   "acquired_utc": "2026-10-27T11:40:43.167717+00:00",
+   "http_status": 200,
+   "response_headers": {
+    "content-type": "text/html;charset=ISO-8859-1"
+   },
+   "provider_sha256_match": null
+  },
+  {
+   "source_key": "aad_notes_dt893_c25002.html",
+   "file": "data/raw/aad_asnf_dt893_dt929/aad_notes_dt893_c25002.html",
+   "bytes": 2601,
+   "sha256": "23afd4266b3d64ed830a74623cf8dc724933763a4201a7cb1bf7068c22c0b0c1",
+   "write_protected": true,
+   "url": "https://aad.archives.gov/aad/popup-notes.jsp?c_id=25002&dt=893",
+   "acquired_utc": "2026-10-27T11:40:47.823011+00:00",
+   "http_status": 200,
+   "response_headers": {
+    "content-type": "text/html;charset=ISO-8859-1"
+   },
+   "provider_sha256_match": null
+  },
+  {
+   "source_key": "aad_notes_dt893_c25003.html",
+   "file": "data/raw/aad_asnf_dt893_dt929/aad_notes_dt893_c25003.html",
+   "bytes": 2724,
+   "sha256": "cde0ac866b0ffdcb73b8e05d561f2d7091e19243a7bcbf8a40eef5832b44cc50",
+   "write_protected": true,
+   "url": "https://aad.archives.gov/aad/popup-notes.jsp?c_id=25003&dt=893",
+   "acquired_utc": "2026-10-27T11:40:52.427102+00:00",
+   "http_status": 200,
+   "response_headers": {
+    "content-type": "text/html;charset=ISO-8859-1"
+   },
+   "provider_sha256_match": null
+  },
+  {
+   "source_key": "aad_notes_dt893_c25004.html",
+   "file": "data/raw/aad_asnf_dt893_dt929/aad_notes_dt893_c25004.html",
+   "bytes": 2828,
+   "sha256": "a02319ebc36d623d6bd9220a269a7434d9e53704cc2f5d05995bc1d1d2fabdf1",
+   "write_protected": true,
+   "url": "https://aad.archives.gov/aad/popup-notes.jsp?c_id=25004&dt=893",
+   "acquired_utc": "2026-10-27T11:40:57.071878+00:00",
+   "http_status": 200,
+   "response_headers": {
+    "content-type": "text/html;charset=ISO-8859-1"
+   },
+   "provider_sha256_match": null
+  },
+  {
+   "source_key": "aad_notes_dt929_c25005.html",
+   "file": "data/raw/aad_asnf_dt893_dt929/aad_notes_dt929_c25005.html",
+   "bytes": 3175,
+   "sha256": "128cfe669691bffd627454c66907fd6b7d233d46d64ed51646b738063a0b3ec8",
+   "write_protected": true,
+   "url": "https://aad.archives.gov/aad/popup-notes.jsp?c_id=25005&dt=929",
+   "acquired_utc": "2026-10-27T11:41:00.625937+00:00",
+   "http_status": 200,
+   "response_headers": {
+    "content-type": "text/html;charset=ISO-8859-1"
+   },
+   "provider_sha256_match": null
+  },
+  {
+   "source_key": "aad_notes_dt929_c25006.html",
+   "file": "data/raw/aad_asnf_dt893_dt929/aad_notes_dt929_c25006.html",
+   "bytes": 4922,
+   "sha256": "9a32966d04cd0819e44250c7e5a8eb90a112b50e2fdaada576ffb4447f80e06d",
+   "write_protected": true,
+   "url": "https://aad.archives.gov/aad/popup-notes.jsp?c_id=25006&dt=929",
+   "acquired_utc": "2026-10-27T11:41:04.173591+00:00",
+   "http_status": 200,
+   "response_headers": {
+    "content-type": "text/html;charset=ISO-8859-1"
+   },
+   "provider_sha256_match": null
+  },
+  {
+   "source_key": "aad_notes_dt929_c25007.html",
+   "file": "data/raw/aad_asnf_dt893_dt929/aad_notes_dt929_c25007.html",
+   "bytes": 2920,
+   "sha256": "81117480497ecd8f669dd15dbf5018f74322647f4c8e867909e3614fc2581437",
+   "write_protected": true,
+   "url": "https://aad.archives.gov/aad/popup-notes.jsp?c_id=25007&dt=929",
+   "acquired_utc": "2026-10-27T11:41:07.742653+00:00",
+   "http_status": 200,
+   "response_headers": {
+    "content-type": "text/html;charset=ISO-8859-1"
+   },
+   "provider_sha256_match": null
+  },
+  {
+   "source_key": "aad_notes_dt929_c25008.html",
+   "file": "data/raw/aad_asnf_dt893_dt929/aad_notes_dt929_c25008.html",
+   "bytes": 2591,
+   "sha256": "165063aae535e9f87120ef446a37b06e870c3385ee4140cab4e2a9d9b2a806a5",
+   "write_protected": true,
+   "url": "https://aad.archives.gov/aad/popup-notes.jsp?c_id=25008&dt=929",
+   "acquired_utc": "2026-10-27T11:41:11.297350+00:00",
+   "http_status": 200,
+   "response_headers": {
+    "content-type": "text/html;charset=ISO-8859-1"
+   },
+   "provider_sha256_match": null
+  },
+  {
+   "source_key": "aad_notes_dt929_c25009.html",
+   "file": "data/raw/aad_asnf_dt893_dt929/aad_notes_dt929_c25009.html",
+   "bytes": 2655,
+   "sha256": "463790df8a67cf9f63d0afd6bdef67dd589349cceed9bcde9435dca23880994e",
+   "write_protected": true,
+   "url": "https://aad.archives.gov/aad/popup-notes.jsp?c_id=25009&dt=929",
+   "acquired_utc": "2026-10-27T11:41:14.845776+00:00",
+   "http_status": 200,
+   "response_headers": {
+    "content-type": "text/html;charset=ISO-8859-1"
+   },
+   "provider_sha256_match": null
+  },
+  {
+   "source_key": "aad_notes_dt929_c25010.html",
+   "file": "data/raw/aad_asnf_dt893_dt929/aad_notes_dt929_c25010.html",
+   "bytes": 2832,
+   "sha256": "7056741f1576a3ede1c7aa4e7272560db803b6fec3ac919a9a9b94f568227dd1",
+   "write_protected": true,
+   "url": "https://aad.archives.gov/aad/popup-notes.jsp?c_id=25010&dt=929",
+   "acquired_utc": "2026-10-27T11:41:18.377067+00:00",
+   "http_status": 200,
+   "response_headers": {
+    "content-type": "text/html;charset=ISO-8859-1"
+   },
+   "provider_sha256_match": null
+  },
+  {
+   "source_key": "aad_notes_dt929_c25011.html",
+   "file": "data/raw/aad_asnf_dt893_dt929/aad_notes_dt929_c25011.html",
+   "bytes": 2492,
+   "sha256": "b01ebd4a88e4a109a9682c4e6517d625d9bd9edb7bb25bc059f06112e5c1abf8",
+   "write_protected": true,
+   "url": "https://aad.archives.gov/aad/popup-notes.jsp?c_id=25011&dt=929",
+   "acquired_utc": "2026-10-27T11:41:21.936647+00:00",
+   "http_status": 200,
+   "response_headers": {
+    "content-type": "text/html;charset=ISO-8859-1"
+   },
+   "provider_sha256_match": null
+  },
+  {
+   "source_key": "aad_notes_dt929_c25012.html",
+   "file": "data/raw/aad_asnf_dt893_dt929/aad_notes_dt929_c25012.html",
+   "bytes": 3181,
+   "sha256": "da535371c751a0476896fa33d1eb066e4320f6ebc975567c07ce9158cbb0bb8a",
+   "write_protected": true,
+   "url": "https://aad.archives.gov/aad/popup-notes.jsp?c_id=25012&dt=929",
+   "acquired_utc": "2026-10-27T11:41:25.482084+00:00",
+   "http_status": 200,
+   "response_headers": {
+    "content-type": "text/html;charset=ISO-8859-1"
+   },
+   "provider_sha256_match": null
+  },
+  {
+   "source_key": "aad_notes_dt929_c25013.html",
+   "file": "data/raw/aad_asnf_dt893_dt929/aad_notes_dt929_c25013.html",
+   "bytes": 2356,
+   "sha256": "924d9396d38a4056a9ca52ba12837163e310bfc0f814ded942885eecf61e4dcc",
+   "write_protected": true,
+   "url": "https://aad.archives.gov/aad/popup-notes.jsp?c_id=25013&dt=929",
+   "acquired_utc": "2026-10-27T11:41:29.006555+00:00",
+   "http_status": 200,
+   "response_headers": {
+    "content-type": "text/html;charset=ISO-8859-1"
+   },
+   "provider_sha256_match": null
+  },
+  {
+   "source_key": "aad_notes_dt929_c25014.html",
+   "file": "data/raw/aad_asnf_dt893_dt929/aad_notes_dt929_c25014.html",
+   "bytes": 2688,
+   "sha256": "0bfb552f6dda1d8bc55bd61012e4362a25d0cfed73aac3717b151a0c40c8e48c",
+   "write_protected": true,
+   "url": "https://aad.archives.gov/aad/popup-notes.jsp?c_id=25014&dt=929",
+   "acquired_utc": "2026-10-27T11:41:32.558617+00:00",
+   "http_status": 200,
+   "response_headers": {
+    "content-type": "text/html;charset=ISO-8859-1"
+   },
+   "provider_sha256_match": null
+  },
+  {
+   "source_key": "aad_notes_dt929_c25015.html",
+   "file": "data/raw/aad_asnf_dt893_dt929/aad_notes_dt929_c25015.html",
+   "bytes": 2536,
+   "sha256": "c7b78896ae40914299b399f69086699f94534b180478e836fece400b44075062",
+   "write_protected": true,
+   "url": "https://aad.archives.gov/aad/popup-notes.jsp?c_id=25015&dt=929",
+   "acquired_utc": "2026-10-27T11:41:36.094998+00:00",
+   "http_status": 200,
+   "response_headers": {
+    "content-type": "text/html;charset=ISO-8859-1"
+   },
+   "provider_sha256_match": null
+  },
+  {
+   "source_key": "aad_notes_dt929_c25016.html",
+   "file": "data/raw/aad_asnf_dt893_dt929/aad_notes_dt929_c25016.html",
+   "bytes": 2548,
+   "sha256": "f981eb7912f0c1e0fd6ce18dbfffc280c51b0311111a8242c2239a046e1e9105",
+   "write_protected": true,
+   "url": "https://aad.archives.gov/aad/popup-notes.jsp?c_id=25016&dt=929",
+   "acquired_utc": "2026-10-27T11:41:39.624040+00:00",
+   "http_status": 200,
+   "response_headers": {
+    "content-type": "text/html;charset=ISO-8859-1"
+   },
+   "provider_sha256_match": null
+  },
+  {
+   "source_key": "aad_notes_dt929_c25017.html",
+   "file": "data/raw/aad_asnf_dt893_dt929/aad_notes_dt929_c25017.html",
+   "bytes": 2509,
+   "sha256": "67f46ed010d4901e390205fbb515093f367b266299c4bd09c7d7428358c3f109",
+   "write_protected": true,
+   "url": "https://aad.archives.gov/aad/popup-notes.jsp?c_id=25017&dt=929",
+   "acquired_utc": "2026-10-27T11:41:43.178570+00:00",
+   "http_status": 200,
+   "response_headers": {
+    "content-type": "text/html;charset=ISO-8859-1"
+   },
+   "provider_sha256_match": null
+  },
+  {
+   "source_key": "aad_notes_dt929_c25018.html",
+   "file": "data/raw/aad_asnf_dt893_dt929/aad_notes_dt929_c25018.html",
+   "bytes": 2470,
+   "sha256": "0c6a91572f7063a3609e07bd605e29a1ca69fadc9c7a2ac9d039ddbb41923120",
+   "write_protected": true,
+   "url": "https://aad.archives.gov/aad/popup-notes.jsp?c_id=25018&dt=929",
+   "acquired_utc": "2026-10-27T11:41:46.668724+00:00",
+   "http_status": 200,
+   "response_headers": {
+    "content-type": "text/html;charset=ISO-8859-1"
+   },
+   "provider_sha256_match": null
+  },
+  {
+   "source_key": "aad_notes_dt929_c25019.html",
+   "file": "data/raw/aad_asnf_dt893_dt929/aad_notes_dt929_c25019.html",
+   "bytes": 2591,
+   "sha256": "1903a20fbec14b99b9fef806f55f4cfe2fce054139250dce456bd4e68c955f50",
+   "write_protected": true,
+   "url": "https://aad.archives.gov/aad/popup-notes.jsp?c_id=25019&dt=929",
+   "acquired_utc": "2026-10-27T11:41:50.218983+00:00",
+   "http_status": 200,
+   "response_headers": {
+    "content-type": "text/html;charset=ISO-8859-1"
+   },
+   "provider_sha256_match": null
+  },
+  {
+   "source_key": "aad_notes_dt929_c25020.html",
+   "file": "data/raw/aad_asnf_dt893_dt929/aad_notes_dt929_c25020.html",
+   "bytes": 2710,
+   "sha256": "90e5a1b20af02935adef143fbf945e6e3cd1f71e9eb3595846afe130caec5574",
+   "write_protected": true,
+   "url": "https://aad.archives.gov/aad/popup-notes.jsp?c_id=25020&dt=929",
+   "acquired_utc": "2026-10-27T11:41:53.813538+00:00",
+   "http_status": 200,
+   "response_headers": {
+    "content-type": "text/html;charset=ISO-8859-1"
+   },
+   "provider_sha256_match": null
+  },
+  {
+   "source_key": "aad_notes_dt929_c25021.html",
+   "file": "data/raw/aad_asnf_dt893_dt929/aad_notes_dt929_c25021.html",
+   "bytes": 2470,
+   "sha256": "9c81658dd7503edff38ab547d4f28337a1c97b29e4663845616f45a86cdc2318",
+   "write_protected": true,
+   "url": "https://aad.archives.gov/aad/popup-notes.jsp?c_id=25021&dt=929",
+   "acquired_utc": "2026-10-27T11:41:57.339873+00:00",
+   "http_status": 200,
+   "response_headers": {
+    "content-type": "text/html;charset=ISO-8859-1"
+   },
+   "provider_sha256_match": null
+  },
+  {
+   "source_key": "aad_notes_dt929_c25022.html",
+   "file": "data/raw/aad_asnf_dt893_dt929/aad_notes_dt929_c25022.html",
+   "bytes": 4408,
+   "sha256": "a76df5d8cf601a69554b7a8d52fd1426179ed076df9586bc710231361ff72532",
+   "write_protected": true,
+   "url": "https://aad.archives.gov/aad/popup-notes.jsp?c_id=25022&dt=929",
+   "acquired_utc": "2026-10-27T11:42:00.919060+00:00",
+   "http_status": 200,
+   "response_headers": {
+    "content-type": "text/html;charset=ISO-8859-1"
+   },
+   "provider_sha256_match": null
+  },
+  {
+   "source_key": "aad_notes_dt929_c25023.html",
+   "file": "data/raw/aad_asnf_dt893_dt929/aad_notes_dt929_c25023.html",
+   "bytes": 2546,
+   "sha256": "e28df70e5dedc5bf70a354fd490df8f696c8381d4bff64bc5b4a4e234040acef",
+   "write_protected": true,
+   "url": "https://aad.archives.gov/aad/popup-notes.jsp?c_id=25023&dt=929",
+   "acquired_utc": "2026-10-27T11:42:04.547607+00:00",
+   "http_status": 200,
+   "response_headers": {
+    "content-type": "text/html;charset=ISO-8859-1"
+   },
+   "provider_sha256_match": null
+  },
+  {
+   "source_key": "aad_notes_dt929_c25024.html",
+   "file": "data/raw/aad_asnf_dt893_dt929/aad_notes_dt929_c25024.html",
+   "bytes": 3077,
+   "sha256": "c7fc76a715b7546e66ba9c8100bd1134852730dae1224a5b3d0ce67ba39d9eaa",
+   "write_protected": true,
+   "url": "https://aad.archives.gov/aad/popup-notes.jsp?c_id=25024&dt=929",
+   "acquired_utc": "2026-10-27T11:42:08.053718+00:00",
+   "http_status": 200,
+   "response_headers": {
+    "content-type": "text/html;charset=ISO-8859-1"
+   },
+   "provider_sha256_match": null
+  },
+  {
+   "source_key": "aad_notes_dt929_c25025.html",
+   "file": "data/raw/aad_asnf_dt893_dt929/aad_notes_dt929_c25025.html",
+   "bytes": 3929,
+   "sha256": "968d2df975bca36bc778101801d7f8b98b3c0ba010ec96cadb33bae3777212b0",
+   "write_protected": true,
+   "url": "https://aad.archives.gov/aad/popup-notes.jsp?c_id=25025&dt=929",
+   "acquired_utc": "2026-10-27T11:42:11.618625+00:00",
+   "http_status": 200,
+   "response_headers": {
+    "content-type": "text/html;charset=ISO-8859-1"
+   },
+   "provider_sha256_match": null
+  },
+  {
+   "source_key": "aad_notes_dt929_c25026.html",
+   "file": "data/raw/aad_asnf_dt893_dt929/aad_notes_dt929_c25026.html",
+   "bytes": 2831,
+   "sha256": "8a4d1d3ef05f2364a8b8582777ccd447ec58de021795e9c8a037010185370b7e",
+   "write_protected": true,
+   "url": "https://aad.archives.gov/aad/popup-notes.jsp?c_id=25026&dt=929",
+   "acquired_utc": "2026-10-27T11:42:15.168128+00:00",
+   "http_status": 200,
+   "response_headers": {
+    "content-type": "text/html;charset=ISO-8859-1"
+   },
+   "provider_sha256_match": null
+  },
+  {
+   "source_key": "aad_notes_dt929_c25027.html",
+   "file": "data/raw/aad_asnf_dt893_dt929/aad_notes_dt929_c25027.html",
+   "bytes": 2659,
+   "sha256": "2e5e8f05e330db5ad09f0ca4635c3ffea26125af64fe43b7d92ae906e74e2f6f",
+   "write_protected": true,
+   "url": "https://aad.archives.gov/aad/popup-notes.jsp?c_id=25027&dt=929",
+   "acquired_utc": "2026-10-27T11:42:18.740588+00:00",
+   "http_status": 200,
+   "response_headers": {
+    "content-type": "text/html;charset=ISO-8859-1"
+   },
+   "provider_sha256_match": null
+  },
+  {
+   "source_key": "aad_notes_dt929_c25028.html",
+   "file": "data/raw/aad_asnf_dt893_dt929/aad_notes_dt929_c25028.html",
+   "bytes": 2759,
+   "sha256": "e13a254778605b25f728643d71bd0b98c16874321b34431d9e19938265f9b48f",
+   "write_protected": true,
+   "url": "https://aad.archives.gov/aad/popup-notes.jsp?c_id=25028&dt=929",
+   "acquired_utc": "2026-10-27T11:42:22.249552+00:00",
+   "http_status": 200,
+   "response_headers": {
+    "content-type": "text/html;charset=ISO-8859-1"
+   },
+   "provider_sha256_match": null
+  },
+  {
+   "source_key": "aad_notes_dt929_c25029.html",
+   "file": "data/raw/aad_asnf_dt893_dt929/aad_notes_dt929_c25029.html",
+   "bytes": 3021,
+   "sha256": "71baecf336cb707f70e17827dd4c9cad5b26a0653be353c1912eec41d384f67b",
+   "write_protected": true,
+   "url": "https://aad.archives.gov/aad/popup-notes.jsp?c_id=25029&dt=929",
+   "acquired_utc": "2026-10-27T11:42:25.781527+00:00",
+   "http_status": 200,
+   "response_headers": {
+    "content-type": "text/html;charset=ISO-8859-1"
+   },
+   "provider_sha256_match": null
+  },
+  {
+   "source_key": "aad_series_description_s3360.html",
+   "file": "data/raw/aad_asnf_dt893_dt929/aad_series_description_s3360.html",
+   "bytes": 20974,
+   "sha256": "90e739a34b7f3881664ef4199417f5670f5f1d1fec1d1501a4ee7a0efd48b6c8",
+   "write_protected": true,
+   "url": "https://aad.archives.gov/aad/series-description.jsp?s=3360",
+   "acquired_utc": "2026-10-27T11:38:51.774263+00:00",
+   "http_status": 200,
+   "response_headers": {
+    "content-type": "text/html;charset=ISO-8859-1"
+   },
+   "provider_sha256_match": null
+  },
+  {
+   "source_key": "aad_show_more_fields_dt893.html",
+   "file": "data/raw/aad_asnf_dt893_dt929/aad_show_more_fields_dt893.html",
+   "bytes": 27802,
+   "sha256": "a1bc22e4fcbfbe715872653a619504d040122d3a5d5b78d3b39268cea76c3356",
+   "write_protected": true,
+   "url": "https://aad.archives.gov/aad/show-more-fields.jsp?dt=893&dl=1176&tf=F&cat=all&bc=sl&sc=24994",
+   "acquired_utc": "2026-10-27T11:38:53.743546+00:00",
+   "http_status": 200,
+   "response_headers": {
+    "content-type": "text/html;charset=ISO-8859-1"
+   },
+   "provider_sha256_match": null
+  },
+  {
+   "source_key": "aad_show_more_fields_dt929.html",
+   "file": "data/raw/aad_asnf_dt893_dt929/aad_show_more_fields_dt929.html",
+   "bytes": 27067,
+   "sha256": "bf58a9a60bd7f0eb2715d31273eec0716605f962b170215c7dd4e0ce081c1bc5",
+   "write_protected": true,
+   "url": "https://aad.archives.gov/aad/show-more-fields.jsp?dt=929&dl=1177&tf=F&cat=all&bc=sl&sc=25005",
+   "acquired_utc": "2026-10-27T11:38:55.712653+00:00",
+   "http_status": 200,
+   "response_headers": {
+    "content-type": "text/html;charset=ISO-8859-1"
+   },
+   "provider_sha256_match": null
+  },
+  {
+   "source_key": "aad_tech_info_f3475.html",
+   "file": "data/raw/aad_asnf_dt893_dt929/aad_tech_info_f3475.html",
+   "bytes": 5332,
+   "sha256": "ae4ddae15faa5dfceda1595ee28f39f6c315160f94ee6a5301c68c2320ba118b",
+   "write_protected": true,
+   "url": "https://aad.archives.gov/aad/popup-tech-info.jsp?f=3475",
+   "acquired_utc": "2026-10-27T11:39:14.318440+00:00",
+   "http_status": 200,
+   "response_headers": {
+    "content-type": "text/html;charset=ISO-8859-1"
+   },
+   "provider_sha256_match": null
+  },
+  {
+   "source_key": "aad_tech_info_s3360.html",
+   "file": "data/raw/aad_asnf_dt893_dt929/aad_tech_info_s3360.html",
+   "bytes": 4951,
+   "sha256": "640f6f8da936d0dc1c8c7e735478d09c1b61ca8658fca375defb08369a124bba",
+   "write_protected": true,
+   "url": "https://aad.archives.gov/aad/popup-tech-info.jsp?s=3360",
+   "acquired_utc": "2026-10-27T11:38:57.471324+00:00",
+   "http_status": 200,
+   "response_headers": {
+    "content-type": "text/html;charset=ISO-8859-1"
+   },
+   "provider_sha256_match": null
+  },
+  {
+   "source_key": "cl_2046.csv",
+   "file": "data/raw/aad_asnf_dt893_dt929/cl_2046.csv",
+   "bytes": 9546,
+   "sha256": "03c777f711e548a3c24a6356f530094e5082c7fc77fe6e8d924b0c46893967bf",
+   "write_protected": true,
+   "url": "https://aad.archives.gov/aad/Download/cl_2046.csv",
+   "acquired_utc": "2026-10-27T11:42:27.541353+00:00",
+   "http_status": 200,
+   "response_headers": {
+    "content-type": "application/excel",
+    "content-length": "9546",
+    "etag": "W/\"9546-1793099539141\"",
+    "last-modified": "Tue, 27 Oct 2026 11:12:19 GMT"
+   },
+   "provider_sha256_match": null
+  },
+  {
+   "source_key": "cl_2057.csv",
+   "file": "data/raw/aad_asnf_dt893_dt929/cl_2057.csv",
+   "bytes": 22,
+   "sha256": "aac5251ccd47129d1c0b15a7f3a3757771367b8aba322ba299e6156018a33731",
+   "write_protected": true,
+   "url": "https://aad.archives.gov/aad/Download/cl_2057.csv",
+   "acquired_utc": "2026-10-27T11:42:29.277897+00:00",
+   "http_status": 200,
+   "response_headers": {
+    "content-type": "application/excel",
+    "content-length": "22",
+    "etag": "W/\"22-1793086143558\"",
+    "last-modified": "Tue, 27 Oct 2026 07:29:03 GMT"
+   },
+   "provider_sha256_match": null
+  },
+  {
+   "source_key": "cl_2058.csv",
+   "file": "data/raw/aad_asnf_dt893_dt929/cl_2058.csv",
+   "bytes": 307,
+   "sha256": "6284c10c37821ff4461826e4abd1637790e2017fcb38a84a19327bfbb7dd6efe",
+   "write_protected": true,
+   "url": "https://aad.archives.gov/aad/Download/cl_2058.csv",
+   "acquired_utc": "2026-10-27T11:42:30.997876+00:00",
+   "http_status": 200,
+   "response_headers": {
+    "content-type": "application/excel",
+    "content-length": "307",
+    "etag": "W/\"307-1722825133000\"",
+    "last-modified": "Mon, 05 Aug 2024 02:32:13 GMT"
+   },
+   "provider_sha256_match": null
+  },
+  {
+   "source_key": "cl_2059.csv",
+   "file": "data/raw/aad_asnf_dt893_dt929/cl_2059.csv",
+   "bytes": 602,
+   "sha256": "9fbabe8cfef925422b482ac13af24b14b4dad08494e3590c56ee2057436bfcee",
+   "write_protected": true,
+   "url": "https://aad.archives.gov/aad/Download/cl_2059.csv",
+   "acquired_utc": "2026-10-27T11:42:32.751848+00:00",
+   "http_status": 200,
+   "response_headers": {
+    "content-type": "application/excel",
+    "content-length": "602",
+    "etag": "W/\"602-1793095928987\"",
+    "last-modified": "Tue, 27 Oct 2026 10:12:08 GMT"
+   },
+   "provider_sha256_match": null
+  },
+  {
+   "source_key": "cl_2072.csv",
+   "file": "data/raw/aad_asnf_dt893_dt929/cl_2072.csv",
+   "bytes": 416,
+   "sha256": "d7652d68a6d464beca968375a5d3dbc11eb50f1f27392ec510366a951e41680b",
+   "write_protected": true,
+   "url": "https://aad.archives.gov/aad/Download/cl_2072.csv",
+   "acquired_utc": "2026-10-27T11:42:34.505537+00:00",
+   "http_status": 200,
+   "response_headers": {
+    "content-type": "application/excel",
+    "content-length": "416",
+    "etag": "W/\"416-1792872915794\"",
+    "last-modified": "Sat, 24 Oct 2026 20:15:15 GMT"
+   },
+   "provider_sha256_match": null
+  },
+  {
+   "source_key": "cl_2073.csv",
+   "file": "data/raw/aad_asnf_dt893_dt929/cl_2073.csv",
+   "bytes": 1781,
+   "sha256": "84bfdd558911a718017cb5b63ec32c88509e1696ef7ab4bbc2b0dddb2a298804",
+   "write_protected": true,
+   "url": "https://aad.archives.gov/aad/Download/cl_2073.csv",
+   "acquired_utc": "2026-10-27T11:42:36.232687+00:00",
+   "http_status": 200,
+   "response_headers": {
+    "content-type": "application/excel",
+    "content-length": "1781",
+    "etag": "W/\"1781-1793061976345\"",
+    "last-modified": "Tue, 27 Oct 2026 00:46:16 GMT"
+   },
+   "provider_sha256_match": null
+  },
+  {
+   "source_key": "cl_2074.csv",
+   "file": "data/raw/aad_asnf_dt893_dt929/cl_2074.csv",
+   "bytes": 2171,
+   "sha256": "c12c2d9f962d0b9087de4834550e9c2301e5dd97ed4e2c778b1b1630ced71026",
+   "write_protected": true,
+   "url": "https://aad.archives.gov/aad/Download/cl_2074.csv",
+   "acquired_utc": "2026-10-27T11:42:37.986728+00:00",
+   "http_status": 200,
+   "response_headers": {
+    "content-type": "application/excel",
+    "content-length": "2171",
+    "etag": "W/\"2171-1792988897362\"",
+    "last-modified": "Mon, 26 Oct 2026 04:28:17 GMT"
+   },
+   "provider_sha256_match": null
+  },
+  {
+   "source_key": "cl_2075.csv",
+   "file": "data/raw/aad_asnf_dt893_dt929/cl_2075.csv",
+   "bytes": 1425,
+   "sha256": "7ca5100294fbd787308dcf5425f19069c02f28e55e9052847304ca8d01227bab",
+   "write_protected": true,
+   "url": "https://aad.archives.gov/aad/Download/cl_2075.csv",
+   "acquired_utc": "2026-10-27T11:42:39.747698+00:00",
+   "http_status": 200,
+   "response_headers": {
+    "content-type": "application/excel",
+    "content-length": "1425",
+    "etag": "W/\"1425-1793077828231\"",
+    "last-modified": "Tue, 27 Oct 2026 05:10:28 GMT"
+   },
+   "provider_sha256_match": null
+  },
+  {
+   "source_key": "cl_2076.csv",
+   "file": "data/raw/aad_asnf_dt893_dt929/cl_2076.csv",
+   "bytes": 526,
+   "sha256": "14b9ea0b1025023ebc9c38325ff42fc23a3f19c496465a42704fc9be11a68cd2",
+   "write_protected": true,
+   "url": "https://aad.archives.gov/aad/Download/cl_2076.csv",
+   "acquired_utc": "2026-10-27T11:42:41.491800+00:00",
+   "http_status": 200,
+   "response_headers": {
+    "content-type": "application/excel",
+    "content-length": "526",
+    "etag": "W/\"526-1792953362475\"",
+    "last-modified": "Sun, 25 Oct 2026 18:36:02 GMT"
+   },
+   "provider_sha256_match": null
+  },
+  {
+   "source_key": "cl_2077.csv",
+   "file": "data/raw/aad_asnf_dt893_dt929/cl_2077.csv",
+   "bytes": 780,
+   "sha256": "f3893cf1ebbfb05d5e867c72ea4f9d76b2e3c7a291ef0d7c3436a6dbfc153ca1",
+   "write_protected": true,
+   "url": "https://aad.archives.gov/aad/Download/cl_2077.csv",
+   "acquired_utc": "2026-10-27T11:42:43.258980+00:00",
+   "http_status": 200,
+   "response_headers": {
+    "content-type": "application/excel",
+    "content-length": "780",
+    "etag": "W/\"780-1793101327141\"",
+    "last-modified": "Tue, 27 Oct 2026 11:42:07 GMT"
+   },
+   "provider_sha256_match": null
+  },
+  {
+   "source_key": "cl_2078.csv",
+   "file": "data/raw/aad_asnf_dt893_dt929/cl_2078.csv",
+   "bytes": 870,
+   "sha256": "983a8bd04bfb030330d3513459692bc4889fd15f0ab1ba51b5e11ed9b44f8f1e",
+   "write_protected": true,
+   "url": "https://aad.archives.gov/aad/Download/cl_2078.csv",
+   "acquired_utc": "2026-10-27T11:42:45.025153+00:00",
+   "http_status": 200,
+   "response_headers": {
+    "content-type": "application/excel",
+    "content-length": "870",
+    "etag": "W/\"870-1793041851351\"",
+    "last-modified": "Mon, 26 Oct 2026 19:10:51 GMT"
+   },
+   "provider_sha256_match": null
+  },
+  {
+   "source_key": "cl_2079.csv",
+   "file": "data/raw/aad_asnf_dt893_dt929/cl_2079.csv",
+   "bytes": 5810,
+   "sha256": "cdac8790a42005fcb3a10792e2593820498e3059d6dcfc10b048b542575841e2",
+   "write_protected": true,
+   "url": "https://aad.archives.gov/aad/Download/cl_2079.csv",
+   "acquired_utc": "2026-10-27T11:42:46.770727+00:00",
+   "http_status": 200,
+   "response_headers": {
+    "content-type": "application/excel",
+    "content-length": "5810",
+    "etag": "W/\"5810-1722909667000\"",
+    "last-modified": "Tue, 06 Aug 2024 02:01:07 GMT"
+   },
+   "provider_sha256_match": null
+  },
+  {
+   "source_key": "cl_2081.csv",
+   "file": "data/raw/aad_asnf_dt893_dt929/cl_2081.csv",
+   "bytes": 345,
+   "sha256": "51b96b55c811a4467fbc9997b2140638519be89ff84cfadcc831530ae124c9c4",
+   "write_protected": true,
+   "url": "https://aad.archives.gov/aad/Download/cl_2081.csv",
+   "acquired_utc": "2026-10-27T11:42:48.507529+00:00",
+   "http_status": 200,
+   "response_headers": {
+    "content-type": "application/excel",
+    "content-length": "345",
+    "etag": "W/\"345-1722909734000\"",
+    "last-modified": "Tue, 06 Aug 2024 02:02:14 GMT"
+   },
+   "provider_sha256_match": null
+  },
+  {
+   "source_key": "cl_3323.csv",
+   "file": "data/raw/aad_asnf_dt893_dt929/cl_3323.csv",
+   "bytes": 31033,
+   "sha256": "67ed8cc4aa9212c2cb97fe8f772aa8d18df1a78743f21d252dae9e8f26fe9d80",
+   "write_protected": true,
+   "url": "https://aad.archives.gov/aad/Download/cl_3323.csv",
+   "acquired_utc": "2026-10-27T11:42:50.463361+00:00",
+   "http_status": 200,
+   "response_headers": {
+    "content-type": "application/excel",
+    "content-length": "31033",
+    "etag": "W/\"31033-1793054401331\"",
+    "last-modified": "Mon, 26 Oct 2026 22:40:01 GMT"
+   },
+   "provider_sha256_match": null
+  },
+  {
+   "source_key": "cl_3323.csv.hdr",
+   "file": "data/raw/aad_asnf_dt893_dt929/cl_3323.csv.hdr",
+   "bytes": 1853,
+   "sha256": "72bbed0956e7974c81fa926082b5772bb128530c30a9b5542bbb3cc6eab38e01",
+   "write_protected": false,
+   "url": null,
+   "acquired_utc": null,
+   "http_status": null,
+   "response_headers": null,
+   "provider_sha256_match": null
+  },
+  {
+   "source_key": "cl_4123.csv",
+   "file": "data/raw/aad_asnf_dt893_dt929/cl_4123.csv",
+   "bytes": 110550,
+   "sha256": "8a6f3f44ea213f5b6bd55f27487c715ba179c740c8858a21c4fa4a08dae99e46",
+   "write_protected": true,
+   "url": "https://aad.archives.gov/aad/Download/cl_4123.csv",
+   "acquired_utc": "2026-10-27T11:42:52.922943+00:00",
+   "http_status": 200,
+   "response_headers": {
+    "content-type": "application/excel",
+    "content-length": "110550",
+    "etag": "W/\"110550-1793094483128\"",
+    "last-modified": "Tue, 27 Oct 2026 09:48:03 GMT"
+   },
+   "provider_sha256_match": null
+  },
+  {
+   "source_key": "rg64_army_serial_faq.pdf",
+   "file": "data/raw/aad_asnf_dt893_dt929/rg64_army_serial_faq.pdf",
+   "bytes": 291797,
+   "sha256": "1d6cacb17112a99351992c2c58c304bdc4aaccd8c748a8b67b0928f473510405",
+   "write_protected": true,
+   "url": "https://aad.archives.gov/aad/content/aad_docs/rg64_army_serial_faq.pdf",
+   "acquired_utc": "2026-10-27T11:39:00.411558+00:00",
+   "http_status": 200,
+   "response_headers": {
+    "content-type": "application/pdf",
+    "content-length": "291797",
+    "etag": "W/\"291797-1591177360000\"",
+    "last-modified": "Wed, 03 Jun 2020 09:42:40 GMT"
+   },
+   "provider_sha256_match": null
+  },
+  {
+   "source_key": "101.1DP.pdf",
+   "file": "data/raw/nara_pow_rg389/101.1DP.pdf",
+   "bytes": 5251039,
+   "sha256": "9f94ff09e51deede260a1a7ebb6481ef5d8d0a652de77a7f9e33b7cfaaf0b26a",
+   "write_protected": true,
+   "url": "https://catalog.archives.gov/medialz/electronic-records/rg-389/wwiipow/101.1DP.pdf",
+   "acquired_utc": "2026-10-27T11:31:29.061278+00:00",
+   "http_status": 200,
+   "response_headers": {
+    "content-type": "application/pdf",
+    "content-length": "5251039",
+    "server": "AmazonS3",
+    "last-modified": "Thu, 14 Oct 2021 14:27:25 GMT",
+    "x-amz-meta-sha256": "9f94ff09e51deede260a1a7ebb6481ef5d8d0a652de77a7f9e33b7cfaaf0b26a",
+    "x-amz-meta-s3b-last-modified": "20110317T162618Z",
+    "x-amz-version-id": "null",
+    "etag": "\"92cbc6b55236bed1005e6476a4769836\""
+   },
+   "provider_sha256_match": true
+  },
+  {
+   "source_key": "101.1MA.pdf",
+   "file": "data/raw/nara_pow_rg389/101.1MA.pdf",
+   "bytes": 19697896,
+   "sha256": "def0e19a1dac114a4fe000ab173dbd894abfb10b8fcceb526a97aad0c8460d45",
+   "write_protected": true,
+   "url": "https://catalog.archives.gov/medialz/electronic-records/rg-389/wwiipow/101.1MA.pdf",
+   "acquired_utc": "2026-10-27T11:31:32.016042+00:00",
+   "http_status": 200,
+   "response_headers": {
+    "content-type": "application/pdf",
+    "content-length": "19697896",
+    "server": "AmazonS3",
+    "last-modified": "Thu, 14 Oct 2021 14:27:25 GMT",
+    "etag": "\"47e18b8654fde1de792f4080e3840a0c-3\"",
+    "x-amz-meta-sha256": "def0e19a1dac114a4fe000ab173dbd894abfb10b8fcceb526a97aad0c8460d45",
+    "x-amz-meta-s3b-last-modified": "20120502T114306Z",
+    "x-amz-version-id": "null"
+   },
+   "provider_sha256_match": true
+  },
+  {
+   "source_key": "POW.MERGED2.txt",
+   "file": "data/raw/nara_pow_rg389/POW.MERGED2.txt",
+   "bytes": 11756668,
+   "sha256": "37cf67788c3520a869b9f4d7b4d7d4872e093adc5f759b8f6ad7320dcbbffef4",
+   "write_protected": true,
+   "url": "https://catalog.archives.gov/medialz/electronic-records/rg-389/wwiipow/POW.MERGED2.txt",
+   "acquired_utc": "2026-10-27T11:31:26.896993+00:00",
+   "http_status": 200,
+   "response_headers": {
+    "content-type": "text/plain",
+    "content-length": "11756668",
+    "server": "AmazonS3",
+    "last-modified": "Thu, 14 Oct 2021 14:27:43 GMT",
+    "x-amz-meta-sha256": "37cf67788c3520a869b9f4d7b4d7d4872e093adc5f759b8f6ad7320dcbbffef4",
+    "x-amz-meta-s3b-last-modified": "20211014T114837Z",
+    "x-amz-version-id": "null",
+    "etag": "\"a1b7d1ce7a469418d947c07a01a9b500-2\""
+   },
+   "provider_sha256_match": true
+  },
+  {
+   "source_key": "WWIIPOW_TSS.pdf",
+   "file": "data/raw/nara_pow_rg389/WWIIPOW_TSS.pdf",
+   "bytes": 183462,
+   "sha256": "3938374c1363aa9087c8f9cb6c20ed6faec4ec913d22268036ebfc6729cb2d0c",
+   "write_protected": true,
+   "url": "https://catalog.archives.gov/medialz/electronic-records/rg-389/wwiipow/WWIIPOW_TSS.pdf",
+   "acquired_utc": "2026-10-27T11:31:33.839194+00:00",
+   "http_status": 200,
+   "response_headers": {
+    "content-type": "application/pdf",
+    "content-length": "183462",
+    "server": "AmazonS3",
+    "last-modified": "Thu, 14 Oct 2021 14:27:25 GMT",
+    "etag": "\"cbe2ef9f974b0abc8ec1fc588f7f82af\"",
+    "x-amz-meta-sha256": "3938374c1363aa9087c8f9cb6c20ed6faec4ec913d22268036ebfc6729cb2d0c",
+    "x-amz-meta-s3b-last-modified": "20211014T121638Z",
+    "x-amz-version-id": "null"
+   },
+   "provider_sha256_match": true
+  },
+  {
+   "source_key": "AT.zip",
+   "file": "data/raw/geonames_dump/AT.zip",
+   "bytes": 1570456,
+   "sha256": "7b7f30005485d8ddd06d9cc8c67774d6680df70eea6c06197f3f11514d2a5564",
+   "write_protected": true,
+   "url": "https://download.geonames.org/export/dump/AT.zip",
+   "acquired_utc": "2026-10-27T11:48:41.643740+00:00",
+   "http_status": 200,
+   "response_headers": {
+    "server": "Apache/2.4.37 (centos) mod_jk/1.2.48 OpenSSL/1.1.1k",
+    "last-modified": "Tue, 27 Oct 2026 02:43:51 GMT",
+    "etag": "\"17f698-65ec96aac0add\"",
+    "content-length": "1570456",
+    "content-type": "application/zip"
+   },
+   "provider_sha256_match": null
+  },
+  {
+   "source_key": "BA.zip",
+   "file": "data/raw/geonames_dump/BA.zip",
+   "bytes": 1349470,
+   "sha256": "46c044280d6180b6b2bd35f443f226d6a1d8cc8755b8ffb0fe07496d70d016a7",
+   "write_protected": true,
+   "url": "https://download.geonames.org/export/dump/BA.zip",
+   "acquired_utc": "2026-10-27T11:50:25.582772+00:00",
+   "http_status": 200,
+   "response_headers": {
+    "server": "Apache/2.4.37 (centos) mod_jk/1.2.48 OpenSSL/1.1.1k",
+    "last-modified": "Tue, 27 Oct 2026 02:43:59 GMT",
+    "etag": "\"14975e-65ec96b27c4cc\"",
+    "content-length": "1349470",
+    "content-type": "application/zip"
+   },
+   "provider_sha256_match": null
+  },
+  {
+   "source_key": "BE.zip",
+   "file": "data/raw/geonames_dump/BE.zip",
+   "bytes": 678348,
+   "sha256": "ef9582ca1b7b40bf9511b6231c4f10e81d3cc96a85aabffe6aab65575aeb3fcf",
+   "write_protected": true,
+   "url": "https://download.geonames.org/export/dump/BE.zip",
+   "acquired_utc": "2026-10-27T11:49:58.261293+00:00",
+   "http_status": 200,
+   "response_headers": {
+    "server": "Apache/2.4.37 (centos) mod_jk/1.2.48 OpenSSL/1.1.1k",
+    "last-modified": "Tue, 27 Oct 2026 02:44:02 GMT",
+    "etag": "\"a59cc-65ec96b517025\"",
+    "content-length": "678348",
+    "content-type": "application/zip"
+   },
+   "provider_sha256_match": null
+  },
+  {
+   "source_key": "BG.zip",
+   "file": "data/raw/geonames_dump/BG.zip",
+   "bytes": 763716,
+   "sha256": "ce09839518d5b396dd3e1a69a81f70620da0826c03a308ca60e6756b9e12ce40",
+   "write_protected": true,
+   "url": "https://download.geonames.org/export/dump/BG.zip",
+   "acquired_utc": "2026-10-27T11:50:15.364500+00:00",
+   "http_status": 200,
+   "response_headers": {
+    "server": "Apache/2.4.37 (centos) mod_jk/1.2.48 OpenSSL/1.1.1k",
+    "last-modified": "Tue, 27 Oct 2026 02:44:03 GMT",
+    "etag": "\"ba744-65ec96b61a457\"",
+    "content-length": "763716",
+    "content-type": "application/zip"
+   },
+   "provider_sha256_match": null
+  },
+  {
+   "source_key": "CN.zip",
+   "file": "data/raw/geonames_dump/CN.zip",
+   "bytes": 32236271,
+   "sha256": "c03cde716fdeec410ea056e7d98bb53c6dc7a33e7432c38b0ede0c66cc716a27",
+   "write_protected": true,
+   "url": "https://download.geonames.org/export/dump/CN.zip",
+   "acquired_utc": "2026-10-27T11:49:17.325595+00:00",
+   "http_status": 200,
+   "response_headers": {
+    "server": "Apache/2.4.37 (centos) mod_jk/1.2.48 OpenSSL/1.1.1k",
+    "last-modified": "Tue, 27 Oct 2026 02:45:05 GMT",
+    "etag": "\"1ebe2ef-65ec96f0fb5df\"",
+    "content-length": "32236271",
+    "content-type": "application/zip"
+   },
+   "provider_sha256_match": null
+  },
+  {
+   "source_key": "CZ.zip",
+   "file": "data/raw/geonames_dump/CZ.zip",
+   "bytes": 1608133,
+   "sha256": "46633b49860f652441306d4fa7920591c6ca417445f9eeecacecf187ae683fa3",
+   "write_protected": true,
+   "url": "https://download.geonames.org/export/dump/CZ.zip",
+   "acquired_utc": "2026-10-27T11:48:49.069063+00:00",
+   "http_status": 200,
+   "response_headers": {
+    "server": "Apache/2.4.37 (centos) mod_jk/1.2.48 OpenSSL/1.1.1k",
+    "last-modified": "Tue, 27 Oct 2026 02:45:11 GMT",
+    "etag": "\"1889c5-65ec96f71067b\"",
+    "content-length": "1608133",
+    "content-type": "application/zip"
+   },
+   "provider_sha256_match": null
+  },
+  {
+   "source_key": "DE.zip",
+   "file": "data/raw/geonames_dump/DE.zip",
+   "bytes": 7538203,
+   "sha256": "9f3d6e7a2869135cd08623380fbea949b3cd903a4427495986bd89fad08ae377",
+   "write_protected": true,
+   "url": "https://download.geonames.org/export/dump/DE.zip",
+   "acquired_utc": "2026-10-27T11:48:38.113531+00:00",
+   "http_status": 200,
+   "response_headers": {
+    "server": "Apache/2.4.37 (centos) mod_jk/1.2.48 OpenSSL/1.1.1k",
+    "last-modified": "Tue, 27 Oct 2026 02:45:19 GMT",
+    "etag": "\"73061b-65ec96fed879f\"",
+    "content-length": "7538203",
+    "content-type": "application/zip"
+   },
+   "provider_sha256_match": null
+  },
+  {
+   "source_key": "DK.zip",
+   "file": "data/raw/geonames_dump/DK.zip",
+   "bytes": 472907,
+   "sha256": "a31072121d9cee172e644ec46ba08c78bf02b30a95d69194e3c38119f1e8ca7e",
+   "write_protected": true,
+   "url": "https://download.geonames.org/export/dump/DK.zip",
+   "acquired_utc": "2026-10-27T11:50:01.366807+00:00",
+   "http_status": 200,
+   "response_headers": {
+    "server": "Apache/2.4.37 (centos) mod_jk/1.2.48 OpenSSL/1.1.1k",
+    "last-modified": "Tue, 27 Oct 2026 02:45:20 GMT",
+    "etag": "\"7374b-65ec96ff900f3\"",
+    "content-length": "472907",
+    "content-type": "application/zip"
+   },
+   "provider_sha256_match": null
+  },
+  {
+   "source_key": "DZ.zip",
+   "file": "data/raw/geonames_dump/DZ.zip",
+   "bytes": 1779769,
+   "sha256": "6d8b80a4b67052f7b41015e1598404e3d845a529115a874e8cc103fc494c7c17",
+   "write_protected": true,
+   "url": "https://download.geonames.org/export/dump/DZ.zip",
+   "acquired_utc": "2026-10-27T11:51:08.320250+00:00",
+   "http_status": 200,
+   "response_headers": {
+    "server": "Apache/2.4.37 (centos) mod_jk/1.2.48 OpenSSL/1.1.1k",
+    "last-modified": "Tue, 27 Oct 2026 02:45:23 GMT",
+    "etag": "\"1b2839-65ec97023b5e8\"",
+    "content-length": "1779769",
+    "content-type": "application/zip"
+   },
+   "provider_sha256_match": null
+  },
+  {
+   "source_key": "FM.zip",
+   "file": "data/raw/geonames_dump/FM.zip",
+   "bytes": 104994,
+   "sha256": "09a4a93a211c88e1da1dc1476af346d4ce83ce8e5861a0417b5972913abc7968",
+   "write_protected": true,
+   "url": "https://download.geonames.org/export/dump/FM.zip",
+   "acquired_utc": "2026-10-27T11:50:54.475418+00:00",
+   "http_status": 200,
+   "response_headers": {
+    "server": "Apache/2.4.37 (centos) mod_jk/1.2.48 OpenSSL/1.1.1k",
+    "last-modified": "Tue, 27 Oct 2026 02:45:46 GMT",
+    "etag": "\"19a22-65ec9718ff278\"",
+    "content-length": "104994",
+    "content-type": "application/zip"
+   },
+   "provider_sha256_match": null
+  },
+  {
+   "source_key": "FR.zip",
+   "file": "data/raw/geonames_dump/FR.zip",
+   "bytes": 7305456,
+   "sha256": "4c7f9548eeac2ade7c9302165903be2fef1ea8f0c06f4e6f965ca3a6b82cacf2",
+   "write_protected": true,
+   "url": "https://download.geonames.org/export/dump/FR.zip",
+   "acquired_utc": "2026-10-27T11:48:58.808287+00:00",
+   "http_status": 200,
+   "response_headers": {
+    "server": "Apache/2.4.37 (centos) mod_jk/1.2.48 OpenSSL/1.1.1k",
+    "last-modified": "Tue, 27 Oct 2026 02:45:54 GMT",
+    "etag": "\"6f78f0-65ec972022af3\"",
+    "content-length": "7305456",
+    "content-type": "application/zip"
+   },
+   "provider_sha256_match": null
+  },
+  {
+   "source_key": "GR.zip",
+   "file": "data/raw/geonames_dump/GR.zip",
+   "bytes": 1739416,
+   "sha256": "d91e11f9f1762a610977cb456d84e731ad995195d47ebec019fc85d4fc6b3b2f",
+   "write_protected": true,
+   "url": "https://download.geonames.org/export/dump/GR.zip",
+   "acquired_utc": "2026-10-27T11:50:04.999388+00:00",
+   "http_status": 200,
+   "response_headers": {
+    "server": "Apache/2.4.37 (centos) mod_jk/1.2.48 OpenSSL/1.1.1k",
+    "last-modified": "Tue, 27 Oct 2026 02:46:02 GMT",
+    "etag": "\"1a8a98-65ec97279937b\"",
+    "content-length": "1739416",
+    "content-type": "application/zip"
+   },
+   "provider_sha256_match": null
+  },
+  {
+   "source_key": "HK.zip",
+   "file": "data/raw/geonames_dump/HK.zip",
+   "bytes": 121018,
+   "sha256": "09f0cdd7bdedc1df02ec5ea8baff8f271e7e3a59a77c0dd5d7ea6591067a1946",
+   "write_protected": true,
+   "url": "https://download.geonames.org/export/dump/HK.zip",
+   "acquired_utc": "2026-10-27T11:49:19.947100+00:00",
+   "http_status": 200,
+   "response_headers": {
+    "server": "Apache/2.4.37 (centos) mod_jk/1.2.48 OpenSSL/1.1.1k",
+    "last-modified": "Tue, 27 Oct 2026 02:46:03 GMT",
+    "etag": "\"1d8ba-65ec97291a72f\"",
+    "content-length": "121018",
+    "content-type": "application/zip"
+   },
+   "provider_sha256_match": null
+  },
+  {
+   "source_key": "HR.zip",
+   "file": "data/raw/geonames_dump/HR.zip",
+   "bytes": 800346,
+   "sha256": "c250eb3a4a94c3e779703ba84261b157c114cb93f93171add540174a65a44869",
+   "write_protected": true,
+   "url": "https://download.geonames.org/export/dump/HR.zip",
+   "acquired_utc": "2026-10-27T11:50:21.873232+00:00",
+   "http_status": 200,
+   "response_headers": {
+    "server": "Apache/2.4.37 (centos) mod_jk/1.2.48 OpenSSL/1.1.1k",
+    "last-modified": "Tue, 27 Oct 2026 02:46:05 GMT",
+    "etag": "\"c365a-65ec972a84bb9\"",
+    "content-length": "800346",
+    "content-type": "application/zip"
+   },
+   "provider_sha256_match": null
+  },
+  {
+   "source_key": "HU.zip",
+   "file": "data/raw/geonames_dump/HU.zip",
+   "bytes": 701639,
+   "sha256": "0f3876f831e1536c18d193a4c6fabb548c8ab2d7663dd381c79ef995ab746f5d",
+   "write_protected": true,
+   "url": "https://download.geonames.org/export/dump/HU.zip",
+   "acquired_utc": "2026-10-27T11:50:08.061251+00:00",
+   "http_status": 200,
+   "response_headers": {
+    "server": "Apache/2.4.37 (centos) mod_jk/1.2.48 OpenSSL/1.1.1k",
+    "last-modified": "Tue, 27 Oct 2026 02:46:06 GMT",
+    "etag": "\"ab4c7-65ec972bd3eb1\"",
+    "content-length": "701639",
+    "content-type": "application/zip"
+   },
+   "provider_sha256_match": null
+  },
+  {
+   "source_key": "ID.zip",
+   "file": "data/raw/geonames_dump/ID.zip",
+   "bytes": 10389796,
+   "sha256": "1cb563c17455a05e3b7727de2ad77a04e29fb7a700b6d81eaf3d148a3b737e2c",
+   "write_protected": true,
+   "url": "https://download.geonames.org/export/dump/ID.zip",
+   "acquired_utc": "2026-10-27T11:49:51.911119+00:00",
+   "http_status": 200,
+   "response_headers": {
+    "server": "Apache/2.4.37 (centos) mod_jk/1.2.48 OpenSSL/1.1.1k",
+    "last-modified": "Tue, 27 Oct 2026 02:46:19 GMT",
+    "etag": "\"9e8924-65ec9737b30c3\"",
+    "content-length": "10389796",
+    "content-type": "application/zip"
+   },
+   "provider_sha256_match": null
+  },
+  {
+   "source_key": "IT.zip",
+   "file": "data/raw/geonames_dump/IT.zip",
+   "bytes": 4361919,
+   "sha256": "da0a3ab38c06863ed0c3f79573bd62774531abe5efde0f9f5380e6e298fe296b",
+   "write_protected": true,
+   "url": "https://download.geonames.org/export/dump/IT.zip",
+   "acquired_utc": "2026-10-27T11:48:53.457509+00:00",
+   "http_status": 200,
+   "response_headers": {
+    "server": "Apache/2.4.37 (centos) mod_jk/1.2.48 OpenSSL/1.1.1k",
+    "last-modified": "Tue, 27 Oct 2026 02:46:57 GMT",
+    "etag": "\"428ebf-65ec975c742ab\"",
+    "content-length": "4361919",
+    "content-type": "application/zip"
+   },
+   "provider_sha256_match": null
+  },
+  {
+   "source_key": "JE.zip",
+   "file": "data/raw/geonames_dump/JE.zip",
+   "bytes": 19808,
+   "sha256": "89d25ca6c6b95cff831c9d3b4a31f8ee072a567db2df154df4d40f1901f8c2b9",
+   "write_protected": true,
+   "url": "https://download.geonames.org/export/dump/JE.zip",
+   "acquired_utc": "2026-10-27T11:50:59.702023+00:00",
+   "http_status": 200,
+   "response_headers": {
+    "server": "Apache/2.4.37 (centos) mod_jk/1.2.48 OpenSSL/1.1.1k",
+    "last-modified": "Tue, 27 Oct 2026 02:46:57 GMT",
+    "etag": "\"4d60-65ec975c769bb\"",
+    "content-length": "19808",
+    "content-type": "application/zip"
+   },
+   "provider_sha256_match": null
+  },
+  {
+   "source_key": "JP.zip",
+   "file": "data/raw/geonames_dump/JP.zip",
+   "bytes": 4959604,
+   "sha256": "8d54653c9a6471f22ecd8ee033cef0e21e95099397e1dd007f34b6e2cfc179a0",
+   "write_protected": true,
+   "url": "https://download.geonames.org/export/dump/JP.zip",
+   "acquired_utc": "2026-10-27T11:49:03.617913+00:00",
+   "http_status": 200,
+   "response_headers": {
+    "server": "Apache/2.4.37 (centos) mod_jk/1.2.48 OpenSSL/1.1.1k",
+    "last-modified": "Tue, 27 Oct 2026 02:47:03 GMT",
+    "etag": "\"4bad74-65ec9761e94d5\"",
+    "content-length": "4959604",
+    "content-type": "application/zip"
+   },
+   "provider_sha256_match": null
+  },
+  {
+   "source_key": "KR.zip",
+   "file": "data/raw/geonames_dump/KR.zip",
+   "bytes": 5413641,
+   "sha256": "fbc3f93b6bd9cdc93631cc3d07fe78f8d19f84d8d64c0ce1b0b8cebd6f8bbaa8",
+   "write_protected": true,
+   "url": "https://download.geonames.org/export/dump/KR.zip",
+   "acquired_utc": "2026-10-27T11:49:25.012414+00:00",
+   "http_status": 200,
+   "response_headers": {
+    "server": "Apache/2.4.37 (centos) mod_jk/1.2.48 OpenSSL/1.1.1k",
+    "last-modified": "Tue, 27 Oct 2026 02:47:14 GMT",
+    "etag": "\"529b09-65ec976c361c8\"",
+    "content-length": "5413641",
+    "content-type": "application/zip"
+   },
+   "provider_sha256_match": null
+  },
+  {
+   "source_key": "LT.zip",
+   "file": "data/raw/geonames_dump/LT.zip",
+   "bytes": 1298401,
+   "sha256": "dcb0e9aca1f3070152632b3ecb2733e7d177705614a12365f91fab823d504d23",
+   "write_protected": true,
+   "url": "https://download.geonames.org/export/dump/LT.zip",
+   "acquired_utc": "2026-10-27T11:50:51.916121+00:00",
+   "http_status": 200,
+   "response_headers": {
+    "server": "Apache/2.4.37 (centos) mod_jk/1.2.48 OpenSSL/1.1.1k",
+    "last-modified": "Tue, 27 Oct 2026 02:47:22 GMT",
+    "etag": "\"13cfe1-65ec97745843e\"",
+    "content-length": "1298401",
+    "content-type": "application/zip"
+   },
+   "provider_sha256_match": null
+  },
+  {
+   "source_key": "MA.zip",
+   "file": "data/raw/geonames_dump/MA.zip",
+   "bytes": 4201009,
+   "sha256": "c25481b5aaa5855eaf5c5363abc09cb32c7c40b36799bcc4852bc5f00eafe875",
+   "write_protected": true,
+   "url": "https://download.geonames.org/export/dump/MA.zip",
+   "acquired_utc": "2026-10-27T11:50:36.304643+00:00",
+   "http_status": 200,
+   "response_headers": {
+    "server": "Apache/2.4.37 (centos) mod_jk/1.2.48 OpenSSL/1.1.1k",
+    "last-modified": "Tue, 27 Oct 2026 02:47:29 GMT",
+    "etag": "\"401a31-65ec977a7bb4f\"",
+    "content-length": "4201009",
+    "content-type": "application/zip"
+   },
+   "provider_sha256_match": null
+  },
+  {
+   "source_key": "MC.zip",
+   "file": "data/raw/geonames_dump/MC.zip",
+   "bytes": 9035,
+   "sha256": "fb25f69bd1026434667d57d46ddcdd9660e9ff0e5fc572caa37e99f78ae1ff81",
+   "write_protected": true,
+   "url": "https://download.geonames.org/export/dump/MC.zip",
+   "acquired_utc": "2026-10-27T11:51:01.538494+00:00",
+   "http_status": 200,
+   "response_headers": {
+    "server": "Apache/2.4.37 (centos) mod_jk/1.2.48 OpenSSL/1.1.1k",
+    "last-modified": "Tue, 27 Oct 2026 02:47:29 GMT",
+    "etag": "\"234b-65ec977a7c707\"",
+    "content-length": "9035",
+    "content-type": "application/zip"
+   },
+   "provider_sha256_match": null
+  },
+  {
+   "source_key": "ME.zip",
+   "file": "data/raw/geonames_dump/ME.zip",
+   "bytes": 376330,
+   "sha256": "a6f52955b811d68d84884aef8cc6bc7392126e76760f97d262b69699d9665150",
+   "write_protected": true,
+   "url": "https://download.geonames.org/export/dump/ME.zip",
+   "acquired_utc": "2026-10-27T11:53:44.133322+00:00",
+   "http_status": 200,
+   "response_headers": {
+    "server": "Apache/2.4.37 (centos) mod_jk/1.2.48 OpenSSL/1.1.1k",
+    "last-modified": "Tue, 27 Oct 2026 02:47:29 GMT",
+    "etag": "\"5be0a-65ec977ad5ca1\"",
+    "content-length": "376330",
+    "content-type": "application/zip"
+   },
+   "provider_sha256_match": null
+  },
+  {
+   "source_key": "MK.zip",
+   "file": "data/raw/geonames_dump/MK.zip",
+   "bytes": 926931,
+   "sha256": "f9df5da8e535844837f6d6f731137e7a8a2cefb8533dfc97920c3955d3198eb1",
+   "write_protected": true,
+   "url": "https://download.geonames.org/export/dump/MK.zip",
+   "acquired_utc": "2026-10-27T11:53:40.997397+00:00",
+   "http_status": 200,
+   "response_headers": {
+    "server": "Apache/2.4.37 (centos) mod_jk/1.2.48 OpenSSL/1.1.1k",
+    "last-modified": "Tue, 27 Oct 2026 02:47:32 GMT",
+    "etag": "\"e24d3-65ec977d7decf\"",
+    "content-length": "926931",
+    "content-type": "application/zip"
+   },
+   "provider_sha256_match": null
+  },
+  {
+   "source_key": "MM.zip",
+   "file": "data/raw/geonames_dump/MM.zip",
+   "bytes": 1936157,
+   "sha256": "419dd1349931ea32c4e5f4284b65cba46a5cc7795abcd56fd347ad1d14f73423",
+   "write_protected": true,
+   "url": "https://download.geonames.org/export/dump/MM.zip",
+   "acquired_utc": "2026-10-27T11:49:39.408348+00:00",
+   "http_status": 200,
+   "response_headers": {
+    "server": "Apache/2.4.37 (centos) mod_jk/1.2.48 OpenSSL/1.1.1k",
+    "last-modified": "Tue, 27 Oct 2026 02:47:35 GMT",
+    "etag": "\"1d8b1d-65ec97800edea\"",
+    "content-length": "1936157",
+    "content-type": "application/zip"
+   },
+   "provider_sha256_match": null
+  },
+  {
+   "source_key": "MY.zip",
+   "file": "data/raw/geonames_dump/MY.zip",
+   "bytes": 1765042,
+   "sha256": "fbca6977237cf416697784f46b5237385ec41fe7969f16839e08a7928868bb65",
+   "write_protected": true,
+   "url": "https://download.geonames.org/export/dump/MY.zip",
+   "acquired_utc": "2026-10-27T11:49:43.012410+00:00",
+   "http_status": 200,
+   "response_headers": {
+    "server": "Apache/2.4.37 (centos) mod_jk/1.2.48 OpenSSL/1.1.1k",
+    "last-modified": "Tue, 27 Oct 2026 02:47:54 GMT",
+    "etag": "\"1aeeb2-65ec97931a12e\"",
+    "content-length": "1765042",
+    "content-type": "application/zip"
+   },
+   "provider_sha256_match": null
+  },
+  {
+   "source_key": "NL.zip",
+   "file": "data/raw/geonames_dump/NL.zip",
+   "bytes": 727661,
+   "sha256": "7e2983e82fb98a7b786b6a376778ad73840796daa276e6e3b425540319ebf9fc",
+   "write_protected": true,
+   "url": "https://download.geonames.org/export/dump/NL.zip",
+   "acquired_utc": "2026-10-27T11:49:55.211863+00:00",
+   "http_status": 200,
+   "response_headers": {
+    "server": "Apache/2.4.37 (centos) mod_jk/1.2.48 OpenSSL/1.1.1k",
+    "last-modified": "Tue, 27 Oct 2026 02:48:00 GMT",
+    "etag": "\"b1a6d-65ec979867e79\"",
+    "content-length": "727661",
+    "content-type": "application/zip"
+   },
+   "provider_sha256_match": null
+  },
+  {
+   "source_key": "PG.zip",
+   "file": "data/raw/geonames_dump/PG.zip",
+   "bytes": 618836,
+   "sha256": "7382fd377318919c904df24dbf82022ce1d11a07d4eaab813be7d8ee0d08f98a",
+   "write_protected": true,
+   "url": "https://download.geonames.org/export/dump/PG.zip",
+   "acquired_utc": "2026-10-27T11:50:57.648224+00:00",
+   "http_status": 200,
+   "response_headers": {
+    "server": "Apache/2.4.37 (centos) mod_jk/1.2.48 OpenSSL/1.1.1k",
+    "last-modified": "Tue, 27 Oct 2026 02:48:28 GMT",
+    "etag": "\"97154-65ec97b2fd2c0\"",
+    "content-length": "618836",
+    "content-type": "application/zip"
+   },
+   "provider_sha256_match": null
+  },
+  {
+   "source_key": "PH.zip",
+   "file": "data/raw/geonames_dump/PH.zip",
+   "bytes": 2555637,
+   "sha256": "548fa24a11145f48412b5f34102c4ea8a3c1f4934b2be613815fbbb216407ec7",
+   "write_protected": true,
+   "url": "https://download.geonames.org/export/dump/PH.zip",
+   "acquired_utc": "2026-10-27T11:49:07.597879+00:00",
+   "http_status": 200,
+   "response_headers": {
+    "server": "Apache/2.4.37 (centos) mod_jk/1.2.48 OpenSSL/1.1.1k",
+    "last-modified": "Tue, 27 Oct 2026 02:48:31 GMT",
+    "etag": "\"26fef5-65ec97b5dd750\"",
+    "content-length": "2555637",
+    "content-type": "application/zip"
+   },
+   "provider_sha256_match": null
+  },
+  {
+   "source_key": "PL.zip",
+   "file": "data/raw/geonames_dump/PL.zip",
+   "bytes": 2044807,
+   "sha256": "027b90e66833e292d566386814abcb510b17f2c6450a6493c323c0868999d892",
+   "write_protected": true,
+   "url": "https://download.geonames.org/export/dump/PL.zip",
+   "acquired_utc": "2026-10-27T11:48:45.384524+00:00",
+   "http_status": 200,
+   "response_headers": {
+    "server": "Apache/2.4.37 (centos) mod_jk/1.2.48 OpenSSL/1.1.1k",
+    "last-modified": "Tue, 27 Oct 2026 02:48:40 GMT",
+    "etag": "\"1f3387-65ec97be387e1\"",
+    "content-length": "2044807",
+    "content-type": "application/zip"
+   },
+   "provider_sha256_match": null
+  },
+  {
+   "source_key": "RO.zip",
+   "file": "data/raw/geonames_dump/RO.zip",
+   "bytes": 2004221,
+   "sha256": "d65ec3b2dcc0b8523494035fb978245a7d6fe0c6404ced38a4a4e4b9aa0a7574",
+   "write_protected": true,
+   "url": "https://download.geonames.org/export/dump/RO.zip",
+   "acquired_utc": "2026-10-27T11:50:11.940177+00:00",
+   "http_status": 200,
+   "response_headers": {
+    "server": "Apache/2.4.37 (centos) mod_jk/1.2.48 OpenSSL/1.1.1k",
+    "last-modified": "Tue, 27 Oct 2026 02:48:45 GMT",
+    "etag": "\"1e94fd-65ec97c2e2c24\"",
+    "content-length": "2004221",
+    "content-type": "application/zip"
+   },
+   "provider_sha256_match": null
+  },
+  {
+   "source_key": "RS.zip",
+   "file": "data/raw/geonames_dump/RS.zip",
+   "bytes": 758307,
+   "sha256": "a0ece6a76ad825516388b07fba6370430c44d3de68ecd0eb69176d233816d939",
+   "write_protected": true,
+   "url": "https://download.geonames.org/export/dump/RS.zip",
+   "acquired_utc": "2026-10-27T11:50:18.453660+00:00",
+   "http_status": 200,
+   "response_headers": {
+    "server": "Apache/2.4.37 (centos) mod_jk/1.2.48 OpenSSL/1.1.1k",
+    "last-modified": "Tue, 27 Oct 2026 02:48:46 GMT",
+    "etag": "\"b9223-65ec97c3c5cbe\"",
+    "content-length": "758307",
+    "content-type": "application/zip"
+   },
+   "provider_sha256_match": null
+  },
+  {
+   "source_key": "RU.zip",
+   "file": "data/raw/geonames_dump/RU.zip",
+   "bytes": 15263830,
+   "sha256": "07b78bbd84a1906cdf5be77f50451011e896c6c653dd9e37aedf916823c48b2e",
+   "write_protected": true,
+   "url": "https://download.geonames.org/export/dump/RU.zip",
+   "acquired_utc": "2026-10-27T11:50:48.222687+00:00",
+   "http_status": 200,
+   "response_headers": {
+    "server": "Apache/2.4.37 (centos) mod_jk/1.2.48 OpenSSL/1.1.1k",
+    "last-modified": "Tue, 27 Oct 2026 02:49:02 GMT",
+    "etag": "\"e8e856-65ec97d37147f\"",
+    "content-length": "15263830",
+    "content-type": "application/zip"
+   },
+   "provider_sha256_match": null
+  },
+  {
+   "source_key": "SG.zip",
+   "file": "data/raw/geonames_dump/SG.zip",
+   "bytes": 69029,
+   "sha256": "1189bdd313965d82ac3ce50d702948219485e32fe2aa417249d254e4ff9b7efd",
+   "write_protected": true,
+   "url": "https://download.geonames.org/export/dump/SG.zip",
+   "acquired_utc": "2026-10-27T11:49:45.316072+00:00",
+   "http_status": 200,
+   "response_headers": {
+    "server": "Apache/2.4.37 (centos) mod_jk/1.2.48 OpenSSL/1.1.1k",
+    "last-modified": "Tue, 27 Oct 2026 02:49:08 GMT",
+    "etag": "\"10da5-65ec97d91ba2d\"",
+    "content-length": "69029",
+    "content-type": "application/zip"
+   },
+   "provider_sha256_match": null
+  },
+  {
+   "source_key": "SI.zip",
+   "file": "data/raw/geonames_dump/SI.zip",
+   "bytes": 417411,
+   "sha256": "c0f2aab147a1610b3862cc0f6c378415ab18c79f39a7eca3757f2451cee60054",
+   "write_protected": true,
+   "url": "https://download.geonames.org/export/dump/SI.zip",
+   "acquired_utc": "2026-10-27T11:51:04.762282+00:00",
+   "http_status": 200,
+   "response_headers": {
+    "server": "Apache/2.4.37 (centos) mod_jk/1.2.48 OpenSSL/1.1.1k",
+    "last-modified": "Tue, 27 Oct 2026 02:49:08 GMT",
+    "etag": "\"65e83-65ec97d978a5f\"",
+    "content-length": "417411",
+    "content-type": "application/zip"
+   },
+   "provider_sha256_match": null
+  },
+  {
+   "source_key": "SK.zip",
+   "file": "data/raw/geonames_dump/SK.zip",
+   "bytes": 453508,
+   "sha256": "2e1a95352a80acd8adb27516fdf21efbc76b774c181d6498ec4062c0e9a958ef",
+   "write_protected": true,
+   "url": "https://download.geonames.org/export/dump/SK.zip",
+   "acquired_utc": "2026-10-27T11:50:28.744482+00:00",
+   "http_status": 200,
+   "response_headers": {
+    "server": "Apache/2.4.37 (centos) mod_jk/1.2.48 OpenSSL/1.1.1k",
+    "last-modified": "Tue, 27 Oct 2026 02:49:09 GMT",
+    "etag": "\"6eb84-65ec97da38c69\"",
+    "content-length": "453508",
+    "content-type": "application/zip"
+   },
+   "provider_sha256_match": null
+  },
+  {
+   "source_key": "TH.zip",
+   "file": "data/raw/geonames_dump/TH.zip",
+   "bytes": 9811182,
+   "sha256": "73c2aa7f90d03f4ab6a7153ea456d4eba9a2902b624b193fd62b232c1d428129",
+   "write_protected": true,
+   "url": "https://download.geonames.org/export/dump/TH.zip",
+   "acquired_utc": "2026-10-27T11:49:35.702124+00:00",
+   "http_status": 200,
+   "response_headers": {
+    "server": "Apache/2.4.37 (centos) mod_jk/1.2.48 OpenSSL/1.1.1k",
+    "last-modified": "Tue, 27 Oct 2026 02:49:25 GMT",
+    "etag": "\"95b4ee-65ec97e9124fd\"",
+    "content-length": "9811182",
+    "content-type": "application/zip"
+   },
+   "provider_sha256_match": null
+  },
+  {
+   "source_key": "TN.zip",
+   "file": "data/raw/geonames_dump/TN.zip",
+   "bytes": 904074,
+   "sha256": "9dd3eee65ebf85bc64bb268592e5c23a0ee1060c8b05987f3e606566e6f06ade",
+   "write_protected": true,
+   "url": "https://download.geonames.org/export/dump/TN.zip",
+   "acquired_utc": "2026-10-27T11:50:31.802991+00:00",
+   "http_status": 200,
+   "response_headers": {
+    "server": "Apache/2.4.37 (centos) mod_jk/1.2.48 OpenSSL/1.1.1k",
+    "last-modified": "Tue, 27 Oct 2026 02:49:26 GMT",
+    "etag": "\"dcb8a-65ec97ea77f4f\"",
+    "content-length": "904074",
+    "content-type": "application/zip"
+   },
+   "provider_sha256_match": null
+  },
+  {
+   "source_key": "TW.zip",
+   "file": "data/raw/geonames_dump/TW.zip",
+   "bytes": 2299832,
+   "sha256": "1aea3fe1597bb64753f51e6caff3adca6b8386a02d78ce950d718e22e753098e",
+   "write_protected": true,
+   "url": "https://download.geonames.org/export/dump/TW.zip",
+   "acquired_utc": "2026-10-27T11:49:29.023679+00:00",
+   "http_status": 200,
+   "response_headers": {
+    "server": "Apache/2.4.37 (centos) mod_jk/1.2.48 OpenSSL/1.1.1k",
+    "last-modified": "Tue, 27 Oct 2026 02:49:32 GMT",
+    "etag": "\"2317b8-65ec97f088d84\"",
+    "content-length": "2299832",
+    "content-type": "application/zip"
+   },
+   "provider_sha256_match": null
+  },
+  {
+   "source_key": "VN.zip",
+   "file": "data/raw/geonames_dump/VN.zip",
+   "bytes": 1967704,
+   "sha256": "e70160b9867b66b3a91b70b7db43ad254d1c847653e6e9126624efac0fa37eb3",
+   "write_protected": true,
+   "url": "https://download.geonames.org/export/dump/VN.zip",
+   "acquired_utc": "2026-10-27T11:50:39.879152+00:00",
+   "http_status": 200,
+   "response_headers": {
+    "server": "Apache/2.4.37 (centos) mod_jk/1.2.48 OpenSSL/1.1.1k",
+    "last-modified": "Tue, 27 Oct 2026 02:50:49 GMT",
+    "etag": "\"1e0658-65ec9839a027f\"",
+    "content-length": "1967704",
+    "content-type": "application/zip"
+   },
+   "provider_sha256_match": null
+  },
+  {
+   "source_key": "admin1CodesASCII.txt",
+   "file": "data/raw/geonames_dump/admin1CodesASCII.txt",
+   "bytes": 151571,
+   "sha256": "2e4867f5397acb056ea26377601b57af37cb4c81399770225018e9e439e91ad3",
+   "write_protected": true,
+   "url": "https://download.geonames.org/export/dump/admin1CodesASCII.txt",
+   "acquired_utc": "2026-10-27T11:48:33.822989+00:00",
+   "http_status": 200,
+   "response_headers": {
+    "server": "Apache/2.4.37 (centos) mod_jk/1.2.48 OpenSSL/1.1.1k",
+    "last-modified": "Tue, 27 Oct 2026 02:50:58 GMT",
+    "etag": "\"25013-65ec984262f1f\"",
+    "content-length": "151571",
+    "content-type": "text/plain; charset=utf-8"
+   },
+   "provider_sha256_match": null
+  },
+  {
+   "source_key": "cities500.zip",
+   "file": "data/raw/geonames_dump/cities500.zip",
+   "bytes": 13908226,
+   "sha256": "4c16306582581fa599d246ef103d24d51ed7cdd615603e6bbf393bcd6b3eff42",
+   "write_protected": true,
+   "url": "https://download.geonames.org/export/dump/cities500.zip",
+   "acquired_utc": "2026-10-27T11:48:29.153562+00:00",
+   "http_status": 200,
+   "response_headers": {
+    "server": "Apache/2.4.37 (centos) mod_jk/1.2.48 OpenSSL/1.1.1k",
+    "last-modified": "Tue, 27 Oct 2026 02:50:58 GMT",
+    "etag": "\"d43902-65ec984262b38\"",
+    "content-length": "13908226",
+    "content-type": "application/zip"
+   },
+   "provider_sha256_match": null
+  },
+  {
+   "source_key": "countryInfo.txt",
+   "file": "data/raw/geonames_dump/countryInfo.txt",
+   "bytes": 31690,
+   "sha256": "c55f638cfaafb4fe45a9aa15120a0f1f78e8a34a8e1847d7b9320cf740fbc9ab",
+   "write_protected": true,
+   "url": "https://download.geonames.org/export/dump/countryInfo.txt",
+   "acquired_utc": "2026-10-27T11:48:31.199733+00:00",
+   "http_status": 200,
+   "response_headers": {
+    "server": "Apache/2.4.37 (centos) mod_jk/1.2.48 OpenSSL/1.1.1k",
+    "last-modified": "Tue, 27 Oct 2026 02:56:29 GMT",
+    "etag": "\"7bca-65ec997e0c712\"",
+    "content-length": "31690",
+    "content-type": "text/plain; charset=utf-8"
+   },
+   "provider_sha256_match": null
+  },
+  {
+   "source_key": "readme.txt",
+   "file": "data/raw/geonames_dump/readme.txt",
+   "bytes": 8843,
+   "sha256": "b1957379b6c1242c700c98ac9a8aa0a09f56c3c0a50ee72175527005f48ef2c5",
+   "write_protected": true,
+   "url": "https://download.geonames.org/export/dump/readme.txt",
+   "acquired_utc": "2026-10-27T11:48:24.307865+00:00",
+   "http_status": 200,
+   "response_headers": {
+    "server": "Apache/2.4.37 (centos) mod_jk/1.2.48 OpenSSL/1.1.1k",
+    "last-modified": "Tue, 27 Oct 2026 02:41:20 GMT",
+    "etag": "\"228b-65ec961a7146b\"",
+    "content-length": "8843",
+    "content-type": "text/plain; charset=utf-8"
+   },
+   "provider_sha256_match": null
+  },
+  {
+   "source_key": "100.1CL_SD.pdf",
+   "file": "data/raw/nara_asnf_rg64/100.1CL_SD.pdf",
+   "bytes": 29870215,
+   "sha256": "5197b7d45d609012ee489f3d8fb8447b0f7a112f36cc2c5b020a64c9a10222a2",
+   "write_protected": true,
+   "url": "https://catalog.archives.gov/medialive/23/2639/1263923/content/arcmedia/electronic-records/rg-064/asnf/100.1CL_SD.pdf",
+   "acquired_utc": "2026-10-27T11:31:40.900530+00:00",
+   "http_status": 200,
+   "response_headers": {
+    "content-length": "29870215",
+    "server": "AmazonS3",
+    "last-modified": "Wed, 25 Nov 2015 13:25:58 GMT",
+    "etag": "\"f5cfd4f801e59028f622fe695a54e5f9\"",
+    "x-amz-version-id": "null"
+   },
+   "provider_sha256_match": null
+  },
+  {
+   "source_key": "100.1ND_NC.pdf",
+   "file": "data/raw/nara_asnf_rg64/100.1ND_NC.pdf",
+   "bytes": 5032606,
+   "sha256": "1aed7d9b86303afea93c69c04f77d0845bb8966c7fd97568c24181b36a9555ea",
+   "write_protected": true,
+   "url": "https://catalog.archives.gov/medialive/23/2639/1263923/content/arcmedia/electronic-records/rg-064/asnf/100.1ND_NC.pdf",
+   "acquired_utc": "2026-10-27T11:31:37.693464+00:00",
+   "http_status": 200,
+   "response_headers": {
+    "content-length": "5032606",
+    "server": "AmazonS3",
+    "last-modified": "Wed, 25 Nov 2015 13:25:55 GMT",
+    "etag": "\"187b35243515d72fa00e5c66d123b312\"",
+    "x-amz-version-id": "null"
+   },
+   "provider_sha256_match": null
+  },
+  {
+   "source_key": "ASNEF.FIN.zip",
+   "file": "data/raw/nara_asnf_rg64/ASNEF.FIN.zip",
+   "bytes": 185043578,
+   "sha256": "80c46e83937c6483d11def47fbb1629cab0ac135694fdfa09268b66d826f1066",
+   "write_protected": true,
+   "url": "https://catalog.archives.gov/medialive/23/2639/1263923/content/arcmedia/electronic-records/rg-064/asnf/ASNEF.FIN.zip",
+   "acquired_utc": "2026-10-27T11:31:47.859738+00:00",
+   "http_status": 200,
+   "response_headers": {
+    "content-length": "185043578",
+    "server": "AmazonS3",
+    "last-modified": "Wed, 25 Nov 2015 13:25:41 GMT",
+    "x-amz-version-id": "null",
+    "etag": "\"bffe41fed64fff3e4b08a08c297791d5\""
+   },
+   "provider_sha256_match": null
+  },
+  {
+   "source_key": "ASNEF.FIN.zip.hdr",
+   "file": "data/raw/nara_asnf_rg64/ASNEF.FIN.zip.hdr",
+   "bytes": 438,
+   "sha256": "e0824db6ff822dd18bf5964f21924c2c437bcc64a76bbfdd020e0091307db960",
+   "write_protected": false,
+   "url": null,
+   "acquired_utc": null,
+   "http_status": null,
+   "response_headers": null,
+   "provider_sha256_match": null
+  },
+  {
+   "source_key": "ASNF_TSS.pdf",
+   "file": "data/raw/nara_asnf_rg64/ASNF_TSS.pdf",
+   "bytes": 75327,
+   "sha256": "acb4e7bf3ccf4b7aec6f7015de5966b77738766c3e29ad7e997181f6dfe11229",
+   "write_protected": true,
+   "url": "https://catalog.archives.gov/medialive/23/2639/1263923/content/arcmedia/electronic-records/rg-064/asnf/ASNF_TSS.pdf",
+   "acquired_utc": "2026-10-27T11:31:35.412701+00:00",
+   "http_status": 200,
+   "response_headers": {
+    "content-length": "75327",
+    "server": "AmazonS3",
+    "last-modified": "Wed, 25 Nov 2015 13:25:54 GMT",
+    "x-amz-version-id": "null",
+    "etag": "\"f606549115698cbbd1c680f3fb8784ee\""
+   },
+   "provider_sha256_match": null
+  },
+  {
+   "source_key": "extracted",
+   "file": "data/raw/nara_asnf_rg64/extracted/ASNEF.FIN.DAT",
+   "bytes": 837221112,
+   "sha256": "db10dbf90f0ef95dc327b0e8f8f0489923941b65399cf79bba71ac4b45d07e5b",
+   "write_protected": false,
+   "url": null,
+   "acquired_utc": null,
+   "http_status": null,
+   "response_headers": null,
+   "provider_sha256_match": null
+  }
+ ],
+ "failed_attempts_logged": [
+  {
+   "source_key": "nara_pow_rg389",
+   "url": "https://catalog.archives.gov/medialz/electronic-records/rg-389/wwiipow/POW.MERGED2.txt",
+   "file": "data/raw/nara_pow_rg389/POW.MERGED2.txt",
+   "started_utc": "2026-10-27T11:30:20.071889+00:00",
+   "status": "failed",
+   "error": "URLError('unknown url type: https')",
+   "finished_utc": "2026-10-27T11:30:20.075412+00:00"
+  },
+  {
+   "source_key": "nara_pow_rg389",
+   "url": "https://catalog.archives.gov/medialz/electronic-records/rg-389/wwiipow/101.1DP.pdf",
+   "file": "data/raw/nara_pow_rg389/101.1DP.pdf",
+   "started_utc": "2026-10-27T11:30:21.080684+00:00",
+   "status": "failed",
+   "error": "URLError('unknown url type: https')",
+   "finished_utc": "2026-10-27T11:30:21.080800+00:00"
+  },
+  {
+   "source_key": "nara_pow_rg389",
+   "url": "https://catalog.archives.gov/medialz/electronic-records/rg-389/wwiipow/101.1MA.pdf",
+   "file": "data/raw/nara_pow_rg389/101.1MA.pdf",
+   "started_utc": "2026-10-27T11:30:22.087975+00:00",
+   "status": "failed",
+   "error": "URLError('unknown url type: https')",
+   "finished_utc": "2026-10-27T11:30:22.088129+00:00"
+  },
+  {
+   "source_key": "nara_pow_rg389",
+   "url": "https://catalog.archives.gov/medialz/electronic-records/rg-389/wwiipow/WWIIPOW_TSS.pdf",
+   "file": "data/raw/nara_pow_rg389/WWIIPOW_TSS.pdf",
+   "started_utc": "2026-10-27T11:30:23.093446+00:00",
+   "status": "failed",
+   "error": "URLError('unknown url type: https')",
+   "finished_utc": "2026-10-27T11:30:23.093574+00:00"
+  }
+ ],
+ "other_failures_and_workarounds": [
+  {
+   "time_utc": "2026-10-27T11:30Z",
+   "what": "Python urllib downloads of the four POW files",
+   "response": "URLError('unknown url type: https'): the project Python's ssl module cannot load /opt/homebrew/opt/openssl@3/lib/libssl.3.dylib. Switched transport to /usr/bin/curl; all files then obtained.",
+   "outcome": "resolved"
+  },
+  {
+   "time_utc": "2026-10-27T11:32Z",
+   "what": "AAD HTML pages (aad.archives.gov/aad/, fielded-search.jsp?dt=466, series-description.jsp?s=644) with user agent 'Mozilla/5.0 (research replication)'",
+   "response": "HTTP 403 Forbidden (awselb). The catalog's AAD link dt=466 is obsolete; the current POW table is dt=3159.",
+   "outcome": "resolved: the same pages, popups and Download/cl_*.csv returned 200 with user agent 'Mozilla/5.0 (academic replication; single-session download)'; the AAD table was also viewed read-only in the desktop browser pane to identify field and code-list ids. No access control was bypassed and no login was used."
+  },
+  {
+   "time_utc": "2026-10-27",
+   "what": "chmod a-w on files not written by download.py (catalog metadata JSON, extracted ASNEF.FIN.DAT)",
+   "response": "Shell chmod denied by the session permission system.",
+   "outcome": "unresolved: these files are not write-protected (see write_protected flags); download.py set read-only mode on every file it downloaded."
+  },
+  {
+   "time_utc": "2026-10-27",
+   "what": "Leftover curl response-header dumps data/raw/nara_asnf_rg64/ASNEF.FIN.zip.hdr and data/raw/aad_asnf_dt893_dt929/cl_3323.csv.hdr",
+   "response": "download.py deletes these after parsing; two reappeared in the Dropbox-synced folder. Removal by shell rm was denied by the session permission system.",
+   "outcome": "unresolved: harmless HTTP header text files (not data); their content duplicates response_headers recorded for the corresponding downloads."
+  }
+ ],
+ "catalog_metadata_discrepancies": [
+  "Catalog objectFileSize differs from served size for 101.1MA.pdf (catalog 23015452; served 19697896, provider x-amz-meta-sha256 matched), 100.1CL_SD.pdf (catalog 29870216; served 29870215 = TSS size) and ASNEF.FIN.zip (catalog 185043584; served 185043578 = Content-Length; ZIP integrity test passed; extracted DAT size 837221112 = TSS size)."
+ ],
+ "per_attempt_log": "registry/acquisition_attempts.jsonl",
+ "runtime": {
+  "python": "3.13.4",
+  "numpy": "2.4.2",
+  "pyarrow": "26.0.0",
+  "curl": "curl 8.7.1 (x86_64-apple-darwin25.0) libcurl/8.7.1 (SecureTransport) LibreSSL/3.3.6 zlib/1.2.12 nghttp2/1.68.1",
+  "R": "Rscript (R) version 4.6.1 (2026-06-24)",
+  "platform": "macOS-26.6.2-arm64-arm-64bit-Mach-O"
+ },
+ "not_obtained": [
+  "Machine-readable county-of-residence code list for the enlistment file (AAD cl_2057 is empty); county codes exist only as scanned tables in 100.1CL_SD.pdf.",
+  "NARA 'Army Serial Number Electronic Files: Merged Raw Files' (multiple FOSDIC reads before collapsing) - not offered for download in the catalog; not needed for the processed file.",
+  "Supplemental documentation listed as 'available upon request' in the NARA documentation packages (e.g. AERIC verification reports, full technical manuals) - not requested (no contact authorized)."
+ ]
+}

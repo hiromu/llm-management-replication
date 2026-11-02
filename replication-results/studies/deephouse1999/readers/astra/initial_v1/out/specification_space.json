@@ -1,0 +1,766 @@
+{
+  "paper_id": "P-OPAQUE-01",
+  "source": "DOC01 p9 Research design; DOC01 p10 variables; DOC01 p11 Analysis",
+  "origin": {
+    "A01": "A01_O",
+    "A02": "A02_O",
+    "A03": "A03_O",
+    "A04": "A04_O",
+    "A05": "A05_O",
+    "A06": "A06_O",
+    "A07": "A07_O",
+    "A08": "A08_O",
+    "A09": "A09_O",
+    "A10": "A10_O",
+    "A11": "A11_O",
+    "A12": "A12_O",
+    "A13": "A13_O",
+    "A14": "A14_O",
+    "A15": "A15_O",
+    "A16": "A16_O",
+    "A17": "A17_O",
+    "A18": "A18_O",
+    "A19": "A19_O",
+    "A20": "A20_O",
+    "A21": "A21_O"
+  },
+  "origin_status": "Closest-described model plus explicitly provisional coding choices; not a claim of unique reconstruction. No level selected by numerical agreement.",
+  "axes": [
+    {
+      "axis_id": "A01",
+      "decision": "Metropolitan boundary and state coverage",
+      "priority_group": "sample_construction",
+      "source": "DOC01 p9 Sample and data",
+      "levels": [
+        {
+          "level_id": "A01_O",
+          "description": "Contemporaneous headquarters in fixed 1983 MSA counties",
+          "codeable_rule": "Apply S02, both MN and WI counties.",
+          "label": "origin",
+          "basis": "DOC01 p9 Sample and data",
+          "rationale": "Closest pre-period metropolitan delineation; precise vintage not printed.",
+          "source": "DOC01 p9 Sample and data"
+        },
+        {
+          "level_id": "A01_RSSD",
+          "description": "Archived MSA code",
+          "codeable_rule": "Use Q4 RSSD9180==5120 instead of county membership.",
+          "label": "uncertain",
+          "basis": "DOC01 p9 Sample and data",
+          "rationale": "Direct metropolitan identifier, but provider vintage unknown.",
+          "source": "DOC01 p9 Sample and data"
+        },
+        {
+          "level_id": "A01_DYNAMIC",
+          "description": "Latest delineation dated no later than observation",
+          "codeable_rule": "Join county membership to latest available omb_definition_date <= Q4 date, using 1983 then 1990 definitions.",
+          "label": "uncertain",
+          "basis": "DOC01 p9 Sample and data",
+          "rationale": "Contemporaneous boundaries are defensible; article gives no time rule.",
+          "source": "DOC01 p9 Sample and data"
+        },
+        {
+          "level_id": "A01_MN",
+          "description": "Minnesota portion only",
+          "codeable_rule": "Apply origin county definition and RSSD9210==27.",
+          "label": "uncertain",
+          "basis": "DOC01 p9 Sample and data",
+          "rationale": "Publication explicitly names Minnesota; exclusion of Wisconsin is not explicit and could narrow intended market.",
+          "source": "DOC01 p9 Sample and data"
+        }
+      ]
+    },
+    {
+      "axis_id": "A02",
+      "decision": "Historical commercial-bank classification",
+      "priority_group": "sample_construction",
+      "source": "DOC01 p9 Sample and data; DOC01 p4 bank context",
+      "levels": [
+        {
+          "level_id": "A02_O",
+          "description": "Charter-based bank filter",
+          "codeable_rule": "RSSD9048==200; CALL8786 in {1,2}; audit RSSD9331.",
+          "label": "origin",
+          "basis": "DOC01 p9 Sample and data; DOC01 p4 bank context",
+          "rationale": "Implements commercial banks as legal institutions.",
+          "source": "DOC01 p9 Sample and data; DOC01 p4 bank context"
+        },
+        {
+          "level_id": "A02_ENTITY",
+          "description": "Entity-type filter",
+          "codeable_rule": "RSSD9331==1; CALL8786 in {1,2}; audit RSSD9048.",
+          "label": "uncertain",
+          "basis": "DOC01 p9 Sample and data; DOC01 p4 bank context",
+          "rationale": "Two historical indicators are available; conflicts unresolved.",
+          "source": "DOC01 p9 Sample and data; DOC01 p4 bank context"
+        },
+        {
+          "level_id": "A02_AGREE",
+          "description": "Require agreement",
+          "codeable_rule": "Require RSSD9048==200 and RSSD9331==1 and CALL8786 in {1,2}.",
+          "label": "uncertain",
+          "basis": "DOC01 p9 Sample and data; DOC01 p4 bank context",
+          "rationale": "Conservative classification can lose banks with missing or discordant archival codes.",
+          "source": "DOC01 p9 Sample and data; DOC01 p4 bank context"
+        }
+      ]
+    },
+    {
+      "axis_id": "A03",
+      "decision": "Merger continuity and lags",
+      "priority_group": "sample_construction",
+      "source": "DOC01 p9 Sample and data; DOC01 p10 lagged dependent variable",
+      "levels": [
+        {
+          "level_id": "A03_O",
+          "description": "As-reported legal entity",
+          "codeable_rule": "Same-RSSD consecutive-year lag, no predecessor aggregation.",
+          "label": "origin",
+          "basis": "DOC01 p9 Sample and data; DOC01 p10 lagged dependent variable",
+          "rationale": "Bank is the unit; preserves actual contemporaneous reports.",
+          "source": "DOC01 p9 Sample and data; DOC01 p10 lagged dependent variable"
+        },
+        {
+          "level_id": "A03_CONTINUITY",
+          "description": "Documented continuation links only",
+          "codeable_rule": "For an RSSD change with unique certificate/event evidence of legal continuation rather than absorption, allow predecessor lag after identity audit; otherwise missing.",
+          "label": "uncertain",
+          "basis": "DOC01 p9 Sample and data; DOC01 p10 lagged dependent variable",
+          "rationale": "Foundings, mergers and failures said to be accounted for, without algorithm.",
+          "source": "DOC01 p9 Sample and data; DOC01 p10 lagged dependent variable"
+        },
+        {
+          "level_id": "A03_SYNTHETIC",
+          "description": "Merger-adjusted predecessor pro forma",
+          "codeable_rule": "Aggregate predecessor income and average assets using dated events before constructing survivor prior ROA.",
+          "label": "non_equivalent",
+          "basis": "DOC01 p9 Sample and data; DOC01 p10 lagged dependent variable",
+          "rationale": "Creates synthetic earlier bank outcomes, beyond documented bank-year measurements; wider sensitivity only.",
+          "source": "DOC01 p9 Sample and data; DOC01 p10 lagged dependent variable"
+        }
+      ]
+    },
+    {
+      "axis_id": "A04",
+      "decision": "Reference population for annual means, SDs and market totals",
+      "priority_group": "sample_construction",
+      "source": "DOC01 p9 Dependent and independent variables; DOC01 p10 equation",
+      "levels": [
+        {
+          "level_id": "A04_O",
+          "description": "All eligible banks, available per concept",
+          "codeable_rule": "Use U_t before lag/outlier deletion; available observations per strategy or ROA; deposit total requires complete coverage.",
+          "label": "origin",
+          "basis": "DOC01 p9 Dependent and independent variables; DOC01 p10 equation",
+          "rationale": "Closest reading of all Twin Cities banks.",
+          "source": "DOC01 p9 Dependent and independent variables; DOC01 p10 equation"
+        },
+        {
+          "level_id": "A04_JOINT",
+          "description": "Common complete annual reference set",
+          "codeable_rule": "Use eligible banks jointly observed on ROA and all eleven strategy shares for means/SDs; still use all eligible deposit observations with coverage audit.",
+          "label": "uncertain",
+          "basis": "DOC01 p9 Dependent and independent variables; DOC01 p10 equation",
+          "rationale": "Article does not explain incomplete item reports; changes norm population.",
+          "source": "DOC01 p9 Dependent and independent variables; DOC01 p10 equation"
+        },
+        {
+          "level_id": "A04_ANALYTIC",
+          "description": "Final analytic population references",
+          "codeable_rule": "Recompute norms and deposit totals on retained complete-case bank-years after lag and exclusion steps; recompute lag using analogous previous-year set and record nonrecursive mask definition.",
+          "label": "uncertain",
+          "basis": "DOC01 p9 Dependent and independent variables; DOC01 p10 equation",
+          "rationale": "Table descriptives may use final sample, but wording all banks favors origin. Freeze a mask once; do not iterate to numerical agreement.",
+          "source": "DOC01 p9 Dependent and independent variables; DOC01 p10 equation"
+        }
+      ]
+    },
+    {
+      "axis_id": "A05",
+      "decision": "Partial-year entrants and annual financial coverage",
+      "priority_group": "sample_construction",
+      "source": "DOC01 p9 Sample and data; Dependent variable",
+      "levels": [
+        {
+          "level_id": "A05_O",
+          "description": "Full measurement coverage for chosen average-assets definition",
+          "codeable_rule": "Require all measurement points of selected A08 level: in origin Q1–Q4 RCFD3368; do not additionally require an unused denominator item. Other stocks/flows follow A09.",
+          "label": "origin",
+          "basis": "DOC01 p9 Sample and data; Dependent variable",
+          "rationale": "Avoids treating a quarter as a year; article does not state annualization.",
+          "source": "DOC01 p9 Sample and data; Dependent variable"
+        },
+        {
+          "level_id": "A05_AVAILABLE",
+          "description": "Available-quarter annual average",
+          "codeable_rule": "Mean all available within-year RCFD3368 if at least one; use reported YTD Q4 net income without annualizing.",
+          "label": "uncertain",
+          "basis": "DOC01 p9 Sample and data; Dependent variable",
+          "rationale": "Includes partial histories but may mix exposures; no author rule.",
+          "source": "DOC01 p9 Sample and data; Dependent variable"
+        },
+        {
+          "level_id": "A05_ENDPOINT",
+          "description": "Endpoint denominator coverage",
+          "codeable_rule": "Use average-assets endpoint variant A08_ENDPOINT and require its two Q4 stocks; do not independently require all quarterly averages.",
+          "label": "uncertain",
+          "basis": "DOC01 p9 Sample and data; Dependent variable",
+          "rationale": "Legitimate implementation of endpoint averaging if chosen, with different coverage.",
+          "source": "DOC01 p9 Sample and data; Dependent variable"
+        }
+      ]
+    },
+    {
+      "axis_id": "A06",
+      "decision": "Nonreported components versus economic zero",
+      "priority_group": "sample_construction",
+      "source": "DOC01 p9 Independent variable eleven strategies",
+      "levels": [
+        {
+          "level_id": "A06_O",
+          "description": "Missing stays missing",
+          "codeable_rule": "Strict input completeness for D; do not impute missing trading or other components.",
+          "label": "origin",
+          "basis": "DOC01 p9 Independent variable eleven strategies",
+          "rationale": "No imputation described and source dictionary preserves missingness.",
+          "source": "DOC01 p9 Independent variable eleven strategies"
+        },
+        {
+          "level_id": "A06_IDENTITY",
+          "description": "Exact within-form reconstruction",
+          "codeable_rule": "Fill a missing total only if all components are observed and dictionary definitions establish exhaustive disjoint equality, e.g. cash=RCFD0081+RCFD0071; otherwise leave missing.",
+          "label": "equivalent",
+          "basis": "DOC01 p9 Independent variable eleven strategies",
+          "rationale": "An exact accounting identity preserves intended amount; equivalence conditional on verified form/year definition.",
+          "source": "DOC01 p9 Independent variable eleven strategies"
+        },
+        {
+          "level_id": "A06_ZERO",
+          "description": "Documented structural nonapplicability only",
+          "codeable_rule": "Set missing component to zero only with affirmative form-specific evidence that missing encodes not applicable/zero; log evidence; otherwise remain missing.",
+          "label": "uncertain",
+          "basis": "DOC01 p9 Independent variable eleven strategies",
+          "rationale": "Small forms omit detail, which is not by itself zero; available descriptions may be insufficient to activate this level.",
+          "source": "DOC01 p9 Independent variable eleven strategies"
+        }
+      ]
+    },
+    {
+      "axis_id": "A07",
+      "decision": "Whether excluded outcome propagates into later lag or benchmarks",
+      "priority_group": "sample_construction",
+      "source": "DOC01 p11 Analysis outlier paragraph",
+      "levels": [
+        {
+          "level_id": "A07_O",
+          "description": "Exclude regression row after variable construction",
+          "codeable_rule": "Preserve excluded bank-year in benchmarks and as an observed later lag.",
+          "label": "origin",
+          "basis": "DOC01 p11 Analysis outlier paragraph",
+          "rationale": "Article says observation deleted after model estimation; no bank deletion.",
+          "source": "DOC01 p11 Analysis outlier paragraph"
+        },
+        {
+          "level_id": "A07_LAG",
+          "description": "Also suppress its lag contribution",
+          "codeable_rule": "Retain pre-exclusion benchmarks but set lag missing when its source is the excluded bank-year.",
+          "label": "uncertain",
+          "basis": "DOC01 p11 Analysis outlier paragraph",
+          "rationale": "Could follow row deletion before lag construction; affects another outcome year.",
+          "source": "DOC01 p11 Analysis outlier paragraph"
+        },
+        {
+          "level_id": "A07_BENCH",
+          "description": "Remove before benchmark calculation",
+          "codeable_rule": "Exclude named bank-year from U_t before norms; rebuild affected outcomes and lags without it as an available lag source.",
+          "label": "uncertain",
+          "basis": "DOC01 p11 Analysis outlier paragraph",
+          "rationale": "Order not documented; affects all market-relative values that year.",
+          "source": "DOC01 p11 Analysis outlier paragraph"
+        }
+      ]
+    },
+    {
+      "axis_id": "A08",
+      "decision": "Annual average-assets formula",
+      "priority_group": "variable_coding",
+      "source": "DOC01 p9 Dependent variable",
+      "levels": [
+        {
+          "level_id": "A08_O",
+          "description": "Mean quarterly reported averages",
+          "codeable_rule": "Arithmetic mean of four RCFD3368 values.",
+          "label": "origin",
+          "basis": "DOC01 p9 Dependent variable",
+          "rationale": "Uses regulatory quarterly averages to cover calendar year.",
+          "source": "DOC01 p9 Dependent variable"
+        },
+        {
+          "level_id": "A08_DAYS",
+          "description": "Calendar-day-weighted quarterly averages",
+          "codeable_rule": "Sum(days_in_quarter*RCFD3368)/days_in_year, requiring all quarters.",
+          "label": "uncertain",
+          "basis": "DOC01 p9 Dependent variable",
+          "rationale": "Daily/weekly averages vary in quarter length; annual aggregation unspecified.",
+          "source": "DOC01 p9 Dependent variable"
+        },
+        {
+          "level_id": "A08_FIVE",
+          "description": "Five endpoint average",
+          "codeable_rule": "Mean RCFD2170 at prior Q4 and current Q1,Q2,Q3,Q4.",
+          "label": "uncertain",
+          "basis": "DOC01 p9 Dependent variable",
+          "rationale": "Common stock-based annual average is defensible, but not identical to average of within-quarter averages.",
+          "source": "DOC01 p9 Dependent variable"
+        },
+        {
+          "level_id": "A08_ENDPOINT",
+          "description": "Beginning/end year mean",
+          "codeable_rule": "(RCFD2170_Q4_tminus1+RCFD2170_Q4_t)/2.",
+          "label": "uncertain",
+          "basis": "DOC01 p9 Dependent variable",
+          "rationale": "Minimal annual stock average; article explains why average is used without defining it.",
+          "source": "DOC01 p9 Dependent variable"
+        }
+      ]
+    },
+    {
+      "axis_id": "A09",
+      "decision": "Annual timing of strategy and deposit stocks",
+      "priority_group": "variable_coding",
+      "source": "DOC01 p9 Independent variable; DOC01 p10 controls",
+      "levels": [
+        {
+          "level_id": "A09_O",
+          "description": "Year-end stocks",
+          "codeable_rule": "Use Q4 stocks for each share and deposits.",
+          "label": "origin",
+          "basis": "DOC01 p9 Independent variable; DOC01 p10 controls",
+          "rationale": "Natural annual balance-sheet measurement; exact timing unreported.",
+          "source": "DOC01 p9 Independent variable; DOC01 p10 controls"
+        },
+        {
+          "level_id": "A09_QUARTERS",
+          "description": "Average annual shares and deposits",
+          "codeable_rule": "Compute each share at each Q1–Q4 date and take arithmetic mean of four shares; deposits=mean of four stocks; require all quarters; same annual entity and market membership.",
+          "label": "uncertain",
+          "basis": "DOC01 p9 Independent variable; DOC01 p10 controls",
+          "rationale": "Annual strategic position can be an average; differs from year-end.",
+          "source": "DOC01 p9 Independent variable; DOC01 p10 controls"
+        },
+        {
+          "level_id": "A09_RATIO_MEANS",
+          "description": "Ratio of annual average stocks",
+          "codeable_rule": "Each share=mean quarterly category stock/mean quarterly total assets; deposits=mean quarterly deposits; require all quarters.",
+          "label": "uncertain",
+          "basis": "DOC01 p9 Independent variable; DOC01 p10 controls",
+          "rationale": "Another annual position coding; not equal to mean of ratios.",
+          "source": "DOC01 p9 Independent variable; DOC01 p10 controls"
+        }
+      ]
+    },
+    {
+      "axis_id": "A10",
+      "decision": "Geographic scope of deposits",
+      "priority_group": "variable_coding",
+      "source": "DOC01 p10 Market share of deposits; Market growth of deposits",
+      "levels": [
+        {
+          "level_id": "A10_O",
+          "description": "Consolidated deposits",
+          "codeable_rule": "Use RCFD2200 consistently in share numerator/denominator and market growth.",
+          "label": "origin",
+          "basis": "DOC01 p10 Market share of deposits; Market growth of deposits",
+          "rationale": "Literal total bank deposits.",
+          "source": "DOC01 p10 Market share of deposits; Market growth of deposits"
+        },
+        {
+          "level_id": "A10_DOMESTIC",
+          "description": "Domestic deposits",
+          "codeable_rule": "Use RCON2200 consistently for share and market growth.",
+          "label": "uncertain",
+          "basis": "DOC01 p10 Market share of deposits; Market growth of deposits",
+          "rationale": "Better proximity to local market concept, but still includes domestic offices outside MSA. Branch-local data unavailable.",
+          "source": "DOC01 p10 Market share of deposits; Market growth of deposits"
+        }
+      ]
+    },
+    {
+      "axis_id": "A11",
+      "decision": "Commercial loan coverage",
+      "priority_group": "variable_coding",
+      "source": "DOC01 p9 Eleven asset strategies commercial loans",
+      "levels": [
+        {
+          "level_id": "A11_O",
+          "description": "C&I excluding acceptances",
+          "codeable_rule": "Use RCFD1766.",
+          "label": "origin",
+          "basis": "DOC01 p9 Eleven asset strategies commercial loans",
+          "rationale": "Direct C&I item introduced before sample.",
+          "source": "DOC01 p9 Eleven asset strategies commercial loans"
+        },
+        {
+          "level_id": "A11_ACCEPT",
+          "description": "C&I including other-bank acceptances",
+          "codeable_rule": "Use RCFD1600; subtract same amount when constructing other_loans_leases.",
+          "label": "uncertain",
+          "basis": "DOC01 p9 Eleven asset strategies commercial loans",
+          "rationale": "Older broad C&I total also matches general wording; preserve coherent residual allocation.",
+          "source": "DOC01 p9 Eleven asset strategies commercial loans"
+        }
+      ]
+    },
+    {
+      "axis_id": "A12",
+      "decision": "Agricultural versus real-estate loan allocation",
+      "priority_group": "variable_coding",
+      "source": "DOC01 p9 Eleven asset strategies agriculture loans and real estate loans",
+      "levels": [
+        {
+          "level_id": "A12_O",
+          "description": "Production loans only in agriculture",
+          "codeable_rule": "Agriculture=RCFD1590; real_estate=RCFD1410.",
+          "label": "origin",
+          "basis": "DOC01 p9 Eleven asset strategies agriculture loans and real estate loans",
+          "rationale": "Avoids overlap and maps named totals.",
+          "source": "DOC01 p9 Eleven asset strategies agriculture loans and real estate loans"
+        },
+        {
+          "level_id": "A12_FARMLAND",
+          "description": "Reallocate farmland to agriculture",
+          "codeable_rule": "Only for consistent domestic scope: agriculture=RCON1590+RCON1420; real_estate=RCON1410-RCON1420; use RCON for all stock share inputs and total assets.",
+          "label": "uncertain",
+          "basis": "DOC01 p9 Eleven asset strategies agriculture loans and real estate loans",
+          "rationale": "Broader economic agriculture definition; article item codes absent. RCON1420 is not a consolidated item.",
+          "source": "DOC01 p9 Eleven asset strategies agriculture loans and real estate loans"
+        }
+      ]
+    },
+    {
+      "axis_id": "A13",
+      "decision": "Other-loans-and-leases residual and valuation basis",
+      "priority_group": "variable_coding",
+      "source": "DOC01 p9 Eleven asset strategies other loans and leases",
+      "levels": [
+        {
+          "level_id": "A13_O",
+          "description": "Gross residual",
+          "codeable_rule": "RCFD1400 minus four named loan categories under selected mappings.",
+          "label": "origin",
+          "basis": "DOC01 p9 Eleven asset strategies other loans and leases",
+          "rationale": "Preserves gross categories including leases.",
+          "source": "DOC01 p9 Eleven asset strategies other loans and leases"
+        },
+        {
+          "level_id": "A13_NETUNEARNED",
+          "description": "Residual after unearned income",
+          "codeable_rule": "RCFD2122 minus same four loan categories.",
+          "label": "uncertain",
+          "basis": "DOC01 p9 Eleven asset strategies other loans and leases",
+          "rationale": "Loan basis not stated; unearned income reduces residual.",
+          "source": "DOC01 p9 Eleven asset strategies other loans and leases"
+        },
+        {
+          "level_id": "A13_NETALLOWANCE",
+          "description": "Residual after allowances",
+          "codeable_rule": "RCFD2125 minus same four loan categories.",
+          "label": "uncertain",
+          "basis": "DOC01 p9 Eleven asset strategies other loans and leases",
+          "rationale": "Net balance-sheet loan total is plausible; allocating all deductions to other loans may be economically problematic. Do not truncate negative residuals.",
+          "source": "DOC01 p9 Eleven asset strategies other loans and leases"
+        }
+      ]
+    },
+    {
+      "axis_id": "A14",
+      "decision": "Coverage of other assets",
+      "priority_group": "variable_coding",
+      "source": "DOC01 p9 Eleven asset strategies other assets",
+      "levels": [
+        {
+          "level_id": "A14_O",
+          "description": "Literal other-assets item",
+          "codeable_rule": "RCFD2160.",
+          "label": "origin",
+          "basis": "DOC01 p9 Eleven asset strategies other assets",
+          "rationale": "Closest item-name match; does not force eleven shares to sum to one.",
+          "source": "DOC01 p9 Eleven asset strategies other assets"
+        },
+        {
+          "level_id": "A14_BROAD",
+          "description": "Sum named nonloan residual assets",
+          "codeable_rule": "RCFD2160+RCFD2150+RCFD2130+RCFD2155+RCFD2143, requiring all components.",
+          "label": "uncertain",
+          "basis": "DOC01 p9 Eleven asset strategies other assets",
+          "rationale": "Article may mean all other categories, not only a single regulatory line.",
+          "source": "DOC01 p9 Eleven asset strategies other assets"
+        },
+        {
+          "level_id": "A14_RESIDUAL",
+          "description": "Residual from total assets",
+          "codeable_rule": "RCFD2170 minus amounts of other ten strategies.",
+          "label": "uncertain",
+          "basis": "DOC01 p9 Eleven asset strategies other assets",
+          "rationale": "Exhaustive allocation plausible; can absorb allowance/accounting differences. No evidence article required shares sum to one.",
+          "source": "DOC01 p9 Eleven asset strategies other assets"
+        }
+      ]
+    },
+    {
+      "axis_id": "A15",
+      "decision": "Stock consolidation scope",
+      "priority_group": "variable_coding",
+      "source": "DOC01 p9 Bank asset strategies and performance",
+      "levels": [
+        {
+          "level_id": "A15_O",
+          "description": "Consolidated bank stocks",
+          "codeable_rule": "Use RCFD for total assets, quarterly averages and asset categories.",
+          "label": "origin",
+          "basis": "DOC01 p9 Bank asset strategies and performance",
+          "rationale": "Bank legal entity and consolidated item coverage support it.",
+          "source": "DOC01 p9 Bank asset strategies and performance"
+        },
+        {
+          "level_id": "A15_DOMESTIC",
+          "description": "Domestic-office stock scope",
+          "codeable_rule": "Replace each RCFD stock/quarterly-average item with same-code RCON; keep RIAD income only if reporting scope aligns; otherwise flag undefined rather than silently combine.",
+          "label": "uncertain",
+          "basis": "DOC01 p9 Bank asset strategies and performance",
+          "rationale": "Local market could suggest domestic scope; income-statement compatibility must be established. For banks without foreign offices the dictionary says amounts coincide.",
+          "source": "DOC01 p9 Bank asset strategies and performance"
+        }
+      ]
+    },
+    {
+      "axis_id": "A16",
+      "decision": "Annual norm SD divisor and zero-variance rule",
+      "priority_group": "variable_coding",
+      "source": "DOC01 p10 Strategic-deviation equation",
+      "levels": [
+        {
+          "level_id": "A16_O",
+          "description": "Sample SD; constant strategy contributes zero",
+          "codeable_rule": "Use divisor count_a,t-1; if positive count and all reported shares equal, contribution=0; insufficient count remains undefined.",
+          "label": "origin",
+          "basis": "DOC01 p10 Strategic-deviation equation",
+          "rationale": "Conventional sample SD; zero-variance convention needed but unreported.",
+          "source": "DOC01 p10 Strategic-deviation equation"
+        },
+        {
+          "level_id": "A16_POP",
+          "description": "Population SD",
+          "codeable_rule": "Use divisor count_a,t, retaining zero-variance convention.",
+          "label": "uncertain",
+          "basis": "DOC01 p10 Strategic-deviation equation",
+          "rationale": "The article calls the banks a population; annual counts vary so this is not necessarily constant rescaling.",
+          "source": "DOC01 p10 Strategic-deviation equation"
+        },
+        {
+          "level_id": "A16_UNDEFINED",
+          "description": "Leave zero SD undefined",
+          "codeable_rule": "Use sample SD but set D missing if any strategy SD is zero.",
+          "label": "uncertain",
+          "basis": "DOC01 p10 Strategic-deviation equation",
+          "rationale": "Literal formula divides by zero; article supplies no convention.",
+          "source": "DOC01 p10 Strategic-deviation equation"
+        }
+      ]
+    },
+    {
+      "axis_id": "A17",
+      "decision": "Inflation index, averaging and vintage",
+      "priority_group": "variable_coding",
+      "source": "DOC01 p10 Real market growth",
+      "levels": [
+        {
+          "level_id": "A17_O",
+          "description": "National NSA CPI annual mean",
+          "codeable_rule": "Use CPIAUCNS annual mean as manifest.",
+          "label": "origin",
+          "basis": "DOC01 p10 Real market growth",
+          "rationale": "Disclosed conventional assumption; no named index in article.",
+          "source": "DOC01 p10 Real market growth"
+        },
+        {
+          "level_id": "A17_LOCAL",
+          "description": "Local annual CPI",
+          "codeable_rule": "Use CUUSA211SA0 annual values, one provider/vintage per year.",
+          "label": "uncertain",
+          "basis": "DOC01 p10 Real market growth",
+          "rationale": "Single-market design supports local price adjustment; series geography can change.",
+          "source": "DOC01 p10 Real market growth"
+        },
+        {
+          "level_id": "A17_GDP",
+          "description": "Historical-vintage GDP deflator",
+          "codeable_rule": "Use GDPDEF ALFRED vintage 1997-06-30, annual mean of four quarterly indices.",
+          "label": "uncertain",
+          "basis": "DOC01 p10 Real market growth",
+          "rationale": "Real-deposit growth may use broad deflator; contemporaneous vintage is available but not identified by article.",
+          "source": "DOC01 p10 Real market growth"
+        },
+        {
+          "level_id": "A17_DEC",
+          "description": "National NSA CPI year-end",
+          "codeable_rule": "Use CPIAUCNS December value with Q4 deposit stocks.",
+          "label": "uncertain",
+          "basis": "DOC01 p10 Real market growth",
+          "rationale": "Aligns price date to stock date rather than annual mean.",
+          "source": "DOC01 p10 Real market growth"
+        }
+      ]
+    },
+    {
+      "axis_id": "A18",
+      "decision": "Normalization of precision weights",
+      "priority_group": "estimator",
+      "source": "DOC01 p11 Analysis WLS and SSE comparisons",
+      "levels": [
+        {
+          "level_id": "A18_O",
+          "description": "Raw fractional market-share weights",
+          "codeable_rule": "w=market_share; objective sum(w*e²).",
+          "label": "origin",
+          "basis": "DOC01 p11 Analysis WLS and SSE comparisons",
+          "rationale": "Direct inverse of stated error-variance proportionality.",
+          "source": "DOC01 p11 Analysis WLS and SSE comparisons"
+        },
+        {
+          "level_id": "A18_MEAN1",
+          "description": "Weights normalized to mean one",
+          "codeable_rule": "w=market_share/mean_estimation_sample(market_share), same common sample all models.",
+          "label": "equivalent",
+          "basis": "DOC01 p11 Analysis WLS and SSE comparisons",
+          "rationale": "Common positive scaling preserves coefficients, conventional SE and F; raw SSE must be converted back by that constant before comparison.",
+          "source": "DOC01 p11 Analysis WLS and SSE comparisons"
+        }
+      ]
+    },
+    {
+      "axis_id": "A19",
+      "decision": "Native covariance implementation and dependence sensitivity",
+      "priority_group": "fixed_effects_clustering",
+      "source": "DOC01 p11 Analysis pooled time series and WLS",
+      "levels": [
+        {
+          "level_id": "A19_O",
+          "description": "Model-based WLS",
+          "codeable_rule": "Covariance=s²*(X W X)^(-1) with residual-df s².",
+          "label": "origin",
+          "basis": "DOC01 p11 Analysis pooled time series and WLS",
+          "rationale": "No robust or cluster method named; closest classical GLS description.",
+          "source": "DOC01 p11 Analysis pooled time series and WLS"
+        },
+        {
+          "level_id": "A19_BANKCLUSTER",
+          "description": "Bank-cluster sensitivity",
+          "codeable_rule": "Sandwich covariance from weighted score contributions summed within RSSD9001, use cluster-count finite-sample factor G/(G-1)*(n-1)/(n-k), reference t_(G-1).",
+          "label": "non_equivalent",
+          "basis": "DOC01 p11 Analysis pooled time series and WLS",
+          "rationale": "Repeated bank observations motivate checking residual dependence, but this changes native inference. Article discusses that dependence in its autocorrelation assessment; not an equivalent replication.",
+          "source": "DOC01 p11 Analysis pooled time series and WLS"
+        }
+      ]
+    },
+    {
+      "axis_id": "A20",
+      "decision": "Unstated coefficient-test tails",
+      "priority_group": "estimator",
+      "source": "DOC01 p10 Directional hypotheses; DOC01 p12 table significance notes",
+      "levels": [
+        {
+          "level_id": "A20_O",
+          "description": "Two-sided coefficient inference",
+          "codeable_rule": "2*Student_t_sf(abs(t),df_resid); keep hypotheses directions separate.",
+          "label": "origin",
+          "basis": "DOC01 p10 Directional hypotheses; DOC01 p12 table significance notes",
+          "rationale": "Tail not reported; symmetric convention disclosed.",
+          "source": "DOC01 p10 Directional hypotheses; DOC01 p12 table significance notes"
+        },
+        {
+          "level_id": "A20_DIRECTIONAL",
+          "description": "One-sided focal tests",
+          "codeable_rule": "H1 use upper t tail on M2 D; H2 lower tail on same coefficient; H3 lower tail on M3 D². Keep nuisance coefficient tests two-sided and F tests upper-tailed.",
+          "label": "uncertain",
+          "basis": "DOC01 p10 Directional hypotheses; DOC01 p12 table significance notes",
+          "rationale": "Explicit directional hypotheses permit this interpretation but notes do not endorse it; never recode an opposite-sign result as supporting a hypothesis.",
+          "source": "DOC01 p10 Directional hypotheses; DOC01 p12 table significance notes"
+        }
+      ]
+    },
+    {
+      "axis_id": "A21",
+      "decision": "Polynomial basis implementation",
+      "priority_group": "variable_coding",
+      "source": "DOC01 p11 Model 3 equation; DOC01 p13 collinearity",
+      "levels": [
+        {
+          "level_id": "A21_O",
+          "description": "Raw polynomial",
+          "codeable_rule": "Fit intercept,D²,D plus fixed controls.",
+          "label": "origin",
+          "basis": "DOC01 p11 Model 3 equation; DOC01 p13 collinearity",
+          "rationale": "Explicit printed model.",
+          "source": "DOC01 p11 Model 3 equation; DOC01 p13 collinearity"
+        },
+        {
+          "level_id": "A21_CENTER",
+          "description": "Centered polynomial with back-transformation",
+          "codeable_rule": "Set z=D-c for fixed c=unweighted sample mean D; fit intercept,z²,z plus unchanged controls; report b_D²=b_z², b_D=b_z-2*c*b_z², intercept=b0_z-c*b_z+c²*b_z²; transform covariance by same Jacobian.",
+          "label": "equivalent",
+          "basis": "DOC01 p11 Model 3 equation; DOC01 p13 collinearity",
+          "rationale": "Algebraic reparameterization of same column space, same fitted values and weights; no coefficient comparison before conversion.",
+          "source": "DOC01 p11 Model 3 equation; DOC01 p13 collinearity"
+        }
+      ]
+    }
+  ],
+  "locked_design": {
+    "source": "DOC01 p11 Model 3 equation and hierarchical regression; DOC01 p13 diagnostic",
+    "rules": [
+      "Keep outcome years, relative-ROA outcome, eleven strategy concepts, all four named controls, intercept, and the M1/M2/M3 progression fixed.",
+      "M3_SQ is a separately reported robustness model, not an equivalent alternative to M3. Unreported strategy-control regressions are unavailable, not an equivalent control-list choice.",
+      "No bank/year fixed effects in origin or equivalent set. Year fixed effects would absorb the explicitly included market-year growth variable.",
+      "No alternative estimator is put into the equivalent set: WLS is explicit. Reversing the weights to 1/market_share or premultiplying by market_share instead of its square root contradicts stated variance model.",
+      "The eleven category concepts and absolute-z sum are explicit; pairwise/Euclidean distances discussed as future research are not equivalent implementations.",
+      "Balanced-survivor panels, all-US markets, thrift inclusion and alternative outcomes are not open decisions under the stated design."
+    ]
+  },
+  "compatible_crossings": [
+    {
+      "rule": "A05_ENDPOINT requires A08_ENDPOINT; A08_ENDPOINT need not force survival of all quarters. A05_AVAILABLE is allowed only with A08_O and changes its four-quarter completeness rule. A08_FIVE requires prior Q4 plus all current endpoints, regardless of average-item availability. A09 quarterly stock levels retain their own coverage requirements.",
+      "source": "DOC01 p9 Sample and data; Dependent variable"
+    },
+    {
+      "rule": "A12_FARMLAND requires A15_DOMESTIC and scope-compatible income. Adjust real-estate and other-loan residual amounts together; never double-count farmland.",
+      "source": "DOC01 p9 Independent variable"
+    },
+    {
+      "rule": "A11 and A13 always cross by subtracting the selected four loan category definitions from the selected loan total. A14_RESIDUAL must use those same ten category amounts.",
+      "source": "DOC01 p9 Eleven asset strategies"
+    },
+    {
+      "rule": "A09_QUARTERS and A09_RATIO_MEANS require quarterly strategy/deposit coverage and annual aggregation before annual norms. A17_DEC is a date-matching rationale chiefly for A09_O; its crossing with averaged deposits remains an uncertain mixed timing variant.",
+      "source": "DOC01 p9 Independent variable; DOC01 p10 real growth"
+    },
+    {
+      "rule": "A04_ANALYTIC and A07_BENCH must use a single explicitly frozen membership mask and deletion order. Do not iterate sample membership until numerical targets agree.",
+      "source": "DOC01 p9 All-bank means; DOC01 p11 outlier deletion"
+    },
+    {
+      "rule": "For every variant, M1/M2/M3 nested tests require identical rows and weights. Apply any source or benchmark variant to current and lagged outcomes consistently.",
+      "source": "DOC01 p11 Hierarchical regression and F-tests"
+    },
+    {
+      "rule": "A18_MEAN1 and A21_CENTER require back-conversion of SSE and coefficients/covariance respectively for published-scale comparisons. The conditional identity A06_IDENTITY is equivalent only after the equality is established from definitions, not fitted results.",
+      "source": "DOC01 p11 WLS; Model 3 equation"
+    },
+    {
+      "rule": "Non-equivalent levels are outside equivalent replication family. Uncertain levels require reconciliation before execution. Wider space is off by default.",
+      "source": "DOC01 p11 Reported analysis; governance in rules/reader_rules.md"
+    }
+  ],
+  "wider_grid_enabled": false
+}

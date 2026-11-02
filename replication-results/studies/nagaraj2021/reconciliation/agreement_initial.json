@@ -1,0 +1,205 @@
+{
+ "rule_set": "Initial reader agreement on claim tiers, before any clarification round.\n\nMatching rule set (fixed before comparing labels): one ledger unit per Table 1 row, Table 2 row,\nregression column in Tables 3-7 (Table 6 split into the Treat and Distance terms) and figure panel or series.\nEach unit maps to the reader claim that covers it; a reader claim covering several units is reused.\nText-summary claims that span several tables are kept as structural extras, outside the unit ledger.",
+ "units": 84,
+ "tier_5cat": {
+  "n": 84,
+  "observed_agreement": 0.9048,
+  "chance_pe": 0.1848,
+  "ac1": 0.8832
+ },
+ "focal_vs_other": {
+  "n": 84,
+  "observed_agreement": 0.9762,
+  "chance_pe": 0.375,
+  "ac1": 0.9619
+ },
+ "by_block": {
+  "F1": {
+   "n": 2,
+   "observed_agreement": 0.5,
+   "chance_pe": 0.0938,
+   "ac1": 0.4483
+  },
+  "F2": {
+   "n": 2,
+   "observed_agreement": 0.0,
+   "chance_pe": 0.125,
+   "ac1": -0.1429
+  },
+  "F3": {
+   "n": 4,
+   "observed_agreement": 1.0,
+   "chance_pe": 0.0,
+   "ac1": 1.0
+  },
+  "F4": {
+   "n": 2,
+   "observed_agreement": 1.0,
+   "chance_pe": 0.0,
+   "ac1": 1.0
+  },
+  "F5": {
+   "n": 1,
+   "observed_agreement": 1.0,
+   "chance_pe": 0.0,
+   "ac1": 1.0
+  },
+  "F6": {
+   "n": 3,
+   "observed_agreement": 0.0,
+   "chance_pe": 0.125,
+   "ac1": -0.1429
+  },
+  "T1": {
+   "n": 11,
+   "observed_agreement": 1.0,
+   "chance_pe": 0.124,
+   "ac1": 1.0
+  },
+  "T2": {
+   "n": 18,
+   "observed_agreement": 1.0,
+   "chance_pe": 0.0,
+   "ac1": 1.0
+  },
+  "T3": {
+   "n": 6,
+   "observed_agreement": 1.0,
+   "chance_pe": 0.0,
+   "ac1": 1.0
+  },
+  "T4": {
+   "n": 6,
+   "observed_agreement": 1.0,
+   "chance_pe": 0.0,
+   "ac1": 1.0
+  },
+  "T5A": {
+   "n": 8,
+   "observed_agreement": 1.0,
+   "chance_pe": 0.0938,
+   "ac1": 1.0
+  },
+  "T5B": {
+   "n": 8,
+   "observed_agreement": 1.0,
+   "chance_pe": 0.0,
+   "ac1": 1.0
+  },
+  "T6": {
+   "n": 6,
+   "observed_agreement": 0.6667,
+   "chance_pe": 0.1528,
+   "ac1": 0.6066
+  },
+  "T7": {
+   "n": 7,
+   "observed_agreement": 1.0,
+   "chance_pe": 0.0,
+   "ac1": 1.0
+  }
+ },
+ "disagreements": [
+  {
+   "unit": "T6|(2) Treat",
+   "opus_claim": "C_T6_2",
+   "astra_claim": "T6C2",
+   "opus_tier": "robustness",
+   "astra_tier": "focal",
+   "agree": false,
+   "reconciled_tier": "uncertain:focal|robustness"
+  },
+  {
+   "unit": "T6|(3) Treat",
+   "opus_claim": "C_T6_3",
+   "astra_claim": "T6C3",
+   "opus_tier": "robustness",
+   "astra_tier": "focal",
+   "agree": false,
+   "reconciled_tier": "uncertain:focal|robustness"
+  },
+  {
+   "unit": "F1|a",
+   "opus_claim": "C_F1_a",
+   "astra_claim": "F1A",
+   "opus_tier": "descriptive",
+   "astra_tier": "identification_or_inference_diagnostic",
+   "agree": false,
+   "reconciled_tier": "uncertain:descriptive|identification_or_inference_diagnostic"
+  },
+  {
+   "unit": "F2|a",
+   "opus_claim": "C_F2_a",
+   "astra_claim": "F2A",
+   "opus_tier": "descriptive",
+   "astra_tier": "identification_or_inference_diagnostic",
+   "agree": false,
+   "reconciled_tier": "uncertain:descriptive|identification_or_inference_diagnostic"
+  },
+  {
+   "unit": "F2|b",
+   "opus_claim": "C_F2_b",
+   "astra_claim": "F2B",
+   "opus_tier": "descriptive",
+   "astra_tier": "identification_or_inference_diagnostic",
+   "agree": false,
+   "reconciled_tier": "uncertain:descriptive|identification_or_inference_diagnostic"
+  },
+  {
+   "unit": "F6|a follow-on",
+   "opus_claim": "C_F6_a",
+   "astra_claim": "F6AF",
+   "opus_tier": "descriptive",
+   "astra_tier": "robustness",
+   "agree": false,
+   "reconciled_tier": "uncertain:descriptive|robustness"
+  },
+  {
+   "unit": "F6|a contributors",
+   "opus_claim": "C_F6_a",
+   "astra_claim": "F6AU",
+   "opus_tier": "descriptive",
+   "astra_tier": "robustness",
+   "agree": false,
+   "reconciled_tier": "uncertain:descriptive|robustness"
+  },
+  {
+   "unit": "F6|b",
+   "opus_claim": "C_F6_b",
+   "astra_claim": "F6B",
+   "opus_tier": "descriptive",
+   "astra_tier": "robustness",
+   "agree": false,
+   "reconciled_tier": "uncertain:descriptive|robustness"
+  }
+ ],
+ "structural_extras": {
+  "opus_text_claims": [
+   "C_TXT_intro",
+   "C_TXT_abstract",
+   "C_TXT_333"
+  ],
+  "astra_text_claims": [
+   "INTRO_ACTIVITY",
+   "INTRO_QUALITY"
+  ],
+  "opus_extra_units": [
+   "C_T2_sample (panel dimensions note)"
+  ],
+  "granularity": "Opus grouped Table 1 balance rows, Table 2 rows, Figure 3 sub-panels and Figure 6(a) series; Astra listed them separately"
+ },
+ "counts": {
+  "opus_claims": 66,
+  "astra_claims": 86
+ },
+ "specification_labels": {
+  "matched_level_pairs": 15,
+  "agree": 8,
+  "observed_agreement": 0.5333,
+  "chance_pe": 0.3233,
+  "ac1": 0.3103,
+  "axes_opus": 21,
+  "axes_astra": 13,
+  "note": "Initial outputs only; no clarification round was used."
+ }
+}

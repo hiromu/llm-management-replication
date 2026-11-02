@@ -1,0 +1,2145 @@
+{
+ "claims": [
+  {
+   "claim_id": "C01",
+   "statement": "GenMe placed significantly greater emphasis on leisure than GenX (d = .22).",
+   "hypothesis_label": "Research Question 1",
+   "direction_claimed": "increase",
+   "tier": "focal",
+   "estimand": "Standardized difference in latent means of the Leisure rewards factor between the two survey-year cohorts, d = (later-year latent mean minus earlier-year latent mean) / SD; d formula and SD definition not stated in the article",
+   "effect_scale_and_null": "Cohen's d-type standardized mean difference; null = 0",
+   "population": "U.S. high school seniors, Monitoring the Future, Form 4 respondents, survey years 1976 (Boomers), 1991 (GenX), 2006 (GenMe)",
+   "comparison_units": "1991 vs 2006",
+   "supporting_results": [
+    {
+     "doc_id": "P1",
+     "pdf_page": 11,
+     "table": "Table 1",
+     "column": "1991 vs 2006 t or d",
+     "row": "Leisure rewards"
+    },
+    {
+     "doc_id": "P1",
+     "pdf_page": 15,
+     "table": "Results text",
+     "column": "",
+     "row": "Research Question 1"
+    }
+   ],
+   "target_ids": [
+    "T023",
+    "T014",
+    "T015",
+    "T016",
+    "T017",
+    "T018",
+    "T019",
+    "T020",
+    "T021"
+   ],
+   "notes": ""
+  },
+  {
+   "claim_id": "C02",
+   "statement": "GenMe placed significantly greater emphasis on leisure than Boomers (d = .57), exceeding the d = .50 moderate-effect cutoff; headline finding in abstract.",
+   "hypothesis_label": "Research Question 1",
+   "direction_claimed": "increase",
+   "tier": "focal",
+   "estimand": "Standardized difference in latent means of the Leisure rewards factor between the two survey-year cohorts, d = (later-year latent mean minus earlier-year latent mean) / SD; d formula and SD definition not stated in the article",
+   "effect_scale_and_null": "Cohen's d-type standardized mean difference; null = 0",
+   "population": "U.S. high school seniors, Monitoring the Future, Form 4 respondents, survey years 1976 (Boomers), 1991 (GenX), 2006 (GenMe)",
+   "comparison_units": "1976 vs 2006",
+   "supporting_results": [
+    {
+     "doc_id": "P1",
+     "pdf_page": 11,
+     "table": "Table 1",
+     "column": "1976 vs 2006 t or d",
+     "row": "Leisure rewards"
+    },
+    {
+     "doc_id": "P1",
+     "pdf_page": 15,
+     "table": "Results text",
+     "column": "",
+     "row": "Research Question 1"
+    }
+   ],
+   "target_ids": [
+    "T024",
+    "T010",
+    "T011",
+    "T012",
+    "T013",
+    "T018",
+    "T019",
+    "T020",
+    "T021"
+   ],
+   "notes": "Also abstract PDF p. 1."
+  },
+  {
+   "claim_id": "C03",
+   "statement": "GenX valued leisure significantly more than Boomers (d = .35).",
+   "hypothesis_label": "Research Question 1",
+   "direction_claimed": "increase",
+   "tier": "focal",
+   "estimand": "Standardized difference in latent means of the Leisure rewards factor between the two survey-year cohorts, d = (later-year latent mean minus earlier-year latent mean) / SD; d formula and SD definition not stated in the article",
+   "effect_scale_and_null": "Cohen's d-type standardized mean difference; null = 0",
+   "population": "U.S. high school seniors, Monitoring the Future, Form 4 respondents, survey years 1976 (Boomers), 1991 (GenX), 2006 (GenMe)",
+   "comparison_units": "1976 vs 1991",
+   "supporting_results": [
+    {
+     "doc_id": "P1",
+     "pdf_page": 11,
+     "table": "Table 1",
+     "column": "1976 vs 1991 t or d",
+     "row": "Leisure rewards"
+    },
+    {
+     "doc_id": "P1",
+     "pdf_page": 15,
+     "table": "Results text",
+     "column": "",
+     "row": "Research Question 1"
+    }
+   ],
+   "target_ids": [
+    "T022",
+    "T010",
+    "T011",
+    "T012",
+    "T013",
+    "T014",
+    "T015",
+    "T016",
+    "T017"
+   ],
+   "notes": ""
+  },
+  {
+   "claim_id": "C04",
+   "statement": "GenX significantly more likely than Boomers to value extrinsic rewards (d = .39).",
+   "hypothesis_label": "Research Question 2",
+   "direction_claimed": "increase",
+   "tier": "focal",
+   "estimand": "Standardized difference in latent means of the Extrinsic rewards factor between the two survey-year cohorts, d = (later-year latent mean minus earlier-year latent mean) / SD; d formula and SD definition not stated in the article",
+   "effect_scale_and_null": "Cohen's d-type standardized mean difference; null = 0",
+   "population": "U.S. high school seniors, Monitoring the Future, Form 4 respondents, survey years 1976 (Boomers), 1991 (GenX), 2006 (GenMe)",
+   "comparison_units": "1976 vs 1991",
+   "supporting_results": [
+    {
+     "doc_id": "P1",
+     "pdf_page": 12,
+     "table": "Table 1",
+     "column": "1976 vs 1991 t or d",
+     "row": "Extrinsic rewards"
+    },
+    {
+     "doc_id": "P1",
+     "pdf_page": 16,
+     "table": "Results text",
+     "column": "",
+     "row": "Research Question 2"
+    }
+   ],
+   "target_ids": [
+    "T082",
+    "T070",
+    "T071",
+    "T072",
+    "T073",
+    "T074",
+    "T075",
+    "T076",
+    "T077"
+   ],
+   "notes": ""
+  },
+  {
+   "claim_id": "C05",
+   "statement": "GenMe less likely than GenX to value extrinsic rewards (d = -.13); trend reversed between GenX and GenMe.",
+   "hypothesis_label": "Research Question 2",
+   "direction_claimed": "decrease",
+   "tier": "focal",
+   "estimand": "Standardized difference in latent means of the Extrinsic rewards factor between the two survey-year cohorts, d = (later-year latent mean minus earlier-year latent mean) / SD; d formula and SD definition not stated in the article",
+   "effect_scale_and_null": "Cohen's d-type standardized mean difference; null = 0",
+   "population": "U.S. high school seniors, Monitoring the Future, Form 4 respondents, survey years 1976 (Boomers), 1991 (GenX), 2006 (GenMe)",
+   "comparison_units": "1991 vs 2006",
+   "supporting_results": [
+    {
+     "doc_id": "P1",
+     "pdf_page": 12,
+     "table": "Table 1",
+     "column": "1991 vs 2006 t or d",
+     "row": "Extrinsic rewards"
+    },
+    {
+     "doc_id": "P1",
+     "pdf_page": 16,
+     "table": "Results text",
+     "column": "",
+     "row": "Research Question 2"
+    }
+   ],
+   "target_ids": [
+    "T083",
+    "T074",
+    "T075",
+    "T076",
+    "T077",
+    "T078",
+    "T079",
+    "T080",
+    "T081"
+   ],
+   "notes": ""
+  },
+  {
+   "claim_id": "C06",
+   "statement": "GenMe still significantly more likely than Boomers to value extrinsic rewards (d = .26); headline finding in abstract.",
+   "hypothesis_label": "Research Question 2",
+   "direction_claimed": "increase",
+   "tier": "focal",
+   "estimand": "Standardized difference in latent means of the Extrinsic rewards factor between the two survey-year cohorts, d = (later-year latent mean minus earlier-year latent mean) / SD; d formula and SD definition not stated in the article",
+   "effect_scale_and_null": "Cohen's d-type standardized mean difference; null = 0",
+   "population": "U.S. high school seniors, Monitoring the Future, Form 4 respondents, survey years 1976 (Boomers), 1991 (GenX), 2006 (GenMe)",
+   "comparison_units": "1976 vs 2006",
+   "supporting_results": [
+    {
+     "doc_id": "P1",
+     "pdf_page": 12,
+     "table": "Table 1",
+     "column": "1976 vs 2006 t or d",
+     "row": "Extrinsic rewards"
+    },
+    {
+     "doc_id": "P1",
+     "pdf_page": 16,
+     "table": "Results text",
+     "column": "",
+     "row": "Research Question 2"
+    }
+   ],
+   "target_ids": [
+    "T084",
+    "T070",
+    "T071",
+    "T072",
+    "T073",
+    "T078",
+    "T079",
+    "T080",
+    "T081"
+   ],
+   "notes": "Also abstract PDF p. 1."
+  },
+  {
+   "claim_id": "C07",
+   "statement": "GenX and Boomers did not differ significantly in intrinsic value (text prints d = .05; Table 1 prints -.05).",
+   "hypothesis_label": "Research Question 3",
+   "direction_claimed": "no_difference",
+   "tier": "focal",
+   "estimand": "Standardized difference in latent means of the Intrinsic rewards factor between the two survey-year cohorts, d = (later-year latent mean minus earlier-year latent mean) / SD; d formula and SD definition not stated in the article",
+   "effect_scale_and_null": "Cohen's d-type standardized mean difference; null = 0",
+   "population": "U.S. high school seniors, Monitoring the Future, Form 4 respondents, survey years 1976 (Boomers), 1991 (GenX), 2006 (GenMe)",
+   "comparison_units": "1976 vs 1991",
+   "supporting_results": [
+    {
+     "doc_id": "P1",
+     "pdf_page": 11,
+     "table": "Table 1",
+     "column": "1976 vs 1991 t or d",
+     "row": "Intrinsic rewards"
+    },
+    {
+     "doc_id": "P1",
+     "pdf_page": 16,
+     "table": "Results text",
+     "column": "",
+     "row": "Research Question 3"
+    }
+   ],
+   "target_ids": [
+    "T037",
+    "T025",
+    "T026",
+    "T027",
+    "T028",
+    "T029",
+    "T030",
+    "T031",
+    "T032"
+   ],
+   "notes": "Sign discrepancy between text (.05) and Table 1 (-.05)."
+  },
+  {
+   "claim_id": "C08",
+   "statement": "GenMe significantly less likely than GenX to value intrinsically rewarding job (d = -.16).",
+   "hypothesis_label": "Research Question 3",
+   "direction_claimed": "decrease",
+   "tier": "focal",
+   "estimand": "Standardized difference in latent means of the Intrinsic rewards factor between the two survey-year cohorts, d = (later-year latent mean minus earlier-year latent mean) / SD; d formula and SD definition not stated in the article",
+   "effect_scale_and_null": "Cohen's d-type standardized mean difference; null = 0",
+   "population": "U.S. high school seniors, Monitoring the Future, Form 4 respondents, survey years 1976 (Boomers), 1991 (GenX), 2006 (GenMe)",
+   "comparison_units": "1991 vs 2006",
+   "supporting_results": [
+    {
+     "doc_id": "P1",
+     "pdf_page": 11,
+     "table": "Table 1",
+     "column": "1991 vs 2006 t or d",
+     "row": "Intrinsic rewards"
+    },
+    {
+     "doc_id": "P1",
+     "pdf_page": 17,
+     "table": "Results text",
+     "column": "",
+     "row": "Research Question 3"
+    }
+   ],
+   "target_ids": [
+    "T038",
+    "T029",
+    "T030",
+    "T031",
+    "T032",
+    "T033",
+    "T034",
+    "T035",
+    "T036"
+   ],
+   "notes": ""
+  },
+  {
+   "claim_id": "C09",
+   "statement": "GenMe significantly less likely than Boomers to value intrinsically rewarding job (d = -.20).",
+   "hypothesis_label": "Research Question 3",
+   "direction_claimed": "decrease",
+   "tier": "focal",
+   "estimand": "Standardized difference in latent means of the Intrinsic rewards factor between the two survey-year cohorts, d = (later-year latent mean minus earlier-year latent mean) / SD; d formula and SD definition not stated in the article",
+   "effect_scale_and_null": "Cohen's d-type standardized mean difference; null = 0",
+   "population": "U.S. high school seniors, Monitoring the Future, Form 4 respondents, survey years 1976 (Boomers), 1991 (GenX), 2006 (GenMe)",
+   "comparison_units": "1976 vs 2006",
+   "supporting_results": [
+    {
+     "doc_id": "P1",
+     "pdf_page": 11,
+     "table": "Table 1",
+     "column": "1976 vs 2006 t or d",
+     "row": "Intrinsic rewards"
+    },
+    {
+     "doc_id": "P1",
+     "pdf_page": 17,
+     "table": "Results text",
+     "column": "",
+     "row": "Research Question 3"
+    }
+   ],
+   "target_ids": [
+    "T039",
+    "T025",
+    "T026",
+    "T027",
+    "T028",
+    "T033",
+    "T034",
+    "T035",
+    "T036"
+   ],
+   "notes": ""
+  },
+  {
+   "claim_id": "C10",
+   "statement": "No significant differences among GenMe, GenX and Boomers in altruistic work values (Table 1 d = -.04, -.06, -.10); GenMe does not favor altruistic values more than earlier generations.",
+   "hypothesis_label": "Research Question 4",
+   "direction_claimed": "no_difference",
+   "tier": "focal",
+   "estimand": "Standardized differences in latent means of the Altruistic factor for each year pair, d = later minus earlier / SD (formula not stated)",
+   "effect_scale_and_null": "d; null = 0",
+   "population": "U.S. high school seniors, Monitoring the Future, Form 4 respondents, survey years 1976 (Boomers), 1991 (GenX), 2006 (GenMe)",
+   "comparison_units": "1976 vs 1991; 1991 vs 2006; 1976 vs 2006",
+   "supporting_results": [
+    {
+     "doc_id": "P1",
+     "pdf_page": 12,
+     "table": "Table 1",
+     "column": "t or d (all three)",
+     "row": "Altruistic rewards"
+    },
+    {
+     "doc_id": "P1",
+     "pdf_page": 17,
+     "table": "Results text",
+     "column": "",
+     "row": "Research Question 4"
+    }
+   ],
+   "target_ids": [
+    "T052",
+    "T053",
+    "T054",
+    "T040",
+    "T041",
+    "T042",
+    "T043",
+    "T044",
+    "T045",
+    "T046",
+    "T047",
+    "T048",
+    "T049",
+    "T050",
+    "T051"
+   ],
+   "notes": "Headline 'contrary to popular press' claim in abstract (PDF p. 1). No test statistic reported for the latent means; significance judgement apparently from CIs/effect sizes."
+  },
+  {
+   "claim_id": "C11",
+   "statement": "GenMe valued social interactions at work significantly less than GenX (d = -.18).",
+   "hypothesis_label": "Research Question 5",
+   "direction_claimed": "decrease",
+   "tier": "focal",
+   "estimand": "Standardized difference in latent means of the Social rewards factor between the two survey-year cohorts, d = (later-year latent mean minus earlier-year latent mean) / SD; d formula and SD definition not stated in the article",
+   "effect_scale_and_null": "Cohen's d-type standardized mean difference; null = 0",
+   "population": "U.S. high school seniors, Monitoring the Future, Form 4 respondents, survey years 1976 (Boomers), 1991 (GenX), 2006 (GenMe)",
+   "comparison_units": "1991 vs 2006",
+   "supporting_results": [
+    {
+     "doc_id": "P1",
+     "pdf_page": 12,
+     "table": "Table 1",
+     "column": "1991 vs 2006 t or d",
+     "row": "Social rewards"
+    },
+    {
+     "doc_id": "P1",
+     "pdf_page": 17,
+     "table": "Results text",
+     "column": "",
+     "row": "Research Question 5"
+    }
+   ],
+   "target_ids": [
+    "T068",
+    "T059",
+    "T060",
+    "T061",
+    "T062",
+    "T063",
+    "T064",
+    "T065",
+    "T066"
+   ],
+   "notes": ""
+  },
+  {
+   "claim_id": "C12",
+   "statement": "GenMe valued social rewards significantly less than Boomers (d = -.28).",
+   "hypothesis_label": "Research Question 5",
+   "direction_claimed": "decrease",
+   "tier": "focal",
+   "estimand": "Standardized difference in latent means of the Social rewards factor between the two survey-year cohorts, d = (later-year latent mean minus earlier-year latent mean) / SD; d formula and SD definition not stated in the article",
+   "effect_scale_and_null": "Cohen's d-type standardized mean difference; null = 0",
+   "population": "U.S. high school seniors, Monitoring the Future, Form 4 respondents, survey years 1976 (Boomers), 1991 (GenX), 2006 (GenMe)",
+   "comparison_units": "1976 vs 2006",
+   "supporting_results": [
+    {
+     "doc_id": "P1",
+     "pdf_page": 12,
+     "table": "Table 1",
+     "column": "1976 vs 2006 t or d",
+     "row": "Social rewards"
+    },
+    {
+     "doc_id": "P1",
+     "pdf_page": 17,
+     "table": "Results text",
+     "column": "",
+     "row": "Research Question 5"
+    }
+   ],
+   "target_ids": [
+    "T069",
+    "T055",
+    "T056",
+    "T057",
+    "T058",
+    "T063",
+    "T064",
+    "T065",
+    "T066"
+   ],
+   "notes": ""
+  },
+  {
+   "claim_id": "C13",
+   "statement": "GenX and Boomers did not significantly differ in social values (d = -.10).",
+   "hypothesis_label": "Research Question 5",
+   "direction_claimed": "no_difference",
+   "tier": "focal",
+   "estimand": "Standardized difference in latent means of the Social rewards factor between the two survey-year cohorts, d = (later-year latent mean minus earlier-year latent mean) / SD; d formula and SD definition not stated in the article",
+   "effect_scale_and_null": "Cohen's d-type standardized mean difference; null = 0",
+   "population": "U.S. high school seniors, Monitoring the Future, Form 4 respondents, survey years 1976 (Boomers), 1991 (GenX), 2006 (GenMe)",
+   "comparison_units": "1976 vs 1991",
+   "supporting_results": [
+    {
+     "doc_id": "P1",
+     "pdf_page": 12,
+     "table": "Table 1",
+     "column": "1976 vs 1991 t or d",
+     "row": "Social rewards"
+    },
+    {
+     "doc_id": "P1",
+     "pdf_page": 17,
+     "table": "Results text",
+     "column": "",
+     "row": "Research Question 5"
+    }
+   ],
+   "target_ids": [
+    "T067",
+    "T055",
+    "T056",
+    "T057",
+    "T058",
+    "T059",
+    "T060",
+    "T061",
+    "T062"
+   ],
+   "notes": ""
+  },
+  {
+   "claim_id": "C14",
+   "statement": "Latent means of the five work-value factors differ significantly across the three generations (mean-invariance model vs partial scalar model: delta chi-square = 518.24, p < .05; delta CFI = .008).",
+   "hypothesis_label": null,
+   "direction_claimed": "other",
+   "tier": "identification_inference_diagnostic",
+   "estimand": "Chi-square difference and CFI difference between the partial scalar invariance model and a model constraining all five latent means equal across groups",
+   "effect_scale_and_null": "chi-square difference (null: equal latent means); delta CFI vs .002 criterion",
+   "population": "U.S. high school seniors, Monitoring the Future, Form 4 respondents, survey years 1976 (Boomers), 1991 (GenX), 2006 (GenMe)",
+   "comparison_units": "three groups jointly",
+   "supporting_results": [
+    {
+     "doc_id": "P1",
+     "pdf_page": 14,
+     "table": "Table 2",
+     "column": "df, c2, CFI",
+     "row": "Model 5 / Delta Model 4 vs. Model 5"
+    },
+    {
+     "doc_id": "P1",
+     "pdf_page": 15,
+     "table": "Primary Analyses text",
+     "column": "",
+     "row": ""
+    }
+   ],
+   "target_ids": [
+    "T526",
+    "T527",
+    "T528",
+    "T511",
+    "T512",
+    "T516"
+   ],
+   "notes": ""
+  },
+  {
+   "claim_id": "C15",
+   "statement": "Configural invariance model fits adequately across the three generations (same five-factor structure).",
+   "hypothesis_label": null,
+   "direction_claimed": "other",
+   "tier": "identification_inference_diagnostic",
+   "estimand": "Fit of three-group configural five-factor CFA (19 items)",
+   "effect_scale_and_null": "chi-square, RMSEA, SRMSR, TLI, CFI; conventional adequacy thresholds",
+   "population": "U.S. high school seniors, Monitoring the Future, Form 4 respondents, survey years 1976 (Boomers), 1991 (GenX), 2006 (GenMe)",
+   "comparison_units": "three groups",
+   "supporting_results": [
+    {
+     "doc_id": "P1",
+     "pdf_page": 14,
+     "table": "Table 2",
+     "column": "all",
+     "row": "Model 1: configural inv"
+    }
+   ],
+   "target_ids": [
+    "T487",
+    "T488",
+    "T489",
+    "T490",
+    "T491",
+    "T492"
+   ],
+   "notes": ""
+  },
+  {
+   "claim_id": "C16",
+   "statement": "Metric invariance supported: nonsignificant decrement in fit (delta chi-square = 39.58, ns) and negligible delta CFI (.0002).",
+   "hypothesis_label": null,
+   "direction_claimed": "no_difference",
+   "tier": "identification_inference_diagnostic",
+   "estimand": "Chi-square and CFI difference between configural and metric (equal loadings) models",
+   "effect_scale_and_null": "delta chi-square on 26 df (null: equal loadings); delta CFI < .002",
+   "population": "U.S. high school seniors, Monitoring the Future, Form 4 respondents, survey years 1976 (Boomers), 1991 (GenX), 2006 (GenMe)",
+   "comparison_units": "three groups",
+   "supporting_results": [
+    {
+     "doc_id": "P1",
+     "pdf_page": 14,
+     "table": "Table 2",
+     "column": "df, c2, CFI",
+     "row": "Delta Model 1 vs. Model 2"
+    },
+    {
+     "doc_id": "P1",
+     "pdf_page": 15,
+     "table": "text",
+     "column": "",
+     "row": ""
+    }
+   ],
+   "target_ids": [
+    "T517",
+    "T518",
+    "T519",
+    "T493",
+    "T494",
+    "T498"
+   ],
+   "notes": "See forensics: chi-square 39.58 on 26 df has p of about .043, which contradicts 'ns' at alpha .05."
+  },
+  {
+   "claim_id": "C17",
+   "statement": "Full scalar invariance not supported (delta chi-square = 388.59, p < .01; delta CFI = .006 above the .002 cutoff).",
+   "hypothesis_label": null,
+   "direction_claimed": "other",
+   "tier": "identification_inference_diagnostic",
+   "estimand": "Chi-square and CFI difference between metric and full scalar models",
+   "effect_scale_and_null": "delta chi-square on 26 df; delta CFI vs .002",
+   "population": "U.S. high school seniors, Monitoring the Future, Form 4 respondents, survey years 1976 (Boomers), 1991 (GenX), 2006 (GenMe)",
+   "comparison_units": "three groups",
+   "supporting_results": [
+    {
+     "doc_id": "P1",
+     "pdf_page": 14,
+     "table": "Table 2",
+     "column": "df, c2, CFI",
+     "row": "Delta Model 2 vs. Model 3"
+    }
+   ],
+   "target_ids": [
+    "T520",
+    "T521",
+    "T522",
+    "T499",
+    "T500",
+    "T504"
+   ],
+   "notes": ""
+  },
+  {
+   "claim_id": "C18",
+   "statement": "Partial scalar invariance (six item intercepts freed, footnote a) supported by delta CFI = .0012 below cutoff despite significant delta chi-square = 91.34 (p < .05); constructs assessed equivalently across generations.",
+   "hypothesis_label": null,
+   "direction_claimed": "other",
+   "tier": "identification_inference_diagnostic",
+   "estimand": "Chi-square and CFI difference between metric and partial scalar models",
+   "effect_scale_and_null": "delta chi-square on 16 df; delta CFI vs .002",
+   "population": "U.S. high school seniors, Monitoring the Future, Form 4 respondents, survey years 1976 (Boomers), 1991 (GenX), 2006 (GenMe)",
+   "comparison_units": "three groups",
+   "supporting_results": [
+    {
+     "doc_id": "P1",
+     "pdf_page": 14,
+     "table": "Table 2",
+     "column": "df, c2, CFI",
+     "row": "Delta Model 2 vs. Model 4"
+    },
+    {
+     "doc_id": "P1",
+     "pdf_page": 13,
+     "table": "Table 1 footnote a",
+     "column": "",
+     "row": ""
+    }
+   ],
+   "target_ids": [
+    "T523",
+    "T524",
+    "T525",
+    "T505",
+    "T506",
+    "T510"
+   ],
+   "notes": "Altruistic factor has two items, one of which is freed, contradicting the stated 'at least two indicators per factor' rule."
+  },
+  {
+   "claim_id": "C19",
+   "statement": "Form 3 work-centrality items do not fit a (two-factor: five-item centrality + single-indicator stability) model adequately in any year and have low internal consistency; therefore not analyzed as a scale.",
+   "hypothesis_label": null,
+   "direction_claimed": "other",
+   "tier": "identification_inference_diagnostic",
+   "estimand": "Single-group CFA fit of Form 3 two-factor model per year; coefficient alpha (value not printed)",
+   "effect_scale_and_null": "chi-square on 9 df, RMSEA, SRMSR, TLI, CFI",
+   "population": "U.S. high school seniors, Monitoring the Future, Form 3 respondents, survey years 1976, 1991, 2006",
+   "comparison_units": "each year separately",
+   "supporting_results": [
+    {
+     "doc_id": "P1",
+     "pdf_page": 14,
+     "table": "Table 2",
+     "column": "all",
+     "row": "Form 3: 2 factor (1976, 1991, 2006)"
+    },
+    {
+     "doc_id": "P1",
+     "pdf_page": 10,
+     "table": "Preliminary Analyses text",
+     "column": "",
+     "row": ""
+    }
+   ],
+   "target_ids": [
+    "T433",
+    "T434",
+    "T435",
+    "T436",
+    "T437",
+    "T438",
+    "T451",
+    "T452",
+    "T453",
+    "T454",
+    "T455",
+    "T456",
+    "T469",
+    "T470",
+    "T471",
+    "T472",
+    "T473",
+    "T474"
+   ],
+   "notes": "Which five of the six Form 3 items form 'work centrality' is not stated explicitly; the stability item is inferred to be 'stay in the same job'. Alpha values not printed."
+  },
+  {
+   "claim_id": "C20",
+   "statement": "Seven-factor model (extrinsic, intrinsic, altruistic, social, leisure, security, influence) on 23 Form 4 items fits adequately in all three years.",
+   "hypothesis_label": null,
+   "direction_claimed": "other",
+   "tier": "identification_inference_diagnostic",
+   "estimand": "Single-group CFA fit per year",
+   "effect_scale_and_null": "chi-square on 209 df, RMSEA, SRMSR, TLI, CFI",
+   "population": "U.S. high school seniors, Monitoring the Future, Form 4 respondents, survey years 1976 (Boomers), 1991 (GenX), 2006 (GenMe)",
+   "comparison_units": "each year separately",
+   "supporting_results": [
+    {
+     "doc_id": "P1",
+     "pdf_page": 14,
+     "table": "Table 2",
+     "column": "all",
+     "row": "Form 4: 7 factor (1976, 1991, 2006)"
+    }
+   ],
+   "target_ids": [
+    "T439",
+    "T440",
+    "T441",
+    "T442",
+    "T443",
+    "T444",
+    "T457",
+    "T458",
+    "T459",
+    "T460",
+    "T461",
+    "T462",
+    "T475",
+    "T476",
+    "T477",
+    "T478",
+    "T479",
+    "T480"
+   ],
+   "notes": "Assignment of the four omitted items to security vs influence factors is not stated explicitly."
+  },
+  {
+   "claim_id": "C21",
+   "statement": "Security and influence scales had poor internal consistency in every year (no alpha exceeded .50) and were dropped.",
+   "hypothesis_label": null,
+   "direction_claimed": "other",
+   "tier": "identification_inference_diagnostic",
+   "estimand": "Coefficient alpha of the two-item security and influence scales per year",
+   "effect_scale_and_null": "alpha; inequality < .50",
+   "population": "U.S. high school seniors, Monitoring the Future, Form 4 respondents, survey years 1976 (Boomers), 1991 (GenX), 2006 (GenMe)",
+   "comparison_units": "each year",
+   "supporting_results": [
+    {
+     "doc_id": "P1",
+     "pdf_page": 10,
+     "table": "Preliminary Analyses text",
+     "column": "",
+     "row": ""
+    }
+   ],
+   "target_ids": [
+    "T529"
+   ],
+   "notes": "Exact alphas not printed; retained-scale reliabilities said to be in Table 1 but absent."
+  },
+  {
+   "claim_id": "C22",
+   "statement": "Five-factor model on remaining 19 items fits adequately in all three years and is adopted for subsequent analyses.",
+   "hypothesis_label": null,
+   "direction_claimed": "other",
+   "tier": "identification_inference_diagnostic",
+   "estimand": "Single-group CFA fit per year",
+   "effect_scale_and_null": "chi-square on 142 df, RMSEA, SRMSR, TLI, CFI",
+   "population": "U.S. high school seniors, Monitoring the Future, Form 4 respondents, survey years 1976 (Boomers), 1991 (GenX), 2006 (GenMe)",
+   "comparison_units": "each year separately",
+   "supporting_results": [
+    {
+     "doc_id": "P1",
+     "pdf_page": 14,
+     "table": "Table 2",
+     "column": "all",
+     "row": "Form 4: 5 factor (1976, 1991, 2006)"
+    }
+   ],
+   "target_ids": [
+    "T445",
+    "T446",
+    "T447",
+    "T448",
+    "T449",
+    "T450",
+    "T463",
+    "T464",
+    "T465",
+    "T466",
+    "T467",
+    "T468",
+    "T481",
+    "T482",
+    "T483",
+    "T484",
+    "T485",
+    "T486"
+   ],
+   "notes": ""
+  },
+  {
+   "claim_id": "C23",
+   "statement": "Item-level means, percentages and year-pair t tests for 'A job where you have more than 2 weeks' vacation' (Table 1); 1976 vs 2006 t = 15.53***.",
+   "hypothesis_label": null,
+   "direction_claimed": "increase",
+   "tier": "descriptive",
+   "estimand": "Difference in item means between survey-year cohorts tested by t; percentage endorsing top category/categories",
+   "effect_scale_and_null": "t statistic (null: equal means); item means on original response scale",
+   "population": "U.S. high school seniors, Monitoring the Future, Form 4 respondents, survey years 1976 (Boomers), 1991 (GenX), 2006 (GenMe)",
+   "comparison_units": "1976 vs 1991; 1991 vs 2006; 1976 vs 2006",
+   "supporting_results": [
+    {
+     "doc_id": "P1",
+     "pdf_page": 11,
+     "table": "Table 1",
+     "column": "all",
+     "row": "A job where you have more than 2 weeks' vacation"
+    }
+   ],
+   "target_ids": [
+    "T085",
+    "T086",
+    "T087",
+    "T088",
+    "T089",
+    "T090",
+    "T091",
+    "T092",
+    "T093",
+    "T094",
+    "T095",
+    "T096"
+   ],
+   "notes": "Item belongs to the Leisure scale."
+  },
+  {
+   "claim_id": "C24",
+   "statement": "Item-level means, percentages and year-pair t tests for 'A job that leaves a lot of time for other things in your life' (Table 1); 1976 vs 2006 t = 5.16***.",
+   "hypothesis_label": null,
+   "direction_claimed": "increase",
+   "tier": "descriptive",
+   "estimand": "Difference in item means between survey-year cohorts tested by t; percentage endorsing top category/categories",
+   "effect_scale_and_null": "t statistic (null: equal means); item means on original response scale",
+   "population": "U.S. high school seniors, Monitoring the Future, Form 4 respondents, survey years 1976 (Boomers), 1991 (GenX), 2006 (GenMe)",
+   "comparison_units": "1976 vs 1991; 1991 vs 2006; 1976 vs 2006",
+   "supporting_results": [
+    {
+     "doc_id": "P1",
+     "pdf_page": 11,
+     "table": "Table 1",
+     "column": "all",
+     "row": "A job that leaves a lot of time for other things in your life"
+    }
+   ],
+   "target_ids": [
+    "T097",
+    "T098",
+    "T099",
+    "T100",
+    "T101",
+    "T102",
+    "T103",
+    "T104",
+    "T105",
+    "T106",
+    "T107",
+    "T108"
+   ],
+   "notes": "Item belongs to the Leisure scale. Footnote a (unconstrained intercept)."
+  },
+  {
+   "claim_id": "C25",
+   "statement": "Item-level means, percentages and year-pair t tests for 'A job with an easy pace that lets you work slowly' (Table 1); 1976 vs 2006 t = 8.51***.",
+   "hypothesis_label": null,
+   "direction_claimed": "increase",
+   "tier": "descriptive",
+   "estimand": "Difference in item means between survey-year cohorts tested by t; percentage endorsing top category/categories",
+   "effect_scale_and_null": "t statistic (null: equal means); item means on original response scale",
+   "population": "U.S. high school seniors, Monitoring the Future, Form 4 respondents, survey years 1976 (Boomers), 1991 (GenX), 2006 (GenMe)",
+   "comparison_units": "1976 vs 1991; 1991 vs 2006; 1976 vs 2006",
+   "supporting_results": [
+    {
+     "doc_id": "P1",
+     "pdf_page": 11,
+     "table": "Table 1",
+     "column": "all",
+     "row": "A job with an easy pace that lets you work slowly"
+    }
+   ],
+   "target_ids": [
+    "T109",
+    "T110",
+    "T111",
+    "T112",
+    "T113",
+    "T114",
+    "T115",
+    "T116",
+    "T117",
+    "T118",
+    "T119",
+    "T120"
+   ],
+   "notes": "Item belongs to the Leisure scale."
+  },
+  {
+   "claim_id": "C26",
+   "statement": "Item-level means, percentages and year-pair t tests for 'A job that leaves you mostly free of supervision by others' (Table 1); 1976 vs 2006 t = 2.36*.",
+   "hypothesis_label": null,
+   "direction_claimed": "increase",
+   "tier": "descriptive",
+   "estimand": "Difference in item means between survey-year cohorts tested by t; percentage endorsing top category/categories",
+   "effect_scale_and_null": "t statistic (null: equal means); item means on original response scale",
+   "population": "U.S. high school seniors, Monitoring the Future, Form 4 respondents, survey years 1976 (Boomers), 1991 (GenX), 2006 (GenMe)",
+   "comparison_units": "1976 vs 1991; 1991 vs 2006; 1976 vs 2006",
+   "supporting_results": [
+    {
+     "doc_id": "P1",
+     "pdf_page": 11,
+     "table": "Table 1",
+     "column": "all",
+     "row": "A job that leaves you mostly free of supervision by others"
+    }
+   ],
+   "target_ids": [
+    "T121",
+    "T122",
+    "T123",
+    "T124",
+    "T125",
+    "T126",
+    "T127",
+    "T128",
+    "T129",
+    "T130",
+    "T131",
+    "T132"
+   ],
+   "notes": "Item belongs to the Leisure scale. Footnote a (unconstrained intercept)."
+  },
+  {
+   "claim_id": "C27",
+   "statement": "Item-level means, percentages and year-pair t tests for 'A job that is interesting to do' (Table 1); 1976 vs 2006 t = −6.01***.",
+   "hypothesis_label": null,
+   "direction_claimed": "decrease",
+   "tier": "descriptive",
+   "estimand": "Difference in item means between survey-year cohorts tested by t; percentage endorsing top category/categories",
+   "effect_scale_and_null": "t statistic (null: equal means); item means on original response scale",
+   "population": "U.S. high school seniors, Monitoring the Future, Form 4 respondents, survey years 1976 (Boomers), 1991 (GenX), 2006 (GenMe)",
+   "comparison_units": "1976 vs 1991; 1991 vs 2006; 1976 vs 2006",
+   "supporting_results": [
+    {
+     "doc_id": "P1",
+     "pdf_page": 11,
+     "table": "Table 1",
+     "column": "all",
+     "row": "A job that is interesting to do"
+    }
+   ],
+   "target_ids": [
+    "T133",
+    "T134",
+    "T135",
+    "T136",
+    "T137",
+    "T138",
+    "T139",
+    "T140",
+    "T141",
+    "T142",
+    "T143",
+    "T144"
+   ],
+   "notes": "Item belongs to the Intrinsic scale."
+  },
+  {
+   "claim_id": "C28",
+   "statement": "Item-level means, percentages and year-pair t tests for 'A job where you can learn new things, learn new skills' (Table 1); 1976 vs 2006 t = −4.99***.",
+   "hypothesis_label": null,
+   "direction_claimed": "decrease",
+   "tier": "descriptive",
+   "estimand": "Difference in item means between survey-year cohorts tested by t; percentage endorsing top category/categories",
+   "effect_scale_and_null": "t statistic (null: equal means); item means on original response scale",
+   "population": "U.S. high school seniors, Monitoring the Future, Form 4 respondents, survey years 1976 (Boomers), 1991 (GenX), 2006 (GenMe)",
+   "comparison_units": "1976 vs 1991; 1991 vs 2006; 1976 vs 2006",
+   "supporting_results": [
+    {
+     "doc_id": "P1",
+     "pdf_page": 11,
+     "table": "Table 1",
+     "column": "all",
+     "row": "A job where you can learn new things, learn new skills"
+    }
+   ],
+   "target_ids": [
+    "T145",
+    "T146",
+    "T147",
+    "T148",
+    "T149",
+    "T150",
+    "T151",
+    "T152",
+    "T153",
+    "T154",
+    "T155",
+    "T156"
+   ],
+   "notes": "Item belongs to the Intrinsic scale."
+  },
+  {
+   "claim_id": "C29",
+   "statement": "Item-level means, percentages and year-pair t tests for 'A job where the skills you learn will not go out of date' (Table 1); 1976 vs 2006 t = −5.82***.",
+   "hypothesis_label": null,
+   "direction_claimed": "decrease",
+   "tier": "descriptive",
+   "estimand": "Difference in item means between survey-year cohorts tested by t; percentage endorsing top category/categories",
+   "effect_scale_and_null": "t statistic (null: equal means); item means on original response scale",
+   "population": "U.S. high school seniors, Monitoring the Future, Form 4 respondents, survey years 1976 (Boomers), 1991 (GenX), 2006 (GenMe)",
+   "comparison_units": "1976 vs 1991; 1991 vs 2006; 1976 vs 2006",
+   "supporting_results": [
+    {
+     "doc_id": "P1",
+     "pdf_page": 11,
+     "table": "Table 1",
+     "column": "all",
+     "row": "A job where the skills you learn will not go out of date"
+    }
+   ],
+   "target_ids": [
+    "T157",
+    "T158",
+    "T159",
+    "T160",
+    "T161",
+    "T162",
+    "T163",
+    "T164",
+    "T165",
+    "T166",
+    "T167",
+    "T168"
+   ],
+   "notes": "Item belongs to the Intrinsic scale."
+  },
+  {
+   "claim_id": "C30",
+   "statement": "Item-level means, percentages and year-pair t tests for 'A job where you can see the results of what you do' (Table 1); 1976 vs 2006 t = −8.47***.",
+   "hypothesis_label": null,
+   "direction_claimed": "decrease",
+   "tier": "descriptive",
+   "estimand": "Difference in item means between survey-year cohorts tested by t; percentage endorsing top category/categories",
+   "effect_scale_and_null": "t statistic (null: equal means); item means on original response scale",
+   "population": "U.S. high school seniors, Monitoring the Future, Form 4 respondents, survey years 1976 (Boomers), 1991 (GenX), 2006 (GenMe)",
+   "comparison_units": "1976 vs 1991; 1991 vs 2006; 1976 vs 2006",
+   "supporting_results": [
+    {
+     "doc_id": "P1",
+     "pdf_page": 11,
+     "table": "Table 1",
+     "column": "all",
+     "row": "A job where you can see the results of what you do"
+    }
+   ],
+   "target_ids": [
+    "T169",
+    "T170",
+    "T171",
+    "T172",
+    "T173",
+    "T174",
+    "T175",
+    "T176",
+    "T177",
+    "T178",
+    "T179",
+    "T180"
+   ],
+   "notes": "Item belongs to the Intrinsic scale."
+  },
+  {
+   "claim_id": "C31",
+   "statement": "Item-level means, percentages and year-pair t tests for 'A job that uses your skills and abilities—lets you do the things you can do best' (Table 1); 1976 vs 2006 t = −3.48***.",
+   "hypothesis_label": null,
+   "direction_claimed": "decrease",
+   "tier": "descriptive",
+   "estimand": "Difference in item means between survey-year cohorts tested by t; percentage endorsing top category/categories",
+   "effect_scale_and_null": "t statistic (null: equal means); item means on original response scale",
+   "population": "U.S. high school seniors, Monitoring the Future, Form 4 respondents, survey years 1976 (Boomers), 1991 (GenX), 2006 (GenMe)",
+   "comparison_units": "1976 vs 1991; 1991 vs 2006; 1976 vs 2006",
+   "supporting_results": [
+    {
+     "doc_id": "P1",
+     "pdf_page": 11,
+     "table": "Table 1",
+     "column": "all",
+     "row": "A job that uses your skills and abilities—lets you do the things you can do best"
+    }
+   ],
+   "target_ids": [
+    "T181",
+    "T182",
+    "T183",
+    "T184",
+    "T185",
+    "T186",
+    "T187",
+    "T188",
+    "T189",
+    "T190",
+    "T191",
+    "T192"
+   ],
+   "notes": "Item belongs to the Intrinsic scale."
+  },
+  {
+   "claim_id": "C32",
+   "statement": "Item-level means, percentages and year-pair t tests for 'A job where you do not have to pretend to be a type of person that you are not' (Table 1); 1976 vs 2006 t = −4.33***.",
+   "hypothesis_label": null,
+   "direction_claimed": "decrease",
+   "tier": "descriptive",
+   "estimand": "Difference in item means between survey-year cohorts tested by t; percentage endorsing top category/categories",
+   "effect_scale_and_null": "t statistic (null: equal means); item means on original response scale",
+   "population": "U.S. high school seniors, Monitoring the Future, Form 4 respondents, survey years 1976 (Boomers), 1991 (GenX), 2006 (GenMe)",
+   "comparison_units": "1976 vs 1991; 1991 vs 2006; 1976 vs 2006",
+   "supporting_results": [
+    {
+     "doc_id": "P1",
+     "pdf_page": 11,
+     "table": "Table 1",
+     "column": "all",
+     "row": "A job where you do not have to pretend to be a type of person that you are not"
+    }
+   ],
+   "target_ids": [
+    "T193",
+    "T194",
+    "T195",
+    "T196",
+    "T197",
+    "T198",
+    "T199",
+    "T200",
+    "T201",
+    "T202",
+    "T203",
+    "T204"
+   ],
+   "notes": "Item belongs to the Intrinsic scale."
+  },
+  {
+   "claim_id": "C33",
+   "statement": "Item-level means, percentages and year-pair t tests for 'A job where you have the chance to be creative' (Table 1); 1976 vs 2006 t = 3.88***.",
+   "hypothesis_label": null,
+   "direction_claimed": "increase",
+   "tier": "descriptive",
+   "estimand": "Difference in item means between survey-year cohorts tested by t; percentage endorsing top category/categories",
+   "effect_scale_and_null": "t statistic (null: equal means); item means on original response scale",
+   "population": "U.S. high school seniors, Monitoring the Future, Form 4 respondents, survey years 1976 (Boomers), 1991 (GenX), 2006 (GenMe)",
+   "comparison_units": "1976 vs 1991; 1991 vs 2006; 1976 vs 2006",
+   "supporting_results": [
+    {
+     "doc_id": "P1",
+     "pdf_page": 11,
+     "table": "Table 1",
+     "column": "all",
+     "row": "A job where you have the chance to be creative"
+    }
+   ],
+   "target_ids": [
+    "T205",
+    "T206",
+    "T207",
+    "T208",
+    "T209",
+    "T210",
+    "T211",
+    "T212",
+    "T213",
+    "T214",
+    "T215",
+    "T216"
+   ],
+   "notes": "Item belongs to the Intrinsic scale. Footnote a (unconstrained intercept)."
+  },
+  {
+   "claim_id": "C34",
+   "statement": "Item-level means, percentages and year-pair t tests for 'A job that gives you an opportunity to be directly helpful to others' (Table 1); 1976 vs 2006 t = −4.85***.",
+   "hypothesis_label": null,
+   "direction_claimed": "decrease",
+   "tier": "descriptive",
+   "estimand": "Difference in item means between survey-year cohorts tested by t; percentage endorsing top category/categories",
+   "effect_scale_and_null": "t statistic (null: equal means); item means on original response scale",
+   "population": "U.S. high school seniors, Monitoring the Future, Form 4 respondents, survey years 1976 (Boomers), 1991 (GenX), 2006 (GenMe)",
+   "comparison_units": "1976 vs 1991; 1991 vs 2006; 1976 vs 2006",
+   "supporting_results": [
+    {
+     "doc_id": "P1",
+     "pdf_page": 12,
+     "table": "Table 1",
+     "column": "all",
+     "row": "A job that gives you an opportunity to be directly helpful to others"
+    }
+   ],
+   "target_ids": [
+    "T217",
+    "T218",
+    "T219",
+    "T220",
+    "T221",
+    "T222",
+    "T223",
+    "T224",
+    "T225",
+    "T226",
+    "T227",
+    "T228"
+   ],
+   "notes": "Item belongs to the Altruistic scale. Footnote a (unconstrained intercept)."
+  },
+  {
+   "claim_id": "C35",
+   "statement": "Item-level means, percentages and year-pair t tests for 'A job that is worthwhile to society' (Table 1); 1976 vs 2006 t = −.46.",
+   "hypothesis_label": null,
+   "direction_claimed": "no_difference",
+   "tier": "descriptive",
+   "estimand": "Difference in item means between survey-year cohorts tested by t; percentage endorsing top category/categories",
+   "effect_scale_and_null": "t statistic (null: equal means); item means on original response scale",
+   "population": "U.S. high school seniors, Monitoring the Future, Form 4 respondents, survey years 1976 (Boomers), 1991 (GenX), 2006 (GenMe)",
+   "comparison_units": "1976 vs 1991; 1991 vs 2006; 1976 vs 2006",
+   "supporting_results": [
+    {
+     "doc_id": "P1",
+     "pdf_page": 12,
+     "table": "Table 1",
+     "column": "all",
+     "row": "A job that is worthwhile to society"
+    }
+   ],
+   "target_ids": [
+    "T229",
+    "T230",
+    "T231",
+    "T232",
+    "T233",
+    "T234",
+    "T235",
+    "T236",
+    "T237",
+    "T238",
+    "T239",
+    "T240"
+   ],
+   "notes": "Item belongs to the Altruistic scale."
+  },
+  {
+   "claim_id": "C36",
+   "statement": "Item-level means, percentages and year-pair t tests for 'A job that gives you a chance to make friends' (Table 1); 1976 vs 2006 t = −11.63***.",
+   "hypothesis_label": null,
+   "direction_claimed": "decrease",
+   "tier": "descriptive",
+   "estimand": "Difference in item means between survey-year cohorts tested by t; percentage endorsing top category/categories",
+   "effect_scale_and_null": "t statistic (null: equal means); item means on original response scale",
+   "population": "U.S. high school seniors, Monitoring the Future, Form 4 respondents, survey years 1976 (Boomers), 1991 (GenX), 2006 (GenMe)",
+   "comparison_units": "1976 vs 1991; 1991 vs 2006; 1976 vs 2006",
+   "supporting_results": [
+    {
+     "doc_id": "P1",
+     "pdf_page": 12,
+     "table": "Table 1",
+     "column": "all",
+     "row": "A job that gives you a chance to make friends"
+    }
+   ],
+   "target_ids": [
+    "T241",
+    "T242",
+    "T243",
+    "T244",
+    "T245",
+    "T246",
+    "T247",
+    "T248",
+    "T249",
+    "T250",
+    "T251",
+    "T252"
+   ],
+   "notes": "Item belongs to the Social scale."
+  },
+  {
+   "claim_id": "C37",
+   "statement": "Item-level means, percentages and year-pair t tests for 'A job that permits contact with a lot of people' (Table 1); 1976 vs 2006 t = −3.82***.",
+   "hypothesis_label": null,
+   "direction_claimed": "decrease",
+   "tier": "descriptive",
+   "estimand": "Difference in item means between survey-year cohorts tested by t; percentage endorsing top category/categories",
+   "effect_scale_and_null": "t statistic (null: equal means); item means on original response scale",
+   "population": "U.S. high school seniors, Monitoring the Future, Form 4 respondents, survey years 1976 (Boomers), 1991 (GenX), 2006 (GenMe)",
+   "comparison_units": "1976 vs 1991; 1991 vs 2006; 1976 vs 2006",
+   "supporting_results": [
+    {
+     "doc_id": "P1",
+     "pdf_page": 12,
+     "table": "Table 1",
+     "column": "all",
+     "row": "A job that permits contact with a lot of people"
+    }
+   ],
+   "target_ids": [
+    "T253",
+    "T254",
+    "T255",
+    "T256",
+    "T257",
+    "T258",
+    "T259",
+    "T260",
+    "T261",
+    "T262",
+    "T263",
+    "T264"
+   ],
+   "notes": "Item belongs to the Social scale."
+  },
+  {
+   "claim_id": "C38",
+   "statement": "Item-level means, percentages and year-pair t tests for 'A job that has high status and prestige' (Table 1); 1976 vs 2006 t = 6.04***.",
+   "hypothesis_label": null,
+   "direction_claimed": "increase",
+   "tier": "descriptive",
+   "estimand": "Difference in item means between survey-year cohorts tested by t; percentage endorsing top category/categories",
+   "effect_scale_and_null": "t statistic (null: equal means); item means on original response scale",
+   "population": "U.S. high school seniors, Monitoring the Future, Form 4 respondents, survey years 1976 (Boomers), 1991 (GenX), 2006 (GenMe)",
+   "comparison_units": "1976 vs 1991; 1991 vs 2006; 1976 vs 2006",
+   "supporting_results": [
+    {
+     "doc_id": "P1",
+     "pdf_page": 12,
+     "table": "Table 1",
+     "column": "all",
+     "row": "A job that has high status and prestige"
+    }
+   ],
+   "target_ids": [
+    "T265",
+    "T266",
+    "T267",
+    "T268",
+    "T269",
+    "T270",
+    "T271",
+    "T272",
+    "T273",
+    "T274",
+    "T275",
+    "T276"
+   ],
+   "notes": "Item belongs to the Extrinsic scale."
+  },
+  {
+   "claim_id": "C39",
+   "statement": "Item-level means, percentages and year-pair t tests for 'A job that most people look up to and respect' (Table 1); 1976 vs 2006 t = 7.63***.",
+   "hypothesis_label": null,
+   "direction_claimed": "increase",
+   "tier": "descriptive",
+   "estimand": "Difference in item means between survey-year cohorts tested by t; percentage endorsing top category/categories",
+   "effect_scale_and_null": "t statistic (null: equal means); item means on original response scale",
+   "population": "U.S. high school seniors, Monitoring the Future, Form 4 respondents, survey years 1976 (Boomers), 1991 (GenX), 2006 (GenMe)",
+   "comparison_units": "1976 vs 1991; 1991 vs 2006; 1976 vs 2006",
+   "supporting_results": [
+    {
+     "doc_id": "P1",
+     "pdf_page": 12,
+     "table": "Table 1",
+     "column": "all",
+     "row": "A job that most people look up to and respect"
+    }
+   ],
+   "target_ids": [
+    "T277",
+    "T278",
+    "T279",
+    "T280",
+    "T281",
+    "T282",
+    "T283",
+    "T284",
+    "T285",
+    "T286",
+    "T287",
+    "T288"
+   ],
+   "notes": "Item belongs to the Extrinsic scale."
+  },
+  {
+   "claim_id": "C40",
+   "statement": "Item-level means, percentages and year-pair t tests for 'A job that provides you with a chance to earn a good deal of money' (Table 1); 1976 vs 2006 t = 4.04***.",
+   "hypothesis_label": null,
+   "direction_claimed": "increase",
+   "tier": "descriptive",
+   "estimand": "Difference in item means between survey-year cohorts tested by t; percentage endorsing top category/categories",
+   "effect_scale_and_null": "t statistic (null: equal means); item means on original response scale",
+   "population": "U.S. high school seniors, Monitoring the Future, Form 4 respondents, survey years 1976 (Boomers), 1991 (GenX), 2006 (GenMe)",
+   "comparison_units": "1976 vs 1991; 1991 vs 2006; 1976 vs 2006",
+   "supporting_results": [
+    {
+     "doc_id": "P1",
+     "pdf_page": 12,
+     "table": "Table 1",
+     "column": "all",
+     "row": "A job that provides you with a chance to earn a good deal of money"
+    }
+   ],
+   "target_ids": [
+    "T289",
+    "T290",
+    "T291",
+    "T292",
+    "T293",
+    "T294",
+    "T295",
+    "T296",
+    "T297",
+    "T298",
+    "T299",
+    "T300"
+   ],
+   "notes": "Item belongs to the Extrinsic scale. Footnote a (unconstrained intercept)."
+  },
+  {
+   "claim_id": "C41",
+   "statement": "Item-level means, percentages and year-pair t tests for 'A job where the chances for advancement and promotion are good' (Table 1); 1976 vs 2006 t = −.83.",
+   "hypothesis_label": null,
+   "direction_claimed": "no_difference",
+   "tier": "descriptive",
+   "estimand": "Difference in item means between survey-year cohorts tested by t; percentage endorsing top category/categories",
+   "effect_scale_and_null": "t statistic (null: equal means); item means on original response scale",
+   "population": "U.S. high school seniors, Monitoring the Future, Form 4 respondents, survey years 1976 (Boomers), 1991 (GenX), 2006 (GenMe)",
+   "comparison_units": "1976 vs 1991; 1991 vs 2006; 1976 vs 2006",
+   "supporting_results": [
+    {
+     "doc_id": "P1",
+     "pdf_page": 12,
+     "table": "Table 1",
+     "column": "all",
+     "row": "A job where the chances for advancement and promotion are good"
+    }
+   ],
+   "target_ids": [
+    "T301",
+    "T302",
+    "T303",
+    "T304",
+    "T305",
+    "T306",
+    "T307",
+    "T308",
+    "T309",
+    "T310",
+    "T311",
+    "T312"
+   ],
+   "notes": "Item belongs to the Extrinsic scale. Footnote a (unconstrained intercept)."
+  },
+  {
+   "claim_id": "C42",
+   "statement": "Item-level means, percentages and year-pair t tests for 'To me, work is nothing more than making a living.' (Table 1); 1976 vs 2006 t = 14.02***.",
+   "hypothesis_label": null,
+   "direction_claimed": "increase",
+   "tier": "descriptive",
+   "estimand": "Difference in item means between survey-year cohorts tested by t; percentage endorsing top category/categories",
+   "effect_scale_and_null": "t statistic (null: equal means); item means on original response scale",
+   "population": "U.S. high school seniors, Monitoring the Future, Form 3 respondents, survey years 1976, 1991, 2006",
+   "comparison_units": "1976 vs 1991; 1991 vs 2006; 1976 vs 2006",
+   "supporting_results": [
+    {
+     "doc_id": "P1",
+     "pdf_page": 12,
+     "table": "Table 1",
+     "column": "all",
+     "row": "To me, work is nothing more than making a living."
+    }
+   ],
+   "target_ids": [
+    "T313",
+    "T314",
+    "T315",
+    "T316",
+    "T317",
+    "T318",
+    "T319",
+    "T320",
+    "T321",
+    "T322",
+    "T323",
+    "T324"
+   ],
+   "notes": "Omitted (work centrality, Form 3)"
+  },
+  {
+   "claim_id": "C43",
+   "statement": "Item-level means, percentages and year-pair t tests for 'I expect my work to be a very central part of my life.' (Table 1); 1976 vs 2006 t = −9.74***.",
+   "hypothesis_label": null,
+   "direction_claimed": "decrease",
+   "tier": "descriptive",
+   "estimand": "Difference in item means between survey-year cohorts tested by t; percentage endorsing top category/categories",
+   "effect_scale_and_null": "t statistic (null: equal means); item means on original response scale",
+   "population": "U.S. high school seniors, Monitoring the Future, Form 3 respondents, survey years 1976, 1991, 2006",
+   "comparison_units": "1976 vs 1991; 1991 vs 2006; 1976 vs 2006",
+   "supporting_results": [
+    {
+     "doc_id": "P1",
+     "pdf_page": 12,
+     "table": "Table 1",
+     "column": "all",
+     "row": "I expect my work to be a very central part of my life."
+    }
+   ],
+   "target_ids": [
+    "T325",
+    "T326",
+    "T327",
+    "T328",
+    "T329",
+    "T330",
+    "T331",
+    "T332",
+    "T333",
+    "T334",
+    "T335",
+    "T336"
+   ],
+   "notes": "Omitted (work centrality, Form 3)"
+  },
+  {
+   "claim_id": "C44",
+   "statement": "Item-level means, percentages and year-pair t tests for 'I want to do my best in my job, even if this sometimes means working overtime.' (Table 1); 1976 vs 2006 t = −7.94***.",
+   "hypothesis_label": null,
+   "direction_claimed": "decrease",
+   "tier": "descriptive",
+   "estimand": "Difference in item means between survey-year cohorts tested by t; percentage endorsing top category/categories",
+   "effect_scale_and_null": "t statistic (null: equal means); item means on original response scale",
+   "population": "U.S. high school seniors, Monitoring the Future, Form 3 respondents, survey years 1976, 1991, 2006",
+   "comparison_units": "1976 vs 1991; 1991 vs 2006; 1976 vs 2006",
+   "supporting_results": [
+    {
+     "doc_id": "P1",
+     "pdf_page": 12,
+     "table": "Table 1",
+     "column": "all",
+     "row": "I want to do my best in my job, even if this sometimes means working overtime."
+    }
+   ],
+   "target_ids": [
+    "T337",
+    "T338",
+    "T339",
+    "T340",
+    "T341",
+    "T342",
+    "T343",
+    "T344",
+    "T345",
+    "T346",
+    "T347",
+    "T348"
+   ],
+   "notes": "Omitted (work centrality, Form 3)"
+  },
+  {
+   "claim_id": "C45",
+   "statement": "Item-level means, percentages and year-pair t tests for 'I like the kind of work you can forget about after the work day is over.' (Table 1); 1976 vs 2006 t = −1.92.",
+   "hypothesis_label": null,
+   "direction_claimed": "no_difference",
+   "tier": "descriptive",
+   "estimand": "Difference in item means between survey-year cohorts tested by t; percentage endorsing top category/categories",
+   "effect_scale_and_null": "t statistic (null: equal means); item means on original response scale",
+   "population": "U.S. high school seniors, Monitoring the Future, Form 3 respondents, survey years 1976, 1991, 2006",
+   "comparison_units": "1976 vs 1991; 1991 vs 2006; 1976 vs 2006",
+   "supporting_results": [
+    {
+     "doc_id": "P1",
+     "pdf_page": 13,
+     "table": "Table 1",
+     "column": "all",
+     "row": "I like the kind of work you can forget about after the work day is over."
+    }
+   ],
+   "target_ids": [
+    "T349",
+    "T350",
+    "T351",
+    "T352",
+    "T353",
+    "T354",
+    "T355",
+    "T356",
+    "T357",
+    "T358",
+    "T359",
+    "T360"
+   ],
+   "notes": "Omitted (work centrality, Form 3)"
+  },
+  {
+   "claim_id": "C46",
+   "statement": "Item-level means, percentages and year-pair t tests for 'If you were to get enough money to live as comfortably as you'd like for the rest of your life, would you want to work?' (Table 1); 1976 vs 2006 t = −5.92***.",
+   "hypothesis_label": null,
+   "direction_claimed": "decrease",
+   "tier": "descriptive",
+   "estimand": "Difference in item means between survey-year cohorts tested by t; percentage endorsing top category/categories",
+   "effect_scale_and_null": "t statistic (null: equal means); item means on original response scale",
+   "population": "U.S. high school seniors, Monitoring the Future, Form 3 respondents, survey years 1976, 1991, 2006",
+   "comparison_units": "1976 vs 1991; 1991 vs 2006; 1976 vs 2006",
+   "supporting_results": [
+    {
+     "doc_id": "P1",
+     "pdf_page": 13,
+     "table": "Table 1",
+     "column": "all",
+     "row": "If you were to get enough money to live as comfortably as you'd like for the rest of your life, would you want to work?"
+    }
+   ],
+   "target_ids": [
+    "T361",
+    "T362",
+    "T363",
+    "T364",
+    "T365",
+    "T366",
+    "T367",
+    "T368",
+    "T369",
+    "T370",
+    "T371",
+    "T372"
+   ],
+   "notes": "Omitted (work centrality, Form 3)"
+  },
+  {
+   "claim_id": "C47",
+   "statement": "Item-level means, percentages and year-pair t tests for 'A job where most problems are difficult and challenging' (Table 1); 1976 vs 2006 t = −4.67***.",
+   "hypothesis_label": null,
+   "direction_claimed": "decrease",
+   "tier": "descriptive",
+   "estimand": "Difference in item means between survey-year cohorts tested by t; percentage endorsing top category/categories",
+   "effect_scale_and_null": "t statistic (null: equal means); item means on original response scale",
+   "population": "U.S. high school seniors, Monitoring the Future, Form 4 respondents, survey years 1976 (Boomers), 1991 (GenX), 2006 (GenMe)",
+   "comparison_units": "1976 vs 1991; 1991 vs 2006; 1976 vs 2006",
+   "supporting_results": [
+    {
+     "doc_id": "P1",
+     "pdf_page": 13,
+     "table": "Table 1",
+     "column": "all",
+     "row": "A job where most problems are difficult and challenging"
+    }
+   ],
+   "target_ids": [
+    "T373",
+    "T374",
+    "T375",
+    "T376",
+    "T377",
+    "T378",
+    "T379",
+    "T380",
+    "T381",
+    "T382",
+    "T383",
+    "T384"
+   ],
+   "notes": "Omitted (influence/security, Form 4)"
+  },
+  {
+   "claim_id": "C48",
+   "statement": "Item-level means, percentages and year-pair t tests for 'A job where you get a chance to participate in decision making' (Table 1); 1976 vs 2006 t = 7.91***.",
+   "hypothesis_label": null,
+   "direction_claimed": "increase",
+   "tier": "descriptive",
+   "estimand": "Difference in item means between survey-year cohorts tested by t; percentage endorsing top category/categories",
+   "effect_scale_and_null": "t statistic (null: equal means); item means on original response scale",
+   "population": "U.S. high school seniors, Monitoring the Future, Form 4 respondents, survey years 1976 (Boomers), 1991 (GenX), 2006 (GenMe)",
+   "comparison_units": "1976 vs 1991; 1991 vs 2006; 1976 vs 2006",
+   "supporting_results": [
+    {
+     "doc_id": "P1",
+     "pdf_page": 13,
+     "table": "Table 1",
+     "column": "all",
+     "row": "A job where you get a chance to participate in decision making"
+    }
+   ],
+   "target_ids": [
+    "T385",
+    "T386",
+    "T387",
+    "T388",
+    "T389",
+    "T390",
+    "T391",
+    "T392",
+    "T393",
+    "T394",
+    "T395",
+    "T396"
+   ],
+   "notes": "Omitted (influence/security, Form 4)"
+  },
+  {
+   "claim_id": "C49",
+   "statement": "Item-level means, percentages and year-pair t tests for 'A job that offers a reasonably predictable, secure future' (Table 1); 1976 vs 2006 t = −6.78***.",
+   "hypothesis_label": null,
+   "direction_claimed": "decrease",
+   "tier": "descriptive",
+   "estimand": "Difference in item means between survey-year cohorts tested by t; percentage endorsing top category/categories",
+   "effect_scale_and_null": "t statistic (null: equal means); item means on original response scale",
+   "population": "U.S. high school seniors, Monitoring the Future, Form 4 respondents, survey years 1976 (Boomers), 1991 (GenX), 2006 (GenMe)",
+   "comparison_units": "1976 vs 1991; 1991 vs 2006; 1976 vs 2006",
+   "supporting_results": [
+    {
+     "doc_id": "P1",
+     "pdf_page": 13,
+     "table": "Table 1",
+     "column": "all",
+     "row": "A job that offers a reasonably predictable, secure future"
+    }
+   ],
+   "target_ids": [
+    "T397",
+    "T398",
+    "T399",
+    "T400",
+    "T401",
+    "T402",
+    "T403",
+    "T404",
+    "T405",
+    "T406",
+    "T407",
+    "T408"
+   ],
+   "notes": "Omitted (influence/security, Form 4)"
+  },
+  {
+   "claim_id": "C50",
+   "statement": "Item-level means, percentages and year-pair t tests for 'A job that allows you to establish roots in a community and not have to move from place to place' (Table 1); 1976 vs 2006 t = .91.",
+   "hypothesis_label": null,
+   "direction_claimed": "no_difference",
+   "tier": "descriptive",
+   "estimand": "Difference in item means between survey-year cohorts tested by t; percentage endorsing top category/categories",
+   "effect_scale_and_null": "t statistic (null: equal means); item means on original response scale",
+   "population": "U.S. high school seniors, Monitoring the Future, Form 4 respondents, survey years 1976 (Boomers), 1991 (GenX), 2006 (GenMe)",
+   "comparison_units": "1976 vs 1991; 1991 vs 2006; 1976 vs 2006",
+   "supporting_results": [
+    {
+     "doc_id": "P1",
+     "pdf_page": 13,
+     "table": "Table 1",
+     "column": "all",
+     "row": "A job that allows you to establish roots in a community and not have to move from place to place"
+    }
+   ],
+   "target_ids": [
+    "T409",
+    "T410",
+    "T411",
+    "T412",
+    "T413",
+    "T414",
+    "T415",
+    "T416",
+    "T417",
+    "T418",
+    "T419",
+    "T420"
+   ],
+   "notes": "Omitted (influence/security, Form 4)"
+  },
+  {
+   "claim_id": "C51",
+   "statement": "Item-level means, percentages and year-pair t tests for 'I would like to stay in the same job for most of my adult life.' (Table 1); 1976 vs 2006 t = 4.41***.",
+   "hypothesis_label": null,
+   "direction_claimed": "increase",
+   "tier": "descriptive",
+   "estimand": "Difference in item means between survey-year cohorts tested by t; percentage endorsing top category/categories",
+   "effect_scale_and_null": "t statistic (null: equal means); item means on original response scale",
+   "population": "U.S. high school seniors, Monitoring the Future, Form 3 respondents, survey years 1976, 1991, 2006",
+   "comparison_units": "1976 vs 1991; 1991 vs 2006; 1976 vs 2006",
+   "supporting_results": [
+    {
+     "doc_id": "P1",
+     "pdf_page": 13,
+     "table": "Table 1",
+     "column": "all",
+     "row": "I would like to stay in the same job for most of my adult life."
+    }
+   ],
+   "target_ids": [
+    "T421",
+    "T422",
+    "T423",
+    "T424",
+    "T425",
+    "T426",
+    "T427",
+    "T428",
+    "T429",
+    "T430",
+    "T431",
+    "T432"
+   ],
+   "notes": "Omitted (job stability, Form 3)"
+  },
+  {
+   "claim_id": "C52",
+   "statement": "Almost twice as many seniors in 2006 as in 1976 rated more-than-2-weeks vacation 'very important'; almost twice as many wanted an easy-pace job; nearly half in 2006 wanted a job leaving time for other things.",
+   "hypothesis_label": null,
+   "direction_claimed": "increase",
+   "tier": "descriptive",
+   "estimand": "Ratio/level of percentage 'very important' across years",
+   "effect_scale_and_null": "percentage points",
+   "population": "U.S. high school seniors, Monitoring the Future, Form 4 respondents, survey years 1976 (Boomers), 1991 (GenX), 2006 (GenMe)",
+   "comparison_units": "1976 vs 2006",
+   "supporting_results": [
+    {
+     "doc_id": "P1",
+     "pdf_page": 16,
+     "table": "Results text RQ1",
+     "column": "",
+     "row": ""
+    },
+    {
+     "doc_id": "P1",
+     "pdf_page": 11,
+     "table": "Table 1",
+     "column": "% v. imp.",
+     "row": "Leisure items"
+    }
+   ],
+   "target_ids": [
+    "T087",
+    "T090",
+    "T093",
+    "T111",
+    "T114",
+    "T117",
+    "T105"
+   ],
+   "notes": ""
+  },
+  {
+   "claim_id": "C53",
+   "statement": "Work centrality declined: GenMe less likely to want to work overtime, more likely to say they would stop working with enough money; 23% of Boomers vs 34% of GenMe agreed work is just making a living; three fourths of Boomers vs 63% of GenMe expected work to be central.",
+   "hypothesis_label": null,
+   "direction_claimed": "decrease",
+   "tier": "descriptive",
+   "estimand": "Percentages agreeing / item means across years for Form 3 work-centrality items",
+   "effect_scale_and_null": "percentage points; t",
+   "population": "U.S. high school seniors, Monitoring the Future, Form 3 respondents, survey years 1976, 1991, 2006",
+   "comparison_units": "1976 vs 2006",
+   "supporting_results": [
+    {
+     "doc_id": "P1",
+     "pdf_page": 16,
+     "table": "Results text RQ1",
+     "column": "",
+     "row": ""
+    },
+    {
+     "doc_id": "P1",
+     "pdf_page": 12,
+     "table": "Table 1",
+     "column": "% v. imp.",
+     "row": "Omitted items (Form 3)"
+    }
+   ],
+   "target_ids": [
+    "T530",
+    "T531",
+    "T532",
+    "T315",
+    "T318",
+    "T321",
+    "T327",
+    "T330",
+    "T333"
+   ],
+   "notes": "Abstract: 'work centrality declined'."
+  },
+  {
+   "claim_id": "C54",
+   "statement": "GenMe placed slightly less emphasis on 'a job that gives you an opportunity to be directly helpful to others' than Boomers did.",
+   "hypothesis_label": null,
+   "direction_claimed": "decrease",
+   "tier": "descriptive",
+   "estimand": "Item mean difference 1976 vs 2006",
+   "effect_scale_and_null": "t; null 0",
+   "population": "U.S. high school seniors, Monitoring the Future, Form 4 respondents, survey years 1976 (Boomers), 1991 (GenX), 2006 (GenMe)",
+   "comparison_units": "1976 vs 2006",
+   "supporting_results": [
+    {
+     "doc_id": "P1",
+     "pdf_page": 17,
+     "table": "Results text RQ4",
+     "column": "",
+     "row": ""
+    },
+    {
+     "doc_id": "P1",
+     "pdf_page": 12,
+     "table": "Table 1",
+     "column": "1976 vs. 2006 t",
+     "row": "A job that gives you an opportunity to be directly helpful to others"
+    }
+   ],
+   "target_ids": [
+    "T228"
+   ],
+   "notes": ""
+  },
+  {
+   "claim_id": "C55",
+   "statement": "Extrinsic rewards were the only value without a linear trend across the three generations (GenX highest).",
+   "hypothesis_label": null,
+   "direction_claimed": "mixed",
+   "tier": "descriptive",
+   "estimand": "Pattern of latent means across three years",
+   "effect_scale_and_null": "latent means",
+   "population": "U.S. high school seniors, Monitoring the Future, Form 4 respondents, survey years 1976 (Boomers), 1991 (GenX), 2006 (GenMe)",
+   "comparison_units": "1976, 1991, 2006",
+   "supporting_results": [
+    {
+     "doc_id": "P1",
+     "pdf_page": 18,
+     "table": "Discussion text",
+     "column": "",
+     "row": ""
+    },
+    {
+     "doc_id": "P1",
+     "pdf_page": 16,
+     "table": "Figure 1",
+     "column": "",
+     "row": ""
+    }
+   ],
+   "target_ids": [
+    "T070",
+    "T074",
+    "T078"
+   ],
+   "notes": ""
+  },
+  {
+   "claim_id": "C56",
+   "statement": "Across all three generations, intrinsic rewards were valued more than all other rewards.",
+   "hypothesis_label": null,
+   "direction_claimed": "other",
+   "tier": "descriptive",
+   "estimand": "Rank order of latent means across the five factors within year",
+   "effect_scale_and_null": "latent means",
+   "population": "U.S. high school seniors, Monitoring the Future, Form 4 respondents, survey years 1976 (Boomers), 1991 (GenX), 2006 (GenMe)",
+   "comparison_units": "within year",
+   "supporting_results": [
+    {
+     "doc_id": "P1",
+     "pdf_page": 20,
+     "table": "Implications text",
+     "column": "",
+     "row": ""
+    },
+    {
+     "doc_id": "P1",
+     "pdf_page": 11,
+     "table": "Table 1",
+     "column": "M",
+     "row": "scale rows"
+    }
+   ],
+   "target_ids": [
+    "T010",
+    "T014",
+    "T018",
+    "T025",
+    "T029",
+    "T033",
+    "T040",
+    "T044",
+    "T048",
+    "T055",
+    "T059",
+    "T063",
+    "T070",
+    "T074",
+    "T078"
+   ],
+   "notes": ""
+  },
+  {
+   "claim_id": "C57",
+   "statement": "Overall generational differences are small to moderate.",
+   "hypothesis_label": null,
+   "direction_claimed": "other",
+   "tier": "descriptive",
+   "estimand": "Magnitude of d values",
+   "effect_scale_and_null": "d",
+   "population": "U.S. high school seniors, Monitoring the Future, Form 4 respondents, survey years 1976 (Boomers), 1991 (GenX), 2006 (GenMe)",
+   "comparison_units": "all pairs",
+   "supporting_results": [
+    {
+     "doc_id": "P1",
+     "pdf_page": 22,
+     "table": "Limitations text",
+     "column": "",
+     "row": ""
+    },
+    {
+     "doc_id": "P1",
+     "pdf_page": 17,
+     "table": "Discussion",
+     "column": "",
+     "row": ""
+    }
+   ],
+   "target_ids": [
+    "T022",
+    "T023",
+    "T024",
+    "T037",
+    "T038",
+    "T039",
+    "T052",
+    "T053",
+    "T054",
+    "T067",
+    "T068",
+    "T069",
+    "T082",
+    "T083",
+    "T084"
+   ],
+   "notes": ""
+  },
+  {
+   "claim_id": "C58",
+   "statement": "Sample: Form 3 n = 3,284 / 2,563 / 2,432 and Form 4 n = 3,296 / 2,526 / 2,406 for 1976 / 1991 / 2006; total 16,507.",
+   "hypothesis_label": null,
+   "direction_claimed": "other",
+   "tier": "descriptive",
+   "estimand": "Counts of respondents per form and year",
+   "effect_scale_and_null": "count",
+   "population": "MTF 12th-grade respondents, Forms 3 and 4",
+   "comparison_units": "form by year",
+   "supporting_results": [
+    {
+     "doc_id": "P1",
+     "pdf_page": 10,
+     "table": "Method text",
+     "column": "",
+     "row": ""
+    }
+   ],
+   "target_ids": [
+    "T001",
+    "T002",
+    "T003",
+    "T004",
+    "T005",
+    "T006",
+    "T007"
+   ],
+   "notes": ""
+  },
+  {
+   "claim_id": "C59",
+   "statement": "Figure 1 plots d of GenX and GenMe relative to Boomers (zero baseline) for the five scales.",
+   "hypothesis_label": null,
+   "direction_claimed": "mixed",
+   "tier": "descriptive",
+   "estimand": "Same d values as Table 1 scale rows",
+   "effect_scale_and_null": "d",
+   "population": "U.S. high school seniors, Monitoring the Future, Form 4 respondents, survey years 1976 (Boomers), 1991 (GenX), 2006 (GenMe)",
+   "comparison_units": "1976 vs 1991; 1976 vs 2006",
+   "supporting_results": [
+    {
+     "doc_id": "P1",
+     "pdf_page": 16,
+     "table": "Figure 1",
+     "column": "",
+     "row": ""
+    }
+   ],
+   "target_ids": [
+    "T022",
+    "T024",
+    "T037",
+    "T039",
+    "T052",
+    "T054",
+    "T067",
+    "T069",
+    "T082",
+    "T084"
+   ],
+   "notes": "Figure values not separately readable from text extraction; PDF is authoritative."
+  }
+ ]
+}

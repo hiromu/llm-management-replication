@@ -1,0 +1,50 @@
+{
+  "study_id": "delaney1996",
+  "paper_id": "AMJ_1996_DELANEY",
+  "citation": "Delaney, J. T., and Huselid, M. A. (1996). The Impact of Human Resource Management Practices on Perceptions of Organizational Performance. Academy of Management Journal, 39(4), 949-969.",
+  "journal": "Academy of Management Journal",
+  "doi": "10.5465/256718",
+  "alternate_doi": "10.2307/256718",
+  "paper_path_from_project_root": "papers/journal_collection/AMJ/AMJ_1996_DELANEY.pdf",
+  "paper_sha256": "d2ec15a6fd3be26ef46211947312557f6240577168695ae2d68abc255f166b1c",
+  "status": "completed_indeterminate",
+  "data_policy": "Use the user-supplied ICPSR 6240 bundle (National Organizations Survey, 1991), downloaded from ICPSR by the user (a human) and saved in this study's data/supplied/, after independent validation. Agents do not download from or log in to ICPSR. Acquire all other empirical inputs afresh from permitted original sources. No printed article data or focal-author replication packages. Published results are sealed comparison targets or publication diagnostics only.",
+  "supplied_source_ids": [
+    "icpsr06240"
+  ],
+  "supplied_sources_inventory_from_study": "data/supplied/supplied_sources.json",
+  "supplied_bundle_paths_from_study": [
+    "data/supplied/ICPSR_06240"
+  ],
+  "supplied_source_status": "source_data_present_integrity_verified",
+  "supplied_source_acquisition": "downloaded from ICPSR by the user by hand; byte-identical copy of ../Replication_management_v4_codex/studies/delaney1996/data/raw/ICPSR_06240; stored inside the study it belongs to",
+  "supplied_source_file_count": 6,
+  "supplied_empirical_data_file_count": 1,
+  "reader_runs": 2,
+  "model_fits": "912 per implementation x 3 implementations (38 specs); 2,400 leave-one-out refits per implementation",
+  "research_authorized": true,
+  "session_scope": "delaney1996 only; other papers require a separate session",
+  "public_source_eligibility": "eligible: NOS 1991 ICPSR 6240 user-supplied bundle validated; Census crosswalk acquired",
+  "author_package_availability": "not found after documented search (logs/eligibility/package_and_supplement_search.json)",
+  "supplement_catalog_from_project_root": "papers/supplements/catalog.json",
+  "supplements": [],
+  "local_supplement_status": "no_local_match",
+  "external_supplement_availability": "none found; author-hosted alternate article copy included as D2",
+  "prepared_utc": "2026-10-28T03:14:22Z",
+  "research_authorized_utc": "2026-10-28T03:25:00Z",
+  "coordinator_session": "b5dfe2d8-6c78-49e5-9b2d-f3b29045f21f",
+  "memorization_probes": 2,
+  "paper_outcome": "indeterminate (sample_reconstruction; label_sensitive)",
+  "claim_outcomes": {
+    "H1": "indeterminate",
+    "H2": "indeterminate"
+  },
+  "discrepant_candidates": "23 pending human review; adversarial review: 16 overturned, 7 uncertain; none confirmed",
+  "reports": [
+    "reports/replication_report.md",
+    "reports/technical_supplement.md",
+    "reports/figures/reconstruction_influence.svg"
+  ],
+  "completed_utc": "2026-10-28T06:20:00Z",
+  "amendment_decision": "User chose not to run a v2 amendment for the unexecuted percent-managers origin level (Reader A A15.L0); frozen v1 results are the final record."
+}

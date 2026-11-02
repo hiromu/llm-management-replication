@@ -1,0 +1,34 @@
+Deterministic synthetic checks; no real-data fitting.
+                                            test passed
+                                          <char> <lgcl>
+1:                     known_probit_coefficients   TRUE
+2: marginal_effects_and_delta_finite_differences   TRUE
+3:            cluster_covariance_direct_sandwich   TRUE
+4:                     handmade_hierarchy_groups   TRUE
+5:          delong_identical_and_tied_predictors   TRUE
+6:                        NUL_safe_Parquet_pages   TRUE
+7:          duplicate_linkage_and_missing_design   TRUE
+8:     coordinate_selection_and_capital_override   TRUE
+9:                all_families_on_synthetic_data   TRUE
+                                                                                                                     detail
+                                                                                                                     <char>
+1:                                                   max absolute error 0.00914005; max standardized error 0.76658; n=60000
+2:                                                      ME error 1.62e-12; Jacobian error 2.03e-07; delta SE error 3.12e-08
+3:                                                                                            max covariance error 2.78e-17
+4:                               single rank S=0; one member S=0; matching shares M=1; ranks 1,9 S=0.4; empty group missing
+5:                                                                    identical z=0, p=1; tied brute-force z error 8.88e-16
+6:                                     NUL at beginning/middle/end removed; spaces, empty strings and null values preserved
+7:                                      duplicate unmatched/first/combine; missing regressor zero replacement and indicator
+8: lowest entry selected; eligible capital km=1; unknown/no row missing; malformed degree missing; absent degree falls back
+9:                104 synthetic models, 8 paired ROC comparisons, 96 leave-camp-out fits; constant-outcome failure recorded
+   seconds
+     <num>
+1:   0.051
+2:   0.008
+3:   0.000
+4:   0.008
+5:   0.007
+6:   0.025
+7:   0.040
+8:   0.013
+9:   2.019

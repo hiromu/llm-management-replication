@@ -1,0 +1,1587 @@
+{
+ "target_free": true,
+ "opaque_paper_id": "PAPER_X",
+ "rule": "No article identity, author names, title, journal, published numbers, published Ns, or result directions may appear in this file. Describe operations on the source data only.",
+ "design_summary": "Repeated cross-sections of 12th-grade respondents from the same survey programme in three survey years spaced 15 years apart, using two questionnaire forms. Work-value items on one form are modelled as five correlated latent factors with multigroup measurement invariance testing across the three years; latent means per year are compared pairwise with standardized mean differences. Items on the other form (and four dropped items) are compared year-by-year with item means, top-category percentages and independent-samples t tests.",
+ "data_sources": [
+  {
+   "source_key": "1976_DS0003",
+   "role": "Form 3 respondents, earliest year (work/leisure agreement items V3222-V3227)"
+  },
+  {
+   "source_key": "1976_DS0004",
+   "role": "Form 4 respondents, earliest year (job characteristic importance items V4225-V4247)"
+  },
+  {
+   "source_key": "1991_DS0004",
+   "role": "Form 3 respondents, middle year"
+  },
+  {
+   "source_key": "1991_DS0005",
+   "role": "Form 4 respondents, middle year"
+  },
+  {
+   "source_key": "2006_DS0004",
+   "role": "Form 3 respondents, latest year"
+  },
+  {
+   "source_key": "2006_DS0005",
+   "role": "Form 4 respondents, latest year"
+  },
+  {
+   "source_key": "core files (DS0006 1976; DS0001 1991; DS0001 2006)",
+   "role": "not used; no core variables are required"
+  }
+ ],
+ "variables": [
+  {
+   "variable_id": "V001",
+   "concept": "Importance rating of job characteristic: job: see the results of what you do",
+   "factor_assignment": "intrinsic",
+   "source_variables": {
+    "1976_DS0004": "V4225",
+    "1991_DS0005": "V4225",
+    "2006_DS0005": "V4225"
+   },
+   "coding": "Keep original codes 1 = Not important, 2 = A little important, 3 = Pretty important, 4 = Very important (identical labels in all three years per dictionaries). No reverse coding. Valid range 1-4. NOTE: the article text describes a 5-point scale, but the source instrument has 4 categories; implement the 4-category source coding.",
+   "missing_rule": "1976: declared missing 0 and 9-or-higher; 1991: declared missing 0 and 9; 2006: declared missing -9. Set all declared missing codes and blanks to missing.",
+   "top_category_indicator": "Binary indicator = 1 if code 4 (Very important), 0 if codes 1-3, missing otherwise (for the percentage output).",
+   "locators": [
+    {
+     "doc_id": "P1",
+     "pdf_page": 10,
+     "section_or_table": "Method text, Form 4 item description"
+    },
+    {
+     "doc_id": "P1",
+     "pdf_page": 11,
+     "section_or_table": "Table 1 item rows"
+    },
+    {
+     "doc_id": "P1",
+     "pdf_page": 12,
+     "section_or_table": "Table 1 item rows"
+    },
+    {
+     "doc_id": "P1",
+     "pdf_page": 13,
+     "section_or_table": "Table 1 item rows"
+    },
+    {
+     "source": "sources/dictionaries/1976_DS0004, 1991_DS0005, 2006_DS0005"
+    }
+   ]
+  },
+  {
+   "variable_id": "V002",
+   "concept": "Importance rating of job characteristic: job: high status and prestige",
+   "factor_assignment": "extrinsic",
+   "source_variables": {
+    "1976_DS0004": "V4226",
+    "1991_DS0005": "V4226",
+    "2006_DS0005": "V4226"
+   },
+   "coding": "Keep original codes 1 = Not important, 2 = A little important, 3 = Pretty important, 4 = Very important (identical labels in all three years per dictionaries). No reverse coding. Valid range 1-4. NOTE: the article text describes a 5-point scale, but the source instrument has 4 categories; implement the 4-category source coding.",
+   "missing_rule": "1976: declared missing 0 and 9-or-higher; 1991: declared missing 0 and 9; 2006: declared missing -9. Set all declared missing codes and blanks to missing.",
+   "top_category_indicator": "Binary indicator = 1 if code 4 (Very important), 0 if codes 1-3, missing otherwise (for the percentage output).",
+   "locators": [
+    {
+     "doc_id": "P1",
+     "pdf_page": 10,
+     "section_or_table": "Method text, Form 4 item description"
+    },
+    {
+     "doc_id": "P1",
+     "pdf_page": 11,
+     "section_or_table": "Table 1 item rows"
+    },
+    {
+     "doc_id": "P1",
+     "pdf_page": 12,
+     "section_or_table": "Table 1 item rows"
+    },
+    {
+     "doc_id": "P1",
+     "pdf_page": 13,
+     "section_or_table": "Table 1 item rows"
+    },
+    {
+     "source": "sources/dictionaries/1976_DS0004, 1991_DS0005, 2006_DS0005"
+    }
+   ]
+  },
+  {
+   "variable_id": "V003",
+   "concept": "Importance rating of job characteristic: job: interesting to do",
+   "factor_assignment": "intrinsic",
+   "source_variables": {
+    "1976_DS0004": "V4227",
+    "1991_DS0005": "V4227",
+    "2006_DS0005": "V4227"
+   },
+   "coding": "Keep original codes 1 = Not important, 2 = A little important, 3 = Pretty important, 4 = Very important (identical labels in all three years per dictionaries). No reverse coding. Valid range 1-4. NOTE: the article text describes a 5-point scale, but the source instrument has 4 categories; implement the 4-category source coding.",
+   "missing_rule": "1976: declared missing 0 and 9-or-higher; 1991: declared missing 0 and 9; 2006: declared missing -9. Set all declared missing codes and blanks to missing.",
+   "top_category_indicator": "Binary indicator = 1 if code 4 (Very important), 0 if codes 1-3, missing otherwise (for the percentage output).",
+   "locators": [
+    {
+     "doc_id": "P1",
+     "pdf_page": 10,
+     "section_or_table": "Method text, Form 4 item description"
+    },
+    {
+     "doc_id": "P1",
+     "pdf_page": 11,
+     "section_or_table": "Table 1 item rows"
+    },
+    {
+     "doc_id": "P1",
+     "pdf_page": 12,
+     "section_or_table": "Table 1 item rows"
+    },
+    {
+     "doc_id": "P1",
+     "pdf_page": 13,
+     "section_or_table": "Table 1 item rows"
+    },
+    {
+     "source": "sources/dictionaries/1976_DS0004, 1991_DS0005, 2006_DS0005"
+    }
+   ]
+  },
+  {
+   "variable_id": "V004",
+   "concept": "Importance rating of job characteristic: job: chances for advancement and promotion are good",
+   "factor_assignment": "extrinsic",
+   "source_variables": {
+    "1976_DS0004": "V4228",
+    "1991_DS0005": "V4228",
+    "2006_DS0005": "V4228"
+   },
+   "coding": "Keep original codes 1 = Not important, 2 = A little important, 3 = Pretty important, 4 = Very important (identical labels in all three years per dictionaries). No reverse coding. Valid range 1-4. NOTE: the article text describes a 5-point scale, but the source instrument has 4 categories; implement the 4-category source coding.",
+   "missing_rule": "1976: declared missing 0 and 9-or-higher; 1991: declared missing 0 and 9; 2006: declared missing -9. Set all declared missing codes and blanks to missing.",
+   "top_category_indicator": "Binary indicator = 1 if code 4 (Very important), 0 if codes 1-3, missing otherwise (for the percentage output).",
+   "locators": [
+    {
+     "doc_id": "P1",
+     "pdf_page": 10,
+     "section_or_table": "Method text, Form 4 item description"
+    },
+    {
+     "doc_id": "P1",
+     "pdf_page": 11,
+     "section_or_table": "Table 1 item rows"
+    },
+    {
+     "doc_id": "P1",
+     "pdf_page": 12,
+     "section_or_table": "Table 1 item rows"
+    },
+    {
+     "doc_id": "P1",
+     "pdf_page": 13,
+     "section_or_table": "Table 1 item rows"
+    },
+    {
+     "source": "sources/dictionaries/1976_DS0004, 1991_DS0005, 2006_DS0005"
+    }
+   ]
+  },
+  {
+   "variable_id": "V005",
+   "concept": "Importance rating of job characteristic: job: opportunity to be directly helpful to others",
+   "factor_assignment": "altruistic",
+   "source_variables": {
+    "1976_DS0004": "V4229",
+    "1991_DS0005": "V4229",
+    "2006_DS0005": "V4229"
+   },
+   "coding": "Keep original codes 1 = Not important, 2 = A little important, 3 = Pretty important, 4 = Very important (identical labels in all three years per dictionaries). No reverse coding. Valid range 1-4. NOTE: the article text describes a 5-point scale, but the source instrument has 4 categories; implement the 4-category source coding.",
+   "missing_rule": "1976: declared missing 0 and 9-or-higher; 1991: declared missing 0 and 9; 2006: declared missing -9. Set all declared missing codes and blanks to missing.",
+   "top_category_indicator": "Binary indicator = 1 if code 4 (Very important), 0 if codes 1-3, missing otherwise (for the percentage output).",
+   "locators": [
+    {
+     "doc_id": "P1",
+     "pdf_page": 10,
+     "section_or_table": "Method text, Form 4 item description"
+    },
+    {
+     "doc_id": "P1",
+     "pdf_page": 11,
+     "section_or_table": "Table 1 item rows"
+    },
+    {
+     "doc_id": "P1",
+     "pdf_page": 12,
+     "section_or_table": "Table 1 item rows"
+    },
+    {
+     "doc_id": "P1",
+     "pdf_page": 13,
+     "section_or_table": "Table 1 item rows"
+    },
+    {
+     "source": "sources/dictionaries/1976_DS0004, 1991_DS0005, 2006_DS0005"
+    }
+   ]
+  },
+  {
+   "variable_id": "V006",
+   "concept": "Importance rating of job characteristic: job: chance to earn a good deal of money",
+   "factor_assignment": "extrinsic",
+   "source_variables": {
+    "1976_DS0004": "V4230",
+    "1991_DS0005": "V4230",
+    "2006_DS0005": "V4230"
+   },
+   "coding": "Keep original codes 1 = Not important, 2 = A little important, 3 = Pretty important, 4 = Very important (identical labels in all three years per dictionaries). No reverse coding. Valid range 1-4. NOTE: the article text describes a 5-point scale, but the source instrument has 4 categories; implement the 4-category source coding.",
+   "missing_rule": "1976: declared missing 0 and 9-or-higher; 1991: declared missing 0 and 9; 2006: declared missing -9. Set all declared missing codes and blanks to missing.",
+   "top_category_indicator": "Binary indicator = 1 if code 4 (Very important), 0 if codes 1-3, missing otherwise (for the percentage output).",
+   "locators": [
+    {
+     "doc_id": "P1",
+     "pdf_page": 10,
+     "section_or_table": "Method text, Form 4 item description"
+    },
+    {
+     "doc_id": "P1",
+     "pdf_page": 11,
+     "section_or_table": "Table 1 item rows"
+    },
+    {
+     "doc_id": "P1",
+     "pdf_page": 12,
+     "section_or_table": "Table 1 item rows"
+    },
+    {
+     "doc_id": "P1",
+     "pdf_page": 13,
+     "section_or_table": "Table 1 item rows"
+    },
+    {
+     "source": "sources/dictionaries/1976_DS0004, 1991_DS0005, 2006_DS0005"
+    }
+   ]
+  },
+  {
+   "variable_id": "V007",
+   "concept": "Importance rating of job characteristic: job: chance to be creative",
+   "factor_assignment": "intrinsic",
+   "source_variables": {
+    "1976_DS0004": "V4231",
+    "1991_DS0005": "V4231",
+    "2006_DS0005": "V4231"
+   },
+   "coding": "Keep original codes 1 = Not important, 2 = A little important, 3 = Pretty important, 4 = Very important (identical labels in all three years per dictionaries). No reverse coding. Valid range 1-4. NOTE: the article text describes a 5-point scale, but the source instrument has 4 categories; implement the 4-category source coding.",
+   "missing_rule": "1976: declared missing 0 and 9-or-higher; 1991: declared missing 0 and 9; 2006: declared missing -9. Set all declared missing codes and blanks to missing.",
+   "top_category_indicator": "Binary indicator = 1 if code 4 (Very important), 0 if codes 1-3, missing otherwise (for the percentage output).",
+   "locators": [
+    {
+     "doc_id": "P1",
+     "pdf_page": 10,
+     "section_or_table": "Method text, Form 4 item description"
+    },
+    {
+     "doc_id": "P1",
+     "pdf_page": 11,
+     "section_or_table": "Table 1 item rows"
+    },
+    {
+     "doc_id": "P1",
+     "pdf_page": 12,
+     "section_or_table": "Table 1 item rows"
+    },
+    {
+     "doc_id": "P1",
+     "pdf_page": 13,
+     "section_or_table": "Table 1 item rows"
+    },
+    {
+     "source": "sources/dictionaries/1976_DS0004, 1991_DS0005, 2006_DS0005"
+    }
+   ]
+  },
+  {
+   "variable_id": "V008",
+   "concept": "Importance rating of job characteristic: job: skills you learn will not go out of date",
+   "factor_assignment": "intrinsic",
+   "source_variables": {
+    "1976_DS0004": "V4232",
+    "1991_DS0005": "V4232",
+    "2006_DS0005": "V4232"
+   },
+   "coding": "Keep original codes 1 = Not important, 2 = A little important, 3 = Pretty important, 4 = Very important (identical labels in all three years per dictionaries). No reverse coding. Valid range 1-4. NOTE: the article text describes a 5-point scale, but the source instrument has 4 categories; implement the 4-category source coding.",
+   "missing_rule": "1976: declared missing 0 and 9-or-higher; 1991: declared missing 0 and 9; 2006: declared missing -9. Set all declared missing codes and blanks to missing.",
+   "top_category_indicator": "Binary indicator = 1 if code 4 (Very important), 0 if codes 1-3, missing otherwise (for the percentage output).",
+   "locators": [
+    {
+     "doc_id": "P1",
+     "pdf_page": 10,
+     "section_or_table": "Method text, Form 4 item description"
+    },
+    {
+     "doc_id": "P1",
+     "pdf_page": 11,
+     "section_or_table": "Table 1 item rows"
+    },
+    {
+     "doc_id": "P1",
+     "pdf_page": 12,
+     "section_or_table": "Table 1 item rows"
+    },
+    {
+     "doc_id": "P1",
+     "pdf_page": 13,
+     "section_or_table": "Table 1 item rows"
+    },
+    {
+     "source": "sources/dictionaries/1976_DS0004, 1991_DS0005, 2006_DS0005"
+    }
+   ]
+  },
+  {
+   "variable_id": "V009",
+   "concept": "Importance rating of job characteristic: job: chance to make friends",
+   "factor_assignment": "social",
+   "source_variables": {
+    "1976_DS0004": "V4233",
+    "1991_DS0005": "V4233",
+    "2006_DS0005": "V4233"
+   },
+   "coding": "Keep original codes 1 = Not important, 2 = A little important, 3 = Pretty important, 4 = Very important (identical labels in all three years per dictionaries). No reverse coding. Valid range 1-4. NOTE: the article text describes a 5-point scale, but the source instrument has 4 categories; implement the 4-category source coding.",
+   "missing_rule": "1976: declared missing 0 and 9-or-higher; 1991: declared missing 0 and 9; 2006: declared missing -9. Set all declared missing codes and blanks to missing.",
+   "top_category_indicator": "Binary indicator = 1 if code 4 (Very important), 0 if codes 1-3, missing otherwise (for the percentage output).",
+   "locators": [
+    {
+     "doc_id": "P1",
+     "pdf_page": 10,
+     "section_or_table": "Method text, Form 4 item description"
+    },
+    {
+     "doc_id": "P1",
+     "pdf_page": 11,
+     "section_or_table": "Table 1 item rows"
+    },
+    {
+     "doc_id": "P1",
+     "pdf_page": 12,
+     "section_or_table": "Table 1 item rows"
+    },
+    {
+     "doc_id": "P1",
+     "pdf_page": 13,
+     "section_or_table": "Table 1 item rows"
+    },
+    {
+     "source": "sources/dictionaries/1976_DS0004, 1991_DS0005, 2006_DS0005"
+    }
+   ]
+  },
+  {
+   "variable_id": "V010",
+   "concept": "Importance rating of job characteristic: job: uses your skills and abilities",
+   "factor_assignment": "intrinsic",
+   "source_variables": {
+    "1976_DS0004": "V4234",
+    "1991_DS0005": "V4234",
+    "2006_DS0005": "V4234"
+   },
+   "coding": "Keep original codes 1 = Not important, 2 = A little important, 3 = Pretty important, 4 = Very important (identical labels in all three years per dictionaries). No reverse coding. Valid range 1-4. NOTE: the article text describes a 5-point scale, but the source instrument has 4 categories; implement the 4-category source coding.",
+   "missing_rule": "1976: declared missing 0 and 9-or-higher; 1991: declared missing 0 and 9; 2006: declared missing -9. Set all declared missing codes and blanks to missing.",
+   "top_category_indicator": "Binary indicator = 1 if code 4 (Very important), 0 if codes 1-3, missing otherwise (for the percentage output).",
+   "locators": [
+    {
+     "doc_id": "P1",
+     "pdf_page": 10,
+     "section_or_table": "Method text, Form 4 item description"
+    },
+    {
+     "doc_id": "P1",
+     "pdf_page": 11,
+     "section_or_table": "Table 1 item rows"
+    },
+    {
+     "doc_id": "P1",
+     "pdf_page": 12,
+     "section_or_table": "Table 1 item rows"
+    },
+    {
+     "doc_id": "P1",
+     "pdf_page": 13,
+     "section_or_table": "Table 1 item rows"
+    },
+    {
+     "source": "sources/dictionaries/1976_DS0004, 1991_DS0005, 2006_DS0005"
+    }
+   ]
+  },
+  {
+   "variable_id": "V011",
+   "concept": "Importance rating of job characteristic: job: worthwhile to society",
+   "factor_assignment": "altruistic",
+   "source_variables": {
+    "1976_DS0004": "V4235",
+    "1991_DS0005": "V4235",
+    "2006_DS0005": "V4235"
+   },
+   "coding": "Keep original codes 1 = Not important, 2 = A little important, 3 = Pretty important, 4 = Very important (identical labels in all three years per dictionaries). No reverse coding. Valid range 1-4. NOTE: the article text describes a 5-point scale, but the source instrument has 4 categories; implement the 4-category source coding.",
+   "missing_rule": "1976: declared missing 0 and 9-or-higher; 1991: declared missing 0 and 9; 2006: declared missing -9. Set all declared missing codes and blanks to missing.",
+   "top_category_indicator": "Binary indicator = 1 if code 4 (Very important), 0 if codes 1-3, missing otherwise (for the percentage output).",
+   "locators": [
+    {
+     "doc_id": "P1",
+     "pdf_page": 10,
+     "section_or_table": "Method text, Form 4 item description"
+    },
+    {
+     "doc_id": "P1",
+     "pdf_page": 11,
+     "section_or_table": "Table 1 item rows"
+    },
+    {
+     "doc_id": "P1",
+     "pdf_page": 12,
+     "section_or_table": "Table 1 item rows"
+    },
+    {
+     "doc_id": "P1",
+     "pdf_page": 13,
+     "section_or_table": "Table 1 item rows"
+    },
+    {
+     "source": "sources/dictionaries/1976_DS0004, 1991_DS0005, 2006_DS0005"
+    }
+   ]
+  },
+  {
+   "variable_id": "V012",
+   "concept": "Importance rating of job characteristic: job: more than two weeks vacation",
+   "factor_assignment": "leisure",
+   "source_variables": {
+    "1976_DS0004": "V4236",
+    "1991_DS0005": "V4236",
+    "2006_DS0005": "V4236"
+   },
+   "coding": "Keep original codes 1 = Not important, 2 = A little important, 3 = Pretty important, 4 = Very important (identical labels in all three years per dictionaries). No reverse coding. Valid range 1-4. NOTE: the article text describes a 5-point scale, but the source instrument has 4 categories; implement the 4-category source coding.",
+   "missing_rule": "1976: declared missing 0 and 9-or-higher; 1991: declared missing 0 and 9; 2006: declared missing -9. Set all declared missing codes and blanks to missing.",
+   "top_category_indicator": "Binary indicator = 1 if code 4 (Very important), 0 if codes 1-3, missing otherwise (for the percentage output).",
+   "locators": [
+    {
+     "doc_id": "P1",
+     "pdf_page": 10,
+     "section_or_table": "Method text, Form 4 item description"
+    },
+    {
+     "doc_id": "P1",
+     "pdf_page": 11,
+     "section_or_table": "Table 1 item rows"
+    },
+    {
+     "doc_id": "P1",
+     "pdf_page": 12,
+     "section_or_table": "Table 1 item rows"
+    },
+    {
+     "doc_id": "P1",
+     "pdf_page": 13,
+     "section_or_table": "Table 1 item rows"
+    },
+    {
+     "source": "sources/dictionaries/1976_DS0004, 1991_DS0005, 2006_DS0005"
+    }
+   ]
+  },
+  {
+   "variable_id": "V013",
+   "concept": "Importance rating of job characteristic: job: chance to participate in decision making",
+   "factor_assignment": "omitted (influence)",
+   "source_variables": {
+    "1976_DS0004": "V4237",
+    "1991_DS0005": "V4237",
+    "2006_DS0005": "V4237"
+   },
+   "coding": "Keep original codes 1 = Not important, 2 = A little important, 3 = Pretty important, 4 = Very important (identical labels in all three years per dictionaries). No reverse coding. Valid range 1-4. NOTE: the article text describes a 5-point scale, but the source instrument has 4 categories; implement the 4-category source coding.",
+   "missing_rule": "1976: declared missing 0 and 9-or-higher; 1991: declared missing 0 and 9; 2006: declared missing -9. Set all declared missing codes and blanks to missing.",
+   "top_category_indicator": "Binary indicator = 1 if code 4 (Very important), 0 if codes 1-3, missing otherwise (for the percentage output).",
+   "locators": [
+    {
+     "doc_id": "P1",
+     "pdf_page": 10,
+     "section_or_table": "Method text, Form 4 item description"
+    },
+    {
+     "doc_id": "P1",
+     "pdf_page": 11,
+     "section_or_table": "Table 1 item rows"
+    },
+    {
+     "doc_id": "P1",
+     "pdf_page": 12,
+     "section_or_table": "Table 1 item rows"
+    },
+    {
+     "doc_id": "P1",
+     "pdf_page": 13,
+     "section_or_table": "Table 1 item rows"
+    },
+    {
+     "source": "sources/dictionaries/1976_DS0004, 1991_DS0005, 2006_DS0005"
+    }
+   ]
+  },
+  {
+   "variable_id": "V014",
+   "concept": "Importance rating of job characteristic: job: leaves a lot of time for other things in your life",
+   "factor_assignment": "leisure",
+   "source_variables": {
+    "1976_DS0004": "V4238",
+    "1991_DS0005": "V4238",
+    "2006_DS0005": "V4238"
+   },
+   "coding": "Keep original codes 1 = Not important, 2 = A little important, 3 = Pretty important, 4 = Very important (identical labels in all three years per dictionaries). No reverse coding. Valid range 1-4. NOTE: the article text describes a 5-point scale, but the source instrument has 4 categories; implement the 4-category source coding.",
+   "missing_rule": "1976: declared missing 0 and 9-or-higher; 1991: declared missing 0 and 9; 2006: declared missing -9. Set all declared missing codes and blanks to missing.",
+   "top_category_indicator": "Binary indicator = 1 if code 4 (Very important), 0 if codes 1-3, missing otherwise (for the percentage output).",
+   "locators": [
+    {
+     "doc_id": "P1",
+     "pdf_page": 10,
+     "section_or_table": "Method text, Form 4 item description"
+    },
+    {
+     "doc_id": "P1",
+     "pdf_page": 11,
+     "section_or_table": "Table 1 item rows"
+    },
+    {
+     "doc_id": "P1",
+     "pdf_page": 12,
+     "section_or_table": "Table 1 item rows"
+    },
+    {
+     "doc_id": "P1",
+     "pdf_page": 13,
+     "section_or_table": "Table 1 item rows"
+    },
+    {
+     "source": "sources/dictionaries/1976_DS0004, 1991_DS0005, 2006_DS0005"
+    }
+   ]
+  },
+  {
+   "variable_id": "V015",
+   "concept": "Importance rating of job characteristic: job: establish roots in a community, not move",
+   "factor_assignment": "omitted (security)",
+   "source_variables": {
+    "1976_DS0004": "V4239",
+    "1991_DS0005": "V4239",
+    "2006_DS0005": "V4239"
+   },
+   "coding": "Keep original codes 1 = Not important, 2 = A little important, 3 = Pretty important, 4 = Very important (identical labels in all three years per dictionaries). No reverse coding. Valid range 1-4. NOTE: the article text describes a 5-point scale, but the source instrument has 4 categories; implement the 4-category source coding.",
+   "missing_rule": "1976: declared missing 0 and 9-or-higher; 1991: declared missing 0 and 9; 2006: declared missing -9. Set all declared missing codes and blanks to missing.",
+   "top_category_indicator": "Binary indicator = 1 if code 4 (Very important), 0 if codes 1-3, missing otherwise (for the percentage output).",
+   "locators": [
+    {
+     "doc_id": "P1",
+     "pdf_page": 10,
+     "section_or_table": "Method text, Form 4 item description"
+    },
+    {
+     "doc_id": "P1",
+     "pdf_page": 11,
+     "section_or_table": "Table 1 item rows"
+    },
+    {
+     "doc_id": "P1",
+     "pdf_page": 12,
+     "section_or_table": "Table 1 item rows"
+    },
+    {
+     "doc_id": "P1",
+     "pdf_page": 13,
+     "section_or_table": "Table 1 item rows"
+    },
+    {
+     "source": "sources/dictionaries/1976_DS0004, 1991_DS0005, 2006_DS0005"
+    }
+   ]
+  },
+  {
+   "variable_id": "V016",
+   "concept": "Importance rating of job characteristic: job: mostly free of supervision by others",
+   "factor_assignment": "leisure",
+   "source_variables": {
+    "1976_DS0004": "V4240",
+    "1991_DS0005": "V4240",
+    "2006_DS0005": "V4240"
+   },
+   "coding": "Keep original codes 1 = Not important, 2 = A little important, 3 = Pretty important, 4 = Very important (identical labels in all three years per dictionaries). No reverse coding. Valid range 1-4. NOTE: the article text describes a 5-point scale, but the source instrument has 4 categories; implement the 4-category source coding.",
+   "missing_rule": "1976: declared missing 0 and 9-or-higher; 1991: declared missing 0 and 9; 2006: declared missing -9. Set all declared missing codes and blanks to missing.",
+   "top_category_indicator": "Binary indicator = 1 if code 4 (Very important), 0 if codes 1-3, missing otherwise (for the percentage output).",
+   "locators": [
+    {
+     "doc_id": "P1",
+     "pdf_page": 10,
+     "section_or_table": "Method text, Form 4 item description"
+    },
+    {
+     "doc_id": "P1",
+     "pdf_page": 11,
+     "section_or_table": "Table 1 item rows"
+    },
+    {
+     "doc_id": "P1",
+     "pdf_page": 12,
+     "section_or_table": "Table 1 item rows"
+    },
+    {
+     "doc_id": "P1",
+     "pdf_page": 13,
+     "section_or_table": "Table 1 item rows"
+    },
+    {
+     "source": "sources/dictionaries/1976_DS0004, 1991_DS0005, 2006_DS0005"
+    }
+   ]
+  },
+  {
+   "variable_id": "V017",
+   "concept": "Importance rating of job characteristic: job: reasonably predictable, secure future",
+   "factor_assignment": "omitted (security)",
+   "source_variables": {
+    "1976_DS0004": "V4241",
+    "1991_DS0005": "V4241",
+    "2006_DS0005": "V4241"
+   },
+   "coding": "Keep original codes 1 = Not important, 2 = A little important, 3 = Pretty important, 4 = Very important (identical labels in all three years per dictionaries). No reverse coding. Valid range 1-4. NOTE: the article text describes a 5-point scale, but the source instrument has 4 categories; implement the 4-category source coding.",
+   "missing_rule": "1976: declared missing 0 and 9-or-higher; 1991: declared missing 0 and 9; 2006: declared missing -9. Set all declared missing codes and blanks to missing.",
+   "top_category_indicator": "Binary indicator = 1 if code 4 (Very important), 0 if codes 1-3, missing otherwise (for the percentage output).",
+   "locators": [
+    {
+     "doc_id": "P1",
+     "pdf_page": 10,
+     "section_or_table": "Method text, Form 4 item description"
+    },
+    {
+     "doc_id": "P1",
+     "pdf_page": 11,
+     "section_or_table": "Table 1 item rows"
+    },
+    {
+     "doc_id": "P1",
+     "pdf_page": 12,
+     "section_or_table": "Table 1 item rows"
+    },
+    {
+     "doc_id": "P1",
+     "pdf_page": 13,
+     "section_or_table": "Table 1 item rows"
+    },
+    {
+     "source": "sources/dictionaries/1976_DS0004, 1991_DS0005, 2006_DS0005"
+    }
+   ]
+  },
+  {
+   "variable_id": "V018",
+   "concept": "Importance rating of job characteristic: job: learn new things, learn new skills",
+   "factor_assignment": "intrinsic",
+   "source_variables": {
+    "1976_DS0004": "V4242",
+    "1991_DS0005": "V4242",
+    "2006_DS0005": "V4242"
+   },
+   "coding": "Keep original codes 1 = Not important, 2 = A little important, 3 = Pretty important, 4 = Very important (identical labels in all three years per dictionaries). No reverse coding. Valid range 1-4. NOTE: the article text describes a 5-point scale, but the source instrument has 4 categories; implement the 4-category source coding.",
+   "missing_rule": "1976: declared missing 0 and 9-or-higher; 1991: declared missing 0 and 9; 2006: declared missing -9. Set all declared missing codes and blanks to missing.",
+   "top_category_indicator": "Binary indicator = 1 if code 4 (Very important), 0 if codes 1-3, missing otherwise (for the percentage output).",
+   "locators": [
+    {
+     "doc_id": "P1",
+     "pdf_page": 10,
+     "section_or_table": "Method text, Form 4 item description"
+    },
+    {
+     "doc_id": "P1",
+     "pdf_page": 11,
+     "section_or_table": "Table 1 item rows"
+    },
+    {
+     "doc_id": "P1",
+     "pdf_page": 12,
+     "section_or_table": "Table 1 item rows"
+    },
+    {
+     "doc_id": "P1",
+     "pdf_page": 13,
+     "section_or_table": "Table 1 item rows"
+    },
+    {
+     "source": "sources/dictionaries/1976_DS0004, 1991_DS0005, 2006_DS0005"
+    }
+   ]
+  },
+  {
+   "variable_id": "V019",
+   "concept": "Importance rating of job characteristic: job: do not have to pretend to be a type of person you are not",
+   "factor_assignment": "intrinsic",
+   "source_variables": {
+    "1976_DS0004": "V4243",
+    "1991_DS0005": "V4243",
+    "2006_DS0005": "V4243"
+   },
+   "coding": "Keep original codes 1 = Not important, 2 = A little important, 3 = Pretty important, 4 = Very important (identical labels in all three years per dictionaries). No reverse coding. Valid range 1-4. NOTE: the article text describes a 5-point scale, but the source instrument has 4 categories; implement the 4-category source coding.",
+   "missing_rule": "1976: declared missing 0 and 9-or-higher; 1991: declared missing 0 and 9; 2006: declared missing -9. Set all declared missing codes and blanks to missing.",
+   "top_category_indicator": "Binary indicator = 1 if code 4 (Very important), 0 if codes 1-3, missing otherwise (for the percentage output).",
+   "locators": [
+    {
+     "doc_id": "P1",
+     "pdf_page": 10,
+     "section_or_table": "Method text, Form 4 item description"
+    },
+    {
+     "doc_id": "P1",
+     "pdf_page": 11,
+     "section_or_table": "Table 1 item rows"
+    },
+    {
+     "doc_id": "P1",
+     "pdf_page": 12,
+     "section_or_table": "Table 1 item rows"
+    },
+    {
+     "doc_id": "P1",
+     "pdf_page": 13,
+     "section_or_table": "Table 1 item rows"
+    },
+    {
+     "source": "sources/dictionaries/1976_DS0004, 1991_DS0005, 2006_DS0005"
+    }
+   ]
+  },
+  {
+   "variable_id": "V020",
+   "concept": "Importance rating of job characteristic: job: most people look up to and respect",
+   "factor_assignment": "extrinsic",
+   "source_variables": {
+    "1976_DS0004": "V4244",
+    "1991_DS0005": "V4244",
+    "2006_DS0005": "V4244"
+   },
+   "coding": "Keep original codes 1 = Not important, 2 = A little important, 3 = Pretty important, 4 = Very important (identical labels in all three years per dictionaries). No reverse coding. Valid range 1-4. NOTE: the article text describes a 5-point scale, but the source instrument has 4 categories; implement the 4-category source coding.",
+   "missing_rule": "1976: declared missing 0 and 9-or-higher; 1991: declared missing 0 and 9; 2006: declared missing -9. Set all declared missing codes and blanks to missing.",
+   "top_category_indicator": "Binary indicator = 1 if code 4 (Very important), 0 if codes 1-3, missing otherwise (for the percentage output).",
+   "locators": [
+    {
+     "doc_id": "P1",
+     "pdf_page": 10,
+     "section_or_table": "Method text, Form 4 item description"
+    },
+    {
+     "doc_id": "P1",
+     "pdf_page": 11,
+     "section_or_table": "Table 1 item rows"
+    },
+    {
+     "doc_id": "P1",
+     "pdf_page": 12,
+     "section_or_table": "Table 1 item rows"
+    },
+    {
+     "doc_id": "P1",
+     "pdf_page": 13,
+     "section_or_table": "Table 1 item rows"
+    },
+    {
+     "source": "sources/dictionaries/1976_DS0004, 1991_DS0005, 2006_DS0005"
+    }
+   ]
+  },
+  {
+   "variable_id": "V021",
+   "concept": "Importance rating of job characteristic: job: permits contact with a lot of people",
+   "factor_assignment": "social",
+   "source_variables": {
+    "1976_DS0004": "V4245",
+    "1991_DS0005": "V4245",
+    "2006_DS0005": "V4245"
+   },
+   "coding": "Keep original codes 1 = Not important, 2 = A little important, 3 = Pretty important, 4 = Very important (identical labels in all three years per dictionaries). No reverse coding. Valid range 1-4. NOTE: the article text describes a 5-point scale, but the source instrument has 4 categories; implement the 4-category source coding.",
+   "missing_rule": "1976: declared missing 0 and 9-or-higher; 1991: declared missing 0 and 9; 2006: declared missing -9. Set all declared missing codes and blanks to missing.",
+   "top_category_indicator": "Binary indicator = 1 if code 4 (Very important), 0 if codes 1-3, missing otherwise (for the percentage output).",
+   "locators": [
+    {
+     "doc_id": "P1",
+     "pdf_page": 10,
+     "section_or_table": "Method text, Form 4 item description"
+    },
+    {
+     "doc_id": "P1",
+     "pdf_page": 11,
+     "section_or_table": "Table 1 item rows"
+    },
+    {
+     "doc_id": "P1",
+     "pdf_page": 12,
+     "section_or_table": "Table 1 item rows"
+    },
+    {
+     "doc_id": "P1",
+     "pdf_page": 13,
+     "section_or_table": "Table 1 item rows"
+    },
+    {
+     "source": "sources/dictionaries/1976_DS0004, 1991_DS0005, 2006_DS0005"
+    }
+   ]
+  },
+  {
+   "variable_id": "V022",
+   "concept": "Importance rating of job characteristic: job: easy pace that lets you work slowly",
+   "factor_assignment": "leisure",
+   "source_variables": {
+    "1976_DS0004": "V4246",
+    "1991_DS0005": "V4246",
+    "2006_DS0005": "V4246"
+   },
+   "coding": "Keep original codes 1 = Not important, 2 = A little important, 3 = Pretty important, 4 = Very important (identical labels in all three years per dictionaries). No reverse coding. Valid range 1-4. NOTE: the article text describes a 5-point scale, but the source instrument has 4 categories; implement the 4-category source coding.",
+   "missing_rule": "1976: declared missing 0 and 9-or-higher; 1991: declared missing 0 and 9; 2006: declared missing -9. Set all declared missing codes and blanks to missing.",
+   "top_category_indicator": "Binary indicator = 1 if code 4 (Very important), 0 if codes 1-3, missing otherwise (for the percentage output).",
+   "locators": [
+    {
+     "doc_id": "P1",
+     "pdf_page": 10,
+     "section_or_table": "Method text, Form 4 item description"
+    },
+    {
+     "doc_id": "P1",
+     "pdf_page": 11,
+     "section_or_table": "Table 1 item rows"
+    },
+    {
+     "doc_id": "P1",
+     "pdf_page": 12,
+     "section_or_table": "Table 1 item rows"
+    },
+    {
+     "doc_id": "P1",
+     "pdf_page": 13,
+     "section_or_table": "Table 1 item rows"
+    },
+    {
+     "source": "sources/dictionaries/1976_DS0004, 1991_DS0005, 2006_DS0005"
+    }
+   ]
+  },
+  {
+   "variable_id": "V023",
+   "concept": "Importance rating of job characteristic: job: most problems are quite difficult and challenging",
+   "factor_assignment": "omitted (influence)",
+   "source_variables": {
+    "1976_DS0004": "V4247",
+    "1991_DS0005": "V4247",
+    "2006_DS0005": "V4247"
+   },
+   "coding": "Keep original codes 1 = Not important, 2 = A little important, 3 = Pretty important, 4 = Very important (identical labels in all three years per dictionaries). No reverse coding. Valid range 1-4. NOTE: the article text describes a 5-point scale, but the source instrument has 4 categories; implement the 4-category source coding.",
+   "missing_rule": "1976: declared missing 0 and 9-or-higher; 1991: declared missing 0 and 9; 2006: declared missing -9. Set all declared missing codes and blanks to missing.",
+   "top_category_indicator": "Binary indicator = 1 if code 4 (Very important), 0 if codes 1-3, missing otherwise (for the percentage output).",
+   "locators": [
+    {
+     "doc_id": "P1",
+     "pdf_page": 10,
+     "section_or_table": "Method text, Form 4 item description"
+    },
+    {
+     "doc_id": "P1",
+     "pdf_page": 11,
+     "section_or_table": "Table 1 item rows"
+    },
+    {
+     "doc_id": "P1",
+     "pdf_page": 12,
+     "section_or_table": "Table 1 item rows"
+    },
+    {
+     "doc_id": "P1",
+     "pdf_page": 13,
+     "section_or_table": "Table 1 item rows"
+    },
+    {
+     "source": "sources/dictionaries/1976_DS0004, 1991_DS0005, 2006_DS0005"
+    }
+   ]
+  },
+  {
+   "variable_id": "V024",
+   "concept": "Agreement with work/leisure statement: I like the kind of work you can forget about after the work day is over",
+   "factor_assignment": "work centrality (five-item set) or job stability single indicator; see AX09",
+   "source_variables": {
+    "1976_DS0003": "V3222",
+    "1991_DS0004": "V3222",
+    "2006_DS0004": "V3222"
+   },
+   "coding": "Keep original codes 1 = Disagree, 2 = Mostly disagree, 3 = Neither, 4 = Mostly agree, 5 = Agree. No reverse coding. Valid range 1-5. (Article text calls the anchors 'strongly disagree' to 'strongly agree'; the instrument anchors are 'Disagree' to 'Agree'.)",
+   "missing_rule": "1976: declared missing 0 and 9-or-higher; 1991: declared missing 0 and 9; 2006: declared missing -9. Set to missing.",
+   "top_category_indicator": "Binary indicator = 1 if code 4 or 5 (Mostly agree or Agree), 0 if codes 1-3 (for the percentage output).",
+   "locators": [
+    {
+     "doc_id": "P1",
+     "pdf_page": 10,
+     "section_or_table": "Method text, Form 3 item description"
+    },
+    {
+     "doc_id": "P1",
+     "pdf_page": 12,
+     "section_or_table": "Table 1 'Omitted items'"
+    },
+    {
+     "doc_id": "P1",
+     "pdf_page": 13,
+     "section_or_table": "Table 1 'Omitted items' and note"
+    },
+    {
+     "source": "sources/dictionaries/1976_DS0003, 1991_DS0004, 2006_DS0004"
+    }
+   ]
+  },
+  {
+   "variable_id": "V025",
+   "concept": "Agreement with work/leisure statement: To me, work is nothing more than making a living",
+   "factor_assignment": "work centrality (five-item set) or job stability single indicator; see AX09",
+   "source_variables": {
+    "1976_DS0003": "V3223",
+    "1991_DS0004": "V3223",
+    "2006_DS0004": "V3223"
+   },
+   "coding": "Keep original codes 1 = Disagree, 2 = Mostly disagree, 3 = Neither, 4 = Mostly agree, 5 = Agree. No reverse coding. Valid range 1-5. (Article text calls the anchors 'strongly disagree' to 'strongly agree'; the instrument anchors are 'Disagree' to 'Agree'.)",
+   "missing_rule": "1976: declared missing 0 and 9-or-higher; 1991: declared missing 0 and 9; 2006: declared missing -9. Set to missing.",
+   "top_category_indicator": "Binary indicator = 1 if code 4 or 5 (Mostly agree or Agree), 0 if codes 1-3 (for the percentage output).",
+   "locators": [
+    {
+     "doc_id": "P1",
+     "pdf_page": 10,
+     "section_or_table": "Method text, Form 3 item description"
+    },
+    {
+     "doc_id": "P1",
+     "pdf_page": 12,
+     "section_or_table": "Table 1 'Omitted items'"
+    },
+    {
+     "doc_id": "P1",
+     "pdf_page": 13,
+     "section_or_table": "Table 1 'Omitted items' and note"
+    },
+    {
+     "source": "sources/dictionaries/1976_DS0003, 1991_DS0004, 2006_DS0004"
+    }
+   ]
+  },
+  {
+   "variable_id": "V026",
+   "concept": "Agreement with work/leisure statement: I expect my work to be a very central part of my life",
+   "factor_assignment": "work centrality (five-item set) or job stability single indicator; see AX09",
+   "source_variables": {
+    "1976_DS0003": "V3224",
+    "1991_DS0004": "V3224",
+    "2006_DS0004": "V3224"
+   },
+   "coding": "Keep original codes 1 = Disagree, 2 = Mostly disagree, 3 = Neither, 4 = Mostly agree, 5 = Agree. No reverse coding. Valid range 1-5. (Article text calls the anchors 'strongly disagree' to 'strongly agree'; the instrument anchors are 'Disagree' to 'Agree'.)",
+   "missing_rule": "1976: declared missing 0 and 9-or-higher; 1991: declared missing 0 and 9; 2006: declared missing -9. Set to missing.",
+   "top_category_indicator": "Binary indicator = 1 if code 4 or 5 (Mostly agree or Agree), 0 if codes 1-3 (for the percentage output).",
+   "locators": [
+    {
+     "doc_id": "P1",
+     "pdf_page": 10,
+     "section_or_table": "Method text, Form 3 item description"
+    },
+    {
+     "doc_id": "P1",
+     "pdf_page": 12,
+     "section_or_table": "Table 1 'Omitted items'"
+    },
+    {
+     "doc_id": "P1",
+     "pdf_page": 13,
+     "section_or_table": "Table 1 'Omitted items' and note"
+    },
+    {
+     "source": "sources/dictionaries/1976_DS0003, 1991_DS0004, 2006_DS0004"
+    }
+   ]
+  },
+  {
+   "variable_id": "V027",
+   "concept": "Agreement with work/leisure statement: I want to do my best in my job, even if this sometimes means working overtime",
+   "factor_assignment": "work centrality (five-item set) or job stability single indicator; see AX09",
+   "source_variables": {
+    "1976_DS0003": "V3225",
+    "1991_DS0004": "V3225",
+    "2006_DS0004": "V3225"
+   },
+   "coding": "Keep original codes 1 = Disagree, 2 = Mostly disagree, 3 = Neither, 4 = Mostly agree, 5 = Agree. No reverse coding. Valid range 1-5. (Article text calls the anchors 'strongly disagree' to 'strongly agree'; the instrument anchors are 'Disagree' to 'Agree'.)",
+   "missing_rule": "1976: declared missing 0 and 9-or-higher; 1991: declared missing 0 and 9; 2006: declared missing -9. Set to missing.",
+   "top_category_indicator": "Binary indicator = 1 if code 4 or 5 (Mostly agree or Agree), 0 if codes 1-3 (for the percentage output).",
+   "locators": [
+    {
+     "doc_id": "P1",
+     "pdf_page": 10,
+     "section_or_table": "Method text, Form 3 item description"
+    },
+    {
+     "doc_id": "P1",
+     "pdf_page": 12,
+     "section_or_table": "Table 1 'Omitted items'"
+    },
+    {
+     "doc_id": "P1",
+     "pdf_page": 13,
+     "section_or_table": "Table 1 'Omitted items' and note"
+    },
+    {
+     "source": "sources/dictionaries/1976_DS0003, 1991_DS0004, 2006_DS0004"
+    }
+   ]
+  },
+  {
+   "variable_id": "V028",
+   "concept": "Agreement with work/leisure statement: I would like to stay in the same job for most of my adult life",
+   "factor_assignment": "work centrality (five-item set) or job stability single indicator; see AX09",
+   "source_variables": {
+    "1976_DS0003": "V3226",
+    "1991_DS0004": "V3226",
+    "2006_DS0004": "V3226"
+   },
+   "coding": "Keep original codes 1 = Disagree, 2 = Mostly disagree, 3 = Neither, 4 = Mostly agree, 5 = Agree. No reverse coding. Valid range 1-5. (Article text calls the anchors 'strongly disagree' to 'strongly agree'; the instrument anchors are 'Disagree' to 'Agree'.)",
+   "missing_rule": "1976: declared missing 0 and 9-or-higher; 1991: declared missing 0 and 9; 2006: declared missing -9. Set to missing.",
+   "top_category_indicator": "Binary indicator = 1 if code 4 or 5 (Mostly agree or Agree), 0 if codes 1-3 (for the percentage output).",
+   "locators": [
+    {
+     "doc_id": "P1",
+     "pdf_page": 10,
+     "section_or_table": "Method text, Form 3 item description"
+    },
+    {
+     "doc_id": "P1",
+     "pdf_page": 12,
+     "section_or_table": "Table 1 'Omitted items'"
+    },
+    {
+     "doc_id": "P1",
+     "pdf_page": 13,
+     "section_or_table": "Table 1 'Omitted items' and note"
+    },
+    {
+     "source": "sources/dictionaries/1976_DS0003, 1991_DS0004, 2006_DS0004"
+    }
+   ]
+  },
+  {
+   "variable_id": "V029",
+   "concept": "Would want to work if had enough money to live comfortably for life (yes/no)",
+   "factor_assignment": "work centrality (five-item set) candidate; single item in Table 1",
+   "source_variables": {
+    "1976_DS0003": "V3227",
+    "1991_DS0004": "V3227",
+    "2006_DS0004": "V3227"
+   },
+   "coding": "Keep original codes 1 = I would want to work, 2 = I would not want to work. No reverse coding. Mean on this 1-2 coding is the item mean output. Valid range 1-2.",
+   "missing_rule": "1976: declared missing 0 and 9-or-higher; 1991: 0 and 9; 2006: -9. Set to missing.",
+   "top_category_indicator": "Binary indicator = 1 if code 1 (would want to work), 0 if code 2 (percentage output; the published percentage column for this item corresponds to code 1, see reader_notes).",
+   "locators": [
+    {
+     "doc_id": "P1",
+     "pdf_page": 10,
+     "section_or_table": "Method text 'answered with yes or no'"
+    },
+    {
+     "doc_id": "P1",
+     "pdf_page": 13,
+     "section_or_table": "Table 1 'Omitted items'"
+    },
+    {
+     "source": "sources/dictionaries/1976_DS0003, 1991_DS0004, 2006_DS0004"
+    }
+   ]
+  },
+  {
+   "variable_id": "V030",
+   "concept": "Sampling weight",
+   "factor_assignment": null,
+   "source_variables": {
+    "1976_DS0003": "V5",
+    "1976_DS0004": "V5",
+    "1991_DS0004": "V5",
+    "1991_DS0005": "V5",
+    "2006_DS0004": "V5",
+    "2006_DS0005": "V5"
+   },
+   "coding": "Numeric weight as supplied (bracketed public-use weight).",
+   "missing_rule": "1976 form files: declared missing 0 and 9-or-higher; 1991: 0 and 9; 2006: none declared. Use only under AX02 weighted level.",
+   "locators": [
+    {
+     "source": "sources/source_description.md, Weights"
+    },
+    {
+     "doc_id": "P1",
+     "pdf_page": 9,
+     "section_or_table": "Method text (no weighting statement)"
+    }
+   ]
+  },
+  {
+   "variable_id": "V031",
+   "concept": "Questionnaire form identifier",
+   "factor_assignment": null,
+   "source_variables": {
+    "1976_DS0003": "V3",
+    "1976_DS0004": "V3",
+    "1991_DS0004": "V3",
+    "1991_DS0005": "V3",
+    "2006_DS0004": "V3",
+    "2006_DS0005": "V3"
+   },
+   "coding": "Used only to verify that each form file contains the intended form (3 or 4).",
+   "missing_rule": "none",
+   "locators": [
+    {
+     "source": "sources/source_description.md, Questionnaire-form design"
+    },
+    {
+     "doc_id": "P1",
+     "pdf_page": 10,
+     "section_or_table": "Method text 'Forms 3 and 4'"
+    }
+   ]
+  },
+  {
+   "variable_id": "V032",
+   "concept": "Survey year / cohort group indicator",
+   "factor_assignment": null,
+   "source_variables": {
+    "1976_DS0003": "V1",
+    "1976_DS0004": "V1",
+    "1991_DS0004": "V1",
+    "1991_DS0005": "V1",
+    "2006_DS0004": "V1",
+    "2006_DS0005": "V1"
+   },
+   "coding": "Group = file year (two-digit code in the first two releases, four-digit in the third). Each year is one group; groups are ordered earliest, middle, latest.",
+   "missing_rule": "none",
+   "locators": [
+    {
+     "doc_id": "P1",
+     "pdf_page": 10,
+     "section_or_table": "Method text 'Three data collection years'"
+    }
+   ]
+  },
+  {
+   "variable_id": "V033",
+   "concept": "Respondent serial number (within-file key)",
+   "factor_assignment": null,
+   "source_variables": {
+    "1976_DS0003": "V4",
+    "1976_DS0004": "V4",
+    "1991_DS0004": "V4",
+    "1991_DS0005": "V4",
+    "2006_DS0004": "V4",
+    "2006_DS0005": "V4"
+   },
+   "coding": "Identifier only; respondents appear in exactly one form file.",
+   "missing_rule": "none",
+   "locators": [
+    {
+     "source": "sources/source_description.md, Identifiers"
+    }
+   ]
+  }
+ ],
+ "constructs": [
+  {
+   "construct_id": "K01",
+   "name": "leisure rewards",
+   "items": [
+    "V012",
+    "V014",
+    "V022",
+    "V016"
+   ],
+   "scoring": "Latent factor in CFA (see E01-E03); item order as listed in the article: vacation, time for other things, easy pace, free of supervision. Items V014 and V016 have intercepts freed in the partial scalar model (article footnote a). Latent mean per group and SD as defined in AX04/AX05; no observed composite is described (observed unit-weighted mean composite is AX04 alternative).",
+   "locators": [
+    {
+     "doc_id": "P1",
+     "pdf_page": 11,
+     "section_or_table": "Table 1 Leisure rewards rows"
+    },
+    {
+     "doc_id": "P1",
+     "pdf_page": 13,
+     "section_or_table": "Table 1 footnote a"
+    }
+   ]
+  },
+  {
+   "construct_id": "K02",
+   "name": "intrinsic rewards",
+   "items": [
+    "V003",
+    "V018",
+    "V008",
+    "V001",
+    "V010",
+    "V019",
+    "V007"
+   ],
+   "scoring": "Latent factor; order as listed: interesting, learn new things, skills not out of date, see results, uses skills, not pretend, creative. V007 intercept freed (footnote a).",
+   "locators": [
+    {
+     "doc_id": "P1",
+     "pdf_page": 11,
+     "section_or_table": "Table 1 Intrinsic rewards rows"
+    }
+   ]
+  },
+  {
+   "construct_id": "K03",
+   "name": "altruistic rewards",
+   "items": [
+    "V005",
+    "V011"
+   ],
+   "scoring": "Latent factor; order: directly helpful, worthwhile to society. V005 intercept freed (footnote a), leaving one constrained intercept on this factor.",
+   "locators": [
+    {
+     "doc_id": "P1",
+     "pdf_page": 12,
+     "section_or_table": "Table 1 Altruistic rewards rows"
+    }
+   ]
+  },
+  {
+   "construct_id": "K04",
+   "name": "social rewards",
+   "items": [
+    "V009",
+    "V021"
+   ],
+   "scoring": "Latent factor; order: make friends, contact with people. No freed intercepts.",
+   "locators": [
+    {
+     "doc_id": "P1",
+     "pdf_page": 12,
+     "section_or_table": "Table 1 Social rewards rows"
+    }
+   ]
+  },
+  {
+   "construct_id": "K05",
+   "name": "extrinsic rewards",
+   "items": [
+    "V002",
+    "V020",
+    "V006",
+    "V004"
+   ],
+   "scoring": "Latent factor; order: status/prestige, look up to/respect, earn money, advancement. V006 and V004 intercepts freed (footnote a).",
+   "locators": [
+    {
+     "doc_id": "P1",
+     "pdf_page": 12,
+     "section_or_table": "Table 1 Extrinsic rewards rows"
+    }
+   ]
+  },
+  {
+   "construct_id": "K06",
+   "name": "security (diagnostic only, dropped)",
+   "items": [
+    "V017",
+    "V015"
+   ],
+   "scoring": "Two-item factor in the seven-factor diagnostic CFA and coefficient alpha; assignment of items inferred (AX08). Not scored for comparisons.",
+   "locators": [
+    {
+     "doc_id": "P1",
+     "pdf_page": 10,
+     "section_or_table": "Preliminary Analyses text"
+    }
+   ]
+  },
+  {
+   "construct_id": "K07",
+   "name": "influence (diagnostic only, dropped)",
+   "items": [
+    "V013",
+    "V023"
+   ],
+   "scoring": "Two-item factor in the seven-factor diagnostic CFA and coefficient alpha; assignment inferred (AX08). Not scored for comparisons.",
+   "locators": [
+    {
+     "doc_id": "P1",
+     "pdf_page": 10,
+     "section_or_table": "Preliminary Analyses text"
+    }
+   ]
+  },
+  {
+   "construct_id": "K08",
+   "name": "work centrality (diagnostic only, not scaled)",
+   "items": [
+    "V024",
+    "V025",
+    "V026",
+    "V027",
+    "V029"
+   ],
+   "scoring": "Five-item factor in a Form 3 two-factor CFA with V028 as a single-indicator 'job stability' factor (loading fixed to 1, error fixed to 0); coefficient alpha reported qualitatively only. Which five items constitute the factor is an open decision (AX09). Items analyzed individually, never as a scale score.",
+   "locators": [
+    {
+     "doc_id": "P1",
+     "pdf_page": 10,
+     "section_or_table": "Method and Preliminary Analyses text"
+    },
+    {
+     "doc_id": "P1",
+     "pdf_page": 14,
+     "section_or_table": "Table 2 Form 3: 2 factor"
+    }
+   ]
+  }
+ ],
+ "sample_steps": [
+  {
+   "step_id": "S01",
+   "operation": "Load the Form 3 and Form 4 per-form datasets for the three survey years: 1976_DS0003, 1976_DS0004, 1991_DS0004, 1991_DS0005, 2006_DS0004, 2006_DS0005 (dataset numbers differ by year; verify with V3).",
+   "applies_to": "all",
+   "locators": [
+    {
+     "doc_id": "P1",
+     "pdf_page": 10,
+     "section_or_table": "Method text 'Forms 3 and 4'"
+    },
+    {
+     "source": "sources/source_description.md, Files and releases"
+    }
+   ]
+  },
+  {
+   "step_id": "S02",
+   "operation": "Keep every respondent record in each form file. No age, grade, region or other exclusion is described. Do not merge the core file.",
+   "applies_to": "all",
+   "locators": [
+    {
+     "doc_id": "P1",
+     "pdf_page": 10,
+     "section_or_table": "Method text"
+    }
+   ]
+  },
+  {
+   "step_id": "S03",
+   "operation": "Recode declared missing codes of the analysis items to missing (0 and 9+ in the earliest year, 0 and 9 in the middle year, -9 in the latest year); keep valid codes unchanged.",
+   "applies_to": "V001-V029",
+   "locators": [
+    {
+     "source": "sources/dictionaries (declared_missing_values)"
+    }
+   ]
+  },
+  {
+   "step_id": "S04",
+   "operation": "Analysis set for item-level outputs: available cases per item (open decision AX01). Analysis set for CFA/invariance: cases with complete data on the 19 retained Form 4 items (AX01 origin; alternatives listed).",
+   "applies_to": "Form 4 items / Form 3 items",
+   "locators": [
+    {
+     "doc_id": "P1",
+     "pdf_page": 10,
+     "section_or_table": "Method text, no missing-data statement"
+    }
+   ]
+  },
+  {
+   "step_id": "S05",
+   "operation": "Weights: unweighted analyses at origin (article is silent; AX02).",
+   "applies_to": "all",
+   "locators": [
+    {
+     "doc_id": "P1",
+     "pdf_page": 9,
+     "section_or_table": "Method text"
+    }
+   ]
+  },
+  {
+   "step_id": "S06",
+   "operation": "Stack the three Form 4 files for multigroup CFA with year as the group variable; keep Form 3 files separate for their single-group CFA per year and item statistics.",
+   "applies_to": "all",
+   "locators": [
+    {
+     "doc_id": "P1",
+     "pdf_page": 14,
+     "section_or_table": "Primary Analyses text"
+    }
+   ]
+  }
+ ],
+ "weights": {
+  "rule": "Origin: no weights (article silent). Alternative: V5 sampling weight per file (AX02). No design-based variance adjustment described; no school/PSU identifiers exist in the public files.",
+  "locators": [
+   {
+    "doc_id": "P1",
+    "pdf_page": 9,
+    "section_or_table": "Method text"
+   },
+   {
+    "source": "sources/source_description.md, Weights and Sampling design"
+   }
+  ]
+ },
+ "estimators": [
+  {
+   "estimator_id": "E01",
+   "quantity": "Single-group CFA per year: (a) Form 3 two-factor model: K08 five items on one factor, V028 single indicator with loading 1 and error variance 0, factors correlated; (b) Form 4 seven-factor model on 23 items (K01-K07) with correlated factors; (c) Form 4 five-factor model on 19 items (K01-K05). Maximum likelihood on the covariance matrix (LISREL 8.7 default; AX06). Report chi-square, df, RMSEA, SRMSR, TLI, CFI.",
+   "groups": "each year separately",
+   "software_default_notes": "LISREL 8.7 (Joreskog & Sorbom 2004). Default: ML, listwise deletion in PRELIS, RMSEA uses N-1 denominator. Fit indices as reported by LISREL.",
+   "locators": [
+    {
+     "doc_id": "P1",
+     "pdf_page": 10,
+     "section_or_table": "Preliminary Analyses"
+    },
+    {
+     "doc_id": "P1",
+     "pdf_page": 14,
+     "section_or_table": "Table 2"
+    }
+   ]
+  },
+  {
+   "estimator_id": "E02",
+   "quantity": "Coefficient alpha (Cronbach) per scale and year for K01-K07 (and K08).",
+   "groups": "each year",
+   "software_default_notes": "standard unweighted alpha",
+   "locators": [
+    {
+     "doc_id": "P1",
+     "pdf_page": 10,
+     "section_or_table": "Preliminary Analyses"
+    }
+   ]
+  },
+  {
+   "estimator_id": "E03",
+   "quantity": "Three-group CFA invariance sequence on the 19-item five-factor model with mean structure, ML (AX06): Model 1 configural (all parameters free by group); Model 2 metric (factor loadings equal across groups); Model 3 scalar (loadings and all item intercepts equal); Model 4 partial scalar (loadings equal; intercepts equal except V014, V016, V007, V005, V006, V004 which are free by group); Model 5 = Model 4 plus all five latent means equal across groups. Report chi-square, df, RMSEA, SRMSR, TLI, CFI for each model, chi-square difference and df difference for M1 vs M2, M2 vs M3, M2 vs M4, M4 vs M5, and delta CFI (earlier model CFI minus later model CFI) evaluated against .002.",
+   "groups": "three survey years jointly",
+   "software_default_notes": "Identification/scaling of latent means not stated: AX05. Nested-model df differences printed in the article could not be fully reconstructed from this description (see forensics); implementers should report their own df.",
+   "locators": [
+    {
+     "doc_id": "P1",
+     "pdf_page": 14,
+     "section_or_table": "Primary Analyses"
+    },
+    {
+     "doc_id": "P1",
+     "pdf_page": 15,
+     "section_or_table": "Primary Analyses"
+    },
+    {
+     "doc_id": "P1",
+     "pdf_page": 13,
+     "section_or_table": "Table 1 footnote a"
+    }
+   ]
+  },
+  {
+   "estimator_id": "E04",
+   "quantity": "Latent mean, its standard error (from the CFA software) and 95% CI = mean +/- 1.96*SE for each of K01-K05 in each group under Model 4; plus an SD per factor and group (definition open, AX04).",
+   "groups": "each year",
+   "software_default_notes": "LISREL standard errors.",
+   "locators": [
+    {
+     "doc_id": "P1",
+     "pdf_page": 15,
+     "section_or_table": "Primary Analyses"
+    },
+    {
+     "doc_id": "P1",
+     "pdf_page": 13,
+     "section_or_table": "Table 1 note"
+    }
+   ]
+  },
+  {
+   "estimator_id": "E05",
+   "quantity": "Effect size for each factor and year pair: d = (M_later - M_earlier) / sqrt((SD_earlier^2 + SD_later^2)/2), where M are the latent means from E04 and SD the factor SDs from AX04; positive d = higher value in the later year (AX03 for denominator alternatives). Pairs: earliest vs middle, middle vs latest, earliest vs latest.",
+   "groups": "year pairs",
+   "software_default_notes": "Article does not state the formula; origin formula is the standard equal-weight pooled-SD d (Cohen 1988). No small-sample correction.",
+   "locators": [
+    {
+     "doc_id": "P1",
+     "pdf_page": 15,
+     "section_or_table": "Results text 'd ='"
+    },
+    {
+     "doc_id": "P1",
+     "pdf_page": 11,
+     "section_or_table": "Table 1 scale rows"
+    }
+   ]
+  },
+  {
+   "estimator_id": "E06",
+   "quantity": "Item-level: mean and SD per item and year on the original coding; percentage in the top category (Form 4: code 4; Form 3 agree items: codes 4 or 5; V029: code 1); independent-samples t statistic for each year pair = (M_later - M_earlier)/sqrt(sp^2 (1/n1 + 1/n2)) with pooled variance sp^2 (AX07), two-sided p, and significance flags at .05/.01/.001.",
+   "groups": "year pairs, each item",
+   "software_default_notes": "Student t with pooled variance is the usual default; Welch is AX07 alternative. Item-level n = available cases per item.",
+   "locators": [
+    {
+     "doc_id": "P1",
+     "pdf_page": 11,
+     "section_or_table": "Table 1 item rows"
+    },
+    {
+     "doc_id": "P1",
+     "pdf_page": 13,
+     "section_or_table": "Table 1 note"
+    }
+   ]
+  }
+ ],
+ "inference": {
+  "test": "Item level: independent-samples t per year pair with star thresholds .05/.01/.001. Scale level: latent mean differences judged by d and by 95% CIs of latent means; nested chi-square difference tests and delta CFI (.002 criterion) for invariance and omnibus mean differences.",
+  "se_method": "Model-based ML standard errors from the SEM software for latent means; conventional pooled-variance t for items. No clustering or design adjustment.",
+  "tail": "two-sided (not stated explicitly)",
+  "alpha": 0.05,
+  "clustering": "none (no school identifiers available in public files; none described)",
+  "multiple_comparison": "none",
+  "locators": [
+   {
+    "doc_id": "P1",
+    "pdf_page": 13,
+    "section_or_table": "Table 1 note and star legend"
+   },
+   {
+    "doc_id": "P1",
+    "pdf_page": 15,
+    "section_or_table": "Primary Analyses text"
+   }
+  ]
+ },
+ "outputs_required": [
+  "Per form, per year: number of records in file; number with valid weight; number with complete data on the 19 retained Form 4 items (Form 4 files) and on the six Form 3 items (Form 3 files).",
+  "Per Form 4 item (V001-V023) and Form 3 item (V024-V029), per year: n, mean, SD, percentage in top category; per year pair: t, df, two-sided p, sign convention later minus earlier.",
+  "Per year: single-group CFA fit (chi-square, df, RMSEA, SRMSR, TLI, CFI) for Form 3 two-factor, Form 4 seven-factor and Form 4 five-factor models; coefficient alpha per scale.",
+  "Multigroup: fit of Models 1-5, chi-square/df differences and p for the four nested comparisons, delta CFI for each.",
+  "Per factor K01-K05 and year: latent mean, SE, 95% CI, factor SD (as defined by AX04).",
+  "Per factor and year pair: d with sign later minus earlier; also the SD definition and identification choice used.",
+  "Record every open-decision level actually used."
+ ],
+ "open_decisions": [
+  "AX01",
+  "AX02",
+  "AX03",
+  "AX04",
+  "AX05",
+  "AX06",
+  "AX07",
+  "AX08",
+  "AX09"
+ ]
+}

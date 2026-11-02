@@ -1,0 +1,39 @@
+{
+ "checked_utc": "2026-10-27T11:47:34.659131+00:00",
+ "python": "3.13.4",
+ "pyarrow": "26.0.0",
+ "sources": {
+  "pow": {
+   "raw_file": "data/raw/nara_pow_rg389/POW.MERGED2.txt",
+   "derived_file": "data/derived/pow_rg389_records.parquet",
+   "derived_sha256": "1d00a433f1df5257dc5d09132a383eabe61543200b2db5e5dcf3c2d94df714b8",
+   "rows_python_parquet": 143374,
+   "rows_r_raw": 143374,
+   "columns_compared": 26,
+   "column_checksum_mismatches": [],
+   "columns_missing_in_one_loader": [],
+   "identical": true,
+   "r_version": "R version 4.6.1 (2026-06-24)",
+   "r_digest_version": "0.6.39",
+   "python_method": "sha256 over column values (exact strings; record_seq as decimal text) joined by '\\n' in record_seq order",
+   "r_method": "sha256 over exact field bytes (record_seq as decimal text) joined by '\\n' in physical record order"
+  },
+  "asnf": {
+   "raw_file": "data/raw/nara_asnf_rg64/extracted/ASNEF.FIN.DAT",
+   "derived_file": "data/derived/asnf_rg64_records.parquet",
+   "derived_sha256": "102b4c39047c1482a29d94a5cbb58a32618e89a86b0be8f2920c211769e3c725",
+   "rows_python_parquet": 9200232,
+   "rows_r_raw": 9200232,
+   "columns_compared": 42,
+   "column_checksum_mismatches": [],
+   "columns_missing_in_one_loader": [],
+   "identical": true,
+   "r_version": "R version 4.6.1 (2026-06-24)",
+   "r_digest_version": "0.6.39",
+   "python_method": "sha256 over column values (exact strings; record_seq as decimal text) joined by '\\n' in record_seq order",
+   "r_method": "sha256 over exact field bytes (record_seq as decimal text) joined by '\\n' in physical record order"
+  }
+ },
+ "all_identical": true,
+ "note": "Python parses raw bytes with numpy/pyarrow and checksums values re-read from the derived Parquet; R independently parses the raw file bytes with readBin and its own hard-coded layout. Equal per-column sha256 implies identical values and order."
+}

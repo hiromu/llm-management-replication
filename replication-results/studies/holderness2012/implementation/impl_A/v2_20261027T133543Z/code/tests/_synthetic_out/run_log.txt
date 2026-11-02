@@ -1,0 +1,129 @@
+[2026-10-27 22:50:31] === Spec S000 (origin) deviation: none 
+[2026-10-27 22:50:31] Samples: D0=20000, D=16310, R_cap=15763, R_camp=15763; ranks non-missing in D0: 19558; linked enlistment rows in R_cap: 9586 
+[2026-10-27 22:50:31] Reference fractions p_r: 0.5995 0.1139 0.1184 0.0000 0.0871 0.0463 0.0209 0.0115 0.0024; sameness constant c = 1.3190 
+[2026-10-27 22:50:31] Groups: captured cohorts with members = 540, camps with members = 45 
+[2026-10-27 22:50:32] Model frame cap: rows=15763; share missing: survival=0.000, steepness=0.000, sameness=0.000, men=0.000, length=0.000, distance=0.161, height=0.455, age=0.392, education=0.410, dependents=0.392, officer=0.021, friends=0.309, steepness_unit=0.309 
+[2026-10-27 22:50:32] Model frame cap: survival mean=0.8077, camps=45, cohorts=540 
+[2026-10-27 22:50:32] Model frame camp: rows=15763; share missing: survival=0.000, steepness=0.000, sameness=0.000, men=0.000, length=0.000, distance=0.161, height=0.455, age=0.392, education=0.410, dependents=0.392, officer=0.021, friends=0.299, steepness_unit=0.299 
+[2026-10-27 22:50:32] Model frame camp: survival mean=0.8077, camps=45, cohorts=540 
+[2026-10-27 22:50:32] Variable construction done in 0.5 secs 
+[2026-10-27 22:50:32] S000 T4_steepness_cap_simple: n=15763 clusters=540 ll=-6706.37 iter=5 conv=TRUE dropped(pp)=0 rows/0 camps [0.18 secs]  
+[2026-10-27 22:50:32] S000 T4_steepness_cap_full: n=15763 clusters=540 ll=-6661.62 iter=5 conv=TRUE dropped(pp)=0 rows/0 camps [0.07 secs] omitted exactly collinear (reported with NA): dependents_miss 
+[2026-10-27 22:50:32] S000 T4_steepness_camp_simple: n=15763 clusters=45 ll=-7516.52 iter=4 conv=TRUE dropped(pp)=0 rows/0 camps [0.02 secs]  
+[2026-10-27 22:50:32] S000 T4_steepness_camp_full: n=15763 clusters=45 ll=-7409.48 iter=4 conv=TRUE dropped(pp)=0 rows/0 camps [0.06 secs] omitted exactly collinear (reported with NA): dependents_miss 
+[2026-10-27 22:50:32] S000 T4_sameness_cap_simple: n=15763 clusters=540 ll=-6708.13 iter=5 conv=TRUE dropped(pp)=0 rows/0 camps [0.06 secs]  
+[2026-10-27 22:50:32] S000 T4_sameness_cap_full: n=15763 clusters=540 ll=-6660.52 iter=5 conv=TRUE dropped(pp)=0 rows/0 camps [0.06 secs] omitted exactly collinear (reported with NA): dependents_miss 
+[2026-10-27 22:50:32] S000 T4_sameness_camp_simple: n=15763 clusters=45 ll=-7517.68 iter=4 conv=TRUE dropped(pp)=0 rows/0 camps [0.02 secs]  
+[2026-10-27 22:50:32] S000 T4_sameness_camp_full: n=15763 clusters=45 ll=-7409.47 iter=4 conv=TRUE dropped(pp)=0 rows/0 camps [0.06 secs] omitted exactly collinear (reported with NA): dependents_miss 
+[2026-10-27 22:50:32] S000 T5_cap_simple: n=15763 clusters=540 ll=-6706.32 iter=5 conv=TRUE dropped(pp)=0 rows/0 camps [0.04 secs]  
+[2026-10-27 22:50:33] S000 T5_cap_full: n=15763 clusters=540 ll=-6659.92 iter=5 conv=TRUE dropped(pp)=0 rows/0 camps [0.09 secs] omitted exactly collinear (reported with NA): dependents_miss 
+[2026-10-27 22:50:33] S000 T5_camp_simple: n=15763 clusters=45 ll=-7516.50 iter=4 conv=TRUE dropped(pp)=0 rows/0 camps [0.02 secs]  
+[2026-10-27 22:50:33] S000 T5_camp_full: n=15763 clusters=45 ll=-7409.46 iter=4 conv=TRUE dropped(pp)=0 rows/0 camps [0.09 secs] omitted exactly collinear (reported with NA): dependents_miss 
+[2026-10-27 22:50:33] S000 T5ROC T5_cap_simple row=steepness vs T4_sameness_cap_simple: auc_t5=0.73485 auc_t4=0.73474 z=0.2467 p=0.8051 ok 
+[2026-10-27 22:50:33] S000 T5ROC T5_cap_simple row=sameness vs T4_steepness_cap_simple: auc_t5=0.73485 auc_t4=0.73481 z=0.4603 p=0.6453 ok 
+[2026-10-27 22:50:33] S000 T5ROC T5_cap_full row=steepness vs T4_sameness_cap_full: auc_t5=0.7409 auc_t4=0.74076 z=0.6822 p=0.4951 ok 
+[2026-10-27 22:50:33] S000 T5ROC T5_cap_full row=sameness vs T4_steepness_cap_full: auc_t5=0.7409 auc_t4=0.74102 z=-0.444 p=0.657 ok 
+[2026-10-27 22:50:33] S000 T5ROC T5_camp_simple row=steepness vs T4_sameness_camp_simple: auc_t5=0.59732 auc_t4=0.59574 z=0.3679 p=0.713 ok 
+[2026-10-27 22:50:33] S000 T5ROC T5_camp_simple row=sameness vs T4_steepness_camp_simple: auc_t5=0.59732 auc_t4=0.59975 z=-1.992 p=0.04638 ok 
+[2026-10-27 22:50:33] S000 T5ROC T5_camp_full row=steepness vs T4_sameness_camp_full: auc_t5=0.6365 auc_t4=0.6366 z=-1.859 p=0.06306 ok 
+[2026-10-27 22:50:33] S000 T5ROC T5_camp_full row=sameness vs T4_steepness_camp_full: auc_t5=0.6365 auc_t4=0.63645 z=0.8745 p=0.3818 ok 
+[2026-10-27 22:50:33] S000 T6_steepness_cap_simple: n=15763 clusters=540 ll=-6668.49 iter=5 conv=TRUE dropped(pp)=0 rows/0 camps [0.05 secs] omitted exactly collinear (reported with NA): officer_x_steepness_miss 
+[2026-10-27 22:50:33] S000 T6_steepness_cap_full: n=15763 clusters=540 ll=-6661.47 iter=5 conv=TRUE dropped(pp)=0 rows/0 camps [0.07 secs] omitted exactly collinear (reported with NA): dependents_miss|officer_x_steepness_miss 
+[2026-10-27 22:50:33] S000 T6_steepness_camp_simple: n=15763 clusters=45 ll=-7479.97 iter=4 conv=TRUE dropped(pp)=0 rows/0 camps [0.03 secs] omitted exactly collinear (reported with NA): officer_x_steepness_miss 
+[2026-10-27 22:50:33] S000 T6_steepness_camp_full: n=15763 clusters=45 ll=-7408.06 iter=4 conv=TRUE dropped(pp)=0 rows/0 camps [0.07 secs] omitted exactly collinear (reported with NA): dependents_miss|officer_x_steepness_miss 
+[2026-10-27 22:50:33] S000 T6_sameness_cap_simple: n=15763 clusters=540 ll=-6668.36 iter=5 conv=TRUE dropped(pp)=0 rows/0 camps [0.04 secs] omitted exactly collinear (reported with NA): officer_x_sameness_miss 
+[2026-10-27 22:50:33] S000 T6_sameness_cap_full: n=15763 clusters=540 ll=-6660.52 iter=5 conv=TRUE dropped(pp)=0 rows/0 camps [0.07 secs] omitted exactly collinear (reported with NA): dependents_miss|officer_x_sameness_miss 
+[2026-10-27 22:50:33] S000 T6_sameness_camp_simple: n=15763 clusters=45 ll=-7483.18 iter=4 conv=TRUE dropped(pp)=0 rows/0 camps [0.03 secs] omitted exactly collinear (reported with NA): officer_x_sameness_miss 
+[2026-10-27 22:50:33] S000 T6_sameness_camp_full: n=15763 clusters=45 ll=-7409.45 iter=4 conv=TRUE dropped(pp)=0 rows/0 camps [0.06 secs] omitted exactly collinear (reported with NA): dependents_miss|officer_x_sameness_miss 
+[2026-10-27 22:50:33] S000 Rcc_steepness_cap_full: n=8152 clusters=539 ll=-3423.48 iter=5 conv=TRUE dropped(pp)=0 rows/0 camps [0.04 secs]  
+[2026-10-27 22:50:33] S000 Rcc_steepness_camp_full: n=6836 clusters=38 ll=-3156.04 iter=4 conv=TRUE dropped(pp)=0 rows/0 camps [0.02 secs]  
+[2026-10-27 22:50:33] S000 Rcc_sameness_cap_full: n=8152 clusters=539 ll=-3421.22 iter=5 conv=TRUE dropped(pp)=0 rows/0 camps [0.04 secs]  
+[2026-10-27 22:50:33] S000 Rcc_sameness_camp_full: n=6836 clusters=38 ll=-3156.69 iter=4 conv=TRUE dropped(pp)=0 rows/0 camps [0.02 secs]  
+[2026-10-27 22:50:33] S000 Rn50_steepness_cap_simple: n=7046 clusters=100 ll=-2714.68 iter=5 conv=TRUE dropped(pp)=0 rows/0 camps [0.03 secs]  
+[2026-10-27 22:50:33] S000 Rn50_steepness_cap_full: n=7046 clusters=100 ll=-2692.59 iter=5 conv=TRUE dropped(pp)=0 rows/0 camps [0.03 secs] omitted exactly collinear (reported with NA): dependents_miss 
+[2026-10-27 22:50:33] S000 Rn50_steepness_camp_simple: n=15763 clusters=45 ll=-7516.52 iter=4 conv=TRUE dropped(pp)=0 rows/0 camps [0.03 secs]  
+[2026-10-27 22:50:33] S000 Rn50_steepness_camp_full: n=15763 clusters=45 ll=-7409.48 iter=4 conv=TRUE dropped(pp)=0 rows/0 camps [0.05 secs] omitted exactly collinear (reported with NA): dependents_miss 
+[2026-10-27 22:50:33] S000 Rn50_sameness_cap_simple: n=7046 clusters=100 ll=-2714.72 iter=5 conv=TRUE dropped(pp)=0 rows/0 camps [0.03 secs]  
+[2026-10-27 22:50:33] S000 Rn50_sameness_cap_full: n=7046 clusters=100 ll=-2692.55 iter=5 conv=TRUE dropped(pp)=0 rows/0 camps [0.06 secs] omitted exactly collinear (reported with NA): dependents_miss 
+[2026-10-27 22:50:34] S000 Rn50_sameness_camp_simple: n=15763 clusters=45 ll=-7517.68 iter=4 conv=TRUE dropped(pp)=0 rows/0 camps [0.02 secs]  
+[2026-10-27 22:50:34] S000 Rn50_sameness_camp_full: n=15763 clusters=45 ll=-7409.47 iter=4 conv=TRUE dropped(pp)=0 rows/0 camps [0.07 secs] omitted exactly collinear (reported with NA): dependents_miss 
+[2026-10-27 22:50:34] S000 Rn100_steepness_cap_simple: FAILED: estimation sample has no outcome variation 
+[2026-10-27 22:50:34] S000 Rn100_steepness_cap_full: FAILED: estimation sample has no outcome variation 
+[2026-10-27 22:50:34] S000 Rn100_steepness_camp_simple: n=15763 clusters=45 ll=-7516.52 iter=4 conv=TRUE dropped(pp)=0 rows/0 camps [0.02 secs]  
+[2026-10-27 22:50:34] S000 Rn100_steepness_camp_full: n=15763 clusters=45 ll=-7409.48 iter=4 conv=TRUE dropped(pp)=0 rows/0 camps [0.05 secs] omitted exactly collinear (reported with NA): dependents_miss 
+[2026-10-27 22:50:34] S000 Rn100_sameness_cap_simple: FAILED: estimation sample has no outcome variation 
+[2026-10-27 22:50:34] S000 Rn100_sameness_cap_full: FAILED: estimation sample has no outcome variation 
+[2026-10-27 22:50:34] S000 Rn100_sameness_camp_simple: n=15763 clusters=45 ll=-7517.68 iter=4 conv=TRUE dropped(pp)=0 rows/0 camps [0.03 secs]  
+[2026-10-27 22:50:34] S000 Rn100_sameness_camp_full: n=15763 clusters=45 ll=-7409.47 iter=4 conv=TRUE dropped(pp)=0 rows/0 camps [0.08 secs] omitted exactly collinear (reported with NA): dependents_miss 
+[2026-10-27 22:50:34] S000 Rnoexec_steepness_cap_simple: n=15163 clusters=540 ll=-5816.76 iter=5 conv=TRUE dropped(pp)=0 rows/0 camps [0.04 secs]  
+[2026-10-27 22:50:34] S000 Rnoexec_steepness_cap_full: n=15163 clusters=540 ll=-5778.79 iter=5 conv=TRUE dropped(pp)=0 rows/0 camps [0.09 secs] omitted exactly collinear (reported with NA): dependents_miss 
+[2026-10-27 22:50:34] S000 Rnoexec_steepness_camp_simple: n=15163 clusters=45 ll=-6504.27 iter=4 conv=TRUE dropped(pp)=0 rows/0 camps [0.02 secs]  
+[2026-10-27 22:50:34] S000 Rnoexec_steepness_camp_full: n=15163 clusters=45 ll=-6412.87 iter=4 conv=TRUE dropped(pp)=0 rows/0 camps [0.06 secs] omitted exactly collinear (reported with NA): dependents_miss 
+[2026-10-27 22:50:34] S000 Rnoexec_sameness_cap_simple: n=15163 clusters=540 ll=-5818.11 iter=5 conv=TRUE dropped(pp)=0 rows/0 camps [0.04 secs]  
+[2026-10-27 22:50:34] S000 Rnoexec_sameness_cap_full: n=15163 clusters=540 ll=-5777.83 iter=5 conv=TRUE dropped(pp)=0 rows/0 camps [0.07 secs] omitted exactly collinear (reported with NA): dependents_miss 
+[2026-10-27 22:50:34] S000 Rnoexec_sameness_camp_simple: n=15163 clusters=45 ll=-6505.53 iter=4 conv=TRUE dropped(pp)=0 rows/0 camps [0.02 secs]  
+[2026-10-27 22:50:34] S000 Rnoexec_sameness_camp_full: n=15163 clusters=45 ll=-6412.91 iter=4 conv=TRUE dropped(pp)=0 rows/0 camps [0.05 secs] omitted exactly collinear (reported with NA): dependents_miss 
+[2026-10-27 22:50:34] S000 Rger_steepness_cap_simple: n=11222 clusters=300 ll=-4425.82 iter=5 conv=TRUE dropped(pp)=0 rows/0 camps [0.03 secs]  
+[2026-10-27 22:50:34] S000 Rger_steepness_cap_full: n=11222 clusters=300 ll=-4395.92 iter=5 conv=TRUE dropped(pp)=0 rows/0 camps [0.07 secs] omitted exactly collinear (reported with NA): dependents_miss 
+[2026-10-27 22:50:34] S000 Rger_steepness_camp_simple: n=11222 clusters=25 ll=-4767.30 iter=2 conv=TRUE dropped(pp)=0 rows/0 camps [0.01 secs]  
+[2026-10-27 22:50:34] S000 Rger_steepness_camp_full: n=11222 clusters=25 ll=-4668.78 iter=4 conv=TRUE dropped(pp)=0 rows/0 camps [0.03 secs] omitted exactly collinear (reported with NA): dependents_miss 
+[2026-10-27 22:50:34] S000 Rger_sameness_cap_simple: n=11222 clusters=300 ll=-4428.69 iter=5 conv=TRUE dropped(pp)=0 rows/0 camps [0.03 secs]  
+[2026-10-27 22:50:34] S000 Rger_sameness_cap_full: n=11222 clusters=300 ll=-4397.10 iter=5 conv=TRUE dropped(pp)=0 rows/0 camps [0.05 secs] omitted exactly collinear (reported with NA): dependents_miss 
+[2026-10-27 22:50:34] S000 Rger_sameness_camp_simple: n=11222 clusters=25 ll=-4765.92 iter=3 conv=TRUE dropped(pp)=0 rows/0 camps [0.01 secs]  
+[2026-10-27 22:50:34] S000 Rger_sameness_camp_full: n=11222 clusters=25 ll=-4668.37 iter=4 conv=TRUE dropped(pp)=0 rows/0 camps [0.03 secs] omitted exactly collinear (reported with NA): dependents_miss 
+[2026-10-27 22:50:34] S000 Rjap_steepness_cap_simple: n=4541 clusters=240 ll=-2277.28 iter=5 conv=TRUE dropped(pp)=0 rows/0 camps [0.02 secs]  
+[2026-10-27 22:50:34] S000 Rjap_steepness_cap_full: n=4541 clusters=240 ll=-2253.64 iter=5 conv=TRUE dropped(pp)=0 rows/0 camps [0.03 secs] omitted exactly collinear (reported with NA): dependents_miss 
+[2026-10-27 22:50:34] S000 Rjap_steepness_camp_simple: n=4541 clusters=20 ll=-2748.94 iter=3 conv=TRUE dropped(pp)=0 rows/0 camps [0.01 secs]  
+[2026-10-27 22:50:34] S000 Rjap_steepness_camp_full: n=4541 clusters=20 ll=-2706.34 iter=4 conv=TRUE dropped(pp)=0 rows/0 camps [0.02 secs] omitted exactly collinear (reported with NA): dependents_miss 
+[2026-10-27 22:50:35] S000 Rjap_sameness_cap_simple: n=4541 clusters=240 ll=-2277.25 iter=5 conv=TRUE dropped(pp)=0 rows/0 camps [0.02 secs]  
+[2026-10-27 22:50:35] S000 Rjap_sameness_cap_full: n=4541 clusters=240 ll=-2251.38 iter=5 conv=TRUE dropped(pp)=0 rows/0 camps [0.03 secs] omitted exactly collinear (reported with NA): dependents_miss 
+[2026-10-27 22:50:35] S000 Rjap_sameness_camp_simple: n=4541 clusters=20 ll=-2750.06 iter=3 conv=TRUE dropped(pp)=0 rows/0 camps [0.01 secs]  
+[2026-10-27 22:50:35] S000 Rjap_sameness_camp_full: n=4541 clusters=20 ll=-2705.53 iter=4 conv=TRUE dropped(pp)=0 rows/0 camps [0.01 secs] omitted exactly collinear (reported with NA): dependents_miss 
+[2026-10-27 22:50:35] S000 Raaf_steepness_cap_simple: n=2662 clusters=289 ll=-998.26 iter=5 conv=TRUE dropped(pp)=0 rows/0 camps [0.02 secs]  
+[2026-10-27 22:50:35] S000 Raaf_steepness_cap_full: n=2662 clusters=289 ll=-988.94 iter=5 conv=TRUE dropped(pp)=0 rows/0 camps [0.02 secs] omitted exactly collinear (reported with NA): dependents_miss 
+[2026-10-27 22:50:35] S000 Raaf_steepness_camp_simple: n=2662 clusters=25 ll=-1081.13 iter=3 conv=TRUE dropped(pp)=0 rows/0 camps [0.01 secs]  
+[2026-10-27 22:50:35] S000 Raaf_steepness_camp_full: n=2662 clusters=25 ll=-1044.56 iter=4 conv=TRUE dropped(pp)=0 rows/0 camps [0.01 secs] omitted exactly collinear (reported with NA): dependents_miss 
+[2026-10-27 22:50:35] S000 Raaf_sameness_cap_simple: n=2662 clusters=289 ll=-1002.64 iter=5 conv=TRUE dropped(pp)=0 rows/0 camps [0.02 secs]  
+[2026-10-27 22:50:35] S000 Raaf_sameness_cap_full: n=2662 clusters=289 ll=-991.44 iter=5 conv=TRUE dropped(pp)=0 rows/0 camps [0.02 secs] omitted exactly collinear (reported with NA): dependents_miss 
+[2026-10-27 22:50:35] S000 Raaf_sameness_camp_simple: n=2662 clusters=25 ll=-1089.06 iter=3 conv=TRUE dropped(pp)=0 rows/0 camps [0.01 secs]  
+[2026-10-27 22:50:35] S000 Raaf_sameness_camp_full: n=2662 clusters=25 ll=-1047.36 iter=4 conv=TRUE dropped(pp)=0 rows/0 camps [0.01 secs] omitted exactly collinear (reported with NA): dependents_miss 
+[2026-10-27 22:50:35] S000 Rnosq_steepness_cap_full: n=15763 clusters=540 ll=-6664.67 iter=5 conv=TRUE dropped(pp)=0 rows/0 camps [0.06 secs] omitted exactly collinear (reported with NA): dependents_miss 
+[2026-10-27 22:50:35] S000 Rnosq_steepness_camp_full: n=15763 clusters=45 ll=-7409.90 iter=4 conv=TRUE dropped(pp)=0 rows/0 camps [0.09 secs] omitted exactly collinear (reported with NA): dependents_miss 
+[2026-10-27 22:50:35] S000 Rnosq_sameness_cap_full: n=15763 clusters=540 ll=-6664.12 iter=5 conv=TRUE dropped(pp)=0 rows/0 camps [0.06 secs] omitted exactly collinear (reported with NA): dependents_miss 
+[2026-10-27 22:50:35] S000 Rnosq_sameness_camp_full: n=15763 clusters=45 ll=-7409.91 iter=4 conv=TRUE dropped(pp)=0 rows/0 camps [0.1 secs] omitted exactly collinear (reported with NA): dependents_miss 
+[2026-10-27 22:50:35] S000 Ralt_ratio_cap_simple: n=15763 clusters=540 ll=-6709.17 iter=5 conv=TRUE dropped(pp)=0 rows/0 camps [0.04 secs] dropped constant: ratio_sameness|ratio_sameness_miss 
+[2026-10-27 22:50:35] S000 Ralt_absdev_cap_simple: n=15763 clusters=540 ll=-6708.09 iter=5 conv=TRUE dropped(pp)=0 rows/0 camps [0.04 secs]  
+[2026-10-27 22:50:35] S000 Ralt_ratio_cap_full: n=15763 clusters=540 ll=-6663.46 iter=5 conv=TRUE dropped(pp)=0 rows/0 camps [0.07 secs] dropped constant: ratio_sameness|ratio_sameness_miss; omitted exactly collinear (reported with NA): dependents_miss 
+[2026-10-27 22:50:35] S000 Ralt_absdev_cap_full: n=15763 clusters=540 ll=-6660.80 iter=5 conv=TRUE dropped(pp)=0 rows/0 camps [0.07 secs] omitted exactly collinear (reported with NA): dependents_miss 
+[2026-10-27 22:50:35] S000 Ralt_ratio_camp_simple: n=15763 clusters=45 ll=-7517.75 iter=4 conv=TRUE dropped(pp)=0 rows/0 camps [0.02 secs] dropped constant: ratio_sameness|ratio_sameness_miss 
+[2026-10-27 22:50:35] S000 Ralt_absdev_camp_simple: n=15763 clusters=45 ll=-7517.70 iter=4 conv=TRUE dropped(pp)=0 rows/0 camps [0.02 secs]  
+[2026-10-27 22:50:35] S000 Ralt_ratio_camp_full: n=15763 clusters=45 ll=-7409.49 iter=4 conv=TRUE dropped(pp)=0 rows/0 camps [0.08 secs] dropped constant: ratio_sameness|ratio_sameness_miss; omitted exactly collinear (reported with NA): dependents_miss 
+[2026-10-27 22:50:35] S000 Ralt_absdev_camp_full: n=15763 clusters=45 ll=-7409.43 iter=4 conv=TRUE dropped(pp)=0 rows/0 camps [0.08 secs] omitted exactly collinear (reported with NA): dependents_miss 
+[2026-10-27 22:50:35] S000 Ralt_n_distinct_ranks_cap_full: n=15763 clusters=540 ll=-6662.66 iter=5 conv=TRUE dropped(pp)=0 rows/0 camps [0.08 secs] omitted exactly collinear (reported with NA): dependents_miss 
+[2026-10-27 22:50:36] S000 Ralt_sum_ranks_cap_full: n=15763 clusters=540 ll=-6663.02 iter=5 conv=TRUE dropped(pp)=0 rows/0 camps [0.06 secs] omitted exactly collinear (reported with NA): dependents_miss 
+[2026-10-27 22:50:36] S000 Ralt_admin_intensity_cap_full: n=15763 clusters=540 ll=-6661.62 iter=5 conv=TRUE dropped(pp)=0 rows/0 camps [0.06 secs] omitted exactly collinear (reported with NA): dependents_miss 
+[2026-10-27 22:50:36] S000 Ralt_n_distinct_ranks_camp_full: n=15763 clusters=45 ll=-7387.95 iter=4 conv=TRUE dropped(pp)=0 rows/0 camps [0.05 secs] omitted exactly collinear (reported with NA): dependents_miss 
+[2026-10-27 22:50:36] S000 Ralt_sum_ranks_camp_full: n=15763 clusters=45 ll=-7407.92 iter=4 conv=TRUE dropped(pp)=0 rows/0 camps [0.07 secs] omitted exactly collinear (reported with NA): dependents_miss 
+[2026-10-27 22:50:36] S000 Ralt_admin_intensity_camp_full: n=15763 clusters=45 ll=-7389.74 iter=4 conv=TRUE dropped(pp)=0 rows/0 camps [0.05 secs] omitted exactly collinear (reported with NA): dependents_miss 
+[2026-10-27 22:50:36] S000 Rfriends_only_cap_full: n=15763 clusters=540 ll=-6662.73 iter=5 conv=TRUE dropped(pp)=0 rows/0 camps [0.09 secs] omitted exactly collinear (reported with NA): dependents_miss 
+[2026-10-27 22:50:36] S000 Rfriends_only_camp_full: n=15763 clusters=45 ll=-7406.63 iter=4 conv=TRUE dropped(pp)=0 rows/0 camps [0.05 secs] omitted exactly collinear (reported with NA): dependents_miss 
+[2026-10-27 22:50:36] S000 Rfriends_steepness_cap_full: n=15763 clusters=540 ll=-6660.90 iter=5 conv=TRUE dropped(pp)=0 rows/0 camps [0.11 secs] omitted exactly collinear (reported with NA): dependents_miss 
+[2026-10-27 22:50:36] S000 Rfriends_steepness_camp_full: n=15763 clusters=45 ll=-7406.62 iter=4 conv=TRUE dropped(pp)=0 rows/0 camps [0.06 secs] omitted exactly collinear (reported with NA): dependents_miss 
+[2026-10-27 22:50:36] S000 Rfriends_sameness_cap_full: n=15763 clusters=540 ll=-6659.80 iter=5 conv=TRUE dropped(pp)=0 rows/0 camps [0.1 secs] omitted exactly collinear (reported with NA): dependents_miss 
+[2026-10-27 22:50:36] S000 Rfriends_sameness_camp_full: n=15763 clusters=45 ll=-7406.60 iter=4 conv=TRUE dropped(pp)=0 rows/0 camps [0.05 secs] omitted exactly collinear (reported with NA): dependents_miss 
+[2026-10-27 22:50:36] S000 Rfriends_unit_steepness_cap_full: n=15763 clusters=540 ll=-6662.71 iter=5 conv=TRUE dropped(pp)=0 rows/0 camps [0.11 secs] omitted exactly collinear (reported with NA): friends_miss|dependents_miss 
+[2026-10-27 22:50:36] S000 Rfriends_unit_steepness_camp_full: n=15763 clusters=45 ll=-7405.84 iter=4 conv=TRUE dropped(pp)=0 rows/0 camps [0.06 secs] omitted exactly collinear (reported with NA): friends_miss|dependents_miss 
+[2026-10-27 22:50:37] S000 Rfriends_unit_sameness_cap_full: n=15763 clusters=540 ll=-6659.69 iter=5 conv=TRUE dropped(pp)=0 rows/0 camps [0.13 secs] omitted exactly collinear (reported with NA): friends_miss|dependents_miss 
+[2026-10-27 22:50:37] S000 Rfriends_unit_sameness_camp_full: n=15763 clusters=45 ll=-7406.44 iter=4 conv=TRUE dropped(pp)=0 rows/0 camps [0.06 secs] omitted exactly collinear (reported with NA): friends_miss|dependents_miss 
+[2026-10-27 22:50:37] S000 Rint_steepness_cap_full: n=15763 clusters=540 ll=-6661.10 iter=5 conv=TRUE dropped(pp)=0 rows/0 camps [0.07 secs] omitted exactly collinear (reported with NA): dependents_miss 
+[2026-10-27 22:50:37] S000 Rint_steepness_camp_full: n=15763 clusters=45 ll=-7408.52 iter=4 conv=TRUE dropped(pp)=0 rows/0 camps [0.08 secs] omitted exactly collinear (reported with NA): dependents_miss 
+[2026-10-27 22:50:37] S000 Rint_sameness_cap_full: n=15763 clusters=540 ll=-6660.41 iter=5 conv=TRUE dropped(pp)=0 rows/0 camps [0.05 secs] omitted exactly collinear (reported with NA): dependents_miss 
+[2026-10-27 22:50:37] S000 Rint_sameness_camp_full: n=15763 clusters=45 ll=-7408.18 iter=4 conv=TRUE dropped(pp)=0 rows/0 camps [0.05 secs] omitted exactly collinear (reported with NA): dependents_miss 
+[2026-10-27 22:50:38] S000 INFLUENCE T4_steepness_cap_simple: 20 camps refitted in 0.7 secs 
+[2026-10-27 22:50:39] S000 INFLUENCE T4_steepness_cap_full: 20 camps refitted in 1.2 secs 
+[2026-10-27 22:50:39] S000 INFLUENCE T4_steepness_camp_simple: 20 camps refitted in 0.4 secs 
+[2026-10-27 22:50:40] S000 INFLUENCE T4_steepness_camp_full: 20 camps refitted in 0.9 secs 
+[2026-10-27 22:50:41] S000 INFLUENCE T4_sameness_cap_simple: 20 camps refitted in 0.7 secs 
+[2026-10-27 22:50:42] S000 INFLUENCE T4_sameness_cap_full: 20 camps refitted in 1.2 secs 
+[2026-10-27 22:50:43] S000 INFLUENCE T4_sameness_camp_simple: 20 camps refitted in 0.4 secs 
+[2026-10-27 22:50:44] S000 INFLUENCE T4_sameness_camp_full: 20 camps refitted in 1.1 secs 

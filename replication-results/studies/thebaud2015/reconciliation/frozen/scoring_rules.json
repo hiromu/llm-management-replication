@@ -1,0 +1,99 @@
+{
+  "version": 1,
+  "status": "provisional, frozen before any empirical fit; not calibrated on real papers",
+  "basis": "instructions/scoring.md; constants chosen by the coordinator for this study with stated reasons; no constants inherited from an earlier exercise",
+  "scored_scope": {
+    "focal_estimands": [
+      {"id": "F01", "hypothesis": "H1a", "model": "M3", "terms": ["female:leave", "female:leave_sq"], "published_claim": "not established (nonsignificant)"},
+      {"id": "F02", "hypothesis": "H1b", "model": "M3", "terms": ["female:childcare"], "published_claim": "negative, significant", "direction": "negative"},
+      {"id": "F03", "hypothesis": "H1c", "model": "M3", "terms": ["female:parttime"], "published_claim": "nonsignificant"},
+      {"id": "F04", "hypothesis": "baseline", "model": "M1", "terms": ["female"], "published_claim": "negative, significant", "direction": "negative"},
+      {"id": "F05", "hypothesis": "H2", "model": "M4", "terms": ["female:childcare"], "published_claim": "negative, significant", "direction": "negative"},
+      {"id": "F06", "hypothesis": "H2", "model": "M4", "terms": ["female:parttime"], "published_claim": "negative, significant", "direction": "negative"},
+      {"id": "F07", "hypothesis": "H2", "model": "M4", "terms": ["female:leave", "female:leave_sq"], "published_claim": "nonsignificant"},
+      {"id": "F08", "hypothesis": "H3", "model": "M5", "terms": ["female:leave", "female:leave_sq"], "published_claim": "positive linear and negative squared interaction, significant", "direction": "female:leave positive; female:leave_sq negative"},
+      {"id": "F09", "hypothesis": "H3", "model": "M6", "terms": ["female:leave", "female:leave_sq"], "published_claim": "positive linear and negative squared interaction, significant", "direction": "female:leave positive; female:leave_sq negative"},
+      {"id": "F10", "hypothesis": "H3", "model": "M7", "terms": ["female:leave", "female:leave_sq"], "published_claim": "positive linear and negative squared interaction, significant", "direction": "female:leave positive; female:leave_sq negative"},
+      {"id": "F11", "hypothesis": "H3", "model": "M8", "terms": ["female:childcare"], "published_claim": "positive, marginal", "direction": "positive"},
+      {"id": "F12", "hypothesis": "H3", "model": "M5-M8", "terms": ["female:childcare (M5-M7)", "female:parttime (M5-M8)", "female:leave and female:leave_sq (M8)"], "published_claim": "nonsignificant interactions"}
+    ],
+    "robustness_estimands": [
+      {"id": "R01", "model": "R1", "terms": ["female:childcare"]},
+      {"id": "R02", "model": "R2", "terms": ["female:childcare"]},
+      {"id": "R03", "model": "R3", "terms": ["female:childcare"]}
+    ],
+    "sign_and_direction_source": "Exact per-term published values come from sealed targets; directions above restate the claim, not values.",
+    "not_scored": "nuisance controls, descriptive figures, per-country regressions, variance-decomposition diagnostics, not-shown footnote robustness checks; their published values stay sealed and are reported as out of scored scope"
+  },
+  "implementation_agreement": {
+    "compare_first": "sample_hash, n_obs, n_countries, n_surveys, then origin estimates and SEs, before any target is read",
+    "sample_identity": "identical sample_hash required",
+    "estimate_tolerance": "|b_i - b_j| <= 0.05 x max(se_i, se_j) or <= 0.001 absolute",
+    "se_tolerance": "|se_i - se_j| / max(se_i, se_j) <= 0.05",
+    "pairing": "two agreeing of three permit scoring on that pair; the third goes to code audit; no agreeing pair gives indeterminate:implementation_disagreement",
+    "reason": "A (R lme4), B (R lme4) and C (Julia MixedModels) all use the Laplace approximation, so differences beyond optimizer tolerance indicate implementation differences"
+  },
+  "n_rule": {
+    "regime": "same survey source (supplied GEM harmonized file, later vintage than the article's unnamed release) with different-vintage country-level inputs",
+    "match": "|N_rec - N_pub| / N_pub <= 0.05",
+    "grey": "0.05 < relative difference <= 0.15",
+    "mismatch": "> 0.15: sample not reconstructed; magnitude criterion for that model is reported but its outcome cannot be consistent (indeterminate:incomplete_coverage or source_vintage)",
+    "evaluated_by": "code, using the sealed N branch"
+  },
+  "rounding": "Published values are intervals [v - h, v + h], h = half a unit of the last printed digit. Distances are measured from the reconstructed estimate to the nearest interval end (0 if inside). Published SE uses its printed value; if the printed SE is zero or negative, the magnitude criterion is not audited for that cell.",
+  "magnitude": {
+    "unit": "published SE",
+    "bands_different_vintage": {"within": "distance <= 1.5", "grey": "1.5 < distance <= 3", "outside": "distance > 3"},
+    "bands_same_data": {"within": "distance <= 1.0", "grey": "1.0 < distance <= 2", "outside": "distance > 2"},
+    "regime_applied": "different_vintage for every focal and robustness estimand, because every model contains reconstructed country-level variables",
+    "relative_effect": "reported alongside: reconstructed / published",
+    "reason": "Sampling noise alone gives about 1 SE; reconstructed covariates of a later vintage widen the band. Provisional."
+  },
+  "sign": {
+    "mismatch": "reconstructed sign opposite to the published sign and reconstructed |z| >= 1.645",
+    "grey": "opposite sign with |z| < 1.645",
+    "published_zero": "published value whose rounding interval contains 0 has no sign to compare"
+  },
+  "inference": {
+    "bands": ["p < .01", ".01 <= p < .05", ".05 <= p < .10", "p >= .10"],
+    "published_band_from_stars": "three bullets: p <= .01; two: .01 < p <= .05; one: .05 < p <= .10; none: p > .10 (no exact p); legend uses <=, band edges are treated as the printed inequality",
+    "tail": "two-tailed (both readers found the tail unstated)",
+    "alpha": "the paper's lowest legend level .10 for a marked result; .05 for statements of significance in the text",
+    "consistent": "same band or adjacent band",
+    "outside": "a change of two or more bands; for a published significant claim, weaker by two or more bands; for a published nonsignificant claim, reconstructed p < .01",
+    "stronger_significance": "stronger supported significance in the published direction is not a failure"
+  },
+  "benchmark_inference": {
+    "adaptation_declared_before_execution": "Model class is a multilevel logit or linear mixed model with country-level predictors. Benchmark: same fixed terms in a pooled logit (or OLS for M5) with country-clustered CR1 sandwich SEs (assignment unit: country). M5 additionally uses a restricted wild cluster bootstrap with Rademacher weights because G = 24 is below the threshold.",
+    "few_cluster_threshold": 30,
+    "fragile_inference_rule": "magnitude and sign within tolerance at the origin, native band consistent, and the benchmark band weaker by two or more bands for a published significant claim",
+    "limitation": "the pooled benchmark removes the random effects, so it is an adaptation, not the same estimator"
+  },
+  "specification_sets": {
+    "equivalent_set": "empty after reconciliation; specification fragility is not assessed",
+    "uncertain_set": "U01-U26 one-at-a-time deviations; reported separately as sign share, share significant in the published direction at .05 (two-tailed), median, min-max, and the published estimate's position; not used to change an outcome",
+    "non_equivalent_checks": "N01; reported only",
+    "influence": "leave-one-country-out ranges reported as influence ranges, not confidence intervals; not part of any specification set"
+  },
+  "claim_outcome": {
+    "per_term": "consistent if implementations agree, sign not mismatched, magnitude within, inference consistent; discrepant_candidate if implementations agree and sign mismatch, or magnitude outside, or inference outside; indeterminate if any criterion is grey and no criterion is outside, or if N is a mismatch, or if implementations disagree",
+    "per_estimand_group": "all terms consistent -> consistent; any term discrepant_candidate -> discrepant_candidate; otherwise indeterminate with the sub-code of the first non-consistent term",
+    "precedence": ["not_attemptable", "indeterminate:implementation_disagreement", "discrepant_candidate", "indeterminate (other sub-codes)", "fragile_inference", "consistent"],
+    "fragile": "not available: equivalent set empty",
+    "discrepant_final": "a discrepant_candidate becomes discrepant only after adversarial review by a model family independent of the implementers and actual human confirmation; until then it is reported as discrepant_candidate (unconfirmed)",
+    "grey_zone": "benefit of uncertainty goes to indeterminate"
+  },
+  "paper_aggregation": {
+    "focal_structure": "Three hypothesis groups: H1 (F01-F03), H2 (F05-F07), H3 (F08-F12); F04 is the baseline gender gap. The article's supported focal results are F02, F05, F06, F08, F09, F10 and F11.",
+    "rule": "Hypothesis outcome = outcome of its supported focal estimands under the claim precedence (H1: F02; H2: F05 and F06; H3: F08-F11); its nonsignificant focal estimands qualify the description. Paper outcome: any not_attemptable or indeterminate supported focal hypothesis -> paper indeterminate; else any discrepant (confirmed) -> not reproduced; else all consistent and no tier discrepant -> fully reproduced; all focal consistent but lower-tier discrepant -> partially reproduced. discrepant_candidate without human confirmation makes the paper indeterminate:awaiting_confirmation.",
+    "reason": "follows instructions/scoring.md mapping; avoids a worst-cell rule by naming the supported focal estimands in advance"
+  },
+  "missingness_failure": "Failed or non-converged origin fits make that estimand indeterminate:implementation_failure. Failed deviation and influence fits are retained and counted, never dropped.",
+  "compute_budget": {
+    "implementations": "A and B: ORIGIN; A and C: ORIGIN, all deviations and influence. B runs deviations only if time remains after A and C finish.",
+    "wall_clock_cap_hours_per_implementation": 30,
+    "order": "ORIGIN, deviations in listed order, N01, influence",
+    "on_cap": "stop, record unexecuted run IDs"
+  },
+  "calibration_status": "No planted-error, null-data or post-cutoff calibration arms were run in this session; synthetic rule tests run on fabricated inputs only. Constants are provisional."
+}

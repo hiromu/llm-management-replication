@@ -1,0 +1,1897 @@
+{
+  "sealed": true,
+  "findings": [
+    {
+      "finding_id": "F001",
+      "check": "leisure: d arithmetic, 1976 vs. 1991",
+      "inputs_locators": [
+        {
+          "doc_id": "P1",
+          "pdf_page": 11,
+          "section_or_table": "Table 1: leisure scale row"
+        }
+      ],
+      "computation": "Conditional reference formula (later latent mean - earlier latent mean)/sqrt((SD_earlier^2+SD_later^2)/2). No sample counts used.",
+      "result": "consistent",
+      "rounding_interval_used": {
+        "mean_half_width": 0.005,
+        "SD_half_width": 0.005,
+        "d_half_width": 0.005,
+        "computed_d_range": [
+          0.3332545962746393,
+          0.3675576444505755
+        ],
+        "printed_d_range": [
+          0.345,
+          0.355
+        ]
+      },
+      "notes": "Compatibility with this formula does not establish the published denominator. No choice is selected from agreement.",
+      "point_reference": 0.3502809912331196
+    },
+    {
+      "finding_id": "F002",
+      "check": "leisure: d arithmetic, 1991 vs. 2006",
+      "inputs_locators": [
+        {
+          "doc_id": "P1",
+          "pdf_page": 11,
+          "section_or_table": "Table 1: leisure scale row"
+        }
+      ],
+      "computation": "Conditional reference formula (later latent mean - earlier latent mean)/sqrt((SD_earlier^2+SD_later^2)/2). No sample counts used.",
+      "result": "consistent",
+      "rounding_interval_used": {
+        "mean_half_width": 0.005,
+        "SD_half_width": 0.005,
+        "d_half_width": 0.005,
+        "computed_d_range": [
+          0.20828813681835656,
+          0.2393832025274689
+        ],
+        "printed_d_range": [
+          0.215,
+          0.225
+        ]
+      },
+      "notes": "Compatibility with this formula does not establish the published denominator. No choice is selected from agreement.",
+      "point_reference": 0.22372699590537154
+    },
+    {
+      "finding_id": "F003",
+      "check": "leisure: d arithmetic, 1976 vs. 2006",
+      "inputs_locators": [
+        {
+          "doc_id": "P1",
+          "pdf_page": 11,
+          "section_or_table": "Table 1: leisure scale row"
+        }
+      ],
+      "computation": "Conditional reference formula (later latent mean - earlier latent mean)/sqrt((SD_earlier^2+SD_later^2)/2). No sample counts used.",
+      "result": "consistent",
+      "rounding_interval_used": {
+        "mean_half_width": 0.005,
+        "SD_half_width": 0.005,
+        "d_half_width": 0.005,
+        "computed_d_range": [
+          0.5526913161225776,
+          0.5893792304227442
+        ],
+        "printed_d_range": [
+          0.565,
+          0.575
+        ]
+      },
+      "notes": "Compatibility with this formula does not establish the published denominator. No choice is selected from agreement.",
+      "point_reference": 0.5709045118958112
+    },
+    {
+      "finding_id": "F004",
+      "check": "intrinsic: d arithmetic, 1976 vs. 1991",
+      "inputs_locators": [
+        {
+          "doc_id": "P1",
+          "pdf_page": 11,
+          "section_or_table": "Table 1: intrinsic scale row"
+        }
+      ],
+      "computation": "Conditional reference formula (later latent mean - earlier latent mean)/sqrt((SD_earlier^2+SD_later^2)/2). No sample counts used.",
+      "result": "consistent",
+      "rounding_interval_used": {
+        "mean_half_width": 0.005,
+        "SD_half_width": 0.005,
+        "d_half_width": 0.005,
+        "computed_d_range": [
+          -0.07316529130196261,
+          -0.023807836806028458
+        ],
+        "printed_d_range": [
+          -0.055,
+          -0.045000000000000005
+        ]
+      },
+      "notes": "Compatibility with this formula does not establish the published denominator. No choice is selected from agreement.",
+      "point_reference": -0.048189273659093534
+    },
+    {
+      "finding_id": "F005",
+      "check": "intrinsic: d arithmetic, 1991 vs. 2006",
+      "inputs_locators": [
+        {
+          "doc_id": "P1",
+          "pdf_page": 11,
+          "section_or_table": "Table 1: intrinsic scale row"
+        }
+      ],
+      "computation": "Conditional reference formula (later latent mean - earlier latent mean)/sqrt((SD_earlier^2+SD_later^2)/2). No sample counts used.",
+      "result": "consistent",
+      "rounding_interval_used": {
+        "mean_half_width": 0.005,
+        "SD_half_width": 0.005,
+        "d_half_width": 0.005,
+        "computed_d_range": [
+          -0.17936813957902692,
+          -0.13158242782839277
+        ],
+        "printed_d_range": [
+          -0.165,
+          -0.155
+        ]
+      },
+      "notes": "Compatibility with this formula does not establish the published denominator. No choice is selected from agreement.",
+      "point_reference": -0.15521102455547314
+    },
+    {
+      "finding_id": "F006",
+      "check": "intrinsic: d arithmetic, 1976 vs. 2006",
+      "inputs_locators": [
+        {
+          "doc_id": "P1",
+          "pdf_page": 11,
+          "section_or_table": "Table 1: intrinsic scale row"
+        }
+      ],
+      "computation": "Conditional reference formula (later latent mean - earlier latent mean)/sqrt((SD_earlier^2+SD_later^2)/2). No sample counts used.",
+      "result": "consistent",
+      "rounding_interval_used": {
+        "mean_half_width": 0.005,
+        "SD_half_width": 0.005,
+        "d_half_width": 0.005,
+        "computed_d_range": [
+          -0.22655708988018372,
+          -0.17724248230444103
+        ],
+        "printed_d_range": [
+          -0.20500000000000002,
+          -0.195
+        ]
+      },
+      "notes": "Compatibility with this formula does not establish the published denominator. No choice is selected from agreement.",
+      "point_reference": -0.20162451903236284
+    },
+    {
+      "finding_id": "F007",
+      "check": "altruistic: d arithmetic, 1976 vs. 1991",
+      "inputs_locators": [
+        {
+          "doc_id": "P1",
+          "pdf_page": 12,
+          "section_or_table": "Table 1: altruistic scale row"
+        }
+      ],
+      "computation": "Conditional reference formula (later latent mean - earlier latent mean)/sqrt((SD_earlier^2+SD_later^2)/2). No sample counts used.",
+      "result": "consistent",
+      "rounding_interval_used": {
+        "mean_half_width": 0.005,
+        "SD_half_width": 0.005,
+        "d_half_width": 0.005,
+        "computed_d_range": [
+          -0.05633663122563019,
+          -0.027777108006049305
+        ],
+        "printed_d_range": [
+          -0.045,
+          -0.035
+        ]
+      },
+      "notes": "Compatibility with this formula does not establish the published denominator. No choice is selected from agreement.",
+      "point_reference": -0.041957016076503664
+    },
+    {
+      "finding_id": "F008",
+      "check": "altruistic: d arithmetic, 1991 vs. 2006",
+      "inputs_locators": [
+        {
+          "doc_id": "P1",
+          "pdf_page": 12,
+          "section_or_table": "Table 1: altruistic scale row"
+        }
+      ],
+      "computation": "Conditional reference formula (later latent mean - earlier latent mean)/sqrt((SD_earlier^2+SD_later^2)/2). No sample counts used.",
+      "result": "consistent",
+      "rounding_interval_used": {
+        "mean_half_width": 0.005,
+        "SD_half_width": 0.005,
+        "d_half_width": 0.005,
+        "computed_d_range": [
+          -0.0689589578427299,
+          -0.0408125493395504
+        ],
+        "printed_d_range": [
+          -0.065,
+          -0.055
+        ]
+      },
+      "notes": "Compatibility with this formula does not establish the published denominator. No choice is selected from agreement.",
+      "point_reference": -0.054789380107899424
+    },
+    {
+      "finding_id": "F009",
+      "check": "altruistic: d arithmetic, 1976 vs. 2006",
+      "inputs_locators": [
+        {
+          "doc_id": "P1",
+          "pdf_page": 12,
+          "section_or_table": "Table 1: altruistic scale row"
+        }
+      ],
+      "computation": "Conditional reference formula (later latent mean - earlier latent mean)/sqrt((SD_earlier^2+SD_later^2)/2). No sample counts used.",
+      "result": "consistent",
+      "rounding_interval_used": {
+        "mean_half_width": 0.005,
+        "SD_half_width": 0.005,
+        "d_half_width": 0.005,
+        "computed_d_range": [
+          -0.11108700630312306,
+          -0.08217443488774817
+        ],
+        "printed_d_range": [
+          -0.10500000000000001,
+          -0.095
+        ]
+      },
+      "notes": "Compatibility with this formula does not establish the published denominator. No choice is selected from agreement.",
+      "point_reference": -0.09653106571608795
+    },
+    {
+      "finding_id": "F010",
+      "check": "social: d arithmetic, 1976 vs. 1991",
+      "inputs_locators": [
+        {
+          "doc_id": "P1",
+          "pdf_page": 12,
+          "section_or_table": "Table 1: social scale row"
+        }
+      ],
+      "computation": "Conditional reference formula (later latent mean - earlier latent mean)/sqrt((SD_earlier^2+SD_later^2)/2). No sample counts used.",
+      "result": "consistent",
+      "rounding_interval_used": {
+        "mean_half_width": 0.005,
+        "SD_half_width": 0.005,
+        "d_half_width": 0.005,
+        "computed_d_range": [
+          -0.11510791366906487,
+          -0.08510638297872411
+        ],
+        "printed_d_range": [
+          -0.10500000000000001,
+          -0.095
+        ]
+      },
+      "notes": "Compatibility with this formula does not establish the published denominator. No choice is selected from agreement.",
+      "point_reference": -0.10000000000000041
+    },
+    {
+      "finding_id": "F011",
+      "check": "social: d arithmetic, 1991 vs. 2006",
+      "inputs_locators": [
+        {
+          "doc_id": "P1",
+          "pdf_page": 12,
+          "section_or_table": "Table 1: social scale row"
+        }
+      ],
+      "computation": "Conditional reference formula (later latent mean - earlier latent mean)/sqrt((SD_earlier^2+SD_later^2)/2). No sample counts used.",
+      "result": "consistent",
+      "rounding_interval_used": {
+        "mean_half_width": 0.005,
+        "SD_half_width": 0.005,
+        "d_half_width": 0.005,
+        "computed_d_range": [
+          -0.19112997511429844,
+          -0.159382633000914
+        ],
+        "printed_d_range": [
+          -0.185,
+          -0.175
+        ]
+      },
+      "notes": "Compatibility with this formula does not establish the published denominator. No choice is selected from agreement.",
+      "point_reference": -0.17514049561655914
+    },
+    {
+      "finding_id": "F012",
+      "check": "social: d arithmetic, 1976 vs. 2006",
+      "inputs_locators": [
+        {
+          "doc_id": "P1",
+          "pdf_page": 12,
+          "section_or_table": "Table 1: social scale row"
+        }
+      ],
+      "computation": "Conditional reference formula (later latent mean - earlier latent mean)/sqrt((SD_earlier^2+SD_later^2)/2). No sample counts used.",
+      "result": "consistent",
+      "rounding_interval_used": {
+        "mean_half_width": 0.005,
+        "SD_half_width": 0.005,
+        "d_half_width": 0.005,
+        "computed_d_range": [
+          -0.29404611556046,
+          -0.26080794491058706
+        ],
+        "printed_d_range": [
+          -0.28500000000000003,
+          -0.275
+        ]
+      },
+      "notes": "Compatibility with this formula does not establish the published denominator. No choice is selected from agreement.",
+      "point_reference": -0.27730578472621936
+    },
+    {
+      "finding_id": "F013",
+      "check": "extrinsic: d arithmetic, 1976 vs. 1991",
+      "inputs_locators": [
+        {
+          "doc_id": "P1",
+          "pdf_page": 12,
+          "section_or_table": "Table 1: extrinsic scale row"
+        }
+      ],
+      "computation": "Conditional reference formula (later latent mean - earlier latent mean)/sqrt((SD_earlier^2+SD_later^2)/2). No sample counts used.",
+      "result": "consistent",
+      "rounding_interval_used": {
+        "mean_half_width": 0.005,
+        "SD_half_width": 0.005,
+        "d_half_width": 0.005,
+        "computed_d_range": [
+          0.37134332381775187,
+          0.40570124763869037
+        ],
+        "printed_d_range": [
+          0.385,
+          0.395
+        ]
+      },
+      "notes": "Compatibility with this formula does not establish the published denominator. No choice is selected from agreement.",
+      "point_reference": 0.38839875829808074
+    },
+    {
+      "finding_id": "F014",
+      "check": "extrinsic: d arithmetic, 1991 vs. 2006",
+      "inputs_locators": [
+        {
+          "doc_id": "P1",
+          "pdf_page": 12,
+          "section_or_table": "Table 1: extrinsic scale row"
+        }
+      ],
+      "computation": "Conditional reference formula (later latent mean - earlier latent mean)/sqrt((SD_earlier^2+SD_later^2)/2). No sample counts used.",
+      "result": "consistent",
+      "rounding_interval_used": {
+        "mean_half_width": 0.005,
+        "SD_half_width": 0.005,
+        "d_half_width": 0.005,
+        "computed_d_range": [
+          -0.14285349868171845,
+          -0.11267326245126164
+        ],
+        "printed_d_range": [
+          -0.135,
+          -0.125
+        ]
+      },
+      "notes": "Compatibility with this formula does not establish the published denominator. No choice is selected from agreement.",
+      "point_reference": -0.1276563639968113
+    },
+    {
+      "finding_id": "F015",
+      "check": "extrinsic: d arithmetic, 1976 vs. 2006",
+      "inputs_locators": [
+        {
+          "doc_id": "P1",
+          "pdf_page": 12,
+          "section_or_table": "Table 1: extrinsic scale row"
+        }
+      ],
+      "computation": "Conditional reference formula (later latent mean - earlier latent mean)/sqrt((SD_earlier^2+SD_later^2)/2). No sample counts used.",
+      "result": "consistent",
+      "rounding_interval_used": {
+        "mean_half_width": 0.005,
+        "SD_half_width": 0.005,
+        "d_half_width": 0.005,
+        "computed_d_range": [
+          0.24457900043030673,
+          0.27734271107293834
+        ],
+        "printed_d_range": [
+          0.255,
+          0.265
+        ]
+      },
+      "notes": "Compatibility with this formula does not establish the published denominator. No choice is selected from agreement.",
+      "point_reference": 0.2608421730227219
+    },
+    {
+      "finding_id": "F016",
+      "check": "leisure, 1976: printed 95% interval versus mean and SE",
+      "inputs_locators": [
+        {
+          "doc_id": "P1",
+          "pdf_page": 11,
+          "section_or_table": "Table 1: leisure, 1976"
+        },
+        {
+          "doc_id": "P1",
+          "pdf_page": 15,
+          "section_or_table": "Primary Analyses: LISREL SE and confidence intervals"
+        }
+      ],
+      "computation": "Feasibility of lower=M-z_.975*SE and upper=M+z_.975*SE simultaneously, over complete rounding intervals.",
+      "result": "consistent",
+      "rounding_interval_used": {
+        "mean": [
+          2.355,
+          2.3649999999999998
+        ],
+        "SE": [
+          0.0165,
+          0.0175
+        ],
+        "lower_endpoint": [
+          2.325,
+          2.335
+        ],
+        "upper_endpoint": [
+          2.3850000000000002,
+          2.395
+        ],
+        "possible_Wald_width": [
+          0.06467881148982178,
+          0.0685987394589019
+        ],
+        "possible_printed_width": [
+          0.050000000000000266,
+          0.06999999999999984
+        ]
+      },
+      "notes": "Conditional on the conventional normal-Wald 95% construction. Article does not explicitly specify the critical-value formula; a different documented interval method could change this diagnostic. This is not a replication verdict."
+    },
+    {
+      "finding_id": "F017",
+      "check": "leisure, 1991: printed 95% interval versus mean and SE",
+      "inputs_locators": [
+        {
+          "doc_id": "P1",
+          "pdf_page": 11,
+          "section_or_table": "Table 1: leisure, 1991"
+        },
+        {
+          "doc_id": "P1",
+          "pdf_page": 15,
+          "section_or_table": "Primary Analyses: LISREL SE and confidence intervals"
+        }
+      ],
+      "computation": "Feasibility of lower=M-z_.975*SE and upper=M+z_.975*SE simultaneously, over complete rounding intervals.",
+      "result": "consistent",
+      "rounding_interval_used": {
+        "mean": [
+          2.595,
+          2.605
+        ],
+        "SE": [
+          0.0185,
+          0.0195
+        ],
+        "lower_endpoint": [
+          2.555,
+          2.565
+        ],
+        "upper_endpoint": [
+          2.6350000000000002,
+          2.645
+        ],
+        "possible_Wald_width": [
+          0.07251866742798199,
+          0.0764385953970621
+        ],
+        "possible_printed_width": [
+          0.07000000000000028,
+          0.08999999999999986
+        ]
+      },
+      "notes": "Conditional on the conventional normal-Wald 95% construction. Article does not explicitly specify the critical-value formula; a different documented interval method could change this diagnostic. This is not a replication verdict."
+    },
+    {
+      "finding_id": "F018",
+      "check": "leisure, 2006: printed 95% interval versus mean and SE",
+      "inputs_locators": [
+        {
+          "doc_id": "P1",
+          "pdf_page": 11,
+          "section_or_table": "Table 1: leisure, 2006"
+        },
+        {
+          "doc_id": "P1",
+          "pdf_page": 15,
+          "section_or_table": "Primary Analyses: LISREL SE and confidence intervals"
+        }
+      ],
+      "computation": "Feasibility of lower=M-z_.975*SE and upper=M+z_.975*SE simultaneously, over complete rounding intervals.",
+      "result": "consistent",
+      "rounding_interval_used": {
+        "mean": [
+          2.755,
+          2.7649999999999997
+        ],
+        "SE": [
+          0.0195,
+          0.0205
+        ],
+        "lower_endpoint": [
+          2.7150000000000003,
+          2.725
+        ],
+        "upper_endpoint": [
+          2.795,
+          2.8049999999999997
+        ],
+        "possible_Wald_width": [
+          0.0764385953970621,
+          0.08035852336614221
+        ],
+        "possible_printed_width": [
+          0.06999999999999984,
+          0.08999999999999941
+        ]
+      },
+      "notes": "Conditional on the conventional normal-Wald 95% construction. Article does not explicitly specify the critical-value formula; a different documented interval method could change this diagnostic. This is not a replication verdict."
+    },
+    {
+      "finding_id": "F019",
+      "check": "intrinsic, 1976: printed 95% interval versus mean and SE",
+      "inputs_locators": [
+        {
+          "doc_id": "P1",
+          "pdf_page": 11,
+          "section_or_table": "Table 1: intrinsic, 1976"
+        },
+        {
+          "doc_id": "P1",
+          "pdf_page": 15,
+          "section_or_table": "Primary Analyses: LISREL SE and confidence intervals"
+        }
+      ],
+      "computation": "Feasibility of lower=M-z_.975*SE and upper=M+z_.975*SE simultaneously, over complete rounding intervals.",
+      "result": "consistent",
+      "rounding_interval_used": {
+        "mean": [
+          3.845,
+          3.855
+        ],
+        "SE": [
+          0.012499999999999999,
+          0.0135
+        ],
+        "lower_endpoint": [
+          3.815,
+          3.8249999999999997
+        ],
+        "upper_endpoint": [
+          3.875,
+          3.885
+        ],
+        "possible_Wald_width": [
+          0.048999099613501344,
+          0.052919027582581456
+        ],
+        "possible_printed_width": [
+          0.050000000000000266,
+          0.06999999999999984
+        ]
+      },
+      "notes": "Conditional on the conventional normal-Wald 95% construction. Article does not explicitly specify the critical-value formula; a different documented interval method could change this diagnostic. This is not a replication verdict."
+    },
+    {
+      "finding_id": "F020",
+      "check": "intrinsic, 1991: printed 95% interval versus mean and SE",
+      "inputs_locators": [
+        {
+          "doc_id": "P1",
+          "pdf_page": 11,
+          "section_or_table": "Table 1: intrinsic, 1991"
+        },
+        {
+          "doc_id": "P1",
+          "pdf_page": 15,
+          "section_or_table": "Primary Analyses: LISREL SE and confidence intervals"
+        }
+      ],
+      "computation": "Feasibility of lower=M-z_.975*SE and upper=M+z_.975*SE simultaneously, over complete rounding intervals.",
+      "result": "consistent",
+      "rounding_interval_used": {
+        "mean": [
+          3.825,
+          3.835
+        ],
+        "SE": [
+          0.0135,
+          0.0145
+        ],
+        "lower_endpoint": [
+          3.795,
+          3.8049999999999997
+        ],
+        "upper_endpoint": [
+          3.855,
+          3.8649999999999998
+        ],
+        "possible_Wald_width": [
+          0.052919027582581456,
+          0.05683895555166157
+        ],
+        "possible_printed_width": [
+          0.050000000000000266,
+          0.06999999999999984
+        ]
+      },
+      "notes": "Conditional on the conventional normal-Wald 95% construction. Article does not explicitly specify the critical-value formula; a different documented interval method could change this diagnostic. This is not a replication verdict."
+    },
+    {
+      "finding_id": "F021",
+      "check": "intrinsic, 2006: printed 95% interval versus mean and SE",
+      "inputs_locators": [
+        {
+          "doc_id": "P1",
+          "pdf_page": 11,
+          "section_or_table": "Table 1: intrinsic, 2006"
+        },
+        {
+          "doc_id": "P1",
+          "pdf_page": 15,
+          "section_or_table": "Primary Analyses: LISREL SE and confidence intervals"
+        }
+      ],
+      "computation": "Feasibility of lower=M-z_.975*SE and upper=M+z_.975*SE simultaneously, over complete rounding intervals.",
+      "result": "consistent",
+      "rounding_interval_used": {
+        "mean": [
+          3.755,
+          3.7649999999999997
+        ],
+        "SE": [
+          0.014499999999999999,
+          0.0155
+        ],
+        "lower_endpoint": [
+          3.725,
+          3.735
+        ],
+        "upper_endpoint": [
+          3.785,
+          3.795
+        ],
+        "possible_Wald_width": [
+          0.05683895555166156,
+          0.06075888352074167
+        ],
+        "possible_printed_width": [
+          0.050000000000000266,
+          0.06999999999999984
+        ]
+      },
+      "notes": "Conditional on the conventional normal-Wald 95% construction. Article does not explicitly specify the critical-value formula; a different documented interval method could change this diagnostic. This is not a replication verdict."
+    },
+    {
+      "finding_id": "F022",
+      "check": "altruistic, 1976: printed 95% interval versus mean and SE",
+      "inputs_locators": [
+        {
+          "doc_id": "P1",
+          "pdf_page": 12,
+          "section_or_table": "Table 1: altruistic, 1976"
+        },
+        {
+          "doc_id": "P1",
+          "pdf_page": 15,
+          "section_or_table": "Primary Analyses: LISREL SE and confidence intervals"
+        }
+      ],
+      "computation": "Feasibility of lower=M-z_.975*SE and upper=M+z_.975*SE simultaneously, over complete rounding intervals.",
+      "result": "consistent",
+      "rounding_interval_used": {
+        "mean": [
+          3.295,
+          3.3049999999999997
+        ],
+        "SE": [
+          0.0155,
+          0.0165
+        ],
+        "lower_endpoint": [
+          3.265,
+          3.275
+        ],
+        "upper_endpoint": [
+          3.325,
+          3.335
+        ],
+        "possible_Wald_width": [
+          0.06075888352074167,
+          0.06467881148982178
+        ],
+        "possible_printed_width": [
+          0.050000000000000266,
+          0.06999999999999984
+        ]
+      },
+      "notes": "Conditional on the conventional normal-Wald 95% construction. Article does not explicitly specify the critical-value formula; a different documented interval method could change this diagnostic. This is not a replication verdict."
+    },
+    {
+      "finding_id": "F023",
+      "check": "altruistic, 1991: printed 95% interval versus mean and SE",
+      "inputs_locators": [
+        {
+          "doc_id": "P1",
+          "pdf_page": 12,
+          "section_or_table": "Table 1: altruistic, 1991"
+        },
+        {
+          "doc_id": "P1",
+          "pdf_page": 15,
+          "section_or_table": "Primary Analyses: LISREL SE and confidence intervals"
+        }
+      ],
+      "computation": "Feasibility of lower=M-z_.975*SE and upper=M+z_.975*SE simultaneously, over complete rounding intervals.",
+      "result": "consistent",
+      "rounding_interval_used": {
+        "mean": [
+          3.265,
+          3.275
+        ],
+        "SE": [
+          0.017499999999999998,
+          0.0185
+        ],
+        "lower_endpoint": [
+          3.225,
+          3.235
+        ],
+        "upper_endpoint": [
+          3.305,
+          3.315
+        ],
+        "possible_Wald_width": [
+          0.06859873945890188,
+          0.07251866742798199
+        ],
+        "possible_printed_width": [
+          0.07000000000000028,
+          0.08999999999999986
+        ]
+      },
+      "notes": "Conditional on the conventional normal-Wald 95% construction. Article does not explicitly specify the critical-value formula; a different documented interval method could change this diagnostic. This is not a replication verdict."
+    },
+    {
+      "finding_id": "F024",
+      "check": "altruistic, 2006: printed 95% interval versus mean and SE",
+      "inputs_locators": [
+        {
+          "doc_id": "P1",
+          "pdf_page": 12,
+          "section_or_table": "Table 1: altruistic, 2006"
+        },
+        {
+          "doc_id": "P1",
+          "pdf_page": 15,
+          "section_or_table": "Primary Analyses: LISREL SE and confidence intervals"
+        }
+      ],
+      "computation": "Feasibility of lower=M-z_.975*SE and upper=M+z_.975*SE simultaneously, over complete rounding intervals.",
+      "result": "inconsistent_beyond_rounding",
+      "rounding_interval_used": {
+        "mean": [
+          3.225,
+          3.235
+        ],
+        "SE": [
+          0.0155,
+          0.0165
+        ],
+        "lower_endpoint": [
+          3.185,
+          3.195
+        ],
+        "upper_endpoint": [
+          3.265,
+          3.275
+        ],
+        "possible_Wald_width": [
+          0.06075888352074167,
+          0.06467881148982178
+        ],
+        "possible_printed_width": [
+          0.07000000000000028,
+          0.08999999999999986
+        ]
+      },
+      "notes": "Conditional on the conventional normal-Wald 95% construction. Article does not explicitly specify the critical-value formula; a different documented interval method could change this diagnostic. This is not a replication verdict."
+    },
+    {
+      "finding_id": "F025",
+      "check": "social, 1976: printed 95% interval versus mean and SE",
+      "inputs_locators": [
+        {
+          "doc_id": "P1",
+          "pdf_page": 12,
+          "section_or_table": "Table 1: social, 1976"
+        },
+        {
+          "doc_id": "P1",
+          "pdf_page": 15,
+          "section_or_table": "Primary Analyses: LISREL SE and confidence intervals"
+        }
+      ],
+      "computation": "Feasibility of lower=M-z_.975*SE and upper=M+z_.975*SE simultaneously, over complete rounding intervals.",
+      "result": "consistent",
+      "rounding_interval_used": {
+        "mean": [
+          3.345,
+          3.355
+        ],
+        "SE": [
+          0.0155,
+          0.0165
+        ],
+        "lower_endpoint": [
+          3.315,
+          3.3249999999999997
+        ],
+        "upper_endpoint": [
+          3.375,
+          3.385
+        ],
+        "possible_Wald_width": [
+          0.06075888352074167,
+          0.06467881148982178
+        ],
+        "possible_printed_width": [
+          0.050000000000000266,
+          0.06999999999999984
+        ]
+      },
+      "notes": "Conditional on the conventional normal-Wald 95% construction. Article does not explicitly specify the critical-value formula; a different documented interval method could change this diagnostic. This is not a replication verdict."
+    },
+    {
+      "finding_id": "F026",
+      "check": "social, 1991: printed 95% interval versus mean and SE",
+      "inputs_locators": [
+        {
+          "doc_id": "P1",
+          "pdf_page": 12,
+          "section_or_table": "Table 1: social, 1991"
+        },
+        {
+          "doc_id": "P1",
+          "pdf_page": 15,
+          "section_or_table": "Primary Analyses: LISREL SE and confidence intervals"
+        }
+      ],
+      "computation": "Feasibility of lower=M-z_.975*SE and upper=M+z_.975*SE simultaneously, over complete rounding intervals.",
+      "result": "consistent",
+      "rounding_interval_used": {
+        "mean": [
+          3.275,
+          3.2849999999999997
+        ],
+        "SE": [
+          0.017499999999999998,
+          0.0185
+        ],
+        "lower_endpoint": [
+          3.2350000000000003,
+          3.245
+        ],
+        "upper_endpoint": [
+          3.315,
+          3.3249999999999997
+        ],
+        "possible_Wald_width": [
+          0.06859873945890188,
+          0.07251866742798199
+        ],
+        "possible_printed_width": [
+          0.06999999999999984,
+          0.08999999999999941
+        ]
+      },
+      "notes": "Conditional on the conventional normal-Wald 95% construction. Article does not explicitly specify the critical-value formula; a different documented interval method could change this diagnostic. This is not a replication verdict."
+    },
+    {
+      "finding_id": "F027",
+      "check": "social, 2006: printed 95% interval versus mean and SE",
+      "inputs_locators": [
+        {
+          "doc_id": "P1",
+          "pdf_page": 12,
+          "section_or_table": "Table 1: social, 2006"
+        },
+        {
+          "doc_id": "P1",
+          "pdf_page": 15,
+          "section_or_table": "Primary Analyses: LISREL SE and confidence intervals"
+        }
+      ],
+      "computation": "Feasibility of lower=M-z_.975*SE and upper=M+z_.975*SE simultaneously, over complete rounding intervals.",
+      "result": "consistent",
+      "rounding_interval_used": {
+        "mean": [
+          3.1550000000000002,
+          3.165
+        ],
+        "SE": [
+          0.0185,
+          0.0195
+        ],
+        "lower_endpoint": [
+          3.115,
+          3.125
+        ],
+        "upper_endpoint": [
+          3.1950000000000003,
+          3.205
+        ],
+        "possible_Wald_width": [
+          0.07251866742798199,
+          0.0764385953970621
+        ],
+        "possible_printed_width": [
+          0.07000000000000028,
+          0.08999999999999986
+        ]
+      },
+      "notes": "Conditional on the conventional normal-Wald 95% construction. Article does not explicitly specify the critical-value formula; a different documented interval method could change this diagnostic. This is not a replication verdict."
+    },
+    {
+      "finding_id": "F028",
+      "check": "extrinsic, 1976: printed 95% interval versus mean and SE",
+      "inputs_locators": [
+        {
+          "doc_id": "P1",
+          "pdf_page": 12,
+          "section_or_table": "Table 1: extrinsic, 1976"
+        },
+        {
+          "doc_id": "P1",
+          "pdf_page": 15,
+          "section_or_table": "Primary Analyses: LISREL SE and confidence intervals"
+        }
+      ],
+      "computation": "Feasibility of lower=M-z_.975*SE and upper=M+z_.975*SE simultaneously, over complete rounding intervals.",
+      "result": "consistent",
+      "rounding_interval_used": {
+        "mean": [
+          2.625,
+          2.635
+        ],
+        "SE": [
+          0.0155,
+          0.0165
+        ],
+        "lower_endpoint": [
+          2.595,
+          2.605
+        ],
+        "upper_endpoint": [
+          2.6550000000000002,
+          2.665
+        ],
+        "possible_Wald_width": [
+          0.06075888352074167,
+          0.06467881148982178
+        ],
+        "possible_printed_width": [
+          0.050000000000000266,
+          0.06999999999999984
+        ]
+      },
+      "notes": "Conditional on the conventional normal-Wald 95% construction. Article does not explicitly specify the critical-value formula; a different documented interval method could change this diagnostic. This is not a replication verdict."
+    },
+    {
+      "finding_id": "F029",
+      "check": "extrinsic, 1991: printed 95% interval versus mean and SE",
+      "inputs_locators": [
+        {
+          "doc_id": "P1",
+          "pdf_page": 12,
+          "section_or_table": "Table 1: extrinsic, 1991"
+        },
+        {
+          "doc_id": "P1",
+          "pdf_page": 15,
+          "section_or_table": "Primary Analyses: LISREL SE and confidence intervals"
+        }
+      ],
+      "computation": "Feasibility of lower=M-z_.975*SE and upper=M+z_.975*SE simultaneously, over complete rounding intervals.",
+      "result": "consistent",
+      "rounding_interval_used": {
+        "mean": [
+          2.895,
+          2.905
+        ],
+        "SE": [
+          0.0185,
+          0.0195
+        ],
+        "lower_endpoint": [
+          2.855,
+          2.8649999999999998
+        ],
+        "upper_endpoint": [
+          2.935,
+          2.945
+        ],
+        "possible_Wald_width": [
+          0.07251866742798199,
+          0.0764385953970621
+        ],
+        "possible_printed_width": [
+          0.07000000000000028,
+          0.08999999999999986
+        ]
+      },
+      "notes": "Conditional on the conventional normal-Wald 95% construction. Article does not explicitly specify the critical-value formula; a different documented interval method could change this diagnostic. This is not a replication verdict."
+    },
+    {
+      "finding_id": "F030",
+      "check": "extrinsic, 2006: printed 95% interval versus mean and SE",
+      "inputs_locators": [
+        {
+          "doc_id": "P1",
+          "pdf_page": 12,
+          "section_or_table": "Table 1: extrinsic, 2006"
+        },
+        {
+          "doc_id": "P1",
+          "pdf_page": 15,
+          "section_or_table": "Primary Analyses: LISREL SE and confidence intervals"
+        }
+      ],
+      "computation": "Feasibility of lower=M-z_.975*SE and upper=M+z_.975*SE simultaneously, over complete rounding intervals.",
+      "result": "inconsistent_beyond_rounding",
+      "rounding_interval_used": {
+        "mean": [
+          2.805,
+          2.815
+        ],
+        "SE": [
+          0.0165,
+          0.0175
+        ],
+        "lower_endpoint": [
+          2.765,
+          2.775
+        ],
+        "upper_endpoint": [
+          2.845,
+          2.855
+        ],
+        "possible_Wald_width": [
+          0.06467881148982178,
+          0.0685987394589019
+        ],
+        "possible_printed_width": [
+          0.07000000000000028,
+          0.08999999999999986
+        ]
+      },
+      "notes": "Conditional on the conventional normal-Wald 95% construction. Article does not explicitly specify the critical-value formula; a different documented interval method could change this diagnostic. This is not a replication verdict."
+    },
+    {
+      "finding_id": "F031",
+      "check": "Table 2 Model 1 vs. 2: df difference",
+      "inputs_locators": [
+        {
+          "doc_id": "P1",
+          "pdf_page": 14,
+          "section_or_table": "Table 2: Models 1, 2 and Delta row"
+        }
+      ],
+      "computation": "401 - 375 = 26; printed 26.",
+      "result": "consistent",
+      "rounding_interval_used": "Integer degrees of freedom are exact.",
+      "notes": ""
+    },
+    {
+      "finding_id": "F032",
+      "check": "Table 2 Model 1 vs. 2: chi-square difference",
+      "inputs_locators": [
+        {
+          "doc_id": "P1",
+          "pdf_page": 14,
+          "section_or_table": "Table 2: Models 1, 2 and Delta row"
+        }
+      ],
+      "computation": "Difference of printed parent model values, with sign appropriate to chi-square.",
+      "result": "consistent",
+      "rounding_interval_used": {
+        "parent_a": [
+          4110.925,
+          4110.935
+        ],
+        "parent_b": [
+          4150.515,
+          4150.525000000001
+        ],
+        "computed_difference": [
+          39.57999999999993,
+          39.600000000000364
+        ],
+        "printed_difference": [
+          39.574999999999996,
+          39.585
+        ]
+      },
+      "notes": "The narrative uses fewer decimal places for some CFI changes; this check concerns the Table 2 cells only."
+    },
+    {
+      "finding_id": "F033",
+      "check": "Table 2 Model 1 vs. 2: CFI difference",
+      "inputs_locators": [
+        {
+          "doc_id": "P1",
+          "pdf_page": 14,
+          "section_or_table": "Table 2: Models 1, 2 and Delta row"
+        }
+      ],
+      "computation": "Difference of printed parent model values, with sign appropriate to CFI.",
+      "result": "consistent",
+      "rounding_interval_used": {
+        "parent_a": [
+          0.93905,
+          0.93915
+        ],
+        "parent_b": [
+          0.93885,
+          0.93895
+        ],
+        "computed_difference": [
+          0.00010000000000010001,
+          0.000300000000000078
+        ],
+        "printed_difference": [
+          0.00015000000000000001,
+          0.00025
+        ]
+      },
+      "notes": "The narrative uses fewer decimal places for some CFI changes; this check concerns the Table 2 cells only."
+    },
+    {
+      "finding_id": "F034",
+      "check": "Table 2 Model 2 vs. 3: df difference",
+      "inputs_locators": [
+        {
+          "doc_id": "P1",
+          "pdf_page": 14,
+          "section_or_table": "Table 2: Models 2, 3 and Delta row"
+        }
+      ],
+      "computation": "427 - 401 = 26; printed 26.",
+      "result": "consistent",
+      "rounding_interval_used": "Integer degrees of freedom are exact.",
+      "notes": ""
+    },
+    {
+      "finding_id": "F035",
+      "check": "Table 2 Model 2 vs. 3: chi-square difference",
+      "inputs_locators": [
+        {
+          "doc_id": "P1",
+          "pdf_page": 14,
+          "section_or_table": "Table 2: Models 2, 3 and Delta row"
+        }
+      ],
+      "computation": "Difference of printed parent model values, with sign appropriate to chi-square.",
+      "result": "consistent",
+      "rounding_interval_used": {
+        "parent_a": [
+          4150.515,
+          4150.525000000001
+        ],
+        "parent_b": [
+          4539.095,
+          4539.1050000000005
+        ],
+        "computed_difference": [
+          388.5699999999997,
+          388.59000000000015
+        ],
+        "printed_difference": [
+          388.585,
+          388.59499999999997
+        ]
+      },
+      "notes": "The narrative uses fewer decimal places for some CFI changes; this check concerns the Table 2 cells only."
+    },
+    {
+      "finding_id": "F036",
+      "check": "Table 2 Model 2 vs. 3: CFI difference",
+      "inputs_locators": [
+        {
+          "doc_id": "P1",
+          "pdf_page": 14,
+          "section_or_table": "Table 2: Models 2, 3 and Delta row"
+        }
+      ],
+      "computation": "Difference of printed parent model values, with sign appropriate to CFI.",
+      "result": "consistent",
+      "rounding_interval_used": {
+        "parent_a": [
+          0.93885,
+          0.93895
+        ],
+        "parent_b": [
+          0.9329500000000001,
+          0.93305
+        ],
+        "computed_difference": [
+          0.005799999999999916,
+          0.005999999999999894
+        ],
+        "printed_difference": [
+          0.00595,
+          0.00605
+        ]
+      },
+      "notes": "The narrative uses fewer decimal places for some CFI changes; this check concerns the Table 2 cells only."
+    },
+    {
+      "finding_id": "F037",
+      "check": "Table 2 Model 2 vs. 4: df difference",
+      "inputs_locators": [
+        {
+          "doc_id": "P1",
+          "pdf_page": 14,
+          "section_or_table": "Table 2: Models 2, 4 and Delta row"
+        }
+      ],
+      "computation": "417 - 401 = 16; printed 16.",
+      "result": "consistent",
+      "rounding_interval_used": "Integer degrees of freedom are exact.",
+      "notes": ""
+    },
+    {
+      "finding_id": "F038",
+      "check": "Table 2 Model 2 vs. 4: chi-square difference",
+      "inputs_locators": [
+        {
+          "doc_id": "P1",
+          "pdf_page": 14,
+          "section_or_table": "Table 2: Models 2, 4 and Delta row"
+        }
+      ],
+      "computation": "Difference of printed parent model values, with sign appropriate to chi-square.",
+      "result": "consistent",
+      "rounding_interval_used": {
+        "parent_a": [
+          4150.515,
+          4150.525000000001
+        ],
+        "parent_b": [
+          4241.855,
+          4241.865
+        ],
+        "computed_difference": [
+          91.32999999999902,
+          91.34999999999945
+        ],
+        "printed_difference": [
+          91.33500000000001,
+          91.345
+        ]
+      },
+      "notes": "The narrative uses fewer decimal places for some CFI changes; this check concerns the Table 2 cells only."
+    },
+    {
+      "finding_id": "F039",
+      "check": "Table 2 Model 2 vs. 4: CFI difference",
+      "inputs_locators": [
+        {
+          "doc_id": "P1",
+          "pdf_page": 14,
+          "section_or_table": "Table 2: Models 2, 4 and Delta row"
+        }
+      ],
+      "computation": "Difference of printed parent model values, with sign appropriate to CFI.",
+      "result": "consistent",
+      "rounding_interval_used": {
+        "parent_a": [
+          0.93885,
+          0.93895
+        ],
+        "parent_b": [
+          0.93765,
+          0.93775
+        ],
+        "computed_difference": [
+          0.0010999999999999899,
+          0.0012999999999999678
+        ],
+        "printed_difference": [
+          0.00115,
+          0.0012499999999999998
+        ]
+      },
+      "notes": "The narrative uses fewer decimal places for some CFI changes; this check concerns the Table 2 cells only."
+    },
+    {
+      "finding_id": "F040",
+      "check": "Table 2 Model 4 vs. 5: df difference",
+      "inputs_locators": [
+        {
+          "doc_id": "P1",
+          "pdf_page": 14,
+          "section_or_table": "Table 2: Models 4, 5 and Delta row"
+        }
+      ],
+      "computation": "427 - 417 = 10; printed 10.",
+      "result": "consistent",
+      "rounding_interval_used": "Integer degrees of freedom are exact.",
+      "notes": ""
+    },
+    {
+      "finding_id": "F041",
+      "check": "Table 2 Model 4 vs. 5: chi-square difference",
+      "inputs_locators": [
+        {
+          "doc_id": "P1",
+          "pdf_page": 14,
+          "section_or_table": "Table 2: Models 4, 5 and Delta row"
+        }
+      ],
+      "computation": "Difference of printed parent model values, with sign appropriate to chi-square.",
+      "result": "consistent",
+      "rounding_interval_used": {
+        "parent_a": [
+          4241.855,
+          4241.865
+        ],
+        "parent_b": [
+          4760.085,
+          4760.095
+        ],
+        "computed_difference": [
+          518.2200000000003,
+          518.2400000000007
+        ],
+        "printed_difference": [
+          518.235,
+          518.245
+        ]
+      },
+      "notes": "The narrative uses fewer decimal places for some CFI changes; this check concerns the Table 2 cells only."
+    },
+    {
+      "finding_id": "F042",
+      "check": "Table 2 Model 4 vs. 5: CFI difference",
+      "inputs_locators": [
+        {
+          "doc_id": "P1",
+          "pdf_page": 14,
+          "section_or_table": "Table 2: Models 4, 5 and Delta row"
+        }
+      ],
+      "computation": "Difference of printed parent model values, with sign appropriate to CFI.",
+      "result": "inconsistent_beyond_rounding",
+      "rounding_interval_used": {
+        "parent_a": [
+          0.93765,
+          0.93775
+        ],
+        "parent_b": [
+          0.92935,
+          0.92945
+        ],
+        "computed_difference": [
+          0.008199999999999985,
+          0.008399999999999963
+        ],
+        "printed_difference": [
+          0.00795,
+          0.00805
+        ]
+      },
+      "notes": "The narrative uses fewer decimal places for some CFI changes; this check concerns the Table 2 cells only."
+    },
+    {
+      "finding_id": "F043",
+      "check": "All starred item t cells checked for impossible p thresholds",
+      "inputs_locators": [
+        {
+          "doc_id": "P1",
+          "pdf_page": 11,
+          "section_or_table": "Table 1"
+        },
+        {
+          "doc_id": "P1",
+          "pdf_page": 12,
+          "section_or_table": "Table 1"
+        },
+        {
+          "doc_id": "P1",
+          "pdf_page": 13,
+          "section_or_table": "Table 1 and star legend"
+        }
+      ],
+      "computation": "Evaluate the smallest one- and two-sided normal tail over each full rounded t interval. Finite-df conventional t tails cannot be smaller.",
+      "result": "inconsistent_beyond_rounding",
+      "rounding_interval_used": "All t cells rounded to .01: ±.005; p thresholds are exact inequalities.",
+      "notes": "Only impossibility is asserted. Exact p and df remain unavailable; absence of stars supplies no exact p. Other cells passing this bound are not proof of the exact test.",
+      "exceptions": [
+        {
+          "item": "Earn a good deal of money",
+          "pair": "1991 vs. 2006",
+          "t_range": [
+            -2.375,
+            -2.365
+          ],
+          "stars": "***",
+          "claimed_p_upper_bound": 0.001,
+          "minimum_possible_one_tail_p": 0.00877447509573836,
+          "minimum_possible_two_tail_p": 0.01754895019147672,
+          "locator": {
+            "doc_id": "P1",
+            "pdf_page": 12,
+            "section_or_table": "Table 1"
+          }
+        }
+      ]
+    },
+    {
+      "finding_id": "F044",
+      "check": "Item t directions relative to native means",
+      "inputs_locators": [
+        {
+          "doc_id": "P1",
+          "pdf_page": 13,
+          "section_or_table": "Table 1: forget work and work if financially comfortable"
+        }
+      ],
+      "computation": "Compare full interval for mean_later-mean_earlier against the sign of the printed t.",
+      "result": "not_checkable",
+      "rounding_interval_used": "Each mean and t permitted ±.005.",
+      "notes": "The work-if-rich row can use an explicitly reversed binary test orientation while retaining native means. The forget-work row has two incompatible directions under the general later-minus-earlier convention. No global sign convention fixes that row; original coding/test syntax is needed.",
+      "exceptions": [
+        {
+          "item": "Forget work after the work day",
+          "source_variable": "V3222",
+          "pair": "1991 vs. 2006",
+          "difference_range": [
+            -0.040000000000000036,
+            -0.020000000000000462
+          ],
+          "t_range": [
+            0.535,
+            0.545
+          ],
+          "locator": {
+            "doc_id": "P1",
+            "pdf_page": 13,
+            "section_or_table": "Table 1"
+          }
+        },
+        {
+          "item": "Forget work after the work day",
+          "source_variable": "V3222",
+          "pair": "1976 vs. 2006",
+          "difference_range": [
+            0.06000000000000005,
+            0.07999999999999963
+          ],
+          "t_range": [
+            -1.9249999999999998,
+            -1.915
+          ],
+          "locator": {
+            "doc_id": "P1",
+            "pdf_page": 13,
+            "section_or_table": "Table 1"
+          }
+        },
+        {
+          "item": "Want to work if financially comfortable",
+          "source_variable": "V3227",
+          "pair": "1976 vs. 1991",
+          "difference_range": [
+            0.03000000000000025,
+            0.04999999999999982
+          ],
+          "t_range": [
+            -3.815,
+            -3.805
+          ],
+          "locator": {
+            "doc_id": "P1",
+            "pdf_page": 13,
+            "section_or_table": "Table 1"
+          }
+        },
+        {
+          "item": "Want to work if financially comfortable",
+          "source_variable": "V3227",
+          "pair": "1991 vs. 2006",
+          "difference_range": [
+            0.02000000000000024,
+            0.039999999999999813
+          ],
+          "t_range": [
+            -2.045,
+            -2.035
+          ],
+          "locator": {
+            "doc_id": "P1",
+            "pdf_page": 13,
+            "section_or_table": "Table 1"
+          }
+        },
+        {
+          "item": "Want to work if financially comfortable",
+          "source_variable": "V3227",
+          "pair": "1976 vs. 2006",
+          "difference_range": [
+            0.060000000000000275,
+            0.07999999999999985
+          ],
+          "t_range": [
+            -5.925,
+            -5.915
+          ],
+          "locator": {
+            "doc_id": "P1",
+            "pdf_page": 13,
+            "section_or_table": "Table 1"
+          }
+        }
+      ]
+    },
+    {
+      "finding_id": "F045",
+      "check": "Intrinsic contrast sign differs between text and table",
+      "inputs_locators": [
+        {
+          "doc_id": "P1",
+          "pdf_page": 11,
+          "section_or_table": "Table 1: intrinsic 1976 vs.1991"
+        },
+        {
+          "doc_id": "P1",
+          "pdf_page": 16,
+          "section_or_table": "RQ3 narrative"
+        }
+      ],
+      "computation": "Table −.05 versus narrative .05, for the same cohort comparison.",
+      "result": "inconsistent_beyond_rounding",
+      "rounding_interval_used": {
+        "table": [
+          -0.055,
+          -0.045
+        ],
+        "narrative": [
+          0.045,
+          0.055
+        ]
+      },
+      "notes": "The prose may be using an unsigned magnitude; its use of signed d elsewhere makes this a reporting ambiguity. Neither value is corrected."
+    },
+    {
+      "finding_id": "F046",
+      "check": "Total sample arithmetic",
+      "inputs_locators": [
+        {
+          "doc_id": "P1",
+          "pdf_page": 10,
+          "section_or_table": "Method: six form/year counts"
+        },
+        {
+          "doc_id": "P1",
+          "pdf_page": 1,
+          "section_or_table": "Abstract: N"
+        }
+      ],
+      "computation": "3284+3296+2563+2526+2432+2406=16507.",
+      "result": "consistent",
+      "rounding_interval_used": "Published integer sample counts treated as exact.",
+      "notes": "This checks the reported totals only, not actual model eligibility."
+    },
+    {
+      "finding_id": "F047",
+      "check": "Claimed reliability estimates in Table 1",
+      "inputs_locators": [
+        {
+          "doc_id": "P1",
+          "pdf_page": 10,
+          "section_or_table": "Preliminary Analyses: reliability referral"
+        },
+        {
+          "doc_id": "P1",
+          "pdf_page": 11,
+          "section_or_table": "Table 1"
+        },
+        {
+          "doc_id": "P1",
+          "pdf_page": 12,
+          "section_or_table": "Table 1"
+        },
+        {
+          "doc_id": "P1",
+          "pdf_page": 13,
+          "section_or_table": "Table 1 notes"
+        }
+      ],
+      "computation": "Inspect all scale rows and the note defining parenthetical entries as SD or SE.",
+      "result": "not_checkable",
+      "rounding_interval_used": "No identifiable alpha values printed for retained scales.",
+      "notes": "Do not reinterpret a printed SD as reliability. Reliability targets remain null."
+    },
+    {
+      "finding_id": "F048",
+      "check": "Form 4 response-category count",
+      "inputs_locators": [
+        {
+          "doc_id": "P1",
+          "pdf_page": 10,
+          "section_or_table": "Method: five-point description"
+        }
+      ],
+      "computation": "Compare the article scale description with value labels V4225–V4247 in all three Form 4 dictionaries.",
+      "result": "inconsistent_beyond_rounding",
+      "rounding_interval_used": "Discrete category counts are exact.",
+      "notes": "Article describes five categories; all supplied dictionaries describe four. This is a publication-versus-source-metadata contradiction, not a raw-data finding.",
+      "source_dictionary_refs": [
+        "sources/dictionaries/1976_DS0004.dictionary.json: V4225–V4247",
+        "sources/dictionaries/1991_DS0005.dictionary.json: V4225–V4247",
+        "sources/dictionaries/2006_DS0005.dictionary.json: V4225–V4247"
+      ]
+    },
+    {
+      "finding_id": "F049",
+      "check": "CFA df and indicator-count implications",
+      "inputs_locators": [
+        {
+          "doc_id": "P1",
+          "pdf_page": 10,
+          "section_or_table": "Preliminary Analyses: 19 retained indicators"
+        },
+        {
+          "doc_id": "P1",
+          "pdf_page": 14,
+          "section_or_table": "Table 2: five-factor and multigroup models"
+        }
+      ],
+      "computation": "For a simple correlated five-factor covariance model with p indicators, free parameters are p+(p-5)+15=2p+10. p=19 gives 190-48=142 df per group, or 426 across three separate configural groups. Reported multigroup configural df is 375. p=18 would give 125 per group and 375 total; metric increment for 18 indicators with five markers would be 2*(18-5)=26, as printed.",
+      "result": "not_checkable",
+      "rounding_interval_used": "Model dimensions/df are integers.",
+      "notes": "This is conditional model-count algebra, not evidence authorizing an 18-item substitution. Unreported residual covariances, cross-loadings, constraints or model revisions could change df; original syntax is missing."
+    },
+    {
+      "finding_id": "F050",
+      "check": "Partial scalar footnotes versus df and anchor rule",
+      "inputs_locators": [
+        {
+          "doc_id": "P1",
+          "pdf_page": 11,
+          "section_or_table": "Table 1 footnotes on leisure/intrinsic"
+        },
+        {
+          "doc_id": "P1",
+          "pdf_page": 12,
+          "section_or_table": "Table 1 footnotes on altruistic/extrinsic"
+        },
+        {
+          "doc_id": "P1",
+          "pdf_page": 13,
+          "section_or_table": "Table 1 footnote a"
+        },
+        {
+          "doc_id": "P1",
+          "pdf_page": 14,
+          "section_or_table": "Table 2: scalar and partial scalar df"
+        },
+        {
+          "doc_id": "P1",
+          "pdf_page": 15,
+          "section_or_table": "Primary Analyses: at least two invariant indicators"
+        }
+      ],
+      "computation": "Six items have footnote a: two leisure, one intrinsic, one altruistic, two extrinsic. Releasing each intercept across all three groups would release 12 constraints, but scalar-to-partial df decreases by 427-417=10. Altruistic has two listed indicators and one is flagged, leaving one fully invariant indicator under a literal all-groups release interpretation.",
+      "result": "not_checkable",
+      "rounding_interval_used": "Counts and df are exact.",
+      "notes": "Group-specific releases are not given. These are tensions in the documentation, not grounds to invent a release pattern or choose items from model fit."
+    },
+    {
+      "finding_id": "F051",
+      "check": "Latent pairwise significance and reported individual CIs",
+      "inputs_locators": [
+        {
+          "doc_id": "P1",
+          "pdf_page": 15,
+          "section_or_table": "Primary Analyses: latent pairwise comparisons"
+        },
+        {
+          "doc_id": "P1",
+          "pdf_page": 16,
+          "section_or_table": "RQ2/RQ3"
+        },
+        {
+          "doc_id": "P1",
+          "pdf_page": 17,
+          "section_or_table": "RQ4/RQ5"
+        }
+      ],
+      "computation": "A contrast SE requires Var(mu_a)+Var(mu_b)-2*Cov(mu_a,mu_b), not merely overlap of separate intervals.",
+      "result": "not_checkable",
+      "rounding_interval_used": "No exact p, contrast SE, cross-group covariance or equality-test output is printed.",
+      "notes": "Individual latent mean SEs and overlapping/nonoverlapping CIs cannot verify all narrative significance claims. Altruistic item significance is a different estimand from latent-mean significance."
+    },
+    {
+      "finding_id": "F052",
+      "check": "Starred chi-square thresholds and corresponding narrative inequalities",
+      "inputs_locators": [
+        {
+          "doc_id": "P1",
+          "pdf_page": 14,
+          "section_or_table": "Table 2: nested tests"
+        },
+        {
+          "doc_id": "P1",
+          "pdf_page": 15,
+          "section_or_table": "Primary Analyses"
+        }
+      ],
+      "computation": "Compute conventional chi-square upper-tail ranges from the full rounded difference-statistic intervals and integer df.",
+      "result": "consistent",
+      "rounding_interval_used": "Statistic ±.005; df exact.",
+      "notes": "The Table 2 mean-invariance row has ** (p<.01), while text says p<.05. These inequalities are compatible. Fewer stars than the maximum possible do not contradict a one-way threshold legend.",
+      "checks": [
+        {
+          "pair": "2 vs 3",
+          "df": 26,
+          "p_range": [
+            2.6697401778002197e-66,
+            2.6822983539918173e-66
+          ]
+        },
+        {
+          "pair": "2 vs 4",
+          "df": 16,
+          "p_range": [
+            1.4131081456799925e-12,
+            1.4191299672564228e-12
+          ]
+        },
+        {
+          "pair": "4 vs 5",
+          "df": 10,
+          "p_range": [
+            5.559903522130336e-105,
+            5.587343059845537e-105
+          ]
+        }
+      ]
+    },
+    {
+      "finding_id": "F053",
+      "check": "Figure 1 agrees in direction and approximate placement with Table 1",
+      "inputs_locators": [
+        {
+          "doc_id": "P1",
+          "pdf_page": 16,
+          "section_or_table": "Figure 1"
+        },
+        {
+          "doc_id": "P1",
+          "pdf_page": 11,
+          "section_or_table": "Table 1: leisure/intrinsic"
+        },
+        {
+          "doc_id": "P1",
+          "pdf_page": 12,
+          "section_or_table": "Table 1: other latent rows"
+        }
+      ],
+      "computation": "Visually compare the figure baseline and relative points with the printed standardized contrasts; no graph digitization.",
+      "result": "consistent",
+      "rounding_interval_used": "Figure has no numeric point labels; visual precision is limited by tick spacing.",
+      "notes": "Baseline is 1976. Exact targets come from Table 1, not pixel estimates. The negative intrinsic point supports retaining the table sign separately from the prose sign."
+    },
+    {
+      "finding_id": "F054",
+      "check": "Scale rows are latent means, not raw item averages",
+      "inputs_locators": [
+        {
+          "doc_id": "P1",
+          "pdf_page": 13,
+          "section_or_table": "Table 1 note"
+        },
+        {
+          "doc_id": "P1",
+          "pdf_page": 15,
+          "section_or_table": "Primary Analyses"
+        }
+      ],
+      "computation": "Table note explicitly defines scale rows as latent means; therefore arithmetic means of the listed item means are not an identity that those rows must satisfy.",
+      "result": "not_checkable",
+      "rounding_interval_used": "No raw scoring equality is asserted.",
+      "notes": "Apparent differences from item averages are not a forensic inconsistency. Exact latent scale anchors and SD definitions remain missing."
+    },
+    {
+      "finding_id": "F055",
+      "check": "Numerical support for approximate vacation/pace descriptions",
+      "inputs_locators": [
+        {
+          "doc_id": "P1",
+          "pdf_page": 11,
+          "section_or_table": "Table 1: vacation and easy pace percentages"
+        },
+        {
+          "doc_id": "P1",
+          "pdf_page": 16,
+          "section_or_table": "RQ1 narrative"
+        }
+      ],
+      "computation": "Vacations: 31.3/17.3; slow pace: 14.9/8.9. Bound both ratios using ±.05 percentage-point intervals.",
+      "result": "consistent",
+      "rounding_interval_used": {
+        "vacation_ratio": [
+          1.8011527377521612,
+          1.8173913043478263
+        ],
+        "pace_ratio": [
+          1.6592178770949721,
+          1.689265536723164
+        ]
+      },
+      "notes": "“Almost twice” is qualitative and has no exact acceptance cutoff; these ratios preserve rather than sharpen that wording."
+    },
+    {
+      "finding_id": "F056",
+      "check": "Metric-invariance nonsignificance claim versus chi-square statistic and df",
+      "inputs_locators": [
+        {
+          "doc_id": "P1",
+          "pdf_page": 14,
+          "section_or_table": "Table 2: Delta Model 1 vs. Model 2"
+        },
+        {
+          "doc_id": "P1",
+          "pdf_page": 15,
+          "section_or_table": "Primary Analyses: metric invariance described as ns"
+        }
+      ],
+      "computation": "For chi-square difference 39.58 with 26 df, compute upper-tail probability across the complete statistic rounding interval.",
+      "result": "inconsistent_beyond_rounding",
+      "rounding_interval_used": {
+        "chi_square_interval": [
+          39.574999999999996,
+          39.585
+        ],
+        "df": 26,
+        "computed_p_interval": [
+          0.04282443611322985,
+          0.04292022052358845
+        ]
+      },
+      "notes": "The computed p is about .0429, contradicting ns at a conventional .05 threshold (the first star threshold in Table 2). A separately chosen stricter alpha could make ns true, but no such metric-test rule is reported. This does not contradict accepting metric invariance on the separate CFI criterion. The computed p is forensic only and is not inserted as a published exact_p target."
+    }
+  ],
+  "rule": "Printed-record diagnostics only. Full rounding intervals used; conditional formulas are stated. No replication verdict and no raw-data estimate."
+}

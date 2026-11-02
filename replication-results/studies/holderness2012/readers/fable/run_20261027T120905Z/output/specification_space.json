@@ -1,0 +1,141 @@
+{
+  "paper_id": "P-R7M2",
+  "origin_description": {
+    "main_table_probits (M01-M08)": "Probit of survival (STA 7/8/9 = 1; 4/5 = 0) on one hierarchy index computed over the captured cohort (CAMP x report year-month) or the camp cohort (CAMP), on the sample of U.S. military POWs held by Germany or Japan with known status and usable camp and month; captured-cohort models add unreported camp dummies and cluster by captured cohort, camp-cohort models add the Japan dummy and cluster by camp; complex models add ln(group size)/10 and its square, (camp models) ln(km to Berlin/Tokyo)/10, months-before-war-end/10, height/10, age/100, education-beyond-8th/10, dependents, officer, with missing covariates set to 0 plus missing indicators; marginal effects at the means (discrete change for dummies) and cluster-robust p-values (D1 pdf 8-9, sections 4.3-4.4, Table 4 notes; Table 2 pdf 7).",
+    "both_measures (M09-M12) and ROC tests (M13-M16)": "Same four specifications with both indices entered together; Hanley-McNeil (1983) test of the difference in ROC areas between the one-index and two-index probits (D1 pdf 9, Table 5 and section 4.5).",
+    "officer_interaction (M17-M24)": "Main-table specifications with the officer dummy and officer x index interaction added (D1 pdf 12-13, section 6.1, Table 6).",
+    "descriptives (M25)": "Means, medians, standard deviations and counts on the descriptive sample (D1 pdf 6, Table 1)."
+  },
+  "axes": [
+    {
+      "axis_id": "A01",
+      "decision": "Which SERVICE_CODE values count as 'civilians' to be excluded.",
+      "priority": "sample_construction",
+      "levels": [
+        {"level_id": "A01L0", "description": "Exclude SERVICE_CODE '6' (CIVILIAN) and '7' (WAR CORRESPONDENT); keep Army, Navy, Marine, Merchant Marine and blank/undefined codes.", "is_origin": true, "label": "uncertain", "rationale": "The article excludes 'civilians' without listing codes; war correspondents are civilians in ordinary usage, but the article lists them as a separate arm-of-service category.", "basis": "article", "basis_citation_or_locator": "D1 pdf 6 (section 3, 'we exclude ... civilians (779)'); D1 pdf 5 (section 3, list of arm-of-service categories); Table 1 notes 'U.S. military POWs' (pdf 6)"},
+        {"level_id": "A01L1", "description": "Exclude only SERVICE_CODE '6' (CIVILIAN).", "is_origin": false, "label": "uncertain", "rationale": "Literal reading of 'civilians' as the single code labelled CIVILIAN.", "basis": "article", "basis_citation_or_locator": "D1 pdf 6 (section 3); pow_SERVICE_CODE_cl1278.csv"},
+        {"level_id": "A01L2", "description": "Exclude SERVICE_CODE '4' (MERCHANT MARINE), '6' and '7', keeping only uniformed military (Army, Navy, Marine).", "is_origin": false, "label": "uncertain", "rationale": "Table 1 is described as covering 'U.S. military POWs'; merchant mariners were civilians.", "basis": "article", "basis_citation_or_locator": "D1 pdf 6 (Table 1 notes)"}
+      ]
+    },
+    {
+      "axis_id": "A02",
+      "decision": "Whether one common regression sample (requiring both usable camp and usable report month) is used for all eight main-table columns, or each column uses the largest sample its grouping allows.",
+      "priority": "sample_construction",
+      "levels": [
+        {"level_id": "A02L0", "description": "Common sample: records with non-blank CAMP (not '000') and valid DATE_REPORTED month/year, used for every column.", "is_origin": true, "label": "uncertain", "rationale": "A single observation count is printed for all eight columns, implying one sample; the restriction itself is not described.", "basis": "article", "basis_citation_or_locator": "D1 pdf 9 (Table 4 notes: single observation count); Table 2 definitions of cohorts (pdf 7)"},
+        {"level_id": "A02L1", "description": "Column-specific samples: camp-cohort columns keep records with usable CAMP regardless of month; captured-cohort columns require both.", "is_origin": false, "label": "non_equivalent", "rationale": "Changes the estimation sample of half the columns relative to what the single printed count implies.", "basis": "article", "basis_citation_or_locator": "D1 pdf 9 (Table 4 notes)"}
+      ]
+    },
+    {
+      "axis_id": "A03",
+      "decision": "How grade abbreviations and codes are collapsed into the nine-rank ladder (rank_value).",
+      "priority": "variable_coding",
+      "levels": [
+        {"level_id": "A03L0", "description": "Map GRADE_ALPHA abbreviations (with SERVICE_CODE to resolve Navy/Marine terms) to the nine ranks as specified in the manifest; GRADE_CODE plus serial-number identity letter as fallback.", "is_origin": true, "label": "uncertain", "rationale": "The article names the nine ranks and the rank values but not the mapping of the many grade abbreviations (including Navy ratings, technicians, nurses).", "basis": "article", "basis_citation_or_locator": "D1 pdf 6 (section 4.1.1); D1 pdf 7 (Table 3 rows); pow_GRADE_ALPHA_cl1275.csv"},
+        {"level_id": "A03L1", "description": "Map GRADE_CODE digit/letter codes (TM 12-310 Code No. 5) to the nine ranks, using the SERIAL_NO identity letter ('O'/'T' officer, otherwise enlisted) to resolve digits shared by officer and enlisted grades; GRADE_ALPHA as fallback.", "is_origin": false, "label": "uncertain", "rationale": "The numeric grade code is the formal War Department code but conflates officer and enlisted grades (e.g. code 5 = Captain or Sergeant); results depend on how conflicts are resolved.", "basis": "article", "basis_citation_or_locator": "D1 pdf 5 (section 3: 'rank at the time of capture'); pow_GRADE_CODE_cl1279.csv code notes"},
+        {"level_id": "A03L2", "description": "Use the WWII pay grade of the rank instead of the 1-9 rank value when computing Steepness (the article's 'Alternative Steepness').", "is_origin": false, "label": "non_equivalent", "rationale": "A distinct reported robustness measure, not an implementation of the main measure; pay-grade table not in the registry.", "basis": "article", "basis_citation_or_locator": "D1 pdf 10 (section 5.3.1)"}
+      ]
+    },
+    {
+      "axis_id": "A04",
+      "decision": "Over which set of records the group-level quantities (hierarchy indices, group size n_g, friends) are computed.",
+      "priority": "variable_coding",
+      "levels": [
+        {"level_id": "A04L0", "description": "Groups formed from records in the regression sample (after exclusions of civilians, other powers, unknown status).", "is_origin": true, "label": "uncertain", "rationale": "The article defines groups over 'POWs' and reports group statistics on the descriptive sample; whether excluded records (e.g. unknown-status prisoners who were physically in the camp) were counted is not stated.", "basis": "article", "basis_citation_or_locator": "D1 pdf 6 (section 3 exclusions; Table 1 cohort statistics); Table 2 (pdf 7) group definitions"},
+        {"level_id": "A04L1", "description": "Groups formed from all records in the POW file sharing the CAMP (and month), including records excluded from the regression sample, so that group size and rank shares reflect everyone present.", "is_origin": false, "label": "uncertain", "rationale": "Substantively defensible (hierarchy experienced by the prisoner includes all co-detainees) and consistent with the article's wording 'number of POWs in the cohort', but not described.", "basis": "article", "basis_citation_or_locator": "D1 pdf 7 (Table 2, 'Men in captured or camp cohort')"}
+      ]
+    },
+    {
+      "axis_id": "A05",
+      "decision": "Population rank fractions and scaling constant used in the Sameness index.",
+      "priority": "variable_coding",
+      "levels": [
+        {"level_id": "A05L0", "description": "Population fractions = rank shares of the descriptive sample (all U.S. military POWs held by Germany or Japan with known status); constant fixed at 1.319 as printed.", "is_origin": true, "label": "uncertain", "rationale": "Footnote 9 says fractions come from 'the population of American POWs'; the constant is printed. Which sample defines the population is not stated.", "basis": "article", "basis_citation_or_locator": "D1 pdf 6 (footnote 9); D1 pdf 7 (section 4.1.2)"},
+        {"level_id": "A05L1", "description": "Same fractions, but the constant recomputed as (1 - p_generals)^2 + sum over other ranks of p_r^2, so that the all-generals group scores exactly 0.", "is_origin": false, "label": "equivalent", "rationale": "The article states that 1.319 is defined by exactly this property; recomputing it from the fractions actually used reproduces the intended scaling up to rounding of the printed constant.", "basis": "article", "basis_citation_or_locator": "D1 pdf 7 (section 4.1.2: 'that number ensures that the hierarchy measure will equal 0 for the least hierarchical group')"},
+        {"level_id": "A05L2", "description": "Population fractions computed from the regression sample (after the camp/month restriction) rather than the descriptive sample.", "is_origin": false, "label": "uncertain", "rationale": "Alternative reading of 'population of American POWs'; expected to change fractions only slightly.", "basis": "article", "basis_citation_or_locator": "D1 pdf 6 (footnote 9)"}
+      ]
+    },
+    {
+      "axis_id": "A06",
+      "decision": "Years of education assigned to the 'Post-graduate' education code.",
+      "priority": "variable_coding",
+      "levels": [
+        {"level_id": "A06L0", "description": "Post-graduate (code 9) = 9 years beyond eighth grade (one year beyond four years of college).", "is_origin": true, "label": "uncertain", "rationale": "The code list is ordinal with one step per year; treating post-graduate as the next step is the minimal assumption. Not stated by the article.", "basis": "article", "basis_citation_or_locator": "D1 pdf 7 (Table 2, Education of POW); asnf_EDUCATION_cl2058.csv"},
+        {"level_id": "A06L1", "description": "Post-graduate = 10 years beyond eighth grade (two years of graduate study).", "is_origin": false, "label": "uncertain", "rationale": "Alternative convention; affects a small share of enlisted men.", "basis": "methodological_literature", "basis_citation_or_locator": "Standard practice of assigning midpoint years to open-ended schooling categories (e.g. Jaeger 1997, 'Reconciling the old and new Census Bureau education questions', J. Business & Economic Statistics 15:300-309)"}
+      ]
+    },
+    {
+      "axis_id": "A07",
+      "decision": "Camp coordinates and distance formula for distance to Berlin/Tokyo.",
+      "priority": "variable_coding",
+      "levels": [
+        {"level_id": "A07L0", "description": "Crosswalk geocoded latitude/longitude (WGS84), haversine great-circle distance, Earth radius 6371 km; Berlin 52.5200/13.4050, Tokyo 35.6762/139.6503; camps identified as Berlin/Tokyo set to 1 km; unknown-location camps missing.", "is_origin": true, "label": "uncertain", "rationale": "The article gives only 'number of kilometers from the camp to the national capital'; coordinate source and formula are not stated.", "basis": "article", "basis_citation_or_locator": "D1 pdf 7 (Table 2, Distance from camp to Berlin or Tokyo); camp_location_crosswalk_schema.md"},
+        {"level_id": "A07L1", "description": "NARA whole-degree camp coordinates from the code list (nara_degree_coords_text) instead of the geocoded point, same formula.", "is_origin": false, "label": "uncertain", "rationale": "The only coordinates in the original NARA documentation; coarse (whole degrees) but possibly what the authors used.", "basis": "article", "basis_citation_or_locator": "pow_CAMP_cl1277.csv (code-list coordinates); D1 pdf 5 (section 3: data from the NARA file)"},
+        {"level_id": "A07L2", "description": "Geodesic (ellipsoidal, e.g. Vincenty) distance instead of haversine on the same coordinates.", "is_origin": false, "label": "equivalent", "rationale": "Differences are below 0.5% of distance and vanish after the log and /10 scaling.", "basis": "methodological_literature", "basis_citation_or_locator": "Vincenty (1975), Survey Review 23:88-93; haversine versus ellipsoid discrepancy bounded by the WGS84 flattening (about 0.3%)"}
+      ]
+    },
+    {
+      "axis_id": "A08",
+      "decision": "Coding of the 'Married' marital-status code (no dependency qualifier) in the dependents dummy.",
+      "priority": "variable_coding",
+      "levels": [
+        {"level_id": "A08L0", "description": "Married (code 2) = has dependents (1), together with the explicit 'with dependents' codes 1, 3, 4, 5.", "is_origin": true, "label": "uncertain", "rationale": "A wife counted as a dependent for Army dependency allowances; the article says only 'whether the enlistee has dependents'.", "basis": "article", "basis_citation_or_locator": "D1 pdf 5 (section 3); D1 pdf 7 (Table 2); asnf_MARITAL_STATUS_cl2081.csv"},
+        {"level_id": "A08L1", "description": "Married (code 2) = 0; only codes 1, 3, 4, 5 = 1.", "is_origin": false, "label": "uncertain", "rationale": "Literal reading: only codes explicitly labelled 'with dependents'.", "basis": "article", "basis_citation_or_locator": "asnf_MARITAL_STATUS_cl2081.csv; D1 pdf 7 (Table 2)"}
+      ]
+    },
+    {
+      "axis_id": "A09",
+      "decision": "Handling of camps whose outcome does not vary (perfect prediction) in the captured-cohort probits with camp dummies.",
+      "priority": "estimator",
+      "levels": [
+        {"level_id": "A09L0", "description": "Drop the camp dummy and its observations (standard maximum-likelihood probit routine behaviour), report the reduced sample.", "is_origin": true, "label": "uncertain", "rationale": "The article is silent; this is the default of common probit routines and the likely behaviour behind the printed results, though the single printed count for all columns leaves it unverified.", "basis": "methodological_literature", "basis_citation_or_locator": "Albert and Anderson (1984), Biometrika 71:1-10 (separation in ML logistic/probit); Stata probit documentation ('note: ... predicts success perfectly ... dropped')"},
+        {"level_id": "A09L1", "description": "Retain all observations using a penalized (Firth-type) probit so no camps are dropped.", "is_origin": false, "label": "non_equivalent", "rationale": "Different estimator; changes the likelihood and the estimation sample.", "basis": "methodological_literature", "basis_citation_or_locator": "Firth (1993), Biometrika 80:27-38"}
+      ]
+    },
+    {
+      "axis_id": "A10",
+      "decision": "Resolution of serial numbers that match more than one enlistment record.",
+      "priority": "sample_construction",
+      "levels": [
+        {"level_id": "A10L0", "description": "Treat multi-record serial numbers as unmatched: all enlistment covariates missing (0 plus indicator).", "is_origin": true, "label": "uncertain", "rationale": "Conservative record-linkage practice when identifiers are not unique; the article does not describe the merge beyond 'serial number'.", "basis": "methodological_literature", "basis_citation_or_locator": "Abramitzky, Boustan, Eriksson, Feigenbaum and Perez (2021), 'Automated linking of historical data', Journal of Economic Literature 59:865-918 (unique-match rule)"},
+        {"level_id": "A10L1", "description": "Keep the first enlistment record in physical order (record_seq) for each serial number.", "is_origin": false, "label": "uncertain", "rationale": "Typical one-to-one merge behaviour of statistical software when duplicates are not deduplicated first.", "basis": "methodological_literature", "basis_citation_or_locator": "Stata 'merge 1:m' / 'duplicates drop' default behaviours; Abramitzky et al. (2021)"},
+        {"level_id": "A10L2", "description": "Combine duplicate enlistment records by taking, per field, the value when all non-blank duplicates agree and missing otherwise.", "is_origin": false, "label": "uncertain", "rationale": "Repeated card reads of the same person are documented in the enlistment file; consensus coding recovers data without arbitrary choice.", "basis": "methodological_literature", "basis_citation_or_locator": "NARA ASNF documentation (repeated reads collapsed to a best-guess record); Abramitzky et al. (2021)"}
+      ]
+    },
+    {
+      "axis_id": "A11",
+      "decision": "Cluster level for standard errors in the captured-cohort regressions.",
+      "priority": "fixed_effects_clustering",
+      "levels": [
+        {"level_id": "A11L0", "description": "Cluster by captured cohort (camp x month).", "is_origin": true, "label": "equivalent", "rationale": "Explicitly stated by the article.", "basis": "article", "basis_citation_or_locator": "D1 pdf 8 (section 4.4); Table 4 notes (pdf 9)"},
+        {"level_id": "A11L1", "description": "Cluster by camp (the coarser level within which captured cohorts are nested, and the level of the fixed effects).", "is_origin": false, "label": "non_equivalent", "rationale": "Point estimates are unchanged but p-values differ; not the article's choice. Methodological literature recommends clustering at the coarsest level at which errors may be correlated.", "basis": "methodological_literature", "basis_citation_or_locator": "Cameron and Miller (2015), 'A practitioner's guide to cluster-robust inference', Journal of Human Resources 50:317-372"}
+      ]
+    },
+    {
+      "axis_id": "A12",
+      "decision": "Evaluation point and definition of the reported marginal effects.",
+      "priority": "estimator",
+      "levels": [
+        {"level_id": "A12L0", "description": "Marginal effects at the means of all regressors (including means of dummies and of unreported camp and missing indicators); discrete change for dummy regressors.", "is_origin": true, "label": "equivalent", "rationale": "Explicitly stated.", "basis": "article", "basis_citation_or_locator": "D1 pdf 8 (section 4.4); Table 4 notes (pdf 9)"},
+        {"level_id": "A12L1", "description": "Average marginal effects (averaged over observations).", "is_origin": false, "label": "non_equivalent", "rationale": "Different estimand from effects at the means in a nonlinear model.", "basis": "methodological_literature", "basis_citation_or_locator": "Greene (2012), Econometric Analysis, 7th ed., section 17.3; Wooldridge (2010), Econometric Analysis of Cross Section and Panel Data, section 15.6"},
+        {"level_id": "A12L2", "description": "Raw probit index coefficients.", "is_origin": false, "label": "non_equivalent", "rationale": "Not the reported quantity; scale differs by the density factor.", "basis": "article", "basis_citation_or_locator": "D1 pdf 9 (Table 4 notes)"}
+      ]
+    },
+    {
+      "axis_id": "A13",
+      "decision": "Implementation of the test for a difference between correlated ROC areas.",
+      "priority": "estimator",
+      "levels": [
+        {"level_id": "A13L0", "description": "Hanley and McNeil (1983) test using their correlation-table approximation for areas derived from the same cases.", "is_origin": true, "label": "equivalent", "rationale": "Named by the article.", "basis": "article", "basis_citation_or_locator": "D1 pdf 9 (section 4.5 and Table 5 notes)"},
+        {"level_id": "A13L1", "description": "DeLong, DeLong and Clarke-Pearson (1988) nonparametric test for correlated ROC areas.", "is_origin": false, "label": "uncertain", "rationale": "Same null hypothesis with a different variance estimator; p-values typically close but not identical, and it is the routine most software implements.", "basis": "methodological_literature", "basis_citation_or_locator": "DeLong, DeLong and Clarke-Pearson (1988), Biometrics 44:837-845"}
+      ]
+    }
+  ],
+  "incompatible_crossings": [
+    "A03L2 (pay-grade Steepness) is a distinct reported robustness measure (claim C16) and must not be crossed with the main-table origin targets.",
+    "A05L1 (recomputed constant) must be evaluated with the same population fractions chosen on A04/A05L2; the constant follows the fractions.",
+    "A02L1 (column-specific samples) cannot be combined with the single-N check in the sealed targets.",
+    "A09L1 (penalized probit) is incompatible with A12L0 marginal effects as printed by a standard routine without re-deriving them."
+  ],
+  "notes": "Explicitly listed control sets (Table 4, Table 6) are fixed and are not varied within the equivalent set. The two hierarchy indices and the two cohort definitions are distinct reported outcomes, not interchangeable levels. The wider grid is off unless the coordinator includes it. Axes are ordered by priority: sample construction (A01, A02, A10), variable coding (A03-A08), clustering (A11), estimator (A09, A12, A13). No alternatives were added beyond those with an article or literature basis; several documented decisions (e.g. war-end months, ln(1) for capital camps, the officer threshold) have no genuine alternative and are not axes."
+}

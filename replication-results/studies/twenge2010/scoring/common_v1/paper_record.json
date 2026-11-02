@@ -1,0 +1,43 @@
+{
+  "rule": "../../scoring_rules_common_v1.json",
+  "status": "post hoc",
+  "study_rule_paper": "indeterminate",
+  "paper": {
+    "common": "not reproduced (unverified)",
+    "lenient": "indeterminate"
+  },
+  "claims": {
+    "common": {
+      "leisure": "consistent",
+      "intrinsic": "candidate",
+      "altruistic": "indeterminate",
+      "social": "consistent",
+      "extrinsic": "consistent"
+    },
+    "lenient": {
+      "leisure": "consistent",
+      "intrinsic": "indeterminate",
+      "altruistic": "indeterminate",
+      "social": "consistent",
+      "extrinsic": "consistent"
+    }
+  },
+  "terms_by_table": {
+    "common": {
+      "Table 1": {
+        "consistent": 91,
+        "indeterminate": 10,
+        "candidate": 1,
+        "total": 102
+      }
+    },
+    "lenient": {
+      "Table 1": {
+        "consistent": 91,
+        "indeterminate": 11,
+        "candidate": 0,
+        "total": 102
+      }
+    }
+  }
+}

@@ -1,0 +1,2334 @@
+{
+  "paper_id": "P-R7M2",
+  "data_sources": [
+    {
+      "source_key": "nara_pow_rg389",
+      "role": "Primary POW identity, outcome, capture-rank and cohort proxies.",
+      "fields_used": [
+        "record_seq",
+        "SERIAL_NO",
+        "GRADE_ALPHA",
+        "GRADE_CODE",
+        "SERVICE_CODE",
+        "ARM_SVC_ALPHA",
+        "ARM_SVC_CODE",
+        "DATE_REPORTED_YEAR",
+        "DATE_REPORTED_MONTH",
+        "TYPE_ORG",
+        "PARENT_UNIT_NUM",
+        "PARENT_UNIT_TYPE",
+        "STA",
+        "DET_POWER",
+        "CAMP",
+        "SHIP"
+      ],
+      "locators": [
+        {
+          "doc_id": "D1",
+          "pdf_page": 5,
+          "journal_page": null,
+          "section": "3",
+          "table": null,
+          "column": null,
+          "row": null,
+          "quote": null
+        },
+        {
+          "doc_id": "D1",
+          "pdf_page": 7,
+          "journal_page": null,
+          "section": "Table 2",
+          "table": "2",
+          "column": null,
+          "row": null,
+          "quote": null
+        }
+      ]
+    },
+    {
+      "source_key": "nara_asnf_rg64",
+      "role": "Linked individual covariates; conditional card-layout decoding.",
+      "fields_used": [
+        "record_seq",
+        "SER_NUM",
+        "YR_BIRTH",
+        "EDUCATION",
+        "MARITAL_STATUS",
+        "HEIGHT",
+        "WEIGHT",
+        "CARD_NUM",
+        "DATE_ENL_YEAR",
+        "ERC_YR_BIRTH",
+        "ERC_EDUCATION",
+        "ERC_MARITAL_STATUS",
+        "ERC_HEIGHT",
+        "ERC_WEIGHT"
+      ],
+      "locators": [
+        {
+          "doc_id": "D1",
+          "pdf_page": 5,
+          "journal_page": null,
+          "section": "3",
+          "table": null,
+          "column": null,
+          "row": null,
+          "quote": null
+        },
+        {
+          "doc_id": "D1",
+          "pdf_page": 7,
+          "journal_page": null,
+          "section": "Table 2",
+          "table": "2",
+          "column": null,
+          "row": null,
+          "quote": null
+        }
+      ]
+    },
+    {
+      "source_key": "geonames_dump",
+      "role": "Independently prepared camp-location crosswalk, not an author-supplied geocoding source. Link crosswalk.camp_code to CAMP; use documented coordinates and confidence fields only after resolving ambiguity.",
+      "fields_used": [
+        "camp_code",
+        "latitude",
+        "longitude",
+        "country_iso2",
+        "confidence",
+        "ambiguous",
+        "alt_latitude",
+        "alt_longitude",
+        "duplicate_code_in_nara_list"
+      ],
+      "locators": [
+        {
+          "doc_id": "D1",
+          "pdf_page": 7,
+          "journal_page": null,
+          "section": "Table 2",
+          "table": "2",
+          "column": null,
+          "row": null,
+          "quote": null
+        }
+      ],
+      "source_documentation": "sources/camp_location_crosswalk_schema.md; sources/source_descriptions.md. Listed fields belong to the derived crosswalk, not directly to gazetteer dump."
+    }
+  ],
+  "unit_of_observation": {
+    "description": "Individual prisoner, after explicitly resolved source duplication.",
+    "locators": [
+      {
+        "doc_id": "D1",
+        "pdf_page": 5,
+        "journal_page": null,
+        "section": "3",
+        "table": null,
+        "column": null,
+        "row": null,
+        "quote": null
+      }
+    ]
+  },
+  "sample_steps": [
+    {
+      "step": 1,
+      "description": "Preserve source fields and individual-record provenance.",
+      "rule": "Read nara_pow_rg389 fields as strings. Preserve record_seq. Interpret only documented codes; treat blank/NUL/undefined values as unresolved, not valid categories. No source record values are supplied at reader stage.",
+      "locators": [
+        {
+          "doc_id": "D1",
+          "pdf_page": 5,
+          "journal_page": null,
+          "section": "3",
+          "table": null,
+          "column": null,
+          "row": null,
+          "quote": null
+        }
+      ],
+      "ambiguity": "Publication gives no duplicate-record or string-cleaning policy. Do not silently collapse repeated serial numbers."
+    },
+    {
+      "step": 2,
+      "description": "Restrict to military prisoners held by the two studied powers with known fate.",
+      "rule": "Require DET_POWER in {\"1\",\"2\"}; exclude SERVICE_CODE=\"6\" (civilian); require STA in {\"4\",\"5\",\"7\",\"8\",\"9\"}. Include ordinary military services \"1\",\"2\",\"3\". Merchant Marine \"4\", war correspondents \"7\", unknown service and contradictory civilian grade labels require explicit adjudication before analysis.",
+      "locators": [
+        {
+          "doc_id": "D1",
+          "pdf_page": 6,
+          "journal_page": null,
+          "section": "3",
+          "table": null,
+          "column": null,
+          "row": null,
+          "quote": null
+        }
+      ],
+      "ambiguity": "Article excludes civilians but does not give service codes, treatment of correspondents/merchant mariners, or restriction order. Nationality and sex restrictions cannot be inferred from reliable dedicated fields. Do not add them silently."
+    },
+    {
+      "step": 3,
+      "description": "Link supplementary enlistment information without dropping unmatched POWs.",
+      "rule": "Candidate link nara_pow_rg389.SERIAL_NO to nara_asnf_rg64.SER_NUM as string identifiers, retaining leading zeroes and identity prefixes. Closest-described candidate is exact unique-key matching after documented exterior padding treatment. Keep unmatched covariates missing. Flag multiple candidate enlistment cards and POW duplicates; do not perform a many-to-many row expansion.",
+      "locators": [
+        {
+          "doc_id": "D1",
+          "pdf_page": 5,
+          "journal_page": null,
+          "section": "3",
+          "table": null,
+          "column": null,
+          "row": null,
+          "quote": null
+        }
+      ],
+      "ambiguity": "Normalization, multiple cards, officer prefixes and conflicting links are unspecified. No fuzzy/name matching is authorized as equivalent. No explicit enlistment-date filter is described."
+    },
+    {
+      "step": 4,
+      "description": "Decode supplementary card layouts and covariates.",
+      "rule": "Use CARD_NUM=\"3\" to select ERC_YR_BIRTH, ERC_EDUCATION, ERC_MARITAL_STATUS, ERC_HEIGHT, ERC_WEIGHT; otherwise use corresponding ordinary slices. Source schema supplies layout rule, not article. Resolve valid height/weight vintage before treating the slices as measurements.",
+      "locators": [
+        {
+          "doc_id": "D1",
+          "pdf_page": 5,
+          "journal_page": null,
+          "section": "3",
+          "table": null,
+          "column": null,
+          "row": null,
+          "quote": null
+        }
+      ],
+      "ambiguity": "Different meanings of height/weight columns cannot be distinguished reliably by a numeric range alone. Birth century and post-graduate years remain unresolved."
+    },
+    {
+      "step": 5,
+      "description": "Define usable cohort identities and rank classifications.",
+      "rule": "Camp proxy is CAMP (with DET_POWER retained to prevent accidental cross-power collisions); captured proxy adds DATE_REPORTED_YEAR and DATE_REPORTED_MONTH after decoding. Compute rank9 using GRADE_ALPHA with SERVICE_CODE and GRADE_CODE validation. Flag missing/ambiguous camp, date or rank; do not assign a fictitious observed group.",
+      "locators": [
+        {
+          "doc_id": "D1",
+          "pdf_page": 7,
+          "journal_page": null,
+          "section": "Table 2; 4.1; 4.2",
+          "table": null,
+          "column": null,
+          "row": null,
+          "quote": null
+        }
+      ],
+      "ambiguity": "There is no actual entry-date field and CAMP is not a guaranteed first camp. Article omits eligibility rules for these missing values and singleton groups."
+    },
+    {
+      "step": 6,
+      "description": "Construct hierarchy composition and reference population before covariate imputation.",
+      "rule": "For each group, count each usable rank and total members; calculate steepness and sameness with formulas below. The reference rank fractions must be calculated from the chosen eligible POW population, never copied from publication examples. Proposed origin is the base selected POW population before covariate missingness exclusions.",
+      "locators": [
+        {
+          "doc_id": "D1",
+          "pdf_page": 6,
+          "journal_page": null,
+          "section": "4.1",
+          "table": null,
+          "column": null,
+          "row": null,
+          "quote": null
+        }
+      ],
+      "ambiguity": "Exact reference population and whether group counts include unknown ranks, excluded outcomes or unmatched records are not fully specified; freeze before execution. Subsample recalculation versus fixed full-sample composition is open."
+    },
+    {
+      "step": 7,
+      "description": "Prepare model-specific covariates and missing indicators.",
+      "rule": "For each included independent variable, create a missing indicator and replace its missing analytic value by zero, following the described method. Preserve original missing masks. Do not zero-fill survival. For missing cohort identities or ranks needed for group construction, resolve eligibility separately; do not pool into an artificial common cohort.",
+      "locators": [
+        {
+          "doc_id": "D1",
+          "pdf_page": 5,
+          "journal_page": null,
+          "section": "3",
+          "table": null,
+          "column": null,
+          "row": null,
+          "quote": null
+        }
+      ],
+      "ambiguity": "Whether zero filling was applied to all POW covariates or only enlistment covariates, and before or after nonlinear transformations, is not stated."
+    },
+    {
+      "step": 8,
+      "description": "Fit the explicitly specified models and separately named checks.",
+      "rule": "Use samples satisfying the selected cohort and outcome requirements. Core models retain unmatched enlistment observations with zero filling and missing flags. Complete-case, group-size, power-specific, execution-exclusion and air-service restrictions are separate robustness families, not replacements for the primary sample.",
+      "locators": [
+        {
+          "doc_id": "D1",
+          "pdf_page": 8,
+          "journal_page": null,
+          "section": "4.3; 4.4",
+          "table": null,
+          "column": null,
+          "row": null,
+          "quote": null
+        }
+      ],
+      "ambiguity": "Model-specific exclusions, perfectly predicted outcomes, convergence failures and unusable fixed-effect groups are not documented. Do not use a publication sample count to choose a rule."
+    }
+  ],
+  "variables": [
+    {
+      "name": "survival",
+      "role": "outcome",
+      "definition": "One if survives captivity, zero if dies.",
+      "construction": "nara_pow_rg389.STA in {\"7\",\"8\",\"9\"} -> 1; in {\"4\",\"5\"} -> 0; otherwise missing.",
+      "transformation": "none",
+      "scaling": "none",
+      "missing_handling": "Exclude unknown fate; never impute outcome.",
+      "locators": [
+        {
+          "doc_id": "D1",
+          "pdf_page": 7,
+          "journal_page": null,
+          "section": "Table 2",
+          "table": "2",
+          "column": null,
+          "row": null,
+          "quote": null
+        }
+      ],
+      "ambiguity": null
+    },
+    {
+      "name": "executed",
+      "role": "other",
+      "definition": "Reported execution category for descriptive analysis and restricted-sample checks.",
+      "construction": "STA=\"4\" -> 1; other known survival-status codes -> 0.",
+      "transformation": "none",
+      "scaling": "none",
+      "missing_handling": "Missing independent covariates: zero fill plus individual missing indicator, subject to sample-step ambiguities.",
+      "locators": [
+        {
+          "doc_id": "D1",
+          "pdf_page": 7,
+          "journal_page": null,
+          "section": "Table 2",
+          "table": "2",
+          "column": null,
+          "row": null,
+          "quote": null
+        }
+      ],
+      "ambiguity": "STA=\"4\" bundles execution, sinking deaths and deaths during escape; pure execution cannot be separated with the supplied fields. SHIP does not identify all nonexecution cases."
+    },
+    {
+      "name": "japan",
+      "role": "control",
+      "definition": "Detaining-power indicator.",
+      "construction": "DET_POWER=\"2\" -> 1; DET_POWER=\"1\" -> 0.",
+      "transformation": "none",
+      "scaling": "none",
+      "missing_handling": "Outside these codes excluded.",
+      "locators": [
+        {
+          "doc_id": "D1",
+          "pdf_page": 7,
+          "journal_page": null,
+          "section": "Table 2",
+          "table": "2",
+          "column": null,
+          "row": null,
+          "quote": null
+        }
+      ],
+      "ambiguity": null
+    },
+    {
+      "name": "rank9",
+      "role": "other",
+      "definition": "Ordered nine-category rank used to measure hierarchy.",
+      "construction": "Use pow_GRADE_ALPHA_cl1275 meanings and SERVICE_CODE: unambiguous Private/Private First Class -> 1, Corporal -> 2, Sergeant variants -> 3, Warrant Officer -> 4, Lieutenant -> 5, Captain -> 6, Major -> 7, Colonel/Lieutenant Colonel -> 8, General variants -> 9. Literal examples include PVT/PFC, CPL, SGT, W/O/WOJG/CWO, 2LT/1LT, CPT, MAJ, COL/LT COL, GENL/B G/M G. GRADE_CODE letters A/B/C/D/E/F/G/Y/Z corroborate relevant categories with service context. Never interpret numeric GRADE_CODE directly as the nine-rank score.",
+      "transformation": "none",
+      "scaling": "none",
+      "missing_handling": "Unknown or conflicting grade cannot be assigned rank zero; group construction requires a predeclared treatment.",
+      "locators": [
+        {
+          "doc_id": "D1",
+          "pdf_page": 6,
+          "journal_page": null,
+          "section": "4.1.1",
+          "table": null,
+          "column": null,
+          "row": null,
+          "quote": null
+        }
+      ],
+      "ambiguity": "Nine published labels do not supply a full cross-service crosswalk. Navy Captain is not Army Captain; service-specific equivalents, technicians, cadets, flight officers, nursing ranks, malformed labels and conflicts require adjudication. Listed collapsing is a transparent candidate, not an author-supplied codebook."
+    },
+    {
+      "name": "officer",
+      "role": "control",
+      "definition": "Lieutenant or above at capture.",
+      "construction": "If rank9 known, indicator(rank9>=5); warrant officers below cutoff. Do not use enlistment GRADE to replace capture GRADE_ALPHA.",
+      "transformation": "none",
+      "scaling": "none",
+      "missing_handling": "Missing independent covariates: zero fill plus individual missing indicator, subject to sample-step ambiguities.",
+      "locators": [
+        {
+          "doc_id": "D1",
+          "pdf_page": 7,
+          "journal_page": null,
+          "section": "Table 2",
+          "table": "2",
+          "column": null,
+          "row": null,
+          "quote": null
+        }
+      ],
+      "ambiguity": "Depends on unresolved cross-service rank mapping; source numeric grade is not ordinal."
+    },
+    {
+      "name": "camp_id",
+      "role": "group_definition",
+      "definition": "Initial incarceration camp.",
+      "construction": "Candidate proxy: (DET_POWER,CAMP), retaining defined three-character codes; join camp_code in supplied crosswalk.",
+      "transformation": "none",
+      "scaling": "none",
+      "missing_handling": "Unresolved camp -> no valid camp assignment, pending eligibility rule.",
+      "locators": [
+        {
+          "doc_id": "D1",
+          "pdf_page": 7,
+          "journal_page": null,
+          "section": "Table 2",
+          "table": "2",
+          "column": null,
+          "row": null,
+          "quote": null
+        }
+      ],
+      "ambiguity": "NARA field may be first or last camp or a mobile detail; duplicate camp-code meanings 359 and 510 require adjudication. A place geocode does not establish initial camp."
+    },
+    {
+      "name": "capture_month",
+      "role": "other",
+      "definition": "Month of capture/entry used for cohort and duration.",
+      "construction": "Decode DATE_REPORTED_YEAR codes \"1\" through \"6\" as calendar years 1941 through 1946; require DATE_REPORTED_MONTH in 01..12. Use year-month pair, never month alone. DATE_REPORTED_DAY not needed for month grouping.",
+      "transformation": "none",
+      "scaling": "none",
+      "missing_handling": "Invalid year/month -> missing; no imputed date.",
+      "locators": [
+        {
+          "doc_id": "D1",
+          "pdf_page": 7,
+          "journal_page": null,
+          "section": "Table 2",
+          "table": "2",
+          "column": null,
+          "row": null,
+          "quote": null
+        }
+      ],
+      "ambiguity": "Article alternates capture date and camp-entry month; registry documents report date, not either event date. LATEST_REPORT_DATE is not a valid replacement."
+    },
+    {
+      "name": "captured_id",
+      "role": "group_definition",
+      "definition": "Prisoners entering the same camp in the same month.",
+      "construction": "Candidate proxy (camp_id,capture_month).",
+      "transformation": "none",
+      "scaling": "none",
+      "missing_handling": "Both keys must be resolved.",
+      "locators": [
+        {
+          "doc_id": "D1",
+          "pdf_page": 7,
+          "journal_page": null,
+          "section": "Table 2",
+          "table": "2",
+          "column": null,
+          "row": null,
+          "quote": null
+        }
+      ],
+      "ambiguity": "Report-month proxy cannot establish actual contemporaneous entry."
+    },
+    {
+      "name": "unit_id",
+      "role": "group_definition",
+      "definition": "Military unit before capture.",
+      "construction": "Composite (SERVICE_CODE,TYPE_ORG,PARENT_UNIT_NUM,PARENT_UNIT_TYPE), preserving leading zeroes; consult relevant organization lists. Missing unit components remain unresolved.",
+      "transformation": "none",
+      "scaling": "none",
+      "missing_handling": "Do not count unrelated missing-unit records as friends.",
+      "locators": [
+        {
+          "doc_id": "D1",
+          "pdf_page": 7,
+          "journal_page": null,
+          "section": "Table 2",
+          "table": "2",
+          "column": null,
+          "row": null,
+          "quote": null
+        }
+      ],
+      "ambiguity": "Exact article unit aggregation is not given; parent-unit number alone is insufficient to identify a unique unit."
+    },
+    {
+      "name": "group_n",
+      "role": "other",
+      "definition": "Number of POWs in the relevant camp or captured cohort.",
+      "construction": "Count unique selected prisoner records in camp_id or captured_id after explicit duplicate resolution and group eligibility rules. Include the focal prisoner.",
+      "transformation": "none",
+      "scaling": "none",
+      "missing_handling": "Missing independent covariates: zero fill plus individual missing indicator, subject to sample-step ambiguities.",
+      "locators": [
+        {
+          "doc_id": "D1",
+          "pdf_page": 7,
+          "journal_page": null,
+          "section": "Table 2",
+          "table": "2",
+          "column": null,
+          "row": null,
+          "quote": null
+        }
+      ],
+      "ambiguity": "Stage of sample filtering relative to counting, treatment of missing rank and empirical uniqueness of prisoner identifiers are unspecified."
+    },
+    {
+      "name": "log_group_n",
+      "role": "control",
+      "definition": "Natural log of group membership count.",
+      "construction": "ln(group_n)/10.",
+      "transformation": "natural log",
+      "scaling": "divide by 10",
+      "missing_handling": "Defined for nonempty groups.",
+      "locators": [
+        {
+          "doc_id": "D1",
+          "pdf_page": 7,
+          "journal_page": null,
+          "section": "Table 2",
+          "table": "2",
+          "column": null,
+          "row": null,
+          "quote": null
+        }
+      ],
+      "ambiguity": null
+    },
+    {
+      "name": "log_group_n_squared",
+      "role": "control",
+      "definition": "Quadratic group-size term.",
+      "construction": "Closest-described candidate: (ln(group_n)/10)^2, using the same group definition as log_group_n.",
+      "transformation": "square",
+      "scaling": "square of scaled log",
+      "missing_handling": "Missing independent covariates: zero fill plus individual missing indicator, subject to sample-step ambiguities.",
+      "locators": [
+        {
+          "doc_id": "D1",
+          "pdf_page": 8,
+          "journal_page": null,
+          "section": "4.3",
+          "table": null,
+          "column": null,
+          "row": null,
+          "quote": null
+        }
+      ],
+      "ambiguity": "Table 2 defines the linear log scaling but not whether the square is formed before or after rescaling. Alternative ln(group_n)^2/10 changes the displayed coefficient scale; fitted quadratic span is the same."
+    },
+    {
+      "name": "steepness",
+      "role": "key_regressor",
+      "definition": "Ordered Gini of nine-category prisoner ranks within group.",
+      "construction": "Sort individual rank9 in nondecreasing order and apply the printed ordered-Gini formula using group_n with the same rank-eligible population.",
+      "transformation": "none",
+      "scaling": "none",
+      "missing_handling": "Singleton with known rank yields zero under the formula. Undefined rank composition remains unresolved; never insert a zero rank.",
+      "locators": [
+        {
+          "doc_id": "D1",
+          "pdf_page": 6,
+          "journal_page": null,
+          "section": "4.1.1",
+          "table": null,
+          "column": null,
+          "row": null,
+          "quote": null
+        }
+      ],
+      "ambiguity": "Missing-rank treatment and population denominator not specified. No finite-sample n/(n-1) correction appears in the formula."
+    },
+    {
+      "name": "sameness",
+      "role": "key_regressor",
+      "definition": "Closeness of group rank shares to eligible POW reference shares.",
+      "construction": "1-sum_r((n_gr/n_g)-(n_r/N_ref))^2/1.319 over the nine ranks. Estimate n_r/N_ref from approved source population; do not import any published proportions.",
+      "transformation": "none",
+      "scaling": "none",
+      "missing_handling": "Missing group or reference composition must be resolved before estimation.",
+      "locators": [
+        {
+          "doc_id": "D1",
+          "pdf_page": 7,
+          "journal_page": null,
+          "section": "4.1.2",
+          "table": null,
+          "column": null,
+          "row": null,
+          "quote": null
+        }
+      ],
+      "ambiguity": "Reference is POW population proxy for military population; exact selection stage unknown. Keep printed scaling constant fixed, unless declared sensitivity."
+    },
+    {
+      "name": "distance",
+      "role": "control",
+      "definition": "Log kilometers from camp to detaining-power national capital.",
+      "construction": "Join CAMP to camp_code crosswalk; use latitude/longitude for camp and an explicitly documented Berlin or Tokyo point. Calculate geodesic kilometers, set distance=1 km if camp is in that capital, then ln(distance_km)/10.",
+      "transformation": "natural log",
+      "scaling": "divide by 10",
+      "missing_handling": "Missing independent covariates: zero fill plus individual missing indicator, subject to sample-step ambiguities.",
+      "locators": [
+        {
+          "doc_id": "D1",
+          "pdf_page": 7,
+          "journal_page": null,
+          "section": "Table 2",
+          "table": "2",
+          "column": null,
+          "row": null,
+          "quote": null
+        }
+      ],
+      "ambiguity": "Capital coordinates, distance formula, geographical city membership and treatment of ambiguous/approximate crosswalk entries are absent. No coordinates are supplied for capitals; do not invent them from memory. This variable is unresolved until independently specified."
+    },
+    {
+      "name": "captivity",
+      "role": "control",
+      "definition": "Potential months from capture until theater war end.",
+      "construction": "For Germany: 12*(1945-capture_year)+5-capture_month; Japan: 12*(1945-capture_year)+9-capture_month; divide by 10.",
+      "transformation": "none",
+      "scaling": "divide by 10",
+      "missing_handling": "Missing independent covariates: zero fill plus individual missing indicator, subject to sample-step ambiguities.",
+      "locators": [
+        {
+          "doc_id": "D1",
+          "pdf_page": 7,
+          "journal_page": null,
+          "section": "Table 2",
+          "table": "2",
+          "column": null,
+          "row": null,
+          "quote": null
+        }
+      ],
+      "ambiguity": "Uses report-month proxy; inclusive-month convention and day fractions unspecified. Negative durations or reports after war end need adjudication, not automatic truncation. It is not observed survival time."
+    },
+    {
+      "name": "age",
+      "role": "control",
+      "definition": "Age as of 1945.",
+      "construction": "Select YR_BIRTH or ERC_YR_BIRTH using card layout; age=(1945-full_birth_year)/100.",
+      "transformation": "none",
+      "scaling": "divide by 100",
+      "missing_handling": "Missing independent covariates: zero fill plus individual missing indicator, subject to sample-step ambiguities.",
+      "locators": [
+        {
+          "doc_id": "D1",
+          "pdf_page": 7,
+          "journal_page": null,
+          "section": "Table 2",
+          "table": "2",
+          "column": null,
+          "row": null,
+          "quote": null
+        }
+      ],
+      "ambiguity": "Two-digit birth-year century not supplied. Both plausible centuries and invalid ages require a documented independent rule; no arbitrary age filter is stated."
+    },
+    {
+      "name": "height",
+      "role": "control",
+      "definition": "Height in inches on service entry.",
+      "construction": "Select HEIGHT or ERC_HEIGHT only when column meaning is established as height; parse numeric inches; divide by 10.",
+      "transformation": "none",
+      "scaling": "divide by 10",
+      "missing_handling": "Missing independent covariates: zero fill plus individual missing indicator, subject to sample-step ambiguities.",
+      "locators": [
+        {
+          "doc_id": "D1",
+          "pdf_page": 7,
+          "journal_page": null,
+          "section": "Table 2",
+          "table": "2",
+          "column": null,
+          "row": null,
+          "quote": null
+        }
+      ],
+      "ambiguity": "No reliable field identifies which card vintages used these columns for height. Treat uncertain meaning as missing rather than treating every numeric slice as height."
+    },
+    {
+      "name": "education",
+      "role": "control",
+      "definition": "Years completed beyond eighth grade.",
+      "construction": "Select EDUCATION or ERC_EDUCATION by layout. Codes 0..8 -> 0..8 years beyond grade eight, then divide by 10. Code 9 means postgraduate; exact additional years not stated.",
+      "transformation": "none",
+      "scaling": "divide by 10",
+      "missing_handling": "Missing independent covariates: zero fill plus individual missing indicator, subject to sample-step ambiguities.",
+      "locators": [
+        {
+          "doc_id": "D1",
+          "pdf_page": 7,
+          "journal_page": null,
+          "section": "Table 2",
+          "table": "2",
+          "column": null,
+          "row": null,
+          "quote": null
+        }
+      ],
+      "ambiguity": "Postgraduate code is not an exact year count. Coding it as nine is an uncertain convention, not a documented fact. Grammar-school code cannot recover exact years below eighth grade."
+    },
+    {
+      "name": "dependents",
+      "role": "control",
+      "definition": "Indicator of dependents on service entry.",
+      "construction": "Select MARITAL_STATUS or ERC_MARITAL_STATUS; codes {1,3,4,5}->1; {6,7,8,9}->0; code 2 is married and requires an explicit convention, candidate 1.",
+      "transformation": "none",
+      "scaling": "none",
+      "missing_handling": "Missing independent covariates: zero fill plus individual missing indicator, subject to sample-step ambiguities.",
+      "locators": [
+        {
+          "doc_id": "D1",
+          "pdf_page": 7,
+          "journal_page": null,
+          "section": "Table 2",
+          "table": "2",
+          "column": null,
+          "row": null,
+          "quote": null
+        }
+      ],
+      "ambiguity": "Married code does not explicitly encode dependents. Author mapping absent. Do not equate all non-single statuses with dependents."
+    },
+    {
+      "name": "weight",
+      "role": "other",
+      "definition": "Weight in pounds for descriptive table only.",
+      "construction": "Select WEIGHT or ERC_WEIGHT where column meaning is established as weight; parse pounds. Not a regression control.",
+      "transformation": "none",
+      "scaling": "none",
+      "missing_handling": "Missing independent covariates: zero fill plus individual missing indicator, subject to sample-step ambiguities.",
+      "locators": [
+        {
+          "doc_id": "D1",
+          "pdf_page": 6,
+          "journal_page": null,
+          "section": "3; Table 1",
+          "table": null,
+          "column": null,
+          "row": null,
+          "quote": null
+        }
+      ],
+      "ambiguity": "Same card-vintage issue as height; possible AGCT or occupational coding. Table 2 does not define this descriptive variable despite Table 1 note."
+    },
+    {
+      "name": "outside_home_country",
+      "role": "other",
+      "definition": "Camp outside Germany or Japan proper for descriptive table.",
+      "construction": "Use camp crosswalk location and a separately documented territorial definition for the detaining power.",
+      "transformation": "none",
+      "scaling": "none",
+      "missing_handling": "Missing independent covariates: zero fill plus individual missing indicator, subject to sample-step ambiguities.",
+      "locators": [
+        {
+          "doc_id": "D1",
+          "pdf_page": 6,
+          "journal_page": null,
+          "section": "Table 1",
+          "table": null,
+          "column": null,
+          "row": null,
+          "quote": null
+        }
+      ],
+      "ambiguity": "Modern country_iso2 does not encode historical proper borders. Germany discussion specifies prewar borders; Japan proper not operationalized."
+    },
+    {
+      "name": "missing_flags",
+      "role": "control",
+      "definition": "Indicators for missing values of included explanatory variables.",
+      "construction": "For every included independent variable eligible for zero filling, add indicator(original analytic value missing); omit redundant all-zero flags only as deterministic collinearity handling.",
+      "transformation": "none",
+      "scaling": "none",
+      "missing_handling": "Retain flags; do not substitute an arbitrary missingness percentage.",
+      "locators": [
+        {
+          "doc_id": "D1",
+          "pdf_page": 5,
+          "journal_page": null,
+          "section": "3",
+          "table": null,
+          "column": null,
+          "row": null,
+          "quote": null
+        }
+      ],
+      "ambiguity": "Whether flags for squares/products are separately added is not specified."
+    },
+    {
+      "name": "officer_hierarchy",
+      "role": "key_regressor",
+      "definition": "Product term in officer models.",
+      "construction": "Multiply officer by the hierarchy measure selected for the specification; include both main effects.",
+      "transformation": "none",
+      "scaling": "none",
+      "missing_handling": "Missing independent covariates: zero fill plus individual missing indicator, subject to sample-step ambiguities.",
+      "locators": [
+        {
+          "doc_id": "D1",
+          "pdf_page": 12,
+          "journal_page": null,
+          "section": "6.1",
+          "table": null,
+          "column": null,
+          "row": null,
+          "quote": null
+        }
+      ],
+      "ambiguity": "Missingness ordering and nonlinear marginal-effect treatment of the product not specified."
+    },
+    {
+      "name": "friends",
+      "role": "other",
+      "definition": "Other prisoners from same precapture unit in the selected cohort.",
+      "construction": "Within (unit_id,camp_id) or (unit_id,captured_id), count prisoners and subtract one for the focal prisoner; take natural log for friends models.",
+      "transformation": "natural log of other-member count",
+      "scaling": "none",
+      "missing_handling": "Missing independent covariates: zero fill plus individual missing indicator, subject to sample-step ambiguities.",
+      "locators": [
+        {
+          "doc_id": "D1",
+          "pdf_page": 10,
+          "journal_page": null,
+          "section": "5.2",
+          "table": null,
+          "column": null,
+          "row": null,
+          "quote": null
+        }
+      ],
+      "ambiguity": "Zero-friend logarithm, missing units and whether authors actually excluded self are not documented; no plus-one transformation can be called equivalent without qualification."
+    },
+    {
+      "name": "air_force",
+      "role": "other",
+      "definition": "Army Air Force personnel held by Germany.",
+      "construction": "Candidate filter SERVICE_CODE=\"1\", ARM_SVC_CODE=\"20\" (AC: Air Corps), DET_POWER=\"1\"; ARM_SVC_ALPHA=\"AC\" can corroborate.",
+      "transformation": "none",
+      "scaling": "none",
+      "missing_handling": "Conflicting/missing arm information requires explicit resolution.",
+      "locators": [
+        {
+          "doc_id": "D1",
+          "pdf_page": 12,
+          "journal_page": null,
+          "section": "5.4",
+          "table": null,
+          "column": null,
+          "row": null,
+          "quote": null
+        }
+      ],
+      "ambiguity": "Historical Army Air Force classification may exceed this Air Corps proxy; article supplies no exact code list."
+    },
+    {
+      "name": "hierarchy_x_log_group_n",
+      "role": "key_regressor",
+      "definition": "Hierarchy-by-size product for mechanism checks.",
+      "construction": "Multiply the relevant hierarchy measure by log_group_n; include both main effects.",
+      "transformation": "none",
+      "scaling": "none",
+      "missing_handling": "Missing independent covariates: zero fill plus individual missing indicator, subject to sample-step ambiguities.",
+      "locators": [
+        {
+          "doc_id": "D1",
+          "pdf_page": 14,
+          "journal_page": null,
+          "section": "6.2",
+          "table": null,
+          "column": null,
+          "row": null,
+          "quote": null
+        }
+      ],
+      "ambiguity": "Exact retained quadratic specification and product marginal-effect convention are not reported."
+    }
+  ],
+  "group_definitions": [
+    {
+      "name": "camp",
+      "definition": "camp_id proxy for initial camp; all eligible prisoners in that camp",
+      "locators": [
+        {
+          "doc_id": "D1",
+          "pdf_page": 7,
+          "journal_page": null,
+          "section": "Table 2; 4.2",
+          "table": "2",
+          "column": null,
+          "row": null,
+          "quote": null
+        },
+        {
+          "doc_id": "D1",
+          "pdf_page": 8,
+          "journal_page": null,
+          "section": "4.2",
+          "table": null,
+          "column": null,
+          "row": null,
+          "quote": null
+        }
+      ]
+    },
+    {
+      "name": "captured",
+      "definition": "captured_id proxy for common camp entry year-month",
+      "locators": [
+        {
+          "doc_id": "D1",
+          "pdf_page": 7,
+          "journal_page": null,
+          "section": "Table 2; 4.2",
+          "table": "2",
+          "column": null,
+          "row": null,
+          "quote": null
+        },
+        {
+          "doc_id": "D1",
+          "pdf_page": 8,
+          "journal_page": null,
+          "section": "4.2",
+          "table": null,
+          "column": null,
+          "row": null,
+          "quote": null
+        }
+      ]
+    },
+    {
+      "name": "friends_camp",
+      "definition": "Same unit_id within camp_id; only documented social-network checks",
+      "locators": [
+        {
+          "doc_id": "D1",
+          "pdf_page": 7,
+          "journal_page": null,
+          "section": "Table 2; 4.2",
+          "table": "2",
+          "column": null,
+          "row": null,
+          "quote": null
+        },
+        {
+          "doc_id": "D1",
+          "pdf_page": 8,
+          "journal_page": null,
+          "section": "4.2",
+          "table": null,
+          "column": null,
+          "row": null,
+          "quote": null
+        }
+      ]
+    },
+    {
+      "name": "friends_captured",
+      "definition": "Same unit_id within captured_id; only documented social-network checks",
+      "locators": [
+        {
+          "doc_id": "D1",
+          "pdf_page": 7,
+          "journal_page": null,
+          "section": "Table 2; 4.2",
+          "table": "2",
+          "column": null,
+          "row": null,
+          "quote": null
+        },
+        {
+          "doc_id": "D1",
+          "pdf_page": 8,
+          "journal_page": null,
+          "section": "4.2",
+          "table": null,
+          "column": null,
+          "row": null,
+          "quote": null
+        }
+      ]
+    },
+    {
+      "name": "reference",
+      "definition": "Eligible military POW population for rank shares, selection stage unresolved",
+      "locators": [
+        {
+          "doc_id": "D1",
+          "pdf_page": 7,
+          "journal_page": null,
+          "section": "Table 2; 4.2",
+          "table": "2",
+          "column": null,
+          "row": null,
+          "quote": null
+        },
+        {
+          "doc_id": "D1",
+          "pdf_page": 8,
+          "journal_page": null,
+          "section": "4.2",
+          "table": null,
+          "column": null,
+          "row": null,
+          "quote": null
+        }
+      ]
+    }
+  ],
+  "formulas": [
+    {
+      "name": "steepness",
+      "latex_or_text": "G_g = 1 + 1/n_g - 2*sum_{i=1}^{n_g}[(n_g+1-i)*rank_(i)]/(n_g*sum_{i=1}^{n_g}rank_(i)), ranks sorted ascending.",
+      "inputs": [
+        "rank9",
+        "group_n"
+      ],
+      "locators": [
+        {
+          "doc_id": "D1",
+          "pdf_page": 6,
+          "journal_page": null,
+          "section": "4.1.1",
+          "table": null,
+          "column": null,
+          "row": null,
+          "quote": null
+        }
+      ]
+    },
+    {
+      "name": "sameness",
+      "latex_or_text": "S_g = 1 - (1/1.319)*sum_{r=1}^{9}(p_gr-p_r)^2.",
+      "inputs": [
+        "group rank fractions",
+        "reference rank fractions"
+      ],
+      "locators": [
+        {
+          "doc_id": "D1",
+          "pdf_page": 7,
+          "journal_page": null,
+          "section": "4.1.2",
+          "table": null,
+          "column": null,
+          "row": null,
+          "quote": null
+        }
+      ]
+    },
+    {
+      "name": "probit",
+      "latex_or_text": "Pr(survival_i=1|X_i)=Phi(X_i beta + applicable camp intercept). Continuous effect j at means is phi(xbar beta)*beta_j; binary effect is Phi(xbar with d=1)-Phi(xbar with d=0).",
+      "inputs": [
+        "survival",
+        "model-specific regressors"
+      ],
+      "locators": [
+        {
+          "doc_id": "D1",
+          "pdf_page": 8,
+          "journal_page": null,
+          "section": "4.4",
+          "table": null,
+          "column": null,
+          "row": null,
+          "quote": null
+        },
+        {
+          "doc_id": "D1",
+          "pdf_page": 9,
+          "journal_page": null,
+          "section": null,
+          "table": "4",
+          "column": null,
+          "row": null,
+          "quote": null
+        }
+      ]
+    },
+    {
+      "name": "alternative_sameness",
+      "latex_or_text": "S_alt,g = 1 - (1/10000)*sum_{r=1}^{9}(p_gr/p_r - 1)^2.",
+      "inputs": [
+        "group rank fractions",
+        "reference rank fractions"
+      ],
+      "locators": [
+        {
+          "doc_id": "D1",
+          "pdf_page": 10,
+          "journal_page": null,
+          "section": "5.3.1",
+          "table": null,
+          "column": null,
+          "row": null,
+          "quote": null
+        }
+      ]
+    },
+    {
+      "name": "alternative_steepness",
+      "latex_or_text": "Use stated ordered-Gini formula with historical pay grades in place of ordinal ranks. Pay schedule is unavailable; do not infer it from publication results.",
+      "inputs": [
+        "historical pay schedule",
+        "capture rank"
+      ],
+      "locators": [
+        {
+          "doc_id": "D1",
+          "pdf_page": 10,
+          "journal_page": null,
+          "section": "5.3.1",
+          "table": null,
+          "column": null,
+          "row": null,
+          "quote": null
+        }
+      ]
+    },
+    {
+      "name": "other_hierarchy_measures",
+      "latex_or_text": "Number of distinct ranks; sum of rank9; administrative intensity=sum(rank9>1)/group_n. Absolute-deviation sameness replaces squared deviations by absolute deviations, but its rescaling is not stated.",
+      "inputs": [
+        "rank9",
+        "group_n",
+        "reference rank fractions"
+      ],
+      "locators": [
+        {
+          "doc_id": "D1",
+          "pdf_page": 10,
+          "journal_page": null,
+          "section": "5.3.1",
+          "table": null,
+          "column": null,
+          "row": null,
+          "quote": null
+        },
+        {
+          "doc_id": "D1",
+          "pdf_page": 11,
+          "journal_page": null,
+          "section": "5.3.1; 5.3.2",
+          "table": null,
+          "column": null,
+          "row": null,
+          "quote": null
+        }
+      ]
+    }
+  ],
+  "models": [
+    {
+      "model_id": "M01",
+      "outcome": "survival",
+      "key_regressors": [
+        "steepness"
+      ],
+      "controls": [
+        "missing_flags_for_included_covariates"
+      ],
+      "fixed_effects": [
+        "camp_id"
+      ],
+      "estimator": "Maximum-likelihood probit",
+      "reported_quantity": "Marginal effects at independent-variable means; infinitesimal for continuous, discrete 0-to-1 change for dummies.",
+      "covariance": "Heteroskedasticity-robust covariance clustered by hierarchy group.",
+      "cluster_variable": "captured_id",
+      "sample": "Steps 1–8; captured cohort construction",
+      "software_defaults_needed": "Software/version unspecified. Freeze optimizer, convergence tolerance, intercept and reference-category convention, perfect-prediction handling, collinearity handling, cluster finite-sample corrections, reference distribution, and delta-method/discrete-change uncertainty before execution. Probit with explicit camp dummies, not an undocumented conditional estimator. No weights are described.",
+      "locators": [
+        {
+          "doc_id": "D1",
+          "pdf_page": 9,
+          "journal_page": null,
+          "section": "4.3; 4.4",
+          "table": "4",
+          "column": null,
+          "row": null,
+          "quote": null
+        }
+      ],
+      "specification_label": "Steepness / captured / simple"
+    },
+    {
+      "model_id": "M02",
+      "outcome": "survival",
+      "key_regressors": [
+        "steepness"
+      ],
+      "controls": [
+        "log_group_n",
+        "log_group_n_squared",
+        "captivity",
+        "height",
+        "age",
+        "education",
+        "dependents",
+        "officer",
+        "missing_flags_for_included_covariates"
+      ],
+      "fixed_effects": [
+        "camp_id"
+      ],
+      "estimator": "Maximum-likelihood probit",
+      "reported_quantity": "Marginal effects at independent-variable means; infinitesimal for continuous, discrete 0-to-1 change for dummies.",
+      "covariance": "Heteroskedasticity-robust covariance clustered by hierarchy group.",
+      "cluster_variable": "captured_id",
+      "sample": "Steps 1–8; captured cohort construction",
+      "software_defaults_needed": "Software/version unspecified. Freeze optimizer, convergence tolerance, intercept and reference-category convention, perfect-prediction handling, collinearity handling, cluster finite-sample corrections, reference distribution, and delta-method/discrete-change uncertainty before execution. Probit with explicit camp dummies, not an undocumented conditional estimator. No weights are described.",
+      "locators": [
+        {
+          "doc_id": "D1",
+          "pdf_page": 9,
+          "journal_page": null,
+          "section": "4.3; 4.4",
+          "table": "4",
+          "column": null,
+          "row": null,
+          "quote": null
+        }
+      ],
+      "specification_label": "Steepness / captured / controlled"
+    },
+    {
+      "model_id": "M03",
+      "outcome": "survival",
+      "key_regressors": [
+        "steepness"
+      ],
+      "controls": [
+        "japan",
+        "missing_flags_for_included_covariates"
+      ],
+      "fixed_effects": [],
+      "estimator": "Maximum-likelihood probit",
+      "reported_quantity": "Marginal effects at independent-variable means; infinitesimal for continuous, discrete 0-to-1 change for dummies.",
+      "covariance": "Heteroskedasticity-robust covariance clustered by hierarchy group.",
+      "cluster_variable": "camp_id",
+      "sample": "Steps 1–8; camp cohort construction",
+      "software_defaults_needed": "Software/version unspecified. Freeze optimizer, convergence tolerance, intercept and reference-category convention, perfect-prediction handling, collinearity handling, cluster finite-sample corrections, reference distribution, and delta-method/discrete-change uncertainty before execution. Probit with explicit camp dummies, not an undocumented conditional estimator. No weights are described.",
+      "locators": [
+        {
+          "doc_id": "D1",
+          "pdf_page": 9,
+          "journal_page": null,
+          "section": "4.3; 4.4",
+          "table": "4",
+          "column": null,
+          "row": null,
+          "quote": null
+        }
+      ],
+      "specification_label": "Steepness / camp / simple"
+    },
+    {
+      "model_id": "M04",
+      "outcome": "survival",
+      "key_regressors": [
+        "steepness"
+      ],
+      "controls": [
+        "log_group_n",
+        "log_group_n_squared",
+        "captivity",
+        "height",
+        "age",
+        "education",
+        "dependents",
+        "officer",
+        "japan",
+        "distance",
+        "missing_flags_for_included_covariates"
+      ],
+      "fixed_effects": [],
+      "estimator": "Maximum-likelihood probit",
+      "reported_quantity": "Marginal effects at independent-variable means; infinitesimal for continuous, discrete 0-to-1 change for dummies.",
+      "covariance": "Heteroskedasticity-robust covariance clustered by hierarchy group.",
+      "cluster_variable": "camp_id",
+      "sample": "Steps 1–8; camp cohort construction",
+      "software_defaults_needed": "Software/version unspecified. Freeze optimizer, convergence tolerance, intercept and reference-category convention, perfect-prediction handling, collinearity handling, cluster finite-sample corrections, reference distribution, and delta-method/discrete-change uncertainty before execution. Probit with explicit camp dummies, not an undocumented conditional estimator. No weights are described.",
+      "locators": [
+        {
+          "doc_id": "D1",
+          "pdf_page": 9,
+          "journal_page": null,
+          "section": "4.3; 4.4",
+          "table": "4",
+          "column": null,
+          "row": null,
+          "quote": null
+        }
+      ],
+      "specification_label": "Steepness / camp / controlled"
+    },
+    {
+      "model_id": "M05",
+      "outcome": "survival",
+      "key_regressors": [
+        "sameness"
+      ],
+      "controls": [
+        "missing_flags_for_included_covariates"
+      ],
+      "fixed_effects": [
+        "camp_id"
+      ],
+      "estimator": "Maximum-likelihood probit",
+      "reported_quantity": "Marginal effects at independent-variable means; infinitesimal for continuous, discrete 0-to-1 change for dummies.",
+      "covariance": "Heteroskedasticity-robust covariance clustered by hierarchy group.",
+      "cluster_variable": "captured_id",
+      "sample": "Steps 1–8; captured cohort construction",
+      "software_defaults_needed": "Software/version unspecified. Freeze optimizer, convergence tolerance, intercept and reference-category convention, perfect-prediction handling, collinearity handling, cluster finite-sample corrections, reference distribution, and delta-method/discrete-change uncertainty before execution. Probit with explicit camp dummies, not an undocumented conditional estimator. No weights are described.",
+      "locators": [
+        {
+          "doc_id": "D1",
+          "pdf_page": 9,
+          "journal_page": null,
+          "section": "4.3; 4.4",
+          "table": "4",
+          "column": null,
+          "row": null,
+          "quote": null
+        }
+      ],
+      "specification_label": "Sameness / captured / simple"
+    },
+    {
+      "model_id": "M06",
+      "outcome": "survival",
+      "key_regressors": [
+        "sameness"
+      ],
+      "controls": [
+        "log_group_n",
+        "log_group_n_squared",
+        "captivity",
+        "height",
+        "age",
+        "education",
+        "dependents",
+        "officer",
+        "missing_flags_for_included_covariates"
+      ],
+      "fixed_effects": [
+        "camp_id"
+      ],
+      "estimator": "Maximum-likelihood probit",
+      "reported_quantity": "Marginal effects at independent-variable means; infinitesimal for continuous, discrete 0-to-1 change for dummies.",
+      "covariance": "Heteroskedasticity-robust covariance clustered by hierarchy group.",
+      "cluster_variable": "captured_id",
+      "sample": "Steps 1–8; captured cohort construction",
+      "software_defaults_needed": "Software/version unspecified. Freeze optimizer, convergence tolerance, intercept and reference-category convention, perfect-prediction handling, collinearity handling, cluster finite-sample corrections, reference distribution, and delta-method/discrete-change uncertainty before execution. Probit with explicit camp dummies, not an undocumented conditional estimator. No weights are described.",
+      "locators": [
+        {
+          "doc_id": "D1",
+          "pdf_page": 9,
+          "journal_page": null,
+          "section": "4.3; 4.4",
+          "table": "4",
+          "column": null,
+          "row": null,
+          "quote": null
+        }
+      ],
+      "specification_label": "Sameness / captured / controlled"
+    },
+    {
+      "model_id": "M07",
+      "outcome": "survival",
+      "key_regressors": [
+        "sameness"
+      ],
+      "controls": [
+        "japan",
+        "missing_flags_for_included_covariates"
+      ],
+      "fixed_effects": [],
+      "estimator": "Maximum-likelihood probit",
+      "reported_quantity": "Marginal effects at independent-variable means; infinitesimal for continuous, discrete 0-to-1 change for dummies.",
+      "covariance": "Heteroskedasticity-robust covariance clustered by hierarchy group.",
+      "cluster_variable": "camp_id",
+      "sample": "Steps 1–8; camp cohort construction",
+      "software_defaults_needed": "Software/version unspecified. Freeze optimizer, convergence tolerance, intercept and reference-category convention, perfect-prediction handling, collinearity handling, cluster finite-sample corrections, reference distribution, and delta-method/discrete-change uncertainty before execution. Probit with explicit camp dummies, not an undocumented conditional estimator. No weights are described.",
+      "locators": [
+        {
+          "doc_id": "D1",
+          "pdf_page": 9,
+          "journal_page": null,
+          "section": "4.3; 4.4",
+          "table": "4",
+          "column": null,
+          "row": null,
+          "quote": null
+        }
+      ],
+      "specification_label": "Sameness / camp / simple"
+    },
+    {
+      "model_id": "M08",
+      "outcome": "survival",
+      "key_regressors": [
+        "sameness"
+      ],
+      "controls": [
+        "log_group_n",
+        "log_group_n_squared",
+        "captivity",
+        "height",
+        "age",
+        "education",
+        "dependents",
+        "officer",
+        "japan",
+        "distance",
+        "missing_flags_for_included_covariates"
+      ],
+      "fixed_effects": [],
+      "estimator": "Maximum-likelihood probit",
+      "reported_quantity": "Marginal effects at independent-variable means; infinitesimal for continuous, discrete 0-to-1 change for dummies.",
+      "covariance": "Heteroskedasticity-robust covariance clustered by hierarchy group.",
+      "cluster_variable": "camp_id",
+      "sample": "Steps 1–8; camp cohort construction",
+      "software_defaults_needed": "Software/version unspecified. Freeze optimizer, convergence tolerance, intercept and reference-category convention, perfect-prediction handling, collinearity handling, cluster finite-sample corrections, reference distribution, and delta-method/discrete-change uncertainty before execution. Probit with explicit camp dummies, not an undocumented conditional estimator. No weights are described.",
+      "locators": [
+        {
+          "doc_id": "D1",
+          "pdf_page": 9,
+          "journal_page": null,
+          "section": "4.3; 4.4",
+          "table": "4",
+          "column": null,
+          "row": null,
+          "quote": null
+        }
+      ],
+      "specification_label": "Sameness / camp / controlled"
+    },
+    {
+      "model_id": "M09",
+      "outcome": "survival",
+      "key_regressors": [
+        "steepness",
+        "sameness"
+      ],
+      "controls": [
+        "missing_flags_for_included_covariates"
+      ],
+      "fixed_effects": [
+        "camp_id"
+      ],
+      "estimator": "Maximum-likelihood probit; paired ROC-area comparison",
+      "reported_quantity": "Panel A adopts corresponding probit effect conventions. Panel B compares full two-measure model to each one-measure model, on a common sample.",
+      "covariance": "Panel A: group-clustered robust. ROC comparison cites a paired-curve method; cluster adjustment not specified.",
+      "cluster_variable": "captured_id",
+      "sample": "Same described family as corresponding separate-measure models; no exact common-sample construction stated.",
+      "software_defaults_needed": "Software/version unspecified. Freeze optimizer, convergence tolerance, intercept and reference-category convention, perfect-prediction handling, collinearity handling, cluster finite-sample corrections, reference distribution, and delta-method/discrete-change uncertainty before execution. Probit with explicit camp dummies, not an undocumented conditional estimator. No weights are described.",
+      "locators": [
+        {
+          "doc_id": "D1",
+          "pdf_page": 9,
+          "journal_page": null,
+          "section": "4.5",
+          "table": "5",
+          "column": null,
+          "row": null,
+          "quote": null
+        }
+      ],
+      "roc_method": "Paired differences in area under receiver-operating-characteristic curves. No software or exact implementation provided."
+    },
+    {
+      "model_id": "M10",
+      "outcome": "survival",
+      "key_regressors": [
+        "steepness",
+        "sameness"
+      ],
+      "controls": [
+        "log_group_n",
+        "log_group_n_squared",
+        "captivity",
+        "height",
+        "age",
+        "education",
+        "dependents",
+        "officer",
+        "missing_flags_for_included_covariates"
+      ],
+      "fixed_effects": [
+        "camp_id"
+      ],
+      "estimator": "Maximum-likelihood probit; paired ROC-area comparison",
+      "reported_quantity": "Panel A adopts corresponding probit effect conventions. Panel B compares full two-measure model to each one-measure model, on a common sample.",
+      "covariance": "Panel A: group-clustered robust. ROC comparison cites a paired-curve method; cluster adjustment not specified.",
+      "cluster_variable": "captured_id",
+      "sample": "Same described family as corresponding separate-measure models; no exact common-sample construction stated.",
+      "software_defaults_needed": "Software/version unspecified. Freeze optimizer, convergence tolerance, intercept and reference-category convention, perfect-prediction handling, collinearity handling, cluster finite-sample corrections, reference distribution, and delta-method/discrete-change uncertainty before execution. Probit with explicit camp dummies, not an undocumented conditional estimator. No weights are described.",
+      "locators": [
+        {
+          "doc_id": "D1",
+          "pdf_page": 9,
+          "journal_page": null,
+          "section": "4.5",
+          "table": "5",
+          "column": null,
+          "row": null,
+          "quote": null
+        }
+      ],
+      "roc_method": "Paired differences in area under receiver-operating-characteristic curves. No software or exact implementation provided."
+    },
+    {
+      "model_id": "M11",
+      "outcome": "survival",
+      "key_regressors": [
+        "steepness",
+        "sameness"
+      ],
+      "controls": [
+        "japan",
+        "missing_flags_for_included_covariates"
+      ],
+      "fixed_effects": [],
+      "estimator": "Maximum-likelihood probit; paired ROC-area comparison",
+      "reported_quantity": "Panel A adopts corresponding probit effect conventions. Panel B compares full two-measure model to each one-measure model, on a common sample.",
+      "covariance": "Panel A: group-clustered robust. ROC comparison cites a paired-curve method; cluster adjustment not specified.",
+      "cluster_variable": "camp_id",
+      "sample": "Same described family as corresponding separate-measure models; no exact common-sample construction stated.",
+      "software_defaults_needed": "Software/version unspecified. Freeze optimizer, convergence tolerance, intercept and reference-category convention, perfect-prediction handling, collinearity handling, cluster finite-sample corrections, reference distribution, and delta-method/discrete-change uncertainty before execution. Probit with explicit camp dummies, not an undocumented conditional estimator. No weights are described.",
+      "locators": [
+        {
+          "doc_id": "D1",
+          "pdf_page": 9,
+          "journal_page": null,
+          "section": "4.5",
+          "table": "5",
+          "column": null,
+          "row": null,
+          "quote": null
+        }
+      ],
+      "roc_method": "Paired differences in area under receiver-operating-characteristic curves. No software or exact implementation provided."
+    },
+    {
+      "model_id": "M12",
+      "outcome": "survival",
+      "key_regressors": [
+        "steepness",
+        "sameness"
+      ],
+      "controls": [
+        "log_group_n",
+        "log_group_n_squared",
+        "captivity",
+        "height",
+        "age",
+        "education",
+        "dependents",
+        "officer",
+        "japan",
+        "distance",
+        "missing_flags_for_included_covariates"
+      ],
+      "fixed_effects": [],
+      "estimator": "Maximum-likelihood probit; paired ROC-area comparison",
+      "reported_quantity": "Panel A adopts corresponding probit effect conventions. Panel B compares full two-measure model to each one-measure model, on a common sample.",
+      "covariance": "Panel A: group-clustered robust. ROC comparison cites a paired-curve method; cluster adjustment not specified.",
+      "cluster_variable": "camp_id",
+      "sample": "Same described family as corresponding separate-measure models; no exact common-sample construction stated.",
+      "software_defaults_needed": "Software/version unspecified. Freeze optimizer, convergence tolerance, intercept and reference-category convention, perfect-prediction handling, collinearity handling, cluster finite-sample corrections, reference distribution, and delta-method/discrete-change uncertainty before execution. Probit with explicit camp dummies, not an undocumented conditional estimator. No weights are described.",
+      "locators": [
+        {
+          "doc_id": "D1",
+          "pdf_page": 9,
+          "journal_page": null,
+          "section": "4.5",
+          "table": "5",
+          "column": null,
+          "row": null,
+          "quote": null
+        }
+      ],
+      "roc_method": "Paired differences in area under receiver-operating-characteristic curves. No software or exact implementation provided."
+    },
+    {
+      "model_id": "M13",
+      "outcome": "survival",
+      "key_regressors": [
+        "steepness",
+        "officer_hierarchy"
+      ],
+      "controls": [
+        "officer",
+        "missing_flags_for_included_covariates"
+      ],
+      "fixed_effects": [
+        "camp_id"
+      ],
+      "estimator": "Maximum-likelihood probit",
+      "reported_quantity": "Table reports continuous slopes and dummy discrete changes. Product-term marginal reporting is ambiguous; retain latent product coefficient separately from a derived interaction in probabilities.",
+      "covariance": "Group-clustered robust.",
+      "cluster_variable": "captured_id",
+      "sample": "Steps 1–8 with officer interaction; no additional documented sample restriction.",
+      "software_defaults_needed": "Software/version unspecified. Freeze optimizer, convergence tolerance, intercept and reference-category convention, perfect-prediction handling, collinearity handling, cluster finite-sample corrections, reference distribution, and delta-method/discrete-change uncertainty before execution. Probit with explicit camp dummies, not an undocumented conditional estimator. No weights are described.",
+      "locators": [
+        {
+          "doc_id": "D1",
+          "pdf_page": 13,
+          "journal_page": null,
+          "section": "6.1",
+          "table": "6",
+          "column": null,
+          "row": null,
+          "quote": null
+        }
+      ],
+      "specification_label": "Steepness / captured / simple"
+    },
+    {
+      "model_id": "M14",
+      "outcome": "survival",
+      "key_regressors": [
+        "steepness",
+        "officer_hierarchy"
+      ],
+      "controls": [
+        "officer",
+        "log_group_n",
+        "log_group_n_squared",
+        "captivity",
+        "height",
+        "age",
+        "education",
+        "dependents",
+        "missing_flags_for_included_covariates"
+      ],
+      "fixed_effects": [
+        "camp_id"
+      ],
+      "estimator": "Maximum-likelihood probit",
+      "reported_quantity": "Table reports continuous slopes and dummy discrete changes. Product-term marginal reporting is ambiguous; retain latent product coefficient separately from a derived interaction in probabilities.",
+      "covariance": "Group-clustered robust.",
+      "cluster_variable": "captured_id",
+      "sample": "Steps 1–8 with officer interaction; no additional documented sample restriction.",
+      "software_defaults_needed": "Software/version unspecified. Freeze optimizer, convergence tolerance, intercept and reference-category convention, perfect-prediction handling, collinearity handling, cluster finite-sample corrections, reference distribution, and delta-method/discrete-change uncertainty before execution. Probit with explicit camp dummies, not an undocumented conditional estimator. No weights are described.",
+      "locators": [
+        {
+          "doc_id": "D1",
+          "pdf_page": 13,
+          "journal_page": null,
+          "section": "6.1",
+          "table": "6",
+          "column": null,
+          "row": null,
+          "quote": null
+        }
+      ],
+      "specification_label": "Steepness / captured / controlled"
+    },
+    {
+      "model_id": "M15",
+      "outcome": "survival",
+      "key_regressors": [
+        "steepness",
+        "officer_hierarchy"
+      ],
+      "controls": [
+        "officer",
+        "japan",
+        "missing_flags_for_included_covariates"
+      ],
+      "fixed_effects": [],
+      "estimator": "Maximum-likelihood probit",
+      "reported_quantity": "Table reports continuous slopes and dummy discrete changes. Product-term marginal reporting is ambiguous; retain latent product coefficient separately from a derived interaction in probabilities.",
+      "covariance": "Group-clustered robust.",
+      "cluster_variable": "camp_id",
+      "sample": "Steps 1–8 with officer interaction; no additional documented sample restriction.",
+      "software_defaults_needed": "Software/version unspecified. Freeze optimizer, convergence tolerance, intercept and reference-category convention, perfect-prediction handling, collinearity handling, cluster finite-sample corrections, reference distribution, and delta-method/discrete-change uncertainty before execution. Probit with explicit camp dummies, not an undocumented conditional estimator. No weights are described.",
+      "locators": [
+        {
+          "doc_id": "D1",
+          "pdf_page": 13,
+          "journal_page": null,
+          "section": "6.1",
+          "table": "6",
+          "column": null,
+          "row": null,
+          "quote": null
+        }
+      ],
+      "specification_label": "Steepness / camp / simple"
+    },
+    {
+      "model_id": "M16",
+      "outcome": "survival",
+      "key_regressors": [
+        "steepness",
+        "officer_hierarchy"
+      ],
+      "controls": [
+        "officer",
+        "log_group_n",
+        "log_group_n_squared",
+        "captivity",
+        "height",
+        "age",
+        "education",
+        "dependents",
+        "japan",
+        "distance",
+        "missing_flags_for_included_covariates"
+      ],
+      "fixed_effects": [],
+      "estimator": "Maximum-likelihood probit",
+      "reported_quantity": "Table reports continuous slopes and dummy discrete changes. Product-term marginal reporting is ambiguous; retain latent product coefficient separately from a derived interaction in probabilities.",
+      "covariance": "Group-clustered robust.",
+      "cluster_variable": "camp_id",
+      "sample": "Steps 1–8 with officer interaction; no additional documented sample restriction.",
+      "software_defaults_needed": "Software/version unspecified. Freeze optimizer, convergence tolerance, intercept and reference-category convention, perfect-prediction handling, collinearity handling, cluster finite-sample corrections, reference distribution, and delta-method/discrete-change uncertainty before execution. Probit with explicit camp dummies, not an undocumented conditional estimator. No weights are described.",
+      "locators": [
+        {
+          "doc_id": "D1",
+          "pdf_page": 13,
+          "journal_page": null,
+          "section": "6.1",
+          "table": "6",
+          "column": null,
+          "row": null,
+          "quote": null
+        }
+      ],
+      "specification_label": "Steepness / camp / controlled"
+    },
+    {
+      "model_id": "M17",
+      "outcome": "survival",
+      "key_regressors": [
+        "sameness",
+        "officer_hierarchy"
+      ],
+      "controls": [
+        "officer",
+        "missing_flags_for_included_covariates"
+      ],
+      "fixed_effects": [
+        "camp_id"
+      ],
+      "estimator": "Maximum-likelihood probit",
+      "reported_quantity": "Table reports continuous slopes and dummy discrete changes. Product-term marginal reporting is ambiguous; retain latent product coefficient separately from a derived interaction in probabilities.",
+      "covariance": "Group-clustered robust.",
+      "cluster_variable": "captured_id",
+      "sample": "Steps 1–8 with officer interaction; no additional documented sample restriction.",
+      "software_defaults_needed": "Software/version unspecified. Freeze optimizer, convergence tolerance, intercept and reference-category convention, perfect-prediction handling, collinearity handling, cluster finite-sample corrections, reference distribution, and delta-method/discrete-change uncertainty before execution. Probit with explicit camp dummies, not an undocumented conditional estimator. No weights are described.",
+      "locators": [
+        {
+          "doc_id": "D1",
+          "pdf_page": 13,
+          "journal_page": null,
+          "section": "6.1",
+          "table": "6",
+          "column": null,
+          "row": null,
+          "quote": null
+        }
+      ],
+      "specification_label": "Sameness / captured / simple"
+    },
+    {
+      "model_id": "M18",
+      "outcome": "survival",
+      "key_regressors": [
+        "sameness",
+        "officer_hierarchy"
+      ],
+      "controls": [
+        "officer",
+        "log_group_n",
+        "log_group_n_squared",
+        "captivity",
+        "height",
+        "age",
+        "education",
+        "dependents",
+        "missing_flags_for_included_covariates"
+      ],
+      "fixed_effects": [
+        "camp_id"
+      ],
+      "estimator": "Maximum-likelihood probit",
+      "reported_quantity": "Table reports continuous slopes and dummy discrete changes. Product-term marginal reporting is ambiguous; retain latent product coefficient separately from a derived interaction in probabilities.",
+      "covariance": "Group-clustered robust.",
+      "cluster_variable": "captured_id",
+      "sample": "Steps 1–8 with officer interaction; no additional documented sample restriction.",
+      "software_defaults_needed": "Software/version unspecified. Freeze optimizer, convergence tolerance, intercept and reference-category convention, perfect-prediction handling, collinearity handling, cluster finite-sample corrections, reference distribution, and delta-method/discrete-change uncertainty before execution. Probit with explicit camp dummies, not an undocumented conditional estimator. No weights are described.",
+      "locators": [
+        {
+          "doc_id": "D1",
+          "pdf_page": 13,
+          "journal_page": null,
+          "section": "6.1",
+          "table": "6",
+          "column": null,
+          "row": null,
+          "quote": null
+        }
+      ],
+      "specification_label": "Sameness / captured / controlled"
+    },
+    {
+      "model_id": "M19",
+      "outcome": "survival",
+      "key_regressors": [
+        "sameness",
+        "officer_hierarchy"
+      ],
+      "controls": [
+        "officer",
+        "japan",
+        "missing_flags_for_included_covariates"
+      ],
+      "fixed_effects": [],
+      "estimator": "Maximum-likelihood probit",
+      "reported_quantity": "Table reports continuous slopes and dummy discrete changes. Product-term marginal reporting is ambiguous; retain latent product coefficient separately from a derived interaction in probabilities.",
+      "covariance": "Group-clustered robust.",
+      "cluster_variable": "camp_id",
+      "sample": "Steps 1–8 with officer interaction; no additional documented sample restriction.",
+      "software_defaults_needed": "Software/version unspecified. Freeze optimizer, convergence tolerance, intercept and reference-category convention, perfect-prediction handling, collinearity handling, cluster finite-sample corrections, reference distribution, and delta-method/discrete-change uncertainty before execution. Probit with explicit camp dummies, not an undocumented conditional estimator. No weights are described.",
+      "locators": [
+        {
+          "doc_id": "D1",
+          "pdf_page": 13,
+          "journal_page": null,
+          "section": "6.1",
+          "table": "6",
+          "column": null,
+          "row": null,
+          "quote": null
+        }
+      ],
+      "specification_label": "Sameness / camp / simple"
+    },
+    {
+      "model_id": "M20",
+      "outcome": "survival",
+      "key_regressors": [
+        "sameness",
+        "officer_hierarchy"
+      ],
+      "controls": [
+        "officer",
+        "log_group_n",
+        "log_group_n_squared",
+        "captivity",
+        "height",
+        "age",
+        "education",
+        "dependents",
+        "japan",
+        "distance",
+        "missing_flags_for_included_covariates"
+      ],
+      "fixed_effects": [],
+      "estimator": "Maximum-likelihood probit",
+      "reported_quantity": "Table reports continuous slopes and dummy discrete changes. Product-term marginal reporting is ambiguous; retain latent product coefficient separately from a derived interaction in probabilities.",
+      "covariance": "Group-clustered robust.",
+      "cluster_variable": "camp_id",
+      "sample": "Steps 1–8 with officer interaction; no additional documented sample restriction.",
+      "software_defaults_needed": "Software/version unspecified. Freeze optimizer, convergence tolerance, intercept and reference-category convention, perfect-prediction handling, collinearity handling, cluster finite-sample corrections, reference distribution, and delta-method/discrete-change uncertainty before execution. Probit with explicit camp dummies, not an undocumented conditional estimator. No weights are described.",
+      "locators": [
+        {
+          "doc_id": "D1",
+          "pdf_page": 13,
+          "journal_page": null,
+          "section": "6.1",
+          "table": "6",
+          "column": null,
+          "row": null,
+          "quote": null
+        }
+      ],
+      "specification_label": "Sameness / camp / controlled"
+    },
+    {
+      "model_id": "M21",
+      "outcome": "survival",
+      "key_regressors": [
+        "Inherit the appropriate core hierarchy or the expressly described replacement"
+      ],
+      "controls": [
+        "Inherit core covariate list except stated changes in recipe"
+      ],
+      "fixed_effects": [
+        "Inherit camp_id effects for captured cohorts"
+      ],
+      "estimator": "Probit family, not a single fully reported specification",
+      "reported_quantity": "Same intended marginal-effect conventions; individual numerical results not required to define construction.",
+      "covariance": "Inherit group-clustered robust unless source description explicitly differs.",
+      "cluster_variable": "Relevant camp or captured cohort",
+      "sample": "Steps 1–8; Repeat M01–M08 for DET_POWER=\"1\" and \"2\" separately. A within-power japan indicator is constant and omitted.",
+      "software_defaults_needed": "Software/version unspecified. Freeze optimizer, convergence tolerance, intercept and reference-category convention, perfect-prediction handling, collinearity handling, cluster finite-sample corrections, reference distribution, and delta-method/discrete-change uncertainty before execution. Probit with explicit camp dummies, not an undocumented conditional estimator. No weights are described.",
+      "locators": [
+        {
+          "doc_id": "D1",
+          "pdf_page": 10,
+          "journal_page": null,
+          "section": "5.1",
+          "table": null,
+          "column": null,
+          "row": null,
+          "quote": null
+        }
+      ],
+      "family_label": "Power-specific repeats",
+      "family_not_single_model": true
+    },
+    {
+      "model_id": "M22",
+      "outcome": "survival",
+      "key_regressors": [
+        "Inherit the appropriate core hierarchy or the expressly described replacement"
+      ],
+      "controls": [
+        "Inherit core covariate list except stated changes in recipe"
+      ],
+      "fixed_effects": [
+        "Inherit camp_id effects for captured cohorts"
+      ],
+      "estimator": "Probit family, not a single fully reported specification",
+      "reported_quantity": "Same intended marginal-effect conventions; individual numerical results not required to define construction.",
+      "covariance": "Inherit group-clustered robust unless source description explicitly differs.",
+      "cluster_variable": "Relevant camp or captured cohort",
+      "sample": "Steps 1–8; Use the four controlled core models, first removing hierarchy and adding ln(friends), then including both. Fix zero-friend and unknown-unit handling before implementation.",
+      "software_defaults_needed": "Software/version unspecified. Freeze optimizer, convergence tolerance, intercept and reference-category convention, perfect-prediction handling, collinearity handling, cluster finite-sample corrections, reference distribution, and delta-method/discrete-change uncertainty before execution. Probit with explicit camp dummies, not an undocumented conditional estimator. No weights are described.",
+      "locators": [
+        {
+          "doc_id": "D1",
+          "pdf_page": 10,
+          "journal_page": null,
+          "section": "5.2",
+          "table": null,
+          "column": null,
+          "row": null,
+          "quote": null
+        }
+      ],
+      "family_label": "Friends covariate tests",
+      "family_not_single_model": true
+    },
+    {
+      "model_id": "M23",
+      "outcome": "survival",
+      "key_regressors": [
+        "Inherit the appropriate core hierarchy or the expressly described replacement"
+      ],
+      "controls": [
+        "Inherit core covariate list except stated changes in recipe"
+      ],
+      "fixed_effects": [
+        "Inherit camp_id effects for captured cohorts"
+      ],
+      "estimator": "Probit family, not a single fully reported specification",
+      "reported_quantity": "Same intended marginal-effect conventions; individual numerical results not required to define construction.",
+      "covariance": "Inherit group-clustered robust unless source description explicitly differs.",
+      "cluster_variable": "Relevant camp or captured cohort",
+      "sample": "Steps 1–8; Reconstruct hierarchy within same-unit members of the selected cohort; include ln(friends) in the corresponding specifications. Exact population and zero counts unresolved.",
+      "software_defaults_needed": "Software/version unspecified. Freeze optimizer, convergence tolerance, intercept and reference-category convention, perfect-prediction handling, collinearity handling, cluster finite-sample corrections, reference distribution, and delta-method/discrete-change uncertainty before execution. Probit with explicit camp dummies, not an undocumented conditional estimator. No weights are described.",
+      "locators": [
+        {
+          "doc_id": "D1",
+          "pdf_page": 10,
+          "journal_page": null,
+          "section": "5.2",
+          "table": null,
+          "column": null,
+          "row": null,
+          "quote": null
+        }
+      ],
+      "family_label": "Friends-only hierarchy tests",
+      "family_not_single_model": true
+    },
+    {
+      "model_id": "M24",
+      "outcome": "survival",
+      "key_regressors": [
+        "Inherit the appropriate core hierarchy or the expressly described replacement"
+      ],
+      "controls": [
+        "Inherit core covariate list except stated changes in recipe"
+      ],
+      "fixed_effects": [
+        "Inherit camp_id effects for captured cohorts"
+      ],
+      "estimator": "Probit family, not a single fully reported specification",
+      "reported_quantity": "Same intended marginal-effect conventions; individual numerical results not required to define construction.",
+      "covariance": "Inherit group-clustered robust unless source description explicitly differs.",
+      "cluster_variable": "Relevant camp or captured cohort",
+      "sample": "Steps 1–8; Repeat core models replacing each hierarchy with its corresponding stated alternative. Number-of-ranks and sum-of-ranks checks only use controlled models with group size. Pay-based checks unavailable without pay schedule.",
+      "software_defaults_needed": "Software/version unspecified. Freeze optimizer, convergence tolerance, intercept and reference-category convention, perfect-prediction handling, collinearity handling, cluster finite-sample corrections, reference distribution, and delta-method/discrete-change uncertainty before execution. Probit with explicit camp dummies, not an undocumented conditional estimator. No weights are described.",
+      "locators": [
+        {
+          "doc_id": "D1",
+          "pdf_page": 11,
+          "journal_page": null,
+          "section": "5.3.1; 5.3.2",
+          "table": null,
+          "column": null,
+          "row": null,
+          "quote": null
+        }
+      ],
+      "family_label": "Alternative hierarchy measurements",
+      "family_not_single_model": true
+    },
+    {
+      "model_id": "M25",
+      "outcome": "survival",
+      "key_regressors": [
+        "Inherit the appropriate core hierarchy or the expressly described replacement"
+      ],
+      "controls": [
+        "Inherit core covariate list except stated changes in recipe"
+      ],
+      "fixed_effects": [
+        "Inherit camp_id effects for captured cohorts"
+      ],
+      "estimator": "Probit family, not a single fully reported specification",
+      "reported_quantity": "Same intended marginal-effect conventions; individual numerical results not required to define construction.",
+      "covariance": "Inherit group-clustered robust unless source description explicitly differs.",
+      "cluster_variable": "Relevant camp or captured cohort",
+      "sample": "Steps 1–8; Separate runs: complete cases (controlled models), group_n>=50, group_n>=100, and STA!=\"4\". Recompute versus freeze group shares is unresolved.",
+      "software_defaults_needed": "Software/version unspecified. Freeze optimizer, convergence tolerance, intercept and reference-category convention, perfect-prediction handling, collinearity handling, cluster finite-sample corrections, reference distribution, and delta-method/discrete-change uncertainty before execution. Probit with explicit camp dummies, not an undocumented conditional estimator. No weights are described.",
+      "locators": [
+        {
+          "doc_id": "D1",
+          "pdf_page": 11,
+          "journal_page": null,
+          "section": "5.3.3",
+          "table": null,
+          "column": null,
+          "row": null,
+          "quote": null
+        }
+      ],
+      "family_label": "Sample robustness",
+      "family_not_single_model": true
+    },
+    {
+      "model_id": "M26",
+      "outcome": "survival",
+      "key_regressors": [
+        "Inherit the appropriate core hierarchy or the expressly described replacement"
+      ],
+      "controls": [
+        "Inherit core covariate list except stated changes in recipe"
+      ],
+      "fixed_effects": [
+        "Inherit camp_id effects for captured cohorts"
+      ],
+      "estimator": "Probit family, not a single fully reported specification",
+      "reported_quantity": "Same intended marginal-effect conventions; individual numerical results not required to define construction.",
+      "covariance": "Inherit group-clustered robust unless source description explicitly differs.",
+      "cluster_variable": "Relevant camp or captured cohort",
+      "sample": "Steps 1–8; Repeat core families restricted to air_force indicator as defined, retaining camp effects for captured cohorts.",
+      "software_defaults_needed": "Software/version unspecified. Freeze optimizer, convergence tolerance, intercept and reference-category convention, perfect-prediction handling, collinearity handling, cluster finite-sample corrections, reference distribution, and delta-method/discrete-change uncertainty before execution. Probit with explicit camp dummies, not an undocumented conditional estimator. No weights are described.",
+      "locators": [
+        {
+          "doc_id": "D1",
+          "pdf_page": 12,
+          "journal_page": null,
+          "section": "5.4",
+          "table": null,
+          "column": null,
+          "row": null,
+          "quote": null
+        }
+      ],
+      "family_label": "German air-service subsample",
+      "family_not_single_model": true
+    },
+    {
+      "model_id": "M27",
+      "outcome": "survival",
+      "key_regressors": [
+        "Inherit the appropriate core hierarchy or the expressly described replacement"
+      ],
+      "controls": [
+        "Inherit core covariate list except stated changes in recipe"
+      ],
+      "fixed_effects": [
+        "Inherit camp_id effects for captured cohorts"
+      ],
+      "estimator": "Probit family, not a single fully reported specification",
+      "reported_quantity": "Same intended marginal-effect conventions; individual numerical results not required to define construction.",
+      "covariance": "Inherit group-clustered robust unless source description explicitly differs.",
+      "cluster_variable": "Relevant camp or captured cohort",
+      "sample": "Steps 1–8; Replace officer product with pay-by-hierarchy product, retaining main effects; also estimate officer tests separately by power. Pay source and exact covariate changes absent.",
+      "software_defaults_needed": "Software/version unspecified. Freeze optimizer, convergence tolerance, intercept and reference-category convention, perfect-prediction handling, collinearity handling, cluster finite-sample corrections, reference distribution, and delta-method/discrete-change uncertainty before execution. Probit with explicit camp dummies, not an undocumented conditional estimator. No weights are described.",
+      "locators": [
+        {
+          "doc_id": "D1",
+          "pdf_page": 12,
+          "journal_page": null,
+          "section": "6.1 footnote 13",
+          "table": null,
+          "column": null,
+          "row": null,
+          "quote": null
+        }
+      ],
+      "family_label": "Pay and regime officer checks",
+      "family_not_single_model": true
+    },
+    {
+      "model_id": "M28",
+      "outcome": "survival",
+      "key_regressors": [
+        "log_group_n",
+        "appropriate core hierarchy"
+      ],
+      "controls": [
+        "Inherit core covariate list except stated changes in recipe"
+      ],
+      "fixed_effects": [
+        "Inherit camp_id effects for captured cohorts"
+      ],
+      "estimator": "Probit family, not a single fully reported specification",
+      "reported_quantity": "Same intended marginal-effect conventions; individual numerical results not required to define construction.",
+      "covariance": "Inherit group-clustered robust unless source description explicitly differs.",
+      "cluster_variable": "Relevant camp or captured cohort",
+      "sample": "Steps 1–8; Use the four controlled core models omitting log_group_n_squared.",
+      "software_defaults_needed": "Software/version unspecified. Freeze optimizer, convergence tolerance, intercept and reference-category convention, perfect-prediction handling, collinearity handling, cluster finite-sample corrections, reference distribution, and delta-method/discrete-change uncertainty before execution. Probit with explicit camp dummies, not an undocumented conditional estimator. No weights are described.",
+      "locators": [
+        {
+          "doc_id": "D1",
+          "pdf_page": 14,
+          "journal_page": null,
+          "section": "6.2",
+          "table": null,
+          "column": null,
+          "row": null,
+          "quote": null
+        }
+      ],
+      "family_label": "Linear group-size check",
+      "family_not_single_model": true
+    },
+    {
+      "model_id": "M29",
+      "outcome": "survival",
+      "key_regressors": [
+        "appropriate core hierarchy",
+        "log_group_n",
+        "hierarchy_x_log_group_n"
+      ],
+      "controls": [
+        "Inherit core covariate list except stated changes in recipe"
+      ],
+      "fixed_effects": [
+        "Inherit camp_id effects for captured cohorts"
+      ],
+      "estimator": "Probit family, not a single fully reported specification",
+      "reported_quantity": "Same intended marginal-effect conventions; individual numerical results not required to define construction.",
+      "covariance": "Inherit group-clustered robust unless source description explicitly differs.",
+      "cluster_variable": "Relevant camp or captured cohort",
+      "sample": "Steps 1–8; Add hierarchy*log_group_n with main effects to relevant core models. Article does not state whether the quadratic remains or exactly which simple/controlled specifications were run.",
+      "software_defaults_needed": "Software/version unspecified. Freeze optimizer, convergence tolerance, intercept and reference-category convention, perfect-prediction handling, collinearity handling, cluster finite-sample corrections, reference distribution, and delta-method/discrete-change uncertainty before execution. Probit with explicit camp dummies, not an undocumented conditional estimator. No weights are described.",
+      "locators": [
+        {
+          "doc_id": "D1",
+          "pdf_page": 14,
+          "journal_page": null,
+          "section": "6.2",
+          "table": null,
+          "column": null,
+          "row": null,
+          "quote": null
+        }
+      ],
+      "family_label": "Hierarchy-by-size check",
+      "family_not_single_model": true
+    },
+    {
+      "model_id": "M30",
+      "outcome": "survival",
+      "key_regressors": [
+        "age"
+      ],
+      "controls": [
+        "Not completely specified for this unreported check"
+      ],
+      "fixed_effects": [
+        "Not specified"
+      ],
+      "estimator": "Unreported age/regime diagnostic; cannot infer exact estimator specification",
+      "reported_quantity": "Association of age and survival under Japanese conditions; no full numerical table.",
+      "covariance": "Not specifically documented.",
+      "cluster_variable": null,
+      "sample": "Not specified beyond Japanese conditions; do not invent an interaction model.",
+      "software_defaults_needed": "Software/version unspecified. Freeze optimizer, convergence tolerance, intercept and reference-category convention, perfect-prediction handling, collinearity handling, cluster finite-sample corrections, reference distribution, and delta-method/discrete-change uncertainty before execution. Probit with explicit camp dummies, not an undocumented conditional estimator. No weights are described.",
+      "locators": [
+        {
+          "doc_id": "D1",
+          "pdf_page": 8,
+          "journal_page": null,
+          "section": "4.4",
+          "table": null,
+          "column": null,
+          "row": null,
+          "quote": null
+        }
+      ],
+      "family_not_single_model": true
+    },
+    {
+      "model_id": "D01",
+      "outcome": "Descriptive characteristics",
+      "key_regressors": [],
+      "controls": [],
+      "fixed_effects": [],
+      "estimator": "Descriptive aggregation",
+      "reported_quantity": "Unweighted counts and percentages; means, medians and SDs by detaining power.",
+      "covariance": "Not applicable",
+      "cluster_variable": null,
+      "sample": "Base selected population; variable-specific available cases; group weighting unspecified.",
+      "software_defaults_needed": "Software/version unspecified. Freeze optimizer, convergence tolerance, intercept and reference-category convention, perfect-prediction handling, collinearity handling, cluster finite-sample corrections, reference distribution, and delta-method/discrete-change uncertainty before execution. Probit with explicit camp dummies, not an undocumented conditional estimator. No weights are described.",
+      "locators": [
+        {
+          "doc_id": "D1",
+          "pdf_page": 6,
+          "journal_page": null,
+          "section": "3",
+          "table": "1",
+          "column": null,
+          "row": null,
+          "quote": null
+        }
+      ]
+    },
+    {
+      "model_id": "D02",
+      "outcome": "Illustrative hierarchy values",
+      "key_regressors": [],
+      "controls": [],
+      "fixed_effects": [],
+      "estimator": "Deterministic formulas only",
+      "reported_quantity": "Hypothetical illustrations; no implementation input and no empirical estimation.",
+      "covariance": "Not applicable",
+      "cluster_variable": null,
+      "sample": "No registry sample; printed examples intentionally withheld from implementer.",
+      "software_defaults_needed": "Software/version unspecified. Freeze optimizer, convergence tolerance, intercept and reference-category convention, perfect-prediction handling, collinearity handling, cluster finite-sample corrections, reference distribution, and delta-method/discrete-change uncertainty before execution. Probit with explicit camp dummies, not an undocumented conditional estimator. No weights are described.",
+      "locators": [
+        {
+          "doc_id": "D1",
+          "pdf_page": 7,
+          "journal_page": null,
+          "section": "4.1",
+          "table": "3",
+          "column": null,
+          "row": null,
+          "quote": null
+        }
+      ]
+    }
+  ],
+  "missingness_rules": {
+    "description": "Keep unmatched enlisted-record covariates missing, then zero-fill included independent variables and include missing indicators. Outcome unknowns excluded. Missing group/rank/date eligibility, nonlinear ordering and layout/vintage invalidity remain explicit decisions. Separate complete-case robustness does not replace origin.",
+    "locators": [
+      {
+        "doc_id": "D1",
+        "pdf_page": 5,
+        "journal_page": null,
+        "section": "3",
+        "table": null,
+        "column": null,
+        "row": null,
+        "quote": null
+      }
+    ]
+  },
+  "inference_rules": {
+    "test": "Probit coefficient/marginal-effect tests and paired ROC-area comparisons as specified; reference distribution and cluster correction not stated.",
+    "tail": "unknown",
+    "alpha": null,
+    "locators": [
+      {
+        "doc_id": "D1",
+        "pdf_page": 8,
+        "journal_page": null,
+        "section": "4.4",
+        "table": null,
+        "column": null,
+        "row": null,
+        "quote": null
+      },
+      {
+        "doc_id": "D1",
+        "pdf_page": 9,
+        "journal_page": null,
+        "section": "4.5",
+        "table": "5",
+        "column": null,
+        "row": null,
+        "quote": null
+      }
+    ]
+  },
+  "leakage_flags": [
+    {
+      "item": "Binary coding, rank scores and nine rank categories",
+      "reason": "Genuine variable definitions, not estimates; locators D1 pp.6–7, sections 4.1 and Table 2."
+    },
+    {
+      "item": "1.319 and 10000",
+      "reason": "Printed formula scaling constants; explicitly allowed design constants. D1 pp.7 and 10, sections 4.1.2 and 5.3.1. Reference shares themselves must be computed from source data, never copied from published illustrations."
+    },
+    {
+      "item": "Divisors 10 and 100; one kilometer capital exception; 1945 and theater end months",
+      "reason": "Design transformations in D1 p.7 Table 2. These are not publication dates or fitted targets."
+    },
+    {
+      "item": "Minimum group sizes 50 and 100",
+      "reason": "Explicit robustness thresholds in D1 p.11 section 5.3.3, not published sample sizes."
+    },
+    {
+      "item": "Provider codes, historical calendar decoding and camp-code ambiguities",
+      "reason": "Summary-free source metadata required for construction; not article numerical outcomes."
+    },
+    {
+      "item": "No target values or bibliographic identity included",
+      "reason": "Source locators retain opaque doc_id and PDF pages with journal_page null. Published sample sizes remain exclusively in sealed targets/n_branch. Unavailable recipe components are marked, not inferred by target matching."
+    }
+  ]
+}

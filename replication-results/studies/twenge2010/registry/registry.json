@@ -1,0 +1,1128 @@
+{
+ "schema_version": 1,
+ "study_id": "twenge2010",
+ "created_utc": "2026-10-28T02:17:33Z",
+ "created_by": "source/data role (fresh context)",
+ "runtime": {
+  "python": "3.13.4",
+  "pyreadstat": "1.3.3",
+  "pandas": "2.2.3",
+  "numpy": "2.4.2",
+  "R": "R version 4.6.1 (2026-06-24)",
+  "haven": "2.5.5",
+  "pdftotext": "pdftotext version 26.10.0"
+ },
+ "sources": [
+  {
+   "source_id": "icpsr07927",
+   "kind": "user-supplied original survey bundle",
+   "provider": "ICPSR (NAHDAP archive), data producer University of Michigan Institute for Social Research, Survey Research Center",
+   "provider_url_from_setup_inventory": "https://www.icpsr.umich.edu/web/NAHDAP/studies/7927",
+   "provider_url_accessed_by_agent": false,
+   "title": "Monitoring the Future: A Continuing Study of the Lifestyles and Values of Youth, 1976 (ICPSR 7927)",
+   "principal_investigators": [
+    "Jerald G. Bachman",
+    "Lloyd D. Johnston",
+    "Patrick M. O'Malley"
+   ],
+   "survey_year": 1976,
+   "grade": 12,
+   "release": {
+    "version": "V4",
+    "version_date": "2007-05-25",
+    "original_release_date": "1984-03-18",
+    "doi": "10.3886/ICPSR07927.v4",
+    "evidence": [
+     "07927-manifest.txt header (ICPSR07927-v4, 2007-05-25, doi)",
+     "07927-descriptioncitation.html citation and version history"
+    ]
+   },
+   "path_from_study": "data/supplied/ICPSR_07927",
+   "provenance": "downloaded by the user, a human, by hand; download time not recorded",
+   "download_date_evidence": "TermsOfUse.html states that the user agreed to the ICPSR terms on 2026-10-27 pursuant to the download of study 7927; time of day and file-level download times are not recorded.",
+   "setup_copy_time_utc": "2026-10-28T01:48:50Z",
+   "validation_time_utc": "2026-10-28T02:17:33Z",
+   "validation": {
+    "files_on_disk": 11,
+    "files_in_setup_inventory": 11,
+    "setup_inventory_sha256_and_size_match_all": true,
+    "data_files": 6,
+    "provider_manifest_md5_match_all_data_files": true,
+    "codebook_md5_match": [
+     "07927-Codebook.pdf"
+    ],
+    "hidden_or_extra_files": [],
+    "dataset_labels": {
+     "DS0001": {
+      "provider_label": "Form 1 Questionnaire",
+      "label_in_setup_inventory": "Form 1 Questionnaire",
+      "form_id_variable_V3_constant_and_matches": true,
+      "icpsr_part_variable": [
+       "V9002"
+      ],
+      "rows_cols_match_manifest": true
+     },
+     "DS0002": {
+      "provider_label": "Form 2 Questionnaire",
+      "label_in_setup_inventory": "Form 2 Questionnaire",
+      "form_id_variable_V3_constant_and_matches": true,
+      "icpsr_part_variable": [
+       "V9002"
+      ],
+      "rows_cols_match_manifest": true
+     },
+     "DS0003": {
+      "provider_label": "Form 3 Questionnaire",
+      "label_in_setup_inventory": "Form 3 Questionnaire",
+      "form_id_variable_V3_constant_and_matches": true,
+      "icpsr_part_variable": [
+       "V9002"
+      ],
+      "rows_cols_match_manifest": true
+     },
+     "DS0004": {
+      "provider_label": "Form 4 Questionnaire",
+      "label_in_setup_inventory": "Form 4 Questionnaire",
+      "form_id_variable_V3_constant_and_matches": true,
+      "icpsr_part_variable": [
+       "V9002"
+      ],
+      "rows_cols_match_manifest": true
+     },
+     "DS0005": {
+      "provider_label": "Form 5 Questionnaire",
+      "label_in_setup_inventory": "Form 5 Questionnaire",
+      "form_id_variable_V3_constant_and_matches": true,
+      "icpsr_part_variable": [
+       "V9002"
+      ],
+      "rows_cols_match_manifest": true
+     },
+     "DS0006": {
+      "provider_label": "Core Variables",
+      "label_in_setup_inventory": "Core Variables",
+      "form_id_variable_V3_constant_and_matches": null,
+      "icpsr_part_variable": [
+       "V9002"
+      ],
+      "rows_cols_match_manifest": true
+     }
+    },
+    "loader_equivalence_pass": {
+     "1976_DS0001": true,
+     "1976_DS0002": true,
+     "1976_DS0003": true,
+     "1976_DS0004": true,
+     "1976_DS0005": true,
+     "1976_DS0006": true
+    },
+    "release_identity": "confirmed from manifest header and description-citation html (title, version, DOI, distributor date)"
+   },
+   "files": [
+    {
+     "path": "07927-Codebook.pdf",
+     "bytes": 810671,
+     "sha256": "ee2fb72878a7549b689ae86782467d69f50229d9472a3c66aec92cef1a7f8142",
+     "md5": "4ed209817473478fac14d98f955e78e9",
+     "provider_manifest_md5": "4ed209817473478fac14d98f955e78e9",
+     "manifest_dataset": "study"
+    },
+    {
+     "path": "07927-descriptioncitation.html",
+     "bytes": 8910,
+     "sha256": "fc7b4a9dcf07b45654b6609b45b2f229f24c2687c15024e8affb32a4c630f126",
+     "md5": "32dd0fdeefb6eefcd33331c6c8e0611b",
+     "provider_manifest_md5": null,
+     "manifest_dataset": null
+    },
+    {
+     "path": "07927-manifest.txt",
+     "bytes": 10124,
+     "sha256": "58a5075deffe007f0b8ad256fa27258354a7514b8c1c9d7df776c6b260f6ad80",
+     "md5": "d44be79c3e00c5f147fa5d856d37de63",
+     "provider_manifest_md5": null,
+     "manifest_dataset": "study"
+    },
+    {
+     "path": "07927-related_literature.txt",
+     "bytes": 111640,
+     "sha256": "397c51cc38131de2350f13d90da4bb987fa8229e9e7eb163262e79abe22103af",
+     "md5": "cbfbcd9b7e8537c3c7feb7d2b4b3a475",
+     "provider_manifest_md5": null,
+     "manifest_dataset": "study"
+    },
+    {
+     "path": "DS0001/07927-0001-Data.por",
+     "bytes": 4152546,
+     "sha256": "4acb76976dd525a341533208da482ffa5ee7eaef97933e4bbcedef8bf2305164",
+     "md5": "90ebdedf5e84c65a1bbeef691d73f592",
+     "provider_manifest_md5": "90ebdedf5e84c65a1bbeef691d73f592",
+     "manifest_dataset": "DS0001"
+    },
+    {
+     "path": "DS0002/07927-0002-Data.por",
+     "bytes": 2193723,
+     "sha256": "ec37298adc9bba1a06452815f20ae71f3502158e51f9a3988a1b7b2f0e1f9281",
+     "md5": "bd0af7e4e2f50b4af00a1aef0dd40637",
+     "provider_manifest_md5": "bd0af7e4e2f50b4af00a1aef0dd40637",
+     "manifest_dataset": "DS0002"
+    },
+    {
+     "path": "DS0003/07927-0003-Data.por",
+     "bytes": 2097252,
+     "sha256": "f4227693718c17fb5caf4fae9105dd7dc0baec35e44b0fe91c071fd33d60919e",
+     "md5": "0aaea93b8b4ccc18a045ae3738a6ec09",
+     "provider_manifest_md5": "0aaea93b8b4ccc18a045ae3738a6ec09",
+     "manifest_dataset": "DS0003"
+    },
+    {
+     "path": "DS0004/07927-0004-Data.por",
+     "bytes": 1889568,
+     "sha256": "864f70df9701d599af9b394887e938fe3deb002989cab3af70dce71c0fd382b9",
+     "md5": "66cb9c4c29f81b5a717772850aca22df",
+     "provider_manifest_md5": "66cb9c4c29f81b5a717772850aca22df",
+     "manifest_dataset": "DS0004"
+    },
+    {
+     "path": "DS0005/07927-0005-Data.por",
+     "bytes": 1932417,
+     "sha256": "7f01426b8a5e5550b2bee1a88ae4d56f25b9b6601ad85d503acf15e71a8626c9",
+     "md5": "5294d2028c94ed814d3151be1362201b",
+     "provider_manifest_md5": "5294d2028c94ed814d3151be1362201b",
+     "manifest_dataset": "DS0005"
+    },
+    {
+     "path": "DS0006/07927-0006-Data.por",
+     "bytes": 4044006,
+     "sha256": "8d9b79eeb48ce5a46a224a5eeb78792f5b0ec8518e6236ffd2df7d56bcd02bbb",
+     "md5": "1f03c3904d6176538d052a1e7ad90c68",
+     "provider_manifest_md5": "1f03c3904d6176538d052a1e7ad90c68",
+     "manifest_dataset": "DS0006"
+    },
+    {
+     "path": "TermsOfUse.html",
+     "bytes": 4305,
+     "sha256": "569f75cba3976a972857bd0744c5643cd0990e9df4c5a3027640d3f8981d399c",
+     "md5": "f7ed30ef62befb6a1328398eb11fb083",
+     "provider_manifest_md5": null,
+     "manifest_dataset": null
+    }
+   ],
+   "provider_manifest_components_not_supplied": {
+    "files": [
+     "07927-0001-Data.dta",
+     "07927-0001-Data.txt",
+     "07927-0001-Data.xpt",
+     "07927-0001-Setup.dct",
+     "07927-0001-Setup.do",
+     "07927-0001-Setup.sas",
+     "07927-0001-Setup.sps",
+     "07927-0001-Supplemental_syntax.do",
+     "07927-0001-Supplemental_syntax.sas",
+     "07927-0002-Data.dta",
+     "07927-0002-Data.txt",
+     "07927-0002-Data.xpt",
+     "07927-0002-Setup.dct",
+     "07927-0002-Setup.do",
+     "07927-0002-Setup.sas",
+     "07927-0002-Setup.sps",
+     "07927-0002-Supplemental_syntax.do",
+     "07927-0002-Supplemental_syntax.sas",
+     "07927-0003-Data.dta",
+     "07927-0003-Data.txt",
+     "07927-0003-Data.xpt",
+     "07927-0003-Setup.dct",
+     "07927-0003-Setup.do",
+     "07927-0003-Setup.sas",
+     "07927-0003-Setup.sps",
+     "07927-0003-Supplemental_syntax.do",
+     "07927-0003-Supplemental_syntax.sas",
+     "07927-0004-Data.dta",
+     "07927-0004-Data.txt",
+     "07927-0004-Data.xpt",
+     "07927-0004-Setup.dct",
+     "07927-0004-Setup.do",
+     "07927-0004-Setup.sas",
+     "07927-0004-Setup.sps",
+     "07927-0004-Supplemental_syntax.do",
+     "07927-0004-Supplemental_syntax.sas",
+     "07927-0005-Data.dta",
+     "07927-0005-Data.txt",
+     "07927-0005-Data.xpt",
+     "07927-0005-Setup.dct",
+     "07927-0005-Setup.do",
+     "07927-0005-Setup.sas",
+     "07927-0005-Setup.sps",
+     "07927-0005-Supplemental_syntax.do",
+     "07927-0005-Supplemental_syntax.sas",
+     "07927-0006-Data.dta",
+     "07927-0006-Data.txt",
+     "07927-0006-Data.xpt",
+     "07927-0006-Setup.dct",
+     "07927-0006-Setup.do",
+     "07927-0006-Setup.sas",
+     "07927-0006-Setup.sps",
+     "07927-0006-Supplemental_syntax.do",
+     "07927-0006-Supplemental_syntax.sas",
+     "07927-descriptioncitation.pdf"
+    ],
+    "assessment": "Alternative formats (Stata .dta, ASCII .txt, SAS transport .xpt) and setup/syntax files of the same datasets, plus the description-citation PDF (supplied as HTML). Not needed: the SPSS files carry all variables, value labels and declared missing values, and two independent loaders agree."
+   },
+   "provider_documentation_notes": [
+    "Version history: 2007-05-25 change in how missing values were assigned to V151; 2004-07-30 value labels added, 22 Form 1 variables recoded to correct coding errors, and 14 Form 3 variables (V3319-V3332) removed due to undefined codes.",
+    "Public-use weight V5 is a bracketed version of the original school-specific weight (six grouped values per the codebook); codebook distributions used the original full weights.",
+    "Identifying variables (birth month, school, city, state, student ID) removed; race collapsed (white/non-white/missing) per codebook.",
+    "Codebook is an edited ISR frequency volume; it documents question wording but not missing-data code values."
+   ],
+   "terms": {
+    "file": "TermsOfUse.html (preserved unchanged)",
+    "summary": [
+     "Use the data solely for research or statistical purposes; no re-identification of research subjects.",
+     "Make no use of any identity discovered inadvertently and report such a discovery (to CBHSQ/SAMHDA per the text).",
+     "Cite the recommended bibliographic citation in publications and send citations of published works to ICPSR.",
+     "SAMHSA and ICPSR bear no responsibility for use or interpretation; violations may lead to institutional sanctions.",
+     "The terms text uses SAMHSA/SAMHDA wording although the study is distributed through NAHDAP; it does not expressly address redistribution, so data and derived extracts stay inside this study folder and are never given to readers."
+    ],
+    "accepted_by": "the user, at download; no agent accepted terms"
+   },
+   "missing_components": []
+  },
+  {
+   "source_id": "icpsr09871",
+   "kind": "user-supplied original survey bundle",
+   "provider": "ICPSR (NAHDAP archive), data producer University of Michigan Institute for Social Research, Survey Research Center",
+   "provider_url_from_setup_inventory": "https://www.icpsr.umich.edu/web/NAHDAP/studies/9871",
+   "provider_url_accessed_by_agent": false,
+   "title": "Monitoring the Future: A Continuing Study of the Lifestyles and Values of Youth, 1991 (ICPSR 9871)",
+   "principal_investigators": [
+    "Lloyd D. Johnston",
+    "Jerald G. Bachman",
+    "Patrick M. O'Malley"
+   ],
+   "survey_year": 1991,
+   "grade": 12,
+   "release": {
+    "version": "V1",
+    "version_date": "2006-03-30",
+    "original_release_date": "1993-05-02",
+    "doi": "10.3886/ICPSR09871.v1",
+    "evidence": [
+     "09871-manifest.txt header",
+     "09871-descriptioncitation.html citation and version history",
+     "ICPSR EDITION NUMBER variable value label \"February 1993 release\" in every 1991 file"
+    ]
+   },
+   "path_from_study": "data/supplied/ICPSR_09871",
+   "provenance": "downloaded by the user, a human, by hand; download time not recorded",
+   "download_date_evidence": "TermsOfUse.html states that the user agreed to the ICPSR terms on 2026-10-27 pursuant to the download of study 9871; time of day and file-level download times are not recorded.",
+   "setup_copy_time_utc": "2026-10-28T01:48:50Z",
+   "validation_time_utc": "2026-10-28T02:17:33Z",
+   "validation": {
+    "files_on_disk": 12,
+    "files_in_setup_inventory": 12,
+    "setup_inventory_sha256_and_size_match_all": true,
+    "data_files": 7,
+    "provider_manifest_md5_match_all_data_files": true,
+    "codebook_md5_match": [
+     "09871-Codebook.pdf"
+    ],
+    "hidden_or_extra_files": [],
+    "dataset_labels": {
+     "DS0001": {
+      "provider_label": "Core Data",
+      "label_in_setup_inventory": "Core Data",
+      "form_id_variable_V3_constant_and_matches": null,
+      "icpsr_part_variable": [
+       "V210"
+      ],
+      "rows_cols_match_manifest": true
+     },
+     "DS0002": {
+      "provider_label": "Form 1 Data",
+      "label_in_setup_inventory": "Form 1 Data",
+      "form_id_variable_V3_constant_and_matches": true,
+      "icpsr_part_variable": [
+       "V1811"
+      ],
+      "rows_cols_match_manifest": true
+     },
+     "DS0003": {
+      "provider_label": "Form 2 Data",
+      "label_in_setup_inventory": "Form 2 Data",
+      "form_id_variable_V3_constant_and_matches": true,
+      "icpsr_part_variable": [
+       "V2502"
+      ],
+      "rows_cols_match_manifest": true
+     },
+     "DS0004": {
+      "provider_label": "Form 3 Data",
+      "label_in_setup_inventory": "Form 3 Data",
+      "form_id_variable_V3_constant_and_matches": true,
+      "icpsr_part_variable": [
+       "V3486"
+      ],
+      "rows_cols_match_manifest": true
+     },
+     "DS0005": {
+      "provider_label": "Form 4 Data",
+      "label_in_setup_inventory": "Form 4 Data",
+      "form_id_variable_V3_constant_and_matches": true,
+      "icpsr_part_variable": [
+       "V4436"
+      ],
+      "rows_cols_match_manifest": true
+     },
+     "DS0006": {
+      "provider_label": "Form 5 Data",
+      "label_in_setup_inventory": "Form 5 Data",
+      "form_id_variable_V3_constant_and_matches": true,
+      "icpsr_part_variable": [
+       "V5491"
+      ],
+      "rows_cols_match_manifest": true
+     },
+     "DS0007": {
+      "provider_label": "Form 6 Data",
+      "label_in_setup_inventory": "Form 6 Data",
+      "form_id_variable_V3_constant_and_matches": true,
+      "icpsr_part_variable": [
+       "V6506"
+      ],
+      "rows_cols_match_manifest": true
+     }
+    },
+    "loader_equivalence_pass": {
+     "1991_DS0001": true,
+     "1991_DS0002": true,
+     "1991_DS0003": true,
+     "1991_DS0004": true,
+     "1991_DS0005": true,
+     "1991_DS0006": true,
+     "1991_DS0007": true
+    },
+    "release_identity": "confirmed from manifest header and description-citation html (title, version, DOI, distributor date)"
+   },
+   "files": [
+    {
+     "path": "09871-Codebook.pdf",
+     "bytes": 2570600,
+     "sha256": "6086dffffe8eb7091eac427863362c24e74255854f14cbfb712fc690eed12656",
+     "md5": "796f90f6c6734413edf2569e4edf2e64",
+     "provider_manifest_md5": "796f90f6c6734413edf2569e4edf2e64",
+     "manifest_dataset": "study"
+    },
+    {
+     "path": "09871-descriptioncitation.html",
+     "bytes": 7521,
+     "sha256": "2db01794784284348d80038657b07da32375812ad65052ab15274d3b485d03e9",
+     "md5": "da16e05186554bc8e4388b39dca50cf9",
+     "provider_manifest_md5": null,
+     "manifest_dataset": null
+    },
+    {
+     "path": "09871-manifest.txt",
+     "bytes": 10656,
+     "sha256": "64cd78f79d8236a4b887828b73af58e694857f47d8588a16063d4dfa4497be20",
+     "md5": "45bf55acb4a0b767ff7e0c78f14ca1f3",
+     "provider_manifest_md5": null,
+     "manifest_dataset": "study"
+    },
+    {
+     "path": "09871-related_literature.txt",
+     "bytes": 129744,
+     "sha256": "02ea38460465fdd9dfd740f0f6211e028baed32d2ee34d3e232de0507b8634bc",
+     "md5": "53415ca67f269051db7a5fc8114444d4",
+     "provider_manifest_md5": null,
+     "manifest_dataset": "study"
+    },
+    {
+     "path": "DS0001/09871-0001-Data.por",
+     "bytes": 3600369,
+     "sha256": "2ff9fa98fc66c6f32f4856a37b1b79dbd4ab25cc08e4be06869568c7c646fd8d",
+     "md5": "e7d7aba9f5b272b1c09355be2dddabcd",
+     "provider_manifest_md5": "e7d7aba9f5b272b1c09355be2dddabcd",
+     "manifest_dataset": "DS0001"
+    },
+    {
+     "path": "DS0002/09871-0002-Data.por",
+     "bytes": 3125466,
+     "sha256": "eb2d7836f486a10614ad825b8b2ced3d64c04fb6e526807009b953f8bf68e309",
+     "md5": "4acefc6e1cc092729384201794d43ea6",
+     "provider_manifest_md5": "4acefc6e1cc092729384201794d43ea6",
+     "manifest_dataset": "DS0002"
+    },
+    {
+     "path": "DS0003/09871-0003-Data.por",
+     "bytes": 1750491,
+     "sha256": "a4e667a8f8153d49719333639cca743d1919fe9022f45113ed3f866626830f10",
+     "md5": "40fe25fc080db5d426dd1f6f44bb6fc0",
+     "provider_manifest_md5": "40fe25fc080db5d426dd1f6f44bb6fc0",
+     "manifest_dataset": "DS0003"
+    },
+    {
+     "path": "DS0004/09871-0004-Data.por",
+     "bytes": 1949913,
+     "sha256": "aeb535b17476b468ba2bbbd7007564d013e569268578ae5134c04438b2480119",
+     "md5": "7e952482e9f56726ad90cafb02fb665e",
+     "provider_manifest_md5": "7e952482e9f56726ad90cafb02fb665e",
+     "manifest_dataset": "DS0004"
+    },
+    {
+     "path": "DS0005/09871-0005-Data.por",
+     "bytes": 1568241,
+     "sha256": "930aa08a388cda67cc8561adab093c1ab30ca70e156146c6da44b9d5abf528cf",
+     "md5": "7b8dbf50a36836ceaff70acfac87d510",
+     "provider_manifest_md5": "7b8dbf50a36836ceaff70acfac87d510",
+     "manifest_dataset": "DS0005"
+    },
+    {
+     "path": "DS0006/09871-0006-Data.por",
+     "bytes": 1726353,
+     "sha256": "b0d8b2874255d443a1ee836046a311e5237982ef030a051e78102d55885e78e7",
+     "md5": "018cad95f5544e028ff9f28aafd2f2cd",
+     "provider_manifest_md5": "018cad95f5544e028ff9f28aafd2f2cd",
+     "manifest_dataset": "DS0006"
+    },
+    {
+     "path": "DS0007/09871-0007-Data.por",
+     "bytes": 2011392,
+     "sha256": "8088a7a7676fd8be05048cd9cf4fbceab78b177f389ed2b9608891f28f474c20",
+     "md5": "e1fcafcba360767b1586634c44673de8",
+     "provider_manifest_md5": "e1fcafcba360767b1586634c44673de8",
+     "manifest_dataset": "DS0007"
+    },
+    {
+     "path": "TermsOfUse.html",
+     "bytes": 4305,
+     "sha256": "6e65e65197d4799a4cc4877efecaa22953772049e2a1b9ded37e24a83954d9eb",
+     "md5": "bab087024d1a169ef30626b76a92c7df",
+     "provider_manifest_md5": null,
+     "manifest_dataset": null
+    }
+   ],
+   "provider_manifest_components_not_supplied": {
+    "files": [
+     "09871-0001-Data.dta",
+     "09871-0001-Data.txt",
+     "09871-0001-Data.xpt",
+     "09871-0001-Setup.dct",
+     "09871-0001-Setup.do",
+     "09871-0001-Setup.sas",
+     "09871-0001-Setup.sps",
+     "09871-0001-Supplemental_syntax.do",
+     "09871-0001-Supplemental_syntax.sas",
+     "09871-0002-Data.dta",
+     "09871-0002-Data.txt",
+     "09871-0002-Data.xpt",
+     "09871-0002-Setup.dct",
+     "09871-0002-Setup.do",
+     "09871-0002-Setup.sas",
+     "09871-0002-Setup.sps",
+     "09871-0002-Supplemental_syntax.do",
+     "09871-0002-Supplemental_syntax.sas",
+     "09871-0003-Data.dta",
+     "09871-0003-Data.txt",
+     "09871-0003-Data.xpt",
+     "09871-0003-Setup.dct",
+     "09871-0003-Setup.do",
+     "09871-0003-Setup.sas",
+     "09871-0003-Setup.sps",
+     "09871-0003-Supplemental_syntax.do",
+     "09871-0003-Supplemental_syntax.sas",
+     "09871-0004-Data.dta",
+     "09871-0004-Data.txt",
+     "09871-0004-Data.xpt",
+     "09871-0004-Setup.dct",
+     "09871-0004-Setup.do",
+     "09871-0004-Setup.sas",
+     "09871-0004-Setup.sps",
+     "09871-0004-Supplemental_syntax.do",
+     "09871-0004-Supplemental_syntax.sas",
+     "09871-0005-Data.dta",
+     "09871-0005-Data.txt",
+     "09871-0005-Data.xpt",
+     "09871-0005-Setup.dct",
+     "09871-0005-Setup.do",
+     "09871-0005-Setup.sas",
+     "09871-0005-Setup.sps",
+     "09871-0005-Supplemental_syntax.do",
+     "09871-0005-Supplemental_syntax.sas",
+     "09871-0006-Data.dta",
+     "09871-0006-Data.txt",
+     "09871-0006-Data.xpt",
+     "09871-0006-Setup.dct",
+     "09871-0006-Setup.do",
+     "09871-0006-Setup.sas",
+     "09871-0006-Setup.sps",
+     "09871-0006-Supplemental_syntax.do",
+     "09871-0006-Supplemental_syntax.sas",
+     "09871-0007-Data.dta",
+     "09871-0007-Data.txt",
+     "09871-0007-Data.xpt",
+     "09871-0007-Setup.dct",
+     "09871-0007-Setup.do",
+     "09871-0007-Setup.sas",
+     "09871-0007-Setup.sps",
+     "09871-0007-Supplemental_syntax.do",
+     "09871-0007-Supplemental_syntax.sas",
+     "09871-descriptioncitation.pdf"
+    ],
+    "assessment": "Alternative formats (Stata .dta, ASCII .txt, SAS transport .xpt) and setup/syntax files of the same datasets, plus the description-citation PDF (supplied as HTML). Not needed: the SPSS files carry all variables, value labels and declared missing values, and two independent loaders agree."
+   },
+   "provider_documentation_notes": [
+    "Public-use weight V5 modified from the original school-varying weight for confidentiality; codebook distributions used the original full weights.",
+    "Codebook file-structure table lists Form 6 (Part 7) with a different variable count and case count than the delivered data file and the manifest; the data file agrees with the manifest. Not relevant to Forms 3-4.",
+    "Codebook states missing-data rules per variable (e.g. \"MISSING 0 OR GE 9\"); SPSS files declare discrete missing values that agree for one-digit items. For V5 the codebook says \"MISSING 0 OR GE 9000\" while the SPSS file declares 0 and 9."
+   ],
+   "terms": {
+    "file": "TermsOfUse.html (preserved unchanged)",
+    "summary": [
+     "Use the data solely for research or statistical purposes; no re-identification of research subjects.",
+     "Make no use of any identity discovered inadvertently and report such a discovery (to CBHSQ/SAMHDA per the text).",
+     "Cite the recommended bibliographic citation in publications and send citations of published works to ICPSR.",
+     "SAMHSA and ICPSR bear no responsibility for use or interpretation; violations may lead to institutional sanctions.",
+     "The terms text uses SAMHSA/SAMHDA wording although the study is distributed through NAHDAP; it does not expressly address redistribution, so data and derived extracts stay inside this study folder and are never given to readers."
+    ],
+    "accepted_by": "the user, at download; no agent accepted terms"
+   },
+   "missing_components": []
+  },
+  {
+   "source_id": "icpsr20022",
+   "kind": "user-supplied original survey bundle",
+   "provider": "ICPSR (NAHDAP archive), data producer University of Michigan Institute for Social Research, Survey Research Center",
+   "provider_url_from_setup_inventory": "https://www.icpsr.umich.edu/web/NAHDAP/studies/20022",
+   "provider_url_accessed_by_agent": false,
+   "title": "Monitoring the Future: A Continuing Study of American Youth (12th-Grade Survey), 2006 (ICPSR 20022)",
+   "principal_investigators": [
+    "Lloyd D. Johnston",
+    "Jerald G. Bachman",
+    "Patrick M. O'Malley",
+    "John E. Schulenberg"
+   ],
+   "survey_year": 2006,
+   "grade": 12,
+   "release": {
+    "version": "V3",
+    "version_date": "2008-09-12",
+    "original_release_date": "2007-10-29",
+    "doi": "10.3886/ICPSR20022.v3",
+    "evidence": [
+     "20022-manifest.txt header",
+     "20022-descriptioncitation.html citation and version history"
+    ]
+   },
+   "path_from_study": "data/supplied/ICPSR_20022",
+   "provenance": "downloaded by the user, a human, by hand; download time not recorded",
+   "download_date_evidence": "TermsOfUse.html states that the user agreed to the ICPSR terms on 2026-10-27 pursuant to the download of study 20022; time of day and file-level download times are not recorded.",
+   "setup_copy_time_utc": "2026-10-28T01:48:50Z",
+   "validation_time_utc": "2026-10-28T02:17:33Z",
+   "validation": {
+    "files_on_disk": 19,
+    "files_in_setup_inventory": 19,
+    "setup_inventory_sha256_and_size_match_all": true,
+    "data_files": 7,
+    "provider_manifest_md5_match_all_data_files": true,
+    "codebook_md5_match": [
+     "20022-User_guide.pdf",
+     "DS0001/20022-0001-Codebook.pdf",
+     "DS0002/20022-0002-Codebook.pdf",
+     "DS0003/20022-0003-Codebook.pdf",
+     "DS0004/20022-0004-Codebook.pdf",
+     "DS0005/20022-0005-Codebook.pdf",
+     "DS0006/20022-0006-Codebook.pdf",
+     "DS0007/20022-0007-Codebook.pdf"
+    ],
+    "hidden_or_extra_files": [],
+    "dataset_labels": {
+     "DS0001": {
+      "provider_label": "Core Data",
+      "label_in_setup_inventory": "Core Data",
+      "form_id_variable_V3_constant_and_matches": null,
+      "icpsr_part_variable": [],
+      "rows_cols_match_manifest": true
+     },
+     "DS0002": {
+      "provider_label": "Form 1 Data",
+      "label_in_setup_inventory": "Form 1 Data",
+      "form_id_variable_V3_constant_and_matches": true,
+      "icpsr_part_variable": [],
+      "rows_cols_match_manifest": true
+     },
+     "DS0003": {
+      "provider_label": "Form 2 Data",
+      "label_in_setup_inventory": "Form 2 Data",
+      "form_id_variable_V3_constant_and_matches": true,
+      "icpsr_part_variable": [],
+      "rows_cols_match_manifest": true
+     },
+     "DS0004": {
+      "provider_label": "Form 3 Data",
+      "label_in_setup_inventory": "Form 3 Data",
+      "form_id_variable_V3_constant_and_matches": true,
+      "icpsr_part_variable": [],
+      "rows_cols_match_manifest": true
+     },
+     "DS0005": {
+      "provider_label": "Form 4 Data",
+      "label_in_setup_inventory": "Form 4 Data",
+      "form_id_variable_V3_constant_and_matches": true,
+      "icpsr_part_variable": [],
+      "rows_cols_match_manifest": true
+     },
+     "DS0006": {
+      "provider_label": "Form 5 Data",
+      "label_in_setup_inventory": "Form 5 Data",
+      "form_id_variable_V3_constant_and_matches": true,
+      "icpsr_part_variable": [],
+      "rows_cols_match_manifest": true
+     },
+     "DS0007": {
+      "provider_label": "Form 6 Data",
+      "label_in_setup_inventory": "Form 6 Data",
+      "form_id_variable_V3_constant_and_matches": true,
+      "icpsr_part_variable": [],
+      "rows_cols_match_manifest": true
+     }
+    },
+    "loader_equivalence_pass": {
+     "2006_DS0001": true,
+     "2006_DS0002": true,
+     "2006_DS0003": true,
+     "2006_DS0004": true,
+     "2006_DS0005": true,
+     "2006_DS0006": true,
+     "2006_DS0007": true
+    },
+    "release_identity": "confirmed from manifest header and description-citation html (title, version, DOI, distributor date)"
+   },
+   "files": [
+    {
+     "path": "20022-User_guide.pdf",
+     "bytes": 4055478,
+     "sha256": "da884e61911165b60d586b072b4e0cc5c2f7794e3e0fb28188e63addfe743db2",
+     "md5": "691e5f4b2917fcc4de9ffe1086111e94",
+     "provider_manifest_md5": "691e5f4b2917fcc4de9ffe1086111e94",
+     "manifest_dataset": "study"
+    },
+    {
+     "path": "20022-descriptioncitation.html",
+     "bytes": 9075,
+     "sha256": "2e6f9b2b2adb6190eef9cf896efb6945ec588c643dd2508de34f29bd8dd8fbad",
+     "md5": "42c5b07e4fb1c3e997974b769dee9e63",
+     "provider_manifest_md5": null,
+     "manifest_dataset": null
+    },
+    {
+     "path": "20022-manifest.txt",
+     "bytes": 11992,
+     "sha256": "ad67f3f7d8491eabab180792e30bf3ae807a09d1e0db144bd8fcfe33c6be1c13",
+     "md5": "ef1e54e93d11f18f594313a1126a3941",
+     "provider_manifest_md5": null,
+     "manifest_dataset": "study"
+    },
+    {
+     "path": "20022-related_literature.txt",
+     "bytes": 107333,
+     "sha256": "061ceb1f200d72a1d6e03efa0dcb4cb29ffe5be484e710513b96abe1c67817fc",
+     "md5": "6165de021f681f7cdde1699be63497cf",
+     "provider_manifest_md5": null,
+     "manifest_dataset": "study"
+    },
+    {
+     "path": "DS0001/20022-0001-Codebook.pdf",
+     "bytes": 809331,
+     "sha256": "fb1e835b1547949ea3c19c0638b363410a1d43bddb4ca9ce7de3717ca72bc448",
+     "md5": "7500774bb926f6c82b1202806852ea14",
+     "provider_manifest_md5": "7500774bb926f6c82b1202806852ea14",
+     "manifest_dataset": "DS0001"
+    },
+    {
+     "path": "DS0001/20022-0001-Data.sav",
+     "bytes": 3263073,
+     "sha256": "7c04cf470d20c21fb896a9ef25ca42dd1458bcd23e6477ef12d0822e38559680",
+     "md5": "e050d4cd7c5739170c71be2e7df2f8f2",
+     "provider_manifest_md5": "e050d4cd7c5739170c71be2e7df2f8f2",
+     "manifest_dataset": "DS0001"
+    },
+    {
+     "path": "DS0002/20022-0002-Codebook.pdf",
+     "bytes": 5786303,
+     "sha256": "8ed19999bff855b06a9fcd637a802f12a30915c63cd1b5a3ba800dac5745801d",
+     "md5": "cd2dd16103dd2a833d3d06471535f2b5",
+     "provider_manifest_md5": "cd2dd16103dd2a833d3d06471535f2b5",
+     "manifest_dataset": "DS0002"
+    },
+    {
+     "path": "DS0002/20022-0002-Data.sav",
+     "bytes": 1751509,
+     "sha256": "8d979b940eba3cbe8e2f2e99d88020080af2f84ef712d900a05e39de31a4c95f",
+     "md5": "f7a0a0ed8bfb751ae2884ff03b835488",
+     "provider_manifest_md5": "f7a0a0ed8bfb751ae2884ff03b835488",
+     "manifest_dataset": "DS0002"
+    },
+    {
+     "path": "DS0003/20022-0003-Codebook.pdf",
+     "bytes": 1012683,
+     "sha256": "956705f107f656eb651c9b99683bde7ee78726c0a1e91ffeea7c00f84f4373b9",
+     "md5": "c7e55300577fba5036b9eff2bddada49",
+     "provider_manifest_md5": "c7e55300577fba5036b9eff2bddada49",
+     "manifest_dataset": "DS0003"
+    },
+    {
+     "path": "DS0003/20022-0003-Data.sav",
+     "bytes": 976645,
+     "sha256": "a3ad90ec07fd23cac321b9fc617e54612b64dad55388516e6bc31005e7a22cd7",
+     "md5": "9c32125ce244a079e0ef21d2433e36f9",
+     "provider_manifest_md5": "9c32125ce244a079e0ef21d2433e36f9",
+     "manifest_dataset": "DS0003"
+    },
+    {
+     "path": "DS0004/20022-0004-Codebook.pdf",
+     "bytes": 1005345,
+     "sha256": "d1970d10cb17855465c2150c2c478890e4cff8388f9ab3598a2797c5472a8efd",
+     "md5": "265fc126b3bd929e516b8ab9f5f7d4fd",
+     "provider_manifest_md5": "265fc126b3bd929e516b8ab9f5f7d4fd",
+     "manifest_dataset": "DS0004"
+    },
+    {
+     "path": "DS0004/20022-0004-Data.sav",
+     "bytes": 1038601,
+     "sha256": "ca1aa3537f59e2d7e32ea3d88a6f2a1eefcb2104bc00fd570261b4f179cc477d",
+     "md5": "c71c0fdf57d9423285d38159efba6e3b",
+     "provider_manifest_md5": "c71c0fdf57d9423285d38159efba6e3b",
+     "manifest_dataset": "DS0004"
+    },
+    {
+     "path": "DS0005/20022-0005-Codebook.pdf",
+     "bytes": 898296,
+     "sha256": "92c9918dfd51f0bb23d18b17defc847602836f8d62602884e0774ec9e5a6efa8",
+     "md5": "d44271d5390c12b3e7d35417cae1b89e",
+     "provider_manifest_md5": "d44271d5390c12b3e7d35417cae1b89e",
+     "manifest_dataset": "DS0005"
+    },
+    {
+     "path": "DS0005/20022-0005-Data.sav",
+     "bytes": 809059,
+     "sha256": "8be19c9c5a430d0cb38eaa5ad3b78370b099d46b43d81296070c3e0396923ac2",
+     "md5": "06686a228c80f83b0851a2a80a266a9e",
+     "provider_manifest_md5": "06686a228c80f83b0851a2a80a266a9e",
+     "manifest_dataset": "DS0005"
+    },
+    {
+     "path": "DS0006/20022-0006-Codebook.pdf",
+     "bytes": 1383701,
+     "sha256": "c58bebef91055c80d8f685d0d548abbda22914490755fdc5bda6787c5746ba94",
+     "md5": "c3db3a21269632e8d3f0191f7052e610",
+     "provider_manifest_md5": "c3db3a21269632e8d3f0191f7052e610",
+     "manifest_dataset": "DS0006"
+    },
+    {
+     "path": "DS0006/20022-0006-Data.sav",
+     "bytes": 968477,
+     "sha256": "c0a7942c75e0f28f22706ee1a927e756c4f9c52cbf8f43ab64b47e34aa17f87c",
+     "md5": "02a74bbd4e7bd9abc5760ffaca2e26d7",
+     "provider_manifest_md5": "02a74bbd4e7bd9abc5760ffaca2e26d7",
+     "manifest_dataset": "DS0006"
+    },
+    {
+     "path": "DS0007/20022-0007-Codebook.pdf",
+     "bytes": 989245,
+     "sha256": "419a65186746d4b83d6969466e8fb748f7ccaa578d2ec0caf95b122f3d3825db",
+     "md5": "67eda400a0e555ab6b34fee675ae1042",
+     "provider_manifest_md5": "67eda400a0e555ab6b34fee675ae1042",
+     "manifest_dataset": "DS0007"
+    },
+    {
+     "path": "DS0007/20022-0007-Data.sav",
+     "bytes": 984851,
+     "sha256": "fe90e66bffcc8dfb2a2ae5f537524de11b3a4feeeef9de0c20c81799235dd95e",
+     "md5": "eb0bd606005cd0505ac94a26f2ce371b",
+     "provider_manifest_md5": "eb0bd606005cd0505ac94a26f2ce371b",
+     "manifest_dataset": "DS0007"
+    },
+    {
+     "path": "TermsOfUse.html",
+     "bytes": 4306,
+     "sha256": "e68dfbe2cb7c5dfa99ecebbae107a1ca57fba4e1c672149c6689ca7ee5f36f0f",
+     "md5": "fe5ffe2b2c71a66ba8c255315914af05",
+     "provider_manifest_md5": null,
+     "manifest_dataset": null
+    }
+   ],
+   "provider_manifest_components_not_supplied": {
+    "files": [
+     "20022-0001-Data.dta",
+     "20022-0001-Data.stc",
+     "20022-0001-Data.tsv",
+     "20022-0001-Data.txt",
+     "20022-0001-Setup.dct",
+     "20022-0001-Setup.do",
+     "20022-0001-Setup.sas",
+     "20022-0001-Setup.sps",
+     "20022-0001-Supplemental_syntax.do",
+     "20022-0001-Supplemental_syntax.sas",
+     "20022-0002-Data.dta",
+     "20022-0002-Data.stc",
+     "20022-0002-Data.tsv",
+     "20022-0002-Data.txt",
+     "20022-0002-Setup.dct",
+     "20022-0002-Setup.do",
+     "20022-0002-Setup.sas",
+     "20022-0002-Setup.sps",
+     "20022-0002-Supplemental_syntax.do",
+     "20022-0002-Supplemental_syntax.sas",
+     "20022-0003-Data.dta",
+     "20022-0003-Data.stc",
+     "20022-0003-Data.tsv",
+     "20022-0003-Data.txt",
+     "20022-0003-Setup.dct",
+     "20022-0003-Setup.do",
+     "20022-0003-Setup.sas",
+     "20022-0003-Setup.sps",
+     "20022-0003-Supplemental_syntax.do",
+     "20022-0003-Supplemental_syntax.sas",
+     "20022-0004-Data.dta",
+     "20022-0004-Data.stc",
+     "20022-0004-Data.tsv",
+     "20022-0004-Data.txt",
+     "20022-0004-Setup.dct",
+     "20022-0004-Setup.do",
+     "20022-0004-Setup.sas",
+     "20022-0004-Setup.sps",
+     "20022-0004-Supplemental_syntax.do",
+     "20022-0004-Supplemental_syntax.sas",
+     "20022-0005-Data.dta",
+     "20022-0005-Data.stc",
+     "20022-0005-Data.tsv",
+     "20022-0005-Data.txt",
+     "20022-0005-Setup.dct",
+     "20022-0005-Setup.do",
+     "20022-0005-Setup.sas",
+     "20022-0005-Setup.sps",
+     "20022-0005-Supplemental_syntax.do",
+     "20022-0005-Supplemental_syntax.sas",
+     "20022-0006-Data.dta",
+     "20022-0006-Data.stc",
+     "20022-0006-Data.tsv",
+     "20022-0006-Data.txt",
+     "20022-0006-Setup.dct",
+     "20022-0006-Setup.do",
+     "20022-0006-Setup.sas",
+     "20022-0006-Setup.sps",
+     "20022-0006-Supplemental_syntax.do",
+     "20022-0006-Supplemental_syntax.sas",
+     "20022-0007-Data.dta",
+     "20022-0007-Data.stc",
+     "20022-0007-Data.tsv",
+     "20022-0007-Data.txt",
+     "20022-0007-Setup.dct",
+     "20022-0007-Setup.do",
+     "20022-0007-Setup.sas",
+     "20022-0007-Setup.sps",
+     "20022-0007-Supplemental_syntax.do",
+     "20022-0007-Supplemental_syntax.sas",
+     "20022-descriptioncitation.pdf"
+    ],
+    "assessment": "Alternative formats (Stata .dta, ASCII .txt, SAS transport .xpt) and setup/syntax files of the same datasets, plus the description-citation PDF (supplied as HTML). Not needed: the SPSS files carry all variables, value labels and declared missing values, and two independent loaders agree."
+   },
+   "provider_documentation_notes": [
+    "Version history: 2008-09-12 new PI data for Form 5 V5530-V5532; 2007-12-13 minor question-text changes for Form 3 V3342, V3359, V3376 and Form 4 V4223 (none are the Form 3 leisure/work statements or the Form 4 job-importance battery).",
+    "ICPSR standardized missing values to -9 and declared them as SPSS user-missing.",
+    "Some variables from Western-region schools were set to -9 for confidentiality (listed per form in the codebooks; none of the Form 3 A05/A06 or Form 4 A08 items are listed).",
+    "Public-use weight V5 modified from the original version for confidentiality.",
+    "User guide contains the MTF grade 12 cross-time question index 1976-2006 by item reference number."
+   ],
+   "terms": {
+    "file": "TermsOfUse.html (preserved unchanged)",
+    "summary": [
+     "Use the data solely for research or statistical purposes; no re-identification of research subjects.",
+     "Make no use of any identity discovered inadvertently and report such a discovery (to CBHSQ/SAMHDA per the text).",
+     "Cite the recommended bibliographic citation in publications and send citations of published works to ICPSR.",
+     "SAMHSA and ICPSR bear no responsibility for use or interpretation; violations may lead to institutional sanctions.",
+     "The terms text uses SAMHSA/SAMHDA wording although the study is distributed through NAHDAP; it does not expressly address redistribution, so data and derived extracts stay inside this study folder and are never given to readers."
+    ],
+    "accepted_by": "the user, at download; no agent accepted terms"
+   },
+   "missing_components": []
+  }
+ ],
+ "newly_acquired_sources": [],
+ "newly_acquired_note": "No other public source is required: the article uses only MTF 12th-grade surveys for 1976, 1991 and 2006 (Forms 3 and 4), all present in the supplied bundles. No network access to any provider was made by this role.",
+ "source_requirements": "registry/source_requirements.json",
+ "derived": {
+  "extracts": {
+   "dir": "data/derived/extracts",
+   "files": [
+    {
+     "path": "data/derived/extracts/1976_DS0001.csv.gz",
+     "sha256": "95cc2eded0be09c03693c071a4c8d6ea82eda226e2bebe5a809a125f9d58940b",
+     "source": "data/supplied/ICPSR_07927/DS0001/07927-0001-Data.por",
+     "source_sha256": "4acb76976dd525a341533208da482ffa5ee7eaef97933e4bbcedef8bf2305164"
+    },
+    {
+     "path": "data/derived/extracts/1976_DS0002.csv.gz",
+     "sha256": "a0cfbffa50f65790210bd9bfb28aa12148f3312b90cf4a3ceb2891d0f464f25f",
+     "source": "data/supplied/ICPSR_07927/DS0002/07927-0002-Data.por",
+     "source_sha256": "ec37298adc9bba1a06452815f20ae71f3502158e51f9a3988a1b7b2f0e1f9281"
+    },
+    {
+     "path": "data/derived/extracts/1976_DS0003.csv.gz",
+     "sha256": "cb74b1087b2b84a457946563bca92d059e6585ea0ca24d0a2a8f6605e380f032",
+     "source": "data/supplied/ICPSR_07927/DS0003/07927-0003-Data.por",
+     "source_sha256": "f4227693718c17fb5caf4fae9105dd7dc0baec35e44b0fe91c071fd33d60919e"
+    },
+    {
+     "path": "data/derived/extracts/1976_DS0004.csv.gz",
+     "sha256": "dadeb62624cad15f69a261f77664ccd66bd628adc1be567d3bd8343e64eb639a",
+     "source": "data/supplied/ICPSR_07927/DS0004/07927-0004-Data.por",
+     "source_sha256": "864f70df9701d599af9b394887e938fe3deb002989cab3af70dce71c0fd382b9"
+    },
+    {
+     "path": "data/derived/extracts/1976_DS0005.csv.gz",
+     "sha256": "9a9bb180bed216e473c3049691ad4bf2677fb4adc1e96b57dc44f687bebd7b3b",
+     "source": "data/supplied/ICPSR_07927/DS0005/07927-0005-Data.por",
+     "source_sha256": "7f01426b8a5e5550b2bee1a88ae4d56f25b9b6601ad85d503acf15e71a8626c9"
+    },
+    {
+     "path": "data/derived/extracts/1976_DS0006.csv.gz",
+     "sha256": "4d96e3d7048ed91b7c53febd65bed2ec09c8f8763bc09e5d38a054b813c49849",
+     "source": "data/supplied/ICPSR_07927/DS0006/07927-0006-Data.por",
+     "source_sha256": "8d9b79eeb48ce5a46a224a5eeb78792f5b0ec8518e6236ffd2df7d56bcd02bbb"
+    },
+    {
+     "path": "data/derived/extracts/1991_DS0001.csv.gz",
+     "sha256": "f1e18fca3f44a2e58d6d77a72b4090c7b6f504be93cecc7af13b0f736595fe1e",
+     "source": "data/supplied/ICPSR_09871/DS0001/09871-0001-Data.por",
+     "source_sha256": "2ff9fa98fc66c6f32f4856a37b1b79dbd4ab25cc08e4be06869568c7c646fd8d"
+    },
+    {
+     "path": "data/derived/extracts/1991_DS0002.csv.gz",
+     "sha256": "58032139c84986aef8571469cea49e5fb1c721be28676dae6dfee84e8fdd05eb",
+     "source": "data/supplied/ICPSR_09871/DS0002/09871-0002-Data.por",
+     "source_sha256": "eb2d7836f486a10614ad825b8b2ced3d64c04fb6e526807009b953f8bf68e309"
+    },
+    {
+     "path": "data/derived/extracts/1991_DS0003.csv.gz",
+     "sha256": "383a7d99caa75644c7ade359e9ff02f9a99a7dc8be22be7096c65ae1205366a0",
+     "source": "data/supplied/ICPSR_09871/DS0003/09871-0003-Data.por",
+     "source_sha256": "a4e667a8f8153d49719333639cca743d1919fe9022f45113ed3f866626830f10"
+    },
+    {
+     "path": "data/derived/extracts/1991_DS0004.csv.gz",
+     "sha256": "c2fea10e349770137a272380f6cc2d51bad0f11968bb3d15a473516cbd9ab923",
+     "source": "data/supplied/ICPSR_09871/DS0004/09871-0004-Data.por",
+     "source_sha256": "aeb535b17476b468ba2bbbd7007564d013e569268578ae5134c04438b2480119"
+    },
+    {
+     "path": "data/derived/extracts/1991_DS0005.csv.gz",
+     "sha256": "87ff608e85c166bd19733b61f279ae2c40715b62199157c23ce1d35f3ae26a4f",
+     "source": "data/supplied/ICPSR_09871/DS0005/09871-0005-Data.por",
+     "source_sha256": "930aa08a388cda67cc8561adab093c1ab30ca70e156146c6da44b9d5abf528cf"
+    },
+    {
+     "path": "data/derived/extracts/1991_DS0006.csv.gz",
+     "sha256": "a50d57f454e4e5c579eb246a8468e654161ed4b131670950117575b1c4f0bc57",
+     "source": "data/supplied/ICPSR_09871/DS0006/09871-0006-Data.por",
+     "source_sha256": "b0d8b2874255d443a1ee836046a311e5237982ef030a051e78102d55885e78e7"
+    },
+    {
+     "path": "data/derived/extracts/1991_DS0007.csv.gz",
+     "sha256": "dfbc62de5ba806eef87d5a5b26d5790ba581c9acb950dc00580e31b493b58e44",
+     "source": "data/supplied/ICPSR_09871/DS0007/09871-0007-Data.por",
+     "source_sha256": "8088a7a7676fd8be05048cd9cf4fbceab78b177f389ed2b9608891f28f474c20"
+    },
+    {
+     "path": "data/derived/extracts/2006_DS0001.csv.gz",
+     "sha256": "c0e8eebd06abd79a1c54d1fc9f016246387db9d8c3ff94a7f44099fbea5e0376",
+     "source": "data/supplied/ICPSR_20022/DS0001/20022-0001-Data.sav",
+     "source_sha256": "7c04cf470d20c21fb896a9ef25ca42dd1458bcd23e6477ef12d0822e38559680"
+    },
+    {
+     "path": "data/derived/extracts/2006_DS0002.csv.gz",
+     "sha256": "f681a86d78f1221f9e8cbd5aed4e86bb97306c9f0ce7b4ab8e72b8ab5e3253cb",
+     "source": "data/supplied/ICPSR_20022/DS0002/20022-0002-Data.sav",
+     "source_sha256": "8d979b940eba3cbe8e2f2e99d88020080af2f84ef712d900a05e39de31a4c95f"
+    },
+    {
+     "path": "data/derived/extracts/2006_DS0003.csv.gz",
+     "sha256": "2b4f6132ee69d410e5b7c3011b01ea70adc2ac416e13b12a44f6fd3877e20468",
+     "source": "data/supplied/ICPSR_20022/DS0003/20022-0003-Data.sav",
+     "source_sha256": "a3ad90ec07fd23cac321b9fc617e54612b64dad55388516e6bc31005e7a22cd7"
+    },
+    {
+     "path": "data/derived/extracts/2006_DS0004.csv.gz",
+     "sha256": "f9eae8b40e2415cc82e9652af31687c1f02dacc05e7f695307e26e6e98bcae51",
+     "source": "data/supplied/ICPSR_20022/DS0004/20022-0004-Data.sav",
+     "source_sha256": "ca1aa3537f59e2d7e32ea3d88a6f2a1eefcb2104bc00fd570261b4f179cc477d"
+    },
+    {
+     "path": "data/derived/extracts/2006_DS0005.csv.gz",
+     "sha256": "427e20b074d73cd0941d032593c2a167b3ef5f9e36c6eb92f60ca213f11d4218",
+     "source": "data/supplied/ICPSR_20022/DS0005/20022-0005-Data.sav",
+     "source_sha256": "8be19c9c5a430d0cb38eaa5ad3b78370b099d46b43d81296070c3e0396923ac2"
+    },
+    {
+     "path": "data/derived/extracts/2006_DS0006.csv.gz",
+     "sha256": "2e03640ff223f80c259a1080699743ea08f15f11be77370ae1fecec45cc6166d",
+     "source": "data/supplied/ICPSR_20022/DS0006/20022-0006-Data.sav",
+     "source_sha256": "c0a7942c75e0f28f22706ee1a927e756c4f9c52cbf8f43ab64b47e34aa17f87c"
+    },
+    {
+     "path": "data/derived/extracts/2006_DS0007.csv.gz",
+     "sha256": "80d418b5a8b4c0ed36f5611f311786c13a954847e365fff95cbd5e27558b37ad",
+     "source": "data/supplied/ICPSR_20022/DS0007/20022-0007-Data.sav",
+     "source_sha256": "fe90e66bffcc8dfb2a2ae5f537524de11b3a4feeeef9de0c20c81799235dd95e"
+    }
+   ],
+   "content": "every row and variable of every supplied SPSS file; raw numeric codes; declared user-missing codes retained; system-missing as empty field"
+  },
+  "dictionaries": {
+   "dir": "data/derived/dictionaries",
+   "summary_free_check": "registry/summary_free_check.json"
+  },
+  "source_description": "data/derived/dictionaries/source_description.md"
+ },
+ "checks": {
+  "loader_check": "registry/loader_check.json",
+  "structure_check": "registry/structure_check.json",
+  "summary_free_check": "registry/summary_free_check.json",
+  "coverage_internal": "registry/coverage_internal.json (coordinator-only)",
+  "file_validation": "registry/work/file_validation.json"
+ },
+ "cross_year_findings": {
+  "form_mapping": {
+   "1976": {
+    "Form 3": "DS0003",
+    "Form 4": "DS0004",
+    "core": "DS0006"
+   },
+   "1991": {
+    "Form 3": "DS0004",
+    "Form 4": "DS0005",
+    "core": "DS0001"
+   },
+   "2006": {
+    "Form 3": "DS0004",
+    "Form 4": "DS0005",
+    "core": "DS0001"
+   }
+  },
+  "form_mapping_evidence": [
+   "ICPSR manifest dataset labels",
+   "description-citation files",
+   "V3 (FORM ID) constant and equal to the form number in each form file",
+   "1991 ICPSR PART NUMBER value labels (Part 4: Form 3; Part 5: Form 4)",
+   "1976 V9002 part number",
+   "2006 per-dataset codebook titles"
+  ],
+  "work_items_present_all_years": true,
+  "work_items": "Form 3: V3222-V3226 (A05A-E, five agree/disagree categories) and V3227 (A06, two categories); Form 4: V4225-V4247 (A08A-W, four importance categories). Same variable names, question codes and MTF item reference numbers (08050-08100; 10090-10310) in 1976, 1991 and 2006. The A06/A14 \"would you want to work\" item (08100) also appears in Form 4 as V4263 and, per the cross-time index, in Form 5.",
+  "wording_and_scale_comparability": "Question wording and response-category wording agree across the three codebooks apart from capitalisation and abbreviated SPSS labels; the 2006 cross-time index flags no wording, response-category or renumbering change for these items between 1976 and 2006. Missing-value coding differs by release (1976/1991: 0 and 9-or-higher declared missing, blanks system-missing; 2006: -9).",
+  "school_or_psu_identifiers": "absent in all public files; only region (V13), self-representing PSU flag (V16) and SMSA/MSA flag (V17) describe the sampling location",
+  "weights": "V5 SAMPLING WEIGHT in every file (public-use modified/bracketed version)",
+  "respondent_ids": "V4 serial number unique within each file; form-file serials are disjoint across forms and together equal the core-file serials in each year; 2006 files also carry CASEID (sequential case number within file)"
+ },
+ "blocking_issues": []
+}

@@ -1,0 +1,113 @@
+"sample_hash","U1","U2","U3","U4","U5","U6","step","description","rows"
+"f2045edd66da3f30ba25f2822a9ca4a287c0023373cc6aa711d67f3ef6d26a0b",0,0,0,0,0,0,"S1","stack six season files, keep season_type == REG",266592
+"f2045edd66da3f30ba25f2822a9ca4a287c0023373cc6aa711d67f3ef6d26a0b",0,0,0,0,0,0,"S2","keep down == 4",24282
+"f2045edd66da3f30ba25f2822a9ca4a287c0023373cc6aa711d67f3ef6d26a0b",0,0,0,0,0,0,"S3","keep play_type in {punt, field_goal, run, pass}",22909
+"f2045edd66da3f30ba25f2822a9ca4a287c0023373cc6aa711d67f3ef6d26a0b",0,0,0,0,0,0,"S4","keep qtr in {1,2,3,4}",22766
+"f2045edd66da3f30ba25f2822a9ca4a287c0023373cc6aa711d67f3ef6d26a0b",0,0,0,0,0,0,"S5","keep game_seconds_remaining > 120",21540
+"f2045edd66da3f30ba25f2822a9ca4a287c0023373cc6aa711d67f3ef6d26a0b",0,0,0,0,0,0,"S6","drop empty or missing posteam/defteam",21540
+"f2045edd66da3f30ba25f2822a9ca4a287c0023373cc6aa711d67f3ef6d26a0b",0,0,0,0,0,0,"S7","merge games (game_id) and alignment (offence and defence); all rows matched",21540
+"f2045edd66da3f30ba25f2822a9ca4a287c0023373cc6aa711d67f3ef6d26a0b",0,0,0,0,0,0,"S8","common complete cases over the variables of M1, M2 and M3",21540
+"f2045edd66da3f30ba25f2822a9ca4a287c0023373cc6aa711d67f3ef6d26a0b",0,0,0,0,0,0,"S8_dropped","rows dropped at S8 (missing value in a model variable)",0
+"f2045edd66da3f30ba25f2822a9ca4a287c0023373cc6aa711d67f3ef6d26a0b",0,0,0,0,0,0,"S8_M1_specific","rows M1 would use under model-specific complete cases",21540
+"f2045edd66da3f30ba25f2822a9ca4a287c0023373cc6aa711d67f3ef6d26a0b",0,0,0,0,0,0,"S8_M2_specific","rows M2 would use under model-specific complete cases",21540
+"f2045edd66da3f30ba25f2822a9ca4a287c0023373cc6aa711d67f3ef6d26a0b",0,0,0,0,0,0,"S8_M3_specific","rows M3 would use under model-specific complete cases",21540
+"f2045edd66da3f30ba25f2822a9ca4a287c0023373cc6aa711d67f3ef6d26a0b",0,0,0,0,0,0,"S8_flag","model-specific complete-case counts equal the common sample (no flag)",0
+"f2045edd66da3f30ba25f2822a9ca4a287c0023373cc6aa711d67f3ef6d26a0b",0,0,0,0,0,0,"check_same_division","rows where same_division (alignment) disagrees with games.div_game",0
+"da56119d47b7baa128cd97a289c90633c421256289b42ffc0171b82d2c832559",1,0,0,0,0,0,"S1","stack six season files, keep season_type == REG",266592
+"da56119d47b7baa128cd97a289c90633c421256289b42ffc0171b82d2c832559",1,0,0,0,0,0,"S2","keep down == 4",24282
+"da56119d47b7baa128cd97a289c90633c421256289b42ffc0171b82d2c832559",1,0,0,0,0,0,"S3","keep play_type in {punt, field_goal, run, pass}; S3b (U1=1): plus no_play rows classified by punt_attempt/field_goal_attempt (non-attempt) or pass/rush (attempt); unclassifiable no_play rows dropped",23024
+"da56119d47b7baa128cd97a289c90633c421256289b42ffc0171b82d2c832559",1,0,0,0,0,0,"S4","keep qtr in {1,2,3,4}",22880
+"da56119d47b7baa128cd97a289c90633c421256289b42ffc0171b82d2c832559",1,0,0,0,0,0,"S5","keep game_seconds_remaining > 120",21640
+"da56119d47b7baa128cd97a289c90633c421256289b42ffc0171b82d2c832559",1,0,0,0,0,0,"S6","drop empty or missing posteam/defteam",21640
+"da56119d47b7baa128cd97a289c90633c421256289b42ffc0171b82d2c832559",1,0,0,0,0,0,"S7","merge games (game_id) and alignment (offence and defence); all rows matched",21640
+"da56119d47b7baa128cd97a289c90633c421256289b42ffc0171b82d2c832559",1,0,0,0,0,0,"S8","common complete cases over the variables of M1, M2 and M3",21640
+"da56119d47b7baa128cd97a289c90633c421256289b42ffc0171b82d2c832559",1,0,0,0,0,0,"S8_dropped","rows dropped at S8 (missing value in a model variable)",0
+"da56119d47b7baa128cd97a289c90633c421256289b42ffc0171b82d2c832559",1,0,0,0,0,0,"S8_M1_specific","rows M1 would use under model-specific complete cases",21640
+"da56119d47b7baa128cd97a289c90633c421256289b42ffc0171b82d2c832559",1,0,0,0,0,0,"S8_M2_specific","rows M2 would use under model-specific complete cases",21640
+"da56119d47b7baa128cd97a289c90633c421256289b42ffc0171b82d2c832559",1,0,0,0,0,0,"S8_M3_specific","rows M3 would use under model-specific complete cases",21640
+"da56119d47b7baa128cd97a289c90633c421256289b42ffc0171b82d2c832559",1,0,0,0,0,0,"S8_flag","model-specific complete-case counts equal the common sample (no flag)",0
+"da56119d47b7baa128cd97a289c90633c421256289b42ffc0171b82d2c832559",1,0,0,0,0,0,"check_same_division","rows where same_division (alignment) disagrees with games.div_game",0
+"2fb7b4fdaf91b19c5b93084ea0abcbf4bca37af12fcee33372d3cf7dca464246",0,1,0,0,0,0,"S1","stack six season files, keep season_type == REG",266592
+"2fb7b4fdaf91b19c5b93084ea0abcbf4bca37af12fcee33372d3cf7dca464246",0,1,0,0,0,0,"S2","keep down == 4",24282
+"2fb7b4fdaf91b19c5b93084ea0abcbf4bca37af12fcee33372d3cf7dca464246",0,1,0,0,0,0,"S3","keep play_type in {punt, field_goal, run, pass}; S3c (U2=1): plus qb_kneel/qb_spike as non-attempt",22919
+"2fb7b4fdaf91b19c5b93084ea0abcbf4bca37af12fcee33372d3cf7dca464246",0,1,0,0,0,0,"S4","keep qtr in {1,2,3,4}",22776
+"2fb7b4fdaf91b19c5b93084ea0abcbf4bca37af12fcee33372d3cf7dca464246",0,1,0,0,0,0,"S5","keep game_seconds_remaining > 120",21541
+"2fb7b4fdaf91b19c5b93084ea0abcbf4bca37af12fcee33372d3cf7dca464246",0,1,0,0,0,0,"S6","drop empty or missing posteam/defteam",21541
+"2fb7b4fdaf91b19c5b93084ea0abcbf4bca37af12fcee33372d3cf7dca464246",0,1,0,0,0,0,"S7","merge games (game_id) and alignment (offence and defence); all rows matched",21541
+"2fb7b4fdaf91b19c5b93084ea0abcbf4bca37af12fcee33372d3cf7dca464246",0,1,0,0,0,0,"S8","common complete cases over the variables of M1, M2 and M3",21541
+"2fb7b4fdaf91b19c5b93084ea0abcbf4bca37af12fcee33372d3cf7dca464246",0,1,0,0,0,0,"S8_dropped","rows dropped at S8 (missing value in a model variable)",0
+"2fb7b4fdaf91b19c5b93084ea0abcbf4bca37af12fcee33372d3cf7dca464246",0,1,0,0,0,0,"S8_M1_specific","rows M1 would use under model-specific complete cases",21541
+"2fb7b4fdaf91b19c5b93084ea0abcbf4bca37af12fcee33372d3cf7dca464246",0,1,0,0,0,0,"S8_M2_specific","rows M2 would use under model-specific complete cases",21541
+"2fb7b4fdaf91b19c5b93084ea0abcbf4bca37af12fcee33372d3cf7dca464246",0,1,0,0,0,0,"S8_M3_specific","rows M3 would use under model-specific complete cases",21541
+"2fb7b4fdaf91b19c5b93084ea0abcbf4bca37af12fcee33372d3cf7dca464246",0,1,0,0,0,0,"S8_flag","model-specific complete-case counts equal the common sample (no flag)",0
+"2fb7b4fdaf91b19c5b93084ea0abcbf4bca37af12fcee33372d3cf7dca464246",0,1,0,0,0,0,"check_same_division","rows where same_division (alignment) disagrees with games.div_game",0
+"aef73228fb9df6fc9720b260a5b0fa3e44d419112d5433cbedebe8487170a7d2",1,1,0,0,0,0,"S1","stack six season files, keep season_type == REG",266592
+"aef73228fb9df6fc9720b260a5b0fa3e44d419112d5433cbedebe8487170a7d2",1,1,0,0,0,0,"S2","keep down == 4",24282
+"aef73228fb9df6fc9720b260a5b0fa3e44d419112d5433cbedebe8487170a7d2",1,1,0,0,0,0,"S3","keep play_type in {punt, field_goal, run, pass}; S3b (U1=1): plus no_play rows classified by punt_attempt/field_goal_attempt (non-attempt) or pass/rush (attempt); unclassifiable no_play rows dropped; S3c (U2=1): plus qb_kneel/qb_spike as non-attempt",23034
+"aef73228fb9df6fc9720b260a5b0fa3e44d419112d5433cbedebe8487170a7d2",1,1,0,0,0,0,"S4","keep qtr in {1,2,3,4}",22890
+"aef73228fb9df6fc9720b260a5b0fa3e44d419112d5433cbedebe8487170a7d2",1,1,0,0,0,0,"S5","keep game_seconds_remaining > 120",21641
+"aef73228fb9df6fc9720b260a5b0fa3e44d419112d5433cbedebe8487170a7d2",1,1,0,0,0,0,"S6","drop empty or missing posteam/defteam",21641
+"aef73228fb9df6fc9720b260a5b0fa3e44d419112d5433cbedebe8487170a7d2",1,1,0,0,0,0,"S7","merge games (game_id) and alignment (offence and defence); all rows matched",21641
+"aef73228fb9df6fc9720b260a5b0fa3e44d419112d5433cbedebe8487170a7d2",1,1,0,0,0,0,"S8","common complete cases over the variables of M1, M2 and M3",21641
+"aef73228fb9df6fc9720b260a5b0fa3e44d419112d5433cbedebe8487170a7d2",1,1,0,0,0,0,"S8_dropped","rows dropped at S8 (missing value in a model variable)",0
+"aef73228fb9df6fc9720b260a5b0fa3e44d419112d5433cbedebe8487170a7d2",1,1,0,0,0,0,"S8_M1_specific","rows M1 would use under model-specific complete cases",21641
+"aef73228fb9df6fc9720b260a5b0fa3e44d419112d5433cbedebe8487170a7d2",1,1,0,0,0,0,"S8_M2_specific","rows M2 would use under model-specific complete cases",21641
+"aef73228fb9df6fc9720b260a5b0fa3e44d419112d5433cbedebe8487170a7d2",1,1,0,0,0,0,"S8_M3_specific","rows M3 would use under model-specific complete cases",21641
+"aef73228fb9df6fc9720b260a5b0fa3e44d419112d5433cbedebe8487170a7d2",1,1,0,0,0,0,"S8_flag","model-specific complete-case counts equal the common sample (no flag)",0
+"aef73228fb9df6fc9720b260a5b0fa3e44d419112d5433cbedebe8487170a7d2",1,1,0,0,0,0,"check_same_division","rows where same_division (alignment) disagrees with games.div_game",0
+"402fb54a688708cefd7437e22a81d09fd65682028cad202f6706c02928c1cb71",0,0,1,0,0,0,"S1","stack six season files, keep season_type == REG",266592
+"402fb54a688708cefd7437e22a81d09fd65682028cad202f6706c02928c1cb71",0,0,1,0,0,0,"S2","keep down == 4",24282
+"402fb54a688708cefd7437e22a81d09fd65682028cad202f6706c02928c1cb71",0,0,1,0,0,0,"S3","keep play_type in {punt, field_goal, run, pass}",22909
+"402fb54a688708cefd7437e22a81d09fd65682028cad202f6706c02928c1cb71",0,0,1,0,0,0,"S4","keep qtr in {1,2,3,4}",22766
+"402fb54a688708cefd7437e22a81d09fd65682028cad202f6706c02928c1cb71",0,0,1,0,0,0,"S5","keep game_seconds_remaining >= 120 (U3=1)",21690
+"402fb54a688708cefd7437e22a81d09fd65682028cad202f6706c02928c1cb71",0,0,1,0,0,0,"S6","drop empty or missing posteam/defteam",21690
+"402fb54a688708cefd7437e22a81d09fd65682028cad202f6706c02928c1cb71",0,0,1,0,0,0,"S7","merge games (game_id) and alignment (offence and defence); all rows matched",21690
+"402fb54a688708cefd7437e22a81d09fd65682028cad202f6706c02928c1cb71",0,0,1,0,0,0,"S8","common complete cases over the variables of M1, M2 and M3",21690
+"402fb54a688708cefd7437e22a81d09fd65682028cad202f6706c02928c1cb71",0,0,1,0,0,0,"S8_dropped","rows dropped at S8 (missing value in a model variable)",0
+"402fb54a688708cefd7437e22a81d09fd65682028cad202f6706c02928c1cb71",0,0,1,0,0,0,"S8_M1_specific","rows M1 would use under model-specific complete cases",21690
+"402fb54a688708cefd7437e22a81d09fd65682028cad202f6706c02928c1cb71",0,0,1,0,0,0,"S8_M2_specific","rows M2 would use under model-specific complete cases",21690
+"402fb54a688708cefd7437e22a81d09fd65682028cad202f6706c02928c1cb71",0,0,1,0,0,0,"S8_M3_specific","rows M3 would use under model-specific complete cases",21690
+"402fb54a688708cefd7437e22a81d09fd65682028cad202f6706c02928c1cb71",0,0,1,0,0,0,"S8_flag","model-specific complete-case counts equal the common sample (no flag)",0
+"402fb54a688708cefd7437e22a81d09fd65682028cad202f6706c02928c1cb71",0,0,1,0,0,0,"check_same_division","rows where same_division (alignment) disagrees with games.div_game",0
+"6c2094902fd59c6ef196e50a49f9834f6aab3037485e8ca346c31f97d2d52c0b",1,0,1,0,0,0,"S1","stack six season files, keep season_type == REG",266592
+"6c2094902fd59c6ef196e50a49f9834f6aab3037485e8ca346c31f97d2d52c0b",1,0,1,0,0,0,"S2","keep down == 4",24282
+"6c2094902fd59c6ef196e50a49f9834f6aab3037485e8ca346c31f97d2d52c0b",1,0,1,0,0,0,"S3","keep play_type in {punt, field_goal, run, pass}; S3b (U1=1): plus no_play rows classified by punt_attempt/field_goal_attempt (non-attempt) or pass/rush (attempt); unclassifiable no_play rows dropped",23024
+"6c2094902fd59c6ef196e50a49f9834f6aab3037485e8ca346c31f97d2d52c0b",1,0,1,0,0,0,"S4","keep qtr in {1,2,3,4}",22880
+"6c2094902fd59c6ef196e50a49f9834f6aab3037485e8ca346c31f97d2d52c0b",1,0,1,0,0,0,"S5","keep game_seconds_remaining >= 120 (U3=1)",21791
+"6c2094902fd59c6ef196e50a49f9834f6aab3037485e8ca346c31f97d2d52c0b",1,0,1,0,0,0,"S6","drop empty or missing posteam/defteam",21791
+"6c2094902fd59c6ef196e50a49f9834f6aab3037485e8ca346c31f97d2d52c0b",1,0,1,0,0,0,"S7","merge games (game_id) and alignment (offence and defence); all rows matched",21791
+"6c2094902fd59c6ef196e50a49f9834f6aab3037485e8ca346c31f97d2d52c0b",1,0,1,0,0,0,"S8","common complete cases over the variables of M1, M2 and M3",21791
+"6c2094902fd59c6ef196e50a49f9834f6aab3037485e8ca346c31f97d2d52c0b",1,0,1,0,0,0,"S8_dropped","rows dropped at S8 (missing value in a model variable)",0
+"6c2094902fd59c6ef196e50a49f9834f6aab3037485e8ca346c31f97d2d52c0b",1,0,1,0,0,0,"S8_M1_specific","rows M1 would use under model-specific complete cases",21791
+"6c2094902fd59c6ef196e50a49f9834f6aab3037485e8ca346c31f97d2d52c0b",1,0,1,0,0,0,"S8_M2_specific","rows M2 would use under model-specific complete cases",21791
+"6c2094902fd59c6ef196e50a49f9834f6aab3037485e8ca346c31f97d2d52c0b",1,0,1,0,0,0,"S8_M3_specific","rows M3 would use under model-specific complete cases",21791
+"6c2094902fd59c6ef196e50a49f9834f6aab3037485e8ca346c31f97d2d52c0b",1,0,1,0,0,0,"S8_flag","model-specific complete-case counts equal the common sample (no flag)",0
+"6c2094902fd59c6ef196e50a49f9834f6aab3037485e8ca346c31f97d2d52c0b",1,0,1,0,0,0,"check_same_division","rows where same_division (alignment) disagrees with games.div_game",0
+"06d3ab4822e7fb259d30d2f31f50ab9ad912b480ec27fb4f322a9abd1a08bd70",0,1,1,0,0,0,"S1","stack six season files, keep season_type == REG",266592
+"06d3ab4822e7fb259d30d2f31f50ab9ad912b480ec27fb4f322a9abd1a08bd70",0,1,1,0,0,0,"S2","keep down == 4",24282
+"06d3ab4822e7fb259d30d2f31f50ab9ad912b480ec27fb4f322a9abd1a08bd70",0,1,1,0,0,0,"S3","keep play_type in {punt, field_goal, run, pass}; S3c (U2=1): plus qb_kneel/qb_spike as non-attempt",22919
+"06d3ab4822e7fb259d30d2f31f50ab9ad912b480ec27fb4f322a9abd1a08bd70",0,1,1,0,0,0,"S4","keep qtr in {1,2,3,4}",22776
+"06d3ab4822e7fb259d30d2f31f50ab9ad912b480ec27fb4f322a9abd1a08bd70",0,1,1,0,0,0,"S5","keep game_seconds_remaining >= 120 (U3=1)",21691
+"06d3ab4822e7fb259d30d2f31f50ab9ad912b480ec27fb4f322a9abd1a08bd70",0,1,1,0,0,0,"S6","drop empty or missing posteam/defteam",21691
+"06d3ab4822e7fb259d30d2f31f50ab9ad912b480ec27fb4f322a9abd1a08bd70",0,1,1,0,0,0,"S7","merge games (game_id) and alignment (offence and defence); all rows matched",21691
+"06d3ab4822e7fb259d30d2f31f50ab9ad912b480ec27fb4f322a9abd1a08bd70",0,1,1,0,0,0,"S8","common complete cases over the variables of M1, M2 and M3",21691
+"06d3ab4822e7fb259d30d2f31f50ab9ad912b480ec27fb4f322a9abd1a08bd70",0,1,1,0,0,0,"S8_dropped","rows dropped at S8 (missing value in a model variable)",0
+"06d3ab4822e7fb259d30d2f31f50ab9ad912b480ec27fb4f322a9abd1a08bd70",0,1,1,0,0,0,"S8_M1_specific","rows M1 would use under model-specific complete cases",21691
+"06d3ab4822e7fb259d30d2f31f50ab9ad912b480ec27fb4f322a9abd1a08bd70",0,1,1,0,0,0,"S8_M2_specific","rows M2 would use under model-specific complete cases",21691
+"06d3ab4822e7fb259d30d2f31f50ab9ad912b480ec27fb4f322a9abd1a08bd70",0,1,1,0,0,0,"S8_M3_specific","rows M3 would use under model-specific complete cases",21691
+"06d3ab4822e7fb259d30d2f31f50ab9ad912b480ec27fb4f322a9abd1a08bd70",0,1,1,0,0,0,"S8_flag","model-specific complete-case counts equal the common sample (no flag)",0
+"06d3ab4822e7fb259d30d2f31f50ab9ad912b480ec27fb4f322a9abd1a08bd70",0,1,1,0,0,0,"check_same_division","rows where same_division (alignment) disagrees with games.div_game",0
+"9d7d33382d9bf9d7d0bd6f9654ac1731f94f1ab8ad4fc8f84cdeb411a0a1926d",1,1,1,0,0,0,"S1","stack six season files, keep season_type == REG",266592
+"9d7d33382d9bf9d7d0bd6f9654ac1731f94f1ab8ad4fc8f84cdeb411a0a1926d",1,1,1,0,0,0,"S2","keep down == 4",24282
+"9d7d33382d9bf9d7d0bd6f9654ac1731f94f1ab8ad4fc8f84cdeb411a0a1926d",1,1,1,0,0,0,"S3","keep play_type in {punt, field_goal, run, pass}; S3b (U1=1): plus no_play rows classified by punt_attempt/field_goal_attempt (non-attempt) or pass/rush (attempt); unclassifiable no_play rows dropped; S3c (U2=1): plus qb_kneel/qb_spike as non-attempt",23034
+"9d7d33382d9bf9d7d0bd6f9654ac1731f94f1ab8ad4fc8f84cdeb411a0a1926d",1,1,1,0,0,0,"S4","keep qtr in {1,2,3,4}",22890
+"9d7d33382d9bf9d7d0bd6f9654ac1731f94f1ab8ad4fc8f84cdeb411a0a1926d",1,1,1,0,0,0,"S5","keep game_seconds_remaining >= 120 (U3=1)",21792
+"9d7d33382d9bf9d7d0bd6f9654ac1731f94f1ab8ad4fc8f84cdeb411a0a1926d",1,1,1,0,0,0,"S6","drop empty or missing posteam/defteam",21792
+"9d7d33382d9bf9d7d0bd6f9654ac1731f94f1ab8ad4fc8f84cdeb411a0a1926d",1,1,1,0,0,0,"S7","merge games (game_id) and alignment (offence and defence); all rows matched",21792
+"9d7d33382d9bf9d7d0bd6f9654ac1731f94f1ab8ad4fc8f84cdeb411a0a1926d",1,1,1,0,0,0,"S8","common complete cases over the variables of M1, M2 and M3",21792
+"9d7d33382d9bf9d7d0bd6f9654ac1731f94f1ab8ad4fc8f84cdeb411a0a1926d",1,1,1,0,0,0,"S8_dropped","rows dropped at S8 (missing value in a model variable)",0
+"9d7d33382d9bf9d7d0bd6f9654ac1731f94f1ab8ad4fc8f84cdeb411a0a1926d",1,1,1,0,0,0,"S8_M1_specific","rows M1 would use under model-specific complete cases",21792
+"9d7d33382d9bf9d7d0bd6f9654ac1731f94f1ab8ad4fc8f84cdeb411a0a1926d",1,1,1,0,0,0,"S8_M2_specific","rows M2 would use under model-specific complete cases",21792
+"9d7d33382d9bf9d7d0bd6f9654ac1731f94f1ab8ad4fc8f84cdeb411a0a1926d",1,1,1,0,0,0,"S8_M3_specific","rows M3 would use under model-specific complete cases",21792
+"9d7d33382d9bf9d7d0bd6f9654ac1731f94f1ab8ad4fc8f84cdeb411a0a1926d",1,1,1,0,0,0,"S8_flag","model-specific complete-case counts equal the common sample (no flag)",0
+"9d7d33382d9bf9d7d0bd6f9654ac1731f94f1ab8ad4fc8f84cdeb411a0a1926d",1,1,1,0,0,0,"check_same_division","rows where same_division (alignment) disagrees with games.div_game",0

@@ -1,0 +1,11 @@
+{
+ "amends": "scoring/scoring_rules.json (scoring_rules_v1), which stays unchanged and keeps its pre-execution hash",
+ "requested_by": "The user, in the coordinator session: remove the human review stage because of time",
+ "timing": "Made while the frozen scripts were running. No empirical output had been opened or scored, and no target had been compared with any empirical result.",
+ "changes": {
+  "discrepant": "A discrepant_candidate that survives adversarial review is reported as discrepant, with the statement that no human reviewed it. Because no model family independent of both implementation families is available for the adversarial pass, that limitation is recorded and the finding is not called fully verified.",
+  "label_sensitivity": "Label-sensitive claims report both scores. No choice is made between them.",
+  "paper_aggregation": "A family that remains discrepant after adversarial review makes the paper outcome discrepant. A family whose candidates are overturned is rescored by the frozen family rule."
+ },
+ "unchanged": "All tolerances, bands, stability rules, targets, labels, the grid, score.py, and the recorded status of corpus-level human validation (pending or unavailable)."
+}

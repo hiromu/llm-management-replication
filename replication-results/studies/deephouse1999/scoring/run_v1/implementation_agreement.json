@@ -1,0 +1,277 @@
+{
+ "pairs": {
+  "impl_A|impl_B": {
+   "specs": 164,
+   "specs_agree": 160,
+   "origin_O_A_agree": true,
+   "origin_O_B_agree": true,
+   "disagreeing_specs": [
+    "O_A__R03.proforma",
+    "O_A__R13.components",
+    "O_B__R03.proforma",
+    "O_B__R13.components"
+   ]
+  },
+  "impl_A|impl_C": {
+   "specs": 164,
+   "specs_agree": 160,
+   "origin_O_A_agree": true,
+   "origin_O_B_agree": true,
+   "disagreeing_specs": [
+    "O_A__R03.proforma",
+    "O_A__R13.components",
+    "O_B__R03.proforma",
+    "O_B__R13.components"
+   ]
+  },
+  "impl_B|impl_C": {
+   "specs": 164,
+   "specs_agree": 164,
+   "origin_O_A_agree": true,
+   "origin_O_B_agree": true,
+   "disagreeing_specs": []
+  }
+ },
+ "origin_rows": [
+  {
+   "pair": "impl_A|impl_B",
+   "spec_id": "O_A",
+   "model": "M1",
+   "n_a": 1260.0,
+   "n_b": 1260.0,
+   "hash_same": true,
+   "max_abs_est_diff": 1.1013412404281553e-13,
+   "agree": true
+  },
+  {
+   "pair": "impl_A|impl_B",
+   "spec_id": "O_A",
+   "model": "M2",
+   "n_a": 1260.0,
+   "n_b": 1260.0,
+   "hash_same": true,
+   "max_abs_est_diff": 1.5987211554602254e-13,
+   "agree": true
+  },
+  {
+   "pair": "impl_A|impl_B",
+   "spec_id": "O_A",
+   "model": "M3",
+   "n_a": 1260.0,
+   "n_b": 1260.0,
+   "hash_same": true,
+   "max_abs_est_diff": 1.900701818158268e-13,
+   "agree": true
+  },
+  {
+   "pair": "impl_A|impl_B",
+   "spec_id": "O_A",
+   "model": "M3_SQ",
+   "n_a": 1260.0,
+   "n_b": 1260.0,
+   "hash_same": true,
+   "max_abs_est_diff": 1.3145040611561853e-13,
+   "agree": true
+  },
+  {
+   "pair": "impl_A|impl_B",
+   "spec_id": "O_B",
+   "model": "M1",
+   "n_a": 1255.0,
+   "n_b": 1255.0,
+   "hash_same": true,
+   "max_abs_est_diff": 6.039613253960852e-14,
+   "agree": true
+  },
+  {
+   "pair": "impl_A|impl_B",
+   "spec_id": "O_B",
+   "model": "M2",
+   "n_a": 1255.0,
+   "n_b": 1255.0,
+   "hash_same": true,
+   "max_abs_est_diff": 3.019806626980426e-14,
+   "agree": true
+  },
+  {
+   "pair": "impl_A|impl_B",
+   "spec_id": "O_B",
+   "model": "M3",
+   "n_a": 1255.0,
+   "n_b": 1255.0,
+   "hash_same": true,
+   "max_abs_est_diff": 1.0036416142611415e-13,
+   "agree": true
+  },
+  {
+   "pair": "impl_A|impl_B",
+   "spec_id": "O_B",
+   "model": "M3_SQ",
+   "n_a": 1255.0,
+   "n_b": 1255.0,
+   "hash_same": true,
+   "max_abs_est_diff": 6.039613253960852e-14,
+   "agree": true
+  },
+  {
+   "pair": "impl_A|impl_C",
+   "spec_id": "O_A",
+   "model": "M1",
+   "n_a": 1260.0,
+   "n_b": 1260.0,
+   "hash_same": true,
+   "max_abs_est_diff": 1.0835776720341528e-13,
+   "agree": true
+  },
+  {
+   "pair": "impl_A|impl_C",
+   "spec_id": "O_A",
+   "model": "M2",
+   "n_a": 1260.0,
+   "n_b": 1260.0,
+   "hash_same": true,
+   "max_abs_est_diff": 1.3500311979441904e-13,
+   "agree": true
+  },
+  {
+   "pair": "impl_A|impl_C",
+   "spec_id": "O_A",
+   "model": "M3",
+   "n_a": 1260.0,
+   "n_b": 1260.0,
+   "hash_same": true,
+   "max_abs_est_diff": 2.1049828546892968e-13,
+   "agree": true
+  },
+  {
+   "pair": "impl_A|impl_C",
+   "spec_id": "O_A",
+   "model": "M3_SQ",
+   "n_a": 1260.0,
+   "n_b": 1260.0,
+   "hash_same": true,
+   "max_abs_est_diff": 1.580957587066223e-13,
+   "agree": true
+  },
+  {
+   "pair": "impl_A|impl_C",
+   "spec_id": "O_B",
+   "model": "M1",
+   "n_a": 1255.0,
+   "n_b": 1255.0,
+   "hash_same": true,
+   "max_abs_est_diff": 7.105427357601002e-14,
+   "agree": true
+  },
+  {
+   "pair": "impl_A|impl_C",
+   "spec_id": "O_B",
+   "model": "M2",
+   "n_a": 1255.0,
+   "n_b": 1255.0,
+   "hash_same": true,
+   "max_abs_est_diff": 4.085620730620576e-14,
+   "agree": true
+  },
+  {
+   "pair": "impl_A|impl_C",
+   "spec_id": "O_B",
+   "model": "M3",
+   "n_a": 1255.0,
+   "n_b": 1255.0,
+   "hash_same": true,
+   "max_abs_est_diff": 3.108624468950438e-14,
+   "agree": true
+  },
+  {
+   "pair": "impl_A|impl_C",
+   "spec_id": "O_B",
+   "model": "M3_SQ",
+   "n_a": 1255.0,
+   "n_b": 1255.0,
+   "hash_same": true,
+   "max_abs_est_diff": 3.730349362740526e-14,
+   "agree": true
+  },
+  {
+   "pair": "impl_B|impl_C",
+   "spec_id": "O_A",
+   "model": "M1",
+   "n_a": 1260.0,
+   "n_b": 1260.0,
+   "hash_same": true,
+   "max_abs_est_diff": 2.55351295663786e-15,
+   "agree": true
+  },
+  {
+   "pair": "impl_B|impl_C",
+   "spec_id": "O_A",
+   "model": "M2",
+   "n_a": 1260.0,
+   "n_b": 1260.0,
+   "hash_same": true,
+   "max_abs_est_diff": 2.4868995751603507e-14,
+   "agree": true
+  },
+  {
+   "pair": "impl_B|impl_C",
+   "spec_id": "O_A",
+   "model": "M3",
+   "n_a": 1260.0,
+   "n_b": 1260.0,
+   "hash_same": true,
+   "max_abs_est_diff": 2.042810365310288e-14,
+   "agree": true
+  },
+  {
+   "pair": "impl_B|impl_C",
+   "spec_id": "O_A",
+   "model": "M3_SQ",
+   "n_a": 1260.0,
+   "n_b": 1260.0,
+   "hash_same": true,
+   "max_abs_est_diff": 2.6645352591003757e-14,
+   "agree": true
+  },
+  {
+   "pair": "impl_B|impl_C",
+   "spec_id": "O_B",
+   "model": "M1",
+   "n_a": 1255.0,
+   "n_b": 1255.0,
+   "hash_same": true,
+   "max_abs_est_diff": 1.0658141036401503e-14,
+   "agree": true
+  },
+  {
+   "pair": "impl_B|impl_C",
+   "spec_id": "O_B",
+   "model": "M2",
+   "n_a": 1255.0,
+   "n_b": 1255.0,
+   "hash_same": true,
+   "max_abs_est_diff": 1.0658141036401503e-14,
+   "agree": true
+  },
+  {
+   "pair": "impl_B|impl_C",
+   "spec_id": "O_B",
+   "model": "M3",
+   "n_a": 1255.0,
+   "n_b": 1255.0,
+   "hash_same": true,
+   "max_abs_est_diff": 1.3145040611561853e-13,
+   "agree": true
+  },
+  {
+   "pair": "impl_B|impl_C",
+   "spec_id": "O_B",
+   "model": "M3_SQ",
+   "n_a": 1255.0,
+   "n_b": 1255.0,
+   "hash_same": true,
+   "max_abs_est_diff": 2.3092638912203256e-14,
+   "agree": true
+  }
+ ]
+}

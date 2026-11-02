@@ -1,0 +1,842 @@
+[
+ {
+  "unit": "T3|(1)",
+  "kind": "regression",
+  "tier": "focal",
+  "paper_focal": false,
+  "pre_review_outcome": "consistent",
+  "pre_review_reason": "origin sign, magnitude, inference and N criteria met",
+  "outcome": "consistent",
+  "reason": "origin sign, magnitude, inference and N criteria met"
+ },
+ {
+  "unit": "T3|(2)",
+  "kind": "regression",
+  "tier": "focal",
+  "paper_focal": false,
+  "pre_review_outcome": "indeterminate",
+  "pre_review_reason": "magnitude_grey_zone",
+  "outcome": "indeterminate",
+  "reason": "magnitude_grey_zone"
+ },
+ {
+  "unit": "T3|(3)",
+  "kind": "regression",
+  "tier": "focal",
+  "paper_focal": true,
+  "pre_review_outcome": "fragile_inference",
+  "pre_review_reason": "benchmark band weaker by 1; HC1 band not weaker",
+  "outcome": "fragile_inference",
+  "reason": "benchmark band weaker by 1; HC1 band not weaker"
+ },
+ {
+  "unit": "T3|(4)",
+  "kind": "regression",
+  "tier": "focal",
+  "paper_focal": true,
+  "pre_review_outcome": "indeterminate",
+  "pre_review_reason": "magnitude_grey_zone",
+  "outcome": "indeterminate",
+  "reason": "magnitude_grey_zone"
+ },
+ {
+  "unit": "T3|(5)",
+  "kind": "regression",
+  "tier": "focal",
+  "paper_focal": true,
+  "pre_review_outcome": "consistent",
+  "pre_review_reason": "origin sign, magnitude, inference and N criteria met",
+  "outcome": "consistent",
+  "reason": "origin sign, magnitude, inference and N criteria met"
+ },
+ {
+  "unit": "T3|(6)",
+  "kind": "regression",
+  "tier": "focal",
+  "paper_focal": true,
+  "pre_review_outcome": "indeterminate",
+  "pre_review_reason": "magnitude_grey_zone",
+  "outcome": "indeterminate",
+  "reason": "magnitude_grey_zone"
+ },
+ {
+  "unit": "T4|(1)",
+  "kind": "regression",
+  "tier": "focal",
+  "paper_focal": false,
+  "pre_review_outcome": "indeterminate",
+  "pre_review_reason": "magnitude_grey_zone",
+  "outcome": "indeterminate",
+  "reason": "magnitude_grey_zone"
+ },
+ {
+  "unit": "T4|(2)",
+  "kind": "regression",
+  "tier": "focal",
+  "paper_focal": false,
+  "pre_review_outcome": "indeterminate",
+  "pre_review_reason": "magnitude_grey_zone",
+  "outcome": "indeterminate",
+  "reason": "magnitude_grey_zone"
+ },
+ {
+  "unit": "T4|(3)",
+  "kind": "regression",
+  "tier": "focal",
+  "paper_focal": true,
+  "pre_review_outcome": "indeterminate",
+  "pre_review_reason": "label_sensitive",
+  "outcome": "indeterminate",
+  "reason": "label_sensitive"
+ },
+ {
+  "unit": "T4|(4)",
+  "kind": "regression",
+  "tier": "focal",
+  "paper_focal": true,
+  "pre_review_outcome": "indeterminate",
+  "pre_review_reason": "magnitude_grey_zone",
+  "outcome": "indeterminate",
+  "reason": "magnitude_grey_zone"
+ },
+ {
+  "unit": "T4|(5)",
+  "kind": "regression",
+  "tier": "focal",
+  "paper_focal": true,
+  "pre_review_outcome": "indeterminate",
+  "pre_review_reason": "sample_reconstruction; inconsistent_targets",
+  "outcome": "indeterminate",
+  "reason": "sample_reconstruction; inconsistent_targets"
+ },
+ {
+  "unit": "T4|(6)",
+  "kind": "regression",
+  "tier": "focal",
+  "paper_focal": true,
+  "pre_review_outcome": "indeterminate",
+  "pre_review_reason": "magnitude_grey_zone",
+  "outcome": "indeterminate",
+  "reason": "magnitude_grey_zone"
+ },
+ {
+  "unit": "T5A|(1)",
+  "kind": "regression",
+  "tier": "robustness",
+  "paper_focal": false,
+  "pre_review_outcome": "indeterminate",
+  "pre_review_reason": "magnitude_grey_zone",
+  "outcome": "indeterminate",
+  "reason": "magnitude_grey_zone"
+ },
+ {
+  "unit": "T5A|(2)",
+  "kind": "regression",
+  "tier": "robustness",
+  "paper_focal": false,
+  "pre_review_outcome": "indeterminate",
+  "pre_review_reason": "magnitude_grey_zone",
+  "outcome": "indeterminate",
+  "reason": "magnitude_grey_zone"
+ },
+ {
+  "unit": "T5A|(3)",
+  "kind": "placebo",
+  "tier": "identification_or_inference_diagnostic",
+  "paper_focal": false,
+  "pre_review_outcome": "consistent",
+  "pre_review_reason": "placebo p >= .10",
+  "outcome": "consistent",
+  "reason": "placebo p >= .10"
+ },
+ {
+  "unit": "T5A|(4)",
+  "kind": "placebo",
+  "tier": "identification_or_inference_diagnostic",
+  "paper_focal": false,
+  "pre_review_outcome": "consistent",
+  "pre_review_reason": "placebo p >= .10",
+  "outcome": "consistent",
+  "reason": "placebo p >= .10"
+ },
+ {
+  "unit": "T5A|(5)",
+  "kind": "regression",
+  "tier": "robustness",
+  "paper_focal": false,
+  "pre_review_outcome": "indeterminate",
+  "pre_review_reason": "sample_reconstruction; inconsistent_targets",
+  "outcome": "indeterminate",
+  "reason": "sample_reconstruction; inconsistent_targets"
+ },
+ {
+  "unit": "T5A|(6)",
+  "kind": "regression",
+  "tier": "robustness",
+  "paper_focal": false,
+  "pre_review_outcome": "discrepant_candidate",
+  "pre_review_reason": "magnitude",
+  "outcome": "indeterminate",
+  "reason": "inconsistent_targets (adversarial review)"
+ },
+ {
+  "unit": "T5A|(7)",
+  "kind": "regression",
+  "tier": "robustness",
+  "paper_focal": false,
+  "pre_review_outcome": "discrepant_candidate",
+  "pre_review_reason": "magnitude",
+  "outcome": "indeterminate",
+  "reason": "inconsistent_targets (adversarial review)"
+ },
+ {
+  "unit": "T5A|(8)",
+  "kind": "regression",
+  "tier": "robustness",
+  "paper_focal": false,
+  "pre_review_outcome": "discrepant_candidate",
+  "pre_review_reason": "inference_2band;magnitude",
+  "outcome": "discrepant_not_fully_verified",
+  "reason": "inference_2band;magnitude; survived adversarial review by a same-family reviewer"
+ },
+ {
+  "unit": "T5B|(1)",
+  "kind": "regression",
+  "tier": "robustness",
+  "paper_focal": false,
+  "pre_review_outcome": "indeterminate",
+  "pre_review_reason": "label_sensitive",
+  "outcome": "indeterminate",
+  "reason": "label_sensitive"
+ },
+ {
+  "unit": "T5B|(2)",
+  "kind": "regression",
+  "tier": "robustness",
+  "paper_focal": false,
+  "pre_review_outcome": "indeterminate",
+  "pre_review_reason": "magnitude_grey_zone",
+  "outcome": "indeterminate",
+  "reason": "magnitude_grey_zone"
+ },
+ {
+  "unit": "T5B|(3)",
+  "kind": "regression",
+  "tier": "robustness",
+  "paper_focal": false,
+  "pre_review_outcome": "indeterminate",
+  "pre_review_reason": "sample_reconstruction; inconsistent_targets",
+  "outcome": "indeterminate",
+  "reason": "sample_reconstruction; inconsistent_targets"
+ },
+ {
+  "unit": "T5B|(4)",
+  "kind": "regression",
+  "tier": "robustness",
+  "paper_focal": false,
+  "pre_review_outcome": "indeterminate",
+  "pre_review_reason": "sample_reconstruction; inconsistent_targets",
+  "outcome": "indeterminate",
+  "reason": "sample_reconstruction; inconsistent_targets"
+ },
+ {
+  "unit": "T5B|(5)",
+  "kind": "regression",
+  "tier": "robustness",
+  "paper_focal": false,
+  "pre_review_outcome": "indeterminate",
+  "pre_review_reason": "sample_reconstruction; inconsistent_targets",
+  "outcome": "indeterminate",
+  "reason": "sample_reconstruction; inconsistent_targets"
+ },
+ {
+  "unit": "T5B|(6)",
+  "kind": "regression",
+  "tier": "robustness",
+  "paper_focal": false,
+  "pre_review_outcome": "indeterminate",
+  "pre_review_reason": "magnitude_grey_zone",
+  "outcome": "indeterminate",
+  "reason": "magnitude_grey_zone"
+ },
+ {
+  "unit": "T5B|(7)",
+  "kind": "regression",
+  "tier": "robustness",
+  "paper_focal": false,
+  "pre_review_outcome": "indeterminate",
+  "pre_review_reason": "magnitude_grey_zone",
+  "outcome": "indeterminate",
+  "reason": "magnitude_grey_zone"
+ },
+ {
+  "unit": "T5B|(8)",
+  "kind": "regression",
+  "tier": "robustness",
+  "paper_focal": false,
+  "pre_review_outcome": "indeterminate",
+  "pre_review_reason": "magnitude_grey_zone",
+  "outcome": "indeterminate",
+  "reason": "magnitude_grey_zone"
+ },
+ {
+  "unit": "T6|(1) Treat",
+  "kind": "regression",
+  "tier": "focal",
+  "paper_focal": true,
+  "pre_review_outcome": "discrepant_candidate",
+  "pre_review_reason": "sign;magnitude",
+  "outcome": "discrepant_not_fully_verified",
+  "reason": "sign;magnitude; survived adversarial review by a same-family reviewer"
+ },
+ {
+  "unit": "T6|(1) Distance",
+  "kind": "regression_nuisance_unit",
+  "tier": "nuisance",
+  "paper_focal": false,
+  "pre_review_outcome": "discrepant_candidate",
+  "pre_review_reason": "magnitude",
+  "outcome": "discrepant_not_fully_verified",
+  "reason": "magnitude; survived adversarial review by a same-family reviewer"
+ },
+ {
+  "unit": "T6|(2) Treat",
+  "kind": "regression",
+  "tier": "uncertain:focal|robustness",
+  "paper_focal": false,
+  "pre_review_outcome": "discrepant_candidate",
+  "pre_review_reason": "sign;magnitude",
+  "outcome": "discrepant_not_fully_verified",
+  "reason": "sign;magnitude; survived adversarial review by a same-family reviewer"
+ },
+ {
+  "unit": "T6|(2) Distance",
+  "kind": "regression_nuisance_unit",
+  "tier": "nuisance",
+  "paper_focal": false,
+  "pre_review_outcome": "discrepant_candidate",
+  "pre_review_reason": "magnitude",
+  "outcome": "discrepant_not_fully_verified",
+  "reason": "magnitude; survived adversarial review by a same-family reviewer"
+ },
+ {
+  "unit": "T6|(3) Treat",
+  "kind": "regression",
+  "tier": "uncertain:focal|robustness",
+  "paper_focal": false,
+  "pre_review_outcome": "discrepant_candidate",
+  "pre_review_reason": "sign;magnitude",
+  "outcome": "discrepant_not_fully_verified",
+  "reason": "sign;magnitude; survived adversarial review by a same-family reviewer"
+ },
+ {
+  "unit": "T6|(3) Distance",
+  "kind": "regression_nuisance_unit",
+  "tier": "nuisance",
+  "paper_focal": false,
+  "pre_review_outcome": "discrepant_candidate",
+  "pre_review_reason": "magnitude",
+  "outcome": "discrepant_not_fully_verified",
+  "reason": "magnitude; survived adversarial review by a same-family reviewer"
+ },
+ {
+  "unit": "T7|(1)",
+  "kind": "regression",
+  "tier": "focal",
+  "paper_focal": false,
+  "pre_review_outcome": "indeterminate",
+  "pre_review_reason": "sample_reconstruction; inconsistent_targets",
+  "outcome": "indeterminate",
+  "reason": "sample_reconstruction; inconsistent_targets"
+ },
+ {
+  "unit": "T7|(2)",
+  "kind": "regression",
+  "tier": "focal",
+  "paper_focal": false,
+  "pre_review_outcome": "indeterminate",
+  "pre_review_reason": "magnitude_grey_zone",
+  "outcome": "indeterminate",
+  "reason": "magnitude_grey_zone"
+ },
+ {
+  "unit": "T7|(3)",
+  "kind": "regression",
+  "tier": "focal",
+  "paper_focal": false,
+  "pre_review_outcome": "indeterminate",
+  "pre_review_reason": "sample_reconstruction; inconsistent_targets",
+  "outcome": "indeterminate",
+  "reason": "sample_reconstruction; inconsistent_targets"
+ },
+ {
+  "unit": "T7|(4)",
+  "kind": "regression",
+  "tier": "focal",
+  "paper_focal": false,
+  "pre_review_outcome": "indeterminate",
+  "pre_review_reason": "magnitude_grey_zone",
+  "outcome": "indeterminate",
+  "reason": "magnitude_grey_zone"
+ },
+ {
+  "unit": "T7|(5)",
+  "kind": "regression",
+  "tier": "focal",
+  "paper_focal": false,
+  "pre_review_outcome": "indeterminate",
+  "pre_review_reason": "sample_reconstruction; inconsistent_targets",
+  "outcome": "indeterminate",
+  "reason": "sample_reconstruction; inconsistent_targets"
+ },
+ {
+  "unit": "T7|(6)",
+  "kind": "regression",
+  "tier": "focal",
+  "paper_focal": false,
+  "pre_review_outcome": "indeterminate",
+  "pre_review_reason": "sample_reconstruction; inconsistent_targets",
+  "outcome": "indeterminate",
+  "reason": "sample_reconstruction; inconsistent_targets"
+ },
+ {
+  "unit": "T7|(7)",
+  "kind": "regression",
+  "tier": "focal",
+  "paper_focal": false,
+  "pre_review_outcome": "indeterminate",
+  "pre_review_reason": "magnitude_grey_zone",
+  "outcome": "indeterminate",
+  "reason": "magnitude_grey_zone"
+ },
+ {
+  "unit": "T1|Contributions",
+  "kind": "descriptive_group",
+  "tier": "descriptive",
+  "paper_focal": false,
+  "pre_review_outcome": "indeterminate",
+  "pre_review_reason": "measurement",
+  "outcome": "indeterminate",
+  "reason": "measurement"
+ },
+ {
+  "unit": "T1|Follow-on Contributions",
+  "kind": "descriptive_group",
+  "tier": "descriptive",
+  "paper_focal": false,
+  "pre_review_outcome": "indeterminate",
+  "pre_review_reason": "measurement",
+  "outcome": "indeterminate",
+  "reason": "measurement"
+ },
+ {
+  "unit": "T1|Contributors",
+  "kind": "descriptive_group",
+  "tier": "descriptive",
+  "paper_focal": false,
+  "pre_review_outcome": "indeterminate",
+  "pre_review_reason": "measurement",
+  "outcome": "indeterminate",
+  "reason": "measurement"
+ },
+ {
+  "unit": "T1|Error-Score",
+  "kind": "descriptive_group",
+  "tier": "descriptive",
+  "paper_focal": false,
+  "pre_review_outcome": "indeterminate",
+  "pre_review_reason": "measurement",
+  "outcome": "indeterminate",
+  "reason": "measurement"
+ },
+ {
+  "unit": "T1|Owner-Contributions",
+  "kind": "descriptive_group",
+  "tier": "descriptive",
+  "paper_focal": false,
+  "pre_review_outcome": "indeterminate",
+  "pre_review_reason": "measurement",
+  "outcome": "indeterminate",
+  "reason": "measurement"
+ },
+ {
+  "unit": "T1|D Population",
+  "kind": "descriptive_group",
+  "tier": "identification_or_inference_diagnostic",
+  "paper_focal": false,
+  "pre_review_outcome": "discrepant_candidate",
+  "pre_review_reason": "group mean mismatch at origin and every reading",
+  "outcome": "indeterminate",
+  "reason": "source_vintage (adversarial review)"
+ },
+ {
+  "unit": "T1|D Households",
+  "kind": "descriptive_group",
+  "tier": "identification_or_inference_diagnostic",
+  "paper_focal": false,
+  "pre_review_outcome": "discrepant_candidate",
+  "pre_review_reason": "group mean mismatch at origin and every reading",
+  "outcome": "indeterminate",
+  "reason": "source_vintage (adversarial review)"
+ },
+ {
+  "unit": "T1|D Unemployed Pop.",
+  "kind": "descriptive_group",
+  "tier": "identification_or_inference_diagnostic",
+  "paper_focal": false,
+  "pre_review_outcome": "discrepant_candidate",
+  "pre_review_reason": "group mean mismatch at origin and every reading",
+  "outcome": "indeterminate",
+  "reason": "source_vintage (adversarial review)"
+ },
+ {
+  "unit": "T1|D Educ. Population",
+  "kind": "descriptive_group",
+  "tier": "identification_or_inference_diagnostic",
+  "paper_focal": false,
+  "pre_review_outcome": "discrepant_candidate",
+  "pre_review_reason": "group mean mismatch at origin and every reading",
+  "outcome": "indeterminate",
+  "reason": "source_vintage (adversarial review)"
+ },
+ {
+  "unit": "T1|D Male Population (18-45)",
+  "kind": "descriptive_group",
+  "tier": "identification_or_inference_diagnostic",
+  "paper_focal": false,
+  "pre_review_outcome": "discrepant_candidate",
+  "pre_review_reason": "group mean mismatch at origin and every reading",
+  "outcome": "indeterminate",
+  "reason": "source_vintage (adversarial review)"
+ },
+ {
+  "unit": "T1|D Income per Capita",
+  "kind": "descriptive_group",
+  "tier": "identification_or_inference_diagnostic",
+  "paper_focal": false,
+  "pre_review_outcome": "discrepant_candidate",
+  "pre_review_reason": "group mean mismatch at origin and every reading",
+  "outcome": "indeterminate",
+  "reason": "source_vintage (adversarial review)"
+ },
+ {
+  "unit": "T2|Total Contributions",
+  "kind": "descriptive_summary",
+  "tier": "descriptive",
+  "paper_focal": false,
+  "pre_review_outcome": "indeterminate",
+  "pre_review_reason": "measurement",
+  "outcome": "indeterminate",
+  "reason": "measurement"
+ },
+ {
+  "unit": "T2|Total Follow-on Contributions",
+  "kind": "descriptive_summary",
+  "tier": "descriptive",
+  "paper_focal": false,
+  "pre_review_outcome": "consistent",
+  "pre_review_reason": "mean and median reproduced",
+  "outcome": "consistent",
+  "reason": "mean and median reproduced"
+ },
+ {
+  "unit": "T2|Contributors",
+  "kind": "descriptive_summary",
+  "tier": "descriptive",
+  "paper_focal": false,
+  "pre_review_outcome": "consistent",
+  "pre_review_reason": "mean and median reproduced",
+  "outcome": "consistent",
+  "reason": "mean and median reproduced"
+ },
+ {
+  "unit": "T2|Distant Follow-on",
+  "kind": "descriptive_summary",
+  "tier": "descriptive",
+  "paper_focal": false,
+  "pre_review_outcome": "indeterminate",
+  "pre_review_reason": "measurement",
+  "outcome": "indeterminate",
+  "reason": "measurement"
+ },
+ {
+  "unit": "T2|Incremental Follow-On",
+  "kind": "descriptive_summary",
+  "tier": "descriptive",
+  "paper_focal": false,
+  "pre_review_outcome": "consistent",
+  "pre_review_reason": "mean and median reproduced",
+  "outcome": "consistent",
+  "reason": "mean and median reproduced"
+ },
+ {
+  "unit": "T2|New Contributors",
+  "kind": "descriptive_summary",
+  "tier": "descriptive",
+  "paper_focal": false,
+  "pre_review_outcome": "consistent",
+  "pre_review_reason": "mean and median reproduced",
+  "outcome": "consistent",
+  "reason": "mean and median reproduced"
+ },
+ {
+  "unit": "T2|Old Contributors",
+  "kind": "descriptive_summary",
+  "tier": "descriptive",
+  "paper_focal": false,
+  "pre_review_outcome": "consistent",
+  "pre_review_reason": "mean and median reproduced",
+  "outcome": "consistent",
+  "reason": "mean and median reproduced"
+ },
+ {
+  "unit": "T2|Low Ownership Contributions",
+  "kind": "descriptive_summary",
+  "tier": "descriptive",
+  "paper_focal": false,
+  "pre_review_outcome": "discrepant_candidate",
+  "pre_review_reason": "mean mismatch at origin and every reading",
+  "outcome": "indeterminate",
+  "reason": "inconsistent_targets (adversarial review)"
+ },
+ {
+  "unit": "T2|High Ownership Contributions",
+  "kind": "descriptive_summary",
+  "tier": "descriptive",
+  "paper_focal": false,
+  "pre_review_outcome": "discrepant_candidate",
+  "pre_review_reason": "mean mismatch at origin and every reading",
+  "outcome": "indeterminate",
+  "reason": "inconsistent_targets (adversarial review)"
+ },
+ {
+  "unit": "T2|Owner-Contributions",
+  "kind": "descriptive_summary",
+  "tier": "descriptive",
+  "paper_focal": false,
+  "pre_review_outcome": "consistent",
+  "pre_review_reason": "mean and median reproduced",
+  "outcome": "consistent",
+  "reason": "mean and median reproduced"
+ },
+ {
+  "unit": "T2|Treat",
+  "kind": "descriptive_summary",
+  "tier": "descriptive",
+  "paper_focal": false,
+  "pre_review_outcome": "consistent",
+  "pre_review_reason": "mean and median reproduced",
+  "outcome": "consistent",
+  "reason": "mean and median reproduced"
+ },
+ {
+  "unit": "T2|Post",
+  "kind": "descriptive_summary",
+  "tier": "descriptive",
+  "paper_focal": false,
+  "pre_review_outcome": "consistent",
+  "pre_review_reason": "mean and median reproduced",
+  "outcome": "consistent",
+  "reason": "mean and median reproduced"
+ },
+ {
+  "unit": "T2|Year",
+  "kind": "descriptive_summary",
+  "tier": "descriptive",
+  "paper_focal": false,
+  "pre_review_outcome": "consistent",
+  "pre_review_reason": "mean and median reproduced",
+  "outcome": "consistent",
+  "reason": "mean and median reproduced"
+ },
+ {
+  "unit": "T2|Quarter",
+  "kind": "descriptive_summary",
+  "tier": "descriptive",
+  "paper_focal": false,
+  "pre_review_outcome": "consistent",
+  "pre_review_reason": "mean and median reproduced",
+  "outcome": "consistent",
+  "reason": "mean and median reproduced"
+ },
+ {
+  "unit": "T2|Population",
+  "kind": "descriptive_summary",
+  "tier": "descriptive",
+  "paper_focal": false,
+  "pre_review_outcome": "indeterminate",
+  "pre_review_reason": "measurement",
+  "outcome": "indeterminate",
+  "reason": "measurement"
+ },
+ {
+  "unit": "T2|Households",
+  "kind": "descriptive_summary",
+  "tier": "descriptive",
+  "paper_focal": false,
+  "pre_review_outcome": "indeterminate",
+  "pre_review_reason": "measurement",
+  "outcome": "indeterminate",
+  "reason": "measurement"
+ },
+ {
+  "unit": "T2|Population Density",
+  "kind": "descriptive_summary",
+  "tier": "descriptive",
+  "paper_focal": false,
+  "pre_review_outcome": "indeterminate",
+  "pre_review_reason": "measurement",
+  "outcome": "indeterminate",
+  "reason": "measurement"
+ },
+ {
+  "unit": "T2|Per-Capita Income",
+  "kind": "descriptive_summary",
+  "tier": "descriptive",
+  "paper_focal": false,
+  "pre_review_outcome": "consistent",
+  "pre_review_reason": "mean and median reproduced",
+  "outcome": "consistent",
+  "reason": "mean and median reproduced"
+ },
+ {
+  "unit": "F1|a",
+  "kind": "count",
+  "tier": "uncertain:descriptive|identification_or_inference_diagnostic",
+  "paper_focal": false,
+  "pre_review_outcome": "discrepant_candidate",
+  "pre_review_reason": "county counts differ by more than 1%",
+  "outcome": "indeterminate",
+  "reason": "inconsistent_targets (adversarial review)"
+ },
+ {
+  "unit": "F2|a",
+  "kind": "count",
+  "tier": "uncertain:descriptive|identification_or_inference_diagnostic",
+  "paper_focal": false,
+  "pre_review_outcome": "discrepant_candidate",
+  "pre_review_reason": "county counts differ by more than 1%",
+  "outcome": "indeterminate",
+  "reason": "inconsistent_targets (adversarial review)"
+ },
+ {
+  "unit": "F2|b",
+  "kind": "count",
+  "tier": "uncertain:descriptive|identification_or_inference_diagnostic",
+  "paper_focal": false,
+  "pre_review_outcome": "discrepant_candidate",
+  "pre_review_reason": "county counts differ by more than 1%",
+  "outcome": "discrepant_not_fully_verified",
+  "reason": "county counts differ by more than 1%; survived adversarial review by a same-family reviewer"
+ },
+ {
+  "unit": "F4|follow-on",
+  "kind": "plot_points",
+  "tier": "identification_or_inference_diagnostic",
+  "paper_focal": false,
+  "pre_review_outcome": "consistent",
+  "pre_review_reason": "share of read points matched = 0.80",
+  "outcome": "consistent",
+  "reason": "share of read points matched = 0.80"
+ },
+ {
+  "unit": "F4|contributors",
+  "kind": "plot_points",
+  "tier": "identification_or_inference_diagnostic",
+  "paper_focal": false,
+  "pre_review_outcome": "consistent",
+  "pre_review_reason": "share of read points matched = 0.80",
+  "outcome": "consistent",
+  "reason": "share of read points matched = 0.80"
+ },
+ {
+  "unit": "F5|follow-on",
+  "kind": "plot_points",
+  "tier": "identification_or_inference_diagnostic",
+  "paper_focal": false,
+  "pre_review_outcome": "indeterminate",
+  "pre_review_reason": "share of read points matched = 0.30",
+  "outcome": "indeterminate",
+  "reason": "share of read points matched = 0.30"
+ },
+ {
+  "unit": "F6|a follow-on",
+  "kind": "plot_points",
+  "tier": "uncertain:descriptive|robustness",
+  "paper_focal": false,
+  "pre_review_outcome": "indeterminate",
+  "pre_review_reason": "share of read points matched = 0.30",
+  "outcome": "indeterminate",
+  "reason": "share of read points matched = 0.30"
+ },
+ {
+  "unit": "F6|a contributors",
+  "kind": "plot_points",
+  "tier": "uncertain:descriptive|robustness",
+  "paper_focal": false,
+  "pre_review_outcome": "indeterminate",
+  "pre_review_reason": "share of read points matched = 0.00",
+  "outcome": "indeterminate",
+  "reason": "share of read points matched = 0.00"
+ },
+ {
+  "unit": "F6|b",
+  "kind": "plot_points",
+  "tier": "uncertain:descriptive|robustness",
+  "paper_focal": false,
+  "pre_review_outcome": "indeterminate",
+  "pre_review_reason": "share of read points matched = 0.33",
+  "outcome": "indeterminate",
+  "reason": "share of read points matched = 0.33"
+ },
+ {
+  "unit": "F1|b",
+  "kind": "not_audited",
+  "tier": "descriptive",
+  "paper_focal": false,
+  "pre_review_outcome": "not_audited",
+  "pre_review_reason": "illustrative image pair, not reproducible from deposited data",
+  "outcome": "not_audited",
+  "reason": "illustrative image pair, not reproducible from deposited data"
+ },
+ {
+  "unit": "F3|a(i)",
+  "kind": "not_audited",
+  "tier": "descriptive",
+  "paper_focal": false,
+  "pre_review_outcome": "not_audited",
+  "pre_review_reason": "no numeric target in either reader's sealed targets",
+  "outcome": "not_audited",
+  "reason": "no numeric target in either reader's sealed targets"
+ },
+ {
+  "unit": "F3|a(ii)",
+  "kind": "not_audited",
+  "tier": "descriptive",
+  "paper_focal": false,
+  "pre_review_outcome": "not_audited",
+  "pre_review_reason": "no numeric target in either reader's sealed targets",
+  "outcome": "not_audited",
+  "reason": "no numeric target in either reader's sealed targets"
+ },
+ {
+  "unit": "F3|b(i)",
+  "kind": "not_audited",
+  "tier": "descriptive",
+  "paper_focal": false,
+  "pre_review_outcome": "not_audited",
+  "pre_review_reason": "no numeric target in either reader's sealed targets",
+  "outcome": "not_audited",
+  "reason": "no numeric target in either reader's sealed targets"
+ },
+ {
+  "unit": "F3|b(ii)",
+  "kind": "not_audited",
+  "tier": "descriptive",
+  "paper_focal": false,
+  "pre_review_outcome": "not_audited",
+  "pre_review_reason": "no numeric target in either reader's sealed targets",
+  "outcome": "not_audited",
+  "reason": "no numeric target in either reader's sealed targets"
+ }
+]

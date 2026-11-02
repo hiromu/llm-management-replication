@@ -1,0 +1,57 @@
+level,dataset,label_fable,label_astra,label_reconciled,structure
+attention: exclude on inferred key (attn == wrongdoing_num),1,equivalent,uncertain,uncertain,both
+attention: no filter,1,uncertain,,uncertain,one reader
+attention: documented rule with no executable form (not runnable),1,,equivalent,equivalent,one reader
+attention: exclude if either check fails,2,equivalent,uncertain,uncertain,both
+attention: exclude only if both fail,2,uncertain,,uncertain,one reader
+attention: no filter,2,uncertain,,uncertain,one reader
+attention: documented rule with no executable form (not runnable),2,,equivalent,equivalent,one reader
+attention: exclude if any of four checks fails,3,equivalent,uncertain,uncertain,both
+attention: comp1-comp3 only,3,uncertain,,uncertain,one reader
+attention: no filter,3,uncertain,,uncertain,one reader
+attention: documented rule with no executable form (not runnable),3,,equivalent,equivalent,one reader
+composite: item mean,1,equivalent,uncertain,uncertain,both
+composite: literal sum,1,non_equivalent,uncertain,uncertain,both
+composite: deposited column,1,,equivalent,equivalent,one reader
+composite: item mean,2,equivalent,uncertain,uncertain,both
+composite: literal sum,2,non_equivalent,uncertain,uncertain,both
+composite: deposited column,2,,equivalent,equivalent,one reader
+composite: item mean,3,equivalent,uncertain,uncertain,both
+composite: literal sum,3,non_equivalent,uncertain,uncertain,both
+composite: deposited column,3,,equivalent,equivalent,one reader
+loyalty predictor: continuous,4,equivalent,equivalent,equivalent,both
+loyalty predictor: strong dichotomy,4,non_equivalent,non_equivalent,non_equivalent,both
+loyalty predictor: exponential,4,non_equivalent,non_equivalent,non_equivalent,both
+paired test: paired t,1,equivalent,,equivalent,one reader
+paired test: within main effect of mixed ANOVA,1,uncertain,,uncertain,one reader
+paired test: mixed model,1,uncertain,,uncertain,one reader
+effect size: d from condition SDs,1,equivalent,,equivalent,one reader
+effect size: dz,1,non_equivalent,,non_equivalent,one reader
+t variance: Welch,2,equivalent,,equivalent,one reader
+t variance: Student,2,equivalent,,equivalent,one reader
+indirect interval: bias-corrected bootstrap,2,equivalent,,equivalent,one reader
+indirect interval: delta/Wald,2,uncertain,,uncertain,one reader
+indirect interval: percentile bootstrap,2,equivalent,,equivalent,one reader
+mediator entry: simultaneous,2,equivalent,,equivalent,one reader
+mediator entry: single-mediator,2,non_equivalent,,non_equivalent,one reader
+accused integrity item 3: as dictionary,2,,equivalent,equivalent,one reader
+accused integrity item 3: reversed as preregistered,2,,uncertain,uncertain,one reader
+contrast error: full-model pooled,3,equivalent,,equivalent,one reader
+contrast error: Student two cells,3,uncertain,,uncertain,one reader
+contrast error: Welch two cells,3,uncertain,,uncertain,one reader
+SS: Type III,3,equivalent,,equivalent,one reader
+SS: Type II,3,uncertain,,uncertain,one reader
+SS: Type I,3,non_equivalent,,non_equivalent,one reader
+eta2: partial,3,equivalent,,equivalent,one reader
+eta2: classical,3,non_equivalent,,non_equivalent,one reader
+house loyalty: covariate,4,equivalent,,equivalent,one reader
+house loyalty: focal predictor in place of broker loyalty,4,non_equivalent,,non_equivalent,one reader
+logit SE: model-based,4,equivalent,,equivalent,one reader
+logit SE: sandwich,4,uncertain,,uncertain,one reader
+"mediation binary outcome: as stated, link unresolved",4,equivalent,,equivalent,one reader
+mediation binary outcome: logistic,4,uncertain,,uncertain,one reader
+mediation binary outcome: linear probability,4,uncertain,,uncertain,one reader
+duration unit: semesters,4,,equivalent,equivalent,one reader
+"duration unit: months (no column, unavailable)",4,,non_equivalent,non_equivalent,one reader
+moral-intensity anchors: appendix,1,,equivalent,equivalent,one reader
+moral-intensity anchors: dictionary,1,,uncertain,uncertain,one reader

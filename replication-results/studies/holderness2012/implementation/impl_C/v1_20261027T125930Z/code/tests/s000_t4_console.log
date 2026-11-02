@@ -1,0 +1,24 @@
+SYNTHETIC PASS known_probit_coefficients: {'n': 60000, 'truth': [-0.25, 0.7, -0.45], 'recovered': [-0.253643035336078, 0.6994023733131636, -0.45580497051969565], 'max_abs_error': 0.00580497051969564, 'tolerance': 0.035}
+SYNTHETIC PASS marginal_effects_and_delta_finite_differences: {'max_me_error': 4.1609771184170086e-12, 'max_jacobian_error': 2.020595341600817e-07, 'max_se_error': 5.333785813195491e-10}
+SYNTHETIC PASS cluster_sandwich_direct_tiny_example: {'max_abs_error': 1.1102230246251565e-16, 'clusters': 4, 'correction': 1.3333333333333333}
+SYNTHETIC PASS handmade_hierarchy_groups: {'single_rank_steepness': 0.0, 'matching_reference_sameness': 1.0, 'ranks_1_9_steepness': 0.3999999999999999, 'empty_group_missing': True}
+SYNTHETIC PASS delong_identical_and_direct_paired_with_ties: {'identical_z': 0.0, 'identical_p': np.float64(1.0), 'paired_z': np.float64(0.8660254037844387)}
+SYNTHETIC PASS model_family_inventory: {'T4': 8, 'T5': 4, 'T6': 8, 'R_cc': 4, 'R_n50': 8, 'R_n100': 8, 'R_noexec': 8, 'R_ger': 8, 'R_jap': 8, 'R_aaf': 8, 'R_nosq': 4, 'R_alt': 14, 'R_friends': 10, 'R_int': 4}
+SYNTHETIC PASS cleaning_and_duplicate_linkage: {'pow_rows_preserved': 6, 'duplicate_rules': 3}
+2026-10-27 22:13:00 Invocation={'grid': PosixPath('grid.json'), 'data': PosixPath('data'), 'out': PosixPath('results'), 'specs': 'S000', 'influence': 'none', 'families': 'T4', 'self_test': False, 'integration_test': False, 'construct_only': False}; synthetic checks passed=7; numpy=2.4.2; pandas=2.2.3
+2026-10-27 22:13:05 Read D0=143374; scanned enlistments=9200232; retained=74210; distinct matching serials=73601; seconds=5.27
+2026-10-27 22:13:05 BEGIN S000; params={"age_rule": "range", "camp_valid": "nonblank", "coords": "crosswalk", "dup_serial": "unmatched", "educ_postgrad": 9, "friends_def": "incl_self", "group_members": "regression", "height_rule": "range", "married": 1, "pop_fractions": "descriptive", "rank_rule": "origin", "sameness_constant": "fixed", "sample_common": true, "svc_exclude": ["6", "7"]}; families=['T4']
+2026-10-27 22:13:05 S000 sample service=128958
+2026-10-27 22:13:05 S000 sample power=124933
+2026-10-27 22:13:05 S000 sample D_status=124387
+2026-10-27 22:13:06 S000 cap: R=101993; linked=57659; rank_reference=[0.4619027539005482, 0.08810697719679522, 0.2810016542865484, 0.0069658438483246295, 0.13724901878101786, 0.015456226280450226, 0.0053034480521586816, 0.003843783450647118, 0.00017029420350968245]; missing={'rank': 772, 'height': 60811, 'age': 44463, 'education': 44334, 'dependents': 44505, 'officer': 772, 'length': 0, 'distance': 625, 'n_g': 228, 'steepness': 228, 'sameness': 228, 'ratio_sameness': 228, 'absolute_sameness': 228, 'distinct_ranks': 228, 'sum_ranks': 228, 'administrative_intensity': 228}
+2026-10-27 22:13:06 S000 camp: R=101993; linked=57659; rank_reference=[0.4619027539005482, 0.08810697719679522, 0.2810016542865484, 0.0069658438483246295, 0.13724901878101786, 0.015456226280450226, 0.0053034480521586816, 0.003843783450647118, 0.00017029420350968245]; missing={'rank': 772, 'height': 60811, 'age': 44463, 'education': 44334, 'dependents': 44505, 'officer': 772, 'length': 0, 'distance': 625, 'n_g': 100, 'steepness': 100, 'sameness': 100, 'ratio_sameness': 100, 'absolute_sameness': 100, 'distinct_ranks': 100, 'sum_ranks': 100, 'administrative_intensity': 100}
+2026-10-27 22:13:07 S000 T4__cap__simple__steepness: ok; N=100672 K=165 clusters=1674; PP=1321/178; omitted={}; scaled_score=8.61e-13; seconds=1.417
+2026-10-27 22:13:08 S000 T4__cap__simple__sameness: ok; N=100672 K=165 clusters=1674; PP=1321/178; omitted={}; scaled_score=1.2e-12; seconds=1.414
+2026-10-27 22:13:18 S000 T4__cap__full__steepness: ok; N=100672 K=178 clusters=1674; PP=1321/178; omitted={'men_missing': 'omitted_collinear', 'men_sq_missing': 'omitted_collinear'}; scaled_score=8.8e-12; seconds=9.091
+2026-10-27 22:13:27 S000 T4__cap__full__sameness: ok; N=100672 K=178 clusters=1674; PP=1321/178; omitted={'men_missing': 'omitted_collinear', 'men_sq_missing': 'omitted_collinear'}; scaled_score=1.65e-11; seconds=9.082
+2026-10-27 22:13:27 S000 T4__camp__simple__steepness: ok; N=101993 K=4 clusters=341; PP=0/0; omitted={}; scaled_score=1.3e-10; seconds=0.098
+2026-10-27 22:13:27 S000 T4__camp__simple__sameness: ok; N=101993 K=4 clusters=341; PP=0/0; omitted={}; scaled_score=1.22e-08; seconds=0.090
+2026-10-27 22:13:27 S000 T4__camp__full__steepness: ok; N=101993 K=19 clusters=341; PP=0/0; omitted={'men_missing': 'omitted_collinear', 'men_sq_missing': 'omitted_collinear'}; scaled_score=1.17e-14; seconds=0.387
+2026-10-27 22:13:28 S000 T4__camp__full__sameness: ok; N=101993 K=19 clusters=341; PP=0/0; omitted={'men_missing': 'omitted_collinear', 'men_sq_missing': 'omitted_collinear'}; scaled_score=1.13e-13; seconds=0.351
+2026-10-27 22:13:28 END S000

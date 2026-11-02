@@ -1,0 +1,259 @@
+PASS 01: M1 WLS estimates vs direct normal equations
+PASS 02: M1 WLS SEs vs direct normal equations
+PASS 03: M1 weighted SSE vs direct matrix expression
+PASS 04: M1 t and two-sided Student p
+PASS 05: M1 scaled condition index includes intercept
+PASS 06: M2 WLS estimates vs direct normal equations
+PASS 07: M2 WLS SEs vs direct normal equations
+PASS 08: M2 weighted SSE vs direct matrix expression
+PASS 09: M2 t and two-sided Student p
+PASS 10: M2 scaled condition index includes intercept
+PASS 11: M3 WLS estimates vs direct normal equations
+PASS 12: M3 WLS SEs vs direct normal equations
+PASS 13: M3 weighted SSE vs direct matrix expression
+PASS 14: M3 t and two-sided Student p
+PASS 15: M3 scaled condition index includes intercept
+PASS 16: M3_SQ WLS estimates vs direct normal equations
+PASS 17: M3_SQ WLS SEs vs direct normal equations
+PASS 18: M3_SQ weighted SSE vs direct matrix expression
+PASS 19: M3_SQ t and two-sided Student p
+PASS 20: M3_SQ scaled condition index includes intercept
+PASS 21: M2 vs M1 F and p vs direct matrices
+PASS 22: M3 vs M1 F and p vs direct matrices
+PASS 23: M3 vs M2 F and p vs direct matrices
+PASS 24: M3_SQ vs M1 F and p vs direct matrices
+PASS 25: hand-made eleven-category SD equals 11, 0, 11
+PASS 26: population SD uses denominator n
+PASS 27: zero sample SD contributes zero
+PASS 28: zero-SD-missing rule makes whole score missing
+PASS 29: collected bank-level missing share propagates
+PASS 30: lag uses calendar t-1, handles unsorted entries and gaps
+PASS 31: missing prior outcome is never skipped
+PASS 32: sample SHA-256 hashes sorted integer lines with trailing LF
+PASS 33: hash is 64 lower-case hex and order invariant
+PASS 34: empty sample hashes empty bytes
+PASS 35: M1 mean-one weights preserve coefficients and SEs
+PASS 36: M1 weight scaling scales SSE only
+PASS 37: M1 centered basis restores coefficients and full covariance
+PASS 38: M2 mean-one weights preserve coefficients and SEs
+PASS 39: M2 weight scaling scales SSE only
+PASS 40: M2 centered basis restores coefficients and full covariance
+PASS 41: M3 mean-one weights preserve coefficients and SEs
+PASS 42: M3 weight scaling scales SSE only
+PASS 43: M3 centered basis restores coefficients and full covariance
+PASS 44: M3_SQ mean-one weights preserve coefficients and SEs
+PASS 45: M3_SQ weight scaling scales SSE only
+PASS 46: M3_SQ centered basis restores coefficients and full covariance
+PASS 47: R23.hc1 matches direct sandwich
+PASS 48: R23.cluster_bank matches direct sandwich
+PASS 49: Prais-Winsten restarts at entries and gaps
+PASS 50: two-step AR(1) coefficients and SEs match direct transformation
+PASS 51: AR(1) reports original weighted SSE
+PASS 52: external studentization row 1 agrees with deletion refit
+PASS 53: external studentization row 19 agrees with deletion refit
+PASS 54: external studentization row 53 agrees with deletion refit
+PASS 55: fitting guard refuses construction-only fits
+PASS 56: synthetic annual construction returns complete sample
+PASS 57: income uses Q4 YTD once, AA uses quarterly mean
+PASS 58: expense ratio uses Q4 expense over average assets
+PASS 59: not-collected missing component becomes zero, observed value retained
+PASS 60: collected component missing for individual bank stays missing
+PASS 61: exact identity fills only from complete component set
+PASS 62: uncollected denominator is never imputed to zero
+PASS 63: zero SD does not hide a missing bank share
+PASS 64: min-two rule rejects exactly one average-assets quarter
+PASS 65: any-quarter rule accepts one average-assets quarter
+PASS 66: zero available averages trigger available five-point fallback
+PASS 67: explicit five-point assets use all five endpoints
+PASS 68: explicit five-point assets reject a missing endpoint
+PASS 69: duplicate bank-quarter selects reporting level 1
+PASS 70: duplicate handling is counted and logged
+PASS 71: pure same-CERT legal continuation gets predecessor lag
+PASS 72: proforma lag sums survivor and absorbed predecessor NI and AA
+PASS 73: named outlier deleted only after variables built
+PASS 74: named outlier still supplies next-year lag
+PASS 75: suppress-lag rule removes 1988 row too
+PASS 76: pre-benchmark deletion also removes next-year lag
+PASS 77: day-weighted average assets handles leap year
+PASS 78: mean of quarterly shares and deposits uses quarterly values
+PASS 79: ratio-of-means differs from mean of shares as specified
+O_A  
+O_B  
+O_A__R01.fixed1983  
+O_A__R01.rssdmsa  
+O_A__R01.mnonly  
+O_A__R01.dynamic  
+O_A__R02.charter_entity  
+O_A__R02.charter  
+O_A__R02.entity  
+O_A__R02.no_special  
+O_A__R02.add_savings  
+O_A__R03.as_reported  
+O_A__R03.drop_merger_years  
+O_A__R03.continuity  
+O_A__R03.proforma  
+O_A__R04.lag_only  
+O_A__R04.full_prior_year  
+O_A__R04.annualise  
+O_A__R05.min2_fallback  
+O_A__R05.all4  
+O_A__R05.any  
+O_A__R06.rck_mean  
+O_A__R06.rck_days  
+O_A__R06.five_point  
+O_A__R06.two_point  
+O_A__R06.fdic_roa  
+O_A__R07.net_income  
+O_A__R07.before_extraordinary  
+O_A__R08.year_end  
+O_A__R08.mean_of_quarter_shares  
+O_A__R08.ratio_of_means  
+O_A__R09.all_market  
+O_A__R09.analytic  
+O_A__R09.joint_complete  
+O_A__R09.weighted_roa  
+O_A__R10.delete_named  
+O_A__R10.max_rstudent  
+O_A__R10.suppress_lag  
+O_A__R10.before_benchmarks  
+O_A__R10.none  
+O_A__R11.excl_accept  
+O_A__R11.incl_accept  
+O_A__R12.production  
+O_A__R12.plus_farmland  
+O_A__R13.gross_residual  
+O_A__R13.components  
+O_A__R13.net_unearned  
+O_A__R13.net_allowance  
+O_A__R14.broad  
+O_A__R14.literal  
+O_A__R14.residual  
+O_A__R15.zero_if_not_collected  
+O_A__R15.missing  
+O_A__R15.identity_fill  
+O_A__R16.consolidated  
+O_A__R16.domestic  
+O_A__R17.sample_sd  
+O_A__R17.population_sd  
+O_A__R17.zero_sd_missing  
+O_A__R18.domestic  
+O_A__R18.consolidated  
+O_A__R19.commercial  
+O_A__R19.all_insured  
+O_A__R20.cpi_annual  
+O_A__R20.cpi_december  
+O_A__R20.local_cpi  
+O_A__R20.gdp_current  
+O_A__R20.gdp_historical  
+O_A__R21.commercial  
+O_A__R21.all_insured  
+O_A__R22.none  
+O_A__R22.year  
+O_A__R22.bank  
+O_A__R23.conventional  
+O_A__R23.cluster_bank  
+O_A__R23.hc1  
+O_A__R24.raw  
+O_A__R25.wls  
+O_A__R25.ols  
+O_A__R25.wls_ar1  
+O_A__R26.raw  
+O_B__R01.fixed1983  
+O_B__R01.rssdmsa  
+O_B__R01.mnonly  
+O_B__R01.dynamic  
+O_B__R02.charter_entity  
+O_B__R02.charter  
+O_B__R02.entity  
+O_B__R02.no_special  
+O_B__R02.add_savings  
+O_B__R03.as_reported  
+O_B__R03.drop_merger_years  
+O_B__R03.continuity  
+O_B__R03.proforma  
+O_B__R04.lag_only  
+O_B__R04.full_prior_year  
+O_B__R04.annualise  
+O_B__R05.min2_fallback  
+O_B__R05.all4  
+O_B__R05.any  
+O_B__R06.rck_mean  
+O_B__R06.rck_days  
+O_B__R06.five_point  
+O_B__R06.two_point  
+O_B__R06.fdic_roa  
+O_B__R07.net_income  
+O_B__R07.before_extraordinary  
+O_B__R08.year_end  
+O_B__R08.mean_of_quarter_shares  
+O_B__R08.ratio_of_means  
+O_B__R09.all_market  
+O_B__R09.analytic  
+O_B__R09.joint_complete  
+O_B__R09.weighted_roa  
+O_B__R10.delete_named  
+O_B__R10.max_rstudent  
+O_B__R10.suppress_lag  
+O_B__R10.before_benchmarks  
+O_B__R10.none  
+O_B__R11.excl_accept  
+O_B__R11.incl_accept  
+O_B__R12.production  
+O_B__R12.plus_farmland  
+O_B__R13.gross_residual  
+O_B__R13.components  
+O_B__R13.net_unearned  
+O_B__R13.net_allowance  
+O_B__R14.broad  
+O_B__R14.literal  
+O_B__R14.residual  
+O_B__R15.zero_if_not_collected  
+O_B__R15.missing  
+O_B__R15.identity_fill  
+O_B__R16.consolidated  
+O_B__R16.domestic  
+O_B__R17.sample_sd  
+O_B__R17.population_sd  
+O_B__R17.zero_sd_missing  
+O_B__R18.domestic  
+O_B__R18.consolidated  
+O_B__R19.commercial  
+O_B__R19.all_insured  
+O_B__R20.cpi_annual  
+O_B__R20.cpi_december  
+O_B__R20.local_cpi  
+O_B__R20.gdp_current  
+O_B__R20.gdp_historical  
+O_B__R21.commercial  
+O_B__R21.all_insured  
+O_B__R22.none  
+O_B__R22.year  
+O_B__R22.bank  
+O_B__R23.conventional  
+O_B__R23.cluster_bank  
+O_B__R23.hc1  
+O_B__R24.raw  
+O_B__R25.wls  
+O_B__R25.ols  
+O_B__R25.wls_ar1  
+O_B__R26.raw  
+O_A__R24.mean1  
+O_A__R26.centered  
+O_B__R24.mean1  
+O_B__R26.centered  
+Influence completed: O_A M2 bank_year (128 deletions)
+Influence completed: O_A M2 bank (16 deletions)
+Influence completed: O_A M3 bank_year (128 deletions)
+Influence completed: O_A M3 bank (16 deletions)
+Influence completed: O_B M2 bank_year (128 deletions)
+Influence completed: O_B M2 bank (16 deletions)
+Influence completed: O_B M3 bank_year (128 deletions)
+Influence completed: O_B M3 bank (16 deletions)
+PASS 80: every grid specification produces result rows
+PASS 81: no unexpected synthetic full-grid failures
+PASS 82: only missing documented special-bank codes unavailable
+PASS 83: four F-test entries for every specification
+PASS 84: influence retains every synthetic row and bank deletion
+PASS 85: all synthetic influence fits succeed
+
+ALL 85 TESTS PASSED. All fitted observations were synthetic.

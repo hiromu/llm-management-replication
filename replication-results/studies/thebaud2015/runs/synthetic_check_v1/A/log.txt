@@ -1,0 +1,19 @@
+01:57:56 - reading inputs from implementation/synthetic/data 
+01:57:56 - gem_extract rows: 26400; country_year rows: 264 
+01:57:56 - run ORIGIN: preparing data 
+01:58:09 - run ORIGIN model M1: status=ok n=6579 (12.9s) 
+01:58:40 - run ORIGIN model M2: status=ok n=6579 (31.4s) 
+01:58:48 - run ORIGIN model M3: status=ok n=6579 (7.9s) 
+01:58:49 - run ORIGIN model M4: status=ok n=365 (0.6s) 
+boundary (singular) fit: see help('isSingular')
+01:58:49 - run ORIGIN model M5: status=ok n=372 (0.1s) 
+01:58:49 - run ORIGIN model M6: status=ok n=372 (0.6s) 
+01:58:53 - run ORIGIN model M7: status=ok n=332 (3.6s) 
+01:58:53 - run ORIGIN model M8: status=ok n=179 (0.3s) 
+02:00:02 - run ORIGIN model R1: status=ok n=6579 (68.2s) 
+02:00:55 - run ORIGIN model R2: status=ok n=9634 (53.8s) 
+02:00:58 - run ORIGIN model R3: status=ok n=2197 (2.4s) 
+02:00:58 - done: 277 result rows written to runs/synthetic_check_v1/A 
+real 182.72
+user 182.08
+sys 0.46

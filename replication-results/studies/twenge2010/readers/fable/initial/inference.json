@@ -1,0 +1,36 @@
+{
+ "observation_unit": "individual 12th-grade respondent (one questionnaire form each)",
+ "sampling_unit": "multistage: geographic PSU, then school (PPS by senior-class size), then students/classrooms within school",
+ "assignment_unit": "survey year (cohort) is observational, not assigned; forms are distributed within school in ordered/random sequence",
+ "clusters": "schools within PSUs; no school or PSU identifiers in the public files; article uses no clustering",
+ "native_se_method_software": "LISREL 8.7 (Joreskog & Sorbom, 2004) model-based ML standard errors for latent means; conventional t tests for items (software for t tests not stated)",
+ "first_stage_strength": "not applicable",
+ "unavailable_source_fallbacks": [
+  {
+   "item": "Original (unbracketed) sampling weights used in ISR publications",
+   "fallback": "Public-use bracketed V5 (or unweighted at origin)",
+   "label": "uncertain"
+  },
+  {
+   "item": "School/PSU cluster identifiers for design-based SEs",
+   "fallback": "None available; use model-based/independent SEs as the article did",
+   "label": "uncertain"
+  },
+  {
+   "item": "2006 data 'most recent available when the analyses were performed' - release vintage used by the authors unknown",
+   "fallback": "ICPSR 20022 V3 (2008-09-12)",
+   "label": "uncertain"
+  },
+  {
+   "item": "1976 and 1991 release vintages used by the authors (article cites the 2nd ICPSR edition of Johnston et al. 2006 cumulative file)",
+   "fallback": "ICPSR 7927 V4 (2007) and ICPSR 9871 V1 (2006) per-year files",
+   "label": "uncertain"
+  },
+  {
+   "item": "Reliability estimates for retained scales (said to be in Table 1, absent)",
+   "fallback": "Compute alpha per scale/year; no target to compare",
+   "label": "uncertain"
+  }
+ ],
+ "vintage_notes": "Article (2010) cites Johnston, Bachman & O'Malley (2006) 2nd ICPSR edition as the data source and states 2006 was the most recent year available at analysis time; the packet supplies 1976 V4 (2007-05-25), 1991 V1 (2006-03-30) and 2006 V3 (2008-09-12). ICPSR changed missing-value assignment for one 1976 variable (V151, not used here) in 2007 and removed 14 Form 3 variables (V3319-V3332, not used) in 2004. Year codes in V1 and missing codes differ by release; none of the work items in the 2006 files are among the Western-region suppressed variables (checked in dictionaries: suppressed items are V4169, V4170, V4264-V4266 in Form 4 and V3169, V3170 in Form 3)."
+}

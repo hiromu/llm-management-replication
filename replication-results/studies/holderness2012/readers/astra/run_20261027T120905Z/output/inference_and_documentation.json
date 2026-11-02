@@ -1,0 +1,592 @@
+{
+  "observation_unit": {
+    "description": "Individual POW record intended to represent an individual person; duplicate-card handling not stated.",
+    "locators": [
+      {
+        "doc_id": "D1",
+        "pdf_page": 5,
+        "journal_page": null,
+        "section": "3",
+        "table": null,
+        "column": null,
+        "row": null,
+        "quote": null
+      }
+    ]
+  },
+  "sampling_unit": {
+    "description": "Administrative coverage of individual POWs rather than a documented probability sample; survival until camp registration affects inclusion.",
+    "locators": [
+      {
+        "doc_id": "D1",
+        "pdf_page": 5,
+        "journal_page": null,
+        "section": "3",
+        "table": null,
+        "column": null,
+        "row": null,
+        "quote": null
+      }
+    ]
+  },
+  "assignment_unit": {
+    "description": "No randomized treatment assignment. Hierarchy is shared at camp/captured-cohort level; capture, transport and camp placement determine exposure. Air-service argument is a diagnostic, not proven random assignment.",
+    "locators": [
+      {
+        "doc_id": "D1",
+        "pdf_page": 11,
+        "journal_page": null,
+        "section": "5.4",
+        "table": null,
+        "column": null,
+        "row": null,
+        "quote": null
+      }
+    ]
+  },
+  "cluster_units": [
+    {
+      "unit": "captured_id",
+      "applies_to": "Captured-cohort models",
+      "locators": [
+        {
+          "doc_id": "D1",
+          "pdf_page": 8,
+          "journal_page": null,
+          "section": "4.4",
+          "table": null,
+          "column": null,
+          "row": null,
+          "quote": null
+        }
+      ]
+    },
+    {
+      "unit": "camp_id",
+      "applies_to": "Camp-cohort models",
+      "locators": [
+        {
+          "doc_id": "D1",
+          "pdf_page": 8,
+          "journal_page": null,
+          "section": "4.4",
+          "table": null,
+          "column": null,
+          "row": null,
+          "quote": null
+        }
+      ]
+    }
+  ],
+  "native_se_method": {
+    "description": "Heteroskedasticity-robust covariance with stated group clustering; tables print p-values, not SEs. No finite-sample correction, test reference distribution, cluster counts for fitted samples or df given. ROC procedure is described separately and does not document cluster adjustment.",
+    "locators": [
+      {
+        "doc_id": "D1",
+        "pdf_page": 8,
+        "journal_page": null,
+        "section": "4.4",
+        "table": null,
+        "column": null,
+        "row": null,
+        "quote": null
+      }
+    ]
+  },
+  "native_software": null,
+  "native_software_locators": [
+    {
+      "doc_id": "D1",
+      "pdf_page": 8,
+      "journal_page": null,
+      "section": "4.4",
+      "table": null,
+      "column": null,
+      "row": null,
+      "quote": null
+    },
+    {
+      "doc_id": "D1",
+      "pdf_page": 9,
+      "journal_page": null,
+      "section": "4.5",
+      "table": null,
+      "column": null,
+      "row": null,
+      "quote": null
+    }
+  ],
+  "first_stage_strength": null,
+  "first_stage_note": {
+    "description": "No instrumental-variable model or first stage is described.",
+    "locators": [
+      {
+        "doc_id": "D1",
+        "pdf_page": 11,
+        "journal_page": null,
+        "section": "5.4",
+        "table": null,
+        "column": null,
+        "row": null,
+        "quote": null
+      }
+    ]
+  },
+  "documentation_scores": {
+    "specificity": 2,
+    "precision": 1,
+    "exhaustiveness": 1,
+    "rationale": {
+      "description": "Scale is 0=absent, 1=limited, 2=substantial but incomplete, 3=fully operational. Formulas, primary estimator, many controls, scaling, groups and clusters are named. Critical code mappings, source cleaning, timing proxies, software and nonlinear effect conventions are missing. Multiple robustness families are discussed without complete estimates, sample rules or accessible appendices.",
+      "locators": [
+        {
+          "doc_id": "D1",
+          "pdf_page": 5,
+          "journal_page": null,
+          "section": "3",
+          "table": null,
+          "column": null,
+          "row": null,
+          "quote": null
+        },
+        {
+          "doc_id": "D1",
+          "pdf_page": 7,
+          "journal_page": null,
+          "section": "Table 2",
+          "table": "2",
+          "column": null,
+          "row": null,
+          "quote": null
+        },
+        {
+          "doc_id": "D1",
+          "pdf_page": 8,
+          "journal_page": null,
+          "section": "4.3; 4.4",
+          "table": null,
+          "column": null,
+          "row": null,
+          "quote": null
+        },
+        {
+          "doc_id": "D1",
+          "pdf_page": 10,
+          "journal_page": null,
+          "section": "5.1–5.3",
+          "table": null,
+          "column": null,
+          "row": null,
+          "quote": null
+        },
+        {
+          "doc_id": "D1",
+          "pdf_page": 12,
+          "journal_page": null,
+          "section": "5.4; 6.1",
+          "table": null,
+          "column": null,
+          "row": null,
+          "quote": null
+        },
+        {
+          "doc_id": "D1",
+          "pdf_page": 14,
+          "journal_page": null,
+          "section": "6.2",
+          "table": null,
+          "column": null,
+          "row": null,
+          "quote": null
+        }
+      ]
+    }
+  },
+  "unavailable_source_fallbacks": [
+    {
+      "item": "Actual camp-entry and capture dates",
+      "problem": "Only DATE_REPORTED fields supplied; article uses both capture and entry terminology.",
+      "fallback": "Report-month proxy only as explicitly uncertain; exact entry-based reconstruction unavailable.",
+      "label": "uncertain",
+      "locators": [
+        {
+          "doc_id": "D1",
+          "pdf_page": 7,
+          "journal_page": null,
+          "section": "Table 2; 4.2",
+          "table": null,
+          "column": null,
+          "row": null,
+          "quote": null
+        }
+      ],
+      "source_documentation": "sources/data_dictionary_nara_pow_rg389.csv"
+    },
+    {
+      "item": "Initial camp and movement history",
+      "problem": "CAMP may be first or last camp; no transfer trajectory.",
+      "fallback": "Use recorded camp only as uncertain proxy; do not fabricate movements or assert clean attenuation bias.",
+      "label": "uncertain",
+      "locators": [
+        {
+          "doc_id": "D1",
+          "pdf_page": 5,
+          "journal_page": null,
+          "section": "3 footnote 7",
+          "table": null,
+          "column": null,
+          "row": null,
+          "quote": null
+        }
+      ],
+      "source_documentation": "sources/source_descriptions.md"
+    },
+    {
+      "item": "Historical height and weight meanings",
+      "problem": "Raw columns have multiple uses; NARA cannot date layouts reliably.",
+      "fallback": "Use only provenance-supported height/weight values; otherwise keep missing with flags. No arbitrary numeric cutoff proves measurement identity.",
+      "label": "uncertain",
+      "locators": [
+        {
+          "doc_id": "D1",
+          "pdf_page": 5,
+          "journal_page": null,
+          "section": "3",
+          "table": null,
+          "column": null,
+          "row": null,
+          "quote": null
+        }
+      ],
+      "source_documentation": "sources/data_dictionary_nara_asnf_rg64.csv"
+    },
+    {
+      "item": "Army-wide rank distribution",
+      "problem": "Article says original military population shares could not be located.",
+      "fallback": "Use eligible POW reference shares computed from registry under a frozen sample rule; never copy Table 3 fractions.",
+      "label": "uncertain",
+      "locators": [
+        {
+          "doc_id": "D1",
+          "pdf_page": 6,
+          "journal_page": null,
+          "section": "4.1.2 footnote 9",
+          "table": null,
+          "column": null,
+          "row": null,
+          "quote": null
+        }
+      ],
+      "source_documentation": null
+    },
+    {
+      "item": "Full capture-rank crosswalk",
+      "problem": "Nine category labels do not cover all source grade meanings and services.",
+      "fallback": "Prepare a transparent semantic crosswalk from supplied code meanings; keep unresolved ranks explicit pending adjudication.",
+      "label": "uncertain",
+      "locators": [
+        {
+          "doc_id": "D1",
+          "pdf_page": 6,
+          "journal_page": null,
+          "section": "4.1.1",
+          "table": null,
+          "column": null,
+          "row": null,
+          "quote": null
+        }
+      ],
+      "source_documentation": "sources/code_lists/pow_GRADE_ALPHA_cl1275.csv; pow_GRADE_CODE_cl1279.csv"
+    },
+    {
+      "item": "Capital and camp geocoding",
+      "problem": "Capital coordinates and author distance formula not in supplied files; crosswalk only a schema.",
+      "fallback": "Require independent frozen coordinates/formula before distance-dependent execution. Crosswalk decimal and whole-degree points are uncertainty variants, not interchangeable facts.",
+      "label": "unavailable",
+      "locators": [
+        {
+          "doc_id": "D1",
+          "pdf_page": 7,
+          "journal_page": null,
+          "section": "Table 2",
+          "table": null,
+          "column": null,
+          "row": null,
+          "quote": null
+        }
+      ],
+      "source_documentation": "sources/camp_location_crosswalk_schema.md"
+    },
+    {
+      "item": "Historical pay grades",
+      "problem": "No pay schedule or detailed conversion table supplied.",
+      "fallback": "Pay-based Gini and pay-interaction checks unavailable; do not replace pay by ordinal rank silently.",
+      "label": "unavailable",
+      "locators": [
+        {
+          "doc_id": "D1",
+          "pdf_page": 10,
+          "journal_page": null,
+          "section": "5.3.1",
+          "table": null,
+          "column": null,
+          "row": null,
+          "quote": null
+        }
+      ],
+      "source_documentation": null
+    },
+    {
+      "item": "Precapture unit and friends",
+      "problem": "Composite unit identity, zero-friend transformation and missing-unit rules are unspecified.",
+      "fallback": "Use organization+parent-number+parent-type+service candidate and log-zero alternatives only under explicit uncertainty.",
+      "label": "uncertain",
+      "locators": [
+        {
+          "doc_id": "D1",
+          "pdf_page": 10,
+          "journal_page": null,
+          "section": "5.2",
+          "table": null,
+          "column": null,
+          "row": null,
+          "quote": null
+        }
+      ],
+      "source_documentation": "sources/data_dictionary_nara_pow_rg389.csv"
+    },
+    {
+      "item": "Red Cross per-capita food deliveries",
+      "problem": "Article says attempted acquisition failed.",
+      "fallback": "No quantitative test of that proposed mechanism; retain as unavailable.",
+      "label": "unavailable",
+      "locators": [
+        {
+          "doc_id": "D1",
+          "pdf_page": 14,
+          "journal_page": null,
+          "section": "6.2",
+          "table": null,
+          "column": null,
+          "row": null,
+          "quote": null
+        }
+      ],
+      "source_documentation": null
+    },
+    {
+      "item": "Injury at capture and dates of death",
+      "problem": "Neither observed in analytic source description.",
+      "fallback": "No injury adjustment or hazard model can be reconstructed; do not substitute report-close date for death.",
+      "label": "unavailable",
+      "locators": [
+        {
+          "doc_id": "D1",
+          "pdf_page": 5,
+          "journal_page": null,
+          "section": "3",
+          "table": null,
+          "column": null,
+          "row": null,
+          "quote": null
+        }
+      ],
+      "source_documentation": null
+    },
+    {
+      "item": "Unprinted robustness and earlier-version tables",
+      "problem": "Frozen packet excludes earlier versions and contains no supplements.",
+      "fallback": "Preserve prose claims and available p-values only; no invented coefficients, Ns or specification-complete tables.",
+      "label": "unavailable",
+      "locators": [
+        {
+          "doc_id": "D1",
+          "pdf_page": 10,
+          "journal_page": null,
+          "section": "5.1; 5.2",
+          "table": null,
+          "column": null,
+          "row": null,
+          "quote": null
+        }
+      ],
+      "source_documentation": null
+    },
+    {
+      "item": "Source record component group",
+      "problem": "POW provider merged card components without retained component label.",
+      "fallback": "Cannot emulate component-specific author selection; record as unidentifiable if needed.",
+      "label": "unavailable",
+      "locators": [
+        {
+          "doc_id": "D1",
+          "pdf_page": 5,
+          "journal_page": null,
+          "section": "3",
+          "table": null,
+          "column": null,
+          "row": null,
+          "quote": null
+        }
+      ],
+      "source_documentation": "sources/source_descriptions.md"
+    },
+    {
+      "item": "Linkage normalization and duplicate records",
+      "problem": "Serial number match is named, but prefixes, padding and multiple cards are not resolved.",
+      "fallback": "Prefer declared exact unique-key candidate; ambiguous linked covariates remain missing instead of multiplying prisoners. Exact author linkage unavailable.",
+      "label": "uncertain",
+      "locators": [
+        {
+          "doc_id": "D1",
+          "pdf_page": 5,
+          "journal_page": null,
+          "section": "3",
+          "table": null,
+          "column": null,
+          "row": null,
+          "quote": null
+        }
+      ],
+      "source_documentation": "sources/source_descriptions.md; both field dictionaries"
+    },
+    {
+      "item": "Education, dependent and birth-year mappings",
+      "problem": "Postgraduate years, married dependency and two-digit century unresolved.",
+      "fallback": "Predeclare documented mappings and keep remaining values unknown; assess named uncertainty variants, not target-matching choices.",
+      "label": "uncertain",
+      "locators": [
+        {
+          "doc_id": "D1",
+          "pdf_page": 7,
+          "journal_page": null,
+          "section": "Table 2",
+          "table": null,
+          "column": null,
+          "row": null,
+          "quote": null
+        }
+      ],
+      "source_documentation": "asnf_EDUCATION_cl2058.csv; asnf_MARITAL_STATUS_cl2081.csv; enlistment dictionary"
+    },
+    {
+      "item": "Historical camp country boundaries",
+      "problem": "Modern crosswalk country labels do not identify prewar proper borders.",
+      "fallback": "Descriptive outside-country classification remains uncertain until historical boundary convention is supplied.",
+      "label": "uncertain",
+      "locators": [
+        {
+          "doc_id": "D1",
+          "pdf_page": 4,
+          "journal_page": null,
+          "section": "2.1",
+          "table": null,
+          "column": null,
+          "row": null,
+          "quote": null
+        }
+      ],
+      "source_documentation": "sources/camp_location_crosswalk_schema.md"
+    }
+  ],
+  "vintage_issues": [
+    {
+      "item": "POW card conversion and component merger",
+      "description": "Provider converted different card components in 1978 and 1998 and merged them in 2002. Component identity unavailable; source acquisition date/version used by authors is unstated.",
+      "locators": [
+        {
+          "doc_id": "D1",
+          "pdf_page": 5,
+          "journal_page": null,
+          "section": "3",
+          "table": null,
+          "column": null,
+          "row": null,
+          "quote": null
+        }
+      ],
+      "source_documentation": "sources/source_descriptions.md"
+    },
+    {
+      "item": "Enlistment source and card layouts",
+      "description": "Current source covers approximately 1938–1946 with documented later/invalid date codes; article gives both 1938–1946 and 1938–1945 coverage. Do not silently impose a date restriction from inconsistent descriptive prose. ERC layout and height/weight meanings differ.",
+      "locators": [
+        {
+          "doc_id": "D1",
+          "pdf_page": 5,
+          "journal_page": null,
+          "section": "3",
+          "table": null,
+          "column": null,
+          "row": null,
+          "quote": null
+        }
+      ],
+      "source_documentation": "sources/source_descriptions.md; enlistment dictionary"
+    },
+    {
+      "item": "Camp-location reconstruction",
+      "description": "Independent present-day geocoding is not the documented author geography; coarse coordinates, ambiguous names, duplicate codes and historical borders can change distances and country labels.",
+      "locators": [
+        {
+          "doc_id": "D1",
+          "pdf_page": 4,
+          "journal_page": null,
+          "section": "2.1",
+          "table": null,
+          "column": null,
+          "row": null,
+          "quote": null
+        },
+        {
+          "doc_id": "D1",
+          "pdf_page": 7,
+          "journal_page": null,
+          "section": "Table 2",
+          "table": "2",
+          "column": null,
+          "row": null,
+          "quote": null
+        }
+      ],
+      "source_documentation": "sources/camp_location_crosswalk_schema.md"
+    },
+    {
+      "item": "Publication evidence vintage",
+      "description": "Only frozen published D1 supplied; excluded earlier versions cannot repair gaps. No supplied matching supplement or correction. Packet search outcome does not establish that none exists anywhere.",
+      "locators": [
+        {
+          "doc_id": "D1",
+          "pdf_page": 10,
+          "journal_page": null,
+          "section": "5.1",
+          "table": null,
+          "column": null,
+          "row": null,
+          "quote": null
+        },
+        {
+          "doc_id": "D1",
+          "pdf_page": 12,
+          "journal_page": null,
+          "section": "5.4",
+          "table": null,
+          "column": null,
+          "row": null,
+          "quote": null
+        },
+        {
+          "doc_id": "D1",
+          "pdf_page": 14,
+          "journal_page": null,
+          "section": "6.2",
+          "table": null,
+          "column": null,
+          "row": null,
+          "quote": null
+        }
+      ],
+      "packet_reference": "packet/publication_packet.json, v1"
+    }
+  ]
+}

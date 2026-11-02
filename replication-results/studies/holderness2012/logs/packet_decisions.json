@@ -1,0 +1,18 @@
+{
+  "decided": "2026-10-27",
+  "packet_contents": [
+    "D1 main article (JSTOR scan of published version)"
+  ],
+  "supplements": "none exist per documented search; no local catalog match",
+  "corrections": "none found",
+  "working_paper_versions": {
+    "status": "identified, excluded from the publication packet",
+    "items": [
+      "AEA/ASSA 2009 conference paper (Dec 2008)",
+      "SSRN 1345420 (2009)",
+      "accepted-manuscript file on author Google Drive (Jan 2012)"
+    ],
+    "rationale": "Not part of the published record or publisher supplements; they are earlier, different versions whose results the article mentions as 'reported in previous versions'. Including them would add non-published specifications and numbers. Their unavailability to readers is recorded as a packet gap for the article's unreported-in-print analyses (Germany/Japan split, Air Force subsample, linear-only size term)."
+  },
+  "incidental_exposure": "The eligibility agent's WebFetch cached the AEA working-paper PDF and two author CVs in the coordinator session's tool-result cache (outside the study). The agent reports it did not open the working paper. It was not read by the coordinator and is not in any role input."
+}

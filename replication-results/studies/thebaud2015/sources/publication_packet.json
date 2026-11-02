@@ -1,0 +1,84 @@
+{
+  "packet_version": 1,
+  "frozen_utc": "2026-10-27T15:05:46+00:00",
+  "paper_id_opaque": "P-7Q3",
+  "documents": [
+    {
+      "order": 1,
+      "doc_id": "MAIN",
+      "role": "main article",
+      "source_path": "papers/journal_collection/ASQ/ASQ_2015_Thebaud.pdf",
+      "packet_name": "MAIN.pdf",
+      "sha256": "65b9354449e0f46108a5ec81b46fc00e9bf43fcce113f49585f40e5625d60b07",
+      "pages": 42,
+      "version": "issue version, ASQ 60(4) December 2015, pp. 671-711; online first 2015-06-05",
+      "identity_check": "title, author, DOI 10.1177/0001839215591627 on PDF; hash matches STUDY.json",
+      "redactions": "none"
+    },
+    {
+      "order": 2,
+      "doc_id": "S1",
+      "role": "online appendix",
+      "source_path": "papers/supplements/ASQ/ASQ_2015_Thebaud_S1.pdf",
+      "packet_name": "S1.pdf",
+      "sha256": "5f6590b995f551e25f5de4dc6d5ae27827884023899a1236d19d202511f0c866",
+      "pages": 3,
+      "version": "publisher supplement ds_10.1177_0001839215591627.pdf (single supplemental file on SAGE page)",
+      "identity_check": "publisher filename and exact byte size match SAGE listing; PDF metadata author Sarah Thebaud; tables A1-A3 match article references",
+      "redactions": "none (copied_without_code_removal); no code or links found"
+    }
+  ],
+  "text_extractions": [
+    {
+      "name": "MAIN.paged.txt",
+      "sha256": "2e5506860676318576c55ecf020772b08757ba9f52637fdf9974e9809316629c",
+      "tool": "pdftotext 26.10.0 -layout, split on form feeds"
+    },
+    {
+      "name": "S1.paged.txt",
+      "sha256": "e6bc3ce5a72af6a70074b87f197ce014911a2ad38664dfc50a3c7a034dd4fed1",
+      "tool": "pdftotext 26.10.0 -layout, split on form feeds"
+    }
+  ],
+  "known_gaps": [
+    "No additional supplements, errata or replacement versions found (sources/supplements/supplement_search.json).",
+    "MAIN refers to Panel B of Online Appendix table A1 for established-owner descriptives; in S1 that panel is Panel B of Table A2.",
+    "S1 Table A1 prints country-level values and Table A2 prints descriptive statistics; these are documentary/comparison material only, never empirical inputs."
+  ],
+  "reader_source_dictionaries": [
+    {
+      "name": "README.md",
+      "sha256": "a39bba24211d0504006424d4cc89f687e3b3576f2aa460d996b449348ee01a77"
+    },
+    {
+      "name": "icpsr20320_gem_aps.md",
+      "sha256": "aa3168c67e8e7e02d9dffd1ec3a61da406a4137689b2d2f578ce1c78d0e52618"
+    },
+    {
+      "name": "oecd_sources.md",
+      "sha256": "fb09bf976376660b9ca61319ce3b62623411553883431b5aea3580e6878a4258"
+    },
+    {
+      "name": "leave_policy_documents.md",
+      "sha256": "3416be9a62d43f9adf02586aa64d35be35d9a27028215c5a0c33cc14d77c2836"
+    },
+    {
+      "name": "undp_worldbank_gem_sources.md",
+      "sha256": "37e68630bdd92913bf9c9cb22c2bd8d801af0efcad8501211cae9d80b216c320"
+    }
+  ],
+  "rules": [
+    {
+      "name": "reader_assignment.md",
+      "sha256": "7e8a5de49ce88e6ac198443e6ee4674acf1e73435f327a21fdc173f8c9137feb"
+    },
+    {
+      "name": "reader_rules.md",
+      "sha256": "eaf1912cc4a8c3a3303007e31dbc893d06120caecaa1e11bc72747727972a61a"
+    },
+    {
+      "name": "reader_output_schema.md",
+      "sha256": "396975fc709e48229fcd34dfb0014c1699caa83d66a78a957bca6edc9209b75f"
+    }
+  ]
+}

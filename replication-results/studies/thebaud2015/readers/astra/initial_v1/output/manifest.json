@@ -1,0 +1,2629 @@
+{
+  "paper_id": "P-7Q3",
+  "data_sources": [
+    {
+      "source_key": "icpsr20320_gem_aps",
+      "role": "Individual survey records, owner-module outcomes, demographic controls, survey status aggregation and cluster identifiers",
+      "years": "2001–2008; outcome-specific windows below",
+      "notes": "Key follows the supplied dictionary filename because that dictionary does not declare a separate registry key. Available harmonized release is V6; article release unspecified. sources/icpsr20320_gem_aps.md; MAIN pp.9–11,14–15."
+    },
+    {
+      "source_key": "worldbank_income_class",
+      "role": "Document the high-income eligibility criterion",
+      "years": "2013 classification cited",
+      "notes": "Use Country Analytical History, code H, for documentation; the explicit country list and survey-year roster govern the closest-described sample. MAIN p.10; sources/undp_worldbank_gem_sources.md."
+    },
+    {
+      "source_key": "undp_hdr",
+      "role": "High-human-development classification, GDP index candidate, female legislators/senior officials/managers share",
+      "years": "Reports 2004, 2005, 2006, 2007/2008, 2009, 2010; underlying indicator years require mapping",
+      "notes": "MAIN pp.10,13–14; S1 p.1 header calls GDP an index. Later report changes leave gaps; never fill from S1 summaries."
+    },
+    {
+      "source_key": "cepr_parental_leave",
+      "role": "FTE mother leave construction documentation",
+      "years": "Policy cross-section around 2008; historical effective dates needed for survey window",
+      "notes": "MAIN pp.11–12 and notes; public report available, cited journal version unavailable. Not a complete annual policy series."
+    },
+    {
+      "source_key": "ilo_travail_maternity",
+      "role": "Country leave laws, payment rates and effective-date evidence",
+      "years": "Archived editions 2009 and 2011, legislation may describe earlier policies",
+      "notes": "MAIN pp.11–12; coverage and vintage gaps in sources/leave_policy_documents.md. Pages must supply historical laws, not assumed retrospective annual values."
+    },
+    {
+      "source_key": "oecd_family_database",
+      "role": "Childcare spending, fertility and supplemental leave documentation",
+      "years": "Article cites 2012 release; childcare observation years stated as 2005 and 2007; survey window 2001–2008",
+      "notes": "Current spreadsheets differ in vintage and sometimes concept. MAIN pp.12,14; sources/oecd_sources.md."
+    },
+    {
+      "source_key": "oecd_ftpt",
+      "role": "Female part-time employment incidence",
+      "years": "2001–2008",
+      "notes": "MAIN p.12; S1 p.1 note ‡. Definition, age universe and employee versus total-employed denominator not completely identified."
+    },
+    {
+      "source_key": "oecd_unemployment",
+      "role": "Unemployment control",
+      "years": "2001–2008",
+      "notes": "MAIN p.13; annual harmonised series is closest source family, with source gaps and unspecified adjustment/age choice."
+    },
+    {
+      "source_key": "oecd_epl",
+      "role": "Employment protection control",
+      "years": "2001–2008",
+      "notes": "MAIN p.13 requires regular and temporary protection; acquired components do not supply an identified overall historical composite."
+    }
+  ],
+  "sample_steps": [
+    {
+      "step": 1,
+      "rule": {
+        "action": "Use the explicit country-year roster, harmonize country IDs, pool repeated cross-sections; do not treat respondents as a longitudinal panel.",
+        "country_year_roster": {
+          "Australia": [
+            2002,
+            2003,
+            2004,
+            2005,
+            2006
+          ],
+          "Austria": [
+            2005,
+            2007
+          ],
+          "Belgium": [
+            2001,
+            2002,
+            2003,
+            2004,
+            2005,
+            2006,
+            2007,
+            2008
+          ],
+          "Canada": [
+            2001,
+            2002,
+            2003,
+            2006
+          ],
+          "Czech Republic": [
+            2006
+          ],
+          "Denmark": [
+            2001,
+            2002,
+            2003,
+            2004,
+            2005,
+            2006,
+            2007,
+            2008
+          ],
+          "Finland": [
+            2001,
+            2002,
+            2003,
+            2004,
+            2005,
+            2006,
+            2007,
+            2008
+          ],
+          "France": [
+            2002,
+            2003,
+            2004,
+            2005,
+            2006,
+            2007,
+            2008
+          ],
+          "Germany": [
+            2001,
+            2002,
+            2003,
+            2004,
+            2005,
+            2006,
+            2008
+          ],
+          "Greece": [
+            2003,
+            2004,
+            2005,
+            2006,
+            2007,
+            2008
+          ],
+          "Iceland": [
+            2002,
+            2003,
+            2004,
+            2005,
+            2006,
+            2007,
+            2008
+          ],
+          "Ireland": [
+            2001,
+            2002,
+            2003,
+            2004,
+            2005,
+            2006,
+            2007,
+            2008
+          ],
+          "Italy": [
+            2001,
+            2002,
+            2003,
+            2005,
+            2006,
+            2007,
+            2008
+          ],
+          "Japan": [
+            2001,
+            2002,
+            2003,
+            2004,
+            2005,
+            2006,
+            2007,
+            2008
+          ],
+          "Netherlands": [
+            2002,
+            2003,
+            2004,
+            2005,
+            2006,
+            2007,
+            2008
+          ],
+          "New Zealand": [
+            2001,
+            2003,
+            2004,
+            2005
+          ],
+          "Norway": [
+            2002,
+            2003,
+            2004,
+            2005,
+            2006,
+            2008
+          ],
+          "Poland": [
+            2001,
+            2002,
+            2004
+          ],
+          "Portugal": [
+            2001,
+            2004,
+            2007
+          ],
+          "Spain": [
+            2002,
+            2003,
+            2004,
+            2005,
+            2006,
+            2007,
+            2008
+          ],
+          "Sweden": [
+            2001,
+            2002,
+            2003,
+            2004,
+            2005,
+            2006,
+            2007
+          ],
+          "Switzerland": [
+            2002,
+            2003,
+            2005,
+            2007
+          ],
+          "United Kingdom": [
+            2001,
+            2002,
+            2003,
+            2004,
+            2005,
+            2006,
+            2007,
+            2008
+          ],
+          "United States": [
+            2001,
+            2002,
+            2003,
+            2004,
+            2005,
+            2006,
+            2007,
+            2008
+          ]
+        }
+      },
+      "source_locator": [
+        {
+          "doc": "MAIN",
+          "page": 10,
+          "section": "Data and Variables"
+        },
+        {
+          "doc": "S1",
+          "page": 1,
+          "section": "Table A1, Survey years column"
+        }
+      ]
+    },
+    {
+      "step": 2,
+      "rule": "Resolve source missing codes before numerical comparisons; retain GEMAGE > 18 and GEMAGE < 55 under the literal age wording. Inclusion of exactly age 18 is unclear and a separate specification axis.",
+      "source_locator": [
+        {
+          "doc": "MAIN",
+          "page": 10,
+          "section": "Sample restriction"
+        },
+        {
+          "doc": "MAIN",
+          "page": 11,
+          "section": "Individual-level variables"
+        }
+      ]
+    },
+    {
+      "step": 3,
+      "rule": "Main branch: closest operational reading is employed respondents, GEMWORK in {1,2} (GEMWORK3=10 as cross-check), because footnote contrasts this sample with inclusion of not-employed people. Prose instead says in the labor force; treatment of unemployed job seekers cannot be identified from GEMWORK alone. This is an uncertain origin, not a documented code. A3_M2 bypasses this step and codes not_employed.",
+      "source_locator": [
+        {
+          "doc": "MAIN",
+          "page": 10,
+          "section": "Sample restriction and footnote 2"
+        },
+        {
+          "doc": "S1",
+          "page": 3,
+          "section": "Table A3 Model 2 and note †"
+        }
+      ]
+    },
+    {
+      "step": 4,
+      "rule": "Construct nascent and current-owner indicators and total entrepreneurial activity as defined below. MAIN quotation supports current owner-manager eligibility, while a stricter harmonized established-owner duration cutoff is not stated. Preserve the distinction as unclear.",
+      "source_locator": [
+        {
+          "doc": "MAIN",
+          "page": 11,
+          "section": "Entrepreneurial activity and footnote 3"
+        },
+        {
+          "doc": "MAIN",
+          "page": 14,
+          "section": "Established owners"
+        }
+      ]
+    },
+    {
+      "step": 5,
+      "rule": "Join independently sourced institutional/control variables by country and survey year, with mother-leave policy changes lagged one year. Childcare missing-year imputation is required but its algorithm is unspecified. Do not derive any country-year input, scale constant or missing value from published tables.",
+      "source_locator": [
+        {
+          "doc": "MAIN",
+          "page": 12,
+          "section": "Institutional variables and footnotes 6–9"
+        },
+        {
+          "doc": "MAIN",
+          "page": 13,
+          "section": "Survey-level controls"
+        },
+        {
+          "doc": "MAIN",
+          "page": 14,
+          "section": "Survey-level controls"
+        }
+      ]
+    },
+    {
+      "step": 6,
+      "rule": "Resolve required variable availability for each model. Complete-case processing is an explicit provisional fallback, not an article-reported rule; common versus model-specific sample retention is unclear. France 2003 lacks work and education responses in the supplied harmonized source despite its inclusion in the roster. Status lacks early-year responses. Do not remove years or impute silently.",
+      "source_locator": [
+        {
+          "doc": "MAIN",
+          "page": 10,
+          "section": "Sample"
+        },
+        {
+          "doc": "MAIN",
+          "page": 11,
+          "section": "Individual covariates"
+        },
+        {
+          "doc": "MAIN",
+          "page": 13,
+          "section": "Entrepreneurship status"
+        },
+        {
+          "doc": "S1",
+          "page": 1,
+          "section": "Table A1 roster"
+        }
+      ]
+    },
+    {
+      "step": 7,
+      "rule": "For M4–M8 retain current established business owners from step 4, not nascent-only respondents. Use the owner module for motives and firm characteristics; M7 restricts to 2002–2008 and M8 to 2005–2008. Poland contributes no eligible survey years to M8. Model-specific outcome missingness remains unclear.",
+      "source_locator": [
+        {
+          "doc": "MAIN",
+          "page": 14,
+          "section": "Established business owners"
+        },
+        {
+          "doc": "MAIN",
+          "page": 15,
+          "section": "Footnotes 14–15"
+        },
+        {
+          "doc": "MAIN",
+          "page": 22,
+          "section": "Table 2 notes"
+        }
+      ]
+    },
+    {
+      "step": 8,
+      "rule": "For A3_M3 require the perception/network covariates. Recognize the questionnaire’s entrepreneur-dependent screening pattern from 2003 onward; no correction is described. A3_M1 uses the nascent outcome with the main sampling branch.",
+      "source_locator": [
+        {
+          "doc": "MAIN",
+          "page": 11,
+          "section": "Perceptions and footnote 5"
+        },
+        {
+          "doc": "S1",
+          "page": 3,
+          "section": "Table A3 Models 1 and 3"
+        }
+      ]
+    }
+  ],
+  "variables": [
+    {
+      "name": "female",
+      "role": "predictor",
+      "definition": "Respondent is female, with male reference.",
+      "construction from source variables and codes": {
+        "source_key": "icpsr20320_gem_aps",
+        "variables": [
+          "GEMSEX"
+        ],
+        "rule": "GEMSEX=2 -> 1; GEMSEX=1 -> 0"
+      },
+      "coding of missing/refused/don't know": "GEMSEX=9 or system missing -> missing; article does not give its recode.",
+      "transformations": "None",
+      "level": "individual",
+      "locator": [
+        {
+          "doc": "MAIN",
+          "page": 11,
+          "section": "Gender"
+        }
+      ]
+    },
+    {
+      "name": "age_c",
+      "role": "control",
+      "definition": "Respondent age, grand mean-centered.",
+      "construction from source variables and codes": {
+        "source_key": "icpsr20320_gem_aps",
+        "variables": [
+          "GEMAGE"
+        ],
+        "rule": "GEMAGE minus analysis grand mean; exact reference sample and weighting unclear."
+      },
+      "coding of missing/refused/don't know": "GEMAGE codes 99,999 and system missing excluded from centering/filtering.",
+      "transformations": "Grand mean center; source may substitute age-category midpoints.",
+      "level": "individual",
+      "locator": [
+        {
+          "doc": "MAIN",
+          "page": 11,
+          "section": "Age and footnote 4"
+        }
+      ]
+    },
+    {
+      "name": "age_c_sq",
+      "role": "control",
+      "definition": "Quadratic age term.",
+      "construction from source variables and codes": {
+        "source_key": "icpsr20320_gem_aps",
+        "variables": [
+          "GEMAGE"
+        ],
+        "rule": "Closest provisional construction age_c squared; whether this term is centered again is unclear."
+      },
+      "coding of missing/refused/don't know": "Inherit age missingness.",
+      "transformations": "Order of square and centering unresolved; retain both polynomial terms.",
+      "level": "individual",
+      "locator": [
+        {
+          "doc": "MAIN",
+          "page": 11,
+          "section": "Age and footnote 4"
+        },
+        {
+          "doc": "MAIN",
+          "page": 15,
+          "section": "Footnote 15"
+        }
+      ]
+    },
+    {
+      "name": "postsecondary",
+      "role": "control",
+      "definition": "Postsecondary degree or higher.",
+      "construction from source variables and codes": {
+        "source_key": "icpsr20320_gem_aps",
+        "variables": [
+          "GEMEDUC"
+        ],
+        "rule": "Closest mapping: 1316 or 1720 -> 1; 0,111,1212 -> 0. Harmonized postsecondary category need not distinguish completed degree from some training."
+      },
+      "coding of missing/refused/don't know": "9999/system missing -> missing; no imputation described.",
+      "transformations": "None",
+      "level": "individual",
+      "locator": [
+        {
+          "doc": "MAIN",
+          "page": 11,
+          "section": "Education"
+        }
+      ]
+    },
+    {
+      "name": "nascent",
+      "role": "outcome",
+      "definition": "Active start-up attempt with no more than three months of payments.",
+      "construction from source variables and codes": {
+        "source_key": "icpsr20320_gem_aps",
+        "variables": [
+          "BSTART",
+          "SUACTS",
+          "SUOWN",
+          "SUWAGE",
+          "SUBOANWT"
+        ],
+        "rule": "Provisional harmonized indicator SUBOANWT in {1,100} -> 1, 0 -> 0; source checks active effort, expected ownership and payment duration. Text quotation also permits BSTART-based screening; exact activity/ownership checks and harmonizer reclassification are unclear."
+      },
+      "coding of missing/refused/don't know": "BSTART=8,9; SUACTS=3,4,8,9; SUOWN=4,5,7,8,9,999999; SUWAGE=3,4,8,9 are missing/unknown, not zero. Harmonized transformations can embed year-specific missing handling.",
+      "transformations": "None",
+      "level": "individual",
+      "locator": [
+        {
+          "doc": "MAIN",
+          "page": 11,
+          "section": "Entrepreneurial activity and footnote 3"
+        },
+        {
+          "doc": "S1",
+          "page": 3,
+          "section": "Table A3 Model 1"
+        }
+      ]
+    },
+    {
+      "name": "current_owner",
+      "role": "predictor",
+      "definition": "Owner of a business the respondent helps manage; used for owner-subsample selection.",
+      "construction from source variables and codes": {
+        "source_key": "icpsr20320_gem_aps",
+        "variables": [
+          "OWNMGE",
+          "OMOWN",
+          "OMESTBBT",
+          "OMBABYBT"
+        ],
+        "rule": "Closest textual reading OWNMGE=1; OMOWN in {1,2} may corroborate ownership but an extra consistency filter is not stated. OMESTBBT imposes a more-than-42-month payments condition not stated by the article. Retain as an uncertain eligibility alternative, not an automatic substitution."
+      },
+      "coding of missing/refused/don't know": "OWNMGE=8,9; OMOWN=7,8,9,999999 are nonresponse; OMOWN=3 means no personal share and requires explicit resolution if screen says owner.",
+      "transformations": "None",
+      "level": "individual",
+      "locator": [
+        {
+          "doc": "MAIN",
+          "page": 11,
+          "section": "Owner-manager definition"
+        },
+        {
+          "doc": "MAIN",
+          "page": 14,
+          "section": "Established business owners"
+        }
+      ]
+    },
+    {
+      "name": "entrepreneurial_activity",
+      "role": "outcome",
+      "definition": "Nascent entrepreneur or current owner-manager, counted once.",
+      "construction from source variables and codes": {
+        "source_key": "icpsr20320_gem_aps",
+        "variables": [
+          "SUBOANWT",
+          "BSTART",
+          "OWNMGE"
+        ],
+        "rule": "1 if nascent=1 or current_owner=1; 0 if both resolved as 0; otherwise unresolved. Quoted screening rule BSTART=1 OR OWNMGE=1 is an alternative. TEA alone is not this outcome because it omits older businesses."
+      },
+      "coding of missing/refused/don't know": "Unresolved screening responses stay missing unless another component positively establishes activity; author rule unknown.",
+      "transformations": "Binary",
+      "level": "individual",
+      "locator": [
+        {
+          "doc": "MAIN",
+          "page": 11,
+          "section": "Entrepreneurial activity"
+        }
+      ]
+    },
+    {
+      "name": "limited_options",
+      "role": "outcome",
+      "definition": "Reports no better choices for work as reason for involvement.",
+      "construction from source variables and codes": {
+        "source_key": "icpsr20320_gem_aps",
+        "variables": [
+          "OMREASON",
+          "OMWHY"
+        ],
+        "rule": "Closest direct mapping OMREASON=2 -> 1; substantive alternatives 1,3,4,6 -> 0. Mixed motive code 3 may alternatively count as limited options and is unclear. OMWHY=-1 is a possible harmonized check, not an automatic replacement."
+      },
+      "coding of missing/refused/don't know": "OMREASON=7,8,9,999999/system missing -> missing, not no; treatment of mixed/other motives unstated.",
+      "transformations": "Binary",
+      "level": "individual",
+      "locator": [
+        {
+          "doc": "MAIN",
+          "page": 14,
+          "section": "Entrepreneurial motivations"
+        }
+      ]
+    },
+    {
+      "name": "log_business_size",
+      "role": "outcome",
+      "definition": "Log of current employee count plus owner-labor allowance.",
+      "construction from source variables and codes": {
+        "source_key": "icpsr20320_gem_aps",
+        "variables": [
+          "OMNOWJOB"
+        ],
+        "rule": "Natural log(OMNOWJOB + 1) is the closest conventional log reading; use valid nonnegative employee counts. Article first says full-time employees but later admits hours unknown; available item is headcount."
+      },
+      "coding of missing/refused/don't know": "999999,9999997,9999999/system missing -> missing before transformation; negative counts invalid. No trimming rule given.",
+      "transformations": "Log(count + 1); log base not expressly stated. Outcome centering is not explicitly established despite general continuous-variable centering statement.",
+      "level": "individual",
+      "locator": [
+        {
+          "doc": "MAIN",
+          "page": 14,
+          "section": "Growth orientation"
+        },
+        {
+          "doc": "MAIN",
+          "page": 31,
+          "section": "Limitations, employee hours"
+        },
+        {
+          "doc": "MAIN",
+          "page": 32,
+          "section": "Limitations"
+        }
+      ]
+    },
+    {
+      "name": "high_growth",
+      "role": "outcome",
+      "definition": "Expects more than five additional employees over the next five years.",
+      "construction from source variables and codes": {
+        "source_key": "icpsr20320_gem_aps",
+        "variables": [
+          "OMYR5JOB",
+          "OMNOWJOB"
+        ],
+        "rule": "Closest definition 1{OMYR5JOB - OMNOWJOB > 5}, else 0 for valid counts. Later results wording says hire more than five employees without additional; future total >5 is a non-equivalent alternative."
+      },
+      "coding of missing/refused/don't know": "For each count: 999999,9999997,9999999/system missing -> missing; do not classify unknown expectations as low growth.",
+      "transformations": "Binary difference threshold",
+      "level": "individual",
+      "locator": [
+        {
+          "doc": "MAIN",
+          "page": 14,
+          "section": "Growth orientation"
+        },
+        {
+          "doc": "MAIN",
+          "page": 24,
+          "section": "High-growth model interpretation"
+        }
+      ]
+    },
+    {
+      "name": "new_product",
+      "role": "outcome",
+      "definition": "Product/service new and unfamiliar to all customers.",
+      "construction from source variables and codes": {
+        "source_key": "icpsr20320_gem_aps",
+        "variables": [
+          "OMNEWCST"
+        ],
+        "rule": "1 -> 1; 2 or 3 -> 0; use 2002–2008 owner module."
+      },
+      "coding of missing/refused/don't know": "7,8,9/system missing -> missing.",
+      "transformations": "Binary",
+      "level": "individual",
+      "locator": [
+        {
+          "doc": "MAIN",
+          "page": 14,
+          "section": "Growth orientation"
+        },
+        {
+          "doc": "MAIN",
+          "page": 15,
+          "section": "Footnote 14"
+        }
+      ]
+    },
+    {
+      "name": "new_technology",
+      "role": "outcome",
+      "definition": "Product/service uses technology described as less than five years old.",
+      "construction from source variables and codes": {
+        "source_key": "icpsr20320_gem_aps",
+        "variables": [
+          "OMNEWT_5"
+        ],
+        "rule": "1 or 2 -> 1; 3 -> 0; 2005–2008. The source’s one-to-five-years category includes an unresolved exact five-year boundary. OMNEWTEC uses a different one-year threshold and is not equivalent."
+      },
+      "coding of missing/refused/don't know": "7,8,9,99/system missing -> missing.",
+      "transformations": "Binary",
+      "level": "individual",
+      "locator": [
+        {
+          "doc": "MAIN",
+          "page": 14,
+          "section": "Growth orientation"
+        },
+        {
+          "doc": "MAIN",
+          "page": 15,
+          "section": "Technology definition and footnote 14"
+        }
+      ]
+    },
+    {
+      "name": "sole_owner",
+      "role": "control",
+      "definition": "Owns the whole business rather than sharing ownership.",
+      "construction from source variables and codes": {
+        "source_key": "icpsr20320_gem_aps",
+        "variables": [
+          "OMOWN",
+          "OMOWNERS"
+        ],
+        "rule": "Closest direct share mapping OMOWN=1 -> 1, 2 -> 0; OMOWNERS=1 versus >1 is a different count of owner-managers and a check/uncertain alternative."
+      },
+      "coding of missing/refused/don't know": "OMOWN=3 is not a valid all/part owner response; 7,8,9,999999 missing. OMOWNERS=999,9997,9999 missing.",
+      "transformations": "None",
+      "level": "individual",
+      "locator": [
+        {
+          "doc": "MAIN",
+          "page": 15,
+          "section": "Ownership share"
+        }
+      ]
+    },
+    {
+      "name": "log_business_age_c",
+      "role": "control",
+      "definition": "Log years since founders first received wages, profits or payments in kind, centered.",
+      "construction from source variables and codes": {
+        "source_key": "icpsr20320_gem_aps",
+        "variables": [
+          "OMWAGEYR",
+          "GEM_YR"
+        ],
+        "rule": "Decode payment year using its year-specific scheme, compute GEM_YR minus payment year, take natural log for positive ages, then grand mean center. Exact dating, open-ended earliest-year category, no-profits-yet and same-year cases unresolved; no +1 stated."
+      },
+      "coding of missing/refused/don't know": "Calendar scheme 9997,9998,9999; categorical scheme 13,14,15; system missing are unresolved/nonresponse. Code 12=before 1990 and year 1990=up to 1990 require explicit handling, not an invented exact year.",
+      "transformations": "Log then grand mean center; centering population unknown.",
+      "level": "individual",
+      "locator": [
+        {
+          "doc": "MAIN",
+          "page": 15,
+          "section": "Business age and footnote 15"
+        }
+      ]
+    },
+    {
+      "name": "not_employed",
+      "role": "control",
+      "definition": "Not employed indicator for the expanded-sample robustness model.",
+      "construction from source variables and codes": {
+        "source_key": "icpsr20320_gem_aps",
+        "variables": [
+          "GEMWORK",
+          "GEMWORK3"
+        ],
+        "rule": "Provisional GEMWORK in {3,4,5,6} -> 1, {1,2} -> 0; equivalently GEMWORK3 in {20,30} versus 10 where codes agree. Article gives no detailed mapping."
+      },
+      "coding of missing/refused/don't know": "GEMWORK=9 or GEMWORK3=99/system missing -> missing.",
+      "transformations": "None",
+      "level": "individual",
+      "locator": [
+        {
+          "doc": "S1",
+          "page": 3,
+          "section": "Table A3 Model 2, Not employed and note †"
+        },
+        {
+          "doc": "MAIN",
+          "page": 10,
+          "section": "Footnote 2"
+        }
+      ]
+    },
+    {
+      "name": "skill",
+      "role": "control",
+      "definition": "Self-assessed knowledge, skill and experience to start a business.",
+      "construction from source variables and codes": {
+        "source_key": "icpsr20320_gem_aps",
+        "variables": [
+          "SUSKILL"
+        ],
+        "rule": "1 or 100 -> 1; 0 -> 0"
+      },
+      "coding of missing/refused/don't know": "8,9/system missing -> missing. Distinguish questionnaire routing from explicit no.",
+      "transformations": "None",
+      "level": "individual",
+      "locator": [
+        {
+          "doc": "MAIN",
+          "page": 11,
+          "section": "Perceptions and footnote 5"
+        },
+        {
+          "doc": "S1",
+          "page": 3,
+          "section": "Table A3 Model 3"
+        }
+      ]
+    },
+    {
+      "name": "fear_failure",
+      "role": "control",
+      "definition": "Fear of failure would prevent business start-up.",
+      "construction from source variables and codes": {
+        "source_key": "icpsr20320_gem_aps",
+        "variables": [
+          "FEARFAIL"
+        ],
+        "rule": "1 or 100 -> 1; 0 -> 0"
+      },
+      "coding of missing/refused/don't know": "8,9/system missing -> missing. Distinguish questionnaire routing from explicit no.",
+      "transformations": "None",
+      "level": "individual",
+      "locator": [
+        {
+          "doc": "MAIN",
+          "page": 11,
+          "section": "Perceptions and footnote 5"
+        },
+        {
+          "doc": "S1",
+          "page": 3,
+          "section": "Table A3 Model 3"
+        }
+      ]
+    },
+    {
+      "name": "knows_entrepreneur",
+      "role": "control",
+      "definition": "Knows someone personally who started a business in the past two years.",
+      "construction from source variables and codes": {
+        "source_key": "icpsr20320_gem_aps",
+        "variables": [
+          "KNOWENT"
+        ],
+        "rule": "1 or 100 -> 1; 0 -> 0"
+      },
+      "coding of missing/refused/don't know": "8,9/system missing -> missing. Distinguish questionnaire routing from explicit no.",
+      "transformations": "None",
+      "level": "individual",
+      "locator": [
+        {
+          "doc": "MAIN",
+          "page": 11,
+          "section": "Perceptions and footnote 5"
+        },
+        {
+          "doc": "S1",
+          "page": 3,
+          "section": "Table A3 Model 3"
+        }
+      ]
+    },
+    {
+      "name": "leave_z",
+      "role": "country_level",
+      "definition": "Mother-accessible state-paid leave in full-time-equivalent weeks.",
+      "construction from source variables and codes": {
+        "source_key": [
+          "cepr_parental_leave",
+          "ilo_travail_maternity",
+          "oecd_family_database"
+        ],
+        "variables": [
+          "Statutory duration",
+          "Wage replacement rate",
+          "Policy effective date"
+        ],
+        "rule": "Sum relevant non-overlapping durations multiplied by wage replacement fractions for mother-accessible paid leave. Lag policy changes one year. Treatment of caps, flat rates, reference earnings, shared leave, eligibility and home-care leave is unclear. Not available as an exact ready-made historical series."
+      },
+      "coding of missing/refused/don't know": "Unknown policies/rates/dates stay missing; absence of source is not zero entitlement.",
+      "transformations": "Standardize survey-level values; exact sample, weighting, SD divisor and model-specific versus pooled reference distribution are unstated. Never use printed means/SDs.",
+      "level": "country-year",
+      "locator": [
+        {
+          "doc": "MAIN",
+          "page": 11,
+          "section": "Paid leave"
+        },
+        {
+          "doc": "MAIN",
+          "page": 12,
+          "section": "Paid leave and footnotes 6–8"
+        }
+      ]
+    },
+    {
+      "name": "leave_sq_z",
+      "role": "country_level",
+      "definition": "Quadratic mother-leave term.",
+      "construction from source variables and codes": {
+        "source_key": [
+          "cepr_parental_leave",
+          "ilo_travail_maternity",
+          "oecd_family_database"
+        ],
+        "variables": [
+          "Constructed FTE weeks"
+        ],
+        "rule": "Provisional closest reading: square raw FTE leave then standardize that term separately, because all survey-level variables are said to be standardized. Squaring standardized leave is another uncertain parameterization; retain both lower-order terms and matching interactions."
+      },
+      "coding of missing/refused/don't know": "Inherit leave missingness.",
+      "transformations": "Standardize survey-level values; exact sample, weighting, SD divisor and model-specific versus pooled reference distribution are unstated. Never use printed means/SDs. Exact square/standardize order unresolved.",
+      "level": "country-year",
+      "locator": [
+        {
+          "doc": "MAIN",
+          "page": 12,
+          "section": "Squared leave term"
+        },
+        {
+          "doc": "MAIN",
+          "page": 14,
+          "section": "Standardization"
+        }
+      ]
+    },
+    {
+      "name": "childcare_z",
+      "role": "country_level",
+      "definition": "Public childcare-services support for children under five as a percentage of GDP, including cash, in-kind and tax support.",
+      "construction from source variables and codes": {
+        "source_key": "oecd_family_database",
+        "variables": [
+          "PF3_1_Public_spending_on_childcare_and_early_education.xlsx"
+        ],
+        "rule": "Historical childcare-only concept in cited vintage; observations for 2005 and 2007, missing-year information imputed by an unstated method. Current Time-series contains ECEC including pre-primary and is a fallback, not established equivalent."
+      },
+      "coding of missing/refused/don't know": "Missing years were imputed; algorithm not given; unavailable source values cannot be replaced by S1.",
+      "transformations": "Standardize survey-level values; exact sample, weighting, SD divisor and model-specific versus pooled reference distribution are unstated. Never use printed means/SDs.",
+      "level": "country-year",
+      "locator": [
+        {
+          "doc": "MAIN",
+          "page": 12,
+          "section": "Childcare and footnote 9"
+        }
+      ]
+    },
+    {
+      "name": "parttime_z",
+      "role": "country_level",
+      "definition": "Percentage of women in paid employment working part time.",
+      "construction from source variables and codes": {
+        "source_key": "oecd_ftpt",
+        "variables": [
+          "OBS_VALUE",
+          "TIME_PERIOD",
+          "SEX",
+          "AGE",
+          "WORKER_STATUS",
+          "WORK_TIME_ARNGMNT",
+          "METHODOLOGY"
+        ],
+        "rule": "Annual FREQ=A, female SEX=F, part-time PT incidence as PT_POP_SUB. S1 specifies female employees, so ICSE93_1 is closest denominator; common/national hours definition and age group unclear. Alternative source LMF_1_6 PT_Women requires conceptual matching."
+      },
+      "coding of missing/refused/don't know": "Non-numeric and absent observations remain missing; source flags retained and assessed.",
+      "transformations": "Standardize survey-level values; exact sample, weighting, SD divisor and model-specific versus pooled reference distribution are unstated. Never use printed means/SDs.",
+      "level": "country-year",
+      "locator": [
+        {
+          "doc": "MAIN",
+          "page": 12,
+          "section": "Part-time employment"
+        },
+        {
+          "doc": "S1",
+          "page": 1,
+          "section": "Table A1 note ‡"
+        }
+      ]
+    },
+    {
+      "name": "gdp_z",
+      "role": "control",
+      "definition": "Economic development: MAIN says GDP per capita; S1 explicitly labels GDP index.",
+      "construction from source variables and codes": {
+        "source_key": "undp_hdr",
+        "variables": [
+          "Statistical annex GDP index"
+        ],
+        "rule": "Provisional origin GDP index, with unresolved GDP-per-capita alternative. Map actual indicator reference year, not automatically report publication year. Do not substitute the later GNI-based income index."
+      },
+      "coding of missing/refused/don't know": "Missing years/reports need explicit fallback; no author mapping or imputation rule supplied.",
+      "transformations": "Standardize survey-level values; exact sample, weighting, SD divisor and model-specific versus pooled reference distribution are unstated. Never use printed means/SDs.",
+      "level": "country-year",
+      "locator": [
+        {
+          "doc": "MAIN",
+          "page": 13,
+          "section": "Economic controls"
+        },
+        {
+          "doc": "S1",
+          "page": 1,
+          "section": "Table A1 GDP index header"
+        }
+      ]
+    },
+    {
+      "name": "unemployment_z",
+      "role": "control",
+      "definition": "Unemployment rate.",
+      "construction from source variables and codes": {
+        "source_key": "oecd_unemployment",
+        "variables": [
+          "OBS_VALUE",
+          "TIME_PERIOD"
+        ],
+        "rule": "Candidate annual FREQ=A, SEX=_T, MEASURE=UNE_LF_M, UNIT_MEASURE=PT_LF_SUB; AGE and ADJUSTMENT not specified. Y_GE15 is a source-family candidate, not an article-reported decision."
+      },
+      "coding of missing/refused/don't know": "Coverage gaps require separately documented alternative; missing is not zero unemployment.",
+      "transformations": "Standardize survey-level values; exact sample, weighting, SD divisor and model-specific versus pooled reference distribution are unstated. Never use printed means/SDs.",
+      "level": "country-year",
+      "locator": [
+        {
+          "doc": "MAIN",
+          "page": 13,
+          "section": "Economic controls"
+        }
+      ]
+    },
+    {
+      "name": "epl_z",
+      "role": "control",
+      "definition": "Overall employment protection for regular and temporary workers.",
+      "construction from source variables and codes": {
+        "source_key": "oecd_epl",
+        "variables": [
+          "EPL_R",
+          "EPL_OV",
+          "EPL_CD",
+          "EPL_T",
+          "VERSION",
+          "OBS_VALUE"
+        ],
+        "rule": "Historical overall composite required; component weights, inclusion of collective dismissal and version not specified. The available file has components only. No weights are invented here."
+      },
+      "coding of missing/refused/don't know": "Incomplete component/vintage coverage, including Iceland, remains unresolved.",
+      "transformations": "Standardize survey-level values; exact sample, weighting, SD divisor and model-specific versus pooled reference distribution are unstated. Never use printed means/SDs.",
+      "level": "country-year",
+      "locator": [
+        {
+          "doc": "MAIN",
+          "page": 13,
+          "section": "Economic/legal controls"
+        }
+      ]
+    },
+    {
+      "name": "status_z",
+      "role": "control",
+      "definition": "Mean survey-level agreement that successful new entrepreneurs have high status and respect.",
+      "construction from source variables and codes": {
+        "source_key": "icpsr20320_gem_aps",
+        "variables": [
+          "NBSTATUS",
+          "COUNTRY",
+          "GEM_YR",
+          "WEIGHT",
+          "WEIGHT_L",
+          "WEIGHT_A"
+        ],
+        "rule": "Code NBSTATUS in {1,100} as yes and 0 as no; aggregate within country-year over eligible valid respondents. Denominator before/after analytical restrictions and weighting/routing correction unspecified. No early-year item responses in harmonized or original listed files."
+      },
+      "coding of missing/refused/don't know": "8,9/system missing excluded from proposed mean; whole missing survey-years cannot be treated as no.",
+      "transformations": "Binary recode then country-year aggregation then standardization; denominator and scale reference unclear.",
+      "level": "country-year",
+      "locator": [
+        {
+          "doc": "MAIN",
+          "page": 13,
+          "section": "Social status"
+        },
+        {
+          "doc": "MAIN",
+          "page": 14,
+          "section": "Social status and standardization"
+        },
+        {
+          "doc": "MAIN",
+          "page": 11,
+          "section": "Footnote 5"
+        }
+      ]
+    },
+    {
+      "name": "women_managers_z",
+      "role": "control",
+      "definition": "Percentage of legislators, senior officials and managers who are women.",
+      "construction from source variables and codes": {
+        "source_key": "undp_hdr",
+        "variables": [
+          "Female legislators, senior officials and managers (% of total)"
+        ],
+        "rule": "Use annex indicator with its actual reference year; interpolation/carrying across survey years unspecified. Later report does not contain the same indicator; current OECD Managers_Women starts after this study window."
+      },
+      "coding of missing/refused/don't know": "Missing reference years unresolved; no automatic replacement by women’s labor-force participation.",
+      "transformations": "Standardize survey-level values; exact sample, weighting, SD divisor and model-specific versus pooled reference distribution are unstated. Never use printed means/SDs.",
+      "level": "country-year",
+      "locator": [
+        {
+          "doc": "MAIN",
+          "page": 14,
+          "section": "Women’s position in labor market"
+        }
+      ]
+    },
+    {
+      "name": "fertility_z",
+      "role": "control",
+      "definition": "National total fertility rate as a proxy for respondents’ propensity to have children.",
+      "construction from source variables and codes": {
+        "source_key": "oecd_family_database",
+        "variables": [
+          "SF_2_1_Fertility_rates.xlsx",
+          "Total Fertility Rates"
+        ],
+        "rule": "Country-year total fertility rate; not individual parenthood."
+      },
+      "coding of missing/refused/don't know": "Missing values unresolved; available current series is a vintage fallback.",
+      "transformations": "Standardize survey-level values; exact sample, weighting, SD divisor and model-specific versus pooled reference distribution are unstated. Never use printed means/SDs.",
+      "level": "country-year",
+      "locator": [
+        {
+          "doc": "MAIN",
+          "page": 14,
+          "section": "Fertility and standardization"
+        }
+      ]
+    },
+    {
+      "name": "female_leave",
+      "role": "interaction",
+      "definition": "Cross-level modification of the gender coefficient.",
+      "construction from source variables and codes": {
+        "source_key": "derived",
+        "variables": [
+          "female",
+          "leave_z"
+        ],
+        "rule": "female multiplied by leave_z; include both corresponding main effects."
+      },
+      "coding of missing/refused/don't know": "Missing if either component missing.",
+      "transformations": "Product after chosen macro transformation.",
+      "level": "individual",
+      "locator": [
+        {
+          "doc": "MAIN",
+          "page": 15,
+          "section": "Analytic Strategy"
+        },
+        {
+          "doc": "MAIN",
+          "page": 19,
+          "section": "Table 1 Model 3"
+        },
+        {
+          "doc": "MAIN",
+          "page": 22,
+          "section": "Table 2"
+        }
+      ]
+    },
+    {
+      "name": "female_leave_sq",
+      "role": "interaction",
+      "definition": "Cross-level modification of the gender coefficient.",
+      "construction from source variables and codes": {
+        "source_key": "derived",
+        "variables": [
+          "female",
+          "leave_sq_z"
+        ],
+        "rule": "female multiplied by leave_sq_z; include both corresponding main effects."
+      },
+      "coding of missing/refused/don't know": "Missing if either component missing.",
+      "transformations": "Product after chosen macro transformation.",
+      "level": "individual",
+      "locator": [
+        {
+          "doc": "MAIN",
+          "page": 15,
+          "section": "Analytic Strategy"
+        },
+        {
+          "doc": "MAIN",
+          "page": 19,
+          "section": "Table 1 Model 3"
+        },
+        {
+          "doc": "MAIN",
+          "page": 22,
+          "section": "Table 2"
+        }
+      ]
+    },
+    {
+      "name": "female_childcare",
+      "role": "interaction",
+      "definition": "Cross-level modification of the gender coefficient.",
+      "construction from source variables and codes": {
+        "source_key": "derived",
+        "variables": [
+          "female",
+          "childcare_z"
+        ],
+        "rule": "female multiplied by childcare_z; include both corresponding main effects."
+      },
+      "coding of missing/refused/don't know": "Missing if either component missing.",
+      "transformations": "Product after chosen macro transformation.",
+      "level": "individual",
+      "locator": [
+        {
+          "doc": "MAIN",
+          "page": 15,
+          "section": "Analytic Strategy"
+        },
+        {
+          "doc": "MAIN",
+          "page": 19,
+          "section": "Table 1 Model 3"
+        },
+        {
+          "doc": "MAIN",
+          "page": 22,
+          "section": "Table 2"
+        }
+      ]
+    },
+    {
+      "name": "female_parttime",
+      "role": "interaction",
+      "definition": "Cross-level modification of the gender coefficient.",
+      "construction from source variables and codes": {
+        "source_key": "derived",
+        "variables": [
+          "female",
+          "parttime_z"
+        ],
+        "rule": "female multiplied by parttime_z; include both corresponding main effects."
+      },
+      "coding of missing/refused/don't know": "Missing if either component missing.",
+      "transformations": "Product after chosen macro transformation.",
+      "level": "individual",
+      "locator": [
+        {
+          "doc": "MAIN",
+          "page": 15,
+          "section": "Analytic Strategy"
+        },
+        {
+          "doc": "MAIN",
+          "page": 19,
+          "section": "Table 1 Model 3"
+        },
+        {
+          "doc": "MAIN",
+          "page": 22,
+          "section": "Table 2"
+        }
+      ]
+    },
+    {
+      "name": "year",
+      "role": "control",
+      "definition": "Survey-year fixed effects.",
+      "construction from source variables and codes": {
+        "source_key": "icpsr20320_gem_aps",
+        "variables": [
+          "GEM_YR"
+        ],
+        "rule": "Categorical survey year. Reference 2001 for M1–M6 and A3 models; reference 2002 for M7 and 2008 for M8 inferred from printed dash pattern. Full-dummy coefficients in sealed targets are not inputs."
+      },
+      "coding of missing/refused/don't know": "Missing year cannot define survey cluster.",
+      "transformations": "Dummy coding; not a linear time trend.",
+      "level": "country-year",
+      "locator": [
+        {
+          "doc": "S1",
+          "page": 2,
+          "section": "Table A2 year reference"
+        },
+        {
+          "doc": "MAIN",
+          "page": 19,
+          "section": "Table 1 year rows"
+        },
+        {
+          "doc": "MAIN",
+          "page": 22,
+          "section": "Table 2 year rows"
+        },
+        {
+          "doc": "S1",
+          "page": 3,
+          "section": "Table A3 year rows"
+        }
+      ]
+    },
+    {
+      "name": "country_id",
+      "role": "cluster id",
+      "definition": "Country grouping identifier.",
+      "construction from source variables and codes": {
+        "source_key": "icpsr20320_gem_aps",
+        "variables": [
+          "COUNTRY",
+          "CTRYALP",
+          "NAME"
+        ],
+        "rule": "Map the listed countries to a stable country ID and harmonized source country keys; do not treat code magnitudes as measurements."
+      },
+      "coding of missing/refused/don't know": "Unknown country IDs unresolved; restrict explicit roster.",
+      "transformations": "None",
+      "level": "country",
+      "locator": [
+        {
+          "doc": "MAIN",
+          "page": 10,
+          "section": "Country sample"
+        },
+        {
+          "doc": "MAIN",
+          "page": 15,
+          "section": "Three-level structure"
+        }
+      ]
+    },
+    {
+      "name": "survey_id",
+      "role": "cluster id",
+      "definition": "Country-by-survey-year grouping nested in country.",
+      "construction from source variables and codes": {
+        "source_key": "icpsr20320_gem_aps",
+        "variables": [
+          "COUNTRY",
+          "GEM_YR"
+        ],
+        "rule": "Interaction/group of country_id and GEM_YR; never pool equal year codes across countries into one survey cluster."
+      },
+      "coding of missing/refused/don't know": "Missing either component -> unresolved grouping.",
+      "transformations": "None",
+      "level": "country-year",
+      "locator": [
+        {
+          "doc": "MAIN",
+          "page": 15,
+          "section": "Three-level structure"
+        }
+      ]
+    },
+    {
+      "name": "analysis_weight",
+      "role": "weight",
+      "definition": "Whether and how individual survey weights enter estimation is unstated.",
+      "construction from source variables and codes": {
+        "source_key": "icpsr20320_gem_aps",
+        "variables": [
+          "WEIGHT",
+          "WEIGHT_L",
+          "WEIGHT_A"
+        ],
+        "rule": "No article-specified selection. Closest minimal executable assumption would be unweighted fitting, marked uncertain; weighted branch needs the chosen weight and multilevel scaling recorded."
+      },
+      "coding of missing/refused/don't know": "Article treatment unknown. Do not substitute zero for absent weights.",
+      "transformations": "No rescaling documented.",
+      "level": "individual",
+      "locator": [
+        {
+          "doc": "MAIN",
+          "page": 15,
+          "section": "Analytic Strategy; weighting not specified"
+        }
+      ]
+    }
+  ],
+  "models": [
+    {
+      "model_id": "M1",
+      "outcome": "entrepreneurial_activity",
+      "sample": "Steps 1–6; main employment branch.",
+      "terms": [
+        "intercept",
+        "female",
+        "age_c",
+        "age_c_sq",
+        "postsecondary",
+        "year[2002]",
+        "year[2003]",
+        "year[2004]",
+        "year[2005]",
+        "year[2006]",
+        "year[2007]",
+        "year[2008]"
+      ],
+      "estimator": "Three-level logistic mixed-effects model",
+      "random effects / fixed effects": {
+        "random": "Random intercept and female slope at country and country-year-within-country levels; covariance between intercept and female slope at either level unstated.",
+        "fixed": "All listed covariate effects and survey-year indicators; no country fixed effects in multilevel models."
+      },
+      "weights": {
+        "reported": null,
+        "status": "unclear",
+        "provisional_origin": "Unweighted, only as a minimal assumption; source recommends weights and a weighted sensitivity branch is retained."
+      },
+      "covariance method": {
+        "reported": null,
+        "status": "unclear",
+        "provisional_origin": "Model-based information-matrix covariance is a candidate; no robust or cluster-sandwich estimator is stated."
+      },
+      "software and defaults if stated": null,
+      "integration method if stated": null,
+      "locator": [
+        {
+          "doc": "MAIN",
+          "page": 19,
+          "section": "Table 1 Model 1"
+        },
+        {
+          "doc": "MAIN",
+          "page": 15,
+          "section": "Analytic Strategy"
+        }
+      ]
+    },
+    {
+      "model_id": "M2",
+      "outcome": "entrepreneurial_activity",
+      "sample": "Steps 1–6; main employment branch.",
+      "terms": [
+        "intercept",
+        "female",
+        "age_c",
+        "age_c_sq",
+        "postsecondary",
+        "year[2002]",
+        "year[2003]",
+        "year[2004]",
+        "year[2005]",
+        "year[2006]",
+        "year[2007]",
+        "year[2008]",
+        "leave_z",
+        "leave_sq_z",
+        "childcare_z",
+        "parttime_z",
+        "gdp_z",
+        "unemployment_z",
+        "epl_z",
+        "status_z",
+        "women_managers_z",
+        "fertility_z"
+      ],
+      "estimator": "Three-level logistic mixed-effects model",
+      "random effects / fixed effects": {
+        "random": "Random intercept and female slope at country and country-year-within-country levels; covariance between intercept and female slope at either level unstated.",
+        "fixed": "All listed covariate effects and survey-year indicators; no country fixed effects in multilevel models."
+      },
+      "weights": {
+        "reported": null,
+        "status": "unclear",
+        "provisional_origin": "Unweighted, only as a minimal assumption; source recommends weights and a weighted sensitivity branch is retained."
+      },
+      "covariance method": {
+        "reported": null,
+        "status": "unclear",
+        "provisional_origin": "Model-based information-matrix covariance is a candidate; no robust or cluster-sandwich estimator is stated."
+      },
+      "software and defaults if stated": null,
+      "integration method if stated": null,
+      "locator": [
+        {
+          "doc": "MAIN",
+          "page": 19,
+          "section": "Table 1 Model 2"
+        },
+        {
+          "doc": "MAIN",
+          "page": 15,
+          "section": "Analytic Strategy"
+        }
+      ]
+    },
+    {
+      "model_id": "M3",
+      "outcome": "entrepreneurial_activity",
+      "sample": "Steps 1–6; main employment branch.",
+      "terms": [
+        "intercept",
+        "female",
+        "age_c",
+        "age_c_sq",
+        "postsecondary",
+        "year[2002]",
+        "year[2003]",
+        "year[2004]",
+        "year[2005]",
+        "year[2006]",
+        "year[2007]",
+        "year[2008]",
+        "leave_z",
+        "leave_sq_z",
+        "childcare_z",
+        "parttime_z",
+        "gdp_z",
+        "unemployment_z",
+        "epl_z",
+        "status_z",
+        "women_managers_z",
+        "fertility_z",
+        "female_leave",
+        "female_leave_sq",
+        "female_childcare",
+        "female_parttime"
+      ],
+      "estimator": "Three-level logistic mixed-effects model",
+      "random effects / fixed effects": {
+        "random": "Random intercept and female slope at country and country-year-within-country levels; covariance between intercept and female slope at either level unstated.",
+        "fixed": "All listed covariate effects and survey-year indicators; no country fixed effects in multilevel models."
+      },
+      "weights": {
+        "reported": null,
+        "status": "unclear",
+        "provisional_origin": "Unweighted, only as a minimal assumption; source recommends weights and a weighted sensitivity branch is retained."
+      },
+      "covariance method": {
+        "reported": null,
+        "status": "unclear",
+        "provisional_origin": "Model-based information-matrix covariance is a candidate; no robust or cluster-sandwich estimator is stated."
+      },
+      "software and defaults if stated": null,
+      "integration method if stated": null,
+      "locator": [
+        {
+          "doc": "MAIN",
+          "page": 19,
+          "section": "Table 1 Model 3"
+        },
+        {
+          "doc": "MAIN",
+          "page": 15,
+          "section": "Analytic Strategy"
+        }
+      ]
+    },
+    {
+      "model_id": "M4",
+      "outcome": "limited_options",
+      "sample": "Steps 1–7; owner subsample",
+      "terms": [
+        "intercept",
+        "female",
+        "age_c",
+        "age_c_sq",
+        "postsecondary",
+        "year[2002]",
+        "year[2003]",
+        "year[2004]",
+        "year[2005]",
+        "year[2006]",
+        "year[2007]",
+        "year[2008]",
+        "sole_owner",
+        "log_business_age_c",
+        "leave_z",
+        "leave_sq_z",
+        "childcare_z",
+        "parttime_z",
+        "gdp_z",
+        "unemployment_z",
+        "epl_z",
+        "status_z",
+        "women_managers_z",
+        "fertility_z",
+        "female_leave",
+        "female_leave_sq",
+        "female_childcare",
+        "female_parttime"
+      ],
+      "estimator": "Three-level logistic mixed-effects model",
+      "random effects / fixed effects": {
+        "random": "Random intercept and female slope at country and country-year-within-country levels; covariance between intercept and female slope at either level unstated.",
+        "fixed": "All listed covariate effects and survey-year indicators; no country fixed effects in multilevel models."
+      },
+      "weights": {
+        "reported": null,
+        "status": "unclear",
+        "provisional_origin": "Unweighted, only as a minimal assumption; source recommends weights and a weighted sensitivity branch is retained."
+      },
+      "covariance method": {
+        "reported": null,
+        "status": "unclear",
+        "provisional_origin": "Model-based information-matrix covariance is a candidate; no robust or cluster-sandwich estimator is stated."
+      },
+      "software and defaults if stated": null,
+      "integration method if stated": null,
+      "locator": [
+        {
+          "doc": "MAIN",
+          "page": 22,
+          "section": "Table 2 Model 4"
+        },
+        {
+          "doc": "MAIN",
+          "page": 15,
+          "section": "Analytic Strategy"
+        }
+      ]
+    },
+    {
+      "model_id": "M5",
+      "outcome": "log_business_size",
+      "sample": "Steps 1–7; owner subsample",
+      "terms": [
+        "intercept",
+        "female",
+        "age_c",
+        "age_c_sq",
+        "postsecondary",
+        "year[2002]",
+        "year[2003]",
+        "year[2004]",
+        "year[2005]",
+        "year[2006]",
+        "year[2007]",
+        "year[2008]",
+        "sole_owner",
+        "log_business_age_c",
+        "leave_z",
+        "leave_sq_z",
+        "childcare_z",
+        "parttime_z",
+        "gdp_z",
+        "unemployment_z",
+        "epl_z",
+        "status_z",
+        "women_managers_z",
+        "fertility_z",
+        "female_leave",
+        "female_leave_sq",
+        "female_childcare",
+        "female_parttime"
+      ],
+      "estimator": "Three-level linear mixed model",
+      "random effects / fixed effects": {
+        "random": "Random intercept and female slope at country and country-year-within-country levels; covariance between intercept and female slope at either level unstated.",
+        "fixed": "All listed covariate effects and survey-year indicators; no country fixed effects in multilevel models."
+      },
+      "weights": {
+        "reported": null,
+        "status": "unclear",
+        "provisional_origin": "Unweighted, only as a minimal assumption; source recommends weights and a weighted sensitivity branch is retained."
+      },
+      "covariance method": {
+        "reported": null,
+        "status": "unclear",
+        "provisional_origin": "Model-based information-matrix covariance is a candidate; no robust or cluster-sandwich estimator is stated."
+      },
+      "software and defaults if stated": null,
+      "integration method if stated": null,
+      "locator": [
+        {
+          "doc": "MAIN",
+          "page": 22,
+          "section": "Table 2 Model 5"
+        },
+        {
+          "doc": "MAIN",
+          "page": 15,
+          "section": "Analytic Strategy"
+        }
+      ]
+    },
+    {
+      "model_id": "M6",
+      "outcome": "high_growth",
+      "sample": "Steps 1–7; owner subsample",
+      "terms": [
+        "intercept",
+        "female",
+        "age_c",
+        "age_c_sq",
+        "postsecondary",
+        "year[2002]",
+        "year[2003]",
+        "year[2004]",
+        "year[2005]",
+        "year[2006]",
+        "year[2007]",
+        "year[2008]",
+        "sole_owner",
+        "log_business_age_c",
+        "leave_z",
+        "leave_sq_z",
+        "childcare_z",
+        "parttime_z",
+        "gdp_z",
+        "unemployment_z",
+        "epl_z",
+        "status_z",
+        "women_managers_z",
+        "fertility_z",
+        "female_leave",
+        "female_leave_sq",
+        "female_childcare",
+        "female_parttime"
+      ],
+      "estimator": "Three-level logistic mixed-effects model",
+      "random effects / fixed effects": {
+        "random": "Random intercept and female slope at country and country-year-within-country levels; covariance between intercept and female slope at either level unstated.",
+        "fixed": "All listed covariate effects and survey-year indicators; no country fixed effects in multilevel models."
+      },
+      "weights": {
+        "reported": null,
+        "status": "unclear",
+        "provisional_origin": "Unweighted, only as a minimal assumption; source recommends weights and a weighted sensitivity branch is retained."
+      },
+      "covariance method": {
+        "reported": null,
+        "status": "unclear",
+        "provisional_origin": "Model-based information-matrix covariance is a candidate; no robust or cluster-sandwich estimator is stated."
+      },
+      "software and defaults if stated": null,
+      "integration method if stated": null,
+      "locator": [
+        {
+          "doc": "MAIN",
+          "page": 22,
+          "section": "Table 2 Model 6"
+        },
+        {
+          "doc": "MAIN",
+          "page": 15,
+          "section": "Analytic Strategy"
+        }
+      ]
+    },
+    {
+      "model_id": "M7",
+      "outcome": "new_product",
+      "sample": "Steps 1–7; owner subsample; 2002–2008",
+      "terms": [
+        "intercept",
+        "female",
+        "age_c",
+        "age_c_sq",
+        "postsecondary",
+        "year[2003]",
+        "year[2004]",
+        "year[2005]",
+        "year[2006]",
+        "year[2007]",
+        "year[2008]",
+        "sole_owner",
+        "log_business_age_c",
+        "leave_z",
+        "leave_sq_z",
+        "childcare_z",
+        "parttime_z",
+        "gdp_z",
+        "unemployment_z",
+        "epl_z",
+        "status_z",
+        "women_managers_z",
+        "fertility_z",
+        "female_leave",
+        "female_leave_sq",
+        "female_childcare",
+        "female_parttime"
+      ],
+      "estimator": "Three-level logistic mixed-effects model",
+      "random effects / fixed effects": {
+        "random": "Random intercept and female slope at country and country-year-within-country levels; covariance between intercept and female slope at either level unstated.",
+        "fixed": "All listed covariate effects and survey-year indicators; no country fixed effects in multilevel models."
+      },
+      "weights": {
+        "reported": null,
+        "status": "unclear",
+        "provisional_origin": "Unweighted, only as a minimal assumption; source recommends weights and a weighted sensitivity branch is retained."
+      },
+      "covariance method": {
+        "reported": null,
+        "status": "unclear",
+        "provisional_origin": "Model-based information-matrix covariance is a candidate; no robust or cluster-sandwich estimator is stated."
+      },
+      "software and defaults if stated": null,
+      "integration method if stated": null,
+      "locator": [
+        {
+          "doc": "MAIN",
+          "page": 22,
+          "section": "Table 2 Model 7"
+        },
+        {
+          "doc": "MAIN",
+          "page": 15,
+          "section": "Analytic Strategy"
+        }
+      ]
+    },
+    {
+      "model_id": "M8",
+      "outcome": "new_technology",
+      "sample": "Steps 1–7; owner subsample; 2005–2008, Poland excluded",
+      "terms": [
+        "intercept",
+        "female",
+        "age_c",
+        "age_c_sq",
+        "postsecondary",
+        "year[2005]",
+        "year[2006]",
+        "year[2007]",
+        "sole_owner",
+        "log_business_age_c",
+        "leave_z",
+        "leave_sq_z",
+        "childcare_z",
+        "parttime_z",
+        "gdp_z",
+        "unemployment_z",
+        "epl_z",
+        "status_z",
+        "women_managers_z",
+        "fertility_z",
+        "female_leave",
+        "female_leave_sq",
+        "female_childcare",
+        "female_parttime"
+      ],
+      "estimator": "Three-level logistic mixed-effects model",
+      "random effects / fixed effects": {
+        "random": "Random intercept and female slope at country and country-year-within-country levels; covariance between intercept and female slope at either level unstated.",
+        "fixed": "All listed covariate effects and survey-year indicators; no country fixed effects in multilevel models."
+      },
+      "weights": {
+        "reported": null,
+        "status": "unclear",
+        "provisional_origin": "Unweighted, only as a minimal assumption; source recommends weights and a weighted sensitivity branch is retained."
+      },
+      "covariance method": {
+        "reported": null,
+        "status": "unclear",
+        "provisional_origin": "Model-based information-matrix covariance is a candidate; no robust or cluster-sandwich estimator is stated."
+      },
+      "software and defaults if stated": null,
+      "integration method if stated": null,
+      "locator": [
+        {
+          "doc": "MAIN",
+          "page": 22,
+          "section": "Table 2 Model 8"
+        },
+        {
+          "doc": "MAIN",
+          "page": 15,
+          "section": "Analytic Strategy"
+        }
+      ]
+    },
+    {
+      "model_id": "A3_M1",
+      "outcome": "nascent",
+      "sample": "Steps 1–6 and 8; main employment branch, nascent outcome.",
+      "terms": [
+        "intercept",
+        "female",
+        "age_c",
+        "age_c_sq",
+        "postsecondary",
+        "year[2002]",
+        "year[2003]",
+        "year[2004]",
+        "year[2005]",
+        "year[2006]",
+        "year[2007]",
+        "year[2008]",
+        "leave_z",
+        "leave_sq_z",
+        "childcare_z",
+        "parttime_z",
+        "gdp_z",
+        "unemployment_z",
+        "epl_z",
+        "status_z",
+        "women_managers_z",
+        "fertility_z",
+        "female_leave",
+        "female_leave_sq",
+        "female_childcare",
+        "female_parttime"
+      ],
+      "estimator": "Three-level logistic mixed-effects model",
+      "random effects / fixed effects": {
+        "random": "Random intercept and female slope at country and country-year-within-country levels; covariance between intercept and female slope at either level unstated.",
+        "fixed": "All listed covariate effects and survey-year indicators; no country fixed effects in multilevel models."
+      },
+      "weights": {
+        "reported": null,
+        "status": "unclear",
+        "provisional_origin": "Unweighted, only as a minimal assumption; source recommends weights and a weighted sensitivity branch is retained."
+      },
+      "covariance method": {
+        "reported": null,
+        "status": "unclear",
+        "provisional_origin": "Model-based information-matrix covariance is a candidate; no robust or cluster-sandwich estimator is stated."
+      },
+      "software and defaults if stated": null,
+      "integration method if stated": null,
+      "locator": [
+        {
+          "doc": "S1",
+          "page": 3,
+          "section": "Table A3 Model 1"
+        },
+        {
+          "doc": "MAIN",
+          "page": 11,
+          "section": "Footnote 3"
+        }
+      ]
+    },
+    {
+      "model_id": "A3_M2",
+      "outcome": "entrepreneurial_activity",
+      "sample": "Steps 1–6 with employment restriction in step 3 bypassed. Closest table-described model omits fertility; blank cell could instead be a reporting omission.",
+      "terms": [
+        "intercept",
+        "female",
+        "age_c",
+        "age_c_sq",
+        "postsecondary",
+        "year[2002]",
+        "year[2003]",
+        "year[2004]",
+        "year[2005]",
+        "year[2006]",
+        "year[2007]",
+        "year[2008]",
+        "not_employed",
+        "leave_z",
+        "leave_sq_z",
+        "childcare_z",
+        "parttime_z",
+        "gdp_z",
+        "unemployment_z",
+        "epl_z",
+        "status_z",
+        "women_managers_z",
+        "female_leave",
+        "female_leave_sq",
+        "female_childcare",
+        "female_parttime"
+      ],
+      "estimator": "Three-level logistic mixed-effects model",
+      "random effects / fixed effects": {
+        "random": "Random intercept and female slope at country and country-year-within-country levels; covariance between intercept and female slope at either level unstated.",
+        "fixed": "All listed covariate effects and survey-year indicators; no country fixed effects in multilevel models."
+      },
+      "weights": {
+        "reported": null,
+        "status": "unclear",
+        "provisional_origin": "Unweighted, only as a minimal assumption; source recommends weights and a weighted sensitivity branch is retained."
+      },
+      "covariance method": {
+        "reported": null,
+        "status": "unclear",
+        "provisional_origin": "Model-based information-matrix covariance is a candidate; no robust or cluster-sandwich estimator is stated."
+      },
+      "software and defaults if stated": null,
+      "integration method if stated": null,
+      "locator": [
+        {
+          "doc": "S1",
+          "page": 3,
+          "section": "Table A3 Model 2 and note †"
+        },
+        {
+          "doc": "MAIN",
+          "page": 10,
+          "section": "Footnote 2"
+        }
+      ]
+    },
+    {
+      "model_id": "A3_M3",
+      "outcome": "entrepreneurial_activity",
+      "sample": "Steps 1–6 and 8; observed perception/network responses.",
+      "terms": [
+        "intercept",
+        "female",
+        "age_c",
+        "age_c_sq",
+        "postsecondary",
+        "year[2002]",
+        "year[2003]",
+        "year[2004]",
+        "year[2005]",
+        "year[2006]",
+        "year[2007]",
+        "year[2008]",
+        "skill",
+        "fear_failure",
+        "knows_entrepreneur",
+        "leave_z",
+        "leave_sq_z",
+        "childcare_z",
+        "parttime_z",
+        "gdp_z",
+        "unemployment_z",
+        "epl_z",
+        "status_z",
+        "women_managers_z",
+        "fertility_z",
+        "female_leave",
+        "female_leave_sq",
+        "female_childcare",
+        "female_parttime"
+      ],
+      "estimator": "Three-level logistic mixed-effects model",
+      "random effects / fixed effects": {
+        "random": "Random intercept and female slope at country and country-year-within-country levels; covariance between intercept and female slope at either level unstated.",
+        "fixed": "All listed covariate effects and survey-year indicators; no country fixed effects in multilevel models."
+      },
+      "weights": {
+        "reported": null,
+        "status": "unclear",
+        "provisional_origin": "Unweighted, only as a minimal assumption; source recommends weights and a weighted sensitivity branch is retained."
+      },
+      "covariance method": {
+        "reported": null,
+        "status": "unclear",
+        "provisional_origin": "Model-based information-matrix covariance is a candidate; no robust or cluster-sandwich estimator is stated."
+      },
+      "software and defaults if stated": null,
+      "integration method if stated": null,
+      "locator": [
+        {
+          "doc": "S1",
+          "page": 3,
+          "section": "Table A3 Model 3"
+        },
+        {
+          "doc": "MAIN",
+          "page": 11,
+          "section": "Footnote 5"
+        }
+      ]
+    },
+    {
+      "model_id": "D_country",
+      "outcome": "entrepreneurial_activity",
+      "sample": "Steps 1–6, estimated separately by country; omit absent year indicators. Descriptive average marginal gender effects, not a substitute for multilevel models.",
+      "terms": [
+        "intercept",
+        "female",
+        "age_c",
+        "age_c_sq",
+        "postsecondary",
+        "year[2002]",
+        "year[2003]",
+        "year[2004]",
+        "year[2005]",
+        "year[2006]",
+        "year[2007]",
+        "year[2008]"
+      ],
+      "estimator": "Separate country logistic regressions",
+      "random effects / fixed effects": {
+        "random": null,
+        "fixed": "All listed covariate effects and survey-year indicators; no country fixed effects in multilevel models."
+      },
+      "weights": {
+        "reported": null,
+        "status": "unclear",
+        "provisional_origin": "Unweighted, only as a minimal assumption; source recommends weights and a weighted sensitivity branch is retained."
+      },
+      "covariance method": {
+        "reported": null,
+        "status": "unclear",
+        "provisional_origin": "Model-based information-matrix covariance is a candidate; no robust or cluster-sandwich estimator is stated."
+      },
+      "software and defaults if stated": null,
+      "integration method if stated": null,
+      "locator": [
+        {
+          "doc": "MAIN",
+          "page": 15,
+          "section": "First-stage country regressions"
+        },
+        {
+          "doc": "MAIN",
+          "page": 16,
+          "section": "Figure 2 description"
+        },
+        {
+          "doc": "MAIN",
+          "page": 17,
+          "section": "Figure 2"
+        }
+      ]
+    }
+  ],
+  "inference": {
+    "observation_unit": "Adult respondent in a national survey; owner outcomes describe the respondent’s business. Multiple owners of a venture are not a separately documented cluster.",
+    "sampling_unit": "Individual adults within country-year national repeated cross-sectional samples; MAIN describes random sampling, while the dictionary notes country-specific survey designs and some quotas. Primary sampling units/strata are not supplied by the article.",
+    "assignment_unit_for_country_variables": "Observational country-year institutional environment, largely country-level variation; no randomized assignment.",
+    "clusters": "Country-year surveys nested within countries, with random intercepts and female slopes at both grouping levels. Cluster-sandwich unit and finite-cluster corrections are unstated.",
+    "native_se_method": null,
+    "software": null,
+    "tail_and_alpha_policy": {
+      "tail": "unstated",
+      "alpha": "Table legends define significance categories; numeric thresholds are retained only in sealed_targets.json under the target-free requirement. Exact p values and multiplicity policy are unstated.",
+      "testing": "Coefficient-test statistic/distribution, likelihood-ratio df and boundary corrections are unstated; no joint quadratic-interaction tests are printed."
+    },
+    "locator": [
+      {
+        "doc": "MAIN",
+        "page": 9,
+        "section": "Data"
+      },
+      {
+        "doc": "MAIN",
+        "page": 10,
+        "section": "Sample"
+      },
+      {
+        "doc": "MAIN",
+        "page": 15,
+        "section": "Analytic Strategy"
+      },
+      {
+        "doc": "MAIN",
+        "page": 18,
+        "section": "Footnote 17"
+      },
+      {
+        "doc": "MAIN",
+        "page": 19,
+        "section": "Table 1 note"
+      },
+      {
+        "doc": "MAIN",
+        "page": 22,
+        "section": "Table 2 note"
+      },
+      {
+        "doc": "S1",
+        "page": 3,
+        "section": "Table A3 note"
+      }
+    ]
+  },
+  "missing_data": {
+    "reported": "Childcare values for missing years were imputed, method unstated. Perception items have questionnaire-routing missingness. Innovation and technology have restricted year windows. Industry was omitted for extensive missingness. All other analytic missing-data rules are unstated.",
+    "provisional_rule": "Preserve unknowns; map documented special codes to missing before transformations; no published-cell imputation. Complete cases per model only as an uncertain implementation fallback, with a common-sample alternative recorded.",
+    "locator": [
+      {
+        "doc": "MAIN",
+        "page": 11,
+        "section": "Footnote 5"
+      },
+      {
+        "doc": "MAIN",
+        "page": 12,
+        "section": "Footnote 9"
+      },
+      {
+        "doc": "MAIN",
+        "page": 15,
+        "section": "Footnote 14"
+      },
+      {
+        "doc": "MAIN",
+        "page": 32,
+        "section": "Industry missingness"
+      }
+    ]
+  },
+  "sealed_n_branch": [
+    {
+      "model_id": "M1",
+      "n_individuals": 354143,
+      "n_countries": null,
+      "locator": {
+        "doc": "MAIN",
+        "page": 19,
+        "section": "Table 1 Model 1; country N not separately printed"
+      }
+    },
+    {
+      "model_id": "M2",
+      "n_individuals": 354143,
+      "n_countries": null,
+      "locator": {
+        "doc": "MAIN",
+        "page": 19,
+        "section": "Table 1 Model 2; country N not separately printed"
+      }
+    },
+    {
+      "model_id": "M3",
+      "n_individuals": 354143,
+      "n_countries": null,
+      "locator": {
+        "doc": "MAIN",
+        "page": 19,
+        "section": "Table 1 Model 3; country N not separately printed"
+      }
+    },
+    {
+      "model_id": "M4",
+      "n_individuals": 28775,
+      "n_countries": null,
+      "locator": {
+        "doc": "MAIN",
+        "page": 22,
+        "section": "Table 2 Model 4; country N not separately printed"
+      }
+    },
+    {
+      "model_id": "M5",
+      "n_individuals": 28775,
+      "n_countries": null,
+      "locator": {
+        "doc": "MAIN",
+        "page": 22,
+        "section": "Table 2 Model 5; country N not separately printed"
+      }
+    },
+    {
+      "model_id": "M6",
+      "n_individuals": 28775,
+      "n_countries": null,
+      "locator": {
+        "doc": "MAIN",
+        "page": 22,
+        "section": "Table 2 Model 6; country N not separately printed"
+      }
+    },
+    {
+      "model_id": "M7",
+      "n_individuals": 27107,
+      "n_countries": null,
+      "locator": {
+        "doc": "MAIN",
+        "page": 22,
+        "section": "Table 2 Model 7; country N not separately printed"
+      }
+    },
+    {
+      "model_id": "M8",
+      "n_individuals": 17498,
+      "n_countries": null,
+      "locator": {
+        "doc": "MAIN",
+        "page": 22,
+        "section": "Table 2 Model 8; country N not separately printed"
+      }
+    },
+    {
+      "model_id": "A3_M1",
+      "n_individuals": 354143,
+      "n_countries": null,
+      "locator": {
+        "doc": "S1",
+        "page": 3,
+        "section": "Table A3 Model 1; country N not separately printed"
+      }
+    },
+    {
+      "model_id": "A3_M2",
+      "n_individuals": 417026,
+      "n_countries": null,
+      "locator": {
+        "doc": "S1",
+        "page": 3,
+        "section": "Table A3 Model 2; country N not separately printed"
+      }
+    },
+    {
+      "model_id": "A3_M3",
+      "n_individuals": 265075,
+      "n_countries": null,
+      "locator": {
+        "doc": "S1",
+        "page": 3,
+        "section": "Table A3 Model 3; country N not separately printed"
+      }
+    },
+    {
+      "model_id": "overall_sample_description",
+      "n_individuals": null,
+      "n_countries": 24,
+      "locator": {
+        "doc": "MAIN",
+        "page": 10,
+        "section": "Country sample; surveys N=143. No individual-model-specific country counts printed."
+      }
+    }
+  ],
+  "unavailable_or_unclear": [
+    {
+      "item": "Age and employment restriction",
+      "status": "unclear",
+      "detail": "Strict versus inclusive age lower bound; labor force versus employed-only; unemployed job seekers cannot be identified reliably from GEMWORK.",
+      "locator": [
+        {
+          "doc": "MAIN",
+          "page": 10,
+          "section": "Sample and footnote 2"
+        }
+      ]
+    },
+    {
+      "item": "Nascent and established definitions",
+      "status": "unclear",
+      "detail": "Screening text versus harmonized nascent rules; owner-manager definition versus duration-qualified established business; no source code supplied.",
+      "locator": [
+        {
+          "doc": "MAIN",
+          "page": 11,
+          "section": "Outcome and footnote 3"
+        },
+        {
+          "doc": "MAIN",
+          "page": 14,
+          "section": "Owner subsample"
+        }
+      ]
+    },
+    {
+      "item": "France survey covariates",
+      "status": "unclear",
+      "detail": "France 2003 appears in roster but harmonized GEMWORK and GEMEDUC have no responses. Original files listed cover only earlier years. No exact source-based recovery is available.",
+      "locator": [
+        {
+          "doc": "S1",
+          "page": 1,
+          "section": "Table A1 France roster"
+        },
+        {
+          "doc": "MAIN",
+          "page": 11,
+          "section": "Controls"
+        }
+      ]
+    },
+    {
+      "item": "Education completion",
+      "status": "unclear",
+      "detail": "GEMEDUC category is broader than a clearly completed postsecondary degree; no crosswalk is stated.",
+      "locator": [
+        {
+          "doc": "MAIN",
+          "page": 11,
+          "section": "Education"
+        }
+      ]
+    },
+    {
+      "item": "Status early-year absence and denominator",
+      "status": "unclear",
+      "detail": "NBSTATUS absent in early survey years in both listed individual sources; survey aggregation universe, weights and routing correction unknown.",
+      "locator": [
+        {
+          "doc": "MAIN",
+          "page": 13,
+          "section": "Entrepreneurship status"
+        },
+        {
+          "doc": "MAIN",
+          "page": 14,
+          "section": "Entrepreneurship status"
+        }
+      ]
+    },
+    {
+      "item": "Historical FTE leave",
+      "status": "unclear",
+      "detail": "No complete ready-made lagged annual series; country-specific eligibility, payment caps and effective dates need documentary reconstruction. Available sources cannot establish every value.",
+      "locator": [
+        {
+          "doc": "MAIN",
+          "page": 12,
+          "section": "Leave and notes"
+        }
+      ]
+    },
+    {
+      "item": "Childcare concept/vintage/imputation",
+      "status": "unclear",
+      "detail": "Historical childcare-only measure versus current ECEC series, reference-year assignment and missing-year imputation unresolved.",
+      "locator": [
+        {
+          "doc": "MAIN",
+          "page": 12,
+          "section": "Childcare and footnote 9"
+        }
+      ]
+    },
+    {
+      "item": "Part-time definition",
+      "status": "unclear",
+      "detail": "Employee/total-employed denominator, age group, national/common threshold, missing series and vintage unresolved.",
+      "locator": [
+        {
+          "doc": "MAIN",
+          "page": 12,
+          "section": "Part-time"
+        },
+        {
+          "doc": "S1",
+          "page": 1,
+          "section": "Table A1 note ‡"
+        }
+      ]
+    },
+    {
+      "item": "GDP concept and year mapping",
+      "status": "unclear",
+      "detail": "GDP per capita in MAIN versus GDP index label in S1; UNDP publication-to-reference-year mapping and later-report gaps unresolved.",
+      "locator": [
+        {
+          "doc": "MAIN",
+          "page": 13,
+          "section": "GDP"
+        },
+        {
+          "doc": "S1",
+          "page": 1,
+          "section": "Table A1 GDP index"
+        }
+      ]
+    },
+    {
+      "item": "Overall EPL composite",
+      "status": "unclear",
+      "detail": "Exact historical version, regular/temporary/collective weights, and missing Iceland years not established by source dictionary.",
+      "locator": [
+        {
+          "doc": "MAIN",
+          "page": 13,
+          "section": "Employment protection"
+        }
+      ]
+    },
+    {
+      "item": "Unemployment series",
+      "status": "unclear",
+      "detail": "Annual age/adjustment choice and missing Switzerland/Iceland years require documented sourcing.",
+      "locator": [
+        {
+          "doc": "MAIN",
+          "page": 13,
+          "section": "Unemployment"
+        }
+      ]
+    },
+    {
+      "item": "Female manager share",
+      "status": "unclear",
+      "detail": "Annual mapping and missing indicator in later UNDP report; OECD current managers series does not cover study window.",
+      "locator": [
+        {
+          "doc": "MAIN",
+          "page": 14,
+          "section": "Women’s position"
+        }
+      ]
+    },
+    {
+      "item": "Firm controls/outcomes",
+      "status": "unclear",
+      "detail": "Mixed motives; employee hours unknown; growth additions versus total; sole ownership versus owner-manager count; log business age at zero, open-ended dates and payment-year schemes.",
+      "locator": [
+        {
+          "doc": "MAIN",
+          "page": 14,
+          "section": "Motivations/growth"
+        },
+        {
+          "doc": "MAIN",
+          "page": 15,
+          "section": "Ownership/business age"
+        },
+        {
+          "doc": "MAIN",
+          "page": 31,
+          "section": "Limitations"
+        }
+      ]
+    },
+    {
+      "item": "Transformations",
+      "status": "unclear",
+      "detail": "Log base not explicit; population/weights for centering and standardization, square ordering, and reuse across model samples unstated.",
+      "locator": [
+        {
+          "doc": "MAIN",
+          "page": 11,
+          "section": "Footnote 4"
+        },
+        {
+          "doc": "MAIN",
+          "page": 14,
+          "section": "Standardization"
+        },
+        {
+          "doc": "MAIN",
+          "page": 15,
+          "section": "Footnote 15"
+        }
+      ]
+    },
+    {
+      "item": "Model estimation and inference",
+      "status": "unclear",
+      "detail": "Random-effect distribution, software/version, algorithm, quadrature, ML versus REML for linear model, convergence, random intercept/slope covariance, native SE, small-sample adjustments, tails and multiplicity unstated.",
+      "locator": [
+        {
+          "doc": "MAIN",
+          "page": 15,
+          "section": "Analytic Strategy"
+        },
+        {
+          "doc": "MAIN",
+          "page": 18,
+          "section": "Footnote 17"
+        }
+      ]
+    },
+    {
+      "item": "Weights and missingness",
+      "status": "unclear",
+      "detail": "No analytic weight selection, scaling, deletion/imputation or common-sample rule stated.",
+      "locator": [
+        {
+          "doc": "MAIN",
+          "page": 15,
+          "section": "Analytic Strategy"
+        },
+        {
+          "doc": "MAIN",
+          "page": 12,
+          "section": "Footnote 9"
+        }
+      ]
+    },
+    {
+      "item": "Expanded robustness fertility control",
+      "status": "unclear",
+      "detail": "A3_M2 fertility entry is blank despite the general controls description; omission from fitted model versus printing omission cannot be resolved.",
+      "locator": [
+        {
+          "doc": "S1",
+          "page": 3,
+          "section": "Table A3 Model 2 Fertility rate"
+        },
+        {
+          "doc": "MAIN",
+          "page": 14,
+          "section": "Controls"
+        }
+      ]
+    },
+    {
+      "item": "Prediction construction",
+      "status": "unclear",
+      "detail": "Fixed-part predictions and other covariates held at means are stated, but uncertainty intervals and complete raw-variable refit details are absent.",
+      "locator": [
+        {
+          "doc": "MAIN",
+          "page": 21,
+          "section": "Footnote 20"
+        },
+        {
+          "doc": "MAIN",
+          "page": 23,
+          "section": "Figure 5"
+        }
+      ]
+    },
+    {
+      "item": "Unprinted checks and unavailable alternatives",
+      "status": "unclear",
+      "detail": "No coefficient tables for prose-only checks. Gender ideology and academic-field segregation sources are unavailable; service-sector size and gender wage-gap sources were not acquired.",
+      "locator": [
+        {
+          "doc": "MAIN",
+          "page": 13,
+          "section": "Footnote 11"
+        },
+        {
+          "doc": "MAIN",
+          "page": 14,
+          "section": "Footnotes 12–13"
+        },
+        {
+          "doc": "MAIN",
+          "page": 31,
+          "section": "Footnote 25"
+        }
+      ]
+    }
+  ]
+}

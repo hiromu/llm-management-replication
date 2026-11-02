@@ -1,0 +1,472 @@
+{
+ "per_table_or_figure": {
+  "Table 1": {
+   "specificity": {
+    "score": 2,
+    "reason": "Outcome means' unit (county vs county-quarter) and period unclear; test for p-values unstated."
+   },
+   "precision": {
+    "score": 2,
+    "reason": "Group Ns conflict with text; p printed to two decimals."
+   },
+   "exhaustiveness": {
+    "score": 2,
+    "reason": "Error-score aggregation and Delta-control years not reproducible from deposited ACS years."
+   }
+  },
+  "Table 2": {
+   "specificity": {
+    "score": 4,
+    "reason": "Variables and panel dimensions stated."
+   },
+   "precision": {
+    "score": 3,
+    "reason": "Observation count conflicts between note and text."
+   },
+   "exhaustiveness": {
+    "score": 4,
+    "reason": "Most rows documented; column mappings inferred."
+   }
+  },
+  "Table 3": {
+   "specificity": {
+    "score": 3,
+    "reason": "Equation, FE and Log-OLS stated."
+   },
+   "precision": {
+    "score": 3,
+    "reason": "SE method not stated; log rule ambiguous."
+   },
+   "exhaustiveness": {
+    "score": 2,
+    "reason": "Controls listed only in appendix; transformations unstated."
+   }
+  },
+  "Table 4": {
+   "specificity": {
+    "score": 3,
+    "reason": "Equation, quartile FE, robust SE stated."
+   },
+   "precision": {
+    "score": 3,
+    "reason": "Control coding and reference year unstated."
+   },
+   "exhaustiveness": {
+    "score": 2,
+    "reason": "Quartile variable list conflicts with appendix."
+   }
+  },
+  "Table 5": {
+   "specificity": {
+    "score": 2,
+    "reason": "Diff-Time-Trends described two ways; placebo mechanism unstated."
+   },
+   "precision": {
+    "score": 2,
+    "reason": "Panel B N rows conflict with sample definitions; panel A N differs within sample."
+   },
+   "exhaustiveness": {
+    "score": 2,
+    "reason": "Controls inclusion in Panel A unstated."
+   }
+  },
+  "Table 6": {
+   "specificity": {
+    "score": 3,
+    "reason": "Pair-level spec and distance control stated."
+   },
+   "precision": {
+    "score": 2,
+    "reason": "SE type, distance unit and log-zero handling unstated."
+   },
+   "exhaustiveness": {
+    "score": 2,
+    "reason": "Drop rule from collected pairs to estimation sample unstated."
+   }
+  },
+  "Table 7": {
+   "specificity": {
+    "score": 3,
+    "reason": "Outcome definitions in note and Sec 2.4.1."
+   },
+   "precision": {
+    "score": 3,
+    "reason": "SE method unstated."
+   },
+   "exhaustiveness": {
+    "score": 2,
+    "reason": "Distant/ownership constructs ambiguous relative to deposited columns."
+   }
+  },
+  "Figure 1": {
+   "specificity": {
+    "score": 4,
+    "reason": "Treatment map from county_lookup."
+   },
+   "precision": {
+    "score": 4,
+    "reason": "Legend clear."
+   },
+   "exhaustiveness": {
+    "score": 4,
+    "reason": "Panel (b) is illustrative imagery."
+   }
+  },
+  "Figure 2": {
+   "specificity": {
+    "score": 3,
+    "reason": "Sample rules described."
+   },
+   "precision": {
+    "score": 3,
+    "reason": "Counts stated."
+   },
+   "exhaustiveness": {
+    "score": 3,
+    "reason": "Contiguity rule and date column inferred."
+   }
+  },
+  "Figure 3": {
+   "specificity": {
+    "score": 2,
+    "reason": "Logged/cumulative quantity not precisely defined."
+   },
+   "precision": {
+    "score": 2,
+    "reason": "Note says quarterly; plotted points annual."
+   },
+   "exhaustiveness": {
+    "score": 2,
+    "reason": "Aggregation unstated."
+   }
+  },
+  "Figure 4": {
+   "specificity": {
+    "score": 3,
+    "reason": "County-year, Log-OLS, county clustering stated."
+   },
+   "precision": {
+    "score": 3,
+    "reason": "Reference year not stated in text."
+   },
+   "exhaustiveness": {
+    "score": 3,
+    "reason": "Annual aggregation unstated."
+   }
+  },
+  "Figure 5": {
+   "specificity": {
+    "score": 3,
+    "reason": "Per-year cross-sections with robust SE."
+   },
+   "precision": {
+    "score": 3,
+    "reason": "Outcome aggregation unstated."
+   },
+   "exhaustiveness": {
+    "score": 3,
+    "reason": "Control years per regression unstated."
+   }
+  },
+  "Figure 6": {
+   "specificity": {
+    "score": 1,
+    "reason": "Estimator, FE, controls, SE and interval level unstated."
+   },
+   "precision": {
+    "score": 1,
+    "reason": "Percentile construction unstated."
+   },
+   "exhaustiveness": {
+    "score": 1,
+    "reason": "Decile definition year unstated."
+   }
+  }
+ },
+ "choices": [
+  {
+   "choice": "Log(Y+1) with OLS on skewed counts",
+   "default_common_or_rare": "common",
+   "justified": true,
+   "locator": "D01 p.13 (journal p.4920); 'because of the highly skewed distribution'"
+  },
+  {
+   "choice": "County and quarter two-way FE DiD with single treatment date",
+   "default_common_or_rare": "default",
+   "justified": true,
+   "locator": "D01 p.13 (journal p.4920)"
+  },
+  {
+   "choice": "Cross-sectional spec with quartile FEs for density/income instead of county FE",
+   "default_common_or_rare": "rare",
+   "justified": true,
+   "locator": "D01 p.14 (journal p.4921); limited pre-period; D01 p.15 (journal p.4922)"
+  },
+  {
+   "choice": "Heteroskedasticity-robust SE in cross-section",
+   "default_common_or_rare": "default",
+   "justified": false,
+   "locator": "D01 p.15 (journal p.4922); Table 4 note"
+  },
+  {
+   "choice": "SE method for panel models not reported (county clustering only in Figure 4)",
+   "default_common_or_rare": "rare",
+   "justified": false,
+   "locator": "D01 p.14 (journal p.4921); Table 3; D01 p.15 (journal p.4922); Figure 4 note"
+  },
+  {
+   "choice": "Boundary sample of counties bordering opposite-status counties",
+   "default_common_or_rare": "common",
+   "justified": true,
+   "locator": "D01 p.8 (journal p.4915); cites Dube et al. 2010"
+  },
+  {
+   "choice": "Timing sample restricted to counties scheduled in 2005-2006",
+   "default_common_or_rare": "rare",
+   "justified": true,
+   "locator": "D01 p.8 (journal p.4915)"
+  },
+  {
+   "choice": "Single random placebo reassignment",
+   "default_common_or_rare": "common",
+   "justified": true,
+   "locator": "D01 p.17 (journal p.4924)"
+  },
+  {
+   "choice": "Pair-level quality regression with crow-flies distance control",
+   "default_common_or_rare": "rare",
+   "justified": true,
+   "locator": "D01 p.18 (journal p.4925); D01 p.25 (journal p.4932); endnote 30"
+  },
+  {
+   "choice": "Ownership proxy by 0.1-degree spatial concentration; exclude >0.5-degree users",
+   "default_common_or_rare": "rare",
+   "justified": true,
+   "locator": "D01 p.10 (journal p.4917); D01 p.25 (journal p.4932); endnote 21"
+  },
+  {
+   "choice": "Event study on county-year rather than county-quarter",
+   "default_common_or_rare": "common",
+   "justified": true,
+   "locator": "D01 p.14 (journal p.4921); 'for simplicity and ... more precise values'"
+  }
+ ],
+ "wider_space": [
+  {
+   "choice": "Count-model estimator",
+   "alternatives": [
+    "Poisson pseudo-ML with FE (Santos Silva & Tenreyro 2006)",
+    "inverse hyperbolic sine transform"
+   ],
+   "default_common_or_rare": "common",
+   "justified": false,
+   "locator": "D01 p.13 (journal p.4920); log-linear chosen for skew"
+  },
+  {
+   "choice": "Inference with spatially clustered treatment",
+   "alternatives": [
+    "cluster by state or by Census regional office",
+    "Conley spatial HAC SE"
+   ],
+   "default_common_or_rare": "common",
+   "justified": false,
+   "locator": "D01 p.8 (journal p.4915); 'significant clustering across counties within a given region'"
+  },
+  {
+   "choice": "Placebo inference",
+   "alternatives": [
+    "randomization inference over many permutations"
+   ],
+   "default_common_or_rare": "common",
+   "justified": false,
+   "locator": "D01 p.17 (journal p.4924)"
+  },
+  {
+   "choice": "Quality outcome",
+   "alternatives": [
+    "county-average logged error (Sec 2.4.3)",
+    "signed difference"
+   ],
+   "default_common_or_rare": "rare",
+   "justified": true,
+   "locator": "D01 p.11 (journal p.4918); D01 p.18 (journal p.4925)"
+  }
+ ],
+ "structural_counts": {
+  "Table 1": {
+   "n_columns": 4,
+   "n_outcomes": 11,
+   "n_regressors_of_interest": 1,
+   "n_controls": 0,
+   "n_fixed_effect_sets": 0,
+   "n_sample_rules": 2
+  },
+  "Table 2": {
+   "n_columns": 5,
+   "n_outcomes": 18,
+   "n_regressors_of_interest": 0,
+   "n_controls": 0,
+   "n_fixed_effect_sets": 0,
+   "n_sample_rules": 3
+  },
+  "Table 3": {
+   "n_columns": 6,
+   "n_outcomes": 3,
+   "n_regressors_of_interest": 1,
+   "n_controls": 10,
+   "n_fixed_effect_sets": 2,
+   "n_sample_rules": 3
+  },
+  "Table 4": {
+   "n_columns": 6,
+   "n_outcomes": 6,
+   "n_regressors_of_interest": 1,
+   "n_controls": 10,
+   "n_fixed_effect_sets": 3,
+   "n_sample_rules": 2
+  },
+  "Table 5": {
+   "n_columns": 16,
+   "n_outcomes": 6,
+   "n_regressors_of_interest": 1,
+   "n_controls": 10,
+   "n_fixed_effect_sets": 3,
+   "n_sample_rules": 4
+  },
+  "Table 6": {
+   "n_columns": 3,
+   "n_outcomes": 1,
+   "n_regressors_of_interest": 1,
+   "n_controls": 11,
+   "n_fixed_effect_sets": 3,
+   "n_sample_rules": 4
+  },
+  "Table 7": {
+   "n_columns": 7,
+   "n_outcomes": 7,
+   "n_regressors_of_interest": 1,
+   "n_controls": 10,
+   "n_fixed_effect_sets": 2,
+   "n_sample_rules": 3
+  },
+  "Figure 1": {
+   "n_columns": 2,
+   "n_outcomes": 0,
+   "n_regressors_of_interest": 0,
+   "n_controls": 0,
+   "n_fixed_effect_sets": 0,
+   "n_sample_rules": 2
+  },
+  "Figure 2": {
+   "n_columns": 2,
+   "n_outcomes": 0,
+   "n_regressors_of_interest": 0,
+   "n_controls": 0,
+   "n_fixed_effect_sets": 0,
+   "n_sample_rules": 4
+  },
+  "Figure 3": {
+   "n_columns": 4,
+   "n_outcomes": 2,
+   "n_regressors_of_interest": 0,
+   "n_controls": 0,
+   "n_fixed_effect_sets": 0,
+   "n_sample_rules": 2
+  },
+  "Figure 4": {
+   "n_columns": 2,
+   "n_outcomes": 2,
+   "n_regressors_of_interest": 9,
+   "n_controls": 0,
+   "n_fixed_effect_sets": 2,
+   "n_sample_rules": 3
+  },
+  "Figure 5": {
+   "n_columns": 10,
+   "n_outcomes": 1,
+   "n_regressors_of_interest": 1,
+   "n_controls": 10,
+   "n_fixed_effect_sets": 3,
+   "n_sample_rules": 3
+  },
+  "Figure 6": {
+   "n_columns": 26,
+   "n_outcomes": 8,
+   "n_regressors_of_interest": 1,
+   "n_controls": null,
+   "n_fixed_effect_sets": null,
+   "n_sample_rules": 3
+  }
+ },
+ "structural_counts_notes": "Controls counted as the ten appendix-listed controls (D02 p.11-12); Table 6 adds distance. Figure 4 regressors of interest = nine year interactions (reference year omitted, read from plot). Figure 6 columns = 10+10 deciles + 6 percentile thresholds; controls/FE unstated (null).",
+ "unusualness_overall": {
+  "rating": "moderate",
+  "reason": "Standard two-way FE DiD and log(Y+1) OLS, but cross-sectional quartile-FE design, pair-level quality model, bespoke ownership proxies and many unstated inference details (panel SEs, Figure 6) plus internal N contradictions."
+ },
+ "unavailable_or_appendix_only": [
+  "Panel model control coefficients and control list: appendix only (D02 p.11 Table D.3, p.12 Table D.4)",
+  "IV / stock-of-knowledge estimates discussed in text D01 p.16: appendix Table D.2 (D02 p.10), out of scope",
+  "Changeset and Google-Maps-popularity robustness discussed D01 p.17-18: appendix Table D.5 (D02 p.13), out of scope",
+  "Object-level Florida ownership analysis discussed D01 p.23: appendix Table D.6 (D02 p.13), out of scope",
+  "Governance (events/maptime) test discussed D01 p.23: appendix Table D.7 (D02 p.14), out of scope",
+  "Restaurant-name quality measure: Appendix B Table B.1 (D02 p.5), out of scope",
+  "Covariate trends figure D.1 referenced D01 p.7, p.15 (D02 p.8), out of scope",
+  "Author code: article cites an external replication repository (D01 p.1); no code in packet; not reconstructed",
+  "Raw OSM history, bot list and per-user/per-object data: not in packet (only pre-aggregated quarterly.csv)",
+  "ACS 2012-2014 vintages and variables median age / IT workers / highly educated (D01 p.11): not in deposited acs5year columns",
+  "Polygon geometry for contiguity (D60 lists attribute fields only)",
+  "Seeding-event timing / county MTAIP map image source: only coded county_lookup.treat available"
+ ],
+ "unavailable_source_fallbacks": [
+  {
+   "item": "Distinct contributors over 2008-2014 / 2014",
+   "why_unavailable": "deposit is county-quarter counts",
+   "fallback": "sum of quarterly totalusers",
+   "label": "non_equivalent"
+  },
+  {
+   "item": "ACS controls for 2012-2014 and 2005-2014 change",
+   "why_unavailable": "D03 says acs5year covers 2005-2011",
+   "fallback": "carry last available year forward; Delta = latest minus earliest available",
+   "label": "non_equivalent"
+  },
+  {
+   "item": "Boundary contiguity",
+   "why_unavailable": "GIS algorithm unstated; no geometry in D60",
+   "fallback": "use deposited boundary-counties.csv",
+   "label": "equivalent"
+  },
+  {
+   "item": "Timing schedule date semantics",
+   "why_unavailable": "D54 columns unlabeled beyond names",
+   "fallback": "use 'Sch SB Delivery' year",
+   "label": "uncertain"
+  },
+  {
+   "item": "Bot / DaveHansenTiger exclusion",
+   "why_unavailable": "pre-applied in aggregates",
+   "fallback": "use quarterly.csv as delivered",
+   "label": "equivalent"
+  },
+  {
+   "item": "Placebo random draw",
+   "why_unavailable": "seed and mechanism unstated",
+   "fallback": "random permutation with fixed documented seed",
+   "label": "uncertain"
+  },
+  {
+   "item": "Google Maps popularity at county level",
+   "why_unavailable": "google_trends.csv is state x quarter (out-of-scope table)",
+   "fallback": "not needed for in-scope analyses",
+   "label": "uncertain"
+  }
+ ],
+ "inference_fields": {
+  "observation_unit": "county-quarter (Tables 2, 3, 5A, 7; Figure 6 inferred); county-year (Figure 4); county (Tables 1, 4, 5B; Figure 5); county-address pair (Table 6)",
+  "sampling_unit": "county (all counties in universe; address pairs sampled within counties for Table 6)",
+  "treatment_assignment_unit": "county (MTAIP update status by 2006 TIGER release); assignment clustered geographically by Census regional office logistics (D01 p.8)",
+  "clusters": "county stated only for Figure 4 (D01 p.15); unstated for Tables 3, 5A, 6, 7; none (robust) for Tables 4, 5B and Figure 5",
+  "native_se_method_and_software": "Heteroskedasticity-robust (cross-section; D01 p.15-16), county-clustered (event study; D01 p.15); software unstated (quarter coding consistent with Stata, inferred)",
+  "first_stage_strength": "not applicable in scope (IV only in appendix Table D.2)"
+ }
+}

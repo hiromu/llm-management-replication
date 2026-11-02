@@ -1,0 +1,54 @@
+{
+  "version": "v1",
+  "frozen_before_fitting": true,
+  "calibration_status": "provisional, uncalibrated: constants chosen from the rounding structure of the published table and general methodological convention; no real-paper calibration in this session (corpus calibration arms unperformed).",
+  "focal_structure": {
+    "primary_focal": {"claim": "H3", "target": "Table 2, Model 3, Strategic Deviation^2 (negative, curvature)", "supporting": ["Model 3 first-order Strategic Deviation (positive, required for an interior maximum)", "F test Model 3 vs Model 2 (identification/inference diagnostic)"]},
+    "secondary_focal": {"claim": "H2 over H1", "target": "Table 2, Model 2, Strategic Deviation (negative)"},
+    "lower_tiers": ["controls in Models 1-3 (nuisance)", "Model 3 without first-order term (robustness)", "Table 1 descriptives (descriptive)", "F tests M2 vs M1, M3 vs M1 (diagnostic)"],
+    "paper_rule": "The paper outcome is the primary focal (H3, Model 3 SD^2) claim outcome, determined jointly with the Model 3 SD term as a single claim (both must meet criteria for consistent). It is qualified, not overridden, by the secondary focal and lower tiers using the scoring.md mapping: fully reproduced = primary consistent and no tier discrepant; partially reproduced = primary fragile, or primary consistent with a discrepant lower tier or secondary focal; not reproduced = primary discrepant; indeterminate/not attemptable/fragile inference reported as such. Rationale: title, abstract and conclusion state the strategic-balance (concave) result as the paper's contribution; H2 is the competing linear test."
+  },
+  "implementation_agreement": {
+    "pairing": "Compare A, B, C at each origin before targets: identical sample_hash and N; coefficients agree if |diff| <= 1e-6 * max(1, |b|) and SEs likewise. A pair agrees on a spec if all four models agree. Two agreeing of three permit scoring on that pair; the third goes to code audit. No agreeing pair -> indeterminate (implementation_disagreement).",
+    "grid_agreement": "Report the share of specs on which each pair agrees; never average implementations."
+  },
+  "rounding": "Published coefficient b and SE s printed to 3 decimals: intervals [b-0.0005, b+0.0005], [s-0.0005, s+0.0005]. Stars are inequalities. All comparisons use the most favourable point of the rounding interval (benefit of rounding).",
+  "sign": "Sign agreement if the reconstructed estimate has the same sign as the published estimate. If the published rounding interval contains 0, sign is not assessed.",
+  "inference": {
+    "published_band_from_stars": {"***": "p<.001", "**": "p<.01", "*": "p<.05", "none": "p>=.05"},
+    "comparison_bands": ["p<.01", ".01<=p<.05", ".05<=p<.10", "p>=.10"],
+    "mapping": "*** and ** map to band p<.01; * to .01-.05; no star maps to p>=.05 (band .05-.10 or >=.10, ambiguous across those two).",
+    "reconstructed_p": "two-sided t p from native conventional WLS (tail unstated in article; both readers record unstated tails). One-sided p in the hypothesised direction reported alongside as the directional reading; it never converts an opposite-sign estimate into support.",
+    "rule": "Inference agrees if reconstructed band equals or is stronger than the published band for a positive significance claim; a one-band weakening is a difference but never sufficient for discrepancy; a two-or-more-band weakening (e.g. published p<.01, reconstructed p>=.05 with band >=.10) meets the discrepancy inference criterion. For a published non-significant term, a newly significant reconstruction (p<.05) is a contradiction.",
+    "benchmark_inference": "Not audited. Assignment-level clustering does not apply (observational population; both readers record assignment unit as not applicable). No alternative benchmark declared. Bank-clustered CR1 SEs are reported as a non-equivalent sensitivity only. Fragile-inference outcome therefore cannot be assigned.",
+    "few_cluster_threshold": "not applicable"
+  },
+  "magnitude": {
+    "regime": "different_vintage_public_reconstruction (independently rebuilt sample and variables from archived public Call Reports; not author data)",
+    "metric": "d = distance from reconstructed estimate to the published rounding interval, divided by the upper end of the published SE interval.",
+    "bands": {"consistent": "d <= 1.5", "grey": "1.5 < d <= 3.0", "outside": "d > 3.0"},
+    "relative_effect": "Also report (b_rec - b_pub)/|b_pub| and the ratio; descriptive only.",
+    "no_published_se": "magnitude not audited (e.g., F statistics, SSE)."
+  },
+  "n_tolerance": {
+    "published_n_branch": "sealed; evaluated by code",
+    "bands": {"consistent": "|N_rec - N_pub|/N_pub <= 0.05", "grey": "0.05-0.15", "outside": "> 0.15"},
+    "use": "N outside tolerance cannot by itself create discrepancy; if a claim would otherwise be discrepant while N is outside tolerance, it becomes indeterminate (source_vintage/sample_construction). A consistent claim with N outside tolerance remains consistent with an explicit coverage qualification."
+  },
+  "claim_outcome_at_one_origin": {
+    "consistent": "sign agrees, inference agrees, magnitude band consistent (or not audited with reason stated)",
+    "grey": "sign agrees, and either magnitude grey or inference one band weaker",
+    "discrepant_candidate": "agreeing implementations; sign opposite, or inference two-or-more bands weaker, or magnitude outside",
+    "otherwise": "grey -> indeterminate (grey_zone)"
+  },
+  "origin_ambiguity": "Two origins (O_A, O_B) exist because readers disagreed on five origin levels. Claim outcome at the origin = the common outcome if O_A and O_B agree; if they differ, the claim is label-sensitive and its outcome is indeterminate (origin_label_sensitive), with both reported.",
+  "discrepancy_across_readings": "scoring.md requires discrepancy at the origin and at every equivalent reading. The substantive equivalent set is empty (only algebraic checks), so the condition is discrepant_candidate at both origins O_A and O_B. Uncertain-set results are reported as context and, if any uncertain reading is consistent, the claim is flagged label-sensitive and becomes indeterminate (label_sensitive) rather than discrepant.",
+  "fragility": "Specification fragility requires a substantive equivalent set; it is empty here, so fragility is 'not assessed'. Uncertain-set dispersion (sign share, share significant at .05 in the hypothesised direction, median, min-max, position of published estimate) is reported separately.",
+  "multiverse_summary_rules": {"sign_share": "share of ok uncertain specs with the published sign", "significance_share": "share with two-sided p<.05 and the hypothesised sign", "dedupe": "identical sample_hash and identical estimates counted once; algebraic checks excluded"},
+  "precedence": ["not_attemptable", "indeterminate", "discrepant (only after adversarial review and human confirmation; otherwise reported as discrepant_candidate -> formal outcome indeterminate (pending_confirmation))", "fragile_inference (unavailable: benchmark not audited)", "fragile (unavailable: no equivalent set)", "consistent"],
+  "descriptives": "Table 1 means/SDs/correlations compared on rounding intervals only, reported descriptively (no SE): agreement if within the printed precision interval widened by 10% relative; informational, does not drive the paper outcome.",
+  "f_tests": "Compare significance (published text p<.001 for all three; reconstructed upper-tail p) and report F values; magnitude not audited.",
+  "failure_policy": "Failed or unavailable specs are listed and never counted as agreement or disagreement.",
+  "compute_budget": "per grid_v1.json; exceeding it stops further runs and is reported.",
+  "adversarial_review": "Required for any discrepant_candidate. No model family independent of both implementer families is available; any discrepant claim is reported as not fully verified."
+}

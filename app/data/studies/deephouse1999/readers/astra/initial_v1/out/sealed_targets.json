@@ -1,0 +1,2048 @@
+[
+  {
+    "target_id": "T2_M1_0",
+    "claim_id": null,
+    "table": "Table 2",
+    "model": "M1",
+    "row_term": "Intercept",
+    "coefficient": 0.929,
+    "published_se": 0.169,
+    "test_statistic": null,
+    "exact_p": null,
+    "stars_or_inequality": "***",
+    "alpha_convention": "* p < 0.05; ** p < 0.01; *** p < 0.001",
+    "tail": "unstated",
+    "direction_hypothesized": null,
+    "n": 960,
+    "other_stats": {},
+    "printed_precision": {
+      "coefficient": 3,
+      "published_se": 3
+    },
+    "source": "DOC01 p12 Table 2 M1 Intercept",
+    "tier": "nuisance_control",
+    "printed": {
+      "coefficient": "0.929",
+      "published_se": "0.169",
+      "stars": "***"
+    }
+  },
+  {
+    "target_id": "T2_M1_1",
+    "claim_id": "C3",
+    "table": "Table 2",
+    "model": "M1",
+    "row_term": "Strategic Deviation²",
+    "coefficient": null,
+    "published_se": null,
+    "test_statistic": null,
+    "exact_p": null,
+    "stars_or_inequality": null,
+    "alpha_convention": "* p < 0.05; ** p < 0.01; *** p < 0.001",
+    "tail": "unstated",
+    "direction_hypothesized": "concave_down",
+    "n": 960,
+    "other_stats": {},
+    "printed_precision": {
+      "coefficient": null,
+      "published_se": null
+    },
+    "source": "DOC01 p12 Table 2 M1 Strategic Deviation²",
+    "tier": "focal",
+    "printed": {
+      "coefficient": null,
+      "published_se": null,
+      "stars": null
+    },
+    "notes": "Blank published cell: regressor not included."
+  },
+  {
+    "target_id": "T2_M1_2",
+    "claim_id": "C3",
+    "table": "Table 2",
+    "model": "M1",
+    "row_term": "Strategic Deviation",
+    "coefficient": null,
+    "published_se": null,
+    "test_statistic": null,
+    "exact_p": null,
+    "stars_or_inequality": null,
+    "alpha_convention": "* p < 0.05; ** p < 0.01; *** p < 0.001",
+    "tail": "unstated",
+    "direction_hypothesized": "concave_down",
+    "n": 960,
+    "other_stats": {},
+    "printed_precision": {
+      "coefficient": null,
+      "published_se": null
+    },
+    "source": "DOC01 p12 Table 2 M1 Strategic Deviation",
+    "tier": "focal",
+    "printed": {
+      "coefficient": null,
+      "published_se": null,
+      "stars": null
+    },
+    "notes": "Blank published cell: regressor not included."
+  },
+  {
+    "target_id": "T2_M1_3",
+    "claim_id": "C6",
+    "table": "Table 2",
+    "model": "M1",
+    "row_term": "Market Share",
+    "coefficient": -0.576,
+    "published_se": 0.138,
+    "test_statistic": null,
+    "exact_p": null,
+    "stars_or_inequality": "***",
+    "alpha_convention": "* p < 0.05; ** p < 0.01; *** p < 0.001",
+    "tail": "unstated",
+    "direction_hypothesized": "positive",
+    "n": 960,
+    "other_stats": {},
+    "printed_precision": {
+      "coefficient": 3,
+      "published_se": 3
+    },
+    "source": "DOC01 p12 Table 2 M1 Market Share",
+    "tier": "nuisance_control",
+    "printed": {
+      "coefficient": "-0.576",
+      "published_se": "0.138",
+      "stars": "***"
+    }
+  },
+  {
+    "target_id": "T2_M1_4",
+    "claim_id": "C7",
+    "table": "Table 2",
+    "model": "M1",
+    "row_term": "Total Expense Ratio",
+    "coefficient": -9.948,
+    "published_se": 2.001,
+    "test_statistic": null,
+    "exact_p": null,
+    "stars_or_inequality": "***",
+    "alpha_convention": "* p < 0.05; ** p < 0.01; *** p < 0.001",
+    "tail": "unstated",
+    "direction_hypothesized": "negative",
+    "n": 960,
+    "other_stats": {},
+    "printed_precision": {
+      "coefficient": 3,
+      "published_se": 3
+    },
+    "source": "DOC01 p12 Table 2 M1 Total Expense Ratio",
+    "tier": "nuisance_control",
+    "printed": {
+      "coefficient": "-9.948",
+      "published_se": "2.001",
+      "stars": "***"
+    }
+  },
+  {
+    "target_id": "T2_M1_5",
+    "claim_id": "C8",
+    "table": "Table 2",
+    "model": "M1",
+    "row_term": "Real Market Growth",
+    "coefficient": 0.014,
+    "published_se": 0.004,
+    "test_statistic": null,
+    "exact_p": null,
+    "stars_or_inequality": "***",
+    "alpha_convention": "* p < 0.05; ** p < 0.01; *** p < 0.001",
+    "tail": "unstated",
+    "direction_hypothesized": "positive",
+    "n": 960,
+    "other_stats": {},
+    "printed_precision": {
+      "coefficient": 3,
+      "published_se": 3
+    },
+    "source": "DOC01 p12 Table 2 M1 Real Market Growth",
+    "tier": "nuisance_control",
+    "printed": {
+      "coefficient": "0.014",
+      "published_se": "0.004",
+      "stars": "***"
+    }
+  },
+  {
+    "target_id": "T2_M1_6",
+    "claim_id": "C9",
+    "table": "Table 2",
+    "model": "M1",
+    "row_term": "Relative ROAt−1",
+    "coefficient": 0.369,
+    "published_se": 0.028,
+    "test_statistic": null,
+    "exact_p": null,
+    "stars_or_inequality": "***",
+    "alpha_convention": "* p < 0.05; ** p < 0.01; *** p < 0.001",
+    "tail": "unstated",
+    "direction_hypothesized": "positive",
+    "n": 960,
+    "other_stats": {},
+    "printed_precision": {
+      "coefficient": 3,
+      "published_se": 3
+    },
+    "source": "DOC01 p12 Table 2 M1 Relative ROAt−1",
+    "tier": "nuisance_control",
+    "printed": {
+      "coefficient": "0.369",
+      "published_se": "0.028",
+      "stars": "***"
+    }
+  },
+  {
+    "target_id": "T2_M2_0",
+    "claim_id": null,
+    "table": "Table 2",
+    "model": "M2",
+    "row_term": "Intercept",
+    "coefficient": 1.164,
+    "published_se": 0.172,
+    "test_statistic": null,
+    "exact_p": null,
+    "stars_or_inequality": "***",
+    "alpha_convention": "* p < 0.05; ** p < 0.01; *** p < 0.001",
+    "tail": "unstated",
+    "direction_hypothesized": null,
+    "n": 960,
+    "other_stats": {},
+    "printed_precision": {
+      "coefficient": 3,
+      "published_se": 3
+    },
+    "source": "DOC01 p12 Table 2 M2 Intercept",
+    "tier": "nuisance_control",
+    "printed": {
+      "coefficient": "1.164",
+      "published_se": "0.172",
+      "stars": "***"
+    }
+  },
+  {
+    "target_id": "T2_M2_1",
+    "claim_id": "C3",
+    "table": "Table 2",
+    "model": "M2",
+    "row_term": "Strategic Deviation²",
+    "coefficient": null,
+    "published_se": null,
+    "test_statistic": null,
+    "exact_p": null,
+    "stars_or_inequality": null,
+    "alpha_convention": "* p < 0.05; ** p < 0.01; *** p < 0.001",
+    "tail": "unstated",
+    "direction_hypothesized": "concave_down",
+    "n": 960,
+    "other_stats": {},
+    "printed_precision": {
+      "coefficient": null,
+      "published_se": null
+    },
+    "source": "DOC01 p12 Table 2 M2 Strategic Deviation²",
+    "tier": "focal",
+    "printed": {
+      "coefficient": null,
+      "published_se": null,
+      "stars": null
+    },
+    "notes": "Blank published cell: regressor not included."
+  },
+  {
+    "target_id": "T2_M2_2",
+    "claim_id": "C2",
+    "table": "Table 2",
+    "model": "M2",
+    "row_term": "Strategic Deviation",
+    "coefficient": -0.02,
+    "published_se": 0.004,
+    "test_statistic": null,
+    "exact_p": null,
+    "stars_or_inequality": "***",
+    "alpha_convention": "* p < 0.05; ** p < 0.01; *** p < 0.001",
+    "tail": "unstated",
+    "direction_hypothesized": "negative",
+    "n": 960,
+    "other_stats": {},
+    "printed_precision": {
+      "coefficient": 3,
+      "published_se": 3
+    },
+    "source": "DOC01 p12 Table 2 M2 Strategic Deviation",
+    "tier": "focal",
+    "printed": {
+      "coefficient": "-0.020",
+      "published_se": "0.004",
+      "stars": "***"
+    },
+    "additional_claim_ids": [
+      "C1"
+    ]
+  },
+  {
+    "target_id": "T2_M2_3",
+    "claim_id": "C6",
+    "table": "Table 2",
+    "model": "M2",
+    "row_term": "Market Share",
+    "coefficient": -0.093,
+    "published_se": 0.161,
+    "test_statistic": null,
+    "exact_p": null,
+    "stars_or_inequality": null,
+    "alpha_convention": "* p < 0.05; ** p < 0.01; *** p < 0.001",
+    "tail": "unstated",
+    "direction_hypothesized": "positive",
+    "n": 960,
+    "other_stats": {},
+    "printed_precision": {
+      "coefficient": 3,
+      "published_se": 3
+    },
+    "source": "DOC01 p12 Table 2 M2 Market Share",
+    "tier": "nuisance_control",
+    "printed": {
+      "coefficient": "-0.093",
+      "published_se": "0.161",
+      "stars": null
+    },
+    "notes": "No printed star is not an exact p value."
+  },
+  {
+    "target_id": "T2_M2_4",
+    "claim_id": "C7",
+    "table": "Table 2",
+    "model": "M2",
+    "row_term": "Total Expense Ratio",
+    "coefficient": -10.601,
+    "published_se": 1.974,
+    "test_statistic": null,
+    "exact_p": null,
+    "stars_or_inequality": "***",
+    "alpha_convention": "* p < 0.05; ** p < 0.01; *** p < 0.001",
+    "tail": "unstated",
+    "direction_hypothesized": "negative",
+    "n": 960,
+    "other_stats": {},
+    "printed_precision": {
+      "coefficient": 3,
+      "published_se": 3
+    },
+    "source": "DOC01 p12 Table 2 M2 Total Expense Ratio",
+    "tier": "nuisance_control",
+    "printed": {
+      "coefficient": "-10.601",
+      "published_se": "1.974",
+      "stars": "***"
+    }
+  },
+  {
+    "target_id": "T2_M2_5",
+    "claim_id": "C8",
+    "table": "Table 2",
+    "model": "M2",
+    "row_term": "Real Market Growth",
+    "coefficient": 0.016,
+    "published_se": 0.004,
+    "test_statistic": null,
+    "exact_p": null,
+    "stars_or_inequality": "***",
+    "alpha_convention": "* p < 0.05; ** p < 0.01; *** p < 0.001",
+    "tail": "unstated",
+    "direction_hypothesized": "positive",
+    "n": 960,
+    "other_stats": {},
+    "printed_precision": {
+      "coefficient": 3,
+      "published_se": 3
+    },
+    "source": "DOC01 p12 Table 2 M2 Real Market Growth",
+    "tier": "nuisance_control",
+    "printed": {
+      "coefficient": "0.016",
+      "published_se": "0.004",
+      "stars": "***"
+    }
+  },
+  {
+    "target_id": "T2_M2_6",
+    "claim_id": "C9",
+    "table": "Table 2",
+    "model": "M2",
+    "row_term": "Relative ROAt−1",
+    "coefficient": 0.361,
+    "published_se": 0.027,
+    "test_statistic": null,
+    "exact_p": null,
+    "stars_or_inequality": "***",
+    "alpha_convention": "* p < 0.05; ** p < 0.01; *** p < 0.001",
+    "tail": "unstated",
+    "direction_hypothesized": "positive",
+    "n": 960,
+    "other_stats": {},
+    "printed_precision": {
+      "coefficient": 3,
+      "published_se": 3
+    },
+    "source": "DOC01 p12 Table 2 M2 Relative ROAt−1",
+    "tier": "nuisance_control",
+    "printed": {
+      "coefficient": "0.361",
+      "published_se": "0.027",
+      "stars": "***"
+    }
+  },
+  {
+    "target_id": "T2_M3_0",
+    "claim_id": null,
+    "table": "Table 2",
+    "model": "M3",
+    "row_term": "Intercept",
+    "coefficient": 0.511,
+    "published_se": 0.171,
+    "test_statistic": null,
+    "exact_p": null,
+    "stars_or_inequality": "**",
+    "alpha_convention": "* p < 0.05; ** p < 0.01; *** p < 0.001",
+    "tail": "unstated",
+    "direction_hypothesized": null,
+    "n": 960,
+    "other_stats": {},
+    "printed_precision": {
+      "coefficient": 3,
+      "published_se": 3
+    },
+    "source": "DOC01 p12 Table 2 M3 Intercept",
+    "tier": "nuisance_control",
+    "printed": {
+      "coefficient": "0.511",
+      "published_se": "0.171",
+      "stars": "**"
+    }
+  },
+  {
+    "target_id": "T2_M3_1",
+    "claim_id": "C3",
+    "table": "Table 2",
+    "model": "M3",
+    "row_term": "Strategic Deviation²",
+    "coefficient": -0.006,
+    "published_se": 0.001,
+    "test_statistic": null,
+    "exact_p": null,
+    "stars_or_inequality": "***",
+    "alpha_convention": "* p < 0.05; ** p < 0.01; *** p < 0.001",
+    "tail": "unstated",
+    "direction_hypothesized": "concave_down",
+    "n": 960,
+    "other_stats": {},
+    "printed_precision": {
+      "coefficient": 3,
+      "published_se": 3
+    },
+    "source": "DOC01 p12 Table 2 M3 Strategic Deviation²",
+    "tier": "focal",
+    "printed": {
+      "coefficient": "-0.006",
+      "published_se": "0.001",
+      "stars": "***"
+    }
+  },
+  {
+    "target_id": "T2_M3_2",
+    "claim_id": "C3",
+    "table": "Table 2",
+    "model": "M3",
+    "row_term": "Strategic Deviation",
+    "coefficient": 0.17,
+    "published_se": 0.017,
+    "test_statistic": null,
+    "exact_p": null,
+    "stars_or_inequality": "***",
+    "alpha_convention": "* p < 0.05; ** p < 0.01; *** p < 0.001",
+    "tail": "unstated",
+    "direction_hypothesized": "concave_down",
+    "n": 960,
+    "other_stats": {},
+    "printed_precision": {
+      "coefficient": 3,
+      "published_se": 3
+    },
+    "source": "DOC01 p12 Table 2 M3 Strategic Deviation",
+    "tier": "focal",
+    "printed": {
+      "coefficient": "0.170",
+      "published_se": "0.017",
+      "stars": "***"
+    }
+  },
+  {
+    "target_id": "T2_M3_3",
+    "claim_id": "C6",
+    "table": "Table 2",
+    "model": "M3",
+    "row_term": "Market Share",
+    "coefficient": -0.457,
+    "published_se": 0.155,
+    "test_statistic": null,
+    "exact_p": null,
+    "stars_or_inequality": "**",
+    "alpha_convention": "* p < 0.05; ** p < 0.01; *** p < 0.001",
+    "tail": "unstated",
+    "direction_hypothesized": "positive",
+    "n": 960,
+    "other_stats": {},
+    "printed_precision": {
+      "coefficient": 3,
+      "published_se": 3
+    },
+    "source": "DOC01 p12 Table 2 M3 Market Share",
+    "tier": "nuisance_control",
+    "printed": {
+      "coefficient": "-0.457",
+      "published_se": "0.155",
+      "stars": "**"
+    }
+  },
+  {
+    "target_id": "T2_M3_4",
+    "claim_id": "C7",
+    "table": "Table 2",
+    "model": "M3",
+    "row_term": "Total Expense Ratio",
+    "coefficient": -15.387,
+    "published_se": 1.895,
+    "test_statistic": null,
+    "exact_p": null,
+    "stars_or_inequality": "***",
+    "alpha_convention": "* p < 0.05; ** p < 0.01; *** p < 0.001",
+    "tail": "unstated",
+    "direction_hypothesized": "negative",
+    "n": 960,
+    "other_stats": {},
+    "printed_precision": {
+      "coefficient": 3,
+      "published_se": 3
+    },
+    "source": "DOC01 p12 Table 2 M3 Total Expense Ratio",
+    "tier": "nuisance_control",
+    "printed": {
+      "coefficient": "-15.387",
+      "published_se": "1.895",
+      "stars": "***"
+    }
+  },
+  {
+    "target_id": "T2_M3_5",
+    "claim_id": "C8",
+    "table": "Table 2",
+    "model": "M3",
+    "row_term": "Real Market Growth",
+    "coefficient": 0.018,
+    "published_se": 0.003,
+    "test_statistic": null,
+    "exact_p": null,
+    "stars_or_inequality": "***",
+    "alpha_convention": "* p < 0.05; ** p < 0.01; *** p < 0.001",
+    "tail": "unstated",
+    "direction_hypothesized": "positive",
+    "n": 960,
+    "other_stats": {},
+    "printed_precision": {
+      "coefficient": 3,
+      "published_se": 3
+    },
+    "source": "DOC01 p12 Table 2 M3 Real Market Growth",
+    "tier": "nuisance_control",
+    "printed": {
+      "coefficient": "0.018",
+      "published_se": "0.003",
+      "stars": "***"
+    }
+  },
+  {
+    "target_id": "T2_M3_6",
+    "claim_id": "C9",
+    "table": "Table 2",
+    "model": "M3",
+    "row_term": "Relative ROAt−1",
+    "coefficient": 0.403,
+    "published_se": 0.026,
+    "test_statistic": null,
+    "exact_p": null,
+    "stars_or_inequality": "***",
+    "alpha_convention": "* p < 0.05; ** p < 0.01; *** p < 0.001",
+    "tail": "unstated",
+    "direction_hypothesized": "positive",
+    "n": 960,
+    "other_stats": {},
+    "printed_precision": {
+      "coefficient": 3,
+      "published_se": 3
+    },
+    "source": "DOC01 p12 Table 2 M3 Relative ROAt−1",
+    "tier": "nuisance_control",
+    "printed": {
+      "coefficient": "0.403",
+      "published_se": "0.026",
+      "stars": "***"
+    }
+  },
+  {
+    "target_id": "T2_M1_SSE",
+    "claim_id": null,
+    "table": "Table 2",
+    "model": "M1",
+    "row_term": "Sum of squared errors",
+    "coefficient": null,
+    "published_se": null,
+    "test_statistic": null,
+    "exact_p": null,
+    "stars_or_inequality": null,
+    "alpha_convention": "* p < 0.05; ** p < 0.01; *** p < 0.001",
+    "tail": "unstated",
+    "direction_hypothesized": null,
+    "n": 960,
+    "other_stats": {
+      "SSE": 2.978
+    },
+    "printed_precision": {
+      "coefficient": null,
+      "published_se": null
+    },
+    "source": "DOC01 p12 Table 2 M1 Sum of squared errors",
+    "tier": "identification_inference_diagnostic",
+    "printed": {
+      "SSE": "2.978"
+    }
+  },
+  {
+    "target_id": "T2_M2_SSE",
+    "claim_id": null,
+    "table": "Table 2",
+    "model": "M2",
+    "row_term": "Sum of squared errors",
+    "coefficient": null,
+    "published_se": null,
+    "test_statistic": null,
+    "exact_p": null,
+    "stars_or_inequality": null,
+    "alpha_convention": "* p < 0.05; ** p < 0.01; *** p < 0.001",
+    "tail": "unstated",
+    "direction_hypothesized": null,
+    "n": 960,
+    "other_stats": {
+      "SSE": 2.886
+    },
+    "printed_precision": {
+      "coefficient": null,
+      "published_se": null
+    },
+    "source": "DOC01 p12 Table 2 M2 Sum of squared errors",
+    "tier": "identification_inference_diagnostic",
+    "printed": {
+      "SSE": "2.886"
+    }
+  },
+  {
+    "target_id": "T2_M3_SSE",
+    "claim_id": null,
+    "table": "Table 2",
+    "model": "M3",
+    "row_term": "Sum of squared errors",
+    "coefficient": null,
+    "published_se": null,
+    "test_statistic": null,
+    "exact_p": null,
+    "stars_or_inequality": null,
+    "alpha_convention": "* p < 0.05; ** p < 0.01; *** p < 0.001",
+    "tail": "unstated",
+    "direction_hypothesized": null,
+    "n": 960,
+    "other_stats": {
+      "SSE": 2.53
+    },
+    "printed_precision": {
+      "coefficient": null,
+      "published_se": null
+    },
+    "source": "DOC01 p12 Table 2 M3 Sum of squared errors",
+    "tier": "identification_inference_diagnostic",
+    "printed": {
+      "SSE": "2.530"
+    }
+  },
+  {
+    "target_id": "T2_M2_vs_M1",
+    "claim_id": "C4",
+    "table": "Table 2",
+    "model": "M2",
+    "row_term": "Δ Sum of squared errors over M1",
+    "coefficient": null,
+    "published_se": null,
+    "test_statistic": {
+      "value": 30.4,
+      "type": "F"
+    },
+    "exact_p": null,
+    "stars_or_inequality": "***",
+    "alpha_convention": "* p < 0.05; ** p < 0.01; *** p < 0.001",
+    "tail": "unstated",
+    "direction_hypothesized": null,
+    "n": 960,
+    "other_stats": {
+      "delta_SSE": 0.092,
+      "df": [
+        1,
+        954
+      ],
+      "text_significance": "p < 0.001"
+    },
+    "printed_precision": {
+      "coefficient": null,
+      "published_se": null
+    },
+    "source": "DOC01 p12 Table 2 M2 Δ SSE; DOC01 p12 Results F-test",
+    "tier": "identification_inference_diagnostic",
+    "printed": {
+      "delta_SSE": "0.092",
+      "F": "30.4",
+      "df": "1,954",
+      "table_stars": "***",
+      "text_inequality": "p < 0.001"
+    }
+  },
+  {
+    "target_id": "T2_M3_vs_M1",
+    "claim_id": "C5",
+    "table": "Table 2",
+    "model": "M3",
+    "row_term": "Δ Sum of squared errors over M1",
+    "coefficient": null,
+    "published_se": null,
+    "test_statistic": {
+      "value": 84.4,
+      "type": "F"
+    },
+    "exact_p": null,
+    "stars_or_inequality": "***",
+    "alpha_convention": "* p < 0.05; ** p < 0.01; *** p < 0.001",
+    "tail": "unstated",
+    "direction_hypothesized": null,
+    "n": 960,
+    "other_stats": {
+      "delta_SSE": 0.448,
+      "df": [
+        2,
+        953
+      ],
+      "text_significance": "p < 0.001"
+    },
+    "printed_precision": {
+      "coefficient": null,
+      "published_se": null
+    },
+    "source": "DOC01 p12 Table 2 M3 Δ SSE; DOC01 p13 Results F-test",
+    "tier": "identification_inference_diagnostic",
+    "printed": {
+      "delta_SSE": "0.448",
+      "F": "84.4",
+      "df": "2,953",
+      "table_stars": "***",
+      "text_inequality": "p < 0.001"
+    }
+  },
+  {
+    "target_id": "T2_M3_vs_M2",
+    "claim_id": "C5",
+    "table": "Table 2",
+    "model": "M3",
+    "row_term": "Δ Sum of squared errors over M2",
+    "coefficient": null,
+    "published_se": null,
+    "test_statistic": {
+      "value": 134.1,
+      "type": "F"
+    },
+    "exact_p": null,
+    "stars_or_inequality": "***",
+    "alpha_convention": "* p < 0.05; ** p < 0.01; *** p < 0.001",
+    "tail": "unstated",
+    "direction_hypothesized": null,
+    "n": 960,
+    "other_stats": {
+      "delta_SSE": 0.356,
+      "df": [
+        1,
+        953
+      ],
+      "text_significance": "p < 0.001"
+    },
+    "printed_precision": {
+      "coefficient": null,
+      "published_se": null
+    },
+    "source": "DOC01 p12 Table 2 M3 Δ SSE; DOC01 p13 Results F-test",
+    "tier": "identification_inference_diagnostic",
+    "printed": {
+      "delta_SSE": "0.356",
+      "F": "134.1",
+      "df": "1,953",
+      "table_stars": "***",
+      "text_inequality": "p < 0.001"
+    }
+  },
+  {
+    "target_id": "T1_1_mean",
+    "claim_id": "C17",
+    "table": "Table 1",
+    "model": null,
+    "row_term": "Relative ROA",
+    "coefficient": null,
+    "published_se": null,
+    "test_statistic": null,
+    "exact_p": null,
+    "stars_or_inequality": null,
+    "alpha_convention": "* p < 0.05; ** p < 0.01; *** p < 0.001",
+    "tail": "unstated",
+    "direction_hypothesized": null,
+    "n": 960,
+    "other_stats": {
+      "mean": 0.0
+    },
+    "printed_precision": {
+      "mean": 3,
+      "coefficient": null,
+      "published_se": null
+    },
+    "source": "DOC01 p12 Table 1  Relative ROA",
+    "tier": "descriptive",
+    "printed": {
+      "mean": "0.000"
+    }
+  },
+  {
+    "target_id": "T1_1_SD",
+    "claim_id": "C17",
+    "table": "Table 1",
+    "model": null,
+    "row_term": "Relative ROA",
+    "coefficient": null,
+    "published_se": null,
+    "test_statistic": null,
+    "exact_p": null,
+    "stars_or_inequality": null,
+    "alpha_convention": "* p < 0.05; ** p < 0.01; *** p < 0.001",
+    "tail": "unstated",
+    "direction_hypothesized": null,
+    "n": 960,
+    "other_stats": {
+      "SD": 0.007
+    },
+    "printed_precision": {
+      "SD": 3,
+      "coefficient": null,
+      "published_se": null
+    },
+    "source": "DOC01 p12 Table 1  Relative ROA",
+    "tier": "descriptive",
+    "printed": {
+      "SD": "0.007"
+    }
+  },
+  {
+    "target_id": "T1_2_mean",
+    "claim_id": "C17",
+    "table": "Table 1",
+    "model": null,
+    "row_term": "Relative ROAt−1",
+    "coefficient": null,
+    "published_se": null,
+    "test_statistic": null,
+    "exact_p": null,
+    "stars_or_inequality": null,
+    "alpha_convention": "* p < 0.05; ** p < 0.01; *** p < 0.001",
+    "tail": "unstated",
+    "direction_hypothesized": null,
+    "n": 960,
+    "other_stats": {
+      "mean": 0.0
+    },
+    "printed_precision": {
+      "mean": 3,
+      "coefficient": null,
+      "published_se": null
+    },
+    "source": "DOC01 p12 Table 1  Relative ROAt−1",
+    "tier": "descriptive",
+    "printed": {
+      "mean": "0.000"
+    }
+  },
+  {
+    "target_id": "T1_2_SD",
+    "claim_id": "C17",
+    "table": "Table 1",
+    "model": null,
+    "row_term": "Relative ROAt−1",
+    "coefficient": null,
+    "published_se": null,
+    "test_statistic": null,
+    "exact_p": null,
+    "stars_or_inequality": null,
+    "alpha_convention": "* p < 0.05; ** p < 0.01; *** p < 0.001",
+    "tail": "unstated",
+    "direction_hypothesized": null,
+    "n": 960,
+    "other_stats": {
+      "SD": 0.007
+    },
+    "printed_precision": {
+      "SD": 3,
+      "coefficient": null,
+      "published_se": null
+    },
+    "source": "DOC01 p12 Table 1  Relative ROAt−1",
+    "tier": "descriptive",
+    "printed": {
+      "SD": "0.007"
+    }
+  },
+  {
+    "target_id": "T1_3_mean",
+    "claim_id": "C17",
+    "table": "Table 1",
+    "model": null,
+    "row_term": "Strategic Deviation²",
+    "coefficient": null,
+    "published_se": null,
+    "test_statistic": null,
+    "exact_p": null,
+    "stars_or_inequality": null,
+    "alpha_convention": "* p < 0.05; ** p < 0.01; *** p < 0.001",
+    "tail": "unstated",
+    "direction_hypothesized": null,
+    "n": 960,
+    "other_stats": {
+      "mean": 66.956
+    },
+    "printed_precision": {
+      "mean": 3,
+      "coefficient": null,
+      "published_se": null
+    },
+    "source": "DOC01 p12 Table 1  Strategic Deviation²",
+    "tier": "descriptive",
+    "printed": {
+      "mean": "66.956"
+    }
+  },
+  {
+    "target_id": "T1_3_SD",
+    "claim_id": "C17",
+    "table": "Table 1",
+    "model": null,
+    "row_term": "Strategic Deviation²",
+    "coefficient": null,
+    "published_se": null,
+    "test_statistic": null,
+    "exact_p": null,
+    "stars_or_inequality": null,
+    "alpha_convention": "* p < 0.05; ** p < 0.01; *** p < 0.001",
+    "tail": "unstated",
+    "direction_hypothesized": null,
+    "n": 960,
+    "other_stats": {
+      "SD": 66.548
+    },
+    "printed_precision": {
+      "SD": 3,
+      "coefficient": null,
+      "published_se": null
+    },
+    "source": "DOC01 p12 Table 1  Strategic Deviation²",
+    "tier": "descriptive",
+    "printed": {
+      "SD": "66.548"
+    }
+  },
+  {
+    "target_id": "T1_4_mean",
+    "claim_id": "C17",
+    "table": "Table 1",
+    "model": null,
+    "row_term": "Strategic Deviation",
+    "coefficient": null,
+    "published_se": null,
+    "test_statistic": null,
+    "exact_p": null,
+    "stars_or_inequality": null,
+    "alpha_convention": "* p < 0.05; ** p < 0.01; *** p < 0.001",
+    "tail": "unstated",
+    "direction_hypothesized": null,
+    "n": 960,
+    "other_stats": {
+      "mean": 7.64
+    },
+    "printed_precision": {
+      "mean": 3,
+      "coefficient": null,
+      "published_se": null
+    },
+    "source": "DOC01 p12 Table 1  Strategic Deviation",
+    "tier": "descriptive",
+    "printed": {
+      "mean": "7.640"
+    }
+  },
+  {
+    "target_id": "T1_4_SD",
+    "claim_id": "C17",
+    "table": "Table 1",
+    "model": null,
+    "row_term": "Strategic Deviation",
+    "coefficient": null,
+    "published_se": null,
+    "test_statistic": null,
+    "exact_p": null,
+    "stars_or_inequality": null,
+    "alpha_convention": "* p < 0.05; ** p < 0.01; *** p < 0.001",
+    "tail": "unstated",
+    "direction_hypothesized": null,
+    "n": 960,
+    "other_stats": {
+      "SD": 2.932
+    },
+    "printed_precision": {
+      "SD": 3,
+      "coefficient": null,
+      "published_se": null
+    },
+    "source": "DOC01 p12 Table 1  Strategic Deviation",
+    "tier": "descriptive",
+    "printed": {
+      "SD": "2.932"
+    }
+  },
+  {
+    "target_id": "T1_5_mean",
+    "claim_id": "C17",
+    "table": "Table 1",
+    "model": null,
+    "row_term": "Market Share",
+    "coefficient": null,
+    "published_se": null,
+    "test_statistic": null,
+    "exact_p": null,
+    "stars_or_inequality": null,
+    "alpha_convention": "* p < 0.05; ** p < 0.01; *** p < 0.001",
+    "tail": "unstated",
+    "direction_hypothesized": null,
+    "n": 960,
+    "other_stats": {
+      "mean": 0.008
+    },
+    "printed_precision": {
+      "mean": 3,
+      "coefficient": null,
+      "published_se": null
+    },
+    "source": "DOC01 p12 Table 1  Market Share",
+    "tier": "descriptive",
+    "printed": {
+      "mean": "0.008"
+    }
+  },
+  {
+    "target_id": "T1_5_SD",
+    "claim_id": "C17",
+    "table": "Table 1",
+    "model": null,
+    "row_term": "Market Share",
+    "coefficient": null,
+    "published_se": null,
+    "test_statistic": null,
+    "exact_p": null,
+    "stars_or_inequality": null,
+    "alpha_convention": "* p < 0.05; ** p < 0.01; *** p < 0.001",
+    "tail": "unstated",
+    "direction_hypothesized": null,
+    "n": 960,
+    "other_stats": {
+      "SD": 0.037
+    },
+    "printed_precision": {
+      "SD": 3,
+      "coefficient": null,
+      "published_se": null
+    },
+    "source": "DOC01 p12 Table 1  Market Share",
+    "tier": "descriptive",
+    "printed": {
+      "SD": "0.037"
+    }
+  },
+  {
+    "target_id": "T1_6_mean",
+    "claim_id": "C17",
+    "table": "Table 1",
+    "model": null,
+    "row_term": "Total Expense Ratio",
+    "coefficient": null,
+    "published_se": null,
+    "test_statistic": null,
+    "exact_p": null,
+    "stars_or_inequality": null,
+    "alpha_convention": "* p < 0.05; ** p < 0.01; *** p < 0.001",
+    "tail": "unstated",
+    "direction_hypothesized": null,
+    "n": 960,
+    "other_stats": {
+      "mean": 0.085
+    },
+    "printed_precision": {
+      "mean": 3,
+      "coefficient": null,
+      "published_se": null
+    },
+    "source": "DOC01 p12 Table 1  Total Expense Ratio",
+    "tier": "descriptive",
+    "printed": {
+      "mean": "0.085"
+    }
+  },
+  {
+    "target_id": "T1_6_SD",
+    "claim_id": "C17",
+    "table": "Table 1",
+    "model": null,
+    "row_term": "Total Expense Ratio",
+    "coefficient": null,
+    "published_se": null,
+    "test_statistic": null,
+    "exact_p": null,
+    "stars_or_inequality": null,
+    "alpha_convention": "* p < 0.05; ** p < 0.01; *** p < 0.001",
+    "tail": "unstated",
+    "direction_hypothesized": null,
+    "n": 960,
+    "other_stats": {
+      "SD": 0.012
+    },
+    "printed_precision": {
+      "SD": 3,
+      "coefficient": null,
+      "published_se": null
+    },
+    "source": "DOC01 p12 Table 1  Total Expense Ratio",
+    "tier": "descriptive",
+    "printed": {
+      "SD": "0.012"
+    }
+  },
+  {
+    "target_id": "T1_7_mean",
+    "claim_id": "C17",
+    "table": "Table 1",
+    "model": null,
+    "row_term": "Real Market Growth (%)",
+    "coefficient": null,
+    "published_se": null,
+    "test_statistic": null,
+    "exact_p": null,
+    "stars_or_inequality": null,
+    "alpha_convention": "* p < 0.05; ** p < 0.01; *** p < 0.001",
+    "tail": "unstated",
+    "direction_hypothesized": null,
+    "n": 960,
+    "other_stats": {
+      "mean": -1.094
+    },
+    "printed_precision": {
+      "mean": 3,
+      "coefficient": null,
+      "published_se": null
+    },
+    "source": "DOC01 p12 Table 1  Real Market Growth (%)",
+    "tier": "descriptive",
+    "printed": {
+      "mean": "−1.094"
+    }
+  },
+  {
+    "target_id": "T1_7_SD",
+    "claim_id": "C17",
+    "table": "Table 1",
+    "model": null,
+    "row_term": "Real Market Growth (%)",
+    "coefficient": null,
+    "published_se": null,
+    "test_statistic": null,
+    "exact_p": null,
+    "stars_or_inequality": null,
+    "alpha_convention": "* p < 0.05; ** p < 0.01; *** p < 0.001",
+    "tail": "unstated",
+    "direction_hypothesized": null,
+    "n": 960,
+    "other_stats": {
+      "SD": 5.492
+    },
+    "printed_precision": {
+      "SD": 3,
+      "coefficient": null,
+      "published_se": null
+    },
+    "source": "DOC01 p12 Table 1  Real Market Growth (%)",
+    "tier": "descriptive",
+    "printed": {
+      "SD": "5.492"
+    }
+  },
+  {
+    "target_id": "T1_r_2_1",
+    "claim_id": "C17",
+    "table": "Table 1",
+    "model": null,
+    "row_term": "Relative ROAt−1 with Relative ROA",
+    "coefficient": null,
+    "published_se": null,
+    "test_statistic": null,
+    "exact_p": null,
+    "stars_or_inequality": "***",
+    "alpha_convention": "* p < 0.05; ** p < 0.01; *** p < 0.001",
+    "tail": "unstated",
+    "direction_hypothesized": null,
+    "n": 960,
+    "other_stats": {
+      "correlation": 0.62
+    },
+    "printed_precision": {
+      "correlation": 2,
+      "coefficient": null,
+      "published_se": null
+    },
+    "source": "DOC01 p12 Table 1 row 2 column 1",
+    "tier": "descriptive",
+    "printed": {
+      "correlation": "0.62",
+      "stars": "***"
+    }
+  },
+  {
+    "target_id": "T1_r_3_1",
+    "claim_id": "C17",
+    "table": "Table 1",
+    "model": null,
+    "row_term": "Strategic Deviation² with Relative ROA",
+    "coefficient": null,
+    "published_se": null,
+    "test_statistic": null,
+    "exact_p": null,
+    "stars_or_inequality": "***",
+    "alpha_convention": "* p < 0.05; ** p < 0.01; *** p < 0.001",
+    "tail": "unstated",
+    "direction_hypothesized": null,
+    "n": 960,
+    "other_stats": {
+      "correlation": -0.12
+    },
+    "printed_precision": {
+      "correlation": 2,
+      "coefficient": null,
+      "published_se": null
+    },
+    "source": "DOC01 p12 Table 1 row 3 column 1",
+    "tier": "descriptive",
+    "printed": {
+      "correlation": "−0.12",
+      "stars": "***"
+    }
+  },
+  {
+    "target_id": "T1_r_3_2",
+    "claim_id": "C17",
+    "table": "Table 1",
+    "model": null,
+    "row_term": "Strategic Deviation² with Relative ROAt−1",
+    "coefficient": null,
+    "published_se": null,
+    "test_statistic": null,
+    "exact_p": null,
+    "stars_or_inequality": "***",
+    "alpha_convention": "* p < 0.05; ** p < 0.01; *** p < 0.001",
+    "tail": "unstated",
+    "direction_hypothesized": null,
+    "n": 960,
+    "other_stats": {
+      "correlation": -0.14
+    },
+    "printed_precision": {
+      "correlation": 2,
+      "coefficient": null,
+      "published_se": null
+    },
+    "source": "DOC01 p12 Table 1 row 3 column 2",
+    "tier": "descriptive",
+    "printed": {
+      "correlation": "−0.14",
+      "stars": "***"
+    }
+  },
+  {
+    "target_id": "T1_r_4_1",
+    "claim_id": "C17",
+    "table": "Table 1",
+    "model": null,
+    "row_term": "Strategic Deviation with Relative ROA",
+    "coefficient": null,
+    "published_se": null,
+    "test_statistic": null,
+    "exact_p": null,
+    "stars_or_inequality": "***",
+    "alpha_convention": "* p < 0.05; ** p < 0.01; *** p < 0.001",
+    "tail": "unstated",
+    "direction_hypothesized": null,
+    "n": 960,
+    "other_stats": {
+      "correlation": -0.14
+    },
+    "printed_precision": {
+      "correlation": 2,
+      "coefficient": null,
+      "published_se": null
+    },
+    "source": "DOC01 p12 Table 1 row 4 column 1",
+    "tier": "descriptive",
+    "printed": {
+      "correlation": "−0.14",
+      "stars": "***"
+    }
+  },
+  {
+    "target_id": "T1_r_4_2",
+    "claim_id": "C17",
+    "table": "Table 1",
+    "model": null,
+    "row_term": "Strategic Deviation with Relative ROAt−1",
+    "coefficient": null,
+    "published_se": null,
+    "test_statistic": null,
+    "exact_p": null,
+    "stars_or_inequality": "***",
+    "alpha_convention": "* p < 0.05; ** p < 0.01; *** p < 0.001",
+    "tail": "unstated",
+    "direction_hypothesized": null,
+    "n": 960,
+    "other_stats": {
+      "correlation": -0.17
+    },
+    "printed_precision": {
+      "correlation": 2,
+      "coefficient": null,
+      "published_se": null
+    },
+    "source": "DOC01 p12 Table 1 row 4 column 2",
+    "tier": "descriptive",
+    "printed": {
+      "correlation": "−0.17",
+      "stars": "***"
+    }
+  },
+  {
+    "target_id": "T1_r_4_3",
+    "claim_id": "C13",
+    "table": "Table 1",
+    "model": null,
+    "row_term": "Strategic Deviation with Strategic Deviation²",
+    "coefficient": null,
+    "published_se": null,
+    "test_statistic": null,
+    "exact_p": null,
+    "stars_or_inequality": "***",
+    "alpha_convention": "* p < 0.05; ** p < 0.01; *** p < 0.001",
+    "tail": "unstated",
+    "direction_hypothesized": null,
+    "n": 960,
+    "other_stats": {
+      "correlation": 0.95
+    },
+    "printed_precision": {
+      "correlation": 2,
+      "coefficient": null,
+      "published_se": null
+    },
+    "source": "DOC01 p12 Table 1 row 4 column 3",
+    "tier": "descriptive",
+    "printed": {
+      "correlation": "0.95",
+      "stars": "***"
+    }
+  },
+  {
+    "target_id": "T1_r_5_1",
+    "claim_id": "C17",
+    "table": "Table 1",
+    "model": null,
+    "row_term": "Market Share with Relative ROA",
+    "coefficient": null,
+    "published_se": null,
+    "test_statistic": null,
+    "exact_p": null,
+    "stars_or_inequality": null,
+    "alpha_convention": "* p < 0.05; ** p < 0.01; *** p < 0.001",
+    "tail": "unstated",
+    "direction_hypothesized": null,
+    "n": 960,
+    "other_stats": {
+      "correlation": -0.04
+    },
+    "printed_precision": {
+      "correlation": 2,
+      "coefficient": null,
+      "published_se": null
+    },
+    "source": "DOC01 p12 Table 1 row 5 column 1",
+    "tier": "descriptive",
+    "printed": {
+      "correlation": "−0.04",
+      "stars": null
+    }
+  },
+  {
+    "target_id": "T1_r_5_2",
+    "claim_id": "C17",
+    "table": "Table 1",
+    "model": null,
+    "row_term": "Market Share with Relative ROAt−1",
+    "coefficient": null,
+    "published_se": null,
+    "test_statistic": null,
+    "exact_p": null,
+    "stars_or_inequality": "**",
+    "alpha_convention": "* p < 0.05; ** p < 0.01; *** p < 0.001",
+    "tail": "unstated",
+    "direction_hypothesized": null,
+    "n": 960,
+    "other_stats": {
+      "correlation": -0.08
+    },
+    "printed_precision": {
+      "correlation": 2,
+      "coefficient": null,
+      "published_se": null
+    },
+    "source": "DOC01 p12 Table 1 row 5 column 2",
+    "tier": "descriptive",
+    "printed": {
+      "correlation": "−0.08",
+      "stars": "**"
+    }
+  },
+  {
+    "target_id": "T1_r_5_3",
+    "claim_id": "C17",
+    "table": "Table 1",
+    "model": null,
+    "row_term": "Market Share with Strategic Deviation²",
+    "coefficient": null,
+    "published_se": null,
+    "test_statistic": null,
+    "exact_p": null,
+    "stars_or_inequality": "***",
+    "alpha_convention": "* p < 0.05; ** p < 0.01; *** p < 0.001",
+    "tail": "unstated",
+    "direction_hypothesized": null,
+    "n": 960,
+    "other_stats": {
+      "correlation": 0.49
+    },
+    "printed_precision": {
+      "correlation": 2,
+      "coefficient": null,
+      "published_se": null
+    },
+    "source": "DOC01 p12 Table 1 row 5 column 3",
+    "tier": "descriptive",
+    "printed": {
+      "correlation": "0.49",
+      "stars": "***"
+    }
+  },
+  {
+    "target_id": "T1_r_5_4",
+    "claim_id": "C17",
+    "table": "Table 1",
+    "model": null,
+    "row_term": "Market Share with Strategic Deviation",
+    "coefficient": null,
+    "published_se": null,
+    "test_statistic": null,
+    "exact_p": null,
+    "stars_or_inequality": "***",
+    "alpha_convention": "* p < 0.05; ** p < 0.01; *** p < 0.001",
+    "tail": "unstated",
+    "direction_hypothesized": null,
+    "n": 960,
+    "other_stats": {
+      "correlation": 0.41
+    },
+    "printed_precision": {
+      "correlation": 2,
+      "coefficient": null,
+      "published_se": null
+    },
+    "source": "DOC01 p12 Table 1 row 5 column 4",
+    "tier": "descriptive",
+    "printed": {
+      "correlation": "0.41",
+      "stars": "***"
+    }
+  },
+  {
+    "target_id": "T1_r_6_1",
+    "claim_id": "C17",
+    "table": "Table 1",
+    "model": null,
+    "row_term": "Total Expense Ratio with Relative ROA",
+    "coefficient": null,
+    "published_se": null,
+    "test_statistic": null,
+    "exact_p": null,
+    "stars_or_inequality": "***",
+    "alpha_convention": "* p < 0.05; ** p < 0.01; *** p < 0.001",
+    "tail": "unstated",
+    "direction_hypothesized": null,
+    "n": 960,
+    "other_stats": {
+      "correlation": -0.45
+    },
+    "printed_precision": {
+      "correlation": 2,
+      "coefficient": null,
+      "published_se": null
+    },
+    "source": "DOC01 p12 Table 1 row 6 column 1",
+    "tier": "descriptive",
+    "printed": {
+      "correlation": "−0.45",
+      "stars": "***"
+    }
+  },
+  {
+    "target_id": "T1_r_6_2",
+    "claim_id": "C17",
+    "table": "Table 1",
+    "model": null,
+    "row_term": "Total Expense Ratio with Relative ROAt−1",
+    "coefficient": null,
+    "published_se": null,
+    "test_statistic": null,
+    "exact_p": null,
+    "stars_or_inequality": "***",
+    "alpha_convention": "* p < 0.05; ** p < 0.01; *** p < 0.001",
+    "tail": "unstated",
+    "direction_hypothesized": null,
+    "n": 960,
+    "other_stats": {
+      "correlation": -0.4
+    },
+    "printed_precision": {
+      "correlation": 2,
+      "coefficient": null,
+      "published_se": null
+    },
+    "source": "DOC01 p12 Table 1 row 6 column 2",
+    "tier": "descriptive",
+    "printed": {
+      "correlation": "−0.40",
+      "stars": "***"
+    }
+  },
+  {
+    "target_id": "T1_r_6_3",
+    "claim_id": "C17",
+    "table": "Table 1",
+    "model": null,
+    "row_term": "Total Expense Ratio with Strategic Deviation²",
+    "coefficient": null,
+    "published_se": null,
+    "test_statistic": null,
+    "exact_p": null,
+    "stars_or_inequality": "**",
+    "alpha_convention": "* p < 0.05; ** p < 0.01; *** p < 0.001",
+    "tail": "unstated",
+    "direction_hypothesized": null,
+    "n": 960,
+    "other_stats": {
+      "correlation": 0.09
+    },
+    "printed_precision": {
+      "correlation": 2,
+      "coefficient": null,
+      "published_se": null
+    },
+    "source": "DOC01 p12 Table 1 row 6 column 3",
+    "tier": "descriptive",
+    "printed": {
+      "correlation": "0.09",
+      "stars": "**"
+    }
+  },
+  {
+    "target_id": "T1_r_6_4",
+    "claim_id": "C17",
+    "table": "Table 1",
+    "model": null,
+    "row_term": "Total Expense Ratio with Strategic Deviation",
+    "coefficient": null,
+    "published_se": null,
+    "test_statistic": null,
+    "exact_p": null,
+    "stars_or_inequality": "***",
+    "alpha_convention": "* p < 0.05; ** p < 0.01; *** p < 0.001",
+    "tail": "unstated",
+    "direction_hypothesized": null,
+    "n": 960,
+    "other_stats": {
+      "correlation": 0.13
+    },
+    "printed_precision": {
+      "correlation": 2,
+      "coefficient": null,
+      "published_se": null
+    },
+    "source": "DOC01 p12 Table 1 row 6 column 4",
+    "tier": "descriptive",
+    "printed": {
+      "correlation": "0.13",
+      "stars": "***"
+    }
+  },
+  {
+    "target_id": "T1_r_6_5",
+    "claim_id": "C17",
+    "table": "Table 1",
+    "model": null,
+    "row_term": "Total Expense Ratio with Market Share",
+    "coefficient": null,
+    "published_se": null,
+    "test_statistic": null,
+    "exact_p": null,
+    "stars_or_inequality": null,
+    "alpha_convention": "* p < 0.05; ** p < 0.01; *** p < 0.001",
+    "tail": "unstated",
+    "direction_hypothesized": null,
+    "n": 960,
+    "other_stats": {
+      "correlation": -0.03
+    },
+    "printed_precision": {
+      "correlation": 2,
+      "coefficient": null,
+      "published_se": null
+    },
+    "source": "DOC01 p12 Table 1 row 6 column 5",
+    "tier": "descriptive",
+    "printed": {
+      "correlation": "−0.03",
+      "stars": null
+    }
+  },
+  {
+    "target_id": "T1_r_7_1",
+    "claim_id": "C17",
+    "table": "Table 1",
+    "model": null,
+    "row_term": "Real Market Growth (%) with Relative ROA",
+    "coefficient": null,
+    "published_se": null,
+    "test_statistic": null,
+    "exact_p": null,
+    "stars_or_inequality": null,
+    "alpha_convention": "* p < 0.05; ** p < 0.01; *** p < 0.001",
+    "tail": "unstated",
+    "direction_hypothesized": null,
+    "n": 960,
+    "other_stats": {
+      "correlation": 0.01
+    },
+    "printed_precision": {
+      "correlation": 2,
+      "coefficient": null,
+      "published_se": null
+    },
+    "source": "DOC01 p12 Table 1 row 7 column 1",
+    "tier": "descriptive",
+    "printed": {
+      "correlation": "0.01",
+      "stars": null
+    }
+  },
+  {
+    "target_id": "T1_r_7_2",
+    "claim_id": "C17",
+    "table": "Table 1",
+    "model": null,
+    "row_term": "Real Market Growth (%) with Relative ROAt−1",
+    "coefficient": null,
+    "published_se": null,
+    "test_statistic": null,
+    "exact_p": null,
+    "stars_or_inequality": null,
+    "alpha_convention": "* p < 0.05; ** p < 0.01; *** p < 0.001",
+    "tail": "unstated",
+    "direction_hypothesized": null,
+    "n": 960,
+    "other_stats": {
+      "correlation": -0.01
+    },
+    "printed_precision": {
+      "correlation": 2,
+      "coefficient": null,
+      "published_se": null
+    },
+    "source": "DOC01 p12 Table 1 row 7 column 2",
+    "tier": "descriptive",
+    "printed": {
+      "correlation": "−0.01",
+      "stars": null
+    }
+  },
+  {
+    "target_id": "T1_r_7_3",
+    "claim_id": "C17",
+    "table": "Table 1",
+    "model": null,
+    "row_term": "Real Market Growth (%) with Strategic Deviation²",
+    "coefficient": null,
+    "published_se": null,
+    "test_statistic": null,
+    "exact_p": null,
+    "stars_or_inequality": null,
+    "alpha_convention": "* p < 0.05; ** p < 0.01; *** p < 0.001",
+    "tail": "unstated",
+    "direction_hypothesized": null,
+    "n": 960,
+    "other_stats": {
+      "correlation": 0.0
+    },
+    "printed_precision": {
+      "correlation": 2,
+      "coefficient": null,
+      "published_se": null
+    },
+    "source": "DOC01 p12 Table 1 row 7 column 3",
+    "tier": "descriptive",
+    "printed": {
+      "correlation": "0.00",
+      "stars": null
+    }
+  },
+  {
+    "target_id": "T1_r_7_4",
+    "claim_id": "C17",
+    "table": "Table 1",
+    "model": null,
+    "row_term": "Real Market Growth (%) with Strategic Deviation",
+    "coefficient": null,
+    "published_se": null,
+    "test_statistic": null,
+    "exact_p": null,
+    "stars_or_inequality": null,
+    "alpha_convention": "* p < 0.05; ** p < 0.01; *** p < 0.001",
+    "tail": "unstated",
+    "direction_hypothesized": null,
+    "n": 960,
+    "other_stats": {
+      "correlation": 0.0
+    },
+    "printed_precision": {
+      "correlation": 2,
+      "coefficient": null,
+      "published_se": null
+    },
+    "source": "DOC01 p12 Table 1 row 7 column 4",
+    "tier": "descriptive",
+    "printed": {
+      "correlation": "0.00",
+      "stars": null
+    }
+  },
+  {
+    "target_id": "T1_r_7_5",
+    "claim_id": "C17",
+    "table": "Table 1",
+    "model": null,
+    "row_term": "Real Market Growth (%) with Market Share",
+    "coefficient": null,
+    "published_se": null,
+    "test_statistic": null,
+    "exact_p": null,
+    "stars_or_inequality": null,
+    "alpha_convention": "* p < 0.05; ** p < 0.01; *** p < 0.001",
+    "tail": "unstated",
+    "direction_hypothesized": null,
+    "n": 960,
+    "other_stats": {
+      "correlation": -0.02
+    },
+    "printed_precision": {
+      "correlation": 2,
+      "coefficient": null,
+      "published_se": null
+    },
+    "source": "DOC01 p12 Table 1 row 7 column 5",
+    "tier": "descriptive",
+    "printed": {
+      "correlation": "−0.02",
+      "stars": null
+    }
+  },
+  {
+    "target_id": "T1_r_7_6",
+    "claim_id": "C17",
+    "table": "Table 1",
+    "model": null,
+    "row_term": "Real Market Growth (%) with Total Expense Ratio",
+    "coefficient": null,
+    "published_se": null,
+    "test_statistic": null,
+    "exact_p": null,
+    "stars_or_inequality": "*",
+    "alpha_convention": "* p < 0.05; ** p < 0.01; *** p < 0.001",
+    "tail": "unstated",
+    "direction_hypothesized": null,
+    "n": 960,
+    "other_stats": {
+      "correlation": 0.08
+    },
+    "printed_precision": {
+      "correlation": 2,
+      "coefficient": null,
+      "published_se": null
+    },
+    "source": "DOC01 p12 Table 1 row 7 column 6",
+    "tier": "descriptive",
+    "printed": {
+      "correlation": "0.08",
+      "stars": "*"
+    }
+  },
+  {
+    "target_id": "T2_note",
+    "claim_id": null,
+    "table": "Table 2",
+    "model": null,
+    "row_term": "Table note",
+    "coefficient": null,
+    "published_se": null,
+    "test_statistic": null,
+    "exact_p": null,
+    "stars_or_inequality": null,
+    "alpha_convention": "* p < 0.05; ** p < 0.01; *** p < 0.001",
+    "tail": "unstated",
+    "direction_hypothesized": null,
+    "n": 960,
+    "other_stats": {},
+    "printed_precision": {
+      "coefficient": null,
+      "published_se": null
+    },
+    "source": "DOC01 p12 Table 2  Table note",
+    "tier": "identification_inference_diagnostic",
+    "printed": {
+      "note": "a Standard errors are in parentheses. n = 960",
+      "significance_note": "* p < 0.05; ** p < 0.01; *** p < 0.001"
+    }
+  },
+  {
+    "target_id": "T1_note",
+    "claim_id": "C17",
+    "table": "Table 1",
+    "model": null,
+    "row_term": "Table note",
+    "coefficient": null,
+    "published_se": null,
+    "test_statistic": null,
+    "exact_p": null,
+    "stars_or_inequality": null,
+    "alpha_convention": "* p < 0.05; ** p < 0.01; *** p < 0.001",
+    "tail": "unstated",
+    "direction_hypothesized": null,
+    "n": 960,
+    "other_stats": {},
+    "printed_precision": {
+      "coefficient": null,
+      "published_se": null
+    },
+    "source": "DOC01 p12 Table 1  Table note",
+    "tier": "descriptive",
+    "printed": {
+      "note": "n = 960",
+      "significance_note": "* p < 0.05; ** p < 0.01; *** p < 0.001"
+    }
+  },
+  {
+    "target_id": "TR_sq",
+    "claim_id": "C15",
+    "table": "Text",
+    "model": "M3_SQ",
+    "row_term": "Strategic Deviation²",
+    "coefficient": -0.001,
+    "published_se": 0.0001,
+    "test_statistic": null,
+    "exact_p": null,
+    "stars_or_inequality": null,
+    "alpha_convention": null,
+    "tail": "unstated",
+    "direction_hypothesized": null,
+    "n": null,
+    "other_stats": {
+      "SSE": 2.803
+    },
+    "printed_precision": {
+      "coefficient": 3,
+      "published_se": 4
+    },
+    "source": "DOC01 p13 Results Model 3 without first-order term",
+    "tier": "robustness",
+    "printed": {
+      "coefficient": "−0.001",
+      "published_se": "0.0001",
+      "SSE": "2.803",
+      "significance": "negative and significant"
+    },
+    "notes": "No exact p, star, alpha or N printed for this diagnostic."
+  },
+  {
+    "target_id": "TD_h",
+    "claim_id": "C11",
+    "table": "Text",
+    "model": "M1/M2/M3",
+    "row_term": "Durbin h",
+    "coefficient": null,
+    "published_se": null,
+    "test_statistic": null,
+    "exact_p": null,
+    "stars_or_inequality": "N.S.",
+    "alpha_convention": null,
+    "tail": "unstated",
+    "direction_hypothesized": null,
+    "n": null,
+    "other_stats": {
+      "h_upper_bound": 1.28,
+      "relation": "less than; not explicitly absolute value",
+      "reference_distribution": "asymptotically standard normal"
+    },
+    "printed_precision": {
+      "coefficient": null,
+      "published_se": null
+    },
+    "source": "DOC01 p11 Analysis autocorrelation",
+    "tier": "identification_inference_diagnostic",
+    "printed": {
+      "text": "less than 1.28 (N.S.)"
+    },
+    "notes": "No model-specific statistic; test_statistic remains null."
+  },
+  {
+    "target_id": "TD_outlier",
+    "claim_id": "C12",
+    "table": "Text",
+    "model": "M2 (minimum across models)",
+    "row_term": "studentized deleted residual",
+    "coefficient": null,
+    "published_se": null,
+    "test_statistic": {
+      "value": 21.8,
+      "type": "studentized deleted residual"
+    },
+    "exact_p": null,
+    "stars_or_inequality": null,
+    "alpha_convention": null,
+    "tail": "unstated",
+    "direction_hypothesized": null,
+    "n": null,
+    "other_stats": {
+      "approx_percent_above_second_highest": 50
+    },
+    "printed_precision": {
+      "coefficient": null,
+      "published_se": null
+    },
+    "source": "DOC01 p11 Analysis outlier paragraph",
+    "tier": "identification_inference_diagnostic",
+    "printed": {
+      "minimum": "21.8",
+      "comparison": "about 50 percent higher"
+    }
+  },
+  {
+    "target_id": "TD_condition_aug",
+    "claim_id": "C16",
+    "table": "Text",
+    "model": "Augmented strategy-control models",
+    "row_term": "condition numbers",
+    "coefficient": null,
+    "published_se": null,
+    "test_statistic": null,
+    "exact_p": null,
+    "stars_or_inequality": "exceeded 234",
+    "alpha_convention": null,
+    "tail": "unstated",
+    "direction_hypothesized": null,
+    "n": null,
+    "other_stats": {
+      "lower_bound": 234,
+      "concern_threshold": 30
+    },
+    "printed_precision": {
+      "coefficient": null,
+      "published_se": null
+    },
+    "source": "DOC01 p11 Opening collinearity paragraph",
+    "tier": "robustness",
+    "printed": {
+      "condition_numbers": "exceeded 234",
+      "reference_threshold": "30"
+    }
+  },
+  {
+    "target_id": "TD_condition_M3",
+    "claim_id": "C14",
+    "table": "Text",
+    "model": "M3",
+    "row_term": "largest condition number",
+    "coefficient": null,
+    "published_se": null,
+    "test_statistic": {
+      "value": 35.0,
+      "type": "condition number"
+    },
+    "exact_p": null,
+    "stars_or_inequality": null,
+    "alpha_convention": null,
+    "tail": "unstated",
+    "direction_hypothesized": null,
+    "n": null,
+    "other_stats": {
+      "concern_threshold": 30
+    },
+    "printed_precision": {
+      "coefficient": null,
+      "published_se": null
+    },
+    "source": "DOC01 p13 Results collinearity final paragraph",
+    "tier": "identification_inference_diagnostic",
+    "printed": {
+      "condition_number": "35.0",
+      "reference_threshold": "30"
+    }
+  }
+]

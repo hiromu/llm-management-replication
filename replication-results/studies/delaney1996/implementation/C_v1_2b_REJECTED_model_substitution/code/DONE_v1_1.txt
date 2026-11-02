@@ -1,0 +1,26 @@
+PAPER_K7 grid implementation, repair round v1.1 complete (2026-10-28).
+
+Inputs applied: spec_amendment_v1_1.md (A1-A10) and checker_items.md (13 items).
+
+Changes:
+- code/paperk7/regression.py: HC3 with leverage-one rows contributing zero (A1), n_leverage_one; dummy
+  resolution before the df check with named reasons for non-dummy degeneracy (A5); nested_f checks the
+  effective rank increase against the number of added terms (A5).
+- code/paperk7/coding.py: spec-level codes beat declared-missing values and ranges (A2: 995 under L2,
+  V157 99996, V261 96); STAFF 996-999 never counts, level exclusions applied before the copy rule (A7, A9);
+  SUBSID V17 == 2 -> 0 and V17 blank -> missing (A4, A9); V43 blank -> industry missing (A4);
+  V8/V17/V43/WEIGHT through metadata (A9).
+- code/paperk7/pipeline.py: reference sample under z_reference L1/L2 from validity, fixed (A8); dropped
+  columns recorded on failed fits, influence rows for every record of a failed origin model, nested-test
+  failures with reasons (A6); influence refits resolve collinearity first and report failures (A10).
+- code/run_grid.py: model_stats.csv column n_leverage_one; failures of influence refits in run_info.json;
+  HC3 "unimplemented" entry removed; integer count columns written as integers.
+- Checker items C1-C11 fixed; C12 and C13 unchanged because amendment A6 / A3 resolve them (see README).
+
+Tests: 75 tests in 5 files, all passing (code/dev_out/test_log_v1_1.txt), including HC3 with a
+leverage-one row (OLS and WLS) and copy-rule validity (code/tests/test_v1_1.py, 28 tests).
+
+Full grid on synthetic data/survey.csv: code/dev_out/v1_1/ (all six output files; 38 specs; 32 recorded
+failures, all the D05 empty-sample artefact; log code/dev_out/v1_1_log.txt). Results not interpreted.
+
+README: code/README.md, section "v1.1 changes" lists every amendment and checker item.

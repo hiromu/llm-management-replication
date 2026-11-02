@@ -1,0 +1,27 @@
+{
+ "primary_claim_outcome": "indeterminate",
+ "primary_reasons": "sample_construction_N_outside_tolerance|discrepancy_not_confirmed: adversarial review and human confirmation required",
+ "paper_outcome": "indeterminate",
+ "rule": "scoring_rules_v1.json focal_structure.paper_rule; indeterminate primary focal -> paper indeterminate",
+ "secondary_claim_outcome": "indeterminate",
+ "lower_tier_discrepant_candidates_both_origins": [
+  "control_TER_M3",
+  "control_intercept_M3"
+ ],
+ "fragility": "not assessed (no substantive equivalent set)",
+ "fragile_inference": "not assessable (benchmark inference not audited)",
+ "n": {
+  "O_A": {
+   "n_rec": 1260,
+   "n_pub": 960,
+   "rel_diff": 0.3125,
+   "band": "outside"
+  },
+  "O_B": {
+   "n_rec": 1255,
+   "n_pub": 960,
+   "rel_diff": 0.3072916666666667,
+   "band": "outside"
+  }
+ }
+}

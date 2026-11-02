@@ -1,0 +1,17 @@
+[ Info: run ids: ORIGIN
+[ Info: read gem_extract: 26400 rows; country_year_inputs: 264 rows
+[ Info: ORIGIN M1: n=6579 countries=24 surveys=111 converged=true singular=false (53.9s)
+[ Info: ORIGIN M2: n=6579 countries=24 surveys=111 converged=true singular=false (109.8s)
+[ Info: ORIGIN M3: n=6579 countries=24 surveys=111 converged=true singular=false (186.8s)
+[ Info: ORIGIN M4: n=365 countries=24 surveys=107 converged=true singular=true (11.7s)
+[ Info: ORIGIN M5: n=372 countries=24 surveys=107 converged=true singular=true (0.4s)
+[ Info: ORIGIN M6: n=372 countries=24 surveys=107 converged=true singular=true (8.5s)
+[ Info: ORIGIN M7: n=332 countries=24 surveys=96 converged=true singular=false (7.3s)
+[ Info: ORIGIN M8: n=179 countries=22 surveys=51 converged=true singular=true (5.1s)
+[ Info: ORIGIN R1: n=6579 countries=24 surveys=111 converged=true singular=true (129.9s)
+[ Info: ORIGIN R2: n=9634 countries=24 surveys=111 converged=true singular=false (331.8s)
+[ Info: ORIGIN R3: n=2197 countries=24 surveys=111 converged=true singular=false (41.6s)
+[ Info: done: 276 result rows written to runs/synthetic_check_v1/C/results.csv in 892.2s
+real 902.91
+user 925.37
+sys 25.30

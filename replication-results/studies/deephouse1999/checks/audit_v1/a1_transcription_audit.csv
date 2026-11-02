@@ -1,0 +1,51 @@
+reader,model,term,aud_coef,aud_se,aud_stars,rd_coef,rd_se,rd_stars,rd_n,match
+ReaderA_fable,M1,intercept,0.929,0.169,***,0.929,0.169,***,960,True
+ReaderA_fable,M1,MS,-0.576,0.138,***,-0.576,0.138,***,960,True
+ReaderA_fable,M1,TER,-9.948,2.001,***,-9.948,2.001,***,960,True
+ReaderA_fable,M1,RMG,0.014,0.004,***,0.014,0.004,***,960,True
+ReaderA_fable,M1,lag,0.369,0.028,***,0.369,0.028,***,960,True
+ReaderA_fable,M2,intercept,1.164,0.172,***,1.164,0.172,***,960,True
+ReaderA_fable,M2,SD,-0.02,0.004,***,-0.02,0.004,***,960,True
+ReaderA_fable,M2,MS,-0.093,0.161,,-0.093,0.161,,960,True
+ReaderA_fable,M2,TER,-10.601,1.974,***,-10.601,1.974,***,960,True
+ReaderA_fable,M2,RMG,0.016,0.004,***,0.016,0.004,***,960,True
+ReaderA_fable,M2,lag,0.361,0.027,***,0.361,0.027,***,960,True
+ReaderA_fable,M3,intercept,0.511,0.171,**,0.511,0.171,**,960,True
+ReaderA_fable,M3,SD2,-0.006,0.001,***,-0.006,0.001,***,960,True
+ReaderA_fable,M3,SD,0.17,0.017,***,0.17,0.017,***,960,True
+ReaderA_fable,M3,MS,-0.457,0.155,**,-0.457,0.155,**,960,True
+ReaderA_fable,M3,TER,-15.387,1.895,***,-15.387,1.895,***,960,True
+ReaderA_fable,M3,RMG,0.018,0.003,***,0.018,0.003,***,960,True
+ReaderA_fable,M3,lag,0.403,0.026,***,0.403,0.026,***,960,True
+ReaderA_fable,M1,SSE,2.978,,,2.978,,,,True
+ReaderA_fable,M2,SSE,2.886,,,2.886,,,,True
+ReaderA_fable,M3,SSE,2.53,,,2.53,,,,True
+ReaderA_fable,M2 vs M1,deltaSSE|F|stars,0.092|30.4|***,,,0.092|30.4|*** (table); text: 'significant at the p < 0.001 level',,,,True
+ReaderA_fable,M3 vs M1,deltaSSE|F|stars,0.448|84.4|***,,,0.448|84.4|*** (table); text: 'significant at the p < 0.001 level',,,,True
+ReaderA_fable,M3 vs M2,deltaSSE|F|stars,0.356|134.1|***,,,0.356|134.1|*** (table); text: 'also significant at the p < 0.001 level',,,,True
+ReaderA_fable,M3_SQ,SD2|SE|SSE,-0.001|0.0001|2.803,,,"(-0.001, 0.0001, 2.803)",,,,True
+ReaderB_astra,M1,intercept,0.929,0.169,***,0.929,0.169,***,960,True
+ReaderB_astra,M1,MS,-0.576,0.138,***,-0.576,0.138,***,960,True
+ReaderB_astra,M1,TER,-9.948,2.001,***,-9.948,2.001,***,960,True
+ReaderB_astra,M1,RMG,0.014,0.004,***,0.014,0.004,***,960,True
+ReaderB_astra,M1,lag,0.369,0.028,***,0.369,0.028,***,960,True
+ReaderB_astra,M2,intercept,1.164,0.172,***,1.164,0.172,***,960,True
+ReaderB_astra,M2,SD,-0.02,0.004,***,-0.02,0.004,***,960,True
+ReaderB_astra,M2,MS,-0.093,0.161,,-0.093,0.161,,960,True
+ReaderB_astra,M2,TER,-10.601,1.974,***,-10.601,1.974,***,960,True
+ReaderB_astra,M2,RMG,0.016,0.004,***,0.016,0.004,***,960,True
+ReaderB_astra,M2,lag,0.361,0.027,***,0.361,0.027,***,960,True
+ReaderB_astra,M3,intercept,0.511,0.171,**,0.511,0.171,**,960,True
+ReaderB_astra,M3,SD2,-0.006,0.001,***,-0.006,0.001,***,960,True
+ReaderB_astra,M3,SD,0.17,0.017,***,0.17,0.017,***,960,True
+ReaderB_astra,M3,MS,-0.457,0.155,**,-0.457,0.155,**,960,True
+ReaderB_astra,M3,TER,-15.387,1.895,***,-15.387,1.895,***,960,True
+ReaderB_astra,M3,RMG,0.018,0.003,***,0.018,0.003,***,960,True
+ReaderB_astra,M3,lag,0.403,0.026,***,0.403,0.026,***,960,True
+ReaderB_astra,M1,SSE,2.978,,,2.978,,,,True
+ReaderB_astra,M2,SSE,2.886,,,2.886,,,,True
+ReaderB_astra,M3,SSE,2.53,,,2.53,,,,True
+ReaderB_astra,M2 vs M1,deltaSSE|F|stars,0.092|30.4|***,,,0.092|30.4|***,,,,True
+ReaderB_astra,M3 vs M1,deltaSSE|F|stars,0.448|84.4|***,,,0.448|84.4|***,,,,True
+ReaderB_astra,M3 vs M2,deltaSSE|F|stars,0.356|134.1|***,,,0.356|134.1|***,,,,True
+ReaderB_astra,M3_SQ,SD2|SE|SSE,-0.001|0.0001|2.803,,,"(-0.001, 0.0001, 2.803)",,,,True

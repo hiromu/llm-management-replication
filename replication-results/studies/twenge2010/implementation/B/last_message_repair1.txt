@@ -1,0 +1,7 @@
+Repaired all three issues:
+
+- CHK1 correctly fixes 1976 means and variances; df is 470 with no warnings.
+- S04 computes all 15 `d_obs` values using the documented FIML covariance convention.
+- Sample hashes omit the terminal newline.
+
+Regenerated all twelve specification outputs and the existing influence chunk. All 32 synthetic tests and 480 output checks passed. Updated `README.md` and `code/TESTS.md`.

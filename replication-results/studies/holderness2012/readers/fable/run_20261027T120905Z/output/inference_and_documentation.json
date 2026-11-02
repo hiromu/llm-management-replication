@@ -1,0 +1,34 @@
+{
+  "paper_id": "P-R7M2",
+  "observation_unit": "Individual prisoner of war (one record in the NARA POW file after exclusions).",
+  "sampling_unit": "Not a sample: the file is described as encompassing virtually all American POWs (a population census of carded prisoners); inference is model-based.",
+  "assignment_unit": "The hierarchy 'treatment' is a group-level attribute: the captured cohort (camp x entry month) in half the specifications and the camp in the other half. Prisoners were assigned to camps by the detaining power, generally the camp closest to capture (D1 pdf 4).",
+  "cluster_units": ["captured cohort (CAMP x DATE_REPORTED year-month) for captured-cohort regressions", "camp cohort (CAMP) for camp-cohort regressions"],
+  "native_se_method": "Heteroskedasticity-robust (sandwich) standard errors clustered by captured cohort or camp cohort; p-values printed in parentheses (D1 pdf 8 section 4.4; Table 4/5/6 notes). No standard errors are printed, only p-values.",
+  "native_software": null,
+  "first_stage_strength": null,
+  "documentation_scores": {
+    "specificity": 2,
+    "precision": 2,
+    "exhaustiveness": 1,
+    "rationale": "Specificity 2: variables are defined in a dedicated table (D1 Table 2) with formulas for both indices and explicit rescalings, estimator, marginal-effect convention and clustering are stated, but the grade-to-rank mapping, the serial-number merge, the construction of the regression sample and the distance computation are not specified. Precision 2: estimates are printed to two decimals with p-values to two decimals ('0.00' floors), no standard errors, no confidence intervals, and a single observation count per table; correlations and the quartile effect are given in text. Exhaustiveness 1: a large share of the analyses the text relies on (Germany/Japan separately, Air Force subsample, friends regressions, alternative measures, subsets, size interaction, no-squared-term, pay interaction, age-in-Japan) are 'unreported' or 'reported in previous versions', with no appendix or supplement in the published record (packet lists no supplements)."
+  },
+  "unavailable_source_fallbacks": [
+    {"item": "WWII pay grade by rank (Alternative Steepness, M29) and prisoner pay (footnote 13 interaction, M35)", "problem": "No pay-grade or pay field exists in either registry file; the article does not say where pay came from.", "fallback": "Do not implement; report as unavailable. If the coordinator supplies a documented 1942 pay-grade table, treat as a versioned addition.", "label": "unavailable"},
+    {"item": "Army-wide rank distribution for the 'established hierarchy'", "problem": "The authors could not locate it and used the POW population's distribution instead (D1 pdf 6 footnote 9).", "fallback": "Use POW-population rank shares as the article does (manifest variable 'sameness').", "label": "uncertain"},
+    {"item": "Date of entry into camp / date of capture", "problem": "The POW file has only 'date reported' (DDMMY) and 'latest report date'; no capture or camp-entry date field.", "fallback": "Use DATE_REPORTED month/year as the entry month for captured cohorts and for length of captivity.", "label": "uncertain"},
+    {"item": "Camp coordinates and national-capital coordinates for the distance variable", "problem": "The article does not state coordinate sources or the distance formula; the NARA list gives only whole-degree points.", "fallback": "Use the registry camp_location_crosswalk geocoded coordinates with haversine distance and the capital coordinates stated in the manifest; camps with confidence 'unknown' get missing distance plus indicator.", "label": "uncertain"},
+    {"item": "'Camp located outside of Germany or Japan proper' (Table 1 descriptive)", "problem": "'Proper' (pre-1939 borders) is not resolvable from crosswalk country_iso2 for annexed territories (Austria, Sudetenland, Korea, Taiwan, Manchuria).", "fallback": "Approximate with country_iso2 != 'DE' (Germany) or != 'JP' (Japan); label as approximate descriptive.", "label": "uncertain"},
+    {"item": "Height and weight (columns 74-78 of the enlistment card)", "problem": "NARA could not date when these columns carried height/weight versus other content and excluded them from its public database; values may be corrupt for some card vintages.", "fallback": "Use the raw slices with plausibility windows (height 48-84 inches; weight 80-300 pounds for the descriptive only); out-of-range -> missing.", "label": "uncertain"},
+    {"item": "Enlistment covariates for officers, Navy, Marine, Merchant Marine and pre-1938 enlistees", "problem": "By construction absent from the enlistment file (D1 pdf 5).", "fallback": "Missing -> 0 plus indicator, as the article does.", "label": "uncertain"},
+    {"item": "Identification of U.S. Army Air Force personnel (M32)", "problem": "The article does not say how airmen were identified.", "fallback": "ARM_SVC_CODE '20' (Air Corps) or corresponding ARM_SVC_ALPHA, with SERVICE_CODE '1'.", "label": "uncertain"},
+    {"item": "Precapture unit for 'friends' (M27, M28)", "problem": "Granularity of 'unit' not stated; the file has TYPE_ORG, PARENT_UNIT_NUM, PARENT_UNIT_TYPE.", "fallback": "Concatenate the three fields.", "label": "uncertain"},
+    {"item": "Count of records that fall out between the descriptive sample and the regression sample", "problem": "Unexplained in the article.", "fallback": "Reconstructed as the camp-and-month usability restriction (manifest sample step 6) plus any perfect-prediction drops (step 8); report the resulting counts in the implementer log for the coordinator.", "label": "uncertain"}
+  ],
+  "vintage_issues": [
+    "The article (received 2010, data correspondence dated April 2008) used the NARA POW data file as merged in 2002 and the Army Serial Number Merged File (2002 conversion); the registry files are the same NARA products, so content vintage should match, but the article's 'approximately 129,000' records and '9.2 million' enlistment records are approximate and cannot be reconciled exactly.",
+    "The camp location crosswalk is newly constructed with GeoNames (2026) coordinates, not the authors' (unknown) coordinates; distances may differ at the kilometre level.",
+    "NARA documentation notes undefined code values and duplicate camp-code meanings (359, 510); the authors' handling is unknown.",
+    "Earlier working-paper versions containing the unreported robustness tables are excluded from the packet by rule."
+  ]
+}

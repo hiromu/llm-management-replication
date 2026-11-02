@@ -1,0 +1,281 @@
+grade_alpha,meaning,rank_origin_service_not_navy,rank_origin_navy,rank_strict_service_not_navy,rank_strict_navy,rule
+ADML,Admiral,9,9,,,flag officer (Navy) -> 9; strict: Navy-only label
+AERO1C,"Aerographer, first class",3,3,,,rated 1st/2nd class -> 3; strict: Navy-only
+AERO2C,"Aerographer, second class",3,3,,,rated 1st/2nd class -> 3; strict: Navy-only
+AERO3C,"Aerographer, third class",2,2,,,rated 3rd class -> 2; strict: Navy-only
+AS,Apprentice seaman,1,1,,,seaman/apprentice/fireman -> 1; strict: Navy-only
+APS,"Apprentice, Seaman",1,1,,,seaman/apprentice/fireman -> 1; strict: Navy-only
+ATS,Army Transport Service,,,,,civilian/non-rank or unclassifiable label -> missing
+AV C,Aviation Cadet,1,1,,,cadet -> 1; strict: detailed label
+ACM1C,"Aviation capenter`s mate, first class",3,3,,,rated 1st/2nd class -> 3; strict: Navy-only
+ACM2C,"Aviation carpenter`s mate, second class",3,3,,,rated 1st/2nd class -> 3; strict: Navy-only
+ACM3C,"Aviation carpenter`s mate, third class",2,2,,,rated 3rd class -> 2; strict: Navy-only
+ACCM,Aviation chief carpenter`s mate,3,3,,,chief petty officer / master at arms -> 3; strict: Navy-only
+ACMM,Aviation chief machinist`s mate,3,3,,,chief petty officer / master at arms -> 3; strict: Navy-only
+ACM,Aviation chief metalsmith,3,3,,,chief petty officer / master at arms -> 3; strict: Navy-only
+ACOM,Aviation chief ordnance man,3,3,,,chief petty officer / master at arms -> 3; strict: Navy-only
+ACR,Aviation chief rigger,3,3,,,chief petty officer / master at arms -> 3; strict: Navy-only
+AMM1C,"Aviation machinist`s mate, first class",3,3,,,rated 1st/2nd class -> 3; strict: Navy-only
+AMM2C,"Aviation machinist`s mate, second class",3,3,,,rated 1st/2nd class -> 3; strict: Navy-only
+AMM3C,"Aviation machinist`s mate, third class",2,2,,,rated 3rd class -> 2; strict: Navy-only
+AM1C,"Aviation metalsmith, first class",3,3,,,rated 1st/2nd class -> 3; strict: Navy-only
+AM2C,"Aviation metalsmith, second class",3,3,,,rated 1st/2nd class -> 3; strict: Navy-only
+AM3C,"Aviation metalsmith, third class",2,2,,,rated 3rd class -> 2; strict: Navy-only
+AOM1C,"Aviation ordnance man, first class",3,3,,,rated 1st/2nd class -> 3; strict: Navy-only
+AOM2C,"Aviation ordnance man, second class",3,3,,,rated 1st/2nd class -> 3; strict: Navy-only
+AOM3C,"Aviation ordnance man, third class",2,2,,,rated 3rd class -> 2; strict: Navy-only
+AP,Aviation pilots,,,,,civilian/non-rank or unclassifiable label -> missing
+AR1C,"Aviation rigger, first class",3,3,,,rated 1st/2nd class -> 3; strict: Navy-only
+AR2C,"Aviation rigger, second class",3,3,,,rated 1st/2nd class -> 3; strict: Navy-only
+AR3C,"Aviation rigger, third class",2,2,,,rated 3rd class -> 2; strict: Navy-only
+BKR1C,"Baker, first class",3,3,,,rated 1st/2nd class -> 3; strict: Navy-only
+BKR2C,"Baker, second class",3,3,,,rated 1st/2nd class -> 3; strict: Navy-only
+BKR3C,"Baker, third class",2,2,,,rated 3rd class -> 2; strict: Navy-only
+BMST1C,"Blacksmith, first class",3,3,,,rated 1st/2nd class -> 3; strict: Navy-only
+BMST2C,"Blacksmith, second class",3,3,,,rated 1st/2nd class -> 3; strict: Navy-only
+BMST3C,"Blacksmith, third class",2,2,,,rated 3rd class -> 2; strict: Navy-only
+BM1C,"Boatswain`s mate, first class",3,3,,,rated 1st/2nd class -> 3; strict: Navy-only
+BM2C,"Boatswain`s mate, second class",3,3,,,rated 1st/2nd class -> 3; strict: Navy-only
+BMKR1C,"Boilermaker, first class",3,3,,,rated 1st/2nd class -> 3; strict: Navy-only
+B1C,"Boilermaker, first class",3,3,,,rated 1st/2nd class -> 3; strict: Navy-only
+B2C,"Boilermaker, second class",3,3,,,rated 1st/2nd class -> 3; strict: Navy-only
+BMKR2C,"Boilermaker, second class",3,3,,,rated 1st/2nd class -> 3; strict: Navy-only
+B3C,"Boilermaker, third class",2,2,,,rated 3rd class -> 2; strict: Navy-only
+BMKR3C,"Boilermaker, third class",2,2,,,rated 3rd class -> 2; strict: Navy-only
+B. G.,Brigadier General,9,9,9,9,general officer -> 9
+B G,Brigadier General,9,9,9,9,general officer -> 9
+BYD,Bureau of Yards and Docks,,,,,civilian/non-rank or unclassifiable label -> missing
+CDT,"Cadet, USMA",1,1,,,cadet -> 1; strict: detailed label
+CPT,Captain,6,8,6,,Army captain (6) / Navy captain (8) by service
+CAPT,Captain or Asst. superintendent of nurses or Asst. director of nurses or Chief dietitian or Chief physical therapy aide,6,8,6,,Army captain (6) / Navy captain (8) by service
+CM1C,"Carpenter`s mate, first class",3,3,,,rated 1st/2nd class -> 3; strict: Navy-only
+CM2C,"Carpenter`s mate, second class",3,3,,,rated 1st/2nd class -> 3; strict: Navy-only
+CM3C,"Carpenter`s mate, third class",2,2,,,rated 3rd class -> 2; strict: Navy-only
+CPA,Chief Petty Officer Acting Appointment,3,3,,,chief petty officer / master at arms -> 3; strict: Navy-only
+CPO,Chief Petty Officer Permanent Appointment,3,3,,,chief petty officer / master at arms -> 3; strict: Navy-only
+C/WO,Chief Warrant Officer,4,4,4,4,warrant officer -> 4
+C WO,Chief Warrant Officer,4,4,4,4,warrant officer -> 4
+CWO,Chief Warrant Officer,4,4,4,4,warrant officer -> 4
+CAERO,Chief aerographers,3,3,,,chief petty officer / master at arms -> 3; strict: Navy-only
+CBM,Chief boatswain`s mate,3,3,,,chief petty officer / master at arms -> 3; strict: Navy-only
+CCM,Chief carpenter`s mate,3,3,,,chief petty officer / master at arms -> 3; strict: Navy-only
+CCSTD,Chief commissary steward,3,3,,,chief petty officer / master at arms -> 3; strict: Navy-only
+CEM,Chief electrician`s mate,3,3,,,chief petty officer / master at arms -> 3; strict: Navy-only
+CFC,Chief fire controlman,3,3,,,chief petty officer / master at arms -> 3; strict: Navy-only
+CGM,Chief gunner`s mate,3,3,,,chief petty officer / master at arms -> 3; strict: Navy-only
+CMM,Chief machinist`s mate,3,3,,,chief petty officer / master at arms -> 3; strict: Navy-only
+CMAA,Chief master at arms,3,3,,,chief petty officer / master at arms -> 3; strict: Navy-only
+CMOMM,Chief motor machinist`s mate,3,3,,,chief petty officer / master at arms -> 3; strict: Navy-only
+CPHM,Chief pharmacist`s mate,3,3,,,chief petty officer / master at arms -> 3; strict: Navy-only
+CPHO,Chief photographer,3,3,,,chief petty officer / master at arms -> 3; strict: Navy-only
+CPRTR,Chief printer,3,3,,,chief petty officer / master at arms -> 3; strict: Navy-only
+CQM,Chief quartermaster,3,3,,,chief petty officer / master at arms -> 3; strict: Navy-only
+CRM,Chief radioman,3,3,,,chief petty officer / master at arms -> 3; strict: Navy-only
+CSF,Chief shipfitter,3,3,,,chief petty officer / master at arms -> 3; strict: Navy-only
+CSM,Chief signalman,3,3,,,chief petty officer / master at arms -> 3; strict: Navy-only
+CSK,Chief storekeeper,3,3,,,chief petty officer / master at arms -> 3; strict: Navy-only
+CT,Chief telegraphist,3,3,,,chief petty officer / master at arms -> 3; strict: Navy-only
+CTM,Chief torpedoman,3,3,,,chief petty officer / master at arms -> 3; strict: Navy-only
+CTC,Chief turret captain,3,3,,,chief petty officer / master at arms -> 3; strict: Navy-only
+CWT,Chief water tender,3,3,,,chief petty officer / master at arms -> 3; strict: Navy-only
+CY,Chief yeoman,3,3,,,chief petty officer / master at arms -> 3; strict: Navy-only
+CIV,Civilian,,,,,civilian/non-rank or unclassifiable label -> missing
+CIV,Civilian,,,,,civilian/non-rank or unclassifiable label -> missing
+NAV,Civilian Employee of the Navy,,,,,civilian/non-rank or unclassifiable label -> missing
+COL,Colonel or Superintendent of Nurses,8,8,8,8,colonel -> 8
+COM,Commander,8,8,,,Navy commander -> 8; strict: Navy-only
+CSTD,Commissary steward,,,,,rating without class or unclassifiable -> missing
+CNSN,Contract Surgeon,,,,,civilian/non-rank or unclassifiable label -> missing
+CST,Coppersmith,,,,,rating without class or unclassifiable -> missing
+CST1C,"Coppersmith, first class",3,3,,,rated 1st/2nd class -> 3; strict: Navy-only
+CST2C,"Coppersmith, second class",3,3,,,rated 1st/2nd class -> 3; strict: Navy-only
+CST3C,"Coppersmith, third class",2,2,,,rated 3rd class -> 2; strict: Navy-only
+CPL,Corporal,2,2,2,2,corporal -> 2
+cPL,Corporal,2,2,2,2,corporal -> 2
+COX,Coxswain,2,2,,,coxswain (petty-officer-third-class equivalent) -> 2; strict: Navy-only
+EMIC,"Electrician's Mate, First Class",3,3,,,rated 1st/2nd class -> 3; strict: Navy-only
+EM1C,"Electrician`s mate, first class",3,3,,,rated 1st/2nd class -> 3; strict: Navy-only
+EM2C,"Electrician`s mate, second class",3,3,,,rated 1st/2nd class -> 3; strict: Navy-only
+EM3C,"Electrician`s mate, third class",2,2,,,rated 3rd class -> 2; strict: Navy-only
+AGO,Employee of the Adjutant General's Corps,,,,,civilian/non-rank or unclassifiable label -> missing
+ENS,Ensign,5,5,,,LTJG/Ensign -> 5; strict: Navy-only
+FC1C,"Fire controlman, first class",3,3,,,rated 1st/2nd class -> 3; strict: Navy-only
+FC2C,"Fire controlman, second class",3,3,,,rated 1st/2nd class -> 3; strict: Navy-only
+FC3C,"Fire controlman, third class",2,2,,,rated 3rd class -> 2; strict: Navy-only
+FIC,"Fireman, First Class",1,1,,,seaman/apprentice/fireman -> 1; strict: Navy-only
+F1C,"Fireman, first class",1,1,,,seaman/apprentice/fireman -> 1; strict: Navy-only
+F2C,"Fireman, second class",1,1,,,seaman/apprentice/fireman -> 1; strict: Navy-only
+F3C,"Fireman, third class",1,1,,,seaman/apprentice/fireman -> 1; strict: Navy-only
+1CS,"First Class, Seaman",1,1,,,seaman/apprentice/fireman -> 1; strict: Navy-only
+1 LTLT,First Lieutenant,5,5,5,5,lieutenant -> 5
+1 LT,First Lieutenant or Chief nurse or Head dietitian or Head physical therapy aides,5,5,5,5,lieutenant -> 5
+1LT,First Lieutenant or Chief nurse or Head dietitian or Head physical therapy aides,5,5,5,5,lieutenant -> 5
+1 SG,First Sergeant,3,3,3,3,sergeant grades -> 3
+1SG,First Sergeant,3,3,3,3,sergeant grades -> 3
+1SGT,First Sergeant,3,3,3,3,sergeant grades -> 3
+1 SGT,First Sergeant,3,3,3,3,sergeant grades -> 3
+1-LT,First Sergeant,3,3,3,3,sergeant grades -> 3
+FL O,Flight Officer,4,4,,,flight officer -> 4; strict: detailed label
+FLO,Flight Officer,4,4,,,flight officer -> 4; strict: detailed label
+GENL,General,9,9,9,9,general officer -> 9
+GM1C,"Gunner`s mate, first class",3,3,,,rated 1st/2nd class -> 3; strict: Navy-only
+GM2C,"Gunner`s mate, second class",3,3,,,rated 1st/2nd class -> 3; strict: Navy-only
+GM3C,"Gunner`s mate, third class",2,2,,,rated 3rd class -> 2; strict: Navy-only
+GMIC,"Gunners Mate, First Class",3,3,,,rated 1st/2nd class -> 3; strict: Navy-only
+GM3,"Gunners Mate, Third Class",2,2,,,rated 3rd class -> 2; strict: Navy-only
+G SG,Gunnery Sergeant,3,3,3,3,sergeant grades -> 3
+GY SGT,Gunnery Sergeant,3,3,3,3,sergeant grades -> 3
+GYSGT,Gunnery Sergeant,3,3,3,3,sergeant grades -> 3
+SGTG,Gunnery Sergeant,3,3,3,3,sergeant grades -> 3
+HAIC,"Hospital Apprentice, First Class",1,1,,,seaman/apprentice/fireman -> 1; strict: Navy-only
+HA2C,"Hospital apprentic, second class",1,1,,,seaman/apprentice/fireman -> 1; strict: Navy-only
+HA1C,"Hospital apprentice, first class",1,1,,,seaman/apprentice/fireman -> 1; strict: Navy-only
+LT,Lieutenant,5,6,5,,Army lieutenant (5) / Navy lieutenant (6) by service
+LT COL,Lieutenant Colonel,8,8,8,8,lieutenant colonel -> 8
+LT COL,Lieutenant Colonel,8,8,8,8,lieutenant colonel -> 8
+L CO,Lieutenant Colonel OR Lieutenant Commander,8,7,8,,Army LtCol (8) / Navy LtCdr (7) by service
+LTC,Lieutenant Colonel OR Lieutenant Commander,8,7,8,,Army LtCol (8) / Navy LtCdr (7) by service
+Lt C,Lieutenant Colonel or Asst. superintendent of nurses or Director of nurses,8,8,8,8,lieutenant colonel -> 8
+LCDR,Lieutenant Commander,7,7,,,Navy lieutenant commander -> 7; strict: Navy-only
+LT COM,Lieutenant Commander,7,7,,,Navy lieutenant commander -> 7; strict: Navy-only
+Lt. G.,Lieutenant General,9,9,9,9,general officer -> 9
+LT JG,Lieutenant Junior Grade,5,5,,,LTJG/Ensign -> 5; strict: Navy-only
+LT/C,Lt. Commander,7,7,,,Navy lieutenant commander -> 7; strict: Navy-only
+LTJG,Lt. Jr. Grade,5,5,,,LTJG/Ensign -> 5; strict: Navy-only
+MM1C,"Machinist`s mate, first class",3,3,,,rated 1st/2nd class -> 3; strict: Navy-only
+MM2C,"Machinist`s mate, second class",3,3,,,rated 1st/2nd class -> 3; strict: Navy-only
+MM3C,"Machinist`s mate, third class",2,2,,,rated 3rd class -> 2; strict: Navy-only
+MMIC,"Machinists Mate, First Class",3,3,,,rated 1st/2nd class -> 3; strict: Navy-only
+M. G.,Major General,9,9,9,9,general officer -> 9
+M G,Major General,9,9,9,9,general officer -> 9
+MAJ,Major or Asst. superintendent of nurses or Director of nurses or Director of dietitians or Director of physical therapy aides,7,7,7,7,major -> 7
+MGSGT,Master Gunnery Sergeant,3,3,3,3,sergeant grades -> 3
+MGYSGT,Master Gunnery Sergeant,3,3,3,3,sergeant grades -> 3
+M SG,Master Sergeant,3,3,3,3,sergeant grades -> 3
+MSGT,Master Sergeant,3,3,3,3,sergeant grades -> 3
+MTSGT,Master Sergeant,3,3,3,3,sergeant grades -> 3
+MSG,Master Sergeant,3,3,3,3,sergeant grades -> 3
+M SG,Master Sergeant,3,3,3,3,sergeant grades -> 3
+MAA,Master at arms first class,3,3,,,chief petty officer / master at arms -> 3; strict: Navy-only
+CMST,"Metalsmith, chief",3,3,,,chief petty officer / master at arms -> 3; strict: Navy-only
+MLIC,"Molder, First Class",3,3,,,rated 1st/2nd class -> 3; strict: Navy-only
+ML1C,"Molder, first class",3,3,,,rated 1st/2nd class -> 3; strict: Navy-only
+ML2C,"Molder, second class",3,3,,,rated 1st/2nd class -> 3; strict: Navy-only
+ML3C,"Molder, third class",2,2,,,rated 3rd class -> 2; strict: Navy-only
+MOMMIC,"Motor Machinists Mate, First Class",3,3,,,rated 1st/2nd class -> 3; strict: Navy-only
+MOMM1C,"Motor machinist`s mate, first class",3,3,,,rated 1st/2nd class -> 3; strict: Navy-only
+MOMM2C,"Motor machinist`s mate, second class",3,3,,,rated 1st/2nd class -> 3; strict: Navy-only
+MOMM3C,"Motor machinist`s mate, third class",2,2,,,rated 3rd class -> 2; strict: Navy-only
+PTR1C,"Painter, first class",3,3,,,rated 1st/2nd class -> 3; strict: Navy-only
+PTR2C,"Painter, second class",3,3,,,rated 1st/2nd class -> 3; strict: Navy-only
+PTR3C,"Painter, third class",2,2,,,rated 3rd class -> 2; strict: Navy-only
+PM1C,"Patternmaker, first class",3,3,,,rated 1st/2nd class -> 3; strict: Navy-only
+PM2C,"Patternmaker, second class",3,3,,,rated 1st/2nd class -> 3; strict: Navy-only
+PAYCLK,Payclerk,,,,,civilian/non-rank or unclassifiable label -> missing
+1PO,"Petty Officer, 1st Class",3,3,,,PO1/PO2 -> 3; strict: Navy-only
+2PO,"Petty Officer, 2nd Class",3,3,,,PO1/PO2 -> 3; strict: Navy-only
+3PO,"Petty Officer, 3rd Class",2,2,,,PO3 -> 2; strict: Navy-only
+PHM1C,"Pharmacist`s mate, first class",3,3,,,rated 1st/2nd class -> 3; strict: Navy-only
+PHM2C,"Pharmacist`s mate, second class",3,3,,,rated 1st/2nd class -> 3; strict: Navy-only
+PHM3C,"Pharmacist`s mate, third class",2,2,,,rated 3rd class -> 2; strict: Navy-only
+PHM,Pharmacists Mate,,,,,rating without class or unclassifiable -> missing
+PHM1,"Pharmacists Mate, First Class",3,3,,,rated 1st/2nd class -> 3; strict: Navy-only
+PHM3,"Pharmacists Mate, Third Class",2,2,,,rated 3rd class -> 2; strict: Navy-only
+PHM33,"Pharmacists Mate, Third Class",2,2,,,rated 3rd class -> 2; strict: Navy-only
+PHMIC,"Pharmacists Mate, Third Class",2,2,,,rated 3rd class -> 2; strict: Navy-only
+PHO1C,"Photographer, first class",3,3,,,rated 1st/2nd class -> 3; strict: Navy-only
+PHO2C,"Photographer, second class",3,3,,,rated 1st/2nd class -> 3; strict: Navy-only
+PHO3C,"Photographer, third class",2,2,,,rated 3rd class -> 2; strict: Navy-only
+PLSG,Platoon Sergeant,3,3,3,3,sergeant grades -> 3
+PLSGT,Platoon Sergeant,3,3,3,3,sergeant grades -> 3
+PRT,Printer,,,,,rating without class or unclassifiable -> missing
+PRTR1C,"Printer, first class",3,3,,,rated 1st/2nd class -> 3; strict: Navy-only
+PRTR2C,"Printer, second class",3,3,,,rated 1st/2nd class -> 3; strict: Navy-only
+PRTR3C,"Printer, third class",2,2,,,rated 3rd class -> 2; strict: Navy-only
+PVT,Private,1,1,1,1,private/PFC -> 1
+PVT7,Private,1,1,1,1,private/PFC -> 1
+PVT 8,Private,1,1,1,1,private/PFC -> 1
+PV,Private,1,1,1,1,private/PFC -> 1
+PFC,Private First Class,1,1,1,1,private/PFC -> 1
+PFC&,Private First Class,1,1,1,1,private/PFC -> 1
+PFCC,Private First Class,1,1,1,1,private/PFC -> 1
+QMIC,"Quartermaster, First Class",3,3,,,rated 1st/2nd class -> 3; strict: Navy-only
+QM1C,"Quartermaster, first class",3,3,,,rated 1st/2nd class -> 3; strict: Navy-only
+QM2C,"Quartermaster, second class",3,3,,,rated 1st/2nd class -> 3; strict: Navy-only
+QM3C,"Quartermaster, third class",2,2,,,rated 3rd class -> 2; strict: Navy-only
+RMIC,"Radioman, First Class",3,3,,,rated 1st/2nd class -> 3; strict: Navy-only
+RM2,"Radioman, Second Class",3,3,,,rated 1st/2nd class -> 3; strict: Navy-only
+RM2 C,"Radioman, Second Class",3,3,,,rated 1st/2nd class -> 3; strict: Navy-only
+RM3,"Radioman, Third Class",2,2,,,rated 3rd class -> 2; strict: Navy-only
+RM1C,"Radioman, first class",3,3,,,rated 1st/2nd class -> 3; strict: Navy-only
+RM2C,"Radioman, second class",3,3,,,rated 1st/2nd class -> 3; strict: Navy-only
+RM3C,"Radioman, third class",2,2,,,rated 3rd class -> 2; strict: Navy-only
+RADM,Rear Admiral,9,9,,,flag officer (Navy) -> 9; strict: Navy-only label
+SEA1,"Seaman, First Class",1,1,,,seaman/apprentice/fireman -> 1; strict: Navy-only
+SEA2,"Seaman, Second Class",1,1,,,seaman/apprentice/fireman -> 1; strict: Navy-only
+S 2C,"Seaman, Second Class",1,1,,,seaman/apprentice/fireman -> 1; strict: Navy-only
+S1C,"Seaman, first class",1,1,,,seaman/apprentice/fireman -> 1; strict: Navy-only
+S2C,"Seaman, second class",1,1,,,seaman/apprentice/fireman -> 1; strict: Navy-only
+2CS,"Second Class, Seaman",1,1,,,seaman/apprentice/fireman -> 1; strict: Navy-only
+2NDLT,Second Lieutenant,5,5,5,5,lieutenant -> 5
+2LT,Second Lieutenant,5,5,5,5,lieutenant -> 5
+2 LT,Second Lieutenant or Nurse or Dietitian or Physical therapy aide,5,5,5,5,lieutenant -> 5
+SG,Sergeant,3,3,3,3,sergeant grades -> 3
+S G,Sergeant,3,3,3,3,sergeant grades -> 3
+SGT,Sergeant,3,3,3,3,sergeant grades -> 3
+SGTMAJ,Sergeant Major,3,3,3,3,sergeant grades -> 3
+SGMAJ,Sergeant Major,3,3,3,3,sergeant grades -> 3
+SC1C,"Ship`s cook, first class",3,3,,,rated 1st/2nd class -> 3; strict: Navy-only
+SC2C,"Ship`s cook, second class",3,3,,,rated 1st/2nd class -> 3; strict: Navy-only
+SC3C,"Ship`s cook, third class",2,2,,,rated 3rd class -> 2; strict: Navy-only
+SFIC,"Shipfitter, First Class",3,3,,,rated 1st/2nd class -> 3; strict: Navy-only
+SF1C,"Shipfitter, first class",3,3,,,rated 1st/2nd class -> 3; strict: Navy-only
+SF2C,"Shipfitter, second class",3,3,,,rated 1st/2nd class -> 3; strict: Navy-only
+SF3C,"Shipfitter, third class",2,2,,,rated 3rd class -> 2; strict: Navy-only
+SMIC,"Signalman, First Class",3,3,,,rated 1st/2nd class -> 3; strict: Navy-only
+SM3,"Signalman, Third Class",2,2,,,rated 3rd class -> 2; strict: Navy-only
+SM1C,"Signalman, first class",3,3,,,rated 1st/2nd class -> 3; strict: Navy-only
+SM2C,"Signalman, second class",3,3,,,rated 1st/2nd class -> 3; strict: Navy-only
+SM3C,"Signalman, third class",2,2,,,rated 3rd class -> 2; strict: Navy-only
+S SGT,Staff Sergeant,3,3,3,3,sergeant grades -> 3
+STFSGT,Staff Sergeant,3,3,3,3,sergeant grades -> 3
+S SG,Staff Sergeant,3,3,3,3,sergeant grades -> 3
+SSGT,Staff Sergeant,3,3,3,3,sergeant grades -> 3
+SSG,Staff Sergeant,3,3,3,3,sergeant grades -> 3
+ST1C,"Steward, first class",3,3,,,rated 1st/2nd class -> 3; strict: Navy-only
+ST2C,"Steward, second class",3,3,,,rated 1st/2nd class -> 3; strict: Navy-only
+ST3C,"Steward, third class",2,2,,,rated 3rd class -> 2; strict: Navy-only
+SK1C,"Storekeeper, first class",3,3,,,rated 1st/2nd class -> 3; strict: Navy-only
+SK2C,"Storekeeper, second class",3,3,,,rated 1st/2nd class -> 3; strict: Navy-only
+SK3C,"Storekeeper, third class",2,2,,,rated 3rd class -> 2; strict: Navy-only
+T SG,Technical Sergeant,3,3,3,3,sergeant grades -> 3
+T SGT,Technical Sergeant,3,3,3,3,sergeant grades -> 3
+SGTT,Technical Sergeant,3,3,3,3,sergeant grades -> 3
+SGT T,Technical Sergeant,3,3,3,3,sergeant grades -> 3
+TSGT,Technical Sergeant,3,3,3,3,sergeant grades -> 3
+TSG,Technical Sergeant,3,3,3,3,sergeant grades -> 3
+TEC3,Technician 3d Grade,3,3,,,technician 3d/4th grade -> 3; strict: detailed label
+TEC4,Technician 4th Grade,3,3,,,technician 3d/4th grade -> 3; strict: detailed label
+TEC5,Technician 5th Grade,2,2,,,technician 5th grade -> 2; strict: detailed label
+TEC4,"Technician, 4th Grade",3,3,,,technician 3d/4th grade -> 3; strict: detailed label
+TEC5,"Technician, Grade 5",2,2,,,technician 5th grade -> 2; strict: detailed label
+TEC3,"Technician, Third Grade",3,3,,,technician 3d/4th grade -> 3; strict: detailed label
+T1C,"Telegraphist, first class",3,3,,,rated 1st/2nd class -> 3; strict: Navy-only
+T2C,"Telegraphist, second class",3,3,,,rated 1st/2nd class -> 3; strict: Navy-only
+T3C,"Telegraphist, third class",2,2,,,rated 3rd class -> 2; strict: Navy-only
+TM,Torpedoman,,,,,rating without class or unclassifiable -> missing
+TMIC,"Torpedoman, First Class",3,3,,,rated 1st/2nd class -> 3; strict: Navy-only
+TM1C,"Torpedoman, first class",3,3,,,rated 1st/2nd class -> 3; strict: Navy-only
+TM2C,"Torpedoman, second class",3,3,,,rated 1st/2nd class -> 3; strict: Navy-only
+TM3C,"Torpedoman, third class",2,2,,,rated 3rd class -> 2; strict: Navy-only
+TC1C,"Turret captain, first class",3,3,,,rated 1st/2nd class -> 3; strict: Navy-only
+VADM,Vice Admiral,9,9,,,flag officer (Navy) -> 9; strict: Navy-only label
+W/O,Warrant Officer,4,4,4,4,warrant officer -> 4
+WOJG,Warrant Officer Junior Grade,4,4,4,4,warrant officer -> 4
+WTIC,"Water Tender, First Class",3,3,,,rated 1st/2nd class -> 3; strict: Navy-only
+WT1C,"Water tender, first class",3,3,,,rated 1st/2nd class -> 3; strict: Navy-only
+WT2C,"Water tender, second class",3,3,,,rated 1st/2nd class -> 3; strict: Navy-only
+YIC,"Yeoman, First Class",3,3,,,rated 1st/2nd class -> 3; strict: Navy-only
+Y1C,"Yeoman, first class",3,3,,,rated 1st/2nd class -> 3; strict: Navy-only
+Y2C,"Yeoman, second class",3,3,,,rated 1st/2nd class -> 3; strict: Navy-only
+Y3C,"Yeoman, third class",2,2,,,rated 3rd class -> 2; strict: Navy-only

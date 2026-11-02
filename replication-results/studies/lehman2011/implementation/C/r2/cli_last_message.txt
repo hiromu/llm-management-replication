@@ -1,0 +1,8 @@
+Fixed auxiliary step labels and restricted duplicate flags to scheduled step-3 repeats.
+
+- Updated `code/run_all.py` and `code/synthetic.py`; appended repair notes.
+- Regenerated synthetic reports, sample outputs, and environment log.
+- **107/107 synthetic checks passed**, including all 604 scheduled fits and 27 valid duplicates.
+- Origin rows S1–S8: **266,592 → 24,282 → 22,909 → 22,766 → 21,540 → 21,540 → 21,540 → 21,540**.
+- Sample stage produced 8 distinct samples.
+- No real-data models fitted. No manifest items remain unimplemented.

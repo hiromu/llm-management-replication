@@ -1,0 +1,7774 @@
+{
+ "dataset": "1976_DS0004",
+ "survey_year": 1976,
+ "provider_dataset_id": "DS0004",
+ "provider_dataset_label": "Form 4 Questionnaire",
+ "source_id": "icpsr07927",
+ "source_release": "ICPSR 7927 V4",
+ "data_file": "data/supplied/ICPSR_07927/DS0004/07927-0004-Data.por",
+ "extract": "data/derived/extracts/1976_DS0004.csv.gz",
+ "codebook_source": "data/supplied/ICPSR_07927/07927-Codebook.pdf",
+ "n_variables": 272,
+ "variables_with_codebook_question_text": 241,
+ "summary_free": true,
+ "notes": [
+  "Value labels and declared missing values come from the SPSS file metadata (read with R haven, user_na=TRUE).",
+  "Question wording comes from the ICPSR codebook; frequencies, percentages, weighted Ns, case counts and valid-code ranges were removed.",
+  "declared_missing_range uses HIGHEST for an open upper bound (SPSS \"x THRU HI\").",
+  "codebook.matched_by states how the codebook entry was linked to the variable."
+ ],
+ "variables": [
+  {
+   "name": "V1",
+   "label": "764    :YEAR OF ADMINST",
+   "storage": {
+    "spss_format": "F2.0",
+    "kind": "numeric",
+    "width": 2,
+    "decimals": 0
+   },
+   "value_labels": null,
+   "declared_missing_values": null,
+   "declared_missing_range": null,
+   "codebook": null
+  },
+  {
+   "name": "V3",
+   "label": "764    :FORM ID",
+   "storage": {
+    "spss_format": "F1.0",
+    "kind": "numeric",
+    "width": 1,
+    "decimals": 0
+   },
+   "value_labels": null,
+   "declared_missing_values": null,
+   "declared_missing_range": null,
+   "codebook": null
+  },
+  {
+   "name": "V4",
+   "label": "764    :R'S ID-SERIAL #",
+   "storage": {
+    "spss_format": "F5.0",
+    "kind": "numeric",
+    "width": 5,
+    "decimals": 0
+   },
+   "value_labels": null,
+   "declared_missing_values": null,
+   "declared_missing_range": null,
+   "codebook": null
+  },
+  {
+   "name": "V5",
+   "label": "764    :SAMPLING WEIGHT",
+   "storage": {
+    "spss_format": "F6.4",
+    "kind": "numeric",
+    "width": 6,
+    "decimals": 4
+   },
+   "value_labels": null,
+   "declared_missing_values": [
+    0
+   ],
+   "declared_missing_range": [
+    9,
+    "HIGHEST"
+   ],
+   "codebook": null
+  },
+  {
+   "name": "V13",
+   "label": "764     :SCHL RGN-4 CAT",
+   "storage": {
+    "spss_format": "F1.0",
+    "kind": "numeric",
+    "width": 1,
+    "decimals": 0
+   },
+   "value_labels": null,
+   "declared_missing_values": null,
+   "declared_missing_range": [
+    9,
+    "HIGHEST"
+   ],
+   "codebook": null
+  },
+  {
+   "name": "V16",
+   "label": "764     :SELF-REP/NOT=0",
+   "storage": {
+    "spss_format": "F1.0",
+    "kind": "numeric",
+    "width": 1,
+    "decimals": 0
+   },
+   "value_labels": null,
+   "declared_missing_values": null,
+   "declared_missing_range": [
+    9,
+    "HIGHEST"
+   ],
+   "codebook": null
+  },
+  {
+   "name": "V17",
+   "label": "764     :SMSA/NON-SMSA=0",
+   "storage": {
+    "spss_format": "F1.0",
+    "kind": "numeric",
+    "width": 1,
+    "decimals": 0
+   },
+   "value_labels": null,
+   "declared_missing_values": null,
+   "declared_missing_range": [
+    9,
+    "HIGHEST"
+   ],
+   "codebook": null
+  },
+  {
+   "name": "V4101",
+   "label": "764B01 :EVR SMK CIG,REGL",
+   "storage": {
+    "spss_format": "F1.0",
+    "kind": "numeric",
+    "width": 1,
+    "decimals": 0
+   },
+   "value_labels": {
+    "1": "NEVER",
+    "2": "ONCE OR TWICE",
+    "3": "OCCASIONALLY BUT NOT REGULARLY",
+    "4": "REGULARLY IN THE PAST",
+    "5": "REGULARLY NOW"
+   },
+   "declared_missing_values": [
+    0
+   ],
+   "declared_missing_range": [
+    9,
+    "HIGHEST"
+   ],
+   "codebook": {
+    "question_code": "B01",
+    "question_text": "HAVE YOU EVER SMOKED CIGARETTES?",
+    "matched_by": "core question B01 (codebook variable V101)"
+   }
+  },
+  {
+   "name": "V4102",
+   "label": "764B02 :#CIGS SMKD/30DAY",
+   "storage": {
+    "spss_format": "F1.0",
+    "kind": "numeric",
+    "width": 1,
+    "decimals": 0
+   },
+   "value_labels": {
+    "1": "NOT AT ALL",
+    "2": "LESS THAN 1 CIGARETTE PER DAY",
+    "3": "1-5 CIGARETTES PER DAY",
+    "4": "ABOUT 1/2 PACK PER DAY",
+    "5": "ABOUT 1 PACK PER DAY",
+    "6": "ABOUT 1 AND 1/2 PACKS PER DAY",
+    "7": "2 PACKS OR MORE PER DAY"
+   },
+   "declared_missing_values": [
+    0
+   ],
+   "declared_missing_range": [
+    9,
+    "HIGHEST"
+   ],
+   "codebook": {
+    "question_code": "B02",
+    "question_text": "HOW FREQUENTLY HAVE YOU SMOKED CIGARETTES IN THE PAST 30 DAYS",
+    "matched_by": "core question B02 (codebook variable V102)"
+   }
+  },
+  {
+   "name": "V4103",
+   "label": "764B03 :EVER DRINK",
+   "storage": {
+    "spss_format": "F1.0",
+    "kind": "numeric",
+    "width": 1,
+    "decimals": 0
+   },
+   "value_labels": {
+    "1": "NO",
+    "2": "YES"
+   },
+   "declared_missing_values": [
+    0
+   ],
+   "declared_missing_range": [
+    9,
+    "HIGHEST"
+   ],
+   "codebook": {
+    "question_code": "B03",
+    "question_text": "EVER HAD ANY BEER, WINE,OR LIQUOR",
+    "matched_by": "core question B03 (codebook variable V103)"
+   }
+  },
+  {
+   "name": "V4104",
+   "label": "764B04A:#X DRNK/LIFETIME",
+   "storage": {
+    "spss_format": "F1.0",
+    "kind": "numeric",
+    "width": 1,
+    "decimals": 0
+   },
+   "value_labels": {
+    "1": "0 OCCASIONS",
+    "2": "1-2",
+    "3": "3-5",
+    "4": "6-9",
+    "5": "10-19",
+    "6": "20-39",
+    "7": "40 OR MORE"
+   },
+   "declared_missing_values": [
+    0
+   ],
+   "declared_missing_range": [
+    9,
+    "HIGHEST"
+   ],
+   "codebook": {
+    "question_code": "B04A",
+    "question_text": "ALCOHOL-USE IN LIFETIME",
+    "matched_by": "core question B04A (codebook variable V104)"
+   }
+  },
+  {
+   "name": "V4105",
+   "label": "764B04B:#X DRNK/LAST12MO",
+   "storage": {
+    "spss_format": "F1.0",
+    "kind": "numeric",
+    "width": 1,
+    "decimals": 0
+   },
+   "value_labels": {
+    "1": "0 OCCASIONS",
+    "2": "1-2",
+    "3": "3-5",
+    "4": "6-9",
+    "5": "10-19",
+    "6": "20-39",
+    "7": "40 OR MORE"
+   },
+   "declared_missing_values": [
+    0
+   ],
+   "declared_missing_range": [
+    9,
+    "HIGHEST"
+   ],
+   "codebook": {
+    "question_code": "B04B",
+    "question_text": "ALCOHOL-USE DURING LAST 12 MONTHS",
+    "matched_by": "core question B04B (codebook variable V105)"
+   }
+  },
+  {
+   "name": "V4106",
+   "label": "764B04C:#X DRNK/LAST30DA",
+   "storage": {
+    "spss_format": "F1.0",
+    "kind": "numeric",
+    "width": 1,
+    "decimals": 0
+   },
+   "value_labels": {
+    "1": "0 OCCASIONS",
+    "2": "1-2",
+    "3": "3-5",
+    "4": "6-9",
+    "5": "10-19",
+    "6": "20-39",
+    "7": "40 OR MORE"
+   },
+   "declared_missing_values": [
+    0
+   ],
+   "declared_missing_range": [
+    9,
+    "HIGHEST"
+   ],
+   "codebook": {
+    "question_code": "B04C",
+    "question_text": "ALCOHOL-USE DURING LAST 30 DAYS",
+    "matched_by": "core question B04C (codebook variable V106)"
+   }
+  },
+  {
+   "name": "V4107",
+   "label": "764B05 :#X DRK ENF FL HI",
+   "storage": {
+    "spss_format": "F1.0",
+    "kind": "numeric",
+    "width": 1,
+    "decimals": 0
+   },
+   "value_labels": {
+    "1": "ON NONE OF THE OCCASIONS",
+    "2": "ON FEW OF THE OCCASIONS",
+    "3": "ON ABOUT HALF OF THE OCCASIONS",
+    "4": "ON MOST OF THE OCCASIONS",
+    "5": "ON NEARLY ALL OF THE OCCASIONS"
+   },
+   "declared_missing_values": [
+    0
+   ],
+   "declared_missing_range": [
+    8,
+    "HIGHEST"
+   ],
+   "codebook": {
+    "question_code": "B05",
+    "question_text": "WHEN YOU DRINK, HOW OFTEN DO YOU DRINK ENOUGH TO FEEL PRETTY HIGH",
+    "matched_by": "core question B05 (codebook variable V107)"
+   }
+  },
+  {
+   "name": "V4108",
+   "label": "764B06 :5+DRK ROW/LST 2W",
+   "storage": {
+    "spss_format": "F1.0",
+    "kind": "numeric",
+    "width": 1,
+    "decimals": 0
+   },
+   "value_labels": {
+    "1": "NONE",
+    "2": "ONCE",
+    "3": "TWICE",
+    "4": "3-5 TIMES",
+    "5": "6-9 TIMES",
+    "6": "10 OR MORE"
+   },
+   "declared_missing_values": [
+    0
+   ],
+   "declared_missing_range": [
+    8,
+    "HIGHEST"
+   ],
+   "codebook": {
+    "question_code": "B06",
+    "question_text": "#TIMES HAD 5 OR MORE DRINKS IN A ROW DURING THE LAST TWO WEEKS",
+    "matched_by": "core question B06 (codebook variable V108)"
+   }
+  },
+  {
+   "name": "V4109",
+   "label": "764    :DUMMY VARIABLE",
+   "storage": {
+    "spss_format": "F1.0",
+    "kind": "numeric",
+    "width": 1,
+    "decimals": 0
+   },
+   "value_labels": null,
+   "declared_missing_values": [
+    0
+   ],
+   "declared_missing_range": [
+    9,
+    "HIGHEST"
+   ],
+   "codebook": null
+  },
+  {
+   "name": "V4110",
+   "label": "764    :DUMMY VARIABLE",
+   "storage": {
+    "spss_format": "F1.0",
+    "kind": "numeric",
+    "width": 1,
+    "decimals": 0
+   },
+   "value_labels": null,
+   "declared_missing_values": [
+    0
+   ],
+   "declared_missing_range": [
+    9,
+    "HIGHEST"
+   ],
+   "codebook": null
+  },
+  {
+   "name": "V4111",
+   "label": "764    :DUMMY VARIABLE",
+   "storage": {
+    "spss_format": "F1.0",
+    "kind": "numeric",
+    "width": 1,
+    "decimals": 0
+   },
+   "value_labels": null,
+   "declared_missing_values": [
+    0
+   ],
+   "declared_missing_range": [
+    9,
+    "HIGHEST"
+   ],
+   "codebook": null
+  },
+  {
+   "name": "V4112",
+   "label": "764    :DUMMY VARIABLE",
+   "storage": {
+    "spss_format": "F1.0",
+    "kind": "numeric",
+    "width": 1,
+    "decimals": 0
+   },
+   "value_labels": null,
+   "declared_missing_values": [
+    0
+   ],
+   "declared_missing_range": [
+    9,
+    "HIGHEST"
+   ],
+   "codebook": null
+  },
+  {
+   "name": "V4113",
+   "label": "764    :DUMMY VARIABLE",
+   "storage": {
+    "spss_format": "F1.0",
+    "kind": "numeric",
+    "width": 1,
+    "decimals": 0
+   },
+   "value_labels": null,
+   "declared_missing_values": [
+    0
+   ],
+   "declared_missing_range": [
+    8,
+    "HIGHEST"
+   ],
+   "codebook": null
+  },
+  {
+   "name": "V4114",
+   "label": "764    :DUMMY VARIABLE",
+   "storage": {
+    "spss_format": "F1.0",
+    "kind": "numeric",
+    "width": 1,
+    "decimals": 0
+   },
+   "value_labels": null,
+   "declared_missing_values": [
+    0
+   ],
+   "declared_missing_range": [
+    8,
+    "HIGHEST"
+   ],
+   "codebook": null
+  },
+  {
+   "name": "V4115",
+   "label": "764B07A:#X MARJ/LIFETIME",
+   "storage": {
+    "spss_format": "F1.0",
+    "kind": "numeric",
+    "width": 1,
+    "decimals": 0
+   },
+   "value_labels": {
+    "1": "0 OCCASIONS",
+    "2": "1-2",
+    "3": "3-5",
+    "4": "6-9",
+    "5": "10-19",
+    "6": "20-39",
+    "7": "40 OR MORE"
+   },
+   "declared_missing_values": [
+    0
+   ],
+   "declared_missing_range": [
+    9,
+    "HIGHEST"
+   ],
+   "codebook": {
+    "question_code": "B07A",
+    "question_text": "MARIJUANA/HASHISH-USE IN LIFETIME",
+    "matched_by": "core question B07A (codebook variable V115)"
+   }
+  },
+  {
+   "name": "V4116",
+   "label": "764B07B:#X MARJ/LAST12MO",
+   "storage": {
+    "spss_format": "F1.0",
+    "kind": "numeric",
+    "width": 1,
+    "decimals": 0
+   },
+   "value_labels": {
+    "1": "0 OCCASIONS",
+    "2": "1-2",
+    "3": "3-5",
+    "4": "6-9",
+    "5": "10-19",
+    "6": "20-39",
+    "7": "40 OR MORE"
+   },
+   "declared_missing_values": [
+    0
+   ],
+   "declared_missing_range": [
+    9,
+    "HIGHEST"
+   ],
+   "codebook": {
+    "question_code": "B07B",
+    "question_text": "MARIJUANA/HASHISH-USE DURING LAST 12 MONTHS",
+    "matched_by": "core question B07B (codebook variable V116)"
+   }
+  },
+  {
+   "name": "V4117",
+   "label": "764B07C:#X MARJ/LAST30DA",
+   "storage": {
+    "spss_format": "F1.0",
+    "kind": "numeric",
+    "width": 1,
+    "decimals": 0
+   },
+   "value_labels": {
+    "1": "0 OCCASIONS",
+    "2": "1-2",
+    "3": "3-5",
+    "4": "6-9",
+    "5": "10-19",
+    "6": "20-39",
+    "7": "40 OR MORE"
+   },
+   "declared_missing_values": [
+    0
+   ],
+   "declared_missing_range": [
+    9,
+    "HIGHEST"
+   ],
+   "codebook": {
+    "question_code": "B07C",
+    "question_text": "MARIJUANA/HASHISH-USE DURING LAST 30 DAYS",
+    "matched_by": "core question B07C (codebook variable V117)"
+   }
+  },
+  {
+   "name": "V4118",
+   "label": "764B08A:#X LSD/LIFETIME",
+   "storage": {
+    "spss_format": "F1.0",
+    "kind": "numeric",
+    "width": 1,
+    "decimals": 0
+   },
+   "value_labels": {
+    "1": "0 OCCASIONS",
+    "2": "1-2",
+    "3": "3-5",
+    "4": "6-9",
+    "5": "10-19",
+    "6": "20-39",
+    "7": "40 OR MORE"
+   },
+   "declared_missing_values": [
+    0
+   ],
+   "declared_missing_range": [
+    9,
+    "HIGHEST"
+   ],
+   "codebook": {
+    "question_code": "B08A",
+    "question_text": "LSD-USE DURING LIFETIME",
+    "matched_by": "core question B08A (codebook variable V118)"
+   }
+  },
+  {
+   "name": "V4119",
+   "label": "764B08B:#X LSD/LAST 12MO",
+   "storage": {
+    "spss_format": "F1.0",
+    "kind": "numeric",
+    "width": 1,
+    "decimals": 0
+   },
+   "value_labels": {
+    "1": "0 OCCASIONS",
+    "2": "1-2",
+    "3": "3-5",
+    "4": "6-9",
+    "5": "10-19",
+    "6": "20-39",
+    "7": "40 OR MORE"
+   },
+   "declared_missing_values": [
+    0
+   ],
+   "declared_missing_range": [
+    9,
+    "HIGHEST"
+   ],
+   "codebook": {
+    "question_code": "B08B",
+    "question_text": "LSD-USE DURING LAST 12 MONTHS",
+    "matched_by": "core question B08B (codebook variable V119)"
+   }
+  },
+  {
+   "name": "V4120",
+   "label": "764B08C:#X LSD/LAST 30DA",
+   "storage": {
+    "spss_format": "F1.0",
+    "kind": "numeric",
+    "width": 1,
+    "decimals": 0
+   },
+   "value_labels": {
+    "1": "0 OCCASIONS",
+    "2": "1-2",
+    "3": "3-5",
+    "4": "6-9",
+    "5": "10-19",
+    "6": "20-39",
+    "7": "40 OR MORE"
+   },
+   "declared_missing_values": [
+    0
+   ],
+   "declared_missing_range": [
+    9,
+    "HIGHEST"
+   ],
+   "codebook": {
+    "question_code": "B08C",
+    "question_text": "LSD-USE DURING LAST 30 DAYS",
+    "matched_by": "core question B08C (codebook variable V120)"
+   }
+  },
+  {
+   "name": "V4121",
+   "label": "764B09A:#X PSYD/LIFETIME",
+   "storage": {
+    "spss_format": "F1.0",
+    "kind": "numeric",
+    "width": 1,
+    "decimals": 0
+   },
+   "value_labels": {
+    "1": "0 OCCASIONS",
+    "2": "1-2",
+    "3": "3-5",
+    "4": "6-9",
+    "5": "10-19",
+    "6": "20-39",
+    "7": "40 OR MORE"
+   },
+   "declared_missing_values": [
+    0
+   ],
+   "declared_missing_range": [
+    9,
+    "HIGHEST"
+   ],
+   "codebook": {
+    "question_code": "B09A",
+    "question_text": "OTHER PSYCHEDELICS-USE LIFETIME",
+    "matched_by": "core question B09A (codebook variable V121)"
+   }
+  },
+  {
+   "name": "V4122",
+   "label": "764B09B:#X PSYD/LAST12MO",
+   "storage": {
+    "spss_format": "F1.0",
+    "kind": "numeric",
+    "width": 1,
+    "decimals": 0
+   },
+   "value_labels": {
+    "1": "0 OCCASIONS",
+    "2": "1-2",
+    "3": "3-5",
+    "4": "6-9",
+    "5": "10-19",
+    "6": "20-39",
+    "7": "40 OR MORE"
+   },
+   "declared_missing_values": [
+    0
+   ],
+   "declared_missing_range": [
+    9,
+    "HIGHEST"
+   ],
+   "codebook": {
+    "question_code": "B09B",
+    "question_text": "OTHER PSYCHEDELICS-USE DURING LAST 12 MONTHS",
+    "matched_by": "core question B09B (codebook variable V122)"
+   }
+  },
+  {
+   "name": "V4123",
+   "label": "764B09C:#X PSYD/LAST30DA",
+   "storage": {
+    "spss_format": "F1.0",
+    "kind": "numeric",
+    "width": 1,
+    "decimals": 0
+   },
+   "value_labels": {
+    "1": "0 OCCASIONS",
+    "2": "1-2",
+    "3": "3-5",
+    "4": "6-9",
+    "5": "10-19",
+    "6": "20-39",
+    "7": "40 OR MORE"
+   },
+   "declared_missing_values": [
+    0
+   ],
+   "declared_missing_range": [
+    9,
+    "HIGHEST"
+   ],
+   "codebook": {
+    "question_code": "B09C",
+    "question_text": "OTHER PSYCHEDELICS-USE DURING LAST 30 DAYS",
+    "matched_by": "core question B09C (codebook variable V123)"
+   }
+  },
+  {
+   "name": "V4124",
+   "label": "764B10A:#X COKE/LIFETIME",
+   "storage": {
+    "spss_format": "F1.0",
+    "kind": "numeric",
+    "width": 1,
+    "decimals": 0
+   },
+   "value_labels": {
+    "1": "0 OCCASIONS",
+    "2": "1-2",
+    "3": "3-5",
+    "4": "6-9",
+    "5": "10-19",
+    "6": "20-39",
+    "7": "40 OR MORE"
+   },
+   "declared_missing_values": [
+    0
+   ],
+   "declared_missing_range": [
+    9,
+    "HIGHEST"
+   ],
+   "codebook": {
+    "question_code": "B10A",
+    "question_text": "COCAINE-USE IN LIFETIME",
+    "matched_by": "core question B10A (codebook variable V124)"
+   }
+  },
+  {
+   "name": "V4125",
+   "label": "764B10B:#X COKE/LAST12MO",
+   "storage": {
+    "spss_format": "F1.0",
+    "kind": "numeric",
+    "width": 1,
+    "decimals": 0
+   },
+   "value_labels": {
+    "1": "0 OCCASIONS",
+    "2": "1-2",
+    "3": "3-5",
+    "4": "6-9",
+    "5": "10-19",
+    "6": "20-39",
+    "7": "40 OR MORE"
+   },
+   "declared_missing_values": [
+    0
+   ],
+   "declared_missing_range": [
+    9,
+    "HIGHEST"
+   ],
+   "codebook": {
+    "question_code": "B10B",
+    "question_text": "COCAINE-USE DURING LAST 12 MONTHS",
+    "matched_by": "core question B10B (codebook variable V125)"
+   }
+  },
+  {
+   "name": "V4126",
+   "label": "764B10C:#X COKE/LAST30DA",
+   "storage": {
+    "spss_format": "F1.0",
+    "kind": "numeric",
+    "width": 1,
+    "decimals": 0
+   },
+   "value_labels": {
+    "1": "0 OCCASIONS",
+    "2": "1-2",
+    "3": "3-5",
+    "4": "6-9",
+    "5": "10-19",
+    "6": "20-39",
+    "7": "40 OR MORE"
+   },
+   "declared_missing_values": [
+    0
+   ],
+   "declared_missing_range": [
+    9,
+    "HIGHEST"
+   ],
+   "codebook": {
+    "question_code": "B10C",
+    "question_text": "COCAINE-USE DURING LAST 30 DAYS",
+    "matched_by": "core question B10C (codebook variable V126)"
+   }
+  },
+  {
+   "name": "V4127",
+   "label": "764B11A:#X AMPH/LIFETIME",
+   "storage": {
+    "spss_format": "F1.0",
+    "kind": "numeric",
+    "width": 1,
+    "decimals": 0
+   },
+   "value_labels": {
+    "1": "0 OCCASIONS",
+    "2": "1-2",
+    "3": "3-5",
+    "4": "6-9",
+    "5": "10-19",
+    "6": "20-39",
+    "7": "40 OR MORE"
+   },
+   "declared_missing_values": [
+    0
+   ],
+   "declared_missing_range": [
+    9,
+    "HIGHEST"
+   ],
+   "codebook": {
+    "question_code": "B11A",
+    "question_text": "AMPHETAMINES--USE IN LIFETIME (NOT UNDER DOCTOR'S ORDERS)",
+    "matched_by": "core question B11A (codebook variable V127)"
+   }
+  },
+  {
+   "name": "V4128",
+   "label": "764B11B:#X AMPH/LAST12MO",
+   "storage": {
+    "spss_format": "F1.0",
+    "kind": "numeric",
+    "width": 1,
+    "decimals": 0
+   },
+   "value_labels": {
+    "1": "0 OCCASIONS",
+    "2": "1-2",
+    "3": "3-5",
+    "4": "6-9",
+    "5": "10-19",
+    "6": "20-39",
+    "7": "40 OR MORE"
+   },
+   "declared_missing_values": [
+    0
+   ],
+   "declared_missing_range": [
+    9,
+    "HIGHEST"
+   ],
+   "codebook": {
+    "question_code": "B11B",
+    "question_text": "AMPHETAMINES-USE IN LAST 12 MONTHS (NOT UNDER DOCTOR'S ORDERS)",
+    "matched_by": "core question B11B (codebook variable V128)"
+   }
+  },
+  {
+   "name": "V4129",
+   "label": "764B11C:#X AMPH/LAST30DA",
+   "storage": {
+    "spss_format": "F1.0",
+    "kind": "numeric",
+    "width": 1,
+    "decimals": 0
+   },
+   "value_labels": {
+    "1": "0 OCCASIONS",
+    "2": "1-2",
+    "3": "3-5",
+    "4": "6-9",
+    "5": "10-19",
+    "6": "20-39",
+    "7": "40 OR MORE"
+   },
+   "declared_missing_values": [
+    0
+   ],
+   "declared_missing_range": [
+    9,
+    "HIGHEST"
+   ],
+   "codebook": {
+    "question_code": "B11C",
+    "question_text": "AMPHETAMINES--USE IN LAST 30 DAYS (NOT UNDER DOCTOR'S ORDERS)",
+    "matched_by": "core question B11C (codebook variable V129)"
+   }
+  },
+  {
+   "name": "V4130",
+   "label": "764B12A:#X QUAD/LIFETIME",
+   "storage": {
+    "spss_format": "F1.0",
+    "kind": "numeric",
+    "width": 1,
+    "decimals": 0
+   },
+   "value_labels": {
+    "1": "0 OCCASIONS",
+    "2": "1-2",
+    "3": "3-5",
+    "4": "6-9",
+    "5": "10-19",
+    "6": "20-39",
+    "7": "40 OR MORE"
+   },
+   "declared_missing_values": [
+    0
+   ],
+   "declared_missing_range": [
+    9,
+    "HIGHEST"
+   ],
+   "codebook": {
+    "question_code": "B12A",
+    "question_text": "QUAALUDES--USE IN LIFETIME (NOT UNDER DOCTOR'S ORDERS)",
+    "matched_by": "core question B12A (codebook variable V130)"
+   }
+  },
+  {
+   "name": "V4131",
+   "label": "764B12B:#X QUAD/LAST12MO",
+   "storage": {
+    "spss_format": "F1.0",
+    "kind": "numeric",
+    "width": 1,
+    "decimals": 0
+   },
+   "value_labels": {
+    "1": "0 OCCASIONS",
+    "2": "1-2",
+    "3": "3-5",
+    "4": "6-9",
+    "5": "10-19",
+    "6": "20-39",
+    "7": "40 OR MORE"
+   },
+   "declared_missing_values": [
+    0
+   ],
+   "declared_missing_range": [
+    9,
+    "HIGHEST"
+   ],
+   "codebook": {
+    "question_code": "B12B",
+    "question_text": "QUAALUDES-USE IN LAST 12 MONTHS (NOT UNDER DOCTOR'S ORDER)",
+    "matched_by": "core question B12B (codebook variable V131)"
+   }
+  },
+  {
+   "name": "V4132",
+   "label": "764B12C:#X QUAD/LAST30DA",
+   "storage": {
+    "spss_format": "F1.0",
+    "kind": "numeric",
+    "width": 1,
+    "decimals": 0
+   },
+   "value_labels": {
+    "1": "0 OCCASIONS",
+    "2": "1-2",
+    "3": "3-5",
+    "4": "6-9",
+    "5": "10-19",
+    "6": "20-39",
+    "7": "40 OR MORE"
+   },
+   "declared_missing_values": [
+    0
+   ],
+   "declared_missing_range": [
+    9,
+    "HIGHEST"
+   ],
+   "codebook": {
+    "question_code": "B12C",
+    "question_text": "QUAALUDES-USE IN LAST 30 DAYS (NOT UNDER DOCTOR'S ORDERS)",
+    "matched_by": "core question B12C (codebook variable V132)"
+   }
+  },
+  {
+   "name": "V4133",
+   "label": "764B13A:#X BRBT/LIFETIME",
+   "storage": {
+    "spss_format": "F1.0",
+    "kind": "numeric",
+    "width": 1,
+    "decimals": 0
+   },
+   "value_labels": {
+    "1": "0 OCCASIONS",
+    "2": "1-2",
+    "3": "3-5",
+    "4": "6-9",
+    "5": "10-19",
+    "6": "20-39",
+    "7": "40 OR MORE"
+   },
+   "declared_missing_values": [
+    0
+   ],
+   "declared_missing_range": [
+    9,
+    "HIGHEST"
+   ],
+   "codebook": {
+    "question_code": "B13A",
+    "question_text": "BARBITURATES--USE IN LIFETIME (NOT UNDER DOCTOR'S ORDERS)",
+    "matched_by": "core question B13A (codebook variable V133)"
+   }
+  },
+  {
+   "name": "V4134",
+   "label": "764B13B:#X BRBT/LAST12MO",
+   "storage": {
+    "spss_format": "F1.0",
+    "kind": "numeric",
+    "width": 1,
+    "decimals": 0
+   },
+   "value_labels": {
+    "1": "0 OCCASIONS",
+    "2": "1-2",
+    "3": "3-5",
+    "4": "6-9",
+    "5": "10-19",
+    "6": "20-39",
+    "7": "40 OR MORE"
+   },
+   "declared_missing_values": [
+    0
+   ],
+   "declared_missing_range": [
+    9,
+    "HIGHEST"
+   ],
+   "codebook": {
+    "question_code": "B13B",
+    "question_text": "BARBITURATES-USE IN LAST 12 MONTHS (NOT UNDER DOCTOR'S ORDERS)",
+    "matched_by": "core question B13B (codebook variable V134)"
+   }
+  },
+  {
+   "name": "V4135",
+   "label": "764B13C:#X BRBT/LAST30DA",
+   "storage": {
+    "spss_format": "F1.0",
+    "kind": "numeric",
+    "width": 1,
+    "decimals": 0
+   },
+   "value_labels": {
+    "1": "0 OCCASIONS",
+    "2": "1-2",
+    "3": "3-5",
+    "4": "6-9",
+    "5": "10-19",
+    "6": "20-39",
+    "7": "40 OR MORE"
+   },
+   "declared_missing_values": [
+    0
+   ],
+   "declared_missing_range": [
+    9,
+    "HIGHEST"
+   ],
+   "codebook": {
+    "question_code": "B13C",
+    "question_text": "BARBITURATES-USE IN LAST 30 DAYS (NOT UNDER DOCTOR'S ORDERS)",
+    "matched_by": "core question B13C (codebook variable V135)"
+   }
+  },
+  {
+   "name": "V4136",
+   "label": "764B14A:#X TRQL/LIFETIME",
+   "storage": {
+    "spss_format": "F1.0",
+    "kind": "numeric",
+    "width": 1,
+    "decimals": 0
+   },
+   "value_labels": {
+    "1": "0 OCCASIONS",
+    "2": "1-2",
+    "3": "3-5",
+    "4": "6-9",
+    "5": "10-19",
+    "6": "20-39",
+    "7": "40 OR MORE"
+   },
+   "declared_missing_values": [
+    0
+   ],
+   "declared_missing_range": [
+    9,
+    "HIGHEST"
+   ],
+   "codebook": {
+    "question_code": "B14A",
+    "question_text": "TRANQUILIZERS--USE IN LIFETIME (NOT UNDER DOCTOR'S ORDERS)",
+    "matched_by": "core question B14A (codebook variable V136)"
+   }
+  },
+  {
+   "name": "V4137",
+   "label": "764B14B:#X TRQL/LAST12MO",
+   "storage": {
+    "spss_format": "F1.0",
+    "kind": "numeric",
+    "width": 1,
+    "decimals": 0
+   },
+   "value_labels": {
+    "1": "0 OCCASIONS",
+    "2": "1-2",
+    "3": "3-5",
+    "4": "6-9",
+    "5": "10-19",
+    "6": "20-39",
+    "7": "40 OR MORE"
+   },
+   "declared_missing_values": [
+    0
+   ],
+   "declared_missing_range": [
+    9,
+    "HIGHEST"
+   ],
+   "codebook": {
+    "question_code": "B14B",
+    "question_text": "TRANQUILIZERS-USE LAST 12 MONTHS (NOT UNDER DOCTOR'S ORDERS)",
+    "matched_by": "core question B14B (codebook variable V137)"
+   }
+  },
+  {
+   "name": "V4138",
+   "label": "764B14C:#X TRQL/LAST30DA",
+   "storage": {
+    "spss_format": "F1.0",
+    "kind": "numeric",
+    "width": 1,
+    "decimals": 0
+   },
+   "value_labels": {
+    "1": "0 OCCASIONS",
+    "2": "1-2",
+    "3": "3-5",
+    "4": "6-9",
+    "5": "10-19",
+    "6": "20-39",
+    "7": "40 OR MORE"
+   },
+   "declared_missing_values": [
+    0
+   ],
+   "declared_missing_range": [
+    9,
+    "HIGHEST"
+   ],
+   "codebook": {
+    "question_code": "B14C",
+    "question_text": "TRANQUILIZERS--USE IN LAST 30 DAYS (NOT UNDER DOCTOR'S ORDERS)",
+    "matched_by": "core question B14C (codebook variable V138)"
+   }
+  },
+  {
+   "name": "V4139",
+   "label": "764B15A:#X 'H'/LIFETIME",
+   "storage": {
+    "spss_format": "F1.0",
+    "kind": "numeric",
+    "width": 1,
+    "decimals": 0
+   },
+   "value_labels": {
+    "1": "0 OCCASIONS",
+    "2": "1-2",
+    "3": "3-5",
+    "4": "6-9",
+    "5": "10-19",
+    "6": "20-39",
+    "7": "40 OR MORE"
+   },
+   "declared_missing_values": [
+    0
+   ],
+   "declared_missing_range": [
+    9,
+    "HIGHEST"
+   ],
+   "codebook": {
+    "question_code": "B15A",
+    "question_text": "HEROIN-USE IN LIFETIME",
+    "matched_by": "core question B15A (codebook variable V139)"
+   }
+  },
+  {
+   "name": "V4140",
+   "label": "764B15B:#X 'H'/LAST 12MO",
+   "storage": {
+    "spss_format": "F1.0",
+    "kind": "numeric",
+    "width": 1,
+    "decimals": 0
+   },
+   "value_labels": {
+    "1": "0 OCCASIONS",
+    "2": "1-2",
+    "3": "3-5",
+    "4": "6-9",
+    "5": "10-19",
+    "6": "20-39",
+    "7": "40 OR MORE"
+   },
+   "declared_missing_values": [
+    0
+   ],
+   "declared_missing_range": [
+    9,
+    "HIGHEST"
+   ],
+   "codebook": {
+    "question_code": "B15B",
+    "question_text": "HEROIN-USE DURING LAST 12 MONTHS",
+    "matched_by": "core question B15B (codebook variable V140)"
+   }
+  },
+  {
+   "name": "V4141",
+   "label": "764B15C:#X 'H'/LAST 30DA",
+   "storage": {
+    "spss_format": "F1.0",
+    "kind": "numeric",
+    "width": 1,
+    "decimals": 0
+   },
+   "value_labels": {
+    "1": "0 OCCASIONS",
+    "2": "1-2",
+    "3": "3-5",
+    "4": "6-9",
+    "5": "10-19",
+    "6": "20-39",
+    "7": "40 OR MORE"
+   },
+   "declared_missing_values": [
+    0
+   ],
+   "declared_missing_range": [
+    9,
+    "HIGHEST"
+   ],
+   "codebook": {
+    "question_code": "B15C",
+    "question_text": "HEROIN-USE DURING LAST 30 DAYS",
+    "matched_by": "core question B15C (codebook variable V141)"
+   }
+  },
+  {
+   "name": "V4142",
+   "label": "764B16A:#X NARC/LIFETIME",
+   "storage": {
+    "spss_format": "F1.0",
+    "kind": "numeric",
+    "width": 1,
+    "decimals": 0
+   },
+   "value_labels": {
+    "1": "0 OCCASIONS",
+    "2": "1-2",
+    "3": "3-5",
+    "4": "6-9",
+    "5": "10-19",
+    "6": "20-39",
+    "7": "40 OR MORE"
+   },
+   "declared_missing_values": [
+    0
+   ],
+   "declared_missing_range": [
+    9,
+    "HIGHEST"
+   ],
+   "codebook": {
+    "question_code": "B16A",
+    "question_text": "OTHER NARCOTICS-- USE IN LIFETIME (NOT UNDER DOCTOR'S ORDERS)",
+    "matched_by": "core question B16A (codebook variable V142)"
+   }
+  },
+  {
+   "name": "V4143",
+   "label": "764B16B:#X NARC/LAST12MO",
+   "storage": {
+    "spss_format": "F1.0",
+    "kind": "numeric",
+    "width": 1,
+    "decimals": 0
+   },
+   "value_labels": {
+    "1": "0 OCCASIONS",
+    "2": "1-2",
+    "3": "3-5",
+    "4": "6-9",
+    "5": "10-19",
+    "6": "20-39",
+    "7": "40 OR MORE"
+   },
+   "declared_missing_values": [
+    0
+   ],
+   "declared_missing_range": [
+    9,
+    "HIGHEST"
+   ],
+   "codebook": {
+    "question_code": "B16B",
+    "question_text": "OTHER NARCOTICS-USE LAST 12 MOS. (NOT UNDER DOCTOR'S ORDERS)",
+    "matched_by": "core question B16B (codebook variable V143)"
+   }
+  },
+  {
+   "name": "V4144",
+   "label": "764B16C:#X NARC/LAST30DA",
+   "storage": {
+    "spss_format": "F1.0",
+    "kind": "numeric",
+    "width": 1,
+    "decimals": 0
+   },
+   "value_labels": {
+    "1": "0 OCCASIONS",
+    "2": "1-2",
+    "3": "3-5",
+    "4": "6-9",
+    "5": "10-19",
+    "6": "20-39",
+    "7": "40 OR MORE"
+   },
+   "declared_missing_values": [
+    0
+   ],
+   "declared_missing_range": [
+    9,
+    "HIGHEST"
+   ],
+   "codebook": {
+    "question_code": "B16C",
+    "question_text": "OTHER NARCOTICS-USE LAST 30 DAYS (NOT UNDER DOCTOR'S ORDERS)",
+    "matched_by": "core question B16C (codebook variable V144)"
+   }
+  },
+  {
+   "name": "V4145",
+   "label": "764B17A:#X INHL/LIFETIME",
+   "storage": {
+    "spss_format": "F1.0",
+    "kind": "numeric",
+    "width": 1,
+    "decimals": 0
+   },
+   "value_labels": {
+    "1": "0 OCCASIONS",
+    "2": "1-2",
+    "3": "3-5",
+    "4": "6-9",
+    "5": "10-19",
+    "6": "20-39",
+    "7": "40 OR MORE"
+   },
+   "declared_missing_values": [
+    0
+   ],
+   "declared_missing_range": [
+    9,
+    "HIGHEST"
+   ],
+   "codebook": {
+    "question_code": "B17A",
+    "question_text": "INHALANTS-USE IN LIFETIME",
+    "matched_by": "core question B17A (codebook variable V145)"
+   }
+  },
+  {
+   "name": "V4146",
+   "label": "764B17B:#X INHL/LAST12MO",
+   "storage": {
+    "spss_format": "F1.0",
+    "kind": "numeric",
+    "width": 1,
+    "decimals": 0
+   },
+   "value_labels": {
+    "1": "0 OCCASIONS",
+    "2": "1-2",
+    "3": "3-5",
+    "4": "6-9",
+    "5": "10-19",
+    "6": "20-39",
+    "7": "40 OR MORE"
+   },
+   "declared_missing_values": [
+    0
+   ],
+   "declared_missing_range": [
+    9,
+    "HIGHEST"
+   ],
+   "codebook": {
+    "question_code": "B17B",
+    "question_text": "INHALANTS-USE IN LAST 12 MONTHS",
+    "matched_by": "core question B17B (codebook variable V146)"
+   }
+  },
+  {
+   "name": "V4147",
+   "label": "764B17C:#X INHL/LAST30DA",
+   "storage": {
+    "spss_format": "F1.0",
+    "kind": "numeric",
+    "width": 1,
+    "decimals": 0
+   },
+   "value_labels": {
+    "1": "0 OCCASIONS",
+    "2": "1-2",
+    "3": "3-5",
+    "4": "6-9",
+    "5": "10-19",
+    "6": "20-39",
+    "7": "40 OR MORE"
+   },
+   "declared_missing_values": [
+    0
+   ],
+   "declared_missing_range": [
+    9,
+    "HIGHEST"
+   ],
+   "codebook": {
+    "question_code": "B17C",
+    "question_text": "INHALANTS-USE LAST 30 DAYS",
+    "matched_by": "core question B17C (codebook variable V147)"
+   }
+  },
+  {
+   "name": "V4148",
+   "label": "764C01 :R'S BIRTH YEAR",
+   "storage": {
+    "spss_format": "F1.0",
+    "kind": "numeric",
+    "width": 1,
+    "decimals": 0
+   },
+   "value_labels": {
+    "1": "BEFORE '56",
+    "2": "1956",
+    "3": "1957",
+    "4": "1958",
+    "5": "1959",
+    "6": "1960",
+    "7": "1961",
+    "8": "AFTER 1961"
+   },
+   "declared_missing_values": [
+    0
+   ],
+   "declared_missing_range": [
+    9,
+    "HIGHEST"
+   ],
+   "codebook": {
+    "question_code": "C01",
+    "question_text": "IN WHAT YEAR WERE YOU BORN?",
+    "matched_by": "core question C01 (codebook variable V148)"
+   }
+  },
+  {
+   "name": "V4150",
+   "label": "764C03 :R'S SEX",
+   "storage": {
+    "spss_format": "F1.0",
+    "kind": "numeric",
+    "width": 1,
+    "decimals": 0
+   },
+   "value_labels": {
+    "1": "MALE",
+    "2": "FEMALE"
+   },
+   "declared_missing_values": [
+    0
+   ],
+   "declared_missing_range": [
+    9,
+    "HIGHEST"
+   ],
+   "codebook": {
+    "question_code": "C03",
+    "question_text": "WHAT IS YOUR SEX?",
+    "matched_by": "core question C03 (codebook variable V150)"
+   }
+  },
+  {
+   "name": "V4151",
+   "label": "764C04 :R'S RACE",
+   "storage": {
+    "spss_format": "F1.0",
+    "kind": "numeric",
+    "width": 1,
+    "decimals": 0
+   },
+   "value_labels": {
+    "0": "WHITE OR CAUCASIAN",
+    "1": "NON-WHITE"
+   },
+   "declared_missing_values": [
+    9
+   ],
+   "declared_missing_range": [
+    9,
+    "HIGHEST"
+   ],
+   "codebook": {
+    "question_code": "C04",
+    "question_text": "HOW DO YOU DESCRIBE YOURSELF?",
+    "matched_by": "core question C04 (codebook variable V151)"
+   }
+  },
+  {
+   "name": "V4152",
+   "label": "764C05 :R SPD >TIM R-URB",
+   "storage": {
+    "spss_format": "F1.0",
+    "kind": "numeric",
+    "width": 1,
+    "decimals": 0
+   },
+   "value_labels": {
+    "1": "ON A FARM",
+    "2": "IN THE COUNTRY, NOT ON A FARM",
+    "3": "IN A SMALL CITY OR TOWN (UNDER 50,000 PEOPLE)",
+    "4": "IN A MEDIUM-SIZED CITY (50,000 - 100,000)",
+    "5": "IN A SUBURB OF A MEDIUM-SIZED CITY",
+    "6": "IN A LARGE CITY (100,000 - 500,000)",
+    "7": "IN A SUBURB OF A LARGE CITY",
+    "8": "IN A VERY LARGE CITY (OVER 500,000)",
+    "9": "IN A SUBURB OF A VERY LARGE CITY"
+   },
+   "declared_missing_values": [
+    0
+   ],
+   "declared_missing_range": null,
+   "codebook": {
+    "question_code": "C05",
+    "question_text": "WHERE DID YOU GROW UP MOSTLY?",
+    "matched_by": "core question C05 (codebook variable V152)"
+   }
+  },
+  {
+   "name": "V4153",
+   "label": "764C06 :R NOT MARRIED",
+   "storage": {
+    "spss_format": "F1.0",
+    "kind": "numeric",
+    "width": 1,
+    "decimals": 0
+   },
+   "value_labels": {
+    "1": "MARRIED",
+    "2": "ENGAGED",
+    "3": "SEPARATED/DIVORCED",
+    "4": "SINGLE"
+   },
+   "declared_missing_values": [
+    0
+   ],
+   "declared_missing_range": [
+    9,
+    "HIGHEST"
+   ],
+   "codebook": {
+    "question_code": "C06",
+    "question_text": "WHAT IS YOUR PRESENT MARITAL STATUS?",
+    "matched_by": "core question C06 (codebook variable V153)"
+   }
+  },
+  {
+   "name": "V4154",
+   "label": "764C07A:R'S HSHLD ALONE",
+   "storage": {
+    "spss_format": "F1.0",
+    "kind": "numeric",
+    "width": 1,
+    "decimals": 0
+   },
+   "value_labels": {
+    "0": "NO",
+    "1": "YES"
+   },
+   "declared_missing_values": null,
+   "declared_missing_range": [
+    8,
+    "HIGHEST"
+   ],
+   "codebook": null
+  },
+  {
+   "name": "V4155",
+   "label": "764C07B:R'S HSHLD FATHER",
+   "storage": {
+    "spss_format": "F1.0",
+    "kind": "numeric",
+    "width": 1,
+    "decimals": 0
+   },
+   "value_labels": {
+    "0": "NO",
+    "1": "YES"
+   },
+   "declared_missing_values": null,
+   "declared_missing_range": [
+    8,
+    "HIGHEST"
+   ],
+   "codebook": null
+  },
+  {
+   "name": "V4156",
+   "label": "764C07C:R'S HSHLD MOTHER",
+   "storage": {
+    "spss_format": "F1.0",
+    "kind": "numeric",
+    "width": 1,
+    "decimals": 0
+   },
+   "value_labels": {
+    "0": "NO",
+    "1": "YES"
+   },
+   "declared_missing_values": null,
+   "declared_missing_range": [
+    8,
+    "HIGHEST"
+   ],
+   "codebook": null
+  },
+  {
+   "name": "V4157",
+   "label": "764C07D:R'S HSHLD BR/SR",
+   "storage": {
+    "spss_format": "F1.0",
+    "kind": "numeric",
+    "width": 1,
+    "decimals": 0
+   },
+   "value_labels": {
+    "0": "NO",
+    "1": "YES"
+   },
+   "declared_missing_values": null,
+   "declared_missing_range": [
+    8,
+    "HIGHEST"
+   ],
+   "codebook": null
+  },
+  {
+   "name": "V4158",
+   "label": "764C07E:R'S HSHLD GRPRNT",
+   "storage": {
+    "spss_format": "F1.0",
+    "kind": "numeric",
+    "width": 1,
+    "decimals": 0
+   },
+   "value_labels": {
+    "0": "NO",
+    "1": "YES"
+   },
+   "declared_missing_values": null,
+   "declared_missing_range": [
+    8,
+    "HIGHEST"
+   ],
+   "codebook": null
+  },
+  {
+   "name": "V4159",
+   "label": "764C07F:R'S HSHLD SPOUSE",
+   "storage": {
+    "spss_format": "F1.0",
+    "kind": "numeric",
+    "width": 1,
+    "decimals": 0
+   },
+   "value_labels": {
+    "0": "NO",
+    "1": "YES"
+   },
+   "declared_missing_values": null,
+   "declared_missing_range": [
+    8,
+    "HIGHEST"
+   ],
+   "codebook": null
+  },
+  {
+   "name": "V4160",
+   "label": "764C07G:R'S HSHLD CHLDRN",
+   "storage": {
+    "spss_format": "F1.0",
+    "kind": "numeric",
+    "width": 1,
+    "decimals": 0
+   },
+   "value_labels": {
+    "0": "NO",
+    "1": "YES"
+   },
+   "declared_missing_values": null,
+   "declared_missing_range": [
+    8,
+    "HIGHEST"
+   ],
+   "codebook": null
+  },
+  {
+   "name": "V4161",
+   "label": "764C07H:R'S HSHLD RELTVS",
+   "storage": {
+    "spss_format": "F1.0",
+    "kind": "numeric",
+    "width": 1,
+    "decimals": 0
+   },
+   "value_labels": {
+    "0": "NO",
+    "1": "YES"
+   },
+   "declared_missing_values": null,
+   "declared_missing_range": [
+    8,
+    "HIGHEST"
+   ],
+   "codebook": null
+  },
+  {
+   "name": "V4162",
+   "label": "764C07I:R'S HSHLD NONRLT",
+   "storage": {
+    "spss_format": "F1.0",
+    "kind": "numeric",
+    "width": 1,
+    "decimals": 0
+   },
+   "value_labels": {
+    "0": "NO",
+    "1": "YES"
+   },
+   "declared_missing_values": null,
+   "declared_missing_range": [
+    8,
+    "HIGHEST"
+   ],
+   "codebook": null
+  },
+  {
+   "name": "V4163",
+   "label": "764C08 :FATHR EDUC LEVEL",
+   "storage": {
+    "spss_format": "F1.0",
+    "kind": "numeric",
+    "width": 1,
+    "decimals": 0
+   },
+   "value_labels": {
+    "1": "COMPLETED GRADE SCHOOL OR LESS",
+    "2": "SOME HIGH SCHOOL",
+    "3": "COMPLETED HIGH SCHOOL",
+    "4": "SOME COLLEGE",
+    "5": "COMPLETED COLLEGE",
+    "6": "GRADUATE OR PROFESSIONAL SCHOOL AFTER COLLEGE",
+    "7": "DON'T KNOW, OR DOES NOT APPLY"
+   },
+   "declared_missing_values": [
+    0
+   ],
+   "declared_missing_range": [
+    7,
+    "HIGHEST"
+   ],
+   "codebook": {
+    "question_code": "C08",
+    "question_text": "FATHER'S HIGHEST LEVEL OF SCHOOL- ING COMPLETED",
+    "matched_by": "core question C08 (codebook variable V163)"
+   }
+  },
+  {
+   "name": "V4164",
+   "label": "764C09 :MOTHR EDUC LEVEL",
+   "storage": {
+    "spss_format": "F1.0",
+    "kind": "numeric",
+    "width": 1,
+    "decimals": 0
+   },
+   "value_labels": {
+    "1": "COMPLETED GRADE SCHOOL OR LESS",
+    "2": "SOME HIGH SCHOOL",
+    "3": "COMPLETED HIGH SCHOOL",
+    "4": "SOME COLLEGE",
+    "5": "COMPLETED COLLEGE",
+    "6": "GRADUATE OR PROFESSIONAL SCHOOL AFTER COLLEGE",
+    "7": "DON'T KNOW, OR DOES NOT APPLY"
+   },
+   "declared_missing_values": [
+    0
+   ],
+   "declared_missing_range": [
+    7,
+    "HIGHEST"
+   ],
+   "codebook": {
+    "question_code": "C09",
+    "question_text": "MOTHER'S HIGHEST LEVEL OF SCHOOL- ING COMPLETED",
+    "matched_by": "core question C09 (codebook variable V164)"
+   }
+  },
+  {
+   "name": "V4165",
+   "label": "764C10 :MOTH PD JB R YNG",
+   "storage": {
+    "spss_format": "F1.0",
+    "kind": "numeric",
+    "width": 1,
+    "decimals": 0
+   },
+   "value_labels": {
+    "1": "NO",
+    "2": "YES, SOME OF THE TIME WHEN I WAS GROWING UP",
+    "3": "YES, MOST OF THE TIME",
+    "4": "YES, ALL OR NEARLY ALL OF THE TIME"
+   },
+   "declared_missing_values": [
+    0
+   ],
+   "declared_missing_range": [
+    9,
+    "HIGHEST"
+   ],
+   "codebook": {
+    "question_code": "C10",
+    "question_text": "DID YOUR MOTHER HAVE A PAID JOB (1/2 TIME OR MORE) DURING THE TIME YOU WERE GROWING UP?",
+    "matched_by": "core question C10 (codebook variable V165)"
+   }
+  },
+  {
+   "name": "V4166",
+   "label": "764C11 :R'S POLTL PRFNC",
+   "storage": {
+    "spss_format": "F1.0",
+    "kind": "numeric",
+    "width": 1,
+    "decimals": 0
+   },
+   "value_labels": {
+    "1": "STRONGLY REPUBLICAN",
+    "2": "MILDLY REPUBLICAN",
+    "3": "MILDLY DEMOCRAT",
+    "4": "STRONGLY DEMOCRAT",
+    "5": "AMERICAN INDEPENDENT PARTY",
+    "6": "NO PREFERENCE, INDEPENDENT",
+    "7": "OTHER",
+    "8": "DON'T KNOW, HAVEN'T DECIDED"
+   },
+   "declared_missing_values": [
+    0
+   ],
+   "declared_missing_range": [
+    8,
+    "HIGHEST"
+   ],
+   "codebook": {
+    "question_code": "C11",
+    "question_text": "HOW WOULD YOU DESCRIBE YOUR POLITICAL PREFERENCE?",
+    "matched_by": "core question C11 (codebook variable V166)"
+   }
+  },
+  {
+   "name": "V4167",
+   "label": "764C12 :R'POL BLF RADCL",
+   "storage": {
+    "spss_format": "F1.0",
+    "kind": "numeric",
+    "width": 1,
+    "decimals": 0
+   },
+   "value_labels": {
+    "1": "VERY CONSERVATIVE",
+    "2": "CONSERVATIVE",
+    "3": "MODERATE",
+    "4": "LIBERAL",
+    "5": "VERY LIBERAL",
+    "6": "RADICAL",
+    "8": "NONE OF THE ABOVE, OR DON'T KNOW"
+   },
+   "declared_missing_values": [
+    0
+   ],
+   "declared_missing_range": [
+    8,
+    "HIGHEST"
+   ],
+   "codebook": {
+    "question_code": "C12",
+    "question_text": "HOW WOULD YOU DESCRIBE YOUR POLITICAL BELIEFS?",
+    "matched_by": "core question C12 (codebook variable V167)"
+   }
+  },
+  {
+   "name": "V4168",
+   "label": "764C13A:R'S RELGS PRFNC",
+   "storage": {
+    "spss_format": "F2.0",
+    "kind": "numeric",
+    "width": 2,
+    "decimals": 0
+   },
+   "value_labels": {
+    "1": "BAPTIST",
+    "2": "CHURCHES OF CHRIST",
+    "3": "DISCIPLES OF CHRIST",
+    "4": "EPISCOPAL",
+    "5": "LUTHERAN",
+    "6": "METHODIST",
+    "7": "PRESBYTERIAN",
+    "8": "UNITED CHURCH OF CHRIST",
+    "9": "OTHER PROTESTANT",
+    "10": "UNITARIAN",
+    "11": "ROMAN CATHOLIC",
+    "12": "EASTERN ORTHODOX",
+    "13": "JEWISH",
+    "14": "OTHER RELIGION",
+    "15": "NONE"
+   },
+   "declared_missing_values": [
+    0
+   ],
+   "declared_missing_range": [
+    99,
+    "HIGHEST"
+   ],
+   "codebook": {
+    "question_code": "C13A",
+    "question_text": "WHAT IS YOUR RELIGIOUS PREFERENCE",
+    "matched_by": "core question C13A (codebook variable V168)"
+   }
+  },
+  {
+   "name": "V4169",
+   "label": "764C13B:R'ATTND REL SVC",
+   "storage": {
+    "spss_format": "F1.0",
+    "kind": "numeric",
+    "width": 1,
+    "decimals": 0
+   },
+   "value_labels": {
+    "1": "NEVER",
+    "2": "RARELY",
+    "3": "ONCE OR TWICE A MONTH",
+    "4": "ABOUT ONCE A WEEK OR MORE"
+   },
+   "declared_missing_values": [
+    0
+   ],
+   "declared_missing_range": [
+    9,
+    "HIGHEST"
+   ],
+   "codebook": {
+    "question_code": "C13B",
+    "question_text": "HOW OFTEN DO YOU ATTEND RELIGIOUS SERVICES?",
+    "matched_by": "core question C13B (codebook variable V169)"
+   }
+  },
+  {
+   "name": "V4170",
+   "label": "764C13C:RLGN IMP R'S LF",
+   "storage": {
+    "spss_format": "F1.0",
+    "kind": "numeric",
+    "width": 1,
+    "decimals": 0
+   },
+   "value_labels": {
+    "1": "NOT IMPORTANT",
+    "2": "A LITTLE IMPORTANT",
+    "3": "PRETTY IMPORTANT",
+    "4": "VERY IMPORTANT"
+   },
+   "declared_missing_values": [
+    0
+   ],
+   "declared_missing_range": [
+    9,
+    "HIGHEST"
+   ],
+   "codebook": {
+    "question_code": "C13C",
+    "question_text": "HOW IMPORTANT IS RELIGION IN YOUR LIFE?",
+    "matched_by": "core question C13C (codebook variable V170)"
+   }
+  },
+  {
+   "name": "V4171",
+   "label": "764C14 :WHEN R XPCT GRAD",
+   "storage": {
+    "spss_format": "F1.0",
+    "kind": "numeric",
+    "width": 1,
+    "decimals": 0
+   },
+   "value_labels": {
+    "1": "BY THIS JUNE",
+    "2": "JULY TO JANUARY",
+    "3": "AFTER NEXT JANUARY",
+    "6": "DON'T EXPECT TO GRADUATE"
+   },
+   "declared_missing_values": [
+    0
+   ],
+   "declared_missing_range": [
+    9,
+    "HIGHEST"
+   ],
+   "codebook": {
+    "question_code": "C14",
+    "question_text": "WHEN ARE YOU MOST LIKELY TO GRADUATE FROM HIGH SCHOOL?",
+    "matched_by": "core question C14 (codebook variable V171)"
+   }
+  },
+  {
+   "name": "V4172",
+   "label": "764C15 :R'S HS PROGRAM",
+   "storage": {
+    "spss_format": "F1.0",
+    "kind": "numeric",
+    "width": 1,
+    "decimals": 0
+   },
+   "value_labels": {
+    "1": "ACADEMIC OR COLLEGE PREP",
+    "2": "GENERAL",
+    "3": "VOCATION, TECHNICAL, OR COMMERCIAL",
+    "4": "OTHER, OR DON'T KNOW"
+   },
+   "declared_missing_values": [
+    0
+   ],
+   "declared_missing_range": [
+    9,
+    "HIGHEST"
+   ],
+   "codebook": {
+    "question_code": "C15",
+    "question_text": "WHAT IS YOUR PRESENT H.S. PROGRAM",
+    "matched_by": "core question C15 (codebook variable V172)"
+   }
+  },
+  {
+   "name": "V4173",
+   "label": "764C16 :RT SF SCH AB>AVG",
+   "storage": {
+    "spss_format": "F1.0",
+    "kind": "numeric",
+    "width": 1,
+    "decimals": 0
+   },
+   "value_labels": {
+    "1": "FAR BELOW AVERAGE",
+    "2": "BELOW AVERAGE",
+    "3": "SLIGHTLY BELOW AVERAGE",
+    "4": "AVERAGE",
+    "5": "SLIGHTLY ABOVE AVERAGE",
+    "6": "ABOVE AVERAGE",
+    "7": "FAR ABOVE AVERAGE"
+   },
+   "declared_missing_values": [
+    0
+   ],
+   "declared_missing_range": [
+    9,
+    "HIGHEST"
+   ],
+   "codebook": {
+    "question_code": "C16",
+    "question_text": "SELF-RATING OF SCHOOL ABILITY COMPARED TO OTHERS OF OWN AGE",
+    "matched_by": "core question C16 (codebook variable V173)"
+   }
+  },
+  {
+   "name": "V4174",
+   "label": "764C17 :RT SF INTELL>AVG",
+   "storage": {
+    "spss_format": "F1.0",
+    "kind": "numeric",
+    "width": 1,
+    "decimals": 0
+   },
+   "value_labels": {
+    "1": "FAR BELOW AVERAGE",
+    "2": "BELOW AVERAGE",
+    "3": "SLIGHTLY BELOW AVERAGE",
+    "4": "AVERAGE",
+    "5": "SLIGHTLY ABOVE AVERAGE",
+    "6": "ABOVE AVERAGE",
+    "7": "FAR ABOVE AVERAGE"
+   },
+   "declared_missing_values": [
+    0
+   ],
+   "declared_missing_range": [
+    9,
+    "HIGHEST"
+   ],
+   "codebook": {
+    "question_code": "C17",
+    "question_text": "SELF-RATING OF INTELLIGENCE COMPARED TO OTHERS OF OWN AGE",
+    "matched_by": "core question C17 (codebook variable V174)"
+   }
+  },
+  {
+   "name": "V4175",
+   "label": "764C18A:#DA/4W SC MS ILL",
+   "storage": {
+    "spss_format": "F1.0",
+    "kind": "numeric",
+    "width": 1,
+    "decimals": 0
+   },
+   "value_labels": {
+    "1": "NONE",
+    "2": "1 DAY",
+    "3": "2 DAYS",
+    "4": "3 DAYS",
+    "5": "4-5 DAYS",
+    "6": "6-10 DAYS",
+    "7": "11 OR MORE"
+   },
+   "declared_missing_values": [
+    0
+   ],
+   "declared_missing_range": [
+    9,
+    "HIGHEST"
+   ],
+   "codebook": {
+    "question_code": "C18A",
+    "question_stem": "# OF WHOLE SCHOOL DAYS YOU MISSED DURING LAST FOUR WEEKS ...",
+    "question_text": "BECAUSE OF ILLNESS",
+    "matched_by": "core question C18A (codebook variable V175)"
+   }
+  },
+  {
+   "name": "V4176",
+   "label": "764C18B:#DA/4W SC MS CUT",
+   "storage": {
+    "spss_format": "F1.0",
+    "kind": "numeric",
+    "width": 1,
+    "decimals": 0
+   },
+   "value_labels": {
+    "1": "NONE",
+    "2": "1 DAY",
+    "3": "2 DAYS",
+    "4": "3 DAYS",
+    "5": "4-5 DAYS",
+    "6": "6-10 DAYS",
+    "7": "11 OR MORE"
+   },
+   "declared_missing_values": [
+    0
+   ],
+   "declared_missing_range": [
+    9,
+    "HIGHEST"
+   ],
+   "codebook": {
+    "question_code": "C18B",
+    "question_stem": "# OF WHOLE SCHOOL DAYS YOU MISSED DURING LAST FOUR WEEKS ...",
+    "question_text": "BECAUSE YOU SKIPPED OR \"CUT\"",
+    "matched_by": "core question C18B (codebook variable V176)"
+   }
+  },
+  {
+   "name": "V4177",
+   "label": "764C18C:#DA/4W SC MS OTH",
+   "storage": {
+    "spss_format": "F1.0",
+    "kind": "numeric",
+    "width": 1,
+    "decimals": 0
+   },
+   "value_labels": {
+    "1": "NONE",
+    "2": "1 DAY",
+    "3": "2 DAYS",
+    "4": "3 DAYS",
+    "5": "4-5 DAYS",
+    "6": "6-10 DAYS",
+    "7": "11 OR MORE"
+   },
+   "declared_missing_values": [
+    0
+   ],
+   "declared_missing_range": [
+    9,
+    "HIGHEST"
+   ],
+   "codebook": {
+    "question_code": "C18C",
+    "question_stem": "# OF WHOLE SCHOOL DAYS YOU MISSED DURING LAST FOUR WEEKS ...",
+    "question_text": "FOR OTHER REASONS",
+    "matched_by": "core question C18C (codebook variable V177)"
+   }
+  },
+  {
+   "name": "V4178",
+   "label": "764C19 :#DA/4W SKP CLASS",
+   "storage": {
+    "spss_format": "F1.0",
+    "kind": "numeric",
+    "width": 1,
+    "decimals": 0
+   },
+   "value_labels": {
+    "1": "NOT AT ALL",
+    "2": "1 OR 2 TIMES",
+    "3": "3-5 TIMES",
+    "4": "6-10 TIMES",
+    "5": "11-20 TIMES",
+    "6": "MORE THAN 20 TIMES"
+   },
+   "declared_missing_values": [
+    0
+   ],
+   "declared_missing_range": [
+    9,
+    "HIGHEST"
+   ],
+   "codebook": {
+    "question_code": "C19",
+    "question_text": "DURING THE LAST 4 WEEKS, HOW OFTEN HAVE YOU GONE TO SCHOOL, BUT SKIPPED A CLASS WHEN YOU WEREN'T SUPPOSED TO?",
+    "matched_by": "core question C19 (codebook variable V178)"
+   }
+  },
+  {
+   "name": "V4179",
+   "label": "764C20 :R HS GRADE/D=1",
+   "storage": {
+    "spss_format": "F1.0",
+    "kind": "numeric",
+    "width": 1,
+    "decimals": 0
+   },
+   "value_labels": {
+    "1": "D (69 OR BELOW)",
+    "2": "C- (70-72)",
+    "3": "C (73-76)",
+    "4": "C+ (77-79)",
+    "5": "B- (80-82)",
+    "6": "B (83-86)",
+    "7": "B+ (87-89)",
+    "8": "A- (90-92)",
+    "9": "A (93-100)"
+   },
+   "declared_missing_values": [
+    0
+   ],
+   "declared_missing_range": null,
+   "codebook": {
+    "question_code": "C20",
+    "question_text": "AVERAGE GRADE SO FAR IN HIGH SCHL",
+    "matched_by": "core question C20 (codebook variable V179)"
+   }
+  },
+  {
+   "name": "V4180",
+   "label": "764C21A:R WL DO VOC/TEC",
+   "storage": {
+    "spss_format": "F1.0",
+    "kind": "numeric",
+    "width": 1,
+    "decimals": 0
+   },
+   "value_labels": {
+    "1": "DEFINITELY WON'T",
+    "2": "PROBABLY WON'T",
+    "3": "PROBABLY WILL",
+    "4": "DEFINITELY WILL"
+   },
+   "declared_missing_values": [
+    0
+   ],
+   "declared_missing_range": [
+    9,
+    "HIGHEST"
+   ],
+   "codebook": {
+    "question_code": "C21A",
+    "question_stem": "HOW LIKELY IS IT THAT, AFTER HIGH SCHOOL, YOU WILL...",
+    "question_text": "ATTEND TECHNICAL/VOCATIONAL SCHL",
+    "matched_by": "core question C21A (codebook variable V180)"
+   }
+  },
+  {
+   "name": "V4181",
+   "label": "764C21B:R WL DO ARMD FC",
+   "storage": {
+    "spss_format": "F1.0",
+    "kind": "numeric",
+    "width": 1,
+    "decimals": 0
+   },
+   "value_labels": {
+    "1": "DEFINITELY WON'T",
+    "2": "PROBABLY WON'T",
+    "3": "PROBABLY WILL",
+    "4": "DEFINITELY WILL"
+   },
+   "declared_missing_values": [
+    0
+   ],
+   "declared_missing_range": [
+    9,
+    "HIGHEST"
+   ],
+   "codebook": {
+    "question_code": "C21B",
+    "question_stem": "HOW LIKELY IS IT THAT, AFTER HIGH SCHOOL, YOU WILL...",
+    "question_text": "SERVE IN THE ARMED FORCES",
+    "matched_by": "core question C21B (codebook variable V181)"
+   }
+  },
+  {
+   "name": "V4182",
+   "label": "764C21C:R WL DO 2YR CLG",
+   "storage": {
+    "spss_format": "F1.0",
+    "kind": "numeric",
+    "width": 1,
+    "decimals": 0
+   },
+   "value_labels": {
+    "1": "DEFINITELY WON'T",
+    "2": "PROBABLY WON'T",
+    "3": "PROBABLY WILL",
+    "4": "DEFINITELY WILL"
+   },
+   "declared_missing_values": [
+    0
+   ],
+   "declared_missing_range": [
+    9,
+    "HIGHEST"
+   ],
+   "codebook": {
+    "question_code": "C21C",
+    "question_stem": "HOW LIKELY IS IT THAT, AFTER HIGH SCHOOL, YOU WILL...",
+    "question_text": "GRADUATE FROM A 2-YEAR COLLEGE",
+    "matched_by": "core question C21C (codebook variable V182)"
+   }
+  },
+  {
+   "name": "V4183",
+   "label": "764C21D:R WL DO 4YR CLG",
+   "storage": {
+    "spss_format": "F1.0",
+    "kind": "numeric",
+    "width": 1,
+    "decimals": 0
+   },
+   "value_labels": {
+    "1": "DEFINITELY WON'T",
+    "2": "PROBABLY WON'T",
+    "3": "PROBABLY WILL",
+    "4": "DEFINITELY WILL"
+   },
+   "declared_missing_values": [
+    0
+   ],
+   "declared_missing_range": [
+    9,
+    "HIGHEST"
+   ],
+   "codebook": {
+    "question_code": "C21D",
+    "question_stem": "HOW LIKELY IS IT THAT, AFTER HIGH SCHOOL, YOU WILL...",
+    "question_text": "GRADUATE FROM A 4-YEAR COLLEGE",
+    "matched_by": "core question C21D (codebook variable V183)"
+   }
+  },
+  {
+   "name": "V4184",
+   "label": "764C21E:R WL DO GRD/PRF",
+   "storage": {
+    "spss_format": "F1.0",
+    "kind": "numeric",
+    "width": 1,
+    "decimals": 0
+   },
+   "value_labels": {
+    "1": "DEFINITELY WON'T",
+    "2": "PROBABLY WON'T",
+    "3": "PROBABLY WILL",
+    "4": "DEFINITELY WILL"
+   },
+   "declared_missing_values": [
+    0
+   ],
+   "declared_missing_range": [
+    9,
+    "HIGHEST"
+   ],
+   "codebook": {
+    "question_code": "C21E",
+    "question_stem": "HOW LIKELY IS IT THAT, AFTER HIGH SCHOOL, YOU WILL...",
+    "question_text": "ATTEND GRADUATE/PROFESSIONAL SCHOOL AFTER COLLEGE",
+    "matched_by": "core question C21E (codebook variable V184)"
+   }
+  },
+  {
+   "name": "V4185",
+   "label": "764C22A:R WNTDO VOC/TEC",
+   "storage": {
+    "spss_format": "F1.0",
+    "kind": "numeric",
+    "width": 1,
+    "decimals": 0
+   },
+   "value_labels": {
+    "0": "NOT MARKED",
+    "1": "MARKED"
+   },
+   "declared_missing_values": null,
+   "declared_missing_range": [
+    8,
+    "HIGHEST"
+   ],
+   "codebook": null
+  },
+  {
+   "name": "V4186",
+   "label": "764C22B:R WNTDO ARMD FC",
+   "storage": {
+    "spss_format": "F1.0",
+    "kind": "numeric",
+    "width": 1,
+    "decimals": 0
+   },
+   "value_labels": {
+    "0": "NOT MARKED",
+    "1": "MARKED"
+   },
+   "declared_missing_values": null,
+   "declared_missing_range": [
+    8,
+    "HIGHEST"
+   ],
+   "codebook": null
+  },
+  {
+   "name": "V4187",
+   "label": "764C22C:R WNTDO 2YR CLG",
+   "storage": {
+    "spss_format": "F1.0",
+    "kind": "numeric",
+    "width": 1,
+    "decimals": 0
+   },
+   "value_labels": {
+    "0": "NOT MARKED",
+    "1": "MARKED"
+   },
+   "declared_missing_values": null,
+   "declared_missing_range": [
+    8,
+    "HIGHEST"
+   ],
+   "codebook": null
+  },
+  {
+   "name": "V4188",
+   "label": "764C22D:R WNTDO 4YR CLG",
+   "storage": {
+    "spss_format": "F1.0",
+    "kind": "numeric",
+    "width": 1,
+    "decimals": 0
+   },
+   "value_labels": {
+    "0": "NOT MARKED",
+    "1": "MARKED"
+   },
+   "declared_missing_values": null,
+   "declared_missing_range": [
+    8,
+    "HIGHEST"
+   ],
+   "codebook": null
+  },
+  {
+   "name": "V4189",
+   "label": "764C22E:R WNTDO GRD/PRF",
+   "storage": {
+    "spss_format": "F1.0",
+    "kind": "numeric",
+    "width": 1,
+    "decimals": 0
+   },
+   "value_labels": {
+    "0": "NOT MARKED",
+    "1": "MARKED"
+   },
+   "declared_missing_values": null,
+   "declared_missing_range": [
+    8,
+    "HIGHEST"
+   ],
+   "codebook": null
+  },
+  {
+   "name": "V4190",
+   "label": "764C22F:R WNTDO NONE",
+   "storage": {
+    "spss_format": "F1.0",
+    "kind": "numeric",
+    "width": 1,
+    "decimals": 0
+   },
+   "value_labels": {
+    "0": "NOT MARKED",
+    "1": "MARKED"
+   },
+   "declared_missing_values": null,
+   "declared_missing_range": [
+    8,
+    "HIGHEST"
+   ],
+   "codebook": null
+  },
+  {
+   "name": "V4191",
+   "label": "764C23 :HRS/W WRK SCHYR",
+   "storage": {
+    "spss_format": "F1.0",
+    "kind": "numeric",
+    "width": 1,
+    "decimals": 0
+   },
+   "value_labels": {
+    "1": "NONE",
+    "2": "5 OR LESS HOURS",
+    "3": "6 TO 10 HOURS",
+    "4": "11 TO 15 HOURS",
+    "5": "16 TO 20 HOURS",
+    "6": "21 TO 25 HOURS",
+    "7": "26 TO 30 HOURS",
+    "8": "MORE THAN 30 HOURS"
+   },
+   "declared_missing_values": [
+    0
+   ],
+   "declared_missing_range": [
+    9,
+    "HIGHEST"
+   ],
+   "codebook": {
+    "question_code": "C23",
+    "question_text": "#HOURS/WEEK WORKED (ON THE AVER- AGE) OVER SCHOOL YEAR IN PAID OR UNPAID JOB",
+    "matched_by": "core question C23 (codebook variable V191)"
+   }
+  },
+  {
+   "name": "V4192",
+   "label": "764C24A:R$/AVG WEEK JOB",
+   "storage": {
+    "spss_format": "F1.0",
+    "kind": "numeric",
+    "width": 1,
+    "decimals": 0
+   },
+   "value_labels": {
+    "1": "NONE",
+    "2": "$1-5",
+    "3": "$6-10",
+    "4": "$11-20",
+    "5": "$21-35",
+    "6": "$36-50",
+    "7": "$51 +"
+   },
+   "declared_missing_values": [
+    0
+   ],
+   "declared_missing_range": [
+    9,
+    "HIGHEST"
+   ],
+   "codebook": {
+    "question_code": "C24A",
+    "question_stem": "DURING AN AVERAGE WEEK, HOW MUCH MONEY DO YOU GET FROM...",
+    "question_text": "A JOB OR OTHER WORK",
+    "matched_by": "core question C24A (codebook variable V192)"
+   }
+  },
+  {
+   "name": "V4193",
+   "label": "764C24B:R$/AVG WEEK OTH",
+   "storage": {
+    "spss_format": "F1.0",
+    "kind": "numeric",
+    "width": 1,
+    "decimals": 0
+   },
+   "value_labels": {
+    "1": "NONE",
+    "2": "$1-5",
+    "3": "$6-10",
+    "4": "$11-20",
+    "5": "$21-35",
+    "6": "$36-50",
+    "7": "$51 +"
+   },
+   "declared_missing_values": [
+    0
+   ],
+   "declared_missing_range": [
+    9,
+    "HIGHEST"
+   ],
+   "codebook": {
+    "question_code": "C24B",
+    "question_stem": "DURING AN AVERAGE WEEK, HOW MUCH MONEY DO YOU GET FROM...",
+    "question_text": "OTHER SOURCES (ALLOWANCES, ETC.)",
+    "matched_by": "core question C24B (codebook variable V193)"
+   }
+  },
+  {
+   "name": "V4194",
+   "label": "764C25 :#X/AV WK GO OUT",
+   "storage": {
+    "spss_format": "F1.0",
+    "kind": "numeric",
+    "width": 1,
+    "decimals": 0
+   },
+   "value_labels": {
+    "1": "LESS THAN ONE",
+    "2": "ONE",
+    "3": "TWO",
+    "4": "THREE",
+    "5": "FOUR OR FIVE",
+    "6": "SIX OR SEVEN"
+   },
+   "declared_missing_values": [
+    0
+   ],
+   "declared_missing_range": [
+    9,
+    "HIGHEST"
+   ],
+   "codebook": {
+    "question_code": "C25",
+    "question_text": "#EVENINGS OUT FOR FUN&RECREATION DURING A TYPICAL WEEK",
+    "matched_by": "core question C25 (codebook variable V194)"
+   }
+  },
+  {
+   "name": "V4195",
+   "label": "764C26 :#X DATE 3+/WK",
+   "storage": {
+    "spss_format": "F1.0",
+    "kind": "numeric",
+    "width": 1,
+    "decimals": 0
+   },
+   "value_labels": {
+    "1": "NEVER",
+    "2": "ONCE A MONTH OR LESS",
+    "3": "2 OR 3 TIMES A MONTH",
+    "4": "ONCE A WEEK",
+    "5": "2 OR 3 TIMES A WEEK",
+    "6": "OVER 3 TIMES A WEEK"
+   },
+   "declared_missing_values": [
+    0
+   ],
+   "declared_missing_range": [
+    9,
+    "HIGHEST"
+   ],
+   "codebook": {
+    "question_code": "C26",
+    "question_text": "HOW OFTEN DO YOU GO OUT WITH A DATE (OR SPOUSE), ON THE AVERAGE",
+    "matched_by": "core question C26 (codebook variable V195)"
+   }
+  },
+  {
+   "name": "V4196",
+   "label": "764C27 :DRIVE>200 MI/WK",
+   "storage": {
+    "spss_format": "F1.0",
+    "kind": "numeric",
+    "width": 1,
+    "decimals": 0
+   },
+   "value_labels": {
+    "1": "NOT AT ALL",
+    "2": "1 TO 10 MILES",
+    "3": "11 TO 50 MILES",
+    "4": "51 TO 100 MILES",
+    "5": "100 TO 200 MILES",
+    "6": "MORE THAN 200 MILES"
+   },
+   "declared_missing_values": [
+    0
+   ],
+   "declared_missing_range": [
+    9,
+    "HIGHEST"
+   ],
+   "codebook": {
+    "question_code": "C27",
+    "question_text": "HOW MUCH DO YOU DRIVE (CAR,TRUCK, MOTORCYCLE) DURING AVERAGE WEEK",
+    "matched_by": "core question C27 (codebook variable V196)"
+   }
+  },
+  {
+   "name": "V4197",
+   "label": "764C28 :#X/12MO R TCKTD",
+   "storage": {
+    "spss_format": "F1.0",
+    "kind": "numeric",
+    "width": 1,
+    "decimals": 0
+   },
+   "value_labels": {
+    "0": "NONE",
+    "1": "ONCE",
+    "2": "TWICE",
+    "3": "THREE TIMES",
+    "4": "FOUR OR MORE TIMES"
+   },
+   "declared_missing_values": null,
+   "declared_missing_range": [
+    7,
+    "HIGHEST"
+   ],
+   "codebook": {
+    "question_code": "C28",
+    "question_text": "#TIMES YOU RECEIVED A TICKET (OR WERE STOPPED AND WARNED) FOR MOVING VIOLATION IN LAST 12 MONTHS",
+    "matched_by": "core question C28 (codebook variable V197)"
+   }
+  },
+  {
+   "name": "V4198",
+   "label": "764C29A:#TCKTS AFT DRNK",
+   "storage": {
+    "spss_format": "F1.0",
+    "kind": "numeric",
+    "width": 1,
+    "decimals": 0
+   },
+   "value_labels": {
+    "0": "NONE",
+    "1": "ONE",
+    "2": "TWO",
+    "3": "THREE",
+    "4": "FOUR OR MORE"
+   },
+   "declared_missing_values": null,
+   "declared_missing_range": [
+    7,
+    "HIGHEST"
+   ],
+   "codebook": {
+    "question_code": "C29A",
+    "question_stem": "# OF THESE TICKETS/WARNINGS THAT OCCURRED AFTER YOU WERE...",
+    "question_text": "DRINKING ALCOHOLIC BEVERAGES",
+    "matched_by": "core question C29A (codebook variable V198)"
+   }
+  },
+  {
+   "name": "V4199",
+   "label": "764C29B:#TCKTS AFT MARJ",
+   "storage": {
+    "spss_format": "F1.0",
+    "kind": "numeric",
+    "width": 1,
+    "decimals": 0
+   },
+   "value_labels": {
+    "0": "NONE",
+    "1": "ONE",
+    "2": "TWO",
+    "3": "THREE",
+    "4": "FOUR OR MORE"
+   },
+   "declared_missing_values": null,
+   "declared_missing_range": [
+    7,
+    "HIGHEST"
+   ],
+   "codebook": {
+    "question_code": "C29B",
+    "question_stem": "# OF THESE TICKETS/WARNINGS THAT OCCURRED AFTER YOU WERE...",
+    "question_text": "SMOKING MARIJUANA/HASHISH",
+    "matched_by": "core question C29B (codebook variable V199)"
+   }
+  },
+  {
+   "name": "V4200",
+   "label": "764C29C:#TCKTS AFT OTDG",
+   "storage": {
+    "spss_format": "F1.0",
+    "kind": "numeric",
+    "width": 1,
+    "decimals": 0
+   },
+   "value_labels": {
+    "0": "NONE",
+    "1": "ONE",
+    "2": "TWO",
+    "3": "THREE",
+    "4": "FOUR OR MORE"
+   },
+   "declared_missing_values": null,
+   "declared_missing_range": [
+    7,
+    "HIGHEST"
+   ],
+   "codebook": {
+    "question_code": "C29C",
+    "question_stem": "# OF THESE TICKETS/WARNINGS THAT OCCURRED AFTER YOU WERE...",
+    "question_text": "USING OTHER ILLEGAL DRUGS",
+    "matched_by": "core question C29C (codebook variable V200)"
+   }
+  },
+  {
+   "name": "V4201",
+   "label": "764C30 :#ACCIDNTS/12 MO",
+   "storage": {
+    "spss_format": "F1.0",
+    "kind": "numeric",
+    "width": 1,
+    "decimals": 0
+   },
+   "value_labels": {
+    "0": "NONE",
+    "1": "ONE",
+    "2": "TWO",
+    "3": "THREE",
+    "4": "FOUR OR MORE"
+   },
+   "declared_missing_values": null,
+   "declared_missing_range": [
+    7,
+    "HIGHEST"
+   ],
+   "codebook": {
+    "question_code": "C30",
+    "question_text": "# OF ACCIDENTS THAT YOU HAD DURING THE LAST 12 MONTHS WHILE YOU WERE DRIVING, WHETHER OR NOT YOU WERE RESPONSIBLE",
+    "matched_by": "core question C30 (codebook variable V201)"
+   }
+  },
+  {
+   "name": "V4202",
+   "label": "764C31A:#ACDTS AFT DRNK",
+   "storage": {
+    "spss_format": "F1.0",
+    "kind": "numeric",
+    "width": 1,
+    "decimals": 0
+   },
+   "value_labels": {
+    "0": "NONE",
+    "1": "ONE",
+    "2": "TWO",
+    "3": "THREE",
+    "4": "FOUR OR MORE"
+   },
+   "declared_missing_values": null,
+   "declared_missing_range": [
+    7,
+    "HIGHEST"
+   ],
+   "codebook": {
+    "question_code": "C31A",
+    "question_stem": "# OF THESE ACCIDENTS THAT OCCURRED AFTER YOU WERE...",
+    "question_text": "DRINKING ALCOHOLIC BEVERAGES",
+    "matched_by": "core question C31A (codebook variable V202)"
+   }
+  },
+  {
+   "name": "V4203",
+   "label": "764C31B:#ACDTS AFT MARJ",
+   "storage": {
+    "spss_format": "F1.0",
+    "kind": "numeric",
+    "width": 1,
+    "decimals": 0
+   },
+   "value_labels": {
+    "0": "NONE",
+    "1": "ONE",
+    "2": "TWO",
+    "3": "THREE",
+    "4": "FOUR OR MORE"
+   },
+   "declared_missing_values": null,
+   "declared_missing_range": [
+    7,
+    "HIGHEST"
+   ],
+   "codebook": {
+    "question_code": "C31B",
+    "question_stem": "# OF THESE ACCIDENTS THAT OCCURRED AFTER YOU WERE...",
+    "question_text": "SMOKING MARIJUANA/HASHISH",
+    "matched_by": "core question C31B (codebook variable V203)"
+   }
+  },
+  {
+   "name": "V4204",
+   "label": "764C31C:#ACDTS AFT OTDG",
+   "storage": {
+    "spss_format": "F1.0",
+    "kind": "numeric",
+    "width": 1,
+    "decimals": 0
+   },
+   "value_labels": {
+    "0": "NONE",
+    "1": "ONE",
+    "2": "TWO",
+    "3": "THREE",
+    "4": "FOUR OR MORE"
+   },
+   "declared_missing_values": null,
+   "declared_missing_range": [
+    7,
+    "HIGHEST"
+   ],
+   "codebook": {
+    "question_code": "C31C",
+    "question_stem": "# OF THESE ACCIDENTS THAT OCCURRED AFTER YOU WERE...",
+    "question_text": "USING OTHER ILLEGAL DRUGS",
+    "matched_by": "core question C31C (codebook variable V204)"
+   }
+  },
+  {
+   "name": "V4205",
+   "label": "764C32 :R'S BRANCH SERV",
+   "storage": {
+    "spss_format": "F1.0",
+    "kind": "numeric",
+    "width": 1,
+    "decimals": 0
+   },
+   "value_labels": {
+    "1": "ARMY",
+    "2": "NAVY",
+    "3": "MARINE CORPS",
+    "4": "AIR FORCE",
+    "5": "COAST GUARD",
+    "6": "UNCERTAIN"
+   },
+   "declared_missing_values": [
+    0
+   ],
+   "declared_missing_range": [
+    8,
+    "HIGHEST"
+   ],
+   "codebook": {
+    "question_code": "C32",
+    "question_text": "(IF YOU HAVE ENTERED, OR EXPECT TO ENTER, MILITARY SERVICE) WHAT IS, OR WILL BE, YOUR BRANCH",
+    "matched_by": "core question C32 (codebook variable V205)"
+   }
+  },
+  {
+   "name": "V4206",
+   "label": "764C33 :R XPCTS B OFFCR",
+   "storage": {
+    "spss_format": "F1.0",
+    "kind": "numeric",
+    "width": 1,
+    "decimals": 0
+   },
+   "value_labels": {
+    "1": "NO",
+    "2": "UNCERTAIN",
+    "3": "YES"
+   },
+   "declared_missing_values": [
+    0
+   ],
+   "declared_missing_range": [
+    8,
+    "HIGHEST"
+   ],
+   "codebook": {
+    "question_code": "C33",
+    "question_text": "DO YOU EXPECT TO BE AN OFFICER",
+    "matched_by": "core question C33 (codebook variable V206)"
+   }
+  },
+  {
+   "name": "V4207",
+   "label": "764C34 :R XPCTS MLTR CR",
+   "storage": {
+    "spss_format": "F1.0",
+    "kind": "numeric",
+    "width": 1,
+    "decimals": 0
+   },
+   "value_labels": {
+    "1": "NO",
+    "2": "UNCERTAIN",
+    "3": "YES"
+   },
+   "declared_missing_values": [
+    0
+   ],
+   "declared_missing_range": [
+    8,
+    "HIGHEST"
+   ],
+   "codebook": {
+    "question_code": "C34",
+    "question_text": "DO YOU EXPECT TO HAVE A CAREER IN THE ARMED FORCES",
+    "matched_by": "core question C34 (codebook variable V207)"
+   }
+  },
+  {
+   "name": "V4208",
+   "label": "764A01 :VRY HPY THS DAYS",
+   "storage": {
+    "spss_format": "F1.0",
+    "kind": "numeric",
+    "width": 1,
+    "decimals": 0
+   },
+   "value_labels": {
+    "1": "NOT TOO HAPPY",
+    "2": "PRETTY HAPPY",
+    "3": "VERY HAPPY"
+   },
+   "declared_missing_values": [
+    0
+   ],
+   "declared_missing_range": [
+    9,
+    "HIGHEST"
+   ],
+   "codebook": {
+    "question_code": "A01",
+    "question_text": "TAKING ALL THINGS TOGETHER, HOW WOULD YOU SAY THINGS ARE THESE DAYS-WOULD YOU SAY YOU'RE VERY HAPPY, PRETTY HAPPY, OR NOT TOO HAPPY THESE DAYS?",
+    "matched_by": "variable name"
+   }
+  },
+  {
+   "name": "V4209",
+   "label": "764A02 :FUTR CNTRY WORSE",
+   "storage": {
+    "spss_format": "F1.0",
+    "kind": "numeric",
+    "width": 1,
+    "decimals": 0
+   },
+   "value_labels": {
+    "1": "GET MUCH BETTER",
+    "2": "GET SOMEWHAT BETTER",
+    "3": "STAY ABOUT THE SAME",
+    "4": "GET SOMEWHAT WORSE",
+    "5": "GET MUCH WORSE"
+   },
+   "declared_missing_values": [
+    0
+   ],
+   "declared_missing_range": [
+    9,
+    "HIGHEST"
+   ],
+   "codebook": {
+    "question_code": "A02",
+    "question_text": "LOOKING AHEAD TO THE NEXT FIVE YEARS, DO YOU THINK THAT THINGS IN THIS COUNTRY WILL GET BETTER OR WORSE?",
+    "matched_by": "variable name"
+   }
+  },
+  {
+   "name": "V4210",
+   "label": "764A03 :FUTR WORLD WORSE",
+   "storage": {
+    "spss_format": "F1.0",
+    "kind": "numeric",
+    "width": 1,
+    "decimals": 0
+   },
+   "value_labels": {
+    "1": "GET MUCH BETTER",
+    "2": "GET SOMEWHAT BETTER",
+    "3": "STAY ABOUT THE SAME",
+    "4": "GET SOMEWHAT WORSE",
+    "5": "GET MUCH WORSE"
+   },
+   "declared_missing_values": [
+    0
+   ],
+   "declared_missing_range": [
+    9,
+    "HIGHEST"
+   ],
+   "codebook": {
+    "question_code": "A03",
+    "question_text": "LOOKING AHEAD TO THE NEXT FIVE YEARS, DO YOU THINK THAT THINGS IN THE REST OF THE WORLD WILL GET BETTER OR WORSE?",
+    "matched_by": "variable name"
+   }
+  },
+  {
+   "name": "V4211",
+   "label": "764A04 :FUTR R LIFE WRSE",
+   "storage": {
+    "spss_format": "F1.0",
+    "kind": "numeric",
+    "width": 1,
+    "decimals": 0
+   },
+   "value_labels": {
+    "1": "GET MUCH BETTER",
+    "2": "GET SOMEWHAT BETTER",
+    "3": "STAY ABOUT THE SAME",
+    "4": "GET SOMEWHAT WORSE",
+    "5": "GET MUCH WORSE"
+   },
+   "declared_missing_values": [
+    0
+   ],
+   "declared_missing_range": [
+    9,
+    "HIGHEST"
+   ],
+   "codebook": {
+    "question_code": "A04",
+    "question_text": "HOW DO YOU THINK YOUR OWN LIFE WILL GO IN THE NEXT FIVE YEARS-- DO YOU THINK IT WILL GET BETTER OR WORSE?",
+    "matched_by": "variable name"
+   }
+  },
+  {
+   "name": "V4212",
+   "label": "764A05 :THK ABT SOC ISSU",
+   "storage": {
+    "spss_format": "F1.0",
+    "kind": "numeric",
+    "width": 1,
+    "decimals": 0
+   },
+   "value_labels": {
+    "1": "NEVER",
+    "2": "SELDOM",
+    "3": "SOMETIMES",
+    "4": "QUITE OFTEN",
+    "5": "A GREAT DEAL"
+   },
+   "declared_missing_values": [
+    0
+   ],
+   "declared_missing_range": [
+    9,
+    "HIGHEST"
+   ],
+   "codebook": {
+    "question_code": "A05",
+    "question_text": "SOME PEOPLE THINK A LOT ABOUT THE SOCIAL PROBLEMS OF THE NATION AND THE WORLD, AND ABOUT HOW THEY MIGHT BE SOLVED. OTHERS SPEND LITTLE TIME THINKING ABOUT THESE ISSUES. HOW MUCH DO YOU THINK ABOUT SUCH THINGS?",
+    "matched_by": "variable name"
+   }
+  },
+  {
+   "name": "V4213",
+   "label": "764A06A:PLLTN INCR IN US",
+   "storage": {
+    "spss_format": "F1.0",
+    "kind": "numeric",
+    "width": 1,
+    "decimals": 0
+   },
+   "value_labels": {
+    "1": "DISAGREE",
+    "2": "MOSTLY DISAGREE",
+    "3": "NEITHER",
+    "4": "MOSTLY AGREE",
+    "5": "AGREE"
+   },
+   "declared_missing_values": [
+    0
+   ],
+   "declared_missing_range": [
+    9,
+    "HIGHEST"
+   ],
+   "codebook": {
+    "question_code": "A06A",
+    "question_stem": "THESE QUESTIONS ARE ABOUT POLLUTION AND THE ENVIRONMENT. PLEASE MARK THE CIRCLE THAT SHOWS HOW MUCH YOU AGREE OR DISAGREE WITH EACH STATEMENT BELOW.",
+    "question_text": "IN GENERAL, POLLUTION HAS INCREASED IN THE U.S. IN THE LAST TEN YEARS",
+    "matched_by": "variable name"
+   }
+  },
+  {
+   "name": "V4214",
+   "label": "764A06B:PLLTN NT SO DANG",
+   "storage": {
+    "spss_format": "F1.0",
+    "kind": "numeric",
+    "width": 1,
+    "decimals": 0
+   },
+   "value_labels": {
+    "1": "DISAGREE",
+    "2": "MOSTLY DISAGREE",
+    "3": "NEITHER",
+    "4": "MOSTLY AGREE",
+    "5": "AGREE"
+   },
+   "declared_missing_values": [
+    0
+   ],
+   "declared_missing_range": [
+    9,
+    "HIGHEST"
+   ],
+   "codebook": {
+    "question_code": "A06B",
+    "question_stem": "THESE QUESTIONS ARE ABOUT POLLUTION AND THE ENVIRONMENT. PLEASE MARK THE CIRCLE THAT SHOWS HOW MUCH YOU AGREE OR DISAGREE WITH EACH STATEMENT BELOW.",
+    "question_text": "THE DANGERS OF POLLUTION ARE NOT REALLY AS GREAT AS GOVERNMENT, THE MEDIA, AND ENVIRONMENTAL GROUPS WOULD LIKE US TO BELIEVE",
+    "matched_by": "variable name"
+   }
+  },
+  {
+   "name": "V4215",
+   "label": "764A06C:PLLTN NEC 4 GRTH",
+   "storage": {
+    "spss_format": "F1.0",
+    "kind": "numeric",
+    "width": 1,
+    "decimals": 0
+   },
+   "value_labels": {
+    "1": "DISAGREE",
+    "2": "MOSTLY DISAGREE",
+    "3": "NEITHER",
+    "4": "MOSTLY AGREE",
+    "5": "AGREE"
+   },
+   "declared_missing_values": [
+    0
+   ],
+   "declared_missing_range": [
+    9,
+    "HIGHEST"
+   ],
+   "codebook": {
+    "question_code": "A06C",
+    "question_stem": "THESE QUESTIONS ARE ABOUT POLLUTION AND THE ENVIRONMENT. PLEASE MARK THE CIRCLE THAT SHOWS HOW MUCH YOU AGREE OR DISAGREE WITH EACH STATEMENT BELOW.",
+    "question_text": "AMERICA NEEDS GROWTH TO SURVIVE, AND THAT IS GOING TO REQUIRE SOME INCREASE IN POLLUTION",
+    "matched_by": "variable name"
+   }
+  },
+  {
+   "name": "V4216",
+   "label": "764A06D:INDVL RESP 4 ENV",
+   "storage": {
+    "spss_format": "F1.0",
+    "kind": "numeric",
+    "width": 1,
+    "decimals": 0
+   },
+   "value_labels": {
+    "1": "DISAGREE",
+    "2": "MOSTLY DISAGREE",
+    "3": "NEITHER",
+    "4": "MOSTLY AGREE",
+    "5": "AGREE"
+   },
+   "declared_missing_values": [
+    0
+   ],
+   "declared_missing_range": [
+    9,
+    "HIGHEST"
+   ],
+   "codebook": {
+    "question_code": "A06D",
+    "question_stem": "THESE QUESTIONS ARE ABOUT POLLUTION AND THE ENVIRONMENT. PLEASE MARK THE CIRCLE THAT SHOWS HOW MUCH YOU AGREE OR DISAGREE WITH EACH STATEMENT BELOW.",
+    "question_text": "PEOPLE WILL HAVE TO CHANGE THEIR BUYING HABITS AND WAY OF LIFE TO CORRECT OUR ENVIRONMENTAL PROBLEMS",
+    "matched_by": "variable name"
+   }
+  },
+  {
+   "name": "V4217",
+   "label": "764A06E:GOVT  RESP 4 ENV",
+   "storage": {
+    "spss_format": "F1.0",
+    "kind": "numeric",
+    "width": 1,
+    "decimals": 0
+   },
+   "value_labels": {
+    "1": "DISAGREE",
+    "2": "MOSTLY DISAGREE",
+    "3": "NEITHER",
+    "4": "MOSTLY AGREE",
+    "5": "AGREE"
+   },
+   "declared_missing_values": [
+    0
+   ],
+   "declared_missing_range": [
+    9,
+    "HIGHEST"
+   ],
+   "codebook": {
+    "question_code": "A06E",
+    "question_stem": "THESE QUESTIONS ARE ABOUT POLLUTION AND THE ENVIRONMENT. PLEASE MARK THE CIRCLE THAT SHOWS HOW MUCH YOU AGREE OR DISAGREE WITH EACH STATEMENT BELOW.",
+    "question_text": "GOVERNMENT SHOULD TAKE ACTION TO SOLVE OUR ENVIRONMENTAL PROBLEMS EVEN IF IT MEANS THAT SOME OF THE PRODUCTS WE NOW USE WOULD HAVE TO BE CHANGED OR BANNED",
+    "matched_by": "variable name"
+   }
+  },
+  {
+   "name": "V4218",
+   "label": "764A06F:GOVT TAX PLLTRS",
+   "storage": {
+    "spss_format": "F1.0",
+    "kind": "numeric",
+    "width": 1,
+    "decimals": 0
+   },
+   "value_labels": {
+    "1": "DISAGREE",
+    "2": "MOSTLY DISAGREE",
+    "3": "NEITHER",
+    "4": "MOSTLY AGREE",
+    "5": "AGREE"
+   },
+   "declared_missing_values": [
+    0
+   ],
+   "declared_missing_range": [
+    9,
+    "HIGHEST"
+   ],
+   "codebook": {
+    "question_code": "A06F",
+    "question_stem": "THESE QUESTIONS ARE ABOUT POLLUTION AND THE ENVIRONMENT. PLEASE MARK THE CIRCLE THAT SHOWS HOW MUCH YOU AGREE OR DISAGREE WITH EACH STATEMENT BELOW.",
+    "question_text": "GOVERNMENT SHOULD PLACE HIGHER TAXES ON PRODUCTS WHICH CAUSE POLLUTION IN THEIR MANUFACTURE OR DISPOSAL, SO THAT COMPANIES WILL BE ENCOURAGED TO FIND BETTER WAYS TO PRODUCE THEM",
+    "matched_by": "variable name"
+   }
+  },
+  {
+   "name": "V4219",
+   "label": "764A06G:GOVT BAN DSPSBLE",
+   "storage": {
+    "spss_format": "F1.0",
+    "kind": "numeric",
+    "width": 1,
+    "decimals": 0
+   },
+   "value_labels": {
+    "1": "DISAGREE",
+    "2": "MOSTLY DISAGREE",
+    "3": "NEITHER",
+    "4": "MOSTLY AGREE",
+    "5": "AGREE"
+   },
+   "declared_missing_values": [
+    0
+   ],
+   "declared_missing_range": [
+    9,
+    "HIGHEST"
+   ],
+   "codebook": {
+    "question_code": "A06G",
+    "question_stem": "THESE QUESTIONS ARE ABOUT POLLUTION AND THE ENVIRONMENT. PLEASE MARK THE CIRCLE THAT SHOWS HOW MUCH YOU AGREE OR DISAGREE WITH EACH STATEMENT BELOW.",
+    "question_text": "I WISH THAT GOVERNMENT WOULD BAN THROWAWAY BOTTLES AND BEVERAGE CANS.",
+    "matched_by": "variable name"
+   }
+  },
+  {
+   "name": "V4220",
+   "label": "764A06H:TV COMM CRT NDS",
+   "storage": {
+    "spss_format": "F1.0",
+    "kind": "numeric",
+    "width": 1,
+    "decimals": 0
+   },
+   "value_labels": {
+    "1": "DISAGREE",
+    "2": "MOSTLY DISAGREE",
+    "3": "NEITHER",
+    "4": "MOSTLY AGREE",
+    "5": "AGREE"
+   },
+   "declared_missing_values": [
+    0
+   ],
+   "declared_missing_range": [
+    9,
+    "HIGHEST"
+   ],
+   "codebook": {
+    "question_code": "A06H",
+    "question_stem": "THESE QUESTIONS ARE ABOUT POLLUTION AND THE ENVIRONMENT. PLEASE MARK THE CIRCLE THAT SHOWS HOW MUCH YOU AGREE OR DISAGREE WITH EACH STATEMENT BELOW.",
+    "question_text": "T.V. COMMERCIALS STIMULATE PEOPLE TO BUY A LOT OF THINGS THEY DON'T REALLY NEED",
+    "matched_by": "variable name"
+   }
+  },
+  {
+   "name": "V4221",
+   "label": "764A06I:TV COMMRCLS GOOD",
+   "storage": {
+    "spss_format": "F1.0",
+    "kind": "numeric",
+    "width": 1,
+    "decimals": 0
+   },
+   "value_labels": {
+    "1": "DISAGREE",
+    "2": "MOSTLY DISAGREE",
+    "3": "NEITHER",
+    "4": "MOSTLY AGREE",
+    "5": "AGREE"
+   },
+   "declared_missing_values": [
+    0
+   ],
+   "declared_missing_range": [
+    9,
+    "HIGHEST"
+   ],
+   "codebook": {
+    "question_code": "A06I",
+    "question_stem": "THESE QUESTIONS ARE ABOUT POLLUTION AND THE ENVIRONMENT. PLEASE MARK THE CIRCLE THAT SHOWS HOW MUCH YOU AGREE OR DISAGREE WITH EACH STATEMENT BELOW.",
+    "question_text": "T.V. COMMERCIALS DO A LOT OF GOOD BY SHOWING NEW PRODUCTS THAT WE MIGHT NOT KNOW ABOUT OTHERWISE",
+    "matched_by": "variable name"
+   }
+  },
+  {
+   "name": "V4222",
+   "label": "764A06J:FAM BUYS THG -ND",
+   "storage": {
+    "spss_format": "F1.0",
+    "kind": "numeric",
+    "width": 1,
+    "decimals": 0
+   },
+   "value_labels": {
+    "1": "DISAGREE",
+    "2": "MOSTLY DISAGREE",
+    "3": "NEITHER",
+    "4": "MOSTLY AGREE",
+    "5": "AGREE"
+   },
+   "declared_missing_values": [
+    0
+   ],
+   "declared_missing_range": [
+    9,
+    "HIGHEST"
+   ],
+   "codebook": {
+    "question_code": "A06J",
+    "question_stem": "THESE QUESTIONS ARE ABOUT POLLUTION AND THE ENVIRONMENT. PLEASE MARK THE CIRCLE THAT SHOWS HOW MUCH YOU AGREE OR DISAGREE WITH EACH STATEMENT BELOW.",
+    "question_text": "MY FAMILY AND I OFTEN BUY THINGS WE DON'T REALLY NEED; WE COULD GET ALONG WITH MUCH LESS",
+    "matched_by": "variable name"
+   }
+  },
+  {
+   "name": "V4223",
+   "label": "764A06K:POL SLVD BY 2000",
+   "storage": {
+    "spss_format": "F1.0",
+    "kind": "numeric",
+    "width": 1,
+    "decimals": 0
+   },
+   "value_labels": {
+    "1": "DISAGREE",
+    "2": "MOSTLY DISAGREE",
+    "3": "NEITHER",
+    "4": "MOSTLY AGREE",
+    "5": "AGREE"
+   },
+   "declared_missing_values": [
+    0
+   ],
+   "declared_missing_range": [
+    9,
+    "HIGHEST"
+   ],
+   "codebook": {
+    "question_code": "A06K",
+    "question_stem": "THESE QUESTIONS ARE ABOUT POLLUTION AND THE ENVIRONMENT. PLEASE MARK THE CIRCLE THAT SHOWS HOW MUCH YOU AGREE OR DISAGREE WITH EACH STATEMENT BELOW.",
+    "question_text": "BY THE YEAR 2000, ENGINEERS AND SCIENTISTS WILL PROBABLY HAVE INVENTED DEVICES THAT WILL SOLVE OUR POLLUTION PROBLEMS",
+    "matched_by": "variable name"
+   }
+  },
+  {
+   "name": "V4224",
+   "label": "764A07 :R EFRT 2 HLP ENV",
+   "storage": {
+    "spss_format": "F1.0",
+    "kind": "numeric",
+    "width": 1,
+    "decimals": 0
+   },
+   "value_labels": {
+    "1": "NONE",
+    "2": "A LITTLE",
+    "3": "SOME",
+    "4": "QUITE A BIT"
+   },
+   "declared_missing_values": [
+    0
+   ],
+   "declared_missing_range": [
+    9,
+    "HIGHEST"
+   ],
+   "codebook": {
+    "question_code": "A07",
+    "question_text": "IN YOUR OWN ACTIONS--THE THINGS YOU BUY AND THE THINGS YOU DO-- HOW MUCH OF AN EFFORT DO YOU MAKE TO CONSERVE ENERGY AND PROTECT THE ENVIRONMENT?",
+    "matched_by": "variable name"
+   }
+  },
+  {
+   "name": "V4225",
+   "label": "764A08A:JOB IMPC SE RSLT",
+   "storage": {
+    "spss_format": "F1.0",
+    "kind": "numeric",
+    "width": 1,
+    "decimals": 0
+   },
+   "value_labels": {
+    "1": "NOT IMPORTANT",
+    "2": "A LITTLE IMPORTANT",
+    "3": "PRETTY IMPORTANT",
+    "4": "VERY IMPORTANT"
+   },
+   "declared_missing_values": [
+    0
+   ],
+   "declared_missing_range": [
+    9,
+    "HIGHEST"
+   ],
+   "codebook": {
+    "question_code": "A08A",
+    "question_stem": "DIFFERENT PEOPLE MAY LOOK FOR DIFFERENT THINGS IN THEIR WORK. BELOW IS A LIST OF SOME OF THESE THINGS. PLEASE READ EACH ONE, THEN INDICATE HOW IMPORTANT THIS THING IS FOR YOU.",
+    "question_text": "A JOB WHERE YOU CAN SEE THE RESULTS OF WHAT YOU DO",
+    "matched_by": "variable name"
+   }
+  },
+  {
+   "name": "V4226",
+   "label": "764A08B:JOB IMPC STATUS",
+   "storage": {
+    "spss_format": "F1.0",
+    "kind": "numeric",
+    "width": 1,
+    "decimals": 0
+   },
+   "value_labels": {
+    "1": "NOT IMPORTANT",
+    "2": "A LITTLE IMPORTANT",
+    "3": "PRETTY IMPORTANT",
+    "4": "VERY IMPORTANT"
+   },
+   "declared_missing_values": [
+    0
+   ],
+   "declared_missing_range": [
+    9,
+    "HIGHEST"
+   ],
+   "codebook": {
+    "question_code": "A08B",
+    "question_stem": "DIFFERENT PEOPLE MAY LOOK FOR DIFFERENT THINGS IN THEIR WORK. BELOW IS A LIST OF SOME OF THESE THINGS. PLEASE READ EACH ONE, THEN INDICATE HOW IMPORTANT THIS THING IS FOR YOU.",
+    "question_text": "A JOB THAT HAS HIGH STATUS AND PRESTIGE",
+    "matched_by": "variable name"
+   }
+  },
+  {
+   "name": "V4227",
+   "label": "764A08C:JOB IMPC INTRSTG",
+   "storage": {
+    "spss_format": "F1.0",
+    "kind": "numeric",
+    "width": 1,
+    "decimals": 0
+   },
+   "value_labels": {
+    "1": "NOT IMPORTANT",
+    "2": "A LITTLE IMPORTANT",
+    "3": "PRETTY IMPORTANT",
+    "4": "VERY IMPORTANT"
+   },
+   "declared_missing_values": [
+    0
+   ],
+   "declared_missing_range": [
+    9,
+    "HIGHEST"
+   ],
+   "codebook": {
+    "question_code": "A08C",
+    "question_stem": "DIFFERENT PEOPLE MAY LOOK FOR DIFFERENT THINGS IN THEIR WORK. BELOW IS A LIST OF SOME OF THESE THINGS. PLEASE READ EACH ONE, THEN INDICATE HOW IMPORTANT THIS THING IS FOR YOU.",
+    "question_text": "A JOB WHICH IS INTERESTING TO DO",
+    "matched_by": "variable name"
+   }
+  },
+  {
+   "name": "V4228",
+   "label": "764A08D:JOB IMPC ADVNCMT",
+   "storage": {
+    "spss_format": "F1.0",
+    "kind": "numeric",
+    "width": 1,
+    "decimals": 0
+   },
+   "value_labels": {
+    "1": "NOT IMPORTANT",
+    "2": "A LITTLE IMPORTANT",
+    "3": "PRETTY IMPORTANT",
+    "4": "VERY IMPORTANT"
+   },
+   "declared_missing_values": [
+    0
+   ],
+   "declared_missing_range": [
+    9,
+    "HIGHEST"
+   ],
+   "codebook": {
+    "question_code": "A08D",
+    "question_stem": "DIFFERENT PEOPLE MAY LOOK FOR DIFFERENT THINGS IN THEIR WORK. BELOW IS A LIST OF SOME OF THESE THINGS. PLEASE READ EACH ONE, THEN INDICATE HOW IMPORTANT THIS THING IS FOR YOU.",
+    "question_text": "A JOB WHERE THE CHANCES FOR ADVANCEMENT AND PROMOTION ARE GOOD",
+    "matched_by": "variable name"
+   }
+  },
+  {
+   "name": "V4229",
+   "label": "764A08E:JOB IMPC HLP OTH",
+   "storage": {
+    "spss_format": "F1.0",
+    "kind": "numeric",
+    "width": 1,
+    "decimals": 0
+   },
+   "value_labels": {
+    "1": "NOT IMPORTANT",
+    "2": "A LITTLE IMPORTANT",
+    "3": "PRETTY IMPORTANT",
+    "4": "VERY IMPORTANT"
+   },
+   "declared_missing_values": [
+    0
+   ],
+   "declared_missing_range": [
+    9,
+    "HIGHEST"
+   ],
+   "codebook": {
+    "question_code": "A08E",
+    "question_stem": "DIFFERENT PEOPLE MAY LOOK FOR DIFFERENT THINGS IN THEIR WORK. BELOW IS A LIST OF SOME OF THESE THINGS. PLEASE READ EACH ONE, THEN INDICATE HOW IMPORTANT THIS THING IS FOR YOU.",
+    "question_text": "A JOB THAT GIVES YOU AN OPPORTUNITY TO BE DIRECTLY HELPFUL TO OTHERS",
+    "matched_by": "variable name"
+   }
+  },
+  {
+   "name": "V4230",
+   "label": "764A08F:JOB IMPC EARN $",
+   "storage": {
+    "spss_format": "F1.0",
+    "kind": "numeric",
+    "width": 1,
+    "decimals": 0
+   },
+   "value_labels": {
+    "1": "NOT IMPORTANT",
+    "2": "A LITTLE IMPORTANT",
+    "3": "PRETTY IMPORTANT",
+    "4": "VERY IMPORTANT"
+   },
+   "declared_missing_values": [
+    0
+   ],
+   "declared_missing_range": [
+    9,
+    "HIGHEST"
+   ],
+   "codebook": {
+    "question_code": "A08F",
+    "question_stem": "DIFFERENT PEOPLE MAY LOOK FOR DIFFERENT THINGS IN THEIR WORK. BELOW IS A LIST OF SOME OF THESE THINGS. PLEASE READ EACH ONE, THEN INDICATE HOW IMPORTANT THIS THING IS FOR YOU.",
+    "question_text": "A JOB WHICH PROVIDES YOU WITH A CHANCE TO EARN A GOOD DEAL OF MONEY",
+    "matched_by": "variable name"
+   }
+  },
+  {
+   "name": "V4231",
+   "label": "764A08G:JOB IMPC CREATVY",
+   "storage": {
+    "spss_format": "F1.0",
+    "kind": "numeric",
+    "width": 1,
+    "decimals": 0
+   },
+   "value_labels": {
+    "1": "NOT IMPORTANT",
+    "2": "A LITTLE IMPORTANT",
+    "3": "PRETTY IMPORTANT",
+    "4": "VERY IMPORTANT"
+   },
+   "declared_missing_values": [
+    0
+   ],
+   "declared_missing_range": [
+    9,
+    "HIGHEST"
+   ],
+   "codebook": {
+    "question_code": "A08G",
+    "question_stem": "DIFFERENT PEOPLE MAY LOOK FOR DIFFERENT THINGS IN THEIR WORK. BELOW IS A LIST OF SOME OF THESE THINGS. PLEASE READ EACH ONE, THEN INDICATE HOW IMPORTANT THIS THING IS FOR YOU.",
+    "question_text": "A JOB WHERE YOU HAVE THE CHANCE TO BE CREATIVE",
+    "matched_by": "variable name"
+   }
+  },
+  {
+   "name": "V4232",
+   "label": "764A08H:JOB IMPC UTILITY",
+   "storage": {
+    "spss_format": "F1.0",
+    "kind": "numeric",
+    "width": 1,
+    "decimals": 0
+   },
+   "value_labels": {
+    "1": "NOT IMPORTANT",
+    "2": "A LITTLE IMPORTANT",
+    "3": "PRETTY IMPORTANT",
+    "4": "VERY IMPORTANT"
+   },
+   "declared_missing_values": [
+    0
+   ],
+   "declared_missing_range": [
+    9,
+    "HIGHEST"
+   ],
+   "codebook": {
+    "question_code": "A08H",
+    "question_stem": "DIFFERENT PEOPLE MAY LOOK FOR DIFFERENT THINGS IN THEIR WORK. BELOW IS A LIST OF SOME OF THESE THINGS. PLEASE READ EACH ONE, THEN INDICATE HOW IMPORTANT THIS THING IS FOR YOU.",
+    "question_text": "A JOB WHERE THE SKILLS YOU LEARN WILL NOT GO OUT OF DATE",
+    "matched_by": "variable name"
+   }
+  },
+  {
+   "name": "V4233",
+   "label": "764A08I:JOB IMPC MK FRND",
+   "storage": {
+    "spss_format": "F1.0",
+    "kind": "numeric",
+    "width": 1,
+    "decimals": 0
+   },
+   "value_labels": {
+    "1": "NOT IMPORTANT",
+    "2": "A LITTLE IMPORTANT",
+    "3": "PRETTY IMPORTANT",
+    "4": "VERY IMPORTANT"
+   },
+   "declared_missing_values": [
+    0
+   ],
+   "declared_missing_range": [
+    9,
+    "HIGHEST"
+   ],
+   "codebook": {
+    "question_code": "A08I",
+    "question_stem": "DIFFERENT PEOPLE MAY LOOK FOR DIFFERENT THINGS IN THEIR WORK. BELOW IS A LIST OF SOME OF THESE THINGS. PLEASE READ EACH ONE, THEN INDICATE HOW IMPORTANT THIS THING IS FOR YOU.",
+    "question_text": "A JOB THAT GIVES YOU A CHANCE TO MAKE FRIENDS",
+    "matched_by": "variable name"
+   }
+  },
+  {
+   "name": "V4234",
+   "label": "764A08J:JOB IMPC USE SKL",
+   "storage": {
+    "spss_format": "F1.0",
+    "kind": "numeric",
+    "width": 1,
+    "decimals": 0
+   },
+   "value_labels": {
+    "1": "NOT IMPORTANT",
+    "2": "A LITTLE IMPORTANT",
+    "3": "PRETTY IMPORTANT",
+    "4": "VERY IMPORTANT"
+   },
+   "declared_missing_values": [
+    0
+   ],
+   "declared_missing_range": [
+    9,
+    "HIGHEST"
+   ],
+   "codebook": {
+    "question_code": "A08J",
+    "question_stem": "DIFFERENT PEOPLE MAY LOOK FOR DIFFERENT THINGS IN THEIR WORK. BELOW IS A LIST OF SOME OF THESE THINGS. PLEASE READ EACH ONE, THEN INDICATE HOW IMPORTANT THIS THING IS FOR YOU.",
+    "question_text": "A JOB WHICH USES YOUR SKILLS AND ABILITIES--LETS YOU DO THE THINGS YOU CAN DO BEST",
+    "matched_by": "variable name"
+   }
+  },
+  {
+   "name": "V4235",
+   "label": "764A08K:JOB IMPC WRTHWLE",
+   "storage": {
+    "spss_format": "F1.0",
+    "kind": "numeric",
+    "width": 1,
+    "decimals": 0
+   },
+   "value_labels": {
+    "1": "NOT IMPORTANT",
+    "2": "A LITTLE IMPORTANT",
+    "3": "PRETTY IMPORTANT",
+    "4": "VERY IMPORTANT"
+   },
+   "declared_missing_values": [
+    0
+   ],
+   "declared_missing_range": [
+    9,
+    "HIGHEST"
+   ],
+   "codebook": {
+    "question_code": "A08K",
+    "question_stem": "DIFFERENT PEOPLE MAY LOOK FOR DIFFERENT THINGS IN THEIR WORK. BELOW IS A LIST OF SOME OF THESE THINGS. PLEASE READ EACH ONE, THEN INDICATE HOW IMPORTANT THIS THING IS FOR YOU.",
+    "question_text": "A JOB THAT IS WORTHWHILE TO SOCIETY",
+    "matched_by": "variable name"
+   }
+  },
+  {
+   "name": "V4236",
+   "label": "764A08L:JOB IMPC VACATN",
+   "storage": {
+    "spss_format": "F1.0",
+    "kind": "numeric",
+    "width": 1,
+    "decimals": 0
+   },
+   "value_labels": {
+    "1": "NOT IMPORTANT",
+    "2": "A LITTLE IMPORTANT",
+    "3": "PRETTY IMPORTANT",
+    "4": "VERY IMPORTANT"
+   },
+   "declared_missing_values": [
+    0
+   ],
+   "declared_missing_range": [
+    9,
+    "HIGHEST"
+   ],
+   "codebook": {
+    "question_code": "A08L",
+    "question_stem": "DIFFERENT PEOPLE MAY LOOK FOR DIFFERENT THINGS IN THEIR WORK. BELOW IS A LIST OF SOME OF THESE THINGS. PLEASE READ EACH ONE, THEN INDICATE HOW IMPORTANT THIS THING IS FOR YOU.",
+    "question_text": "A JOB WHERE YOU HAVE MORE THAN TWO WEEKS VACATION",
+    "matched_by": "variable name"
+   }
+  },
+  {
+   "name": "V4237",
+   "label": "764A08M:JOB IMPC MK DCSN",
+   "storage": {
+    "spss_format": "F1.0",
+    "kind": "numeric",
+    "width": 1,
+    "decimals": 0
+   },
+   "value_labels": {
+    "1": "NOT IMPORTANT",
+    "2": "A LITTLE IMPORTANT",
+    "3": "PRETTY IMPORTANT",
+    "4": "VERY IMPORTANT"
+   },
+   "declared_missing_values": [
+    0
+   ],
+   "declared_missing_range": [
+    9,
+    "HIGHEST"
+   ],
+   "codebook": {
+    "question_code": "A08M",
+    "question_stem": "DIFFERENT PEOPLE MAY LOOK FOR DIFFERENT THINGS IN THEIR WORK. BELOW IS A LIST OF SOME OF THESE THINGS. PLEASE READ EACH ONE, THEN INDICATE HOW IMPORTANT THIS THING IS FOR YOU.",
+    "question_text": "A JOB WHERE YOU GET A CHANCE TO PARTICIPATE IN DECISION MAKING",
+    "matched_by": "variable name"
+   }
+  },
+  {
+   "name": "V4238",
+   "label": "764A08N:JOB IMPC FRE TIM",
+   "storage": {
+    "spss_format": "F1.0",
+    "kind": "numeric",
+    "width": 1,
+    "decimals": 0
+   },
+   "value_labels": {
+    "1": "NOT IMPORTANT",
+    "2": "A LITTLE IMPORTANT",
+    "3": "PRETTY IMPORTANT",
+    "4": "VERY IMPORTANT"
+   },
+   "declared_missing_values": [
+    0
+   ],
+   "declared_missing_range": [
+    9,
+    "HIGHEST"
+   ],
+   "codebook": {
+    "question_code": "A08N",
+    "question_stem": "DIFFERENT PEOPLE MAY LOOK FOR DIFFERENT THINGS IN THEIR WORK. BELOW IS A LIST OF SOME OF THESE THINGS. PLEASE READ EACH ONE, THEN INDICATE HOW IMPORTANT THIS THING IS FOR YOU.",
+    "question_text": "A JOB WHICH LEAVES A LOT OF TIME FOR OTHER THINGS IN YOUR LIFE",
+    "matched_by": "variable name"
+   }
+  },
+  {
+   "name": "V4239",
+   "label": "764A08O:JOB IMPC NO MVNG",
+   "storage": {
+    "spss_format": "F1.0",
+    "kind": "numeric",
+    "width": 1,
+    "decimals": 0
+   },
+   "value_labels": {
+    "1": "NOT IMPORTANT",
+    "2": "A LITTLE IMPORTANT",
+    "3": "PRETTY IMPORTANT",
+    "4": "VERY IMPORTANT"
+   },
+   "declared_missing_values": [
+    0
+   ],
+   "declared_missing_range": [
+    9,
+    "HIGHEST"
+   ],
+   "codebook": {
+    "question_code": "A08O",
+    "question_stem": "DIFFERENT PEOPLE MAY LOOK FOR DIFFERENT THINGS IN THEIR WORK. BELOW IS A LIST OF SOME OF THESE THINGS. PLEASE READ EACH ONE, THEN INDICATE HOW IMPORTANT THIS THING IS FOR YOU.",
+    "question_text": "A JOB WHICH ALLOWS YOU TO ESTABLISH ROOTS IN A COMMUNITY AND NOT HAVE TO MOVE FROM PLACE TO PLACE",
+    "matched_by": "variable name"
+   }
+  },
+  {
+   "name": "V4240",
+   "label": "764A08P:JOB IMPC NO SPRV",
+   "storage": {
+    "spss_format": "F1.0",
+    "kind": "numeric",
+    "width": 1,
+    "decimals": 0
+   },
+   "value_labels": {
+    "1": "NOT IMPORTANT",
+    "2": "A LITTLE IMPORTANT",
+    "3": "PRETTY IMPORTANT",
+    "4": "VERY IMPORTANT"
+   },
+   "declared_missing_values": [
+    0
+   ],
+   "declared_missing_range": [
+    9,
+    "HIGHEST"
+   ],
+   "codebook": {
+    "question_code": "A08P",
+    "question_stem": "DIFFERENT PEOPLE MAY LOOK FOR DIFFERENT THINGS IN THEIR WORK. BELOW IS A LIST OF SOME OF THESE THINGS. PLEASE READ EACH ONE, THEN INDICATE HOW IMPORTANT THIS THING IS FOR YOU.",
+    "question_text": "A JOB WHICH LEAVES YOU MOSTLY FREE OF SUPERVISION BY OTHERS",
+    "matched_by": "variable name"
+   }
+  },
+  {
+   "name": "V4241",
+   "label": "764A08Q:JOB IMPC SECURTY",
+   "storage": {
+    "spss_format": "F1.0",
+    "kind": "numeric",
+    "width": 1,
+    "decimals": 0
+   },
+   "value_labels": {
+    "1": "NOT IMPORTANT",
+    "2": "A LITTLE IMPORTANT",
+    "3": "PRETTY IMPORTANT",
+    "4": "VERY IMPORTANT"
+   },
+   "declared_missing_values": [
+    0
+   ],
+   "declared_missing_range": [
+    9,
+    "HIGHEST"
+   ],
+   "codebook": {
+    "question_code": "A08Q",
+    "question_stem": "DIFFERENT PEOPLE MAY LOOK FOR DIFFERENT THINGS IN THEIR WORK. BELOW IS A LIST OF SOME OF THESE THINGS. PLEASE READ EACH ONE, THEN INDICATE HOW IMPORTANT THIS THING IS FOR YOU.",
+    "question_text": "A JOB THAT OFFERS A REASONABLY PREDICTABLE, SECURE FUTURE",
+    "matched_by": "variable name"
+   }
+  },
+  {
+   "name": "V4242",
+   "label": "764A08R:JOB IMPC LRNING",
+   "storage": {
+    "spss_format": "F1.0",
+    "kind": "numeric",
+    "width": 1,
+    "decimals": 0
+   },
+   "value_labels": {
+    "1": "NOT IMPORTANT",
+    "2": "A LITTLE IMPORTANT",
+    "3": "PRETTY IMPORTANT",
+    "4": "VERY IMPORTANT"
+   },
+   "declared_missing_values": [
+    0
+   ],
+   "declared_missing_range": [
+    9,
+    "HIGHEST"
+   ],
+   "codebook": {
+    "question_code": "A08R",
+    "question_stem": "DIFFERENT PEOPLE MAY LOOK FOR DIFFERENT THINGS IN THEIR WORK. BELOW IS A LIST OF SOME OF THESE THINGS. PLEASE READ EACH ONE, THEN INDICATE HOW IMPORTANT THIS THING IS FOR YOU.",
+    "question_text": "A JOB WHERE YOU CAN LEARN NEW THINGS, LEARN NEW SKILLS",
+    "matched_by": "variable name"
+   }
+  },
+  {
+   "name": "V4243",
+   "label": "764A08S:JOB IMPC BE SELF",
+   "storage": {
+    "spss_format": "F1.0",
+    "kind": "numeric",
+    "width": 1,
+    "decimals": 0
+   },
+   "value_labels": {
+    "1": "NOT IMPORTANT",
+    "2": "A LITTLE IMPORTANT",
+    "3": "PRETTY IMPORTANT",
+    "4": "VERY IMPORTANT"
+   },
+   "declared_missing_values": [
+    0
+   ],
+   "declared_missing_range": [
+    9,
+    "HIGHEST"
+   ],
+   "codebook": {
+    "question_code": "A08S",
+    "question_stem": "DIFFERENT PEOPLE MAY LOOK FOR DIFFERENT THINGS IN THEIR WORK. BELOW IS A LIST OF SOME OF THESE THINGS. PLEASE READ EACH ONE, THEN INDICATE HOW IMPORTANT THIS THING IS FOR YOU.",
+    "question_text": "A JOB WHERE YOU DO NOT HAVE TO PRETEND TO BE A TYPE OF PERSON THAT YOU ARE NOT",
+    "matched_by": "variable name"
+   }
+  },
+  {
+   "name": "V4244",
+   "label": "764A08T:JOB IMPC RESPECT",
+   "storage": {
+    "spss_format": "F1.0",
+    "kind": "numeric",
+    "width": 1,
+    "decimals": 0
+   },
+   "value_labels": {
+    "1": "NOT IMPORTANT",
+    "2": "A LITTLE IMPORTANT",
+    "3": "PRETTY IMPORTANT",
+    "4": "VERY IMPORTANT"
+   },
+   "declared_missing_values": [
+    0
+   ],
+   "declared_missing_range": [
+    9,
+    "HIGHEST"
+   ],
+   "codebook": {
+    "question_code": "A08T",
+    "question_stem": "DIFFERENT PEOPLE MAY LOOK FOR DIFFERENT THINGS IN THEIR WORK. BELOW IS A LIST OF SOME OF THESE THINGS. PLEASE READ EACH ONE, THEN INDICATE HOW IMPORTANT THIS THING IS FOR YOU.",
+    "question_text": "A JOB THAT MOST PEOPLE LOOK UP TO AND RESPECT",
+    "matched_by": "variable name"
+   }
+  },
+  {
+   "name": "V4245",
+   "label": "764A08U:JOB IMPC CNTC PL",
+   "storage": {
+    "spss_format": "F1.0",
+    "kind": "numeric",
+    "width": 1,
+    "decimals": 0
+   },
+   "value_labels": {
+    "1": "NOT IMPORTANT",
+    "2": "A LITTLE IMPORTANT",
+    "3": "PRETTY IMPORTANT",
+    "4": "VERY IMPORTANT"
+   },
+   "declared_missing_values": [
+    0
+   ],
+   "declared_missing_range": [
+    9,
+    "HIGHEST"
+   ],
+   "codebook": {
+    "question_code": "A08U",
+    "question_stem": "DIFFERENT PEOPLE MAY LOOK FOR DIFFERENT THINGS IN THEIR WORK. BELOW IS A LIST OF SOME OF THESE THINGS. PLEASE READ EACH ONE, THEN INDICATE HOW IMPORTANT THIS THING IS FOR YOU.",
+    "question_text": "A JOB THAT PERMITS CONTACT WITH A LOT OF PEOPLE",
+    "matched_by": "variable name"
+   }
+  },
+  {
+   "name": "V4246",
+   "label": "764A08V:JOB IMPC EZ PACE",
+   "storage": {
+    "spss_format": "F1.0",
+    "kind": "numeric",
+    "width": 1,
+    "decimals": 0
+   },
+   "value_labels": {
+    "1": "NOT IMPORTANT",
+    "2": "A LITTLE IMPORTANT",
+    "3": "PRETTY IMPORTANT",
+    "4": "VERY IMPORTANT"
+   },
+   "declared_missing_values": [
+    0
+   ],
+   "declared_missing_range": [
+    9,
+    "HIGHEST"
+   ],
+   "codebook": {
+    "question_code": "A08V",
+    "question_stem": "DIFFERENT PEOPLE MAY LOOK FOR DIFFERENT THINGS IN THEIR WORK. BELOW IS A LIST OF SOME OF THESE THINGS. PLEASE READ EACH ONE, THEN INDICATE HOW IMPORTANT THIS THING IS FOR YOU.",
+    "question_text": "A JOB WITH AN EASY PACE THAT LETS YOU WORK SLOWLY",
+    "matched_by": "variable name"
+   }
+  },
+  {
+   "name": "V4247",
+   "label": "764A08W:JOB IMPC HRD PRB",
+   "storage": {
+    "spss_format": "F1.0",
+    "kind": "numeric",
+    "width": 1,
+    "decimals": 0
+   },
+   "value_labels": {
+    "1": "NOT IMPORTANT",
+    "2": "A LITTLE IMPORTANT",
+    "3": "PRETTY IMPORTANT",
+    "4": "VERY IMPORTANT"
+   },
+   "declared_missing_values": [
+    0
+   ],
+   "declared_missing_range": [
+    9,
+    "HIGHEST"
+   ],
+   "codebook": {
+    "question_code": "A08W",
+    "question_stem": "DIFFERENT PEOPLE MAY LOOK FOR DIFFERENT THINGS IN THEIR WORK. BELOW IS A LIST OF SOME OF THESE THINGS. PLEASE READ EACH ONE, THEN INDICATE HOW IMPORTANT THIS THING IS FOR YOU.",
+    "question_text": "A JOB WHERE MOST PROBLEMS ARE QUITE DIFFICULT AND CHALLENGING",
+    "matched_by": "variable name"
+   }
+  },
+  {
+   "name": "V4248",
+   "label": "764A09 :KIND OF WORK @30",
+   "storage": {
+    "spss_format": "F2.0",
+    "kind": "numeric",
+    "width": 2,
+    "decimals": 0
+   },
+   "value_labels": {
+    "1": "LABORER (CAR WASHER, SANITARY WORKER, FARM LABORER)",
+    "2": "SERVICE WORKER",
+    "3": "OPERATIVE OR SEMI-SKILLED WORKER",
+    "4": "SALES CLERK IN A RETAIL STORE",
+    "5": "CLERICAL OR OFFICE WORKER",
+    "6": "PROTECTIVE SERVICE (POLICE OFFICER, FIREMAN, DETECTIVE)",
+    "7": "MILITARY SERVICE",
+    "8": "CRAFTSMAN OR SKILLED WORKER",
+    "9": "FARM OWNER, FARM MANAGER",
+    "10": "OWNER OF SMALL BUSINESS (RESTAURANT OWNER, SHOP OWNER)",
+    "11": "SALES REPRESENTATIVE",
+    "12": "MANAGER OR ADMINISTRATOR",
+    "13": "PROFESSIONAL WITHOUT DOCTORAL DEGREE",
+    "14": "PROFESSIONAL WITH DOCTORAL DEGREE OR EQUIVALENT",
+    "15": "FULL-TIME HOMEMAKER OR HOUSEWIFE",
+    "16": "DON'T KNOW"
+   },
+   "declared_missing_values": [
+    0
+   ],
+   "declared_missing_range": [
+    16,
+    "HIGHEST"
+   ],
+   "codebook": {
+    "question_code": "A09",
+    "question_text": "WHAT KIND OF WORK DO YOU THINK YOU WILL BE DOING WHEN YOU ARE 30 YEARS OLD? MARK THE ONE THAT COMES CLOSEST TO WHAT YOU EXPECT TO BE DOING.",
+    "matched_by": "variable name"
+   }
+  },
+  {
+   "name": "V4249",
+   "label": "764A10 :R SURE GT THS WK",
+   "storage": {
+    "spss_format": "F1.0",
+    "kind": "numeric",
+    "width": 1,
+    "decimals": 0
+   },
+   "value_labels": {
+    "1": "NOT VERY LIKELY",
+    "2": "SOMEWHAT LIKELY",
+    "3": "FAIRLY LIKELY",
+    "4": "VERY LIKELY",
+    "5": "CERTAIN",
+    "6": "I ALREADY DO THIS KIND OF WORK"
+   },
+   "declared_missing_values": [
+    0
+   ],
+   "declared_missing_range": [
+    8,
+    "HIGHEST"
+   ],
+   "codebook": {
+    "question_code": "A10",
+    "question_text": "HOW LIKELY DO YOU THINK IT IS THAT YOU WILL ACTUALLY GET TO DO THIS KIND OF WORK?",
+    "matched_by": "variable name"
+   }
+  },
+  {
+   "name": "V4250",
+   "label": "764A11 :R SURE WK GD CHC",
+   "storage": {
+    "spss_format": "F1.0",
+    "kind": "numeric",
+    "width": 1,
+    "decimals": 0
+   },
+   "value_labels": {
+    "1": "NOT AT ALL CERTAIN",
+    "2": "SOMEWHAT CERTAIN",
+    "3": "FAIRLY CERTAIN",
+    "4": "VERY CERTAIN",
+    "5": "COMPLETELY CERTAIN"
+   },
+   "declared_missing_values": [
+    0
+   ],
+   "declared_missing_range": [
+    8,
+    "HIGHEST"
+   ],
+   "codebook": {
+    "question_code": "A11",
+    "question_text": "HOW CERTAIN ARE YOU THAT THIS KIND OF WORK IS A GOOD CHOICE FOR YOU?",
+    "matched_by": "variable name"
+   }
+  },
+  {
+   "name": "V4251",
+   "label": "764A12 :R THNK WK BE SAT",
+   "storage": {
+    "spss_format": "F1.0",
+    "kind": "numeric",
+    "width": 1,
+    "decimals": 0
+   },
+   "value_labels": {
+    "1": "NOT VERY SATISFYING",
+    "2": "SOMEWHAT SATISFYING",
+    "3": "QUITE SATISFYING",
+    "4": "VERY SATISFYING",
+    "5": "EXTREMELY SATISFYING"
+   },
+   "declared_missing_values": [
+    0
+   ],
+   "declared_missing_range": [
+    8,
+    "HIGHEST"
+   ],
+   "codebook": {
+    "question_code": "A12",
+    "question_text": "HOW SATISFYING DO YOU THINK THIS KIND OF WORK WILL BE FOR YOU?",
+    "matched_by": "variable name"
+   }
+  },
+  {
+   "name": "V4252",
+   "label": "764A13A:JOB OBSTC RELGN",
+   "storage": {
+    "spss_format": "F1.0",
+    "kind": "numeric",
+    "width": 1,
+    "decimals": 0
+   },
+   "value_labels": {
+    "1": "NOT AT ALL",
+    "2": "SOMEWHAT",
+    "3": "A LOT",
+    "8": "DON'T KNOW"
+   },
+   "declared_missing_values": [
+    0
+   ],
+   "declared_missing_range": [
+    8,
+    "HIGHEST"
+   ],
+   "codebook": {
+    "question_code": "A13A",
+    "question_stem": "TO WHAT EXTENT DO YOU THINK THE THINGS LISTED BELOW WILL PREVENT YOU FROM GETTING THE KIND OF WORK YOU WOULD LIKE TO HAVE?",
+    "question_text": "YOUR RELIGION",
+    "matched_by": "variable name"
+   }
+  },
+  {
+   "name": "V4253",
+   "label": "764A13B:JOB OBSTC SEX",
+   "storage": {
+    "spss_format": "F1.0",
+    "kind": "numeric",
+    "width": 1,
+    "decimals": 0
+   },
+   "value_labels": {
+    "1": "NOT AT ALL",
+    "2": "SOMEWHAT",
+    "3": "A LOT",
+    "8": "DON'T KNOW"
+   },
+   "declared_missing_values": [
+    0
+   ],
+   "declared_missing_range": [
+    8,
+    "HIGHEST"
+   ],
+   "codebook": {
+    "question_code": "A13B",
+    "question_stem": "TO WHAT EXTENT DO YOU THINK THE THINGS LISTED BELOW WILL PREVENT YOU FROM GETTING THE KIND OF WORK YOU WOULD LIKE TO HAVE?",
+    "question_text": "YOUR SEX",
+    "matched_by": "variable name"
+   }
+  },
+  {
+   "name": "V4254",
+   "label": "764A13C:JOB OBSTC RACE",
+   "storage": {
+    "spss_format": "F1.0",
+    "kind": "numeric",
+    "width": 1,
+    "decimals": 0
+   },
+   "value_labels": {
+    "1": "NOT AT ALL",
+    "2": "SOMEWHAT",
+    "3": "A LOT",
+    "8": "DON'T KNOW"
+   },
+   "declared_missing_values": [
+    0
+   ],
+   "declared_missing_range": [
+    8,
+    "HIGHEST"
+   ],
+   "codebook": {
+    "question_code": "A13C",
+    "question_stem": "TO WHAT EXTENT DO YOU THINK THE THINGS LISTED BELOW WILL PREVENT YOU FROM GETTING THE KIND OF WORK YOU WOULD LIKE TO HAVE?",
+    "question_text": "YOUR RACE",
+    "matched_by": "variable name"
+   }
+  },
+  {
+   "name": "V4255",
+   "label": "764A13D:JOB OBSTC BKGRND",
+   "storage": {
+    "spss_format": "F1.0",
+    "kind": "numeric",
+    "width": 1,
+    "decimals": 0
+   },
+   "value_labels": {
+    "1": "NOT AT ALL",
+    "2": "SOMEWHAT",
+    "3": "A LOT",
+    "8": "DON'T KNOW"
+   },
+   "declared_missing_values": [
+    0
+   ],
+   "declared_missing_range": [
+    8,
+    "HIGHEST"
+   ],
+   "codebook": {
+    "question_code": "A13D",
+    "question_stem": "TO WHAT EXTENT DO YOU THINK THE THINGS LISTED BELOW WILL PREVENT YOU FROM GETTING THE KIND OF WORK YOU WOULD LIKE TO HAVE?",
+    "question_text": "YOUR FAMILY BACKGROUND",
+    "matched_by": "variable name"
+   }
+  },
+  {
+   "name": "V4256",
+   "label": "764A13E:JOB OBSTC POL VW",
+   "storage": {
+    "spss_format": "F1.0",
+    "kind": "numeric",
+    "width": 1,
+    "decimals": 0
+   },
+   "value_labels": {
+    "1": "NOT AT ALL",
+    "2": "SOMEWHAT",
+    "3": "A LOT",
+    "8": "DON'T KNOW"
+   },
+   "declared_missing_values": [
+    0
+   ],
+   "declared_missing_range": [
+    8,
+    "HIGHEST"
+   ],
+   "codebook": {
+    "question_code": "A13E",
+    "question_stem": "TO WHAT EXTENT DO YOU THINK THE THINGS LISTED BELOW WILL PREVENT YOU FROM GETTING THE KIND OF WORK YOU WOULD LIKE TO HAVE?",
+    "question_text": "YOUR POLITICAL VIEWS",
+    "matched_by": "variable name"
+   }
+  },
+  {
+   "name": "V4257",
+   "label": "764A13F:JOB OBSTC EDUCTN",
+   "storage": {
+    "spss_format": "F1.0",
+    "kind": "numeric",
+    "width": 1,
+    "decimals": 0
+   },
+   "value_labels": {
+    "1": "NOT AT ALL",
+    "2": "SOMEWHAT",
+    "3": "A LOT",
+    "8": "DON'T KNOW"
+   },
+   "declared_missing_values": [
+    0
+   ],
+   "declared_missing_range": [
+    8,
+    "HIGHEST"
+   ],
+   "codebook": {
+    "question_code": "A13F",
+    "question_stem": "TO WHAT EXTENT DO YOU THINK THE THINGS LISTED BELOW WILL PREVENT YOU FROM GETTING THE KIND OF WORK YOU WOULD LIKE TO HAVE?",
+    "question_text": "YOUR EDUCATION",
+    "matched_by": "variable name"
+   }
+  },
+  {
+   "name": "V4258",
+   "label": "764A13G:JOB OBSTC -VOC T",
+   "storage": {
+    "spss_format": "F1.0",
+    "kind": "numeric",
+    "width": 1,
+    "decimals": 0
+   },
+   "value_labels": {
+    "1": "NOT AT ALL",
+    "2": "SOMEWHAT",
+    "3": "A LOT",
+    "8": "DON'T KNOW"
+   },
+   "declared_missing_values": [
+    0
+   ],
+   "declared_missing_range": [
+    8,
+    "HIGHEST"
+   ],
+   "codebook": {
+    "question_code": "A13G",
+    "question_stem": "TO WHAT EXTENT DO YOU THINK THE THINGS LISTED BELOW WILL PREVENT YOU FROM GETTING THE KIND OF WORK YOU WOULD LIKE TO HAVE?",
+    "question_text": "LACK OF VOCATIONAL TRAINING",
+    "matched_by": "variable name"
+   }
+  },
+  {
+   "name": "V4259",
+   "label": "764A13H:JOB OBSTC -ABLTY",
+   "storage": {
+    "spss_format": "F1.0",
+    "kind": "numeric",
+    "width": 1,
+    "decimals": 0
+   },
+   "value_labels": {
+    "1": "NOT AT ALL",
+    "2": "SOMEWHAT",
+    "3": "A LOT",
+    "8": "DON'T KNOW"
+   },
+   "declared_missing_values": [
+    0
+   ],
+   "declared_missing_range": [
+    8,
+    "HIGHEST"
+   ],
+   "codebook": {
+    "question_code": "A13H",
+    "question_stem": "TO WHAT EXTENT DO YOU THINK THE THINGS LISTED BELOW WILL PREVENT YOU FROM GETTING THE KIND OF WORK YOU WOULD LIKE TO HAVE?",
+    "question_text": "LACK OF ABILITY",
+    "matched_by": "variable name"
+   }
+  },
+  {
+   "name": "V4260",
+   "label": "764A13I:JOB OBSTC - PULL",
+   "storage": {
+    "spss_format": "F1.0",
+    "kind": "numeric",
+    "width": 1,
+    "decimals": 0
+   },
+   "value_labels": {
+    "1": "NOT AT ALL",
+    "2": "SOMEWHAT",
+    "3": "A LOT",
+    "8": "DON'T KNOW"
+   },
+   "declared_missing_values": [
+    0
+   ],
+   "declared_missing_range": [
+    8,
+    "HIGHEST"
+   ],
+   "codebook": {
+    "question_code": "A13I",
+    "question_stem": "TO WHAT EXTENT DO YOU THINK THE THINGS LISTED BELOW WILL PREVENT YOU FROM GETTING THE KIND OF WORK YOU WOULD LIKE TO HAVE?",
+    "question_text": "NOT KNOWING THE RIGHT PEOPLE",
+    "matched_by": "variable name"
+   }
+  },
+  {
+   "name": "V4261",
+   "label": "764A13J:JOB OBSTC -WK HD",
+   "storage": {
+    "spss_format": "F1.0",
+    "kind": "numeric",
+    "width": 1,
+    "decimals": 0
+   },
+   "value_labels": {
+    "1": "NOT AT ALL",
+    "2": "SOMEWHAT",
+    "3": "A LOT",
+    "8": "DON'T KNOW"
+   },
+   "declared_missing_values": [
+    0
+   ],
+   "declared_missing_range": [
+    8,
+    "HIGHEST"
+   ],
+   "codebook": {
+    "question_code": "A13J",
+    "question_stem": "TO WHAT EXTENT DO YOU THINK THE THINGS LISTED BELOW WILL PREVENT YOU FROM GETTING THE KIND OF WORK YOU WOULD LIKE TO HAVE?",
+    "question_text": "NOT WANTING TO WORK HARD",
+    "matched_by": "variable name"
+   }
+  },
+  {
+   "name": "V4262",
+   "label": "764A13K:JOB OBSTC -CONFM",
+   "storage": {
+    "spss_format": "F1.0",
+    "kind": "numeric",
+    "width": 1,
+    "decimals": 0
+   },
+   "value_labels": {
+    "1": "NOT AT ALL",
+    "2": "SOMEWHAT",
+    "3": "A LOT",
+    "8": "DON'T KNOW"
+   },
+   "declared_missing_values": [
+    0
+   ],
+   "declared_missing_range": [
+    8,
+    "HIGHEST"
+   ],
+   "codebook": {
+    "question_code": "A13K",
+    "question_stem": "TO WHAT EXTENT DO YOU THINK THE THINGS LISTED BELOW WILL PREVENT YOU FROM GETTING THE KIND OF WORK YOU WOULD LIKE TO HAVE?",
+    "question_text": "NOT WANTING TO CONFORM",
+    "matched_by": "variable name"
+   }
+  },
+  {
+   "name": "V4263",
+   "label": "764A14 :ENUF$,NT WNT WRK",
+   "storage": {
+    "spss_format": "F1.0",
+    "kind": "numeric",
+    "width": 1,
+    "decimals": 0
+   },
+   "value_labels": {
+    "1": "I WOULD WANT TO WORK",
+    "2": "I WOULD NOT WANT TO WORK"
+   },
+   "declared_missing_values": [
+    0
+   ],
+   "declared_missing_range": [
+    9,
+    "HIGHEST"
+   ],
+   "codebook": {
+    "question_code": "A14",
+    "question_text": "IF YOU WERE TO GET ENOUGH MONEY TO LIVE AS COMFORTABLY AS YOU'D LIKE FOR THE REST OF YOUR LIFE, WOULD YOU WANT TO WORK?",
+    "matched_by": "variable name"
+   }
+  },
+  {
+   "name": "V4264",
+   "label": "764A15A:FEW GD MAR, ? IT",
+   "storage": {
+    "spss_format": "F1.0",
+    "kind": "numeric",
+    "width": 1,
+    "decimals": 0
+   },
+   "value_labels": {
+    "1": "DISAGREE",
+    "2": "MOSTLY DISAGREE",
+    "3": "NEITHER",
+    "4": "MOSTLY AGREE",
+    "5": "AGREE"
+   },
+   "declared_missing_values": [
+    0
+   ],
+   "declared_missing_range": [
+    9,
+    "HIGHEST"
+   ],
+   "codebook": {
+    "question_code": "A15A",
+    "question_stem": "HOW MUCH DO YOU AGREE OR DISAGREE WITH EACH STATEMENT BELOW?",
+    "question_text": "ONE SEES SO FEW GOOD OR HAPPY MARRIAGES THAT ONE QUESTIONS IT AS A WAY OF LIFE",
+    "matched_by": "variable name"
+   }
+  },
+  {
+   "name": "V4265",
+   "label": "764A15B:GD LIV TG BF MRG",
+   "storage": {
+    "spss_format": "F1.0",
+    "kind": "numeric",
+    "width": 1,
+    "decimals": 0
+   },
+   "value_labels": {
+    "1": "DISAGREE",
+    "2": "MOSTLY DISAGREE",
+    "3": "NEITHER",
+    "4": "MOSTLY AGREE",
+    "5": "AGREE"
+   },
+   "declared_missing_values": [
+    0
+   ],
+   "declared_missing_range": [
+    9,
+    "HIGHEST"
+   ],
+   "codebook": {
+    "question_code": "A15B",
+    "question_stem": "HOW MUCH DO YOU AGREE OR DISAGREE WITH EACH STATEMENT BELOW?",
+    "question_text": "IT IS USUALLY A GOOD IDEA FOR A COUPLE TO LIVE TOGETHER BEFORE GETTING MARRIED IN ORDER TO FIND OUT WHETHER THEY REALLY GET ALONG",
+    "matched_by": "variable name"
+   }
+  },
+  {
+   "name": "V4266",
+   "label": "764A15C:1 PRTNR=RSTRCTVE",
+   "storage": {
+    "spss_format": "F1.0",
+    "kind": "numeric",
+    "width": 1,
+    "decimals": 0
+   },
+   "value_labels": {
+    "1": "DISAGREE",
+    "2": "MOSTLY DISAGREE",
+    "3": "NEITHER",
+    "4": "MOSTLY AGREE",
+    "5": "AGREE"
+   },
+   "declared_missing_values": [
+    0
+   ],
+   "declared_missing_range": [
+    9,
+    "HIGHEST"
+   ],
+   "codebook": {
+    "question_code": "A15C",
+    "question_stem": "HOW MUCH DO YOU AGREE OR DISAGREE WITH EACH STATEMENT BELOW?",
+    "question_text": "HAVING A CLOSE INTIMATE RELATIONSHIP WITH ONLY ONE PARTNER IS TOO RESTRICTIVE FOR THE AVERAGE PERSON",
+    "matched_by": "variable name"
+   }
+  },
+  {
+   "name": "V4267",
+   "label": "764A15D:JB INTFR REL HBD",
+   "storage": {
+    "spss_format": "F1.0",
+    "kind": "numeric",
+    "width": 1,
+    "decimals": 0
+   },
+   "value_labels": {
+    "1": "DISAGREE",
+    "2": "MOSTLY DISAGREE",
+    "3": "NEITHER",
+    "4": "MOSTLY AGREE",
+    "5": "AGREE"
+   },
+   "declared_missing_values": [
+    0
+   ],
+   "declared_missing_range": [
+    9,
+    "HIGHEST"
+   ],
+   "codebook": {
+    "question_code": "A15D",
+    "question_stem": "HOW MUCH DO YOU AGREE OR DISAGREE WITH EACH STATEMENT BELOW?",
+    "question_text": "HAVING A JOB TAKES AWAY FROM A WOMAN'S RELATIONSHIP WITH HER HUSBAND",
+    "matched_by": "variable name"
+   }
+  },
+  {
+   "name": "V4268",
+   "label": "764A15E:JB DVLP WF PERSN",
+   "storage": {
+    "spss_format": "F1.0",
+    "kind": "numeric",
+    "width": 1,
+    "decimals": 0
+   },
+   "value_labels": {
+    "1": "DISAGREE",
+    "2": "MOSTLY DISAGREE",
+    "3": "NEITHER",
+    "4": "MOSTLY AGREE",
+    "5": "AGREE"
+   },
+   "declared_missing_values": [
+    0
+   ],
+   "declared_missing_range": [
+    9,
+    "HIGHEST"
+   ],
+   "codebook": {
+    "question_code": "A15E",
+    "question_stem": "HOW MUCH DO YOU AGREE OR DISAGREE WITH EACH STATEMENT BELOW?",
+    "question_text": "HAVING A JOB GIVES A WIFE MORE OF A CHANCE TO DEVELOP HERSELF AS A PERSON",
+    "matched_by": "variable name"
+   }
+  },
+  {
+   "name": "V4269",
+   "label": "764A15F:RS CHLD + FR MAN",
+   "storage": {
+    "spss_format": "F1.0",
+    "kind": "numeric",
+    "width": 1,
+    "decimals": 0
+   },
+   "value_labels": {
+    "1": "DISAGREE",
+    "2": "MOSTLY DISAGREE",
+    "3": "NEITHER",
+    "4": "MOSTLY AGREE",
+    "5": "AGREE"
+   },
+   "declared_missing_values": [
+    0
+   ],
+   "declared_missing_range": [
+    9,
+    "HIGHEST"
+   ],
+   "codebook": {
+    "question_code": "A15F",
+    "question_stem": "HOW MUCH DO YOU AGREE OR DISAGREE WITH EACH STATEMENT BELOW?",
+    "question_text": "BEING A FATHER AND RAISING CHILDREN IS ONE OF THE MOST FULFILLING EXPERIENCES A MAN CAN HAVE",
+    "matched_by": "variable name"
+   }
+  },
+  {
+   "name": "V4270",
+   "label": "764A15G:MO SH B W CHL>TM",
+   "storage": {
+    "spss_format": "F1.0",
+    "kind": "numeric",
+    "width": 1,
+    "decimals": 0
+   },
+   "value_labels": {
+    "1": "DISAGREE",
+    "2": "MOSTLY DISAGREE",
+    "3": "NEITHER",
+    "4": "MOSTLY AGREE",
+    "5": "AGREE"
+   },
+   "declared_missing_values": [
+    0
+   ],
+   "declared_missing_range": [
+    9,
+    "HIGHEST"
+   ],
+   "codebook": {
+    "question_code": "A15G",
+    "question_stem": "HOW MUCH DO YOU AGREE OR DISAGREE WITH EACH STATEMENT BELOW?",
+    "question_text": "MOST MOTHERS SHOULD SPEND MORE TIME WITH THEIR CHILDREN THAN THEY DO NOW.",
+    "matched_by": "variable name"
+   }
+  },
+  {
+   "name": "V4271",
+   "label": "764A15H:WF WK,HBD SHD>HW",
+   "storage": {
+    "spss_format": "F1.0",
+    "kind": "numeric",
+    "width": 1,
+    "decimals": 0
+   },
+   "value_labels": {
+    "1": "DISAGREE",
+    "2": "MOSTLY DISAGREE",
+    "3": "NEITHER",
+    "4": "MOSTLY AGREE",
+    "5": "AGREE"
+   },
+   "declared_missing_values": [
+    0
+   ],
+   "declared_missing_range": [
+    9,
+    "HIGHEST"
+   ],
+   "codebook": {
+    "question_code": "A15H",
+    "question_stem": "HOW MUCH DO YOU AGREE OR DISAGREE WITH EACH STATEMENT BELOW?",
+    "question_text": "IF A WIFE WORKS, HER HUSBAND SHOULD TAKE A GREATER PART IN HOUSEWORK AND CHILD-CARE",
+    "matched_by": "variable name"
+   }
+  },
+  {
+   "name": "V4272",
+   "label": "764A16 :#HRS TV/DAY/5+",
+   "storage": {
+    "spss_format": "F1.0",
+    "kind": "numeric",
+    "width": 1,
+    "decimals": 0
+   },
+   "value_labels": {
+    "1": "NONE",
+    "2": "HALF-HOUR OR LESS",
+    "3": "ABOUT ONE HOUR",
+    "4": "ABOUT TWO HOURS",
+    "5": "ABOUT THREE HOURS",
+    "6": "ABOUT FOUR HOURS",
+    "7": "FIVE HOURS OR MORE"
+   },
+   "declared_missing_values": [
+    0
+   ],
+   "declared_missing_range": [
+    9,
+    "HIGHEST"
+   ],
+   "codebook": {
+    "question_code": "A16",
+    "question_text": "HOW MUCH TV DO YOU ESTIMATE YOU WATCH ON AN AVERAGE WEEKDAY?",
+    "matched_by": "variable name"
+   }
+  },
+  {
+   "name": "V4273",
+   "label": "764A17 :#BKS LAST YR/10+",
+   "storage": {
+    "spss_format": "F1.0",
+    "kind": "numeric",
+    "width": 1,
+    "decimals": 0
+   },
+   "value_labels": {
+    "1": "NONE",
+    "2": "ONE",
+    "3": "TWO TO FIVE",
+    "4": "SIX TO TEN",
+    "5": "TEN OR MORE"
+   },
+   "declared_missing_values": [
+    0
+   ],
+   "declared_missing_range": [
+    9,
+    "HIGHEST"
+   ],
+   "codebook": {
+    "question_code": "A17",
+    "question_text": "IN THE PAST YEAR, HOW MANY BOOKS HAVE YOU READ JUST BECAUSE YOU WANTED TO--THAT IS, WITHOUT THEIR BEING ASSIGNED?",
+    "matched_by": "variable name"
+   }
+  },
+  {
+   "name": "V4274",
+   "label": "764A18 :INTEREST IN GOVT",
+   "storage": {
+    "spss_format": "F1.0",
+    "kind": "numeric",
+    "width": 1,
+    "decimals": 0
+   },
+   "value_labels": {
+    "1": "NO INTEREST AT ALL",
+    "2": "VERY LITTLE INTEREST",
+    "3": "SOME INTEREST",
+    "4": "A LOT OF INTEREST",
+    "5": "A VERY GREAT INTEREST"
+   },
+   "declared_missing_values": [
+    0
+   ],
+   "declared_missing_range": [
+    9,
+    "HIGHEST"
+   ],
+   "codebook": {
+    "question_code": "A18",
+    "question_text": "SOME PEOPLE THINK ABOUT WHAT'S GOING ON IN GOVERNMENT VERY OFTEN, AND OTHERS ARE NOT THAT INTERESTED. HOW MUCH OF AN INTEREST DO YOU TAKE IN GOVERNMENT AND CURRENT EVENTS?",
+    "matched_by": "variable name"
+   }
+  },
+  {
+   "name": "V4275",
+   "label": "764A19A:>INFLC LARG CORP",
+   "storage": {
+    "spss_format": "F1.0",
+    "kind": "numeric",
+    "width": 1,
+    "decimals": 0
+   },
+   "value_labels": {
+    "1": "MUCH LESS",
+    "2": "LESS",
+    "3": "SAME AS NOW",
+    "4": "MORE",
+    "5": "MUCH MORE",
+    "8": "NO OPINION"
+   },
+   "declared_missing_values": [
+    0
+   ],
+   "declared_missing_range": [
+    8,
+    "HIGHEST"
+   ],
+   "codebook": {
+    "question_code": "A19A",
+    "question_stem": "SOME PEOPLE THINK THAT THERE OUGHT TO BE CHANGES IN THE AMOUNT OF INFLUENCE AND POWER THAT CERTAIN ORGANIZATIONS HAVE IN OUR SOCIETY. DO YOU THINK THE FOLLOWING ORGANIZATIONS SHOULD HAVE MORE INFLUENCE, LESS INFLUENCE, OR ABOUT THE SAME AMOUNT OF INFLUENCE AS THEY HAVE NOW?",
+    "question_text": "LARGE CORPORATIONS?",
+    "matched_by": "variable name"
+   }
+  },
+  {
+   "name": "V4276",
+   "label": "764A19B:>INFLC LBR UNION",
+   "storage": {
+    "spss_format": "F1.0",
+    "kind": "numeric",
+    "width": 1,
+    "decimals": 0
+   },
+   "value_labels": {
+    "1": "MUCH LESS",
+    "2": "LESS",
+    "3": "SAME AS NOW",
+    "4": "MORE",
+    "5": "MUCH MORE",
+    "8": "NO OPINION"
+   },
+   "declared_missing_values": [
+    0
+   ],
+   "declared_missing_range": [
+    8,
+    "HIGHEST"
+   ],
+   "codebook": {
+    "question_code": "A19B",
+    "question_stem": "SOME PEOPLE THINK THAT THERE OUGHT TO BE CHANGES IN THE AMOUNT OF INFLUENCE AND POWER THAT CERTAIN ORGANIZATIONS HAVE IN OUR SOCIETY. DO YOU THINK THE FOLLOWING ORGANIZATIONS SHOULD HAVE MORE INFLUENCE, LESS INFLUENCE, OR ABOUT THE SAME AMOUNT OF INFLUENCE AS THEY HAVE NOW?",
+    "question_text": "MAJOR LABOR UNIONS?",
+    "matched_by": "variable name"
+   }
+  },
+  {
+   "name": "V4277",
+   "label": "764A19C:>INFLC CHURCHES",
+   "storage": {
+    "spss_format": "F1.0",
+    "kind": "numeric",
+    "width": 1,
+    "decimals": 0
+   },
+   "value_labels": {
+    "1": "MUCH LESS",
+    "2": "LESS",
+    "3": "SAME AS NOW",
+    "4": "MORE",
+    "5": "MUCH MORE",
+    "8": "NO OPINION"
+   },
+   "declared_missing_values": [
+    0
+   ],
+   "declared_missing_range": [
+    8,
+    "HIGHEST"
+   ],
+   "codebook": {
+    "question_code": "A19C",
+    "question_stem": "SOME PEOPLE THINK THAT THERE OUGHT TO BE CHANGES IN THE AMOUNT OF INFLUENCE AND POWER THAT CERTAIN ORGANIZATIONS HAVE IN OUR SOCIETY. DO YOU THINK THE FOLLOWING ORGANIZATIONS SHOULD HAVE MORE INFLUENCE, LESS INFLUENCE, OR ABOUT THE SAME AMOUNT OF INFLUENCE AS THEY HAVE NOW?",
+    "question_text": "CHURCHES AND RELIGIOUS ORGANIZATIONS?",
+    "matched_by": "variable name"
+   }
+  },
+  {
+   "name": "V4278",
+   "label": "764A19D:>INFLC NEWS MDIA",
+   "storage": {
+    "spss_format": "F1.0",
+    "kind": "numeric",
+    "width": 1,
+    "decimals": 0
+   },
+   "value_labels": {
+    "1": "MUCH LESS",
+    "2": "LESS",
+    "3": "SAME AS NOW",
+    "4": "MORE",
+    "5": "MUCH MORE",
+    "8": "NO OPINION"
+   },
+   "declared_missing_values": [
+    0
+   ],
+   "declared_missing_range": [
+    8,
+    "HIGHEST"
+   ],
+   "codebook": {
+    "question_code": "A19D",
+    "question_stem": "SOME PEOPLE THINK THAT THERE OUGHT TO BE CHANGES IN THE AMOUNT OF INFLUENCE AND POWER THAT CERTAIN ORGANIZATIONS HAVE IN OUR SOCIETY. DO YOU THINK THE FOLLOWING ORGANIZATIONS SHOULD HAVE MORE INFLUENCE, LESS INFLUENCE, OR ABOUT THE SAME AMOUNT OF INFLUENCE AS THEY HAVE NOW?",
+    "question_text": "THE NATIONAL NEWS MEDIA (TV, MAGAZINES, NEWS SERVICES)?",
+    "matched_by": "variable name"
+   }
+  },
+  {
+   "name": "V4279",
+   "label": "764A19E:>INFLC PRES&ADMN",
+   "storage": {
+    "spss_format": "F1.0",
+    "kind": "numeric",
+    "width": 1,
+    "decimals": 0
+   },
+   "value_labels": {
+    "1": "MUCH LESS",
+    "2": "LESS",
+    "3": "SAME AS NOW",
+    "4": "MORE",
+    "5": "MUCH MORE",
+    "8": "NO OPINION"
+   },
+   "declared_missing_values": [
+    0
+   ],
+   "declared_missing_range": [
+    8,
+    "HIGHEST"
+   ],
+   "codebook": {
+    "question_code": "A19E",
+    "question_stem": "SOME PEOPLE THINK THAT THERE OUGHT TO BE CHANGES IN THE AMOUNT OF INFLUENCE AND POWER THAT CERTAIN ORGANIZATIONS HAVE IN OUR SOCIETY. DO YOU THINK THE FOLLOWING ORGANIZATIONS SHOULD HAVE MORE INFLUENCE, LESS INFLUENCE, OR ABOUT THE SAME AMOUNT OF INFLUENCE AS THEY HAVE NOW?",
+    "question_text": "THE PRESIDENCY AND THE ADMINISTRATION?",
+    "matched_by": "variable name"
+   }
+  },
+  {
+   "name": "V4280",
+   "label": "764A19F:>INFLC CONGRESS",
+   "storage": {
+    "spss_format": "F1.0",
+    "kind": "numeric",
+    "width": 1,
+    "decimals": 0
+   },
+   "value_labels": {
+    "1": "MUCH LESS",
+    "2": "LESS",
+    "3": "SAME AS NOW",
+    "4": "MORE",
+    "5": "MUCH MORE",
+    "8": "NO OPINION"
+   },
+   "declared_missing_values": [
+    0
+   ],
+   "declared_missing_range": [
+    8,
+    "HIGHEST"
+   ],
+   "codebook": {
+    "question_code": "A19F",
+    "question_stem": "SOME PEOPLE THINK THAT THERE OUGHT TO BE CHANGES IN THE AMOUNT OF INFLUENCE AND POWER THAT CERTAIN ORGANIZATIONS HAVE IN OUR SOCIETY. DO YOU THINK THE FOLLOWING ORGANIZATIONS SHOULD HAVE MORE INFLUENCE, LESS INFLUENCE, OR ABOUT THE SAME AMOUNT OF INFLUENCE AS THEY HAVE NOW?",
+    "question_text": "THE CONGRESS--THAT IS, THE U.S. SENATE AND HOUSE OF REPRESENTATIVES?",
+    "matched_by": "variable name"
+   }
+  },
+  {
+   "name": "V4281",
+   "label": "764A19G:>INFLC SUPRM CRT",
+   "storage": {
+    "spss_format": "F1.0",
+    "kind": "numeric",
+    "width": 1,
+    "decimals": 0
+   },
+   "value_labels": {
+    "1": "MUCH LESS",
+    "2": "LESS",
+    "3": "SAME AS NOW",
+    "4": "MORE",
+    "5": "MUCH MORE",
+    "8": "NO OPINION"
+   },
+   "declared_missing_values": [
+    0
+   ],
+   "declared_missing_range": [
+    8,
+    "HIGHEST"
+   ],
+   "codebook": {
+    "question_code": "A19G",
+    "question_stem": "SOME PEOPLE THINK THAT THERE OUGHT TO BE CHANGES IN THE AMOUNT OF INFLUENCE AND POWER THAT CERTAIN ORGANIZATIONS HAVE IN OUR SOCIETY. DO YOU THINK THE FOLLOWING ORGANIZATIONS SHOULD HAVE MORE INFLUENCE, LESS INFLUENCE, OR ABOUT THE SAME AMOUNT OF INFLUENCE AS THEY HAVE NOW?",
+    "question_text": "THE U.S. SUPREME COURT?",
+    "matched_by": "variable name"
+   }
+  },
+  {
+   "name": "V4282",
+   "label": "764A19H:>INFLC JUSTC SYS",
+   "storage": {
+    "spss_format": "F1.0",
+    "kind": "numeric",
+    "width": 1,
+    "decimals": 0
+   },
+   "value_labels": {
+    "1": "MUCH LESS",
+    "2": "LESS",
+    "3": "SAME AS NOW",
+    "4": "MORE",
+    "5": "MUCH MORE",
+    "8": "NO OPINION"
+   },
+   "declared_missing_values": [
+    0
+   ],
+   "declared_missing_range": [
+    8,
+    "HIGHEST"
+   ],
+   "codebook": {
+    "question_code": "A19H",
+    "question_stem": "SOME PEOPLE THINK THAT THERE OUGHT TO BE CHANGES IN THE AMOUNT OF INFLUENCE AND POWER THAT CERTAIN ORGANIZATIONS HAVE IN OUR SOCIETY. DO YOU THINK THE FOLLOWING ORGANIZATIONS SHOULD HAVE MORE INFLUENCE, LESS INFLUENCE, OR ABOUT THE SAME AMOUNT OF INFLUENCE AS THEY HAVE NOW?",
+    "question_text": "ALL THE COURTS AND THE JUSTICE SYSTEM IN GENERAL?",
+    "matched_by": "variable name"
+   }
+  },
+  {
+   "name": "V4283",
+   "label": "764A19I:>INFLC POLICE",
+   "storage": {
+    "spss_format": "F1.0",
+    "kind": "numeric",
+    "width": 1,
+    "decimals": 0
+   },
+   "value_labels": {
+    "1": "MUCH LESS",
+    "2": "LESS",
+    "3": "SAME AS NOW",
+    "4": "MORE",
+    "5": "MUCH MORE",
+    "8": "NO OPINION"
+   },
+   "declared_missing_values": [
+    0
+   ],
+   "declared_missing_range": [
+    8,
+    "HIGHEST"
+   ],
+   "codebook": {
+    "question_code": "A19I",
+    "question_stem": "SOME PEOPLE THINK THAT THERE OUGHT TO BE CHANGES IN THE AMOUNT OF INFLUENCE AND POWER THAT CERTAIN ORGANIZATIONS HAVE IN OUR SOCIETY. DO YOU THINK THE FOLLOWING ORGANIZATIONS SHOULD HAVE MORE INFLUENCE, LESS INFLUENCE, OR ABOUT THE SAME AMOUNT OF INFLUENCE AS THEY HAVE NOW?",
+    "question_text": "THE POLICE AND OTHER LAW ENFORCEMENT AGENCIES?",
+    "matched_by": "variable name"
+   }
+  },
+  {
+   "name": "V4284",
+   "label": "764A19J:>INFLC MILITARY",
+   "storage": {
+    "spss_format": "F1.0",
+    "kind": "numeric",
+    "width": 1,
+    "decimals": 0
+   },
+   "value_labels": {
+    "1": "MUCH LESS",
+    "2": "LESS",
+    "3": "SAME AS NOW",
+    "4": "MORE",
+    "5": "MUCH MORE",
+    "8": "NO OPINION"
+   },
+   "declared_missing_values": [
+    0
+   ],
+   "declared_missing_range": [
+    8,
+    "HIGHEST"
+   ],
+   "codebook": {
+    "question_code": "A19J",
+    "question_stem": "SOME PEOPLE THINK THAT THERE OUGHT TO BE CHANGES IN THE AMOUNT OF INFLUENCE AND POWER THAT CERTAIN ORGANIZATIONS HAVE IN OUR SOCIETY. DO YOU THINK THE FOLLOWING ORGANIZATIONS SHOULD HAVE MORE INFLUENCE, LESS INFLUENCE, OR ABOUT THE SAME AMOUNT OF INFLUENCE AS THEY HAVE NOW?",
+    "question_text": "THE U.S. MILITARY?",
+    "matched_by": "variable name"
+   }
+  },
+  {
+   "name": "V4285",
+   "label": "764A20A:LAW 4 SMK CIGS",
+   "storage": {
+    "spss_format": "F1.0",
+    "kind": "numeric",
+    "width": 1,
+    "decimals": 0
+   },
+   "value_labels": {
+    "1": "NO",
+    "2": "NOT SURE",
+    "3": "YES"
+   },
+   "declared_missing_values": [
+    0
+   ],
+   "declared_missing_range": [
+    9,
+    "HIGHEST"
+   ],
+   "codebook": {
+    "question_code": "A20A",
+    "question_stem": "DO YOU THINK THAT PEOPLE (WHO ARE 18 OR OLDER) SHOULD BE PROHIBITED BY LAW FROM DOING EACH OF THE FOLLOWING?",
+    "question_text": "SMOKING CIGARETTES",
+    "matched_by": "variable name"
+   }
+  },
+  {
+   "name": "V4286",
+   "label": "764A20B:LAW 4 SMK MJ PRI",
+   "storage": {
+    "spss_format": "F1.0",
+    "kind": "numeric",
+    "width": 1,
+    "decimals": 0
+   },
+   "value_labels": {
+    "1": "NO",
+    "2": "NOT SURE",
+    "3": "YES"
+   },
+   "declared_missing_values": [
+    0
+   ],
+   "declared_missing_range": [
+    9,
+    "HIGHEST"
+   ],
+   "codebook": {
+    "question_code": "A20B",
+    "question_stem": "DO YOU THINK THAT PEOPLE (WHO ARE 18 OR OLDER) SHOULD BE PROHIBITED BY LAW FROM DOING EACH OF THE FOLLOWING?",
+    "question_text": "SMOKING MARIJUANA (POT,GRASS) IN PRIVATE",
+    "matched_by": "variable name"
+   }
+  },
+  {
+   "name": "V4287",
+   "label": "764A20C:LAW 4 SMK MJ PUB",
+   "storage": {
+    "spss_format": "F1.0",
+    "kind": "numeric",
+    "width": 1,
+    "decimals": 0
+   },
+   "value_labels": {
+    "1": "NO",
+    "2": "NOT SURE",
+    "3": "YES"
+   },
+   "declared_missing_values": [
+    0
+   ],
+   "declared_missing_range": [
+    9,
+    "HIGHEST"
+   ],
+   "codebook": {
+    "question_code": "A20C",
+    "question_stem": "DO YOU THINK THAT PEOPLE (WHO ARE 18 OR OLDER) SHOULD BE PROHIBITED BY LAW FROM DOING EACH OF THE FOLLOWING?",
+    "question_text": "SMOKING MARIJUANA IN PUBLIC PLACES",
+    "matched_by": "variable name"
+   }
+  },
+  {
+   "name": "V4288",
+   "label": "764A20D:LAW 4 TK LSD PRI",
+   "storage": {
+    "spss_format": "F1.0",
+    "kind": "numeric",
+    "width": 1,
+    "decimals": 0
+   },
+   "value_labels": {
+    "1": "NO",
+    "2": "NOT SURE",
+    "3": "YES"
+   },
+   "declared_missing_values": [
+    0
+   ],
+   "declared_missing_range": [
+    9,
+    "HIGHEST"
+   ],
+   "codebook": {
+    "question_code": "A20D",
+    "question_stem": "DO YOU THINK THAT PEOPLE (WHO ARE 18 OR OLDER) SHOULD BE PROHIBITED BY LAW FROM DOING EACH OF THE FOLLOWING?",
+    "question_text": "TAKING LSD IN PRIVATE",
+    "matched_by": "variable name"
+   }
+  },
+  {
+   "name": "V4289",
+   "label": "764A20E:LAW 4 TK LSD PUB",
+   "storage": {
+    "spss_format": "F1.0",
+    "kind": "numeric",
+    "width": 1,
+    "decimals": 0
+   },
+   "value_labels": {
+    "1": "NO",
+    "2": "NOT SURE",
+    "3": "YES"
+   },
+   "declared_missing_values": [
+    0
+   ],
+   "declared_missing_range": [
+    9,
+    "HIGHEST"
+   ],
+   "codebook": {
+    "question_code": "A20E",
+    "question_stem": "DO YOU THINK THAT PEOPLE (WHO ARE 18 OR OLDER) SHOULD BE PROHIBITED BY LAW FROM DOING EACH OF THE FOLLOWING?",
+    "question_text": "TAKING LSD IN PUBLIC PLACES",
+    "matched_by": "variable name"
+   }
+  },
+  {
+   "name": "V4290",
+   "label": "764A20F:LAW 4 TK AMP PRI",
+   "storage": {
+    "spss_format": "F1.0",
+    "kind": "numeric",
+    "width": 1,
+    "decimals": 0
+   },
+   "value_labels": {
+    "1": "NO",
+    "2": "NOT SURE",
+    "3": "YES"
+   },
+   "declared_missing_values": [
+    0
+   ],
+   "declared_missing_range": [
+    9,
+    "HIGHEST"
+   ],
+   "codebook": {
+    "question_code": "A20F",
+    "question_stem": "DO YOU THINK THAT PEOPLE (WHO ARE 18 OR OLDER) SHOULD BE PROHIBITED BY LAW FROM DOING EACH OF THE FOLLOWING?",
+    "question_text": "TAKING AMPHETAMINES (UPPERS) OR BARBITURATES (DOWNERS) IN PRIVATE",
+    "matched_by": "variable name"
+   }
+  },
+  {
+   "name": "V4291",
+   "label": "764A20G:LAW 4 TK AMP PUB",
+   "storage": {
+    "spss_format": "F1.0",
+    "kind": "numeric",
+    "width": 1,
+    "decimals": 0
+   },
+   "value_labels": {
+    "1": "NO",
+    "2": "NOT SURE",
+    "3": "YES"
+   },
+   "declared_missing_values": [
+    0
+   ],
+   "declared_missing_range": [
+    9,
+    "HIGHEST"
+   ],
+   "codebook": {
+    "question_code": "A20G",
+    "question_stem": "DO YOU THINK THAT PEOPLE (WHO ARE 18 OR OLDER) SHOULD BE PROHIBITED BY LAW FROM DOING EACH OF THE FOLLOWING?",
+    "question_text": "TAKING AMPHETAMINES OR BARBITURATES IN PUBLIC PLACES",
+    "matched_by": "variable name"
+   }
+  },
+  {
+   "name": "V4292",
+   "label": "764A20H:LAW 4 TK HRN PRI",
+   "storage": {
+    "spss_format": "F1.0",
+    "kind": "numeric",
+    "width": 1,
+    "decimals": 0
+   },
+   "value_labels": {
+    "1": "NO",
+    "2": "NOT SURE",
+    "3": "YES"
+   },
+   "declared_missing_values": [
+    0
+   ],
+   "declared_missing_range": [
+    9,
+    "HIGHEST"
+   ],
+   "codebook": {
+    "question_code": "A20H",
+    "question_stem": "DO YOU THINK THAT PEOPLE (WHO ARE 18 OR OLDER) SHOULD BE PROHIBITED BY LAW FROM DOING EACH OF THE FOLLOWING?",
+    "question_text": "TAKING HEROIN (SMACK,HORSE) IN PRIVATE",
+    "matched_by": "variable name"
+   }
+  },
+  {
+   "name": "V4293",
+   "label": "764A20I:LAW 4 TK HRN PUB",
+   "storage": {
+    "spss_format": "F1.0",
+    "kind": "numeric",
+    "width": 1,
+    "decimals": 0
+   },
+   "value_labels": {
+    "1": "NO",
+    "2": "NOT SURE",
+    "3": "YES"
+   },
+   "declared_missing_values": [
+    0
+   ],
+   "declared_missing_range": [
+    9,
+    "HIGHEST"
+   ],
+   "codebook": {
+    "question_code": "A20I",
+    "question_stem": "DO YOU THINK THAT PEOPLE (WHO ARE 18 OR OLDER) SHOULD BE PROHIBITED BY LAW FROM DOING EACH OF THE FOLLOWING?",
+    "question_text": "TAKING HEROIN IN PUBLIC PLACES",
+    "matched_by": "variable name"
+   }
+  },
+  {
+   "name": "V4294",
+   "label": "764A20J:LAW 4 GT DRNK PR",
+   "storage": {
+    "spss_format": "F1.0",
+    "kind": "numeric",
+    "width": 1,
+    "decimals": 0
+   },
+   "value_labels": {
+    "1": "NO",
+    "2": "NOT SURE",
+    "3": "YES"
+   },
+   "declared_missing_values": [
+    0
+   ],
+   "declared_missing_range": [
+    9,
+    "HIGHEST"
+   ],
+   "codebook": {
+    "question_code": "A20J",
+    "question_stem": "DO YOU THINK THAT PEOPLE (WHO ARE 18 OR OLDER) SHOULD BE PROHIBITED BY LAW FROM DOING EACH OF THE FOLLOWING?",
+    "question_text": "GETTING DRUNK IN PRIVATE",
+    "matched_by": "variable name"
+   }
+  },
+  {
+   "name": "V4295",
+   "label": "764A20K:LAW 4 GT DRNK PU",
+   "storage": {
+    "spss_format": "F1.0",
+    "kind": "numeric",
+    "width": 1,
+    "decimals": 0
+   },
+   "value_labels": {
+    "1": "NO",
+    "2": "NOT SURE",
+    "3": "YES"
+   },
+   "declared_missing_values": [
+    0
+   ],
+   "declared_missing_range": [
+    9,
+    "HIGHEST"
+   ],
+   "codebook": {
+    "question_code": "A20K",
+    "question_stem": "DO YOU THINK THAT PEOPLE (WHO ARE 18 OR OLDER) SHOULD BE PROHIBITED BY LAW FROM DOING EACH OF THE FOLLOWING?",
+    "question_text": "GETTING DRUNK IN PUBLIC PLACES",
+    "matched_by": "variable name"
+   }
+  },
+  {
+   "name": "V4296",
+   "label": "764A21 :CRIME 2 USE MARJ",
+   "storage": {
+    "spss_format": "F1.0",
+    "kind": "numeric",
+    "width": 1,
+    "decimals": 0
+   },
+   "value_labels": {
+    "1": "USING MARIJUANA SHOUD BE ENTIRELY LEGAL",
+    "2": "IT SHOUD BE A MINOR VIOLATION BUT NOT A CRIME",
+    "3": "IT SHOULD BE A CRIME",
+    "4": "DON'T KNOW"
+   },
+   "declared_missing_values": [
+    0
+   ],
+   "declared_missing_range": [
+    4,
+    "HIGHEST"
+   ],
+   "codebook": {
+    "question_code": "A21",
+    "question_text": "IN PARTICULAR, THERE HAS BEEN A GREAT DEAL OF PUBLIC DEBATE ABOUT WHETHER MARIJUANA USE SHOULD BE LEGAL. WHICH OF THE FOLLOWING POLICIES WOULD YOU FAVOR?",
+    "matched_by": "variable name"
+   }
+  },
+  {
+   "name": "V4297",
+   "label": "764A22 :LEGAL 2 SELL MRJ",
+   "storage": {
+    "spss_format": "F1.0",
+    "kind": "numeric",
+    "width": 1,
+    "decimals": 0
+   },
+   "value_labels": {
+    "1": "NO",
+    "2": "YES, BUT ONLY TO ADULTS",
+    "3": "YES, TO ANYONE",
+    "4": "DON'T KNOW"
+   },
+   "declared_missing_values": [
+    0
+   ],
+   "declared_missing_range": [
+    4,
+    "HIGHEST"
+   ],
+   "codebook": {
+    "question_code": "A22",
+    "question_text": "IF IT WERE LEGAL FOR PEOPLE TO USE MARIJUANA, SHOULD IT ALSO BE LEGAL TO SELL MARIJUANA?",
+    "matched_by": "variable name"
+   }
+  },
+  {
+   "name": "V4298",
+   "label": "764A23 :USE<MJ IF LEGAL",
+   "storage": {
+    "spss_format": "F1.0",
+    "kind": "numeric",
+    "width": 1,
+    "decimals": 0
+   },
+   "value_labels": {
+    "1": "NOT USE IT, EVEN IF IT WERE LEGAL AND AVAILABLE",
+    "2": "TRY IT",
+    "3": "USE IT ABOUT AS OFTEN AS I DO NOW",
+    "4": "USE IT MORE OFTEN THAN I DO NOW",
+    "5": "USE IT LESS THAN I DO NOW",
+    "6": "DON'T KNOW"
+   },
+   "declared_missing_values": [
+    0
+   ],
+   "declared_missing_range": [
+    6,
+    "HIGHEST"
+   ],
+   "codebook": {
+    "question_code": "A23",
+    "question_text": "IF MARIJUANA WERE LEGAL TO USE AND LEGALLY AVAILABLE, WHICH OF THE FOLLOWING WOULD YOU BE MOST LIKELY TO DO?",
+    "matched_by": "variable name"
+   }
+  },
+  {
+   "name": "V4299",
+   "label": "764D01 :CMP SATFD W/LIFE",
+   "storage": {
+    "spss_format": "F1.0",
+    "kind": "numeric",
+    "width": 1,
+    "decimals": 0
+   },
+   "value_labels": {
+    "1": "COMPLETELY DISSATISFIED",
+    "2": "QUITE DISSATISFIED",
+    "3": "SOMEWHAT DISSATISFIED",
+    "4": "NEITHER, OR MIXED FEELINGS",
+    "5": "SOMEWHAT SATISFIED",
+    "6": "QUITE SATISFIED",
+    "7": "COMPLETELY SATISFIED"
+   },
+   "declared_missing_values": [
+    0
+   ],
+   "declared_missing_range": [
+    9,
+    "HIGHEST"
+   ],
+   "codebook": {
+    "question_code": "D01",
+    "question_text": "HOW SATISFIED ARE YOU WITH YOUR LIFE AS A WHOLE THESE DAYS?",
+    "matched_by": "variable name"
+   }
+  },
+  {
+   "name": "V4300",
+   "label": "764D02 :CMP SATFD W/JOB",
+   "storage": {
+    "spss_format": "F1.0",
+    "kind": "numeric",
+    "width": 1,
+    "decimals": 0
+   },
+   "value_labels": {
+    "1": "COMPLETELY DISSATISFIED",
+    "2": "QUITE DISSATISFIED",
+    "3": "SOMEWHAT DISSATISFIED",
+    "4": "NEITHER, OR MIXED FEELINGS",
+    "5": "SOMEWHAT SATISFIED",
+    "6": "QUITE SATISFIED",
+    "7": "COMPLETELY SATISFIED"
+   },
+   "declared_missing_values": [
+    0
+   ],
+   "declared_missing_range": [
+    8,
+    "HIGHEST"
+   ],
+   "codebook": {
+    "question_code": "D02",
+    "question_text": "FOR THOSE WHO HAVE A JOB: ALL THINGS CONSIDERED, HOW SATISFIED ARE YOU WITH YOUR PRESENT JOB?",
+    "matched_by": "variable name"
+   }
+  },
+  {
+   "name": "V4301",
+   "label": "764D03A:I CNT CHNG WORLD",
+   "storage": {
+    "spss_format": "F1.0",
+    "kind": "numeric",
+    "width": 1,
+    "decimals": 0
+   },
+   "value_labels": {
+    "1": "DISAGREE",
+    "2": "MOSTLY DISAGREE",
+    "3": "NEITHER",
+    "4": "MOSTLY AGREE",
+    "5": "AGREE"
+   },
+   "declared_missing_values": [
+    0
+   ],
+   "declared_missing_range": [
+    9,
+    "HIGHEST"
+   ],
+   "codebook": {
+    "question_code": "D03A",
+    "question_stem": "PEOPLE HAVE DIFFERENT OPINIONS ABOUT WORLD PROBLEMS. HOW MUCH DO YOU AGREE OR DISAGREE WITH EACH OF THE FOLLOWING STATEMENTS?",
+    "question_text": "I FEEL THAT I CAN DO VERY LITTLE TO CHANGE THE WAY THE WORLD IS TODAY",
+    "matched_by": "variable name"
+   }
+  },
+  {
+   "name": "V4302",
+   "label": "764D03B:SOCTY WONT LAST",
+   "storage": {
+    "spss_format": "F1.0",
+    "kind": "numeric",
+    "width": 1,
+    "decimals": 0
+   },
+   "value_labels": {
+    "1": "DISAGREE",
+    "2": "MOSTLY DISAGREE",
+    "3": "NEITHER",
+    "4": "MOSTLY AGREE",
+    "5": "AGREE"
+   },
+   "declared_missing_values": [
+    0
+   ],
+   "declared_missing_range": [
+    9,
+    "HIGHEST"
+   ],
+   "codebook": {
+    "question_code": "D03B",
+    "question_stem": "PEOPLE HAVE DIFFERENT OPINIONS ABOUT WORLD PROBLEMS. HOW MUCH DO YOU AGREE OR DISAGREE WITH EACH OF THE FOLLOWING STATEMENTS?",
+    "question_text": "IT DOES LITTLE GOOD TO CLEAN UP AIR AND WATER POLLUTION BECAUSE THIS SOCIETY WILL NOT LAST LONG ENOUGH FOR IT TO MATTER",
+    "matched_by": "variable name"
+   }
+  },
+  {
+   "name": "V4303",
+   "label": "764D03C:THG TUF,TCHN SLV",
+   "storage": {
+    "spss_format": "F1.0",
+    "kind": "numeric",
+    "width": 1,
+    "decimals": 0
+   },
+   "value_labels": {
+    "1": "DISAGREE",
+    "2": "MOSTLY DISAGREE",
+    "3": "NEITHER",
+    "4": "MOSTLY AGREE",
+    "5": "AGREE"
+   },
+   "declared_missing_values": [
+    0
+   ],
+   "declared_missing_range": [
+    9,
+    "HIGHEST"
+   ],
+   "codebook": {
+    "question_code": "D03C",
+    "question_stem": "PEOPLE HAVE DIFFERENT OPINIONS ABOUT WORLD PROBLEMS. HOW MUCH DO YOU AGREE OR DISAGREE WITH EACH OF THE FOLLOWING STATEMENTS?",
+    "question_text": "WHEN THINGS GET TOUGH ENOUGH, WE'LL PUT OUR MINDS TO IT AND FIND A TECHNOLOGICAL SOLUTION",
+    "matched_by": "variable name"
+   }
+  },
+  {
+   "name": "V4304",
+   "label": "764D03D:NO HOPE 4 WORLD",
+   "storage": {
+    "spss_format": "F1.0",
+    "kind": "numeric",
+    "width": 1,
+    "decimals": 0
+   },
+   "value_labels": {
+    "1": "DISAGREE",
+    "2": "MOSTLY DISAGREE",
+    "3": "NEITHER",
+    "4": "MOSTLY AGREE",
+    "5": "AGREE"
+   },
+   "declared_missing_values": [
+    0
+   ],
+   "declared_missing_range": [
+    9,
+    "HIGHEST"
+   ],
+   "codebook": {
+    "question_code": "D03D",
+    "question_stem": "PEOPLE HAVE DIFFERENT OPINIONS ABOUT WORLD PROBLEMS. HOW MUCH DO YOU AGREE OR DISAGREE WITH EACH OF THE FOLLOWING STATEMENTS?",
+    "question_text": "WHEN I THINK ABOUT ALL THE TERRIBLE THINGS THAT HAVE BEEN HAPPENING, IT IS HARD FOR ME TO HOLD OUT MUCH HOPE FOR THE WORLD",
+    "matched_by": "variable name"
+   }
+  },
+  {
+   "name": "V4305",
+   "label": "764D03E:WNDR PURPS 2 LIF",
+   "storage": {
+    "spss_format": "F1.0",
+    "kind": "numeric",
+    "width": 1,
+    "decimals": 0
+   },
+   "value_labels": {
+    "1": "DISAGREE",
+    "2": "MOSTLY DISAGREE",
+    "3": "NEITHER",
+    "4": "MOSTLY AGREE",
+    "5": "AGREE"
+   },
+   "declared_missing_values": [
+    0
+   ],
+   "declared_missing_range": [
+    9,
+    "HIGHEST"
+   ],
+   "codebook": {
+    "question_code": "D03E",
+    "question_stem": "PEOPLE HAVE DIFFERENT OPINIONS ABOUT WORLD PROBLEMS. HOW MUCH DO YOU AGREE OR DISAGREE WITH EACH OF THE FOLLOWING STATEMENTS?",
+    "question_text": "I OFTEN WONDER IF THERE IS ANY REAL PURPOSE TO MY LIFE IN LIGHT OF THE WORLD SITUATION",
+    "matched_by": "variable name"
+   }
+  },
+  {
+   "name": "V4306",
+   "label": "764D03F:WRLD UPHVL 10 YR",
+   "storage": {
+    "spss_format": "F1.0",
+    "kind": "numeric",
+    "width": 1,
+    "decimals": 0
+   },
+   "value_labels": {
+    "1": "DISAGREE",
+    "2": "MOSTLY DISAGREE",
+    "3": "NEITHER",
+    "4": "MOSTLY AGREE",
+    "5": "AGREE"
+   },
+   "declared_missing_values": [
+    0
+   ],
+   "declared_missing_range": [
+    9,
+    "HIGHEST"
+   ],
+   "codebook": {
+    "question_code": "D03F",
+    "question_stem": "PEOPLE HAVE DIFFERENT OPINIONS ABOUT WORLD PROBLEMS. HOW MUCH DO YOU AGREE OR DISAGREE WITH EACH OF THE FOLLOWING STATEMENTS?",
+    "question_text": "MY GUESS IS THAT THIS COUNTRY WILL BE CAUGHT UP IN A MAJOR WORLD UPHEAVAL IN THE NEXT 10 YEARS",
+    "matched_by": "variable name"
+   }
+  },
+  {
+   "name": "V4307",
+   "label": "764D03G:ANNIHLTN IN LFTM",
+   "storage": {
+    "spss_format": "F1.0",
+    "kind": "numeric",
+    "width": 1,
+    "decimals": 0
+   },
+   "value_labels": {
+    "1": "DISAGREE",
+    "2": "MOSTLY DISAGREE",
+    "3": "NEITHER",
+    "4": "MOSTLY AGREE",
+    "5": "AGREE"
+   },
+   "declared_missing_values": [
+    0
+   ],
+   "declared_missing_range": [
+    9,
+    "HIGHEST"
+   ],
+   "codebook": {
+    "question_code": "D03G",
+    "question_stem": "PEOPLE HAVE DIFFERENT OPINIONS ABOUT WORLD PROBLEMS. HOW MUCH DO YOU AGREE OR DISAGREE WITH EACH OF THE FOLLOWING STATEMENTS?",
+    "question_text": "NUCLEAR OR BIOLOGICAL ANNIHILATION WILL PROBABLY BE THE FATE OF ALL MANKIND, WITHIN MY LIFETIME",
+    "matched_by": "variable name"
+   }
+  },
+  {
+   "name": "V4308",
+   "label": "764D03H:HMN RCE RSILIENT",
+   "storage": {
+    "spss_format": "F1.0",
+    "kind": "numeric",
+    "width": 1,
+    "decimals": 0
+   },
+   "value_labels": {
+    "1": "DISAGREE",
+    "2": "MOSTLY DISAGREE",
+    "3": "NEITHER",
+    "4": "MOSTLY AGREE",
+    "5": "AGREE"
+   },
+   "declared_missing_values": [
+    0
+   ],
+   "declared_missing_range": [
+    9,
+    "HIGHEST"
+   ],
+   "codebook": {
+    "question_code": "D03H",
+    "question_stem": "PEOPLE HAVE DIFFERENT OPINIONS ABOUT WORLD PROBLEMS. HOW MUCH DO YOU AGREE OR DISAGREE WITH EACH OF THE FOLLOWING STATEMENTS?",
+    "question_text": "THE HUMAN RACE HAS COME THROUGH TOUGH TIMES BEFORE, AND WILL DO SO AGAIN",
+    "matched_by": "variable name"
+   }
+  },
+  {
+   "name": "V4309",
+   "label": "764D04A:#X BEER/LIFETIME",
+   "storage": {
+    "spss_format": "F1.0",
+    "kind": "numeric",
+    "width": 1,
+    "decimals": 0
+   },
+   "value_labels": {
+    "1": "0 OCCASIONS",
+    "2": "1-2",
+    "3": "3-5",
+    "4": "6-9",
+    "5": "10-19",
+    "6": "20-39",
+    "7": "40 OR MORE"
+   },
+   "declared_missing_values": [
+    0
+   ],
+   "declared_missing_range": [
+    9,
+    "HIGHEST"
+   ],
+   "codebook": {
+    "question_code": "D04A",
+    "question_stem": "ON HOW MANY OCCASIONS (IF ANY) HAVE YOU HAD BEER TO DRINK...",
+    "question_text": "...IN YOUR LIFETIME?",
+    "matched_by": "variable name"
+   }
+  },
+  {
+   "name": "V4310",
+   "label": "764D04B:#X BEER/LAST12MO",
+   "storage": {
+    "spss_format": "F1.0",
+    "kind": "numeric",
+    "width": 1,
+    "decimals": 0
+   },
+   "value_labels": {
+    "1": "0 OCCASIONS",
+    "2": "1-2",
+    "3": "3-5",
+    "4": "6-9",
+    "5": "10-19",
+    "6": "20-39",
+    "7": "40 OR MORE"
+   },
+   "declared_missing_values": [
+    0
+   ],
+   "declared_missing_range": [
+    9,
+    "HIGHEST"
+   ],
+   "codebook": {
+    "question_code": "D04B",
+    "question_stem": "ON HOW MANY OCCASIONS (IF ANY) HAVE YOU HAD BEER TO DRINK...",
+    "question_text": "...DURING THE LAST 12 MONTHS?",
+    "matched_by": "variable name"
+   }
+  },
+  {
+   "name": "V4311",
+   "label": "764D04C:#X BEER/LAST30DA",
+   "storage": {
+    "spss_format": "F1.0",
+    "kind": "numeric",
+    "width": 1,
+    "decimals": 0
+   },
+   "value_labels": {
+    "1": "0 OCCASIONS",
+    "2": "1-2",
+    "3": "3-5",
+    "4": "6-9",
+    "5": "10-19",
+    "6": "20-39",
+    "7": "40 OR MORE"
+   },
+   "declared_missing_values": [
+    0
+   ],
+   "declared_missing_range": [
+    9,
+    "HIGHEST"
+   ],
+   "codebook": {
+    "question_code": "D04C",
+    "question_stem": "ON HOW MANY OCCASIONS (IF ANY) HAVE YOU HAD BEER TO DRINK...",
+    "question_text": "...DURING THE LAST 30 DAYS?",
+    "matched_by": "variable name"
+   }
+  },
+  {
+   "name": "V4312",
+   "label": "764D05 :5+BR/LST2WK,10+X",
+   "storage": {
+    "spss_format": "F1.0",
+    "kind": "numeric",
+    "width": 1,
+    "decimals": 0
+   },
+   "value_labels": {
+    "1": "NONE",
+    "2": "ONCE",
+    "3": "TWICE",
+    "4": "THREE TO FIVE TIMES",
+    "5": "SIX TO NINE TIMES",
+    "6": "TEN OR MORE TIMES"
+   },
+   "declared_missing_values": [
+    0
+   ],
+   "declared_missing_range": [
+    8,
+    "HIGHEST"
+   ],
+   "codebook": {
+    "question_code": "D05",
+    "question_text": "THINK BACK OVER THE LAST TWO WEEKS. HOW MANY TIMES HAVE YOU HAD FIVE OR MORE 12-OUNCE CANS OF BEER (OR THE EQUIVALENT) IN A ROW?",
+    "matched_by": "variable name"
+   }
+  },
+  {
+   "name": "V4313",
+   "label": "764D06A:#X WINE/LIFETIME",
+   "storage": {
+    "spss_format": "F1.0",
+    "kind": "numeric",
+    "width": 1,
+    "decimals": 0
+   },
+   "value_labels": {
+    "1": "0 OCCASIONS",
+    "2": "1-2",
+    "3": "3-5",
+    "4": "6-9",
+    "5": "10-19",
+    "6": "20-39",
+    "7": "40 OR MORE"
+   },
+   "declared_missing_values": [
+    0
+   ],
+   "declared_missing_range": [
+    9,
+    "HIGHEST"
+   ],
+   "codebook": {
+    "question_code": "D06A",
+    "question_stem": "ON HOW MANY OCCASIONS (IF ANY) HAVE YOU HAD WINE TO DRINK...",
+    "question_text": "...IN YOUR LIFETIME?",
+    "matched_by": "variable name"
+   }
+  },
+  {
+   "name": "V4314",
+   "label": "764D06B:#X WINE/LAST12MO",
+   "storage": {
+    "spss_format": "F1.0",
+    "kind": "numeric",
+    "width": 1,
+    "decimals": 0
+   },
+   "value_labels": {
+    "1": "0 OCCASIONS",
+    "2": "1-2",
+    "3": "3-5",
+    "4": "6-9",
+    "5": "10-19",
+    "6": "20-39",
+    "7": "40 OR MORE"
+   },
+   "declared_missing_values": [
+    0
+   ],
+   "declared_missing_range": [
+    9,
+    "HIGHEST"
+   ],
+   "codebook": {
+    "question_code": "D06B",
+    "question_stem": "ON HOW MANY OCCASIONS (IF ANY) HAVE YOU HAD WINE TO DRINK...",
+    "question_text": "...DURING THE LAST 12 MONTHS?",
+    "matched_by": "variable name"
+   }
+  },
+  {
+   "name": "V4315",
+   "label": "764D06C:#X WINE/LAST30DA",
+   "storage": {
+    "spss_format": "F1.0",
+    "kind": "numeric",
+    "width": 1,
+    "decimals": 0
+   },
+   "value_labels": {
+    "1": "0 OCCASIONS",
+    "2": "1-2",
+    "3": "3-5",
+    "4": "6-9",
+    "5": "10-19",
+    "6": "20-39",
+    "7": "40 OR MORE"
+   },
+   "declared_missing_values": [
+    0
+   ],
+   "declared_missing_range": [
+    9,
+    "HIGHEST"
+   ],
+   "codebook": {
+    "question_code": "D06C",
+    "question_stem": "ON HOW MANY OCCASIONS (IF ANY) HAVE YOU HAD WINE TO DRINK...",
+    "question_text": "...DURING THE LAST 30 DAYS?",
+    "matched_by": "variable name"
+   }
+  },
+  {
+   "name": "V4316",
+   "label": "764D07 :#X 20OZ+ WN/2 WK",
+   "storage": {
+    "spss_format": "F1.0",
+    "kind": "numeric",
+    "width": 1,
+    "decimals": 0
+   },
+   "value_labels": {
+    "1": "NONE",
+    "2": "ONCE",
+    "3": "TWICE",
+    "4": "THREE TO FIVE TIMES",
+    "5": "SIX TO NINE TIMES",
+    "6": "TEN OR MORE TIMES"
+   },
+   "declared_missing_values": [
+    0
+   ],
+   "declared_missing_range": [
+    8,
+    "HIGHEST"
+   ],
+   "codebook": {
+    "question_code": "D07",
+    "question_text": "THINK BACK OVER THE LAST TWO WEEKS. HOW MANY TIMES HAVE YOU HAD FIVE OR MORE 4-OUNCE GLASSES OF WINE IN A ROW (OR THE EQUIVALENT, WHICH IS ABOUT THREE-FOURTHS OF A BOTTLE)?",
+    "matched_by": "variable name"
+   }
+  },
+  {
+   "name": "V4317",
+   "label": "764D08A:#X LIQR/LIFETIME",
+   "storage": {
+    "spss_format": "F1.0",
+    "kind": "numeric",
+    "width": 1,
+    "decimals": 0
+   },
+   "value_labels": {
+    "1": "0 OCCASIONS",
+    "2": "1-2",
+    "3": "3-5",
+    "4": "6-9",
+    "5": "10-19",
+    "6": "20-39",
+    "7": "40 OR MORE"
+   },
+   "declared_missing_values": [
+    0
+   ],
+   "declared_missing_range": [
+    9,
+    "HIGHEST"
+   ],
+   "codebook": {
+    "question_code": "D08A",
+    "question_stem": "ON HOW MANY OCCASIONS (IF ANY) HAVE YOU HAD LIQUOR TO DRINK...",
+    "question_text": "...IN YOUR LIFETIME?",
+    "matched_by": "variable name"
+   }
+  },
+  {
+   "name": "V4318",
+   "label": "764D08B:#X LIQR/LAST12MO",
+   "storage": {
+    "spss_format": "F1.0",
+    "kind": "numeric",
+    "width": 1,
+    "decimals": 0
+   },
+   "value_labels": {
+    "1": "0 OCCASIONS",
+    "2": "1-2",
+    "3": "3-5",
+    "4": "6-9",
+    "5": "10-19",
+    "6": "20-39",
+    "7": "40 OR MORE"
+   },
+   "declared_missing_values": [
+    0
+   ],
+   "declared_missing_range": [
+    9,
+    "HIGHEST"
+   ],
+   "codebook": {
+    "question_code": "D08B",
+    "question_stem": "ON HOW MANY OCCASIONS (IF ANY) HAVE YOU HAD LIQUOR TO DRINK...",
+    "question_text": "...DURING THE LAST 12 MONTHS?",
+    "matched_by": "variable name"
+   }
+  },
+  {
+   "name": "V4319",
+   "label": "764D08C:#X LIQR/LAST30DA",
+   "storage": {
+    "spss_format": "F1.0",
+    "kind": "numeric",
+    "width": 1,
+    "decimals": 0
+   },
+   "value_labels": {
+    "1": "0 OCCASIONS",
+    "2": "1-2",
+    "3": "3-5",
+    "4": "6-9",
+    "5": "10-19",
+    "6": "20-39",
+    "7": "40 OR MORE"
+   },
+   "declared_missing_values": [
+    0
+   ],
+   "declared_missing_range": [
+    9,
+    "HIGHEST"
+   ],
+   "codebook": {
+    "question_code": "D08C",
+    "question_stem": "ON HOW MANY OCCASIONS (IF ANY) HAVE YOU HAD LIQUOR TO DRINK...",
+    "question_text": "...DURING THE LAST 30 DAYS?",
+    "matched_by": "variable name"
+   }
+  },
+  {
+   "name": "V4320",
+   "label": "764D09 :#X 5+LIQ/LST 2WK",
+   "storage": {
+    "spss_format": "F1.0",
+    "kind": "numeric",
+    "width": 1,
+    "decimals": 0
+   },
+   "value_labels": {
+    "1": "NONE",
+    "2": "ONCE",
+    "3": "TWICE",
+    "4": "THREE TO FIVE TIMES",
+    "5": "SIX TO NINE TIMES",
+    "6": "TEN OR MORE TIMES"
+   },
+   "declared_missing_values": [
+    0
+   ],
+   "declared_missing_range": [
+    8,
+    "HIGHEST"
+   ],
+   "codebook": {
+    "question_code": "D09",
+    "question_text": "THINK BACK OVER THE LAST TWO WEEKS. HOW MANY TIMES HAVE YOU HAD FIVE OR MORE MIXED DRINKS OR SHOT-GLASSES OF HARD LIQUOR IN A ROW?",
+    "matched_by": "variable name"
+   }
+  },
+  {
+   "name": "V4321",
+   "label": "764E01A:MLTRY GET AHEAD",
+   "storage": {
+    "spss_format": "F1.0",
+    "kind": "numeric",
+    "width": 1,
+    "decimals": 0
+   },
+   "value_labels": {
+    "1": "TO A VERY LITTLE EXTENT",
+    "2": "TO A LITTLE EXTENT",
+    "3": "TO SOME EXTENT",
+    "4": "TO A GREAT EXTENT",
+    "5": "TO A VERY GREAT EXTENT"
+   },
+   "declared_missing_values": [
+    0
+   ],
+   "declared_missing_range": [
+    9,
+    "HIGHEST"
+   ],
+   "codebook": {
+    "question_code": "E01A",
+    "question_stem": "TO WHAT EXTENT DO YOU THINK THE FOLLOWING OPPORTUNITIES ARE AVAILABLE TO PEOPLE WHO WORK IN THE MILITARY SERVICES?",
+    "question_text": "A CHANCE TO GET AHEAD",
+    "matched_by": "variable name"
+   }
+  },
+  {
+   "name": "V4322",
+   "label": "764E01B:MLTRY MORE ED",
+   "storage": {
+    "spss_format": "F1.0",
+    "kind": "numeric",
+    "width": 1,
+    "decimals": 0
+   },
+   "value_labels": {
+    "1": "TO A VERY LITTLE EXTENT",
+    "2": "TO A LITTLE EXTENT",
+    "3": "TO SOME EXTENT",
+    "4": "TO A GREAT EXTENT",
+    "5": "TO A VERY GREAT EXTENT"
+   },
+   "declared_missing_values": [
+    0
+   ],
+   "declared_missing_range": [
+    9,
+    "HIGHEST"
+   ],
+   "codebook": {
+    "question_code": "E01B",
+    "question_stem": "TO WHAT EXTENT DO YOU THINK THE FOLLOWING OPPORTUNITIES ARE AVAILABLE TO PEOPLE WHO WORK IN THE MILITARY SERVICES?",
+    "question_text": "A CHANCE TO GET MORE EDUCATION",
+    "matched_by": "variable name"
+   }
+  },
+  {
+   "name": "V4323",
+   "label": "764E01C:MLTRY ADVNC RESP",
+   "storage": {
+    "spss_format": "F1.0",
+    "kind": "numeric",
+    "width": 1,
+    "decimals": 0
+   },
+   "value_labels": {
+    "1": "TO A VERY LITTLE EXTENT",
+    "2": "TO A LITTLE EXTENT",
+    "3": "TO SOME EXTENT",
+    "4": "TO A GREAT EXTENT",
+    "5": "TO A VERY GREAT EXTENT"
+   },
+   "declared_missing_values": [
+    0
+   ],
+   "declared_missing_range": [
+    9,
+    "HIGHEST"
+   ],
+   "codebook": {
+    "question_code": "E01C",
+    "question_stem": "TO WHAT EXTENT DO YOU THINK THE FOLLOWING OPPORTUNITIES ARE AVAILABLE TO PEOPLE WHO WORK IN THE MILITARY SERVICES?",
+    "question_text": "A CHANCE TO ADVANCE TO A MORE RESPONSIBLE POSITION",
+    "matched_by": "variable name"
+   }
+  },
+  {
+   "name": "V4324",
+   "label": "764E01D:MLTRY >FLFLLG JB",
+   "storage": {
+    "spss_format": "F1.0",
+    "kind": "numeric",
+    "width": 1,
+    "decimals": 0
+   },
+   "value_labels": {
+    "1": "TO A VERY LITTLE EXTENT",
+    "2": "TO A LITTLE EXTENT",
+    "3": "TO SOME EXTENT",
+    "4": "TO A GREAT EXTENT",
+    "5": "TO A VERY GREAT EXTENT"
+   },
+   "declared_missing_values": [
+    0
+   ],
+   "declared_missing_range": [
+    9,
+    "HIGHEST"
+   ],
+   "codebook": {
+    "question_code": "E01D",
+    "question_stem": "TO WHAT EXTENT DO YOU THINK THE FOLLOWING OPPORTUNITIES ARE AVAILABLE TO PEOPLE WHO WORK IN THE MILITARY SERVICES?",
+    "question_text": "A CHANCE TO HAVE A PERSONALLY MORE FULFILLING JOB",
+    "matched_by": "variable name"
+   }
+  },
+  {
+   "name": "V4325",
+   "label": "764E01E:MLTRY IDEAS HERD",
+   "storage": {
+    "spss_format": "F1.0",
+    "kind": "numeric",
+    "width": 1,
+    "decimals": 0
+   },
+   "value_labels": {
+    "1": "TO A VERY LITTLE EXTENT",
+    "2": "TO A LITTLE EXTENT",
+    "3": "TO SOME EXTENT",
+    "4": "TO A GREAT EXTENT",
+    "5": "TO A VERY GREAT EXTENT"
+   },
+   "declared_missing_values": [
+    0
+   ],
+   "declared_missing_range": [
+    9,
+    "HIGHEST"
+   ],
+   "codebook": {
+    "question_code": "E01E",
+    "question_stem": "TO WHAT EXTENT DO YOU THINK THE FOLLOWING OPPORTUNITIES ARE AVAILABLE TO PEOPLE WHO WORK IN THE MILITARY SERVICES?",
+    "question_text": "A CHANCE TO GET THEIR IDEAS HEARD",
+    "matched_by": "variable name"
+   }
+  },
+  {
+   "name": "V4326",
+   "label": "764E02 :EXTNT MLTRY JSTC",
+   "storage": {
+    "spss_format": "F1.0",
+    "kind": "numeric",
+    "width": 1,
+    "decimals": 0
+   },
+   "value_labels": {
+    "1": "TO A VERY LITTLE EXTENT",
+    "2": "TO A LITTLE EXTENT",
+    "3": "TO SOME EXTENT",
+    "4": "TO A GREAT EXTENT",
+    "5": "TO A VERY GREAT EXTENT"
+   },
+   "declared_missing_values": [
+    0
+   ],
+   "declared_missing_range": [
+    9,
+    "HIGHEST"
+   ],
+   "codebook": {
+    "question_code": "E02",
+    "question_text": "TO WHAT EXTENT IS IT LIKELY THAT A PERSON IN THE MILITARY CAN GET THINGS CHANGED AND SET RIGHT IF HE IS BEING TREATED UNJUSTLY BY A SUPERIOR?",
+    "matched_by": "variable name"
+   }
+  },
+  {
+   "name": "V4327",
+   "label": "764E03 :MLTRY DSCRM WOMN",
+   "storage": {
+    "spss_format": "F1.0",
+    "kind": "numeric",
+    "width": 1,
+    "decimals": 0
+   },
+   "value_labels": {
+    "1": "TO A VERY LITTLE EXTENT",
+    "2": "TO A LITTLE EXTENT",
+    "3": "TO SOME EXTENT",
+    "4": "TO A GREAT EXTENT",
+    "5": "TO A VERY GREAT EXTENT"
+   },
+   "declared_missing_values": [
+    0
+   ],
+   "declared_missing_range": [
+    9,
+    "HIGHEST"
+   ],
+   "codebook": {
+    "question_code": "E03",
+    "question_text": "TO WHAT EXTENT DO YOU THINK THERE IS ANY DISCRIMINATION AGAINST WOMEN WHO ARE IN THE ARMED SERVICES?",
+    "matched_by": "variable name"
+   }
+  },
+  {
+   "name": "V4328",
+   "label": "764E04 :MLTRY DSCRM BLKS",
+   "storage": {
+    "spss_format": "F1.0",
+    "kind": "numeric",
+    "width": 1,
+    "decimals": 0
+   },
+   "value_labels": {
+    "1": "TO A VERY LITTLE EXTENT",
+    "2": "TO A LITTLE EXTENT",
+    "3": "TO SOME EXTENT",
+    "4": "TO A GREAT EXTENT",
+    "5": "TO A VERY GREAT EXTENT"
+   },
+   "declared_missing_values": [
+    0
+   ],
+   "declared_missing_range": [
+    9,
+    "HIGHEST"
+   ],
+   "codebook": {
+    "question_code": "E04",
+    "question_text": "TO WHAT EXTENT DO YOU THINK THERE IS ANY DISCRIMINATION AGAINST BLACK PEOPLE WHO ARE IN THE ARMED SERVICES?",
+    "matched_by": "variable name"
+   }
+  },
+  {
+   "name": "V4329",
+   "label": "764E05 :>FAIR MLTRY CVLN",
+   "storage": {
+    "spss_format": "F1.0",
+    "kind": "numeric",
+    "width": 1,
+    "decimals": 0
+   },
+   "value_labels": {
+    "1": "MUCH MORE FAIR IN THE MILITARY SERVICE",
+    "2": "MORE FAIR IN THE MILITARY SERVICE",
+    "3": "ABOUT THE SAME",
+    "4": "MORE FAIR AS A CIVILIAN",
+    "5": "MUCH MORE FAIR AS A CIVILIAN",
+    "6": "QUESTION NOT APPROPRIATE FOR ME"
+   },
+   "declared_missing_values": [
+    0
+   ],
+   "declared_missing_range": [
+    9,
+    "HIGHEST"
+   ],
+   "codebook": {
+    "question_code": "E05",
+    "question_text": "DO YOU PERSONALLY FEEL THAT YOU WOULD RECEIVE MORE JUST AND FAIR TREATMENT AS A CIVILIAN OR AS A MEMBER OF THE MILITARY SERVICE?",
+    "matched_by": "variable name"
+   }
+  },
+  {
+   "name": "V4330",
+   "label": "764E06 :-MLTRY COUP U.S.",
+   "storage": {
+    "spss_format": "F1.0",
+    "kind": "numeric",
+    "width": 1,
+    "decimals": 0
+   },
+   "value_labels": {
+    "1": "IT COULD NEVER HAPPEN IN THE U.S.",
+    "2": "IT IS NEARLY IMPOSSIBLE",
+    "3": "IT IS CERTAINLY POSSIBLE, BUT NOT VERY LIKELY",
+    "4": "IT MAY HAPPEN IN THE U.S.",
+    "5": "IT PROBABLY WILL HAPPEN IN THE U.S."
+   },
+   "declared_missing_values": [
+    0
+   ],
+   "declared_missing_range": [
+    9,
+    "HIGHEST"
+   ],
+   "codebook": {
+    "question_code": "E06",
+    "question_text": "IN SOME COUNTRIES THE MILITARY FORCES HAVE TAKEN OVER AND THROWN OUT THE CIVILIAN GOVERNMENT. DO YOU THINK THERE IS ANY CHANCE THAT THIS COULD HAPPEN IN THE UNITED STATES?",
+    "matched_by": "variable name"
+   }
+  },
+  {
+   "name": "V4331",
+   "label": "764E07 :NT VOL 4 NEC WAR",
+   "storage": {
+    "spss_format": "F1.0",
+    "kind": "numeric",
+    "width": 1,
+    "decimals": 0
+   },
+   "value_labels": {
+    "1": "I'M SURE THAT I WOULD VOLUNTEER",
+    "2": "I WOULD VERY LIKELY VOLUNTEER",
+    "3": "I WOULD PROBABLY VOLUNTEER",
+    "4": "I WOULD PROBABLY NOT VOLUNTEER",
+    "5": "I WOULD VERY LIKELY NOT VOLUNTEER",
+    "6": "I WOULD DEFINITELY NOT VOLUNTEER",
+    "7": "IN MY OPINION, THERE IS NO SUCH THING AS A 'NECESSARY' WAR"
+   },
+   "declared_missing_values": [
+    0
+   ],
+   "declared_missing_range": [
+    9,
+    "HIGHEST"
+   ],
+   "codebook": {
+    "question_code": "E07",
+    "question_text": "IF YOU FELT THAT IT WAS NECESSARY FOR THE U.S. TO FIGHT IN SOME FUTURE WAR, HOW LIKELY IS IT THAT YOU WOULD VOLUNTEER FOR MILITARY SERVICE IN THAT WAR?",
+    "matched_by": "variable name"
+   }
+  },
+  {
+   "name": "V4332",
+   "label": "764E08A:P'IDEA OF DO LIF",
+   "storage": {
+    "spss_format": "F1.0",
+    "kind": "numeric",
+    "width": 1,
+    "decimals": 0
+   },
+   "value_labels": {
+    "1": "VERY SIMILAR",
+    "2": "MOSTLY SIMILAR",
+    "3": "MOSTLY DIFFERENT",
+    "4": "VERY DIFFERENT",
+    "8": "DON'T KNOW"
+   },
+   "declared_missing_values": [
+    0
+   ],
+   "declared_missing_range": [
+    8,
+    "HIGHEST"
+   ],
+   "codebook": {
+    "question_code": "E08A",
+    "question_stem": "HOW CLOSELY DO YOUR IDEAS AGREE WITH YOUR PARENTS' IDEAS ABOUT (...) OUR IDEAS ARE...",
+    "question_text": "WHAT YOU SHOULD DO WITH YOUR LIFE.",
+    "matched_by": "variable name"
+   }
+  },
+  {
+   "name": "V4333",
+   "label": "764E08B:P'IDEA OF LSR TM",
+   "storage": {
+    "spss_format": "F1.0",
+    "kind": "numeric",
+    "width": 1,
+    "decimals": 0
+   },
+   "value_labels": {
+    "1": "VERY SIMILAR",
+    "2": "MOSTLY SIMILAR",
+    "3": "MOSTLY DIFFERENT",
+    "4": "VERY DIFFERENT",
+    "8": "DON'T KNOW"
+   },
+   "declared_missing_values": [
+    0
+   ],
+   "declared_missing_range": [
+    8,
+    "HIGHEST"
+   ],
+   "codebook": {
+    "question_code": "E08B",
+    "question_stem": "HOW CLOSELY DO YOUR IDEAS AGREE WITH YOUR PARENTS' IDEAS ABOUT (...) OUR IDEAS ARE...",
+    "question_text": "WHAT YOU DO IN YOUR LEISURE TIME",
+    "matched_by": "variable name"
+   }
+  },
+  {
+   "name": "V4334",
+   "label": "764E08C:P'IDEA OF CLTHES",
+   "storage": {
+    "spss_format": "F1.0",
+    "kind": "numeric",
+    "width": 1,
+    "decimals": 0
+   },
+   "value_labels": {
+    "1": "VERY SIMILAR",
+    "2": "MOSTLY SIMILAR",
+    "3": "MOSTLY DIFFERENT",
+    "4": "VERY DIFFERENT",
+    "8": "DON'T KNOW"
+   },
+   "declared_missing_values": [
+    0
+   ],
+   "declared_missing_range": [
+    8,
+    "HIGHEST"
+   ],
+   "codebook": {
+    "question_code": "E08C",
+    "question_stem": "HOW CLOSELY DO YOUR IDEAS AGREE WITH YOUR PARENTS' IDEAS ABOUT (...) OUR IDEAS ARE...",
+    "question_text": "HOW YOU DRESS--WHAT CLOTHES YOU WEAR",
+    "matched_by": "variable name"
+   }
+  },
+  {
+   "name": "V4335",
+   "label": "764E08D:P'IDEA OF SPND $",
+   "storage": {
+    "spss_format": "F1.0",
+    "kind": "numeric",
+    "width": 1,
+    "decimals": 0
+   },
+   "value_labels": {
+    "1": "VERY SIMILAR",
+    "2": "MOSTLY SIMILAR",
+    "3": "MOSTLY DIFFERENT",
+    "4": "VERY DIFFERENT",
+    "8": "DON'T KNOW"
+   },
+   "declared_missing_values": [
+    0
+   ],
+   "declared_missing_range": [
+    8,
+    "HIGHEST"
+   ],
+   "codebook": {
+    "question_code": "E08D",
+    "question_stem": "HOW CLOSELY DO YOUR IDEAS AGREE WITH YOUR PARENTS' IDEAS ABOUT (...) OUR IDEAS ARE...",
+    "question_text": "HOW YOU SPEND YOUR MONEY",
+    "matched_by": "variable name"
+   }
+  },
+  {
+   "name": "V4336",
+   "label": "764E08E:P'IDEA OF DATE",
+   "storage": {
+    "spss_format": "F1.0",
+    "kind": "numeric",
+    "width": 1,
+    "decimals": 0
+   },
+   "value_labels": {
+    "1": "VERY SIMILAR",
+    "2": "MOSTLY SIMILAR",
+    "3": "MOSTLY DIFFERENT",
+    "4": "VERY DIFFERENT",
+    "8": "DON'T KNOW"
+   },
+   "declared_missing_values": [
+    0
+   ],
+   "declared_missing_range": [
+    8,
+    "HIGHEST"
+   ],
+   "codebook": {
+    "question_code": "E08E",
+    "question_stem": "HOW CLOSELY DO YOUR IDEAS AGREE WITH YOUR PARENTS' IDEAS ABOUT (...) OUR IDEAS ARE...",
+    "question_text": "WHAT THINGS ARE O.K. TO DO WHEN YOU ARE ON A DATE",
+    "matched_by": "variable name"
+   }
+  },
+  {
+   "name": "V4337",
+   "label": "764E08F:P'IDEA OF OK DRK",
+   "storage": {
+    "spss_format": "F1.0",
+    "kind": "numeric",
+    "width": 1,
+    "decimals": 0
+   },
+   "value_labels": {
+    "1": "VERY SIMILAR",
+    "2": "MOSTLY SIMILAR",
+    "3": "MOSTLY DIFFERENT",
+    "4": "VERY DIFFERENT",
+    "8": "DON'T KNOW"
+   },
+   "declared_missing_values": [
+    0
+   ],
+   "declared_missing_range": [
+    8,
+    "HIGHEST"
+   ],
+   "codebook": {
+    "question_code": "E08F",
+    "question_stem": "HOW CLOSELY DO YOUR IDEAS AGREE WITH YOUR PARENTS' IDEAS ABOUT (...) OUR IDEAS ARE...",
+    "question_text": "WHETHER IT IS O.K. TO DRINK",
+    "matched_by": "variable name"
+   }
+  },
+  {
+   "name": "V4338",
+   "label": "764E08G:P'IDEA OF OK MRJ",
+   "storage": {
+    "spss_format": "F1.0",
+    "kind": "numeric",
+    "width": 1,
+    "decimals": 0
+   },
+   "value_labels": {
+    "1": "VERY SIMILAR",
+    "2": "MOSTLY SIMILAR",
+    "3": "MOSTLY DIFFERENT",
+    "4": "VERY DIFFERENT",
+    "8": "DON'T KNOW"
+   },
+   "declared_missing_values": [
+    0
+   ],
+   "declared_missing_range": [
+    8,
+    "HIGHEST"
+   ],
+   "codebook": {
+    "question_code": "E08G",
+    "question_stem": "HOW CLOSELY DO YOUR IDEAS AGREE WITH YOUR PARENTS' IDEAS ABOUT (...) OUR IDEAS ARE...",
+    "question_text": "WHETHER IT IS O.K. TO USE MARIJUANA",
+    "matched_by": "variable name"
+   }
+  },
+  {
+   "name": "V4339",
+   "label": "764E08H:P'IDEA OF OK DRG",
+   "storage": {
+    "spss_format": "F1.0",
+    "kind": "numeric",
+    "width": 1,
+    "decimals": 0
+   },
+   "value_labels": {
+    "1": "VERY SIMILAR",
+    "2": "MOSTLY SIMILAR",
+    "3": "MOSTLY DIFFERENT",
+    "4": "VERY DIFFERENT",
+    "8": "DON'T KNOW"
+   },
+   "declared_missing_values": [
+    0
+   ],
+   "declared_missing_range": [
+    8,
+    "HIGHEST"
+   ],
+   "codebook": {
+    "question_code": "E08H",
+    "question_stem": "HOW CLOSELY DO YOUR IDEAS AGREE WITH YOUR PARENTS' IDEAS ABOUT (...) OUR IDEAS ARE...",
+    "question_text": "WHETHER IT IS O.K. TO USE OTHER DRUGS",
+    "matched_by": "variable name"
+   }
+  },
+  {
+   "name": "V4340",
+   "label": "764E08I:P'IDEA OF VALUES",
+   "storage": {
+    "spss_format": "F1.0",
+    "kind": "numeric",
+    "width": 1,
+    "decimals": 0
+   },
+   "value_labels": {
+    "1": "VERY SIMILAR",
+    "2": "MOSTLY SIMILAR",
+    "3": "MOSTLY DIFFERENT",
+    "4": "VERY DIFFERENT",
+    "8": "DON'T KNOW"
+   },
+   "declared_missing_values": [
+    0
+   ],
+   "declared_missing_range": [
+    8,
+    "HIGHEST"
+   ],
+   "codebook": {
+    "question_code": "E08I",
+    "question_stem": "HOW CLOSELY DO YOUR IDEAS AGREE WITH YOUR PARENTS' IDEAS ABOUT (...) OUR IDEAS ARE...",
+    "question_text": "WHAT VALUES ARE IMPORTANT IN LIFE",
+    "matched_by": "variable name"
+   }
+  },
+  {
+   "name": "V4341",
+   "label": "764E08J:P'IDEA OF EDUC",
+   "storage": {
+    "spss_format": "F1.0",
+    "kind": "numeric",
+    "width": 1,
+    "decimals": 0
+   },
+   "value_labels": {
+    "1": "VERY SIMILAR",
+    "2": "MOSTLY SIMILAR",
+    "3": "MOSTLY DIFFERENT",
+    "4": "VERY DIFFERENT",
+    "8": "DON'T KNOW"
+   },
+   "declared_missing_values": [
+    0
+   ],
+   "declared_missing_range": [
+    8,
+    "HIGHEST"
+   ],
+   "codebook": {
+    "question_code": "E08J",
+    "question_stem": "HOW CLOSELY DO YOUR IDEAS AGREE WITH YOUR PARENTS' IDEAS ABOUT (...) OUR IDEAS ARE...",
+    "question_text": "THE VALUE OF EDUCATION",
+    "matched_by": "variable name"
+   }
+  },
+  {
+   "name": "V4342",
+   "label": "764E08K:P'IDEA OF SX RLS",
+   "storage": {
+    "spss_format": "F1.0",
+    "kind": "numeric",
+    "width": 1,
+    "decimals": 0
+   },
+   "value_labels": {
+    "1": "VERY SIMILAR",
+    "2": "MOSTLY SIMILAR",
+    "3": "MOSTLY DIFFERENT",
+    "4": "VERY DIFFERENT",
+    "8": "DON'T KNOW"
+   },
+   "declared_missing_values": [
+    0
+   ],
+   "declared_missing_range": [
+    8,
+    "HIGHEST"
+   ],
+   "codebook": {
+    "question_code": "E08K",
+    "question_stem": "HOW CLOSELY DO YOUR IDEAS AGREE WITH YOUR PARENTS' IDEAS ABOUT (...) OUR IDEAS ARE...",
+    "question_text": "WHAT ARE APPROPRIATE ROLES FOR WOMEN",
+    "matched_by": "variable name"
+   }
+  },
+  {
+   "name": "V4343",
+   "label": "764E08L:P'IDEA OF ECLOGY",
+   "storage": {
+    "spss_format": "F1.0",
+    "kind": "numeric",
+    "width": 1,
+    "decimals": 0
+   },
+   "value_labels": {
+    "1": "VERY SIMILAR",
+    "2": "MOSTLY SIMILAR",
+    "3": "MOSTLY DIFFERENT",
+    "4": "VERY DIFFERENT",
+    "8": "DON'T KNOW"
+   },
+   "declared_missing_values": [
+    0
+   ],
+   "declared_missing_range": [
+    8,
+    "HIGHEST"
+   ],
+   "codebook": {
+    "question_code": "E08L",
+    "question_stem": "HOW CLOSELY DO YOUR IDEAS AGREE WITH YOUR PARENTS' IDEAS ABOUT (...) OUR IDEAS ARE...",
+    "question_text": "CONSERVATION AND POLLUTION ISSUES",
+    "matched_by": "variable name"
+   }
+  },
+  {
+   "name": "V4344",
+   "label": "764E08M:P'IDEA OF RCL IS",
+   "storage": {
+    "spss_format": "F1.0",
+    "kind": "numeric",
+    "width": 1,
+    "decimals": 0
+   },
+   "value_labels": {
+    "1": "VERY SIMILAR",
+    "2": "MOSTLY SIMILAR",
+    "3": "MOSTLY DIFFERENT",
+    "4": "VERY DIFFERENT",
+    "8": "DON'T KNOW"
+   },
+   "declared_missing_values": [
+    0
+   ],
+   "declared_missing_range": [
+    8,
+    "HIGHEST"
+   ],
+   "codebook": {
+    "question_code": "E08M",
+    "question_stem": "HOW CLOSELY DO YOUR IDEAS AGREE WITH YOUR PARENTS' IDEAS ABOUT (...) OUR IDEAS ARE...",
+    "question_text": "RACIAL ISSUES",
+    "matched_by": "variable name"
+   }
+  },
+  {
+   "name": "V4345",
+   "label": "764E08N:P'IDEA OF RLGION",
+   "storage": {
+    "spss_format": "F1.0",
+    "kind": "numeric",
+    "width": 1,
+    "decimals": 0
+   },
+   "value_labels": {
+    "1": "VERY SIMILAR",
+    "2": "MOSTLY SIMILAR",
+    "3": "MOSTLY DIFFERENT",
+    "4": "VERY DIFFERENT",
+    "8": "DON'T KNOW"
+   },
+   "declared_missing_values": [
+    0
+   ],
+   "declared_missing_range": [
+    8,
+    "HIGHEST"
+   ],
+   "codebook": {
+    "question_code": "E08N",
+    "question_stem": "HOW CLOSELY DO YOUR IDEAS AGREE WITH YOUR PARENTS' IDEAS ABOUT (...) OUR IDEAS ARE...",
+    "question_text": "RELIGION",
+    "matched_by": "variable name"
+   }
+  },
+  {
+   "name": "V4346",
+   "label": "764E08O:P'IDEA OF PLTICS",
+   "storage": {
+    "spss_format": "F1.0",
+    "kind": "numeric",
+    "width": 1,
+    "decimals": 0
+   },
+   "value_labels": {
+    "1": "VERY SIMILAR",
+    "2": "MOSTLY SIMILAR",
+    "3": "MOSTLY DIFFERENT",
+    "4": "VERY DIFFERENT",
+    "8": "DON'T KNOW"
+   },
+   "declared_missing_values": [
+    0
+   ],
+   "declared_missing_range": [
+    8,
+    "HIGHEST"
+   ],
+   "codebook": {
+    "question_code": "E08O",
+    "question_stem": "HOW CLOSELY DO YOUR IDEAS AGREE WITH YOUR PARENTS' IDEAS ABOUT (...) OUR IDEAS ARE...",
+    "question_text": "POLITICS",
+    "matched_by": "variable name"
+   }
+  },
+  {
+   "name": "V4347",
+   "label": "764E09A:PRNT DAP CIGS",
+   "storage": {
+    "spss_format": "F1.0",
+    "kind": "numeric",
+    "width": 1,
+    "decimals": 0
+   },
+   "value_labels": {
+    "1": "NOT DISAPPROVE",
+    "2": "DISAPPROVE",
+    "3": "STRONGLY DISAPPROVE"
+   },
+   "declared_missing_values": [
+    0
+   ],
+   "declared_missing_range": [
+    9,
+    "HIGHEST"
+   ],
+   "codebook": {
+    "question_code": "E09A",
+    "question_stem": "HOW DO YOU THINK YOUR PARENTS FEEL (OR WOULD FEEL) ABOUT YOU DOING EACH OF THE FOLLOWING THINGS?",
+    "question_text": "SMOKING ONE OR MORE PACKS OF CIGARETTES PER DAY",
+    "matched_by": "variable name"
+   }
+  },
+  {
+   "name": "V4348",
+   "label": "764E09B:PRNT DAP TRY MRJ",
+   "storage": {
+    "spss_format": "F1.0",
+    "kind": "numeric",
+    "width": 1,
+    "decimals": 0
+   },
+   "value_labels": {
+    "1": "NOT DISAPPROVE",
+    "2": "DISAPPROVE",
+    "3": "STRONGLY DISAPPROVE"
+   },
+   "declared_missing_values": [
+    0
+   ],
+   "declared_missing_range": [
+    9,
+    "HIGHEST"
+   ],
+   "codebook": {
+    "question_code": "E09B",
+    "question_stem": "HOW DO YOU THINK YOUR PARENTS FEEL (OR WOULD FEEL) ABOUT YOU DOING EACH OF THE FOLLOWING THINGS?",
+    "question_text": "TRYING MARIJUANA (POT,GRASS) ONCE OR TWICE.",
+    "matched_by": "variable name"
+   }
+  },
+  {
+   "name": "V4349",
+   "label": "764E09C:PRNT DAP MJ OCC",
+   "storage": {
+    "spss_format": "F1.0",
+    "kind": "numeric",
+    "width": 1,
+    "decimals": 0
+   },
+   "value_labels": {
+    "1": "NOT DISAPPROVE",
+    "2": "DISAPPROVE",
+    "3": "STRONGLY DISAPPROVE"
+   },
+   "declared_missing_values": [
+    0
+   ],
+   "declared_missing_range": [
+    9,
+    "HIGHEST"
+   ],
+   "codebook": {
+    "question_code": "E09C",
+    "question_stem": "HOW DO YOU THINK YOUR PARENTS FEEL (OR WOULD FEEL) ABOUT YOU DOING EACH OF THE FOLLOWING THINGS?",
+    "question_text": "SMOKING MARIJUANA OCCASIONALLY",
+    "matched_by": "variable name"
+   }
+  },
+  {
+   "name": "V4350",
+   "label": "764E09D:PRNT DAP MJ REG",
+   "storage": {
+    "spss_format": "F1.0",
+    "kind": "numeric",
+    "width": 1,
+    "decimals": 0
+   },
+   "value_labels": {
+    "1": "NOT DISAPPROVE",
+    "2": "DISAPPROVE",
+    "3": "STRONGLY DISAPPROVE"
+   },
+   "declared_missing_values": [
+    0
+   ],
+   "declared_missing_range": [
+    9,
+    "HIGHEST"
+   ],
+   "codebook": {
+    "question_code": "E09D",
+    "question_stem": "HOW DO YOU THINK YOUR PARENTS FEEL (OR WOULD FEEL) ABOUT YOU DOING EACH OF THE FOLLOWING THINGS?",
+    "question_text": "SMOKING MARIJUANA REGULARLY",
+    "matched_by": "variable name"
+   }
+  },
+  {
+   "name": "V4351",
+   "label": "764E09E:PRNT DAP TRY LSD",
+   "storage": {
+    "spss_format": "F1.0",
+    "kind": "numeric",
+    "width": 1,
+    "decimals": 0
+   },
+   "value_labels": {
+    "1": "NOT DISAPPROVE",
+    "2": "DISAPPROVE",
+    "3": "STRONGLY DISAPPROVE"
+   },
+   "declared_missing_values": [
+    0
+   ],
+   "declared_missing_range": [
+    9,
+    "HIGHEST"
+   ],
+   "codebook": {
+    "question_code": "E09E",
+    "question_stem": "HOW DO YOU THINK YOUR PARENTS FEEL (OR WOULD FEEL) ABOUT YOU DOING EACH OF THE FOLLOWING THINGS?",
+    "question_text": "TRYING LSD ONCE OR TWICE",
+    "matched_by": "variable name"
+   }
+  },
+  {
+   "name": "V4352",
+   "label": "764E09F:PRNT DAP TRY AMP",
+   "storage": {
+    "spss_format": "F1.0",
+    "kind": "numeric",
+    "width": 1,
+    "decimals": 0
+   },
+   "value_labels": {
+    "1": "NOT DISAPPROVE",
+    "2": "DISAPPROVE",
+    "3": "STRONGLY DISAPPROVE"
+   },
+   "declared_missing_values": [
+    0
+   ],
+   "declared_missing_range": [
+    9,
+    "HIGHEST"
+   ],
+   "codebook": {
+    "question_code": "E09F",
+    "question_stem": "HOW DO YOU THINK YOUR PARENTS FEEL (OR WOULD FEEL) ABOUT YOU DOING EACH OF THE FOLLOWING THINGS?",
+    "question_text": "TRYING AN AMPHETAMINE (UPPER, PEP PILL, BENNIE, SPEED) ONCE OR TWICE",
+    "matched_by": "variable name"
+   }
+  },
+  {
+   "name": "V4353",
+   "label": "764E09G:PRNT DAP 1-2DR/D",
+   "storage": {
+    "spss_format": "F1.0",
+    "kind": "numeric",
+    "width": 1,
+    "decimals": 0
+   },
+   "value_labels": {
+    "1": "NOT DISAPPROVE",
+    "2": "DISAPPROVE",
+    "3": "STRONGLY DISAPPROVE"
+   },
+   "declared_missing_values": [
+    0
+   ],
+   "declared_missing_range": [
+    9,
+    "HIGHEST"
+   ],
+   "codebook": {
+    "question_code": "E09G",
+    "question_stem": "HOW DO YOU THINK YOUR PARENTS FEEL (OR WOULD FEEL) ABOUT YOU DOING EACH OF THE FOLLOWING THINGS?",
+    "question_text": "TAKING ONE OR TWO DRINKS NEARLY EVERY DAY",
+    "matched_by": "variable name"
+   }
+  },
+  {
+   "name": "V4354",
+   "label": "764E09H:PRNT DAP 4-5DR/D",
+   "storage": {
+    "spss_format": "F1.0",
+    "kind": "numeric",
+    "width": 1,
+    "decimals": 0
+   },
+   "value_labels": {
+    "1": "NOT DISAPPROVE",
+    "2": "DISAPPROVE",
+    "3": "STRONGLY DISAPPROVE"
+   },
+   "declared_missing_values": [
+    0
+   ],
+   "declared_missing_range": [
+    9,
+    "HIGHEST"
+   ],
+   "codebook": {
+    "question_code": "E09H",
+    "question_stem": "HOW DO YOU THINK YOUR PARENTS FEEL (OR WOULD FEEL) ABOUT YOU DOING EACH OF THE FOLLOWING THINGS?",
+    "question_text": "TAKING FOUR OR FIVE DRINKS NEARLY EVERY DAY",
+    "matched_by": "variable name"
+   }
+  },
+  {
+   "name": "V4355",
+   "label": "764E09I:PRNT DAP 5+DR/WE",
+   "storage": {
+    "spss_format": "F1.0",
+    "kind": "numeric",
+    "width": 1,
+    "decimals": 0
+   },
+   "value_labels": {
+    "1": "NOT DISAPPROVE",
+    "2": "DISAPPROVE",
+    "3": "STRONGLY DISAPPROVE"
+   },
+   "declared_missing_values": [
+    0
+   ],
+   "declared_missing_range": [
+    9,
+    "HIGHEST"
+   ],
+   "codebook": {
+    "question_code": "E09I",
+    "question_stem": "HOW DO YOU THINK YOUR PARENTS FEEL (OR WOULD FEEL) ABOUT YOU DOING EACH OF THE FOLLOWING THINGS?",
+    "question_text": "HAVING FIVE OR MORE DRINKS ONCE OR TWICE EACH WEEKEND",
+    "matched_by": "variable name"
+   }
+  },
+  {
+   "name": "V4356",
+   "label": "764E10 :R DSNT LIKE SCHL",
+   "storage": {
+    "spss_format": "F1.0",
+    "kind": "numeric",
+    "width": 1,
+    "decimals": 0
+   },
+   "value_labels": {
+    "1": "I DON'T LIKE SCHOOL AT ALL",
+    "2": "I DON'T LIKE SCHOOL VERY MUCH",
+    "3": "I LIKE SCHOOL SOME",
+    "4": "I LIKE SCHOOL QUITE A LOT",
+    "5": "I LIKE SCHOOL VERY MUCH"
+   },
+   "declared_missing_values": [
+    0
+   ],
+   "declared_missing_range": [
+    9,
+    "HIGHEST"
+   ],
+   "codebook": {
+    "question_code": "E10",
+    "question_text": "SOME PEOPLE LIKE SCHOOL VERY MUCH. OTHERS DON'T. HOW DO YOU FEEL ABOUT GOING TO SCHOOL?",
+    "matched_by": "variable name"
+   }
+  },
+  {
+   "name": "V4357",
+   "label": "764E11A:H.S-ROB YRS <$50",
+   "storage": {
+    "spss_format": "F1.0",
+    "kind": "numeric",
+    "width": 1,
+    "decimals": 0
+   },
+   "value_labels": {
+    "1": "NOT AT ALL",
+    "2": "ONCE",
+    "3": "TWICE",
+    "4": "3 OR 4 TIMES",
+    "5": "5 OR MORE TIMES"
+   },
+   "declared_missing_values": [
+    0
+   ],
+   "declared_missing_range": [
+    9,
+    "HIGHEST"
+   ],
+   "codebook": {
+    "question_code": "E11A",
+    "question_stem": "THE NEXT QUESTIONS ARE ABOUT SOME THINGS WHICH MAY HAVE HAPPENED TO YOU WHILE YOU YOU WERE AT SCHOOL (INSIDE OR OUTSIDE OR IN A SCHOOLBUS). DURING THE LAST 12 MONTHS, HOW OFTEN...",
+    "question_text": "HAS SOMETHING OF YOURS (WORTH UNDER $50) BEEN STOLEN?",
+    "matched_by": "variable name"
+   }
+  },
+  {
+   "name": "V4358",
+   "label": "764E11B:H.S-ROB YRS >$50",
+   "storage": {
+    "spss_format": "F1.0",
+    "kind": "numeric",
+    "width": 1,
+    "decimals": 0
+   },
+   "value_labels": {
+    "1": "NOT AT ALL",
+    "2": "ONCE",
+    "3": "TWICE",
+    "4": "3 OR 4 TIMES",
+    "5": "5 OR MORE TIMES"
+   },
+   "declared_missing_values": [
+    0
+   ],
+   "declared_missing_range": [
+    9,
+    "HIGHEST"
+   ],
+   "codebook": {
+    "question_code": "E11B",
+    "question_stem": "THE NEXT QUESTIONS ARE ABOUT SOME THINGS WHICH MAY HAVE HAPPENED TO YOU WHILE YOU YOU WERE AT SCHOOL (INSIDE OR OUTSIDE OR IN A SCHOOLBUS). DURING THE LAST 12 MONTHS, HOW OFTEN...",
+    "question_text": "HAS SOMETHING OF YOURS (WORTH OVER $50) BEEN STOLEN?",
+    "matched_by": "variable name"
+   }
+  },
+  {
+   "name": "V4359",
+   "label": "764E11C:H.S-DMG YR PRPTY",
+   "storage": {
+    "spss_format": "F1.0",
+    "kind": "numeric",
+    "width": 1,
+    "decimals": 0
+   },
+   "value_labels": {
+    "1": "NOT AT ALL",
+    "2": "ONCE",
+    "3": "TWICE",
+    "4": "3 OR 4 TIMES",
+    "5": "5 OR MORE TIMES"
+   },
+   "declared_missing_values": [
+    0
+   ],
+   "declared_missing_range": [
+    9,
+    "HIGHEST"
+   ],
+   "codebook": {
+    "question_code": "E11C",
+    "question_stem": "THE NEXT QUESTIONS ARE ABOUT SOME THINGS WHICH MAY HAVE HAPPENED TO YOU WHILE YOU YOU WERE AT SCHOOL (INSIDE OR OUTSIDE OR IN A SCHOOLBUS). DURING THE LAST 12 MONTHS, HOW OFTEN...",
+    "question_text": "HAS SOMEONE DELIBERATELY DAMAGED YOUR PROPERTY (YOUR CAR, CLOTHING, ETC.)?",
+    "matched_by": "variable name"
+   }
+  },
+  {
+   "name": "V4360",
+   "label": "764E11D:H.S-INJR U W/WPN",
+   "storage": {
+    "spss_format": "F1.0",
+    "kind": "numeric",
+    "width": 1,
+    "decimals": 0
+   },
+   "value_labels": {
+    "1": "NOT AT ALL",
+    "2": "ONCE",
+    "3": "TWICE",
+    "4": "3 OR 4 TIMES",
+    "5": "5 OR MORE TIMES"
+   },
+   "declared_missing_values": [
+    0
+   ],
+   "declared_missing_range": [
+    9,
+    "HIGHEST"
+   ],
+   "codebook": {
+    "question_code": "E11D",
+    "question_stem": "THE NEXT QUESTIONS ARE ABOUT SOME THINGS WHICH MAY HAVE HAPPENED TO YOU WHILE YOU YOU WERE AT SCHOOL (INSIDE OR OUTSIDE OR IN A SCHOOLBUS). DURING THE LAST 12 MONTHS, HOW OFTEN...",
+    "question_text": "HAS SOMEONE INJURED YOU WITH A WEAPON (LIKE A KNIFE, GUN, OR CLUB)?",
+    "matched_by": "variable name"
+   }
+  },
+  {
+   "name": "V4361",
+   "label": "764E11E:H.S-THRTN U W/WP",
+   "storage": {
+    "spss_format": "F1.0",
+    "kind": "numeric",
+    "width": 1,
+    "decimals": 0
+   },
+   "value_labels": {
+    "1": "NOT AT ALL",
+    "2": "ONCE",
+    "3": "TWICE",
+    "4": "3 OR 4 TIMES",
+    "5": "5 OR MORE TIMES"
+   },
+   "declared_missing_values": [
+    0
+   ],
+   "declared_missing_range": [
+    9,
+    "HIGHEST"
+   ],
+   "codebook": {
+    "question_code": "E11E",
+    "question_stem": "THE NEXT QUESTIONS ARE ABOUT SOME THINGS WHICH MAY HAVE HAPPENED TO YOU WHILE YOU YOU WERE AT SCHOOL (INSIDE OR OUTSIDE OR IN A SCHOOLBUS). DURING THE LAST 12 MONTHS, HOW OFTEN...",
+    "question_text": "HAS SOMEONE THREATENED YOU WITH A WEAPON, BUT NOT ACTUALLY INJURED YOU?",
+    "matched_by": "variable name"
+   }
+  },
+  {
+   "name": "V4362",
+   "label": "764E11F:H.S-INJR YU -WPN",
+   "storage": {
+    "spss_format": "F1.0",
+    "kind": "numeric",
+    "width": 1,
+    "decimals": 0
+   },
+   "value_labels": {
+    "1": "NOT AT ALL",
+    "2": "ONCE",
+    "3": "TWICE",
+    "4": "3 OR 4 TIMES",
+    "5": "5 OR MORE TIMES"
+   },
+   "declared_missing_values": [
+    0
+   ],
+   "declared_missing_range": [
+    9,
+    "HIGHEST"
+   ],
+   "codebook": {
+    "question_code": "E11F",
+    "question_stem": "THE NEXT QUESTIONS ARE ABOUT SOME THINGS WHICH MAY HAVE HAPPENED TO YOU WHILE YOU YOU WERE AT SCHOOL (INSIDE OR OUTSIDE OR IN A SCHOOLBUS). DURING THE LAST 12 MONTHS, HOW OFTEN...",
+    "question_text": "HAS SOMEONE INJURED YOU ON PURPOSE WITHOUT USING A WEAPON?",
+    "matched_by": "variable name"
+   }
+  },
+  {
+   "name": "V4363",
+   "label": "764E11G:H.S-THRT U W/INJ",
+   "storage": {
+    "spss_format": "F1.0",
+    "kind": "numeric",
+    "width": 1,
+    "decimals": 0
+   },
+   "value_labels": {
+    "1": "NOT AT ALL",
+    "2": "ONCE",
+    "3": "TWICE",
+    "4": "3 OR 4 TIMES",
+    "5": "5 OR MORE TIMES"
+   },
+   "declared_missing_values": [
+    0
+   ],
+   "declared_missing_range": [
+    9,
+    "HIGHEST"
+   ],
+   "codebook": {
+    "question_code": "E11G",
+    "question_stem": "THE NEXT QUESTIONS ARE ABOUT SOME THINGS WHICH MAY HAVE HAPPENED TO YOU WHILE YOU YOU WERE AT SCHOOL (INSIDE OR OUTSIDE OR IN A SCHOOLBUS). DURING THE LAST 12 MONTHS, HOW OFTEN...",
+    "question_text": "HAS AN UNARMED PERSON THREATENED YOU WITH INJURY, BUT NOT ACTUALLY INJURED YOU?",
+    "matched_by": "variable name"
+   }
+  },
+  {
+   "name": "V9001",
+   "label": "ICPSR STUDY NUMBER",
+   "storage": {
+    "spss_format": "F4.0",
+    "kind": "numeric",
+    "width": 4,
+    "decimals": 0
+   },
+   "value_labels": null,
+   "declared_missing_values": null,
+   "declared_missing_range": null,
+   "codebook": null
+  },
+  {
+   "name": "V9002",
+   "label": "ICPSR PART NUMBER",
+   "storage": {
+    "spss_format": "F1.0",
+    "kind": "numeric",
+    "width": 1,
+    "decimals": 0
+   },
+   "value_labels": null,
+   "declared_missing_values": null,
+   "declared_missing_range": null,
+   "codebook": null
+  },
+  {
+   "name": "V9003",
+   "label": "ICPSR VERSION NUMBER",
+   "storage": {
+    "spss_format": "F1.0",
+    "kind": "numeric",
+    "width": 1,
+    "decimals": 0
+   },
+   "value_labels": null,
+   "declared_missing_values": null,
+   "declared_missing_range": null,
+   "codebook": null
+  }
+ ]
+}

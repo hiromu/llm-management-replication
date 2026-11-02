@@ -1,0 +1,698 @@
+Python Library Documentation: class Logit in module statsmodels.discrete.discrete_model
+
+class Logit(BinaryModel)
+ |  Logit(endog, exog, offset=None, check_rank=True, **kwargs)
+ |
+ |  Logit Model
+ |
+ |  Parameters
+ |  ----------
+ |  endog : array_like
+ |      A 1-d endogenous response variable. The dependent variable.
+ |  exog : array_like
+ |      A nobs x k array where `nobs` is the number of observations and `k`
+ |      is the number of regressors. An intercept is not included by default
+ |      and should be added by the user. See
+ |      :func:`statsmodels.tools.add_constant`.
+ |  offset : array_like
+ |      Offset is added to the linear prediction with coefficient equal to 1.
+ |  missing : str
+ |      Available options are 'none', 'drop', and 'raise'. If 'none', no nan
+ |      checking is done. If 'drop', any observations with nans are dropped.
+ |      If 'raise', an error is raised. Default is 'none'.
+ |  check_rank : bool
+ |      Check exog rank to determine model degrees of freedom. Default is
+ |      True. Setting to False reduces model initialization time when
+ |      exog.shape[1] is large.
+ |
+ |
+ |  Attributes
+ |  ----------
+ |  endog : ndarray
+ |      A reference to the endogenous response variable
+ |  exog : ndarray
+ |      A reference to the exogenous design.
+ |
+ |  Method resolution order:
+ |      Logit
+ |      BinaryModel
+ |      DiscreteModel
+ |      statsmodels.base.model.LikelihoodModel
+ |      statsmodels.base.model.Model
+ |      builtins.object
+ |
+ |  Methods defined here:
+ |
+ |  cdf(self, X)
+ |      The logistic cumulative distribution function
+ |
+ |      Parameters
+ |      ----------
+ |      X : array_like
+ |          `X` is the linear predictor of the logit model.  See notes.
+ |
+ |      Returns
+ |      -------
+ |      1/(1 + exp(-X))
+ |
+ |      Notes
+ |      -----
+ |      In the logit model,
+ |
+ |      .. math:: \Lambda\left(x^{\prime}\beta\right)=
+ |                \text{Prob}\left(Y=1|x\right)=
+ |                \frac{e^{x^{\prime}\beta}}{1+e^{x^{\prime}\beta}}
+ |
+ |  fit(
+ |      self,
+ |      start_params=None,
+ |      method='newton',
+ |      maxiter=35,
+ |      full_output=1,
+ |      disp=1,
+ |      callback=None,
+ |      **kwargs
+ |  )
+ |      Fit the model using maximum likelihood.
+ |
+ |      The rest of the docstring is from
+ |      statsmodels.base.model.LikelihoodModel.fit
+ |
+ |      Fit method for likelihood based models
+ |
+ |      Parameters
+ |      ----------
+ |      start_params : array_like, optional
+ |          Initial guess of the solution for the loglikelihood maximization.
+ |          The default is an array of zeros.
+ |      method : str, optional
+ |          The `method` determines which solver from `scipy.optimize`
+ |          is used, and it can be chosen from among the following strings:
+ |
+ |          - 'newton' for Newton-Raphson, 'nm' for Nelder-Mead
+ |          - 'bfgs' for Broyden-Fletcher-Goldfarb-Shanno (BFGS)
+ |          - 'lbfgs' for limited-memory BFGS with optional box constraints
+ |          - 'powell' for modified Powell's method
+ |          - 'cg' for conjugate gradient
+ |          - 'ncg' for Newton-conjugate gradient
+ |          - 'basinhopping' for global basin-hopping solver
+ |          - 'minimize' for generic wrapper of scipy minimize (BFGS by default)
+ |
+ |          The explicit arguments in `fit` are passed to the solver,
+ |          with the exception of the basin-hopping solver. Each
+ |          solver has several optional arguments that are not the same across
+ |          solvers. See the notes section below (or scipy.optimize) for the
+ |          available arguments and for the list of explicit arguments that the
+ |          basin-hopping solver supports.
+ |      maxiter : int, optional
+ |          The maximum number of iterations to perform.
+ |      full_output : bool, optional
+ |          Set to True to have all available output in the Results object's
+ |          mle_retvals attribute. The output is dependent on the solver.
+ |          See LikelihoodModelResults notes section for more information.
+ |      disp : bool, optional
+ |          Set to True to print convergence messages.
+ |      fargs : tuple, optional
+ |          Extra arguments passed to the likelihood function, i.e.,
+ |          loglike(x,*args)
+ |      callback : callable callback(xk), optional
+ |          Called after each iteration, as callback(xk), where xk is the
+ |          current parameter vector.
+ |      retall : bool, optional
+ |          Set to True to return list of solutions at each iteration.
+ |          Available in Results object's mle_retvals attribute.
+ |      skip_hessian : bool, optional
+ |          If False (default), then the negative inverse hessian is calculated
+ |          after the optimization. If True, then the hessian will not be
+ |          calculated. However, it will be available in methods that use the
+ |          hessian in the optimization (currently only with `"newton"`).
+ |      kwargs : keywords
+ |          All kwargs are passed to the chosen solver with one exception. The
+ |          following keyword controls what happens after the fit::
+ |
+ |              warn_convergence : bool, optional
+ |                  If True, checks the model for the converged flag. If the
+ |                  converged flag is False, a ConvergenceWarning is issued.
+ |
+ |      Notes
+ |      -----
+ |      The 'basinhopping' solver ignores `maxiter`, `retall`, `full_output`
+ |      explicit arguments.
+ |
+ |      Optional arguments for solvers (see returned Results.mle_settings)::
+ |
+ |          'newton'
+ |              tol : float
+ |                  Relative error in params acceptable for convergence.
+ |          'nm' -- Nelder Mead
+ |              xtol : float
+ |                  Relative error in params acceptable for convergence
+ |              ftol : float
+ |                  Relative error in loglike(params) acceptable for
+ |                  convergence
+ |              maxfun : int
+ |                  Maximum number of function evaluations to make.
+ |          'bfgs'
+ |              gtol : float
+ |                  Stop when norm of gradient is less than gtol.
+ |              norm : float
+ |                  Order of norm (np.inf is max, -np.inf is min)
+ |              epsilon
+ |                  If fprime is approximated, use this value for the step
+ |                  size. Only relevant if LikelihoodModel.score is None.
+ |          'lbfgs'
+ |              m : int
+ |                  This many terms are used for the Hessian approximation.
+ |              factr : float
+ |                  A stop condition that is a variant of relative error.
+ |              pgtol : float
+ |                  A stop condition that uses the projected gradient.
+ |              epsilon
+ |                  If fprime is approximated, use this value for the step
+ |                  size. Only relevant if LikelihoodModel.score is None.
+ |              maxfun : int
+ |                  Maximum number of function evaluations to make.
+ |              bounds : sequence
+ |                  (min, max) pairs for each element in x,
+ |                  defining the bounds on that parameter.
+ |                  Use None for one of min or max when there is no bound
+ |                  in that direction.
+ |          'cg'
+ |              gtol : float
+ |                  Stop when norm of gradient is less than gtol.
+ |              norm : float
+ |                  Order of norm (np.inf is max, -np.inf is min)
+ |              epsilon : float
+ |                  If fprime is approximated, use this value for the step
+ |                  size. Can be scalar or vector.  Only relevant if
+ |                  Likelihoodmodel.score is None.
+ |          'ncg'
+ |              fhess_p : callable f'(x,*args)
+ |                  Function which computes the Hessian of f times an arbitrary
+ |                  vector, p.  Should only be supplied if
+ |                  LikelihoodModel.hessian is None.
+ |              avextol : float
+ |                  Stop when the average relative error in the minimizer
+ |                  falls below this amount.
+ |              epsilon : float or ndarray
+ |                  If fhess is approximated, use this value for the step size.
+ |                  Only relevant if Likelihoodmodel.hessian is None.
+ |          'powell'
+ |              xtol : float
+ |                  Line-search error tolerance
+ |              ftol : float
+ |                  Relative error in loglike(params) for acceptable for
+ |                  convergence.
+ |              maxfun : int
+ |                  Maximum number of function evaluations to make.
+ |              start_direc : ndarray
+ |                  Initial direction set.
+ |          'basinhopping'
+ |              niter : int
+ |                  The number of basin hopping iterations.
+ |              niter_success : int
+ |                  Stop the run if the global minimum candidate remains the
+ |                  same for this number of iterations.
+ |              T : float
+ |                  The "temperature" parameter for the accept or reject
+ |                  criterion. Higher "temperatures" mean that larger jumps
+ |                  in function value will be accepted. For best results
+ |                  `T` should be comparable to the separation (in function
+ |                  value) between local minima.
+ |              stepsize : float
+ |                  Initial step size for use in the random displacement.
+ |              interval : int
+ |                  The interval for how often to update the `stepsize`.
+ |              minimizer : dict
+ |                  Extra keyword arguments to be passed to the minimizer
+ |                  `scipy.optimize.minimize()`, for example 'method' - the
+ |                  minimization method (e.g. 'L-BFGS-B'), or 'tol' - the
+ |                  tolerance for termination. Other arguments are mapped from
+ |                  explicit argument of `fit`:
+ |                    - `args` <- `fargs`
+ |                    - `jac` <- `score`
+ |                    - `hess` <- `hess`
+ |          'minimize'
+ |              min_method : str, optional
+ |                  Name of minimization method to use.
+ |                  Any method specific arguments can be passed directly.
+ |                  For a list of methods and their arguments, see
+ |                  documentation of `scipy.optimize.minimize`.
+ |                  If no method is specified, then BFGS is used.
+ |
+ |  hessian(self, params)
+ |      Logit model Hessian matrix of the log-likelihood
+ |
+ |      Parameters
+ |      ----------
+ |      params : array_like
+ |          The parameters of the model
+ |
+ |      Returns
+ |      -------
+ |      hess : ndarray, (k_vars, k_vars)
+ |          The Hessian, second derivative of loglikelihood function,
+ |          evaluated at `params`
+ |
+ |      Notes
+ |      -----
+ |      .. math:: \frac{\partial^{2}\ln L}{\partial\beta\partial\beta^{\prime}}=-\sum_{i}\Lambda_{i}\left(1-\Lambda_{i}\right)x_{i}x_{i}^{\prime}
+ |
+ |  hessian_factor(self, params)
+ |      Logit model Hessian factor
+ |
+ |      Parameters
+ |      ----------
+ |      params : array_like
+ |          The parameters of the model
+ |
+ |      Returns
+ |      -------
+ |      hess : ndarray, (nobs,)
+ |          The Hessian factor, second derivative of loglikelihood function
+ |          with respect to the linear predictor evaluated at `params`
+ |
+ |  loglike(self, params)
+ |      Log-likelihood of logit model.
+ |
+ |      Parameters
+ |      ----------
+ |      params : array_like
+ |          The parameters of the logit model.
+ |
+ |      Returns
+ |      -------
+ |      loglike : float
+ |          The log-likelihood function of the model evaluated at `params`.
+ |          See notes.
+ |
+ |      Notes
+ |      -----
+ |      .. math::
+ |
+ |         \ln L=\sum_{i}\ln\Lambda
+ |         \left(q_{i}x_{i}^{\prime}\beta\right)
+ |
+ |      Where :math:`q=2y-1`. This simplification comes from the fact that the
+ |      logistic distribution is symmetric.
+ |
+ |  loglikeobs(self, params)
+ |      Log-likelihood of logit model for each observation.
+ |
+ |      Parameters
+ |      ----------
+ |      params : array_like
+ |          The parameters of the logit model.
+ |
+ |      Returns
+ |      -------
+ |      loglike : ndarray
+ |          The log likelihood for each observation of the model evaluated
+ |          at `params`. See Notes
+ |
+ |      Notes
+ |      -----
+ |      .. math::
+ |
+ |         \ln L=\sum_{i}\ln\Lambda
+ |         \left(q_{i}x_{i}^{\prime}\beta\right)
+ |
+ |      for observations :math:`i=1,...,n`
+ |
+ |      where :math:`q=2y-1`. This simplification comes from the fact that the
+ |      logistic distribution is symmetric.
+ |
+ |  pdf(self, X)
+ |      The logistic probability density function
+ |
+ |      Parameters
+ |      ----------
+ |      X : array_like
+ |          `X` is the linear predictor of the logit model.  See notes.
+ |
+ |      Returns
+ |      -------
+ |      pdf : ndarray
+ |          The value of the Logit probability mass function, PMF, for each
+ |          point of X. ``np.exp(-x)/(1+np.exp(-X))**2``
+ |
+ |      Notes
+ |      -----
+ |      In the logit model,
+ |
+ |      .. math:: \lambda\left(x^{\prime}\beta\right)=\frac{e^{-x^{\prime}\beta}}{\left(1+e^{-x^{\prime}\beta}\right)^{2}}
+ |
+ |  score(self, params)
+ |      Logit model score (gradient) vector of the log-likelihood
+ |
+ |      Parameters
+ |      ----------
+ |      params : array_like
+ |          The parameters of the model
+ |
+ |      Returns
+ |      -------
+ |      score : ndarray, 1-D
+ |          The score vector of the model, i.e. the first derivative of the
+ |          loglikelihood function, evaluated at `params`
+ |
+ |      Notes
+ |      -----
+ |      .. math:: \frac{\partial\ln L}{\partial\beta}=\sum_{i=1}^{n}\left(y_{i}-\Lambda_{i}\right)x_{i}
+ |
+ |  score_factor(self, params)
+ |      Logit model derivative of the log-likelihood with respect to linpred.
+ |
+ |      Parameters
+ |      ----------
+ |      params : array_like
+ |          The parameters of the model
+ |
+ |      Returns
+ |      -------
+ |      score_factor : array_like
+ |          The derivative of the loglikelihood for each observation evaluated
+ |          at `params`.
+ |
+ |      Notes
+ |      -----
+ |      .. math:: \frac{\partial\ln L_{i}}{\partial\beta}=\left(y_{i}-\lambda_{i}\right)
+ |
+ |      for observations :math:`i=1,...,n`
+ |
+ |      where the loglinear model is assumed
+ |
+ |      .. math:: \ln\lambda_{i}=x_{i}\beta
+ |
+ |  score_obs(self, params)
+ |      Logit model Jacobian of the log-likelihood for each observation
+ |
+ |      Parameters
+ |      ----------
+ |      params : array_like
+ |          The parameters of the model
+ |
+ |      Returns
+ |      -------
+ |      jac : array_like
+ |          The derivative of the loglikelihood for each observation evaluated
+ |          at `params`.
+ |
+ |      Notes
+ |      -----
+ |      .. math:: \frac{\partial\ln L_{i}}{\partial\beta}=\left(y_{i}-\Lambda_{i}\right)x_{i}
+ |
+ |      for observations :math:`i=1,...,n`
+ |
+ |  ----------------------------------------------------------------------
+ |  Data descriptors defined here:
+ |
+ |  family
+ |
+ |  link
+ |
+ |  ----------------------------------------------------------------------
+ |  Methods inherited from BinaryModel:
+ |
+ |  __init__(self, endog, exog, offset=None, check_rank=True, **kwargs)
+ |      Initialize self.  See help(type(self)) for accurate signature.
+ |
+ |  fit_constrained(self, constraints, start_params=None, **fit_kwds)
+ |      fit_constraint that returns a results instance
+ |
+ |      This is a development version for fit_constrained methods or
+ |      fit_constrained as standalone function.
+ |
+ |      It will not work correctly for all models because creating a new
+ |      results instance is not standardized for use outside the `fit` methods,
+ |      and might need adjustements for this.
+ |
+ |      This is the prototype for the fit_constrained method that has been added
+ |      to Poisson and GLM.
+ |
+ |  fit_regularized(
+ |      self,
+ |      start_params=None,
+ |      method='l1',
+ |      maxiter='defined_by_method',
+ |      full_output=1,
+ |      disp=1,
+ |      callback=None,
+ |      alpha=0,
+ |      trim_mode='auto',
+ |      auto_trim_tol=0.01,
+ |      size_trim_tol=0.0001,
+ |      qc_tol=0.03,
+ |      **kwargs
+ |  )
+ |      Fit the model using a regularized maximum likelihood.
+ |
+ |      The regularization method AND the solver used is determined by the
+ |      argument method.
+ |
+ |      Parameters
+ |      ----------
+ |      start_params : array_like, optional
+ |          Initial guess of the solution for the loglikelihood maximization.
+ |          The default is an array of zeros.
+ |      method : 'l1' or 'l1_cvxopt_cp'
+ |          See notes for details.
+ |      maxiter : {int, 'defined_by_method'}
+ |          Maximum number of iterations to perform.
+ |          If 'defined_by_method', then use method defaults (see notes).
+ |      full_output : bool
+ |          Set to True to have all available output in the Results object's
+ |          mle_retvals attribute. The output is dependent on the solver.
+ |          See LikelihoodModelResults notes section for more information.
+ |      disp : bool
+ |          Set to True to print convergence messages.
+ |      fargs : tuple
+ |          Extra arguments passed to the likelihood function, i.e.,
+ |          loglike(x,*args).
+ |      callback : callable callback(xk)
+ |          Called after each iteration, as callback(xk), where xk is the
+ |          current parameter vector.
+ |      retall : bool
+ |          Set to True to return list of solutions at each iteration.
+ |          Available in Results object's mle_retvals attribute.
+ |      alpha : non-negative scalar or numpy array (same size as parameters)
+ |          The weight multiplying the l1 penalty term.
+ |      trim_mode : 'auto, 'size', or 'off'
+ |          If not 'off', trim (set to zero) parameters that would have been
+ |          zero if the solver reached the theoretical minimum.
+ |          If 'auto', trim params using the Theory above.
+ |          If 'size', trim params if they have very small absolute value.
+ |      size_trim_tol : float or 'auto' (default = 'auto')
+ |          Tolerance used when trim_mode == 'size'.
+ |      auto_trim_tol : float
+ |          Tolerance used when trim_mode == 'auto'.
+ |      qc_tol : float
+ |          Print warning and do not allow auto trim when (ii) (above) is
+ |          violated by this much.
+ |      qc_verbose : bool
+ |          If true, print out a full QC report upon failure.
+ |      **kwargs
+ |          Additional keyword arguments used when fitting the model.
+ |
+ |      Returns
+ |      -------
+ |      Results
+ |          A results instance.
+ |
+ |      Notes
+ |      -----
+ |      Using 'l1_cvxopt_cp' requires the cvxopt module.
+ |
+ |      Extra parameters are not penalized if alpha is given as a scalar.
+ |      An example is the shape parameter in NegativeBinomial `nb1` and `nb2`.
+ |
+ |      Optional arguments for the solvers (available in Results.mle_settings)::
+ |
+ |          'l1'
+ |              acc : float (default 1e-6)
+ |                  Requested accuracy as used by slsqp
+ |          'l1_cvxopt_cp'
+ |              abstol : float
+ |                  absolute accuracy (default: 1e-7).
+ |              reltol : float
+ |                  relative accuracy (default: 1e-6).
+ |              feastol : float
+ |                  tolerance for feasibility conditions (default: 1e-7).
+ |              refinement : int
+ |                  number of iterative refinement steps when solving KKT
+ |                  equations (default: 1).
+ |
+ |      Optimization methodology
+ |
+ |      With :math:`L` the negative log likelihood, we solve the convex but
+ |      non-smooth problem
+ |
+ |      .. math:: \min_\beta L(\beta) + \sum_k\alpha_k |\beta_k|
+ |
+ |      via the transformation to the smooth, convex, constrained problem
+ |      in twice as many variables (adding the "added variables" :math:`u_k`)
+ |
+ |      .. math:: \min_{\beta,u} L(\beta) + \sum_k\alpha_k u_k,
+ |
+ |      subject to
+ |
+ |      .. math:: -u_k \leq \beta_k \leq u_k.
+ |
+ |      With :math:`\partial_k L` the derivative of :math:`L` in the
+ |      :math:`k^{th}` parameter direction, theory dictates that, at the
+ |      minimum, exactly one of two conditions holds:
+ |
+ |      (i) :math:`|\partial_k L| = \alpha_k`  and  :math:`\beta_k \neq 0`
+ |      (ii) :math:`|\partial_k L| \leq \alpha_k`  and  :math:`\beta_k = 0`
+ |
+ |  get_distribution(self, params, exog=None, offset=None)
+ |      Get frozen instance of distribution based on predicted parameters.
+ |
+ |      Parameters
+ |      ----------
+ |      params : array_like
+ |          The parameters of the model.
+ |      exog : ndarray, optional
+ |          Explanatory variables for the main count model.
+ |          If ``exog`` is None, then the data from the model will be used.
+ |      offset : ndarray, optional
+ |          Offset is added to the linear predictor of the mean function with
+ |          coefficient equal to 1.
+ |          Default is zero if exog is not None, and the model offset if exog
+ |          is None.
+ |      exposure : ndarray, optional
+ |          Log(exposure) is added to the linear predictor  of the mean
+ |          function with coefficient equal to 1. If exposure is specified,
+ |          then it will be logged by the method. The user does not need to
+ |          log it first.
+ |          Default is one if exog is is not None, and it is the model exposure
+ |          if exog is None.
+ |
+ |      Returns
+ |      -------
+ |      Instance of frozen scipy distribution.
+ |
+ |  predict(self, params, exog=None, which='mean', linear=None, offset=None)
+ |      Predict response variable of a model given exogenous variables.
+ |
+ |      Parameters
+ |      ----------
+ |      params : array_like
+ |          Fitted parameters of the model.
+ |      exog : array_like
+ |          1d or 2d array of exogenous values.  If not supplied, the
+ |          whole exog attribute of the model is used.
+ |      which : {'mean', 'linear', 'var', 'prob'}, optional
+ |          Statistic to predict. Default is 'mean'.
+ |
+ |          - 'mean' returns the conditional expectation of endog E(y | x),
+ |            i.e. exp of linear predictor.
+ |          - 'linear' returns the linear predictor of the mean function.
+ |          - 'var' returns the estimated variance of endog implied by the
+ |            model.
+ |
+ |          .. versionadded: 0.14
+ |
+ |             ``which`` replaces and extends the deprecated ``linear``
+ |             argument.
+ |
+ |      linear : bool
+ |          If True, returns the linear predicted values.  If False or None,
+ |          then the statistic specified by ``which`` will be returned.
+ |
+ |          .. deprecated: 0.14
+ |
+ |             The ``linear` keyword is deprecated and will be removed,
+ |             use ``which`` keyword instead.
+ |
+ |      Returns
+ |      -------
+ |      array
+ |          Fitted values at exog.
+ |
+ |  ----------------------------------------------------------------------
+ |  Methods inherited from DiscreteModel:
+ |
+ |  cov_params_func_l1(self, likelihood_model, xopt, retvals)
+ |      Computes cov_params on a reduced parameter space
+ |      corresponding to the nonzero parameters resulting from the
+ |      l1 regularized fit.
+ |
+ |      Returns a full cov_params matrix, with entries corresponding
+ |      to zero'd values set to np.nan.
+ |
+ |  initialize(self)
+ |      Initialize is called by
+ |      statsmodels.model.LikelihoodModel.__init__
+ |      and should contain any preprocessing that needs to be done for a model.
+ |
+ |  ----------------------------------------------------------------------
+ |  Methods inherited from statsmodels.base.model.LikelihoodModel:
+ |
+ |  information(self, params)
+ |      Fisher information matrix of model.
+ |
+ |      Returns -1 * Hessian of the log-likelihood evaluated at params.
+ |
+ |      Parameters
+ |      ----------
+ |      params : ndarray
+ |          The model parameters.
+ |
+ |  ----------------------------------------------------------------------
+ |  Class methods inherited from statsmodels.base.model.Model:
+ |
+ |  from_formula(formula, data, subset=None, drop_cols=None, *args, **kwargs)
+ |      Create a Model from a formula and dataframe.
+ |
+ |      Parameters
+ |      ----------
+ |      formula : str or generic Formula object
+ |          The formula specifying the model.
+ |      data : array_like
+ |          The data for the model. See Notes.
+ |      subset : array_like
+ |          An array-like object of booleans, integers, or index values that
+ |          indicate the subset of df to use in the model. Assumes df is a
+ |          `pandas.DataFrame`.
+ |      drop_cols : array_like
+ |          Columns to drop from the design matrix.  Cannot be used to
+ |          drop terms involving categoricals.
+ |      *args
+ |          Additional positional argument that are passed to the model.
+ |      **kwargs
+ |          These are passed to the model with one exception. The
+ |          ``eval_env`` keyword is passed to patsy. It can be either a
+ |          :class:`patsy:patsy.EvalEnvironment` object or an integer
+ |          indicating the depth of the namespace to use. For example, the
+ |          default ``eval_env=0`` uses the calling namespace. If you wish
+ |          to use a "clean" environment set ``eval_env=-1``.
+ |
+ |      Returns
+ |      -------
+ |      model
+ |          The model instance.
+ |
+ |      Notes
+ |      -----
+ |      data must define __getitem__ with the keys in the formula terms
+ |      args and kwargs are passed on to the model instantiation. E.g.,
+ |      a numpy structured or rec array, a dictionary, or a pandas DataFrame.
+ |
+ |  ----------------------------------------------------------------------
+ |  Readonly properties inherited from statsmodels.base.model.Model:
+ |
+ |  endog_names
+ |      Names of endogenous variables.
+ |
+ |  exog_names
+ |      Names of exogenous variables.
+ |
+ |  ----------------------------------------------------------------------
+ |  Data descriptors inherited from statsmodels.base.model.Model:
+ |
+ |  __dict__
+ |      dictionary for instance variables
+ |
+ |  __weakref__
+ |      list of weak references to the object

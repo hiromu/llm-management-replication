@@ -1,0 +1,635 @@
+{
+  "manifest": "P-R7M2 v1",
+  "compute_order": "S000 first (families in listed order, INFLUENCE last), then S001 onward in id order",
+  "influence_scope": "set by run configuration: 'all' = every camp in the estimation sample; 'first20' = the 20 smallest camp codes in each model's estimation sample",
+  "notes": "A deviation spec changes only the listed parameter. Specs whose parameter does not affect a model (for example coords for models without distance) are still fitted and reported.",
+  "specs": [
+    {
+      "spec_id": "S000",
+      "role": "origin",
+      "params": {
+        "svc_exclude": [
+          "6",
+          "7"
+        ],
+        "camp_valid": "nonblank",
+        "sample_common": true,
+        "group_members": "regression",
+        "rank_rule": "origin",
+        "pop_fractions": "descriptive",
+        "sameness_constant": "fixed",
+        "coords": "crosswalk",
+        "height_rule": "range",
+        "age_rule": "range",
+        "educ_postgrad": 9,
+        "married": 1,
+        "dup_serial": "unmatched",
+        "friends_def": "incl_self"
+      },
+      "families": [
+        "T4",
+        "T5",
+        "T5ROC",
+        "T6",
+        "R_cc",
+        "R_n50",
+        "R_n100",
+        "R_noexec",
+        "R_ger",
+        "R_jap",
+        "R_aaf",
+        "R_nosq",
+        "R_alt",
+        "R_friends",
+        "R_int",
+        "INFLUENCE"
+      ]
+    },
+    {
+      "spec_id": "S001",
+      "role": "uncertain_one_at_a_time",
+      "deviation": {
+        "svc_exclude": [
+          "6"
+        ]
+      },
+      "params": {
+        "svc_exclude": [
+          "6"
+        ],
+        "camp_valid": "nonblank",
+        "sample_common": true,
+        "group_members": "regression",
+        "rank_rule": "origin",
+        "pop_fractions": "descriptive",
+        "sameness_constant": "fixed",
+        "coords": "crosswalk",
+        "height_rule": "range",
+        "age_rule": "range",
+        "educ_postgrad": 9,
+        "married": 1,
+        "dup_serial": "unmatched",
+        "friends_def": "incl_self"
+      },
+      "families": [
+        "T4"
+      ]
+    },
+    {
+      "spec_id": "S002",
+      "role": "uncertain_one_at_a_time",
+      "deviation": {
+        "svc_exclude": [
+          "4",
+          "6",
+          "7"
+        ]
+      },
+      "params": {
+        "svc_exclude": [
+          "4",
+          "6",
+          "7"
+        ],
+        "camp_valid": "nonblank",
+        "sample_common": true,
+        "group_members": "regression",
+        "rank_rule": "origin",
+        "pop_fractions": "descriptive",
+        "sameness_constant": "fixed",
+        "coords": "crosswalk",
+        "height_rule": "range",
+        "age_rule": "range",
+        "educ_postgrad": 9,
+        "married": 1,
+        "dup_serial": "unmatched",
+        "friends_def": "incl_self"
+      },
+      "families": [
+        "T4"
+      ]
+    },
+    {
+      "spec_id": "S003",
+      "role": "uncertain_one_at_a_time",
+      "deviation": {
+        "sample_common": false
+      },
+      "params": {
+        "svc_exclude": [
+          "6",
+          "7"
+        ],
+        "camp_valid": "nonblank",
+        "sample_common": false,
+        "group_members": "regression",
+        "rank_rule": "origin",
+        "pop_fractions": "descriptive",
+        "sameness_constant": "fixed",
+        "coords": "crosswalk",
+        "height_rule": "range",
+        "age_rule": "range",
+        "educ_postgrad": 9,
+        "married": 1,
+        "dup_serial": "unmatched",
+        "friends_def": "incl_self"
+      },
+      "families": [
+        "T4"
+      ]
+    },
+    {
+      "spec_id": "S004",
+      "role": "uncertain_one_at_a_time",
+      "deviation": {
+        "camp_valid": "defined"
+      },
+      "params": {
+        "svc_exclude": [
+          "6",
+          "7"
+        ],
+        "camp_valid": "defined",
+        "sample_common": true,
+        "group_members": "regression",
+        "rank_rule": "origin",
+        "pop_fractions": "descriptive",
+        "sameness_constant": "fixed",
+        "coords": "crosswalk",
+        "height_rule": "range",
+        "age_rule": "range",
+        "educ_postgrad": 9,
+        "married": 1,
+        "dup_serial": "unmatched",
+        "friends_def": "incl_self"
+      },
+      "families": [
+        "T4"
+      ]
+    },
+    {
+      "spec_id": "S005",
+      "role": "uncertain_one_at_a_time",
+      "deviation": {
+        "rank_rule": "strict"
+      },
+      "params": {
+        "svc_exclude": [
+          "6",
+          "7"
+        ],
+        "camp_valid": "nonblank",
+        "sample_common": true,
+        "group_members": "regression",
+        "rank_rule": "strict",
+        "pop_fractions": "descriptive",
+        "sameness_constant": "fixed",
+        "coords": "crosswalk",
+        "height_rule": "range",
+        "age_rule": "range",
+        "educ_postgrad": 9,
+        "married": 1,
+        "dup_serial": "unmatched",
+        "friends_def": "incl_self"
+      },
+      "families": [
+        "T4"
+      ]
+    },
+    {
+      "spec_id": "S006",
+      "role": "uncertain_one_at_a_time",
+      "deviation": {
+        "rank_rule": "grade_code"
+      },
+      "params": {
+        "svc_exclude": [
+          "6",
+          "7"
+        ],
+        "camp_valid": "nonblank",
+        "sample_common": true,
+        "group_members": "regression",
+        "rank_rule": "grade_code",
+        "pop_fractions": "descriptive",
+        "sameness_constant": "fixed",
+        "coords": "crosswalk",
+        "height_rule": "range",
+        "age_rule": "range",
+        "educ_postgrad": 9,
+        "married": 1,
+        "dup_serial": "unmatched",
+        "friends_def": "incl_self"
+      },
+      "families": [
+        "T4"
+      ]
+    },
+    {
+      "spec_id": "S007",
+      "role": "uncertain_one_at_a_time",
+      "deviation": {
+        "group_members": "file"
+      },
+      "params": {
+        "svc_exclude": [
+          "6",
+          "7"
+        ],
+        "camp_valid": "nonblank",
+        "sample_common": true,
+        "group_members": "file",
+        "rank_rule": "origin",
+        "pop_fractions": "descriptive",
+        "sameness_constant": "fixed",
+        "coords": "crosswalk",
+        "height_rule": "range",
+        "age_rule": "range",
+        "educ_postgrad": 9,
+        "married": 1,
+        "dup_serial": "unmatched",
+        "friends_def": "incl_self"
+      },
+      "families": [
+        "T4"
+      ]
+    },
+    {
+      "spec_id": "S008",
+      "role": "uncertain_one_at_a_time",
+      "deviation": {
+        "group_members": "complete"
+      },
+      "params": {
+        "svc_exclude": [
+          "6",
+          "7"
+        ],
+        "camp_valid": "nonblank",
+        "sample_common": true,
+        "group_members": "complete",
+        "rank_rule": "origin",
+        "pop_fractions": "descriptive",
+        "sameness_constant": "fixed",
+        "coords": "crosswalk",
+        "height_rule": "range",
+        "age_rule": "range",
+        "educ_postgrad": 9,
+        "married": 1,
+        "dup_serial": "unmatched",
+        "friends_def": "incl_self"
+      },
+      "families": [
+        "T4"
+      ]
+    },
+    {
+      "spec_id": "S009",
+      "role": "uncertain_one_at_a_time",
+      "deviation": {
+        "pop_fractions": "regression"
+      },
+      "params": {
+        "svc_exclude": [
+          "6",
+          "7"
+        ],
+        "camp_valid": "nonblank",
+        "sample_common": true,
+        "group_members": "regression",
+        "rank_rule": "origin",
+        "pop_fractions": "regression",
+        "sameness_constant": "fixed",
+        "coords": "crosswalk",
+        "height_rule": "range",
+        "age_rule": "range",
+        "educ_postgrad": 9,
+        "married": 1,
+        "dup_serial": "unmatched",
+        "friends_def": "incl_self"
+      },
+      "families": [
+        "T4"
+      ]
+    },
+    {
+      "spec_id": "S010",
+      "role": "uncertain_one_at_a_time",
+      "deviation": {
+        "sameness_constant": "recomputed"
+      },
+      "params": {
+        "svc_exclude": [
+          "6",
+          "7"
+        ],
+        "camp_valid": "nonblank",
+        "sample_common": true,
+        "group_members": "regression",
+        "rank_rule": "origin",
+        "pop_fractions": "descriptive",
+        "sameness_constant": "recomputed",
+        "coords": "crosswalk",
+        "height_rule": "range",
+        "age_rule": "range",
+        "educ_postgrad": 9,
+        "married": 1,
+        "dup_serial": "unmatched",
+        "friends_def": "incl_self"
+      },
+      "families": [
+        "T4"
+      ]
+    },
+    {
+      "spec_id": "S011",
+      "role": "uncertain_one_at_a_time",
+      "deviation": {
+        "educ_postgrad": 10
+      },
+      "params": {
+        "svc_exclude": [
+          "6",
+          "7"
+        ],
+        "camp_valid": "nonblank",
+        "sample_common": true,
+        "group_members": "regression",
+        "rank_rule": "origin",
+        "pop_fractions": "descriptive",
+        "sameness_constant": "fixed",
+        "coords": "crosswalk",
+        "height_rule": "range",
+        "age_rule": "range",
+        "educ_postgrad": 10,
+        "married": 1,
+        "dup_serial": "unmatched",
+        "friends_def": "incl_self"
+      },
+      "families": [
+        "T4"
+      ]
+    },
+    {
+      "spec_id": "S012",
+      "role": "uncertain_one_at_a_time",
+      "deviation": {
+        "educ_postgrad": "missing"
+      },
+      "params": {
+        "svc_exclude": [
+          "6",
+          "7"
+        ],
+        "camp_valid": "nonblank",
+        "sample_common": true,
+        "group_members": "regression",
+        "rank_rule": "origin",
+        "pop_fractions": "descriptive",
+        "sameness_constant": "fixed",
+        "coords": "crosswalk",
+        "height_rule": "range",
+        "age_rule": "range",
+        "educ_postgrad": "missing",
+        "married": 1,
+        "dup_serial": "unmatched",
+        "friends_def": "incl_self"
+      },
+      "families": [
+        "T4"
+      ]
+    },
+    {
+      "spec_id": "S013",
+      "role": "uncertain_one_at_a_time",
+      "deviation": {
+        "married": 0
+      },
+      "params": {
+        "svc_exclude": [
+          "6",
+          "7"
+        ],
+        "camp_valid": "nonblank",
+        "sample_common": true,
+        "group_members": "regression",
+        "rank_rule": "origin",
+        "pop_fractions": "descriptive",
+        "sameness_constant": "fixed",
+        "coords": "crosswalk",
+        "height_rule": "range",
+        "age_rule": "range",
+        "educ_postgrad": 9,
+        "married": 0,
+        "dup_serial": "unmatched",
+        "friends_def": "incl_self"
+      },
+      "families": [
+        "T4"
+      ]
+    },
+    {
+      "spec_id": "S014",
+      "role": "uncertain_one_at_a_time",
+      "deviation": {
+        "married": "missing"
+      },
+      "params": {
+        "svc_exclude": [
+          "6",
+          "7"
+        ],
+        "camp_valid": "nonblank",
+        "sample_common": true,
+        "group_members": "regression",
+        "rank_rule": "origin",
+        "pop_fractions": "descriptive",
+        "sameness_constant": "fixed",
+        "coords": "crosswalk",
+        "height_rule": "range",
+        "age_rule": "range",
+        "educ_postgrad": 9,
+        "married": "missing",
+        "dup_serial": "unmatched",
+        "friends_def": "incl_self"
+      },
+      "families": [
+        "T4"
+      ]
+    },
+    {
+      "spec_id": "S015",
+      "role": "uncertain_one_at_a_time",
+      "deviation": {
+        "height_rule": "none"
+      },
+      "params": {
+        "svc_exclude": [
+          "6",
+          "7"
+        ],
+        "camp_valid": "nonblank",
+        "sample_common": true,
+        "group_members": "regression",
+        "rank_rule": "origin",
+        "pop_fractions": "descriptive",
+        "sameness_constant": "fixed",
+        "coords": "crosswalk",
+        "height_rule": "none",
+        "age_rule": "range",
+        "educ_postgrad": 9,
+        "married": 1,
+        "dup_serial": "unmatched",
+        "friends_def": "incl_self"
+      },
+      "families": [
+        "T4"
+      ]
+    },
+    {
+      "spec_id": "S016",
+      "role": "uncertain_one_at_a_time",
+      "deviation": {
+        "age_rule": "none"
+      },
+      "params": {
+        "svc_exclude": [
+          "6",
+          "7"
+        ],
+        "camp_valid": "nonblank",
+        "sample_common": true,
+        "group_members": "regression",
+        "rank_rule": "origin",
+        "pop_fractions": "descriptive",
+        "sameness_constant": "fixed",
+        "coords": "crosswalk",
+        "height_rule": "range",
+        "age_rule": "none",
+        "educ_postgrad": 9,
+        "married": 1,
+        "dup_serial": "unmatched",
+        "friends_def": "incl_self"
+      },
+      "families": [
+        "T4"
+      ]
+    },
+    {
+      "spec_id": "S017",
+      "role": "uncertain_one_at_a_time",
+      "deviation": {
+        "dup_serial": "first"
+      },
+      "params": {
+        "svc_exclude": [
+          "6",
+          "7"
+        ],
+        "camp_valid": "nonblank",
+        "sample_common": true,
+        "group_members": "regression",
+        "rank_rule": "origin",
+        "pop_fractions": "descriptive",
+        "sameness_constant": "fixed",
+        "coords": "crosswalk",
+        "height_rule": "range",
+        "age_rule": "range",
+        "educ_postgrad": 9,
+        "married": 1,
+        "dup_serial": "first",
+        "friends_def": "incl_self"
+      },
+      "families": [
+        "T4"
+      ]
+    },
+    {
+      "spec_id": "S018",
+      "role": "uncertain_one_at_a_time",
+      "deviation": {
+        "dup_serial": "combine"
+      },
+      "params": {
+        "svc_exclude": [
+          "6",
+          "7"
+        ],
+        "camp_valid": "nonblank",
+        "sample_common": true,
+        "group_members": "regression",
+        "rank_rule": "origin",
+        "pop_fractions": "descriptive",
+        "sameness_constant": "fixed",
+        "coords": "crosswalk",
+        "height_rule": "range",
+        "age_rule": "range",
+        "educ_postgrad": 9,
+        "married": 1,
+        "dup_serial": "combine",
+        "friends_def": "incl_self"
+      },
+      "families": [
+        "T4"
+      ]
+    },
+    {
+      "spec_id": "S019",
+      "role": "uncertain_one_at_a_time",
+      "deviation": {
+        "coords": "nara_degree"
+      },
+      "params": {
+        "svc_exclude": [
+          "6",
+          "7"
+        ],
+        "camp_valid": "nonblank",
+        "sample_common": true,
+        "group_members": "regression",
+        "rank_rule": "origin",
+        "pop_fractions": "descriptive",
+        "sameness_constant": "fixed",
+        "coords": "nara_degree",
+        "height_rule": "range",
+        "age_rule": "range",
+        "educ_postgrad": 9,
+        "married": 1,
+        "dup_serial": "unmatched",
+        "friends_def": "incl_self"
+      },
+      "families": [
+        "T4"
+      ]
+    },
+    {
+      "spec_id": "S020",
+      "role": "uncertain_one_at_a_time",
+      "deviation": {
+        "friends_def": "others"
+      },
+      "params": {
+        "svc_exclude": [
+          "6",
+          "7"
+        ],
+        "camp_valid": "nonblank",
+        "sample_common": true,
+        "group_members": "regression",
+        "rank_rule": "origin",
+        "pop_fractions": "descriptive",
+        "sameness_constant": "fixed",
+        "coords": "crosswalk",
+        "height_rule": "range",
+        "age_rule": "range",
+        "educ_postgrad": 9,
+        "married": 1,
+        "dup_serial": "unmatched",
+        "friends_def": "others"
+      },
+      "families": [
+        "R_friends"
+      ]
+    }
+  ]
+}

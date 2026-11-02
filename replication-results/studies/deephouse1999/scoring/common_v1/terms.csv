@@ -1,0 +1,20 @@
+table,tier,claim,term,origins,published,published_se,reconstructed,distance_se,n_gap,v1_outcome,common,lenient
+Table 2,lower,,M1 intercept,O_A / O_B,0.929,0.169,0.839 / 0.873,0.529 / 0.33,0.312,consistent / consistent,indeterminate,consistent
+Table 2,lower,,M1 MS,O_A / O_B,-0.576,0.138,-0.574 / -0.719,0.0111 / 1.03,0.312,consistent / consistent,indeterminate,consistent
+Table 2,lower,,M1 TER,O_A / O_B,-9.95,2,-9 / -9.03,0.472 / 0.46,0.312,consistent / consistent,indeterminate,consistent
+Table 2,lower,,M1 RMG,O_A / O_B,0.014,0.004,0.00673 / 0.00986,1.5 / 0.808,0.312,discrepant_candidate / consistent,indeterminate,indeterminate
+Table 2,lower,,M1 lag,O_A / O_B,0.369,0.028,0.399 / 0.391,1.05 / 0.771,0.312,consistent / consistent,indeterminate,consistent
+Table 2,lower,,M2 intercept,O_A / O_B,1.16,0.172,0.923 / 0.906,1.39 / 1.49,0.312,consistent / consistent,indeterminate,consistent
+Table 2,focal,H2,M2 SD,O_A / O_B,-0.02,0.004,-0.014 / -0.00613,1.22 / 2.97,0.312,consistent / discrepant_candidate,indeterminate,indeterminate
+Table 2,lower,,M2 MS,O_A / O_B,-0.093,0.161,-0.182 / -0.585,0.551 / 3.04,0.312,consistent / discrepant_candidate,indeterminate,indeterminate
+Table 2,lower,,M2 TER,O_A / O_B,-10.6,1.97,-8.62 / -8.8,1.01 / 0.909,0.312,consistent / consistent,indeterminate,consistent
+Table 2,lower,,M2 RMG,O_A / O_B,0.016,0.004,0.00924 / 0.0105,1.39 / 1.1,0.312,grey / consistent,indeterminate,indeterminate
+Table 2,lower,,M2 lag,O_A / O_B,0.361,0.027,0.4 / 0.392,1.38 / 1.1,0.312,consistent / consistent,indeterminate,consistent
+Table 2,lower,,M3 intercept,O_A / O_B,0.511,0.171,0.0253 / 0.229,2.83 / 1.64,0.312,discrepant_candidate / discrepant_candidate,indeterminate,indeterminate
+Table 2,focal,H3,M3 SD2,O_A / O_B,-0.006,0.001,-0.00429 / -0.00393,0.806 / 1.05,0.312,consistent / consistent,indeterminate,consistent
+Table 2,focal,H3,M3 SD,O_A / O_B,0.17,0.017,0.112 / 0.1,3.31 / 3.95,0.312,discrepant_candidate / discrepant_candidate,indeterminate,indeterminate
+Table 2,lower,,M3 MS,O_A / O_B,-0.457,0.155,-0.381 / -0.771,0.488 / 2.02,0.312,grey / grey,indeterminate,indeterminate
+Table 2,lower,,M3 TER,O_A / O_B,-15.4,1.9,-5.93 / -7.12,4.99 / 4.36,0.312,discrepant_candidate / discrepant_candidate,indeterminate,indeterminate
+Table 2,lower,,M3 RMG,O_A / O_B,0.018,0.003,0.00698 / 0.0105,3.01 / 2,0.312,discrepant_candidate / grey,indeterminate,indeterminate
+Table 2,lower,,M3 lag,O_A / O_B,0.403,0.026,0.466 / 0.429,2.35 / 0.95,0.312,grey / consistent,indeterminate,indeterminate
+Text,lower,,M3_SQ SD2,O_A / O_B,-0.001,0.0001,-0.00064 / -0.000373,0 / 0.846,0.312,consistent / consistent,indeterminate,consistent

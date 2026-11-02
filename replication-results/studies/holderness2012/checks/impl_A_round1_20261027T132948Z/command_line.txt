@@ -1,0 +1,1 @@
+~/.local/bin/codex exec --ephemeral --ignore-user-config --skip-git-repo-check -C /var/folders/7q/9m3zdcp550d685wgsq9kvf6r0000gn/T/role_ck_AP6NtV -m gpt-6-astra -c model_reasoning_effort=\"high\" -c service_tier=\"default\" -c features.fast_mode=false -s workspace-write 

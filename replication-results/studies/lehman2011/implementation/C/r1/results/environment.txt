@@ -1,0 +1,52 @@
+stage=synthetic
+start_utc=2026-10-27T12:31:09.355126+00:00
+end_utc=2026-10-27T12:31:10.126413+00:00
+elapsed_seconds=0.771
+Python=3.13.4 (main, Jun 12 2025, 14:50:20) [Clang 17.0.0 (clang-1700.0.13.5)]
+executable=~/.venv/bin/python
+OS=macOS-26.6.2-arm64-arm-64bit-Mach-O
+numpy=2.4.2
+pandas=2.2.3
+scipy=1.16.3
+statsmodels=0.14.6
+pyarrow=26.0.0
+
+stage=sample
+start_utc=2026-10-27T12:31:16.101768+00:00
+end_utc=2026-10-27T12:31:21.655396+00:00
+elapsed_seconds=5.554
+Python=3.13.4 (main, Jun 12 2025, 14:50:20) [Clang 17.0.0 (clang-1700.0.13.5)]
+executable=~/.venv/bin/python
+OS=macOS-26.6.2-arm64-arm-64bit-Mach-O
+numpy=2.4.2
+pandas=2.2.3
+scipy=1.16.3
+statsmodels=0.14.6
+pyarrow=26.0.0
+
+stage=synthetic
+start_utc=2026-10-27T12:31:44.355505+00:00
+end_utc=2026-10-27T12:31:50.303445+00:00
+elapsed_seconds=5.948
+Python=3.13.4 (main, Jun 12 2025, 14:50:20) [Clang 17.0.0 (clang-1700.0.13.5)]
+executable=~/.venv/bin/python
+OS=macOS-26.6.2-arm64-arm-64bit-Mach-O
+numpy=2.4.2
+pandas=2.2.3
+scipy=1.16.3
+statsmodels=0.14.6
+pyarrow=26.0.0
+
+stage=synthetic
+start_utc=2026-10-27T12:34:28.395052+00:00
+end_utc=2026-10-27T12:34:34.870055+00:00
+elapsed_seconds=6.475
+Python=3.13.4 (main, Jun 12 2025, 14:50:20) [Clang 17.0.0 (clang-1700.0.13.5)]
+executable=~/.venv/bin/python
+OS=macOS-26.6.2-arm64-arm-64bit-Mach-O
+numpy=2.4.2
+pandas=2.2.3
+scipy=1.16.3
+statsmodels=0.14.6
+pyarrow=26.0.0
+

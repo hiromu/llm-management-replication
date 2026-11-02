@@ -1,0 +1,3229 @@
+[
+  {
+    "issue": "Published t/df/p consistency: S1_you_grant",
+    "locator": "D01 PDF p. 9 (printed p. 770)",
+    "values": {
+      "printed_statistic": "22.06",
+      "printed_df": [
+        "529"
+      ],
+      "printed_p": "< 0.001",
+      "statistic_rounding_interval": [
+        22.055,
+        22.065
+      ],
+      "implied_p_range": [
+        5.55684402927135e-77,
+        6.234912505352886e-77
+      ],
+      "printed_p_interval": [
+        0,
+        0.001
+      ]
+    },
+    "check": "Full rounding interval of statistic; two-sided Student-t reference distribution, a diagnostic assumption because test tail is unstated. Does not identify which test authors actually ran.",
+    "within_rounding": true
+  },
+  {
+    "issue": "Published F/df/p consistency: S1_interaction_you_grant",
+    "locator": "D01 PDF p. 9 (printed p. 770)",
+    "values": {
+      "printed_statistic": "0.47",
+      "printed_df": [
+        "6",
+        "523"
+      ],
+      "printed_p": "0.833",
+      "statistic_rounding_interval": [
+        0.465,
+        0.475
+      ],
+      "implied_p_range": [
+        0.8270440512582742,
+        0.834317929184035
+      ],
+      "printed_p_interval": [
+        0.8325,
+        0.8335
+      ]
+    },
+    "check": "Full rounding interval of statistic; upper-tail F reference distribution. Does not identify which test authors actually ran.",
+    "within_rounding": true
+  },
+  {
+    "issue": "Published t/df/p consistency: S1_prom_voice",
+    "locator": "D01 PDF p. 9 (printed p. 770)",
+    "values": {
+      "printed_statistic": "17.56",
+      "printed_df": [
+        "529"
+      ],
+      "printed_p": "< 0.001",
+      "statistic_rounding_interval": [
+        17.555,
+        17.565
+      ],
+      "implied_p_range": [
+        9.46238622516899e-55,
+        1.0576308260347203e-54
+      ],
+      "printed_p_interval": [
+        0,
+        0.001
+      ]
+    },
+    "check": "Full rounding interval of statistic; two-sided Student-t reference distribution, a diagnostic assumption because test tail is unstated. Does not identify which test authors actually ran.",
+    "within_rounding": true
+  },
+  {
+    "issue": "Published F/df/p consistency: S1_interaction_prom_voice",
+    "locator": "D01 PDF p. 9 (printed p. 770)",
+    "values": {
+      "printed_statistic": "0.12",
+      "printed_df": [
+        "6",
+        "523"
+      ],
+      "printed_p": "0.944",
+      "statistic_rounding_interval": [
+        0.115,
+        0.125
+      ],
+      "implied_p_range": [
+        0.9932914716140236,
+        0.9946583098783811
+      ],
+      "printed_p_interval": [
+        0.9435,
+        0.9445
+      ]
+    },
+    "check": "Full rounding interval of statistic; upper-tail F reference distribution. Does not identify which test authors actually ran.",
+    "within_rounding": false
+  },
+  {
+    "issue": "Published t/df/p consistency: S1_proh_voice",
+    "locator": "D01 PDF p. 9 (printed p. 770)",
+    "values": {
+      "printed_statistic": "16.76",
+      "printed_df": [
+        "529"
+      ],
+      "printed_p": "< 0.001",
+      "statistic_rounding_interval": [
+        16.755,
+        16.765
+      ],
+      "implied_p_range": [
+        6.58909250012147e-51,
+        7.354205389498527e-51
+      ],
+      "printed_p_interval": [
+        0,
+        0.001
+      ]
+    },
+    "check": "Full rounding interval of statistic; two-sided Student-t reference distribution, a diagnostic assumption because test tail is unstated. Does not identify which test authors actually ran.",
+    "within_rounding": true
+  },
+  {
+    "issue": "Published F/df/p consistency: S1_interaction_proh_voice",
+    "locator": "D01 PDF p. 9 (printed p. 770)",
+    "values": {
+      "printed_statistic": "1.04",
+      "printed_df": [
+        "6",
+        "523"
+      ],
+      "printed_p": "0.395",
+      "statistic_rounding_interval": [
+        1.035,
+        1.045
+      ],
+      "implied_p_range": [
+        0.3950794470560587,
+        0.40149056445120823
+      ],
+      "printed_p_interval": [
+        0.3945,
+        0.3955
+      ]
+    },
+    "check": "Full rounding interval of statistic; upper-tail F reference distribution. Does not identify which test authors actually ran.",
+    "within_rounding": true
+  },
+  {
+    "issue": "Published t/df/p consistency: S1_loyal_comb",
+    "locator": "D01 PDF p. 9 (printed p. 770)",
+    "values": {
+      "printed_statistic": "35.63",
+      "printed_df": [
+        "529"
+      ],
+      "printed_p": "< 0.001",
+      "statistic_rounding_interval": [
+        35.625,
+        35.635
+      ],
+      "implied_p_range": [
+        1.0542483556428557e-142,
+        1.1708269482853022e-142
+      ],
+      "printed_p_interval": [
+        0,
+        0.001
+      ]
+    },
+    "check": "Full rounding interval of statistic; two-sided Student-t reference distribution, a diagnostic assumption because test tail is unstated. Does not identify which test authors actually ran.",
+    "within_rounding": true
+  },
+  {
+    "issue": "Published t/df/p consistency: S2_you_grant",
+    "locator": "D01 PDF p. 11 (printed p. 772)",
+    "values": {
+      "printed_statistic": "4.03",
+      "printed_df": [
+        "161"
+      ],
+      "printed_p": "< 0.001",
+      "statistic_rounding_interval": [
+        4.025,
+        4.035
+      ],
+      "implied_p_range": [
+        8.418521618557172e-05,
+        8.750038140111688e-05
+      ],
+      "printed_p_interval": [
+        0,
+        0.001
+      ]
+    },
+    "check": "Full rounding interval of statistic; two-sided Student-t reference distribution, a diagnostic assumption because test tail is unstated. Does not identify which test authors actually ran.",
+    "within_rounding": true
+  },
+  {
+    "issue": "Published t/df/p consistency: S2_prom_voice",
+    "locator": "D01 PDF p. 11 (printed p. 772)",
+    "values": {
+      "printed_statistic": "2.95",
+      "printed_df": [
+        "169"
+      ],
+      "printed_p": "0.004",
+      "statistic_rounding_interval": [
+        2.945,
+        2.955
+      ],
+      "implied_p_range": [
+        0.0035732493280799167,
+        0.003684866150791887
+      ],
+      "printed_p_interval": [
+        0.0035,
+        0.0045
+      ]
+    },
+    "check": "Full rounding interval of statistic; two-sided Student-t reference distribution, a diagnostic assumption because test tail is unstated. Does not identify which test authors actually ran.",
+    "within_rounding": true
+  },
+  {
+    "issue": "Published t/df/p consistency: S2_proh_voice",
+    "locator": "D01 PDF p. 11 (printed p. 772)",
+    "values": {
+      "printed_statistic": "2.22",
+      "printed_df": [
+        "172"
+      ],
+      "printed_p": "0.028",
+      "statistic_rounding_interval": [
+        2.215,
+        2.225
+      ],
+      "implied_p_range": [
+        0.027381664224176556,
+        0.028073556132396725
+      ],
+      "printed_p_interval": [
+        0.0275,
+        0.0285
+      ]
+    },
+    "check": "Full rounding interval of statistic; two-sided Student-t reference distribution, a diagnostic assumption because test tail is unstated. Does not identify which test authors actually ran.",
+    "within_rounding": true
+  },
+  {
+    "issue": "Published F/df/p consistency: S3_anova_you_grant_relationship",
+    "locator": "D01 PDF p. 13 (printed p. 774)",
+    "values": {
+      "printed_statistic": "14.02",
+      "printed_df": [
+        "1",
+        "282"
+      ],
+      "printed_p": "< 0.001",
+      "statistic_rounding_interval": [
+        14.015,
+        14.025
+      ],
+      "implied_p_range": [
+        0.0002186938267859265,
+        0.0002198042056263837
+      ],
+      "printed_p_interval": [
+        0,
+        0.001
+      ]
+    },
+    "check": "Full rounding interval of statistic; upper-tail F reference distribution. Does not identify which test authors actually ran.",
+    "within_rounding": true
+  },
+  {
+    "issue": "Published F/df/p consistency: S3_anova_you_grant_history",
+    "locator": "D01 PDF p. 13 (printed p. 774)",
+    "values": {
+      "printed_statistic": "8.15",
+      "printed_df": [
+        "1",
+        "282"
+      ],
+      "printed_p": "0.005",
+      "statistic_rounding_interval": [
+        8.145,
+        8.155
+      ],
+      "implied_p_range": [
+        0.004613341307409776,
+        0.004638121306740141
+      ],
+      "printed_p_interval": [
+        0.0045,
+        0.0055
+      ]
+    },
+    "check": "Full rounding interval of statistic; upper-tail F reference distribution. Does not identify which test authors actually ran.",
+    "within_rounding": true
+  },
+  {
+    "issue": "Published F/df/p consistency: S3_anova_you_grant_relationship_history",
+    "locator": "D01 PDF p. 13 (printed p. 774)",
+    "values": {
+      "printed_statistic": "0.81",
+      "printed_df": [
+        "1",
+        "282"
+      ],
+      "printed_p": "0.370",
+      "statistic_rounding_interval": [
+        0.805,
+        0.815
+      ],
+      "implied_p_range": [
+        0.3674165826400644,
+        0.37036797004253796
+      ],
+      "printed_p_interval": [
+        0.3695,
+        0.3705
+      ]
+    },
+    "check": "Full rounding interval of statistic; upper-tail F reference distribution. Does not identify which test authors actually ran.",
+    "within_rounding": true
+  },
+  {
+    "issue": "Published t/df/p consistency: S3_H1_you_grant",
+    "locator": "D01 PDF p. 13 (printed p. 774)",
+    "values": {
+      "printed_statistic": "3.33",
+      "printed_df": [
+        "282"
+      ],
+      "printed_p": "0.001",
+      "statistic_rounding_interval": [
+        3.325,
+        3.335
+      ],
+      "implied_p_range": [
+        0.000967249372751383,
+        0.0010012439763119737
+      ],
+      "printed_p_interval": [
+        0.0005,
+        0.0015
+      ]
+    },
+    "check": "Full rounding interval of statistic; two-sided Student-t reference distribution, a diagnostic assumption because test tail is unstated. Does not identify which test authors actually ran.",
+    "within_rounding": true
+  },
+  {
+    "issue": "Published t/df/p consistency: S3_H3_you_grant",
+    "locator": "D01 PDF p. 13 (printed p. 774)",
+    "values": {
+      "printed_statistic": "2.65",
+      "printed_df": [
+        "282"
+      ],
+      "printed_p": "0.008",
+      "statistic_rounding_interval": [
+        2.645,
+        2.655
+      ],
+      "implied_p_range": [
+        0.008381654987325654,
+        0.008627117645606202
+      ],
+      "printed_p_interval": [
+        0.0075,
+        0.0085
+      ]
+    },
+    "check": "Full rounding interval of statistic; two-sided Student-t reference distribution, a diagnostic assumption because test tail is unstated. Does not identify which test authors actually ran.",
+    "within_rounding": true
+  },
+  {
+    "issue": "Published F/df/p consistency: S3_anova_prom_voice_relationship",
+    "locator": "D01 PDF p. 13 (printed p. 774)",
+    "values": {
+      "printed_statistic": "10.53",
+      "printed_df": [
+        "1",
+        "282"
+      ],
+      "printed_p": "0.001",
+      "statistic_rounding_interval": [
+        10.525,
+        10.535
+      ],
+      "implied_p_range": [
+        0.0013126036542376327,
+        0.0013194655961649448
+      ],
+      "printed_p_interval": [
+        0.0005,
+        0.0015
+      ]
+    },
+    "check": "Full rounding interval of statistic; upper-tail F reference distribution. Does not identify which test authors actually ran.",
+    "within_rounding": true
+  },
+  {
+    "issue": "Published F/df/p consistency: S3_anova_prom_voice_history",
+    "locator": "D01 PDF p. 13 (printed p. 774)",
+    "values": {
+      "printed_statistic": "2.09",
+      "printed_df": [
+        "1",
+        "282"
+      ],
+      "printed_p": "0.149",
+      "statistic_rounding_interval": [
+        2.085,
+        2.095
+      ],
+      "implied_p_range": [
+        0.1488924579889437,
+        0.14986226532051794
+      ],
+      "printed_p_interval": [
+        0.1485,
+        0.1495
+      ]
+    },
+    "check": "Full rounding interval of statistic; upper-tail F reference distribution. Does not identify which test authors actually ran.",
+    "within_rounding": true
+  },
+  {
+    "issue": "Published F/df/p consistency: S3_anova_prom_voice_relationship_history",
+    "locator": "D01 PDF p. 13 (printed p. 774)",
+    "values": {
+      "printed_statistic": "1.58",
+      "printed_df": [
+        "1",
+        "282"
+      ],
+      "printed_p": "0.210",
+      "statistic_rounding_interval": [
+        1.575,
+        1.585
+      ],
+      "implied_p_range": [
+        0.20908310829247145,
+        0.21052140923320473
+      ],
+      "printed_p_interval": [
+        0.2095,
+        0.2105
+      ]
+    },
+    "check": "Full rounding interval of statistic; upper-tail F reference distribution. Does not identify which test authors actually ran.",
+    "within_rounding": true
+  },
+  {
+    "issue": "Published t/df/p consistency: S3_H1_prom_voice",
+    "locator": "D01 PDF p. 13 (printed p. 774)",
+    "values": {
+      "printed_statistic": "3.23",
+      "printed_df": [
+        "282"
+      ],
+      "printed_p": "0.001",
+      "statistic_rounding_interval": [
+        3.225,
+        3.235
+      ],
+      "implied_p_range": [
+        0.0013612519769431995,
+        0.0014079295461230774
+      ],
+      "printed_p_interval": [
+        0.0005,
+        0.0015
+      ]
+    },
+    "check": "Full rounding interval of statistic; two-sided Student-t reference distribution, a diagnostic assumption because test tail is unstated. Does not identify which test authors actually ran.",
+    "within_rounding": true
+  },
+  {
+    "issue": "Published t/df/p consistency: S3_H3_prom_voice",
+    "locator": "D01 PDF p. 13 (printed p. 774)",
+    "values": {
+      "printed_statistic": "1.91",
+      "printed_df": [
+        "282"
+      ],
+      "printed_p": "0.057",
+      "statistic_rounding_interval": [
+        1.905,
+        1.915
+      ],
+      "implied_p_range": [
+        0.0565040131882699,
+        0.05779723804864944
+      ],
+      "printed_p_interval": [
+        0.0565,
+        0.0575
+      ]
+    },
+    "check": "Full rounding interval of statistic; two-sided Student-t reference distribution, a diagnostic assumption because test tail is unstated. Does not identify which test authors actually ran.",
+    "within_rounding": true
+  },
+  {
+    "issue": "Published F/df/p consistency: S3_anova_proh_voice_relationship",
+    "locator": "D01 PDF p. 13–14 (printed pp. 774–775)",
+    "values": {
+      "printed_statistic": "16.22",
+      "printed_df": [
+        "1",
+        "282"
+      ],
+      "printed_p": "< 0.001",
+      "statistic_rounding_interval": [
+        16.215,
+        16.225
+      ],
+      "implied_p_range": [
+        7.237997581661399e-05,
+        7.27420491610007e-05
+      ],
+      "printed_p_interval": [
+        0,
+        0.001
+      ]
+    },
+    "check": "Full rounding interval of statistic; upper-tail F reference distribution. Does not identify which test authors actually ran.",
+    "within_rounding": true
+  },
+  {
+    "issue": "Published F/df/p consistency: S3_anova_proh_voice_history",
+    "locator": "D01 PDF p. 13–14 (printed pp. 774–775)",
+    "values": {
+      "printed_statistic": "1.51",
+      "printed_df": [
+        "1",
+        "282"
+      ],
+      "printed_p": "0.221",
+      "statistic_rounding_interval": [
+        1.505,
+        1.515
+      ],
+      "implied_p_range": [
+        0.21940332555695055,
+        0.22092689061310472
+      ],
+      "printed_p_interval": [
+        0.2205,
+        0.2215
+      ]
+    },
+    "check": "Full rounding interval of statistic; upper-tail F reference distribution. Does not identify which test authors actually ran.",
+    "within_rounding": true
+  },
+  {
+    "issue": "Published F/df/p consistency: S3_anova_proh_voice_relationship_history",
+    "locator": "D01 PDF p. 13–14 (printed pp. 774–775)",
+    "values": {
+      "printed_statistic": "1.61",
+      "printed_df": [
+        "1",
+        "282"
+      ],
+      "printed_p": "0.205",
+      "statistic_rounding_interval": [
+        1.605,
+        1.615
+      ],
+      "implied_p_range": [
+        0.20483771405395057,
+        0.2062413826689417
+      ],
+      "printed_p_interval": [
+        0.2045,
+        0.2055
+      ]
+    },
+    "check": "Full rounding interval of statistic; upper-tail F reference distribution. Does not identify which test authors actually ran.",
+    "within_rounding": true
+  },
+  {
+    "issue": "Published t/df/p consistency: S3_H1_proh_voice",
+    "locator": "D01 PDF p. 13–14 (printed pp. 774–775)",
+    "values": {
+      "printed_statistic": "3.80",
+      "printed_df": [
+        "282"
+      ],
+      "printed_p": "< 0.001",
+      "statistic_rounding_interval": [
+        3.795,
+        3.805
+      ],
+      "implied_p_range": [
+        0.000173924039126136,
+        0.0001807281014237342
+      ],
+      "printed_p_interval": [
+        0,
+        0.001
+      ]
+    },
+    "check": "Full rounding interval of statistic; two-sided Student-t reference distribution, a diagnostic assumption because test tail is unstated. Does not identify which test authors actually ran.",
+    "within_rounding": true
+  },
+  {
+    "issue": "Published t/df/p consistency: S3_H3_proh_voice",
+    "locator": "D01 PDF p. 13–14 (printed pp. 774–775)",
+    "values": {
+      "printed_statistic": "1.77",
+      "printed_df": [
+        "282"
+      ],
+      "printed_p": "0.079",
+      "statistic_rounding_interval": [
+        1.765,
+        1.775
+      ],
+      "implied_p_range": [
+        0.07697652474831564,
+        0.0786461167016219
+      ],
+      "printed_p_interval": [
+        0.0785,
+        0.0795
+      ]
+    },
+    "check": "Full rounding interval of statistic; two-sided Student-t reference distribution, a diagnostic assumption because test tail is unstated. Does not identify which test authors actually ran.",
+    "within_rounding": true
+  },
+  {
+    "issue": "Published F/df/p consistency: S3_anova_benev_trust_broker_relationship",
+    "locator": "D03 PDF p. 3",
+    "values": {
+      "printed_statistic": "141.09",
+      "printed_df": [
+        "1",
+        "282"
+      ],
+      "printed_p": "< .001",
+      "statistic_rounding_interval": [
+        141.085,
+        141.095
+      ],
+      "implied_p_range": [
+        1.1729249353292384e-26,
+        1.1768676045605039e-26
+      ],
+      "printed_p_interval": [
+        0,
+        0.001
+      ]
+    },
+    "check": "Full rounding interval of statistic; upper-tail F reference distribution. Does not identify which test authors actually ran.",
+    "within_rounding": true
+  },
+  {
+    "issue": "Published F/df/p consistency: S3_anova_benev_trust_broker_history",
+    "locator": "D03 PDF p. 3",
+    "values": {
+      "printed_statistic": "40.65",
+      "printed_df": [
+        "1",
+        "282"
+      ],
+      "printed_p": "< .001",
+      "statistic_rounding_interval": [
+        40.645,
+        40.655
+      ],
+      "implied_p_range": [
+        7.39983845913575e-10,
+        7.433005960116093e-10
+      ],
+      "printed_p_interval": [
+        0,
+        0.001
+      ]
+    },
+    "check": "Full rounding interval of statistic; upper-tail F reference distribution. Does not identify which test authors actually ran.",
+    "within_rounding": true
+  },
+  {
+    "issue": "Published F/df/p consistency: S3_anova_benev_trust_broker_relationship_history",
+    "locator": "D03 PDF p. 3",
+    "values": {
+      "printed_statistic": "8.33",
+      "printed_df": [
+        "1",
+        "282"
+      ],
+      "printed_p": ".004",
+      "statistic_rounding_interval": [
+        8.325,
+        8.335
+      ],
+      "implied_p_range": [
+        0.004189775573810777,
+        0.004212227111632667
+      ],
+      "printed_p_interval": [
+        0.0035,
+        0.0045
+      ]
+    },
+    "check": "Full rounding interval of statistic; upper-tail F reference distribution. Does not identify which test authors actually ran.",
+    "within_rounding": true
+  },
+  {
+    "issue": "Published t/df/p consistency: S3_H1_benev_trust_broker",
+    "locator": "D03 PDF p. 3",
+    "values": {
+      "printed_statistic": "10.59",
+      "printed_df": [
+        "282"
+      ],
+      "printed_p": "< .001",
+      "statistic_rounding_interval": [
+        10.585,
+        10.595
+      ],
+      "implied_p_range": [
+        2.6677550259552885e-22,
+        2.8796387237888365e-22
+      ],
+      "printed_p_interval": [
+        0,
+        0.001
+      ]
+    },
+    "check": "Full rounding interval of statistic; two-sided Student-t reference distribution, a diagnostic assumption because test tail is unstated. Does not identify which test authors actually ran.",
+    "within_rounding": true
+  },
+  {
+    "issue": "Published t/df/p consistency: S3_H3_benev_trust_broker",
+    "locator": "D03 PDF p. 3",
+    "values": {
+      "printed_statistic": "6.55",
+      "printed_df": [
+        "282"
+      ],
+      "printed_p": "< .001",
+      "statistic_rounding_interval": [
+        6.545,
+        6.555
+      ],
+      "implied_p_range": [
+        2.6415346957099215e-10,
+        2.79958837282089e-10
+      ],
+      "printed_p_interval": [
+        0,
+        0.001
+      ]
+    },
+    "check": "Full rounding interval of statistic; two-sided Student-t reference distribution, a diagnostic assumption because test tail is unstated. Does not identify which test authors actually ran.",
+    "within_rounding": true
+  },
+  {
+    "issue": "Published F/df/p consistency: S3_anova_integ_trust_broker_relationship",
+    "locator": "D03 PDF p. 3–4",
+    "values": {
+      "printed_statistic": "79.16",
+      "printed_df": [
+        "1",
+        "282"
+      ],
+      "printed_p": "< .001",
+      "statistic_rounding_interval": [
+        79.155,
+        79.165
+      ],
+      "implied_p_range": [
+        7.068966879272254e-17,
+        7.096958084691595e-17
+      ],
+      "printed_p_interval": [
+        0,
+        0.001
+      ]
+    },
+    "check": "Full rounding interval of statistic; upper-tail F reference distribution. Does not identify which test authors actually ran.",
+    "within_rounding": true
+  },
+  {
+    "issue": "Published F/df/p consistency: S3_anova_integ_trust_broker_history",
+    "locator": "D03 PDF p. 3–4",
+    "values": {
+      "printed_statistic": "173.12",
+      "printed_df": [
+        "1",
+        "282"
+      ],
+      "printed_p": "< .001",
+      "statistic_rounding_interval": [
+        173.115,
+        173.125
+      ],
+      "implied_p_range": [
+        3.7372851093284237e-31,
+        3.7489473674969856e-31
+      ],
+      "printed_p_interval": [
+        0,
+        0.001
+      ]
+    },
+    "check": "Full rounding interval of statistic; upper-tail F reference distribution. Does not identify which test authors actually ran.",
+    "within_rounding": true
+  },
+  {
+    "issue": "Published F/df/p consistency: S3_anova_integ_trust_broker_relationship_history",
+    "locator": "D03 PDF p. 3–4",
+    "values": {
+      "printed_statistic": "10.19",
+      "printed_df": [
+        "1",
+        "282"
+      ],
+      "printed_p": ".002",
+      "statistic_rounding_interval": [
+        10.185,
+        10.195
+      ],
+      "implied_p_range": [
+        0.0015676578062432018,
+        0.0015758809998089982
+      ],
+      "printed_p_interval": [
+        0.0015,
+        0.0025
+      ]
+    },
+    "check": "Full rounding interval of statistic; upper-tail F reference distribution. Does not identify which test authors actually ran.",
+    "within_rounding": true
+  },
+  {
+    "issue": "Published t/df/p consistency: S3_H1_integ_trust_broker",
+    "locator": "D03 PDF p. 3–4",
+    "values": {
+      "printed_statistic": "8.67",
+      "printed_df": [
+        "282"
+      ],
+      "printed_p": "< .001",
+      "statistic_rounding_interval": [
+        8.665,
+        8.675
+      ],
+      "implied_p_range": [
+        3.3432689005303307e-16,
+        3.5833007704319736e-16
+      ],
+      "printed_p_interval": [
+        0,
+        0.001
+      ]
+    },
+    "check": "Full rounding interval of statistic; two-sided Student-t reference distribution, a diagnostic assumption because test tail is unstated. Does not identify which test authors actually ran.",
+    "within_rounding": true
+  },
+  {
+    "issue": "Published t/df/p consistency: S3_H3_integ_trust_broker",
+    "locator": "D03 PDF p. 3–4",
+    "values": {
+      "printed_statistic": "11.56",
+      "printed_df": [
+        "282"
+      ],
+      "printed_p": "< .001",
+      "statistic_rounding_interval": [
+        11.555,
+        11.565
+      ],
+      "implied_p_range": [
+        1.4106644832935698e-25,
+        1.5266379732564667e-25
+      ],
+      "printed_p_interval": [
+        0,
+        0.001
+      ]
+    },
+    "check": "Full rounding interval of statistic; two-sided Student-t reference distribution, a diagnostic assumption because test tail is unstated. Does not identify which test authors actually ran.",
+    "within_rounding": true
+  },
+  {
+    "issue": "Published F/df/p consistency: S3_anova_val_align_part_broker_relationship",
+    "locator": "D03 PDF p. 4",
+    "values": {
+      "printed_statistic": "41.89",
+      "printed_df": [
+        "1",
+        "282"
+      ],
+      "printed_p": "< .001",
+      "statistic_rounding_interval": [
+        41.885,
+        41.895
+      ],
+      "implied_p_range": [
+        4.255287353336798e-10,
+        4.2742748288593946e-10
+      ],
+      "printed_p_interval": [
+        0,
+        0.001
+      ]
+    },
+    "check": "Full rounding interval of statistic; upper-tail F reference distribution. Does not identify which test authors actually ran.",
+    "within_rounding": true
+  },
+  {
+    "issue": "Published F/df/p consistency: S3_anova_val_align_part_broker_history",
+    "locator": "D03 PDF p. 4",
+    "values": {
+      "printed_statistic": "93.52",
+      "printed_df": [
+        "1",
+        "282"
+      ],
+      "printed_p": "< .001",
+      "statistic_rounding_interval": [
+        93.515,
+        93.525
+      ],
+      "implied_p_range": [
+        2.721675970756398e-19,
+        2.732021248958675e-19
+      ],
+      "printed_p_interval": [
+        0,
+        0.001
+      ]
+    },
+    "check": "Full rounding interval of statistic; upper-tail F reference distribution. Does not identify which test authors actually ran.",
+    "within_rounding": true
+  },
+  {
+    "issue": "Published F/df/p consistency: S3_anova_val_align_part_broker_relationship_history",
+    "locator": "D03 PDF p. 4",
+    "values": {
+      "printed_statistic": "6.28",
+      "printed_df": [
+        "1",
+        "282"
+      ],
+      "printed_p": ".013",
+      "statistic_rounding_interval": [
+        6.275,
+        6.285
+      ],
+      "implied_p_range": [
+        0.012739033141382123,
+        0.012809509106135583
+      ],
+      "printed_p_interval": [
+        0.0125,
+        0.0135
+      ]
+    },
+    "check": "Full rounding interval of statistic; upper-tail F reference distribution. Does not identify which test authors actually ran.",
+    "within_rounding": true
+  },
+  {
+    "issue": "Published t/df/p consistency: S3_H1_val_align_part_broker",
+    "locator": "D03 PDF p. 4",
+    "values": {
+      "printed_statistic": "6.44",
+      "printed_df": [
+        "282"
+      ],
+      "printed_p": "< .001",
+      "statistic_rounding_interval": [
+        6.435,
+        6.445
+      ],
+      "implied_p_range": [
+        4.988786737435287e-10,
+        5.283679430342027e-10
+      ],
+      "printed_p_interval": [
+        0,
+        0.001
+      ]
+    },
+    "check": "Full rounding interval of statistic; two-sided Student-t reference distribution, a diagnostic assumption because test tail is unstated. Does not identify which test authors actually ran.",
+    "within_rounding": true
+  },
+  {
+    "issue": "Published t/df/p consistency: S3_H3_val_align_part_broker",
+    "locator": "D03 PDF p. 4",
+    "values": {
+      "printed_statistic": "8.61",
+      "printed_df": [
+        "282"
+      ],
+      "printed_p": "< .001",
+      "statistic_rounding_interval": [
+        8.605,
+        8.615
+      ],
+      "implied_p_range": [
+        5.064695463944478e-16,
+        5.426866884338872e-16
+      ],
+      "printed_p_interval": [
+        0,
+        0.001
+      ]
+    },
+    "check": "Full rounding interval of statistic; two-sided Student-t reference distribution, a diagnostic assumption because test tail is unstated. Does not identify which test authors actually ran.",
+    "within_rounding": true
+  },
+  {
+    "issue": "Published F/df/p consistency: S3_anova_relconcerns_with_broker_relationship",
+    "locator": "D03 PDF p. 4",
+    "values": {
+      "printed_statistic": "134.96",
+      "printed_df": [
+        "1",
+        "282"
+      ],
+      "printed_p": "< .001",
+      "statistic_rounding_interval": [
+        134.955,
+        134.965
+      ],
+      "implied_p_range": [
+        9.31775420187142e-26,
+        9.349545978990091e-26
+      ],
+      "printed_p_interval": [
+        0,
+        0.001
+      ]
+    },
+    "check": "Full rounding interval of statistic; upper-tail F reference distribution. Does not identify which test authors actually ran.",
+    "within_rounding": true
+  },
+  {
+    "issue": "Published F/df/p consistency: S3_anova_relconcerns_with_broker_history",
+    "locator": "D03 PDF p. 4",
+    "values": {
+      "printed_statistic": "6.19",
+      "printed_df": [
+        "1",
+        "282"
+      ],
+      "printed_p": ".014",
+      "statistic_rounding_interval": [
+        6.185,
+        6.195
+      ],
+      "implied_p_range": [
+        0.013388037737958068,
+        0.013462230891782117
+      ],
+      "printed_p_interval": [
+        0.0135,
+        0.0145
+      ]
+    },
+    "check": "Full rounding interval of statistic; upper-tail F reference distribution. Does not identify which test authors actually ran.",
+    "within_rounding": false
+  },
+  {
+    "issue": "Published F/df/p consistency: S3_anova_relconcerns_with_broker_relationship_history",
+    "locator": "D03 PDF p. 4",
+    "values": {
+      "printed_statistic": "0.001",
+      "printed_df": [
+        "1",
+        "282"
+      ],
+      "printed_p": ".970",
+      "statistic_rounding_interval": [
+        0.0005,
+        0.0015
+      ],
+      "implied_p_range": [
+        0.9691331912227653,
+        0.9821760591068331
+      ],
+      "printed_p_interval": [
+        0.9695,
+        0.9705
+      ]
+    },
+    "check": "Full rounding interval of statistic; upper-tail F reference distribution. Does not identify which test authors actually ran.",
+    "within_rounding": true
+  },
+  {
+    "issue": "Published t/df/p consistency: S3_H1_relconcerns_with_broker",
+    "locator": "D03 PDF p. 4",
+    "values": {
+      "printed_statistic": "8.36",
+      "printed_df": [
+        "282"
+      ],
+      "printed_p": "< .001",
+      "statistic_rounding_interval": [
+        8.355,
+        8.365
+      ],
+      "implied_p_range": [
+        2.8088365524672413e-15,
+        3.0062490883946523e-15
+      ],
+      "printed_p_interval": [
+        0,
+        0.001
+      ]
+    },
+    "check": "Full rounding interval of statistic; two-sided Student-t reference distribution, a diagnostic assumption because test tail is unstated. Does not identify which test authors actually ran.",
+    "within_rounding": true
+  },
+  {
+    "issue": "Published t/df/p consistency: S3_H3_relconcerns_with_broker",
+    "locator": "D03 PDF p. 4",
+    "values": {
+      "printed_statistic": "1.79",
+      "printed_df": [
+        "282"
+      ],
+      "printed_p": ".075",
+      "statistic_rounding_interval": [
+        1.785,
+        1.795
+      ],
+      "implied_p_range": [
+        0.07372445003779327,
+        0.0753360867563791
+      ],
+      "printed_p_interval": [
+        0.0745,
+        0.0755
+      ]
+    },
+    "check": "Full rounding interval of statistic; two-sided Student-t reference distribution, a diagnostic assumption because test tail is unstated. Does not identify which test authors actually ran.",
+    "within_rounding": true
+  },
+  {
+    "issue": "Published t/df/p consistency: S1_gender_loyalty_sexual_harassment_male",
+    "locator": "D03 PDF p. 5 (Exploring Gender Effects)",
+    "values": {
+      "printed_statistic": "3.94",
+      "printed_df": [
+        "86"
+      ],
+      "printed_p": "< .001",
+      "statistic_rounding_interval": [
+        3.935,
+        3.945
+      ],
+      "implied_p_range": [
+        0.0001623907679994771,
+        0.00016822138992257318
+      ],
+      "printed_p_interval": [
+        0,
+        0.001
+      ]
+    },
+    "check": "Full rounding interval of statistic; two-sided Student-t reference distribution, a diagnostic assumption because test tail is unstated. Does not identify which test authors actually ran.",
+    "within_rounding": true
+  },
+  {
+    "issue": "Published t/df/p consistency: S1_gender_loyalty_sexual_harassment_female",
+    "locator": "D03 PDF p. 5 (Exploring Gender Effects)",
+    "values": {
+      "printed_statistic": "3.56",
+      "printed_df": [
+        "58"
+      ],
+      "printed_p": ".001",
+      "statistic_rounding_interval": [
+        3.555,
+        3.565
+      ],
+      "implied_p_range": [
+        0.0007365335703609556,
+        0.0007598746640717725
+      ],
+      "printed_p_interval": [
+        0.0005,
+        0.0015
+      ]
+    },
+    "check": "Full rounding interval of statistic; two-sided Student-t reference distribution, a diagnostic assumption because test tail is unstated. Does not identify which test authors actually ran.",
+    "within_rounding": true
+  },
+  {
+    "issue": "Published t/df/p consistency: S1_gender_loyalty_all_wrongdoing_male",
+    "locator": "D03 PDF p. 5 (Exploring Gender Effects)",
+    "values": {
+      "printed_statistic": "9.81",
+      "printed_df": [
+        "531"
+      ],
+      "printed_p": "< .001",
+      "statistic_rounding_interval": [
+        9.805,
+        9.815
+      ],
+      "implied_p_range": [
+        5.227356074120558e-21,
+        5.6848066911344784e-21
+      ],
+      "printed_p_interval": [
+        0,
+        0.001
+      ]
+    },
+    "check": "Full rounding interval of statistic; two-sided Student-t reference distribution, a diagnostic assumption because test tail is unstated. Does not identify which test authors actually ran.",
+    "within_rounding": true
+  },
+  {
+    "issue": "Published t/df/p consistency: S1_gender_loyalty_all_wrongdoing_female",
+    "locator": "D03 PDF p. 5 (Exploring Gender Effects)",
+    "values": {
+      "printed_statistic": "10.33",
+      "printed_df": [
+        "470"
+      ],
+      "printed_p": "< .001",
+      "statistic_rounding_interval": [
+        10.325,
+        10.335
+      ],
+      "implied_p_range": [
+        1.0661231991758442e-22,
+        1.1606577394116202e-22
+      ],
+      "printed_p_interval": [
+        0,
+        0.001
+      ]
+    },
+    "check": "Full rounding interval of statistic; two-sided Student-t reference distribution, a diagnostic assumption because test tail is unstated. Does not identify which test authors actually ran.",
+    "within_rounding": true
+  },
+  {
+    "issue": "Published t/df/p consistency: S2_gender_loyalty_sexual_harassment_male",
+    "locator": "D03 PDF p. 6 (Exploring Gender Effects)",
+    "values": {
+      "printed_statistic": "3.38",
+      "printed_df": [
+        "83"
+      ],
+      "printed_p": ".001",
+      "statistic_rounding_interval": [
+        3.375,
+        3.385
+      ],
+      "implied_p_range": [
+        0.0010891358704017099,
+        0.0011244858505574588
+      ],
+      "printed_p_interval": [
+        0.0005,
+        0.0015
+      ]
+    },
+    "check": "Full rounding interval of statistic; two-sided Student-t reference distribution, a diagnostic assumption because test tail is unstated. Does not identify which test authors actually ran.",
+    "within_rounding": true
+  },
+  {
+    "issue": "Published t/df/p consistency: S2_gender_loyalty_sexual_harassment_female",
+    "locator": "D03 PDF p. 6 (Exploring Gender Effects)",
+    "values": {
+      "printed_statistic": "2.09",
+      "printed_df": [
+        "75"
+      ],
+      "printed_p": ".040",
+      "statistic_rounding_interval": [
+        2.085,
+        2.095
+      ],
+      "implied_p_range": [
+        0.039547437980869474,
+        0.04047272993462519
+      ],
+      "printed_p_interval": [
+        0.0395,
+        0.0405
+      ]
+    },
+    "check": "Full rounding interval of statistic; two-sided Student-t reference distribution, a diagnostic assumption because test tail is unstated. Does not identify which test authors actually ran.",
+    "within_rounding": true
+  },
+  {
+    "issue": "Published t/df/p consistency: S2_gender_difference_loyal_colleague",
+    "locator": "D03 PDF p. 6 (Study 2 Exploring Gender Effects)",
+    "values": {
+      "printed_statistic": "3.33",
+      "printed_df": [
+        "87"
+      ],
+      "printed_p": ".001",
+      "statistic_rounding_interval": [
+        3.325,
+        3.335
+      ],
+      "implied_p_range": [
+        0.0012552313082892744,
+        0.0012958083235902955
+      ],
+      "printed_p_interval": [
+        0.0005,
+        0.0015
+      ]
+    },
+    "check": "Full rounding interval of statistic; two-sided Student-t reference distribution, a diagnostic assumption because test tail is unstated. Does not identify which test authors actually ran.",
+    "within_rounding": true
+  },
+  {
+    "issue": "Published t/df/p consistency: S2_gender_difference_control",
+    "locator": "D03 PDF p. 6 (Study 2 Exploring Gender Effects)",
+    "values": {
+      "printed_statistic": "2.38",
+      "printed_df": [
+        "77"
+      ],
+      "printed_p": ".020",
+      "statistic_rounding_interval": [
+        2.375,
+        2.385
+      ],
+      "implied_p_range": [
+        0.01953900444839579,
+        0.020038180557314513
+      ],
+      "printed_p_interval": [
+        0.0195,
+        0.0205
+      ]
+    },
+    "check": "Full rounding interval of statistic; two-sided Student-t reference distribution, a diagnostic assumption because test tail is unstated. Does not identify which test authors actually ran.",
+    "within_rounding": true
+  },
+  {
+    "issue": "F/eta-squared identity diagnostic: S3_anova_you_grant_relationship",
+    "locator": "D01 PDF p. 13 (printed p. 774)",
+    "values": {
+      "F": "14.02",
+      "df": [
+        "1",
+        "282"
+      ],
+      "eta2": "0.048",
+      "partial_eta2_implied_interval": [
+        0.04734557370403527,
+        0.04737775525715734
+      ],
+      "eta2_printed_interval": [
+        0.0475,
+        0.0485
+      ]
+    },
+    "check": "Compare with partial eta-squared = F*df1/(F*df1+df2), using full F and eta rounding intervals. Source labels eta-squared without defining partial/generalized variant; nonoverlap is conditional on partial-eta interpretation, not an automatic contradiction.",
+    "within_rounding": false
+  },
+  {
+    "issue": "F/eta-squared identity diagnostic: S3_anova_you_grant_history",
+    "locator": "D01 PDF p. 13 (printed p. 774)",
+    "values": {
+      "F": "8.15",
+      "df": [
+        "1",
+        "282"
+      ],
+      "eta2": "0.028",
+      "partial_eta2_implied_interval": [
+        0.02807217081114615,
+        0.028105667660388415
+      ],
+      "eta2_printed_interval": [
+        0.0275,
+        0.0285
+      ]
+    },
+    "check": "Compare with partial eta-squared = F*df1/(F*df1+df2), using full F and eta rounding intervals. Source labels eta-squared without defining partial/generalized variant; nonoverlap is conditional on partial-eta interpretation, not an automatic contradiction.",
+    "within_rounding": true
+  },
+  {
+    "issue": "F/eta-squared identity diagnostic: S3_anova_you_grant_relationship_history",
+    "locator": "D01 PDF p. 13 (printed p. 774)",
+    "values": {
+      "F": "0.81",
+      "df": [
+        "1",
+        "282"
+      ],
+      "eta2": "0.003",
+      "partial_eta2_implied_interval": [
+        0.0028464843266561768,
+        0.0028817424818344145
+      ],
+      "eta2_printed_interval": [
+        0.0025,
+        0.0035
+      ]
+    },
+    "check": "Compare with partial eta-squared = F*df1/(F*df1+df2), using full F and eta rounding intervals. Source labels eta-squared without defining partial/generalized variant; nonoverlap is conditional on partial-eta interpretation, not an automatic contradiction.",
+    "within_rounding": true
+  },
+  {
+    "issue": "F/eta-squared identity diagnostic: S3_anova_prom_voice_relationship",
+    "locator": "D01 PDF p. 13 (printed p. 774)",
+    "values": {
+      "F": "10.53",
+      "df": [
+        "1",
+        "282"
+      ],
+      "eta2": "0.048",
+      "partial_eta2_implied_interval": [
+        0.035979830783693705,
+        0.036012784794981795
+      ],
+      "eta2_printed_interval": [
+        0.0475,
+        0.0485
+      ]
+    },
+    "check": "Compare with partial eta-squared = F*df1/(F*df1+df2), using full F and eta rounding intervals. Source labels eta-squared without defining partial/generalized variant; nonoverlap is conditional on partial-eta interpretation, not an automatic contradiction.",
+    "within_rounding": false
+  },
+  {
+    "issue": "F/eta-squared identity diagnostic: S3_anova_prom_voice_history",
+    "locator": "D01 PDF p. 13 (printed p. 774)",
+    "values": {
+      "F": "2.09",
+      "df": [
+        "1",
+        "282"
+      ],
+      "eta2": "0.007",
+      "partial_eta2_implied_interval": [
+        0.007339352658535298,
+        0.007374293810169134
+      ],
+      "eta2_printed_interval": [
+        0.0065,
+        0.0075
+      ]
+    },
+    "check": "Compare with partial eta-squared = F*df1/(F*df1+df2), using full F and eta rounding intervals. Source labels eta-squared without defining partial/generalized variant; nonoverlap is conditional on partial-eta interpretation, not an automatic contradiction.",
+    "within_rounding": true
+  },
+  {
+    "issue": "F/eta-squared identity diagnostic: S3_anova_prom_voice_relationship_history",
+    "locator": "D01 PDF p. 13 (printed p. 774)",
+    "values": {
+      "F": "1.58",
+      "df": [
+        "1",
+        "282"
+      ],
+      "eta2": "0.006",
+      "partial_eta2_implied_interval": [
+        0.005554086220576567,
+        0.00558915316395437
+      ],
+      "eta2_printed_interval": [
+        0.0055,
+        0.0065
+      ]
+    },
+    "check": "Compare with partial eta-squared = F*df1/(F*df1+df2), using full F and eta rounding intervals. Source labels eta-squared without defining partial/generalized variant; nonoverlap is conditional on partial-eta interpretation, not an automatic contradiction.",
+    "within_rounding": true
+  },
+  {
+    "issue": "F/eta-squared identity diagnostic: S3_anova_proh_voice_relationship",
+    "locator": "D01 PDF p. 13–14 (printed pp. 774–775)",
+    "values": {
+      "F": "16.22",
+      "df": [
+        "1",
+        "282"
+      ],
+      "eta2": "0.055",
+      "partial_eta2_implied_interval": [
+        0.054373522458628844,
+        0.054405230949786235
+      ],
+      "eta2_printed_interval": [
+        0.0545,
+        0.0555
+      ]
+    },
+    "check": "Compare with partial eta-squared = F*df1/(F*df1+df2), using full F and eta rounding intervals. Source labels eta-squared without defining partial/generalized variant; nonoverlap is conditional on partial-eta interpretation, not an automatic contradiction.",
+    "within_rounding": false
+  },
+  {
+    "issue": "F/eta-squared identity diagnostic: S3_anova_proh_voice_history",
+    "locator": "D01 PDF p. 13–14 (printed pp. 774–775)",
+    "values": {
+      "F": "1.51",
+      "df": [
+        "1",
+        "282"
+      ],
+      "eta2": "0.005",
+      "partial_eta2_implied_interval": [
+        0.005308548350117281,
+        0.005343632612031109
+      ],
+      "eta2_printed_interval": [
+        0.0045,
+        0.0055
+      ]
+    },
+    "check": "Compare with partial eta-squared = F*df1/(F*df1+df2), using full F and eta rounding intervals. Source labels eta-squared without defining partial/generalized variant; nonoverlap is conditional on partial-eta interpretation, not an automatic contradiction.",
+    "within_rounding": true
+  },
+  {
+    "issue": "F/eta-squared identity diagnostic: S3_anova_proh_voice_relationship_history",
+    "locator": "D01 PDF p. 13–14 (printed pp. 774–775)",
+    "values": {
+      "F": "1.61",
+      "df": [
+        "1",
+        "282"
+      ],
+      "eta2": "0.006",
+      "partial_eta2_implied_interval": [
+        0.005659279631882371,
+        0.005694339156955732
+      ],
+      "eta2_printed_interval": [
+        0.0055,
+        0.0065
+      ]
+    },
+    "check": "Compare with partial eta-squared = F*df1/(F*df1+df2), using full F and eta rounding intervals. Source labels eta-squared without defining partial/generalized variant; nonoverlap is conditional on partial-eta interpretation, not an automatic contradiction.",
+    "within_rounding": true
+  },
+  {
+    "issue": "F/eta-squared identity diagnostic: S3_anova_benev_trust_broker_relationship",
+    "locator": "D03 PDF p. 3",
+    "values": {
+      "F": "141.09",
+      "df": [
+        "1",
+        "282"
+      ],
+      "eta2": ".337",
+      "partial_eta2_implied_interval": [
+        0.33346727017029676,
+        0.3334830239071603
+      ],
+      "eta2_printed_interval": [
+        0.3365,
+        0.3375
+      ]
+    },
+    "check": "Compare with partial eta-squared = F*df1/(F*df1+df2), using full F and eta rounding intervals. Source labels eta-squared without defining partial/generalized variant; nonoverlap is conditional on partial-eta interpretation, not an automatic contradiction.",
+    "within_rounding": false
+  },
+  {
+    "issue": "F/eta-squared identity diagnostic: S3_anova_benev_trust_broker_history",
+    "locator": "D03 PDF p. 3",
+    "values": {
+      "F": "40.65",
+      "df": [
+        "1",
+        "282"
+      ],
+      "eta2": ".126",
+      "partial_eta2_implied_interval": [
+        0.12597436811356136,
+        0.1260014566642389
+      ],
+      "eta2_printed_interval": [
+        0.1255,
+        0.1265
+      ]
+    },
+    "check": "Compare with partial eta-squared = F*df1/(F*df1+df2), using full F and eta rounding intervals. Source labels eta-squared without defining partial/generalized variant; nonoverlap is conditional on partial-eta interpretation, not an automatic contradiction.",
+    "within_rounding": true
+  },
+  {
+    "issue": "F/eta-squared identity diagnostic: S3_anova_benev_trust_broker_relationship_history",
+    "locator": "D03 PDF p. 3",
+    "values": {
+      "F": "8.33",
+      "df": [
+        "1",
+        "282"
+      ],
+      "eta2": ".029",
+      "partial_eta2_implied_interval": [
+        0.02867476104365797,
+        0.028708216370744145
+      ],
+      "eta2_printed_interval": [
+        0.0285,
+        0.0295
+      ]
+    },
+    "check": "Compare with partial eta-squared = F*df1/(F*df1+df2), using full F and eta rounding intervals. Source labels eta-squared without defining partial/generalized variant; nonoverlap is conditional on partial-eta interpretation, not an automatic contradiction.",
+    "within_rounding": true
+  },
+  {
+    "issue": "F/eta-squared identity diagnostic: S3_anova_integ_trust_broker_relationship",
+    "locator": "D03 PDF p. 3–4",
+    "values": {
+      "F": "79.16",
+      "df": [
+        "1",
+        "282"
+      ],
+      "eta2": ".222",
+      "partial_eta2_implied_interval": [
+        0.21917182373219257,
+        0.21919344343997896
+      ],
+      "eta2_printed_interval": [
+        0.2215,
+        0.2225
+      ]
+    },
+    "check": "Compare with partial eta-squared = F*df1/(F*df1+df2), using full F and eta rounding intervals. Source labels eta-squared without defining partial/generalized variant; nonoverlap is conditional on partial-eta interpretation, not an automatic contradiction.",
+    "within_rounding": false
+  },
+  {
+    "issue": "F/eta-squared identity diagnostic: S3_anova_integ_trust_broker_history",
+    "locator": "D03 PDF p. 3–4",
+    "values": {
+      "F": "173.12",
+      "df": [
+        "1",
+        "282"
+      ],
+      "eta2": ".380",
+      "partial_eta2_implied_interval": [
+        0.38037638838535315,
+        0.3803900027464982
+      ],
+      "eta2_printed_interval": [
+        0.3795,
+        0.3805
+      ]
+    },
+    "check": "Compare with partial eta-squared = F*df1/(F*df1+df2), using full F and eta rounding intervals. Source labels eta-squared without defining partial/generalized variant; nonoverlap is conditional on partial-eta interpretation, not an automatic contradiction.",
+    "within_rounding": true
+  },
+  {
+    "issue": "F/eta-squared identity diagnostic: S3_anova_integ_trust_broker_relationship_history",
+    "locator": "D03 PDF p. 3–4",
+    "values": {
+      "F": "10.19",
+      "df": [
+        "1",
+        "282"
+      ],
+      "eta2": ".035",
+      "partial_eta2_implied_interval": [
+        0.03485805226140973,
+        0.03489108300963398
+      ],
+      "eta2_printed_interval": [
+        0.0345,
+        0.0355
+      ]
+    },
+    "check": "Compare with partial eta-squared = F*df1/(F*df1+df2), using full F and eta rounding intervals. Source labels eta-squared without defining partial/generalized variant; nonoverlap is conditional on partial-eta interpretation, not an automatic contradiction.",
+    "within_rounding": true
+  },
+  {
+    "issue": "F/eta-squared identity diagnostic: S3_anova_val_align_part_broker_relationship",
+    "locator": "D03 PDF p. 4",
+    "values": {
+      "F": "41.89",
+      "df": [
+        "1",
+        "282"
+      ],
+      "eta2": ".132",
+      "partial_eta2_implied_interval": [
+        0.12932059218549793,
+        0.12934747371833466
+      ],
+      "eta2_printed_interval": [
+        0.1315,
+        0.1325
+      ]
+    },
+    "check": "Compare with partial eta-squared = F*df1/(F*df1+df2), using full F and eta rounding intervals. Source labels eta-squared without defining partial/generalized variant; nonoverlap is conditional on partial-eta interpretation, not an automatic contradiction.",
+    "within_rounding": false
+  },
+  {
+    "issue": "F/eta-squared identity diagnostic: S3_anova_val_align_part_broker_history",
+    "locator": "D03 PDF p. 4",
+    "values": {
+      "F": "93.52",
+      "df": [
+        "1",
+        "282"
+      ],
+      "eta2": ".249",
+      "partial_eta2_implied_interval": [
+        0.24903133030637925,
+        0.24905132814060318
+      ],
+      "eta2_printed_interval": [
+        0.2485,
+        0.2495
+      ]
+    },
+    "check": "Compare with partial eta-squared = F*df1/(F*df1+df2), using full F and eta rounding intervals. Source labels eta-squared without defining partial/generalized variant; nonoverlap is conditional on partial-eta interpretation, not an automatic contradiction.",
+    "within_rounding": true
+  },
+  {
+    "issue": "F/eta-squared identity diagnostic: S3_anova_val_align_part_broker_relationship_history",
+    "locator": "D03 PDF p. 4",
+    "values": {
+      "F": "6.28",
+      "df": [
+        "1",
+        "282"
+      ],
+      "eta2": ".022",
+      "partial_eta2_implied_interval": [
+        0.021767409591535863,
+        0.021801342421561995
+      ],
+      "eta2_printed_interval": [
+        0.0215,
+        0.0225
+      ]
+    },
+    "check": "Compare with partial eta-squared = F*df1/(F*df1+df2), using full F and eta rounding intervals. Source labels eta-squared without defining partial/generalized variant; nonoverlap is conditional on partial-eta interpretation, not an automatic contradiction.",
+    "within_rounding": true
+  },
+  {
+    "issue": "F/eta-squared identity diagnostic: S3_anova_relconcerns_with_broker_relationship",
+    "locator": "D03 PDF p. 4",
+    "values": {
+      "F": "134.96",
+      "df": [
+        "1",
+        "282"
+      ],
+      "eta2": ".324",
+      "partial_eta2_implied_interval": [
+        0.32366802172896353,
+        0.32368424208266877
+      ],
+      "eta2_printed_interval": [
+        0.3235,
+        0.3245
+      ]
+    },
+    "check": "Compare with partial eta-squared = F*df1/(F*df1+df2), using full F and eta rounding intervals. Source labels eta-squared without defining partial/generalized variant; nonoverlap is conditional on partial-eta interpretation, not an automatic contradiction.",
+    "within_rounding": true
+  },
+  {
+    "issue": "F/eta-squared identity diagnostic: S3_anova_relconcerns_with_broker_history",
+    "locator": "D03 PDF p. 4",
+    "values": {
+      "F": "6.19",
+      "df": [
+        "1",
+        "282"
+      ],
+      "eta2": ".021",
+      "partial_eta2_implied_interval": [
+        0.021461908149279108,
+        0.021495862176651226
+      ],
+      "eta2_printed_interval": [
+        0.0205,
+        0.0215
+      ]
+    },
+    "check": "Compare with partial eta-squared = F*df1/(F*df1+df2), using full F and eta rounding intervals. Source labels eta-squared without defining partial/generalized variant; nonoverlap is conditional on partial-eta interpretation, not an automatic contradiction.",
+    "within_rounding": true
+  },
+  {
+    "issue": "F/eta-squared identity diagnostic: S3_anova_relconcerns_with_broker_relationship_history",
+    "locator": "D03 PDF p. 4",
+    "values": {
+      "F": "0.001",
+      "df": [
+        "1",
+        "282"
+      ],
+      "eta2": ".00001",
+      "partial_eta2_implied_interval": [
+        1.7730465016906e-06,
+        5.319120642975303e-06
+      ],
+      "eta2_printed_interval": [
+        5e-06,
+        1.5e-05
+      ]
+    },
+    "check": "Compare with partial eta-squared = F*df1/(F*df1+df2), using full F and eta rounding intervals. Source labels eta-squared without defining partial/generalized variant; nonoverlap is conditional on partial-eta interpretation, not an automatic contradiction.",
+    "within_rounding": true
+  },
+  {
+    "issue": "Logit coefficient/odds-ratio identity: S4_M1_LoyalRequestor",
+    "locator": "D01 PDF p. 16 (printed p. 777; Table 6 Model 1); D01 PDF p. 15 (Results prose supplies exact p; table supplies star inequality)",
+    "values": {
+      "coefficient": "0.94",
+      "odds_ratio": "2.56",
+      "exp_coefficient_interval": [
+        2.5472134577390078,
+        2.572813378588326
+      ],
+      "odds_ratio_interval": [
+        2.555,
+        2.565
+      ]
+    },
+    "check": "Odds ratio should equal exp(unstandardized logistic coefficient). Full rounding intervals compared.",
+    "within_rounding": true
+  },
+  {
+    "issue": "Coefficient/SE/p diagnostic: S4_M1_LoyalRequestor",
+    "locator": "D01 PDF p. 16 (printed p. 777; Table 6 Model 1); D01 PDF p. 15 (Results prose supplies exact p; table supplies star inequality)",
+    "values": {
+      "B": "0.94",
+      "SE": "0.36",
+      "p": "0.009",
+      "star_inequality": "< 0.01",
+      "absolute_z_interval": [
+        2.5616438356164384,
+        2.6619718309859155
+      ],
+      "normal_two_sided_p_interval": [
+        0.00776843793118603,
+        0.01041780931269415
+      ],
+      "printed_p_interval": [
+        0.0085,
+        0.0095
+      ]
+    },
+    "check": "Full B and SE rounding rectangles propagated through |B/SE|. Two-sided normal Wald reference is a diagnostic assumption; native p-value method is unstated.",
+    "within_rounding": true
+  },
+  {
+    "issue": "Logit coefficient/odds-ratio identity: S4_M2_LoyalRequestor",
+    "locator": "D01 PDF p. 16 (printed p. 777; Table 6 Model 2); D01 PDF p. 15 (Results prose supplies exact p; table supplies star inequality)",
+    "values": {
+      "coefficient": "1.09",
+      "odds_ratio": "2.98",
+      "exp_coefficient_interval": [
+        2.9594398187394915,
+        2.9891826833933632
+      ],
+      "odds_ratio_interval": [
+        2.975,
+        2.985
+      ]
+    },
+    "check": "Odds ratio should equal exp(unstandardized logistic coefficient). Full rounding intervals compared.",
+    "within_rounding": true
+  },
+  {
+    "issue": "Coefficient/SE/p diagnostic: S4_M2_LoyalRequestor",
+    "locator": "D01 PDF p. 16 (printed p. 777; Table 6 Model 2); D01 PDF p. 15 (Results prose supplies exact p; table supplies star inequality)",
+    "values": {
+      "B": "1.09",
+      "SE": "0.40",
+      "p": "0.007",
+      "star_inequality": "< 0.01",
+      "absolute_z_interval": [
+        2.6790123456790123,
+        2.772151898734177
+      ],
+      "normal_two_sided_p_interval": [
+        0.00556870441276555,
+        0.0073839671327361215
+      ],
+      "printed_p_interval": [
+        0.0065,
+        0.0075
+      ]
+    },
+    "check": "Full B and SE rounding rectangles propagated through |B/SE|. Two-sided normal Wald reference is a diagnostic assumption; native p-value method is unstated.",
+    "within_rounding": true
+  },
+  {
+    "issue": "Logit coefficient/odds-ratio identity: S4_M2_KnowRequestor",
+    "locator": "D01 PDF p. 16 (printed p. 777; Table 6 Model 2)",
+    "values": {
+      "coefficient": "−0.80",
+      "odds_ratio": "0.45",
+      "exp_coefficient_interval": [
+        0.4470879265593564,
+        0.4515812349225922
+      ],
+      "odds_ratio_interval": [
+        0.445,
+        0.455
+      ]
+    },
+    "check": "Odds ratio should equal exp(unstandardized logistic coefficient). Full rounding intervals compared.",
+    "within_rounding": true
+  },
+  {
+    "issue": "Coefficient/SE with no printed p: S4_M2_KnowRequestor",
+    "locator": "D01 PDF p. 16 (printed p. 777; Table 6 Model 2)",
+    "values": {
+      "B": "−0.80",
+      "SE": "0.45",
+      "p": null,
+      "absolute_z_interval": [
+        1.7472527472527473,
+        1.8089887640449438
+      ]
+    },
+    "check": "No star is not an exact p value; no p target reconstructed.",
+    "within_rounding": null
+  },
+  {
+    "issue": "Logit coefficient/odds-ratio identity: S4_M2_LikeRequestor",
+    "locator": "D01 PDF p. 16 (printed p. 777; Table 6 Model 2)",
+    "values": {
+      "coefficient": "0.24",
+      "odds_ratio": "1.27",
+      "exp_coefficient_interval": [
+        1.2649087687328917,
+        1.2776213132048866
+      ],
+      "odds_ratio_interval": [
+        1.265,
+        1.275
+      ]
+    },
+    "check": "Odds ratio should equal exp(unstandardized logistic coefficient). Full rounding intervals compared.",
+    "within_rounding": true
+  },
+  {
+    "issue": "Coefficient/SE with no printed p: S4_M2_LikeRequestor",
+    "locator": "D01 PDF p. 16 (printed p. 777; Table 6 Model 2)",
+    "values": {
+      "B": "0.24",
+      "SE": "0.37",
+      "p": null,
+      "absolute_z_interval": [
+        0.6266666666666666,
+        0.6712328767123288
+      ]
+    },
+    "check": "No star is not an exact p value; no p target reconstructed.",
+    "within_rounding": null
+  },
+  {
+    "issue": "Logit coefficient/odds-ratio identity: S4_M2_SemestersRequestor",
+    "locator": "D01 PDF p. 16 (printed p. 777; Table 6 Model 2)",
+    "values": {
+      "coefficient": "0.08",
+      "odds_ratio": "1.08",
+      "exp_coefficient_interval": [
+        1.0778841508846315,
+        1.0887170666983987
+      ],
+      "odds_ratio_interval": [
+        1.075,
+        1.085
+      ]
+    },
+    "check": "Odds ratio should equal exp(unstandardized logistic coefficient). Full rounding intervals compared.",
+    "within_rounding": true
+  },
+  {
+    "issue": "Coefficient/SE with no printed p: S4_M2_SemestersRequestor",
+    "locator": "D01 PDF p. 16 (printed p. 777; Table 6 Model 2)",
+    "values": {
+      "B": "0.08",
+      "SE": "0.20",
+      "p": null,
+      "absolute_z_interval": [
+        0.36585365853658536,
+        0.4358974358974359
+      ]
+    },
+    "check": "No star is not an exact p value; no p target reconstructed.",
+    "within_rounding": null
+  },
+  {
+    "issue": "Logit coefficient/odds-ratio identity: S4_M3_LoyalRequestor",
+    "locator": "D01 PDF p. 16 (printed p. 777; Table 6 Model 3); D01 PDF p. 16 (Results prose supplies exact p; table supplies star inequality)",
+    "values": {
+      "coefficient": "0.81",
+      "odds_ratio": "2.23",
+      "exp_coefficient_interval": [
+        2.236696498819987,
+        2.259175672349701
+      ],
+      "odds_ratio_interval": [
+        2.225,
+        2.235
+      ]
+    },
+    "check": "Odds ratio should equal exp(unstandardized logistic coefficient). Full rounding intervals compared.",
+    "within_rounding": false
+  },
+  {
+    "issue": "Coefficient/SE/p diagnostic: S4_M3_LoyalRequestor",
+    "locator": "D01 PDF p. 16 (printed p. 777; Table 6 Model 3); D01 PDF p. 16 (Results prose supplies exact p; table supplies star inequality)",
+    "values": {
+      "B": "0.81",
+      "SE": "0.44",
+      "p": "0.070",
+      "star_inequality": "< 0.10",
+      "absolute_z_interval": [
+        1.8089887640449438,
+        1.8735632183908044
+      ],
+      "normal_two_sided_p_interval": [
+        0.06099065166069012,
+        0.07045274895252451
+      ],
+      "printed_p_interval": [
+        0.0695,
+        0.0705
+      ]
+    },
+    "check": "Full B and SE rounding rectangles propagated through |B/SE|. Two-sided normal Wald reference is a diagnostic assumption; native p-value method is unstated.",
+    "within_rounding": true
+  },
+  {
+    "issue": "Logit coefficient/odds-ratio identity: S4_M3_KnowRequestor",
+    "locator": "D01 PDF p. 16 (printed p. 777; Table 6 Model 3)",
+    "values": {
+      "coefficient": "−0.90",
+      "odds_ratio": "0.41",
+      "exp_coefficient_interval": [
+        0.4045418851030188,
+        0.40860759864084845
+      ],
+      "odds_ratio_interval": [
+        0.405,
+        0.415
+      ]
+    },
+    "check": "Odds ratio should equal exp(unstandardized logistic coefficient). Full rounding intervals compared.",
+    "within_rounding": true
+  },
+  {
+    "issue": "Coefficient/SE/p diagnostic: S4_M3_KnowRequestor",
+    "locator": "D01 PDF p. 16 (printed p. 777; Table 6 Model 3)",
+    "values": {
+      "B": "−0.90",
+      "SE": "0.47",
+      "p": null,
+      "star_inequality": "< 0.10",
+      "absolute_z_interval": [
+        1.8842105263157896,
+        1.946236559139785
+      ],
+      "normal_two_sided_p_interval": [
+        0.05162633025031249,
+        0.05953650427085652
+      ],
+      "printed_p_interval": [
+        0,
+        0.1
+      ]
+    },
+    "check": "Full B and SE rounding rectangles propagated through |B/SE|. Two-sided normal Wald reference is a diagnostic assumption; native p-value method is unstated.",
+    "within_rounding": true
+  },
+  {
+    "issue": "Logit coefficient/odds-ratio identity: S4_M3_LikeRequestor",
+    "locator": "D01 PDF p. 16 (printed p. 777; Table 6 Model 3)",
+    "values": {
+      "coefficient": "0.43",
+      "odds_ratio": "1.54",
+      "exp_coefficient_interval": [
+        1.5295904196633787,
+        1.5449630589513383
+      ],
+      "odds_ratio_interval": [
+        1.535,
+        1.545
+      ]
+    },
+    "check": "Odds ratio should equal exp(unstandardized logistic coefficient). Full rounding intervals compared.",
+    "within_rounding": true
+  },
+  {
+    "issue": "Coefficient/SE with no printed p: S4_M3_LikeRequestor",
+    "locator": "D01 PDF p. 16 (printed p. 777; Table 6 Model 3)",
+    "values": {
+      "B": "0.43",
+      "SE": "0.40",
+      "p": null,
+      "absolute_z_interval": [
+        1.0493827160493827,
+        1.10126582278481
+      ]
+    },
+    "check": "No star is not an exact p value; no p target reconstructed.",
+    "within_rounding": null
+  },
+  {
+    "issue": "Logit coefficient/odds-ratio identity: S4_M3_SemestersRequestor",
+    "locator": "D01 PDF p. 16 (printed p. 777; Table 6 Model 3)",
+    "values": {
+      "coefficient": "0.23",
+      "odds_ratio": "1.26",
+      "exp_coefficient_interval": [
+        1.2523227161918644,
+        1.2649087687328917
+      ],
+      "odds_ratio_interval": [
+        1.255,
+        1.265
+      ]
+    },
+    "check": "Odds ratio should equal exp(unstandardized logistic coefficient). Full rounding intervals compared.",
+    "within_rounding": true
+  },
+  {
+    "issue": "Coefficient/SE with no printed p: S4_M3_SemestersRequestor",
+    "locator": "D01 PDF p. 16 (printed p. 777; Table 6 Model 3)",
+    "values": {
+      "B": "0.23",
+      "SE": "0.22",
+      "p": null,
+      "absolute_z_interval": [
+        1.0,
+        1.0930232558139534
+      ]
+    },
+    "check": "No star is not an exact p value; no p target reconstructed.",
+    "within_rounding": null
+  },
+  {
+    "issue": "Logit coefficient/odds-ratio identity: S4_M3_LoyaltyHouse",
+    "locator": "D01 PDF p. 16 (printed p. 777; Table 6 Model 3)",
+    "values": {
+      "coefficient": "1.27",
+      "odds_ratio": "3.58",
+      "exp_coefficient_interval": [
+        3.5430927361089815,
+        3.578701410101579
+      ],
+      "odds_ratio_interval": [
+        3.575,
+        3.585
+      ]
+    },
+    "check": "Odds ratio should equal exp(unstandardized logistic coefficient). Full rounding intervals compared.",
+    "within_rounding": true
+  },
+  {
+    "issue": "Coefficient/SE/p diagnostic: S4_M3_LoyaltyHouse",
+    "locator": "D01 PDF p. 16 (printed p. 777; Table 6 Model 3)",
+    "values": {
+      "B": "1.27",
+      "SE": "0.70",
+      "p": null,
+      "star_inequality": "< 0.10",
+      "absolute_z_interval": [
+        1.7943262411347518,
+        1.8345323741007193
+      ],
+      "normal_two_sided_p_interval": [
+        0.0665750067076214,
+        0.07276111206571219
+      ],
+      "printed_p_interval": [
+        0,
+        0.1
+      ]
+    },
+    "check": "Full B and SE rounding rectangles propagated through |B/SE|. Two-sided normal Wald reference is a diagnostic assumption; native p-value method is unstated.",
+    "within_rounding": true
+  },
+  {
+    "issue": "Indirect-effect/SE/p diagnostic: S2_ind_you_grant_benev_trust_broker",
+    "locator": "D01 PDF p. 11–12 (printed pp. 772–773; Mediation)",
+    "values": {
+      "B": "0.59",
+      "SE": "0.14",
+      "p": "< 0.001",
+      "normal_two_sided_p_interval": [
+        1.046152990405828e-05,
+        5.472270783819998e-05
+      ],
+      "printed_p_interval": [
+        0,
+        0.001
+      ]
+    },
+    "check": "Full rounding intervals propagated. Normal-Wald calculation is conditional: bootstrap p-value method is not documented, so nonoverlap would not alone establish an error.",
+    "within_rounding": true
+  },
+  {
+    "issue": "CI endpoint ordering: S2_ind_you_grant_benev_trust_broker",
+    "locator": "D01 PDF p. 11–12 (printed pp. 772–773; Mediation)",
+    "values": {
+      "printed_first_endpoint": "0.32",
+      "printed_second_endpoint": "0.86",
+      "first_interval": [
+        0.315,
+        0.325
+      ],
+      "second_interval": [
+        0.855,
+        0.865
+      ]
+    },
+    "check": "Check whether any values in the full rounding intervals can have first endpoint <= second endpoint. Do not reorder or repair printed endpoints.",
+    "within_rounding": true
+  },
+  {
+    "issue": "Indirect-effect/SE/p diagnostic: S2_ind_you_grant_integ_trust_broker",
+    "locator": "D01 PDF p. 11–12 (printed pp. 772–773; Mediation)",
+    "values": {
+      "B": "0.04",
+      "SE": "0.11",
+      "p": "0.738",
+      "normal_two_sided_p_interval": [
+        0.6682351417952492,
+        0.7608629122137154
+      ],
+      "printed_p_interval": [
+        0.7375,
+        0.7385
+      ]
+    },
+    "check": "Full rounding intervals propagated. Normal-Wald calculation is conditional: bootstrap p-value method is not documented, so nonoverlap would not alone establish an error.",
+    "within_rounding": true
+  },
+  {
+    "issue": "CI endpoint ordering: S2_ind_you_grant_integ_trust_broker",
+    "locator": "D01 PDF p. 11–12 (printed pp. 772–773; Mediation)",
+    "values": {
+      "printed_first_endpoint": "−0.18",
+      "printed_second_endpoint": "0.25",
+      "first_interval": [
+        -0.185,
+        -0.175
+      ],
+      "second_interval": [
+        0.245,
+        0.255
+      ]
+    },
+    "check": "Check whether any values in the full rounding intervals can have first endpoint <= second endpoint. Do not reorder or repair printed endpoints.",
+    "within_rounding": true
+  },
+  {
+    "issue": "Indirect-effect/SE/p diagnostic: S2_ind_you_grant_val_align_part_broker",
+    "locator": "D01 PDF p. 11–12 (printed pp. 772–773; Mediation)",
+    "values": {
+      "B": "0.41",
+      "SE": "0.11",
+      "p": "< 0.001",
+      "normal_two_sided_p_interval": [
+        7.737742670611607e-05,
+        0.00042872580445400674
+      ],
+      "printed_p_interval": [
+        0,
+        0.001
+      ]
+    },
+    "check": "Full rounding intervals propagated. Normal-Wald calculation is conditional: bootstrap p-value method is not documented, so nonoverlap would not alone establish an error.",
+    "within_rounding": true
+  },
+  {
+    "issue": "CI endpoint ordering: S2_ind_you_grant_val_align_part_broker",
+    "locator": "D01 PDF p. 11–12 (printed pp. 772–773; Mediation)",
+    "values": {
+      "printed_first_endpoint": "0.20",
+      "printed_second_endpoint": "0.63",
+      "first_interval": [
+        0.195,
+        0.205
+      ],
+      "second_interval": [
+        0.625,
+        0.635
+      ]
+    },
+    "check": "Check whether any values in the full rounding intervals can have first endpoint <= second endpoint. Do not reorder or repair printed endpoints.",
+    "within_rounding": true
+  },
+  {
+    "issue": "Indirect-effect/SE/p diagnostic: S2_ind_you_grant_relconcerns_with_broker",
+    "locator": "D01 PDF p. 11–12 (printed pp. 772–773; Mediation)",
+    "values": {
+      "B": "0.40",
+      "SE": "0.13",
+      "p": "0.002",
+      "normal_two_sided_p_interval": [
+        0.001195296995868831,
+        0.0034343269946668104
+      ],
+      "printed_p_interval": [
+        0.0015,
+        0.0025
+      ]
+    },
+    "check": "Full rounding intervals propagated. Normal-Wald calculation is conditional: bootstrap p-value method is not documented, so nonoverlap would not alone establish an error.",
+    "within_rounding": true
+  },
+  {
+    "issue": "CI endpoint ordering: S2_ind_you_grant_relconcerns_with_broker",
+    "locator": "D01 PDF p. 11–12 (printed pp. 772–773; Mediation)",
+    "values": {
+      "printed_first_endpoint": "0.15",
+      "printed_second_endpoint": "0.65",
+      "first_interval": [
+        0.145,
+        0.155
+      ],
+      "second_interval": [
+        0.645,
+        0.655
+      ]
+    },
+    "check": "Check whether any values in the full rounding intervals can have first endpoint <= second endpoint. Do not reorder or repair printed endpoints.",
+    "within_rounding": true
+  },
+  {
+    "issue": "Indirect-effect/SE/p diagnostic: S2_ind_prom_voice_benev_trust_broker",
+    "locator": "D01 PDF p. 11–12 (printed pp. 772–773; Mediation)",
+    "values": {
+      "B": "0.58",
+      "SE": "0.13",
+      "p": "< 0.001",
+      "normal_two_sided_p_interval": [
+        2.8687491688402662e-06,
+        2.0510546700550897e-05
+      ],
+      "printed_p_interval": [
+        0,
+        0.001
+      ]
+    },
+    "check": "Full rounding intervals propagated. Normal-Wald calculation is conditional: bootstrap p-value method is not documented, so nonoverlap would not alone establish an error.",
+    "within_rounding": true
+  },
+  {
+    "issue": "CI endpoint ordering: S2_ind_prom_voice_benev_trust_broker",
+    "locator": "D01 PDF p. 11–12 (printed pp. 772–773; Mediation)",
+    "values": {
+      "printed_first_endpoint": "0.32",
+      "printed_second_endpoint": "0.84",
+      "first_interval": [
+        0.315,
+        0.325
+      ],
+      "second_interval": [
+        0.835,
+        0.845
+      ]
+    },
+    "check": "Check whether any values in the full rounding intervals can have first endpoint <= second endpoint. Do not reorder or repair printed endpoints.",
+    "within_rounding": true
+  },
+  {
+    "issue": "Indirect-effect/SE/p diagnostic: S2_ind_prom_voice_integ_trust_broker",
+    "locator": "D01 PDF p. 11–12 (printed pp. 772–773; Mediation)",
+    "values": {
+      "B": "0.06",
+      "SE": "0.11",
+      "p": "0.584",
+      "normal_two_sided_p_interval": [
+        0.5358849890670381,
+        0.6324645435947363
+      ],
+      "printed_p_interval": [
+        0.5835,
+        0.5845
+      ]
+    },
+    "check": "Full rounding intervals propagated. Normal-Wald calculation is conditional: bootstrap p-value method is not documented, so nonoverlap would not alone establish an error.",
+    "within_rounding": true
+  },
+  {
+    "issue": "CI endpoint ordering: S2_ind_prom_voice_integ_trust_broker",
+    "locator": "D01 PDF p. 11–12 (printed pp. 772–773; Mediation)",
+    "values": {
+      "printed_first_endpoint": "−0.15",
+      "printed_second_endpoint": "0.27",
+      "first_interval": [
+        -0.155,
+        -0.145
+      ],
+      "second_interval": [
+        0.265,
+        0.275
+      ]
+    },
+    "check": "Check whether any values in the full rounding intervals can have first endpoint <= second endpoint. Do not reorder or repair printed endpoints.",
+    "within_rounding": true
+  },
+  {
+    "issue": "Indirect-effect/SE/p diagnostic: S2_ind_prom_voice_val_align_part_broker",
+    "locator": "D01 PDF p. 11–12 (printed pp. 772–773; Mediation)",
+    "values": {
+      "B": "0.38",
+      "SE": "0.10",
+      "p": "< 0.001",
+      "normal_two_sided_p_interval": [
+        5.0644723389387845e-05,
+        0.00035503938074694144
+      ],
+      "printed_p_interval": [
+        0,
+        0.001
+      ]
+    },
+    "check": "Full rounding intervals propagated. Normal-Wald calculation is conditional: bootstrap p-value method is not documented, so nonoverlap would not alone establish an error.",
+    "within_rounding": true
+  },
+  {
+    "issue": "CI endpoint ordering: S2_ind_prom_voice_val_align_part_broker",
+    "locator": "D01 PDF p. 11–12 (printed pp. 772–773; Mediation)",
+    "values": {
+      "printed_first_endpoint": "0.18",
+      "printed_second_endpoint": "0.57",
+      "first_interval": [
+        0.175,
+        0.185
+      ],
+      "second_interval": [
+        0.565,
+        0.575
+      ]
+    },
+    "check": "Check whether any values in the full rounding intervals can have first endpoint <= second endpoint. Do not reorder or repair printed endpoints.",
+    "within_rounding": true
+  },
+  {
+    "issue": "Indirect-effect/SE/p diagnostic: S2_ind_prom_voice_relconcerns_with_broker",
+    "locator": "D01 PDF p. 11–12 (printed pp. 772–773; Mediation)",
+    "values": {
+      "B": "0.33",
+      "SE": "0.12",
+      "p": "0.006",
+      "normal_two_sided_p_interval": [
+        0.003579247626317954,
+        0.009322376047437495
+      ],
+      "printed_p_interval": [
+        0.0055,
+        0.0065
+      ]
+    },
+    "check": "Full rounding intervals propagated. Normal-Wald calculation is conditional: bootstrap p-value method is not documented, so nonoverlap would not alone establish an error.",
+    "within_rounding": true
+  },
+  {
+    "issue": "CI endpoint ordering: S2_ind_prom_voice_relconcerns_with_broker",
+    "locator": "D01 PDF p. 11–12 (printed pp. 772–773; Mediation)",
+    "values": {
+      "printed_first_endpoint": "0.10",
+      "printed_second_endpoint": "0.57",
+      "first_interval": [
+        0.095,
+        0.105
+      ],
+      "second_interval": [
+        0.565,
+        0.575
+      ]
+    },
+    "check": "Check whether any values in the full rounding intervals can have first endpoint <= second endpoint. Do not reorder or repair printed endpoints.",
+    "within_rounding": true
+  },
+  {
+    "issue": "Indirect-effect/SE/p diagnostic: S2_ind_proh_voice_benev_trust_broker",
+    "locator": "D01 PDF p. 11–12 (printed pp. 772–773; Mediation)",
+    "values": {
+      "B": "0.60",
+      "SE": "0.15",
+      "p": "< 0.001",
+      "normal_two_sided_p_interval": [
+        3.0138964541663098e-05,
+        0.00012368256892021656
+      ],
+      "printed_p_interval": [
+        0,
+        0.001
+      ]
+    },
+    "check": "Full rounding intervals propagated. Normal-Wald calculation is conditional: bootstrap p-value method is not documented, so nonoverlap would not alone establish an error.",
+    "within_rounding": true
+  },
+  {
+    "issue": "CI endpoint ordering: S2_ind_proh_voice_benev_trust_broker",
+    "locator": "D01 PDF p. 11–12 (printed pp. 772–773; Mediation)",
+    "values": {
+      "printed_first_endpoint": "0.31",
+      "printed_second_endpoint": "0.89",
+      "first_interval": [
+        0.305,
+        0.315
+      ],
+      "second_interval": [
+        0.885,
+        0.895
+      ]
+    },
+    "check": "Check whether any values in the full rounding intervals can have first endpoint <= second endpoint. Do not reorder or repair printed endpoints.",
+    "within_rounding": true
+  },
+  {
+    "issue": "Indirect-effect/SE/p diagnostic: S2_ind_proh_voice_integ_trust_broker",
+    "locator": "D01 PDF p. 11–12 (printed pp. 772–773; Mediation)",
+    "values": {
+      "B": "0.11",
+      "SE": "0.12",
+      "p": "0.352",
+      "normal_two_sided_p_interval": [
+        0.31731050786291415,
+        0.40090838652089933
+      ],
+      "printed_p_interval": [
+        0.3515,
+        0.3525
+      ]
+    },
+    "check": "Full rounding intervals propagated. Normal-Wald calculation is conditional: bootstrap p-value method is not documented, so nonoverlap would not alone establish an error.",
+    "within_rounding": true
+  },
+  {
+    "issue": "CI endpoint ordering: S2_ind_proh_voice_integ_trust_broker",
+    "locator": "D01 PDF p. 11–12 (printed pp. 772–773; Mediation)",
+    "values": {
+      "printed_first_endpoint": "−0.13",
+      "printed_second_endpoint": "0.35",
+      "first_interval": [
+        -0.135,
+        -0.125
+      ],
+      "second_interval": [
+        0.345,
+        0.355
+      ]
+    },
+    "check": "Check whether any values in the full rounding intervals can have first endpoint <= second endpoint. Do not reorder or repair printed endpoints.",
+    "within_rounding": true
+  },
+  {
+    "issue": "Indirect-effect/SE/p diagnostic: S2_ind_proh_voice_val_align_part_broker",
+    "locator": "D01 PDF p. 11–12 (printed pp. 772–773; Mediation)",
+    "values": {
+      "B": "0.18",
+      "SE": "0.10",
+      "p": "0.066",
+      "normal_two_sided_p_interval": [
+        0.05149058118210345,
+        0.09558070454562939
+      ],
+      "printed_p_interval": [
+        0.0655,
+        0.0665
+      ]
+    },
+    "check": "Full rounding intervals propagated. Normal-Wald calculation is conditional: bootstrap p-value method is not documented, so nonoverlap would not alone establish an error.",
+    "within_rounding": true
+  },
+  {
+    "issue": "CI endpoint ordering: S2_ind_proh_voice_val_align_part_broker",
+    "locator": "D01 PDF p. 11–12 (printed pp. 772–773; Mediation)",
+    "values": {
+      "printed_first_endpoint": "−0.01",
+      "printed_second_endpoint": "0.37",
+      "first_interval": [
+        -0.015,
+        -0.005
+      ],
+      "second_interval": [
+        0.365,
+        0.375
+      ]
+    },
+    "check": "Check whether any values in the full rounding intervals can have first endpoint <= second endpoint. Do not reorder or repair printed endpoints.",
+    "within_rounding": true
+  },
+  {
+    "issue": "Indirect-effect/SE/p diagnostic: S2_ind_proh_voice_relconcerns_with_broker",
+    "locator": "D01 PDF p. 11–12 (printed pp. 772–773; Mediation)",
+    "values": {
+      "B": "0.33",
+      "SE": "0.13",
+      "p": "0.014",
+      "normal_two_sided_p_interval": [
+        0.007362216018349957,
+        0.016066235699194305
+      ],
+      "printed_p_interval": [
+        0.0135,
+        0.0145
+      ]
+    },
+    "check": "Full rounding intervals propagated. Normal-Wald calculation is conditional: bootstrap p-value method is not documented, so nonoverlap would not alone establish an error.",
+    "within_rounding": true
+  },
+  {
+    "issue": "CI endpoint ordering: S2_ind_proh_voice_relconcerns_with_broker",
+    "locator": "D01 PDF p. 11–12 (printed pp. 772–773; Mediation)",
+    "values": {
+      "printed_first_endpoint": "0.07",
+      "printed_second_endpoint": "0.59",
+      "first_interval": [
+        0.065,
+        0.075
+      ],
+      "second_interval": [
+        0.585,
+        0.595
+      ]
+    },
+    "check": "Check whether any values in the full rounding intervals can have first endpoint <= second endpoint. Do not reorder or repair printed endpoints.",
+    "within_rounding": true
+  },
+  {
+    "issue": "Indirect-effect/SE/p diagnostic: S2_serial_val_align_part_broker",
+    "locator": "D03 PDF p. 2 (serial model 1)",
+    "values": {
+      "B": "0.47",
+      "SE": ".11",
+      "p": "< .001",
+      "normal_two_sided_p_interval": [
+        6.073638880516158e-06,
+        5.2664041262657254e-05
+      ],
+      "printed_p_interval": [
+        0,
+        0.001
+      ]
+    },
+    "check": "Full rounding intervals propagated. Normal-Wald calculation is conditional: bootstrap p-value method is not documented, so nonoverlap would not alone establish an error.",
+    "within_rounding": true
+  },
+  {
+    "issue": "CI endpoint ordering: S2_serial_val_align_part_broker",
+    "locator": "D03 PDF p. 2 (serial model 1)",
+    "values": {
+      "printed_first_endpoint": "0.47",
+      "printed_second_endpoint": "0.14",
+      "first_interval": [
+        0.465,
+        0.475
+      ],
+      "second_interval": [
+        0.135,
+        0.145
+      ]
+    },
+    "check": "Check whether any values in the full rounding intervals can have first endpoint <= second endpoint. Do not reorder or repair printed endpoints.",
+    "within_rounding": false
+  },
+  {
+    "issue": "Indirect-effect/SE/p diagnostic: S2_serial_relconcerns_with_broker",
+    "locator": "D03 PDF p. 3 (serial model 2)",
+    "values": {
+      "B": "0.71",
+      "SE": ".23",
+      "p": ".002",
+      "normal_two_sided_p_interval": [
+        0.001484084513523628,
+        0.002699796063260186
+      ],
+      "printed_p_interval": [
+        0.0015,
+        0.0025
+      ]
+    },
+    "check": "Full rounding intervals propagated. Normal-Wald calculation is conditional: bootstrap p-value method is not documented, so nonoverlap would not alone establish an error.",
+    "within_rounding": true
+  },
+  {
+    "issue": "CI endpoint ordering: S2_serial_relconcerns_with_broker",
+    "locator": "D03 PDF p. 3 (serial model 2)",
+    "values": {
+      "printed_first_endpoint": "0.71",
+      "printed_second_endpoint": "0.21",
+      "first_interval": [
+        0.705,
+        0.715
+      ],
+      "second_interval": [
+        0.205,
+        0.215
+      ]
+    },
+    "check": "Check whether any values in the full rounding intervals can have first endpoint <= second endpoint. Do not reorder or repair printed endpoints.",
+    "within_rounding": false
+  },
+  {
+    "issue": "Indirect-effect/SE/p diagnostic: S4_ind_simultaneous_SignedTrust",
+    "locator": "D03 PDF p. 5 (Study 4 mediation)",
+    "values": {
+      "B": "0.10",
+      "SE": "0.04",
+      "p": ".008",
+      "normal_two_sided_p_interval": [
+        0.0026997960632601918,
+        0.03476276262222843
+      ],
+      "printed_p_interval": [
+        0.0075,
+        0.0085
+      ]
+    },
+    "check": "Full rounding intervals propagated. Normal-Wald calculation is conditional: bootstrap p-value method is not documented, so nonoverlap would not alone establish an error.",
+    "within_rounding": true
+  },
+  {
+    "issue": "CI endpoint ordering: S4_ind_simultaneous_SignedTrust",
+    "locator": "D03 PDF p. 5 (Study 4 mediation)",
+    "values": {
+      "printed_first_endpoint": "0.03",
+      "printed_second_endpoint": "0.17",
+      "first_interval": [
+        0.025,
+        0.035
+      ],
+      "second_interval": [
+        0.165,
+        0.175
+      ]
+    },
+    "check": "Check whether any values in the full rounding intervals can have first endpoint <= second endpoint. Do not reorder or repair printed endpoints.",
+    "within_rounding": true
+  },
+  {
+    "issue": "Indirect-effect/SE/p diagnostic: S4_ind_simultaneous_SignedRisk",
+    "locator": "D03 PDF p. 5 (Study 4 mediation)",
+    "values": {
+      "B": "0.01",
+      "SE": "0.01",
+      "p": ".387",
+      "normal_two_sided_p_interval": [
+        0.002699796063260186,
+        0.7388826803635272
+      ],
+      "printed_p_interval": [
+        0.3865,
+        0.3875
+      ]
+    },
+    "check": "Full rounding intervals propagated. Normal-Wald calculation is conditional: bootstrap p-value method is not documented, so nonoverlap would not alone establish an error.",
+    "within_rounding": true
+  },
+  {
+    "issue": "CI endpoint ordering: S4_ind_simultaneous_SignedRisk",
+    "locator": "D03 PDF p. 5 (Study 4 mediation)",
+    "values": {
+      "printed_first_endpoint": "-0.01",
+      "printed_second_endpoint": "0.04",
+      "first_interval": [
+        -0.015,
+        -0.005
+      ],
+      "second_interval": [
+        0.035,
+        0.045
+      ]
+    },
+    "check": "Check whether any values in the full rounding intervals can have first endpoint <= second endpoint. Do not reorder or repair printed endpoints.",
+    "within_rounding": true
+  },
+  {
+    "issue": "Indirect-effect/SE/p diagnostic: S4_ind_independent_SignedTrust",
+    "locator": "D03 PDF p. 5 (Study 4 mediation)",
+    "values": {
+      "B": ".115",
+      "SE": ".041",
+      "p": ".005",
+      "normal_two_sided_p_interval": [
+        0.0043465352869561935,
+        0.005797212259087658
+      ],
+      "printed_p_interval": [
+        0.0045,
+        0.0055
+      ]
+    },
+    "check": "Full rounding intervals propagated. Normal-Wald calculation is conditional: bootstrap p-value method is not documented, so nonoverlap would not alone establish an error.",
+    "within_rounding": true
+  },
+  {
+    "issue": "CI endpoint ordering: S4_ind_independent_SignedTrust",
+    "locator": "D03 PDF p. 5 (Study 4 mediation)",
+    "values": {
+      "printed_first_endpoint": ".035",
+      "printed_second_endpoint": ".196",
+      "first_interval": [
+        0.0345,
+        0.0355
+      ],
+      "second_interval": [
+        0.1955,
+        0.1965
+      ]
+    },
+    "check": "Check whether any values in the full rounding intervals can have first endpoint <= second endpoint. Do not reorder or repair printed endpoints.",
+    "within_rounding": true
+  },
+  {
+    "issue": "Indirect-effect/SE/p diagnostic: S4_ind_independent_SignedRisk",
+    "locator": "D03 PDF p. 5 (Study 4 mediation)",
+    "values": {
+      "B": ".026",
+      "SE": ".024",
+      "p": ".297",
+      "normal_two_sided_p_interval": [
+        0.2594637164931338,
+        0.29796080123477764
+      ],
+      "printed_p_interval": [
+        0.2965,
+        0.2975
+      ]
+    },
+    "check": "Full rounding intervals propagated. Normal-Wald calculation is conditional: bootstrap p-value method is not documented, so nonoverlap would not alone establish an error.",
+    "within_rounding": true
+  },
+  {
+    "issue": "CI endpoint ordering: S4_ind_independent_SignedRisk",
+    "locator": "D03 PDF p. 5 (Study 4 mediation)",
+    "values": {
+      "printed_first_endpoint": "-.022",
+      "printed_second_endpoint": ".073",
+      "first_interval": [
+        -0.0225,
+        -0.0215
+      ],
+      "second_interval": [
+        0.0725,
+        0.0735
+      ]
+    },
+    "check": "Check whether any values in the full rounding intervals can have first endpoint <= second endpoint. Do not reorder or repair printed endpoints.",
+    "within_rounding": true
+  },
+  {
+    "issue": "Study 1 Table 2 promotive-voice mean versus condition means",
+    "locator": "D01 PDF p. 9 (printed p. 770); Table 2",
+    "values": {
+      "loyal_mean": "3.47",
+      "control_mean": "2.29",
+      "table_mean": "3.88",
+      "equal_weight_mean_interval": [
+        2.875,
+        2.885
+      ]
+    },
+    "check": "Repeated design gives equal condition counts if complete. Full grand-mean interval [2.875,2.885] is disjoint from [3.875,3.885]; moreover the printed pooled mean exceeds either condition mean for any positive weights.",
+    "within_rounding": false
+  },
+  {
+    "issue": "Study 3 repeated no-history/loyal prohibitive-voice SD",
+    "locator": "D01 PDF p. 14 (printed p. 775; two adjacent contrast paragraphs)",
+    "values": {
+      "H1_comparison_SD": "1.74",
+      "H3_comparison_SD": "1.93",
+      "H3_divisive_SD": "1.1.29"
+    },
+    "check": "Same no-history/loyal cell has disjoint SD intervals [1.735,1.745] and [1.925,1.935]. Divisive SD is not a parseable decimal; preserve 1.1.29 rather than guess.",
+    "within_rounding": false
+  },
+  {
+    "issue": "Study 3 demographic percentages",
+    "locator": "D01 PDF p. 12 (printed p. 773; Participants)",
+    "values": {
+      "female_percent": "49",
+      "male_percent": "34",
+      "nonbinary_percent": "1",
+      "sum_interval": [
+        82.5,
+        85.5
+      ]
+    },
+    "check": "Three printed percentages cannot sum to 100 within whole-percentage rounding. Unreported missing/other gender could account for remainder; no extra category is invented.",
+    "within_rounding": false
+  },
+  {
+    "issue": "Study 2 gender-results sentence contradicts its numerical description",
+    "locator": "D03 PDF p. 6 (Exploring Gender Effects)",
+    "values": {
+      "sentence": "did not find significant between-condition differences within genders",
+      "men_t": "3.38",
+      "men_p": ".001",
+      "women_t": "2.09",
+      "women_p": ".040"
+    },
+    "check": "Text then claims focal support separately for men and women. Qualitative wording is inconsistent with the reported comparisons under the article’s usual significance language; no numerical repair.",
+    "within_rounding": null
+  },
+  {
+    "issue": "Study 4 overview mediation construct differs from appendix",
+    "locator": "D01 PDF p. 8 (Table 1 Study 4 mediation checkmark); D03 PDF p. 5",
+    "values": {
+      "overview": "Benevolence trust",
+      "appendix": "trust in the accused"
+    },
+    "check": "Construct identity differs; appendix does not identify the broker benevolence scale as the field mediator.",
+    "within_rounding": null
+  },
+  {
+    "issue": "Study 1 participant count and paired/mixed degrees of freedom",
+    "locator": "D01 PDF p. 7 (Participants); D01 PDF p. 9 (printed p. 770)",
+    "values": {
+      "participants": "530",
+      "paired_df": "529",
+      "interaction_df": [
+        "6",
+        "523"
+      ]
+    },
+    "check": "For complete paired data, df=N−1; for seven between-subject groups in mixed interaction error, denominator df=N−7. Both identities agree exactly. No raw sample size inferred or estimated.",
+    "within_rounding": true
+  },
+  {
+    "issue": "Study 3 participant flow and factorial degrees of freedom",
+    "locator": "D01 PDF p. 12–14",
+    "values": {
+      "recruited": "400",
+      "excluded": "114",
+      "analysed": "286",
+      "error_df": "282",
+      "design_cells": "4"
+    },
+    "check": "400−114=286 and 286−4=282. Contrast denominator is the full model error df, which is consistent with planned ANOVA contrasts; contrast-cell N remains unreported.",
+    "within_rounding": true
+  },
+  {
+    "issue": "Study 2 participant flow and differing t degrees of freedom",
+    "locator": "D01 PDF p. 10–11",
+    "values": {
+      "recruited": "200",
+      "excluded": "14",
+      "analysed": "186",
+      "outcome_df": [
+        "161",
+        "169",
+        "172"
+      ]
+    },
+    "check": "200−14=186. All t dfs differ from N−2=184. Welch df or outcome-specific missingness could explain differences, but neither is specified; do not choose by numerical fit.",
+    "within_rounding": null
+  },
+  {
+    "issue": "Study 1 exploratory gender t degrees of freedom and dependence",
+    "locator": "D03 PDF p. 5 (Exploring Gender Effects); D01 PDF pp. 7,9",
+    "values": {
+      "study_people": "530",
+      "all_men_df": "531",
+      "all_women_df": "470",
+      "sexual_harassment_men_df": "86",
+      "sexual_harassment_women_df": "58"
+    },
+    "check": "The all-men df exceeds total people minus one, so cannot be a participant-level paired t with a subgroup of the stated sample. Treating repeated records as independent is a possible description of the discrepancy, not an authorized reconstruction. Exact subgroup sample sizes and test form are unstated.",
+    "within_rounding": false
+  },
+  {
+    "issue": "Study 4 participant/signing flow",
+    "locator": "D01 PDF p. 15 (printed p. 776)",
+    "values": {
+      "eligible": "60",
+      "participants": "50",
+      "nonrespondents": "10",
+      "participant_signers": "20",
+      "nonrespondent_signers": "2",
+      "participant_rate_percent": "40",
+      "nonrespondent_rate_percent": "20"
+    },
+    "check": "50+10=60; 20/50=40%; 2/10=20%. Integer identities exact. Counts are publication algebra only.",
+    "within_rounding": true
+  },
+  {
+    "issue": "Study 2 marginal and condition moments: you_grant",
+    "locator": "D01 PDF p. 11 (printed p. 772); Table 3",
+    "values": {
+      "condition_loyal_mean": "2.89",
+      "condition_control_mean": "1.95",
+      "loyal_SD": "1.84",
+      "control_SD": "1.29",
+      "table_mean": "2.41",
+      "table_SD": "1.65",
+      "study_N": "186",
+      "SD_enclosure_over_all_feasible_allocations": [
+        1.6385976205774748,
+        1.6594086377462987
+      ]
+    },
+    "check": "Conditional on same complete analytic sample for text and table, enumerate all possible integer allocations consistent with full mean-rounding intervals, then bound combined sample SD using full conditional-SD intervals and between-group variance. These are conservative publication-only bounds, not estimated group Ns. No allocation is chosen for implementation.",
+    "within_rounding": true
+  },
+  {
+    "issue": "Study 2 marginal and condition moments: prom_voice",
+    "locator": "D01 PDF p. 11 (printed p. 772); Table 3",
+    "values": {
+      "condition_loyal_mean": "2.60",
+      "condition_control_mean": "1.95",
+      "loyal_SD": "1.95",
+      "control_SD": "1.31",
+      "table_mean": "2.27",
+      "table_SD": "1.54",
+      "study_N": "186",
+      "SD_enclosure_over_all_feasible_allocations": [
+        1.669127892677989,
+        1.6974716620880537
+      ]
+    },
+    "check": "Conditional on same complete analytic sample for text and table, enumerate all possible integer allocations consistent with full mean-rounding intervals, then bound combined sample SD using full conditional-SD intervals and between-group variance. These are conservative publication-only bounds, not estimated group Ns. No allocation is chosen for implementation.",
+    "within_rounding": false
+  },
+  {
+    "issue": "Study 2 marginal and condition moments: proh_voice",
+    "locator": "D01 PDF p. 11 (printed p. 772); Table 3",
+    "values": {
+      "condition_loyal_mean": "2.70",
+      "condition_control_mean": "2.19",
+      "loyal_SD": "1.74",
+      "control_SD": "1.39",
+      "table_mean": "2.44",
+      "table_SD": "1.59",
+      "study_N": "186",
+      "SD_enclosure_over_all_feasible_allocations": [
+        1.5760861511805246,
+        1.5987287960879608
+      ]
+    },
+    "check": "Conditional on same complete analytic sample for text and table, enumerate all possible integer allocations consistent with full mean-rounding intervals, then bound combined sample SD using full conditional-SD intervals and between-group variance. These are conservative publication-only bounds, not estimated group Ns. No allocation is chosen for implementation.",
+    "within_rounding": true
+  },
+  {
+    "issue": "Study 4 Model 1 pseudo-R-squared identities",
+    "locator": "D01 PDF p. 16 (Table 6 Model 1); D01 PDF p. 15 signing counts",
+    "values": {
+      "log_likelihood": "−29.24",
+      "McFadden_R2": "0.13",
+      "Cox_Snell_R2": "0.16",
+      "null_log_likelihood_from_published_counts": -33.650583350462824,
+      "implied_McFadden_interval": [
+        0.13092145549394252,
+        0.13121862716243504
+      ],
+      "implied_Cox_Snell_interval": [
+        0.16156928767436973,
+        0.16190459289378545
+      ]
+    },
+    "check": "Assuming model uses all published participants and includes an intercept, compute null likelihood from published signing counts, then propagate full log-likelihood rounding interval through standard pseudo-R2 identities. Conditional check, no fitted model.",
+    "within_rounding": true
+  },
+  {
+    "issue": "Study 4 Model 2 pseudo-R-squared identities",
+    "locator": "D01 PDF p. 16 (Table 6 Model 2); D01 PDF p. 15 signing counts",
+    "values": {
+      "log_likelihood": "−27.25",
+      "McFadden_R2": "0.19",
+      "Cox_Snell_R2": "0.23",
+      "null_log_likelihood_from_published_counts": -33.650583350462824,
+      "implied_McFadden_interval": [
+        0.1900586175239325,
+        0.1903557891924249
+      ],
+      "implied_Cox_Snell_interval": [
+        0.22572125457549141,
+        0.22603090413961968
+      ]
+    },
+    "check": "Assuming model uses all published participants and includes an intercept, compute null likelihood from published signing counts, then propagate full log-likelihood rounding interval through standard pseudo-R2 identities. Conditional check, no fitted model.",
+    "within_rounding": true
+  },
+  {
+    "issue": "Study 4 Model 3 pseudo-R-squared identities",
+    "locator": "D01 PDF p. 16 (Table 6 Model 3); D01 PDF p. 15 signing counts",
+    "values": {
+      "log_likelihood": "−24.50",
+      "McFadden_R2": "0.27",
+      "Cox_Snell_R2": "0.31",
+      "null_log_likelihood_from_published_counts": -33.650583350462824,
+      "implied_McFadden_interval": [
+        0.27178082635934564,
+        0.27207799802783805
+      ],
+      "implied_Cox_Snell_interval": [
+        0.3063746696141546,
+        0.3066520642636804
+      ]
+    },
+    "check": "Assuming model uses all published participants and includes an intercept, compute null likelihood from published signing counts, then propagate full log-likelihood rounding interval through standard pseudo-R2 identities. Conditional check, no fitted model.",
+    "within_rounding": true
+  },
+  {
+    "issue": "Study 1 gender-table t/p pairs have no df",
+    "locator": "D03 PDF p. 6 (Table 1)",
+    "values": {
+      "dishonesty_control_t": "1.61",
+      "dishonesty_control_p": ".250",
+      "df": null,
+      "per_cell_N_range": "21–44"
+    },
+    "check": "Without a documented variance method and df, exact t/p consistency cannot be determined. The disclosed cell-size range alone does not fix df; leave unassessed.",
+    "within_rounding": null
+  },
+  {
+    "issue": "Study 1 paired-test d standardizer diagnostic: you_grant",
+    "locator": "D01 PDF p. 9 (printed p. 770)",
+    "values": {
+      "t": "22.06",
+      "N": "530",
+      "d": "0.86",
+      "d_z_interval": [
+        0.9580079814139495,
+        0.9584423536567127
+      ],
+      "d_using_average_marginal_variance_interval": [
+        0.8605208558907637,
+        0.8771179432816945
+      ],
+      "printed_d_interval": [
+        0.855,
+        0.865
+      ],
+      "d_z_compatible": false,
+      "average_variance_d_compatible": true
+    },
+    "check": "Paired-test d_z=t/sqrt(N) differs from a difference standardized by marginal SDs. Full rounding intervals tested for both identities. The article does not define its d denominator; these calculations do not choose an implementation.",
+    "within_rounding": null
+  },
+  {
+    "issue": "Study 1 paired-test d standardizer diagnostic: prom_voice",
+    "locator": "D01 PDF p. 9 (printed p. 770)",
+    "values": {
+      "t": "17.56",
+      "N": "530",
+      "d": "0.71",
+      "d_z_interval": [
+        0.7625404721705683,
+        0.7629748444133314
+      ],
+      "d_using_average_marginal_variance_interval": [
+        0.7129873038386387,
+        0.7296049572870934
+      ],
+      "printed_d_interval": [
+        0.705,
+        0.715
+      ],
+      "d_z_compatible": false,
+      "average_variance_d_compatible": true
+    },
+    "check": "Paired-test d_z=t/sqrt(N) differs from a difference standardized by marginal SDs. Full rounding intervals tested for both identities. The article does not define its d denominator; these calculations do not choose an implementation.",
+    "within_rounding": null
+  },
+  {
+    "issue": "Study 1 paired-test d standardizer diagnostic: proh_voice",
+    "locator": "D01 PDF p. 9 (printed p. 770)",
+    "values": {
+      "t": "16.76",
+      "N": "530",
+      "d": "0.67",
+      "d_z_interval": [
+        0.7277906927495227,
+        0.7282250649922859
+      ],
+      "d_using_average_marginal_variance_interval": [
+        0.6689387481832804,
+        0.6851096186293105
+      ],
+      "printed_d_interval": [
+        0.665,
+        0.675
+      ],
+      "d_z_compatible": false,
+      "average_variance_d_compatible": true
+    },
+    "check": "Paired-test d_z=t/sqrt(N) differs from a difference standardized by marginal SDs. Full rounding intervals tested for both identities. The article does not define its d denominator; these calculations do not choose an implementation.",
+    "within_rounding": null
+  },
+  {
+    "issue": "Study 1 paired-test d standardizer diagnostic: loyal_comb",
+    "locator": "D01 PDF p. 9 (printed p. 770)",
+    "values": {
+      "t": "35.63",
+      "N": "530",
+      "d": "1.93",
+      "d_z_interval": [
+        1.5474511148434347,
+        1.5478854870861978
+      ],
+      "d_using_average_marginal_variance_interval": [
+        1.9184552470096694,
+        1.946273567615817
+      ],
+      "printed_d_interval": [
+        1.925,
+        1.935
+      ],
+      "d_z_compatible": false,
+      "average_variance_d_compatible": true
+    },
+    "check": "Paired-test d_z=t/sqrt(N) differs from a difference standardized by marginal SDs. Full rounding intervals tested for both identities. The article does not define its d denominator; these calculations do not choose an implementation.",
+    "within_rounding": null
+  },
+  {
+    "issue": "Study 3 promotive-voice H3 narrative qualification",
+    "locator": "D01 PDF p. 13–14 (Results versus Discussion)",
+    "values": {
+      "contrast_p": "0.057",
+      "results_wording": "In support of Hypothesis 3",
+      "discussion_wording": "difference did not reach statistical significance"
+    },
+    "check": "Preserve both the hypothesis-support framing and its significance qualification; no threshold or p value changed.",
+    "within_rounding": null
+  }
+]

@@ -1,0 +1,3162 @@
+{
+  "checks": [
+    {
+      "check_id": "F001",
+      "type": "coef_se_stars",
+      "description": "T0001 Table 3 model 1, Staffing selectivity: coefficient/SE/star check.",
+      "computation": "Assume full-rank conventional OLS with 43 slopes and residual df=546; magnitude one-tail diagnostic p=Pr(t_df >= |b|/s). |t| interval [1.12987013, 1.18666667], p interval [0.117937599, 0.129513532]. Printed rule p >= .10 (one-tailed). Consistent means there exists a rounded value satisfying the printed inequality; it does not certify direction or a prespecified test.",
+      "result": "consistent",
+      "rounding_interval_used": "b in [0.0435, 0.0445], SE in [0.0375, 0.0385]; all three-decimal values vary independently over half-unit intervals.",
+      "locator": {
+        "doc_id": "D1",
+        "pdf_page": 14,
+        "where": "Table 3; model 1; Staffing selectivity; coef"
+      }
+    },
+    {
+      "check_id": "F002",
+      "type": "coef_se_stars",
+      "description": "T0003 Table 3 model 1, Training: coefficient/SE/star check.",
+      "computation": "Assume full-rank conventional OLS with 43 slopes and residual df=546; magnitude one-tail diagnostic p=Pr(t_df >= |b|/s). |t| interval [3.19753086, 3.30379747], p interval [0.000508177331, 0.000733187029]. Printed rule p < 0.01 (one-tailed). Consistent means there exists a rounded value satisfying the printed inequality; it does not certify direction or a prespecified test.",
+      "result": "consistent",
+      "rounding_interval_used": "b in [0.1295, 0.1305], SE in [0.0395, 0.0405]; all three-decimal values vary independently over half-unit intervals.",
+      "locator": {
+        "doc_id": "D1",
+        "pdf_page": 14,
+        "where": "Table 3; model 1; Training; coef"
+      }
+    },
+    {
+      "check_id": "F003",
+      "type": "coef_se_stars",
+      "description": "T0005 Table 3 model 1, Incentive compensation: coefficient/SE/star check.",
+      "computation": "Assume full-rank conventional OLS with 43 slopes and residual df=546; magnitude one-tail diagnostic p=Pr(t_df >= |b|/s). |t| interval [2.81443299, 2.89473684], p interval [0.0019732707, 0.0025313051]. Printed rule p < 0.01 (one-tailed). Consistent means there exists a rounded value satisfying the printed inequality; it does not certify direction or a prespecified test.",
+      "result": "consistent",
+      "rounding_interval_used": "b in [0.1365, 0.1375], SE in [0.0475, 0.0485]; all three-decimal values vary independently over half-unit intervals.",
+      "locator": {
+        "doc_id": "D1",
+        "pdf_page": 14,
+        "where": "Table 3; model 1; Incentive compensation; coef"
+      }
+    },
+    {
+      "check_id": "F004",
+      "type": "coef_se_stars",
+      "description": "T0007 Table 3 model 1, Grievance procedure: coefficient/SE/star check.",
+      "computation": "Assume full-rank conventional OLS with 43 slopes and residual df=546; magnitude one-tail diagnostic p=Pr(t_df >= |b|/s). |t| interval [1.36809816, 1.39751553], p interval [0.0814130877, 0.0859220484]. Printed rule p < 0.10 (one-tailed). Consistent means there exists a rounded value satisfying the printed inequality; it does not certify direction or a prespecified test.",
+      "result": "consistent",
+      "rounding_interval_used": "b in [0.1115, 0.1125], SE in [0.0805, 0.0815]; all three-decimal values vary independently over half-unit intervals.",
+      "locator": {
+        "doc_id": "D1",
+        "pdf_page": 14,
+        "where": "Table 3; model 1; Grievance procedure; coef"
+      }
+    },
+    {
+      "check_id": "F005",
+      "type": "coef_se_stars",
+      "description": "T0009 Table 3 model 1, Decentralized decision making: coefficient/SE/star check.",
+      "computation": "Assume full-rank conventional OLS with 43 slopes and residual df=546; magnitude one-tail diagnostic p=Pr(t_df >= |b|/s). |t| interval [1.25974026, 1.32], p interval [0.0936940746, 0.104150638]. Printed rule p < 0.10 (one-tailed). Consistent means there exists a rounded value satisfying the printed inequality; it does not certify direction or a prespecified test. Interval crosses a displayed significance boundary; rounded point estimates alone cannot decide.",
+      "result": "consistent",
+      "rounding_interval_used": "b in [0.0485, 0.0495], SE in [0.0375, 0.0385]; all three-decimal values vary independently over half-unit intervals.",
+      "locator": {
+        "doc_id": "D1",
+        "pdf_page": 14,
+        "where": "Table 3; model 1; Decentralized decision making; coef"
+      }
+    },
+    {
+      "check_id": "F006",
+      "type": "coef_se_stars",
+      "description": "T0011 Table 3 model 1, Internal labor market: coefficient/SE/star check.",
+      "computation": "Assume full-rank conventional OLS with 43 slopes and residual df=546; magnitude one-tail diagnostic p=Pr(t_df >= |b|/s). |t| interval [0.515695067, 0.529411765], p interval [0.298367508, 0.303138074]. Printed rule p >= .10 (one-tailed). Consistent means there exists a rounded value satisfying the printed inequality; it does not certify direction or a prespecified test. Under the positive H1/H2 alternative, p is the opposite tail (>0.5); a negative slope cannot support a positive hypothesis.",
+      "result": "consistent",
+      "rounding_interval_used": "b in [-0.0585, -0.0575], SE in [0.1105, 0.1115]; all three-decimal values vary independently over half-unit intervals.",
+      "locator": {
+        "doc_id": "D1",
+        "pdf_page": 14,
+        "where": "Table 3; model 1; Internal labor market; coef"
+      }
+    },
+    {
+      "check_id": "F007",
+      "type": "coef_se_stars",
+      "description": "T0013 Table 3 model 1, Vertical hierarchy: coefficient/SE/star check.",
+      "computation": "Assume full-rank conventional OLS with 43 slopes and residual df=546; magnitude one-tail diagnostic p=Pr(t_df >= |b|/s). |t| interval [2.26213592, 2.32673267], p interval [0.0101722147, 0.0120406398]. Printed rule p < 0.05 (one-tailed). Consistent means there exists a rounded value satisfying the printed inequality; it does not certify direction or a prespecified test.",
+      "result": "consistent",
+      "rounding_interval_used": "b in [0.1165, 0.1175], SE in [0.0505, 0.0515]; all three-decimal values vary independently over half-unit intervals.",
+      "locator": {
+        "doc_id": "D1",
+        "pdf_page": 14,
+        "where": "Table 3; model 1; Vertical hierarchy; coef"
+      }
+    },
+    {
+      "check_id": "F008",
+      "type": "coef_se_stars",
+      "description": "T0015 Table 3 model 2, Constant: coefficient/SE/star check.",
+      "computation": "Assume full-rank conventional OLS with 48 slopes and residual df=541; magnitude one-tail diagnostic p=Pr(t_df >= |b|/s). |t| interval [10.6399395, 10.6752656], p interval [1.42446906e-24, 1.94963978e-24]. Printed rule p < 0.01 (one-tailed). Consistent means there exists a rounded value satisfying the printed inequality; it does not certify direction or a prespecified test.",
+      "result": "consistent",
+      "rounding_interval_used": "b in [3.5165, 3.5175], SE in [0.3295, 0.3305]; all three-decimal values vary independently over half-unit intervals.",
+      "locator": {
+        "doc_id": "D1",
+        "pdf_page": 14,
+        "where": "Table 3; model 2; Constant; constant"
+      }
+    },
+    {
+      "check_id": "F009",
+      "type": "coef_se_stars",
+      "description": "T0017 Table 3 model 2, Staffing selectivity: coefficient/SE/star check.",
+      "computation": "Assume full-rank conventional OLS with 48 slopes and residual df=541; magnitude one-tail diagnostic p=Pr(t_df >= |b|/s). |t| interval [0.376623377, 0.413333333], p interval [0.339763097, 0.35330059]. Printed rule p >= .10 (one-tailed). Consistent means there exists a rounded value satisfying the printed inequality; it does not certify direction or a prespecified test.",
+      "result": "consistent",
+      "rounding_interval_used": "b in [0.0145, 0.0155], SE in [0.0375, 0.0385]; all three-decimal values vary independently over half-unit intervals.",
+      "locator": {
+        "doc_id": "D1",
+        "pdf_page": 14,
+        "where": "Table 3; model 2; Staffing selectivity; coef"
+      }
+    },
+    {
+      "check_id": "F010",
+      "type": "coef_se_stars",
+      "description": "T0019 Table 3 model 2, Training: coefficient/SE/star check.",
+      "computation": "Assume full-rank conventional OLS with 48 slopes and residual df=541; magnitude one-tail diagnostic p=Pr(t_df >= |b|/s). |t| interval [3, 3.09876543], p interval [0.00102214046, 0.00141208101]. Printed rule p < 0.01 (one-tailed). Consistent means there exists a rounded value satisfying the printed inequality; it does not certify direction or a prespecified test.",
+      "result": "consistent",
+      "rounding_interval_used": "b in [0.1245, 0.1255], SE in [0.0405, 0.0415]; all three-decimal values vary independently over half-unit intervals.",
+      "locator": {
+        "doc_id": "D1",
+        "pdf_page": 14,
+        "where": "Table 3; model 2; Training; coef"
+      }
+    },
+    {
+      "check_id": "F011",
+      "type": "coef_se_stars",
+      "description": "T0021 Table 3 model 2, Incentive compensation: coefficient/SE/star check.",
+      "computation": "Assume full-rank conventional OLS with 48 slopes and residual df=541; magnitude one-tail diagnostic p=Pr(t_df >= |b|/s). |t| interval [2.46391753, 2.53684211], p interval [0.00573280124, 0.00702636166]. Printed rule p < 0.01 (one-tailed). Consistent means there exists a rounded value satisfying the printed inequality; it does not certify direction or a prespecified test.",
+      "result": "consistent",
+      "rounding_interval_used": "b in [0.1195, 0.1205], SE in [0.0475, 0.0485]; all three-decimal values vary independently over half-unit intervals.",
+      "locator": {
+        "doc_id": "D1",
+        "pdf_page": 14,
+        "where": "Table 3; model 2; Incentive compensation; coef"
+      }
+    },
+    {
+      "check_id": "F012",
+      "type": "coef_se_stars",
+      "description": "T0023 Table 3 model 2, Grievance procedure: coefficient/SE/star check.",
+      "computation": "Assume full-rank conventional OLS with 48 slopes and residual df=541; magnitude one-tail diagnostic p=Pr(t_df >= |b|/s). |t| interval [0.939393939, 0.963190184], p interval [0.167941205, 0.173973871]. Printed rule p >= .10 (one-tailed). Consistent means there exists a rounded value satisfying the printed inequality; it does not certify direction or a prespecified test.",
+      "result": "consistent",
+      "rounding_interval_used": "b in [0.0775, 0.0785], SE in [0.0815, 0.0825]; all three-decimal values vary independently over half-unit intervals.",
+      "locator": {
+        "doc_id": "D1",
+        "pdf_page": 14,
+        "where": "Table 3; model 2; Grievance procedure; coef"
+      }
+    },
+    {
+      "check_id": "F013",
+      "type": "coef_se_stars",
+      "description": "T0025 Table 3 model 2, Decentralized decision making: coefficient/SE/star check.",
+      "computation": "Assume full-rank conventional OLS with 48 slopes and residual df=541; magnitude one-tail diagnostic p=Pr(t_df >= |b|/s). |t| interval [0.797468354, 0.844155844], p interval [0.199477721, 0.212764471]. Printed rule p >= .10 (one-tailed). Consistent means there exists a rounded value satisfying the printed inequality; it does not certify direction or a prespecified test.",
+      "result": "consistent",
+      "rounding_interval_used": "b in [0.0315, 0.0325], SE in [0.0385, 0.0395]; all three-decimal values vary independently over half-unit intervals.",
+      "locator": {
+        "doc_id": "D1",
+        "pdf_page": 14,
+        "where": "Table 3; model 2; Decentralized decision making; coef"
+      }
+    },
+    {
+      "check_id": "F014",
+      "type": "coef_se_stars",
+      "description": "T0027 Table 3 model 2, Internal labor market: coefficient/SE/star check.",
+      "computation": "Assume full-rank conventional OLS with 48 slopes and residual df=541; magnitude one-tail diagnostic p=Pr(t_df >= |b|/s). |t| interval [1.38222222, 1.40358744], p interval [0.0805077295, 0.083736932]. Printed rule p >= .10 (one-tailed). Consistent means there exists a rounded value satisfying the printed inequality; it does not certify direction or a prespecified test. Under the positive H1/H2 alternative, p is the opposite tail (>0.5); a negative slope cannot support a positive hypothesis. Therefore there is a magnitude-tail mismatch but no necessary contradiction under the stated positive hypothesis; test direction is not sufficiently documented for a definitive inconsistency.",
+      "result": "undetermined",
+      "rounding_interval_used": "b in [-0.1565, -0.1555], SE in [0.1115, 0.1125]; all three-decimal values vary independently over half-unit intervals.",
+      "locator": {
+        "doc_id": "D1",
+        "pdf_page": 14,
+        "where": "Table 3; model 2; Internal labor market; coef"
+      }
+    },
+    {
+      "check_id": "F015",
+      "type": "coef_se_stars",
+      "description": "T0029 Table 3 model 2, Nonprofit organization: coefficient/SE/star check.",
+      "computation": "Assume full-rank conventional OLS with 48 slopes and residual df=541; magnitude one-tail diagnostic p=Pr(t_df >= |b|/s). |t| interval [2.25405405, 2.28961749], p interval [0.0112138487, 0.0122960525]. Printed rule p < 0.01 (one-tailed). Consistent means there exists a rounded value satisfying the printed inequality; it does not certify direction or a prespecified test.",
+      "result": "inconsistent",
+      "rounding_interval_used": "b in [-0.2095, -0.2085], SE in [0.0915, 0.0925]; all three-decimal values vary independently over half-unit intervals.",
+      "locator": {
+        "doc_id": "D1",
+        "pdf_page": 14,
+        "where": "Table 3; model 2; Nonprofit organization; coef"
+      }
+    },
+    {
+      "check_id": "F016",
+      "type": "coef_se_stars",
+      "description": "T0031 Table 3 model 2, Subsidiary: coefficient/SE/star check.",
+      "computation": "Assume full-rank conventional OLS with 48 slopes and residual df=541; magnitude one-tail diagnostic p=Pr(t_df >= |b|/s). |t| interval [1.45255474, 1.48888889], p interval [0.0685496571, 0.073463573]. Printed rule p < 0.10 (one-tailed). Consistent means there exists a rounded value satisfying the printed inequality; it does not certify direction or a prespecified test.",
+      "result": "consistent",
+      "rounding_interval_used": "b in [0.0995, 0.1005], SE in [0.0675, 0.0685]; all three-decimal values vary independently over half-unit intervals.",
+      "locator": {
+        "doc_id": "D1",
+        "pdf_page": 14,
+        "where": "Table 3; model 2; Subsidiary; coef"
+      }
+    },
+    {
+      "check_id": "F017",
+      "type": "coef_se_stars",
+      "description": "T0033 Table 3 model 2, Log of total employment: coefficient/SE/star check.",
+      "computation": "Assume full-rank conventional OLS with 48 slopes and residual df=541; magnitude one-tail diagnostic p=Pr(t_df >= |b|/s). |t| interval [0.87755102, 0.957446809], p interval [0.169384721, 0.190288477]. Printed rule p >= .10 (one-tailed). Consistent means there exists a rounded value satisfying the printed inequality; it does not certify direction or a prespecified test.",
+      "result": "consistent",
+      "rounding_interval_used": "b in [-0.0225, -0.0215], SE in [0.0235, 0.0245]; all three-decimal values vary independently over half-unit intervals.",
+      "locator": {
+        "doc_id": "D1",
+        "pdf_page": 14,
+        "where": "Table 3; model 2; Log of total employment; coef"
+      }
+    },
+    {
+      "check_id": "F018",
+      "type": "coef_se_stars",
+      "description": "T0035 Table 3 model 2, Log of firm age: coefficient/SE/star check.",
+      "computation": "Assume full-rank conventional OLS with 48 slopes and residual df=541; magnitude one-tail diagnostic p=Pr(t_df >= |b|/s). |t| interval [2.73584906, 2.88235294], p interval [0.00205201293, 0.00321314341]. Printed rule p < 0.01 (one-tailed). Consistent means there exists a rounded value satisfying the printed inequality; it does not certify direction or a prespecified test.",
+      "result": "consistent",
+      "rounding_interval_used": "b in [-0.0735, -0.0725], SE in [0.0255, 0.0265]; all three-decimal values vary independently over half-unit intervals.",
+      "locator": {
+        "doc_id": "D1",
+        "pdf_page": 14,
+        "where": "Table 3; model 2; Log of firm age; coef"
+      }
+    },
+    {
+      "check_id": "F019",
+      "type": "coef_se_stars",
+      "description": "T0037 Table 3 model 2, Percent managers: coefficient/SE/star check.",
+      "computation": "Assume full-rank conventional OLS with 48 slopes and residual df=541; magnitude one-tail diagnostic p=Pr(t_df >= |b|/s). |t| interval [1.55172414, 1.57142857], p interval [0.0583338846, 0.060656507]. Printed rule p < 0.10 (one-tailed). Consistent means there exists a rounded value satisfying the printed inequality; it does not certify direction or a prespecified test.",
+      "result": "consistent",
+      "rounding_interval_used": "b in [-0.2035, -0.2025], SE in [0.1295, 0.1305]; all three-decimal values vary independently over half-unit intervals.",
+      "locator": {
+        "doc_id": "D1",
+        "pdf_page": 14,
+        "where": "Table 3; model 2; Percent managers; coef"
+      }
+    },
+    {
+      "check_id": "F020",
+      "type": "coef_se_stars",
+      "description": "T0039 Table 3 model 2, Union pressure: coefficient/SE/star check.",
+      "computation": "Assume full-rank conventional OLS with 48 slopes and residual df=541; magnitude one-tail diagnostic p=Pr(t_df >= |b|/s). |t| interval [0.926605505, 0.962616822], p interval [0.168084954, 0.177272284]. Printed rule p >= .10 (one-tailed). Consistent means there exists a rounded value satisfying the printed inequality; it does not certify direction or a prespecified test.",
+      "result": "consistent",
+      "rounding_interval_used": "b in [-0.0515, -0.0505], SE in [0.0535, 0.0545]; all three-decimal values vary independently over half-unit intervals.",
+      "locator": {
+        "doc_id": "D1",
+        "pdf_page": 14,
+        "where": "Table 3; model 2; Union pressure; coef"
+      }
+    },
+    {
+      "check_id": "F021",
+      "type": "coef_se_stars",
+      "description": "T0041 Table 3 model 2, Product: coefficient/SE/star check.",
+      "computation": "Assume full-rank conventional OLS with 48 slopes and residual df=541; magnitude one-tail diagnostic p=Pr(t_df >= |b|/s). |t| interval [0.316455696, 0.327659574], p interval [0.371647915, 0.375889356]. Printed rule p >= .10 (one-tailed). Consistent means there exists a rounded value satisfying the printed inequality; it does not certify direction or a prespecified test.",
+      "result": "consistent",
+      "rounding_interval_used": "b in [0.0375, 0.0385], SE in [0.1175, 0.1185]; all three-decimal values vary independently over half-unit intervals.",
+      "locator": {
+        "doc_id": "D1",
+        "pdf_page": 14,
+        "where": "Table 3; model 2; Product; coef"
+      }
+    },
+    {
+      "check_id": "F022",
+      "type": "coef_se_stars",
+      "description": "T0043 Table 3 model 2, Service: coefficient/SE/star check.",
+      "computation": "Assume full-rank conventional OLS with 48 slopes and residual df=541; magnitude one-tail diagnostic p=Pr(t_df >= |b|/s). |t| interval [0.654822335, 0.671794872], p interval [0.251000531, 0.256430226]. Printed rule p >= .10 (one-tailed). Consistent means there exists a rounded value satisfying the printed inequality; it does not certify direction or a prespecified test.",
+      "result": "consistent",
+      "rounding_interval_used": "b in [-0.0655, -0.0645], SE in [0.0975, 0.0985]; all three-decimal values vary independently over half-unit intervals.",
+      "locator": {
+        "doc_id": "D1",
+        "pdf_page": 14,
+        "where": "Table 3; model 2; Service; coef"
+      }
+    },
+    {
+      "check_id": "F023",
+      "type": "coef_se_stars",
+      "description": "T0045 Table 3 model 2, Competitive pressure: coefficient/SE/star check.",
+      "computation": "Assume full-rank conventional OLS with 48 slopes and residual df=541; magnitude one-tail diagnostic p=Pr(t_df >= |b|/s). |t| interval [0.0588235294, 0.0769230769], p interval [0.469356589, 0.476557194]. Printed rule p >= .10 (one-tailed). Consistent means there exists a rounded value satisfying the printed inequality; it does not certify direction or a prespecified test.",
+      "result": "consistent",
+      "rounding_interval_used": "b in [-0.0045, -0.0035], SE in [0.0585, 0.0595]; all three-decimal values vary independently over half-unit intervals.",
+      "locator": {
+        "doc_id": "D1",
+        "pdf_page": 14,
+        "where": "Table 3; model 2; Competitive pressure; coef"
+      }
+    },
+    {
+      "check_id": "F024",
+      "type": "coef_se_stars",
+      "description": "T0047 Table 3 model 3, Constant: coefficient/SE/star check.",
+      "computation": "Assume full-rank conventional OLS with 48 slopes and residual df=541; magnitude one-tail diagnostic p=Pr(t_df >= |b|/s). |t| interval [10.9757366, 11.0173913], p interval [6.5907563e-26, 9.61266817e-26]. Printed rule p < 0.01 (one-tailed). Consistent means there exists a rounded value satisfying the printed inequality; it does not certify direction or a prespecified test.",
+      "result": "consistent",
+      "rounding_interval_used": "b in [3.1665, 3.1675], SE in [0.2875, 0.2885]; all three-decimal values vary independently over half-unit intervals.",
+      "locator": {
+        "doc_id": "D1",
+        "pdf_page": 14,
+        "where": "Table 3; model 3; Constant; constant"
+      }
+    },
+    {
+      "check_id": "F025",
+      "type": "coef_se_stars",
+      "description": "T0049 Table 3 model 3, Staffing selectivity: coefficient/SE/star check.",
+      "computation": "Assume full-rank conventional OLS with 48 slopes and residual df=541; magnitude one-tail diagnostic p=Pr(t_df >= |b|/s). |t| interval [0.272727273, 0.306666667], p interval [0.379607548, 0.392583468]. Printed rule p >= .10 (one-tailed). Consistent means there exists a rounded value satisfying the printed inequality; it does not certify direction or a prespecified test.",
+      "result": "consistent",
+      "rounding_interval_used": "b in [0.0105, 0.0115], SE in [0.0375, 0.0385]; all three-decimal values vary independently over half-unit intervals.",
+      "locator": {
+        "doc_id": "D1",
+        "pdf_page": 14,
+        "where": "Table 3; model 3; Staffing selectivity; coef"
+      }
+    },
+    {
+      "check_id": "F026",
+      "type": "coef_se_stars",
+      "description": "T0051 Table 3 model 3, Training: coefficient/SE/star check.",
+      "computation": "Assume full-rank conventional OLS with 48 slopes and residual df=541; magnitude one-tail diagnostic p=Pr(t_df >= |b|/s). |t| interval [2.72839506, 2.82278481], p interval [0.00246804422, 0.00328563974]. Printed rule p < 0.01 (one-tailed). Consistent means there exists a rounded value satisfying the printed inequality; it does not certify direction or a prespecified test.",
+      "result": "consistent",
+      "rounding_interval_used": "b in [0.1105, 0.1115], SE in [0.0395, 0.0405]; all three-decimal values vary independently over half-unit intervals.",
+      "locator": {
+        "doc_id": "D1",
+        "pdf_page": 14,
+        "where": "Table 3; model 3; Training; coef"
+      }
+    },
+    {
+      "check_id": "F027",
+      "type": "coef_se_stars",
+      "description": "T0053 Table 3 model 3, Incentive compensation: coefficient/SE/star check.",
+      "computation": "Assume full-rank conventional OLS with 48 slopes and residual df=541; magnitude one-tail diagnostic p=Pr(t_df >= |b|/s). |t| interval [2.40206186, 2.47368421], p interval [0.00683932586, 0.00831952253]. Printed rule p < 0.01 (one-tailed). Consistent means there exists a rounded value satisfying the printed inequality; it does not certify direction or a prespecified test.",
+      "result": "consistent",
+      "rounding_interval_used": "b in [0.1165, 0.1175], SE in [0.0475, 0.0485]; all three-decimal values vary independently over half-unit intervals.",
+      "locator": {
+        "doc_id": "D1",
+        "pdf_page": 14,
+        "where": "Table 3; model 3; Incentive compensation; coef"
+      }
+    },
+    {
+      "check_id": "F028",
+      "type": "coef_se_stars",
+      "description": "T0055 Table 3 model 3, Grievance procedure: coefficient/SE/star check.",
+      "computation": "Assume full-rank conventional OLS with 48 slopes and residual df=541; magnitude one-tail diagnostic p=Pr(t_df >= |b|/s). |t| interval [0.717791411, 0.739130435], p interval [0.23007418, 0.23659787]. Printed rule p >= .10 (one-tailed). Consistent means there exists a rounded value satisfying the printed inequality; it does not certify direction or a prespecified test. Under the positive H1/H2 alternative, p is the opposite tail (>0.5); a negative slope cannot support a positive hypothesis.",
+      "result": "consistent",
+      "rounding_interval_used": "b in [-0.0595, -0.0585], SE in [0.0805, 0.0815]; all three-decimal values vary independently over half-unit intervals.",
+      "locator": {
+        "doc_id": "D1",
+        "pdf_page": 14,
+        "where": "Table 3; model 3; Grievance procedure; coef"
+      }
+    },
+    {
+      "check_id": "F029",
+      "type": "coef_se_stars",
+      "description": "T0057 Table 3 model 3, Decentralized decision making: coefficient/SE/star check.",
+      "computation": "Assume full-rank conventional OLS with 48 slopes and residual df=541; magnitude one-tail diagnostic p=Pr(t_df >= |b|/s). |t| interval [0.746835443, 0.792207792], p interval [0.214293379, 0.227743668]. Printed rule p >= .10 (one-tailed). Consistent means there exists a rounded value satisfying the printed inequality; it does not certify direction or a prespecified test.",
+      "result": "consistent",
+      "rounding_interval_used": "b in [0.0295, 0.0305], SE in [0.0385, 0.0395]; all three-decimal values vary independently over half-unit intervals.",
+      "locator": {
+        "doc_id": "D1",
+        "pdf_page": 14,
+        "where": "Table 3; model 3; Decentralized decision making; coef"
+      }
+    },
+    {
+      "check_id": "F030",
+      "type": "coef_se_stars",
+      "description": "T0059 Table 3 model 3, Vertical hierarchy: coefficient/SE/star check.",
+      "computation": "Assume full-rank conventional OLS with 48 slopes and residual df=541; magnitude one-tail diagnostic p=Pr(t_df >= |b|/s). |t| interval [1.99029126, 2.04950495], p interval [0.0204472073, 0.0235308183]. Printed rule p < 0.05 (one-tailed). Consistent means there exists a rounded value satisfying the printed inequality; it does not certify direction or a prespecified test.",
+      "result": "consistent",
+      "rounding_interval_used": "b in [0.1025, 0.1035], SE in [0.0505, 0.0515]; all three-decimal values vary independently over half-unit intervals.",
+      "locator": {
+        "doc_id": "D1",
+        "pdf_page": 14,
+        "where": "Table 3; model 3; Vertical hierarchy; coef"
+      }
+    },
+    {
+      "check_id": "F031",
+      "type": "coef_se_stars",
+      "description": "T0061 Table 3 model 3, Nonprofit organization: coefficient/SE/star check.",
+      "computation": "Assume full-rank conventional OLS with 48 slopes and residual df=541; magnitude one-tail diagnostic p=Pr(t_df >= |b|/s). |t| interval [2.18918919, 2.22404372], p interval [0.0132787551, 0.0145048185]. Printed rule p < 0.05 (one-tailed). Consistent means there exists a rounded value satisfying the printed inequality; it does not certify direction or a prespecified test.",
+      "result": "consistent",
+      "rounding_interval_used": "b in [-0.2035, -0.2025], SE in [0.0915, 0.0925]; all three-decimal values vary independently over half-unit intervals.",
+      "locator": {
+        "doc_id": "D1",
+        "pdf_page": 14,
+        "where": "Table 3; model 3; Nonprofit organization; coef"
+      }
+    },
+    {
+      "check_id": "F032",
+      "type": "coef_se_stars",
+      "description": "T0063 Table 3 model 3, Subsidiary: coefficient/SE/star check.",
+      "computation": "Assume full-rank conventional OLS with 48 slopes and residual df=541; magnitude one-tail diagnostic p=Pr(t_df >= |b|/s). |t| interval [1.88888889, 1.93233083], p interval [0.0269202018, 0.0297206642]. Printed rule p < 0.05 (one-tailed). Consistent means there exists a rounded value satisfying the printed inequality; it does not certify direction or a prespecified test.",
+      "result": "consistent",
+      "rounding_interval_used": "b in [0.1275, 0.1285], SE in [0.0665, 0.0675]; all three-decimal values vary independently over half-unit intervals.",
+      "locator": {
+        "doc_id": "D1",
+        "pdf_page": 14,
+        "where": "Table 3; model 3; Subsidiary; coef"
+      }
+    },
+    {
+      "check_id": "F033",
+      "type": "coef_se_stars",
+      "description": "T0065 Table 3 model 3, Log of total employment: coefficient/SE/star check.",
+      "computation": "Assume full-rank conventional OLS with 48 slopes and residual df=541; magnitude one-tail diagnostic p=Pr(t_df >= |b|/s). |t| interval [1.7755102, 1.89361702], p interval [0.0294045638, 0.0381878891]. Printed rule p < 0.05 (one-tailed). Consistent means there exists a rounded value satisfying the printed inequality; it does not certify direction or a prespecified test.",
+      "result": "consistent",
+      "rounding_interval_used": "b in [-0.0445, -0.0435], SE in [0.0235, 0.0245]; all three-decimal values vary independently over half-unit intervals.",
+      "locator": {
+        "doc_id": "D1",
+        "pdf_page": 14,
+        "where": "Table 3; model 3; Log of total employment; coef"
+      }
+    },
+    {
+      "check_id": "F034",
+      "type": "coef_se_stars",
+      "description": "T0067 Table 3 model 3, Log of firm age: coefficient/SE/star check.",
+      "computation": "Assume full-rank conventional OLS with 48 slopes and residual df=541; magnitude one-tail diagnostic p=Pr(t_df >= |b|/s). |t| interval [2.8490566, 3], p interval [0.00141208101, 0.00227593895]. Printed rule p < 0.01 (one-tailed). Consistent means there exists a rounded value satisfying the printed inequality; it does not certify direction or a prespecified test.",
+      "result": "consistent",
+      "rounding_interval_used": "b in [-0.0765, -0.0755], SE in [0.0255, 0.0265]; all three-decimal values vary independently over half-unit intervals.",
+      "locator": {
+        "doc_id": "D1",
+        "pdf_page": 14,
+        "where": "Table 3; model 3; Log of firm age; coef"
+      }
+    },
+    {
+      "check_id": "F035",
+      "type": "coef_se_stars",
+      "description": "T0069 Table 3 model 3, Percent managers: coefficient/SE/star check.",
+      "computation": "Assume full-rank conventional OLS with 48 slopes and residual df=541; magnitude one-tail diagnostic p=Pr(t_df >= |b|/s). |t| interval [1.23346304, 1.25098039], p interval [0.105741176, 0.108969346]. Printed rule p >= .10 (one-tailed). Consistent means there exists a rounded value satisfying the printed inequality; it does not certify direction or a prespecified test.",
+      "result": "consistent",
+      "rounding_interval_used": "b in [-0.1595, -0.1585], SE in [0.1275, 0.1285]; all three-decimal values vary independently over half-unit intervals.",
+      "locator": {
+        "doc_id": "D1",
+        "pdf_page": 14,
+        "where": "Table 3; model 3; Percent managers; coef"
+      }
+    },
+    {
+      "check_id": "F036",
+      "type": "coef_se_stars",
+      "description": "T0071 Table 3 model 3, Union pressure: coefficient/SE/star check.",
+      "computation": "Assume full-rank conventional OLS with 48 slopes and residual df=541; magnitude one-tail diagnostic p=Pr(t_df >= |b|/s). |t| interval [1.01869159, 1.05714286], p interval [0.145459103, 0.15440237]. Printed rule p >= .10 (one-tailed). Consistent means there exists a rounded value satisfying the printed inequality; it does not certify direction or a prespecified test.",
+      "result": "consistent",
+      "rounding_interval_used": "b in [-0.0555, -0.0545], SE in [0.0525, 0.0535]; all three-decimal values vary independently over half-unit intervals.",
+      "locator": {
+        "doc_id": "D1",
+        "pdf_page": 14,
+        "where": "Table 3; model 3; Union pressure; coef"
+      }
+    },
+    {
+      "check_id": "F037",
+      "type": "coef_se_stars",
+      "description": "T0073 Table 3 model 3, Product: coefficient/SE/star check.",
+      "computation": "Assume full-rank conventional OLS with 48 slopes and residual df=541; magnitude one-tail diagnostic p=Pr(t_df >= |b|/s). |t| interval [0.527896996, 0.541125541], p interval [0.294321899, 0.298893638]. Printed rule p >= .10 (one-tailed). Consistent means there exists a rounded value satisfying the printed inequality; it does not certify direction or a prespecified test.",
+      "result": "consistent",
+      "rounding_interval_used": "b in [0.0615, 0.0625], SE in [0.1155, 0.1165]; all three-decimal values vary independently over half-unit intervals.",
+      "locator": {
+        "doc_id": "D1",
+        "pdf_page": 14,
+        "where": "Table 3; model 3; Product; coef"
+      }
+    },
+    {
+      "check_id": "F038",
+      "type": "coef_se_stars",
+      "description": "T0075 Table 3 model 3, Service: coefficient/SE/star check.",
+      "computation": "Assume full-rank conventional OLS with 48 slopes and residual df=541; magnitude one-tail diagnostic p=Pr(t_df >= |b|/s). |t| interval [0.746192893, 0.764102564], p interval [0.222569624, 0.227937508]. Printed rule p >= .10 (one-tailed). Consistent means there exists a rounded value satisfying the printed inequality; it does not certify direction or a prespecified test.",
+      "result": "consistent",
+      "rounding_interval_used": "b in [-0.0745, -0.0735], SE in [0.0975, 0.0985]; all three-decimal values vary independently over half-unit intervals.",
+      "locator": {
+        "doc_id": "D1",
+        "pdf_page": 14,
+        "where": "Table 3; model 3; Service; coef"
+      }
+    },
+    {
+      "check_id": "F039",
+      "type": "coef_se_stars",
+      "description": "T0077 Table 3 model 3, Competitive pressure: coefficient/SE/star check.",
+      "computation": "Assume full-rank conventional OLS with 48 slopes and residual df=541; magnitude one-tail diagnostic p=Pr(t_df >= |b|/s). |t| interval [0.00840336134, 0.0256410256], p interval [0.489776559, 0.496649132]. Printed rule p >= .10 (one-tailed). Consistent means there exists a rounded value satisfying the printed inequality; it does not certify direction or a prespecified test.",
+      "result": "consistent",
+      "rounding_interval_used": "b in [-0.0015, -0.0005], SE in [0.0585, 0.0595]; all three-decimal values vary independently over half-unit intervals.",
+      "locator": {
+        "doc_id": "D1",
+        "pdf_page": 14,
+        "where": "Table 3; model 3; Competitive pressure; coef"
+      }
+    },
+    {
+      "check_id": "F040",
+      "type": "coef_se_stars",
+      "description": "T0079 Table 3 model 4, Constant: coefficient/SE/star check.",
+      "computation": "Assume full-rank conventional OLS with 51 slopes and residual df=538; magnitude one-tail diagnostic p=Pr(t_df >= |b|/s). |t| interval [4.56450512, 4.5721121], p interval [2.99824464e-06, 3.10481091e-06]. Printed rule p < 0.01 (one-tailed). Consistent means there exists a rounded value satisfying the printed inequality; it does not certify direction or a prespecified test.",
+      "result": "consistent",
+      "rounding_interval_used": "b in [3.3435, 3.3445], SE in [0.7315, 0.7325]; all three-decimal values vary independently over half-unit intervals.",
+      "locator": {
+        "doc_id": "D1",
+        "pdf_page": 14,
+        "where": "Table 3; model 4; Constant; constant"
+      }
+    },
+    {
+      "check_id": "F041",
+      "type": "coef_se_stars",
+      "description": "T0081 Table 3 model 4, Staffing selectivity: coefficient/SE/star check.",
+      "computation": "Assume full-rank conventional OLS with 51 slopes and residual df=538; magnitude one-tail diagnostic p=Pr(t_df >= |b|/s). |t| interval [0.0120481928, 0.037037037], p interval [0.485234606, 0.495195816]. Printed rule p >= .10 (one-tailed). Consistent means there exists a rounded value satisfying the printed inequality; it does not certify direction or a prespecified test. Under the positive H1/H2 alternative, p is the opposite tail (>0.5); a negative slope cannot support a positive hypothesis.",
+      "result": "consistent",
+      "rounding_interval_used": "b in [-0.0015, -0.0005], SE in [0.0405, 0.0415]; all three-decimal values vary independently over half-unit intervals.",
+      "locator": {
+        "doc_id": "D1",
+        "pdf_page": 14,
+        "where": "Table 3; model 4; Staffing selectivity; coef"
+      }
+    },
+    {
+      "check_id": "F042",
+      "type": "coef_se_stars",
+      "description": "T0083 Table 3 model 4, Training: coefficient/SE/star check.",
+      "computation": "Assume full-rank conventional OLS with 51 slopes and residual df=538; magnitude one-tail diagnostic p=Pr(t_df >= |b|/s). |t| interval [2.95180723, 3.04938272], p interval [0.00120299842, 0.00164851554]. Printed rule p < 0.01 (one-tailed). Consistent means there exists a rounded value satisfying the printed inequality; it does not certify direction or a prespecified test.",
+      "result": "consistent",
+      "rounding_interval_used": "b in [0.1225, 0.1235], SE in [0.0405, 0.0415]; all three-decimal values vary independently over half-unit intervals.",
+      "locator": {
+        "doc_id": "D1",
+        "pdf_page": 14,
+        "where": "Table 3; model 4; Training; coef"
+      }
+    },
+    {
+      "check_id": "F043",
+      "type": "coef_se_stars",
+      "description": "T0085 Table 3 model 4, Incentive compensation: coefficient/SE/star check.",
+      "computation": "Assume full-rank conventional OLS with 51 slopes and residual df=538; magnitude one-tail diagnostic p=Pr(t_df >= |b|/s). |t| interval [1.26589595, 1.29239766], p interval [0.0983871357, 0.103049113]. Printed rule p < 0.10 (one-tailed). Consistent means there exists a rounded value satisfying the printed inequality; it does not certify direction or a prespecified test. Interval crosses a displayed significance boundary; rounded point estimates alone cannot decide.",
+      "result": "consistent",
+      "rounding_interval_used": "b in [0.1095, 0.1105], SE in [0.0855, 0.0865]; all three-decimal values vary independently over half-unit intervals.",
+      "locator": {
+        "doc_id": "D1",
+        "pdf_page": 14,
+        "where": "Table 3; model 4; Incentive compensation; coef"
+      }
+    },
+    {
+      "check_id": "F044",
+      "type": "coef_se_stars",
+      "description": "T0087 Table 3 model 4, Grievance procedure: coefficient/SE/star check.",
+      "computation": "Assume full-rank conventional OLS with 51 slopes and residual df=538; magnitude one-tail diagnostic p=Pr(t_df >= |b|/s). |t| interval [0.160202361, 0.164128596], p interval [0.434845776, 0.4363909]. Printed rule p >= .10 (one-tailed). Consistent means there exists a rounded value satisfying the printed inequality; it does not certify direction or a prespecified test. Under the positive H1/H2 alternative, p is the opposite tail (>0.5); a negative slope cannot support a positive hypothesis.",
+      "result": "consistent",
+      "rounding_interval_used": "b in [-0.0485, -0.0475], SE in [0.2955, 0.2965]; all three-decimal values vary independently over half-unit intervals.",
+      "locator": {
+        "doc_id": "D1",
+        "pdf_page": 14,
+        "where": "Table 3; model 4; Grievance procedure; coef"
+      }
+    },
+    {
+      "check_id": "F045",
+      "type": "coef_se_stars",
+      "description": "T0089 Table 3 model 4, Decentralized decision making: coefficient/SE/star check.",
+      "computation": "Assume full-rank conventional OLS with 51 slopes and residual df=538; magnitude one-tail diagnostic p=Pr(t_df >= |b|/s). |t| interval [0.449350649, 0.45691906], p interval [0.323956826, 0.326679845]. Printed rule p >= .10 (one-tailed). Consistent means there exists a rounded value satisfying the printed inequality; it does not certify direction or a prespecified test. Under the positive H1/H2 alternative, p is the opposite tail (>0.5); a negative slope cannot support a positive hypothesis.",
+      "result": "consistent",
+      "rounding_interval_used": "b in [-0.0875, -0.0865], SE in [0.1915, 0.1925]; all three-decimal values vary independently over half-unit intervals.",
+      "locator": {
+        "doc_id": "D1",
+        "pdf_page": 14,
+        "where": "Table 3; model 4; Decentralized decision making; coef"
+      }
+    },
+    {
+      "check_id": "F046",
+      "type": "coef_se_stars",
+      "description": "T0091 Table 3 model 4, Internal labor market: coefficient/SE/star check.",
+      "computation": "Assume full-rank conventional OLS with 51 slopes and residual df=538; magnitude one-tail diagnostic p=Pr(t_df >= |b|/s). |t| interval [0.098782138, 0.101763908], p interval [0.459490995, 0.460674022]. Printed rule p >= .10 (one-tailed). Consistent means there exists a rounded value satisfying the printed inequality; it does not certify direction or a prespecified test. Under the positive H1/H2 alternative, p is the opposite tail (>0.5); a negative slope cannot support a positive hypothesis.",
+      "result": "consistent",
+      "rounding_interval_used": "b in [-0.0375, -0.0365], SE in [0.3685, 0.3695]; all three-decimal values vary independently over half-unit intervals.",
+      "locator": {
+        "doc_id": "D1",
+        "pdf_page": 14,
+        "where": "Table 3; model 4; Internal labor market; coef"
+      }
+    },
+    {
+      "check_id": "F047",
+      "type": "coef_se_stars",
+      "description": "T0093 Table 3 model 4, Training × staffing: coefficient/SE/star check.",
+      "computation": "Assume full-rank conventional OLS with 51 slopes and residual df=538; magnitude one-tail diagnostic p=Pr(t_df >= |b|/s). |t| interval [1.12903226, 1.17582418], p interval [0.120092598, 0.129693698]. Printed rule p >= .10 (one-tailed). Consistent means there exists a rounded value satisfying the printed inequality; it does not certify direction or a prespecified test.",
+      "result": "consistent",
+      "rounding_interval_used": "b in [0.0525, 0.0535], SE in [0.0455, 0.0465]; all three-decimal values vary independently over half-unit intervals.",
+      "locator": {
+        "doc_id": "D1",
+        "pdf_page": 14,
+        "where": "Table 3; model 4; Training × staffing; coef"
+      }
+    },
+    {
+      "check_id": "F048",
+      "type": "coef_se_stars",
+      "description": "T0095 Table 3 model 4, Grievance × incentive compensation: coefficient/SE/star check.",
+      "computation": "Assume full-rank conventional OLS with 51 slopes and residual df=538; magnitude one-tail diagnostic p=Pr(t_df >= |b|/s). |t| interval [0.119617225, 0.130434783], p interval [0.448135602, 0.452415514]. Printed rule p >= .10 (one-tailed). Consistent means there exists a rounded value satisfying the printed inequality; it does not certify direction or a prespecified test.",
+      "result": "consistent",
+      "rounding_interval_used": "b in [0.0125, 0.0135], SE in [0.1035, 0.1045]; all three-decimal values vary independently over half-unit intervals.",
+      "locator": {
+        "doc_id": "D1",
+        "pdf_page": 14,
+        "where": "Table 3; model 4; Grievance × incentive compensation; coef"
+      }
+    },
+    {
+      "check_id": "F049",
+      "type": "coef_se_stars",
+      "description": "T0097 Table 3 model 4, Internal labor market × decentralized decision making: coefficient/SE/star check.",
+      "computation": "Assume full-rank conventional OLS with 51 slopes and residual df=538; magnitude one-tail diagnostic p=Pr(t_df >= |b|/s). |t| interval [0.281105991, 0.293023256], p interval [0.384808681, 0.389368591]. Printed rule p >= .10 (one-tailed). Consistent means there exists a rounded value satisfying the printed inequality; it does not certify direction or a prespecified test. Under the positive H1/H2 alternative, p is the opposite tail (>0.5); a negative slope cannot support a positive hypothesis.",
+      "result": "consistent",
+      "rounding_interval_used": "b in [-0.0315, -0.0305], SE in [0.1075, 0.1085]; all three-decimal values vary independently over half-unit intervals.",
+      "locator": {
+        "doc_id": "D1",
+        "pdf_page": 14,
+        "where": "Table 3; model 4; Internal labor market × decentralized decision making; coef"
+      }
+    },
+    {
+      "check_id": "F050",
+      "type": "coef_se_stars",
+      "description": "T0099 Table 3 model 4, Nonprofit organization: coefficient/SE/star check.",
+      "computation": "Assume full-rank conventional OLS with 51 slopes and residual df=538; magnitude one-tail diagnostic p=Pr(t_df >= |b|/s). |t| interval [2.21081081, 2.24590164], p interval [0.0125576753, 0.0137344129]. Printed rule p < 0.05 (one-tailed). Consistent means there exists a rounded value satisfying the printed inequality; it does not certify direction or a prespecified test.",
+      "result": "consistent",
+      "rounding_interval_used": "b in [-0.2055, -0.2045], SE in [0.0915, 0.0925]; all three-decimal values vary independently over half-unit intervals.",
+      "locator": {
+        "doc_id": "D1",
+        "pdf_page": 14,
+        "where": "Table 3; model 4; Nonprofit organization; coef"
+      }
+    },
+    {
+      "check_id": "F051",
+      "type": "coef_se_stars",
+      "description": "T0101 Table 3 model 4, Subsidiary: coefficient/SE/star check.",
+      "computation": "Assume full-rank conventional OLS with 51 slopes and residual df=538; magnitude one-tail diagnostic p=Pr(t_df >= |b|/s). |t| interval [1.27338129, 1.30656934], p interval [0.0959586327, 0.101716338]. Printed rule p < 0.10 (one-tailed). Consistent means there exists a rounded value satisfying the printed inequality; it does not certify direction or a prespecified test. Interval crosses a displayed significance boundary; rounded point estimates alone cannot decide.",
+      "result": "consistent",
+      "rounding_interval_used": "b in [0.0885, 0.0895], SE in [0.0685, 0.0695]; all three-decimal values vary independently over half-unit intervals.",
+      "locator": {
+        "doc_id": "D1",
+        "pdf_page": 14,
+        "where": "Table 3; model 4; Subsidiary; coef"
+      }
+    },
+    {
+      "check_id": "F052",
+      "type": "coef_se_stars",
+      "description": "T0103 Table 3 model 4, Log of total employment: coefficient/SE/star check.",
+      "computation": "Assume full-rank conventional OLS with 51 slopes and residual df=538; magnitude one-tail diagnostic p=Pr(t_df >= |b|/s). |t| interval [1.07843137, 1.16326531], p interval [0.122618776, 0.140662283]. Printed rule p >= .10 (one-tailed). Consistent means there exists a rounded value satisfying the printed inequality; it does not certify direction or a prespecified test.",
+      "result": "consistent",
+      "rounding_interval_used": "b in [-0.0285, -0.0275], SE in [0.0245, 0.0255]; all three-decimal values vary independently over half-unit intervals.",
+      "locator": {
+        "doc_id": "D1",
+        "pdf_page": 14,
+        "where": "Table 3; model 4; Log of total employment; coef"
+      }
+    },
+    {
+      "check_id": "F053",
+      "type": "coef_se_stars",
+      "description": "T0105 Table 3 model 4, Log of firm age: coefficient/SE/star check.",
+      "computation": "Assume full-rank conventional OLS with 51 slopes and residual df=538; magnitude one-tail diagnostic p=Pr(t_df >= |b|/s). |t| interval [2.8490566, 3], p interval [0.00141243192, 0.00227640877]. Printed rule p < 0.01 (one-tailed). Consistent means there exists a rounded value satisfying the printed inequality; it does not certify direction or a prespecified test.",
+      "result": "consistent",
+      "rounding_interval_used": "b in [-0.0765, -0.0755], SE in [0.0255, 0.0265]; all three-decimal values vary independently over half-unit intervals.",
+      "locator": {
+        "doc_id": "D1",
+        "pdf_page": 14,
+        "where": "Table 3; model 4; Log of firm age; coef"
+      }
+    },
+    {
+      "check_id": "F054",
+      "type": "coef_se_stars",
+      "description": "T0107 Table 3 model 4, Percent managers: coefficient/SE/star check.",
+      "computation": "Assume full-rank conventional OLS with 51 slopes and residual df=538; magnitude one-tail diagnostic p=Pr(t_df >= |b|/s). |t| interval [1.77090909, 1.79120879], p interval [0.0369108907, 0.0385709823]. Printed rule p < 0.10 (one-tailed). Consistent means there exists a rounded value satisfying the printed inequality; it does not certify direction or a prespecified test. Entire p interval is below the next stricter star threshold: under-marked under the customary strongest-star convention.",
+      "result": "consistent",
+      "rounding_interval_used": "b in [-0.2445, -0.2435], SE in [0.1365, 0.1375]; all three-decimal values vary independently over half-unit intervals.",
+      "locator": {
+        "doc_id": "D1",
+        "pdf_page": 14,
+        "where": "Table 3; model 4; Percent managers; coef"
+      }
+    },
+    {
+      "check_id": "F055",
+      "type": "coef_se_stars",
+      "description": "T0109 Table 3 model 4, Union pressure: coefficient/SE/star check.",
+      "computation": "Assume full-rank conventional OLS with 51 slopes and residual df=538; magnitude one-tail diagnostic p=Pr(t_df >= |b|/s). |t| interval [0.81981982, 0.853211009], p interval [0.196960997, 0.206340938]. Printed rule p >= .10 (one-tailed). Consistent means there exists a rounded value satisfying the printed inequality; it does not certify direction or a prespecified test.",
+      "result": "consistent",
+      "rounding_interval_used": "b in [-0.0465, -0.0455], SE in [0.0545, 0.0555]; all three-decimal values vary independently over half-unit intervals.",
+      "locator": {
+        "doc_id": "D1",
+        "pdf_page": 14,
+        "where": "Table 3; model 4; Union pressure; coef"
+      }
+    },
+    {
+      "check_id": "F056",
+      "type": "coef_se_stars",
+      "description": "T0111 Table 3 model 4, Product: coefficient/SE/star check.",
+      "computation": "Assume full-rank conventional OLS with 51 slopes and residual df=538; magnitude one-tail diagnostic p=Pr(t_df >= |b|/s). |t| interval [0.434599156, 0.446808511], p interval [0.327596565, 0.332013833]. Printed rule p >= .10 (one-tailed). Consistent means there exists a rounded value satisfying the printed inequality; it does not certify direction or a prespecified test.",
+      "result": "consistent",
+      "rounding_interval_used": "b in [0.0515, 0.0525], SE in [0.1175, 0.1185]; all three-decimal values vary independently over half-unit intervals.",
+      "locator": {
+        "doc_id": "D1",
+        "pdf_page": 14,
+        "where": "Table 3; model 4; Product; coef"
+      }
+    },
+    {
+      "check_id": "F057",
+      "type": "coef_se_stars",
+      "description": "T0113 Table 3 model 4, Service: coefficient/SE/star check.",
+      "computation": "Assume full-rank conventional OLS with 51 slopes and residual df=538; magnitude one-tail diagnostic p=Pr(t_df >= |b|/s). |t| interval [0.654822335, 0.671794872], p interval [0.25100133, 0.256431002]. Printed rule p >= .10 (one-tailed). Consistent means there exists a rounded value satisfying the printed inequality; it does not certify direction or a prespecified test.",
+      "result": "consistent",
+      "rounding_interval_used": "b in [-0.0655, -0.0645], SE in [0.0975, 0.0985]; all three-decimal values vary independently over half-unit intervals.",
+      "locator": {
+        "doc_id": "D1",
+        "pdf_page": 14,
+        "where": "Table 3; model 4; Service; coef"
+      }
+    },
+    {
+      "check_id": "F058",
+      "type": "coef_se_stars",
+      "description": "T0115 Table 3 model 4, Competitive pressure: coefficient/SE/star check.",
+      "computation": "Assume full-rank conventional OLS with 51 slopes and residual df=538; magnitude one-tail diagnostic p=Pr(t_df >= |b|/s). |t| interval [0.0588235294, 0.0769230769], p interval [0.469356668, 0.476557255]. Printed rule p >= .10 (one-tailed). Consistent means there exists a rounded value satisfying the printed inequality; it does not certify direction or a prespecified test.",
+      "result": "consistent",
+      "rounding_interval_used": "b in [-0.0045, -0.0035], SE in [0.0585, 0.0595]; all three-decimal values vary independently over half-unit intervals.",
+      "locator": {
+        "doc_id": "D1",
+        "pdf_page": 14,
+        "where": "Table 3; model 4; Competitive pressure; coef"
+      }
+    },
+    {
+      "check_id": "F059",
+      "type": "coef_se_stars",
+      "description": "T0117 Table 3 model 5, Constant: coefficient/SE/star check.",
+      "computation": "Assume full-rank conventional OLS with 51 slopes and residual df=538; magnitude one-tail diagnostic p=Pr(t_df >= |b|/s). |t| interval [6.63174603, 6.64793213], p interval [3.65497346e-11, 4.04537998e-11]. Printed rule p < 0.01 (one-tailed). Consistent means there exists a rounded value satisfying the printed inequality; it does not certify direction or a prespecified test.",
+      "result": "consistent",
+      "rounding_interval_used": "b in [3.1335, 3.1345], SE in [0.4715, 0.4725]; all three-decimal values vary independently over half-unit intervals.",
+      "locator": {
+        "doc_id": "D1",
+        "pdf_page": 14,
+        "where": "Table 3; model 5; Constant; constant"
+      }
+    },
+    {
+      "check_id": "F060",
+      "type": "coef_se_stars",
+      "description": "T0119 Table 3 model 5, Staffing selectivity: coefficient/SE/star check.",
+      "computation": "Assume full-rank conventional OLS with 51 slopes and residual df=538; magnitude one-tail diagnostic p=Pr(t_df >= |b|/s). |t| interval [0.185185185, 0.215189873], p interval [0.414850417, 0.42657679]. Printed rule p >= .10 (one-tailed). Consistent means there exists a rounded value satisfying the printed inequality; it does not certify direction or a prespecified test. Under the positive H1/H2 alternative, p is the opposite tail (>0.5); a negative slope cannot support a positive hypothesis.",
+      "result": "consistent",
+      "rounding_interval_used": "b in [-0.0085, -0.0075], SE in [0.0395, 0.0405]; all three-decimal values vary independently over half-unit intervals.",
+      "locator": {
+        "doc_id": "D1",
+        "pdf_page": 14,
+        "where": "Table 3; model 5; Staffing selectivity; coef"
+      }
+    },
+    {
+      "check_id": "F061",
+      "type": "coef_se_stars",
+      "description": "T0121 Table 3 model 5, Training: coefficient/SE/star check.",
+      "computation": "Assume full-rank conventional OLS with 51 slopes and residual df=538; magnitude one-tail diagnostic p=Pr(t_df >= |b|/s). |t| interval [2.72839506, 2.82278481], p interval [0.00246853709, 0.00328622095]. Printed rule p < 0.01 (one-tailed). Consistent means there exists a rounded value satisfying the printed inequality; it does not certify direction or a prespecified test.",
+      "result": "consistent",
+      "rounding_interval_used": "b in [0.1105, 0.1115], SE in [0.0395, 0.0405]; all three-decimal values vary independently over half-unit intervals.",
+      "locator": {
+        "doc_id": "D1",
+        "pdf_page": 14,
+        "where": "Table 3; model 5; Training; coef"
+      }
+    },
+    {
+      "check_id": "F062",
+      "type": "coef_se_stars",
+      "description": "T0123 Table 3 model 5, Incentive compensation: coefficient/SE/star check.",
+      "computation": "Assume full-rank conventional OLS with 51 slopes and residual df=538; magnitude one-tail diagnostic p=Pr(t_df >= |b|/s). |t| interval [1.14035088, 1.16568047], p interval [0.122130092, 0.127323772]. Printed rule p >= .10 (one-tailed). Consistent means there exists a rounded value satisfying the printed inequality; it does not certify direction or a prespecified test.",
+      "result": "consistent",
+      "rounding_interval_used": "b in [0.0975, 0.0985], SE in [0.0845, 0.0855]; all three-decimal values vary independently over half-unit intervals.",
+      "locator": {
+        "doc_id": "D1",
+        "pdf_page": 14,
+        "where": "Table 3; model 5; Incentive compensation; coef"
+      }
+    },
+    {
+      "check_id": "F063",
+      "type": "coef_se_stars",
+      "description": "T0125 Table 3 model 5, Grievance procedure: coefficient/SE/star check.",
+      "computation": "Assume full-rank conventional OLS with 51 slopes and residual df=538; magnitude one-tail diagnostic p=Pr(t_df >= |b|/s). |t| interval [0.0389170897, 0.0424448217], p interval [0.483079923, 0.484485464]. Printed rule p >= .10 (one-tailed). Consistent means there exists a rounded value satisfying the printed inequality; it does not certify direction or a prespecified test. Under the positive H1/H2 alternative, p is the opposite tail (>0.5); a negative slope cannot support a positive hypothesis.",
+      "result": "consistent",
+      "rounding_interval_used": "b in [-0.0125, -0.0115], SE in [0.2945, 0.2955]; all three-decimal values vary independently over half-unit intervals.",
+      "locator": {
+        "doc_id": "D1",
+        "pdf_page": 14,
+        "where": "Table 3; model 5; Grievance procedure; coef"
+      }
+    },
+    {
+      "check_id": "F064",
+      "type": "coef_se_stars",
+      "description": "T0127 Table 3 model 5, Decentralized decision making: coefficient/SE/star check.",
+      "computation": "Assume full-rank conventional OLS with 51 slopes and residual df=538; magnitude one-tail diagnostic p=Pr(t_df >= |b|/s). |t| interval [0.567839196, 0.583756345], p interval [0.279814453, 0.285190527]. Printed rule p >= .10 (one-tailed). Consistent means there exists a rounded value satisfying the printed inequality; it does not certify direction or a prespecified test.",
+      "result": "consistent",
+      "rounding_interval_used": "b in [0.0565, 0.0575], SE in [0.0985, 0.0995]; all three-decimal values vary independently over half-unit intervals.",
+      "locator": {
+        "doc_id": "D1",
+        "pdf_page": 14,
+        "where": "Table 3; model 5; Decentralized decision making; coef"
+      }
+    },
+    {
+      "check_id": "F065",
+      "type": "coef_se_stars",
+      "description": "T0129 Table 3 model 5, Vertical hierarchy: coefficient/SE/star check.",
+      "computation": "Assume full-rank conventional OLS with 51 slopes and residual df=538; magnitude one-tail diagnostic p=Pr(t_df >= |b|/s). |t| interval [0.867374005, 0.877333333], p interval [0.190348605, 0.193061909]. Printed rule p >= .10 (one-tailed). Consistent means there exists a rounded value satisfying the printed inequality; it does not certify direction or a prespecified test.",
+      "result": "consistent",
+      "rounding_interval_used": "b in [0.1635, 0.1645], SE in [0.1875, 0.1885]; all three-decimal values vary independently over half-unit intervals.",
+      "locator": {
+        "doc_id": "D1",
+        "pdf_page": 14,
+        "where": "Table 3; model 5; Vertical hierarchy; coef"
+      }
+    },
+    {
+      "check_id": "F066",
+      "type": "coef_se_stars",
+      "description": "T0131 Table 3 model 5, Training × staffing: coefficient/SE/star check.",
+      "computation": "Assume full-rank conventional OLS with 51 slopes and residual df=538; magnitude one-tail diagnostic p=Pr(t_df >= |b|/s). |t| interval [1.57142857, 1.62921348], p interval [0.0519265911, 0.0583355142]. Printed rule p < 0.10 (one-tailed). Consistent means there exists a rounded value satisfying the printed inequality; it does not certify direction or a prespecified test.",
+      "result": "consistent",
+      "rounding_interval_used": "b in [0.0715, 0.0725], SE in [0.0445, 0.0455]; all three-decimal values vary independently over half-unit intervals.",
+      "locator": {
+        "doc_id": "D1",
+        "pdf_page": 14,
+        "where": "Table 3; model 5; Training × staffing; coef"
+      }
+    },
+    {
+      "check_id": "F067",
+      "type": "coef_se_stars",
+      "description": "T0133 Table 3 model 5, Grievance × incentive compensation: coefficient/SE/star check.",
+      "computation": "Assume full-rank conventional OLS with 51 slopes and residual df=538; magnitude one-tail diagnostic p=Pr(t_df >= |b|/s). |t| interval [0.275362319, 0.287804878], p interval [0.386803467, 0.391571807]. Printed rule p >= .10 (one-tailed). Consistent means there exists a rounded value satisfying the printed inequality; it does not certify direction or a prespecified test.",
+      "result": "consistent",
+      "rounding_interval_used": "b in [0.0285, 0.0295], SE in [0.1025, 0.1035]; all three-decimal values vary independently over half-unit intervals.",
+      "locator": {
+        "doc_id": "D1",
+        "pdf_page": 14,
+        "where": "Table 3; model 5; Grievance × incentive compensation; coef"
+      }
+    },
+    {
+      "check_id": "F068",
+      "type": "coef_se_stars",
+      "description": "T0135 Table 3 model 5, Vertical hierarchy × decentralized decision making: coefficient/SE/star check.",
+      "computation": "Assume full-rank conventional OLS with 51 slopes and residual df=538; magnitude one-tail diagnostic p=Pr(t_df >= |b|/s). |t| interval [0.262135922, 0.287128713], p interval [0.38706216, 0.396658495]. Printed rule p >= .10 (one-tailed). Consistent means there exists a rounded value satisfying the printed inequality; it does not certify direction or a prespecified test. Under the positive H1/H2 alternative, p is the opposite tail (>0.5); a negative slope cannot support a positive hypothesis.",
+      "result": "consistent",
+      "rounding_interval_used": "b in [-0.0145, -0.0135], SE in [0.0505, 0.0515]; all three-decimal values vary independently over half-unit intervals.",
+      "locator": {
+        "doc_id": "D1",
+        "pdf_page": 14,
+        "where": "Table 3; model 5; Vertical hierarchy × decentralized decision making; coef"
+      }
+    },
+    {
+      "check_id": "F069",
+      "type": "coef_se_stars",
+      "description": "T0137 Table 3 model 5, Nonprofit organization: coefficient/SE/star check.",
+      "computation": "Assume full-rank conventional OLS with 51 slopes and residual df=538; magnitude one-tail diagnostic p=Pr(t_df >= |b|/s). |t| interval [2.16756757, 2.20218579], p interval [0.014037845, 0.0153147388]. Printed rule p < 0.05 (one-tailed). Consistent means there exists a rounded value satisfying the printed inequality; it does not certify direction or a prespecified test.",
+      "result": "consistent",
+      "rounding_interval_used": "b in [-0.2015, -0.2005], SE in [0.0915, 0.0925]; all three-decimal values vary independently over half-unit intervals.",
+      "locator": {
+        "doc_id": "D1",
+        "pdf_page": 14,
+        "where": "Table 3; model 5; Nonprofit organization; coef"
+      }
+    },
+    {
+      "check_id": "F070",
+      "type": "coef_se_stars",
+      "description": "T0139 Table 3 model 5, Subsidiary: coefficient/SE/star check.",
+      "computation": "Assume full-rank conventional OLS with 51 slopes and residual df=538; magnitude one-tail diagnostic p=Pr(t_df >= |b|/s). |t| interval [1.55474453, 1.59259259], p interval [0.0559194743, 0.0602974794]. Printed rule p < 0.10 (one-tailed). Consistent means there exists a rounded value satisfying the printed inequality; it does not certify direction or a prespecified test.",
+      "result": "consistent",
+      "rounding_interval_used": "b in [-0.1075, -0.1065], SE in [0.0675, 0.0685]; all three-decimal values vary independently over half-unit intervals.",
+      "locator": {
+        "doc_id": "D1",
+        "pdf_page": 14,
+        "where": "Table 3; model 5; Subsidiary; coef"
+      }
+    },
+    {
+      "check_id": "F071",
+      "type": "coef_se_stars",
+      "description": "T0141 Table 3 model 5, Log of total employment: coefficient/SE/star check.",
+      "computation": "Assume full-rank conventional OLS with 51 slopes and residual df=538; magnitude one-tail diagnostic p=Pr(t_df >= |b|/s). |t| interval [1.89795918, 2.0212766], p interval [0.0218729059, 0.0291182222]. Printed rule p < 0.05 (one-tailed). Consistent means there exists a rounded value satisfying the printed inequality; it does not certify direction or a prespecified test.",
+      "result": "consistent",
+      "rounding_interval_used": "b in [-0.0475, -0.0465], SE in [0.0235, 0.0245]; all three-decimal values vary independently over half-unit intervals.",
+      "locator": {
+        "doc_id": "D1",
+        "pdf_page": 14,
+        "where": "Table 3; model 5; Log of total employment; coef"
+      }
+    },
+    {
+      "check_id": "F072",
+      "type": "coef_se_stars",
+      "description": "T0143 Table 3 model 5, Log of firm age: coefficient/SE/star check.",
+      "computation": "Assume full-rank conventional OLS with 51 slopes and residual df=538; magnitude one-tail diagnostic p=Pr(t_df >= |b|/s). |t| interval [2.9245283, 3.07843137], p interval [0.00109352532, 0.00179761114]. Printed rule p < 0.01 (one-tailed). Consistent means there exists a rounded value satisfying the printed inequality; it does not certify direction or a prespecified test.",
+      "result": "consistent",
+      "rounding_interval_used": "b in [-0.0785, -0.0775], SE in [0.0255, 0.0265]; all three-decimal values vary independently over half-unit intervals.",
+      "locator": {
+        "doc_id": "D1",
+        "pdf_page": 14,
+        "where": "Table 3; model 5; Log of firm age; coef"
+      }
+    },
+    {
+      "check_id": "F073",
+      "type": "coef_se_stars",
+      "description": "T0145 Table 3 model 5, Percent managers: coefficient/SE/star check.",
+      "computation": "Assume full-rank conventional OLS with 51 slopes and residual df=538; magnitude one-tail diagnostic p=Pr(t_df >= |b|/s). |t| interval [1.52398524, 1.54275093], p interval [0.0617395927, 0.0640499888]. Printed rule p < 0.10 (one-tailed). Consistent means there exists a rounded value satisfying the printed inequality; it does not certify direction or a prespecified test.",
+      "result": "consistent",
+      "rounding_interval_used": "b in [-0.2075, -0.2065], SE in [0.1345, 0.1355]; all three-decimal values vary independently over half-unit intervals.",
+      "locator": {
+        "doc_id": "D1",
+        "pdf_page": 14,
+        "where": "Table 3; model 5; Percent managers; coef"
+      }
+    },
+    {
+      "check_id": "F074",
+      "type": "coef_se_stars",
+      "description": "T0147 Table 3 model 5, Union pressure: coefficient/SE/star check.",
+      "computation": "Assume full-rank conventional OLS with 51 slopes and residual df=538; magnitude one-tail diagnostic p=Pr(t_df >= |b|/s). |t| interval [0.90990991, 0.944954128], p interval [0.172553239, 0.181638741]. Printed rule p >= .10 (one-tailed). Consistent means there exists a rounded value satisfying the printed inequality; it does not certify direction or a prespecified test.",
+      "result": "consistent",
+      "rounding_interval_used": "b in [-0.0515, -0.0505], SE in [0.0545, 0.0555]; all three-decimal values vary independently over half-unit intervals.",
+      "locator": {
+        "doc_id": "D1",
+        "pdf_page": 14,
+        "where": "Table 3; model 5; Union pressure; coef"
+      }
+    },
+    {
+      "check_id": "F075",
+      "type": "coef_se_stars",
+      "description": "T0149 Table 3 model 5, Product: coefficient/SE/star check.",
+      "computation": "Assume full-rank conventional OLS with 51 slopes and residual df=538; magnitude one-tail diagnostic p=Pr(t_df >= |b|/s). |t| interval [0.506382979, 0.519313305], p interval [0.301877922, 0.306397634]. Printed rule p >= .10 (one-tailed). Consistent means there exists a rounded value satisfying the printed inequality; it does not certify direction or a prespecified test.",
+      "result": "consistent",
+      "rounding_interval_used": "b in [0.0595, 0.0605], SE in [0.1165, 0.1175]; all three-decimal values vary independently over half-unit intervals.",
+      "locator": {
+        "doc_id": "D1",
+        "pdf_page": 14,
+        "where": "Table 3; model 5; Product; coef"
+      }
+    },
+    {
+      "check_id": "F076",
+      "type": "coef_se_stars",
+      "description": "T0151 Table 3 model 5, Service: coefficient/SE/star check.",
+      "computation": "Assume full-rank conventional OLS with 51 slopes and residual df=538; magnitude one-tail diagnostic p=Pr(t_df >= |b|/s). |t| interval [0.796954315, 0.815384615], p interval [0.207606505, 0.212914562]. Printed rule p >= .10 (one-tailed). Consistent means there exists a rounded value satisfying the printed inequality; it does not certify direction or a prespecified test.",
+      "result": "consistent",
+      "rounding_interval_used": "b in [-0.0795, -0.0785], SE in [0.0975, 0.0985]; all three-decimal values vary independently over half-unit intervals.",
+      "locator": {
+        "doc_id": "D1",
+        "pdf_page": 14,
+        "where": "Table 3; model 5; Service; coef"
+      }
+    },
+    {
+      "check_id": "F077",
+      "type": "coef_se_stars",
+      "description": "T0153 Table 3 model 5, Competitive pressure: coefficient/SE/star check.",
+      "computation": "Assume full-rank conventional OLS with 51 slopes and residual df=538; magnitude one-tail diagnostic p=Pr(t_df >= |b|/s). |t| interval [0.00840336134, 0.0256410256], p interval [0.489776585, 0.496649141]. Printed rule p >= .10 (one-tailed). Consistent means there exists a rounded value satisfying the printed inequality; it does not certify direction or a prespecified test.",
+      "result": "consistent",
+      "rounding_interval_used": "b in [0.0005, 0.0015], SE in [0.0585, 0.0595]; all three-decimal values vary independently over half-unit intervals.",
+      "locator": {
+        "doc_id": "D1",
+        "pdf_page": 14,
+        "where": "Table 3; model 5; Competitive pressure; coef"
+      }
+    },
+    {
+      "check_id": "F078",
+      "type": "coef_se_stars",
+      "description": "T0155 Table 4 model 6, Staffing selectivity: coefficient/SE/star check.",
+      "computation": "Assume full-rank conventional OLS with 42 slopes and residual df=330; magnitude one-tail diagnostic p=Pr(t_df >= |b|/s). |t| interval [3.03603604, 3.11009174], p interval [0.00101665291, 0.0012939391]. Printed rule p < 0.01 (one-tailed). Consistent means there exists a rounded value satisfying the printed inequality; it does not certify direction or a prespecified test.",
+      "result": "consistent",
+      "rounding_interval_used": "b in [0.1685, 0.1695], SE in [0.0545, 0.0555]; all three-decimal values vary independently over half-unit intervals.",
+      "locator": {
+        "doc_id": "D1",
+        "pdf_page": 16,
+        "where": "Table 4; model 6; Staffing selectivity; coef"
+      }
+    },
+    {
+      "check_id": "F079",
+      "type": "coef_se_stars",
+      "description": "T0157 Table 4 model 6, Training: coefficient/SE/star check.",
+      "computation": "Assume full-rank conventional OLS with 42 slopes and residual df=330; magnitude one-tail diagnostic p=Pr(t_df >= |b|/s). |t| interval [1.97391304, 2.02654867], p interval [0.0217562261, 0.0246126812]. Printed rule p < 0.05 (one-tailed). Consistent means there exists a rounded value satisfying the printed inequality; it does not certify direction or a prespecified test.",
+      "result": "consistent",
+      "rounding_interval_used": "b in [0.1135, 0.1145], SE in [0.0565, 0.0575]; all three-decimal values vary independently over half-unit intervals.",
+      "locator": {
+        "doc_id": "D1",
+        "pdf_page": 16,
+        "where": "Table 4; model 6; Training; coef"
+      }
+    },
+    {
+      "check_id": "F080",
+      "type": "coef_se_stars",
+      "description": "T0159 Table 4 model 6, Incentive compensation: coefficient/SE/star check.",
+      "computation": "Assume full-rank conventional OLS with 42 slopes and residual df=330; magnitude one-tail diagnostic p=Pr(t_df >= |b|/s). |t| interval [1.82208589, 1.85714286], p interval [0.0320908081, 0.0346734807]. Printed rule p < 0.05 (one-tailed). Consistent means there exists a rounded value satisfying the printed inequality; it does not certify direction or a prespecified test.",
+      "result": "consistent",
+      "rounding_interval_used": "b in [0.1485, 0.1495], SE in [0.0805, 0.0815]; all three-decimal values vary independently over half-unit intervals.",
+      "locator": {
+        "doc_id": "D1",
+        "pdf_page": 16,
+        "where": "Table 4; model 6; Incentive compensation; coef"
+      }
+    },
+    {
+      "check_id": "F081",
+      "type": "coef_se_stars",
+      "description": "T0161 Table 4 model 6, Grievance procedure: coefficient/SE/star check.",
+      "computation": "Assume full-rank conventional OLS with 42 slopes and residual df=330; magnitude one-tail diagnostic p=Pr(t_df >= |b|/s). |t| interval [0.789473684, 0.806763285], p interval [0.210191961, 0.215201034]. Printed rule p >= .10 (one-tailed). Consistent means there exists a rounded value satisfying the printed inequality; it does not certify direction or a prespecified test.",
+      "result": "consistent",
+      "rounding_interval_used": "b in [0.0825, 0.0835], SE in [0.1035, 0.1045]; all three-decimal values vary independently over half-unit intervals.",
+      "locator": {
+        "doc_id": "D1",
+        "pdf_page": 16,
+        "where": "Table 4; model 6; Grievance procedure; coef"
+      }
+    },
+    {
+      "check_id": "F082",
+      "type": "coef_se_stars",
+      "description": "T0163 Table 4 model 6, Decentralized decision making: coefficient/SE/star check.",
+      "computation": "Assume full-rank conventional OLS with 42 slopes and residual df=330; magnitude one-tail diagnostic p=Pr(t_df >= |b|/s). |t| interval [0.756097561, 0.785123967], p interval [0.216472089, 0.225065048]. Printed rule p >= .10 (one-tailed). Consistent means there exists a rounded value satisfying the printed inequality; it does not certify direction or a prespecified test. Under the positive H1/H2 alternative, p is the opposite tail (>0.5); a negative slope cannot support a positive hypothesis.",
+      "result": "consistent",
+      "rounding_interval_used": "b in [-0.0475, -0.0465], SE in [0.0605, 0.0615]; all three-decimal values vary independently over half-unit intervals.",
+      "locator": {
+        "doc_id": "D1",
+        "pdf_page": 16,
+        "where": "Table 4; model 6; Decentralized decision making; coef"
+      }
+    },
+    {
+      "check_id": "F083",
+      "type": "coef_se_stars",
+      "description": "T0165 Table 4 model 6, Internal labor market: coefficient/SE/star check.",
+      "computation": "Assume full-rank conventional OLS with 42 slopes and residual df=330; magnitude one-tail diagnostic p=Pr(t_df >= |b|/s). |t| interval [1.80495356, 1.82242991], p interval [0.0346473274, 0.0359966818]. Printed rule p < 0.05 (one-tailed). Consistent means there exists a rounded value satisfying the printed inequality; it does not certify direction or a prespecified test.",
+      "result": "consistent",
+      "rounding_interval_used": "b in [0.2915, 0.2925], SE in [0.1605, 0.1615]; all three-decimal values vary independently over half-unit intervals.",
+      "locator": {
+        "doc_id": "D1",
+        "pdf_page": 16,
+        "where": "Table 4; model 6; Internal labor market; coef"
+      }
+    },
+    {
+      "check_id": "F084",
+      "type": "coef_se_stars",
+      "description": "T0167 Table 4 model 6, Vertical hierarchy: coefficient/SE/star check.",
+      "computation": "Assume full-rank conventional OLS with 42 slopes and residual df=330; magnitude one-tail diagnostic p=Pr(t_df >= |b|/s). |t| interval [1.52121212, 1.55214724], p interval [0.0607927374, 0.0645820974]. Printed rule p < 0.10 (one-tailed). Consistent means there exists a rounded value satisfying the printed inequality; it does not certify direction or a prespecified test.",
+      "result": "consistent",
+      "rounding_interval_used": "b in [0.1255, 0.1265], SE in [0.0815, 0.0825]; all three-decimal values vary independently over half-unit intervals.",
+      "locator": {
+        "doc_id": "D1",
+        "pdf_page": 16,
+        "where": "Table 4; model 6; Vertical hierarchy; coef"
+      }
+    },
+    {
+      "check_id": "F085",
+      "type": "coef_se_stars",
+      "description": "T0169 Table 4 model 7, Constant: coefficient/SE/star check.",
+      "computation": "Assume full-rank conventional OLS with 47 slopes and residual df=325; magnitude one-tail diagnostic p=Pr(t_df >= |b|/s). |t| interval [6.6897561, 6.70478983], p interval [4.46889289e-11, 4.89149411e-11]. Printed rule p < 0.01 (one-tailed). Consistent means there exists a rounded value satisfying the printed inequality; it does not certify direction or a prespecified test.",
+      "result": "consistent",
+      "rounding_interval_used": "b in [3.4285, 3.4295], SE in [0.5115, 0.5125]; all three-decimal values vary independently over half-unit intervals.",
+      "locator": {
+        "doc_id": "D1",
+        "pdf_page": 16,
+        "where": "Table 4; model 7; Constant; constant"
+      }
+    },
+    {
+      "check_id": "F086",
+      "type": "coef_se_stars",
+      "description": "T0171 Table 4 model 7, Staffing selectivity: coefficient/SE/star check.",
+      "computation": "Assume full-rank conventional OLS with 47 slopes and residual df=325; magnitude one-tail diagnostic p=Pr(t_df >= |b|/s). |t| interval [2.51304348, 2.57522124], p interval [0.00522968656, 0.00622647765]. Printed rule p < 0.01 (one-tailed). Consistent means there exists a rounded value satisfying the printed inequality; it does not certify direction or a prespecified test.",
+      "result": "consistent",
+      "rounding_interval_used": "b in [0.1445, 0.1455], SE in [0.0565, 0.0575]; all three-decimal values vary independently over half-unit intervals.",
+      "locator": {
+        "doc_id": "D1",
+        "pdf_page": 16,
+        "where": "Table 4; model 7; Staffing selectivity; coef"
+      }
+    },
+    {
+      "check_id": "F087",
+      "type": "coef_se_stars",
+      "description": "T0173 Table 4 model 7, Training: coefficient/SE/star check.",
+      "computation": "Assume full-rank conventional OLS with 47 slopes and residual df=325; magnitude one-tail diagnostic p=Pr(t_df >= |b|/s). |t| interval [1.19834711, 1.23529412], p interval [0.108806646, 0.115827515]. Printed rule p >= .10 (one-tailed). Consistent means there exists a rounded value satisfying the printed inequality; it does not certify direction or a prespecified test.",
+      "result": "consistent",
+      "rounding_interval_used": "b in [0.0725, 0.0735], SE in [0.0595, 0.0605]; all three-decimal values vary independently over half-unit intervals.",
+      "locator": {
+        "doc_id": "D1",
+        "pdf_page": 16,
+        "where": "Table 4; model 7; Training; coef"
+      }
+    },
+    {
+      "check_id": "F088",
+      "type": "coef_se_stars",
+      "description": "T0175 Table 4 model 7, Incentive compensation: coefficient/SE/star check.",
+      "computation": "Assume full-rank conventional OLS with 47 slopes and residual df=325; magnitude one-tail diagnostic p=Pr(t_df >= |b|/s). |t| interval [1.52760736, 1.55900621], p interval [0.05998406, 0.0637913358]. Printed rule p < 0.10 (one-tailed). Consistent means there exists a rounded value satisfying the printed inequality; it does not certify direction or a prespecified test.",
+      "result": "consistent",
+      "rounding_interval_used": "b in [0.1245, 0.1255], SE in [0.0805, 0.0815]; all three-decimal values vary independently over half-unit intervals.",
+      "locator": {
+        "doc_id": "D1",
+        "pdf_page": 16,
+        "where": "Table 4; model 7; Incentive compensation; coef"
+      }
+    },
+    {
+      "check_id": "F089",
+      "type": "coef_se_stars",
+      "description": "T0177 Table 4 model 7, Grievance procedure: coefficient/SE/star check.",
+      "computation": "Assume full-rank conventional OLS with 47 slopes and residual df=325; magnitude one-tail diagnostic p=Pr(t_df >= |b|/s). |t| interval [0.317535545, 0.330143541], p interval [0.370752105, 0.37552059]. Printed rule p >= .10 (one-tailed). Consistent means there exists a rounded value satisfying the printed inequality; it does not certify direction or a prespecified test.",
+      "result": "consistent",
+      "rounding_interval_used": "b in [0.0335, 0.0345], SE in [0.1045, 0.1055]; all three-decimal values vary independently over half-unit intervals.",
+      "locator": {
+        "doc_id": "D1",
+        "pdf_page": 16,
+        "where": "Table 4; model 7; Grievance procedure; coef"
+      }
+    },
+    {
+      "check_id": "F090",
+      "type": "coef_se_stars",
+      "description": "T0179 Table 4 model 7, Decentralized decision making: coefficient/SE/star check.",
+      "computation": "Assume full-rank conventional OLS with 47 slopes and residual df=325; magnitude one-tail diagnostic p=Pr(t_df >= |b|/s). |t| interval [1.14634146, 1.18181818], p interval [0.119070924, 0.126248597]. Printed rule p >= .10 (one-tailed). Consistent means there exists a rounded value satisfying the printed inequality; it does not certify direction or a prespecified test. Under the positive H1/H2 alternative, p is the opposite tail (>0.5); a negative slope cannot support a positive hypothesis.",
+      "result": "consistent",
+      "rounding_interval_used": "b in [-0.0715, -0.0705], SE in [0.0605, 0.0615]; all three-decimal values vary independently over half-unit intervals.",
+      "locator": {
+        "doc_id": "D1",
+        "pdf_page": 16,
+        "where": "Table 4; model 7; Decentralized decision making; coef"
+      }
+    },
+    {
+      "check_id": "F091",
+      "type": "coef_se_stars",
+      "description": "T0181 Table 4 model 7, Internal labor market: coefficient/SE/star check.",
+      "computation": "Assume full-rank conventional OLS with 47 slopes and residual df=325; magnitude one-tail diagnostic p=Pr(t_df >= |b|/s). |t| interval [0.797014925, 0.807807808], p interval [0.209896039, 0.213012115]. Printed rule p >= .10 (one-tailed). Consistent means there exists a rounded value satisfying the printed inequality; it does not certify direction or a prespecified test.",
+      "result": "consistent",
+      "rounding_interval_used": "b in [0.1335, 0.1345], SE in [0.1665, 0.1675]; all three-decimal values vary independently over half-unit intervals.",
+      "locator": {
+        "doc_id": "D1",
+        "pdf_page": 16,
+        "where": "Table 4; model 7; Internal labor market; coef"
+      }
+    },
+    {
+      "check_id": "F092",
+      "type": "coef_se_stars",
+      "description": "T0183 Table 4 model 7, Subsidiary: coefficient/SE/star check.",
+      "computation": "Assume full-rank conventional OLS with 47 slopes and residual df=325; magnitude one-tail diagnostic p=Pr(t_df >= |b|/s). |t| interval [0.436619718, 0.450236967], p interval [0.326419882, 0.331338543]. Printed rule p >= .10 (one-tailed). Consistent means there exists a rounded value satisfying the printed inequality; it does not certify direction or a prespecified test.",
+      "result": "consistent",
+      "rounding_interval_used": "b in [-0.0475, -0.0465], SE in [0.1055, 0.1065]; all three-decimal values vary independently over half-unit intervals.",
+      "locator": {
+        "doc_id": "D1",
+        "pdf_page": 16,
+        "where": "Table 4; model 7; Subsidiary; coef"
+      }
+    },
+    {
+      "check_id": "F093",
+      "type": "coef_se_stars",
+      "description": "T0185 Table 4 model 7, Log of total employment: coefficient/SE/star check.",
+      "computation": "Assume full-rank conventional OLS with 47 slopes and residual df=325; magnitude one-tail diagnostic p=Pr(t_df >= |b|/s). |t| interval [0.0909090909, 0.12], p interval [0.452278647, 0.463810415]. Printed rule p >= .10 (one-tailed). Consistent means there exists a rounded value satisfying the printed inequality; it does not certify direction or a prespecified test.",
+      "result": "consistent",
+      "rounding_interval_used": "b in [0.0035, 0.0045], SE in [0.0375, 0.0385]; all three-decimal values vary independently over half-unit intervals.",
+      "locator": {
+        "doc_id": "D1",
+        "pdf_page": 16,
+        "where": "Table 4; model 7; Log of total employment; coef"
+      }
+    },
+    {
+      "check_id": "F094",
+      "type": "coef_se_stars",
+      "description": "T0187 Table 4 model 7, Log of firm age: coefficient/SE/star check.",
+      "computation": "Assume full-rank conventional OLS with 47 slopes and residual df=325; magnitude one-tail diagnostic p=Pr(t_df >= |b|/s). |t| interval [3.50666667, 3.63013699], p interval [0.000164471383, 0.000258782642]. Printed rule p < 0.01 (one-tailed). Consistent means there exists a rounded value satisfying the printed inequality; it does not certify direction or a prespecified test.",
+      "result": "consistent",
+      "rounding_interval_used": "b in [-0.1325, -0.1315], SE in [0.0365, 0.0375]; all three-decimal values vary independently over half-unit intervals.",
+      "locator": {
+        "doc_id": "D1",
+        "pdf_page": 16,
+        "where": "Table 4; model 7; Log of firm age; coef"
+      }
+    },
+    {
+      "check_id": "F095",
+      "type": "coef_se_stars",
+      "description": "T0189 Table 4 model 7, Percent managers: coefficient/SE/star check.",
+      "computation": "Assume full-rank conventional OLS with 47 slopes and residual df=325; magnitude one-tail diagnostic p=Pr(t_df >= |b|/s). |t| interval [2.90529248, 2.92717087], p interval [0.00183089154, 0.00196033628]. Printed rule p < 0.01 (one-tailed). Consistent means there exists a rounded value satisfying the printed inequality; it does not certify direction or a prespecified test.",
+      "result": "consistent",
+      "rounding_interval_used": "b in [-0.5225, -0.5215], SE in [0.1785, 0.1795]; all three-decimal values vary independently over half-unit intervals.",
+      "locator": {
+        "doc_id": "D1",
+        "pdf_page": 16,
+        "where": "Table 4; model 7; Percent managers; coef"
+      }
+    },
+    {
+      "check_id": "F096",
+      "type": "coef_se_stars",
+      "description": "T0191 Table 4 model 7, Union pressure: coefficient/SE/star check.",
+      "computation": "Assume full-rank conventional OLS with 47 slopes and residual df=325; magnitude one-tail diagnostic p=Pr(t_df >= |b|/s). |t| interval [0.523809524, 0.540106952], p interval [0.294746588, 0.300384017]. Printed rule p >= .10 (one-tailed). Consistent means there exists a rounded value satisfying the printed inequality; it does not certify direction or a prespecified test.",
+      "result": "consistent",
+      "rounding_interval_used": "b in [-0.0505, -0.0495], SE in [0.0935, 0.0945]; all three-decimal values vary independently over half-unit intervals.",
+      "locator": {
+        "doc_id": "D1",
+        "pdf_page": 16,
+        "where": "Table 4; model 7; Union pressure; coef"
+      }
+    },
+    {
+      "check_id": "F097",
+      "type": "coef_se_stars",
+      "description": "T0193 Table 4 model 7, Product: coefficient/SE/star check.",
+      "computation": "Assume full-rank conventional OLS with 47 slopes and residual df=325; magnitude one-tail diagnostic p=Pr(t_df >= |b|/s). |t| interval [1.41355932, 1.43003413], p interval [0.0768339267, 0.0792242135]. Printed rule p < 0.10 (one-tailed). Consistent means there exists a rounded value satisfying the printed inequality; it does not certify direction or a prespecified test.",
+      "result": "consistent",
+      "rounding_interval_used": "b in [0.2085, 0.2095], SE in [0.1465, 0.1475]; all three-decimal values vary independently over half-unit intervals.",
+      "locator": {
+        "doc_id": "D1",
+        "pdf_page": 16,
+        "where": "Table 4; model 7; Product; coef"
+      }
+    },
+    {
+      "check_id": "F098",
+      "type": "coef_se_stars",
+      "description": "T0195 Table 4 model 7, Service: coefficient/SE/star check.",
+      "computation": "Assume full-rank conventional OLS with 47 slopes and residual df=325; magnitude one-tail diagnostic p=Pr(t_df >= |b|/s). |t| interval [1.04780876, 1.06425703], p interval [0.144001173, 0.147752661]. Printed rule p >= .10 (one-tailed). Consistent means there exists a rounded value satisfying the printed inequality; it does not certify direction or a prespecified test.",
+      "result": "consistent",
+      "rounding_interval_used": "b in [0.1315, 0.1325], SE in [0.1245, 0.1255]; all three-decimal values vary independently over half-unit intervals.",
+      "locator": {
+        "doc_id": "D1",
+        "pdf_page": 16,
+        "where": "Table 4; model 7; Service; coef"
+      }
+    },
+    {
+      "check_id": "F099",
+      "type": "coef_se_stars",
+      "description": "T0197 Table 4 model 7, Competitive pressure: coefficient/SE/star check.",
+      "computation": "Assume full-rank conventional OLS with 47 slopes and residual df=325; magnitude one-tail diagnostic p=Pr(t_df >= |b|/s). |t| interval [2.58787879, 2.63190184], p interval [0.00444796179, 0.00504517847]. Printed rule p < 0.01 (one-tailed). Consistent means there exists a rounded value satisfying the printed inequality; it does not certify direction or a prespecified test.",
+      "result": "consistent",
+      "rounding_interval_used": "b in [-0.2145, -0.2135], SE in [0.0815, 0.0825]; all three-decimal values vary independently over half-unit intervals.",
+      "locator": {
+        "doc_id": "D1",
+        "pdf_page": 16,
+        "where": "Table 4; model 7; Competitive pressure; coef"
+      }
+    },
+    {
+      "check_id": "F100",
+      "type": "coef_se_stars",
+      "description": "T0199 Table 4 model 8, Constant: coefficient/SE/star check.",
+      "computation": "Assume full-rank conventional OLS with 47 slopes and residual df=325; magnitude one-tail diagnostic p=Pr(t_df >= |b|/s). |t| interval [7.98297389, 8.00341297], p interval [1.0819199e-14, 1.24275766e-14]. Printed rule p < 0.01 (one-tailed). Consistent means there exists a rounded value satisfying the printed inequality; it does not certify direction or a prespecified test.",
+      "result": "consistent",
+      "rounding_interval_used": "b in [3.5165, 3.5175], SE in [0.4395, 0.4405]; all three-decimal values vary independently over half-unit intervals.",
+      "locator": {
+        "doc_id": "D1",
+        "pdf_page": 16,
+        "where": "Table 4; model 8; Constant; constant"
+      }
+    },
+    {
+      "check_id": "F101",
+      "type": "coef_se_stars",
+      "description": "T0201 Table 4 model 8, Staffing selectivity: coefficient/SE/star check.",
+      "computation": "Assume full-rank conventional OLS with 47 slopes and residual df=325; magnitude one-tail diagnostic p=Pr(t_df >= |b|/s). |t| interval [2.54782609, 2.61061947], p interval [0.00472826776, 0.00564981673]. Printed rule p < 0.01 (one-tailed). Consistent means there exists a rounded value satisfying the printed inequality; it does not certify direction or a prespecified test.",
+      "result": "consistent",
+      "rounding_interval_used": "b in [0.1465, 0.1475], SE in [0.0565, 0.0575]; all three-decimal values vary independently over half-unit intervals.",
+      "locator": {
+        "doc_id": "D1",
+        "pdf_page": 16,
+        "where": "Table 4; model 8; Staffing selectivity; coef"
+      }
+    },
+    {
+      "check_id": "F102",
+      "type": "coef_se_stars",
+      "description": "T0203 Table 4 model 8, Training: coefficient/SE/star check.",
+      "computation": "Assume full-rank conventional OLS with 47 slopes and residual df=325; magnitude one-tail diagnostic p=Pr(t_df >= |b|/s). |t| interval [1.29059829, 1.33043478], p interval [0.0921539116, 0.0988801921]. Printed rule p < 0.05 (one-tailed). Consistent means there exists a rounded value satisfying the printed inequality; it does not certify direction or a prespecified test.",
+      "result": "inconsistent",
+      "rounding_interval_used": "b in [0.0755, 0.0765], SE in [0.0575, 0.0585]; all three-decimal values vary independently over half-unit intervals.",
+      "locator": {
+        "doc_id": "D1",
+        "pdf_page": 16,
+        "where": "Table 4; model 8; Training; coef"
+      }
+    },
+    {
+      "check_id": "F103",
+      "type": "coef_se_stars",
+      "description": "T0205 Table 4 model 8, Incentive compensation: coefficient/SE/star check.",
+      "computation": "Assume full-rank conventional OLS with 47 slopes and residual df=325; magnitude one-tail diagnostic p=Pr(t_df >= |b|/s). |t| interval [1.63803681, 1.67080745], p interval [0.0478611781, 0.0511908837]. Printed rule p < 0.05 (one-tailed). Consistent means there exists a rounded value satisfying the printed inequality; it does not certify direction or a prespecified test. Interval crosses a displayed significance boundary; rounded point estimates alone cannot decide.",
+      "result": "consistent",
+      "rounding_interval_used": "b in [0.1335, 0.1345], SE in [0.0805, 0.0815]; all three-decimal values vary independently over half-unit intervals.",
+      "locator": {
+        "doc_id": "D1",
+        "pdf_page": 16,
+        "where": "Table 4; model 8; Incentive compensation; coef"
+      }
+    },
+    {
+      "check_id": "F104",
+      "type": "coef_se_stars",
+      "description": "T0207 Table 4 model 8, Grievance procedure: coefficient/SE/star check.",
+      "computation": "Assume full-rank conventional OLS with 47 slopes and residual df=325; magnitude one-tail diagnostic p=Pr(t_df >= |b|/s). |t| interval [0.320574163, 0.333333333], p interval [0.369548811, 0.374369571]. Printed rule p >= .10 (one-tailed). Consistent means there exists a rounded value satisfying the printed inequality; it does not certify direction or a prespecified test. Under the positive H1/H2 alternative, p is the opposite tail (>0.5); a negative slope cannot support a positive hypothesis.",
+      "result": "consistent",
+      "rounding_interval_used": "b in [-0.0345, -0.0335], SE in [0.1035, 0.1045]; all three-decimal values vary independently over half-unit intervals.",
+      "locator": {
+        "doc_id": "D1",
+        "pdf_page": 16,
+        "where": "Table 4; model 8; Grievance procedure; coef"
+      }
+    },
+    {
+      "check_id": "F105",
+      "type": "coef_se_stars",
+      "description": "T0209 Table 4 model 8, Decentralized decision making: coefficient/SE/star check.",
+      "computation": "Assume full-rank conventional OLS with 47 slopes and residual df=325; magnitude one-tail diagnostic p=Pr(t_df >= |b|/s). |t| interval [1.14634146, 1.18181818], p interval [0.119070924, 0.126248597]. Printed rule p >= .10 (one-tailed). Consistent means there exists a rounded value satisfying the printed inequality; it does not certify direction or a prespecified test. Under the positive H1/H2 alternative, p is the opposite tail (>0.5); a negative slope cannot support a positive hypothesis.",
+      "result": "consistent",
+      "rounding_interval_used": "b in [-0.0715, -0.0705], SE in [0.0605, 0.0615]; all three-decimal values vary independently over half-unit intervals.",
+      "locator": {
+        "doc_id": "D1",
+        "pdf_page": 16,
+        "where": "Table 4; model 8; Decentralized decision making; coef"
+      }
+    },
+    {
+      "check_id": "F106",
+      "type": "coef_se_stars",
+      "description": "T0211 Table 4 model 8, Vertical hierarchy: coefficient/SE/star check.",
+      "computation": "Assume full-rank conventional OLS with 47 slopes and residual df=325; magnitude one-tail diagnostic p=Pr(t_df >= |b|/s). |t| interval [1.19393939, 1.2208589], p interval [0.111512213, 0.116686197]. Printed rule p >= .10 (one-tailed). Consistent means there exists a rounded value satisfying the printed inequality; it does not certify direction or a prespecified test.",
+      "result": "consistent",
+      "rounding_interval_used": "b in [0.0985, 0.0995], SE in [0.0815, 0.0825]; all three-decimal values vary independently over half-unit intervals.",
+      "locator": {
+        "doc_id": "D1",
+        "pdf_page": 16,
+        "where": "Table 4; model 8; Vertical hierarchy; coef"
+      }
+    },
+    {
+      "check_id": "F107",
+      "type": "coef_se_stars",
+      "description": "T0213 Table 4 model 8, Subsidiary: coefficient/SE/star check.",
+      "computation": "Assume full-rank conventional OLS with 47 slopes and residual df=325; magnitude one-tail diagnostic p=Pr(t_df >= |b|/s). |t| interval [0.615763547, 0.631840796], p interval [0.263967549, 0.269240786]. Printed rule p >= .10 (one-tailed). Consistent means there exists a rounded value satisfying the printed inequality; it does not certify direction or a prespecified test.",
+      "result": "consistent",
+      "rounding_interval_used": "b in [-0.0635, -0.0625], SE in [0.1005, 0.1015]; all three-decimal values vary independently over half-unit intervals.",
+      "locator": {
+        "doc_id": "D1",
+        "pdf_page": 16,
+        "where": "Table 4; model 8; Subsidiary; coef"
+      }
+    },
+    {
+      "check_id": "F108",
+      "type": "coef_se_stars",
+      "description": "T0215 Table 4 model 8, Log of total employment: coefficient/SE/star check.",
+      "computation": "Assume full-rank conventional OLS with 47 slopes and residual df=325; magnitude one-tail diagnostic p=Pr(t_df >= |b|/s). |t| interval [0.0886075949, 0.116883117], p interval [0.453512436, 0.464724173]. Printed rule p >= .10 (one-tailed). Consistent means there exists a rounded value satisfying the printed inequality; it does not certify direction or a prespecified test.",
+      "result": "consistent",
+      "rounding_interval_used": "b in [-0.0045, -0.0035], SE in [0.0385, 0.0395]; all three-decimal values vary independently over half-unit intervals.",
+      "locator": {
+        "doc_id": "D1",
+        "pdf_page": 16,
+        "where": "Table 4; model 8; Log of total employment; coef"
+      }
+    },
+    {
+      "check_id": "F109",
+      "type": "coef_se_stars",
+      "description": "T0217 Table 4 model 8, Log of firm age: coefficient/SE/star check.",
+      "computation": "Assume full-rank conventional OLS with 47 slopes and residual df=325; magnitude one-tail diagnostic p=Pr(t_df >= |b|/s). |t| interval [3.42666667, 3.54794521], p interval [0.000222709584, 0.000344771645]. Printed rule p < 0.01 (one-tailed). Consistent means there exists a rounded value satisfying the printed inequality; it does not certify direction or a prespecified test.",
+      "result": "consistent",
+      "rounding_interval_used": "b in [-0.1295, -0.1285], SE in [0.0365, 0.0375]; all three-decimal values vary independently over half-unit intervals.",
+      "locator": {
+        "doc_id": "D1",
+        "pdf_page": 16,
+        "where": "Table 4; model 8; Log of firm age; coef"
+      }
+    },
+    {
+      "check_id": "F110",
+      "type": "coef_se_stars",
+      "description": "T0219 Table 4 model 8, Percent managers: coefficient/SE/star check.",
+      "computation": "Assume full-rank conventional OLS with 47 slopes and residual df=325; magnitude one-tail diagnostic p=Pr(t_df >= |b|/s). |t| interval [2.97746479, 3], p interval [0.00145423003, 0.0015624044]. Printed rule p < 0.01 (one-tailed). Consistent means there exists a rounded value satisfying the printed inequality; it does not certify direction or a prespecified test.",
+      "result": "consistent",
+      "rounding_interval_used": "b in [-0.5295, -0.5285], SE in [0.1765, 0.1775]; all three-decimal values vary independently over half-unit intervals.",
+      "locator": {
+        "doc_id": "D1",
+        "pdf_page": 16,
+        "where": "Table 4; model 8; Percent managers; coef"
+      }
+    },
+    {
+      "check_id": "F111",
+      "type": "coef_se_stars",
+      "description": "T0221 Table 4 model 8, Union pressure: coefficient/SE/star check.",
+      "computation": "Assume full-rank conventional OLS with 47 slopes and residual df=325; magnitude one-tail diagnostic p=Pr(t_df >= |b|/s). |t| interval [0.513227513, 0.529411765], p interval [0.298440633, 0.304070437]. Printed rule p >= .10 (one-tailed). Consistent means there exists a rounded value satisfying the printed inequality; it does not certify direction or a prespecified test.",
+      "result": "consistent",
+      "rounding_interval_used": "b in [-0.0495, -0.0485], SE in [0.0935, 0.0945]; all three-decimal values vary independently over half-unit intervals.",
+      "locator": {
+        "doc_id": "D1",
+        "pdf_page": 16,
+        "where": "Table 4; model 8; Union pressure; coef"
+      }
+    },
+    {
+      "check_id": "F112",
+      "type": "coef_se_stars",
+      "description": "T0223 Table 4 model 8, Product: coefficient/SE/star check.",
+      "computation": "Assume full-rank conventional OLS with 47 slopes and residual df=325; magnitude one-tail diagnostic p=Pr(t_df >= |b|/s). |t| interval [1.32302405, 1.33910035], p interval [0.0907369021, 0.0933787283]. Printed rule p < 0.10 (one-tailed). Consistent means there exists a rounded value satisfying the printed inequality; it does not certify direction or a prespecified test.",
+      "result": "consistent",
+      "rounding_interval_used": "b in [0.1925, 0.1935], SE in [0.1445, 0.1455]; all three-decimal values vary independently over half-unit intervals.",
+      "locator": {
+        "doc_id": "D1",
+        "pdf_page": 16,
+        "where": "Table 4; model 8; Product; coef"
+      }
+    },
+    {
+      "check_id": "F113",
+      "type": "coef_se_stars",
+      "description": "T0225 Table 4 model 8, Service: coefficient/SE/star check.",
+      "computation": "Assume full-rank conventional OLS with 47 slopes and residual df=325; magnitude one-tail diagnostic p=Pr(t_df >= |b|/s). |t| interval [0.880478088, 0.895582329], p interval [0.18556935, 0.189625495]. Printed rule p >= .10 (one-tailed). Consistent means there exists a rounded value satisfying the printed inequality; it does not certify direction or a prespecified test.",
+      "result": "consistent",
+      "rounding_interval_used": "b in [0.1105, 0.1115], SE in [0.1245, 0.1255]; all three-decimal values vary independently over half-unit intervals.",
+      "locator": {
+        "doc_id": "D1",
+        "pdf_page": 16,
+        "where": "Table 4; model 8; Service; coef"
+      }
+    },
+    {
+      "check_id": "F114",
+      "type": "coef_se_stars",
+      "description": "T0227 Table 4 model 8, Competitive pressure: coefficient/SE/star check.",
+      "computation": "Assume full-rank conventional OLS with 47 slopes and residual df=325; magnitude one-tail diagnostic p=Pr(t_df >= |b|/s). |t| interval [2.62424242, 2.66871166], p interval [0.00399816248, 0.00454707715]. Printed rule p < 0.01 (one-tailed). Consistent means there exists a rounded value satisfying the printed inequality; it does not certify direction or a prespecified test.",
+      "result": "consistent",
+      "rounding_interval_used": "b in [-0.2175, -0.2165], SE in [0.0815, 0.0825]; all three-decimal values vary independently over half-unit intervals.",
+      "locator": {
+        "doc_id": "D1",
+        "pdf_page": 16,
+        "where": "Table 4; model 8; Competitive pressure; coef"
+      }
+    },
+    {
+      "check_id": "F115",
+      "type": "coef_se_stars",
+      "description": "T0229 Table 4 model 9, Constant: coefficient/SE/star check.",
+      "computation": "Assume full-rank conventional OLS with 50 slopes and residual df=322; magnitude one-tail diagnostic p=Pr(t_df >= |b|/s). |t| interval [2.39189804, 2.39498861], p interval [0.00859597584, 0.00866738848]. Printed rule p < 0.01 (one-tailed). Consistent means there exists a rounded value satisfying the printed inequality; it does not certify direction or a prespecified test.",
+      "result": "consistent",
+      "rounding_interval_used": "b in [2.6275, 2.6285], SE in [1.0975, 1.0985]; all three-decimal values vary independently over half-unit intervals.",
+      "locator": {
+        "doc_id": "D1",
+        "pdf_page": 16,
+        "where": "Table 4; model 9; Constant; constant"
+      }
+    },
+    {
+      "check_id": "F116",
+      "type": "coef_se_stars",
+      "description": "T0231 Table 4 model 9, Staffing selectivity: coefficient/SE/star check.",
+      "computation": "Assume full-rank conventional OLS with 50 slopes and residual df=322; magnitude one-tail diagnostic p=Pr(t_df >= |b|/s). |t| interval [2.19327731, 2.24786325], p interval [0.0126306453, 0.0145010631]. Printed rule p < 0.05 (one-tailed). Consistent means there exists a rounded value satisfying the printed inequality; it does not certify direction or a prespecified test.",
+      "result": "consistent",
+      "rounding_interval_used": "b in [0.1305, 0.1315], SE in [0.0585, 0.0595]; all three-decimal values vary independently over half-unit intervals.",
+      "locator": {
+        "doc_id": "D1",
+        "pdf_page": 16,
+        "where": "Table 4; model 9; Staffing selectivity; coef"
+      }
+    },
+    {
+      "check_id": "F117",
+      "type": "coef_se_stars",
+      "description": "T0233 Table 4 model 9, Training: coefficient/SE/star check.",
+      "computation": "Assume full-rank conventional OLS with 50 slopes and residual df=322; magnitude one-tail diagnostic p=Pr(t_df >= |b|/s). |t| interval [1.16528926, 1.20168067], p interval [0.115185165, 0.122382211]. Printed rule p >= .10 (one-tailed). Consistent means there exists a rounded value satisfying the printed inequality; it does not certify direction or a prespecified test.",
+      "result": "consistent",
+      "rounding_interval_used": "b in [0.0705, 0.0715], SE in [0.0595, 0.0605]; all three-decimal values vary independently over half-unit intervals.",
+      "locator": {
+        "doc_id": "D1",
+        "pdf_page": 16,
+        "where": "Table 4; model 9; Training; coef"
+      }
+    },
+    {
+      "check_id": "F118",
+      "type": "coef_se_stars",
+      "description": "T0235 Table 4 model 9, Incentive compensation: coefficient/SE/star check.",
+      "computation": "Assume full-rank conventional OLS with 50 slopes and residual df=322; magnitude one-tail diagnostic p=Pr(t_df >= |b|/s). |t| interval [1.12903226, 1.14883721], p interval [0.125737891, 0.129862324]. Printed rule p >= .10 (one-tailed). Consistent means there exists a rounded value satisfying the printed inequality; it does not certify direction or a prespecified test.",
+      "result": "consistent",
+      "rounding_interval_used": "b in [0.1225, 0.1235], SE in [0.1075, 0.1085]; all three-decimal values vary independently over half-unit intervals.",
+      "locator": {
+        "doc_id": "D1",
+        "pdf_page": 16,
+        "where": "Table 4; model 9; Incentive compensation; coef"
+      }
+    },
+    {
+      "check_id": "F119",
+      "type": "coef_se_stars",
+      "description": "T0237 Table 4 model 9, Grievance procedure: coefficient/SE/star check.",
+      "computation": "Assume full-rank conventional OLS with 50 slopes and residual df=322; magnitude one-tail diagnostic p=Pr(t_df >= |b|/s). |t| interval [0.092491839, 0.0948745911], p interval [0.462236725, 0.463182396]. Printed rule p >= .10 (one-tailed). Consistent means there exists a rounded value satisfying the printed inequality; it does not certify direction or a prespecified test.",
+      "result": "consistent",
+      "rounding_interval_used": "b in [0.0425, 0.0435], SE in [0.4585, 0.4595]; all three-decimal values vary independently over half-unit intervals.",
+      "locator": {
+        "doc_id": "D1",
+        "pdf_page": 16,
+        "where": "Table 4; model 9; Grievance procedure; coef"
+      }
+    },
+    {
+      "check_id": "F120",
+      "type": "coef_se_stars",
+      "description": "T0239 Table 4 model 9, Decentralized decision making: coefficient/SE/star check.",
+      "computation": "Assume full-rank conventional OLS with 50 slopes and residual df=322; magnitude one-tail diagnostic p=Pr(t_df >= |b|/s). |t| interval [0.548387097, 0.553662692], p interval [0.290096979, 0.291903064]. Printed rule p >= .10 (one-tailed). Consistent means there exists a rounded value satisfying the printed inequality; it does not certify direction or a prespecified test.",
+      "result": "consistent",
+      "rounding_interval_used": "b in [0.1615, 0.1625], SE in [0.2935, 0.2945]; all three-decimal values vary independently over half-unit intervals.",
+      "locator": {
+        "doc_id": "D1",
+        "pdf_page": 16,
+        "where": "Table 4; model 9; Decentralized decision making; coef"
+      }
+    },
+    {
+      "check_id": "F121",
+      "type": "coef_se_stars",
+      "description": "T0241 Table 4 model 9, Internal labor market: coefficient/SE/star check.",
+      "computation": "Assume full-rank conventional OLS with 50 slopes and residual df=322; magnitude one-tail diagnostic p=Pr(t_df >= |b|/s). |t| interval [1.03706973, 1.04067197], p interval [0.149404282, 0.15024076]. Printed rule p < 0.10 (one-tailed). Consistent means there exists a rounded value satisfying the printed inequality; it does not certify direction or a prespecified test.",
+      "result": "inconsistent",
+      "rounding_interval_used": "b in [0.5875, 0.5885], SE in [0.5655, 0.5665]; all three-decimal values vary independently over half-unit intervals.",
+      "locator": {
+        "doc_id": "D1",
+        "pdf_page": 16,
+        "where": "Table 4; model 9; Internal labor market; coef"
+      }
+    },
+    {
+      "check_id": "F122",
+      "type": "coef_se_stars",
+      "description": "T0243 Table 4 model 9, Training × staffing: coefficient/SE/star check.",
+      "computation": "Assume full-rank conventional OLS with 50 slopes and residual df=322; magnitude one-tail diagnostic p=Pr(t_df >= |b|/s). |t| interval [1.19548872, 1.22900763], p interval [0.109983163, 0.116387909]. Printed rule p >= .10 (one-tailed). Consistent means there exists a rounded value satisfying the printed inequality; it does not certify direction or a prespecified test.",
+      "result": "consistent",
+      "rounding_interval_used": "b in [0.0795, 0.0805], SE in [0.0655, 0.0665]; all three-decimal values vary independently over half-unit intervals.",
+      "locator": {
+        "doc_id": "D1",
+        "pdf_page": 16,
+        "where": "Table 4; model 9; Training × staffing; coef"
+      }
+    },
+    {
+      "check_id": "F123",
+      "type": "coef_se_stars",
+      "description": "T0245 Table 4 model 9, Grievance × incentive compensation: coefficient/SE/star check.",
+      "computation": "Assume full-rank conventional OLS with 50 slopes and residual df=322; magnitude one-tail diagnostic p=Pr(t_df >= |b|/s). |t| interval [0.00307692308, 0.0092879257], p interval [0.496297583, 0.49877344]. Printed rule p >= .10 (one-tailed). Consistent means there exists a rounded value satisfying the printed inequality; it does not certify direction or a prespecified test.",
+      "result": "consistent",
+      "rounding_interval_used": "b in [0.0005, 0.0015], SE in [0.1615, 0.1625]; all three-decimal values vary independently over half-unit intervals.",
+      "locator": {
+        "doc_id": "D1",
+        "pdf_page": 16,
+        "where": "Table 4; model 9; Grievance × incentive compensation; coef"
+      }
+    },
+    {
+      "check_id": "F124",
+      "type": "coef_se_stars",
+      "description": "T0247 Table 4 model 9, Internal labor market × decentralized decision making: coefficient/SE/star check.",
+      "computation": "Assume full-rank conventional OLS with 50 slopes and residual df=322; magnitude one-tail diagnostic p=Pr(t_df >= |b|/s). |t| interval [0.799392097, 0.810397554], p interval [0.209155123, 0.212326187]. Printed rule p >= .10 (one-tailed). Consistent means there exists a rounded value satisfying the printed inequality; it does not certify direction or a prespecified test. Under the positive H1/H2 alternative, p is the opposite tail (>0.5); a negative slope cannot support a positive hypothesis.",
+      "result": "consistent",
+      "rounding_interval_used": "b in [-0.1325, -0.1315], SE in [0.1635, 0.1645]; all three-decimal values vary independently over half-unit intervals.",
+      "locator": {
+        "doc_id": "D1",
+        "pdf_page": 16,
+        "where": "Table 4; model 9; Internal labor market × decentralized decision making; coef"
+      }
+    },
+    {
+      "check_id": "F125",
+      "type": "coef_se_stars",
+      "description": "T0249 Table 4 model 9, Subsidiary: coefficient/SE/star check.",
+      "computation": "Assume full-rank conventional OLS with 50 slopes and residual df=322; magnitude one-tail diagnostic p=Pr(t_df >= |b|/s). |t| interval [0.603686636, 0.618604651], p interval [0.268307092, 0.273238516]. Printed rule p >= .10 (one-tailed). Consistent means there exists a rounded value satisfying the printed inequality; it does not certify direction or a prespecified test.",
+      "result": "consistent",
+      "rounding_interval_used": "b in [-0.0665, -0.0655], SE in [0.1075, 0.1085]; all three-decimal values vary independently over half-unit intervals.",
+      "locator": {
+        "doc_id": "D1",
+        "pdf_page": 16,
+        "where": "Table 4; model 9; Subsidiary; coef"
+      }
+    },
+    {
+      "check_id": "F126",
+      "type": "coef_se_stars",
+      "description": "T0251 Table 4 model 9, Log of total employment: coefficient/SE/star check.",
+      "computation": "Assume full-rank conventional OLS with 50 slopes and residual df=322; magnitude one-tail diagnostic p=Pr(t_df >= |b|/s). |t| interval [0.189873418, 0.220779221], p interval [0.412702134, 0.42476398]. Printed rule p >= .10 (one-tailed). Consistent means there exists a rounded value satisfying the printed inequality; it does not certify direction or a prespecified test.",
+      "result": "consistent",
+      "rounding_interval_used": "b in [0.0075, 0.0085], SE in [0.0385, 0.0395]; all three-decimal values vary independently over half-unit intervals.",
+      "locator": {
+        "doc_id": "D1",
+        "pdf_page": 16,
+        "where": "Table 4; model 9; Log of total employment; coef"
+      }
+    },
+    {
+      "check_id": "F127",
+      "type": "coef_se_stars",
+      "description": "T0253 Table 4 model 9, Log of firm age: coefficient/SE/star check.",
+      "computation": "Assume full-rank conventional OLS with 50 slopes and residual df=322; magnitude one-tail diagnostic p=Pr(t_df >= |b|/s). |t| interval [3.61333333, 3.73972603], p interval [0.000109001448, 0.000175300358]. Printed rule p < 0.01 (one-tailed). Consistent means there exists a rounded value satisfying the printed inequality; it does not certify direction or a prespecified test.",
+      "result": "consistent",
+      "rounding_interval_used": "b in [-0.1365, -0.1355], SE in [0.0365, 0.0375]; all three-decimal values vary independently over half-unit intervals.",
+      "locator": {
+        "doc_id": "D1",
+        "pdf_page": 16,
+        "where": "Table 4; model 9; Log of firm age; coef"
+      }
+    },
+    {
+      "check_id": "F128",
+      "type": "coef_se_stars",
+      "description": "T0255 Table 4 model 9, Percent managers: coefficient/SE/star check.",
+      "computation": "Assume full-rank conventional OLS with 50 slopes and residual df=322; magnitude one-tail diagnostic p=Pr(t_df >= |b|/s). |t| interval [2.76902887, 2.78891821], p interval [0.00280155976, 0.00297411383]. Printed rule p < 0.01 (one-tailed). Consistent means there exists a rounded value satisfying the printed inequality; it does not certify direction or a prespecified test.",
+      "result": "consistent",
+      "rounding_interval_used": "b in [-0.5285, -0.5275], SE in [0.1895, 0.1905]; all three-decimal values vary independently over half-unit intervals.",
+      "locator": {
+        "doc_id": "D1",
+        "pdf_page": 16,
+        "where": "Table 4; model 9; Percent managers; coef"
+      }
+    },
+    {
+      "check_id": "F129",
+      "type": "coef_se_stars",
+      "description": "T0257 Table 4 model 9, Union pressure: coefficient/SE/star check.",
+      "computation": "Assume full-rank conventional OLS with 50 slopes and residual df=322; magnitude one-tail diagnostic p=Pr(t_df >= |b|/s). |t| interval [0.462686567, 0.477386935], p interval [0.316705241, 0.321950781]. Printed rule p >= .10 (one-tailed). Consistent means there exists a rounded value satisfying the printed inequality; it does not certify direction or a prespecified test.",
+      "result": "consistent",
+      "rounding_interval_used": "b in [-0.0475, -0.0465], SE in [0.0995, 0.1005]; all three-decimal values vary independently over half-unit intervals.",
+      "locator": {
+        "doc_id": "D1",
+        "pdf_page": 16,
+        "where": "Table 4; model 9; Union pressure; coef"
+      }
+    },
+    {
+      "check_id": "F130",
+      "type": "coef_se_stars",
+      "description": "T0259 Table 4 model 9, Product: coefficient/SE/star check.",
+      "computation": "Assume full-rank conventional OLS with 50 slopes and residual df=322; magnitude one-tail diagnostic p=Pr(t_df >= |b|/s). |t| interval [1.28282828, 1.29830508], p interval [0.0975558117, 0.100237428]. Printed rule p < 0.10 (one-tailed). Consistent means there exists a rounded value satisfying the printed inequality; it does not certify direction or a prespecified test. Interval crosses a displayed significance boundary; rounded point estimates alone cannot decide.",
+      "result": "consistent",
+      "rounding_interval_used": "b in [0.1905, 0.1915], SE in [0.1475, 0.1485]; all three-decimal values vary independently over half-unit intervals.",
+      "locator": {
+        "doc_id": "D1",
+        "pdf_page": 16,
+        "where": "Table 4; model 9; Product; coef"
+      }
+    },
+    {
+      "check_id": "F131",
+      "type": "coef_se_stars",
+      "description": "T0261 Table 4 model 9, Service: coefficient/SE/star check.",
+      "computation": "Assume full-rank conventional OLS with 50 slopes and residual df=322; magnitude one-tail diagnostic p=Pr(t_df >= |b|/s). |t| interval [0.960159363, 0.975903614], p interval [0.164922407, 0.168847715]. Printed rule p >= .10 (one-tailed). Consistent means there exists a rounded value satisfying the printed inequality; it does not certify direction or a prespecified test.",
+      "result": "consistent",
+      "rounding_interval_used": "b in [0.1205, 0.1215], SE in [0.1245, 0.1255]; all three-decimal values vary independently over half-unit intervals.",
+      "locator": {
+        "doc_id": "D1",
+        "pdf_page": 16,
+        "where": "Table 4; model 9; Service; coef"
+      }
+    },
+    {
+      "check_id": "F132",
+      "type": "coef_se_stars",
+      "description": "T0263 Table 4 model 9, Competitive pressure: coefficient/SE/star check.",
+      "computation": "Assume full-rank conventional OLS with 50 slopes and residual df=322; magnitude one-tail diagnostic p=Pr(t_df >= |b|/s). |t| interval [2.52727273, 2.57055215], p interval [0.00530134601, 0.0059867487]. Printed rule p < 0.01 (one-tailed). Consistent means there exists a rounded value satisfying the printed inequality; it does not certify direction or a prespecified test.",
+      "result": "consistent",
+      "rounding_interval_used": "b in [-0.2095, -0.2085], SE in [0.0815, 0.0825]; all three-decimal values vary independently over half-unit intervals.",
+      "locator": {
+        "doc_id": "D1",
+        "pdf_page": 16,
+        "where": "Table 4; model 9; Competitive pressure; coef"
+      }
+    },
+    {
+      "check_id": "F133",
+      "type": "coef_se_stars",
+      "description": "T0265 Table 4 model 10, Constant: coefficient/SE/star check.",
+      "computation": "Assume full-rank conventional OLS with 50 slopes and residual df=322; magnitude one-tail diagnostic p=Pr(t_df >= |b|/s). |t| interval [5.47270214, 5.4816609], p interval [4.26055056e-08, 4.4624037e-08]. Printed rule p < 0.01 (one-tailed). Consistent means there exists a rounded value satisfying the printed inequality; it does not certify direction or a prespecified test.",
+      "result": "consistent",
+      "rounding_interval_used": "b in [3.9595, 3.9605], SE in [0.7225, 0.7235]; all three-decimal values vary independently over half-unit intervals.",
+      "locator": {
+        "doc_id": "D1",
+        "pdf_page": 16,
+        "where": "Table 4; model 10; Constant; constant"
+      }
+    },
+    {
+      "check_id": "F134",
+      "type": "coef_se_stars",
+      "description": "T0267 Table 4 model 10, Staffing selectivity: coefficient/SE/star check.",
+      "computation": "Assume full-rank conventional OLS with 50 slopes and residual df=322; magnitude one-tail diagnostic p=Pr(t_df >= |b|/s). |t| interval [2.36752137, 2.42608696], p interval [0.00790576394, 0.00924921034]. Printed rule p < 0.05 (one-tailed). Consistent means there exists a rounded value satisfying the printed inequality; it does not certify direction or a prespecified test. Entire p interval is below the next stricter star threshold: under-marked under the customary strongest-star convention.",
+      "result": "consistent",
+      "rounding_interval_used": "b in [0.1385, 0.1395], SE in [0.0575, 0.0585]; all three-decimal values vary independently over half-unit intervals.",
+      "locator": {
+        "doc_id": "D1",
+        "pdf_page": 16,
+        "where": "Table 4; model 10; Staffing selectivity; coef"
+      }
+    },
+    {
+      "check_id": "F135",
+      "type": "coef_se_stars",
+      "description": "T0269 Table 4 model 10, Training: coefficient/SE/star check.",
+      "computation": "Assume full-rank conventional OLS with 50 slopes and residual df=322; magnitude one-tail diagnostic p=Pr(t_df >= |b|/s). |t| interval [1.3697479, 1.41025641], p interval [0.0797146111, 0.0858600104]. Printed rule p < 0.10 (one-tailed). Consistent means there exists a rounded value satisfying the printed inequality; it does not certify direction or a prespecified test.",
+      "result": "consistent",
+      "rounding_interval_used": "b in [0.0815, 0.0825], SE in [0.0585, 0.0595]; all three-decimal values vary independently over half-unit intervals.",
+      "locator": {
+        "doc_id": "D1",
+        "pdf_page": 16,
+        "where": "Table 4; model 10; Training; coef"
+      }
+    },
+    {
+      "check_id": "F136",
+      "type": "coef_se_stars",
+      "description": "T0271 Table 4 model 10, Incentive compensation: coefficient/SE/star check.",
+      "computation": "Assume full-rank conventional OLS with 50 slopes and residual df=322; magnitude one-tail diagnostic p=Pr(t_df >= |b|/s). |t| interval [1.35348837, 1.37558685], p interval [0.0849528548, 0.0884245]. Printed rule p < 0.10 (one-tailed). Consistent means there exists a rounded value satisfying the printed inequality; it does not certify direction or a prespecified test.",
+      "result": "consistent",
+      "rounding_interval_used": "b in [0.1455, 0.1465], SE in [0.1065, 0.1075]; all three-decimal values vary independently over half-unit intervals.",
+      "locator": {
+        "doc_id": "D1",
+        "pdf_page": 16,
+        "where": "Table 4; model 10; Incentive compensation; coef"
+      }
+    },
+    {
+      "check_id": "F137",
+      "type": "coef_se_stars",
+      "description": "T0273 Table 4 model 10, Grievance procedure: coefficient/SE/star check.",
+      "computation": "Assume full-rank conventional OLS with 50 slopes and residual df=322; magnitude one-tail diagnostic p=Pr(t_df >= |b|/s). |t| interval [0.241003272, 0.243715847], p interval [0.40380305, 0.404852982]. Printed rule p >= .10 (one-tailed). Consistent means there exists a rounded value satisfying the printed inequality; it does not certify direction or a prespecified test. Under the positive H1/H2 alternative, p is the opposite tail (>0.5); a negative slope cannot support a positive hypothesis.",
+      "result": "consistent",
+      "rounding_interval_used": "b in [-0.1115, -0.1105], SE in [0.4575, 0.4585]; all three-decimal values vary independently over half-unit intervals.",
+      "locator": {
+        "doc_id": "D1",
+        "pdf_page": 16,
+        "where": "Table 4; model 10; Grievance procedure; coef"
+      }
+    },
+    {
+      "check_id": "F138",
+      "type": "coef_se_stars",
+      "description": "T0275 Table 4 model 10, Decentralized decision making: coefficient/SE/star check.",
+      "computation": "Assume full-rank conventional OLS with 50 slopes and residual df=322; magnitude one-tail diagnostic p=Pr(t_df >= |b|/s). |t| interval [1.14328358, 1.15615616], p interval [0.124237185, 0.126885075]. Printed rule p >= .10 (one-tailed). Consistent means there exists a rounded value satisfying the printed inequality; it does not certify direction or a prespecified test. Under the positive H1/H2 alternative, p is the opposite tail (>0.5); a negative slope cannot support a positive hypothesis.",
+      "result": "consistent",
+      "rounding_interval_used": "b in [-0.1925, -0.1915], SE in [0.1665, 0.1675]; all three-decimal values vary independently over half-unit intervals.",
+      "locator": {
+        "doc_id": "D1",
+        "pdf_page": 16,
+        "where": "Table 4; model 10; Decentralized decision making; coef"
+      }
+    },
+    {
+      "check_id": "F139",
+      "type": "coef_se_stars",
+      "description": "T0277 Table 4 model 10, Vertical hierarchy: coefficient/SE/star check.",
+      "computation": "Assume full-rank conventional OLS with 50 slopes and residual df=322; magnitude one-tail diagnostic p=Pr(t_df >= |b|/s). |t| interval [0.416536661, 0.420970266], p interval [0.337028816, 0.338647432]. Printed rule p >= .10 (one-tailed). Consistent means there exists a rounded value satisfying the printed inequality; it does not certify direction or a prespecified test. Under the positive H1/H2 alternative, p is the opposite tail (>0.5); a negative slope cannot support a positive hypothesis.",
+      "result": "consistent",
+      "rounding_interval_used": "b in [-0.1345, -0.1335], SE in [0.3195, 0.3205]; all three-decimal values vary independently over half-unit intervals.",
+      "locator": {
+        "doc_id": "D1",
+        "pdf_page": 16,
+        "where": "Table 4; model 10; Vertical hierarchy; coef"
+      }
+    },
+    {
+      "check_id": "F140",
+      "type": "coef_se_stars",
+      "description": "T0279 Table 4 model 10, Training × staffing: coefficient/SE/star check.",
+      "computation": "Assume full-rank conventional OLS with 50 slopes and residual df=322; magnitude one-tail diagnostic p=Pr(t_df >= |b|/s). |t| interval [1.03007519, 1.0610687], p interval [0.144726939, 0.151873904]. Printed rule p >= .10 (one-tailed). Consistent means there exists a rounded value satisfying the printed inequality; it does not certify direction or a prespecified test.",
+      "result": "consistent",
+      "rounding_interval_used": "b in [0.0685, 0.0695], SE in [0.0655, 0.0665]; all three-decimal values vary independently over half-unit intervals.",
+      "locator": {
+        "doc_id": "D1",
+        "pdf_page": 16,
+        "where": "Table 4; model 10; Training × staffing; coef"
+      }
+    },
+    {
+      "check_id": "F141",
+      "type": "coef_se_stars",
+      "description": "T0281 Table 4 model 10, Grievance × incentive compensation: coefficient/SE/star check.",
+      "computation": "Assume full-rank conventional OLS with 50 slopes and residual df=322; magnitude one-tail diagnostic p=Pr(t_df >= |b|/s). |t| interval [0.176470588, 0.183800623], p interval [0.427142778, 0.430017596]. Printed rule p >= .10 (one-tailed). Consistent means there exists a rounded value satisfying the printed inequality; it does not certify direction or a prespecified test. Under the positive H1/H2 alternative, p is the opposite tail (>0.5); a negative slope cannot support a positive hypothesis.",
+      "result": "consistent",
+      "rounding_interval_used": "b in [-0.0295, -0.0285], SE in [0.1605, 0.1615]; all three-decimal values vary independently over half-unit intervals.",
+      "locator": {
+        "doc_id": "D1",
+        "pdf_page": 16,
+        "where": "Table 4; model 10; Grievance × incentive compensation; coef"
+      }
+    },
+    {
+      "check_id": "F142",
+      "type": "coef_se_stars",
+      "description": "T0283 Table 4 model 10, Vertical hierarchy × decentralized decision making: coefficient/SE/star check.",
+      "computation": "Assume full-rank conventional OLS with 50 slopes and residual df=322; magnitude one-tail diagnostic p=Pr(t_df >= |b|/s). |t| interval [0.784431138, 0.806060606], p interval [0.210401394, 0.216681932]. Printed rule p >= .10 (one-tailed). Consistent means there exists a rounded value satisfying the printed inequality; it does not certify direction or a prespecified test.",
+      "result": "consistent",
+      "rounding_interval_used": "b in [0.0655, 0.0665], SE in [0.0825, 0.0835]; all three-decimal values vary independently over half-unit intervals.",
+      "locator": {
+        "doc_id": "D1",
+        "pdf_page": 16,
+        "where": "Table 4; model 10; Vertical hierarchy × decentralized decision making; coef"
+      }
+    },
+    {
+      "check_id": "F143",
+      "type": "coef_se_stars",
+      "description": "T0285 Table 4 model 10, Subsidiary: coefficient/SE/star check.",
+      "computation": "Assume full-rank conventional OLS with 50 slopes and residual df=322; magnitude one-tail diagnostic p=Pr(t_df >= |b|/s). |t| interval [0.827751196, 0.845410628], p interval [0.199254683, 0.204212232]. Printed rule p >= .10 (one-tailed). Consistent means there exists a rounded value satisfying the printed inequality; it does not certify direction or a prespecified test.",
+      "result": "consistent",
+      "rounding_interval_used": "b in [-0.0875, -0.0865], SE in [0.1035, 0.1045]; all three-decimal values vary independently over half-unit intervals.",
+      "locator": {
+        "doc_id": "D1",
+        "pdf_page": 16,
+        "where": "Table 4; model 10; Subsidiary; coef"
+      }
+    },
+    {
+      "check_id": "F144",
+      "type": "coef_se_stars",
+      "description": "T0287 Table 4 model 10, Log of total employment: coefficient/SE/star check.",
+      "computation": "Assume full-rank conventional OLS with 50 slopes and residual df=322; magnitude one-tail diagnostic p=Pr(t_df >= |b|/s). |t| interval [0.160493827, 0.189873418], p interval [0.42476398, 0.436296361]. Printed rule p >= .10 (one-tailed). Consistent means there exists a rounded value satisfying the printed inequality; it does not certify direction or a prespecified test.",
+      "result": "consistent",
+      "rounding_interval_used": "b in [-0.0075, -0.0065], SE in [0.0395, 0.0405]; all three-decimal values vary independently over half-unit intervals.",
+      "locator": {
+        "doc_id": "D1",
+        "pdf_page": 16,
+        "where": "Table 4; model 10; Log of total employment; coef"
+      }
+    },
+    {
+      "check_id": "F145",
+      "type": "coef_se_stars",
+      "description": "T0289 Table 4 model 10, Log of firm age: coefficient/SE/star check.",
+      "computation": "Assume full-rank conventional OLS with 50 slopes and residual df=322; magnitude one-tail diagnostic p=Pr(t_df >= |b|/s). |t| interval [3.45333333, 3.57534247], p interval [0.000201690091, 0.000313869318]. Printed rule p < 0.01 (one-tailed). Consistent means there exists a rounded value satisfying the printed inequality; it does not certify direction or a prespecified test.",
+      "result": "consistent",
+      "rounding_interval_used": "b in [-0.1305, -0.1295], SE in [0.0365, 0.0375]; all three-decimal values vary independently over half-unit intervals.",
+      "locator": {
+        "doc_id": "D1",
+        "pdf_page": 16,
+        "where": "Table 4; model 10; Log of firm age; coef"
+      }
+    },
+    {
+      "check_id": "F146",
+      "type": "coef_se_stars",
+      "description": "T0291 Table 4 model 10, Percent managers: coefficient/SE/star check.",
+      "computation": "Assume full-rank conventional OLS with 50 slopes and residual df=322; magnitude one-tail diagnostic p=Pr(t_df >= |b|/s). |t| interval [3.23592493, 3.25876011], p interval [0.000619255347, 0.000669269548]. Printed rule p < 0.01 (one-tailed). Consistent means there exists a rounded value satisfying the printed inequality; it does not certify direction or a prespecified test.",
+      "result": "consistent",
+      "rounding_interval_used": "b in [-0.6045, -0.6035], SE in [0.1855, 0.1865]; all three-decimal values vary independently over half-unit intervals.",
+      "locator": {
+        "doc_id": "D1",
+        "pdf_page": 16,
+        "where": "Table 4; model 10; Percent managers; coef"
+      }
+    },
+    {
+      "check_id": "F147",
+      "type": "coef_se_stars",
+      "description": "T0293 Table 4 model 10, Union pressure: coefficient/SE/star check.",
+      "computation": "Assume full-rank conventional OLS with 50 slopes and residual df=322; magnitude one-tail diagnostic p=Pr(t_df >= |b|/s). |t| interval [0.507537688, 0.52284264], p interval [0.300721663, 0.306062522]. Printed rule p >= .10 (one-tailed). Consistent means there exists a rounded value satisfying the printed inequality; it does not certify direction or a prespecified test.",
+      "result": "consistent",
+      "rounding_interval_used": "b in [-0.0515, -0.0505], SE in [0.0985, 0.0995]; all three-decimal values vary independently over half-unit intervals.",
+      "locator": {
+        "doc_id": "D1",
+        "pdf_page": 16,
+        "where": "Table 4; model 10; Union pressure; coef"
+      }
+    },
+    {
+      "check_id": "F148",
+      "type": "coef_se_stars",
+      "description": "T0295 Table 4 model 10, Product: coefficient/SE/star check.",
+      "computation": "Assume full-rank conventional OLS with 50 slopes and residual df=322; magnitude one-tail diagnostic p=Pr(t_df >= |b|/s). |t| interval [1.3003413, 1.3161512], p interval [0.094529724, 0.0972069757]. Printed rule p < 0.10 (one-tailed). Consistent means there exists a rounded value satisfying the printed inequality; it does not certify direction or a prespecified test.",
+      "result": "consistent",
+      "rounding_interval_used": "b in [0.1905, 0.1915], SE in [0.1455, 0.1465]; all three-decimal values vary independently over half-unit intervals.",
+      "locator": {
+        "doc_id": "D1",
+        "pdf_page": 16,
+        "where": "Table 4; model 10; Product; coef"
+      }
+    },
+    {
+      "check_id": "F149",
+      "type": "coef_se_stars",
+      "description": "T0297 Table 4 model 10, Service: coefficient/SE/star check.",
+      "computation": "Assume full-rank conventional OLS with 50 slopes and residual df=322; magnitude one-tail diagnostic p=Pr(t_df >= |b|/s). |t| interval [0.71541502, 0.729083665], p interval [0.233240224, 0.237435527]. Printed rule p >= .10 (one-tailed). Consistent means there exists a rounded value satisfying the printed inequality; it does not certify direction or a prespecified test.",
+      "result": "consistent",
+      "rounding_interval_used": "b in [0.0905, 0.0915], SE in [0.1255, 0.1265]; all three-decimal values vary independently over half-unit intervals.",
+      "locator": {
+        "doc_id": "D1",
+        "pdf_page": 16,
+        "where": "Table 4; model 10; Service; coef"
+      }
+    },
+    {
+      "check_id": "F150",
+      "type": "coef_se_stars",
+      "description": "T0299 Table 4 model 10, Competitive pressure: coefficient/SE/star check.",
+      "computation": "Assume full-rank conventional OLS with 50 slopes and residual df=322; magnitude one-tail diagnostic p=Pr(t_df >= |b|/s). |t| interval [2.62424242, 2.66871166], p interval [0.00399996135, 0.00454900563]. Printed rule p < 0.01 (one-tailed). Consistent means there exists a rounded value satisfying the printed inequality; it does not certify direction or a prespecified test.",
+      "result": "consistent",
+      "rounding_interval_used": "b in [-0.2175, -0.2165], SE in [0.0815, 0.0825]; all three-decimal values vary independently over half-unit intervals.",
+      "locator": {
+        "doc_id": "D1",
+        "pdf_page": 16,
+        "where": "Table 4; model 10; Competitive pressure; coef"
+      }
+    },
+    {
+      "check_id": "F151",
+      "type": "coef_se_stars",
+      "description": "D2 model 7 incentive compensation differs in SE and significance implication.",
+      "computation": "D2 p interval using |t| and df325: [0.0194154382, 0.0218737757]. Dagger asserts p<.10, which holds; interval is below .05, making dagger under-marked under strongest-star convention. D1 uses SE .081 and has a different implied p interval.",
+      "result": "consistent",
+      "rounding_interval_used": "b in [.1245,.1255], SE in [.0605,.0615].",
+      "locator": {
+        "doc_id": "D2",
+        "pdf_page": 15,
+        "where": "Table 4 model 7 incentive compensation"
+      }
+    },
+    {
+      "check_id": "F152",
+      "type": "N_df",
+      "description": "Model 2: overall F, R2 and N versus stated regressors.",
+      "computation": "N=590; explicit controls plus industry indicators and HRM/product terms imply k=48, residual df=541. F=(R2/k)/((1-R2)/(N-k-1)) yields [2.49927459, 2.51611876]; printed F interval [2.5145, 2.5155]. Integer slope counts compatible with printed R2/F/N: [48]. No unreported group collapsing is inferred.",
+      "result": "consistent",
+      "rounding_interval_used": "R2 [0.1815, 0.1825], F [2.5145, 2.5155], N integer exact. Conditional on full rank, unweighted conventional OLS.",
+      "locator": {
+        "doc_id": "D1",
+        "pdf_page": 15,
+        "where": "Table 3 model 2 statistics"
+      }
+    },
+    {
+      "check_id": "F153",
+      "type": "table_identity",
+      "description": "Model 2: printed delta-R2 and joint F.",
+      "computation": "F_delta=(deltaR2/q)/((1-R2_full)/df), q=6, df=541; possible F [3.4700672, 3.58460754] versus printed [3.5815, 3.5825].",
+      "result": "consistent",
+      "rounding_interval_used": "deltaR2 [0.0315, 0.0325], R2 [0.1815, 0.1825], joint F [3.5815, 3.5825].",
+      "locator": {
+        "doc_id": "D1",
+        "pdf_page": 15,
+        "where": "Table 3 model 2 incremental-fit rows"
+      }
+    },
+    {
+      "check_id": "F154",
+      "type": "coef_se_stars",
+      "description": "Model 2: joint F significance mark.",
+      "computation": "Upper-tail F(6,541) p interval [0.00171949262, 0.00172362326]; printed mark **. F p is not halved. Weaker-than-available marks are not an inequality contradiction.",
+      "result": "consistent",
+      "rounding_interval_used": "F [3.5815, 3.5825].",
+      "locator": {
+        "doc_id": "D1",
+        "pdf_page": 15,
+        "where": "Table 3 joint F for model 2"
+      }
+    },
+    {
+      "check_id": "F155",
+      "type": "coef_se_stars",
+      "description": "Model 2: overall F star.",
+      "computation": "Upper-tail F(48,541) p interval [3.15340666e-07, 3.19265297e-07]; printed **.",
+      "result": "consistent",
+      "rounding_interval_used": "F [2.5145, 2.5155].",
+      "locator": {
+        "doc_id": "D1",
+        "pdf_page": 15,
+        "where": "Table 3 model 2 overall F"
+      }
+    },
+    {
+      "check_id": "F156",
+      "type": "N_df",
+      "description": "Model 3: overall F, R2 and N versus stated regressors.",
+      "computation": "N=590; explicit controls plus industry indicators and HRM/product terms imply k=48, residual df=541. F=(R2/k)/((1-R2)/(N-k-1)) yields [2.56689943, 2.58390955]; printed F interval [2.5695, 2.5705]. Integer slope counts compatible with printed R2/F/N: [48]. No unreported group collapsing is inferred.",
+      "result": "consistent",
+      "rounding_interval_used": "R2 [0.1855, 0.1865], F [2.5695, 2.5705], N integer exact. Conditional on full rank, unweighted conventional OLS.",
+      "locator": {
+        "doc_id": "D1",
+        "pdf_page": 15,
+        "where": "Table 3 model 3 statistics"
+      }
+    },
+    {
+      "check_id": "F157",
+      "type": "table_identity",
+      "description": "Model 3: printed delta-R2 and joint F.",
+      "computation": "F_delta=(deltaR2/q)/((1-R2_full)/df), q=6, df=541; possible F [3.9299161, 4.04558492] versus printed [3.9525, 3.9535].",
+      "result": "consistent",
+      "rounding_interval_used": "deltaR2 [0.0355, 0.0365], R2 [0.1855, 0.1865], joint F [3.9525, 3.9535].",
+      "locator": {
+        "doc_id": "D1",
+        "pdf_page": 15,
+        "where": "Table 3 model 3 incremental-fit rows"
+      }
+    },
+    {
+      "check_id": "F158",
+      "type": "coef_se_stars",
+      "description": "Model 3: joint F significance mark.",
+      "computation": "Upper-tail F(6,541) p interval [0.00070165976, 0.00070336777]; printed mark **. F p is not halved. Weaker-than-available marks are not an inequality contradiction.",
+      "result": "consistent",
+      "rounding_interval_used": "F [3.9525, 3.9535].",
+      "locator": {
+        "doc_id": "D1",
+        "pdf_page": 15,
+        "where": "Table 3 joint F for model 3"
+      }
+    },
+    {
+      "check_id": "F159",
+      "type": "coef_se_stars",
+      "description": "Model 3: overall F star.",
+      "computation": "Upper-tail F(48,541) p interval [1.59261218e-07, 1.61259391e-07]; printed **.",
+      "result": "consistent",
+      "rounding_interval_used": "F [2.5695, 2.5705].",
+      "locator": {
+        "doc_id": "D1",
+        "pdf_page": 15,
+        "where": "Table 3 model 3 overall F"
+      }
+    },
+    {
+      "check_id": "F160",
+      "type": "N_df",
+      "description": "Model 4: overall F, R2 and N versus stated regressors.",
+      "computation": "N=590; explicit controls plus industry indicators and HRM/product terms imply k=51, residual df=538. F=(R2/k)/((1-R2)/(N-k-1)) yields [2.38662675, 2.40250846]; printed F interval [2.3865, 2.3875]. Integer slope counts compatible with printed R2/F/N: [51]. No unreported group collapsing is inferred.",
+      "result": "consistent",
+      "rounding_interval_used": "R2 [0.1845, 0.1855], F [2.3865, 2.3875], N integer exact. Conditional on full rank, unweighted conventional OLS.",
+      "locator": {
+        "doc_id": "D1",
+        "pdf_page": 15,
+        "where": "Table 3 model 4 statistics"
+      }
+    },
+    {
+      "check_id": "F161",
+      "type": "table_identity",
+      "description": "Model 4: printed delta-R2 and joint F.",
+      "computation": "F_delta=(deltaR2/q)/((1-R2_full)/df), q=3, df=538; possible F [0.329858982, 0.550439943] versus printed [0.4445, 0.4455].",
+      "result": "consistent",
+      "rounding_interval_used": "deltaR2 [0.0015, 0.0025], R2 [0.1845, 0.1855], joint F [0.4445, 0.4455].",
+      "locator": {
+        "doc_id": "D1",
+        "pdf_page": 15,
+        "where": "Table 3 model 4 incremental-fit rows"
+      }
+    },
+    {
+      "check_id": "F162",
+      "type": "coef_se_stars",
+      "description": "Model 4: joint F significance mark.",
+      "computation": "Upper-tail F(3,538) p interval [0.720583394, 0.721291714]; printed mark none. F p is not halved. Weaker-than-available marks are not an inequality contradiction.",
+      "result": "consistent",
+      "rounding_interval_used": "F [0.4445, 0.4455].",
+      "locator": {
+        "doc_id": "D1",
+        "pdf_page": 15,
+        "where": "Table 3 joint F for model 4"
+      }
+    },
+    {
+      "check_id": "F163",
+      "type": "coef_se_stars",
+      "description": "Model 4: overall F star.",
+      "computation": "Upper-tail F(51,538) p interval [8.48751664e-07, 8.59583733e-07]; printed **.",
+      "result": "consistent",
+      "rounding_interval_used": "F [2.3865, 2.3875].",
+      "locator": {
+        "doc_id": "D1",
+        "pdf_page": 15,
+        "where": "Table 3 model 4 overall F"
+      }
+    },
+    {
+      "check_id": "F164",
+      "type": "N_df",
+      "description": "Model 5: overall F, R2 and N versus stated regressors.",
+      "computation": "N=590; explicit controls plus industry indicators and HRM/product terms imply k=51, residual df=538. F=(R2/k)/((1-R2)/(N-k-1)) yields [2.46642716, 2.48250554]; printed F interval [2.4675, 2.4685]. Integer slope counts compatible with printed R2/F/N: [51]. No unreported group collapsing is inferred.",
+      "result": "consistent",
+      "rounding_interval_used": "R2 [0.1895, 0.1905], F [2.4675, 2.4685], N integer exact. Conditional on full rank, unweighted conventional OLS.",
+      "locator": {
+        "doc_id": "D1",
+        "pdf_page": 15,
+        "where": "Table 3 model 5 statistics"
+      }
+    },
+    {
+      "check_id": "F165",
+      "type": "table_identity",
+      "description": "Model 5: printed delta-R2 and joint F.",
+      "computation": "F_delta=(deltaR2/q)/((1-R2_full)/df), q=3, df=538; possible F [0.553156488, 0.775375746] versus printed [0.8675, 0.8685].",
+      "result": "inconsistent",
+      "rounding_interval_used": "deltaR2 [0.0025, 0.0035], R2 [0.1895, 0.1905], joint F [0.8675, 0.8685].",
+      "locator": {
+        "doc_id": "D1",
+        "pdf_page": 15,
+        "where": "Table 3 model 5 incremental-fit rows"
+      }
+    },
+    {
+      "check_id": "F166",
+      "type": "coef_se_stars",
+      "description": "Model 5: joint F significance mark.",
+      "computation": "Upper-tail F(3,538) p interval [0.45720492, 0.45772879]; printed mark none. F p is not halved. Weaker-than-available marks are not an inequality contradiction.",
+      "result": "consistent",
+      "rounding_interval_used": "F [0.8675, 0.8685].",
+      "locator": {
+        "doc_id": "D1",
+        "pdf_page": 15,
+        "where": "Table 3 joint F for model 5"
+      }
+    },
+    {
+      "check_id": "F167",
+      "type": "coef_se_stars",
+      "description": "Model 5: overall F star.",
+      "computation": "Upper-tail F(51,538) p interval [3.01644016e-07, 3.05547256e-07]; printed **.",
+      "result": "consistent",
+      "rounding_interval_used": "F [2.4675, 2.4685].",
+      "locator": {
+        "doc_id": "D1",
+        "pdf_page": 15,
+        "where": "Table 3 model 5 overall F"
+      }
+    },
+    {
+      "check_id": "F168",
+      "type": "N_df",
+      "description": "Model 7: overall F, R2 and N versus stated regressors.",
+      "computation": "N=373; explicit controls plus industry indicators and HRM/product terms imply k=47, residual df=325. F=(R2/k)/((1-R2)/(N-k-1)) yields [2.46123332, 2.47396398]; printed F interval [2.4655, 2.4665]. Integer slope counts compatible with printed R2/F/N: [47]. No unreported group collapsing is inferred.",
+      "result": "consistent",
+      "rounding_interval_used": "R2 [0.2625, 0.2635], F [2.4655, 2.4665], N integer exact. Conditional on full rank, unweighted conventional OLS.",
+      "locator": {
+        "doc_id": "D1",
+        "pdf_page": 16,
+        "where": "Table 4 model 7 statistics"
+      }
+    },
+    {
+      "check_id": "F169",
+      "type": "table_identity",
+      "description": "Model 7: printed delta-R2 and joint F.",
+      "computation": "F_delta=(deltaR2/q)/((1-R2_full)/df), q=6, df=325; possible F [2.68079096, 2.75797692] versus printed [2.7025, 2.7035].",
+      "result": "consistent",
+      "rounding_interval_used": "deltaR2 [0.0365, 0.0375], R2 [0.2625, 0.2635], joint F [2.7025, 2.7035].",
+      "locator": {
+        "doc_id": "D1",
+        "pdf_page": 17,
+        "where": "Table 4 model 7 incremental-fit rows"
+      }
+    },
+    {
+      "check_id": "F170",
+      "type": "coef_se_stars",
+      "description": "Model 7: joint F significance mark.",
+      "computation": "Upper-tail F(6,325) p interval [0.0141567174, 0.0141884799]; printed mark *. F p is not halved. Weaker-than-available marks are not an inequality contradiction.",
+      "result": "consistent",
+      "rounding_interval_used": "F [2.7025, 2.7035].",
+      "locator": {
+        "doc_id": "D1",
+        "pdf_page": 17,
+        "where": "Table 4 joint F for model 7"
+      }
+    },
+    {
+      "check_id": "F171",
+      "type": "coef_se_stars",
+      "description": "Model 7: overall F star.",
+      "computation": "Upper-tail F(47,325) p interval [2.0501558e-06, 2.07247889e-06]; printed **.",
+      "result": "consistent",
+      "rounding_interval_used": "F [2.4655, 2.4665].",
+      "locator": {
+        "doc_id": "D1",
+        "pdf_page": 16,
+        "where": "Table 4 model 7 overall F"
+      }
+    },
+    {
+      "check_id": "F172",
+      "type": "N_df",
+      "description": "Model 8: overall F, R2 and N versus stated regressors.",
+      "computation": "N=373; explicit controls plus industry indicators and HRM/product terms imply k=47, residual df=325. F=(R2/k)/((1-R2)/(N-k-1)) yields [2.48672925, 2.49952928]; printed F interval [2.4885, 2.4895]. Integer slope counts compatible with printed R2/F/N: [47]. No unreported group collapsing is inferred.",
+      "result": "consistent",
+      "rounding_interval_used": "R2 [0.2645, 0.2655], F [2.4885, 2.4895], N integer exact. Conditional on full rank, unweighted conventional OLS.",
+      "locator": {
+        "doc_id": "D1",
+        "pdf_page": 16,
+        "where": "Table 4 model 8 statistics"
+      }
+    },
+    {
+      "check_id": "F173",
+      "type": "table_identity",
+      "description": "Model 8: printed delta-R2 and joint F.",
+      "computation": "F_delta=(deltaR2/q)/((1-R2_full)/df), q=6, df=325; possible F [2.83537276, 2.91297935] versus printed [2.4885, 2.4895].",
+      "result": "inconsistent",
+      "rounding_interval_used": "deltaR2 [0.0385, 0.0395], R2 [0.2645, 0.2655], joint F [2.4885, 2.4895].",
+      "locator": {
+        "doc_id": "D1",
+        "pdf_page": 17,
+        "where": "Table 4 model 8 incremental-fit rows"
+      }
+    },
+    {
+      "check_id": "F174",
+      "type": "coef_se_stars",
+      "description": "Model 8: joint F significance mark.",
+      "computation": "Upper-tail F(6,325) p interval [0.0227813842, 0.0228316474]; printed mark *. F p is not halved. Weaker-than-available marks are not an inequality contradiction.",
+      "result": "consistent",
+      "rounding_interval_used": "F [2.4885, 2.4895].",
+      "locator": {
+        "doc_id": "D1",
+        "pdf_page": 17,
+        "where": "Table 4 joint F for model 8"
+      }
+    },
+    {
+      "check_id": "F175",
+      "type": "coef_se_stars",
+      "description": "Model 8: overall F star.",
+      "computation": "Upper-tail F(47,325) p interval [1.59753504e-06, 1.6149796e-06]; printed **.",
+      "result": "consistent",
+      "rounding_interval_used": "F [2.4885, 2.4895].",
+      "locator": {
+        "doc_id": "D1",
+        "pdf_page": 16,
+        "where": "Table 4 model 8 overall F"
+      }
+    },
+    {
+      "check_id": "F176",
+      "type": "N_df",
+      "description": "Model 9: overall F, R2 and N versus stated regressors.",
+      "computation": "N=373; explicit controls plus industry indicators and HRM/product terms imply k=50, residual df=322. F=(R2/k)/((1-R2)/(N-k-1)) yields [2.33982277, 2.35180887]; printed F interval [2.3485, 2.3495]. Integer slope counts compatible with printed R2/F/N: [50]. No unreported group collapsing is inferred.",
+      "result": "consistent",
+      "rounding_interval_used": "R2 [0.2665, 0.2675], F [2.3485, 2.3495], N integer exact. Conditional on full rank, unweighted conventional OLS.",
+      "locator": {
+        "doc_id": "D1",
+        "pdf_page": 16,
+        "where": "Table 4 model 9 statistics"
+      }
+    },
+    {
+      "check_id": "F177",
+      "type": "table_identity",
+      "description": "Model 9: printed delta-R2 and joint F.",
+      "computation": "F_delta=(deltaR2/q)/((1-R2_full)/df), q=3, df=322; possible F [0.512156328, 0.659385666] versus printed [0.6395, 0.6405].",
+      "result": "consistent",
+      "rounding_interval_used": "deltaR2 [0.0035, 0.0045], R2 [0.2665, 0.2675], joint F [0.6395, 0.6405].",
+      "locator": {
+        "doc_id": "D1",
+        "pdf_page": 17,
+        "where": "Table 4 model 9 incremental-fit rows"
+      }
+    },
+    {
+      "check_id": "F178",
+      "type": "coef_se_stars",
+      "description": "Model 9: joint F significance mark.",
+      "computation": "Upper-tail F(3,322) p interval [0.589438566, 0.590071173]; printed mark none. F p is not halved. Weaker-than-available marks are not an inequality contradiction.",
+      "result": "consistent",
+      "rounding_interval_used": "F [0.6395, 0.6405].",
+      "locator": {
+        "doc_id": "D1",
+        "pdf_page": 17,
+        "where": "Table 4 joint F for model 9"
+      }
+    },
+    {
+      "check_id": "F179",
+      "type": "coef_se_stars",
+      "description": "Model 9: overall F star.",
+      "computation": "Upper-tail F(50,322) p interval [4.57590777e-06, 4.62696754e-06]; printed **.",
+      "result": "consistent",
+      "rounding_interval_used": "F [2.3485, 2.3495].",
+      "locator": {
+        "doc_id": "D1",
+        "pdf_page": 16,
+        "where": "Table 4 model 9 overall F"
+      }
+    },
+    {
+      "check_id": "F180",
+      "type": "N_df",
+      "description": "Model 10: overall F, R2 and N versus stated regressors.",
+      "computation": "N=373; explicit controls plus industry indicators and HRM/product terms imply k=50, residual df=322. F=(R2/k)/((1-R2)/(N-k-1)) yields [2.36382775, 2.37587953]; printed F interval [2.3725, 2.3735]. Integer slope counts compatible with printed R2/F/N: [50]. No unreported group collapsing is inferred.",
+      "result": "consistent",
+      "rounding_interval_used": "R2 [0.2685, 0.2695], F [2.3725, 2.3735], N integer exact. Conditional on full rank, unweighted conventional OLS.",
+      "locator": {
+        "doc_id": "D1",
+        "pdf_page": 16,
+        "where": "Table 4 model 10 statistics"
+      }
+    },
+    {
+      "check_id": "F181",
+      "type": "table_identity",
+      "description": "Model 10: printed delta-R2 and joint F.",
+      "computation": "F_delta=(deltaR2/q)/((1-R2_full)/df), q=3, df=322; possible F [0.660287081, 0.808122291] versus printed [0.6645, 0.6655].",
+      "result": "consistent",
+      "rounding_interval_used": "deltaR2 [0.0045, 0.0055], R2 [0.2685, 0.2695], joint F [0.6645, 0.6655].",
+      "locator": {
+        "doc_id": "D1",
+        "pdf_page": 17,
+        "where": "Table 4 model 10 incremental-fit rows"
+      }
+    },
+    {
+      "check_id": "F182",
+      "type": "coef_se_stars",
+      "description": "Model 10: joint F significance mark.",
+      "computation": "Upper-tail F(3,322) p interval [0.573773322, 0.574394357]; printed mark none. F p is not halved. Weaker-than-available marks are not an inequality contradiction.",
+      "result": "consistent",
+      "rounding_interval_used": "F [0.6645, 0.6655].",
+      "locator": {
+        "doc_id": "D1",
+        "pdf_page": 17,
+        "where": "Table 4 joint F for model 10"
+      }
+    },
+    {
+      "check_id": "F183",
+      "type": "coef_se_stars",
+      "description": "Model 10: overall F star.",
+      "computation": "Upper-tail F(50,322) p interval [3.50430088e-06, 3.5435429e-06]; printed **.",
+      "result": "consistent",
+      "rounding_interval_used": "F [2.3725, 2.3735].",
+      "locator": {
+        "doc_id": "D1",
+        "pdf_page": 16,
+        "where": "Table 4 model 10 overall F"
+      }
+    },
+    {
+      "check_id": "F184",
+      "type": "table_identity",
+      "description": "Model 4 versus 2: delta-R2 from printed R2.",
+      "computation": "R2_full−R2_base in [0.002, 0.004]; printed deltaR2 in [0.0015, 0.0025].",
+      "result": "consistent",
+      "rounding_interval_used": "Both R2 values vary by ±.0005; displayed delta by ±.0005.",
+      "locator": {
+        "doc_id": "D1",
+        "pdf_page": 15,
+        "where": "Table 3, models 2 and 4"
+      }
+    },
+    {
+      "check_id": "F185",
+      "type": "table_identity",
+      "description": "Model 4 versus 2: joint F from the two R2 intervals.",
+      "computation": "Nested F=(R2_full−R2_base)*df/[3*(1−R2_full)], df=538; feasible envelope [0.439811976, 0.880703908], printed [0.4445, 0.4455].",
+      "result": "consistent",
+      "rounding_interval_used": "R2 and joint F each vary over ±.0005; same rows and full-rank OLS assumed.",
+      "locator": {
+        "doc_id": "D1",
+        "pdf_page": 15,
+        "where": "Table 3, nested model comparison"
+      }
+    },
+    {
+      "check_id": "F186",
+      "type": "table_identity",
+      "description": "Model 5 versus 3: delta-R2 from printed R2.",
+      "computation": "R2_full−R2_base in [0.003, 0.005]; printed deltaR2 in [0.0025, 0.0035].",
+      "result": "consistent",
+      "rounding_interval_used": "Both R2 values vary by ±.0005; displayed delta by ±.0005.",
+      "locator": {
+        "doc_id": "D1",
+        "pdf_page": 15,
+        "where": "Table 3, models 3 and 5"
+      }
+    },
+    {
+      "check_id": "F187",
+      "type": "table_identity",
+      "description": "Model 5 versus 3: joint F from the two R2 intervals.",
+      "computation": "Nested F=(R2_full−R2_base)*df/[3*(1−R2_full)], df=538; feasible envelope [0.663787785, 1.10767964], printed [0.8675, 0.8685].",
+      "result": "consistent",
+      "rounding_interval_used": "R2 and joint F each vary over ±.0005; same rows and full-rank OLS assumed.",
+      "locator": {
+        "doc_id": "D1",
+        "pdf_page": 15,
+        "where": "Table 3, nested model comparison"
+      }
+    },
+    {
+      "check_id": "F188",
+      "type": "table_identity",
+      "description": "Model 9 versus 7: delta-R2 from printed R2.",
+      "computation": "R2_full−R2_base in [0.003, 0.005]; printed deltaR2 in [0.0035, 0.0045].",
+      "result": "consistent",
+      "rounding_interval_used": "Both R2 values vary by ±.0005; displayed delta by ±.0005.",
+      "locator": {
+        "doc_id": "D1",
+        "pdf_page": 16,
+        "where": "Table 4, models 7 and 9"
+      }
+    },
+    {
+      "check_id": "F189",
+      "type": "table_identity",
+      "description": "Model 9 versus 7: joint F from the two R2 intervals.",
+      "computation": "Nested F=(R2_full−R2_base)*df/[3*(1−R2_full)], df=322; feasible envelope [0.438991138, 0.732650739], printed [0.6395, 0.6405].",
+      "result": "consistent",
+      "rounding_interval_used": "R2 and joint F each vary over ±.0005; same rows and full-rank OLS assumed.",
+      "locator": {
+        "doc_id": "D1",
+        "pdf_page": 17,
+        "where": "Table 4, nested model comparison"
+      }
+    },
+    {
+      "check_id": "F190",
+      "type": "table_identity",
+      "description": "Model 10 versus 8: delta-R2 from printed R2.",
+      "computation": "R2_full−R2_base in [0.003, 0.005]; printed deltaR2 in [0.0045, 0.0055].",
+      "result": "consistent",
+      "rounding_interval_used": "Both R2 values vary by ±.0005; displayed delta by ±.0005.",
+      "locator": {
+        "doc_id": "D1",
+        "pdf_page": 16,
+        "where": "Table 4, models 8 and 10"
+      }
+    },
+    {
+      "check_id": "F191",
+      "type": "table_identity",
+      "description": "Model 10 versus 8: joint F from the two R2 intervals.",
+      "computation": "Nested F=(R2_full−R2_base)*df/[3*(1−R2_full)], df=322; feasible envelope [0.440191388, 0.734656628], printed [0.6645, 0.6655].",
+      "result": "consistent",
+      "rounding_interval_used": "R2 and joint F each vary over ±.0005; same rows and full-rank OLS assumed.",
+      "locator": {
+        "doc_id": "D1",
+        "pdf_page": 17,
+        "where": "Table 4, nested model comparison"
+      }
+    },
+    {
+      "check_id": "F192",
+      "type": "table_identity",
+      "description": "Models 2/3: implied controls-only fit.",
+      "computation": "R2_full−deltaR2 intervals are [0.149, 0.151] and [0.149, 0.151]; same reduced model is feasible. Equal printed N alone does not establish identical observations.",
+      "result": "consistent",
+      "rounding_interval_used": "Each difference has ±.001 envelope from two independently rounded three-decimal values.",
+      "locator": {
+        "doc_id": "D1",
+        "pdf_page": 15,
+        "where": "Main-effect model incremental variance"
+      }
+    },
+    {
+      "check_id": "F193",
+      "type": "table_identity",
+      "description": "Models 7/8: implied controls-only fit.",
+      "computation": "R2_full−deltaR2 intervals are [0.225, 0.227] and [0.225, 0.227]; same reduced model is feasible. Equal printed N alone does not establish identical observations.",
+      "result": "consistent",
+      "rounding_interval_used": "Each difference has ±.001 envelope from two independently rounded three-decimal values.",
+      "locator": {
+        "doc_id": "D1",
+        "pdf_page": 16,
+        "where": "Main-effect model incremental variance"
+      }
+    },
+    {
+      "check_id": "F194",
+      "type": "N_df",
+      "description": "Analysis sample derivation is not documented.",
+      "computation": "Article reports frame=1427, contacted=1127, completed=727 (D1 p6), organizational analysis=590 and market analysis=373 (pp15,17). No exclusion counts link completed interviews to analysis. Source description also distinguishes copied interviews from distinct establishments. These differences cannot be resolved without inventing sample rules.",
+      "result": "undetermined",
+      "rounding_interval_used": "Counts are exact printed integers; no estimated data counts used.",
+      "locator": {
+        "doc_id": "D1",
+        "pdf_page": 6,
+        "where": "Data; analysis N rows pp15,17"
+      }
+    },
+    {
+      "check_id": "F195",
+      "type": "N_df",
+      "description": "Published response rates versus counts.",
+      "computation": "1127/1427*100 = 78.976875; 727/1127*100 = 64.507542; 727/1427*100 = 50.946041. These round to 79%,64.5%,50.9%.",
+      "result": "consistent",
+      "rounding_interval_used": "79% permits [78.5,79.5]; one-decimal rates permit ±.05 percentage point.",
+      "locator": {
+        "doc_id": "D1",
+        "pdf_page": 6,
+        "where": "Data paragraph 1"
+      }
+    },
+    {
+      "check_id": "F196",
+      "type": "text_vs_table",
+      "description": "Organizational main-effect signs: text says five of six positive in each equation.",
+      "computation": "Model 2 has five positive HRM slopes and one negative (ILM). Model 3 has five positive slopes and one negative (grievance). Model 2 has two significant practices while model 3 has three; the three named practices in prose occur across the pair of specifications.",
+      "result": "consistent",
+      "rounding_interval_used": "Every coefficient ±.0005; none of the relevant sign intervals crosses zero.",
+      "locator": {
+        "doc_id": "D1",
+        "pdf_page": 15,
+        "where": "Results first paragraph versus Table 3 p14"
+      }
+    },
+    {
+      "check_id": "F197",
+      "type": "text_vs_table",
+      "description": "Claim that individual-practice coefficients are always larger.",
+      "computation": "Across main-effect models 2/3/7/8, all matched signed slopes are smaller than in the single-practice families. If “larger” means absolute magnitude, negative ILM and decentralization are counterexamples. Extending “always” to interaction specifications fails: e.g. Model 9 ILM .588 exceeds Model 6 .292. The text principally contrasts individual and simultaneous main effects.",
+      "result": "consistent",
+      "rounding_interval_used": "For matched main-effect comparisons, ±.0005 coefficient intervals do not reverse signed ordering.",
+      "locator": {
+        "doc_id": "D1",
+        "pdf_page": 19,
+        "where": "First main observation; Tables 3/4"
+      }
+    },
+    {
+      "check_id": "F198",
+      "type": "text_vs_table",
+      "description": "Single-practice significance counts and loss of significance.",
+      "computation": "Model 1 marks training, incentive, grievance, decentralization and hierarchy (five); model 6 marks staffing, training, incentive, ILM and hierarchy (five). Grievance and decentralization lose their marks in models 2/3. Thus the prose matches printed marks; numerical validity of marks is checked separately.",
+      "result": "consistent",
+      "rounding_interval_used": "Exact printed symbols, independent of numeric rounding.",
+      "locator": {
+        "doc_id": "D1",
+        "pdf_page": 12,
+        "where": "Results ending; p15 continuation"
+      }
+    },
+    {
+      "check_id": "F199",
+      "type": "text_vs_table",
+      "description": "Interaction narrative and joint-test nonsignificance.",
+      "computation": "Among printed interaction coefficients, only Model 5 training×staffing carries a dagger. All four joint interaction F tests lack stars. Narrative agrees with marks. No evidence for unreported explored models is supplied.",
+      "result": "consistent",
+      "rounding_interval_used": "Printed symbol comparison; rounded coefficient checks separate.",
+      "locator": {
+        "doc_id": "D1",
+        "pdf_page": 17,
+        "where": "Results interaction paragraph"
+      }
+    },
+    {
+      "check_id": "F200",
+      "type": "text_vs_table",
+      "description": "Descriptive correlation sign counts.",
+      "computation": "Count signed positive entries among seven practices × two outcomes and among seven practices: 11/14 and 19/21 respectively. The two negative inter-practice pairs involve incentive compensation with grievance and with hierarchy.",
+      "result": "consistent",
+      "rounding_interval_used": "Two-decimal intervals ±.005: smallest signed entries .01 and −.01 retain sign.",
+      "locator": {
+        "doc_id": "D1",
+        "pdf_page": 12,
+        "where": "Results descriptive paragraph; Table 2 p13"
+      }
+    },
+    {
+      "check_id": "F201",
+      "type": "text_vs_table",
+      "description": "Profit-making versus publicly held population.",
+      "computation": "D1 p7 defines market performance for profit-making organizations; D1 p10 Table 1 footnote a says publicly held firms only. D2 pp6,9 repeats the conflict; dictionary Box F is profit-making. No subset selected to match N.",
+      "result": "inconsistent",
+      "rounding_interval_used": "Not numerical.",
+      "locator": {
+        "doc_id": "D1",
+        "pdf_page": 7,
+        "where": "Dependent-variable definition versus Table 1 p10"
+      }
+    },
+    {
+      "check_id": "F202",
+      "type": "transformation",
+      "description": "Training logging disagreement.",
+      "computation": "D1 p7 says the three measures were standardized and averaged; Table 1 footnote b p10 says standard score of logged value for all, and its marker applies to training. Both copies share this documentation conflict/omission.",
+      "result": "undetermined",
+      "rounding_interval_used": "No transformation selected using printed scale means.",
+      "locator": {
+        "doc_id": "D1",
+        "pdf_page": 7,
+        "where": "Training definition and Table 1 pp9–10"
+      }
+    },
+    {
+      "check_id": "F203",
+      "type": "transformation",
+      "description": "Firm-age scale differs between prose and table labels.",
+      "computation": "D1 p11 defines age in years as 1991 minus founding year; Tables 2/3/4 label log of firm age. D2 agrees in both locations.",
+      "result": "inconsistent",
+      "rounding_interval_used": "Qualitative scale labels; no rounding involved.",
+      "locator": {
+        "doc_id": "D1",
+        "pdf_page": 11,
+        "where": "Control variables versus pp13–16 tables"
+      }
+    },
+    {
+      "check_id": "F204",
+      "type": "transformation",
+      "description": "Vertical hierarchy logging.",
+      "computation": "D1 p8 prose describes number of levels without naming a log; Table 1 p10 explicitly says value is a logarithm. The table resolves a transformation omitted from prose, but does not identify base or nonpositive handling.",
+      "result": "undetermined",
+      "rounding_interval_used": "Not numerical.",
+      "locator": {
+        "doc_id": "D1",
+        "pdf_page": 10,
+        "where": "Table 1 footnote c versus p8"
+      }
+    },
+    {
+      "check_id": "F205",
+      "type": "transformation",
+      "description": "Competition as described cannot produce the displayed descriptive mean.",
+      "computation": "D1 p12 describes a 1–4 variable. Table 2 mean .44 has interval [.435,.445], entirely below the minimum 1 for any average of valid 1–4 values, weighted or unweighted with nonnegative weights. No specific dichotomization can be inferred from the mean.",
+      "result": "inconsistent",
+      "rounding_interval_used": "Full two-decimal mean interval [.435,.445].",
+      "locator": {
+        "doc_id": "D1",
+        "pdf_page": 13,
+        "where": "Table 2 market competition versus p12 definition"
+      }
+    },
+    {
+      "check_id": "F206",
+      "type": "transformation",
+      "description": "Nonprofit and subsidiary called dummy variables but displayed means exceed one.",
+      "computation": "Table 2 nonprofit mean 1.35 and subsidiary 1.44 cannot be means of 0/1 indicators. They could be means of 1/2-coded binary variables, but that is not a uniquely documented coding and is not silently selected.",
+      "result": "inconsistent",
+      "rounding_interval_used": "Mean intervals [1.345,1.355], [1.435,1.445] exclude [0,1].",
+      "locator": {
+        "doc_id": "D1",
+        "pdf_page": 13,
+        "where": "Table 2 means; control definitions p11"
+      }
+    },
+    {
+      "check_id": "F207",
+      "type": "transformation",
+      "description": "Zero means of standardized staffing and training items are not recovered in Table 1.",
+      "computation": "Table 1 item means .10,.08,.09 for staffing and .05,.08,.04 for training all exclude zero at two decimals. Standard scores computed on the very same nonmissing observations with matching weights must average zero. Different reference samples, missingness or weights could explain nonzero reported means; no reference is documented.",
+      "result": "undetermined",
+      "rounding_interval_used": "Every displayed item mean uses ±.005; all are strictly positive.",
+      "locator": {
+        "doc_id": "D1",
+        "pdf_page": 9,
+        "where": "Table 1 staffing/training means and p10 footnote b"
+      }
+    },
+    {
+      "check_id": "F208",
+      "type": "table_identity",
+      "description": "Incentive-compensation Table 1 item means versus Table 2 composite.",
+      "computation": "(2.73+2.56+2.55)/3 = 2.613333. With item means each ±.005, their equal-weight mean is [2.608333,2.618333]; Table 2 composite 2.62 permits [2.615,2.625]. Intervals overlap, so apparent difference is not a contradiction.",
+      "result": "consistent",
+      "rounding_interval_used": "Full two-decimal intervals for all four means; assumes common rows/equal-item means only for this identity check.",
+      "locator": {
+        "doc_id": "D1",
+        "pdf_page": 10,
+        "where": "Table 1 incentive item means; Table 2 p13"
+      }
+    },
+    {
+      "check_id": "F209",
+      "type": "coef_se_stars",
+      "description": "Table 2 correlation footnote: N=590, r>0.05 asserted significant at 0.05.",
+      "computation": "Under standard one-tailed Pearson test with df=N−2=588, critical r=0.067783402. Claimed cutoff read with two-decimal uncertainty spans [0.045, 0.055]. Even the largest rounded cutoff is below the critical value; blanket assertion fails.",
+      "result": "inconsistent",
+      "rounding_interval_used": "Treat printed cutoff as full interval [0.045, 0.055]; N exact. Positive r test.",
+      "locator": {
+        "doc_id": "D1",
+        "pdf_page": 13,
+        "where": "Table 2 footnote a"
+      }
+    },
+    {
+      "check_id": "F210",
+      "type": "coef_se_stars",
+      "description": "Table 2 correlation footnote: N=590, r>0.07 asserted significant at 0.01.",
+      "computation": "Under standard one-tailed Pearson test with df=N−2=588, critical r=0.095757130. Claimed cutoff read with two-decimal uncertainty spans [0.065, 0.075]. Even the largest rounded cutoff is below the critical value; blanket assertion fails.",
+      "result": "inconsistent",
+      "rounding_interval_used": "Treat printed cutoff as full interval [0.065, 0.075]; N exact. Positive r test.",
+      "locator": {
+        "doc_id": "D1",
+        "pdf_page": 13,
+        "where": "Table 2 footnote a"
+      }
+    },
+    {
+      "check_id": "F211",
+      "type": "coef_se_stars",
+      "description": "Table 2 correlation footnote: N=590, r>0.10 asserted significant at 0.001.",
+      "computation": "Under standard one-tailed Pearson test with df=N−2=588, critical r=0.126976819. Claimed cutoff read with two-decimal uncertainty spans [0.095, 0.105]. Even the largest rounded cutoff is below the critical value; blanket assertion fails.",
+      "result": "inconsistent",
+      "rounding_interval_used": "Treat printed cutoff as full interval [0.095, 0.105]; N exact. Positive r test.",
+      "locator": {
+        "doc_id": "D1",
+        "pdf_page": 13,
+        "where": "Table 2 footnote a"
+      }
+    },
+    {
+      "check_id": "F212",
+      "type": "coef_se_stars",
+      "description": "Table 2 correlation footnote: N=373, r>0.09 asserted significant at 0.05.",
+      "computation": "Under standard one-tailed Pearson test with df=N−2=371, critical r=0.085298307. Claimed cutoff read with two-decimal uncertainty spans [0.085, 0.095]. The cutoff is compatible/conservative, but exact pairwise N and computation are not stated.",
+      "result": "consistent",
+      "rounding_interval_used": "Treat printed cutoff as full interval [0.085, 0.095]; N exact. Positive r test.",
+      "locator": {
+        "doc_id": "D1",
+        "pdf_page": 13,
+        "where": "Table 2 footnote a"
+      }
+    },
+    {
+      "check_id": "F213",
+      "type": "coef_se_stars",
+      "description": "Table 2 correlation footnote: N=373, r>0.12 asserted significant at 0.01.",
+      "computation": "Under standard one-tailed Pearson test with df=N−2=371, critical r=0.120419272. Claimed cutoff read with two-decimal uncertainty spans [0.115, 0.125]. The cutoff is compatible/conservative, but exact pairwise N and computation are not stated.",
+      "result": "consistent",
+      "rounding_interval_used": "Treat printed cutoff as full interval [0.115, 0.125]; N exact. Positive r test.",
+      "locator": {
+        "doc_id": "D1",
+        "pdf_page": 13,
+        "where": "Table 2 footnote a"
+      }
+    },
+    {
+      "check_id": "F214",
+      "type": "coef_se_stars",
+      "description": "Table 2 correlation footnote: N=373, r>0.16 asserted significant at 0.001.",
+      "computation": "Under standard one-tailed Pearson test with df=N−2=371, critical r=0.159515820. Claimed cutoff read with two-decimal uncertainty spans [0.155, 0.165]. The cutoff is compatible/conservative, but exact pairwise N and computation are not stated.",
+      "result": "consistent",
+      "rounding_interval_used": "Treat printed cutoff as full interval [0.155, 0.165]; N exact. Positive r test.",
+      "locator": {
+        "doc_id": "D1",
+        "pdf_page": 13,
+        "where": "Table 2 footnote a"
+      }
+    },
+    {
+      "check_id": "F215",
+      "type": "D1_vs_D2",
+      "description": "Table 3, model 2, Training, se: version difference.",
+      "computation": "D1 PDF p14 prints (0.041); D2 PDF p13 prints [0.041). D1 p14 prints (0.041); bracket typography differs, numeric value agrees.",
+      "result": "consistent",
+      "rounding_interval_used": "Exact glyph transcription; numeric values are not averaged or corrected. Consistent means numerical identity if only brackets differ.",
+      "locator": {
+        "doc_id": "D1",
+        "pdf_page": 14,
+        "where": "Table 3; model 2; Training; se"
+      },
+      "related_locators": [
+        {
+          "doc_id": "D2",
+          "pdf_page": 13,
+          "where": "Table 3; model 2; Training; se"
+        }
+      ]
+    },
+    {
+      "check_id": "F216",
+      "type": "D1_vs_D2",
+      "description": "Table 3, model 3, F_deltaR2, F_deltaR2: version difference.",
+      "computation": "D1 PDF p15 prints 3.953**; D2 PDF p14 prints 3.953*. D1 p15 prints 3.953**; both carry superscript c.",
+      "result": "inconsistent",
+      "rounding_interval_used": "Exact glyph transcription; numeric values are not averaged or corrected. Consistent means numerical identity if only brackets differ.",
+      "locator": {
+        "doc_id": "D1",
+        "pdf_page": 15,
+        "where": "Table 3; model 3; F_deltaR2; F_deltaR2"
+      },
+      "related_locators": [
+        {
+          "doc_id": "D2",
+          "pdf_page": 14,
+          "where": "Table 3; model 3; F_deltaR2; F_deltaR2"
+        }
+      ]
+    },
+    {
+      "check_id": "F217",
+      "type": "D1_vs_D2",
+      "description": "Table 4, model 7, Incentive compensation, se: version difference.",
+      "computation": "D1 PDF p16 prints (0.081); D2 PDF p15 prints (0.061). D1 p16 prints (0.081).",
+      "result": "inconsistent",
+      "rounding_interval_used": "Exact glyph transcription; numeric values are not averaged or corrected. Consistent means numerical identity if only brackets differ.",
+      "locator": {
+        "doc_id": "D1",
+        "pdf_page": 16,
+        "where": "Table 4; model 7; Incentive compensation; se"
+      },
+      "related_locators": [
+        {
+          "doc_id": "D2",
+          "pdf_page": 15,
+          "where": "Table 4; model 7; Incentive compensation; se"
+        }
+      ]
+    },
+    {
+      "check_id": "F218",
+      "type": "D1_vs_D2",
+      "description": "Table 4, model 10, Percent managers, coef: version difference.",
+      "computation": "D1 PDF p16 prints −0.604**; D2 PDF p15 prints −0.604”. D2 suffix visually resembles a closing double quotation mark, not two asterisks. D1 p16 clearly has **. D2 significance glyph indeterminate; no p inequality inferred.",
+      "result": "inconsistent",
+      "rounding_interval_used": "Exact glyph transcription; numeric values are not averaged or corrected. Consistent means numerical identity if only brackets differ.",
+      "locator": {
+        "doc_id": "D1",
+        "pdf_page": 16,
+        "where": "Table 4; model 10; Percent managers; coef"
+      },
+      "related_locators": [
+        {
+          "doc_id": "D2",
+          "pdf_page": 15,
+          "where": "Table 4; model 10; Percent managers; coef"
+        }
+      ]
+    },
+    {
+      "check_id": "F219",
+      "type": "D1_vs_D2",
+      "description": "Table 2, model None, Correlation: Grievance procedure / Incentive compensation, other: version difference.",
+      "computation": "D1 PDF p13 prints −.08; D2 PDF p12 prints −.06. D1 p13 differs: -.08.",
+      "result": "inconsistent",
+      "rounding_interval_used": "Exact glyph transcription; numeric values are not averaged or corrected. Consistent means numerical identity if only brackets differ.",
+      "locator": {
+        "doc_id": "D1",
+        "pdf_page": 13,
+        "where": "Table 2; model None; Correlation: Grievance procedure / Incentive compensation; other"
+      },
+      "related_locators": [
+        {
+          "doc_id": "D2",
+          "pdf_page": 12,
+          "where": "Table 2; model None; Correlation: Grievance procedure / Incentive compensation; other"
+        }
+      ]
+    },
+    {
+      "check_id": "F220",
+      "type": "D1_vs_D2",
+      "description": "Table 2, model None, Correlation: Decentralized decision making / Incentive compensation, other: version difference.",
+      "computation": "D1 PDF p13 prints .18; D2 PDF p12 prints .16. D1 p13 differs: .18.",
+      "result": "inconsistent",
+      "rounding_interval_used": "Exact glyph transcription; numeric values are not averaged or corrected. Consistent means numerical identity if only brackets differ.",
+      "locator": {
+        "doc_id": "D1",
+        "pdf_page": 13,
+        "where": "Table 2; model None; Correlation: Decentralized decision making / Incentive compensation; other"
+      },
+      "related_locators": [
+        {
+          "doc_id": "D2",
+          "pdf_page": 12,
+          "where": "Table 2; model None; Correlation: Decentralized decision making / Incentive compensation; other"
+        }
+      ]
+    },
+    {
+      "check_id": "F221",
+      "type": "D1_vs_D2",
+      "description": "Table 2, model None, Nonprofit organization: SD, other: version difference.",
+      "computation": "D1 PDF p13 prints 0.48; D2 PDF p12 prints 0.46. D1 p13 prints 0.48.",
+      "result": "inconsistent",
+      "rounding_interval_used": "Exact glyph transcription; numeric values are not averaged or corrected. Consistent means numerical identity if only brackets differ.",
+      "locator": {
+        "doc_id": "D1",
+        "pdf_page": 13,
+        "where": "Table 2; model None; Nonprofit organization: SD; other"
+      },
+      "related_locators": [
+        {
+          "doc_id": "D2",
+          "pdf_page": 12,
+          "where": "Table 2; model None; Nonprofit organization: SD; other"
+        }
+      ]
+    },
+    {
+      "check_id": "F222",
+      "type": "D1_vs_D2",
+      "description": "Table 2, model None, Correlation: Log of firm age / Training, other: version difference.",
+      "computation": "D1 PDF p13 prints .28; D2 PDF p12 prints .26. D1 p13 differs: .28.",
+      "result": "inconsistent",
+      "rounding_interval_used": "Exact glyph transcription; numeric values are not averaged or corrected. Consistent means numerical identity if only brackets differ.",
+      "locator": {
+        "doc_id": "D1",
+        "pdf_page": 13,
+        "where": "Table 2; model None; Correlation: Log of firm age / Training; other"
+      },
+      "related_locators": [
+        {
+          "doc_id": "D2",
+          "pdf_page": 12,
+          "where": "Table 2; model None; Correlation: Log of firm age / Training; other"
+        }
+      ]
+    },
+    {
+      "check_id": "F223",
+      "type": "D1_vs_D2",
+      "description": "Table 2, model None, Percent managers: SD, other: version difference.",
+      "computation": "D1 PDF p13 prints 0.28; D2 PDF p12 prints 0.26. D1 p13 prints 0.28.",
+      "result": "inconsistent",
+      "rounding_interval_used": "Exact glyph transcription; numeric values are not averaged or corrected. Consistent means numerical identity if only brackets differ.",
+      "locator": {
+        "doc_id": "D1",
+        "pdf_page": 13,
+        "where": "Table 2; model None; Percent managers: SD; other"
+      },
+      "related_locators": [
+        {
+          "doc_id": "D2",
+          "pdf_page": 12,
+          "where": "Table 2; model None; Percent managers: SD; other"
+        }
+      ]
+    },
+    {
+      "check_id": "F224",
+      "type": "D1_vs_D2",
+      "description": "Table 2, model None, Correlation: Service / Percent managers, other: version difference.",
+      "computation": "D1 PDF p13 prints .08; D2 PDF p12 prints .06. D1 p13 differs: .08.",
+      "result": "inconsistent",
+      "rounding_interval_used": "Exact glyph transcription; numeric values are not averaged or corrected. Consistent means numerical identity if only brackets differ.",
+      "locator": {
+        "doc_id": "D1",
+        "pdf_page": 13,
+        "where": "Table 2; model None; Correlation: Service / Percent managers; other"
+      },
+      "related_locators": [
+        {
+          "doc_id": "D2",
+          "pdf_page": 12,
+          "where": "Table 2; model None; Correlation: Service / Percent managers; other"
+        }
+      ]
+    },
+    {
+      "check_id": "F225",
+      "type": "D1_vs_D2",
+      "description": "Other regression cells and item means agree between page-image transcriptions.",
+      "computation": "Tables 1,3,4 visually compared. All numerical regression cells agree except Table 4 model 7 incentive SE; Table 3 model 3 joint-F stars and Table 4 model 10 manager suffix also differ. Training SE bracket differs typographically. Table 1 item numbers agree. D2 Table 4 footnote b mistakenly refers to model 1 instead of model 6, also present in D1.",
+      "result": "consistent",
+      "rounding_interval_used": "Exact printed cells; differences separately retained.",
+      "locator": {
+        "doc_id": "D1",
+        "pdf_page": 14,
+        "where": "Tables 1,3,4; D2 pp8–9,13–16"
+      },
+      "related_locators": [
+        {
+          "doc_id": "D2",
+          "pdf_page": 13,
+          "where": "Tables 1,3,4; D2 pp8–9,13–16"
+        }
+      ]
+    },
+    {
+      "check_id": "F226",
+      "type": "text_vs_table",
+      "description": "PPS design versus later equiprobability description.",
+      "computation": "D1 p5 explicitly states establishment inclusion proportional to employment, while D1 p18 describes a national equiprobability sample of organizations. Equal-probability GSS persons do not imply equal-probability establishments; weighting is unstated. D2 repeats both statements.",
+      "result": "inconsistent",
+      "rounding_interval_used": "Not a rounding issue.",
+      "locator": {
+        "doc_id": "D1",
+        "pdf_page": 18,
+        "where": "Discussion paragraph 1 versus Methods p5"
+      }
+    },
+    {
+      "check_id": "F227",
+      "type": "table_identity",
+      "description": "Model 4/2: simultaneous overall-F, R2 and joint-F consistency.",
+      "computation": "Intersect each model R2 rounding interval with R2=Fk/(df+Fk) from its overall F interval. Feasible full R2 [0.1845, 0.184555048], base R2 [0.182404004, 0.182463309]. Nested F envelope [0.447880531, 0.473059381]; printed partial F [0.4445, 0.4455]. Checks joint constraints rather than selecting one printed statistic as correct.",
+      "result": "inconsistent",
+      "rounding_interval_used": "All displayed R2 and F values vary over their entire ±.0005 intervals; conditional on identical nested samples and stated full-rank OLS dimensions.",
+      "locator": {
+        "doc_id": "D1",
+        "pdf_page": 15,
+        "where": "Table 3 models 2/4"
+      }
+    },
+    {
+      "check_id": "F228",
+      "type": "table_identity",
+      "description": "Model 5/3: simultaneous overall-F, R2 and joint-F consistency.",
+      "computation": "Intersect each model R2 rounding interval with R2=Fk/(df+Fk) from its overall F interval. Feasible full R2 [0.189566802, 0.189629059], base R2 [0.185653043, 0.185711877]. Nested F envelope [0.853020994, 0.879883824]; printed partial F [0.8675, 0.8685]. Checks joint constraints rather than selecting one printed statistic as correct.",
+      "result": "consistent",
+      "rounding_interval_used": "All displayed R2 and F values vary over their entire ±.0005 intervals; conditional on identical nested samples and stated full-rank OLS dimensions.",
+      "locator": {
+        "doc_id": "D1",
+        "pdf_page": 15,
+        "where": "Table 3 models 3/5"
+      }
+    },
+    {
+      "check_id": "F229",
+      "type": "table_identity",
+      "description": "Model 9/7: simultaneous overall-F, R2 and joint-F consistency.",
+      "computation": "Intersect each model R2 rounding interval with R2=Fk/(df+Fk) from its overall F interval. Feasible full R2 [0.267224213, 0.267307583], base R2 [0.262835452, 0.26291403]. Nested F envelope [0.631334167, 0.655129852]; printed partial F [0.6395, 0.6405]. Checks joint constraints rather than selecting one printed statistic as correct.",
+      "result": "consistent",
+      "rounding_interval_used": "All displayed R2 and F values vary over their entire ±.0005 intervals; conditional on identical nested samples and stated full-rank OLS dimensions.",
+      "locator": {
+        "doc_id": "D1",
+        "pdf_page": 17,
+        "where": "Table 4 models 7/9"
+      }
+    },
+    {
+      "check_id": "F230",
+      "type": "table_identity",
+      "description": "Model 10/8: simultaneous overall-F, R2 and joint-F consistency.",
+      "computation": "Intersect each model R2 rounding interval with R2=Fk/(df+Fk) from its overall F interval. Feasible full R2 [0.269219858, 0.269302774], base R2 [0.264638502, 0.264716695]. Nested F envelope [0.661402038, 0.685142719]; printed partial F [0.6645, 0.6655]. Checks joint constraints rather than selecting one printed statistic as correct.",
+      "result": "consistent",
+      "rounding_interval_used": "All displayed R2 and F values vary over their entire ±.0005 intervals; conditional on identical nested samples and stated full-rank OLS dimensions.",
+      "locator": {
+        "doc_id": "D1",
+        "pdf_page": 17,
+        "where": "Table 4 models 8/10"
+      }
+    },
+    {
+      "check_id": "F231",
+      "type": "N_df",
+      "description": "Degrees of freedom and effective industry rank are not printed.",
+      "computation": "Numbers of included columns permit conditional residual df calculations, but none are directly reported; rank deficiency, outcome-specific industry coverage, survey weights and covariance could change the applicable distribution. Overall F/R2/N do not identify the underlying observations or coding.",
+      "result": "undetermined",
+      "rounding_interval_used": "No df imputed as a printed target.",
+      "locator": {
+        "doc_id": "D1",
+        "pdf_page": 15,
+        "where": "Table 3 notes; controls p12; Table 4 p17"
+      }
+    },
+    {
+      "check_id": "F232",
+      "type": "table_identity",
+      "description": "Perceived organizational performance: Table 1 item averages versus Table 2 composite mean.",
+      "computation": "Equal-item average from printed item means 3.04285714; complete rounding envelope [3.03785714, 3.04785714]; composite mean interval [3.045, 3.055]. Requires equal weighting and common item rows; missingness can invalidate this identity.",
+      "result": "consistent",
+      "rounding_interval_used": "Each item and composite mean ±.005; no transformed source data used.",
+      "locator": {
+        "doc_id": "D1",
+        "pdf_page": 9,
+        "where": "Table 1 item means versus Table 2 p13"
+      }
+    },
+    {
+      "check_id": "F233",
+      "type": "table_identity",
+      "description": "Perceived market performance: Table 1 item averages versus Table 2 composite mean.",
+      "computation": "Equal-item average from printed item means 2.88; complete rounding envelope [2.875, 2.885]; composite mean interval [2.845, 2.855]. Requires equal weighting and common item rows; missingness can invalidate this identity.",
+      "result": "undetermined",
+      "rounding_interval_used": "Each item and composite mean ±.005; no transformed source data used.",
+      "locator": {
+        "doc_id": "D1",
+        "pdf_page": 9,
+        "where": "Table 1 item means versus Table 2 p13"
+      }
+    },
+    {
+      "check_id": "F234",
+      "type": "table_identity",
+      "description": "Decentralized decision making: Table 1 item averages versus Table 2 composite mean.",
+      "computation": "Equal-item average from printed item means 3.4975; complete rounding envelope [3.4925, 3.5025]; composite mean interval [3.485, 3.495]. Requires equal weighting and common item rows; missingness can invalidate this identity.",
+      "result": "consistent",
+      "rounding_interval_used": "Each item and composite mean ±.005; no transformed source data used.",
+      "locator": {
+        "doc_id": "D1",
+        "pdf_page": 10,
+        "where": "Table 1 item means versus Table 2 p13"
+      }
+    },
+    {
+      "check_id": "F235",
+      "type": "table_identity",
+      "description": "Internal labor market: Table 1 item averages versus Table 2 composite mean.",
+      "computation": "Equal-item average from printed item means 1.666; complete rounding envelope [1.661, 1.671]; composite mean interval [1.665, 1.675]. Requires equal weighting and common item rows; missingness can invalidate this identity.",
+      "result": "consistent",
+      "rounding_interval_used": "Each item and composite mean ±.005; no transformed source data used.",
+      "locator": {
+        "doc_id": "D1",
+        "pdf_page": 10,
+        "where": "Table 1 item means versus Table 2 p13"
+      }
+    },
+    {
+      "check_id": "F236",
+      "type": "table_identity",
+      "description": "D1 nonprofit mean/SD conditional binary-variable identity.",
+      "computation": "If nonprofit is a two-category variable separated by one unit (e.g. 1/2), mean 1.35 gives p in [.345,.355]. Population/sample SD combined envelope [0.475368278, 0.478919359]; printed SD interval [0.475, 0.485]. This is a conditional check, not a reason to choose coding or preferred version.",
+      "result": "consistent",
+      "rounding_interval_used": "Entire two-decimal mean/SD intervals; both n and n−1 variance divisors considered.",
+      "locator": {
+        "doc_id": "D1",
+        "pdf_page": 13,
+        "where": "Table 2 nonprofit row"
+      }
+    },
+    {
+      "check_id": "F237",
+      "type": "table_identity",
+      "description": "D2 nonprofit mean/SD conditional binary-variable identity.",
+      "computation": "If nonprofit is a two-category variable separated by one unit (e.g. 1/2), mean 1.35 gives p in [.345,.355]. Population/sample SD combined envelope [0.475368278, 0.478919359]; printed SD interval [0.455, 0.465]. This is a conditional check, not a reason to choose coding or preferred version.",
+      "result": "inconsistent",
+      "rounding_interval_used": "Entire two-decimal mean/SD intervals; both n and n−1 variance divisors considered.",
+      "locator": {
+        "doc_id": "D2",
+        "pdf_page": 12,
+        "where": "Table 2 nonprofit row"
+      }
+    }
+  ]
+}

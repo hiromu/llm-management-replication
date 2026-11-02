@@ -1,0 +1,132 @@
+[ Info: U20 M4: n=365 countries=24 surveys=107 converged=true singular=false (15.4s)
+[ Info: U20 M5: n=372 countries=24 surveys=107 converged=true singular=true (0.4s)
+[ Info: N01 M4: n=279 countries=23 surveys=82 converged=true singular=true (8.5s)
+[ Info: U05 M5: n=518 countries=24 surveys=145 converged=true singular=true (0.9s)
+[ Info: U07 M6: n=320 countries=24 surveys=102 converged=true singular=false (6.0s)
+[ Info: U24 M7: n=332 countries=24 surveys=96 converged=true singular=false (10.8s)
+[ Info: U11 M8: n=191 countries=22 surveys=52 converged=true singular=true (5.8s)
+[ Info: U22 M5: n=368 countries=23 surveys=105 converged=true singular=true (0.1s)
+[ Info: U15 M5: n=372 countries=24 surveys=107 converged=true singular=true (0.0s)
+[ Info: U16 M5: n=372 countries=24 surveys=107 converged=true singular=true (0.0s)
+[ Info: U14 M5: n=372 countries=24 surveys=107 converged=true singular=true (0.0s)
+[ Info: U01 M5: n=382 countries=24 surveys=107 converged=true singular=true (0.0s)
+[ Info: U02 M5: n=410 countries=24 surveys=107 converged=true singular=true (0.0s)
+[ Info: U17 M5: n=372 countries=24 surveys=107 converged=true singular=true (0.0s)
+[ Info: U18 M5: n=372 countries=24 surveys=107 converged=true singular=true (0.0s)
+[ Info: U19 M5: n=372 countries=24 surveys=107 converged=true singular=true (0.0s)
+[ Info: U12 M5: n=372 countries=24 surveys=107 converged=true singular=true (0.0s)
+[ Info: U13 M5: n=372 countries=24 surveys=107 converged=true singular=true (0.0s)
+[ Info: U08 M5: n=372 countries=24 surveys=107 converged=true singular=true (0.0s)
+[ Info: U09 M4: n=365 countries=24 surveys=107 converged=true singular=false (11.2s)
+[ Info: U10 M4: n=365 countries=24 surveys=107 converged=true singular=true (9.4s)
+[ Info: U23 M6: n=372 countries=24 surveys=107 converged=true singular=false (11.2s)
+[ Info: TEST M4  FAILED after 0.0s: ArgumentError: The response is constant and thus model fitting has failed
+ORIGIN: roster=143 M3-set surveys=111 carried=57
+  M1 n=6579 surveys=111 cols=11 yref=2001 
+  M2 n=6579 surveys=111 cols=21 yref=2001 
+  M3 n=6579 surveys=111 cols=25 yref=2001 
+  M4 n=365 surveys=107 cols=27 yref=2001 
+  M5 n=372 surveys=107 cols=27 yref=2001 
+  M6 n=372 surveys=107 cols=27 yref=2001 
+  M7 n=332 surveys=96 cols=26 yref=2002 
+  M8 n=179 surveys=51 cols=23 yref=2008 
+  R1 n=6579 surveys=111 cols=25 yref=2001 
+  R2 n=9634 surveys=111 cols=25 yref=2001 
+  R3 n=2197 surveys=111 cols=28 yref=2001 
+
+U01 Dict{Symbol, Any}(:age_rule => :U01) roster=143 set=111/111 leave(m,sd)=(26.311,13.851) status=(0.4991,0.0534) carried=57
+    M3:n=6784,svy=111,cols=25  M4:n=374,svy=107,cols=27  M5:n=382,svy=107,cols=27  M6:n=382,svy=107,cols=27  M7:n=341,svy=96,cols=26  M8:n=183,svy=51,cols=23
+U02 Dict{Symbol, Any}(:employ_rule => :U02) roster=143 set=111/111 leave(m,sd)=(26.311,13.851) status=(0.4991,0.0534) carried=57
+    M3:n=7177,svy=111,cols=25  M4:n=401,svy=107,cols=27  M5:n=410,svy=107,cols=27  M6:n=410,svy=107,cols=27  M7:n=365,svy=96,cols=26  M8:n=196,svy=51,cols=23
+U03 Dict{Symbol, Any}(:activity_def => :U03) roster=143 set=111/111 leave(m,sd)=(26.311,13.851) status=(0.4991,0.0534) carried=57
+    M3:n=6512,svy=111,cols=25  R1:n=6506,svy=111,cols=25
+U04 Dict{Symbol, Any}(:activity_def => :U04) roster=143 set=111/111 leave(m,sd)=(26.311,13.851) status=(0.4991,0.0534) carried=57
+    M3:n=6639,svy=111,cols=25
+U05 Dict{Symbol, Any}(:roster => :U05) roster=151 set=150/150 leave(m,sd)=(27.195,13.924) status=(0.5003,0.0516) carried=40
+    M3:n=8839,svy=150,cols=25  M4:n=508,svy=144,cols=27  M5:n=518,svy=145,cols=27  M6:n=518,svy=145,cols=27  M7:n=446,svy=125,cols=26  M8:n=255,svy=70,cols=23
+U06 Dict{Symbol, Any}(:dk_zero => true) roster=143 set=111/111 leave(m,sd)=(26.311,13.851) status=(0.4991,0.0534) carried=57
+    M3:n=6579,svy=111,cols=25
+U07 Dict{Symbol, Any}(:owner_def => :U07) roster=143 set=111/111 leave(m,sd)=(26.311,13.851) status=(0.4991,0.0534) carried=57
+    M4:n=315,svy=101,cols=27  M5:n=320,svy=102,cols=27  M6:n=320,svy=102,cols=27  M7:n=290,svy=91,cols=26  M8:n=156,svy=49,cols=23
+U08 Dict{Symbol, Any}(:owner_def => :U08) roster=143 set=111/111 leave(m,sd)=(26.311,13.851) status=(0.4991,0.0534) carried=57
+    M4:n=365,svy=107,cols=27  M5:n=372,svy=107,cols=27  M6:n=372,svy=107,cols=27  M7:n=332,svy=96,cols=26  M8:n=179,svy=51,cols=23
+U09 Dict{Symbol, Any}(:planb_def => :U09) roster=143 set=111/111 leave(m,sd)=(26.311,13.851) status=(0.4991,0.0534) carried=57
+    M4:n=365,svy=107,cols=27
+U10 Dict{Symbol, Any}(:planb_def => :U10) roster=143 set=111/111 leave(m,sd)=(26.311,13.851) status=(0.4991,0.0534) carried=57
+    M4:n=365,svy=107,cols=27
+U11 Dict{Symbol, Any}(:bage_def => :U11) roster=143 set=111/111 leave(m,sd)=(26.311,13.851) status=(0.4991,0.0534) carried=57
+    M4:n=392,svy=108,cols=27  M5:n=401,svy=108,cols=27  M6:n=401,svy=108,cols=27  M7:n=359,svy=97,cols=26  M8:n=191,svy=52,cols=23
+U12 Dict{Symbol, Any}(:parttime_var => :pt_national_women) roster=143 set=111/111 leave(m,sd)=(26.311,13.851) status=(0.4991,0.0534) carried=57
+    M3:n=6579,svy=111,cols=25  M4:n=365,svy=107,cols=27  M5:n=372,svy=107,cols=27  M6:n=372,svy=107,cols=27  M7:n=332,svy=96,cols=26  M8:n=179,svy=51,cols=23
+U13 Dict{Symbol, Any}(:parttime_var => :pt_common_total_women) roster=143 set=111/111 leave(m,sd)=(26.311,13.851) status=(0.4991,0.0534) carried=57
+    M3:n=6579,svy=111,cols=25  M4:n=365,svy=107,cols=27  M5:n=372,svy=107,cols=27  M6:n=372,svy=107,cols=27  M7:n=332,svy=96,cols=26  M8:n=179,svy=51,cols=23
+U14 Dict{Symbol, Any}(:leave_sq_rule => :U14) roster=143 set=111/111 leave(m,sd)=(26.311,13.851) status=(0.4991,0.0534) leave_sq_raw=(882.4,754.9) carried=57
+    M3:n=6579,svy=111,cols=25  M4:n=365,svy=107,cols=27  M5:n=372,svy=107,cols=27  M6:n=372,svy=107,cols=27  M7:n=332,svy=96,cols=26  M8:n=179,svy=51,cols=23
+U15 Dict{Symbol, Any}(:std_rule => :country) roster=143 set=111/24 leave(m,sd)=(27.985,13.868) status=(0.5005,0.0311) carried=57
+    M3:n=6579,svy=111,cols=25  M4:n=365,svy=107,cols=27  M5:n=372,svy=107,cols=27  M6:n=372,svy=107,cols=27  M7:n=332,svy=96,cols=26  M8:n=179,svy=51,cols=23
+U16 Dict{Symbol, Any}(:std_rule => :individual) roster=143 set=111/6579 leave(m,sd)=(26.335,13.746) status=(0.4989,0.0533) carried=57
+    M3:n=6579,svy=111,cols=25  M4:n=365,svy=107,cols=27  M5:n=372,svy=107,cols=27  M6:n=372,svy=107,cols=27  M7:n=332,svy=96,cols=26  M8:n=179,svy=51,cols=23
+U17 Dict{Symbol, Any}(:leave_lag => 0) roster=143 set=111/111 leave(m,sd)=(26.106,13.817) status=(0.4991,0.0534) carried=57
+    M3:n=6579,svy=111,cols=25  M4:n=365,svy=107,cols=27  M5:n=372,svy=107,cols=27  M6:n=372,svy=107,cols=27  M7:n=332,svy=96,cols=26  M8:n=179,svy=51,cols=23
+U18 Dict{Symbol, Any}(:leave_lag => 2) roster=143 set=111/111 leave(m,sd)=(26.299,13.726) status=(0.4991,0.0534) carried=57
+    M3:n=6579,svy=111,cols=25  M4:n=365,svy=107,cols=27  M5:n=372,svy=107,cols=27  M6:n=372,svy=107,cols=27  M7:n=332,svy=96,cols=26  M8:n=179,svy=51,cols=23
+U19 Dict{Symbol, Any}(:childcare_var => :childcare_pct_gdp_annual) roster=143 set=111/111 leave(m,sd)=(26.311,13.851) status=(0.4991,0.0534) carried=57
+    M3:n=6579,svy=111,cols=25  M4:n=365,svy=107,cols=27  M5:n=372,svy=107,cols=27  M6:n=372,svy=107,cols=27  M7:n=332,svy=96,cols=26  M8:n=179,svy=51,cols=23
+U20 Dict{Symbol, Any}(:covariance => :unstructured) roster=143 set=111/111 leave(m,sd)=(26.311,13.851) status=(0.4991,0.0534) carried=57
+    M3:n=6579,svy=111,cols=25  M4:n=365,svy=107,cols=27  M5:n=372,svy=107,cols=27  M6:n=372,svy=107,cols=27  M7:n=332,svy=96,cols=26  M8:n=179,svy=51,cols=23
+U22 Dict{Symbol, Any}(:status_rule => :sample) roster=143 set=109/109 leave(m,sd)=(26.005,13.789) status=(0.4989,0.0784) carried=51
+    M3:n=6462,svy=109,cols=25  M4:n=361,svy=105,cols=27  M5:n=368,svy=105,cols=27  M6:n=368,svy=105,cols=27  M7:n=329,svy=95,cols=26  M8:n=179,svy=51,cols=23
+U23 Dict{Symbol, Any}(:growth_def => :U23) roster=143 set=111/111 leave(m,sd)=(26.311,13.851) status=(0.4991,0.0534) carried=57
+    M6:n=372,svy=107,cols=27
+U24 Dict{Symbol, Any}(:sole_def => :U24) roster=143 set=111/111 leave(m,sd)=(26.311,13.851) status=(0.4991,0.0534) carried=57
+    M4:n=365,svy=107,cols=27  M5:n=372,svy=107,cols=27  M6:n=372,svy=107,cols=27  M7:n=332,svy=96,cols=26  M8:n=179,svy=51,cols=23
+U25 Dict{Symbol, Any}(:reml_m5 => true) roster=143 set=111/111 leave(m,sd)=(26.311,13.851) status=(0.4991,0.0534) carried=57
+    M5:n=372,svy=107,cols=27
+U26 Dict{Symbol, Any}(:r2_fert => true) roster=143 set=111/111 leave(m,sd)=(26.311,13.851) status=(0.4991,0.0534) carried=57
+    R2:n=9634,svy=111,cols=26
+N01 Dict{Symbol, Any}(:drop_2001_2002 => true) roster=110 set=84/84 leave(m,sd)=(25.802,13.872) status=(0.4989,0.0532) carried=0
+    M3:n=4967,svy=84,cols=23,yref=2003  M4:n=279,svy=82,cols=25,yref=2003  M5:n=285,svy=82,cols=25,yref=2003  M6:n=285,svy=82,cols=25,yref=2003  M7:n=285,svy=82,cols=25,yref=2003  M8:n=179,svy=51,cols=23
+
+  z-check leave mean=0.0 sd=1.0
+  z-check childcare mean=0.0 sd=1.0
+  z-check parttime mean=-0.0 sd=1.0
+  z-check gdp mean=0.0 sd=1.0
+  z-check unemp mean=-0.0 sd=1.0
+  z-check epl mean=0.0 sd=1.0
+  z-check status mean=0.0 sd=1.0
+  z-check wmgr mean=-0.0 sd=1.0
+  z-check fert mean=-0.0 sd=1.0
+  leave_sq == leave^2: true
+  U15 country-mean leave: mean=0.0 sd=1.0 n=24
+  U16 row-level leave: mean=-0.0 sd=1.0
+  U14 leave_sq over surveys: mean=-0.0 sd=1.0
+
+22×10 DataFrame
+ Row │ run_id  model  status  n_obs  n_countries  n_surveys  converged  singular  sd_country_intercept  sd_survey_female
+     │ Any     Any    Any     Any    Any          Any        Any        Any       Any                   Any
+─────┼───────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+   1 │ U20     M4     ok      365    24           107        true       false     0.00317702            0.0638899
+   2 │ U20     M5     ok      372    24           107        true       true      0.0                   1.31644e-5
+   3 │ N01     M4     ok      279    23           82         true       true      0.0                   0.00675916
+   4 │ U05     M5     ok      518    24           145        true       true      0.0248067             0.0
+   5 │ U07     M6     ok      320    24           102        true       false     0.000184093           0.0210314
+   6 │ U24     M7     ok      332    24           96         true       false     0.000431442           0.601986
+   7 │ U11     M8     ok      191    22           52         true       true      0.00038557            0.00106115
+   8 │ U22     M5     ok      368    23           105        true       true      0.0                   0.0
+   9 │ U15     M5     ok      372    24           107        true       true      0.0                   0.0
+  10 │ U16     M5     ok      372    24           107        true       true      0.0                   0.0
+  11 │ U14     M5     ok      372    24           107        true       true      0.0                   0.0
+  12 │ U01     M5     ok      382    24           107        true       true      0.0                   0.0
+  13 │ U02     M5     ok      410    24           107        true       true      0.0                   0.0
+  14 │ U17     M5     ok      372    24           107        true       true      0.0                   0.0
+  15 │ U18     M5     ok      372    24           107        true       true      0.0                   0.0
+  16 │ U19     M5     ok      372    24           107        true       true      0.0                   0.0
+  17 │ U12     M5     ok      372    24           107        true       true      0.0                   0.0
+  18 │ U13     M5     ok      372    24           107        true       true      0.0                   0.0
+  19 │ U08     M5     ok      372    24           107        true       true      0.0                   0.0
+  20 │ U09     M4     ok      365    24           107        true       false     0.00013178            0.0762414
+  21 │ U10     M4     ok      365    24           107        true       true      0.000263678           0.0
+  22 │ U23     M6     ok      372    24           107        true       false     0.000341958           0.0150992
+U20 M4 terms: (Intercept) female age_c age_c2 postsecondary year2002 year2003 year2004 year2005 year2006 year2007 year2008 leave leave_sq childcare parttime gdp unemp epl status wmgr fert female:leave female:leave_sq female:childcare female:parttime sole bage_c
+N01 M4 terms: (Intercept) female age_c age_c2 postsecondary year2004 year2005 year2006 year2007 year2008 leave leave_sq childcare parttime gdp unemp epl status wmgr fert female:leave female:leave_sq female:childcare female:parttime sole bage_c | error col: reference year 2001 absent from sample; reference set to 2003
+forced-failure row: status=failed error=ArgumentError: The response is constant and thus model fitting has failed |  |

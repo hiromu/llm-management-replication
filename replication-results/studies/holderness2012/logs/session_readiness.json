@@ -1,0 +1,42 @@
+{
+  "study_id": "holderness2012",
+  "paper_id": "MNSC_2012_Holderness",
+  "coordinator_session_id": "fd5c105f-e59a-44db-b474-6f14aa01b1e0",
+  "checked_at": "2026-10-27",
+  "research_authorized": false,
+  "coordinator": {
+    "requested": {"model": "claude-opus-5-5", "effort": "high", "fast_mode": false},
+    "observed_model": "claude-opus-5-5 (self-reported by the running model in its system context)",
+    "observed_effort": "not directly observable by the coordinator; project .claude/settings.json sets high; user-level settings also high",
+    "observed_fast_mode": "not directly observable by the coordinator; project settings set false, overriding user-level fastMode true; needs user confirmation in the app",
+    "status_and_memory_commands": "/status and /memory are interactive commands not runnable from this desktop session; loaded instruction files reported from session context instead"
+  },
+  "loaded_instruction_files": [
+    "CLAUDE.md (project root)",
+    "studies/holderness2012/CLAUDE.md"
+  ],
+  "global_claude_md_loaded": false,
+  "auto_memory_content_loaded": false,
+  "other_loaded_context_disclosed": [
+    "User-level hooks from ~/.claude/settings.json run in this coordinator session: a conversation logger (writes studies/holderness2012/chat_log.md), a session-start logger, iTerm2 status and herdr agent-state hooks. They do not inject instructions observed in context.",
+    "Desktop-app tools, MCP servers, plugins and skills are available to the coordinator session; none are used for reader, implementer or checker roles, which run under claude --safe-mode or codex exec."
+  ],
+  "publication_packet_precheck": {
+    "article_path": "papers/journal_collection/MNSC/MNSC_2012_Holderness.pdf",
+    "article_sha256_expected": "57d70148a9f57247cb0a26f58ef497bc750c3193b7f5f91297bacf272e0fdbb4",
+    "article_sha256_observed": "57d70148a9f57247cb0a26f58ef497bc750c3193b7f5f91297bacf272e0fdbb4",
+    "hash_match": true,
+    "local_supplement_matches": 0,
+    "external_supplement_search": "pending research authorization"
+  },
+  "role_cli": {
+    "claude": {"path": "~/.local/bin/claude", "version": "2.1.270", "required_flags_present": ["--safe-mode", "--effort", "--no-session-persistence", "--tools", "--allowed-tools"]},
+    "codex": {"path": "~/.local/bin/codex", "version": "codex-cli 0.164.0", "required_flags_present": ["--ephemeral", "--ignore-user-config", "--skip-git-repo-check", "--sandbox"], "user_agents_md_present": true, "user_agents_md_load_status": "to be checked at first launch"},
+    "reader_model_access": "unverified; no model call made before authorization"
+  },
+  "python": {"path": "~/.venv/bin/python", "version": "3.13.4"},
+  "eligibility": {
+    "public_source_eligibility": "to_be_verified_after_authorization",
+    "author_package_availability": "to_be_verified_after_authorization"
+  }
+}

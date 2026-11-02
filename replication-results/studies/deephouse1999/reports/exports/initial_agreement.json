@@ -1,0 +1,146 @@
+{
+ "claim_tier": {
+  "matched_n": 17,
+  "agree_n": 14,
+  "raw_agreement": 0.8235,
+  "gwet_ac1": 0.7805,
+  "undefined_reason": null,
+  "categories": [
+   "focal",
+   "identification_inference_diagnostic",
+   "robustness",
+   "descriptive",
+   "nuisance_control"
+  ],
+  "joint_counts": {
+   "focal|focal": 3,
+   "focal|identification_inference_diagnostic": 2,
+   "nuisance_control|nuisance_control": 4,
+   "robustness|robustness": 2,
+   "identification_inference_diagnostic|descriptive": 1,
+   "identification_inference_diagnostic|identification_inference_diagnostic": 3,
+   "descriptive|descriptive": 2
+  }
+ },
+ "claim_direction": {
+  "matched_n": 17,
+  "agree_n": 12,
+  "raw_agreement": 0.7059,
+  "gwet_ac1": 0.6404,
+  "undefined_reason": null,
+  "categories": [
+   "concave_down",
+   "negative",
+   "none",
+   "other",
+   "positive"
+  ],
+  "joint_counts": {
+   "positive|positive": 3,
+   "negative|negative": 3,
+   "other|none": 3,
+   "concave_down|concave_down": 1,
+   "negative|other": 1,
+   "none|positive": 1,
+   "none|none": 5
+  }
+ },
+ "level_label": {
+  "matched_n": 31,
+  "agree_n": 25,
+  "raw_agreement": 0.8065,
+  "gwet_ac1": 0.7595,
+  "undefined_reason": null,
+  "categories": [
+   "origin",
+   "equivalent",
+   "non_equivalent",
+   "uncertain"
+  ],
+  "joint_counts": {
+   "origin|origin": 13,
+   "uncertain|uncertain": 10,
+   "origin|uncertain": 2,
+   "uncertain|origin": 2,
+   "non_equivalent|uncertain": 1,
+   "equivalent|uncertain": 1,
+   "non_equivalent|non_equivalent": 1,
+   "equivalent|equivalent": 1
+  }
+ },
+ "unmatched": {
+  "claims_A_only": [
+   "C3c"
+  ],
+  "claims_B_only": [
+   "C14",
+   "C19",
+   "C20",
+   "C21",
+   "C22",
+   "C23",
+   "C24"
+  ],
+  "levels_A_only": [
+   "E2.a",
+   "E2.b",
+   "E2.c",
+   "F1.a",
+   "F1.b",
+   "F1.c",
+   "F2.c",
+   "S2.b",
+   "S2.c",
+   "S3.b",
+   "S4.a",
+   "S4.b",
+   "S4.c",
+   "S5.a",
+   "S5.b",
+   "S5.c",
+   "V11.a",
+   "V11.b",
+   "V12.d",
+   "V13.a",
+   "V13.b",
+   "V2.c",
+   "V3.d",
+   "V4.a",
+   "V4.b",
+   "V6.b"
+  ],
+  "levels_B_only": [
+   "A01_DYNAMIC",
+   "A02_AGREE",
+   "A02_ENTITY",
+   "A03_CONTINUITY",
+   "A03_SYNTHETIC",
+   "A04_JOINT",
+   "A05_AVAILABLE",
+   "A05_ENDPOINT",
+   "A05_O",
+   "A06_IDENTITY",
+   "A06_O",
+   "A06_ZERO",
+   "A07_BENCH",
+   "A07_LAG",
+   "A07_O",
+   "A08_DAYS",
+   "A09_RATIO_MEANS",
+   "A13_NETALLOWANCE",
+   "A13_NETUNEARNED",
+   "A15_DOMESTIC",
+   "A15_O",
+   "A16_UNDEFINED",
+   "A17_GDP",
+   "A20_DIRECTIONAL",
+   "A20_O",
+   "A21_CENTER",
+   "A21_O"
+  ],
+  "claims_A_total": 18,
+  "claims_B_total": 24,
+  "levels_A_total": 57,
+  "levels_B_total": 58
+ }
+}

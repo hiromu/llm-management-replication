@@ -1,0 +1,23 @@
+Source: Federal Reserve MDRM bulk CSV (data/raw/frb_mdrm/MDRM.zip), mnemonic RSSD item 9425
+BANK TYPE ANALYSIS CODE
+A code to indicate certain entities are subject to special analysis.
+
+0 = Not applicable
+1 = A bankers bank that is subject to reserve requirements
+2 = A bankers bank that is not subject to reserve requirements
+3 = Grandfathered nonbank bank
+4 = Entity is primarily conducting credit card activities
+5 = Wholesale bank (with commercial bank charter)
+6 = Standalone Internet Bank (SAIB): Refers to a domestic head office depository entity only (no branches) with no physical location to which customers can go to obtain banking services. All transactions occur via the Internet.
+7 = Workout entity (problem-loan; spin-off; or collecting bank)
+8 = Depository Institution National Bank (DINB)
+9 = Depository trust company
+10 = Bridge entity
+11 = Banking Edge or agreement corporation
+12 = Investment Edge or agreement corporation
+13 = Data processing services
+14 = Trust preferred securities subsidiary
+15 = Cash management banks
+16 = Farm Credit System Institution
+17 = 10L Election - An election made by a state savings bank to be deemed a savings association under section 10(l) of the Home Owners' Loan Act.
+18 = Grandfathered SLHC

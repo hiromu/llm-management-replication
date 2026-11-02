@@ -1,0 +1,311 @@
+{
+ "grid_version": "v1",
+ "equivalent_substantive_levels": [],
+ "note": "No substantive equivalent alternatives survived reconciliation; all executed alternatives are uncertain.",
+ "labels": [
+  {
+   "spec_id": "O",
+   "type": "origin",
+   "axis": null,
+   "level": null,
+   "label": "origin",
+   "basis": "working origin per reconciliation rules"
+  },
+  {
+   "spec_id": "D01",
+   "type": "deviation",
+   "axis": "records",
+   "level": "L1",
+   "label": "uncertain",
+   "basis": "P02 both readers uncertain (drop V3=0 copies)"
+  },
+  {
+   "spec_id": "D02",
+   "type": "deviation",
+   "axis": "market_sample",
+   "level": "L1",
+   "label": "uncertain",
+   "basis": "P04 both uncertain (Table 1 footnote publicly held)"
+  },
+  {
+   "spec_id": "D03",
+   "type": "deviation",
+   "axis": "market_requires_pop",
+   "level": "L1",
+   "label": "uncertain",
+   "basis": "Fable manifest step 5 (subset of Sample A); Astra silent; rule (c) origin"
+  },
+  {
+   "spec_id": "D04",
+   "type": "deviation",
+   "axis": "case_scope",
+   "level": "L1",
+   "label": "uncertain",
+   "basis": "P06 label disagreement (non_equivalent vs uncertain)"
+  },
+  {
+   "spec_id": "D05",
+   "type": "deviation",
+   "axis": "item_rule",
+   "level": "L1",
+   "label": "uncertain",
+   "basis": "P08 both uncertain"
+  },
+  {
+   "spec_id": "D06",
+   "type": "deviation",
+   "axis": "item_rule",
+   "level": "L2",
+   "label": "uncertain",
+   "basis": "P09 both uncertain"
+  },
+  {
+   "spec_id": "D07",
+   "type": "deviation",
+   "axis": "staff_coding",
+   "level": "L1",
+   "label": "uncertain",
+   "basis": "P11 both uncertain"
+  },
+  {
+   "spec_id": "D08",
+   "type": "deviation",
+   "axis": "staff_coding",
+   "level": "L2",
+   "label": "uncertain",
+   "basis": "Fable A05.L2 single reader uncertain"
+  },
+  {
+   "spec_id": "D09",
+   "type": "deviation",
+   "axis": "z_reference",
+   "level": "L1",
+   "label": "uncertain",
+   "basis": "P12 disagreement; Fable origin"
+  },
+  {
+   "spec_id": "D10",
+   "type": "deviation",
+   "axis": "z_reference",
+   "level": "L2",
+   "label": "uncertain",
+   "basis": "Astra A08.L2"
+  },
+  {
+   "spec_id": "D11",
+   "type": "deviation",
+   "axis": "z_reference",
+   "level": "L3",
+   "label": "uncertain",
+   "basis": "Astra A08.L4 single reader"
+  },
+  {
+   "spec_id": "D12",
+   "type": "deviation",
+   "axis": "train_log",
+   "level": "L1",
+   "label": "uncertain",
+   "basis": "P15 both uncertain"
+  },
+  {
+   "spec_id": "D13",
+   "type": "deviation",
+   "axis": "train_log",
+   "level": "L2",
+   "label": "uncertain",
+   "basis": "Astra origin A06.L0; disagreement"
+  },
+  {
+   "spec_id": "D14",
+   "type": "deviation",
+   "axis": "no_training",
+   "level": "L1",
+   "label": "uncertain",
+   "basis": "P16 disagreement (Fable origin, Astra non_equivalent)"
+  },
+  {
+   "spec_id": "D15",
+   "type": "deviation",
+   "axis": "no_training",
+   "level": "L2",
+   "label": "uncertain",
+   "basis": "Astra A05.L1 single reader"
+  },
+  {
+   "spec_id": "D16",
+   "type": "deviation",
+   "axis": "decision_map",
+   "level": "L1",
+   "label": "uncertain",
+   "basis": "Fable A10.L1 single reader"
+  },
+  {
+   "spec_id": "D17",
+   "type": "deviation",
+   "axis": "union_items",
+   "level": "L1",
+   "label": "uncertain",
+   "basis": "P19 both uncertain"
+  },
+  {
+   "spec_id": "D18",
+   "type": "deviation",
+   "axis": "union_items",
+   "level": "L2",
+   "label": "uncertain",
+   "basis": "Fable A11.L1 single reader"
+  },
+  {
+   "spec_id": "D19",
+   "type": "deviation",
+   "axis": "subsidiary",
+   "level": "L1",
+   "label": "uncertain",
+   "basis": "P22 both uncertain"
+  },
+  {
+   "spec_id": "D20",
+   "type": "deviation",
+   "axis": "subsidiary",
+   "level": "L2",
+   "label": "uncertain",
+   "basis": "Fable A12.L2 single reader"
+  },
+  {
+   "spec_id": "D21",
+   "type": "deviation",
+   "axis": "age",
+   "level": "L1",
+   "label": "uncertain",
+   "basis": "P25 disagreement"
+  },
+  {
+   "spec_id": "D22",
+   "type": "deviation",
+   "axis": "age",
+   "level": "L2",
+   "label": "uncertain",
+   "basis": "P24 disagreement"
+  },
+  {
+   "spec_id": "D23",
+   "type": "deviation",
+   "axis": "hierarchy",
+   "level": "L1",
+   "label": "uncertain",
+   "basis": "P27 disagreement"
+  },
+  {
+   "spec_id": "D24",
+   "type": "deviation",
+   "axis": "hierarchy",
+   "level": "L2",
+   "label": "uncertain",
+   "basis": "Astra A10.L2 single reader"
+  },
+  {
+   "spec_id": "D25",
+   "type": "deviation",
+   "axis": "employment",
+   "level": "L1",
+   "label": "uncertain",
+   "basis": "P30 disagreement"
+  },
+  {
+   "spec_id": "D26",
+   "type": "deviation",
+   "axis": "employment",
+   "level": "L2",
+   "label": "uncertain",
+   "basis": "Fable A14.L2 single reader"
+  },
+  {
+   "spec_id": "D27",
+   "type": "deviation",
+   "axis": "pct_managers",
+   "level": "L1",
+   "label": "uncertain",
+   "basis": "Fable A15.L1 single reader"
+  },
+  {
+   "spec_id": "D28",
+   "type": "deviation",
+   "axis": "pct_managers",
+   "level": "L2",
+   "label": "uncertain",
+   "basis": "P32 disagreement"
+  },
+  {
+   "spec_id": "D29",
+   "type": "deviation",
+   "axis": "competition",
+   "level": "L1",
+   "label": "uncertain",
+   "basis": "P35 disagreement"
+  },
+  {
+   "spec_id": "D30",
+   "type": "deviation",
+   "axis": "competition",
+   "level": "L2",
+   "label": "uncertain",
+   "basis": "Fable A16.L2 single reader"
+  },
+  {
+   "spec_id": "D31",
+   "type": "deviation",
+   "axis": "neither",
+   "level": "L1",
+   "label": "uncertain",
+   "basis": "P37 disagreement"
+  },
+  {
+   "spec_id": "D32",
+   "type": "deviation",
+   "axis": "industry",
+   "level": "L1",
+   "label": "uncertain",
+   "basis": "Astra A17.L1 single reader (operationalized as exclusion)"
+  },
+  {
+   "spec_id": "D33",
+   "type": "deviation",
+   "axis": "weights",
+   "level": "L1",
+   "label": "uncertain",
+   "basis": "P44 disagreement"
+  },
+  {
+   "spec_id": "D34",
+   "type": "deviation",
+   "axis": "centering",
+   "level": "L1",
+   "label": "uncertain",
+   "basis": "P46 disagreement"
+  },
+  {
+   "spec_id": "CHK_hierarchy_log10",
+   "type": "check",
+   "axis": null,
+   "level": null,
+   "label": "algebraic_check",
+   "basis": "exact re-expression (rules_v1)"
+  },
+  {
+   "spec_id": "CHK_pct_proportion",
+   "type": "check",
+   "axis": null,
+   "level": null,
+   "label": "algebraic_check",
+   "basis": "exact re-expression (rules_v1)"
+  },
+  {
+   "spec_id": "CHK_industry_ref_alt",
+   "type": "check",
+   "axis": null,
+   "level": null,
+   "label": "algebraic_check",
+   "basis": "exact re-expression (rules_v1)"
+  }
+ ]
+}

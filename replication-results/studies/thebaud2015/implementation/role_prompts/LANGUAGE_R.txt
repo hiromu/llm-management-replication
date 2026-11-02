@@ -1,0 +1,5 @@
+Language: R 4.6.1
+Interpreter: /opt/homebrew/bin/Rscript
+Permitted packages (already installed; do not install anything): base, stats, utils, lme4 2.1.0, Matrix 1.7.6, sandwich 3.1.3, lmtest 0.9.40, data.table 1.18.6.1, jsonlite 2.0.0, digest 0.6.39.
+Mixed models: lme4::glmer (family binomial, Laplace, nAGQ = 1) and lme4::lmer (REML = FALSE for ML). Package documentation is available offline through R's help system (?glmer, ?lmer, ?vcovCL).
+Script name: run.R

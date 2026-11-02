@@ -1,0 +1,48 @@
+{
+ "timing": "initial outputs, before any clarification; none was requested",
+ "claims": {
+  "union_keys": 65,
+  "both_readers": 60,
+  "raw_agree": 47,
+  "ac1_tier": 0.7375946173254835,
+  "ac1_denominator_excl_mixed_tier_groups": 60,
+  "only_fable": [
+   "S1.sample",
+   "S2.sample",
+   "S3.sample",
+   "S4.sample"
+  ],
+  "only_astra": [
+   "S4.overview_table_mediation_mark"
+  ]
+ },
+ "labels": {
+  "levels_union": 56,
+  "levels_both": 12,
+  "raw_agree": 3,
+  "ac1_label": -0.12207792207792206,
+  "only_one_reader": 44
+ },
+ "transcription": {
+  "keyed_statistics": 484,
+  "status_counts": {
+   "agree": 472,
+   "single_reader": 12
+  },
+  "note": "Separate measure. Agreement on value, SE, CI, exact p, printed inequality and df at printed precision."
+ },
+ "reader_raw_counts": {
+  "fable": {
+   "claims": 66,
+   "targets": 504,
+   "axes": 18,
+   "forensics": 32
+  },
+  "astra": {
+   "claims": 109,
+   "targets": 546,
+   "axes": 10,
+   "forensics": 152
+  }
+ }
+}

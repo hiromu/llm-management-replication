@@ -1,0 +1,487 @@
+Installing packages into ‘/opt/homebrew/lib/R/4.6/site-library’
+(as ‘lib’ is unspecified)
+also installing the dependencies ‘checkmate’, ‘htmlwidgets’, ‘gridExtra’, ‘htmlTable’, ‘plyr’, ‘estimability’, ‘lpSolve’, ‘Hmisc’, ‘reshape2’, ‘carData’, ‘bayestestR’, ‘insight’, ‘parameters’, ‘performance’, ‘datawizard’
+
+trying URL 'https://cloud.r-project.org/src/contrib/checkmate_2.3.4.tar.gz'
+trying URL 'https://cloud.r-project.org/src/contrib/htmlwidgets_1.6.4.tar.gz'
+trying URL 'https://cloud.r-project.org/src/contrib/gridExtra_2.3.1.tar.gz'
+trying URL 'https://cloud.r-project.org/src/contrib/htmlTable_2.5.0.tar.gz'
+trying URL 'https://cloud.r-project.org/src/contrib/plyr_1.8.9.tar.gz'
+trying URL 'https://cloud.r-project.org/src/contrib/estimability_2.0.0.tar.gz'
+trying URL 'https://cloud.r-project.org/src/contrib/lpSolve_5.6.23.tar.gz'
+trying URL 'https://cloud.r-project.org/src/contrib/Hmisc_5.3-0.tar.gz'
+trying URL 'https://cloud.r-project.org/src/contrib/reshape2_1.4.5.tar.gz'
+trying URL 'https://cloud.r-project.org/src/contrib/carData_3.0-6.tar.gz'
+trying URL 'https://cloud.r-project.org/src/contrib/bayestestR_0.20.0.tar.gz'
+trying URL 'https://cloud.r-project.org/src/contrib/insight_1.7.0.tar.gz'
+trying URL 'https://cloud.r-project.org/src/contrib/parameters_0.30.0.tar.gz'
+trying URL 'https://cloud.r-project.org/src/contrib/performance_0.19.0.tar.gz'
+trying URL 'https://cloud.r-project.org/src/contrib/datawizard_1.4.1.tar.gz'
+trying URL 'https://cloud.r-project.org/src/contrib/emmeans_2.0.4.tar.gz'
+trying URL 'https://cloud.r-project.org/src/contrib/mediation_4.5.1.tar.gz'
+trying URL 'https://cloud.r-project.org/src/contrib/lmerTest_3.2-1.tar.gz'
+trying URL 'https://cloud.r-project.org/src/contrib/afex_1.5-1.tar.gz'
+trying URL 'https://cloud.r-project.org/src/contrib/car_3.1-5.tar.gz'
+trying URL 'https://cloud.r-project.org/src/contrib/effectsize_1.0.3.tar.gz'
+* installing *source* package ‘checkmate’ ...
+** this is package ‘checkmate’ version ‘2.3.4’
+** package ‘checkmate’ successfully unpacked and MD5 sums checked
+** using staged installation
+** libs
+using C compiler: ‘Apple clang version 17.0.0 (clang-1700.6.3.2)’
+using SDK: ‘MacOSX26.2.sdk’
+clang -std=gnu23 -I"/opt/homebrew/Cellar/r/4.6.1_2/lib/R/include" -DNDEBUG   -I/opt/homebrew/opt/gettext/include -I/opt/homebrew/opt/readline/include -I/opt/homebrew/opt/xz/include -I/opt/homebrew/include    -fPIC  -g -O2  -c all_missing.c -o all_missing.o
+clang -std=gnu23 -I"/opt/homebrew/Cellar/r/4.6.1_2/lib/R/include" -DNDEBUG   -I/opt/homebrew/opt/gettext/include -I/opt/homebrew/opt/readline/include -I/opt/homebrew/opt/xz/include -I/opt/homebrew/include    -fPIC  -g -O2  -c any_infinite.c -o any_infinite.o
+clang -std=gnu23 -I"/opt/homebrew/Cellar/r/4.6.1_2/lib/R/include" -DNDEBUG   -I/opt/homebrew/opt/gettext/include -I/opt/homebrew/opt/readline/include -I/opt/homebrew/opt/xz/include -I/opt/homebrew/include    -fPIC  -g -O2  -c any_missing.c -o any_missing.o
+clang -std=gnu23 -I"/opt/homebrew/Cellar/r/4.6.1_2/lib/R/include" -DNDEBUG   -I/opt/homebrew/opt/gettext/include -I/opt/homebrew/opt/readline/include -I/opt/homebrew/opt/xz/include -I/opt/homebrew/include    -fPIC  -g -O2  -c any_nan.c -o any_nan.o
+clang -std=gnu23 -I"/opt/homebrew/Cellar/r/4.6.1_2/lib/R/include" -DNDEBUG   -I/opt/homebrew/opt/gettext/include -I/opt/homebrew/opt/readline/include -I/opt/homebrew/opt/xz/include -I/opt/homebrew/include    -fPIC  -g -O2  -c checks.c -o checks.o
+clang -std=gnu23 -I"/opt/homebrew/Cellar/r/4.6.1_2/lib/R/include" -DNDEBUG   -I/opt/homebrew/opt/gettext/include -I/opt/homebrew/opt/readline/include -I/opt/homebrew/opt/xz/include -I/opt/homebrew/include    -fPIC  -g -O2  -c find_nchar.c -o find_nchar.o
+clang -std=gnu23 -I"/opt/homebrew/Cellar/r/4.6.1_2/lib/R/include" -DNDEBUG   -I/opt/homebrew/opt/gettext/include -I/opt/homebrew/opt/readline/include -I/opt/homebrew/opt/xz/include -I/opt/homebrew/include    -fPIC  -g -O2  -c guess_type.c -o guess_type.o
+clang -std=gnu23 -I"/opt/homebrew/Cellar/r/4.6.1_2/lib/R/include" -DNDEBUG   -I/opt/homebrew/opt/gettext/include -I/opt/homebrew/opt/readline/include -I/opt/homebrew/opt/xz/include -I/opt/homebrew/include    -fPIC  -g -O2  -c helper.c -o helper.o
+clang -std=gnu23 -I"/opt/homebrew/Cellar/r/4.6.1_2/lib/R/include" -DNDEBUG   -I/opt/homebrew/opt/gettext/include -I/opt/homebrew/opt/readline/include -I/opt/homebrew/opt/xz/include -I/opt/homebrew/include    -fPIC  -g -O2  -c init.c -o init.o
+clang -std=gnu23 -I"/opt/homebrew/Cellar/r/4.6.1_2/lib/R/include" -DNDEBUG   -I/opt/homebrew/opt/gettext/include -I/opt/homebrew/opt/readline/include -I/opt/homebrew/opt/xz/include -I/opt/homebrew/include    -fPIC  -g -O2  -c integerish.c -o integerish.o
+clang -std=gnu23 -I"/opt/homebrew/Cellar/r/4.6.1_2/lib/R/include" -DNDEBUG   -I/opt/homebrew/opt/gettext/include -I/opt/homebrew/opt/readline/include -I/opt/homebrew/opt/xz/include -I/opt/homebrew/include    -fPIC  -g -O2  -c is_sorted.c -o is_sorted.o
+clang -std=gnu23 -I"/opt/homebrew/Cellar/r/4.6.1_2/lib/R/include" -DNDEBUG   -I/opt/homebrew/opt/gettext/include -I/opt/homebrew/opt/readline/include -I/opt/homebrew/opt/xz/include -I/opt/homebrew/include    -fPIC  -g -O2  -c qassert.c -o qassert.o
+clang -std=gnu23 -I"/opt/homebrew/Cellar/r/4.6.1_2/lib/R/include" -DNDEBUG   -I/opt/homebrew/opt/gettext/include -I/opt/homebrew/opt/readline/include -I/opt/homebrew/opt/xz/include -I/opt/homebrew/include    -fPIC  -g -O2  -c which_first.c -o which_first.o
+clang -std=gnu23 -dynamiclib -Wl,-headerpad_max_install_names -undefined dynamic_lookup -L/opt/homebrew/Cellar/r/4.6.1_2/lib/R/lib -L/opt/homebrew/opt/gettext/lib -L/opt/homebrew/opt/readline/lib -L/opt/homebrew/opt/xz/lib -L/opt/homebrew/lib -o checkmate.so all_missing.o any_infinite.o any_missing.o any_nan.o checks.o find_nchar.o guess_type.o helper.o init.o integerish.o is_sorted.o qassert.o which_first.o -L/opt/homebrew/Cellar/r/4.6.1_2/lib/R/lib -lR
+installing to /opt/homebrew/lib/R/4.6/site-library/00LOCK-checkmate/00new/checkmate/libs
+** R
+** inst
+** byte-compile and prepare package for lazy loading
+** help
+*** installing help indices
+** building package indices
+** installing vignettes
+** testing if installed package can be loaded from temporary location
+** checking absolute paths in shared objects and dynamic libraries
+** testing if installed package can be loaded from final location
+** testing if installed package keeps a record of temporary installation path
+* DONE (checkmate)
+* installing *source* package ‘htmlwidgets’ ...
+** this is package ‘htmlwidgets’ version ‘1.6.4’
+** package ‘htmlwidgets’ successfully unpacked and MD5 sums checked
+** using staged installation
+** R
+** inst
+** byte-compile and prepare package for lazy loading
+** help
+*** installing help indices
+** building package indices
+** installing vignettes
+** testing if installed package can be loaded from temporary location
+** testing if installed package can be loaded from final location
+** testing if installed package keeps a record of temporary installation path
+* DONE (htmlwidgets)
+* installing *source* package ‘gridExtra’ ...
+** this is package ‘gridExtra’ version ‘2.3.1’
+** package ‘gridExtra’ successfully unpacked and MD5 sums checked
+** using staged installation
+** R
+** inst
+** byte-compile and prepare package for lazy loading
+** help
+*** installing help indices
+** building package indices
+** installing vignettes
+** testing if installed package can be loaded from temporary location
+** testing if installed package can be loaded from final location
+** testing if installed package keeps a record of temporary installation path
+* DONE (gridExtra)
+* installing *source* package ‘plyr’ ...
+** this is package ‘plyr’ version ‘1.8.9’
+** package ‘plyr’ successfully unpacked and MD5 sums checked
+** using staged installation
+** libs
+using C compiler: ‘Apple clang version 17.0.0 (clang-1700.6.3.2)’
+using C++ compiler: ‘Apple clang version 17.0.0 (clang-1700.6.3.2)’
+using SDK: ‘MacOSX26.2.sdk’
+clang++ -std=gnu++20 -I"/opt/homebrew/Cellar/r/4.6.1_2/lib/R/include" -DNDEBUG  -I'/opt/homebrew/lib/R/4.6/site-library/Rcpp/include' -I/opt/homebrew/opt/gettext/include -I/opt/homebrew/opt/readline/include -I/opt/homebrew/opt/xz/include -I/opt/homebrew/include    -fPIC  -g -O2   -c RcppExports.cpp -o RcppExports.o
+clang -std=gnu23 -I"/opt/homebrew/Cellar/r/4.6.1_2/lib/R/include" -DNDEBUG  -I'/opt/homebrew/lib/R/4.6/site-library/Rcpp/include' -I/opt/homebrew/opt/gettext/include -I/opt/homebrew/opt/readline/include -I/opt/homebrew/opt/xz/include -I/opt/homebrew/include    -fPIC  -g -O2  -c loop_apply.c -o loop_apply.o
+clang++ -std=gnu++20 -I"/opt/homebrew/Cellar/r/4.6.1_2/lib/R/include" -DNDEBUG  -I'/opt/homebrew/lib/R/4.6/site-library/Rcpp/include' -I/opt/homebrew/opt/gettext/include -I/opt/homebrew/opt/readline/include -I/opt/homebrew/opt/xz/include -I/opt/homebrew/include    -fPIC  -g -O2   -c split-numeric.cpp -o split-numeric.o
+clang++ -std=gnu++20 -dynamiclib -Wl,-headerpad_max_install_names -undefined dynamic_lookup -L/opt/homebrew/Cellar/r/4.6.1_2/lib/R/lib -L/opt/homebrew/opt/gettext/lib -L/opt/homebrew/opt/readline/lib -L/opt/homebrew/opt/xz/lib -L/opt/homebrew/lib -o plyr.so RcppExports.o loop_apply.o split-numeric.o -L/opt/homebrew/Cellar/r/4.6.1_2/lib/R/lib -lR
+installing to /opt/homebrew/lib/R/4.6/site-library/00LOCK-plyr/00new/plyr/libs
+** R
+** data
+*** moving datasets to lazyload DB
+** inst
+** byte-compile and prepare package for lazy loading
+** help
+*** installing help indices
+** building package indices
+** testing if installed package can be loaded from temporary location
+** checking absolute paths in shared objects and dynamic libraries
+** testing if installed package can be loaded from final location
+** testing if installed package keeps a record of temporary installation path
+* DONE (plyr)
+* installing *source* package ‘estimability’ ...
+** this is package ‘estimability’ version ‘2.0.0’
+** package ‘estimability’ successfully unpacked and MD5 sums checked
+** using staged installation
+** R
+** inst
+** byte-compile and prepare package for lazy loading
+** help
+*** installing help indices
+*** copying figures
+** building package indices
+** installing vignettes
+** testing if installed package can be loaded from temporary location
+** testing if installed package can be loaded from final location
+** testing if installed package keeps a record of temporary installation path
+* DONE (estimability)
+* installing *source* package ‘lpSolve’ ...
+** this is package ‘lpSolve’ version ‘5.6.23’
+** package ‘lpSolve’ successfully unpacked and MD5 sums checked
+** using staged installation
+** libs
+using C compiler: ‘Apple clang version 17.0.0 (clang-1700.6.3.2)’
+using SDK: ‘MacOSX26.2.sdk’
+clang -std=gnu23 -I"/opt/homebrew/Cellar/r/4.6.1_2/lib/R/include" -DNDEBUG -I . -DINTEGERTIME -DPARSER_LP -DBUILDING_FOR_R -DYY_NEVER_INTERACTIVE -DUSRDLL -DCLOCKTIME -DRoleIsExternalInvEngine -DINVERSE_ACTIVE=INVERSE_LUSOL -DINLINE=static -DParanoia  -I/opt/homebrew/opt/gettext/include -I/opt/homebrew/opt/readline/include -I/opt/homebrew/opt/xz/include -I/opt/homebrew/include    -fPIC  -g -O2  -c colamd.c -o colamd.o
+clang -std=gnu23 -I"/opt/homebrew/Cellar/r/4.6.1_2/lib/R/include" -DNDEBUG -I . -DINTEGERTIME -DPARSER_LP -DBUILDING_FOR_R -DYY_NEVER_INTERACTIVE -DUSRDLL -DCLOCKTIME -DRoleIsExternalInvEngine -DINVERSE_ACTIVE=INVERSE_LUSOL -DINLINE=static -DParanoia  -I/opt/homebrew/opt/gettext/include -I/opt/homebrew/opt/readline/include -I/opt/homebrew/opt/xz/include -I/opt/homebrew/include    -fPIC  -g -O2  -c commonlib.c -o commonlib.o
+clang -std=gnu23 -I"/opt/homebrew/Cellar/r/4.6.1_2/lib/R/include" -DNDEBUG -I . -DINTEGERTIME -DPARSER_LP -DBUILDING_FOR_R -DYY_NEVER_INTERACTIVE -DUSRDLL -DCLOCKTIME -DRoleIsExternalInvEngine -DINVERSE_ACTIVE=INVERSE_LUSOL -DINLINE=static -DParanoia  -I/opt/homebrew/opt/gettext/include -I/opt/homebrew/opt/readline/include -I/opt/homebrew/opt/xz/include -I/opt/homebrew/include    -fPIC  -g -O2  -c hbio.c -o hbio.o
+clang -std=gnu23 -I"/opt/homebrew/Cellar/r/4.6.1_2/lib/R/include" -DNDEBUG -I . -DINTEGERTIME -DPARSER_LP -DBUILDING_FOR_R -DYY_NEVER_INTERACTIVE -DUSRDLL -DCLOCKTIME -DRoleIsExternalInvEngine -DINVERSE_ACTIVE=INVERSE_LUSOL -DINLINE=static -DParanoia  -I/opt/homebrew/opt/gettext/include -I/opt/homebrew/opt/readline/include -I/opt/homebrew/opt/xz/include -I/opt/homebrew/include    -fPIC  -g -O2  -c ini.c -o ini.o
+clang -std=gnu23 -I"/opt/homebrew/Cellar/r/4.6.1_2/lib/R/include" -DNDEBUG -I . -DINTEGERTIME -DPARSER_LP -DBUILDING_FOR_R -DYY_NEVER_INTERACTIVE -DUSRDLL -DCLOCKTIME -DRoleIsExternalInvEngine -DINVERSE_ACTIVE=INVERSE_LUSOL -DINLINE=static -DParanoia  -I/opt/homebrew/opt/gettext/include -I/opt/homebrew/opt/readline/include -I/opt/homebrew/opt/xz/include -I/opt/homebrew/include    -fPIC  -g -O2  -c init.c -o init.o
+clang -std=gnu23 -I"/opt/homebrew/Cellar/r/4.6.1_2/lib/R/include" -DNDEBUG -I . -DINTEGERTIME -DPARSER_LP -DBUILDING_FOR_R -DYY_NEVER_INTERACTIVE -DUSRDLL -DCLOCKTIME -DRoleIsExternalInvEngine -DINVERSE_ACTIVE=INVERSE_LUSOL -DINLINE=static -DParanoia  -I/opt/homebrew/opt/gettext/include -I/opt/homebrew/opt/readline/include -I/opt/homebrew/opt/xz/include -I/opt/homebrew/include    -fPIC  -g -O2  -c isfixedvar.c -o isfixedvar.o
+clang -std=gnu23 -I"/opt/homebrew/Cellar/r/4.6.1_2/lib/R/include" -DNDEBUG -I . -DINTEGERTIME -DPARSER_LP -DBUILDING_FOR_R -DYY_NEVER_INTERACTIVE -DUSRDLL -DCLOCKTIME -DRoleIsExternalInvEngine -DINVERSE_ACTIVE=INVERSE_LUSOL -DINLINE=static -DParanoia  -I/opt/homebrew/opt/gettext/include -I/opt/homebrew/opt/readline/include -I/opt/homebrew/opt/xz/include -I/opt/homebrew/include    -fPIC  -g -O2  -c lp_Hash.c -o lp_Hash.o
+clang -std=gnu23 -I"/opt/homebrew/Cellar/r/4.6.1_2/lib/R/include" -DNDEBUG -I . -DINTEGERTIME -DPARSER_LP -DBUILDING_FOR_R -DYY_NEVER_INTERACTIVE -DUSRDLL -DCLOCKTIME -DRoleIsExternalInvEngine -DINVERSE_ACTIVE=INVERSE_LUSOL -DINLINE=static -DParanoia  -I/opt/homebrew/opt/gettext/include -I/opt/homebrew/opt/readline/include -I/opt/homebrew/opt/xz/include -I/opt/homebrew/include    -fPIC  -g -O2  -c lp_LUSOL.c -o lp_LUSOL.o
+clang -std=gnu23 -I"/opt/homebrew/Cellar/r/4.6.1_2/lib/R/include" -DNDEBUG -I . -DINTEGERTIME -DPARSER_LP -DBUILDING_FOR_R -DYY_NEVER_INTERACTIVE -DUSRDLL -DCLOCKTIME -DRoleIsExternalInvEngine -DINVERSE_ACTIVE=INVERSE_LUSOL -DINLINE=static -DParanoia  -I/opt/homebrew/opt/gettext/include -I/opt/homebrew/opt/readline/include -I/opt/homebrew/opt/xz/include -I/opt/homebrew/include    -fPIC  -g -O2  -c lp_MDO.c -o lp_MDO.o
+clang -std=gnu23 -I"/opt/homebrew/Cellar/r/4.6.1_2/lib/R/include" -DNDEBUG -I . -DINTEGERTIME -DPARSER_LP -DBUILDING_FOR_R -DYY_NEVER_INTERACTIVE -DUSRDLL -DCLOCKTIME -DRoleIsExternalInvEngine -DINVERSE_ACTIVE=INVERSE_LUSOL -DINLINE=static -DParanoia  -I/opt/homebrew/opt/gettext/include -I/opt/homebrew/opt/readline/include -I/opt/homebrew/opt/xz/include -I/opt/homebrew/include    -fPIC  -g -O2  -c lp_MPS.c -o lp_MPS.o
+clang -std=gnu23 -I"/opt/homebrew/Cellar/r/4.6.1_2/lib/R/include" -DNDEBUG -I . -DINTEGERTIME -DPARSER_LP -DBUILDING_FOR_R -DYY_NEVER_INTERACTIVE -DUSRDLL -DCLOCKTIME -DRoleIsExternalInvEngine -DINVERSE_ACTIVE=INVERSE_LUSOL -DINLINE=static -DParanoia  -I/opt/homebrew/opt/gettext/include -I/opt/homebrew/opt/readline/include -I/opt/homebrew/opt/xz/include -I/opt/homebrew/include    -fPIC  -g -O2  -c lp_SOS.c -o lp_SOS.o
+clang -std=gnu23 -I"/opt/homebrew/Cellar/r/4.6.1_2/lib/R/include" -DNDEBUG -I . -DINTEGERTIME -DPARSER_LP -DBUILDING_FOR_R -DYY_NEVER_INTERACTIVE -DUSRDLL -DCLOCKTIME -DRoleIsExternalInvEngine -DINVERSE_ACTIVE=INVERSE_LUSOL -DINLINE=static -DParanoia  -I/opt/homebrew/opt/gettext/include -I/opt/homebrew/opt/readline/include -I/opt/homebrew/opt/xz/include -I/opt/homebrew/include    -fPIC  -g -O2  -c lp_crash.c -o lp_crash.o
+clang -std=gnu23 -I"/opt/homebrew/Cellar/r/4.6.1_2/lib/R/include" -DNDEBUG -I . -DINTEGERTIME -DPARSER_LP -DBUILDING_FOR_R -DYY_NEVER_INTERACTIVE -DUSRDLL -DCLOCKTIME -DRoleIsExternalInvEngine -DINVERSE_ACTIVE=INVERSE_LUSOL -DINLINE=static -DParanoia  -I/opt/homebrew/opt/gettext/include -I/opt/homebrew/opt/readline/include -I/opt/homebrew/opt/xz/include -I/opt/homebrew/include    -fPIC  -g -O2  -c lp_lib.c -o lp_lib.o
+lp_lib.c:1246:26: warning: equality comparison with extraneous parentheses [-Wparentheses-equality]
+ 1246 |     if((lp->objfromvalue == NULL) /* || (lp->objtillvalue == NULL) */) {
+      |         ~~~~~~~~~~~~~~~~~^~~~~~~
+lp_lib.c:1246:26: note: remove extraneous parentheses around the comparison to silence this warning
+ 1246 |     if((lp->objfromvalue == NULL) /* || (lp->objtillvalue == NULL) */) {
+      |        ~                 ^      ~
+lp_lib.c:1246:26: note: use '=' to turn this equality comparison into an assignment
+ 1246 |     if((lp->objfromvalue == NULL) /* || (lp->objtillvalue == NULL) */) {
+      |                          ^~
+      |                          =
+lp_lib.c:1252:28: warning: equality comparison with extraneous parentheses [-Wparentheses-equality]
+ 1252 |       if((lp->objfromvalue == NULL) /* || (lp->objtillvalue == NULL) */)
+      |           ~~~~~~~~~~~~~~~~~^~~~~~~
+lp_lib.c:1252:28: note: remove extraneous parentheses around the comparison to silence this warning
+ 1252 |       if((lp->objfromvalue == NULL) /* || (lp->objtillvalue == NULL) */)
+      |          ~                 ^      ~
+lp_lib.c:1252:28: note: use '=' to turn this equality comparison into an assignment
+ 1252 |       if((lp->objfromvalue == NULL) /* || (lp->objtillvalue == NULL) */)
+      |                            ^~
+      |                            =
+2 warnings generated.
+clang -std=gnu23 -I"/opt/homebrew/Cellar/r/4.6.1_2/lib/R/include" -DNDEBUG -I . -DINTEGERTIME -DPARSER_LP -DBUILDING_FOR_R -DYY_NEVER_INTERACTIVE -DUSRDLL -DCLOCKTIME -DRoleIsExternalInvEngine -DINVERSE_ACTIVE=INVERSE_LUSOL -DINLINE=static -DParanoia  -I/opt/homebrew/opt/gettext/include -I/opt/homebrew/opt/readline/include -I/opt/homebrew/opt/xz/include -I/opt/homebrew/include    -fPIC  -g -O2  -c lp_matrix.c -o lp_matrix.o
+clang -std=gnu23 -I"/opt/homebrew/Cellar/r/4.6.1_2/lib/R/include" -DNDEBUG -I . -DINTEGERTIME -DPARSER_LP -DBUILDING_FOR_R -DYY_NEVER_INTERACTIVE -DUSRDLL -DCLOCKTIME -DRoleIsExternalInvEngine -DINVERSE_ACTIVE=INVERSE_LUSOL -DINLINE=static -DParanoia  -I/opt/homebrew/opt/gettext/include -I/opt/homebrew/opt/readline/include -I/opt/homebrew/opt/xz/include -I/opt/homebrew/include    -fPIC  -g -O2  -c lp_mipbb.c -o lp_mipbb.o
+clang -std=gnu23 -I"/opt/homebrew/Cellar/r/4.6.1_2/lib/R/include" -DNDEBUG -I . -DINTEGERTIME -DPARSER_LP -DBUILDING_FOR_R -DYY_NEVER_INTERACTIVE -DUSRDLL -DCLOCKTIME -DRoleIsExternalInvEngine -DINVERSE_ACTIVE=INVERSE_LUSOL -DINLINE=static -DParanoia  -I/opt/homebrew/opt/gettext/include -I/opt/homebrew/opt/readline/include -I/opt/homebrew/opt/xz/include -I/opt/homebrew/include    -fPIC  -g -O2  -c lp_params.c -o lp_params.o
+clang -std=gnu23 -I"/opt/homebrew/Cellar/r/4.6.1_2/lib/R/include" -DNDEBUG -I . -DINTEGERTIME -DPARSER_LP -DBUILDING_FOR_R -DYY_NEVER_INTERACTIVE -DUSRDLL -DCLOCKTIME -DRoleIsExternalInvEngine -DINVERSE_ACTIVE=INVERSE_LUSOL -DINLINE=static -DParanoia  -I/opt/homebrew/opt/gettext/include -I/opt/homebrew/opt/readline/include -I/opt/homebrew/opt/xz/include -I/opt/homebrew/include    -fPIC  -g -O2  -c lp_presolve.c -o lp_presolve.o
+clang -std=gnu23 -I"/opt/homebrew/Cellar/r/4.6.1_2/lib/R/include" -DNDEBUG -I . -DINTEGERTIME -DPARSER_LP -DBUILDING_FOR_R -DYY_NEVER_INTERACTIVE -DUSRDLL -DCLOCKTIME -DRoleIsExternalInvEngine -DINVERSE_ACTIVE=INVERSE_LUSOL -DINLINE=static -DParanoia  -I/opt/homebrew/opt/gettext/include -I/opt/homebrew/opt/readline/include -I/opt/homebrew/opt/xz/include -I/opt/homebrew/include    -fPIC  -g -O2  -c lp_price.c -o lp_price.o
+clang -std=gnu23 -I"/opt/homebrew/Cellar/r/4.6.1_2/lib/R/include" -DNDEBUG -I . -DINTEGERTIME -DPARSER_LP -DBUILDING_FOR_R -DYY_NEVER_INTERACTIVE -DUSRDLL -DCLOCKTIME -DRoleIsExternalInvEngine -DINVERSE_ACTIVE=INVERSE_LUSOL -DINLINE=static -DParanoia  -I/opt/homebrew/opt/gettext/include -I/opt/homebrew/opt/readline/include -I/opt/homebrew/opt/xz/include -I/opt/homebrew/include    -fPIC  -g -O2  -c lp_pricePSE.c -o lp_pricePSE.o
+clang -std=gnu23 -I"/opt/homebrew/Cellar/r/4.6.1_2/lib/R/include" -DNDEBUG -I . -DINTEGERTIME -DPARSER_LP -DBUILDING_FOR_R -DYY_NEVER_INTERACTIVE -DUSRDLL -DCLOCKTIME -DRoleIsExternalInvEngine -DINVERSE_ACTIVE=INVERSE_LUSOL -DINLINE=static -DParanoia  -I/opt/homebrew/opt/gettext/include -I/opt/homebrew/opt/readline/include -I/opt/homebrew/opt/xz/include -I/opt/homebrew/include    -fPIC  -g -O2  -c lp_report.c -o lp_report.o
+clang -std=gnu23 -I"/opt/homebrew/Cellar/r/4.6.1_2/lib/R/include" -DNDEBUG -I . -DINTEGERTIME -DPARSER_LP -DBUILDING_FOR_R -DYY_NEVER_INTERACTIVE -DUSRDLL -DCLOCKTIME -DRoleIsExternalInvEngine -DINVERSE_ACTIVE=INVERSE_LUSOL -DINLINE=static -DParanoia  -I/opt/homebrew/opt/gettext/include -I/opt/homebrew/opt/readline/include -I/opt/homebrew/opt/xz/include -I/opt/homebrew/include    -fPIC  -g -O2  -c lp_rlp.c -o lp_rlp.o
+clang -std=gnu23 -I"/opt/homebrew/Cellar/r/4.6.1_2/lib/R/include" -DNDEBUG -I . -DINTEGERTIME -DPARSER_LP -DBUILDING_FOR_R -DYY_NEVER_INTERACTIVE -DUSRDLL -DCLOCKTIME -DRoleIsExternalInvEngine -DINVERSE_ACTIVE=INVERSE_LUSOL -DINLINE=static -DParanoia  -I/opt/homebrew/opt/gettext/include -I/opt/homebrew/opt/readline/include -I/opt/homebrew/opt/xz/include -I/opt/homebrew/include    -fPIC  -g -O2  -c lp_scale.c -o lp_scale.o
+clang -std=gnu23 -I"/opt/homebrew/Cellar/r/4.6.1_2/lib/R/include" -DNDEBUG -I . -DINTEGERTIME -DPARSER_LP -DBUILDING_FOR_R -DYY_NEVER_INTERACTIVE -DUSRDLL -DCLOCKTIME -DRoleIsExternalInvEngine -DINVERSE_ACTIVE=INVERSE_LUSOL -DINLINE=static -DParanoia  -I/opt/homebrew/opt/gettext/include -I/opt/homebrew/opt/readline/include -I/opt/homebrew/opt/xz/include -I/opt/homebrew/include    -fPIC  -g -O2  -c lp_simplex.c -o lp_simplex.o
+clang -std=gnu23 -I"/opt/homebrew/Cellar/r/4.6.1_2/lib/R/include" -DNDEBUG -I . -DINTEGERTIME -DPARSER_LP -DBUILDING_FOR_R -DYY_NEVER_INTERACTIVE -DUSRDLL -DCLOCKTIME -DRoleIsExternalInvEngine -DINVERSE_ACTIVE=INVERSE_LUSOL -DINLINE=static -DParanoia  -I/opt/homebrew/opt/gettext/include -I/opt/homebrew/opt/readline/include -I/opt/homebrew/opt/xz/include -I/opt/homebrew/include    -fPIC  -g -O2  -c lp_utils.c -o lp_utils.o
+clang -std=gnu23 -I"/opt/homebrew/Cellar/r/4.6.1_2/lib/R/include" -DNDEBUG -I . -DINTEGERTIME -DPARSER_LP -DBUILDING_FOR_R -DYY_NEVER_INTERACTIVE -DUSRDLL -DCLOCKTIME -DRoleIsExternalInvEngine -DINVERSE_ACTIVE=INVERSE_LUSOL -DINLINE=static -DParanoia  -I/opt/homebrew/opt/gettext/include -I/opt/homebrew/opt/readline/include -I/opt/homebrew/opt/xz/include -I/opt/homebrew/include    -fPIC  -g -O2  -c lp_wlp.c -o lp_wlp.o
+clang -std=gnu23 -I"/opt/homebrew/Cellar/r/4.6.1_2/lib/R/include" -DNDEBUG -I . -DINTEGERTIME -DPARSER_LP -DBUILDING_FOR_R -DYY_NEVER_INTERACTIVE -DUSRDLL -DCLOCKTIME -DRoleIsExternalInvEngine -DINVERSE_ACTIVE=INVERSE_LUSOL -DINLINE=static -DParanoia  -I/opt/homebrew/opt/gettext/include -I/opt/homebrew/opt/readline/include -I/opt/homebrew/opt/xz/include -I/opt/homebrew/include    -fPIC  -g -O2  -c lpslink56.c -o lpslink56.o
+clang -std=gnu23 -I"/opt/homebrew/Cellar/r/4.6.1_2/lib/R/include" -DNDEBUG -I . -DINTEGERTIME -DPARSER_LP -DBUILDING_FOR_R -DYY_NEVER_INTERACTIVE -DUSRDLL -DCLOCKTIME -DRoleIsExternalInvEngine -DINVERSE_ACTIVE=INVERSE_LUSOL -DINLINE=static -DParanoia  -I/opt/homebrew/opt/gettext/include -I/opt/homebrew/opt/readline/include -I/opt/homebrew/opt/xz/include -I/opt/homebrew/include    -fPIC  -g -O2  -c lusol.c -o lusol.o
+clang -std=gnu23 -I"/opt/homebrew/Cellar/r/4.6.1_2/lib/R/include" -DNDEBUG -I . -DINTEGERTIME -DPARSER_LP -DBUILDING_FOR_R -DYY_NEVER_INTERACTIVE -DUSRDLL -DCLOCKTIME -DRoleIsExternalInvEngine -DINVERSE_ACTIVE=INVERSE_LUSOL -DINLINE=static -DParanoia  -I/opt/homebrew/opt/gettext/include -I/opt/homebrew/opt/readline/include -I/opt/homebrew/opt/xz/include -I/opt/homebrew/include    -fPIC  -g -O2  -c lusolio.c -o lusolio.o
+clang -std=gnu23 -I"/opt/homebrew/Cellar/r/4.6.1_2/lib/R/include" -DNDEBUG -I . -DINTEGERTIME -DPARSER_LP -DBUILDING_FOR_R -DYY_NEVER_INTERACTIVE -DUSRDLL -DCLOCKTIME -DRoleIsExternalInvEngine -DINVERSE_ACTIVE=INVERSE_LUSOL -DINLINE=static -DParanoia  -I/opt/homebrew/opt/gettext/include -I/opt/homebrew/opt/readline/include -I/opt/homebrew/opt/xz/include -I/opt/homebrew/include    -fPIC  -g -O2  -c mmio.c -o mmio.o
+clang -std=gnu23 -I"/opt/homebrew/Cellar/r/4.6.1_2/lib/R/include" -DNDEBUG -I . -DINTEGERTIME -DPARSER_LP -DBUILDING_FOR_R -DYY_NEVER_INTERACTIVE -DUSRDLL -DCLOCKTIME -DRoleIsExternalInvEngine -DINVERSE_ACTIVE=INVERSE_LUSOL -DINLINE=static -DParanoia  -I/opt/homebrew/opt/gettext/include -I/opt/homebrew/opt/readline/include -I/opt/homebrew/opt/xz/include -I/opt/homebrew/include    -fPIC  -g -O2  -c myblas.c -o myblas.o
+clang -std=gnu23 -I"/opt/homebrew/Cellar/r/4.6.1_2/lib/R/include" -DNDEBUG -I . -DINTEGERTIME -DPARSER_LP -DBUILDING_FOR_R -DYY_NEVER_INTERACTIVE -DUSRDLL -DCLOCKTIME -DRoleIsExternalInvEngine -DINVERSE_ACTIVE=INVERSE_LUSOL -DINLINE=static -DParanoia  -I/opt/homebrew/opt/gettext/include -I/opt/homebrew/opt/readline/include -I/opt/homebrew/opt/xz/include -I/opt/homebrew/include    -fPIC  -g -O2  -c sparselib.c -o sparselib.o
+clang -std=gnu23 -I"/opt/homebrew/Cellar/r/4.6.1_2/lib/R/include" -DNDEBUG -I . -DINTEGERTIME -DPARSER_LP -DBUILDING_FOR_R -DYY_NEVER_INTERACTIVE -DUSRDLL -DCLOCKTIME -DRoleIsExternalInvEngine -DINVERSE_ACTIVE=INVERSE_LUSOL -DINLINE=static -DParanoia  -I/opt/homebrew/opt/gettext/include -I/opt/homebrew/opt/readline/include -I/opt/homebrew/opt/xz/include -I/opt/homebrew/include    -fPIC  -g -O2  -c yacc_read.c -o yacc_read.o
+clang -std=gnu23 -dynamiclib -Wl,-headerpad_max_install_names -undefined dynamic_lookup -L/opt/homebrew/Cellar/r/4.6.1_2/lib/R/lib -L/opt/homebrew/opt/gettext/lib -L/opt/homebrew/opt/readline/lib -L/opt/homebrew/opt/xz/lib -L/opt/homebrew/lib -o lpSolve.so colamd.o commonlib.o hbio.o ini.o init.o isfixedvar.o lp_Hash.o lp_LUSOL.o lp_MDO.o lp_MPS.o lp_SOS.o lp_crash.o lp_lib.o lp_matrix.o lp_mipbb.o lp_params.o lp_presolve.o lp_price.o lp_pricePSE.o lp_report.o lp_rlp.o lp_scale.o lp_simplex.o lp_utils.o lp_wlp.o lpslink56.o lusol.o lusolio.o mmio.o myblas.o sparselib.o yacc_read.o -L/opt/homebrew/Cellar/r/4.6.1_2/lib/R/lib -lR
+installing to /opt/homebrew/lib/R/4.6/site-library/00LOCK-lpSolve/00new/lpSolve/libs
+** R
+** byte-compile and prepare package for lazy loading
+** help
+*** installing help indices
+** building package indices
+** testing if installed package can be loaded from temporary location
+** checking absolute paths in shared objects and dynamic libraries
+** testing if installed package can be loaded from final location
+** testing if installed package keeps a record of temporary installation path
+* DONE (lpSolve)
+* installing *source* package ‘carData’ ...
+** this is package ‘carData’ version ‘3.0-6’
+** package ‘carData’ successfully unpacked and MD5 sums checked
+** using staged installation
+** data
+*** moving datasets to lazyload DB
+** help
+*** installing help indices
+** building package indices
+** testing if installed package can be loaded from temporary location
+** testing if installed package can be loaded from final location
+** testing if installed package keeps a record of temporary installation path
+* DONE (carData)
+* installing *source* package ‘insight’ ...
+** this is package ‘insight’ version ‘1.7.0’
+** package ‘insight’ successfully unpacked and MD5 sums checked
+** using staged installation
+** R
+** data
+** inst
+** byte-compile and prepare package for lazy loading
+** help
+*** installing help indices
+*** copying figures
+** building package indices
+** installing vignettes
+** testing if installed package can be loaded from temporary location
+** testing if installed package can be loaded from final location
+** testing if installed package keeps a record of temporary installation path
+* DONE (insight)
+* installing *source* package ‘lmerTest’ ...
+** this is package ‘lmerTest’ version ‘3.2-1’
+** package ‘lmerTest’ successfully unpacked and MD5 sums checked
+** using staged installation
+** R
+** data
+*** moving datasets to lazyload DB
+** inst
+** byte-compile and prepare package for lazy loading
+** help
+*** installing help indices
+** building package indices
+** testing if installed package can be loaded from temporary location
+** testing if installed package can be loaded from final location
+** testing if installed package keeps a record of temporary installation path
+* DONE (lmerTest)
+* installing *source* package ‘htmlTable’ ...
+** this is package ‘htmlTable’ version ‘2.5.0’
+** package ‘htmlTable’ successfully unpacked and MD5 sums checked
+** using staged installation
+** R
+** data
+** inst
+** byte-compile and prepare package for lazy loading
+** help
+*** installing help indices
+** building package indices
+** installing vignettes
+** testing if installed package can be loaded from temporary location
+** testing if installed package can be loaded from final location
+** testing if installed package keeps a record of temporary installation path
+* DONE (htmlTable)
+* installing *source* package ‘reshape2’ ...
+** this is package ‘reshape2’ version ‘1.4.5’
+** package ‘reshape2’ successfully unpacked and MD5 sums checked
+** using staged installation
+** libs
+using C++ compiler: ‘Apple clang version 17.0.0 (clang-1700.6.3.2)’
+using SDK: ‘MacOSX26.2.sdk’
+clang++ -std=gnu++20 -I"/opt/homebrew/Cellar/r/4.6.1_2/lib/R/include" -DNDEBUG  -I'/opt/homebrew/lib/R/4.6/site-library/Rcpp/include' -I/opt/homebrew/opt/gettext/include -I/opt/homebrew/opt/readline/include -I/opt/homebrew/opt/xz/include -I/opt/homebrew/include    -fPIC  -g -O2   -c RcppExports.cpp -o RcppExports.o
+clang++ -std=gnu++20 -I"/opt/homebrew/Cellar/r/4.6.1_2/lib/R/include" -DNDEBUG  -I'/opt/homebrew/lib/R/4.6/site-library/Rcpp/include' -I/opt/homebrew/opt/gettext/include -I/opt/homebrew/opt/readline/include -I/opt/homebrew/opt/xz/include -I/opt/homebrew/include    -fPIC  -g -O2   -c melt.cpp -o melt.o
+clang++ -std=gnu++20 -dynamiclib -Wl,-headerpad_max_install_names -undefined dynamic_lookup -L/opt/homebrew/Cellar/r/4.6.1_2/lib/R/lib -L/opt/homebrew/opt/gettext/lib -L/opt/homebrew/opt/readline/lib -L/opt/homebrew/opt/xz/lib -L/opt/homebrew/lib -o reshape2.so RcppExports.o melt.o -L/opt/homebrew/Cellar/r/4.6.1_2/lib/R/lib -lR
+installing to /opt/homebrew/lib/R/4.6/site-library/00LOCK-reshape2/00new/reshape2/libs
+** R
+** data
+*** moving datasets to lazyload DB
+** inst
+** byte-compile and prepare package for lazy loading
+** help
+*** installing help indices
+** building package indices
+** testing if installed package can be loaded from temporary location
+** checking absolute paths in shared objects and dynamic libraries
+** testing if installed package can be loaded from final location
+** testing if installed package keeps a record of temporary installation path
+* DONE (reshape2)
+* installing *source* package ‘datawizard’ ...
+** this is package ‘datawizard’ version ‘1.4.1’
+** package ‘datawizard’ successfully unpacked and MD5 sums checked
+** using staged installation
+** R
+** data
+** inst
+** byte-compile and prepare package for lazy loading
+** help
+*** installing help indices
+*** copying figures
+** building package indices
+** installing vignettes
+** testing if installed package can be loaded from temporary location
+** testing if installed package can be loaded from final location
+** testing if installed package keeps a record of temporary installation path
+* DONE (datawizard)
+* installing *source* package ‘emmeans’ ...
+** this is package ‘emmeans’ version ‘2.0.4’
+** package ‘emmeans’ successfully unpacked and MD5 sums checked
+** using staged installation
+** R
+** data
+*** moving datasets to lazyload DB
+** inst
+** byte-compile and prepare package for lazy loading
+** help
+*** installing help indices
+*** copying figures
+** building package indices
+** installing vignettes
+** testing if installed package can be loaded from temporary location
+** testing if installed package can be loaded from final location
+** testing if installed package keeps a record of temporary installation path
+* DONE (emmeans)
+* installing *source* package ‘car’ ...
+** this is package ‘car’ version ‘3.1-5’
+** package ‘car’ successfully unpacked and MD5 sums checked
+** using staged installation
+** R
+** inst
+** byte-compile and prepare package for lazy loading
+** help
+*** installing help indices
+** building package indices
+** installing vignettes
+** testing if installed package can be loaded from temporary location
+** testing if installed package can be loaded from final location
+** testing if installed package keeps a record of temporary installation path
+* DONE (car)
+* installing *source* package ‘Hmisc’ ...
+** this is package ‘Hmisc’ version ‘5.3-0’
+** package ‘Hmisc’ successfully unpacked and MD5 sums checked
+** using staged installation
+** libs
+using C compiler: ‘Apple clang version 17.0.0 (clang-1700.6.3.2)’
+using Fortran compiler: ‘GNU Fortran (Homebrew GCC 16.2.0) 16.2.0’
+using SDK: ‘MacOSX26.2.sdk’
+clang -std=gnu23 -I"/opt/homebrew/Cellar/r/4.6.1_2/lib/R/include" -DNDEBUG   -I/opt/homebrew/opt/gettext/include -I/opt/homebrew/opt/readline/include -I/opt/homebrew/opt/xz/include -I/opt/homebrew/include    -fPIC  -g -O2  -c Hmisc.c -o Hmisc.o
+/opt/homebrew/opt/gcc/bin/gfortran  -fPIC  -g -O2  -c  cidxcn.f90 -o cidxcn.o
+/opt/homebrew/opt/gcc/bin/gfortran  -fPIC  -g -O2  -c  cidxcp.f90 -o cidxcp.o
+/opt/homebrew/opt/gcc/bin/gfortran  -fPIC  -g -O2  -c  cutgn.f90 -o cutgn.o
+/opt/homebrew/opt/gcc/bin/gfortran  -fPIC  -g -O2  -c  hlqest.f90 -o hlqest.o
+/opt/homebrew/opt/gcc/bin/gfortran  -fPIC  -g -O2  -c  hoeffd.f90 -o hoeffd.o
+clang -std=gnu23 -I"/opt/homebrew/Cellar/r/4.6.1_2/lib/R/include" -DNDEBUG   -I/opt/homebrew/opt/gettext/include -I/opt/homebrew/opt/readline/include -I/opt/homebrew/opt/xz/include -I/opt/homebrew/include    -fPIC  -g -O2  -c init.c -o init.o
+/opt/homebrew/opt/gcc/bin/gfortran  -fPIC  -g -O2  -c  jacklins.f90 -o jacklins.o
+/opt/homebrew/opt/gcc/bin/gfortran  -fPIC  -g -O2  -c largrec.f -o largrec.o
+clang -std=gnu23 -I"/opt/homebrew/Cellar/r/4.6.1_2/lib/R/include" -DNDEBUG   -I/opt/homebrew/opt/gettext/include -I/opt/homebrew/opt/readline/include -I/opt/homebrew/opt/xz/include -I/opt/homebrew/include    -fPIC  -g -O2  -c mChoice.c -o mChoice.o
+/opt/homebrew/opt/gcc/bin/gfortran  -fPIC  -g -O2  -c  maxempr.f90 -o maxempr.o
+clang -std=gnu23 -I"/opt/homebrew/Cellar/r/4.6.1_2/lib/R/include" -DNDEBUG   -I/opt/homebrew/opt/gettext/include -I/opt/homebrew/opt/readline/include -I/opt/homebrew/opt/xz/include -I/opt/homebrew/include    -fPIC  -g -O2  -c nstr.c -o nstr.o
+clang -std=gnu23 -I"/opt/homebrew/Cellar/r/4.6.1_2/lib/R/include" -DNDEBUG   -I/opt/homebrew/opt/gettext/include -I/opt/homebrew/opt/readline/include -I/opt/homebrew/opt/xz/include -I/opt/homebrew/include    -fPIC  -g -O2  -c ranksort.c -o ranksort.o
+/opt/homebrew/opt/gcc/bin/gfortran  -fPIC  -g -O2  -c  rcorr.f90 -o rcorr.o
+clang -std=gnu23 -I"/opt/homebrew/Cellar/r/4.6.1_2/lib/R/include" -DNDEBUG   -I/opt/homebrew/opt/gettext/include -I/opt/homebrew/opt/readline/include -I/opt/homebrew/opt/xz/include -I/opt/homebrew/include    -fPIC  -g -O2  -c string_box.c -o string_box.o
+/opt/homebrew/opt/gcc/bin/gfortran  -fPIC  -g -O2  -c  wclosest.f90 -o wclosest.o
+clang -std=gnu23 -dynamiclib -Wl,-headerpad_max_install_names -undefined dynamic_lookup -L/opt/homebrew/Cellar/r/4.6.1_2/lib/R/lib -L/opt/homebrew/opt/gettext/lib -L/opt/homebrew/opt/readline/lib -L/opt/homebrew/opt/xz/lib -L/opt/homebrew/lib -o Hmisc.so Hmisc.o cidxcn.o cidxcp.o cutgn.o hlqest.o hoeffd.o init.o jacklins.o largrec.o mChoice.o maxempr.o nstr.o ranksort.o rcorr.o string_box.o wclosest.o -L/opt/homebrew/opt/gcc/lib/gcc/current/gcc/aarch64-apple-darwin24/16 -L/opt/homebrew/opt/gcc/lib/gcc/current/gcc -L/opt/homebrew/opt/gcc/lib/gcc/current -lemutls_w -lheapt_w -lgfortran -lquadmath -L/opt/homebrew/Cellar/r/4.6.1_2/lib/R/lib -lR
+installing to /opt/homebrew/lib/R/4.6/site-library/00LOCK-Hmisc/00new/Hmisc/libs
+** R
+** inst
+** byte-compile and prepare package for lazy loading
+** help
+*** installing help indices
+** building package indices
+** testing if installed package can be loaded from temporary location
+** checking absolute paths in shared objects and dynamic libraries
+** testing if installed package can be loaded from final location
+** testing if installed package keeps a record of temporary installation path
+* DONE (Hmisc)
+* installing *source* package ‘bayestestR’ ...
+** this is package ‘bayestestR’ version ‘0.20.0’
+** package ‘bayestestR’ successfully unpacked and MD5 sums checked
+** using staged installation
+** R
+** data
+** inst
+** byte-compile and prepare package for lazy loading
+** help
+*** installing help indices
+*** copying figures
+** building package indices
+** installing vignettes
+** testing if installed package can be loaded from temporary location
+** testing if installed package can be loaded from final location
+** testing if installed package keeps a record of temporary installation path
+* DONE (bayestestR)
+* installing *source* package ‘afex’ ...
+** this is package ‘afex’ version ‘1.5-1’
+** package ‘afex’ successfully unpacked and MD5 sums checked
+** using staged installation
+** R
+** data
+*** moving datasets to lazyload DB
+** inst
+** byte-compile and prepare package for lazy loading
+** help
+*** installing help indices
+*** copying figures
+** building package indices
+** installing vignettes
+** testing if installed package can be loaded from temporary location
+** testing if installed package can be loaded from final location
+** testing if installed package keeps a record of temporary installation path
+* DONE (afex)
+* installing *source* package ‘parameters’ ...
+** this is package ‘parameters’ version ‘0.30.0’
+** package ‘parameters’ successfully unpacked and MD5 sums checked
+** using staged installation
+** R
+** data
+** inst
+** byte-compile and prepare package for lazy loading
+** help
+*** installing help indices
+*** copying figures
+** building package indices
+** installing vignettes
+** testing if installed package can be loaded from temporary location
+** testing if installed package can be loaded from final location
+** testing if installed package keeps a record of temporary installation path
+* DONE (parameters)
+* installing *source* package ‘performance’ ...
+** this is package ‘performance’ version ‘0.19.0’
+** package ‘performance’ successfully unpacked and MD5 sums checked
+** using staged installation
+** R
+** inst
+** byte-compile and prepare package for lazy loading
+** help
+*** installing help indices
+*** copying figures
+** building package indices
+** testing if installed package can be loaded from temporary location
+** testing if installed package can be loaded from final location
+** testing if installed package keeps a record of temporary installation path
+* DONE (performance)
+* installing *source* package ‘mediation’ ...
+** this is package ‘mediation’ version ‘4.5.1’
+** package ‘mediation’ successfully unpacked and MD5 sums checked
+** using staged installation
+** R
+** data
+*** moving datasets to lazyload DB
+** demo
+** inst
+** byte-compile and prepare package for lazy loading
+** help
+*** installing help indices
+** building package indices
+** installing vignettes
+** testing if installed package can be loaded from temporary location
+** testing if installed package can be loaded from final location
+** testing if installed package keeps a record of temporary installation path
+* DONE (mediation)
+* installing *source* package ‘effectsize’ ...
+** this is package ‘effectsize’ version ‘1.0.3’
+** package ‘effectsize’ successfully unpacked and MD5 sums checked
+** using staged installation
+** R
+** data
+** inst
+** byte-compile and prepare package for lazy loading
+** help
+*** installing help indices
+*** copying figures
+** building package indices
+** installing vignettes
+** testing if installed package can be loaded from temporary location
+** testing if installed package can be loaded from final location
+** testing if installed package keeps a record of temporary installation path
+* DONE (effectsize)
+
+The downloaded source packages are in
+	‘/private/var/folders/zh/rf2d8w8j2k3g4k48zqzv0t340000gn/T/Rtmp0C1jGF/downloaded_packages’
+emmeans 2.0.4 
+mediation 4.5.1 
+lmerTest 3.2.1 
+afex 1.5.1 
+car 3.1.5 
+effectsize 1.0.3 

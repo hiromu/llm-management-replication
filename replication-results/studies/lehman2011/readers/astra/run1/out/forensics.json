@@ -1,0 +1,1487 @@
+{
+  "checks": [
+    {
+      "check_id": "F1",
+      "what": "Incremental LR statistic, Model 2 versus Model 1",
+      "inputs": [
+        "T9",
+        "T24",
+        "T27",
+        "T10",
+        "T25"
+      ],
+      "calculation": "2*(LL2-LL1) = 709.3746. Difference of reported overall LR statistics is 709.37; reported incremental statistic is 168.87.",
+      "rounding_interval_used": "Each LL has interval printed ±0.00005, hence the LR difference lies in [709.3744,709.3748]. The incremental statistic interval is [168.865,168.875]; disjoint.",
+      "result": "inconsistent",
+      "note": "Under the reported nested models and common sample, rounding cannot reconcile the values. Preserve all printed entries; no corrected value is inserted into targets.",
+      "source": {
+        "doc": "D01",
+        "pdf_page": 11,
+        "where": "Table 5 / Models 1–2 / LL, LR χ², Δ LR χ²"
+      }
+    },
+    {
+      "check_id": "F2",
+      "what": "Incremental LR statistic, Model 3 versus Model 2",
+      "inputs": [
+        "T24",
+        "T43",
+        "T46",
+        "T25",
+        "T44"
+      ],
+      "calculation": "2*(LL3-LL2) = 526.6184. Difference of reported overall LR statistics is 526.62; reported incremental statistic is 544.05.",
+      "rounding_interval_used": "LL-based difference in [526.6182,526.6186]; printed increment in [544.045,544.055]; disjoint.",
+      "result": "inconsistent",
+      "note": "Same condition as the preceding check; not an automatic replication verdict.",
+      "source": {
+        "doc": "D01",
+        "pdf_page": 11,
+        "where": "Table 5 / Models 2–3 / LL, LR χ², Δ LR χ²"
+      }
+    },
+    {
+      "check_id": "F3",
+      "what": "Common null likelihood implied by overall LR statistics",
+      "inputs": [
+        "T9",
+        "T24",
+        "T43",
+        "T10",
+        "T25",
+        "T44"
+      ],
+      "calculation": "LLnull = LLmodel - LR/2 gives -7482.0031, -7482.0008, -7482.0016.",
+      "rounding_interval_used": "Each implied null has half-width 0.00255. Intervals [-7482.00565,-7482.00055], [-7482.00335,-7481.99825], [-7482.00415,-7481.99905] overlap.",
+      "result": "consistent",
+      "note": "The overall LR rows are mutually compatible with a common null despite the inconsistent incremental rows.",
+      "source": {
+        "doc": "D01",
+        "pdf_page": 11,
+        "where": "Table 5 / LL and LR χ²"
+      }
+    },
+    {
+      "check_id": "F4",
+      "what": "Degrees of freedom and stated regressors",
+      "inputs": [
+        "T11",
+        "T26",
+        "T45"
+      ],
+      "calculation": "Eight M1 listed non-year predictors plus five season indicators give 13; adding four performance/jump terms gives 17; adding three interactions gives 20.",
+      "rounding_interval_used": "Degrees of freedom and counts of listed terms are exact integers, not rounded continuous estimates.",
+      "result": "consistent",
+      "note": "Compatible with team-conditional estimation and separate season indicators, not proof of the unknown panel declaration. Explicit unconditional team dummies would have a different full parameter count.",
+      "source": {
+        "doc": "D01",
+        "pdf_page": 11,
+        "where": "Table 5; PDF p. 9, Data Analysis Model"
+      }
+    },
+    {
+      "check_id": "F5",
+      "what": "Sample removal arithmetic and model sample equality",
+      "inputs": [],
+      "calculation": "In sealed_N_branch.json, original minus final sample equals the late-game removal entry; the Table 1 and Table 5 sample entries agree.",
+      "rounding_interval_used": "Published integer counts treated as exact; no rounding allowance needed.",
+      "result": "consistent",
+      "note": "Published sample sizes remain only in sealed_N_branch.json. No comparison to independently acquired data was made.",
+      "source": {
+        "doc": "D01",
+        "pdf_page": 16,
+        "where": "Endnote 3; PDF p. 8, Data; PDF pp. 10–11, Tables 1 and 5"
+      }
+    },
+    {
+      "check_id": "F6",
+      "what": "Game frequency table and quarter conversion totals",
+      "inputs": [
+        "T134"
+      ],
+      "calculation": "Summing Table 2 game frequencies equals its game N; weighting frequencies by the row attempt value equals the Table 3 all-quarter conversion total. Dividing by game N rounds to the text mean. Every individual percentage falls in its printed interval; cumulative percentages are checked separately.",
+      "rounding_interval_used": "Integer frequencies exact; two-decimal mean/percent intervals are printed ±0.005.",
+      "result": "consistent",
+      "note": "All count and percentage operands are in sealed_N_branch.json. No raw data used.",
+      "source": {
+        "doc": "D01",
+        "pdf_page": 10,
+        "where": "Tables 2–3 and Results / opening paragraph"
+      }
+    },
+    {
+      "check_id": "F7",
+      "what": "Quarter totals and aspiration subgroup partition",
+      "inputs": [],
+      "calculation": "Summing Table 3 quarter totals and conversions recovers its all-quarter totals. For each quarter, the two Table 4 subgroup Ns sum to Table 3 total fourth downs; subgroup Ns also sum correctly across quarters. All quarter percentages round from their integer ratios.",
+      "rounding_interval_used": "Integer counts exact; percentage intervals printed ±0.005 percentage points.",
+      "result": "consistent",
+      "note": "Operands retained only in sealed_N_branch.json.",
+      "source": {
+        "doc": "D01",
+        "pdf_page": 10,
+        "where": "Table 3; PDF p. 11, Table 4"
+      }
+    },
+    {
+      "check_id": "F8",
+      "what": "Spline means in Table 1 versus subgroup means in Table 4",
+      "inputs": [
+        "T84",
+        "T86",
+        "T116",
+        "T131"
+      ],
+      "calculation": "For zero-filled splines, full-sample mean equals subgroup mean times subgroup sample share. Below-branch full-mean magnitude can lie in [4.732887891,4.739475070]; above branch in [2.916255807,2.919668628].",
+      "rounding_interval_used": "Table 4 subgroup means have half-width 0.005; count weights are exact from sealed_N_branch.json. These intersect the Table 1 intervals [-4.745,-4.735] and [2.915,2.925], respectively.",
+      "result": "consistent",
+      "note": "Signs follow the negative below-aspiration spline definition, not a positive shortfall measure.",
+      "source": {
+        "doc": "D01",
+        "pdf_page": 11,
+        "where": "Table 4 / All; PDF p. 10, Table 1"
+      }
+    },
+    {
+      "check_id": "F9",
+      "what": "Risk-taking mean and Bernoulli standard deviation",
+      "inputs": [
+        "T82",
+        "T83"
+      ],
+      "calculation": "Use the Table 3 all-quarter conversion-attempt count divided by total decisions in sealed_N_branch.json. The resulting proportion rounds to the Table 1 mean, and sqrt(p*(1-p)) or its sample-SD correction rounds to the reported SD.",
+      "rounding_interval_used": "Mean interval [0.105,0.115]; SD interval [0.3065,0.3075].",
+      "result": "consistent",
+      "note": "This checks published aggregates only, not converted first downs or raw data.",
+      "source": {
+        "doc": "D01",
+        "pdf_page": 10,
+        "where": "Tables 1 and 3"
+      }
+    },
+    {
+      "check_id": "F10",
+      "what": "Division/conference indicator nesting",
+      "inputs": [
+        "T96",
+        "T98"
+      ],
+      "calculation": "If both variables are affirmative inclusive indicators, same_division <= same_conference observationwise, and their means must obey the same inequality. Printed means reverse that ordering.",
+      "rounding_interval_used": "Division mean [0.745,0.755] and conference mean [0.415,0.425] are disjoint in the wrong order under affirmative nested coding.",
+      "result": "cannot_assess",
+      "note": "Conditional inconsistency, not a proven data error: binary codes and inclusive/exclusive definitions are unstated. Reverse coding or a mislabeled row could explain it, but neither is assumed or repaired.",
+      "source": {
+        "doc": "D01",
+        "pdf_page": 10,
+        "where": "Table 1 / Same division and Same conference; PDF p. 9, Control Variables"
+      }
+    },
+    {
+      "check_id": "F11",
+      "what": "Printed uncertainty and stars: Model 1, Total points",
+      "inputs": [
+        "T1"
+      ],
+      "calculation": "Assuming printed SE is delta-transformed to the odds-ratio scale, |z| = OR*|ln(OR)|/SE_OR. Full interval bounds give |z| in [16.21557,23.077474]. Printed symbol: **.",
+      "rounding_interval_used": "Estimate interval [0.9405000,0.9415000], SE interval [0.0025000,0.0035000]; zero lower SE is a limit, not exact zero.",
+      "result": "consistent",
+      "note": "At least one pair of unrounded values is compatible with the symbol under a two-sided normal reference. This does not recover an exact p or verify the unspecified method. OR-SE transformation is an assumption, not stated in the table.",
+      "source": {
+        "doc": "D01",
+        "pdf_page": 11,
+        "where": "Table 5 / Model 1 / Total points"
+      }
+    },
+    {
+      "check_id": "F12",
+      "what": "Printed uncertainty and stars: Model 1, Yards to go for 1st down",
+      "inputs": [
+        "T2"
+      ],
+      "calculation": "Assuming printed SE is delta-transformed to the odds-ratio scale, |z| = OR*|ln(OR)|/SE_OR. Full interval bounds give |z| in [24.229847,28.782336]. Printed symbol: **.",
+      "rounding_interval_used": "Estimate interval [0.8255000,0.8265000], SE interval [0.0055000,0.0065000]; zero lower SE is a limit, not exact zero.",
+      "result": "consistent",
+      "note": "At least one pair of unrounded values is compatible with the symbol under a two-sided normal reference. This does not recover an exact p or verify the unspecified method. OR-SE transformation is an assumption, not stated in the table.",
+      "source": {
+        "doc": "D01",
+        "pdf_page": 11,
+        "where": "Table 5 / Model 1 / Yards to go for 1st down"
+      }
+    },
+    {
+      "check_id": "F13",
+      "what": "Printed uncertainty and stars: Model 1, Yards to go for touchdown",
+      "inputs": [
+        "T3"
+      ],
+      "calculation": "Assuming printed SE is delta-transformed to the odds-ratio scale, |z| = OR*|ln(OR)|/SE_OR. Full interval bounds give |z| in [15.481124,48.394787]. Printed symbol: **.",
+      "rounding_interval_used": "Estimate interval [0.9755000,0.9765000], SE interval [0.0005000,0.0015000]; zero lower SE is a limit, not exact zero.",
+      "result": "consistent",
+      "note": "At least one pair of unrounded values is compatible with the symbol under a two-sided normal reference. This does not recover an exact p or verify the unspecified method. OR-SE transformation is an assumption, not stated in the table.",
+      "source": {
+        "doc": "D01",
+        "pdf_page": 11,
+        "where": "Table 5 / Model 1 / Yards to go for touchdown"
+      }
+    },
+    {
+      "check_id": "F14",
+      "what": "Printed uncertainty and stars: Model 1, Same division",
+      "inputs": [
+        "T4"
+      ],
+      "calculation": "Assuming printed SE is delta-transformed to the odds-ratio scale, |z| = OR*|ln(OR)|/SE_OR. Full interval bounds give |z| in [0.55101051,0.57941275]. Printed symbol: none printed.",
+      "rounding_interval_used": "Estimate interval [0.9685000,0.9695000], SE interval [0.0535000,0.0545000]; zero lower SE is a limit, not exact zero.",
+      "result": "consistent",
+      "note": "At least one pair of unrounded values is compatible with the symbol under a two-sided normal reference. This does not recover an exact p or verify the unspecified method. OR-SE transformation is an assumption, not stated in the table.",
+      "source": {
+        "doc": "D01",
+        "pdf_page": 11,
+        "where": "Table 5 / Model 1 / Same division"
+      }
+    },
+    {
+      "check_id": "F15",
+      "what": "Printed uncertainty and stars: Model 1, Same conference",
+      "inputs": [
+        "T5"
+      ],
+      "calculation": "Assuming printed SE is delta-transformed to the odds-ratio scale, |z| = OR*|ln(OR)|/SE_OR. Full interval bounds give |z| in [0.1490704,0.17244491]. Printed symbol: none printed.",
+      "rounding_interval_used": "Estimate interval [1.0075000,1.0085000], SE interval [0.0495000,0.0505000]; zero lower SE is a limit, not exact zero.",
+      "result": "consistent",
+      "note": "At least one pair of unrounded values is compatible with the symbol under a two-sided normal reference. This does not recover an exact p or verify the unspecified method. OR-SE transformation is an assumption, not stated in the table.",
+      "source": {
+        "doc": "D01",
+        "pdf_page": 11,
+        "where": "Table 5 / Model 1 / Same conference"
+      }
+    },
+    {
+      "check_id": "F16",
+      "what": "Printed uncertainty and stars: Model 1, Home-field advantage",
+      "inputs": [
+        "T6"
+      ],
+      "calculation": "Assuming printed SE is delta-transformed to the odds-ratio scale, |z| = OR*|ln(OR)|/SE_OR. Full interval bounds give |z| in [0.37717332,0.40595672]. Printed symbol: none printed.",
+      "rounding_interval_used": "Estimate interval [1.0185000,1.0195000], SE interval [0.0485000,0.0495000]; zero lower SE is a limit, not exact zero.",
+      "result": "consistent",
+      "note": "At least one pair of unrounded values is compatible with the symbol under a two-sided normal reference. This does not recover an exact p or verify the unspecified method. OR-SE transformation is an assumption, not stated in the table.",
+      "source": {
+        "doc": "D01",
+        "pdf_page": 11,
+        "where": "Table 5 / Model 1 / Home-field advantage"
+      }
+    },
+    {
+      "check_id": "F17",
+      "what": "Printed uncertainty and stars: Model 1, Week of season",
+      "inputs": [
+        "T7"
+      ],
+      "calculation": "Assuming printed SE is delta-transformed to the odds-ratio scale, |z| = OR*|ln(OR)|/SE_OR. Full interval bounds give |z| in [3.5798002,4.6019342]. Printed symbol: **.",
+      "rounding_interval_used": "Estimate interval [1.0195000,1.0205000], SE interval [0.0045000,0.0055000]; zero lower SE is a limit, not exact zero.",
+      "result": "consistent",
+      "note": "At least one pair of unrounded values is compatible with the symbol under a two-sided normal reference. This does not recover an exact p or verify the unspecified method. OR-SE transformation is an assumption, not stated in the table.",
+      "source": {
+        "doc": "D01",
+        "pdf_page": 11,
+        "where": "Table 5 / Model 1 / Week of season"
+      }
+    },
+    {
+      "check_id": "F18",
+      "what": "Printed uncertainty and stars: Model 1, Minutes remaining",
+      "inputs": [
+        "T8"
+      ],
+      "calculation": "Assuming printed SE is delta-transformed to the odds-ratio scale, |z| = OR*|ln(OR)|/SE_OR. Full interval bounds give |z| in [20.817059,35.324757]. Printed symbol: **.",
+      "rounding_interval_used": "Estimate interval [0.9455000,0.9465000], SE interval [0.0015000,0.0025000]; zero lower SE is a limit, not exact zero.",
+      "result": "consistent",
+      "note": "At least one pair of unrounded values is compatible with the symbol under a two-sided normal reference. This does not recover an exact p or verify the unspecified method. OR-SE transformation is an assumption, not stated in the table.",
+      "source": {
+        "doc": "D01",
+        "pdf_page": 11,
+        "where": "Table 5 / Model 1 / Minutes remaining"
+      }
+    },
+    {
+      "check_id": "F19",
+      "what": "Printed uncertainty and stars: Model 2, Total points",
+      "inputs": [
+        "T12"
+      ],
+      "calculation": "Assuming printed SE is delta-transformed to the odds-ratio scale, |z| = OR*|ln(OR)|/SE_OR. Full interval bounds give |z| in [1.1856508,1.6729011]. Printed symbol: none printed.",
+      "rounding_interval_used": "Estimate interval [1.0065000,1.0075000], SE interval [0.0045000,0.0055000]; zero lower SE is a limit, not exact zero.",
+      "result": "consistent",
+      "note": "At least one pair of unrounded values is compatible with the symbol under a two-sided normal reference. This does not recover an exact p or verify the unspecified method. OR-SE transformation is an assumption, not stated in the table.",
+      "source": {
+        "doc": "D01",
+        "pdf_page": 11,
+        "where": "Table 5 / Model 2 / Total points"
+      }
+    },
+    {
+      "check_id": "F20",
+      "what": "Printed uncertainty and stars: Model 2, Yards to go for 1st down",
+      "inputs": [
+        "T13"
+      ],
+      "calculation": "Assuming printed SE is delta-transformed to the odds-ratio scale, |z| = OR*|ln(OR)|/SE_OR. Full interval bounds give |z| in [25.832924,30.673997]. Printed symbol: **.",
+      "rounding_interval_used": "Estimate interval [0.8125000,0.8135000], SE interval [0.0055000,0.0065000]; zero lower SE is a limit, not exact zero.",
+      "result": "consistent",
+      "note": "At least one pair of unrounded values is compatible with the symbol under a two-sided normal reference. This does not recover an exact p or verify the unspecified method. OR-SE transformation is an assumption, not stated in the table.",
+      "source": {
+        "doc": "D01",
+        "pdf_page": 11,
+        "where": "Table 5 / Model 2 / Yards to go for 1st down"
+      }
+    },
+    {
+      "check_id": "F21",
+      "what": "Printed uncertainty and stars: Model 2, Yards to go for touchdown",
+      "inputs": [
+        "T14"
+      ],
+      "calculation": "Assuming printed SE is delta-transformed to the odds-ratio scale, |z| = OR*|ln(OR)|/SE_OR. Full interval bounds give |z| in [17.430488,54.236721]. Printed symbol: **.",
+      "rounding_interval_used": "Estimate interval [0.9725000,0.9735000], SE interval [0.0005000,0.0015000]; zero lower SE is a limit, not exact zero.",
+      "result": "consistent",
+      "note": "At least one pair of unrounded values is compatible with the symbol under a two-sided normal reference. This does not recover an exact p or verify the unspecified method. OR-SE transformation is an assumption, not stated in the table.",
+      "source": {
+        "doc": "D01",
+        "pdf_page": 11,
+        "where": "Table 5 / Model 2 / Yards to go for touchdown"
+      }
+    },
+    {
+      "check_id": "F22",
+      "what": "Printed uncertainty and stars: Model 2, Same division",
+      "inputs": [
+        "T15"
+      ],
+      "calculation": "Assuming printed SE is delta-transformed to the odds-ratio scale, |z| = OR*|ln(OR)|/SE_OR. Full interval bounds give |z| in [0.41676813,0.44140848]. Printed symbol: none printed.",
+      "rounding_interval_used": "Estimate interval [1.0245000,1.0255000], SE interval [0.0585000,0.0595000]; zero lower SE is a limit, not exact zero.",
+      "result": "consistent",
+      "note": "At least one pair of unrounded values is compatible with the symbol under a two-sided normal reference. This does not recover an exact p or verify the unspecified method. OR-SE transformation is an assumption, not stated in the table.",
+      "source": {
+        "doc": "D01",
+        "pdf_page": 11,
+        "where": "Table 5 / Model 2 / Same division"
+      }
+    },
+    {
+      "check_id": "F23",
+      "what": "Printed uncertainty and stars: Model 2, Same conference",
+      "inputs": [
+        "T16"
+      ],
+      "calculation": "Assuming printed SE is delta-transformed to the odds-ratio scale, |z| = OR*|ln(OR)|/SE_OR. Full interval bounds give |z| in [0.048482959,0.069185502]. Printed symbol: none printed.",
+      "rounding_interval_used": "Estimate interval [0.9965000,0.9975000], SE interval [0.0505000,0.0515000]; zero lower SE is a limit, not exact zero.",
+      "result": "consistent",
+      "note": "At least one pair of unrounded values is compatible with the symbol under a two-sided normal reference. This does not recover an exact p or verify the unspecified method. OR-SE transformation is an assumption, not stated in the table.",
+      "source": {
+        "doc": "D01",
+        "pdf_page": 11,
+        "where": "Table 5 / Model 2 / Same conference"
+      }
+    },
+    {
+      "check_id": "F24",
+      "what": "Printed uncertainty and stars: Model 2, Home-field advantage",
+      "inputs": [
+        "T17"
+      ],
+      "calculation": "Assuming printed SE is delta-transformed to the odds-ratio scale, |z| = OR*|ln(OR)|/SE_OR. Full interval bounds give |z| in [3.2139989,3.2888188]. Printed symbol: **.",
+      "rounding_interval_used": "Estimate interval [1.1765000,1.1775000], SE interval [0.0585000,0.0595000]; zero lower SE is a limit, not exact zero.",
+      "result": "consistent",
+      "note": "At least one pair of unrounded values is compatible with the symbol under a two-sided normal reference. This does not recover an exact p or verify the unspecified method. OR-SE transformation is an assumption, not stated in the table.",
+      "source": {
+        "doc": "D01",
+        "pdf_page": 11,
+        "where": "Table 5 / Model 2 / Home-field advantage"
+      }
+    },
+    {
+      "check_id": "F25",
+      "what": "Printed uncertainty and stars: Model 2, Week of season",
+      "inputs": [
+        "T18"
+      ],
+      "calculation": "Assuming printed SE is delta-transformed to the odds-ratio scale, |z| = OR*|ln(OR)|/SE_OR. Full interval bounds give |z| in [4.1365905,5.2831082]. Printed symbol: **.",
+      "rounding_interval_used": "Estimate interval [1.0225000,1.0235000], SE interval [0.0045000,0.0055000]; zero lower SE is a limit, not exact zero.",
+      "result": "consistent",
+      "note": "At least one pair of unrounded values is compatible with the symbol under a two-sided normal reference. This does not recover an exact p or verify the unspecified method. OR-SE transformation is an assumption, not stated in the table.",
+      "source": {
+        "doc": "D01",
+        "pdf_page": 11,
+        "where": "Table 5 / Model 2 / Week of season"
+      }
+    },
+    {
+      "check_id": "F26",
+      "what": "Printed uncertainty and stars: Model 2, Minutes remaining",
+      "inputs": [
+        "T19"
+      ],
+      "calculation": "Assuming printed SE is delta-transformed to the odds-ratio scale, |z| = OR*|ln(OR)|/SE_OR. Full interval bounds give |z| in [9.6789574,16.781384]. Printed symbol: **.",
+      "rounding_interval_used": "Estimate interval [0.9745000,0.9755000], SE interval [0.0015000,0.0025000]; zero lower SE is a limit, not exact zero.",
+      "result": "consistent",
+      "note": "At least one pair of unrounded values is compatible with the symbol under a two-sided normal reference. This does not recover an exact p or verify the unspecified method. OR-SE transformation is an assumption, not stated in the table.",
+      "source": {
+        "doc": "D01",
+        "pdf_page": 11,
+        "where": "Table 5 / Model 2 / Minutes remaining"
+      }
+    },
+    {
+      "check_id": "F27",
+      "what": "Printed uncertainty and stars: Model 2, Performance (≤aspiration)",
+      "inputs": [
+        "T20"
+      ],
+      "calculation": "Assuming printed SE is delta-transformed to the odds-ratio scale, |z| = OR*|ln(OR)|/SE_OR. Full interval bounds give |z| in [12.874569,14.70792]. Printed symbol: **.",
+      "rounding_interval_used": "Estimate interval [0.8825000,0.8835000], SE interval [0.0075000,0.0085000]; zero lower SE is a limit, not exact zero.",
+      "result": "consistent",
+      "note": "At least one pair of unrounded values is compatible with the symbol under a two-sided normal reference. This does not recover an exact p or verify the unspecified method. OR-SE transformation is an assumption, not stated in the table.",
+      "source": {
+        "doc": "D01",
+        "pdf_page": 11,
+        "where": "Table 5 / Model 2 / Performance (≤aspiration)"
+      }
+    },
+    {
+      "check_id": "F28",
+      "what": "Printed uncertainty and stars: Model 2, Performance² (≤aspiration)",
+      "inputs": [
+        "T21"
+      ],
+      "calculation": "Assuming printed SE is delta-transformed to the odds-ratio scale, |z| = OR*|ln(OR)|/SE_OR. Full interval bounds give |z| in [0.99974996,unbounded]. Printed symbol: **.",
+      "rounding_interval_used": "Estimate interval [0.9985000,0.9995000], SE interval [0.0000000,0.0005000]; zero lower SE is a limit, not exact zero.",
+      "result": "consistent",
+      "note": "At least one pair of unrounded values is compatible with the symbol under a two-sided normal reference. This does not recover an exact p or verify the unspecified method. OR-SE transformation is an assumption, not stated in the table.",
+      "source": {
+        "doc": "D01",
+        "pdf_page": 11,
+        "where": "Table 5 / Model 2 / Performance² (≤aspiration)"
+      }
+    },
+    {
+      "check_id": "F29",
+      "what": "Printed uncertainty and stars: Model 2, Performance (>aspiration)",
+      "inputs": [
+        "T22"
+      ],
+      "calculation": "Assuming printed SE is delta-transformed to the odds-ratio scale, |z| = OR*|ln(OR)|/SE_OR. Full interval bounds give |z| in [0.73131296,0.99674294]. Printed symbol: none printed.",
+      "rounding_interval_used": "Estimate interval [0.9935000,0.9945000], SE interval [0.0065000,0.0075000]; zero lower SE is a limit, not exact zero.",
+      "result": "consistent",
+      "note": "At least one pair of unrounded values is compatible with the symbol under a two-sided normal reference. This does not recover an exact p or verify the unspecified method. OR-SE transformation is an assumption, not stated in the table.",
+      "source": {
+        "doc": "D01",
+        "pdf_page": 11,
+        "where": "Table 5 / Model 2 / Performance (>aspiration)"
+      }
+    },
+    {
+      "check_id": "F30",
+      "what": "Printed uncertainty and stars: Model 2, Indicator variable",
+      "inputs": [
+        "T23"
+      ],
+      "calculation": "Assuming printed SE is delta-transformed to the odds-ratio scale, |z| = OR*|ln(OR)|/SE_OR. Full interval bounds give |z| in [1.1436342,1.1642457]. Printed symbol: none printed.",
+      "rounding_interval_used": "Estimate interval [1.1195000,1.1205000], SE interval [0.1095000,0.1105000]; zero lower SE is a limit, not exact zero.",
+      "result": "consistent",
+      "note": "At least one pair of unrounded values is compatible with the symbol under a two-sided normal reference. This does not recover an exact p or verify the unspecified method. OR-SE transformation is an assumption, not stated in the table.",
+      "source": {
+        "doc": "D01",
+        "pdf_page": 11,
+        "where": "Table 5 / Model 2 / Indicator variable"
+      }
+    },
+    {
+      "check_id": "F31",
+      "what": "Printed uncertainty and stars: Model 3, Total points",
+      "inputs": [
+        "T28"
+      ],
+      "calculation": "Assuming printed SE is delta-transformed to the odds-ratio scale, |z| = OR*|ln(OR)|/SE_OR. Full interval bounds give |z| in [2.4710396,3.2454712]. Printed symbol: **.",
+      "rounding_interval_used": "Estimate interval [1.0135000,1.0145000], SE interval [0.0045000,0.0055000]; zero lower SE is a limit, not exact zero.",
+      "result": "consistent",
+      "note": "At least one pair of unrounded values is compatible with the symbol under a two-sided normal reference. This does not recover an exact p or verify the unspecified method. OR-SE transformation is an assumption, not stated in the table.",
+      "source": {
+        "doc": "D01",
+        "pdf_page": 11,
+        "where": "Table 5 / Model 3 / Total points"
+      }
+    },
+    {
+      "check_id": "F32",
+      "what": "Printed uncertainty and stars: Model 3, Yards to go for 1st down",
+      "inputs": [
+        "T29"
+      ],
+      "calculation": "Assuming printed SE is delta-transformed to the odds-ratio scale, |z| = OR*|ln(OR)|/SE_OR. Full interval bounds give |z| in [27.284331,32.386592]. Printed symbol: **.",
+      "rounding_interval_used": "Estimate interval [0.8005000,0.8015000], SE interval [0.0055000,0.0065000]; zero lower SE is a limit, not exact zero.",
+      "result": "consistent",
+      "note": "At least one pair of unrounded values is compatible with the symbol under a two-sided normal reference. This does not recover an exact p or verify the unspecified method. OR-SE transformation is an assumption, not stated in the table.",
+      "source": {
+        "doc": "D01",
+        "pdf_page": 11,
+        "where": "Table 5 / Model 3 / Yards to go for 1st down"
+      }
+    },
+    {
+      "check_id": "F33",
+      "what": "Printed uncertainty and stars: Model 3, Yards to go for touchdown",
+      "inputs": [
+        "T30"
+      ],
+      "calculation": "Assuming printed SE is delta-transformed to the odds-ratio scale, |z| = OR*|ln(OR)|/SE_OR. Full interval bounds give |z| in [18.078907,56.179922]. Printed symbol: **.",
+      "rounding_interval_used": "Estimate interval [0.9715000,0.9725000], SE interval [0.0005000,0.0015000]; zero lower SE is a limit, not exact zero.",
+      "result": "consistent",
+      "note": "At least one pair of unrounded values is compatible with the symbol under a two-sided normal reference. This does not recover an exact p or verify the unspecified method. OR-SE transformation is an assumption, not stated in the table.",
+      "source": {
+        "doc": "D01",
+        "pdf_page": 11,
+        "where": "Table 5 / Model 3 / Yards to go for touchdown"
+      }
+    },
+    {
+      "check_id": "F34",
+      "what": "Printed uncertainty and stars: Model 3, Same division",
+      "inputs": [
+        "T31"
+      ],
+      "calculation": "Assuming printed SE is delta-transformed to the odds-ratio scale, |z| = OR*|ln(OR)|/SE_OR. Full interval bounds give |z| in [0.74431637,0.77341051]. Printed symbol: none printed.",
+      "rounding_interval_used": "Estimate interval [1.0455000,1.0465000], SE interval [0.0615000,0.0625000]; zero lower SE is a limit, not exact zero.",
+      "result": "consistent",
+      "note": "At least one pair of unrounded values is compatible with the symbol under a two-sided normal reference. This does not recover an exact p or verify the unspecified method. OR-SE transformation is an assumption, not stated in the table.",
+      "source": {
+        "doc": "D01",
+        "pdf_page": 11,
+        "where": "Table 5 / Model 3 / Same division"
+      }
+    },
+    {
+      "check_id": "F35",
+      "what": "Printed uncertainty and stars: Model 3, Same conference",
+      "inputs": [
+        "T32"
+      ],
+      "calculation": "Assuming printed SE is delta-transformed to the odds-ratio scale, |z| = OR*|ln(OR)|/SE_OR. Full interval bounds give |z| in [0.0095214282,0.029104358]. Printed symbol: none printed.",
+      "rounding_interval_used": "Estimate interval [0.9985000,0.9995000], SE interval [0.0515000,0.0525000]; zero lower SE is a limit, not exact zero.",
+      "result": "consistent",
+      "note": "At least one pair of unrounded values is compatible with the symbol under a two-sided normal reference. This does not recover an exact p or verify the unspecified method. OR-SE transformation is an assumption, not stated in the table.",
+      "source": {
+        "doc": "D01",
+        "pdf_page": 11,
+        "where": "Table 5 / Model 3 / Same conference"
+      }
+    },
+    {
+      "check_id": "F36",
+      "what": "Printed uncertainty and stars: Model 3, Home-field advantage",
+      "inputs": [
+        "T33"
+      ],
+      "calculation": "Assuming printed SE is delta-transformed to the odds-ratio scale, |z| = OR*|ln(OR)|/SE_OR. Full interval bounds give |z| in [2.9694234,3.0387319]. Printed symbol: **.",
+      "rounding_interval_used": "Estimate interval [1.1665000,1.1675000], SE interval [0.0595000,0.0605000]; zero lower SE is a limit, not exact zero.",
+      "result": "consistent",
+      "note": "At least one pair of unrounded values is compatible with the symbol under a two-sided normal reference. This does not recover an exact p or verify the unspecified method. OR-SE transformation is an assumption, not stated in the table.",
+      "source": {
+        "doc": "D01",
+        "pdf_page": 11,
+        "where": "Table 5 / Model 3 / Home-field advantage"
+      }
+    },
+    {
+      "check_id": "F37",
+      "what": "Printed uncertainty and stars: Model 3, Week of season",
+      "inputs": [
+        "T34"
+      ],
+      "calculation": "Assuming printed SE is delta-transformed to the odds-ratio scale, |z| = OR*|ln(OR)|/SE_OR. Full interval bounds give |z| in [4.6949811,5.9662364]. Printed symbol: **.",
+      "rounding_interval_used": "Estimate interval [1.0255000,1.0265000], SE interval [0.0045000,0.0055000]; zero lower SE is a limit, not exact zero.",
+      "result": "consistent",
+      "note": "At least one pair of unrounded values is compatible with the symbol under a two-sided normal reference. This does not recover an exact p or verify the unspecified method. OR-SE transformation is an assumption, not stated in the table.",
+      "source": {
+        "doc": "D01",
+        "pdf_page": 11,
+        "where": "Table 5 / Model 3 / Week of season"
+      }
+    },
+    {
+      "check_id": "F38",
+      "what": "Printed uncertainty and stars: Model 3, Minutes remaining",
+      "inputs": [
+        "T35"
+      ],
+      "calculation": "Assuming printed SE is delta-transformed to the odds-ratio scale, |z| = OR*|ln(OR)|/SE_OR. Full interval bounds give |z| in [5.3343084,7.8755604]. Printed symbol: **.",
+      "rounding_interval_used": "Estimate interval [1.0185000,1.0195000], SE interval [0.0025000,0.0035000]; zero lower SE is a limit, not exact zero.",
+      "result": "consistent",
+      "note": "At least one pair of unrounded values is compatible with the symbol under a two-sided normal reference. This does not recover an exact p or verify the unspecified method. OR-SE transformation is an assumption, not stated in the table.",
+      "source": {
+        "doc": "D01",
+        "pdf_page": 11,
+        "where": "Table 5 / Model 3 / Minutes remaining"
+      }
+    },
+    {
+      "check_id": "F39",
+      "what": "Printed uncertainty and stars: Model 3, Performance (≤aspiration)",
+      "inputs": [
+        "T36"
+      ],
+      "calculation": "Assuming printed SE is delta-transformed to the odds-ratio scale, |z| = OR*|ln(OR)|/SE_OR. Full interval bounds give |z| in [21.489564,23.410224]. Printed symbol: **.",
+      "rounding_interval_used": "Estimate interval [0.6685000,0.6695000], SE interval [0.0115000,0.0125000]; zero lower SE is a limit, not exact zero.",
+      "result": "consistent",
+      "note": "At least one pair of unrounded values is compatible with the symbol under a two-sided normal reference. This does not recover an exact p or verify the unspecified method. OR-SE transformation is an assumption, not stated in the table.",
+      "source": {
+        "doc": "D01",
+        "pdf_page": 11,
+        "where": "Table 5 / Model 3 / Performance (≤aspiration)"
+      }
+    },
+    {
+      "check_id": "F40",
+      "what": "Printed uncertainty and stars: Model 3, Performance² (≤aspiration)",
+      "inputs": [
+        "T37"
+      ],
+      "calculation": "Assuming printed SE is delta-transformed to the odds-ratio scale, |z| = OR*|ln(OR)|/SE_OR. Full interval bounds give |z| in [4.3192194,14.943609]. Printed symbol: **.",
+      "rounding_interval_used": "Estimate interval [0.9925000,0.9935000], SE interval [0.0005000,0.0015000]; zero lower SE is a limit, not exact zero.",
+      "result": "consistent",
+      "note": "At least one pair of unrounded values is compatible with the symbol under a two-sided normal reference. This does not recover an exact p or verify the unspecified method. OR-SE transformation is an assumption, not stated in the table.",
+      "source": {
+        "doc": "D01",
+        "pdf_page": 11,
+        "where": "Table 5 / Model 3 / Performance² (≤aspiration)"
+      }
+    },
+    {
+      "check_id": "F41",
+      "what": "Printed uncertainty and stars: Model 3, Performance (>aspiration)",
+      "inputs": [
+        "T38"
+      ],
+      "calculation": "Assuming printed SE is delta-transformed to the odds-ratio scale, |z| = OR*|ln(OR)|/SE_OR. Full interval bounds give |z| in [3.6375712,4.1296624]. Printed symbol: **.",
+      "rounding_interval_used": "Estimate interval [1.0375000,1.0385000], SE interval [0.0095000,0.0105000]; zero lower SE is a limit, not exact zero.",
+      "result": "consistent",
+      "note": "At least one pair of unrounded values is compatible with the symbol under a two-sided normal reference. This does not recover an exact p or verify the unspecified method. OR-SE transformation is an assumption, not stated in the table.",
+      "source": {
+        "doc": "D01",
+        "pdf_page": 11,
+        "where": "Table 5 / Model 3 / Performance (>aspiration)"
+      }
+    },
+    {
+      "check_id": "F42",
+      "what": "Printed uncertainty and stars: Model 3, Indicator variable",
+      "inputs": [
+        "T39"
+      ],
+      "calculation": "Assuming printed SE is delta-transformed to the odds-ratio scale, |z| = OR*|ln(OR)|/SE_OR. Full interval bounds give |z| in [1.4251567,1.4499746]. Printed symbol: none printed.",
+      "rounding_interval_used": "Estimate interval [0.8565000,0.8575000], SE interval [0.0915000,0.0925000]; zero lower SE is a limit, not exact zero.",
+      "result": "consistent",
+      "note": "At least one pair of unrounded values is compatible with the symbol under a two-sided normal reference. This does not recover an exact p or verify the unspecified method. OR-SE transformation is an assumption, not stated in the table.",
+      "source": {
+        "doc": "D01",
+        "pdf_page": 11,
+        "where": "Table 5 / Model 3 / Indicator variable"
+      }
+    },
+    {
+      "check_id": "F43",
+      "what": "Printed uncertainty and stars: Model 3, Performance (≤aspiration) × Minutes remaining",
+      "inputs": [
+        "T40"
+      ],
+      "calculation": "Assuming printed SE is delta-transformed to the odds-ratio scale, |z| = OR*|ln(OR)|/SE_OR. Full interval bounds give |z| in [7.036622,23.131746]. Printed symbol: **.",
+      "rounding_interval_used": "Estimate interval [1.0105000,1.0115000], SE interval [0.0005000,0.0015000]; zero lower SE is a limit, not exact zero.",
+      "result": "consistent",
+      "note": "At least one pair of unrounded values is compatible with the symbol under a two-sided normal reference. This does not recover an exact p or verify the unspecified method. OR-SE transformation is an assumption, not stated in the table.",
+      "source": {
+        "doc": "D01",
+        "pdf_page": 11,
+        "where": "Table 5 / Model 3 / Performance (≤aspiration) × Minutes remaining"
+      }
+    },
+    {
+      "check_id": "F44",
+      "what": "Printed uncertainty and stars: Model 3, Performance² (≤aspiration) × Minutes remaining",
+      "inputs": [
+        "T41"
+      ],
+      "calculation": "Assuming printed SE is delta-transformed to the odds-ratio scale, |z| = OR*|ln(OR)|/SE_OR. Full interval bounds give |z| in [0,unbounded]. Printed symbol: **.",
+      "rounding_interval_used": "Estimate interval [0.9995000,1.0005000], SE interval [0.0000000,0.0005000]; zero lower SE is a limit, not exact zero.",
+      "result": "consistent",
+      "note": "At least one pair of unrounded values is compatible with the symbol under a two-sided normal reference. This does not recover an exact p or verify the unspecified method. OR-SE transformation is an assumption, not stated in the table.",
+      "source": {
+        "doc": "D01",
+        "pdf_page": 11,
+        "where": "Table 5 / Model 3 / Performance² (≤aspiration) × Minutes remaining"
+      }
+    },
+    {
+      "check_id": "F45",
+      "what": "Printed uncertainty and stars: Model 3, Performance (>aspiration) × Minutes remaining",
+      "inputs": [
+        "T42"
+      ],
+      "calculation": "Assuming printed SE is delta-transformed to the odds-ratio scale, |z| = OR*|ln(OR)|/SE_OR. Full interval bounds give |z| in [2.9977489,unbounded]. Printed symbol: **.",
+      "rounding_interval_used": "Estimate interval [0.9975000,0.9985000], SE interval [0.0000000,0.0005000]; zero lower SE is a limit, not exact zero.",
+      "result": "consistent",
+      "note": "At least one pair of unrounded values is compatible with the symbol under a two-sided normal reference. This does not recover an exact p or verify the unspecified method. OR-SE transformation is an assumption, not stated in the table.",
+      "source": {
+        "doc": "D01",
+        "pdf_page": 11,
+        "where": "Table 5 / Model 3 / Performance (>aspiration) × Minutes remaining"
+      }
+    },
+    {
+      "check_id": "F46",
+      "what": "Printed uncertainty and stars: Model 2, All quarters / Performance − Aspiration = -42",
+      "inputs": [
+        "T47"
+      ],
+      "calculation": "For a normal two-sided Wald check, |z| = |marginal effect|/SE. Full interval bounds give |z| in [0.408,0.43089431]. Printed symbol: none printed.",
+      "rounding_interval_used": "Estimate interval [-0.0026500,-0.0025500], SE interval [0.0061500,0.0062500]; zero lower SE is a limit, not exact zero.",
+      "result": "consistent",
+      "note": "At least one pair of unrounded values is compatible with the symbol under a two-sided normal reference. This does not recover an exact p or verify the unspecified method.",
+      "source": {
+        "doc": "D01",
+        "pdf_page": 12,
+        "where": "Table 6 / All quarters / -42"
+      }
+    },
+    {
+      "check_id": "F47",
+      "what": "Printed uncertainty and stars: Model 2, All quarters / Performance − Aspiration = -28",
+      "inputs": [
+        "T48"
+      ],
+      "calculation": "For a normal two-sided Wald check, |z| = |marginal effect|/SE. Full interval bounds give |z| in [1.5263158,1.6181818]. Printed symbol: none printed.",
+      "rounding_interval_used": "Estimate interval [-0.0044500,-0.0043500], SE interval [0.0027500,0.0028500]; zero lower SE is a limit, not exact zero.",
+      "result": "consistent",
+      "note": "At least one pair of unrounded values is compatible with the symbol under a two-sided normal reference. This does not recover an exact p or verify the unspecified method.",
+      "source": {
+        "doc": "D01",
+        "pdf_page": 12,
+        "where": "Table 6 / All quarters / -28"
+      }
+    },
+    {
+      "check_id": "F48",
+      "what": "Printed uncertainty and stars: Model 2, All quarters / Performance − Aspiration = -14",
+      "inputs": [
+        "T49"
+      ],
+      "calculation": "For a normal two-sided Wald check, |z| = |marginal effect|/SE. Full interval bounds give |z| in [7,8.7777778]. Printed symbol: **.",
+      "rounding_interval_used": "Estimate interval [-0.0039500,-0.0038500], SE interval [0.0004500,0.0005500]; zero lower SE is a limit, not exact zero.",
+      "result": "consistent",
+      "note": "At least one pair of unrounded values is compatible with the symbol under a two-sided normal reference. This does not recover an exact p or verify the unspecified method.",
+      "source": {
+        "doc": "D01",
+        "pdf_page": 12,
+        "where": "Table 6 / All quarters / -14"
+      }
+    },
+    {
+      "check_id": "F49",
+      "what": "Printed uncertainty and stars: Model 2, All quarters / Performance − Aspiration = 0",
+      "inputs": [
+        "T50"
+      ],
+      "calculation": "For a normal two-sided Wald check, |z| = |marginal effect|/SE. Full interval bounds give |z| in [6.1428571,9]. Printed symbol: **.",
+      "rounding_interval_used": "Estimate interval [-0.0022500,-0.0021500], SE interval [0.0002500,0.0003500]; zero lower SE is a limit, not exact zero.",
+      "result": "consistent",
+      "note": "At least one pair of unrounded values is compatible with the symbol under a two-sided normal reference. This does not recover an exact p or verify the unspecified method.",
+      "source": {
+        "doc": "D01",
+        "pdf_page": 12,
+        "where": "Table 6 / All quarters / 0"
+      }
+    },
+    {
+      "check_id": "F50",
+      "what": "Printed uncertainty and stars: Model 2, All quarters / Performance − Aspiration = 14",
+      "inputs": [
+        "T51"
+      ],
+      "calculation": "For a normal two-sided Wald check, |z| = |marginal effect|/SE. Full interval bounds give |z| in [2.2,4.3333333]. Printed symbol: **.",
+      "rounding_interval_used": "Estimate interval [-0.0006500,-0.0005500], SE interval [0.0001500,0.0002500]; zero lower SE is a limit, not exact zero.",
+      "result": "consistent",
+      "note": "At least one pair of unrounded values is compatible with the symbol under a two-sided normal reference. This does not recover an exact p or verify the unspecified method.",
+      "source": {
+        "doc": "D01",
+        "pdf_page": 12,
+        "where": "Table 6 / All quarters / 14"
+      }
+    },
+    {
+      "check_id": "F51",
+      "what": "Printed uncertainty and stars: Model 2, All quarters / Performance − Aspiration = 28",
+      "inputs": [
+        "T52"
+      ],
+      "calculation": "For a normal two-sided Wald check, |z| = |marginal effect|/SE. Full interval bounds give |z| in [2.3333333,9]. Printed symbol: **.",
+      "rounding_interval_used": "Estimate interval [-0.0004500,-0.0003500], SE interval [0.0000500,0.0001500]; zero lower SE is a limit, not exact zero.",
+      "result": "consistent",
+      "note": "At least one pair of unrounded values is compatible with the symbol under a two-sided normal reference. This does not recover an exact p or verify the unspecified method.",
+      "source": {
+        "doc": "D01",
+        "pdf_page": 12,
+        "where": "Table 6 / All quarters / 28"
+      }
+    },
+    {
+      "check_id": "F52",
+      "what": "Printed uncertainty and stars: Model 2, All quarters / Performance − Aspiration = 42",
+      "inputs": [
+        "T53"
+      ],
+      "calculation": "For a normal two-sided Wald check, |z| = |marginal effect|/SE. Full interval bounds give |z| in [5,unbounded]. Printed symbol: **.",
+      "rounding_interval_used": "Estimate interval [-0.0003500,-0.0002500], SE interval [0.0000000,0.0000500]; zero lower SE is a limit, not exact zero.",
+      "result": "consistent",
+      "note": "At least one pair of unrounded values is compatible with the symbol under a two-sided normal reference. This does not recover an exact p or verify the unspecified method.",
+      "source": {
+        "doc": "D01",
+        "pdf_page": 12,
+        "where": "Table 6 / All quarters / 42"
+      }
+    },
+    {
+      "check_id": "F53",
+      "what": "Printed uncertainty and stars: Model 3, 1st quarter / Performance − Aspiration = -42",
+      "inputs": [
+        "T54"
+      ],
+      "calculation": "For a normal two-sided Wald check, |z| = |marginal effect|/SE. Full interval bounds give |z| in [0.76112412,0.76941176]. Printed symbol: none printed.",
+      "rounding_interval_used": "Estimate interval [-0.0163500,-0.0162500], SE interval [0.0212500,0.0213500]; zero lower SE is a limit, not exact zero.",
+      "result": "consistent",
+      "note": "At least one pair of unrounded values is compatible with the symbol under a two-sided normal reference. This does not recover an exact p or verify the unspecified method.",
+      "source": {
+        "doc": "D01",
+        "pdf_page": 12,
+        "where": "Table 6 / 1st quarter / -42"
+      }
+    },
+    {
+      "check_id": "F54",
+      "what": "Printed uncertainty and stars: Model 3, 1st quarter / Performance − Aspiration = -28",
+      "inputs": [
+        "T55"
+      ],
+      "calculation": "For a normal two-sided Wald check, |z| = |marginal effect|/SE. Full interval bounds give |z| in [1.1052632,1.3529412]. Printed symbol: none printed.",
+      "rounding_interval_used": "Estimate interval [-0.0011500,-0.0010500], SE interval [0.0008500,0.0009500]; zero lower SE is a limit, not exact zero.",
+      "result": "consistent",
+      "note": "At least one pair of unrounded values is compatible with the symbol under a two-sided normal reference. This does not recover an exact p or verify the unspecified method.",
+      "source": {
+        "doc": "D01",
+        "pdf_page": 12,
+        "where": "Table 6 / 1st quarter / -28"
+      }
+    },
+    {
+      "check_id": "F55",
+      "what": "Printed uncertainty and stars: Model 3, 1st quarter / Performance − Aspiration = -14",
+      "inputs": [
+        "T56"
+      ],
+      "calculation": "For a normal two-sided Wald check, |z| = |marginal effect|/SE. Full interval bounds give |z| in [2.3333333,9]. Printed symbol: **.",
+      "rounding_interval_used": "Estimate interval [0.0003500,0.0004500], SE interval [0.0000500,0.0001500]; zero lower SE is a limit, not exact zero.",
+      "result": "consistent",
+      "note": "At least one pair of unrounded values is compatible with the symbol under a two-sided normal reference. This does not recover an exact p or verify the unspecified method.",
+      "source": {
+        "doc": "D01",
+        "pdf_page": 12,
+        "where": "Table 6 / 1st quarter / -14"
+      }
+    },
+    {
+      "check_id": "F56",
+      "what": "Printed uncertainty and stars: Model 3, 1st quarter / Performance − Aspiration = 0",
+      "inputs": [
+        "T57"
+      ],
+      "calculation": "For a normal two-sided Wald check, |z| = |marginal effect|/SE. Full interval bounds give |z| in [4.5172414,4.9259259]. Printed symbol: **.",
+      "rounding_interval_used": "Estimate interval [0.0065500,0.0066500], SE interval [0.0013500,0.0014500]; zero lower SE is a limit, not exact zero.",
+      "result": "consistent",
+      "note": "At least one pair of unrounded values is compatible with the symbol under a two-sided normal reference. This does not recover an exact p or verify the unspecified method.",
+      "source": {
+        "doc": "D01",
+        "pdf_page": 12,
+        "where": "Table 6 / 1st quarter / 0"
+      }
+    },
+    {
+      "check_id": "F57",
+      "what": "Printed uncertainty and stars: Model 3, 1st quarter / Performance − Aspiration = 14",
+      "inputs": [
+        "T58"
+      ],
+      "calculation": "For a normal two-sided Wald check, |z| = |marginal effect|/SE. Full interval bounds give |z| in [5,9]. Printed symbol: **.",
+      "rounding_interval_used": "Estimate interval [-0.0013500,-0.0012500], SE interval [0.0001500,0.0002500]; zero lower SE is a limit, not exact zero.",
+      "result": "consistent",
+      "note": "At least one pair of unrounded values is compatible with the symbol under a two-sided normal reference. This does not recover an exact p or verify the unspecified method.",
+      "source": {
+        "doc": "D01",
+        "pdf_page": 12,
+        "where": "Table 6 / 1st quarter / 14"
+      }
+    },
+    {
+      "check_id": "F58",
+      "what": "Printed uncertainty and stars: Model 3, 1st quarter / Performance − Aspiration = 28",
+      "inputs": [
+        "T59"
+      ],
+      "calculation": "For a normal two-sided Wald check, |z| = |marginal effect|/SE. Full interval bounds give |z| in [3,11]. Printed symbol: **.",
+      "rounding_interval_used": "Estimate interval [-0.0005500,-0.0004500], SE interval [0.0000500,0.0001500]; zero lower SE is a limit, not exact zero.",
+      "result": "consistent",
+      "note": "At least one pair of unrounded values is compatible with the symbol under a two-sided normal reference. This does not recover an exact p or verify the unspecified method.",
+      "source": {
+        "doc": "D01",
+        "pdf_page": 12,
+        "where": "Table 6 / 1st quarter / 28"
+      }
+    },
+    {
+      "check_id": "F59",
+      "what": "Printed uncertainty and stars: Model 3, 1st quarter / Performance − Aspiration = 42",
+      "inputs": [
+        "T60"
+      ],
+      "calculation": "For a normal two-sided Wald check, |z| = |marginal effect|/SE. Full interval bounds give |z| in [1,5]. Printed symbol: *.",
+      "rounding_interval_used": "Estimate interval [-0.0002500,-0.0001500], SE interval [0.0000500,0.0001500]; zero lower SE is a limit, not exact zero.",
+      "result": "consistent",
+      "note": "At least one pair of unrounded values is compatible with the symbol under a two-sided normal reference. This does not recover an exact p or verify the unspecified method.",
+      "source": {
+        "doc": "D01",
+        "pdf_page": 12,
+        "where": "Table 6 / 1st quarter / 42"
+      }
+    },
+    {
+      "check_id": "F60",
+      "what": "Printed uncertainty and stars: Model 3, 2nd quarter / Performance − Aspiration = -42",
+      "inputs": [
+        "T61"
+      ],
+      "calculation": "For a normal two-sided Wald check, |z| = |marginal effect|/SE. Full interval bounds give |z| in [0.88340807,0.90045249]. Printed symbol: none printed.",
+      "rounding_interval_used": "Estimate interval [-0.0099500,-0.0098500], SE interval [0.0110500,0.0111500]; zero lower SE is a limit, not exact zero.",
+      "result": "consistent",
+      "note": "At least one pair of unrounded values is compatible with the symbol under a two-sided normal reference. This does not recover an exact p or verify the unspecified method.",
+      "source": {
+        "doc": "D01",
+        "pdf_page": 12,
+        "where": "Table 6 / 2nd quarter / -42"
+      }
+    },
+    {
+      "check_id": "F61",
+      "what": "Printed uncertainty and stars: Model 3, 2nd quarter / Performance − Aspiration = -28",
+      "inputs": [
+        "T62"
+      ],
+      "calculation": "For a normal two-sided Wald check, |z| = |marginal effect|/SE. Full interval bounds give |z| in [1.3555556,1.4651163]. Printed symbol: none printed.",
+      "rounding_interval_used": "Estimate interval [-0.0031500,-0.0030500], SE interval [0.0021500,0.0022500]; zero lower SE is a limit, not exact zero.",
+      "result": "consistent",
+      "note": "At least one pair of unrounded values is compatible with the symbol under a two-sided normal reference. This does not recover an exact p or verify the unspecified method.",
+      "source": {
+        "doc": "D01",
+        "pdf_page": 12,
+        "where": "Table 6 / 2nd quarter / -28"
+      }
+    },
+    {
+      "check_id": "F62",
+      "what": "Printed uncertainty and stars: Model 3, 2nd quarter / Performance − Aspiration = -14",
+      "inputs": [
+        "T63"
+      ],
+      "calculation": "For a normal two-sided Wald check, |z| = |marginal effect|/SE. Full interval bounds give |z| in [2.4285714,3.8]. Printed symbol: *.",
+      "rounding_interval_used": "Estimate interval [-0.0009500,-0.0008500], SE interval [0.0002500,0.0003500]; zero lower SE is a limit, not exact zero.",
+      "result": "consistent",
+      "note": "At least one pair of unrounded values is compatible with the symbol under a two-sided normal reference. This does not recover an exact p or verify the unspecified method.",
+      "source": {
+        "doc": "D01",
+        "pdf_page": 12,
+        "where": "Table 6 / 2nd quarter / -14"
+      }
+    },
+    {
+      "check_id": "F63",
+      "what": "Printed uncertainty and stars: Model 3, 2nd quarter / Performance − Aspiration = 0",
+      "inputs": [
+        "T64"
+      ],
+      "calculation": "For a normal two-sided Wald check, |z| = |marginal effect|/SE. Full interval bounds give |z| in [0.090909091,0.33333333]. Printed symbol: none printed.",
+      "rounding_interval_used": "Estimate interval [0.0000500,0.0001500], SE interval [0.0004500,0.0005500]; zero lower SE is a limit, not exact zero.",
+      "result": "consistent",
+      "note": "At least one pair of unrounded values is compatible with the symbol under a two-sided normal reference. This does not recover an exact p or verify the unspecified method.",
+      "source": {
+        "doc": "D01",
+        "pdf_page": 12,
+        "where": "Table 6 / 2nd quarter / 0"
+      }
+    },
+    {
+      "check_id": "F64",
+      "what": "Printed uncertainty and stars: Model 3, 2nd quarter / Performance − Aspiration = 14",
+      "inputs": [
+        "T65"
+      ],
+      "calculation": "For a normal two-sided Wald check, |z| = |marginal effect|/SE. Full interval bounds give |z| in [3.4,6.3333333]. Printed symbol: **.",
+      "rounding_interval_used": "Estimate interval [-0.0009500,-0.0008500], SE interval [0.0001500,0.0002500]; zero lower SE is a limit, not exact zero.",
+      "result": "consistent",
+      "note": "At least one pair of unrounded values is compatible with the symbol under a two-sided normal reference. This does not recover an exact p or verify the unspecified method.",
+      "source": {
+        "doc": "D01",
+        "pdf_page": 12,
+        "where": "Table 6 / 2nd quarter / 14"
+      }
+    },
+    {
+      "check_id": "F65",
+      "what": "Printed uncertainty and stars: Model 3, 2nd quarter / Performance − Aspiration = 28",
+      "inputs": [
+        "T66"
+      ],
+      "calculation": "For a normal two-sided Wald check, |z| = |marginal effect|/SE. Full interval bounds give |z| in [9,unbounded]. Printed symbol: **.",
+      "rounding_interval_used": "Estimate interval [-0.0005500,-0.0004500], SE interval [0.0000000,0.0000500]; zero lower SE is a limit, not exact zero.",
+      "result": "consistent",
+      "note": "At least one pair of unrounded values is compatible with the symbol under a two-sided normal reference. This does not recover an exact p or verify the unspecified method.",
+      "source": {
+        "doc": "D01",
+        "pdf_page": 12,
+        "where": "Table 6 / 2nd quarter / 28"
+      }
+    },
+    {
+      "check_id": "F66",
+      "what": "Printed uncertainty and stars: Model 3, 2nd quarter / Performance − Aspiration = 42",
+      "inputs": [
+        "T67"
+      ],
+      "calculation": "For a normal two-sided Wald check, |z| = |marginal effect|/SE. Full interval bounds give |z| in [1.6666667,7]. Printed symbol: **.",
+      "rounding_interval_used": "Estimate interval [-0.0003500,-0.0002500], SE interval [0.0000500,0.0001500]; zero lower SE is a limit, not exact zero.",
+      "result": "consistent",
+      "note": "At least one pair of unrounded values is compatible with the symbol under a two-sided normal reference. This does not recover an exact p or verify the unspecified method.",
+      "source": {
+        "doc": "D01",
+        "pdf_page": 12,
+        "where": "Table 6 / 2nd quarter / 42"
+      }
+    },
+    {
+      "check_id": "F67",
+      "what": "Printed uncertainty and stars: Model 3, 3rd quarter / Performance − Aspiration = -42",
+      "inputs": [
+        "T68"
+      ],
+      "calculation": "For a normal two-sided Wald check, |z| = |marginal effect|/SE. Full interval bounds give |z| in [2.1428571,2.2459016]. Printed symbol: *.",
+      "rounding_interval_used": "Estimate interval [0.0067500,0.0068500], SE interval [0.0030500,0.0031500]; zero lower SE is a limit, not exact zero.",
+      "result": "consistent",
+      "note": "At least one pair of unrounded values is compatible with the symbol under a two-sided normal reference. This does not recover an exact p or verify the unspecified method.",
+      "source": {
+        "doc": "D01",
+        "pdf_page": 12,
+        "where": "Table 6 / 3rd quarter / -42"
+      }
+    },
+    {
+      "check_id": "F68",
+      "what": "Printed uncertainty and stars: Model 3, 3rd quarter / Performance − Aspiration = -28",
+      "inputs": [
+        "T69"
+      ],
+      "calculation": "For a normal two-sided Wald check, |z| = |marginal effect|/SE. Full interval bounds give |z| in [1.6315789,1.7272727]. Printed symbol: +.",
+      "rounding_interval_used": "Estimate interval [-0.0047500,-0.0046500], SE interval [0.0027500,0.0028500]; zero lower SE is a limit, not exact zero.",
+      "result": "consistent",
+      "note": "At least one pair of unrounded values is compatible with the symbol under a two-sided normal reference. This does not recover an exact p or verify the unspecified method.",
+      "source": {
+        "doc": "D01",
+        "pdf_page": 12,
+        "where": "Table 6 / 3rd quarter / -28"
+      }
+    },
+    {
+      "check_id": "F69",
+      "what": "Printed uncertainty and stars: Model 3, 3rd quarter / Performance − Aspiration = -14",
+      "inputs": [
+        "T70"
+      ],
+      "calculation": "For a normal two-sided Wald check, |z| = |marginal effect|/SE. Full interval bounds give |z| in [11.470588,13.133333]. Printed symbol: **.",
+      "rounding_interval_used": "Estimate interval [-0.0098500,-0.0097500], SE interval [0.0007500,0.0008500]; zero lower SE is a limit, not exact zero.",
+      "result": "consistent",
+      "note": "At least one pair of unrounded values is compatible with the symbol under a two-sided normal reference. This does not recover an exact p or verify the unspecified method.",
+      "source": {
+        "doc": "D01",
+        "pdf_page": 12,
+        "where": "Table 6 / 3rd quarter / -14"
+      }
+    },
+    {
+      "check_id": "F70",
+      "what": "Printed uncertainty and stars: Model 3, 3rd quarter / Performance − Aspiration = 0",
+      "inputs": [
+        "T71"
+      ],
+      "calculation": "For a normal two-sided Wald check, |z| = |marginal effect|/SE. Full interval bounds give |z| in [14.2,24.333333]. Printed symbol: **.",
+      "rounding_interval_used": "Estimate interval [-0.0036500,-0.0035500], SE interval [0.0001500,0.0002500]; zero lower SE is a limit, not exact zero.",
+      "result": "consistent",
+      "note": "At least one pair of unrounded values is compatible with the symbol under a two-sided normal reference. This does not recover an exact p or verify the unspecified method.",
+      "source": {
+        "doc": "D01",
+        "pdf_page": 12,
+        "where": "Table 6 / 3rd quarter / 0"
+      }
+    },
+    {
+      "check_id": "F71",
+      "what": "Printed uncertainty and stars: Model 3, 3rd quarter / Performance − Aspiration = 14",
+      "inputs": [
+        "T72"
+      ],
+      "calculation": "For a normal two-sided Wald check, |z| = |marginal effect|/SE. Full interval bounds give |z| in [1,2.3333333]. Printed symbol: none printed.",
+      "rounding_interval_used": "Estimate interval [-0.0003500,-0.0002500], SE interval [0.0001500,0.0002500]; zero lower SE is a limit, not exact zero.",
+      "result": "consistent",
+      "note": "At least one pair of unrounded values is compatible with the symbol under a two-sided normal reference. This does not recover an exact p or verify the unspecified method.",
+      "source": {
+        "doc": "D01",
+        "pdf_page": 12,
+        "where": "Table 6 / 3rd quarter / 14"
+      }
+    },
+    {
+      "check_id": "F72",
+      "what": "Printed uncertainty and stars: Model 3, 3rd quarter / Performance − Aspiration = 28",
+      "inputs": [
+        "T73"
+      ],
+      "calculation": "For a normal two-sided Wald check, |z| = |marginal effect|/SE. Full interval bounds give |z| in [1,5]. Printed symbol: +.",
+      "rounding_interval_used": "Estimate interval [-0.0002500,-0.0001500], SE interval [0.0000500,0.0001500]; zero lower SE is a limit, not exact zero.",
+      "result": "consistent",
+      "note": "At least one pair of unrounded values is compatible with the symbol under a two-sided normal reference. This does not recover an exact p or verify the unspecified method.",
+      "source": {
+        "doc": "D01",
+        "pdf_page": 12,
+        "where": "Table 6 / 3rd quarter / 28"
+      }
+    },
+    {
+      "check_id": "F73",
+      "what": "Printed uncertainty and stars: Model 3, 3rd quarter / Performance − Aspiration = 42",
+      "inputs": [
+        "T74"
+      ],
+      "calculation": "For a normal two-sided Wald check, |z| = |marginal effect|/SE. Full interval bounds give |z| in [1,5]. Printed symbol: *.",
+      "rounding_interval_used": "Estimate interval [-0.0002500,-0.0001500], SE interval [0.0000500,0.0001500]; zero lower SE is a limit, not exact zero.",
+      "result": "consistent",
+      "note": "At least one pair of unrounded values is compatible with the symbol under a two-sided normal reference. This does not recover an exact p or verify the unspecified method.",
+      "source": {
+        "doc": "D01",
+        "pdf_page": 12,
+        "where": "Table 6 / 3rd quarter / 42"
+      }
+    },
+    {
+      "check_id": "F74",
+      "what": "Printed uncertainty and stars: Model 3, 4th quarter / Performance − Aspiration = -42",
+      "inputs": [
+        "T75"
+      ],
+      "calculation": "For a normal two-sided Wald check, |z| = |marginal effect|/SE. Full interval bounds give |z| in [17.195122,18.128205]. Printed symbol: **.",
+      "rounding_interval_used": "Estimate interval [0.0352500,0.0353500], SE interval [0.0019500,0.0020500]; zero lower SE is a limit, not exact zero.",
+      "result": "consistent",
+      "note": "At least one pair of unrounded values is compatible with the symbol under a two-sided normal reference. This does not recover an exact p or verify the unspecified method.",
+      "source": {
+        "doc": "D01",
+        "pdf_page": 12,
+        "where": "Table 6 / 4th quarter / -42"
+      }
+    },
+    {
+      "check_id": "F75",
+      "what": "Printed uncertainty and stars: Model 3, 4th quarter / Performance − Aspiration = -28",
+      "inputs": [
+        "T76"
+      ],
+      "calculation": "For a normal two-sided Wald check, |z| = |marginal effect|/SE. Full interval bounds give |z| in [0.056603774,0.098039216]. Printed symbol: none printed.",
+      "rounding_interval_used": "Estimate interval [0.0001500,0.0002500], SE interval [0.0025500,0.0026500]; zero lower SE is a limit, not exact zero.",
+      "result": "consistent",
+      "note": "At least one pair of unrounded values is compatible with the symbol under a two-sided normal reference. This does not recover an exact p or verify the unspecified method.",
+      "source": {
+        "doc": "D01",
+        "pdf_page": 12,
+        "where": "Table 6 / 4th quarter / -28"
+      }
+    },
+    {
+      "check_id": "F76",
+      "what": "Printed uncertainty and stars: Model 3, 4th quarter / Performance − Aspiration = -14",
+      "inputs": [
+        "T77"
+      ],
+      "calculation": "For a normal two-sided Wald check, |z| = |marginal effect|/SE. Full interval bounds give |z| in [21.30303,22.741935]. Printed symbol: **.",
+      "rounding_interval_used": "Estimate interval [-0.0352500,-0.0351500], SE interval [0.0015500,0.0016500]; zero lower SE is a limit, not exact zero.",
+      "result": "consistent",
+      "note": "At least one pair of unrounded values is compatible with the symbol under a two-sided normal reference. This does not recover an exact p or verify the unspecified method.",
+      "source": {
+        "doc": "D01",
+        "pdf_page": 12,
+        "where": "Table 6 / 4th quarter / -14"
+      }
+    },
+    {
+      "check_id": "F77",
+      "what": "Printed uncertainty and stars: Model 3, 4th quarter / Performance − Aspiration = 0",
+      "inputs": [
+        "T78"
+      ],
+      "calculation": "For a normal two-sided Wald check, |z| = |marginal effect|/SE. Full interval bounds give |z| in [12.111111,15.857143]. Printed symbol: **.",
+      "rounding_interval_used": "Estimate interval [-0.0055500,-0.0054500], SE interval [0.0003500,0.0004500]; zero lower SE is a limit, not exact zero.",
+      "result": "consistent",
+      "note": "At least one pair of unrounded values is compatible with the symbol under a two-sided normal reference. This does not recover an exact p or verify the unspecified method.",
+      "source": {
+        "doc": "D01",
+        "pdf_page": 12,
+        "where": "Table 6 / 4th quarter / 0"
+      }
+    },
+    {
+      "check_id": "F78",
+      "what": "Printed uncertainty and stars: Model 3, 4th quarter / Performance − Aspiration = 14",
+      "inputs": [
+        "T79"
+      ],
+      "calculation": "For a normal two-sided Wald check, |z| = |marginal effect|/SE. Full interval bounds give |z| in [1.8,3.6666667]. Printed symbol: *.",
+      "rounding_interval_used": "Estimate interval [0.0004500,0.0005500], SE interval [0.0001500,0.0002500]; zero lower SE is a limit, not exact zero.",
+      "result": "consistent",
+      "note": "At least one pair of unrounded values is compatible with the symbol under a two-sided normal reference. This does not recover an exact p or verify the unspecified method.",
+      "source": {
+        "doc": "D01",
+        "pdf_page": 12,
+        "where": "Table 6 / 4th quarter / 14"
+      }
+    },
+    {
+      "check_id": "F79",
+      "what": "Printed uncertainty and stars: Model 3, 4th quarter / Performance − Aspiration = 28",
+      "inputs": [
+        "T80"
+      ],
+      "calculation": "For a normal two-sided Wald check, |z| = |marginal effect|/SE. Full interval bounds give |z| in [1.2222222,1.8571429]. Printed symbol: +.",
+      "rounding_interval_used": "Estimate interval [0.0005500,0.0006500], SE interval [0.0003500,0.0004500]; zero lower SE is a limit, not exact zero.",
+      "result": "consistent",
+      "note": "At least one pair of unrounded values is compatible with the symbol under a two-sided normal reference. This does not recover an exact p or verify the unspecified method.",
+      "source": {
+        "doc": "D01",
+        "pdf_page": 12,
+        "where": "Table 6 / 4th quarter / 28"
+      }
+    },
+    {
+      "check_id": "F80",
+      "what": "Printed uncertainty and stars: Model 3, 4th quarter / Performance − Aspiration = 42",
+      "inputs": [
+        "T81"
+      ],
+      "calculation": "For a normal two-sided Wald check, |z| = |marginal effect|/SE. Full interval bounds give |z| in [1.1538462,1.5454545]. Printed symbol: none printed.",
+      "rounding_interval_used": "Estimate interval [0.0007500,0.0008500], SE interval [0.0005500,0.0006500]; zero lower SE is a limit, not exact zero.",
+      "result": "consistent",
+      "note": "At least one pair of unrounded values is compatible with the symbol under a two-sided normal reference. This does not recover an exact p or verify the unspecified method.",
+      "source": {
+        "doc": "D01",
+        "pdf_page": 12,
+        "where": "Table 6 / 4th quarter / 42"
+      }
+    },
+    {
+      "check_id": "F81",
+      "what": "Rounded unit odds ratio with significance",
+      "inputs": [
+        "T41"
+      ],
+      "calculation": "An odds ratio printed as 1.000 can differ from unity, and an SE printed as 0.000 can be strictly positive and small. The pair does not fix a Wald statistic or sign.",
+      "rounding_interval_used": "OR in [0.9995,1.0005]; SE in [0,0.0005], with positive SE needed for an ordinary Wald test.",
+      "result": "consistent",
+      "note": "Do not erase the symbol or treat the interaction as exactly zero. This also prevents recovery of a precise quadratic time interaction for prediction.",
+      "source": {
+        "doc": "D01",
+        "pdf_page": 11,
+        "where": "Table 5 / Model 3 / Performance² × Minutes remaining"
+      }
+    },
+    {
+      "check_id": "F82",
+      "what": "Table 6 zero-rounded SEs",
+      "inputs": [
+        "T53",
+        "T66"
+      ],
+      "calculation": "A printed 0.0000 SE permits a sufficiently small positive SE; the corresponding effects can be statistically significant.",
+      "rounding_interval_used": "SE in [0,0.00005]; each effect in printed value ±0.00005.",
+      "result": "consistent",
+      "note": "No infinite test statistic is inferred from printed zero.",
+      "source": {
+        "doc": "D01",
+        "pdf_page": 12,
+        "where": "Table 6 / All quarters at 42 and second quarter at 28"
+      }
+    },
+    {
+      "check_id": "F83",
+      "what": "Seven-point effect examples versus local derivatives",
+      "inputs": [
+        "T136",
+        "T137",
+        "T138",
+        "T139",
+        "T49",
+        "T63",
+        "T77",
+        "T75"
+      ],
+      "calculation": "Seven times the absolute printed local effect, expressed in percentage points, gives 2.73, 0.63, 24.64 and 24.71, matching the text.",
+      "rounding_interval_used": "Each derivative gives ±0.035 percentage points after multiplication by 700; each two-decimal percent has ±0.005 interval. Corresponding intervals intersect.",
+      "result": "consistent",
+      "note": "Arithmetic matches a linear approximation. Percent likelihood changes in prose have no specified denominator; derivatives times seven do not establish relative percentages or exact finite changes. Total points also changes in a real touchdown scenario.",
+      "source": {
+        "doc": "D01",
+        "pdf_page": 12,
+        "where": "Results / seven-point examples; PDF p. 13 continuation"
+      }
+    },
+    {
+      "check_id": "F84",
+      "what": "Exact finite-change interpretation of seven-point examples",
+      "inputs": [
+        "T136",
+        "T137",
+        "T138",
+        "T139"
+      ],
+      "calculation": "Exact finite differences require probabilities at both endpoints, including intercept/fixed effects and every changed regressor. These are not supplied.",
+      "rounding_interval_used": "Rounded slope intervals do not determine endpoint probabilities; no central-value substitution is made.",
+      "result": "cannot_assess",
+      "note": "Separate a local approximation from an exact probability difference; do not insert reconstructed probabilities into targets.",
+      "source": {
+        "doc": "D01",
+        "pdf_page": 12,
+        "where": "Results / examples; PDF pp. 9,13"
+      }
+    },
+    {
+      "check_id": "F85",
+      "what": "H1A shape and observed support after rounding",
+      "inputs": [
+        "T20",
+        "T21",
+        "T47",
+        "T48",
+        "T49",
+        "T50"
+      ],
+      "calculation": "The Model 2 below-branch index stationary point is -ln(OR_linear)/(2*ln(OR_quadratic)). Full OR intervals allow stationary points both within and below published support. Table 6 all-quarter derivatives do not themselves show a positive far-below slope.",
+      "rounding_interval_used": "Linear OR [0.8825,0.8835]; quadratic OR [0.9985,0.9995]. These permit approximate stationary points from -125 to -41; support endpoint is in Table 4.",
+      "result": "cannot_assess",
+      "note": "Negative linear and quadratic terms establish concavity of the below index, not necessarily an interior turning point over observed support. Preserve stated H1A support without concluding impossibility from rounded ORs.",
+      "source": {
+        "doc": "D01",
+        "pdf_page": 11,
+        "where": "Table 5 / Model 2; Table 4; PDF p. 12, Table 6"
+      }
+    },
+    {
+      "check_id": "F86",
+      "what": "Aspiration comparison versus model-addition test",
+      "inputs": [
+        "T135",
+        "T27"
+      ],
+      "calculation": "The same printed chi-square is used for the prose below/above comparison and Model 2 improvement in Table 5. The former’s restrictions are absent and these tests are not generally identical.",
+      "rounding_interval_used": "Both printed intervals [168.865,168.875]; equality cannot identify null restrictions.",
+      "result": "cannot_assess",
+      "note": "Do not select a test by reproducing the value.",
+      "source": {
+        "doc": "D01",
+        "pdf_page": 10,
+        "where": "Results / final paragraph; PDF p. 11, Table 5"
+      }
+    },
+    {
+      "check_id": "F87",
+      "what": "M1 indicator prose versus table",
+      "inputs": [],
+      "calculation": "Methods say the below-aspiration indicator is included in each model; Table 5 shows it only in Models 2 and 3.",
+      "rounding_interval_used": "Not numerical; rounding does not apply.",
+      "result": "inconsistent",
+      "note": "Origin follows explicit table; preserve prose reading as an uncertain, non-equivalent branch.",
+      "source": {
+        "doc": "D01",
+        "pdf_page": 9,
+        "where": "Performance / indicator; PDF p. 11, Table 5"
+      }
+    },
+    {
+      "check_id": "F88",
+      "what": "Figure 3 probability versus marginal-effect labeling",
+      "inputs": [],
+      "calculation": "Figure title, vertical axis and discussion identify predicted probabilities; its note calls the values marginal effects.",
+      "rounding_interval_used": "Not a numerical equality test; no values digitized.",
+      "result": "inconsistent",
+      "note": "The manifest requests probabilities and derivatives separately.",
+      "source": {
+        "doc": "D01",
+        "pdf_page": 13,
+        "where": "Figure 3 title, axis, note and Results"
+      }
+    },
+    {
+      "check_id": "F89",
+      "what": "Times described as quarter midpoints",
+      "inputs": [],
+      "calculation": "Named evaluation times 53,38,23,8 minutes are half a minute above exact midpoints of fifteen-minute quarters in a sixty-minute game.",
+      "rounding_interval_used": "Exact midpoints lie at the half-minute boundary of rounding to integers; actual computational rounding is unspecified.",
+      "result": "cannot_assess",
+      "note": "Use explicitly printed settings as origin, not silently substituted geometric midpoints.",
+      "source": {
+        "doc": "D01",
+        "pdf_page": 12,
+        "where": "Table 6 and Figure 2 notes; PDF p. 9, Deadline Proximity"
+      }
+    },
+    {
+      "check_id": "F90",
+      "what": "H3 strength and significance coverage",
+      "inputs": [
+        "T79",
+        "T80",
+        "T81"
+      ],
+      "calculation": "Late above-aspiration effects are positive at every printed evaluation point, but stars weaken across columns and the final entry has no symbol.",
+      "rounding_interval_used": "Every estimate/SE pair is assessed separately above using full intervals. No-star is not an exact p.",
+      "result": "consistent",
+      "note": "Preserve the final prose qualification of weak support; not every late positive effect is declared significant by the table.",
+      "source": {
+        "doc": "D01",
+        "pdf_page": 13,
+        "where": "Results / H3; PDF p. 12, Table 6"
+      }
+    },
+    {
+      "check_id": "F91",
+      "what": "Table 2 cumulative percentage for row six versus exact frequencies",
+      "inputs": [],
+      "calculation": "The sum of integer game frequencies through row six divided by game N, times 100, gives 99.6052631579. The printed cumulative percentage is 99.60. However, summing the already-rounded individual row percentages through that row gives exactly 99.60.",
+      "rounding_interval_used": "Integer count operands in sealed_N_branch.json are exact. The printed cumulative interval [99.595,99.605] excludes 99.6052631579. Allowing each individual two-decimal percentage its own ±0.005 interval permits accumulated rounding of this magnitude.",
+      "result": "inconsistent",
+      "note": "A narrow inconsistency with direct rounding of the exact count ratio, plausibly explained by summing rounded percentages. It is not evidence of contradictory integer counts and is not a replication verdict. All published counts/percentages remain in sealed_N_branch.json.",
+      "source": {
+        "doc": "D01",
+        "pdf_page": 10,
+        "where": "Table 2 / six conversion attempts / cumulative percentage"
+      }
+    }
+  ]
+}

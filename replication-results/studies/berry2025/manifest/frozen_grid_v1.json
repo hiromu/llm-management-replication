@@ -1,0 +1,40 @@
+{
+ "version": "frozen_grid_v1",
+ "paper_id": "PX01",
+ "scope": "Main-text Studies 1-4 with their Online Appendix results. Supplemental Studies S1-S7 out of scope.",
+ "origin_and_alternatives": {
+  "sample": {
+   "1": {"origin": "D1_key", "alternatives": {"D1_none": "uncertain"}},
+   "2": {"origin": "D2_any", "alternatives": {"D2_both": "uncertain", "D2_none": "uncertain"}},
+   "3": {"origin": "D3_all", "alternatives": {"D3_comp": "uncertain", "D3_none": "uncertain"}},
+   "4": {"origin": "D4_loyal", "alternatives": {}}
+  },
+  "sample_note": "Origin is the executable form of the stated exclusion rule (both readers name this key; labels differ, so uncertain). Published N branch is evaluated by code under scoring_rules.json. Coordinator saw deposit row counts and printed N before freezing and disclosed this; the code rule is fixed regardless.",
+  "composite": {
+   "1,2,3": {"origin": "mean", "alternatives": {"existing": "equivalent_one_reader", "sum": "uncertain_algebraic_for_test_statistics"}},
+   "4": {"origin": "existing", "alternatives": {"mean": "uncertain"}}
+  },
+  "analysis_methods": {
+   "P1": {"origin": "paired", "uncertain": ["ME1 mixed_anova", "LMM1 ri_person", "LMM1 ri_person_wrongdoing"], "benchmark": "p_hc3"},
+   "M1": {"origin": "mixed_anova"},
+   "T2": {"origin": "welch", "equivalent": ["student"], "benchmark": "p_hc3"},
+   "PM2": {"origin": "ci_bc", "equivalent": ["ci_perc"], "uncertain": ["delta/Wald interval"], "non_equivalent": ["SI2 single-mediator"]},
+   "SM2": {"origin": "ci_bc", "equivalent": ["ci_perc"], "uncertain": ["delta/Wald p"]},
+   "A3": {"origin": "type3", "uncertain": ["type2"], "non_equivalent": ["type1"]},
+   "C3": {"origin": "pooled", "uncertain": ["student", "welch"], "benchmark": "p_hc3"},
+   "L4": {"origin": "logit model-based SE", "uncertain": ["p_hc0"], "non_equivalent": ["L4.ALT.strong", "L4.ALT.exp", "L4.ALT.house", "CHI4.strong"]},
+   "MED4": {"origin": "linear_cont", "uncertain": ["logit_cont", "linear_strong", "logit_strong"]},
+   "G1W": {"origin": "paired", "uncertain": ["student", "welch"]},
+   "G1C": {"origin": "welch", "uncertain": ["student"]},
+   "G2W": {"origin": "welch", "uncertain": ["student"]},
+   "G2C": {"origin": "welch", "uncertain": ["student"]}
+  },
+  "effect_size_outputs": {"d origin": "d (printed-metric definition)", "alternatives": "dz, d_pooled, eta2_classic are non_equivalent quantities reported alongside"}
+ },
+ "unavailable": ["Study 4 duration in months: no column, conversion unstated", "Signing share among non-completers: non-completer rows not known to be in the file; reported as unscored if absent", "Author software and macro: unstated in the packet", "Item-level mapping of Study 4 columns: inferred, no dictionary"],
+ "compatible_crossings": "Every sample level crossed with every composite level and every listed method. Bootstraps only under the origin composite. Non-equivalent and uncertain results are never pooled with the equivalent set.",
+ "compute_order": ["origin", "single deviations", "equivalent crossings", "uncertain branches", "non-equivalent", "influence"],
+ "budget": {"bootstrap_resamples": 5000, "implementations": 3, "max_runtime_per_implementation_minutes": 90, "seed": 20261031},
+ "influence": {"unit": "person in dataset 1, row in datasets 2-4, the unit of independent observation in each design", "scope": "focal estimands listed in the manifest under every sample level", "note": "Influence deletions are diagnostics, not equivalent specifications or confidence intervals"},
+ "selection_replay": "No selection procedure; fixed-equation reconstruction only."
+}

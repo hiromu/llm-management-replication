@@ -1,0 +1,50 @@
+{
+ "label": "launchtest_fable",
+ "family": "fable",
+ "started_utc": "2026-10-31T07:17:38.042754+00:00",
+ "cli_version": "2.1.311 (Claude Code)",
+ "cmd": [
+  "~/.local/bin/claude",
+  "-p",
+  "--safe-mode",
+  "--model",
+  "claude-fable-5-1",
+  "--effort",
+  "high",
+  "--settings",
+  "{\"fastMode\":false,\"autoMemoryEnabled\":false}",
+  "--no-session-persistence",
+  "--tools",
+  "Read",
+  "--allowed-tools",
+  "Read",
+  "--permission-mode",
+  "acceptEdits",
+  "--output-format",
+  "json"
+ ],
+ "sandbox_profile_denied_paths": [
+  "~/Library/CloudStorage",
+  "~/.claude/projects",
+  "~/.claude-personal/projects",
+  "~/.codex/sessions",
+  "~/.codex/archived_sessions",
+  "/private/tmp/claude-501"
+ ],
+ "env_keys": [
+  "CLAUDE_CONFIG_DIR",
+  "HOME",
+  "LOGNAME",
+  "PATH",
+  "PWD",
+  "SHELL",
+  "TMPDIR",
+  "USER"
+ ],
+ "staging": "/private/var/folders/zh/rf2d8w8j2k3g4k48zqzv0t340000gn/T/role_15iBegTe",
+ "prompt_sha256": "9a223dec7b7125332f21794daf1ff3a0e199542e1f2d5acba078e3c5c24aabee",
+ "returncode": 1,
+ "timed_out": false,
+ "seconds": 0,
+ "reported": null
+}

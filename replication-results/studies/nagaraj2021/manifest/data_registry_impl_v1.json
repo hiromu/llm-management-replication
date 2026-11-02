@@ -1,0 +1,143 @@
+{
+ "registry_version": "v1",
+ "built": "registry v1, implementer copy",
+ "provenance": {
+  "source": "County-level aggregates prepared by a data depositor from the full edit history of an online collaborative street map, plus public Census and ACS data. Files flagged (*) were pre-processed by the depositor; files flagged (**) were computed by the depositor from the map's full history files.",
+  "no_dictionary": "There is no variable dictionary. Column meanings come only from column names, stored labels and the one-line file notes. The implementation manifest fixes every mapping you need."
+ },
+ "files": {
+  "quarterly.csv": {
+   "deposit_note": "county-quarter level contributions to the map (**)",
+   "format": "tab-separated, header row, values double-quoted in most lines",
+   "rows_including_irregular": 89788,
+   "unit": "county x calendar quarter",
+   "keys": {
+    "geoid": "county FIPS stored as text without leading zero (4 digits for state codes 01-09)",
+    "quarter": "text YYYYqN"
+   },
+   "columns": [
+    "geoid",
+    "quarter",
+    "totaltigerall",
+    "totalowneredit",
+    "totaltaga",
+    "totaltagv2a",
+    "totaltagb",
+    "totaltagv2b",
+    "totaltagh",
+    "totaltagv2h",
+    "totalversion2",
+    "totalversion3",
+    "totalversion4plus",
+    "totalchange",
+    "totalcontrib",
+    "totalusers",
+    "totalnewusers",
+    "totalpctcontrib25",
+    "totalpctcontrib50",
+    "totalpctcontrib75",
+    "totalpctcontrib99",
+    "totaloldusers_active",
+    "totaloldfocused1",
+    "totaloldfocused5",
+    "totalpctcontrib10",
+    "totalpctcontrib90"
+   ],
+   "column_types": "all columns other than geoid and quarter are numeric counts or shares when parsed",
+   "coverage": "3112 distinct counties; 38 distinct quarter values from 2005q2 to 2014q4 (2005q1 and 2005q3 never appear); counties appear in between 3 and 36 quarters; there is no duplicate county-quarter",
+   "irregular_lines": "3111 lines inside the file repeat the header (quoted), so every column reads as text until they are removed; 2 lines have an empty quarter and contain header names as values in the last two columns",
+   "absent_rows": "County-quarters not present in the file are not explained by the deposit notes"
+  },
+  "county_lookup.csv": {
+   "deposit_note": "treatment status by county, coded by the depositor from a published map of counties updated in an earlier government map revision",
+   "format": "comma-separated, header row",
+   "rows": 3109,
+   "unit": "county",
+   "columns": {
+    "NAME": "county name",
+    "STATE_NAME": "state name",
+    "STATE_FIPS": "integer",
+    "CNTY_FIPS": "integer",
+    "FIPS": "integer county FIPS",
+    "area": "number",
+    "population": "number",
+    "treat": "0 or 1"
+   }
+  },
+  "acs5year.dta": {
+   "deposit_note": "control variables from the American Community Survey 5-year data, years 2005-2011",
+   "format": "Stata .dta",
+   "rows": 22545,
+   "unit": "county x ACS year",
+   "coverage": "3223 distinct counties, 52 state codes, acsyear 2005 to 2011, no duplicate county-year",
+   "columns": {
+    "geo_fips": "county FIPS (label Geo_FIPS)",
+    "geo_state": "state FIPS (Geo_STATE)",
+    "population": "SE_T001_001",
+    "popdensity": "SE_T002_002",
+    "area": "SE_T003_001",
+    "popmales": "SE_T004_002",
+    "households": "SE_T017_001",
+    "unemploymentrate": "SE_T033_006",
+    "income_householdmedian": "SE_T057_001",
+    "income_medianearnings": "SE_T066_001",
+    "income_percapita": "SE_T083_001",
+    "popeduc": "no label",
+    "popyoungmales": "no label",
+    "acsyear": "ACS year"
+   },
+   "label_note": "SE_T codes are Social Explorer ACS table codes as stored in the file"
+  },
+  "timing.xlsx": {
+   "deposit_note": "government data on the scheduled timing of county map updates, obtained by personal communication",
+   "format": "Excel, a single sheet; read the first sheet",
+   "rows": 3233,
+   "unit": "county",
+   "columns": {
+    "ID": "integer",
+    "FIPS": "county FIPS stored as text",
+    "County": "county name",
+    "SB Selected": "one-letter code S or blank",
+    "Thread": "integer 1-10 or blank",
+    "Sch SB Delivery": "date, 2002 to 2007"
+   },
+   "missing": "Sch SB Delivery blank in 4 rows, SB Selected in 3, Thread in 5"
+  },
+  "boundary-counties.csv": {
+   "deposit_note": "border counties by focal county (*)",
+   "format": "comma-separated, header row; second header has a leading space",
+   "rows": 3220,
+   "columns": {
+    "source county": "integer county FIPS",
+    " border counties": "semicolon-separated list of county FIPS"
+   }
+  },
+  "distance.csv": {
+   "deposit_note": "driving distance between origin and destination address pairs from an open-source router (osrm_distance) and a commercial map service (ggl_distance), queried in 2017",
+   "format": "tab-separated, header row",
+   "rows": 99403,
+   "unit": "origin-destination pair",
+   "coverage": "2327 distinct counties",
+   "columns": {
+    "origin_lat": "number",
+    "origin_lon": "number",
+    "dest_lat": "number",
+    "dest_lon": "number",
+    "fips": "integer county FIPS",
+    "ggl_distance": "integer",
+    "osrm_distance": "number"
+   }
+  },
+  "placebo_draws.csv": {
+   "format": "comma-separated, header row",
+   "columns": {
+    "seed": "integer 0-200",
+    "fips": "county key",
+    "u": "uniform draw in [0,1)"
+   },
+   "note": "Supplied for the placebo analyses; built from county keys only."
+  }
+ },
+ "development_data": "The data/ folder you receive is synthetic: same file names, columns and formats, random values, and fewer counties. Row counts and coverage numbers in this registry describe the real files.",
+ "other_files": "The deposit holds further files that no analysis uses; they are not described here."
+}

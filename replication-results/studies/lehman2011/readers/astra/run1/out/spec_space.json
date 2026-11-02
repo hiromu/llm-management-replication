@@ -1,0 +1,447 @@
+{
+  "origin": {
+    "description": "M1–M3 as in manifest.json; M3 is the closest-described moderation specification. Regulation regular-season decision plays, terminal two-minute exclusion, pre-play score difference minus one, split quadratic/linear performance with jump, continuous remaining minutes and all three performance-by-time products, full explicit controls, offense-team and season effects. Conditional likelihood and conventional covariance are inferred origins, not confirmed software settings. Missing conference membership and prediction conventions require resolution. Wider grid is OFF; no automatic Cartesian execution or target-based choice.",
+    "source": [
+      {
+        "doc": "D01",
+        "pdf_page": 8,
+        "where": "Data; Risk Taking"
+      },
+      {
+        "doc": "D01",
+        "pdf_page": 9,
+        "where": "Variables; Data Analysis Model"
+      },
+      {
+        "doc": "D01",
+        "pdf_page": 11,
+        "where": "Table 5"
+      },
+      {
+        "doc": "D01",
+        "pdf_page": 12,
+        "where": "Table 6; Figure 2"
+      },
+      {
+        "doc": "D01",
+        "pdf_page": 16,
+        "where": "Endnote 3"
+      }
+    ]
+  },
+  "axes": [
+    {
+      "axis_id": "A1",
+      "decision": "Boundary of terminal-time exclusion",
+      "priority_class": "sample_construction",
+      "levels": [
+        {
+          "level_id": "A1.0",
+          "description": "Exclude plays at or below 120 seconds remaining in regulation.",
+          "is_origin": true,
+          "source": {
+            "doc": "D01",
+            "pdf_page": 16,
+            "where": "Endnote 3"
+          }
+        },
+        {
+          "level_id": "A1.1",
+          "description": "Exclude only plays strictly below 120 seconds, retaining a decision stamped exactly 02:00.",
+          "is_origin": false,
+          "label": "uncertain",
+          "rationale": "D01 PDF pp. 15–16, Endnote 3 invokes the last two minutes and the warning but does not specify boundary inclusion; this is a narrow unresolved sample difference.",
+          "basis": "article",
+          "source": {
+            "doc": "D01",
+            "pdf_page": 16,
+            "where": "Endnote 3"
+          }
+        }
+      ],
+      "compatible_with": [
+        "all"
+      ],
+      "notes": ""
+    },
+    {
+      "axis_id": "A2",
+      "decision": "Executed versus nullified fourth-down decisions",
+      "priority_class": "sample_construction",
+      "levels": [
+        {
+          "level_id": "A2.0",
+          "description": "Retain actual executed decision plays; exclude administrative no-play events. Flag unusual actions for documented adjudication.",
+          "is_origin": true,
+          "source": {
+            "doc": "D01",
+            "pdf_page": 8,
+            "where": "Data; Risk Taking"
+          }
+        },
+        {
+          "level_id": "A2.1",
+          "description": "Include nullified fourth-down plays if their descriptions establish an actual attempted conversion, punt, or kick; still exclude timeouts and period markers.",
+          "is_origin": false,
+          "label": "uncertain",
+          "rationale": "D01 PDF p. 8 describes decisions rather than provider play-type codes. A nullified snap can embody a decision even if it is not an official statistical play; its inclusion is not specified. No arbitrary all-penalties exclusion is justified.",
+          "basis": "article",
+          "source": {
+            "doc": "D01",
+            "pdf_page": 8,
+            "where": "Risk Taking"
+          }
+        }
+      ],
+      "compatible_with": [
+        "all"
+      ],
+      "notes": "Cannot resolve from sample-size matching. Kneels, fakes and aborted kicks remain additional coding questions; no unsupported default labels are invented."
+    },
+    {
+      "axis_id": "A3",
+      "decision": "Measurement and orientation of deadline time",
+      "priority_class": "variable_coding",
+      "levels": [
+        {
+          "level_id": "A3.0",
+          "description": "Fractional minutes remaining from the pre-play seconds clock; uncentered.",
+          "is_origin": true,
+          "source": {
+            "doc": "D01",
+            "pdf_page": 9,
+            "where": "Deadline Proximity"
+          }
+        },
+        {
+          "level_id": "A3.1",
+          "description": "Use quarters remaining as a single ordinal regressor, regenerating all time interactions.",
+          "is_origin": false,
+          "label": "non_equivalent",
+          "rationale": "D01 PDF p. 9 explicitly reports this robustness analysis, but coarsening time changes the design matrix and estimand. Exact ordinal convention is not supplied.",
+          "basis": "article",
+          "source": {
+            "doc": "D01",
+            "pdf_page": 9,
+            "where": "Deadline Proximity"
+          }
+        },
+        {
+          "level_id": "A3.2",
+          "description": "Use elapsed minutes = 60 - minutes remaining, retaining and transforming all lower-order terms and interactions.",
+          "is_origin": false,
+          "label": "equivalent",
+          "rationale": "The fixed-duration period in D01 PDF p. 9 makes this an affine reparameterization of the same complete model. Map coefficient signs and contrasts back to remaining time and preserve the same sample and controls.",
+          "basis": "article",
+          "source": {
+            "doc": "D01",
+            "pdf_page": 9,
+            "where": "Deadline Proximity; PDF p. 11, interaction terms"
+          }
+        }
+      ],
+      "compatible_with": [
+        "all"
+      ],
+      "notes": ""
+    },
+    {
+      "axis_id": "A4",
+      "decision": "Affirmative versus complemented binary control coding",
+      "priority_class": "variable_coding",
+      "levels": [
+        {
+          "level_id": "A4.0",
+          "description": "Same-division, same-conference and home-field indicators coded affirmatively, with unknown codes flagged.",
+          "is_origin": true,
+          "source": {
+            "doc": "D01",
+            "pdf_page": 9,
+            "where": "Control Variables"
+          }
+        },
+        {
+          "level_id": "A4.1",
+          "description": "Complement a binary control and transform the intercept/team effects and its coefficient consistently, preserving the exact observations and semantic categories.",
+          "is_origin": false,
+          "label": "equivalent",
+          "rationale": "D01 PDF p. 9 defines binary control concepts but not codes. Complementation preserves the column space with an intercept or group intercepts; fitted probabilities and transformed contrasts agree. It does not authorize swapping division and conference labels or redefining membership.",
+          "basis": "article",
+          "source": {
+            "doc": "D01",
+            "pdf_page": 9,
+            "where": "Control Variables; Data Analysis Model"
+          }
+        }
+      ],
+      "compatible_with": [
+        "all"
+      ],
+      "notes": "The controls cannot be removed. Semantic ambiguity is not solved by this algebraic equivalence; model-based outputs must be mapped to the same coding."
+    },
+    {
+      "axis_id": "A5",
+      "decision": "Interpretation of fixed-effects logistic estimator",
+      "priority_class": "estimator",
+      "levels": [
+        {
+          "level_id": "A5.0",
+          "description": "Conditional maximum likelihood with offensive franchise as panel and separate season indicators; inferred from xtlogit and team/year effects.",
+          "is_origin": true,
+          "source": {
+            "doc": "D01",
+            "pdf_page": 9,
+            "where": "Data Analysis Model"
+          }
+        },
+        {
+          "level_id": "A5.1",
+          "description": "Unconditional logistic maximum likelihood with explicit offense-team and season indicators.",
+          "is_origin": false,
+          "label": "non_equivalent",
+          "rationale": "D01 PDF p. 9 describes fixed effects but does not give options. Unconditional and conditional likelihoods differ in nuisance-effect treatment and finite-sample estimation, so this plausible interpretation must not be called numerically equivalent. It also changes how probability predictions can be constructed.",
+          "basis": "article",
+          "source": {
+            "doc": "D01",
+            "pdf_page": 9,
+            "where": "Data Analysis Model"
+          }
+        }
+      ],
+      "compatible_with": [
+        "all"
+      ],
+      "notes": "No clustering axis is instantiated: the article does not supply a native cluster method or justify alternative cluster definitions. Record this as missing inference documentation, not an invitation to manufacture a grid."
+    },
+    {
+      "axis_id": "A6",
+      "decision": "Indicator inclusion in the controls-only model",
+      "priority_class": "variable_coding",
+      "levels": [
+        {
+          "level_id": "A6.0",
+          "description": "M1 follows Table 5 and omits below_indicator; M2 and M3 include it.",
+          "is_origin": true,
+          "source": {
+            "doc": "D01",
+            "pdf_page": 11,
+            "where": "Table 5 / Indicator variable"
+          }
+        },
+        {
+          "level_id": "A6.1",
+          "description": "Include below_indicator in M1 as well as M2 and M3.",
+          "is_origin": false,
+          "label": "uncertain",
+          "rationale": "D01 PDF p. 9 says the indicator is included in each model, whereas Table 5 on p. 11 has blank M1 cells. This is an unresolved contradiction; it is not an equivalent change to the explicit table control list.",
+          "basis": "article",
+          "source": {
+            "doc": "D01",
+            "pdf_page": 9,
+            "where": "Performance / indicator"
+          }
+        }
+      ],
+      "compatible_with": [
+        "all"
+      ],
+      "notes": "Applies only to M1 and its model-comparison test; all other controls fixed."
+    },
+    {
+      "axis_id": "A7",
+      "decision": "Common versus model-specific complete cases",
+      "priority_class": "sample_construction",
+      "levels": [
+        {
+          "level_id": "A7.0",
+          "description": "A common complete-case sample for the union of M1–M3 variables; proposed, not reported.",
+          "is_origin": true,
+          "source": {
+            "doc": "D01",
+            "pdf_page": 11,
+            "where": "Table 5 / observation rows"
+          }
+        },
+        {
+          "level_id": "A7.1",
+          "description": "Use complete cases separately for each model, recording all exclusions and estimating LR comparisons only on a common sample.",
+          "is_origin": false,
+          "label": "uncertain",
+          "rationale": "D01 PDF p. 11 reports model observations but never states a missingness protocol. The alternatives coincide only if the resulting cases coincide; that cannot be presumed without data.",
+          "basis": "article",
+          "source": {
+            "doc": "D01",
+            "pdf_page": 11,
+            "where": "Table 5; methods on PDF p. 9"
+          }
+        }
+      ],
+      "compatible_with": [
+        "all"
+      ],
+      "notes": "No imputation or fabricated classifications. The reader does not access data to decide equivalence."
+    },
+    {
+      "axis_id": "A8",
+      "decision": "Derivative at the aspiration threshold",
+      "priority_class": "other",
+      "levels": [
+        {
+          "level_id": "A8.0",
+          "description": "At d=0, report the derivative approaching from below, with the below indicator equal to one; explicitly label the side.",
+          "is_origin": true,
+          "source": {
+            "doc": "D01",
+            "pdf_page": 12,
+            "where": "Table 6 / zero column; PDF p. 9, jump indicator"
+          }
+        },
+        {
+          "level_id": "A8.1",
+          "description": "Report the right-hand derivative at the threshold, with the above-regime limit.",
+          "is_origin": false,
+          "label": "uncertain",
+          "rationale": "D01 PDF p. 9 permits a jump, and Table 6 on p. 12 reports an effect at zero without explaining its side. Left and right derivatives differ and the ordinary two-sided derivative may not exist. Neither choice can be selected by matching a printed result.",
+          "basis": "article",
+          "source": {
+            "doc": "D01",
+            "pdf_page": 12,
+            "where": "Table 6 / zero column"
+          }
+        }
+      ],
+      "compatible_with": [
+        "all"
+      ],
+      "notes": "A finite one-point crossing effect is a distinct estimand, not a derivative substitute; it remains outside the equivalent set."
+    },
+    {
+      "axis_id": "A9",
+      "decision": "Aspiration reference in narrative robustness",
+      "priority_class": "variable_coding",
+      "levels": [
+        {
+          "level_id": "A9.0",
+          "description": "Aspiration is the opposing pre-play score plus one point.",
+          "is_origin": true,
+          "source": {
+            "doc": "D01",
+            "pdf_page": 9,
+            "where": "Performance"
+          }
+        },
+        {
+          "level_id": "A9.1",
+          "description": "Replace aspiration with a benchmark based on recently held point spreads, once its exact lag/window and resetting rule are supplied.",
+          "is_origin": false,
+          "label": "non_equivalent",
+          "rationale": "D01 PDF p. 16, Endnote 4 reports an alternative-aspiration check. It changes the substantive performance reference and cannot be an equivalent specification. Currently incomplete and not executable.",
+          "basis": "article",
+          "source": {
+            "doc": "D01",
+            "pdf_page": 16,
+            "where": "Endnote 4"
+          }
+        }
+      ],
+      "compatible_with": [
+        "A1",
+        "A2",
+        "A3",
+        "A4",
+        "A5",
+        "A6",
+        "A7"
+      ],
+      "notes": "Wider robustness family only; OFF pending documentary clarification. Do not invent a recent-spread statistic."
+    },
+    {
+      "axis_id": "A10",
+      "decision": "Choice-set and field-position restrictions in narrative robustness",
+      "priority_class": "sample_construction",
+      "levels": [
+        {
+          "level_id": "A10.0",
+          "description": "All eligible fourth-down decisions, conversion versus either punt or field goal.",
+          "is_origin": true,
+          "source": {
+            "doc": "D01",
+            "pdf_page": 8,
+            "where": "Risk Taking"
+          }
+        },
+        {
+          "level_id": "A10.1",
+          "description": "Conversion versus kick within field-goal range, with documented range and third-choice treatment required.",
+          "is_origin": false,
+          "label": "non_equivalent",
+          "rationale": "D01 PDF p. 16, Endnote 4 reports this restricted outcome-choice model. It changes population and choice set and is a separate robustness estimand, not a substitute for the main outcome.",
+          "basis": "article",
+          "source": {
+            "doc": "D01",
+            "pdf_page": 16,
+            "where": "Endnote 4"
+          }
+        },
+        {
+          "level_id": "A10.2",
+          "description": "Conversion versus punt outside field-goal range, with documented range and third-choice treatment required.",
+          "is_origin": false,
+          "label": "non_equivalent",
+          "rationale": "D01 PDF p. 16, Endnote 4 reports this separate restricted analysis. The cutoff is absent; it is not equivalent to the main sample or the inside-range analysis.",
+          "basis": "article",
+          "source": {
+            "doc": "D01",
+            "pdf_page": 16,
+            "where": "Endnote 4"
+          }
+        }
+      ],
+      "compatible_with": [
+        "A1",
+        "A2",
+        "A3",
+        "A4",
+        "A5",
+        "A6",
+        "A7",
+        "A8"
+      ],
+      "notes": "Wider robustness family only; OFF pending specification. Alternative levels are distinct models, never pooled as an interchangeable outcome grid."
+    }
+  ],
+  "fixed_not_varied": [
+    "Primary population is the 2000–2005 regular-season regulation fourth-down decision set (D01 PDF p. 8, Data; PDF p. 15, Endnotes 1–2).",
+    "Primary outcome is the conversion decision, not its success or a win-probability model output (D01 PDF p. 8, Risk Taking).",
+    "M1–M3 retain total points, yards to first down, yards to touchdown, division, conference, home field, season week and deadline measure (D01 PDF p. 9, controls; PDF p. 11, Table 5). Explicit controls never vary within the equivalent set.",
+    "M2 and M3 retain both spline pieces, the below quadratic and jump indicator; M3 retains every stated time interaction and its main effects (D01 PDF pp. 9,11).",
+    "Team and season heterogeneity adjustment is retained; replacing it with game effects or a team-by-season interaction is not supported as an equivalent change (D01 PDF p. 9, Data Analysis Model).",
+    "Table 6 evaluation points are the stated gap grid and 53,38,23,8 minutes. These are analysis settings, not rounded estimates to retune (D01 PDF p. 12, Table 6 note)."
+  ],
+  "excluded_alternatives": [
+    {
+      "description": "Drop explicit controls, choose a model by agreement, or invert/swap division and conference labels because the descriptive targets appear odd.",
+      "why_excluded": "No article basis; explicit controls in D01 PDF p. 9 and Table 5 p. 11 must remain. Publication anomalies cannot supply a coding rule."
+    },
+    {
+      "description": "Use provider win probabilities, betting spreads or expected points as performance or aspiration.",
+      "why_excluded": "D01 PDF p. 9 defines a current-score aspiration. Available provider model columns and odds lines measure other constructs (data_description/data_dictionary.md)."
+    },
+    {
+      "description": "Treat the final two minutes, overtime or postseason as equivalent extensions of the primary sample.",
+      "why_excluded": "D01 PDF pp. 15–16, Endnotes 1–3 explicitly exclude them for theoretical reasons."
+    },
+    {
+      "description": "Swap to probit, linear probability, random-effects logit, arbitrary clustering grids or alternative fixed-effect combinations.",
+      "why_excluded": "No such alternatives are supported in the supplied article; absence of detail is recorded as a question rather than a quota of unsupported specifications (D01 PDF p. 9, Data Analysis Model)."
+    },
+    {
+      "description": "Replace marginal effects at mean covariates with averaged individual marginal effects as an equivalent result.",
+      "why_excluded": "D01 PDF pp. 12–13, Figures 2–3 specify control means; nonlinear averaging changes the estimand. Exact Table 6 evaluation remains an open question."
+    },
+    {
+      "description": "Infer alternative-aspiration windows or a field-goal threshold from general football knowledge.",
+      "why_excluded": "D01 PDF p. 16, Endnote 4 omits those definitions. The referenced robustness material is unavailable."
+    }
+  ]
+}

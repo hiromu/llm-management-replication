@@ -1,0 +1,116 @@
+{
+"per_study":{
+"study_1":{
+"specificity":{"score":4,"reason":"Design, measures, exclusion principle and test types are stated (D01 PDF p.7-9; D11), and the dictionary (D31) maps every item. Unstated: the attention-check pass rule, whether the file is pre- or post-exclusion, the data layout (long vs wide), composite metric (sum vs mean), d formula, and software."},
+"precision":{"score":3,"reason":"Means, SDs, t, df, p and d are reported for all tests, but Table 2 contains a promotive-voice mean inconsistent with the text, and the Online Appendix gender df exceed subgroup sizes (forensics)."},
+"exhaustiveness":{"score":3,"reason":"All preregistered tests are reported; per-wrongdoing cell sizes, SD of paired differences, number excluded for attention failure, and the mixed-ANOVA main effects are not reported. Exploratory moderators (moral intensity, perceived importance) are described only in D03 and never analysed."}
+},
+"study_2":{
+"specificity":{"score":3,"reason":"Conditions, items and mediators are fully specified (D01 PDF p.10-11; D12; D32). Unstated: t-test variant, mediation software/macro, bootstrap count in the article (only in D12), attention-check rule, cell sizes, and the serial models' estimator."},
+"precision":{"score":3,"reason":"Full B/SE/CI/p reported, but the CIs and p-values are consistent with normal-theory rather than the stated bias-corrected bootstrap, and the D03 serial-mediation CIs are malformed. Integrity-trust reliability is not reported."},
+"exhaustiveness":{"score":3,"reason":"Preregistered independent (single-mediator) models are not reported anywhere; cell n not reported; power statement in D12 contradicted by D22; exploratory measures summarized only in D03."}
+},
+"study_3":{
+"specificity":{"score":3,"reason":"Design and contrasts are specified (D01 PDF p.12-14; D13), but the contrast error term, SS type, eta-squared type, attention-check rule and software are not stated; D33 omits three item columns."},
+"precision":{"score":2,"reason":"Several internal inconsistencies: duplicate SD values for one cell (1.74 vs 1.93), an SD printed as 1.1.29, a promotive-voice eta-squared duplicating the grant value, contrast d values not reproducible from printed means/SDs, and gender percentages summing to 84%."},
+"exhaustiveness":{"score":3,"reason":"All three outcomes and both planned contrasts are reported; mechanism analyses are in D03 only; cell sizes and the fourth-cell (control/divisive) means are never reported; the exclusion of 28.5% of recruits is stated but not characterized by check."}
+},
+"study_4":{
+"specificity":{"score":3,"reason":"Procedure, measures and models are described (D01 PDF p.14-16; D14), and Table 6 gives complete coefficients and fit, but there is no usable dictionary (D34 belongs to another study), the house-loyalty composite scoring is unstated, the mediation technique for a binary outcome is unstated, and the D03 text mislabels loyalty as a two-level factor."},
+"precision":{"score":4,"reason":"Coefficients, SEs, odds ratios, log-likelihoods and pseudo-R2 are mutually consistent with N = 50 and 20 signers, with one odds ratio slightly outside rounding and one missing marginal-significance marker."},
+"exhaustiveness":{"score":3,"reason":"Preregistered skew/kurtosis check and the conditional StrongLoyalty/ExpLoyalty analyses are not reported; the preregistered 'trust in requester' control is omitted and 'know' substituted; house loyalty is used as a control rather than as a parallel predictor; mediation is reported only in D03."}
+}
+},
+"choices":[
+{"choice":"Study 1: batch recruitment with resampling of attention-check failures until the preregistered target is reached, without interim analysis","default_common_or_rare":"rare","justified":true,"locator":"D01 PDF p.7 (768) Transparency and Openness; D11 Q7"},
+{"choice":"Study 1: collapsing across seven wrongdoing types after a non-significant interaction, then paired t-tests","default_common_or_rare":"common","justified":true,"locator":"D01 PDF p.9 (770); D11 Q5 (prespecified rule)"},
+{"choice":"Study 1: treating stimulus-sampled wrongdoing types as a fixed between-subjects factor rather than a random factor","default_common_or_rare":"common","justified":false,"locator":"D01 PDF p.7 (768) cites Wells and Windschitl 1999; no justification for fixed-effects treatment"},
+{"choice":"Study 1: Cohen's d from pooled condition SDs in a within-subjects design","default_common_or_rare":"common","justified":false,"locator":"D01 PDF p.9 (770); formula unstated (inferred, forensics)"},
+{"choice":"Study 2: Welch-type independent t-tests (inferred from df)","default_common_or_rare":"common","justified":false,"locator":"D01 PDF p.11 (772); not stated; D12 Q5 says independent samples t-tests"},
+{"choice":"Study 2: four mediators entered simultaneously with bias-corrected bootstrap CIs","default_common_or_rare":"common","justified":true,"locator":"D01 PDF p.11 (772); D12 Q5"},
+{"choice":"Study 2: reporting p-values for bootstrap indirect effects","default_common_or_rare":"rare","justified":false,"locator":"D01 PDF p.11-12 (772-773); method unstated"},
+{"choice":"Study 2: including a preregistered but non-theorized mediator (integrity-based trust)","default_common_or_rare":"common","justified":true,"locator":"D01 PDF p.11 (772) Integrity-Based Trust paragraph; D12 H3b"},
+{"choice":"Study 3: planned contrasts using the full-model error term (df = N - 4) rather than subset t-tests","default_common_or_rare":"common","justified":false,"locator":"D01 PDF p.13 (774) t(282); D13 Q5 describes subset t-tests"},
+{"choice":"Study 3: excluding 114 of 400 recruits (28.5%) for attention-check failure without resampling","default_common_or_rare":"rare","justified":true,"locator":"D01 PDF p.12 (773); D13 Q6 (rule prespecified; rate not anticipated)"},
+{"choice":"Study 3: testing H3 as a simple-effect contrast within the loyal condition rather than via the interaction term","default_common_or_rare":"common","justified":true,"locator":"D13 Q5; D01 PDF p.13 (774)"},
+{"choice":"Study 4: continuous loyalty predictor without reporting the preregistered skew/kurtosis gate","default_common_or_rare":"common","justified":false,"locator":"D01 PDF p.15 (776); D14 Q4-Q5"},
+{"choice":"Study 4: covariate set (know, like, semesters known) differing from the preregistered set (like, trust, months known)","default_common_or_rare":"common","justified":false,"locator":"D01 PDF p.15 (776); D14 Q8"},
+{"choice":"Study 4: excluding eligible members who did not complete the loyalty survey","default_common_or_rare":"default","justified":true,"locator":"D14 Q6; D01 PDF p.15 (776)"},
+{"choice":"Study 4: no clustering adjustment; all participants from a single fraternity","default_common_or_rare":"default","justified":true,"locator":"D01 PDF p.14 (775)"},
+{"choice":"Study 4: marginal significance marker (^ p < 0.10) reported","default_common_or_rare":"common","justified":false,"locator":"D01 PDF p.16 (777) Table 6 note"}
+],
+"wider_space":[
+{"choice":"Studies 1-3: ordinal (cumulative-link) models for 7-point Likert outcomes instead of t-tests/ANOVA","alternatives":["ordinal logistic / probit","metric analysis as reported"],"default_common_or_rare":"rare","justified":false,"locator":"Liddell and Kruschke 2018 (methodological literature); not raised in D01"},
+{"choice":"Study 1: cross-classified mixed model with random effects for participant and wrongdoing type","alternatives":["fixed-effects mixed ANOVA as reported","random stimulus effects"],"default_common_or_rare":"rare","justified":false,"locator":"Judd, Westfall and Kenny 2012; D01 PDF p.7 stimulus sampling"},
+{"choice":"Study 1: controlling for condition order (first vs second colleague)","alternatives":["ignore order as reported","include order as covariate or factor"],"default_common_or_rare":"common","justified":false,"locator":"D01 PDF p.7 (768) order randomly assigned; D11 Q2 counterbalanced; no order analysis reported"},
+{"choice":"Study 2-3: non-parametric comparisons (Mann-Whitney) given floor-heavy outcomes","alternatives":["t-test/ANOVA as reported","rank-based tests"],"default_common_or_rare":"rare","justified":false,"locator":"Study 3 cell means near 1.7-2.6 on a 1-7 scale (D01 PDF p.13-14) suggest skew; literature basis only"},
+{"choice":"Study 4: penalized (Firth) or exact logistic regression for N = 50 with 20 events and up to 5 predictors","alternatives":["ML logistic as reported","Firth logistic","exact logistic"],"default_common_or_rare":"rare","justified":false,"locator":"Firth 1993; Peduzzi et al. 1996 events-per-variable guidance; D01 PDF p.16 Table 6"},
+{"choice":"Study 4: including the 10 non-completers with imputed loyalty","alternatives":["complete-case as reported and preregistered","multiple imputation"],"default_common_or_rare":"rare","justified":false,"locator":"D01 PDF p.15 (776); D14 Q6"},
+{"choice":"Study 2: serial mediation reported in the Online Appendix as alternatives to parallel mediation","alternatives":["parallel (reported)","serial models 1 and 2 (D03)"],"default_common_or_rare":"common","justified":true,"locator":"D12 Q8; D03 PDF p.2-3"}
+],
+"structural_counts":{
+"per_study":{
+"study_1":{"n_conditions":14,"n_conditions_note":"2 within-subject relationship levels x 7 between-subject wrongdoing types","n_outcomes":3,"n_mediators":0,"n_covariates":0,"n_exclusion_rules":1,"n_analyses":9},
+"study_2":{"n_conditions":2,"n_outcomes":3,"n_mediators":4,"n_covariates":0,"n_exclusion_rules":1,"n_analyses":10},
+"study_3":{"n_conditions":4,"n_outcomes":3,"n_mediators":4,"n_mediators_note":"measured and analysed as outcomes in D03, not as mediators","n_covariates":0,"n_exclusion_rules":1,"n_analyses":11},
+"study_4":{"n_conditions":0,"n_conditions_note":"correlational; continuous measured predictor","n_outcomes":1,"n_mediators":2,"n_covariates":4,"n_exclusion_rules":1,"n_analyses":6}
+}
+},
+"unusualness_overall":"Low to moderate. The analytic toolkit is standard for experimental organizational behavior (paired/independent t-tests, 2 x 7 and 2 x 2 ANOVA with planned contrasts, parallel and serial mediation with bootstrap CIs, binary logistic regression with sequential controls). Unusual elements are procedural rather than analytic: batch resampling to a fixed target (Study 1), a 28.5% attention-check exclusion rate (Study 3), p-values accompanying bootstrap indirect effects, a preregistered distribution-conditional transformation that is never reported (Study 4), and a field study with a single cluster and 20 events.",
+"unavailable_or_appendix_only":[
+"OSF analysis scripts referenced in D01 PDF p.7 (768) endnote 1 are not in the packet",
+"Study 4 dictionary: D34 is byte-identical to a supplemental study's dictionary and does not describe D44; all Study 4 column mappings are inferred",
+"D33 omits broker_rep1, broker_rep2, broker_rep3 although they appear in D43 and in the relconcerns_with_broker formula",
+"Study 1 exploratory moral-intensity and perceived-importance measure details and reliabilities: D03 PDF p.1-2 only",
+"Study 2 serial mediation results: D03 PDF p.2-3 only",
+"Study 2 reliabilities for trust in accused and group cohesion: D03 PDF p.2 only",
+"Study 3 mechanism-measure ANOVAs and contrasts: D03 PDF p.3-4 only",
+"Study 4 mediation (trust in accused, risk): D03 PDF p.4-5 only",
+"Studies 1-2 gender analyses and D03 Table 1: D03 PDF p.5-7 only",
+"Study 2 integrity-based trust reliability: not reported anywhere",
+"Study 3 control/divisive cell means and all cell sizes: not reported anywhere",
+"Study 2 cell sizes: not reported anywhere",
+"Figures 1-3 (means with SE bars) are images; no numeric values beyond the text",
+"Study 4 skew/kurtosis of loyalty and the preregistered StrongLoyalty/ExpLoyalty analyses: not reported anywhere",
+"D22 deviation report covers only the power-statement typo; no deviation report for Studies 1, 3 or 4"
+],
+"unavailable_source_fallbacks":[
+{"item":"Study 4 variable dictionary","study":4,"why_unavailable":"D34 is the wrong file","fallback":"Map D44 column names to article measures by name (Signed, LoyalRequestor, KnowRequestor, LikeRequestor, SemestersRequestor, LoyaltyHouse, SignedTrust, SignedRisk); treat LoyaltyHouse as the composite of LoyalHouse1-3","label":"inferred"},
+{"item":"Study 3 relational-concerns item descriptions","study":3,"why_unavailable":"broker_rep1-3 absent from D33","fallback":"Use D32 item text for the identically named columns","label":"inferred"},
+{"item":"Attention-check pass rules (Studies 1-3)","study":"1,2,3","why_unavailable":"Not stated in D01 or D11-D13","fallback":"Match check responses to assigned condition/wrongdoing codes as described in the manifest; treat as an open axis","label":"inferred"},
+{"item":"Study 1 data layout","study":1,"why_unavailable":"D31/D41 do not state whether rows are participant-condition or participant","fallback":"Infer long format from single outcome column set plus cond and part_uid; pair by part_uid","label":"inferred"},
+{"item":"Composite scoring metric","study":"1,2,3","why_unavailable":"Dictionaries write sums; article reports 1-7 means","fallback":"Use item means to match reported metric; note sum alternative","label":"inferred"},
+{"item":"Mediation software and bootstrap settings","study":"2,4","why_unavailable":"No macro, package or seed named; bootstrap count only in D12","fallback":"Bias-corrected bootstrap with 5000 resamples per D12; seed unstated so exact replication of bootstrap CIs is impossible","label":"vintage/unstated"},
+{"item":"Study 2 t-test variant","study":2,"why_unavailable":"Not stated","fallback":"Welch (inferred from df); report Student as alternative","label":"inferred"},
+{"item":"Study 3 SS type and eta-squared type","study":3,"why_unavailable":"Not stated","fallback":"Type III and partial eta-squared (inferred from printed values and common defaults)","label":"inferred"},
+{"item":"Study 4 signing records for non-completers","study":4,"why_unavailable":"Unclear whether D44 includes rows for eligible members without survey data","fallback":"If absent, the 2-of-10 descriptive cannot be reproduced","label":"unstated"}
+],
+"inference_fields":{
+"observation_unit":{"study_1":"participant-by-condition response (two per participant)","study_2":"participant","study_3":"participant","study_4":"fraternity member"},
+"sampling_unit":{"study_1":"participant (Prolific full-time employees)","study_2":"participant (Prolific U.S. full-time employees)","study_3":"participant (Prolific U.S. full-time employees)","study_4":"fraternity member within one fraternity at one university"},
+"assignment_unit":{"study_1":"participant (wrongdoing type between; relationship within, order randomized)","study_2":"participant","study_3":"participant","study_4":"none (measured loyalty)"},
+"clusters":{"study_1":"participant (repeated measures handled by pairing)","study_2":"none","study_3":"none","study_4":"single fraternity (one cluster; no adjustment possible or applied)"},
+"native_se_method_and_software":{"study_1":"classical paired t and mixed ANOVA; software unstated","study_2":"t-test SE (Welch inferred); mediation CIs stated as bias-corrected bootstrap but printed values consistent with normal-theory SEs; software unstated","study_3":"ANOVA MSE-based F and contrast t; software unstated","study_4":"ML logistic model-based SE (inferred); software unstated"},
+"first_stage_strength":"not applicable (no instrumental-variable designs); Study 1 manipulation check serves as manipulation-strength evidence"
+},
+"preregistration_vs_article_differences":[
+{"study":1,"difference":"D11 preregisters H2 (promotive and prohibitive voice) as a separate hypothesis; the article folds voice outcomes into the H1 narrative","locator":"D11 Q2; D01 PDF p.9 (770)"},
+{"study":1,"difference":"D11 says the order of naming the two colleagues is counterbalanced; article says order of conditions was randomly assigned","locator":"D11 Q2/Q4; D01 PDF p.7 (768)"},
+{"study":1,"difference":"D11 Q8 plans to explore moderation by moral intensity and perceived importance of ethicality; article says these were to probe a potential interaction and D03 says they were not used","locator":"D11 Q8; D01 PDF p.9 (770); D03 PDF p.1"},
+{"study":2,"difference":"D12 Q7 states 75 participants for 99% power; D22 corrects to 80%; article states 80%","locator":"D12 Q7; D22; D01 PDF p.10 (771)"},
+{"study":2,"difference":"D12 preregisters both independent and simultaneous indirect effects; article reports only simultaneous","locator":"D12 Q5; D01 PDF p.11 (772)"},
+{"study":2,"difference":"D12 H3 names 'reputational concerns with the requestor'; article renames to relational concerns; Study 3 Table 4 reverts to 'Reputational Concerns'","locator":"D12 Q2; D01 PDF p.11 (772) and p.13 (774) Table 4"},
+{"study":2,"difference":"D12 H3b (integrity-based trust) is a preregistered mediation hypothesis; article says it was not theorized but preregistered","locator":"D12 Q2; D01 PDF p.11 (772)"},
+{"study":2,"difference":"Serial mediation models preregistered in D12 Q8 appear only in D03","locator":"D12 Q8; D03 PDF p.2-3"},
+{"study":3,"difference":"D13 H1/H2 correspond to the article's H1/H3; article's H2 (mediation) is not tested in Study 3","locator":"D13 Q2; D01 PDF p.12 (773)"},
+{"study":3,"difference":"D13 Q8 lists three mechanism measures (benevolent trust, value alignment, reputation); article and D33 add integrity-based trust","locator":"D13 Q8; D01 PDF p.13 (774); D33"},
+{"study":3,"difference":"D13 Q5 describes planned contrasts as t-tests within the relevant subset; article contrasts carry df = 282 (full-model error term)","locator":"D13 Q5; D01 PDF p.13 (774)"},
+{"study":3,"difference":"D13 Q7 cites Simmons et al. 2012 for the 100-per-cell target; article cites Simmons et al. 2011","locator":"D13 Q7; D01 PDF p.12 (773)"},
+{"study":4,"difference":"D14 preregisters a skew/kurtosis gate leading to StrongLoyalty chi-square and ExpLoyalty logistic analyses; article reports only the continuous logistic model and no distribution check","locator":"D14 Q4-Q5; D01 PDF p.15 (776)"},
+{"study":4,"difference":"D14 Q8 controls are like, trust and months known; article controls are knows, likes and semesters known (trust omitted)","locator":"D14 Q8; D01 PDF p.15 (776) Table 6"},
+{"study":4,"difference":"D14 Q8 plans to repeat analyses with fraternity loyalty as the predictor (and its transforms); article uses house loyalty only as a covariate","locator":"D14 Q8; D01 PDF p.16 (777)"},
+{"study":4,"difference":"D14 Q7 targets 60 participants from 1-2 fraternities; article: one fraternity, 60 eligible, 50 analysed, attributed to COVID-19 constraints","locator":"D14 Q7; D01 PDF p.14-15 (775-776) and p.20 (781)"},
+{"study":4,"difference":"D14 Q8 mediation (trust in accused, risk) reported only in D03; D03 describes loyalty as Loyal vs Not Loyal","locator":"D14 Q8; D03 PDF p.4-5"},
+{"study":4,"difference":"Article Table 1 credits Study 4 with support for H2a (benevolence trust in the broker); the Study 4 mediator is trust in the accused","locator":"D01 PDF p.8 (769) Table 1; D03 PDF p.5"}
+]
+}

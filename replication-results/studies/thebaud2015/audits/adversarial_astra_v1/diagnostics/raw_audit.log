@@ -1,0 +1,16 @@
+  column      n  unequal  raw_nonmissing_derived_missing  unexplained
+ COUNTRY 713933        0                               0            0
+  GEM_YR 713933        0                               0            0
+  GEMSEX 713933        3                               3            0
+OMREASON 713933    23899                           23899            0
+OMNOWJOB 713933    20617                           20617            0
+OMYR5JOB 713933    66730                           66730            0
+model            term  algebraic  existing_U14     delta
+   M4 female:leave_sq  -0.150108     -0.150082 -0.000027
+   M4    female:leave   0.183532      0.183502  0.000030
+   M4          female   0.042154      0.042150  0.000003
+   M6 female:leave_sq   0.052779      0.052817 -0.000038
+   M6    female:leave  -0.019738     -0.020066  0.000328
+   M6          female  -0.811605     -0.811680  0.000075
+AB maximum coefficient difference 0.0030661035462669906 SE difference 8.932483246601453e-05
+M8 parent-sample upper bound 17265.000000000004 published M8 17498

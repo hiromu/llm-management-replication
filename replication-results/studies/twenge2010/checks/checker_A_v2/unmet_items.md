@@ -1,0 +1,2 @@
+- Manifest §§4.4 and 5 (S04): Required `d_obs` contrasts are returned as unavailable whenever a factor’s items contain missing values in the FIML sample. See `code/lib_models.R:344–347,322–325` and `code/lib_specs.R:197–203`.
+- Manifest §§3 and 7: Influence-mode JSON metadata omits rows read per file, `spec_id`, and an overall `status` with reason. See `code/lib_influence.R:96–107`.

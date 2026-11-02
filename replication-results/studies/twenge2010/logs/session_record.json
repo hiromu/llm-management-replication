@@ -1,0 +1,35 @@
+{
+  "study_id": "twenge2010",
+  "coordinator_session_id": "2cb83689-5c7d-4c08-adf1-ff316c5974d3",
+  "session_started_local": "2026-10-28T10:57:20+09:00",
+  "authorization": {
+    "user_message": "Start the replication project",
+    "interpretation": "Explicit user instruction in this session to begin research for the selected study twenge2010 (the session was opened in studies/twenge2010).",
+    "recorded_by": "coordinator"
+  },
+  "coordinator": {
+    "platform": "Claude Code desktop app (Code tab)",
+    "requested_model": "claude-opus-5-5",
+    "actual_model": "claude-opus-5-5 (reported by the harness system prompt)",
+    "requested_effort": "high",
+    "actual_effort": "not directly observable from inside the session; settings.json pins effortLevel high; /status cannot be run in the desktop app",
+    "fast_mode": "settings.json pins fastMode false; not toggled; direct verification unavailable",
+    "loaded_instruction_files": ["CLAUDE.md (project root)", "studies/twenge2010/CLAUDE.md"],
+    "instruction_load_note": "The harness displayed only these two CLAUDE.md files. /memory is a terminal-dialog command and is unavailable in the desktop app; global ~/.claude/CLAUDE.md is excluded by settings and was not shown. Auto-memory pinned off.",
+    "shared_family_note": "Coordinator (Anthropic) and Reader A (Anthropic) share a model family; coordinator does not read independently."
+  },
+  "runtime": {
+    "python": "~/.venv/bin/python 3.13.4; pyreadstat 1.3.3, pandas 2.2.3, numpy 2.4.2, scipy 1.16.3",
+    "R": "Rscript 4.6.1 (2026-06-24), /opt/homebrew/bin/Rscript",
+    "claude_cli": "~/.local/bin/claude 2.1.270",
+    "codex_cli": "~/.local/bin/codex codex-cli 0.164.0"
+  },
+  "connectivity_checks": {
+    "note": "Connectivity checks only, not reader runs. Neutral prompt 'Reply with the single word OK.' from neutral staging dir.",
+    "claude_fable_5_1": {"result": "OK", "reported_model": "claude-fable-5-1", "flags": "-p --safe-mode --model claude-fable-5-1 --effort high --settings {fastMode:false,autoMemoryEnabled:false} --no-session-persistence --tools ''"},
+    "gpt_6_astra": {"result": "OK", "reported_model": "gpt-6-astra", "reported_reasoning_effort": "high", "flags": "exec --ephemeral --ignore-user-config --skip-git-repo-check -m gpt-6-astra model_reasoning_effort=high service_tier=default features.fast_mode=false -s read-only"},
+    "codex_global_agents_md": "~/.codex/AGENTS.md exists (Python path, Markdown math, Gmail rules); whether it loads under --ignore-user-config is checked at reader launch."
+  },
+  "supplied_bundle_integrity_recheck": "42/42 files present with sha256 and byte size matching data/supplied/supplied_sources.json; no extra or missing files.",
+  "compute_budget": "Provisional: readers one initial run each (+ at most one written clarification round); three implementers + one checker per implementation; model fitting limited to the frozen grid; to be frozen in sealed/budget before execution."
+}

@@ -1,0 +1,342 @@
+[
+  {
+    "claim_id": "C1",
+    "statement": "Differentiation proposition / H1 predicts higher relative ROA as strategic deviation increases; the reported linear test favors H2 instead.",
+    "hypothesis_label": "H1",
+    "tier": "focal",
+    "supporting_locations": [
+      "DOC01 p5 Differentiation proposition",
+      "DOC01 p10 Hypothesis 1",
+      "DOC01 p12 Table 2 Model 2 Strategic Deviation; Results"
+    ],
+    "estimand": "M2 WLS coefficient on strategic deviation; dependent variable is relative ROA multiplied by 100.",
+    "population": "Commercial banks in the Minneapolis–St. Paul metropolitan market, bank-years 1985–1992; unbalanced panel.",
+    "direction_claimed": "positive",
+    "source": "DOC01 p5 Differentiation proposition; DOC01 p10 Hypothesis 1; DOC01 p12 Table 2 Model 2 Strategic Deviation; Results"
+  },
+  {
+    "claim_id": "C2",
+    "statement": "Conformity proposition / H2 predicts lower relative ROA as strategic deviation increases; supported over H1 in the linear model.",
+    "hypothesis_label": "H2",
+    "tier": "focal",
+    "supporting_locations": [
+      "DOC01 p7 Conformity proposition",
+      "DOC01 p10 Hypothesis 2",
+      "DOC01 p12 Table 2 Model 2 Strategic Deviation; Results"
+    ],
+    "estimand": "Same M2 coefficient as C1, with opposite directional hypothesis.",
+    "population": "Commercial banks in the Minneapolis–St. Paul metropolitan market, bank-years 1985–1992; unbalanced panel.",
+    "direction_claimed": "negative",
+    "source": "DOC01 p7 Conformity proposition; DOC01 p10 Hypothesis 2; DOC01 p12 Table 2 Model 2 Strategic Deviation; Results"
+  },
+  {
+    "claim_id": "C3",
+    "statement": "Strategic balance proposition / H3 predicts a concave-down relation; M3 is reported to support an inverted U within the sample range.",
+    "hypothesis_label": "H3",
+    "tier": "focal",
+    "supporting_locations": [
+      "DOC01 p9 Strategic balance proposition",
+      "DOC01 p10 Hypothesis 3",
+      "DOC01 p12 Table 2 Model 3 Strategic Deviation² and Strategic Deviation",
+      "DOC01 p13 Results opening paragraph"
+    ],
+    "estimand": "M3 quadratic coefficient and fitted curvature in relative ROA ×100 per strategic-deviation unit squared; claimed in-range maximum requires support bounds not printed.",
+    "population": "Commercial banks in the Minneapolis–St. Paul metropolitan market, bank-years 1985–1992; unbalanced panel.",
+    "direction_claimed": "concave_down",
+    "source": "DOC01 p9 Strategic balance proposition; DOC01 p10 Hypothesis 3; DOC01 p12 Table 2 Model 3 Strategic Deviation² and Strategic Deviation; DOC01 p13 Results opening paragraph"
+  },
+  {
+    "claim_id": "C4",
+    "statement": "Adding strategic deviation improves model fit over controls alone.",
+    "hypothesis_label": "H2",
+    "tier": "identification_inference_diagnostic",
+    "supporting_locations": [
+      "DOC01 p12 Table 2 Δ SSE over Model 1; Results F-test"
+    ],
+    "estimand": "Nested M2 versus M1 weighted SSE F-test.",
+    "population": "Commercial banks in the Minneapolis–St. Paul metropolitan market, bank-years 1985–1992; unbalanced panel.",
+    "direction_claimed": "none",
+    "source": "DOC01 p12 Table 2 Δ SSE over Model 1; Results F-test"
+  },
+  {
+    "claim_id": "C5",
+    "statement": "Adding the quadratic term improves fit over both the baseline and the linear model; strategic balance receives the strongest support.",
+    "hypothesis_label": "H3",
+    "tier": "identification_inference_diagnostic",
+    "supporting_locations": [
+      "DOC01 p12 Table 2 Model 3 Δ SSE rows",
+      "DOC01 p13 Results F-tests"
+    ],
+    "estimand": "Nested M3 versus M1 and M3 versus M2 weighted SSE F-tests.",
+    "population": "Commercial banks in the Minneapolis–St. Paul metropolitan market, bank-years 1985–1992; unbalanced panel.",
+    "direction_claimed": "none",
+    "source": "DOC01 p12 Table 2 Model 3 Δ SSE rows; DOC01 p13 Results F-tests"
+  },
+  {
+    "claim_id": "C6",
+    "statement": "Market share was expected to raise performance but is negative and significant in M1/M3 and nonsignificant in M2.",
+    "hypothesis_label": null,
+    "tier": "nuisance_control",
+    "supporting_locations": [
+      "DOC01 p10 Control variables Market Share",
+      "DOC01 p12 Table 2 Models 1–3 Market Share; Results",
+      "DOC01 p13 Results remaining variables"
+    ],
+    "estimand": "M1/M2/M3 WLS partial slope on Market Share; outcome ×100; lagged outcome also ×100, market share and expense ratio fractions, growth percentage points.",
+    "population": "Commercial banks in the Minneapolis–St. Paul metropolitan market, bank-years 1985–1992; unbalanced panel.",
+    "direction_claimed": "other",
+    "source": "DOC01 p10 Control variables Market Share; DOC01 p12 Table 2 Models 1–3 Market Share; Results; DOC01 p13 Results remaining variables",
+    "direction_text": "positive expected, negative in M1/M3; no significant effect in M2"
+  },
+  {
+    "claim_id": "C7",
+    "statement": "Total expense ratio has the expected negative significant coefficient in all three models.",
+    "hypothesis_label": null,
+    "tier": "nuisance_control",
+    "supporting_locations": [
+      "DOC01 p10 Control variables Total Expense Ratio",
+      "DOC01 p12 Table 2 Models 1–3 Total Expense Ratio; Results",
+      "DOC01 p13 Results remaining variables"
+    ],
+    "estimand": "M1/M2/M3 WLS partial slope on Total Expense Ratio; outcome ×100; lagged outcome also ×100, market share and expense ratio fractions, growth percentage points.",
+    "population": "Commercial banks in the Minneapolis–St. Paul metropolitan market, bank-years 1985–1992; unbalanced panel.",
+    "direction_claimed": "negative",
+    "source": "DOC01 p10 Control variables Total Expense Ratio; DOC01 p12 Table 2 Models 1–3 Total Expense Ratio; Results; DOC01 p13 Results remaining variables"
+  },
+  {
+    "claim_id": "C8",
+    "statement": "Real market growth has the expected positive significant coefficient in all three models.",
+    "hypothesis_label": null,
+    "tier": "nuisance_control",
+    "supporting_locations": [
+      "DOC01 p10 Control variables Real Market Growth",
+      "DOC01 p12 Table 2 Models 1–3 Real Market Growth; Results",
+      "DOC01 p13 Results remaining variables"
+    ],
+    "estimand": "M1/M2/M3 WLS partial slope on Real Market Growth; outcome ×100; lagged outcome also ×100, market share and expense ratio fractions, growth percentage points.",
+    "population": "Commercial banks in the Minneapolis–St. Paul metropolitan market, bank-years 1985–1992; unbalanced panel.",
+    "direction_claimed": "positive",
+    "source": "DOC01 p10 Control variables Real Market Growth; DOC01 p12 Table 2 Models 1–3 Real Market Growth; Results; DOC01 p13 Results remaining variables"
+  },
+  {
+    "claim_id": "C9",
+    "statement": "Lagged relative ROA has the expected positive significant coefficient in all three models.",
+    "hypothesis_label": null,
+    "tier": "nuisance_control",
+    "supporting_locations": [
+      "DOC01 p10 Control variables Relative ROAt−1",
+      "DOC01 p12 Table 2 Models 1–3 Relative ROAt−1; Results",
+      "DOC01 p13 Results remaining variables"
+    ],
+    "estimand": "M1/M2/M3 WLS partial slope on Relative ROAt−1; outcome ×100; lagged outcome also ×100, market share and expense ratio fractions, growth percentage points.",
+    "population": "Commercial banks in the Minneapolis–St. Paul metropolitan market, bank-years 1985–1992; unbalanced panel.",
+    "direction_claimed": "positive",
+    "source": "DOC01 p10 Control variables Relative ROAt−1; DOC01 p12 Table 2 Models 1–3 Relative ROAt−1; Results; DOC01 p13 Results remaining variables"
+  },
+  {
+    "claim_id": "C10",
+    "statement": "Residual plots suggested error variance inversely proportional to market share, motivating WLS.",
+    "hypothesis_label": null,
+    "tier": "identification_inference_diagnostic",
+    "supporting_locations": [
+      "DOC01 p11 Analysis heteroscedasticity paragraph"
+    ],
+    "estimand": "Qualitative OLS residual-pattern diagnostic; WLS precision weights proportional to market share.",
+    "population": "Commercial banks in the Minneapolis–St. Paul metropolitan market, bank-years 1985–1992; unbalanced panel.",
+    "direction_claimed": "none",
+    "source": "DOC01 p11 Analysis heteroscedasticity paragraph"
+  },
+  {
+    "claim_id": "C11",
+    "statement": "Durbin h statistics were described as nonsignificant in all models; the author concluded autocorrelation was not a problem and OLS was consistent.",
+    "hypothesis_label": null,
+    "tier": "identification_inference_diagnostic",
+    "supporting_locations": [
+      "DOC01 p11 Analysis autocorrelation paragraphs"
+    ],
+    "estimand": "Durbin h against asymptotic standard normal; exact model-specific values unavailable.",
+    "population": "Commercial banks in the Minneapolis–St. Paul metropolitan market, bank-years 1985–1992; unbalanced panel.",
+    "direction_claimed": "none",
+    "source": "DOC01 p11 Analysis autocorrelation paragraphs"
+  },
+  {
+    "claim_id": "C12",
+    "statement": "A named bank-year had the highest studentized deleted residual in every model and was excluded; deletion mainly improved control significance.",
+    "hypothesis_label": null,
+    "tier": "identification_inference_diagnostic",
+    "supporting_locations": [
+      "DOC01 p11 Analysis Norwest Bank Minneapolis N.A. in 1987"
+    ],
+    "estimand": "Influence diagnostic and qualitative before/after comparison; estimates retaining the observation not printed.",
+    "population": "Commercial banks in the Minneapolis–St. Paul metropolitan market, bank-years 1985–1992; unbalanced panel.",
+    "direction_claimed": "none",
+    "source": "DOC01 p11 Analysis Norwest Bank Minneapolis N.A. in 1987"
+  },
+  {
+    "claim_id": "C13",
+    "statement": "Strategic deviation and its square are highly correlated, prompting collinearity checks.",
+    "hypothesis_label": null,
+    "tier": "descriptive",
+    "supporting_locations": [
+      "DOC01 p11 Results opening paragraph",
+      "DOC01 p12 Table 1 row 4 column 3"
+    ],
+    "estimand": "Pooled bivariate correlation between D and D², not a regression coefficient.",
+    "population": "Commercial banks in the Minneapolis–St. Paul metropolitan market, bank-years 1985–1992; unbalanced panel.",
+    "direction_claimed": "positive",
+    "source": "DOC01 p11 Results opening paragraph; DOC01 p12 Table 1 row 4 column 3"
+  },
+  {
+    "claim_id": "C14",
+    "statement": "Small SEs, modest coefficient sizes and a condition-number check led the author to judge M3 collinearity not serious.",
+    "hypothesis_label": null,
+    "tier": "identification_inference_diagnostic",
+    "supporting_locations": [
+      "DOC01 p13 Results collinearity paragraphs"
+    ],
+    "estimand": "Condition number and qualitative parameter-size diagnostics; normalization of design matrix not given.",
+    "population": "Commercial banks in the Minneapolis–St. Paul metropolitan market, bank-years 1985–1992; unbalanced panel.",
+    "direction_claimed": "none",
+    "source": "DOC01 p13 Results collinearity paragraphs"
+  },
+  {
+    "claim_id": "C15",
+    "statement": "Deleting the first-order term leaves a negative significant squared term; fit lies between M2 and M3.",
+    "hypothesis_label": null,
+    "tier": "robustness",
+    "supporting_locations": [
+      "DOC01 p13 Results Model 3 without first-order term"
+    ],
+    "estimand": "M3_SQ WLS coefficient on D², preserving all four controls; weighted SSE comparison.",
+    "population": "Commercial banks in the Minneapolis–St. Paul metropolitan market, bank-years 1985–1992; unbalanced panel.",
+    "direction_claimed": "negative",
+    "source": "DOC01 p13 Results Model 3 without first-order term"
+  },
+  {
+    "claim_id": "C16",
+    "statement": "Including eleven asset-strategy controls reportedly gives consistent strategic-deviation results but serious collinearity; estimates were available only from the author.",
+    "hypothesis_label": null,
+    "tier": "robustness",
+    "supporting_locations": [
+      "DOC01 p10 Control variables final paragraph",
+      "DOC01 p11 Opening paragraph"
+    ],
+    "estimand": "Unpublished augmented-model slopes; precise model variants and estimates unavailable.",
+    "population": "Commercial banks in the Minneapolis–St. Paul metropolitan market, bank-years 1985–1992; unbalanced panel.",
+    "direction_claimed": "none",
+    "source": "DOC01 p10 Control variables final paragraph; DOC01 p11 Opening paragraph"
+  },
+  {
+    "claim_id": "C17",
+    "statement": "Table 1 describes the pooled distributions and correlations of the seven displayed variables.",
+    "hypothesis_label": null,
+    "tier": "descriptive",
+    "supporting_locations": [
+      "DOC01 p12 Table 1 all rows and lower triangle"
+    ],
+    "estimand": "Unscaled relative ROA and lag; means, SDs and correlations; growth in percent.",
+    "population": "Commercial banks in the Minneapolis–St. Paul metropolitan market, bank-years 1985–1992; unbalanced panel.",
+    "direction_claimed": "none",
+    "source": "DOC01 p12 Table 1 all rows and lower triangle"
+  },
+  {
+    "claim_id": "C18",
+    "statement": "The sample accounts for bank entry, mergers and failures, a lag requirement and an outlier deletion.",
+    "hypothesis_label": null,
+    "tier": "descriptive",
+    "supporting_locations": [
+      "DOC01 p9 Sample and data",
+      "DOC01 p11 Analysis outlier paragraph"
+    ],
+    "estimand": "Population and observation counts; no annual flow reconciliation printed.",
+    "population": "Commercial banks in the Minneapolis–St. Paul metropolitan market, bank-years 1985–1992; unbalanced panel.",
+    "direction_claimed": "none",
+    "source": "DOC01 p9 Sample and data; DOC01 p11 Analysis outlier paragraph"
+  },
+  {
+    "claim_id": "C19",
+    "statement": "Intermediate similarity is interpreted as balancing lower competition against legitimacy costs; the recommendation is to be as different as legitimately possible.",
+    "hypothesis_label": "H3",
+    "tier": "focal",
+    "supporting_locations": [
+      "DOC01 p1 Abstract",
+      "DOC01 p2 Opening synthesis",
+      "DOC01 p8 Two thought experiments",
+      "DOC01 p13 Towards a comprehensive theory",
+      "DOC01 p16 Conclusion"
+    ],
+    "estimand": "Interpretation of C3, not separate identification of competition or legitimacy mediation; neither mechanism is directly measured.",
+    "population": "Commercial banks in the Minneapolis–St. Paul metropolitan market, bank-years 1985–1992; unbalanced panel.",
+    "direction_claimed": "concave_down",
+    "source": "DOC01 p1 Abstract; DOC01 p2 Opening synthesis; DOC01 p8 Two thought experiments; DOC01 p13 Towards a comprehensive theory; DOC01 p16 Conclusion"
+  },
+  {
+    "claim_id": "C20",
+    "statement": "Future research conjecture: differentiation may reduce competition and improve performance at declining rates.",
+    "hypothesis_label": null,
+    "tier": "robustness",
+    "supporting_locations": [
+      "DOC01 p13 Towards a comprehensive theory final two paragraphs"
+    ],
+    "estimand": "Untested nonlinear mechanism; no supporting table/model/row.",
+    "population": "Theoretical extensions; not estimated in this publication.",
+    "direction_claimed": "other",
+    "source": "DOC01 p13 Towards a comprehensive theory final two paragraphs",
+    "direction_text": "diminishing returns"
+  },
+  {
+    "claim_id": "C21",
+    "statement": "Future conjecture: similarity has no legitimacy-mediated performance effect inside an acceptable range but departure reduces performance.",
+    "hypothesis_label": null,
+    "tier": "robustness",
+    "supporting_locations": [
+      "DOC01 p14 Opening paragraph"
+    ],
+    "estimand": "Untested threshold mechanism; no table/model/row.",
+    "population": "Theoretical extensions; not estimated in this publication.",
+    "direction_claimed": "other",
+    "source": "DOC01 p14 Opening paragraph",
+    "direction_text": "threshold"
+  },
+  {
+    "claim_id": "C22",
+    "statement": "Future conjecture: the balance point may converge toward similarity, interrupted by divergence following poor performance and deinstitutionalization.",
+    "hypothesis_label": null,
+    "tier": "robustness",
+    "supporting_locations": [
+      "DOC01 p14 Punctuated equilibrium paragraph"
+    ],
+    "estimand": "Untested time evolution; no table/model/row.",
+    "population": "Theoretical extensions; not estimated in this publication.",
+    "direction_claimed": "other",
+    "source": "DOC01 p14 Punctuated equilibrium paragraph",
+    "direction_text": "time-varying"
+  },
+  {
+    "claim_id": "C23",
+    "statement": "Future conjectures extend balance to strategic groups, overlapping groups, collusion, and differing strengths of competitive and institutional environments.",
+    "hypothesis_label": null,
+    "tier": "robustness",
+    "supporting_locations": [
+      "DOC01 p14 Strategic groups, collusion and boundary conditions; continued DOC01 p15 opening"
+    ],
+    "estimand": "Untested moderation/group hypotheses: overlap could benefit performance; collusion could shift the optimum toward similarity; no empirical table.",
+    "population": "Theoretical extensions; not estimated in this publication.",
+    "direction_claimed": "other",
+    "source": "DOC01 p14 Strategic groups, collusion and boundary conditions; continued DOC01 p15 opening",
+    "direction_text": "conditional"
+  },
+  {
+    "claim_id": "C24",
+    "statement": "The chosen mean-distance measure is claimed to have predictive validity, while leaning toward institutional isomorphism; pairwise distances may better capture competition.",
+    "hypothesis_label": null,
+    "tier": "focal",
+    "supporting_locations": [
+      "DOC01 p15 Measurement of strategic similarity paragraphs"
+    ],
+    "estimand": "Interpretation of M2/M3; no separate validation sample or competing distance estimates.",
+    "population": "Commercial banks in the Minneapolis–St. Paul metropolitan market, bank-years 1985–1992; unbalanced panel.",
+    "direction_claimed": "none",
+    "source": "DOC01 p15 Measurement of strategic similarity paragraphs"
+  }
+]

@@ -1,0 +1,28 @@
+                          quantity       value
+                            <char>       <num>
+1:        activity (published 13%)  0.17054917
+2: nascent SUBOANWT (published 3%)  0.03692951
+3:        TEA column (early stage)  0.07383569
+4:  U03 nascent BSTART & SUWAGE!=1  0.04681283
+5:              OMBABYBT new owner  0.04003688
+6:    female share (published .49)  0.49372400
+7:   postsecondary (published .45)  0.45578787
+8:      age mean (published 38.76) 38.51392917
+TEA
+     0      1 
+317428  25306 
+raw female logOR: nascent -0.6156026  TEA -0.5529863  activity -0.5407024 
+317428  25306 
+raw female logOR: nascent -0.6156026  TEA -0.5529863  activity -0.5407024 
+U04 activity share 0.1455; OWNMGE=1 share 0.1478; OMBABYBT|OMESTBBT share 0.1158; OMESTBBT share 0.0767
+SUBOANWT | OMESTBBT share 0.1094
+    year     owner   modowner
+   <int>     <num>      <num>
+1:  2001 0.1455632 0.09757992
+2:  2002 0.1465593 0.10450756
+3:  2003 0.1593043 0.11818457
+4:  2004 0.1366126 0.10847651
+5:  2005 0.1524495 0.12421369
+6:  2006 0.1392238 0.12344337
+7:  2007 0.1508828 0.11147633
+8:  2008 0.1587119 0.12668767

@@ -1,0 +1,19 @@
+{
+  "schema_version": 1,
+  "study": {
+    "id": "replace_with_context_result_id",
+    "citation": "Replace with the uploaded article citation",
+    "title": "Replace with the actual article title",
+    "short": "Author surname",
+    "year": 2026,
+    "journal": "Journal name",
+    "paper_outcomes": {"study": "not attemptable", "common": "not assessed", "lenient": "not assessed"}
+  },
+  "execution": {"status": "blocked"},
+  "blockers": ["Replace this example with the actual observed blocker, or remove blockers when execution succeeds."],
+  "terms": [],
+  "displays": [],
+  "issues": {},
+  "report": "Template only. Replace with the actual methods, execution, evidence and limitations report.",
+  "provenance": {"kind": "research", "sources": []}
+}

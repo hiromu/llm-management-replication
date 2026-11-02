@@ -1,0 +1,1 @@
+General rules — each quantity uses complete cases on the variables it involves: input/code/analysis.R:633-638 restricts PM2/SI2 a and total to complete cases on the entire mediation model; :660-662 similarly restricts SM2 a1 and d21; :1022-1026 similarly restricts MED4 a, excluding rows missing variables those individual quantities do not involve.

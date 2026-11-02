@@ -1,0 +1,405 @@
+[
+ {
+  "issue": "Table 1 control group N differs from text and does not sum to stated total",
+  "locator": "D01 p.8 (journal p.4915); Table 1 header; D01 p.5 (journal p.4912); Sec 2.2.3",
+  "values": {
+   "treatment_N": "1,851",
+   "control_N_table": "1,242",
+   "control_N_text": "1,256",
+   "table_title_N": "3,107"
+  },
+  "check": "1,851 + 1,242 = 3,093 != 3,107; 1,851 + 1,256 = 3,107",
+  "within_rounding": false
+ },
+ {
+  "issue": "Table 1 group means reproduce Table 2 overall county-quarter means only with control N = 1,256",
+  "locator": "D01 p.8 (journal p.4915); D01 p.12 (journal p.4919)",
+  "values": {
+   "weighted_with_1256": {
+    "Contributions": "2867.79",
+    "Follow-on": "529.69",
+    "Contributors": "7.678",
+    "Owner": "171.43"
+   },
+   "Table2_means": {
+    "Contributions": "2,867.80",
+    "Follow-on": "529.68",
+    "Contributors": "7.68",
+    "Owner": "171.42"
+   },
+   "weighted_with_1242": {
+    "Contributions": "2864.51",
+    "Follow-on": "529.22"
+   }
+  },
+  "check": "Weighted average (1,851*treat + n_c*control)/(1,851+n_c); with n_c=1,256 matches Table 2 within rounding of Table 1 inputs; also indicates Table 1 outcome means are per county-quarter despite 'County Level' title",
+  "within_rounding": true
+ },
+ {
+  "issue": "Observation count: Table 2 note vs text",
+  "locator": "D01 p.12 (journal p.4919); Table 2 note; D01 p.11 (journal p.4918); Sec 2.4.5",
+  "values": {
+   "note": "121,173",
+   "text": "120,627",
+   "3107x39": "121173",
+   "3093x39": "120627"
+  },
+  "check": "121,173 = 3,107 x 39; 120,627 = 3,093 x 39 (consistent with Table 1 group sum)",
+  "within_rounding": false
+ },
+ {
+  "issue": "Table 1 differences",
+  "locator": "D01 p.8 (journal p.4915)",
+  "values": {
+   "Contributions": "2,375.5 - 3,593.3 = -1,217.8 vs -1,217.7",
+   "Owner": "149.6 - 203.6 = -54.0 vs -54.08",
+   "Educ": "1,995.9 - 1,884.8 = 111.1 vs 111.0"
+  },
+  "check": "Recomputed differences of rounded means; intervals [-1217.9,-1217.7], [-54.1,-53.9], [111.0,111.2] contain the printed values",
+  "within_rounding": true
+ },
+ {
+  "issue": "Table 1 text percent differences",
+  "locator": "D01 p.12 (journal p.4919); Sec 3.1",
+  "values": {
+   "follow-on": "177.6/457.9 = 38.8% (relative to treatment mean)",
+   "contributors_text": "about 5%",
+   "contributors_calc": "0.484/7.966 = 6.1%; 0.484/7.482 = 6.5%"
+  },
+  "check": "38.8% matches difference over treatment mean; 'about 5%' for contributors is below either base",
+  "within_rounding": false
+ },
+ {
+  "issue": "Table 2 timing rows internally consistent",
+  "locator": "D01 p.12 (journal p.4919)",
+  "values": {
+   "Year_mean": "2,009.62 (calc 2009.615)",
+   "Year_SD": "2.82 (calc 2.816)",
+   "Quarter": "mean 200, SD 11.25, range 181-219 (calc 200, 11.25)",
+   "Post_mean": "0.72 (28/39=0.718)",
+   "Treat_mean": "0.60 (1851/3107=0.596)"
+  },
+  "check": "Computed for 39 quarters 2005Q2-2014Q4 with equal county weight; quarter range matches Stata %tq coding of 2005q2 (181) and 2014q4 (219)",
+  "within_rounding": true
+ },
+ {
+  "issue": "Follow-on decomposition",
+  "locator": "D01 p.12 (journal p.4919); Table 2; D01 p.25 (journal p.4932); endnote 20",
+  "values": {
+   "Distant+Incremental mean": "486.21",
+   "Follow-on mean": "529.68",
+   "max": "Total, Follow-on and Incremental all 3,625,156"
+  },
+  "check": "Distant+Incremental < Follow-on consistent with endnote 20 (categories not exhaustive); identical maxima imply a county-quarter where all contributions were incremental tags",
+  "within_rounding": true
+ },
+ {
+  "issue": "Abstract contribution count vs data section",
+  "locator": "D01 p.1 (journal p.4908); Abstract; D01 p.10 (journal p.4917); Sec 2.4.1; D01 p.12 (journal p.4919); Table 2",
+  "values": {
+   "abstract": "more than 350 million",
+   "data_section": "almost 839.2 million (before dropping bots/TIGER account)",
+   "Table2_mean_x_N": "2,867.80 x 121,173 = 347.5 million"
+  },
+  "check": "Implied total from Table 2 is about 347.5 million, slightly below 'more than 350 million'",
+  "within_rounding": false
+ },
+ {
+  "issue": "Table 3 stars vs coefficient/SE",
+  "locator": "D01 p.14 (journal p.4921)",
+  "values": {
+   "col1": "z=-10.11",
+   "col2": "z=-11.71",
+   "col3": "z=-2.91 p~0.0036",
+   "col4": "z=-3.39",
+   "col5": "z=-3.26",
+   "col6": "z=-3.89"
+  },
+  "check": "|b/se| normal approximation; all p<0.01 consistent with ***",
+  "within_rounding": true
+ },
+ {
+  "issue": "Table 3 text magnitudes",
+  "locator": "D01 p.14 (journal p.4921); Sec 3.2.1; D01 p.15 (journal p.4922); Sec 3.3.1",
+  "values": {
+   "col2": "-0.472 -> '47.2%'",
+   "col4": "-0.152 -> '15.2%'",
+   "col6": "-0.0556 -> '5.6%' (p.14) and '5.5%' (p.15)",
+   "exp(b)-1": "-37.6%, -14.1%, -5.4%"
+  },
+  "check": "Text reads log-point coefficients as percents; same coefficient quoted as 5.6% and 5.5%",
+  "within_rounding": false
+ },
+ {
+  "issue": "Introduction ranges vs tables",
+  "locator": "D01 p.3 (journal p.4910); D01 p.14 (journal p.4921); D01 p.15 (journal p.4922); D01 p.18 (journal p.4925)",
+  "values": {
+   "intro_contributors": "4-5.5% fewer",
+   "Table3": "0.0556-0.0557",
+   "Table4": "0.128 / 0.283",
+   "intro_followon": "10-15%",
+   "Table3_fo": "0.141-0.152",
+   "Table4_fo": "0.193 / 0.405",
+   "intro_error": "about 10% higher",
+   "Table6": "0.126 / 0.149 / 0.297"
+  },
+  "check": "No in-scope estimate of 4% for contributors; cross-sectional magnitudes exceed the introduction ranges",
+  "within_rounding": false
+ },
+ {
+  "issue": "Table 4 stars vs coefficient/SE",
+  "locator": "D01 p.15 (journal p.4922)",
+  "values": {
+   "z": "-13.78, -17.93, -3.20, -6.16, -7.71, -15.22"
+  },
+  "check": "All p<0.01 consistent with ***",
+  "within_rounding": true
+ },
+ {
+  "issue": "Table 5 Panel A stars",
+  "locator": "D01 p.17 (journal p.4924)",
+  "values": {
+   "DTT": "z=-3.99, -6.37 (***)",
+   "Placebo": "z=0.16, -1.25 (none)",
+   "Boundary": "z=-2.40 p~0.016 (**), -4.45 (***)",
+   "Timing": "z=-1.73 p~0.084 (*), -3.50 (***)"
+  },
+  "check": "Normal approximation consistent with printed stars",
+  "within_rounding": true
+ },
+ {
+  "issue": "Table 5 Panel A N differs between outcomes within the same sample",
+  "locator": "D01 p.17 (journal p.4924)",
+  "values": {
+   "Boundary": "86,502 (follow-on) vs 70,980 (contributors)",
+   "Timing": "86,502 vs 70,980",
+   "86,502/39": "2,218",
+   "70,980/39": "1,820"
+  },
+  "check": "Same sample should give identical N across outcomes in a balanced panel; Ns correspond to 2,218 and 1,820 counties x 39",
+  "within_rounding": false
+ },
+ {
+  "issue": "Table 5 Panel B N vs text sample sizes",
+  "locator": "D01 p.17 (journal p.4924); D01 p.8 (journal p.4915); D01 p.9 (journal p.4916); Figure 2 note",
+  "values": {
+   "boundary_columns_N": "2,218",
+   "timing_columns_N": "1,820",
+   "text_boundary": "1,820",
+   "text_timing": "2,218"
+  },
+  "check": "Printed Ns are swapped relative to the text/Figure 2 sample definitions",
+  "within_rounding": false
+ },
+ {
+  "issue": "Table 5 Panel B stars",
+  "locator": "D01 p.17 (journal p.4924)",
+  "values": {
+   "col1": "z=-2.60 (range 2.59-2.61), p~0.009",
+   "others": "|z| >= 3.4"
+  },
+  "check": "All consistent with *** at p<0.01",
+  "within_rounding": true
+ },
+ {
+  "issue": "Text on Table 5 Panel A magnitudes",
+  "locator": "D01 p.16 (journal p.4923); Sec 3.4.1; D01 p.14 (journal p.4921)",
+  "values": {
+   "boundary_followon": "-0.135",
+   "baseline_followon": "-0.141 / -0.152",
+   "timing_followon": "-0.0335"
+  },
+  "check": "Text says estimates largely increase in magnitude except timing follow-on; boundary follow-on is also smaller in magnitude than baseline",
+  "within_rounding": false
+ },
+ {
+  "issue": "Endnote 29 percent rounding",
+  "locator": "D01 p.25 (journal p.4932); endnote 29; D01 p.15 (journal p.4922); D01 p.17 (journal p.4924)",
+  "values": {
+   "Table4": "0.128, 0.283",
+   "endnote": "'12% and 28%'",
+   "Table5B": "0.0815, 0.200 -> '8% and 20%'"
+  },
+  "check": "0.128 rounds to 13%, endnote says 12% (truncation)",
+  "within_rounding": false
+ },
+ {
+  "issue": "Table 6 stars",
+  "locator": "D01 p.18 (journal p.4925)",
+  "values": {
+   "Treat": "z=1.78 p~0.075 (*), 1.86 p~0.063 (*), 3.25 (***)",
+   "Distance": "z=12.98, 11.61, 11.75 (***)"
+  },
+  "check": "Consistent",
+  "within_rounding": true
+ },
+ {
+  "issue": "Table 6 text vs Section 2.4.3 unit of analysis and N",
+  "locator": "D01 p.11 (journal p.4918); Sec 2.4.3; D01 p.18 (journal p.4925); Table 6",
+  "values": {
+   "pairs_collected": "98,711 in 2,312 counties",
+   "Table6_full_N": "81,007",
+   "Sec2.4.3": "key outcome is average logged error at county level",
+   "Table6": "county-address-pair level"
+  },
+  "check": "Pair-level N below collected pairs with drop rule unstated; unit conflict between sections",
+  "within_rounding": false
+ },
+ {
+  "issue": "Table 7 stars",
+  "locator": "D01 p.19 (journal p.4926)",
+  "values": {
+   "z": "3.35, -4.57, -1.00 (none), -4.61, -1.48 (none), -2.06 p~0.039 (**), -4.36"
+  },
+  "check": "Consistent",
+  "within_rounding": true
+ },
+ {
+  "issue": "Diff-Time-Trends description conflict",
+  "locator": "D01 p.17 (journal p.4924); Sec 3.4.2 vs Table 5 note and FE rows",
+  "values": {
+   "text": "156 county-group/quarter effects replacing quarter FE",
+   "note": "county-group specific time trends; time FE replaced",
+   "table_row": "Quarter fixed effects Yes"
+  },
+  "check": "Three descriptions not mutually consistent",
+  "within_rounding": false
+ },
+ {
+  "issue": "Quartile FE variables conflict",
+  "locator": "D01 p.15 (journal p.4922); D02 p.11; D02 p.12; D02 p.5",
+  "values": {
+   "main_text": "population density, household income, per-capita income",
+   "Table D.3/D.4 notes": "population, household income, income per capita",
+   "Appendix B": "population density groups only"
+  },
+  "check": "Main text vs appendix descriptions differ",
+  "within_rounding": false
+ },
+ {
+  "issue": "Control variable lists conflict",
+  "locator": "D01 p.11 (journal p.4918); Sec 2.4.4; D01 p.15 (journal p.4922); D02 p.11; D41",
+  "values": {
+   "Sec2.4.4": "nine variables incl. median age, IT workers, highly educated, area",
+   "Sec3.3.1/D.3/D.4": "ten controls: population, density, male pop 18-44, households, unemployment rate, household income, median income, educ. pop., young pop., per-capita income",
+   "D41": "no median age or IT worker columns"
+  },
+  "check": "Lists differ; deposit matches the appendix list",
+  "within_rounding": false
+ },
+ {
+  "issue": "ACS vintage conflict",
+  "locator": "D01 p.11 (journal p.4918); D01 p.8 (journal p.4915); Table 1 note; D03",
+  "values": {
+   "article": "ACS five-year 2009-2014",
+   "Table1": "changes between 2014 and 2005",
+   "D03": "ACS 5-year data for years 2005-2011"
+  },
+  "check": "Year coverage inconsistent across sources",
+  "within_rounding": false
+ },
+ {
+  "issue": "Figure 4 text vs note on time unit",
+  "locator": "D01 p.14 (journal p.4921); D01 p.15 (journal p.4922); Figure 4 note",
+  "values": {
+   "text": "'for every quarter before and after 2007'",
+   "note": "county-year observations",
+   "plot_x_axis": "Years 2005-2014"
+  },
+  "check": "Text says quarterly; figure is annual",
+  "within_rounding": false
+ },
+ {
+  "issue": "Figure 4 pre-period follow-on coefficients vs parallel-trends claim (read from plot)",
+  "locator": "D01 p.15 (journal p.4922); Figure 4 left panel; D01 p.14 (journal p.4921)",
+  "values": {
+   "2005": "~0.124, 95% CI ~[0.048, 0.200]",
+   "2006": "~0.123, CI lower ~0.048",
+   "reference": "2007 at 0"
+  },
+  "check": "Plotted pre-period intervals appear to exclude zero, while text states parallel pre-trajectory (plot reading; not a published number)",
+  "within_rounding": null
+ },
+ {
+  "issue": "Figure 5 2014 estimate vs Table 4 column (4) (read from plot)",
+  "locator": "D01 p.16 (journal p.4923); Figure 5; D01 p.15 (journal p.4922); Table 4",
+  "values": {
+   "Figure5_2014": "~-0.35 (reading [-0.356,-0.344])",
+   "Table4_col4": "-0.405"
+  },
+  "check": "If Figure 5 uses Table 4 specification for 2014 follow-on, values should coincide; plot reading differs by ~0.05 (outside reading interval)",
+  "within_rounding": null
+ },
+ {
+  "issue": "Figure 5 text vs plot (read from plot)",
+  "locator": "D01 p.16 (journal p.4923); Sec 3.3.2",
+  "values": {
+   "2007": "~-0.12 with CI excluding 0",
+   "2010": "~-0.08, CI upper ~+0.04"
+  },
+  "check": "Text: close to zero first two years and significant around implementation; 2010 interval appears to include zero",
+  "within_rounding": null
+ },
+ {
+  "issue": "Figure 6(b) intervals vs 'only top one percentile unaffected' (read from plot)",
+  "locator": "D01 p.19 (journal p.4926); D01 p.20 (journal p.4927)",
+  "values": {
+   "25th upper": "~+0.002",
+   "50th upper": "~+0.001",
+   "99th": "~-0.003, interval includes 0"
+  },
+  "check": "25th and 50th percentile intervals also appear to reach zero; confidence level unstated",
+  "within_rounding": null
+ },
+ {
+  "issue": "Figure 6(a) decile 10 magnitudes vs text (read from plot)",
+  "locator": "D01 p.19 (journal p.4926); D01 p.20 (journal p.4927)",
+  "values": {
+   "follow-on_d10": "~1.08 log points (exp-1 ~ 1.94)",
+   "contributors_d10": "~0.52 (exp-1 ~0.68)",
+   "text": "double; about 60%"
+  },
+  "check": "Consistent with 'double'; 60% between 52 log points and 68% exp-transform",
+  "within_rounding": null
+ },
+ {
+  "issue": "Figure 6(a) 'negative effect for bottom 80 percentile' (read from plot)",
+  "locator": "D01 p.19 (journal p.4926); D01 p.20 (journal p.4927)",
+  "values": {
+   "follow-on_d3": "~-0.08, interval spans 0",
+   "follow-on_d4": "~-0.01, interval spans 0"
+  },
+  "check": "Some bottom-80% deciles not distinguishable from zero for follow-on",
+  "within_rounding": null
+ },
+ {
+  "issue": "Figure 3 note vs plotted frequency",
+  "locator": "D01 p.13 (journal p.4920); Figure 3",
+  "values": {
+   "note": "cumulative sum up until a given quarter",
+   "plot": "ten annual points 2005-2014"
+  },
+  "check": "Plotted points appear annual",
+  "within_rounding": null
+ },
+ {
+  "issue": "Google Trends granularity",
+  "locator": "D01 p.17 (journal p.4924); D02 p.13; D46",
+  "values": {
+   "article": "county-level popularity",
+   "D02": "county in a given year",
+   "D46": "States x quarter columns"
+  },
+  "check": "Out-of-scope table; data granularity conflicts with description",
+  "within_rounding": false
+ },
+ {
+  "issue": "Star legend only in Table 3",
+  "locator": "D01 p.14 (journal p.4921); D01 p.15 (journal p.4922); D01 p.17 (journal p.4924); D01 p.18 (journal p.4925); D01 p.19 (journal p.4926)",
+  "values": {
+   "legend": "*p<0.10; **p<0.05; ***p<0.01"
+  },
+  "check": "Tables 4-7 print stars without a legend; thresholds assumed identical",
+  "within_rounding": null
+ }
+]

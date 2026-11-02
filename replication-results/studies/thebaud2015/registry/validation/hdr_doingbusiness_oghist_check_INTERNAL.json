@@ -1,0 +1,118 @@
+{
+ "undp_hdr": {
+  "2008-english.pdf": {
+   "label_GDP_index": 8,
+   "label_female_legislators_officials_managers": 3,
+   "label_income_index": 8,
+   "countries_missing_from_text": []
+  },
+  "human-development-report-2004-english.pdf": {
+   "label_GDP_index": 12,
+   "label_female_legislators_officials_managers": 6,
+   "label_income_index": 22,
+   "countries_missing_from_text": []
+  },
+  "human-development-report-2005-english.pdf": {
+   "label_GDP_index": 12,
+   "label_female_legislators_officials_managers": 8,
+   "label_income_index": 12,
+   "countries_missing_from_text": []
+  },
+  "human-development-report-2006-english.pdf": {
+   "label_GDP_index": 16,
+   "label_female_legislators_officials_managers": 8,
+   "label_income_index": 16,
+   "countries_missing_from_text": []
+  },
+  "human-development-report-2009-english.pdf": {
+   "label_GDP_index": 5,
+   "label_female_legislators_officials_managers": 1,
+   "label_income_index": 0,
+   "countries_missing_from_text": []
+  },
+  "human-development-report-2010-complete-english.pdf": {
+   "label_GDP_index": 0,
+   "label_female_legislators_officials_managers": 0,
+   "label_income_index": 14,
+   "countries_missing_from_text": []
+  }
+ },
+ "worldbank_doing_business": {
+  "sheets": [
+   "All Data",
+   "Methodology",
+   "Metadata"
+  ],
+  "header_columns_first40": [
+   "Country code",
+   "Economy",
+   "Region",
+   "Income group",
+   "DB Year",
+   "Ease of doing business rank",
+   "Ease of doing business score (DB17-20 methodology)",
+   "Ease of doing business score (DB15 methodology)",
+   "Ease of doing business score (DB10-14 methodology)",
+   "Rank-Starting a business",
+   "Score-Starting a business",
+   "Procedures - Men (number)",
+   "Score-Procedures - Men (number)",
+   "Time - Men (days)",
+   "Score-Time - Men (days)",
+   "Cost - Men (% of income per capita)",
+   "Score-Cost - Men (% of income per capita)",
+   "Procedures - Women (number)",
+   "Score-Procedures - Women (number)",
+   "Time - Women (days)",
+   "Score-Time - Women (days)",
+   "Cost - Women (% of income per capita)",
+   "Score-Cost - Women (% of income per capita)",
+   "Paid-in Minimum capital (% of income per capita)",
+   "Score-Paid-in Minimum capital (% of income per capita)",
+   "Rank-Dealing with construction permits",
+   "Score-Dealing with construction permits (DB16-20 methodology)",
+   "Score-Dealing with construction permits (DB06-15 methodology)",
+   "Procedures (number)",
+   "Score-Procedures (number)",
+   "Time (days)",
+   "Score-Time (days)",
+   "Cost (% of Warehouse value)",
+   "Score-Cost (% of Warehouse value)",
+   "Building quality control index (0-15) (DB16-20 methodology)",
+   "Score-Building quality control index (0-15) (DB16-20 methodology)",
+   "Quality of building regulations index (0-2) (DB16-20 methodology)",
+   "Quality control before construction index (0-1) (DB16-20 methodology)",
+   "Quality control during construction index (0-3) (DB16-20 methodology)",
+   "Quality control after construction index (0-3) (DB16-20 methodology)"
+  ],
+  "db_years": [
+   2004,
+   2005,
+   2006,
+   2007,
+   2008,
+   2009,
+   2010,
+   2011,
+   2012,
+   2013,
+   2014,
+   2015,
+   2016,
+   2017,
+   2018,
+   2019,
+   2020
+  ],
+  "paper_countries_missing": []
+ },
+ "worldbank_income_class": {
+  "sheets": [
+   "Parameters",
+   "Thresholds",
+   "Country Analytical History",
+   "Operational Category Change",
+   "Country Indebtedness History"
+  ]
+ }
+}

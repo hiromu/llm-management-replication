@@ -1,0 +1,7279 @@
+{
+  "meta": {
+    "created_utc": "2026-10-27T12:19:36Z",
+    "scope": "Columns of the nflverse play-by-play files for seasons 2000-2005 and of the nflverse games/schedules file (rows of seasons 2000-2005 used for the missingness flags). Summary-free: no counts, means, frequencies or value distributions.",
+    "definition_sources": {
+      "pbp": "data/raw/nflverse/dictionaries_20261027T113315Z/nflreadr_dictionary_pbp.csv",
+      "pbp_secondary": "data/derived/dictionary_sources/nflfastR_field_descriptions.csv (exported from data/raw/nflverse/dictionaries_20261027T113315Z/nflfastR_field_descriptions.rda)",
+      "games": "data/raw/nflverse/dictionaries_20261027T113315Z/nflreadr_dictionary_schedules.csv",
+      "units_coding": "Written by the acquisition role from provider definitions and stored types."
+    },
+    "files_described": {
+      "pbp": [
+        "data/raw/nflverse/pbp_release_20261027T113315Z/play_by_play_2000.parquet",
+        "data/raw/nflverse/pbp_release_20261027T113315Z/play_by_play_2001.parquet",
+        "data/raw/nflverse/pbp_release_20261027T113315Z/play_by_play_2002.parquet",
+        "data/raw/nflverse/pbp_release_20261027T113315Z/play_by_play_2003.parquet",
+        "data/raw/nflverse/pbp_release_20261027T113315Z/play_by_play_2004.parquet",
+        "data/raw/nflverse/pbp_release_20261027T113315Z/play_by_play_2005.parquet"
+      ],
+      "pbp_csv_gz_equivalents": [
+        "data/raw/nflverse/pbp_release_20261027T113315Z/play_by_play_2000.csv.gz",
+        "data/raw/nflverse/pbp_release_20261027T113315Z/play_by_play_2001.csv.gz",
+        "data/raw/nflverse/pbp_release_20261027T113315Z/play_by_play_2002.csv.gz",
+        "data/raw/nflverse/pbp_release_20261027T113315Z/play_by_play_2003.csv.gz",
+        "data/raw/nflverse/pbp_release_20261027T113315Z/play_by_play_2004.csv.gz",
+        "data/raw/nflverse/pbp_release_20261027T113315Z/play_by_play_2005.csv.gz"
+      ],
+      "games": "data/raw/nflverse/schedules_release_20261027T113315Z/games.parquet",
+      "team_season_alignment": "registry/team_season_alignment.csv"
+    },
+    "pbp_columns_missing_from_provider_dictionary": [],
+    "provider_dictionary_fields_absent_from_pbp_files": [],
+    "games_columns_missing_from_provider_dictionary": [
+      "ftn"
+    ],
+    "provider_dictionary_fields_absent_from_games_file": []
+  },
+  "play_by_play": [
+    {
+      "column": "play_id",
+      "definition": "Numeric play id that when used with game_id and drive provides the unique identifier for a single play.",
+      "provider_type": "numeric",
+      "stored_type": "double",
+      "seasons_with_values": [
+        2000,
+        2001,
+        2002,
+        2003,
+        2004,
+        2005
+      ],
+      "seasons_entirely_missing": [],
+      "units_coding": "Identifier; unique within game_id. Not a sequence counter of plays."
+    },
+    {
+      "column": "game_id",
+      "definition": "Ten digit identifier for NFL game.",
+      "provider_type": "character",
+      "stored_type": "string",
+      "seasons_with_values": [
+        2000,
+        2001,
+        2002,
+        2003,
+        2004,
+        2005
+      ],
+      "seasons_entirely_missing": [],
+      "units_coding": "Text 'SEASON_WW_AWAY_HOME' (WW = two-digit week); joins to games.game_id."
+    },
+    {
+      "column": "old_game_id",
+      "definition": "Legacy NFL game ID.",
+      "provider_type": "character",
+      "stored_type": "string",
+      "seasons_with_values": [
+        2000,
+        2001,
+        2002,
+        2003,
+        2004,
+        2005
+      ],
+      "seasons_entirely_missing": [],
+      "units_coding": "Ten-digit legacy NFL game identifier (YYYYMMDDNN) stored as text; joins to games.old_game_id."
+    },
+    {
+      "column": "home_team",
+      "definition": "String abbreviation for the home team.",
+      "provider_type": "character",
+      "stored_type": "string",
+      "seasons_with_values": [
+        2000,
+        2001,
+        2002,
+        2003,
+        2004,
+        2005
+      ],
+      "seasons_entirely_missing": [],
+      "coding_categories": [
+        "ARI",
+        "ATL",
+        "BAL",
+        "BUF",
+        "CAR",
+        "CHI",
+        "CIN",
+        "CLE",
+        "DAL",
+        "DEN",
+        "DET",
+        "GB",
+        "HOU",
+        "IND",
+        "JAX",
+        "KC",
+        "LA",
+        "LAC",
+        "LV",
+        "MIA",
+        "MIN",
+        "NE",
+        "NO",
+        "NYG",
+        "NYJ",
+        "PHI",
+        "PIT",
+        "SEA",
+        "SF",
+        "TB",
+        "TEN",
+        "WAS"
+      ],
+      "units_coding": "Team abbreviation (current franchise abbreviations LA, LAC, LV for relocated franchises; game_id uses the abbreviations of the time)."
+    },
+    {
+      "column": "away_team",
+      "definition": "String abbreviation for the away team.",
+      "provider_type": "character",
+      "stored_type": "string",
+      "seasons_with_values": [
+        2000,
+        2001,
+        2002,
+        2003,
+        2004,
+        2005
+      ],
+      "seasons_entirely_missing": [],
+      "coding_categories": [
+        "ARI",
+        "ATL",
+        "BAL",
+        "BUF",
+        "CAR",
+        "CHI",
+        "CIN",
+        "CLE",
+        "DAL",
+        "DEN",
+        "DET",
+        "GB",
+        "HOU",
+        "IND",
+        "JAX",
+        "KC",
+        "LA",
+        "LAC",
+        "LV",
+        "MIA",
+        "MIN",
+        "NE",
+        "NO",
+        "NYG",
+        "NYJ",
+        "PHI",
+        "PIT",
+        "SEA",
+        "SF",
+        "TB",
+        "TEN",
+        "WAS"
+      ],
+      "units_coding": "Team abbreviation (current franchise abbreviations; see home_team)."
+    },
+    {
+      "column": "season_type",
+      "definition": "'REG' or 'POST' indicating if the game belongs to regular or post season.",
+      "provider_type": "character",
+      "stored_type": "string",
+      "seasons_with_values": [
+        2000,
+        2001,
+        2002,
+        2003,
+        2004,
+        2005
+      ],
+      "seasons_entirely_missing": [],
+      "coding_categories": [
+        "POST",
+        "REG"
+      ],
+      "units_coding": "Coded: REG = regular season, POST = postseason."
+    },
+    {
+      "column": "week",
+      "definition": "Season week.",
+      "provider_type": "numeric",
+      "stored_type": "int32",
+      "seasons_with_values": [
+        2000,
+        2001,
+        2002,
+        2003,
+        2004,
+        2005
+      ],
+      "seasons_entirely_missing": [],
+      "units_coding": "Integer week of the season. In these files regular-season weeks run 1-17 and postseason weeks are numbered after them (18-21); season_type distinguishes them."
+    },
+    {
+      "column": "posteam",
+      "definition": "String abbreviation for the team with possession.",
+      "provider_type": "character",
+      "stored_type": "string",
+      "seasons_with_values": [
+        2000,
+        2001,
+        2002,
+        2003,
+        2004,
+        2005
+      ],
+      "seasons_entirely_missing": [],
+      "coding_categories": [
+        "",
+        "ARI",
+        "ATL",
+        "BAL",
+        "BUF",
+        "CAR",
+        "CHI",
+        "CIN",
+        "CLE",
+        "DAL",
+        "DEN",
+        "DET",
+        "GB",
+        "HOU",
+        "IND",
+        "JAX",
+        "KC",
+        "LA",
+        "LAC",
+        "LV",
+        "MIA",
+        "MIN",
+        "NE",
+        "NO",
+        "NYG",
+        "NYJ",
+        "PHI",
+        "PIT",
+        "SEA",
+        "SF",
+        "TB",
+        "TEN",
+        "WAS"
+      ],
+      "units_coding": "Team abbreviation of the team with possession. Team columns use current franchise abbreviations (LA, LAC, LV) for relocated franchises, whereas game_id and the games file use the abbreviations of the time (STL, SD, OAK). Empty string on some rows."
+    },
+    {
+      "column": "posteam_type",
+      "definition": "String indicating whether the posteam team is home or away.",
+      "provider_type": "character",
+      "stored_type": "string",
+      "seasons_with_values": [
+        2000,
+        2001,
+        2002,
+        2003,
+        2004,
+        2005
+      ],
+      "seasons_entirely_missing": [],
+      "coding_categories": [
+        "away",
+        "home"
+      ],
+      "units_coding": "Coded: home or away (relative to posteam)."
+    },
+    {
+      "column": "defteam",
+      "definition": "String abbreviation for the team on defense.",
+      "provider_type": "character",
+      "stored_type": "string",
+      "seasons_with_values": [
+        2000,
+        2001,
+        2002,
+        2003,
+        2004,
+        2005
+      ],
+      "seasons_entirely_missing": [],
+      "coding_categories": [
+        "ARI",
+        "ATL",
+        "BAL",
+        "BUF",
+        "CAR",
+        "CHI",
+        "CIN",
+        "CLE",
+        "DAL",
+        "DEN",
+        "DET",
+        "GB",
+        "HOU",
+        "IND",
+        "JAX",
+        "KC",
+        "LA",
+        "LAC",
+        "LV",
+        "MIA",
+        "MIN",
+        "NE",
+        "NO",
+        "NYG",
+        "NYJ",
+        "PHI",
+        "PIT",
+        "SEA",
+        "SF",
+        "TB",
+        "TEN",
+        "WAS"
+      ],
+      "units_coding": "Team abbreviation of the defending team (current franchise abbreviations; see posteam)."
+    },
+    {
+      "column": "side_of_field",
+      "definition": "String abbreviation for which team's side of the field the team with possession is currently on.",
+      "provider_type": "character",
+      "stored_type": "string",
+      "seasons_with_values": [
+        2000,
+        2001,
+        2002,
+        2003,
+        2004,
+        2005
+      ],
+      "seasons_entirely_missing": [],
+      "coding_categories": [
+        "",
+        "50",
+        "ARI",
+        "ATL",
+        "BAL",
+        "BUF",
+        "CAR",
+        "CHI",
+        "CIN",
+        "CLE",
+        "DAL",
+        "DEN",
+        "DET",
+        "GB",
+        "HOU",
+        "IND",
+        "JAX",
+        "KC",
+        "LA",
+        "LAC",
+        "LV",
+        "MIA",
+        "MID",
+        "MIN",
+        "NE",
+        "NO",
+        "NYG",
+        "NYJ",
+        "PHI",
+        "PIT",
+        "SEA",
+        "SF",
+        "TB",
+        "TEN",
+        "WAS"
+      ],
+      "units_coding": "Team abbreviation of the side of the field the ball is on; MID or 50 at midfield; empty string on some rows."
+    },
+    {
+      "column": "yardline_100",
+      "definition": "Numeric distance in the number of yards from the opponent's endzone for the posteam.",
+      "provider_type": "numeric",
+      "stored_type": "double",
+      "seasons_with_values": [
+        2000,
+        2001,
+        2002,
+        2003,
+        2004,
+        2005
+      ],
+      "seasons_entirely_missing": [],
+      "units_coding": "Yards from the opponent's end zone at the line of scrimmage, on a 0-100 scale (provider definition); relative to posteam."
+    },
+    {
+      "column": "game_date",
+      "definition": "Date of the game.",
+      "provider_type": "character",
+      "stored_type": "string",
+      "seasons_with_values": [
+        2000,
+        2001,
+        2002,
+        2003,
+        2004,
+        2005
+      ],
+      "seasons_entirely_missing": [],
+      "units_coding": "Text date YYYY-MM-DD."
+    },
+    {
+      "column": "quarter_seconds_remaining",
+      "definition": "Numeric seconds remaining in the quarter.",
+      "provider_type": "numeric",
+      "stored_type": "double",
+      "seasons_with_values": [
+        2000,
+        2001,
+        2002,
+        2003,
+        2004,
+        2005
+      ],
+      "seasons_entirely_missing": [],
+      "units_coding": "Seconds remaining in the quarter."
+    },
+    {
+      "column": "half_seconds_remaining",
+      "definition": "Numeric seconds remaining in the half.",
+      "provider_type": "numeric",
+      "stored_type": "double",
+      "seasons_with_values": [
+        2000,
+        2001,
+        2002,
+        2003,
+        2004,
+        2005
+      ],
+      "seasons_entirely_missing": [],
+      "units_coding": "Seconds remaining in the half."
+    },
+    {
+      "column": "game_seconds_remaining",
+      "definition": "Numeric seconds remaining in the game.",
+      "provider_type": "numeric",
+      "stored_type": "double",
+      "seasons_with_values": [
+        2000,
+        2001,
+        2002,
+        2003,
+        2004,
+        2005
+      ],
+      "seasons_entirely_missing": [],
+      "units_coding": "Seconds remaining in the game (provider definition); regulation is 3600 seconds."
+    },
+    {
+      "column": "game_half",
+      "definition": "String indicating which half the play is in, either Half1, Half2, or Overtime.",
+      "provider_type": "character",
+      "stored_type": "string",
+      "seasons_with_values": [
+        2000,
+        2001,
+        2002,
+        2003,
+        2004,
+        2005
+      ],
+      "seasons_entirely_missing": [],
+      "coding_categories": [
+        "Half1",
+        "Half2",
+        "Overtime"
+      ],
+      "units_coding": "Coded: Half1, Half2, Overtime."
+    },
+    {
+      "column": "quarter_end",
+      "definition": "Binary indicator for whether or not the row of the data is marking the end of a quarter.",
+      "provider_type": "numeric",
+      "stored_type": "double",
+      "seasons_with_values": [
+        2000,
+        2001,
+        2002,
+        2003,
+        2004,
+        2005
+      ],
+      "seasons_entirely_missing": [],
+      "coding_categories": [
+        0,
+        1
+      ],
+      "units_coding": "Binary indicator coded 1/0."
+    },
+    {
+      "column": "drive",
+      "definition": "Numeric drive number in the game.",
+      "provider_type": "numeric",
+      "stored_type": "double",
+      "seasons_with_values": [
+        2000,
+        2001,
+        2002,
+        2003,
+        2004,
+        2005
+      ],
+      "seasons_entirely_missing": []
+    },
+    {
+      "column": "sp",
+      "definition": "Binary indicator for whether or not a score occurred on the play.",
+      "provider_type": "numeric",
+      "stored_type": "double",
+      "seasons_with_values": [
+        2000,
+        2001,
+        2002,
+        2003,
+        2004,
+        2005
+      ],
+      "seasons_entirely_missing": [],
+      "units_coding": "Binary indicator coded 1/0."
+    },
+    {
+      "column": "qtr",
+      "definition": "Quarter of the game (5 is overtime).",
+      "provider_type": "numeric",
+      "stored_type": "double",
+      "seasons_with_values": [
+        2000,
+        2001,
+        2002,
+        2003,
+        2004,
+        2005
+      ],
+      "seasons_entirely_missing": [],
+      "coding_categories": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6
+      ],
+      "units_coding": "Integer quarter; 5 (and 6 for a second overtime period) denote overtime."
+    },
+    {
+      "column": "down",
+      "definition": "The down for the given play.",
+      "provider_type": "numeric",
+      "stored_type": "double",
+      "seasons_with_values": [
+        2000,
+        2001,
+        2002,
+        2003,
+        2004,
+        2005
+      ],
+      "seasons_entirely_missing": [],
+      "coding_categories": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "units_coding": "Integer 1-4; missing when the play has no down (e.g. kickoffs, extra points, timeouts, some penalties)."
+    },
+    {
+      "column": "goal_to_go",
+      "definition": "Binary indicator for whether or not the posteam is in a goal down situation.",
+      "provider_type": "numeric",
+      "stored_type": {
+        "2000": "double",
+        "2001": "double",
+        "2002": "double",
+        "2003": "int32",
+        "2004": "int32",
+        "2005": "int32"
+      },
+      "seasons_with_values": [
+        2000,
+        2001,
+        2002,
+        2003,
+        2004,
+        2005
+      ],
+      "seasons_entirely_missing": [],
+      "units_coding": "Binary indicator coded 1/0."
+    },
+    {
+      "column": "time",
+      "definition": "Time at start of play provided in string format as minutes:seconds remaining in the quarter.",
+      "provider_type": "character",
+      "stored_type": "string",
+      "seasons_with_values": [
+        2000,
+        2001,
+        2002,
+        2003,
+        2004,
+        2005
+      ],
+      "seasons_entirely_missing": [],
+      "units_coding": "Game clock at the start of the play, text MM:SS, counting down within the quarter."
+    },
+    {
+      "column": "yrdln",
+      "definition": "String indicating the current field position for a given play.",
+      "provider_type": "character",
+      "stored_type": "string",
+      "seasons_with_values": [
+        2000,
+        2001,
+        2002,
+        2003,
+        2004,
+        2005
+      ],
+      "seasons_entirely_missing": [],
+      "units_coding": "Text field position: team abbreviation followed by yard line (e.g. 'ABC 30'), or 'MID 50'."
+    },
+    {
+      "column": "ydstogo",
+      "definition": "Numeric yards in distance from either the first down marker or the endzone in goal down situations.",
+      "provider_type": "numeric",
+      "stored_type": "double",
+      "seasons_with_values": [
+        2000,
+        2001,
+        2002,
+        2003,
+        2004,
+        2005
+      ],
+      "seasons_entirely_missing": [],
+      "units_coding": "Yards to the first-down marker, or to the end zone in goal-to-go situations (provider definition)."
+    },
+    {
+      "column": "ydsnet",
+      "definition": "Numeric value for total yards gained on the given drive.",
+      "provider_type": "numeric",
+      "stored_type": "double",
+      "seasons_with_values": [
+        2000,
+        2001,
+        2002,
+        2003,
+        2004,
+        2005
+      ],
+      "seasons_entirely_missing": []
+    },
+    {
+      "column": "desc",
+      "definition": "Detailed string description for the given play.",
+      "provider_type": "character",
+      "stored_type": "string",
+      "seasons_with_values": [
+        2000,
+        2001,
+        2002,
+        2003,
+        2004,
+        2005
+      ],
+      "seasons_entirely_missing": [],
+      "units_coding": "Free-text play description from the official play-by-play."
+    },
+    {
+      "column": "play_type",
+      "definition": "String indicating the type of play: pass (includes sacks), run (includes scrambles), punt, field_goal, kickoff, extra_point, qb_kneel, qb_spike, no_play (timeouts and penalties), and missing for rows indicating end of play.",
+      "provider_type": "character",
+      "stored_type": "string",
+      "seasons_with_values": [
+        2000,
+        2001,
+        2002,
+        2003,
+        2004,
+        2005
+      ],
+      "seasons_entirely_missing": [],
+      "coding_categories": [
+        "",
+        "extra_point",
+        "field_goal",
+        "kickoff",
+        "no_play",
+        "pass",
+        "punt",
+        "qb_kneel",
+        "qb_spike",
+        "run"
+      ],
+      "units_coding": "Coded string; see coding categories. Provider: pass includes sacks, run includes scrambles, no_play covers timeouts and penalties; missing on rows marking end of play/period. An empty-string code also occurs."
+    },
+    {
+      "column": "yards_gained",
+      "definition": "Numeric yards gained (or lost) by the possessing team, excluding yards gained via fumble recoveries and laterals.",
+      "provider_type": "numeric",
+      "stored_type": "double",
+      "seasons_with_values": [
+        2000,
+        2001,
+        2002,
+        2003,
+        2004,
+        2005
+      ],
+      "seasons_entirely_missing": [],
+      "units_coding": "Yards gained or lost by posteam (provider definition excludes fumble-recovery and lateral yardage)."
+    },
+    {
+      "column": "shotgun",
+      "definition": "Binary indicator for whether or not the play was in shotgun formation.",
+      "provider_type": "numeric",
+      "stored_type": "double",
+      "seasons_with_values": [
+        2000,
+        2001,
+        2002,
+        2003,
+        2004,
+        2005
+      ],
+      "seasons_entirely_missing": [],
+      "units_coding": "Binary indicator coded 1/0."
+    },
+    {
+      "column": "no_huddle",
+      "definition": "Binary indicator for whether or not the play was in no_huddle formation.",
+      "provider_type": "numeric",
+      "stored_type": "double",
+      "seasons_with_values": [
+        2000,
+        2001,
+        2002,
+        2003,
+        2004,
+        2005
+      ],
+      "seasons_entirely_missing": [],
+      "units_coding": "Binary indicator coded 1/0."
+    },
+    {
+      "column": "qb_dropback",
+      "definition": "Binary indicator for whether or not the QB dropped back on the play (pass attempt, sack, or scrambled).",
+      "provider_type": "numeric",
+      "stored_type": "double",
+      "seasons_with_values": [
+        2000,
+        2001,
+        2002,
+        2003,
+        2004,
+        2005
+      ],
+      "seasons_entirely_missing": [],
+      "units_coding": "Binary indicator coded 1/0."
+    },
+    {
+      "column": "qb_kneel",
+      "definition": "Binary indicator for whether or not the QB took a knee.",
+      "provider_type": "numeric",
+      "stored_type": "double",
+      "seasons_with_values": [
+        2000,
+        2001,
+        2002,
+        2003,
+        2004,
+        2005
+      ],
+      "seasons_entirely_missing": [],
+      "units_coding": "Binary indicator coded 1/0."
+    },
+    {
+      "column": "qb_spike",
+      "definition": "Binary indicator for whether or not the QB spiked the ball.",
+      "provider_type": "numeric",
+      "stored_type": "double",
+      "seasons_with_values": [
+        2000,
+        2001,
+        2002,
+        2003,
+        2004,
+        2005
+      ],
+      "seasons_entirely_missing": [],
+      "units_coding": "Binary indicator coded 1/0."
+    },
+    {
+      "column": "qb_scramble",
+      "definition": "Binary indicator for whether or not the QB scrambled.",
+      "provider_type": "numeric",
+      "stored_type": "double",
+      "seasons_with_values": [
+        2000,
+        2001,
+        2002,
+        2003,
+        2004,
+        2005
+      ],
+      "seasons_entirely_missing": [],
+      "units_coding": "Binary indicator coded 1/0."
+    },
+    {
+      "column": "pass_length",
+      "definition": "String indicator for pass length: short or deep.",
+      "provider_type": "character",
+      "stored_type": "string",
+      "seasons_with_values": [],
+      "seasons_entirely_missing": [
+        2000,
+        2001,
+        2002,
+        2003,
+        2004,
+        2005
+      ],
+      "coding_categories": []
+    },
+    {
+      "column": "pass_location",
+      "definition": "String indicator for pass location: left, middle, or right.",
+      "provider_type": "character",
+      "stored_type": "string",
+      "seasons_with_values": [
+        2000,
+        2001,
+        2002,
+        2003,
+        2004,
+        2005
+      ],
+      "seasons_entirely_missing": [],
+      "coding_categories": [
+        "left",
+        "middle",
+        "right"
+      ]
+    },
+    {
+      "column": "air_yards",
+      "definition": "Numeric value for distance in yards perpendicular to the line of scrimmage at where the targeted receiver either caught or didn't catch the ball.",
+      "provider_type": "numeric",
+      "stored_type": "double",
+      "seasons_with_values": [],
+      "seasons_entirely_missing": [
+        2000,
+        2001,
+        2002,
+        2003,
+        2004,
+        2005
+      ]
+    },
+    {
+      "column": "yards_after_catch",
+      "definition": "Numeric value for distance in yards perpendicular to the yard line where the receiver made the reception to where the play ended.",
+      "provider_type": "numeric",
+      "stored_type": "double",
+      "seasons_with_values": [],
+      "seasons_entirely_missing": [
+        2000,
+        2001,
+        2002,
+        2003,
+        2004,
+        2005
+      ]
+    },
+    {
+      "column": "run_location",
+      "definition": "String indicator for location of run: left, middle, or right.",
+      "provider_type": "character",
+      "stored_type": "string",
+      "seasons_with_values": [
+        2000,
+        2001,
+        2002,
+        2003,
+        2004,
+        2005
+      ],
+      "seasons_entirely_missing": [],
+      "coding_categories": [
+        "left",
+        "middle",
+        "right"
+      ]
+    },
+    {
+      "column": "run_gap",
+      "definition": "String indicator for line gap of run: end, guard, or tackle",
+      "provider_type": "character",
+      "stored_type": "string",
+      "seasons_with_values": [
+        2000,
+        2001,
+        2002,
+        2003,
+        2004,
+        2005
+      ],
+      "seasons_entirely_missing": [],
+      "coding_categories": [
+        "end",
+        "guard",
+        "tackle"
+      ]
+    },
+    {
+      "column": "field_goal_result",
+      "definition": "String indicator for result of field goal attempt: made, missed, or blocked.",
+      "provider_type": "character",
+      "stored_type": "string",
+      "seasons_with_values": [
+        2000,
+        2001,
+        2002,
+        2003,
+        2004,
+        2005
+      ],
+      "seasons_entirely_missing": [],
+      "coding_categories": [
+        "blocked",
+        "made",
+        "missed"
+      ]
+    },
+    {
+      "column": "kick_distance",
+      "definition": "Numeric distance in yards for kickoffs, field goals, and punts.",
+      "provider_type": "numeric",
+      "stored_type": "double",
+      "seasons_with_values": [
+        2000,
+        2001,
+        2002,
+        2003,
+        2004,
+        2005
+      ],
+      "seasons_entirely_missing": []
+    },
+    {
+      "column": "extra_point_result",
+      "definition": "String indicator for the result of the extra point attempt: good, failed, blocked, safety (touchback in defensive endzone is 1 point apparently), or aborted.",
+      "provider_type": "character",
+      "stored_type": "string",
+      "seasons_with_values": [
+        2000,
+        2001,
+        2002,
+        2003,
+        2004,
+        2005
+      ],
+      "seasons_entirely_missing": [],
+      "coding_categories": [
+        "aborted",
+        "blocked",
+        "failed",
+        "good"
+      ]
+    },
+    {
+      "column": "two_point_conv_result",
+      "definition": "String indicator for result of two point conversion attempt: success, failure, safety (touchback in defensive endzone is 1 point apparently), or return.",
+      "provider_type": "character",
+      "stored_type": "string",
+      "seasons_with_values": [
+        2000,
+        2001,
+        2002,
+        2003,
+        2004,
+        2005
+      ],
+      "seasons_entirely_missing": [],
+      "coding_categories": [
+        "failure",
+        "success"
+      ]
+    },
+    {
+      "column": "home_timeouts_remaining",
+      "definition": "Numeric timeouts remaining in the half for the home team.",
+      "provider_type": "numeric",
+      "stored_type": "double",
+      "seasons_with_values": [
+        2000,
+        2001,
+        2002,
+        2003,
+        2004,
+        2005
+      ],
+      "seasons_entirely_missing": [],
+      "units_coding": "Count of home timeouts remaining (0-3)."
+    },
+    {
+      "column": "away_timeouts_remaining",
+      "definition": "Numeric timeouts remaining in the half for the away team.",
+      "provider_type": "numeric",
+      "stored_type": "double",
+      "seasons_with_values": [
+        2000,
+        2001,
+        2002,
+        2003,
+        2004,
+        2005
+      ],
+      "seasons_entirely_missing": [],
+      "units_coding": "Count of away timeouts remaining (0-3)."
+    },
+    {
+      "column": "timeout",
+      "definition": "Binary indicator for whether or not a timeout was called by either team.",
+      "provider_type": "numeric",
+      "stored_type": "double",
+      "seasons_with_values": [
+        2000,
+        2001,
+        2002,
+        2003,
+        2004,
+        2005
+      ],
+      "seasons_entirely_missing": [],
+      "units_coding": "Binary indicator coded 1/0."
+    },
+    {
+      "column": "timeout_team",
+      "definition": "String abbreviation for which team called the timeout.",
+      "provider_type": "character",
+      "stored_type": "string",
+      "seasons_with_values": [
+        2000,
+        2001,
+        2002,
+        2003,
+        2004,
+        2005
+      ],
+      "seasons_entirely_missing": [],
+      "coding_categories": [
+        "ARI",
+        "ATL",
+        "BAL",
+        "BUF",
+        "CAR",
+        "CHI",
+        "CIN",
+        "CLE",
+        "DAL",
+        "DEN",
+        "DET",
+        "GB",
+        "HOU",
+        "IND",
+        "JAX",
+        "KC",
+        "LA",
+        "LAC",
+        "LV",
+        "MIA",
+        "MIN",
+        "NE",
+        "NO",
+        "NYG",
+        "NYJ",
+        "PHI",
+        "PIT",
+        "SEA",
+        "SF",
+        "TB",
+        "TEN",
+        "WAS"
+      ]
+    },
+    {
+      "column": "td_team",
+      "definition": "String abbreviation for which team scored the touchdown.",
+      "provider_type": "character",
+      "stored_type": "string",
+      "seasons_with_values": [
+        2000,
+        2001,
+        2002,
+        2003,
+        2004,
+        2005
+      ],
+      "seasons_entirely_missing": [],
+      "coding_categories": [
+        "ARI",
+        "ATL",
+        "BAL",
+        "BUF",
+        "CAR",
+        "CHI",
+        "CIN",
+        "CLE",
+        "DAL",
+        "DEN",
+        "DET",
+        "GB",
+        "HOU",
+        "IND",
+        "JAX",
+        "KC",
+        "LA",
+        "LAC",
+        "LV",
+        "MIA",
+        "MIN",
+        "NE",
+        "NO",
+        "NYG",
+        "NYJ",
+        "PHI",
+        "PIT",
+        "SEA",
+        "SF",
+        "TB",
+        "TEN",
+        "WAS"
+      ]
+    },
+    {
+      "column": "td_player_name",
+      "definition": "String name of the player who scored a touchdown.",
+      "provider_type": "character",
+      "stored_type": "string",
+      "seasons_with_values": [
+        2000,
+        2001,
+        2002,
+        2003,
+        2004,
+        2005
+      ],
+      "seasons_entirely_missing": []
+    },
+    {
+      "column": "td_player_id",
+      "definition": "Unique identifier of the player who scored a touchdown.",
+      "provider_type": "character",
+      "stored_type": "string",
+      "seasons_with_values": [
+        2000,
+        2001,
+        2002,
+        2003,
+        2004,
+        2005
+      ],
+      "seasons_entirely_missing": []
+    },
+    {
+      "column": "posteam_timeouts_remaining",
+      "definition": "Number of timeouts remaining for the possession team.",
+      "provider_type": "numeric",
+      "stored_type": "double",
+      "seasons_with_values": [
+        2000,
+        2001,
+        2002,
+        2003,
+        2004,
+        2005
+      ],
+      "seasons_entirely_missing": [],
+      "units_coding": "Count of posteam timeouts remaining (0-3)."
+    },
+    {
+      "column": "defteam_timeouts_remaining",
+      "definition": "Number of timeouts remaining for the team on defense.",
+      "provider_type": "numeric",
+      "stored_type": "double",
+      "seasons_with_values": [
+        2000,
+        2001,
+        2002,
+        2003,
+        2004,
+        2005
+      ],
+      "seasons_entirely_missing": [],
+      "units_coding": "Count of defteam timeouts remaining (0-3)."
+    },
+    {
+      "column": "total_home_score",
+      "definition": "Score for the home team at the start of the play.",
+      "provider_type": "numeric",
+      "stored_type": "double",
+      "seasons_with_values": [
+        2000,
+        2001,
+        2002,
+        2003,
+        2004,
+        2005
+      ],
+      "seasons_entirely_missing": [],
+      "nflfastR_field_descriptions_definition": "Score for the home team at the end of the play.",
+      "units_coding": "Home team points. nflreadr dictionary says at the start of the play; nflfastR field_descriptions says at the end of the play. Timing not resolved at acquisition."
+    },
+    {
+      "column": "total_away_score",
+      "definition": "Score for the away team at the start of the play.",
+      "provider_type": "numeric",
+      "stored_type": "double",
+      "seasons_with_values": [
+        2000,
+        2001,
+        2002,
+        2003,
+        2004,
+        2005
+      ],
+      "seasons_entirely_missing": [],
+      "nflfastR_field_descriptions_definition": "Score for the away team at the end of the play.",
+      "units_coding": "Away team points. Same start/end-of-play definitional conflict as total_home_score."
+    },
+    {
+      "column": "posteam_score",
+      "definition": "Score the posteam at the start of the play.",
+      "provider_type": "numeric",
+      "stored_type": "double",
+      "seasons_with_values": [
+        2000,
+        2001,
+        2002,
+        2003,
+        2004,
+        2005
+      ],
+      "seasons_entirely_missing": [],
+      "units_coding": "Points of posteam before the play."
+    },
+    {
+      "column": "defteam_score",
+      "definition": "Score the defteam at the start of the play.",
+      "provider_type": "numeric",
+      "stored_type": "double",
+      "seasons_with_values": [
+        2000,
+        2001,
+        2002,
+        2003,
+        2004,
+        2005
+      ],
+      "seasons_entirely_missing": [],
+      "units_coding": "Points of defteam before the play."
+    },
+    {
+      "column": "score_differential",
+      "definition": "Score differential between the posteam and defteam at the start of the play.",
+      "provider_type": "numeric",
+      "stored_type": "double",
+      "seasons_with_values": [
+        2000,
+        2001,
+        2002,
+        2003,
+        2004,
+        2005
+      ],
+      "seasons_entirely_missing": [],
+      "units_coding": "posteam_score minus defteam_score, before the play."
+    },
+    {
+      "column": "posteam_score_post",
+      "definition": "Score for the posteam at the end of the play.",
+      "provider_type": "numeric",
+      "stored_type": "double",
+      "seasons_with_values": [
+        2000,
+        2001,
+        2002,
+        2003,
+        2004,
+        2005
+      ],
+      "seasons_entirely_missing": [],
+      "units_coding": "Points of posteam after the play."
+    },
+    {
+      "column": "defteam_score_post",
+      "definition": "Score for the defteam at the end of the play.",
+      "provider_type": "numeric",
+      "stored_type": "double",
+      "seasons_with_values": [
+        2000,
+        2001,
+        2002,
+        2003,
+        2004,
+        2005
+      ],
+      "seasons_entirely_missing": [],
+      "units_coding": "Points of defteam after the play."
+    },
+    {
+      "column": "score_differential_post",
+      "definition": "Score differential between the posteam and defteam at the end of the play.",
+      "provider_type": "numeric",
+      "stored_type": "double",
+      "seasons_with_values": [
+        2000,
+        2001,
+        2002,
+        2003,
+        2004,
+        2005
+      ],
+      "seasons_entirely_missing": [],
+      "units_coding": "posteam_score_post minus defteam_score_post."
+    },
+    {
+      "column": "no_score_prob",
+      "definition": "Predicted probability of no score occurring for the rest of the half based on the expected points model.",
+      "provider_type": "numeric",
+      "stored_type": "double",
+      "seasons_with_values": [
+        2000,
+        2001,
+        2002,
+        2003,
+        2004,
+        2005
+      ],
+      "seasons_entirely_missing": []
+    },
+    {
+      "column": "opp_fg_prob",
+      "definition": "Predicted probability of the defteam scoring a FG next. 'Next' in this context means the next score in the same game half.",
+      "provider_type": "numeric",
+      "stored_type": "double",
+      "seasons_with_values": [
+        2000,
+        2001,
+        2002,
+        2003,
+        2004,
+        2005
+      ],
+      "seasons_entirely_missing": [],
+      "nflfastR_field_descriptions_definition": "Predicted probability of the defteam scoring a FG next."
+    },
+    {
+      "column": "opp_safety_prob",
+      "definition": "Predicted probability of the defteam scoring a safety next. 'Next' in this context means the next score in the same game half.",
+      "provider_type": "numeric",
+      "stored_type": "double",
+      "seasons_with_values": [
+        2000,
+        2001,
+        2002,
+        2003,
+        2004,
+        2005
+      ],
+      "seasons_entirely_missing": [],
+      "nflfastR_field_descriptions_definition": "Predicted probability of the defteam scoring a safety next."
+    },
+    {
+      "column": "opp_td_prob",
+      "definition": "Predicted probability of the defteam scoring a TD next. 'Next' in this context means the next score in the same game half.",
+      "provider_type": "numeric",
+      "stored_type": "double",
+      "seasons_with_values": [
+        2000,
+        2001,
+        2002,
+        2003,
+        2004,
+        2005
+      ],
+      "seasons_entirely_missing": [],
+      "nflfastR_field_descriptions_definition": "Predicted probability of the defteam scoring a TD next."
+    },
+    {
+      "column": "fg_prob",
+      "definition": "Predicted probability of the posteam scoring a FG next. 'Next' in this context means the next score in the same game half.",
+      "provider_type": "numeric",
+      "stored_type": "double",
+      "seasons_with_values": [
+        2000,
+        2001,
+        2002,
+        2003,
+        2004,
+        2005
+      ],
+      "seasons_entirely_missing": [],
+      "nflfastR_field_descriptions_definition": "Predicted probability of the posteam scoring a FG next."
+    },
+    {
+      "column": "safety_prob",
+      "definition": "Predicted probability of the posteam scoring a safety next. 'Next' in this context means the next score in the same game half.",
+      "provider_type": "numeric",
+      "stored_type": "double",
+      "seasons_with_values": [
+        2000,
+        2001,
+        2002,
+        2003,
+        2004,
+        2005
+      ],
+      "seasons_entirely_missing": [],
+      "nflfastR_field_descriptions_definition": "Predicted probability of the posteam scoring a safety next."
+    },
+    {
+      "column": "td_prob",
+      "definition": "Predicted probability of the posteam scoring a TD next. 'Next' in this context means the next score in the same game half.",
+      "provider_type": "numeric",
+      "stored_type": "double",
+      "seasons_with_values": [
+        2000,
+        2001,
+        2002,
+        2003,
+        2004,
+        2005
+      ],
+      "seasons_entirely_missing": [],
+      "nflfastR_field_descriptions_definition": "Predicted probability of the posteam scoring a TD next."
+    },
+    {
+      "column": "extra_point_prob",
+      "definition": "Predicted probability of the posteam scoring an extra point.",
+      "provider_type": "numeric",
+      "stored_type": "double",
+      "seasons_with_values": [
+        2000,
+        2001,
+        2002,
+        2003,
+        2004,
+        2005
+      ],
+      "seasons_entirely_missing": []
+    },
+    {
+      "column": "two_point_conversion_prob",
+      "definition": "Predicted probability of the posteam scoring the two point conversion.",
+      "provider_type": "numeric",
+      "stored_type": "double",
+      "seasons_with_values": [
+        2000,
+        2001,
+        2002,
+        2003,
+        2004,
+        2005
+      ],
+      "seasons_entirely_missing": []
+    },
+    {
+      "column": "ep",
+      "definition": "Using the scoring event probabilities, the estimated expected points with respect to the possession team for the given play.",
+      "provider_type": "numeric",
+      "stored_type": "double",
+      "seasons_with_values": [
+        2000,
+        2001,
+        2002,
+        2003,
+        2004,
+        2005
+      ],
+      "seasons_entirely_missing": [],
+      "units_coding": "Model-estimated expected points before the play; nflfastR model output."
+    },
+    {
+      "column": "epa",
+      "definition": "Expected points added (EPA) by the posteam for the given play.",
+      "provider_type": "numeric",
+      "stored_type": "double",
+      "seasons_with_values": [
+        2000,
+        2001,
+        2002,
+        2003,
+        2004,
+        2005
+      ],
+      "seasons_entirely_missing": [],
+      "units_coding": "Model-estimated expected points added; nflfastR model output."
+    },
+    {
+      "column": "total_home_epa",
+      "definition": "Cumulative total EPA for the home team in the game so far.",
+      "provider_type": "numeric",
+      "stored_type": "double",
+      "seasons_with_values": [
+        2000,
+        2001,
+        2002,
+        2003,
+        2004,
+        2005
+      ],
+      "seasons_entirely_missing": []
+    },
+    {
+      "column": "total_away_epa",
+      "definition": "Cumulative total EPA for the away team in the game so far.",
+      "provider_type": "numeric",
+      "stored_type": "double",
+      "seasons_with_values": [
+        2000,
+        2001,
+        2002,
+        2003,
+        2004,
+        2005
+      ],
+      "seasons_entirely_missing": []
+    },
+    {
+      "column": "total_home_rush_epa",
+      "definition": "Cumulative total rushing EPA for the home team in the game so far.",
+      "provider_type": "numeric",
+      "stored_type": "double",
+      "seasons_with_values": [
+        2000,
+        2001,
+        2002,
+        2003,
+        2004,
+        2005
+      ],
+      "seasons_entirely_missing": []
+    },
+    {
+      "column": "total_away_rush_epa",
+      "definition": "Cumulative total rushing EPA for the away team in the game so far.",
+      "provider_type": "numeric",
+      "stored_type": "double",
+      "seasons_with_values": [
+        2000,
+        2001,
+        2002,
+        2003,
+        2004,
+        2005
+      ],
+      "seasons_entirely_missing": []
+    },
+    {
+      "column": "total_home_pass_epa",
+      "definition": "Cumulative total passing EPA for the home team in the game so far.",
+      "provider_type": "numeric",
+      "stored_type": "double",
+      "seasons_with_values": [
+        2000,
+        2001,
+        2002,
+        2003,
+        2004,
+        2005
+      ],
+      "seasons_entirely_missing": []
+    },
+    {
+      "column": "total_away_pass_epa",
+      "definition": "Cumulative total passing EPA for the away team in the game so far.",
+      "provider_type": "numeric",
+      "stored_type": "double",
+      "seasons_with_values": [
+        2000,
+        2001,
+        2002,
+        2003,
+        2004,
+        2005
+      ],
+      "seasons_entirely_missing": []
+    },
+    {
+      "column": "air_epa",
+      "definition": "EPA from the air yards alone. For completions this represents the actual value provided through the air. For incompletions this represents the hypothetical value that could've been added through the air if the pass was completed.",
+      "provider_type": "numeric",
+      "stored_type": "double",
+      "seasons_with_values": [],
+      "seasons_entirely_missing": [
+        2000,
+        2001,
+        2002,
+        2003,
+        2004,
+        2005
+      ]
+    },
+    {
+      "column": "yac_epa",
+      "definition": "EPA from the yards after catch alone. For completions this represents the actual value provided after the catch. For incompletions this represents the difference between the hypothetical air_epa and the play's raw observed EPA (how much the incomplete pass cost the posteam).",
+      "provider_type": "numeric",
+      "stored_type": "double",
+      "seasons_with_values": [],
+      "seasons_entirely_missing": [
+        2000,
+        2001,
+        2002,
+        2003,
+        2004,
+        2005
+      ]
+    },
+    {
+      "column": "comp_air_epa",
+      "definition": "EPA from the air yards alone only for completions.",
+      "provider_type": "numeric",
+      "stored_type": "double",
+      "seasons_with_values": [],
+      "seasons_entirely_missing": [
+        2000,
+        2001,
+        2002,
+        2003,
+        2004,
+        2005
+      ]
+    },
+    {
+      "column": "comp_yac_epa",
+      "definition": "EPA from the yards after catch alone only for completions.",
+      "provider_type": "numeric",
+      "stored_type": "double",
+      "seasons_with_values": [],
+      "seasons_entirely_missing": [
+        2000,
+        2001,
+        2002,
+        2003,
+        2004,
+        2005
+      ]
+    },
+    {
+      "column": "total_home_comp_air_epa",
+      "definition": "Cumulative total completions air EPA for the home team in the game so far.",
+      "provider_type": "numeric",
+      "stored_type": "double",
+      "seasons_with_values": [],
+      "seasons_entirely_missing": [
+        2000,
+        2001,
+        2002,
+        2003,
+        2004,
+        2005
+      ]
+    },
+    {
+      "column": "total_away_comp_air_epa",
+      "definition": "Cumulative total completions air EPA for the away team in the game so far.",
+      "provider_type": "numeric",
+      "stored_type": "double",
+      "seasons_with_values": [],
+      "seasons_entirely_missing": [
+        2000,
+        2001,
+        2002,
+        2003,
+        2004,
+        2005
+      ]
+    },
+    {
+      "column": "total_home_comp_yac_epa",
+      "definition": "Cumulative total completions yac EPA for the home team in the game so far.",
+      "provider_type": "numeric",
+      "stored_type": "double",
+      "seasons_with_values": [],
+      "seasons_entirely_missing": [
+        2000,
+        2001,
+        2002,
+        2003,
+        2004,
+        2005
+      ]
+    },
+    {
+      "column": "total_away_comp_yac_epa",
+      "definition": "Cumulative total completions yac EPA for the away team in the game so far.",
+      "provider_type": "numeric",
+      "stored_type": "double",
+      "seasons_with_values": [],
+      "seasons_entirely_missing": [
+        2000,
+        2001,
+        2002,
+        2003,
+        2004,
+        2005
+      ]
+    },
+    {
+      "column": "total_home_raw_air_epa",
+      "definition": "Cumulative total raw air EPA for the home team in the game so far.",
+      "provider_type": "numeric",
+      "stored_type": "double",
+      "seasons_with_values": [],
+      "seasons_entirely_missing": [
+        2000,
+        2001,
+        2002,
+        2003,
+        2004,
+        2005
+      ]
+    },
+    {
+      "column": "total_away_raw_air_epa",
+      "definition": "Cumulative total raw air EPA for the away team in the game so far.",
+      "provider_type": "numeric",
+      "stored_type": "double",
+      "seasons_with_values": [],
+      "seasons_entirely_missing": [
+        2000,
+        2001,
+        2002,
+        2003,
+        2004,
+        2005
+      ]
+    },
+    {
+      "column": "total_home_raw_yac_epa",
+      "definition": "Cumulative total raw yac EPA for the home team in the game so far.",
+      "provider_type": "numeric",
+      "stored_type": "double",
+      "seasons_with_values": [],
+      "seasons_entirely_missing": [
+        2000,
+        2001,
+        2002,
+        2003,
+        2004,
+        2005
+      ]
+    },
+    {
+      "column": "total_away_raw_yac_epa",
+      "definition": "Cumulative total raw yac EPA for the away team in the game so far.",
+      "provider_type": "numeric",
+      "stored_type": "double",
+      "seasons_with_values": [],
+      "seasons_entirely_missing": [
+        2000,
+        2001,
+        2002,
+        2003,
+        2004,
+        2005
+      ]
+    },
+    {
+      "column": "wp",
+      "definition": "Estimated win probabiity for the posteam given the current situation at the start of the given play.",
+      "provider_type": "numeric",
+      "stored_type": "double",
+      "seasons_with_values": [
+        2000,
+        2001,
+        2002,
+        2003,
+        2004,
+        2005
+      ],
+      "seasons_entirely_missing": [],
+      "units_coding": "Model-estimated win probability for posteam (0-1); derived by nflfastR model, not an official record."
+    },
+    {
+      "column": "def_wp",
+      "definition": "Estimated win probability for the defteam.",
+      "provider_type": "numeric",
+      "stored_type": "double",
+      "seasons_with_values": [
+        2000,
+        2001,
+        2002,
+        2003,
+        2004,
+        2005
+      ],
+      "seasons_entirely_missing": [],
+      "units_coding": "Model-estimated win probability for defteam (0-1); nflfastR model output."
+    },
+    {
+      "column": "home_wp",
+      "definition": "Estimated win probability for the home team.",
+      "provider_type": "numeric",
+      "stored_type": "double",
+      "seasons_with_values": [
+        2000,
+        2001,
+        2002,
+        2003,
+        2004,
+        2005
+      ],
+      "seasons_entirely_missing": [],
+      "units_coding": "Model-estimated home win probability (0-1); nflfastR model output."
+    },
+    {
+      "column": "away_wp",
+      "definition": "Estimated win probability for the away team.",
+      "provider_type": "numeric",
+      "stored_type": "double",
+      "seasons_with_values": [
+        2000,
+        2001,
+        2002,
+        2003,
+        2004,
+        2005
+      ],
+      "seasons_entirely_missing": [],
+      "units_coding": "Model-estimated away win probability (0-1); nflfastR model output."
+    },
+    {
+      "column": "wpa",
+      "definition": "Win probability added (WPA) for the posteam.",
+      "provider_type": "numeric",
+      "stored_type": "double",
+      "seasons_with_values": [
+        2000,
+        2001,
+        2002,
+        2003,
+        2004,
+        2005
+      ],
+      "seasons_entirely_missing": [],
+      "units_coding": "Model-estimated win probability added; nflfastR model output."
+    },
+    {
+      "column": "vegas_wpa",
+      "definition": "Win probability added (WPA) for the posteam: spread_adjusted model.",
+      "provider_type": "numeric",
+      "stored_type": "double",
+      "seasons_with_values": [
+        2000,
+        2001,
+        2002,
+        2003,
+        2004,
+        2005
+      ],
+      "seasons_entirely_missing": []
+    },
+    {
+      "column": "vegas_home_wpa",
+      "definition": "Win probability added (WPA) for the home team: spread_adjusted model.",
+      "provider_type": "numeric",
+      "stored_type": "double",
+      "seasons_with_values": [
+        2000,
+        2001,
+        2002,
+        2003,
+        2004,
+        2005
+      ],
+      "seasons_entirely_missing": []
+    },
+    {
+      "column": "home_wp_post",
+      "definition": "Estimated win probability for the home team at the end of the play.",
+      "provider_type": "numeric",
+      "stored_type": "double",
+      "seasons_with_values": [
+        2000,
+        2001,
+        2002,
+        2003,
+        2004,
+        2005
+      ],
+      "seasons_entirely_missing": []
+    },
+    {
+      "column": "away_wp_post",
+      "definition": "Estimated win probability for the away team at the end of the play.",
+      "provider_type": "numeric",
+      "stored_type": "double",
+      "seasons_with_values": [
+        2000,
+        2001,
+        2002,
+        2003,
+        2004,
+        2005
+      ],
+      "seasons_entirely_missing": []
+    },
+    {
+      "column": "vegas_wp",
+      "definition": "Estimated win probabiity for the posteam given the current situation at the start of the given play, incorporating pre-game Vegas line.",
+      "provider_type": "numeric",
+      "stored_type": "double",
+      "seasons_with_values": [
+        2000,
+        2001,
+        2002,
+        2003,
+        2004,
+        2005
+      ],
+      "seasons_entirely_missing": [],
+      "units_coding": "Model-estimated posteam win probability incorporating the spread (0-1); nflfastR model output."
+    },
+    {
+      "column": "vegas_home_wp",
+      "definition": "Estimated win probability for the home team incorporating pre-game Vegas line.",
+      "provider_type": "numeric",
+      "stored_type": "double",
+      "seasons_with_values": [
+        2000,
+        2001,
+        2002,
+        2003,
+        2004,
+        2005
+      ],
+      "seasons_entirely_missing": []
+    },
+    {
+      "column": "total_home_rush_wpa",
+      "definition": "Cumulative total rushing WPA for the home team in the game so far.",
+      "provider_type": "numeric",
+      "stored_type": "double",
+      "seasons_with_values": [
+        2000,
+        2001,
+        2002,
+        2003,
+        2004,
+        2005
+      ],
+      "seasons_entirely_missing": []
+    },
+    {
+      "column": "total_away_rush_wpa",
+      "definition": "Cumulative total rushing WPA for the away team in the game so far.",
+      "provider_type": "numeric",
+      "stored_type": "double",
+      "seasons_with_values": [
+        2000,
+        2001,
+        2002,
+        2003,
+        2004,
+        2005
+      ],
+      "seasons_entirely_missing": []
+    },
+    {
+      "column": "total_home_pass_wpa",
+      "definition": "Cumulative total passing WPA for the home team in the game so far.",
+      "provider_type": "numeric",
+      "stored_type": "double",
+      "seasons_with_values": [
+        2000,
+        2001,
+        2002,
+        2003,
+        2004,
+        2005
+      ],
+      "seasons_entirely_missing": []
+    },
+    {
+      "column": "total_away_pass_wpa",
+      "definition": "Cumulative total passing WPA for the away team in the game so far.",
+      "provider_type": "numeric",
+      "stored_type": "double",
+      "seasons_with_values": [
+        2000,
+        2001,
+        2002,
+        2003,
+        2004,
+        2005
+      ],
+      "seasons_entirely_missing": []
+    },
+    {
+      "column": "air_wpa",
+      "definition": "WPA through the air (same logic as air_epa).",
+      "provider_type": "numeric",
+      "stored_type": "double",
+      "seasons_with_values": [],
+      "seasons_entirely_missing": [
+        2000,
+        2001,
+        2002,
+        2003,
+        2004,
+        2005
+      ]
+    },
+    {
+      "column": "yac_wpa",
+      "definition": "WPA from yards after the catch (same logic as yac_epa).",
+      "provider_type": "numeric",
+      "stored_type": "double",
+      "seasons_with_values": [],
+      "seasons_entirely_missing": [
+        2000,
+        2001,
+        2002,
+        2003,
+        2004,
+        2005
+      ]
+    },
+    {
+      "column": "comp_air_wpa",
+      "definition": "The air_wpa for completions only.",
+      "provider_type": "numeric",
+      "stored_type": "double",
+      "seasons_with_values": [],
+      "seasons_entirely_missing": [
+        2000,
+        2001,
+        2002,
+        2003,
+        2004,
+        2005
+      ]
+    },
+    {
+      "column": "comp_yac_wpa",
+      "definition": "The yac_wpa for completions only.",
+      "provider_type": "numeric",
+      "stored_type": "double",
+      "seasons_with_values": [],
+      "seasons_entirely_missing": [
+        2000,
+        2001,
+        2002,
+        2003,
+        2004,
+        2005
+      ]
+    },
+    {
+      "column": "total_home_comp_air_wpa",
+      "definition": "Cumulative total completions air WPA for the home team in the game so far.",
+      "provider_type": "numeric",
+      "stored_type": "double",
+      "seasons_with_values": [],
+      "seasons_entirely_missing": [
+        2000,
+        2001,
+        2002,
+        2003,
+        2004,
+        2005
+      ]
+    },
+    {
+      "column": "total_away_comp_air_wpa",
+      "definition": "Cumulative total completions air WPA for the away team in the game so far.",
+      "provider_type": "numeric",
+      "stored_type": "double",
+      "seasons_with_values": [],
+      "seasons_entirely_missing": [
+        2000,
+        2001,
+        2002,
+        2003,
+        2004,
+        2005
+      ]
+    },
+    {
+      "column": "total_home_comp_yac_wpa",
+      "definition": "Cumulative total completions yac WPA for the home team in the game so far.",
+      "provider_type": "numeric",
+      "stored_type": "double",
+      "seasons_with_values": [],
+      "seasons_entirely_missing": [
+        2000,
+        2001,
+        2002,
+        2003,
+        2004,
+        2005
+      ]
+    },
+    {
+      "column": "total_away_comp_yac_wpa",
+      "definition": "Cumulative total completions yac WPA for the away team in the game so far.",
+      "provider_type": "numeric",
+      "stored_type": "double",
+      "seasons_with_values": [],
+      "seasons_entirely_missing": [
+        2000,
+        2001,
+        2002,
+        2003,
+        2004,
+        2005
+      ]
+    },
+    {
+      "column": "total_home_raw_air_wpa",
+      "definition": "Cumulative total raw air WPA for the home team in the game so far.",
+      "provider_type": "numeric",
+      "stored_type": "double",
+      "seasons_with_values": [],
+      "seasons_entirely_missing": [
+        2000,
+        2001,
+        2002,
+        2003,
+        2004,
+        2005
+      ]
+    },
+    {
+      "column": "total_away_raw_air_wpa",
+      "definition": "Cumulative total raw air WPA for the away team in the game so far.",
+      "provider_type": "numeric",
+      "stored_type": "double",
+      "seasons_with_values": [],
+      "seasons_entirely_missing": [
+        2000,
+        2001,
+        2002,
+        2003,
+        2004,
+        2005
+      ]
+    },
+    {
+      "column": "total_home_raw_yac_wpa",
+      "definition": "Cumulative total raw yac WPA for the home team in the game so far.",
+      "provider_type": "numeric",
+      "stored_type": "double",
+      "seasons_with_values": [],
+      "seasons_entirely_missing": [
+        2000,
+        2001,
+        2002,
+        2003,
+        2004,
+        2005
+      ]
+    },
+    {
+      "column": "total_away_raw_yac_wpa",
+      "definition": "Cumulative total raw yac WPA for the away team in the game so far.",
+      "provider_type": "numeric",
+      "stored_type": "double",
+      "seasons_with_values": [],
+      "seasons_entirely_missing": [
+        2000,
+        2001,
+        2002,
+        2003,
+        2004,
+        2005
+      ]
+    },
+    {
+      "column": "punt_blocked",
+      "definition": "Binary indicator for if the punt was blocked.",
+      "provider_type": "numeric",
+      "stored_type": "double",
+      "seasons_with_values": [
+        2000,
+        2001,
+        2002,
+        2003,
+        2004,
+        2005
+      ],
+      "seasons_entirely_missing": [],
+      "units_coding": "Binary indicator coded 1/0."
+    },
+    {
+      "column": "first_down_rush",
+      "definition": "Binary indicator for if a running play converted the first down.",
+      "provider_type": "numeric",
+      "stored_type": "double",
+      "seasons_with_values": [
+        2000,
+        2001,
+        2002,
+        2003,
+        2004,
+        2005
+      ],
+      "seasons_entirely_missing": [],
+      "units_coding": "Binary indicator coded 1/0."
+    },
+    {
+      "column": "first_down_pass",
+      "definition": "Binary indicator for if a passing play converted the first down.",
+      "provider_type": "numeric",
+      "stored_type": "double",
+      "seasons_with_values": [
+        2000,
+        2001,
+        2002,
+        2003,
+        2004,
+        2005
+      ],
+      "seasons_entirely_missing": [],
+      "units_coding": "Binary indicator coded 1/0."
+    },
+    {
+      "column": "first_down_penalty",
+      "definition": "Binary indicator for if a penalty converted the first down.",
+      "provider_type": "numeric",
+      "stored_type": "double",
+      "seasons_with_values": [
+        2000,
+        2001,
+        2002,
+        2003,
+        2004,
+        2005
+      ],
+      "seasons_entirely_missing": [],
+      "units_coding": "Binary indicator coded 1/0."
+    },
+    {
+      "column": "third_down_converted",
+      "definition": "Binary indicator for if the first down was converted on third down.",
+      "provider_type": "numeric",
+      "stored_type": "double",
+      "seasons_with_values": [
+        2000,
+        2001,
+        2002,
+        2003,
+        2004,
+        2005
+      ],
+      "seasons_entirely_missing": [],
+      "units_coding": "Binary indicator coded 1/0."
+    },
+    {
+      "column": "third_down_failed",
+      "definition": "Binary indicator for if the posteam failed to convert first down on third down.",
+      "provider_type": "numeric",
+      "stored_type": "double",
+      "seasons_with_values": [
+        2000,
+        2001,
+        2002,
+        2003,
+        2004,
+        2005
+      ],
+      "seasons_entirely_missing": [],
+      "units_coding": "Binary indicator coded 1/0."
+    },
+    {
+      "column": "fourth_down_converted",
+      "definition": "Binary indicator for if the first down was converted on fourth down.",
+      "provider_type": "numeric",
+      "stored_type": "double",
+      "seasons_with_values": [
+        2000,
+        2001,
+        2002,
+        2003,
+        2004,
+        2005
+      ],
+      "seasons_entirely_missing": [],
+      "units_coding": "Binary indicator coded 1/0."
+    },
+    {
+      "column": "fourth_down_failed",
+      "definition": "Binary indicator for if the posteam failed to convert first down on fourth down.",
+      "provider_type": "numeric",
+      "stored_type": "double",
+      "seasons_with_values": [
+        2000,
+        2001,
+        2002,
+        2003,
+        2004,
+        2005
+      ],
+      "seasons_entirely_missing": [],
+      "units_coding": "Binary indicator coded 1/0."
+    },
+    {
+      "column": "incomplete_pass",
+      "definition": "Binary indicator for if the pass was incomplete.",
+      "provider_type": "numeric",
+      "stored_type": "double",
+      "seasons_with_values": [
+        2000,
+        2001,
+        2002,
+        2003,
+        2004,
+        2005
+      ],
+      "seasons_entirely_missing": [],
+      "units_coding": "Binary indicator coded 1/0."
+    },
+    {
+      "column": "touchback",
+      "definition": "Binary indicator for if a touchback occurred on the play.",
+      "provider_type": "numeric",
+      "stored_type": "double",
+      "seasons_with_values": [
+        2000,
+        2001,
+        2002,
+        2003,
+        2004,
+        2005
+      ],
+      "seasons_entirely_missing": [],
+      "units_coding": "Binary indicator coded 1/0."
+    },
+    {
+      "column": "interception",
+      "definition": "Binary indicator for if the pass was intercepted.",
+      "provider_type": "numeric",
+      "stored_type": "double",
+      "seasons_with_values": [
+        2000,
+        2001,
+        2002,
+        2003,
+        2004,
+        2005
+      ],
+      "seasons_entirely_missing": [],
+      "units_coding": "Binary indicator coded 1/0."
+    },
+    {
+      "column": "punt_inside_twenty",
+      "definition": "Binary indicator for if the punt ended inside the twenty yard line.",
+      "provider_type": "numeric",
+      "stored_type": "double",
+      "seasons_with_values": [
+        2000,
+        2001,
+        2002,
+        2003,
+        2004,
+        2005
+      ],
+      "seasons_entirely_missing": [],
+      "units_coding": "Binary indicator coded 1/0."
+    },
+    {
+      "column": "punt_in_endzone",
+      "definition": "Binary indicator for if the punt was in the endzone.",
+      "provider_type": "numeric",
+      "stored_type": "double",
+      "seasons_with_values": [
+        2000,
+        2001,
+        2002,
+        2003,
+        2004,
+        2005
+      ],
+      "seasons_entirely_missing": [],
+      "units_coding": "Binary indicator coded 1/0."
+    },
+    {
+      "column": "punt_out_of_bounds",
+      "definition": "Binary indicator for if the punt went out of bounds.",
+      "provider_type": "numeric",
+      "stored_type": "double",
+      "seasons_with_values": [
+        2000,
+        2001,
+        2002,
+        2003,
+        2004,
+        2005
+      ],
+      "seasons_entirely_missing": [],
+      "units_coding": "Binary indicator coded 1/0."
+    },
+    {
+      "column": "punt_downed",
+      "definition": "Binary indicator for if the punt was downed.",
+      "provider_type": "numeric",
+      "stored_type": "double",
+      "seasons_with_values": [
+        2000,
+        2001,
+        2002,
+        2003,
+        2004,
+        2005
+      ],
+      "seasons_entirely_missing": [],
+      "units_coding": "Binary indicator coded 1/0."
+    },
+    {
+      "column": "punt_fair_catch",
+      "definition": "Binary indicator for if the punt was caught with a fair catch.",
+      "provider_type": "numeric",
+      "stored_type": "double",
+      "seasons_with_values": [
+        2000,
+        2001,
+        2002,
+        2003,
+        2004,
+        2005
+      ],
+      "seasons_entirely_missing": [],
+      "units_coding": "Binary indicator coded 1/0."
+    },
+    {
+      "column": "kickoff_inside_twenty",
+      "definition": "Binary indicator for if the kickoff ended inside the twenty yard line.",
+      "provider_type": "numeric",
+      "stored_type": "double",
+      "seasons_with_values": [
+        2000,
+        2001,
+        2002,
+        2003,
+        2004,
+        2005
+      ],
+      "seasons_entirely_missing": [],
+      "units_coding": "Binary indicator coded 1/0."
+    },
+    {
+      "column": "kickoff_in_endzone",
+      "definition": "Binary indicator for if the kickoff was in the endzone.",
+      "provider_type": "numeric",
+      "stored_type": "double",
+      "seasons_with_values": [
+        2000,
+        2001,
+        2002,
+        2003,
+        2004,
+        2005
+      ],
+      "seasons_entirely_missing": [],
+      "units_coding": "Binary indicator coded 1/0."
+    },
+    {
+      "column": "kickoff_out_of_bounds",
+      "definition": "Binary indicator for if the kickoff went out of bounds.",
+      "provider_type": "numeric",
+      "stored_type": "double",
+      "seasons_with_values": [
+        2000,
+        2001,
+        2002,
+        2003,
+        2004,
+        2005
+      ],
+      "seasons_entirely_missing": [],
+      "units_coding": "Binary indicator coded 1/0."
+    },
+    {
+      "column": "kickoff_downed",
+      "definition": "Binary indicator for if the kickoff was downed.",
+      "provider_type": "numeric",
+      "stored_type": "double",
+      "seasons_with_values": [
+        2000,
+        2001,
+        2002,
+        2003,
+        2004,
+        2005
+      ],
+      "seasons_entirely_missing": [],
+      "units_coding": "Binary indicator coded 1/0."
+    },
+    {
+      "column": "kickoff_fair_catch",
+      "definition": "Binary indicator for if the kickoff was caught with a fair catch.",
+      "provider_type": "numeric",
+      "stored_type": "double",
+      "seasons_with_values": [
+        2000,
+        2001,
+        2002,
+        2003,
+        2004,
+        2005
+      ],
+      "seasons_entirely_missing": [],
+      "units_coding": "Binary indicator coded 1/0."
+    },
+    {
+      "column": "fumble_forced",
+      "definition": "Binary indicator for if the fumble was forced.",
+      "provider_type": "numeric",
+      "stored_type": "double",
+      "seasons_with_values": [
+        2000,
+        2001,
+        2002,
+        2003,
+        2004,
+        2005
+      ],
+      "seasons_entirely_missing": [],
+      "units_coding": "Binary indicator coded 1/0."
+    },
+    {
+      "column": "fumble_not_forced",
+      "definition": "Binary indicator for if the fumble was not forced.",
+      "provider_type": "numeric",
+      "stored_type": "double",
+      "seasons_with_values": [
+        2000,
+        2001,
+        2002,
+        2003,
+        2004,
+        2005
+      ],
+      "seasons_entirely_missing": [],
+      "units_coding": "Binary indicator coded 1/0."
+    },
+    {
+      "column": "fumble_out_of_bounds",
+      "definition": "Binary indicator for if the fumble went out of bounds.",
+      "provider_type": "numeric",
+      "stored_type": "double",
+      "seasons_with_values": [
+        2000,
+        2001,
+        2002,
+        2003,
+        2004,
+        2005
+      ],
+      "seasons_entirely_missing": [],
+      "units_coding": "Binary indicator coded 1/0."
+    },
+    {
+      "column": "solo_tackle",
+      "definition": "Binary indicator if the play had a solo tackle (could be multiple due to fumbles).",
+      "provider_type": "numeric",
+      "stored_type": "double",
+      "seasons_with_values": [
+        2000,
+        2001,
+        2002,
+        2003,
+        2004,
+        2005
+      ],
+      "seasons_entirely_missing": [],
+      "units_coding": "Binary indicator coded 1/0."
+    },
+    {
+      "column": "safety",
+      "definition": "Binary indicator for whether or not a safety occurred.",
+      "provider_type": "numeric",
+      "stored_type": "double",
+      "seasons_with_values": [
+        2000,
+        2001,
+        2002,
+        2003,
+        2004,
+        2005
+      ],
+      "seasons_entirely_missing": [],
+      "units_coding": "Binary indicator coded 1/0."
+    },
+    {
+      "column": "penalty",
+      "definition": "Binary indicator for whether or not a penalty occurred.",
+      "provider_type": "numeric",
+      "stored_type": "double",
+      "seasons_with_values": [
+        2000,
+        2001,
+        2002,
+        2003,
+        2004,
+        2005
+      ],
+      "seasons_entirely_missing": [],
+      "units_coding": "Binary indicator coded 1/0."
+    },
+    {
+      "column": "tackled_for_loss",
+      "definition": "Binary indicator for whether or not a tackle for loss on a run play occurred.",
+      "provider_type": "numeric",
+      "stored_type": "double",
+      "seasons_with_values": [
+        2000,
+        2001,
+        2002,
+        2003,
+        2004,
+        2005
+      ],
+      "seasons_entirely_missing": [],
+      "units_coding": "Binary indicator coded 1/0."
+    },
+    {
+      "column": "fumble_lost",
+      "definition": "Binary indicator for if the fumble was lost.",
+      "provider_type": "numeric",
+      "stored_type": "double",
+      "seasons_with_values": [
+        2000,
+        2001,
+        2002,
+        2003,
+        2004,
+        2005
+      ],
+      "seasons_entirely_missing": [],
+      "units_coding": "Binary indicator coded 1/0."
+    },
+    {
+      "column": "own_kickoff_recovery",
+      "definition": "Binary indicator for if the kicking team recovered the kickoff.",
+      "provider_type": "numeric",
+      "stored_type": "double",
+      "seasons_with_values": [
+        2000,
+        2001,
+        2002,
+        2003,
+        2004,
+        2005
+      ],
+      "seasons_entirely_missing": [],
+      "units_coding": "Binary indicator coded 1/0."
+    },
+    {
+      "column": "own_kickoff_recovery_td",
+      "definition": "Binary indicator for if the kicking team recovered the kickoff and scored a TD.",
+      "provider_type": "numeric",
+      "stored_type": "double",
+      "seasons_with_values": [
+        2000,
+        2001,
+        2002,
+        2003,
+        2004,
+        2005
+      ],
+      "seasons_entirely_missing": [],
+      "units_coding": "Binary indicator coded 1/0."
+    },
+    {
+      "column": "qb_hit",
+      "definition": "Binary indicator if the QB was hit on the play.",
+      "provider_type": "numeric",
+      "stored_type": "double",
+      "seasons_with_values": [
+        2000,
+        2001,
+        2002,
+        2003,
+        2004,
+        2005
+      ],
+      "seasons_entirely_missing": [],
+      "units_coding": "Binary indicator coded 1/0."
+    },
+    {
+      "column": "rush_attempt",
+      "definition": "Binary indicator for if the play was a run.",
+      "provider_type": "numeric",
+      "stored_type": "double",
+      "seasons_with_values": [
+        2000,
+        2001,
+        2002,
+        2003,
+        2004,
+        2005
+      ],
+      "seasons_entirely_missing": [],
+      "units_coding": "Binary indicator coded 1/0."
+    },
+    {
+      "column": "pass_attempt",
+      "definition": "Binary indicator for if the play was a pass attempt (includes sacks).",
+      "provider_type": "numeric",
+      "stored_type": "double",
+      "seasons_with_values": [
+        2000,
+        2001,
+        2002,
+        2003,
+        2004,
+        2005
+      ],
+      "seasons_entirely_missing": [],
+      "units_coding": "Binary indicator coded 1/0."
+    },
+    {
+      "column": "sack",
+      "definition": "Binary indicator for if the play ended in a sack.",
+      "provider_type": "numeric",
+      "stored_type": "double",
+      "seasons_with_values": [
+        2000,
+        2001,
+        2002,
+        2003,
+        2004,
+        2005
+      ],
+      "seasons_entirely_missing": [],
+      "units_coding": "Binary indicator coded 1/0."
+    },
+    {
+      "column": "touchdown",
+      "definition": "Binary indicator for if the play resulted in a TD.",
+      "provider_type": "numeric",
+      "stored_type": "double",
+      "seasons_with_values": [
+        2000,
+        2001,
+        2002,
+        2003,
+        2004,
+        2005
+      ],
+      "seasons_entirely_missing": [],
+      "units_coding": "Binary indicator coded 1/0."
+    },
+    {
+      "column": "pass_touchdown",
+      "definition": "Binary indicator for if the play resulted in a passing TD.",
+      "provider_type": "numeric",
+      "stored_type": "double",
+      "seasons_with_values": [
+        2000,
+        2001,
+        2002,
+        2003,
+        2004,
+        2005
+      ],
+      "seasons_entirely_missing": [],
+      "units_coding": "Binary indicator coded 1/0."
+    },
+    {
+      "column": "rush_touchdown",
+      "definition": "Binary indicator for if the play resulted in a rushing TD.",
+      "provider_type": "numeric",
+      "stored_type": "double",
+      "seasons_with_values": [
+        2000,
+        2001,
+        2002,
+        2003,
+        2004,
+        2005
+      ],
+      "seasons_entirely_missing": [],
+      "units_coding": "Binary indicator coded 1/0."
+    },
+    {
+      "column": "return_touchdown",
+      "definition": "Binary indicator for if the play resulted in a return TD. Returns may occur on any of: interception, fumble, kickoff, punt, or blocked kicks.",
+      "provider_type": "numeric",
+      "stored_type": "double",
+      "seasons_with_values": [
+        2000,
+        2001,
+        2002,
+        2003,
+        2004,
+        2005
+      ],
+      "seasons_entirely_missing": [],
+      "nflfastR_field_descriptions_definition": "Binary indicator for if the play resulted in a return TD.",
+      "units_coding": "Binary indicator coded 1/0."
+    },
+    {
+      "column": "extra_point_attempt",
+      "definition": "Binary indicator for extra point attempt.",
+      "provider_type": "numeric",
+      "stored_type": "double",
+      "seasons_with_values": [
+        2000,
+        2001,
+        2002,
+        2003,
+        2004,
+        2005
+      ],
+      "seasons_entirely_missing": [],
+      "units_coding": "Binary indicator coded 1/0."
+    },
+    {
+      "column": "two_point_attempt",
+      "definition": "Binary indicator for two point conversion attempt.",
+      "provider_type": "numeric",
+      "stored_type": "double",
+      "seasons_with_values": [
+        2000,
+        2001,
+        2002,
+        2003,
+        2004,
+        2005
+      ],
+      "seasons_entirely_missing": [],
+      "units_coding": "Binary indicator coded 1/0."
+    },
+    {
+      "column": "field_goal_attempt",
+      "definition": "Binary indicator for field goal attempt.",
+      "provider_type": "numeric",
+      "stored_type": "double",
+      "seasons_with_values": [
+        2000,
+        2001,
+        2002,
+        2003,
+        2004,
+        2005
+      ],
+      "seasons_entirely_missing": [],
+      "units_coding": "Binary indicator coded 1/0."
+    },
+    {
+      "column": "kickoff_attempt",
+      "definition": "Binary indicator for kickoff.",
+      "provider_type": "numeric",
+      "stored_type": "double",
+      "seasons_with_values": [
+        2000,
+        2001,
+        2002,
+        2003,
+        2004,
+        2005
+      ],
+      "seasons_entirely_missing": [],
+      "units_coding": "Binary indicator coded 1/0."
+    },
+    {
+      "column": "punt_attempt",
+      "definition": "Binary indicator for punts.",
+      "provider_type": "numeric",
+      "stored_type": "double",
+      "seasons_with_values": [
+        2000,
+        2001,
+        2002,
+        2003,
+        2004,
+        2005
+      ],
+      "seasons_entirely_missing": [],
+      "units_coding": "Binary indicator coded 1/0."
+    },
+    {
+      "column": "fumble",
+      "definition": "Binary indicator for if a fumble occurred.",
+      "provider_type": "numeric",
+      "stored_type": "double",
+      "seasons_with_values": [
+        2000,
+        2001,
+        2002,
+        2003,
+        2004,
+        2005
+      ],
+      "seasons_entirely_missing": [],
+      "units_coding": "Binary indicator coded 1/0."
+    },
+    {
+      "column": "complete_pass",
+      "definition": "Binary indicator for if the pass was completed.",
+      "provider_type": "numeric",
+      "stored_type": "double",
+      "seasons_with_values": [
+        2000,
+        2001,
+        2002,
+        2003,
+        2004,
+        2005
+      ],
+      "seasons_entirely_missing": [],
+      "units_coding": "Binary indicator coded 1/0."
+    },
+    {
+      "column": "assist_tackle",
+      "definition": "Binary indicator for if an assist tackle occurred.",
+      "provider_type": "numeric",
+      "stored_type": "double",
+      "seasons_with_values": [
+        2000,
+        2001,
+        2002,
+        2003,
+        2004,
+        2005
+      ],
+      "seasons_entirely_missing": [],
+      "units_coding": "Binary indicator coded 1/0."
+    },
+    {
+      "column": "lateral_reception",
+      "definition": "Binary indicator for if a lateral occurred on the reception.",
+      "provider_type": "numeric",
+      "stored_type": "double",
+      "seasons_with_values": [
+        2000,
+        2001,
+        2002,
+        2003,
+        2004,
+        2005
+      ],
+      "seasons_entirely_missing": [],
+      "units_coding": "Binary indicator coded 1/0."
+    },
+    {
+      "column": "lateral_rush",
+      "definition": "Binary indicator for if a lateral occurred on a run.",
+      "provider_type": "numeric",
+      "stored_type": "double",
+      "seasons_with_values": [
+        2000,
+        2001,
+        2002,
+        2003,
+        2004,
+        2005
+      ],
+      "seasons_entirely_missing": [],
+      "units_coding": "Binary indicator coded 1/0."
+    },
+    {
+      "column": "lateral_return",
+      "definition": "Binary indicator for if a lateral occurred on a return. Returns may occur on any of: interception, fumble, kickoff, punt, or blocked kicks.",
+      "provider_type": "numeric",
+      "stored_type": "double",
+      "seasons_with_values": [
+        2000,
+        2001,
+        2002,
+        2003,
+        2004,
+        2005
+      ],
+      "seasons_entirely_missing": [],
+      "nflfastR_field_descriptions_definition": "Binary indicator for if a lateral occurred on a return.",
+      "units_coding": "Binary indicator coded 1/0."
+    },
+    {
+      "column": "lateral_recovery",
+      "definition": "Binary indicator for if a lateral occurred on a fumble recovery.",
+      "provider_type": "numeric",
+      "stored_type": "double",
+      "seasons_with_values": [
+        2000,
+        2001,
+        2002,
+        2003,
+        2004,
+        2005
+      ],
+      "seasons_entirely_missing": [],
+      "units_coding": "Binary indicator coded 1/0."
+    },
+    {
+      "column": "passer_player_id",
+      "definition": "Unique identifier for the player that attempted the pass.",
+      "provider_type": "character",
+      "stored_type": "string",
+      "seasons_with_values": [
+        2000,
+        2001,
+        2002,
+        2003,
+        2004,
+        2005
+      ],
+      "seasons_entirely_missing": []
+    },
+    {
+      "column": "passer_player_name",
+      "definition": "String name for the player that attempted the pass.",
+      "provider_type": "character",
+      "stored_type": "string",
+      "seasons_with_values": [
+        2000,
+        2001,
+        2002,
+        2003,
+        2004,
+        2005
+      ],
+      "seasons_entirely_missing": []
+    },
+    {
+      "column": "passing_yards",
+      "definition": "Numeric yards by the passer_player_name, including yards gained in pass plays with laterals. This should equal official passing statistics.",
+      "provider_type": "numeric",
+      "stored_type": "double",
+      "seasons_with_values": [
+        2000,
+        2001,
+        2002,
+        2003,
+        2004,
+        2005
+      ],
+      "seasons_entirely_missing": []
+    },
+    {
+      "column": "receiver_player_id",
+      "definition": "Unique identifier for the receiver that was targeted on the pass.",
+      "provider_type": "character",
+      "stored_type": "string",
+      "seasons_with_values": [
+        2000,
+        2001,
+        2002,
+        2003,
+        2004,
+        2005
+      ],
+      "seasons_entirely_missing": []
+    },
+    {
+      "column": "receiver_player_name",
+      "definition": "String name for the targeted receiver.",
+      "provider_type": "character",
+      "stored_type": "string",
+      "seasons_with_values": [
+        2000,
+        2001,
+        2002,
+        2003,
+        2004,
+        2005
+      ],
+      "seasons_entirely_missing": []
+    },
+    {
+      "column": "receiving_yards",
+      "definition": "Numeric yards by the receiver_player_name, excluding yards gained in pass plays with laterals. This should equal official receiving statistics but could miss yards gained in pass plays with laterals. Please see the description of `lateral_receiver_player_name` for further information.",
+      "provider_type": "numeric",
+      "stored_type": "double",
+      "seasons_with_values": [
+        2000,
+        2001,
+        2002,
+        2003,
+        2004,
+        2005
+      ],
+      "seasons_entirely_missing": []
+    },
+    {
+      "column": "rusher_player_id",
+      "definition": "Unique identifier for the player that attempted the run.",
+      "provider_type": "character",
+      "stored_type": "string",
+      "seasons_with_values": [
+        2000,
+        2001,
+        2002,
+        2003,
+        2004,
+        2005
+      ],
+      "seasons_entirely_missing": []
+    },
+    {
+      "column": "rusher_player_name",
+      "definition": "String name for the player that attempted the run.",
+      "provider_type": "character",
+      "stored_type": "string",
+      "seasons_with_values": [
+        2000,
+        2001,
+        2002,
+        2003,
+        2004,
+        2005
+      ],
+      "seasons_entirely_missing": []
+    },
+    {
+      "column": "rushing_yards",
+      "definition": "Numeric yards by the rusher_player_name, excluding yards gained in rush plays with laterals. This should equal official rushing statistics but could miss yards gained in rush plays with laterals. Please see the description of `lateral_rusher_player_name` for further information.",
+      "provider_type": "numeric",
+      "stored_type": "double",
+      "seasons_with_values": [
+        2000,
+        2001,
+        2002,
+        2003,
+        2004,
+        2005
+      ],
+      "seasons_entirely_missing": []
+    },
+    {
+      "column": "lateral_receiver_player_id",
+      "definition": "Unique identifier for the player that received the last(!) lateral on a pass play.",
+      "provider_type": "character",
+      "stored_type": "string",
+      "seasons_with_values": [
+        2000,
+        2001,
+        2002,
+        2003,
+        2004,
+        2005
+      ],
+      "seasons_entirely_missing": []
+    },
+    {
+      "column": "lateral_receiver_player_name",
+      "definition": "String name for the player that received the last(!) lateral on a pass play. If there were multiple laterals in the same play, this will only be the last player who received a lateral. Please see <https://github.com/mrcaseb/nfl-data/tree/master/data/lateral_yards> for a list of plays where multiple players recorded lateral receiving yards.",
+      "provider_type": "character",
+      "stored_type": "string",
+      "seasons_with_values": [
+        2000,
+        2001,
+        2002,
+        2003,
+        2004,
+        2005
+      ],
+      "seasons_entirely_missing": []
+    },
+    {
+      "column": "lateral_receiving_yards",
+      "definition": "Numeric yards by the `lateral_receiver_player_name` in pass plays with laterals. Please see the description of `lateral_receiver_player_name` for further information.",
+      "provider_type": "numeric",
+      "stored_type": "double",
+      "seasons_with_values": [
+        2000,
+        2001,
+        2002,
+        2003,
+        2004,
+        2005
+      ],
+      "seasons_entirely_missing": []
+    },
+    {
+      "column": "lateral_rusher_player_id",
+      "definition": "Unique identifier for the player that received the last(!) lateral on a run play.",
+      "provider_type": "character",
+      "stored_type": "string",
+      "seasons_with_values": [
+        2000,
+        2001,
+        2002,
+        2004,
+        2005
+      ],
+      "seasons_entirely_missing": [
+        2003
+      ]
+    },
+    {
+      "column": "lateral_rusher_player_name",
+      "definition": "String name for the player that received the last(!) lateral on a run play. If there were multiple laterals in the same play, this will only be the last player who received a lateral. Please see <https://github.com/mrcaseb/nfl-data/tree/master/data/lateral_yards> for a list of plays where multiple players recorded lateral rushing yards.",
+      "provider_type": "character",
+      "stored_type": "string",
+      "seasons_with_values": [
+        2000,
+        2001,
+        2002,
+        2004,
+        2005
+      ],
+      "seasons_entirely_missing": [
+        2003
+      ]
+    },
+    {
+      "column": "lateral_rushing_yards",
+      "definition": "Numeric yards by the `lateral_rusher_player_name` in run plays with laterals. Please see the description of `lateral_rusher_player_name` for further information.",
+      "provider_type": "numeric",
+      "stored_type": "double",
+      "seasons_with_values": [
+        2000,
+        2001,
+        2002,
+        2004,
+        2005
+      ],
+      "seasons_entirely_missing": [
+        2003
+      ]
+    },
+    {
+      "column": "lateral_sack_player_id",
+      "definition": "Unique identifier for the player that received the lateral on a sack.",
+      "provider_type": "character",
+      "stored_type": "string",
+      "seasons_with_values": [],
+      "seasons_entirely_missing": [
+        2000,
+        2001,
+        2002,
+        2003,
+        2004,
+        2005
+      ]
+    },
+    {
+      "column": "lateral_sack_player_name",
+      "definition": "String name for the player that received the lateral on a sack.",
+      "provider_type": "character",
+      "stored_type": "string",
+      "seasons_with_values": [],
+      "seasons_entirely_missing": [
+        2000,
+        2001,
+        2002,
+        2003,
+        2004,
+        2005
+      ]
+    },
+    {
+      "column": "interception_player_id",
+      "definition": "Unique identifier for the player that intercepted the pass.",
+      "provider_type": "character",
+      "stored_type": "string",
+      "seasons_with_values": [
+        2000,
+        2001,
+        2002,
+        2003,
+        2004,
+        2005
+      ],
+      "seasons_entirely_missing": []
+    },
+    {
+      "column": "interception_player_name",
+      "definition": "String name for the player that intercepted the pass.",
+      "provider_type": "character",
+      "stored_type": "string",
+      "seasons_with_values": [
+        2000,
+        2001,
+        2002,
+        2003,
+        2004,
+        2005
+      ],
+      "seasons_entirely_missing": []
+    },
+    {
+      "column": "lateral_interception_player_id",
+      "definition": "Unique indentifier for the player that received the lateral on an interception.",
+      "provider_type": "character",
+      "stored_type": "string",
+      "seasons_with_values": [
+        2000,
+        2001,
+        2002,
+        2003,
+        2004,
+        2005
+      ],
+      "seasons_entirely_missing": []
+    },
+    {
+      "column": "lateral_interception_player_name",
+      "definition": "String name for the player that received the lateral on an interception.",
+      "provider_type": "character",
+      "stored_type": "string",
+      "seasons_with_values": [
+        2000,
+        2001,
+        2002,
+        2003,
+        2004,
+        2005
+      ],
+      "seasons_entirely_missing": []
+    },
+    {
+      "column": "punt_returner_player_id",
+      "definition": "Unique identifier for the punt returner.",
+      "provider_type": "character",
+      "stored_type": "string",
+      "seasons_with_values": [
+        2000,
+        2001,
+        2002,
+        2003,
+        2004,
+        2005
+      ],
+      "seasons_entirely_missing": []
+    },
+    {
+      "column": "punt_returner_player_name",
+      "definition": "String name for the punt returner.",
+      "provider_type": "character",
+      "stored_type": "string",
+      "seasons_with_values": [
+        2000,
+        2001,
+        2002,
+        2003,
+        2004,
+        2005
+      ],
+      "seasons_entirely_missing": []
+    },
+    {
+      "column": "lateral_punt_returner_player_id",
+      "definition": "Unique identifier for the player that received the lateral on a punt return.",
+      "provider_type": "character",
+      "stored_type": "string",
+      "seasons_with_values": [
+        2000,
+        2001,
+        2002,
+        2003,
+        2004,
+        2005
+      ],
+      "seasons_entirely_missing": []
+    },
+    {
+      "column": "lateral_punt_returner_player_name",
+      "definition": "String name for the player that received the lateral on a punt return.",
+      "provider_type": "character",
+      "stored_type": "string",
+      "seasons_with_values": [
+        2000,
+        2001,
+        2002,
+        2003,
+        2004,
+        2005
+      ],
+      "seasons_entirely_missing": []
+    },
+    {
+      "column": "kickoff_returner_player_name",
+      "definition": "String name for the kickoff returner.",
+      "provider_type": "character",
+      "stored_type": "string",
+      "seasons_with_values": [
+        2000,
+        2001,
+        2002,
+        2003,
+        2004,
+        2005
+      ],
+      "seasons_entirely_missing": []
+    },
+    {
+      "column": "kickoff_returner_player_id",
+      "definition": "Unique identifier for the kickoff returner.",
+      "provider_type": "character",
+      "stored_type": "string",
+      "seasons_with_values": [
+        2000,
+        2001,
+        2002,
+        2003,
+        2004,
+        2005
+      ],
+      "seasons_entirely_missing": []
+    },
+    {
+      "column": "lateral_kickoff_returner_player_id",
+      "definition": "Unique identifier for the player that received the lateral on a kickoff return.",
+      "provider_type": "character",
+      "stored_type": "string",
+      "seasons_with_values": [
+        2000,
+        2001,
+        2002,
+        2003,
+        2004,
+        2005
+      ],
+      "seasons_entirely_missing": []
+    },
+    {
+      "column": "lateral_kickoff_returner_player_name",
+      "definition": "String name for the player that received the lateral on a kickoff return.",
+      "provider_type": "character",
+      "stored_type": "string",
+      "seasons_with_values": [
+        2000,
+        2001,
+        2002,
+        2003,
+        2004,
+        2005
+      ],
+      "seasons_entirely_missing": []
+    },
+    {
+      "column": "punter_player_id",
+      "definition": "Unique identifier for the punter.",
+      "provider_type": "character",
+      "stored_type": "string",
+      "seasons_with_values": [
+        2000,
+        2001,
+        2002,
+        2003,
+        2004,
+        2005
+      ],
+      "seasons_entirely_missing": []
+    },
+    {
+      "column": "punter_player_name",
+      "definition": "String name for the punter.",
+      "provider_type": "character",
+      "stored_type": "string",
+      "seasons_with_values": [
+        2000,
+        2001,
+        2002,
+        2003,
+        2004,
+        2005
+      ],
+      "seasons_entirely_missing": []
+    },
+    {
+      "column": "kicker_player_name",
+      "definition": "String name for the kicker on FG or kickoff.",
+      "provider_type": "character",
+      "stored_type": "string",
+      "seasons_with_values": [
+        2000,
+        2001,
+        2002,
+        2003,
+        2004,
+        2005
+      ],
+      "seasons_entirely_missing": []
+    },
+    {
+      "column": "kicker_player_id",
+      "definition": "Unique identifier for the kicker on FG or kickoff.",
+      "provider_type": "character",
+      "stored_type": "string",
+      "seasons_with_values": [
+        2000,
+        2001,
+        2002,
+        2003,
+        2004,
+        2005
+      ],
+      "seasons_entirely_missing": []
+    },
+    {
+      "column": "own_kickoff_recovery_player_id",
+      "definition": "Unique identifier for the player that recovered their own kickoff.",
+      "provider_type": "character",
+      "stored_type": "string",
+      "seasons_with_values": [
+        2000,
+        2001,
+        2002,
+        2003,
+        2004,
+        2005
+      ],
+      "seasons_entirely_missing": []
+    },
+    {
+      "column": "own_kickoff_recovery_player_name",
+      "definition": "String name for the player that recovered their own kickoff.",
+      "provider_type": "character",
+      "stored_type": "string",
+      "seasons_with_values": [
+        2000,
+        2001,
+        2002,
+        2003,
+        2004,
+        2005
+      ],
+      "seasons_entirely_missing": []
+    },
+    {
+      "column": "blocked_player_id",
+      "definition": "Unique identifier for the player that blocked the punt or FG.",
+      "provider_type": "character",
+      "stored_type": "string",
+      "seasons_with_values": [
+        2000,
+        2001,
+        2002,
+        2003,
+        2004,
+        2005
+      ],
+      "seasons_entirely_missing": []
+    },
+    {
+      "column": "blocked_player_name",
+      "definition": "String name for the player that blocked the punt or FG.",
+      "provider_type": "character",
+      "stored_type": "string",
+      "seasons_with_values": [
+        2000,
+        2001,
+        2002,
+        2003,
+        2004,
+        2005
+      ],
+      "seasons_entirely_missing": []
+    },
+    {
+      "column": "tackle_for_loss_1_player_id",
+      "definition": "Unique identifier for one of the potential players with the tackle for loss.",
+      "provider_type": "character",
+      "stored_type": "string",
+      "seasons_with_values": [
+        2000,
+        2001,
+        2002
+      ],
+      "seasons_entirely_missing": [
+        2003,
+        2004,
+        2005
+      ]
+    },
+    {
+      "column": "tackle_for_loss_1_player_name",
+      "definition": "String name for one of the potential players with the tackle for loss.",
+      "provider_type": "character",
+      "stored_type": "string",
+      "seasons_with_values": [
+        2000,
+        2001,
+        2002
+      ],
+      "seasons_entirely_missing": [
+        2003,
+        2004,
+        2005
+      ]
+    },
+    {
+      "column": "tackle_for_loss_2_player_id",
+      "definition": "Unique identifier for one of the potential players with the tackle for loss.",
+      "provider_type": "character",
+      "stored_type": "string",
+      "seasons_with_values": [
+        2001,
+        2002
+      ],
+      "seasons_entirely_missing": [
+        2000,
+        2003,
+        2004,
+        2005
+      ]
+    },
+    {
+      "column": "tackle_for_loss_2_player_name",
+      "definition": "String name for one of the potential players with the tackle for loss.",
+      "provider_type": "character",
+      "stored_type": "string",
+      "seasons_with_values": [
+        2001,
+        2002
+      ],
+      "seasons_entirely_missing": [
+        2000,
+        2003,
+        2004,
+        2005
+      ]
+    },
+    {
+      "column": "qb_hit_1_player_id",
+      "definition": "Unique identifier for one of the potential players that hit the QB. No sack as the QB was not the ball carrier. For sacks please see `sack_player` or `half_sack_*_player`.",
+      "provider_type": "character",
+      "stored_type": "string",
+      "seasons_with_values": [
+        2000,
+        2001,
+        2002,
+        2003
+      ],
+      "seasons_entirely_missing": [
+        2004,
+        2005
+      ]
+    },
+    {
+      "column": "qb_hit_1_player_name",
+      "definition": "String name for one of the potential players that hit the QB. No sack as the QB was not the ball carrier. For sacks please see `sack_player` or `half_sack_*_player`.",
+      "provider_type": "character",
+      "stored_type": "string",
+      "seasons_with_values": [
+        2000,
+        2001,
+        2002,
+        2003
+      ],
+      "seasons_entirely_missing": [
+        2004,
+        2005
+      ]
+    },
+    {
+      "column": "qb_hit_2_player_id",
+      "definition": "Unique identifier for one of the potential players that hit the QB. No sack as the QB was not the ball carrier. For sacks please see `sack_player` or `half_sack_*_player`.",
+      "provider_type": "character",
+      "stored_type": "string",
+      "seasons_with_values": [
+        2000,
+        2001,
+        2002,
+        2003
+      ],
+      "seasons_entirely_missing": [
+        2004,
+        2005
+      ]
+    },
+    {
+      "column": "qb_hit_2_player_name",
+      "definition": "String name for one of the potential players that hit the QB. No sack as the QB was not the ball carrier. For sacks please see `sack_player` or `half_sack_*_player`.",
+      "provider_type": "character",
+      "stored_type": "string",
+      "seasons_with_values": [
+        2000,
+        2001,
+        2002,
+        2003
+      ],
+      "seasons_entirely_missing": [
+        2004,
+        2005
+      ]
+    },
+    {
+      "column": "forced_fumble_player_1_team",
+      "definition": "Team of one of the players with a forced fumble.",
+      "provider_type": "character",
+      "stored_type": "string",
+      "seasons_with_values": [
+        2000,
+        2001,
+        2002,
+        2003,
+        2004,
+        2005
+      ],
+      "seasons_entirely_missing": []
+    },
+    {
+      "column": "forced_fumble_player_1_player_id",
+      "definition": "Unique identifier of one of the players with a forced fumble.",
+      "provider_type": "character",
+      "stored_type": "string",
+      "seasons_with_values": [
+        2000,
+        2001,
+        2002,
+        2003,
+        2004,
+        2005
+      ],
+      "seasons_entirely_missing": []
+    },
+    {
+      "column": "forced_fumble_player_1_player_name",
+      "definition": "String name of one of the players with a forced fumble.",
+      "provider_type": "character",
+      "stored_type": "string",
+      "seasons_with_values": [
+        2000,
+        2001,
+        2002,
+        2003,
+        2004,
+        2005
+      ],
+      "seasons_entirely_missing": []
+    },
+    {
+      "column": "forced_fumble_player_2_team",
+      "definition": "Team of one of the players with a forced fumble.",
+      "provider_type": "character",
+      "stored_type": "string",
+      "seasons_with_values": [
+        2000,
+        2001,
+        2002,
+        2003,
+        2004,
+        2005
+      ],
+      "seasons_entirely_missing": []
+    },
+    {
+      "column": "forced_fumble_player_2_player_id",
+      "definition": "Unique identifier of one of the players with a forced fumble.",
+      "provider_type": "character",
+      "stored_type": "string",
+      "seasons_with_values": [
+        2000,
+        2001,
+        2002,
+        2003,
+        2004,
+        2005
+      ],
+      "seasons_entirely_missing": []
+    },
+    {
+      "column": "forced_fumble_player_2_player_name",
+      "definition": "String name of one of the players with a forced fumble.",
+      "provider_type": "character",
+      "stored_type": "string",
+      "seasons_with_values": [
+        2000,
+        2001,
+        2002,
+        2003,
+        2004,
+        2005
+      ],
+      "seasons_entirely_missing": []
+    },
+    {
+      "column": "solo_tackle_1_team",
+      "definition": "Team of one of the players with a solo tackle.",
+      "provider_type": "character",
+      "stored_type": "string",
+      "seasons_with_values": [
+        2000,
+        2001,
+        2002,
+        2003,
+        2004,
+        2005
+      ],
+      "seasons_entirely_missing": []
+    },
+    {
+      "column": "solo_tackle_2_team",
+      "definition": "Team of one of the players with a solo tackle.",
+      "provider_type": "character",
+      "stored_type": "string",
+      "seasons_with_values": [
+        2000,
+        2001,
+        2002,
+        2003,
+        2004,
+        2005
+      ],
+      "seasons_entirely_missing": []
+    },
+    {
+      "column": "solo_tackle_1_player_id",
+      "definition": "Unique identifier of one of the players with a solo tackle.",
+      "provider_type": "character",
+      "stored_type": "string",
+      "seasons_with_values": [
+        2000,
+        2001,
+        2002,
+        2003,
+        2004,
+        2005
+      ],
+      "seasons_entirely_missing": []
+    },
+    {
+      "column": "solo_tackle_2_player_id",
+      "definition": "Unique identifier of one of the players with a solo tackle.",
+      "provider_type": "character",
+      "stored_type": "string",
+      "seasons_with_values": [
+        2000,
+        2001,
+        2002,
+        2003,
+        2004,
+        2005
+      ],
+      "seasons_entirely_missing": []
+    },
+    {
+      "column": "solo_tackle_1_player_name",
+      "definition": "String name of one of the players with a solo tackle.",
+      "provider_type": "character",
+      "stored_type": "string",
+      "seasons_with_values": [
+        2000,
+        2001,
+        2002,
+        2003,
+        2004,
+        2005
+      ],
+      "seasons_entirely_missing": []
+    },
+    {
+      "column": "solo_tackle_2_player_name",
+      "definition": "String name of one of the players with a solo tackle.",
+      "provider_type": "character",
+      "stored_type": "string",
+      "seasons_with_values": [
+        2000,
+        2001,
+        2002,
+        2003,
+        2004,
+        2005
+      ],
+      "seasons_entirely_missing": []
+    },
+    {
+      "column": "assist_tackle_1_player_id",
+      "definition": "Unique identifier of one of the players with a tackle assist.",
+      "provider_type": "character",
+      "stored_type": "string",
+      "seasons_with_values": [
+        2000,
+        2001,
+        2002,
+        2003,
+        2004,
+        2005
+      ],
+      "seasons_entirely_missing": []
+    },
+    {
+      "column": "assist_tackle_1_player_name",
+      "definition": "String name of one of the players with a tackle assist.",
+      "provider_type": "character",
+      "stored_type": "string",
+      "seasons_with_values": [
+        2000,
+        2001,
+        2002,
+        2003,
+        2004,
+        2005
+      ],
+      "seasons_entirely_missing": []
+    },
+    {
+      "column": "assist_tackle_1_team",
+      "definition": "Team of one of the players with a tackle assist.",
+      "provider_type": "character",
+      "stored_type": "string",
+      "seasons_with_values": [
+        2000,
+        2001,
+        2002,
+        2003,
+        2004,
+        2005
+      ],
+      "seasons_entirely_missing": []
+    },
+    {
+      "column": "assist_tackle_2_player_id",
+      "definition": "Unique identifier of one of the players with a tackle assist.",
+      "provider_type": "character",
+      "stored_type": "string",
+      "seasons_with_values": [
+        2000,
+        2001,
+        2002,
+        2003,
+        2004,
+        2005
+      ],
+      "seasons_entirely_missing": []
+    },
+    {
+      "column": "assist_tackle_2_player_name",
+      "definition": "String name of one of the players with a tackle assist.",
+      "provider_type": "character",
+      "stored_type": "string",
+      "seasons_with_values": [
+        2000,
+        2001,
+        2002,
+        2003,
+        2004,
+        2005
+      ],
+      "seasons_entirely_missing": []
+    },
+    {
+      "column": "assist_tackle_2_team",
+      "definition": "Team of one of the players with a tackle assist.",
+      "provider_type": "character",
+      "stored_type": "string",
+      "seasons_with_values": [
+        2000,
+        2001,
+        2002,
+        2003,
+        2004,
+        2005
+      ],
+      "seasons_entirely_missing": []
+    },
+    {
+      "column": "assist_tackle_3_player_id",
+      "definition": "Unique identifier of one of the players with a tackle assist.",
+      "provider_type": "character",
+      "stored_type": "string",
+      "seasons_with_values": [],
+      "seasons_entirely_missing": [
+        2000,
+        2001,
+        2002,
+        2003,
+        2004,
+        2005
+      ]
+    },
+    {
+      "column": "assist_tackle_3_player_name",
+      "definition": "String name of one of the players with a tackle assist.",
+      "provider_type": "character",
+      "stored_type": "string",
+      "seasons_with_values": [],
+      "seasons_entirely_missing": [
+        2000,
+        2001,
+        2002,
+        2003,
+        2004,
+        2005
+      ]
+    },
+    {
+      "column": "assist_tackle_3_team",
+      "definition": "Team of one of the players with a tackle assist.",
+      "provider_type": "character",
+      "stored_type": "string",
+      "seasons_with_values": [],
+      "seasons_entirely_missing": [
+        2000,
+        2001,
+        2002,
+        2003,
+        2004,
+        2005
+      ]
+    },
+    {
+      "column": "assist_tackle_4_player_id",
+      "definition": "Unique identifier of one of the players with a tackle assist.",
+      "provider_type": "character",
+      "stored_type": "string",
+      "seasons_with_values": [],
+      "seasons_entirely_missing": [
+        2000,
+        2001,
+        2002,
+        2003,
+        2004,
+        2005
+      ]
+    },
+    {
+      "column": "assist_tackle_4_player_name",
+      "definition": "String name of one of the players with a tackle assist.",
+      "provider_type": "character",
+      "stored_type": "string",
+      "seasons_with_values": [],
+      "seasons_entirely_missing": [
+        2000,
+        2001,
+        2002,
+        2003,
+        2004,
+        2005
+      ]
+    },
+    {
+      "column": "assist_tackle_4_team",
+      "definition": "Team of one of the players with a tackle assist.",
+      "provider_type": "character",
+      "stored_type": "string",
+      "seasons_with_values": [],
+      "seasons_entirely_missing": [
+        2000,
+        2001,
+        2002,
+        2003,
+        2004,
+        2005
+      ]
+    },
+    {
+      "column": "tackle_with_assist",
+      "definition": "Binary indicator for if there has been a tackle with assist.",
+      "provider_type": "numeric",
+      "stored_type": "double",
+      "seasons_with_values": [
+        2000,
+        2001,
+        2002,
+        2003,
+        2004,
+        2005
+      ],
+      "seasons_entirely_missing": [],
+      "units_coding": "Binary indicator coded 1/0."
+    },
+    {
+      "column": "tackle_with_assist_1_player_id",
+      "definition": "Unique identifier of one of the players with a tackle with assist.",
+      "provider_type": "character",
+      "stored_type": "string",
+      "seasons_with_values": [
+        2000,
+        2001,
+        2002,
+        2003,
+        2004,
+        2005
+      ],
+      "seasons_entirely_missing": []
+    },
+    {
+      "column": "tackle_with_assist_1_player_name",
+      "definition": "String name of one of the players with a tackle with assist.",
+      "provider_type": "character",
+      "stored_type": "string",
+      "seasons_with_values": [
+        2000,
+        2001,
+        2002,
+        2003,
+        2004,
+        2005
+      ],
+      "seasons_entirely_missing": []
+    },
+    {
+      "column": "tackle_with_assist_1_team",
+      "definition": "Team of one of the players with a tackle with assist.",
+      "provider_type": "character",
+      "stored_type": "string",
+      "seasons_with_values": [
+        2000,
+        2001,
+        2002,
+        2003,
+        2004,
+        2005
+      ],
+      "seasons_entirely_missing": []
+    },
+    {
+      "column": "tackle_with_assist_2_player_id",
+      "definition": "Unique identifier of one of the players with a tackle with assist.",
+      "provider_type": "character",
+      "stored_type": "string",
+      "seasons_with_values": [],
+      "seasons_entirely_missing": [
+        2000,
+        2001,
+        2002,
+        2003,
+        2004,
+        2005
+      ]
+    },
+    {
+      "column": "tackle_with_assist_2_player_name",
+      "definition": "String name of one of the players with a tackle with assist.",
+      "provider_type": "character",
+      "stored_type": "string",
+      "seasons_with_values": [],
+      "seasons_entirely_missing": [
+        2000,
+        2001,
+        2002,
+        2003,
+        2004,
+        2005
+      ]
+    },
+    {
+      "column": "tackle_with_assist_2_team",
+      "definition": "Team of one of the players with a tackle with assist.",
+      "provider_type": "character",
+      "stored_type": "string",
+      "seasons_with_values": [],
+      "seasons_entirely_missing": [
+        2000,
+        2001,
+        2002,
+        2003,
+        2004,
+        2005
+      ]
+    },
+    {
+      "column": "pass_defense_1_player_id",
+      "definition": "Unique identifier of one of the players with a pass defense.",
+      "provider_type": "character",
+      "stored_type": "string",
+      "seasons_with_values": [
+        2000,
+        2001,
+        2002,
+        2003,
+        2004,
+        2005
+      ],
+      "seasons_entirely_missing": []
+    },
+    {
+      "column": "pass_defense_1_player_name",
+      "definition": "String name of one of the players with a pass defense.",
+      "provider_type": "character",
+      "stored_type": "string",
+      "seasons_with_values": [
+        2000,
+        2001,
+        2002,
+        2003,
+        2004,
+        2005
+      ],
+      "seasons_entirely_missing": []
+    },
+    {
+      "column": "pass_defense_2_player_id",
+      "definition": "Unique identifier of one of the players with a pass defense.",
+      "provider_type": "character",
+      "stored_type": "string",
+      "seasons_with_values": [
+        2000,
+        2001,
+        2002,
+        2003,
+        2004,
+        2005
+      ],
+      "seasons_entirely_missing": []
+    },
+    {
+      "column": "pass_defense_2_player_name",
+      "definition": "String name of one of the players with a pass defense.",
+      "provider_type": "character",
+      "stored_type": "string",
+      "seasons_with_values": [
+        2000,
+        2001,
+        2002,
+        2003,
+        2004,
+        2005
+      ],
+      "seasons_entirely_missing": []
+    },
+    {
+      "column": "fumbled_1_team",
+      "definition": "Team of one of the first player with a fumble.",
+      "provider_type": "character",
+      "stored_type": "string",
+      "seasons_with_values": [
+        2000,
+        2001,
+        2002,
+        2003,
+        2004,
+        2005
+      ],
+      "seasons_entirely_missing": []
+    },
+    {
+      "column": "fumbled_1_player_id",
+      "definition": "Unique identifier of the first player who fumbled on the play.",
+      "provider_type": "character",
+      "stored_type": "string",
+      "seasons_with_values": [
+        2000,
+        2001,
+        2002,
+        2003,
+        2004,
+        2005
+      ],
+      "seasons_entirely_missing": []
+    },
+    {
+      "column": "fumbled_1_player_name",
+      "definition": "String name of one of the first player who fumbled on the play.",
+      "provider_type": "character",
+      "stored_type": "string",
+      "seasons_with_values": [
+        2000,
+        2001,
+        2002,
+        2003,
+        2004,
+        2005
+      ],
+      "seasons_entirely_missing": []
+    },
+    {
+      "column": "fumbled_2_player_id",
+      "definition": "Unique identifier of the second player who fumbled on the play.",
+      "provider_type": "character",
+      "stored_type": "string",
+      "seasons_with_values": [
+        2000,
+        2001,
+        2002,
+        2003,
+        2004,
+        2005
+      ],
+      "seasons_entirely_missing": []
+    },
+    {
+      "column": "fumbled_2_player_name",
+      "definition": "String name of one of the second player who fumbled on the play.",
+      "provider_type": "character",
+      "stored_type": "string",
+      "seasons_with_values": [
+        2000,
+        2001,
+        2002,
+        2003,
+        2004,
+        2005
+      ],
+      "seasons_entirely_missing": []
+    },
+    {
+      "column": "fumbled_2_team",
+      "definition": "Team of one of the second player with a fumble.",
+      "provider_type": "character",
+      "stored_type": "string",
+      "seasons_with_values": [
+        2000,
+        2001,
+        2002,
+        2003,
+        2004,
+        2005
+      ],
+      "seasons_entirely_missing": []
+    },
+    {
+      "column": "fumble_recovery_1_team",
+      "definition": "Team of one of the players with a fumble recovery.",
+      "provider_type": "character",
+      "stored_type": "string",
+      "seasons_with_values": [
+        2000,
+        2001,
+        2002,
+        2003,
+        2004,
+        2005
+      ],
+      "seasons_entirely_missing": []
+    },
+    {
+      "column": "fumble_recovery_1_yards",
+      "definition": "Yards gained by one of the players with a fumble recovery.",
+      "provider_type": "numeric",
+      "stored_type": "double",
+      "seasons_with_values": [
+        2000,
+        2001,
+        2002,
+        2003,
+        2004,
+        2005
+      ],
+      "seasons_entirely_missing": []
+    },
+    {
+      "column": "fumble_recovery_1_player_id",
+      "definition": "Unique identifier of one of the players with a fumble recovery.",
+      "provider_type": "character",
+      "stored_type": "string",
+      "seasons_with_values": [
+        2000,
+        2001,
+        2002,
+        2003,
+        2004,
+        2005
+      ],
+      "seasons_entirely_missing": []
+    },
+    {
+      "column": "fumble_recovery_1_player_name",
+      "definition": "String name of one of the players with a fumble recovery.",
+      "provider_type": "character",
+      "stored_type": "string",
+      "seasons_with_values": [
+        2000,
+        2001,
+        2002,
+        2003,
+        2004,
+        2005
+      ],
+      "seasons_entirely_missing": []
+    },
+    {
+      "column": "fumble_recovery_2_team",
+      "definition": "Team of one of the players with a fumble recovery.",
+      "provider_type": "character",
+      "stored_type": "string",
+      "seasons_with_values": [
+        2000,
+        2001,
+        2002,
+        2003,
+        2004,
+        2005
+      ],
+      "seasons_entirely_missing": []
+    },
+    {
+      "column": "fumble_recovery_2_yards",
+      "definition": "Yards gained by one of the players with a fumble recovery.",
+      "provider_type": "numeric",
+      "stored_type": "double",
+      "seasons_with_values": [
+        2000,
+        2001,
+        2002,
+        2003,
+        2004,
+        2005
+      ],
+      "seasons_entirely_missing": []
+    },
+    {
+      "column": "fumble_recovery_2_player_id",
+      "definition": "Unique identifier of one of the players with a fumble recovery.",
+      "provider_type": "character",
+      "stored_type": "string",
+      "seasons_with_values": [
+        2000,
+        2001,
+        2002,
+        2003,
+        2004,
+        2005
+      ],
+      "seasons_entirely_missing": []
+    },
+    {
+      "column": "fumble_recovery_2_player_name",
+      "definition": "String name of one of the players with a fumble recovery.",
+      "provider_type": "character",
+      "stored_type": "string",
+      "seasons_with_values": [
+        2000,
+        2001,
+        2002,
+        2003,
+        2004,
+        2005
+      ],
+      "seasons_entirely_missing": []
+    },
+    {
+      "column": "sack_player_id",
+      "definition": "Unique identifier of the player who recorded a solo sack.",
+      "provider_type": "character",
+      "stored_type": "string",
+      "seasons_with_values": [
+        2000,
+        2001,
+        2002,
+        2003,
+        2004,
+        2005
+      ],
+      "seasons_entirely_missing": []
+    },
+    {
+      "column": "sack_player_name",
+      "definition": "String name of the player who recorded a solo sack.",
+      "provider_type": "character",
+      "stored_type": "string",
+      "seasons_with_values": [
+        2000,
+        2001,
+        2002,
+        2003,
+        2004,
+        2005
+      ],
+      "seasons_entirely_missing": []
+    },
+    {
+      "column": "half_sack_1_player_id",
+      "definition": "Unique identifier of the first player who recorded half a sack.",
+      "provider_type": "character",
+      "stored_type": "string",
+      "seasons_with_values": [
+        2000,
+        2001,
+        2002,
+        2003,
+        2004,
+        2005
+      ],
+      "seasons_entirely_missing": []
+    },
+    {
+      "column": "half_sack_1_player_name",
+      "definition": "String name of the first player who recorded half a sack.",
+      "provider_type": "character",
+      "stored_type": "string",
+      "seasons_with_values": [
+        2000,
+        2001,
+        2002,
+        2003,
+        2004,
+        2005
+      ],
+      "seasons_entirely_missing": []
+    },
+    {
+      "column": "half_sack_2_player_id",
+      "definition": "Unique identifier of the second player who recorded half a sack.",
+      "provider_type": "character",
+      "stored_type": "string",
+      "seasons_with_values": [
+        2000,
+        2001,
+        2002,
+        2003,
+        2004,
+        2005
+      ],
+      "seasons_entirely_missing": []
+    },
+    {
+      "column": "half_sack_2_player_name",
+      "definition": "String name of the second player who recorded half a sack.",
+      "provider_type": "character",
+      "stored_type": "string",
+      "seasons_with_values": [
+        2000,
+        2001,
+        2002,
+        2003,
+        2004,
+        2005
+      ],
+      "seasons_entirely_missing": []
+    },
+    {
+      "column": "return_team",
+      "definition": "String abbreviation of the return team. Returns may occur on any of: interception, fumble, kickoff, punt, or blocked kicks.",
+      "provider_type": "character",
+      "stored_type": "string",
+      "seasons_with_values": [
+        2000,
+        2001,
+        2002,
+        2003,
+        2004,
+        2005
+      ],
+      "seasons_entirely_missing": [],
+      "coding_categories": [
+        "ARI",
+        "ATL",
+        "BAL",
+        "BUF",
+        "CAR",
+        "CHI",
+        "CIN",
+        "CLE",
+        "DAL",
+        "DEN",
+        "DET",
+        "GB",
+        "HOU",
+        "IND",
+        "JAX",
+        "KC",
+        "LA",
+        "LAC",
+        "LV",
+        "MIA",
+        "MIN",
+        "NE",
+        "NO",
+        "NYG",
+        "NYJ",
+        "PHI",
+        "PIT",
+        "SEA",
+        "SF",
+        "TB",
+        "TEN",
+        "WAS"
+      ],
+      "nflfastR_field_descriptions_definition": "String abbreviation of the return team."
+    },
+    {
+      "column": "return_yards",
+      "definition": "Yards gained by the return team. Returns may occur on any of: interception, fumble, kickoff, punt, or blocked kicks.",
+      "provider_type": "numeric",
+      "stored_type": "double",
+      "seasons_with_values": [
+        2000,
+        2001,
+        2002,
+        2003,
+        2004,
+        2005
+      ],
+      "seasons_entirely_missing": [],
+      "nflfastR_field_descriptions_definition": "Yards gained by the return team."
+    },
+    {
+      "column": "penalty_team",
+      "definition": "String abbreviation of the team with the penalty.",
+      "provider_type": "character",
+      "stored_type": "string",
+      "seasons_with_values": [
+        2000,
+        2001,
+        2002,
+        2003,
+        2004,
+        2005
+      ],
+      "seasons_entirely_missing": [],
+      "coding_categories": [
+        "ARI",
+        "ATL",
+        "BAL",
+        "BUF",
+        "CAR",
+        "CHI",
+        "CIN",
+        "CLE",
+        "DAL",
+        "DEN",
+        "DET",
+        "GB",
+        "HOU",
+        "IND",
+        "JAX",
+        "KC",
+        "LA",
+        "LAC",
+        "LV",
+        "MIA",
+        "MIN",
+        "NE",
+        "NO",
+        "NYG",
+        "NYJ",
+        "PHI",
+        "PIT",
+        "SEA",
+        "SF",
+        "TB",
+        "TEN",
+        "WAS"
+      ]
+    },
+    {
+      "column": "penalty_player_id",
+      "definition": "Unique identifier for the player with the penalty.",
+      "provider_type": "character",
+      "stored_type": "string",
+      "seasons_with_values": [
+        2000,
+        2001,
+        2002,
+        2003,
+        2004,
+        2005
+      ],
+      "seasons_entirely_missing": []
+    },
+    {
+      "column": "penalty_player_name",
+      "definition": "String name for the player with the penalty.",
+      "provider_type": "character",
+      "stored_type": "string",
+      "seasons_with_values": [
+        2000,
+        2001,
+        2002,
+        2003,
+        2004,
+        2005
+      ],
+      "seasons_entirely_missing": []
+    },
+    {
+      "column": "penalty_yards",
+      "definition": "Yards gained (or lost) by the posteam from the penalty.",
+      "provider_type": "numeric",
+      "stored_type": "double",
+      "seasons_with_values": [
+        2000,
+        2001,
+        2002,
+        2003,
+        2004,
+        2005
+      ],
+      "seasons_entirely_missing": []
+    },
+    {
+      "column": "replay_or_challenge",
+      "definition": "Binary indicator for whether or not a replay or challenge.",
+      "provider_type": "numeric",
+      "stored_type": "double",
+      "seasons_with_values": [
+        2000,
+        2001,
+        2002,
+        2003,
+        2004,
+        2005
+      ],
+      "seasons_entirely_missing": [],
+      "units_coding": "Binary indicator coded 1/0."
+    },
+    {
+      "column": "replay_or_challenge_result",
+      "definition": "String indicating the result of the replay or challenge.",
+      "provider_type": "character",
+      "stored_type": "string",
+      "seasons_with_values": [
+        2000,
+        2001,
+        2002,
+        2003,
+        2004,
+        2005
+      ],
+      "seasons_entirely_missing": [],
+      "coding_categories": [
+        "denied",
+        "reversed",
+        "upheld"
+      ]
+    },
+    {
+      "column": "penalty_type",
+      "definition": "String indicating the penalty type of the first penalty in the given play. Will be `NA` if `desc` is missing the type.",
+      "provider_type": "character",
+      "stored_type": "string",
+      "seasons_with_values": [
+        2000,
+        2001,
+        2002,
+        2003,
+        2004,
+        2005
+      ],
+      "seasons_entirely_missing": [],
+      "coding_categories": [
+        "Chop Block",
+        "Clipping",
+        "Defensive 12 On-field",
+        "Defensive Delay of Game",
+        "Defensive Holding",
+        "Defensive Offside",
+        "Defensive Pass Interference",
+        "Delay of Game",
+        "Disqualification",
+        "Encroachment",
+        "Face Mask",
+        "Face Mask (5 Yards)",
+        "Fair Catch Interference",
+        "False Start",
+        "Illegal Bat",
+        "Illegal Block Above the Waist",
+        "Illegal Contact",
+        "Illegal Crackback",
+        "Illegal Cut",
+        "Illegal Formation",
+        "Illegal Forward Pass",
+        "Illegal Kick",
+        "Illegal Motion",
+        "Illegal Procedure",
+        "Illegal Receiver Pass",
+        "Illegal Scrimmage Kick",
+        "Illegal Shift",
+        "Illegal Substitution",
+        "Illegal Touch Kick",
+        "Illegal Touch Pass",
+        "Illegal Use of Hands",
+        "Ineligible Downfield Kick",
+        "Ineligible Downfield Pass",
+        "Intentional Grounding",
+        "Interference with Opportunity to Catch",
+        "Invalid Fair Catch Signal",
+        "Kickoff Out of Bounds",
+        "Leaping",
+        "Leverage",
+        "Low Block",
+        "Neutral Zone Infraction",
+        "Offensive 12 On-field",
+        "Offensive Holding",
+        "Offensive Offside",
+        "Offensive Pass Interference",
+        "Offside on Free Kick",
+        "Personal Foul",
+        "Player Out of Bounds on Punt",
+        "Roughing the Kicker",
+        "Roughing the Passer",
+        "Running Into the Kicker",
+        "Short Free Kick",
+        "Taunting",
+        "Tripping",
+        "Unnecessary Roughness",
+        "Unsportsmanlike Conduct"
+      ]
+    },
+    {
+      "column": "defensive_two_point_attempt",
+      "definition": "Binary indicator whether or not the defense was able to have an attempt on a two point conversion, this results following a turnover.",
+      "provider_type": "numeric",
+      "stored_type": "double",
+      "seasons_with_values": [
+        2000,
+        2001,
+        2002,
+        2003,
+        2004,
+        2005
+      ],
+      "seasons_entirely_missing": [],
+      "units_coding": "Binary indicator coded 1/0."
+    },
+    {
+      "column": "defensive_two_point_conv",
+      "definition": "Binary indicator whether or not the defense successfully scored on the two point conversion.",
+      "provider_type": "numeric",
+      "stored_type": "double",
+      "seasons_with_values": [
+        2000,
+        2001,
+        2002,
+        2003,
+        2004,
+        2005
+      ],
+      "seasons_entirely_missing": [],
+      "units_coding": "Binary indicator coded 1/0."
+    },
+    {
+      "column": "defensive_extra_point_attempt",
+      "definition": "Binary indicator whether or not the defense was able to have an attempt on an extra point attempt, this results following a blocked attempt that the defense recovers the ball.",
+      "provider_type": "numeric",
+      "stored_type": "double",
+      "seasons_with_values": [
+        2000,
+        2001,
+        2002,
+        2003,
+        2004,
+        2005
+      ],
+      "seasons_entirely_missing": [],
+      "units_coding": "Binary indicator coded 1/0."
+    },
+    {
+      "column": "defensive_extra_point_conv",
+      "definition": "Binary indicator whether or not the defense successfully scored on an extra point attempt.",
+      "provider_type": "numeric",
+      "stored_type": "double",
+      "seasons_with_values": [
+        2000,
+        2001,
+        2002,
+        2003,
+        2004,
+        2005
+      ],
+      "seasons_entirely_missing": [],
+      "units_coding": "Binary indicator coded 1/0."
+    },
+    {
+      "column": "safety_player_name",
+      "definition": "String name for the player who scored a safety.",
+      "provider_type": "character",
+      "stored_type": "string",
+      "seasons_with_values": [
+        2000,
+        2001,
+        2002,
+        2003,
+        2004,
+        2005
+      ],
+      "seasons_entirely_missing": []
+    },
+    {
+      "column": "safety_player_id",
+      "definition": "Unique identifier for the player who scored a safety.",
+      "provider_type": "character",
+      "stored_type": "string",
+      "seasons_with_values": [
+        2000,
+        2001,
+        2002,
+        2003,
+        2004,
+        2005
+      ],
+      "seasons_entirely_missing": []
+    },
+    {
+      "column": "season",
+      "definition": "4 digit number indicating to which season the game belongs to.",
+      "provider_type": "numeric",
+      "stored_type": "int32",
+      "seasons_with_values": [
+        2000,
+        2001,
+        2002,
+        2003,
+        2004,
+        2005
+      ],
+      "seasons_entirely_missing": [],
+      "units_coding": "Four-digit season year; January/February games carry the prior calendar year."
+    },
+    {
+      "column": "cp",
+      "definition": "Numeric value indicating the probability for a complete pass based on comparable game situations.",
+      "provider_type": "numeric",
+      "stored_type": "double",
+      "seasons_with_values": [],
+      "seasons_entirely_missing": [
+        2000,
+        2001,
+        2002,
+        2003,
+        2004,
+        2005
+      ]
+    },
+    {
+      "column": "cpoe",
+      "definition": "For a single pass play this is 1 - cp when the pass was completed or 0 - cp when the pass was incomplete. Analyzed for a whole game or season an indicator for the passer how much over or under expectation his completion percentage was.",
+      "provider_type": "numeric",
+      "stored_type": "double",
+      "seasons_with_values": [],
+      "seasons_entirely_missing": [
+        2000,
+        2001,
+        2002,
+        2003,
+        2004,
+        2005
+      ]
+    },
+    {
+      "column": "series",
+      "definition": "Starts at 1, each new first down increments, numbers shared across both teams NA: kickoffs, extra point/two point conversion attempts, non-plays, no posteam",
+      "provider_type": "numeric",
+      "stored_type": "double",
+      "seasons_with_values": [
+        2000,
+        2001,
+        2002,
+        2003,
+        2004,
+        2005
+      ],
+      "seasons_entirely_missing": []
+    },
+    {
+      "column": "series_success",
+      "definition": "1: scored touchdown, gained enough yards for first down.",
+      "provider_type": "numeric",
+      "stored_type": "double",
+      "seasons_with_values": [
+        2000,
+        2001,
+        2002,
+        2003,
+        2004,
+        2005
+      ],
+      "seasons_entirely_missing": []
+    },
+    {
+      "column": "series_result",
+      "definition": "Possible values: First down, Touchdown, Opp touchdown, Field goal, Missed field goal, Safety, Turnover, Punt, Turnover on downs, QB kneel, End of half",
+      "provider_type": "character",
+      "stored_type": "string",
+      "seasons_with_values": [
+        2000,
+        2001,
+        2002,
+        2003,
+        2004,
+        2005
+      ],
+      "seasons_entirely_missing": [],
+      "coding_categories": [
+        "End of half",
+        "Field goal",
+        "First down",
+        "Missed field goal",
+        "Opp touchdown",
+        "Punt",
+        "QB kneel",
+        "Safety",
+        "Touchdown",
+        "Turnover",
+        "Turnover on downs"
+      ]
+    },
+    {
+      "column": "order_sequence",
+      "definition": "Column provided by NFL to fix out-of-order plays. Available 2011 and beyond with source \"nfl\".",
+      "provider_type": "numeric",
+      "stored_type": "double",
+      "seasons_with_values": [
+        2001,
+        2002,
+        2003,
+        2004,
+        2005
+      ],
+      "seasons_entirely_missing": [
+        2000
+      ]
+    },
+    {
+      "column": "start_time",
+      "definition": "Kickoff time in eastern time zone.",
+      "provider_type": "character",
+      "stored_type": "string",
+      "seasons_with_values": [
+        2001,
+        2002,
+        2003,
+        2004,
+        2005
+      ],
+      "seasons_entirely_missing": [
+        2000
+      ],
+      "units_coding": "Text kickoff time as recorded in the source feed."
+    },
+    {
+      "column": "time_of_day",
+      "definition": "Time of day of play in UTC \"HH:MM:SS\" format. Available 2011 and beyond with source \"nfl\".",
+      "provider_type": "character",
+      "stored_type": "string",
+      "seasons_with_values": [
+        2001,
+        2002,
+        2003,
+        2004,
+        2005
+      ],
+      "seasons_entirely_missing": [
+        2000
+      ],
+      "units_coding": "Text UTC time of day of the play as recorded in the source feed."
+    },
+    {
+      "column": "stadium",
+      "definition": "Game site name.",
+      "provider_type": "character",
+      "stored_type": "string",
+      "seasons_with_values": [
+        2001,
+        2002,
+        2003,
+        2004,
+        2005
+      ],
+      "seasons_entirely_missing": [
+        2000
+      ],
+      "units_coding": "Free-text stadium name."
+    },
+    {
+      "column": "weather",
+      "definition": "String describing the weather including temperature, humidity and wind (direction and speed). Doesn't change during the game!",
+      "provider_type": "character",
+      "stored_type": "string",
+      "seasons_with_values": [
+        2001,
+        2002,
+        2003,
+        2004,
+        2005
+      ],
+      "seasons_entirely_missing": [
+        2000
+      ],
+      "units_coding": "Free-text weather string (temperature, humidity, wind); constant within game."
+    },
+    {
+      "column": "nfl_api_id",
+      "definition": "UUID of the game in the new NFL API.",
+      "provider_type": "character",
+      "stored_type": "string",
+      "seasons_with_values": [
+        2001,
+        2002,
+        2003,
+        2004,
+        2005
+      ],
+      "seasons_entirely_missing": [
+        2000
+      ]
+    },
+    {
+      "column": "play_clock",
+      "definition": "Time on the playclock when the ball was snapped.",
+      "provider_type": "character",
+      "stored_type": "string",
+      "seasons_with_values": [
+        2001,
+        2002,
+        2003,
+        2004,
+        2005
+      ],
+      "seasons_entirely_missing": [
+        2000
+      ]
+    },
+    {
+      "column": "play_deleted",
+      "definition": "Binary indicator for deleted plays.",
+      "provider_type": "numeric",
+      "stored_type": "double",
+      "seasons_with_values": [
+        2001,
+        2002,
+        2003,
+        2004,
+        2005
+      ],
+      "seasons_entirely_missing": [
+        2000
+      ],
+      "units_coding": "Binary indicator coded 1/0."
+    },
+    {
+      "column": "play_type_nfl",
+      "definition": "Play type as listed in the NFL source. Slightly different to the regular play_type variable.",
+      "provider_type": "character",
+      "stored_type": "string",
+      "seasons_with_values": [
+        2001,
+        2002,
+        2003,
+        2004,
+        2005
+      ],
+      "seasons_entirely_missing": [
+        2000
+      ],
+      "coding_categories": [
+        "COMMENT",
+        "END_GAME",
+        "END_QUARTER",
+        "FIELD_GOAL",
+        "FREE_KICK",
+        "FUMBLE_RECOVERED_BY_OPPONENT",
+        "GAME_START",
+        "INTERCEPTION",
+        "KICK_OFF",
+        "PASS",
+        "PAT2",
+        "PENALTY",
+        "PUNT",
+        "RUSH",
+        "SACK",
+        "TIMEOUT",
+        "UNSPECIFIED",
+        "XP_KICK"
+      ]
+    },
+    {
+      "column": "special_teams_play",
+      "definition": "Binary indicator for whether play is special teams play from NFL source. Available 2011 and beyond with source \"nfl\".",
+      "provider_type": "numeric",
+      "stored_type": "double",
+      "seasons_with_values": [
+        2001,
+        2002,
+        2003,
+        2004,
+        2005
+      ],
+      "seasons_entirely_missing": [
+        2000
+      ],
+      "units_coding": "Binary indicator coded 1/0."
+    },
+    {
+      "column": "st_play_type",
+      "definition": "Type of special teams play from NFL source. Available 2011 and beyond with source \"nfl\".",
+      "provider_type": "character",
+      "stored_type": "string",
+      "seasons_with_values": [
+        2001,
+        2002
+      ],
+      "seasons_entirely_missing": [
+        2000,
+        2003,
+        2004,
+        2005
+      ],
+      "coding_categories": [
+        "PENALTY"
+      ]
+    },
+    {
+      "column": "end_clock_time",
+      "definition": "Game time at the end of a given play.",
+      "provider_type": "character",
+      "stored_type": "string",
+      "seasons_with_values": [
+        2001,
+        2002
+      ],
+      "seasons_entirely_missing": [
+        2000,
+        2003,
+        2004,
+        2005
+      ]
+    },
+    {
+      "column": "end_yard_line",
+      "definition": "String indicating the yardline at the end of the given play consisting of team half and yard line number.",
+      "provider_type": "character",
+      "stored_type": "string",
+      "seasons_with_values": [
+        2001,
+        2002
+      ],
+      "seasons_entirely_missing": [
+        2000,
+        2003,
+        2004,
+        2005
+      ]
+    },
+    {
+      "column": "fixed_drive",
+      "definition": "Manually created drive number in a game.",
+      "provider_type": "numeric",
+      "stored_type": "double",
+      "seasons_with_values": [
+        2000,
+        2001,
+        2002,
+        2003,
+        2004,
+        2005
+      ],
+      "seasons_entirely_missing": []
+    },
+    {
+      "column": "fixed_drive_result",
+      "definition": "Manually created drive result.",
+      "provider_type": "character",
+      "stored_type": "string",
+      "seasons_with_values": [
+        2000,
+        2001,
+        2002,
+        2003,
+        2004,
+        2005
+      ],
+      "seasons_entirely_missing": [],
+      "coding_categories": [
+        "End of half",
+        "Field goal",
+        "Missed field goal",
+        "Opp touchdown",
+        "Punt",
+        "Safety",
+        "Touchdown",
+        "Turnover",
+        "Turnover on downs"
+      ]
+    },
+    {
+      "column": "drive_real_start_time",
+      "definition": "Local day time when the drive started (currently not used by the NFL and therefore mostly 'NA').",
+      "provider_type": "character",
+      "stored_type": "string",
+      "seasons_with_values": [
+        2003,
+        2004,
+        2005
+      ],
+      "seasons_entirely_missing": [
+        2000,
+        2001,
+        2002
+      ]
+    },
+    {
+      "column": "drive_play_count",
+      "definition": "Numeric value of how many regular plays happened in a given drive.",
+      "provider_type": "numeric",
+      "stored_type": "double",
+      "seasons_with_values": [
+        2000,
+        2001,
+        2002,
+        2003,
+        2004,
+        2005
+      ],
+      "seasons_entirely_missing": []
+    },
+    {
+      "column": "drive_time_of_possession",
+      "definition": "Time of possession in a given drive.",
+      "provider_type": "character",
+      "stored_type": "string",
+      "seasons_with_values": [
+        2000,
+        2001,
+        2002,
+        2003,
+        2004,
+        2005
+      ],
+      "seasons_entirely_missing": []
+    },
+    {
+      "column": "drive_first_downs",
+      "definition": "Number of first downs in a given drive.",
+      "provider_type": "numeric",
+      "stored_type": "double",
+      "seasons_with_values": [
+        2000,
+        2001,
+        2002,
+        2003,
+        2004,
+        2005
+      ],
+      "seasons_entirely_missing": []
+    },
+    {
+      "column": "drive_inside20",
+      "definition": "Binary indicator if the offense was able to get inside the opponents 20 yard line.",
+      "provider_type": "numeric",
+      "stored_type": "double",
+      "seasons_with_values": [
+        2000,
+        2001,
+        2002,
+        2003,
+        2004,
+        2005
+      ],
+      "seasons_entirely_missing": [],
+      "units_coding": "Binary indicator coded 1/0."
+    },
+    {
+      "column": "drive_ended_with_score",
+      "definition": "Binary indicator the drive ended with a score.",
+      "provider_type": "numeric",
+      "stored_type": "double",
+      "seasons_with_values": [
+        2000,
+        2001,
+        2002,
+        2003,
+        2004,
+        2005
+      ],
+      "seasons_entirely_missing": [],
+      "coding_categories": [
+        0,
+        1
+      ],
+      "units_coding": "Binary indicator coded 1/0."
+    },
+    {
+      "column": "drive_quarter_start",
+      "definition": "Numeric value indicating in which quarter the given drive has started.",
+      "provider_type": "numeric",
+      "stored_type": "double",
+      "seasons_with_values": [
+        2000,
+        2001,
+        2002,
+        2003,
+        2004,
+        2005
+      ],
+      "seasons_entirely_missing": []
+    },
+    {
+      "column": "drive_quarter_end",
+      "definition": "Numeric value indicating in which quarter the given drive has ended.",
+      "provider_type": "numeric",
+      "stored_type": "double",
+      "seasons_with_values": [
+        2000,
+        2001,
+        2002,
+        2003,
+        2004,
+        2005
+      ],
+      "seasons_entirely_missing": []
+    },
+    {
+      "column": "drive_yards_penalized",
+      "definition": "Numeric value of how many yards the offense gained or lost through penalties in the given drive.",
+      "provider_type": "numeric",
+      "stored_type": "double",
+      "seasons_with_values": [
+        2001,
+        2002,
+        2003,
+        2004,
+        2005
+      ],
+      "seasons_entirely_missing": [
+        2000
+      ]
+    },
+    {
+      "column": "drive_start_transition",
+      "definition": "String indicating how the offense got the ball.",
+      "provider_type": "character",
+      "stored_type": "string",
+      "seasons_with_values": [
+        2000,
+        2001,
+        2002,
+        2003,
+        2004,
+        2005
+      ],
+      "seasons_entirely_missing": [],
+      "coding_categories": [
+        "BLOCKED_FG",
+        "BLOCKED_FG,_DOWNS",
+        "BLOCKED_FG_DOWNS",
+        "BLOCKED_PUNT",
+        "BLOCKED_PUNT,_DOWNS",
+        "BLOCKED_PUNT_DOWNS",
+        "Blocked FG",
+        "Blocked FG, Downs",
+        "Blocked Punt",
+        "Blocked Punt, Downs",
+        "DOWNS",
+        "Downs",
+        "End of Half",
+        "FUMBLE",
+        "Field Goal",
+        "Fumble",
+        "INTERCEPTION",
+        "Interception",
+        "KICKOFF",
+        "MISSED_FG",
+        "MUFFED_KICKOFF",
+        "MUFFED_PUNT",
+        "Missed FG",
+        "ONSIDE_KICK",
+        "OWN_KICKOFF",
+        "PUNT",
+        "Punt",
+        "Safety",
+        "Touchdown",
+        "UNKNOWN"
+      ]
+    },
+    {
+      "column": "drive_end_transition",
+      "definition": "String indicating how the offense lost the ball.",
+      "provider_type": "character",
+      "stored_type": "string",
+      "seasons_with_values": [
+        2000,
+        2001,
+        2002,
+        2003,
+        2004,
+        2005
+      ],
+      "seasons_entirely_missing": [],
+      "coding_categories": [
+        "BLOCKED_FG",
+        "BLOCKED_FG,_DOWNS",
+        "BLOCKED_FG_DOWNS",
+        "BLOCKED_PUNT",
+        "BLOCKED_PUNT,_DOWNS",
+        "BLOCKED_PUNT_DOWNS",
+        "Blocked FG",
+        "Blocked FG, Downs",
+        "Blocked Punt",
+        "Blocked Punt, Downs",
+        "DOWNS",
+        "Downs",
+        "END_GAME",
+        "END_HALF",
+        "End of Game",
+        "End of Half",
+        "FIELD_GOAL",
+        "FUMBLE",
+        "FUMBLE,_SAFETY",
+        "FUMBLE_SAFETY",
+        "Field Goal",
+        "Fumble",
+        "INTERCEPTION",
+        "Interception",
+        "MISSED_FG",
+        "Missed FG",
+        "PUNT",
+        "Punt",
+        "SAFETY",
+        "Safety",
+        "TOUCHDOWN",
+        "Touchdown",
+        "UNKNOWN"
+      ]
+    },
+    {
+      "column": "drive_game_clock_start",
+      "definition": "Game time at the beginning of a given drive.",
+      "provider_type": "character",
+      "stored_type": "string",
+      "seasons_with_values": [
+        2000,
+        2001,
+        2002,
+        2003,
+        2004,
+        2005
+      ],
+      "seasons_entirely_missing": []
+    },
+    {
+      "column": "drive_game_clock_end",
+      "definition": "Game time at the end of a given drive.",
+      "provider_type": "character",
+      "stored_type": "string",
+      "seasons_with_values": [
+        2000,
+        2001,
+        2002,
+        2003,
+        2004,
+        2005
+      ],
+      "seasons_entirely_missing": []
+    },
+    {
+      "column": "drive_start_yard_line",
+      "definition": "String indicating where a given drive started consisting of team half and yard line number.",
+      "provider_type": "character",
+      "stored_type": "string",
+      "seasons_with_values": [
+        2000,
+        2001,
+        2002,
+        2003,
+        2004,
+        2005
+      ],
+      "seasons_entirely_missing": []
+    },
+    {
+      "column": "drive_end_yard_line",
+      "definition": "String indicating where a given drive ended consisting of team half and yard line number.",
+      "provider_type": "character",
+      "stored_type": "string",
+      "seasons_with_values": [
+        2000,
+        2001,
+        2002,
+        2003,
+        2004,
+        2005
+      ],
+      "seasons_entirely_missing": []
+    },
+    {
+      "column": "drive_play_id_started",
+      "definition": "Play_id of the first play in the given drive.",
+      "provider_type": "numeric",
+      "stored_type": "double",
+      "seasons_with_values": [
+        2000,
+        2001,
+        2002,
+        2003,
+        2004,
+        2005
+      ],
+      "seasons_entirely_missing": []
+    },
+    {
+      "column": "drive_play_id_ended",
+      "definition": "Play_id of the last play in the given drive.",
+      "provider_type": "numeric",
+      "stored_type": "double",
+      "seasons_with_values": [
+        2000,
+        2001,
+        2002,
+        2003,
+        2004,
+        2005
+      ],
+      "seasons_entirely_missing": []
+    },
+    {
+      "column": "away_score",
+      "definition": "Total points scored by the away team.",
+      "provider_type": "numeric",
+      "stored_type": "int32",
+      "seasons_with_values": [
+        2000,
+        2001,
+        2002,
+        2003,
+        2004,
+        2005
+      ],
+      "seasons_entirely_missing": [],
+      "units_coding": "Final away team points."
+    },
+    {
+      "column": "home_score",
+      "definition": "Total points scored by the home team.",
+      "provider_type": "numeric",
+      "stored_type": "int32",
+      "seasons_with_values": [
+        2000,
+        2001,
+        2002,
+        2003,
+        2004,
+        2005
+      ],
+      "seasons_entirely_missing": [],
+      "units_coding": "Final home team points."
+    },
+    {
+      "column": "location",
+      "definition": "Either 'Home' o 'Neutral' indicating if the home team played at home or at a neutral site.",
+      "provider_type": "character",
+      "stored_type": "string",
+      "seasons_with_values": [
+        2000,
+        2001,
+        2002,
+        2003,
+        2004,
+        2005
+      ],
+      "seasons_entirely_missing": [],
+      "coding_categories": [
+        "Home",
+        "Neutral"
+      ],
+      "units_coding": "Coded: Home or Neutral."
+    },
+    {
+      "column": "result",
+      "definition": "Equals home_score - away_score and means the game outcome from the perspective of the home team.",
+      "provider_type": "numeric",
+      "stored_type": "int32",
+      "seasons_with_values": [
+        2000,
+        2001,
+        2002,
+        2003,
+        2004,
+        2005
+      ],
+      "seasons_entirely_missing": [],
+      "units_coding": "Home points minus away points at game end."
+    },
+    {
+      "column": "total",
+      "definition": "Equals home_score + away_score and means the total points scored in the given game.",
+      "provider_type": "numeric",
+      "stored_type": "int32",
+      "seasons_with_values": [
+        2000,
+        2001,
+        2002,
+        2003,
+        2004,
+        2005
+      ],
+      "seasons_entirely_missing": [],
+      "units_coding": "Home points plus away points at game end."
+    },
+    {
+      "column": "spread_line",
+      "definition": "The closing spread line for the game. A positive number means the home team was favored by that many points, a negative number means the away team was favored by that many points. (Source: Pro-Football-Reference)",
+      "provider_type": "numeric",
+      "stored_type": "double",
+      "seasons_with_values": [
+        2000,
+        2001,
+        2002,
+        2003,
+        2004,
+        2005
+      ],
+      "seasons_entirely_missing": [],
+      "units_coding": "Closing point spread, in points, from the home team's perspective (provider definition: positive = home team favored)."
+    },
+    {
+      "column": "total_line",
+      "definition": "The closing total line for the game. (Source: Pro-Football-Reference)",
+      "provider_type": "numeric",
+      "stored_type": "double",
+      "seasons_with_values": [
+        2000,
+        2001,
+        2002,
+        2003,
+        2004,
+        2005
+      ],
+      "seasons_entirely_missing": [],
+      "units_coding": "Closing over/under total, in points."
+    },
+    {
+      "column": "div_game",
+      "definition": "Binary indicator for if the given game was a division game.",
+      "provider_type": "numeric",
+      "stored_type": "int32",
+      "seasons_with_values": [
+        2000,
+        2001,
+        2002,
+        2003,
+        2004,
+        2005
+      ],
+      "seasons_entirely_missing": [],
+      "units_coding": "Binary 1/0 indicator of a division game."
+    },
+    {
+      "column": "roof",
+      "definition": "One of 'dome', 'outdoors', 'closed', 'open' indicating indicating the roof status of the stadium the game was played in. (Source: Pro-Football-Reference)",
+      "provider_type": "character",
+      "stored_type": "string",
+      "seasons_with_values": [
+        2000,
+        2001,
+        2002,
+        2003,
+        2004,
+        2005
+      ],
+      "seasons_entirely_missing": [],
+      "coding_categories": [
+        "closed",
+        "dome",
+        "open",
+        "outdoors"
+      ],
+      "units_coding": "Coded: dome, outdoors, closed, open (provider definition)."
+    },
+    {
+      "column": "surface",
+      "definition": "What type of ground the game was played on. (Source: Pro-Football-Reference)",
+      "provider_type": "character",
+      "stored_type": "string",
+      "seasons_with_values": [
+        2000,
+        2001,
+        2002,
+        2003,
+        2004,
+        2005
+      ],
+      "seasons_entirely_missing": [],
+      "coding_categories": [
+        "astroplay",
+        "astroturf",
+        "dessograss",
+        "fieldturf",
+        "grass",
+        "sportturf"
+      ],
+      "units_coding": "Free-text/coded playing-surface type (provider definition)."
+    },
+    {
+      "column": "temp",
+      "definition": "The temperature at the stadium only for 'roof' = 'outdoors' or 'open'.(Source: Pro-Football-Reference)",
+      "provider_type": "numeric",
+      "stored_type": "int32",
+      "seasons_with_values": [
+        2000,
+        2001,
+        2002,
+        2003,
+        2004,
+        2005
+      ],
+      "seasons_entirely_missing": [],
+      "units_coding": "Degrees Fahrenheit; populated only for roof outdoors/open per provider definition."
+    },
+    {
+      "column": "wind",
+      "definition": "The speed of the wind in miles/hour only for 'roof' = 'outdoors' or 'open'. (Source: Pro-Football-Reference)",
+      "provider_type": "numeric",
+      "stored_type": "int32",
+      "seasons_with_values": [
+        2000,
+        2001,
+        2002,
+        2003,
+        2004,
+        2005
+      ],
+      "seasons_entirely_missing": [],
+      "units_coding": "Miles per hour; populated only for roof outdoors/open per provider definition."
+    },
+    {
+      "column": "home_coach",
+      "definition": "First and last name of the home team coach. (Source: Pro-Football-Reference)",
+      "provider_type": "character",
+      "stored_type": "string",
+      "seasons_with_values": [
+        2000,
+        2001,
+        2002,
+        2003,
+        2004,
+        2005
+      ],
+      "seasons_entirely_missing": []
+    },
+    {
+      "column": "away_coach",
+      "definition": "First and last name of the away team coach. (Source: Pro-Football-Reference)",
+      "provider_type": "character",
+      "stored_type": "string",
+      "seasons_with_values": [
+        2000,
+        2001,
+        2002,
+        2003,
+        2004,
+        2005
+      ],
+      "seasons_entirely_missing": []
+    },
+    {
+      "column": "stadium_id",
+      "definition": "ID of the stadium the game was played in. (Source: Pro-Football-Reference)",
+      "provider_type": "character",
+      "stored_type": "string",
+      "seasons_with_values": [
+        2000,
+        2001,
+        2002,
+        2003,
+        2004,
+        2005
+      ],
+      "seasons_entirely_missing": [],
+      "units_coding": "Pro-Football-Reference stadium identifier."
+    },
+    {
+      "column": "game_stadium",
+      "definition": "Name of the stadium the game was played in. (Source: Pro-Football-Reference)",
+      "provider_type": "character",
+      "stored_type": "string",
+      "seasons_with_values": [
+        2000,
+        2001,
+        2002,
+        2003,
+        2004,
+        2005
+      ],
+      "seasons_entirely_missing": [],
+      "units_coding": "Free-text stadium name."
+    },
+    {
+      "column": "aborted_play",
+      "definition": "Binary indicator if the play description indicates \"Aborted\".",
+      "provider_type": "numeric",
+      "stored_type": "double",
+      "seasons_with_values": [
+        2000,
+        2001,
+        2002,
+        2003,
+        2004,
+        2005
+      ],
+      "seasons_entirely_missing": [],
+      "units_coding": "Binary indicator coded 1/0."
+    },
+    {
+      "column": "success",
+      "definition": "Binary indicator wheter epa > 0 in the given play.",
+      "provider_type": "numeric",
+      "stored_type": "double",
+      "seasons_with_values": [
+        2000,
+        2001,
+        2002,
+        2003,
+        2004,
+        2005
+      ],
+      "seasons_entirely_missing": [],
+      "units_coding": "Binary indicator coded 1/0."
+    },
+    {
+      "column": "passer",
+      "definition": "Name of the dropback player (scrambles included) including plays with penalties.",
+      "provider_type": "character",
+      "stored_type": "string",
+      "seasons_with_values": [
+        2000,
+        2001,
+        2002,
+        2003,
+        2004,
+        2005
+      ],
+      "seasons_entirely_missing": []
+    },
+    {
+      "column": "passer_jersey_number",
+      "definition": "Jersey number of the passer.",
+      "provider_type": "numeric",
+      "stored_type": "int32",
+      "seasons_with_values": [
+        2001,
+        2002,
+        2003,
+        2004,
+        2005
+      ],
+      "seasons_entirely_missing": [
+        2000
+      ]
+    },
+    {
+      "column": "rusher",
+      "definition": "Name of the rusher (no scrambles) including plays with penalties.",
+      "provider_type": "character",
+      "stored_type": "string",
+      "seasons_with_values": [
+        2000,
+        2001,
+        2002,
+        2003,
+        2004,
+        2005
+      ],
+      "seasons_entirely_missing": []
+    },
+    {
+      "column": "rusher_jersey_number",
+      "definition": "Jersey number of the rusher.",
+      "provider_type": "numeric",
+      "stored_type": "int32",
+      "seasons_with_values": [
+        2001,
+        2002,
+        2003,
+        2004,
+        2005
+      ],
+      "seasons_entirely_missing": [
+        2000
+      ]
+    },
+    {
+      "column": "receiver",
+      "definition": "Name of the receiver including plays with penalties.",
+      "provider_type": "character",
+      "stored_type": "string",
+      "seasons_with_values": [
+        2000,
+        2001,
+        2002,
+        2003,
+        2004,
+        2005
+      ],
+      "seasons_entirely_missing": []
+    },
+    {
+      "column": "receiver_jersey_number",
+      "definition": "Jersey number of the receiver.",
+      "provider_type": "numeric",
+      "stored_type": "int32",
+      "seasons_with_values": [
+        2001,
+        2002,
+        2003,
+        2004,
+        2005
+      ],
+      "seasons_entirely_missing": [
+        2000
+      ]
+    },
+    {
+      "column": "pass",
+      "definition": "Binary indicator if the play was a pass play (sacks and scrambles included).",
+      "provider_type": "numeric",
+      "stored_type": "double",
+      "seasons_with_values": [
+        2000,
+        2001,
+        2002,
+        2003,
+        2004,
+        2005
+      ],
+      "seasons_entirely_missing": [],
+      "units_coding": "Binary indicator coded 1/0."
+    },
+    {
+      "column": "rush",
+      "definition": "Binary indicator if the play was a rushing play.",
+      "provider_type": "numeric",
+      "stored_type": "double",
+      "seasons_with_values": [
+        2000,
+        2001,
+        2002,
+        2003,
+        2004,
+        2005
+      ],
+      "seasons_entirely_missing": [],
+      "units_coding": "Binary indicator coded 1/0."
+    },
+    {
+      "column": "first_down",
+      "definition": "Binary indicator if the play ended in a first down.",
+      "provider_type": "numeric",
+      "stored_type": "double",
+      "seasons_with_values": [
+        2000,
+        2001,
+        2002,
+        2003,
+        2004,
+        2005
+      ],
+      "seasons_entirely_missing": [],
+      "units_coding": "Binary indicator coded 1/0."
+    },
+    {
+      "column": "special",
+      "definition": "Binary indicator if \"play_type\" is one of \"extra_point\", \"field_goal\", \"kickoff\", or \"punt\".",
+      "provider_type": "numeric",
+      "stored_type": "double",
+      "seasons_with_values": [
+        2000,
+        2001,
+        2002,
+        2003,
+        2004,
+        2005
+      ],
+      "seasons_entirely_missing": [],
+      "nflfastR_field_descriptions_definition": "Binary indicator if the play was a special teams play.",
+      "units_coding": "Binary indicator coded 1/0."
+    },
+    {
+      "column": "play",
+      "definition": "Binary indicator: 1 if the play was a 'normal' play (including penalties), 0 otherwise.",
+      "provider_type": "numeric",
+      "stored_type": "double",
+      "seasons_with_values": [
+        2000,
+        2001,
+        2002,
+        2003,
+        2004,
+        2005
+      ],
+      "seasons_entirely_missing": [],
+      "units_coding": "Binary indicator coded 1/0."
+    },
+    {
+      "column": "passer_id",
+      "definition": "ID of the player in the 'passer' column.",
+      "provider_type": "character",
+      "stored_type": "string",
+      "seasons_with_values": [
+        2000,
+        2001,
+        2002,
+        2003,
+        2004,
+        2005
+      ],
+      "seasons_entirely_missing": []
+    },
+    {
+      "column": "rusher_id",
+      "definition": "ID of the player in the 'rusher' column.",
+      "provider_type": "character",
+      "stored_type": "string",
+      "seasons_with_values": [
+        2000,
+        2001,
+        2002,
+        2003,
+        2004,
+        2005
+      ],
+      "seasons_entirely_missing": []
+    },
+    {
+      "column": "receiver_id",
+      "definition": "ID of the player in the 'receiver' column.",
+      "provider_type": "character",
+      "stored_type": "string",
+      "seasons_with_values": [
+        2000,
+        2001,
+        2002,
+        2003,
+        2004,
+        2005
+      ],
+      "seasons_entirely_missing": []
+    },
+    {
+      "column": "name",
+      "definition": "Name of the 'passer' if it is not 'NA', or name of the 'rusher' otherwise.",
+      "provider_type": "character",
+      "stored_type": "string",
+      "seasons_with_values": [
+        2000,
+        2001,
+        2002,
+        2003,
+        2004,
+        2005
+      ],
+      "seasons_entirely_missing": []
+    },
+    {
+      "column": "jersey_number",
+      "definition": "Jersey number of the player listed in the 'name' column.",
+      "provider_type": "numeric",
+      "stored_type": "int32",
+      "seasons_with_values": [
+        2001,
+        2002,
+        2003,
+        2004,
+        2005
+      ],
+      "seasons_entirely_missing": [
+        2000
+      ]
+    },
+    {
+      "column": "id",
+      "definition": "ID of the player in the 'name' column.",
+      "provider_type": "character",
+      "stored_type": "string",
+      "seasons_with_values": [
+        2000,
+        2001,
+        2002,
+        2003,
+        2004,
+        2005
+      ],
+      "seasons_entirely_missing": []
+    },
+    {
+      "column": "fantasy_player_name",
+      "definition": "Name of the rusher on rush plays or receiver on pass plays (from official stats).",
+      "provider_type": "character",
+      "stored_type": "string",
+      "seasons_with_values": [
+        2000,
+        2001,
+        2002,
+        2003,
+        2004,
+        2005
+      ],
+      "seasons_entirely_missing": []
+    },
+    {
+      "column": "fantasy_player_id",
+      "definition": "ID of the rusher on rush plays or receiver on pass plays (from official stats).",
+      "provider_type": "character",
+      "stored_type": "string",
+      "seasons_with_values": [
+        2000,
+        2001,
+        2002,
+        2003,
+        2004,
+        2005
+      ],
+      "seasons_entirely_missing": []
+    },
+    {
+      "column": "fantasy",
+      "definition": "Name of the rusher on rush plays or receiver on pass plays.",
+      "provider_type": "character",
+      "stored_type": "string",
+      "seasons_with_values": [
+        2000,
+        2001,
+        2002,
+        2003,
+        2004,
+        2005
+      ],
+      "seasons_entirely_missing": []
+    },
+    {
+      "column": "fantasy_id",
+      "definition": "ID of the rusher on rush plays or receiver on pass plays.",
+      "provider_type": "character",
+      "stored_type": "string",
+      "seasons_with_values": [
+        2000,
+        2001,
+        2002,
+        2003,
+        2004,
+        2005
+      ],
+      "seasons_entirely_missing": []
+    },
+    {
+      "column": "out_of_bounds",
+      "definition": "1 if play description contains ran ob, pushed ob, or sacked ob; 0 otherwise.",
+      "provider_type": "numeric",
+      "stored_type": "double",
+      "seasons_with_values": [
+        2000,
+        2001,
+        2002,
+        2003,
+        2004,
+        2005
+      ],
+      "seasons_entirely_missing": []
+    },
+    {
+      "column": "home_opening_kickoff",
+      "definition": "1 if the home team received the opening kickoff, 0 otherwise.",
+      "provider_type": "numeric",
+      "stored_type": "double",
+      "seasons_with_values": [
+        2000,
+        2001,
+        2002,
+        2003,
+        2004,
+        2005
+      ],
+      "seasons_entirely_missing": [],
+      "nflfastR_field_descriptions_definition": "= 1 if the home team received the opening kickoff, 0 otherwise."
+    },
+    {
+      "column": "qb_epa",
+      "definition": "Gives QB credit for EPA for up to the point where a receiver lost a fumble after a completed catch and makes EPA work more like passing yards on plays with fumbles.",
+      "provider_type": "numeric",
+      "stored_type": "double",
+      "seasons_with_values": [
+        2000,
+        2001,
+        2002,
+        2003,
+        2004,
+        2005
+      ],
+      "seasons_entirely_missing": []
+    },
+    {
+      "column": "xyac_epa",
+      "definition": "Expected value of EPA gained after the catch, starting from where the catch was made. Zero yards after the catch would be listed as zero EPA.",
+      "provider_type": "numeric",
+      "stored_type": "double",
+      "seasons_with_values": [],
+      "seasons_entirely_missing": [
+        2000,
+        2001,
+        2002,
+        2003,
+        2004,
+        2005
+      ]
+    },
+    {
+      "column": "xyac_mean_yardage",
+      "definition": "Average expected yards after the catch based on where the ball was caught.",
+      "provider_type": "numeric",
+      "stored_type": "double",
+      "seasons_with_values": [],
+      "seasons_entirely_missing": [
+        2000,
+        2001,
+        2002,
+        2003,
+        2004,
+        2005
+      ]
+    },
+    {
+      "column": "xyac_median_yardage",
+      "definition": "Median expected yards after the catch based on where the ball was caught.",
+      "provider_type": "numeric",
+      "stored_type": "double",
+      "seasons_with_values": [],
+      "seasons_entirely_missing": [
+        2000,
+        2001,
+        2002,
+        2003,
+        2004,
+        2005
+      ]
+    },
+    {
+      "column": "xyac_success",
+      "definition": "Probability play earns positive EPA (relative to where play started) based on where ball was caught.",
+      "provider_type": "numeric",
+      "stored_type": "double",
+      "seasons_with_values": [],
+      "seasons_entirely_missing": [
+        2000,
+        2001,
+        2002,
+        2003,
+        2004,
+        2005
+      ]
+    },
+    {
+      "column": "xyac_fd",
+      "definition": "Probability play earns a first down based on where the ball was caught.",
+      "provider_type": "numeric",
+      "stored_type": "double",
+      "seasons_with_values": [],
+      "seasons_entirely_missing": [
+        2000,
+        2001,
+        2002,
+        2003,
+        2004,
+        2005
+      ]
+    },
+    {
+      "column": "xpass",
+      "definition": "Probability of dropback scaled from 0 to 1.",
+      "provider_type": "numeric",
+      "stored_type": "double",
+      "seasons_with_values": [],
+      "seasons_entirely_missing": [
+        2000,
+        2001,
+        2002,
+        2003,
+        2004,
+        2005
+      ]
+    },
+    {
+      "column": "pass_oe",
+      "definition": "Dropback percent over expected on a given play scaled from 0 to 100.",
+      "provider_type": "numeric",
+      "stored_type": "double",
+      "seasons_with_values": [],
+      "seasons_entirely_missing": [
+        2000,
+        2001,
+        2002,
+        2003,
+        2004,
+        2005
+      ]
+    }
+  ],
+  "games": [
+    {
+      "column": "game_id",
+      "definition": "A human-readable game ID. It consists of: the season, an underscore, the two-digit week number, an underscore, the away team, an underscore, the home team. This is the primary identifier for a given game and is also used in various nflverse dataframes.",
+      "provider_type": "numeric",
+      "stored_type": "string",
+      "seasons_with_values": [
+        2000,
+        2001,
+        2002,
+        2003,
+        2004,
+        2005
+      ],
+      "seasons_entirely_missing": [],
+      "units_coding": "Text 'SEASON_WW_AWAY_HOME'; joins to play-by-play game_id."
+    },
+    {
+      "column": "season",
+      "definition": "The year of the NFL season. This represents the whole season, so regular season games that happen in January as well as playoff games will occur in the year after this number.",
+      "provider_type": "numeric",
+      "stored_type": "int32",
+      "seasons_with_values": [
+        2000,
+        2001,
+        2002,
+        2003,
+        2004,
+        2005
+      ],
+      "seasons_entirely_missing": [],
+      "units_coding": "Four-digit season year."
+    },
+    {
+      "column": "game_type",
+      "definition": "What type of game? One of REG, WC, DIV, CON, SB",
+      "provider_type": "character",
+      "stored_type": "string",
+      "seasons_with_values": [
+        2000,
+        2001,
+        2002,
+        2003,
+        2004,
+        2005
+      ],
+      "seasons_entirely_missing": [],
+      "coding_categories": [
+        "CON",
+        "DIV",
+        "REG",
+        "SB",
+        "WC"
+      ],
+      "units_coding": "Coded: REG, WC, DIV, CON, SB."
+    },
+    {
+      "column": "week",
+      "definition": "The week of the NFL season the game occurs in. Please note that the `game_type` will differ for weeks >= 18 because of the season expansion in 2021. Please use `game_type` to filter for regular season or postseason.",
+      "provider_type": "numeric",
+      "stored_type": "int32",
+      "seasons_with_values": [
+        2000,
+        2001,
+        2002,
+        2003,
+        2004,
+        2005
+      ],
+      "seasons_entirely_missing": [],
+      "units_coding": "Integer week; regular season 1-17 and postseason 18-21 for these seasons."
+    },
+    {
+      "column": "gameday",
+      "definition": "The date on which the game occurred.",
+      "provider_type": "character",
+      "stored_type": "string",
+      "seasons_with_values": [
+        2000,
+        2001,
+        2002,
+        2003,
+        2004,
+        2005
+      ],
+      "seasons_entirely_missing": [],
+      "units_coding": "Text date YYYY-MM-DD."
+    },
+    {
+      "column": "weekday",
+      "definition": "The day of the week on which the game occcured.",
+      "provider_type": "character",
+      "stored_type": "string",
+      "seasons_with_values": [
+        2000,
+        2001,
+        2002,
+        2003,
+        2004,
+        2005
+      ],
+      "seasons_entirely_missing": [],
+      "coding_categories": [
+        "Friday",
+        "Monday",
+        "Saturday",
+        "Sunday",
+        "Thursday"
+      ],
+      "units_coding": "Day-of-week name."
+    },
+    {
+      "column": "gametime",
+      "definition": "The kickoff time of the game. This is represented in 24-hour time and the Eastern time zone, regardless of what time zone the game was being played in.",
+      "provider_type": "character",
+      "stored_type": "string",
+      "seasons_with_values": [
+        2000,
+        2001,
+        2002,
+        2003,
+        2004,
+        2005
+      ],
+      "seasons_entirely_missing": [],
+      "units_coding": "Text kickoff time HH:MM (US Eastern per provider documentation)."
+    },
+    {
+      "column": "away_team",
+      "definition": "The away team.",
+      "provider_type": "character",
+      "stored_type": "string",
+      "seasons_with_values": [
+        2000,
+        2001,
+        2002,
+        2003,
+        2004,
+        2005
+      ],
+      "seasons_entirely_missing": [],
+      "coding_categories": [
+        "ARI",
+        "ATL",
+        "BAL",
+        "BUF",
+        "CAR",
+        "CHI",
+        "CIN",
+        "CLE",
+        "DAL",
+        "DEN",
+        "DET",
+        "GB",
+        "HOU",
+        "IND",
+        "JAX",
+        "KC",
+        "MIA",
+        "MIN",
+        "NE",
+        "NO",
+        "NYG",
+        "NYJ",
+        "OAK",
+        "PHI",
+        "PIT",
+        "SD",
+        "SEA",
+        "SF",
+        "STL",
+        "TB",
+        "TEN",
+        "WAS"
+      ],
+      "units_coding": "Team abbreviation of the time (see home_team)."
+    },
+    {
+      "column": "away_score",
+      "definition": "The number of points the away team scored. Is NA for games which haven't yet been played.",
+      "provider_type": "numeric",
+      "stored_type": "int32",
+      "seasons_with_values": [
+        2000,
+        2001,
+        2002,
+        2003,
+        2004,
+        2005
+      ],
+      "seasons_entirely_missing": []
+    },
+    {
+      "column": "home_team",
+      "definition": "The home team. Note that this contains the designated home team for games which no team is playing at home such as Super Bowls or NFL International games.",
+      "provider_type": "character",
+      "stored_type": "string",
+      "seasons_with_values": [
+        2000,
+        2001,
+        2002,
+        2003,
+        2004,
+        2005
+      ],
+      "seasons_entirely_missing": [],
+      "coding_categories": [
+        "ARI",
+        "ATL",
+        "BAL",
+        "BUF",
+        "CAR",
+        "CHI",
+        "CIN",
+        "CLE",
+        "DAL",
+        "DEN",
+        "DET",
+        "GB",
+        "HOU",
+        "IND",
+        "JAX",
+        "KC",
+        "MIA",
+        "MIN",
+        "NE",
+        "NO",
+        "NYG",
+        "NYJ",
+        "OAK",
+        "PHI",
+        "PIT",
+        "SD",
+        "SEA",
+        "SF",
+        "STL",
+        "TB",
+        "TEN",
+        "WAS"
+      ],
+      "units_coding": "Team abbreviation of the time (e.g. STL, SD, OAK), unlike the play-by-play team columns."
+    },
+    {
+      "column": "home_score",
+      "definition": "The number of points the home team scored. Is NA for games which haven't yet been played.",
+      "provider_type": "numeric",
+      "stored_type": "int32",
+      "seasons_with_values": [
+        2000,
+        2001,
+        2002,
+        2003,
+        2004,
+        2005
+      ],
+      "seasons_entirely_missing": []
+    },
+    {
+      "column": "location",
+      "definition": "Either Home if the home team is playing in their home stadium, or Neutral if the game is being played at a neutral location. This still shows as Home for games between the Giants and Jets even though they share the same home stadium.",
+      "provider_type": "character",
+      "stored_type": "string",
+      "seasons_with_values": [
+        2000,
+        2001,
+        2002,
+        2003,
+        2004,
+        2005
+      ],
+      "seasons_entirely_missing": [],
+      "coding_categories": [
+        "Home",
+        "Neutral"
+      ]
+    },
+    {
+      "column": "result",
+      "definition": "The number of points the home team scored minus the number of points the visiting team scored. Equals h_score - v_score. Is NA for games which haven't yet been played. Convenient for evaluating against the spread bets.",
+      "provider_type": "numeric",
+      "stored_type": "int32",
+      "seasons_with_values": [
+        2000,
+        2001,
+        2002,
+        2003,
+        2004,
+        2005
+      ],
+      "seasons_entirely_missing": [],
+      "units_coding": "home_score minus away_score."
+    },
+    {
+      "column": "total",
+      "definition": "The sum of each team's score in the game. Equals h_score + v_score. Is NA for games which haven't yet been played. Convenient for evaluating over/under total bets.",
+      "provider_type": "numeric",
+      "stored_type": "int32",
+      "seasons_with_values": [
+        2000,
+        2001,
+        2002,
+        2003,
+        2004,
+        2005
+      ],
+      "seasons_entirely_missing": [],
+      "units_coding": "home_score plus away_score."
+    },
+    {
+      "column": "overtime",
+      "definition": "Binary indicator of whether or not game went to overtime.",
+      "provider_type": "numeric",
+      "stored_type": "int32",
+      "seasons_with_values": [
+        2000,
+        2001,
+        2002,
+        2003,
+        2004,
+        2005
+      ],
+      "seasons_entirely_missing": [],
+      "coding_categories": [
+        0,
+        1
+      ],
+      "units_coding": "Binary 1/0 indicator that the game went to overtime."
+    },
+    {
+      "column": "old_game_id",
+      "definition": "The old id for the game assigned by the NFL.",
+      "provider_type": "numeric",
+      "stored_type": "string",
+      "seasons_with_values": [
+        2000,
+        2001,
+        2002,
+        2003,
+        2004,
+        2005
+      ],
+      "seasons_entirely_missing": [],
+      "units_coding": "Ten-digit legacy NFL game identifier; joins to play-by-play old_game_id."
+    },
+    {
+      "column": "gsis",
+      "definition": "The id of the game issued by the NFL Game Statistics & Information System.",
+      "provider_type": "numeric",
+      "stored_type": "int32",
+      "seasons_with_values": [
+        2000,
+        2001,
+        2002,
+        2003,
+        2004,
+        2005
+      ],
+      "seasons_entirely_missing": []
+    },
+    {
+      "column": "nfl_detail_id",
+      "definition": "The id of the game issued by NFL Detail.",
+      "provider_type": "numeric",
+      "stored_type": "string",
+      "seasons_with_values": [],
+      "seasons_entirely_missing": [
+        2000,
+        2001,
+        2002,
+        2003,
+        2004,
+        2005
+      ]
+    },
+    {
+      "column": "pfr",
+      "definition": "The id of the game issued by [Pro-Football-Reference](https://www.pro-football-reference.com/)",
+      "provider_type": "numeric",
+      "stored_type": "string",
+      "seasons_with_values": [
+        2000,
+        2001,
+        2002,
+        2003,
+        2004,
+        2005
+      ],
+      "seasons_entirely_missing": []
+    },
+    {
+      "column": "pff",
+      "definition": "The id of the game issued by [Pro Football Focus](https://www.pff.com/)",
+      "provider_type": "numeric",
+      "stored_type": "int32",
+      "seasons_with_values": [],
+      "seasons_entirely_missing": [
+        2000,
+        2001,
+        2002,
+        2003,
+        2004,
+        2005
+      ]
+    },
+    {
+      "column": "espn",
+      "definition": "The id of the game issued by [ESPN](https://www.espn.com/)",
+      "provider_type": "numeric",
+      "stored_type": "string",
+      "seasons_with_values": [
+        2000,
+        2001,
+        2002,
+        2003,
+        2004,
+        2005
+      ],
+      "seasons_entirely_missing": []
+    },
+    {
+      "column": "ftn",
+      "definition": null,
+      "provider_type": null,
+      "stored_type": "int32",
+      "seasons_with_values": [],
+      "seasons_entirely_missing": [
+        2000,
+        2001,
+        2002,
+        2003,
+        2004,
+        2005
+      ]
+    },
+    {
+      "column": "away_rest",
+      "definition": "Days of rest that the away team is coming off of.",
+      "provider_type": "numeric",
+      "stored_type": "int32",
+      "seasons_with_values": [
+        2000,
+        2001,
+        2002,
+        2003,
+        2004,
+        2005
+      ],
+      "seasons_entirely_missing": [],
+      "units_coding": "Days of rest for the away team."
+    },
+    {
+      "column": "home_rest",
+      "definition": "Days of rest that the home team is coming off of.",
+      "provider_type": "numeric",
+      "stored_type": "int32",
+      "seasons_with_values": [
+        2000,
+        2001,
+        2002,
+        2003,
+        2004,
+        2005
+      ],
+      "seasons_entirely_missing": [],
+      "units_coding": "Days of rest for the home team."
+    },
+    {
+      "column": "away_moneyline",
+      "definition": "Odds for away team to win the game.",
+      "provider_type": "numeric",
+      "stored_type": "int32",
+      "seasons_with_values": [],
+      "seasons_entirely_missing": [
+        2000,
+        2001,
+        2002,
+        2003,
+        2004,
+        2005
+      ],
+      "units_coding": "American-odds moneyline."
+    },
+    {
+      "column": "home_moneyline",
+      "definition": "Odds for home team to win the game.",
+      "provider_type": "numeric",
+      "stored_type": "int32",
+      "seasons_with_values": [],
+      "seasons_entirely_missing": [
+        2000,
+        2001,
+        2002,
+        2003,
+        2004,
+        2005
+      ],
+      "units_coding": "American-odds moneyline."
+    },
+    {
+      "column": "spread_line",
+      "definition": "The spread line for the game. A positive number means the home team was favored by that many points, a negative number means the away team was favored by that many points. This lines up with the result column.",
+      "provider_type": "numeric",
+      "stored_type": "double",
+      "seasons_with_values": [
+        2000,
+        2001,
+        2002,
+        2003,
+        2004,
+        2005
+      ],
+      "seasons_entirely_missing": [],
+      "units_coding": "Point spread in points; positive means the home team is favored (provider definition)."
+    },
+    {
+      "column": "away_spread_odds",
+      "definition": "Odds for away team to cover the spread.",
+      "provider_type": "numeric",
+      "stored_type": "int32",
+      "seasons_with_values": [],
+      "seasons_entirely_missing": [
+        2000,
+        2001,
+        2002,
+        2003,
+        2004,
+        2005
+      ],
+      "units_coding": "American odds on the spread."
+    },
+    {
+      "column": "home_spread_odds",
+      "definition": "Odds for home team to cover the spread.",
+      "provider_type": "numeric",
+      "stored_type": "int32",
+      "seasons_with_values": [],
+      "seasons_entirely_missing": [
+        2000,
+        2001,
+        2002,
+        2003,
+        2004,
+        2005
+      ],
+      "units_coding": "American odds on the spread."
+    },
+    {
+      "column": "total_line",
+      "definition": "The total line for the game.",
+      "provider_type": "numeric",
+      "stored_type": "double",
+      "seasons_with_values": [
+        2000,
+        2001,
+        2002,
+        2003,
+        2004,
+        2005
+      ],
+      "seasons_entirely_missing": [],
+      "units_coding": "Over/under total in points."
+    },
+    {
+      "column": "under_odds",
+      "definition": "Odds that total score of game would be under the total_line.",
+      "provider_type": "numeric",
+      "stored_type": "int32",
+      "seasons_with_values": [],
+      "seasons_entirely_missing": [
+        2000,
+        2001,
+        2002,
+        2003,
+        2004,
+        2005
+      ],
+      "units_coding": "American odds on the under."
+    },
+    {
+      "column": "over_odds",
+      "definition": "Odds that total score of game would be over the total_ine.",
+      "provider_type": "numeric",
+      "stored_type": "int32",
+      "seasons_with_values": [],
+      "seasons_entirely_missing": [
+        2000,
+        2001,
+        2002,
+        2003,
+        2004,
+        2005
+      ],
+      "units_coding": "American odds on the over."
+    },
+    {
+      "column": "div_game",
+      "definition": "Binary indicator of whether or not game was played by 2 teams in the same division.",
+      "provider_type": "numeric",
+      "stored_type": "int32",
+      "seasons_with_values": [
+        2000,
+        2001,
+        2002,
+        2003,
+        2004,
+        2005
+      ],
+      "seasons_entirely_missing": [],
+      "coding_categories": [
+        0,
+        1
+      ],
+      "units_coding": "Binary 1/0 indicator of a division game."
+    },
+    {
+      "column": "roof",
+      "definition": "What was the status of the stadium's roof? One of outdoors, open, closed, dome",
+      "provider_type": "character",
+      "stored_type": "string",
+      "seasons_with_values": [
+        2000,
+        2001,
+        2002,
+        2003,
+        2004,
+        2005
+      ],
+      "seasons_entirely_missing": [],
+      "coding_categories": [
+        "closed",
+        "dome",
+        "open",
+        "outdoors"
+      ],
+      "units_coding": "Coded: outdoors, open, closed, dome."
+    },
+    {
+      "column": "surface",
+      "definition": "What type of ground the game was played on",
+      "provider_type": "character",
+      "stored_type": "string",
+      "seasons_with_values": [
+        2000,
+        2001,
+        2002,
+        2003,
+        2004,
+        2005
+      ],
+      "seasons_entirely_missing": [],
+      "coding_categories": [
+        "astroplay",
+        "astroturf",
+        "dessograss",
+        "fieldturf",
+        "grass",
+        "sportturf"
+      ]
+    },
+    {
+      "column": "temp",
+      "definition": "The temperature at the stadium (for outdoors and open only)",
+      "provider_type": "numeric",
+      "stored_type": "int32",
+      "seasons_with_values": [
+        2000,
+        2001,
+        2002,
+        2003,
+        2004,
+        2005
+      ],
+      "seasons_entirely_missing": [],
+      "units_coding": "Degrees Fahrenheit (outdoors/open only)."
+    },
+    {
+      "column": "wind",
+      "definition": "The speed of the wind in miles/hour (for outdoors and open only)",
+      "provider_type": "numeric",
+      "stored_type": "int32",
+      "seasons_with_values": [
+        2000,
+        2001,
+        2002,
+        2003,
+        2004,
+        2005
+      ],
+      "seasons_entirely_missing": [],
+      "units_coding": "Miles per hour (outdoors/open only)."
+    },
+    {
+      "column": "away_qb_id",
+      "definition": "GSIS Player ID for away team starting quarterback.",
+      "provider_type": "numeric",
+      "stored_type": "string",
+      "seasons_with_values": [
+        2000,
+        2001,
+        2002,
+        2003,
+        2004,
+        2005
+      ],
+      "seasons_entirely_missing": []
+    },
+    {
+      "column": "home_qb_id",
+      "definition": "GSIS Player ID for home team starting quarterback.",
+      "provider_type": "numeric",
+      "stored_type": "string",
+      "seasons_with_values": [
+        2000,
+        2001,
+        2002,
+        2003,
+        2004,
+        2005
+      ],
+      "seasons_entirely_missing": []
+    },
+    {
+      "column": "away_qb_name",
+      "definition": "Name of away team starting QB.",
+      "provider_type": "character",
+      "stored_type": "string",
+      "seasons_with_values": [
+        2000,
+        2001,
+        2002,
+        2003,
+        2004,
+        2005
+      ],
+      "seasons_entirely_missing": []
+    },
+    {
+      "column": "home_qb_name",
+      "definition": "Name of home team starting QB.",
+      "provider_type": "character",
+      "stored_type": "string",
+      "seasons_with_values": [
+        2000,
+        2001,
+        2002,
+        2003,
+        2004,
+        2005
+      ],
+      "seasons_entirely_missing": []
+    },
+    {
+      "column": "away_coach",
+      "definition": "Name of the head coach of the away team",
+      "provider_type": "character",
+      "stored_type": "string",
+      "seasons_with_values": [
+        2000,
+        2001,
+        2002,
+        2003,
+        2004,
+        2005
+      ],
+      "seasons_entirely_missing": []
+    },
+    {
+      "column": "home_coach",
+      "definition": "Name of the head coach of the home team",
+      "provider_type": "character",
+      "stored_type": "string",
+      "seasons_with_values": [
+        2000,
+        2001,
+        2002,
+        2003,
+        2004,
+        2005
+      ],
+      "seasons_entirely_missing": []
+    },
+    {
+      "column": "referee",
+      "definition": "Name of the game's referee (head official)",
+      "provider_type": "character",
+      "stored_type": "string",
+      "seasons_with_values": [
+        2000,
+        2001,
+        2002,
+        2003,
+        2004,
+        2005
+      ],
+      "seasons_entirely_missing": []
+    },
+    {
+      "column": "stadium_id",
+      "definition": "ID of Stadium that game took place in",
+      "provider_type": "character",
+      "stored_type": "string",
+      "seasons_with_values": [
+        2000,
+        2001,
+        2002,
+        2003,
+        2004,
+        2005
+      ],
+      "seasons_entirely_missing": []
+    },
+    {
+      "column": "stadium",
+      "definition": "Name of the stadium",
+      "provider_type": "character",
+      "stored_type": "string",
+      "seasons_with_values": [
+        2000,
+        2001,
+        2002,
+        2003,
+        2004,
+        2005
+      ],
+      "seasons_entirely_missing": []
+    }
+  ],
+  "team_season_alignment": [
+    {
+      "column": "season",
+      "definition": "Four-digit NFL season year.",
+      "type": "integer"
+    },
+    {
+      "column": "team_abbr_games_file",
+      "definition": "Team abbreviation as used in game_id and in the games/schedules file (abbreviations of the time, e.g. STL, SD, OAK).",
+      "type": "text"
+    },
+    {
+      "column": "team_abbr_pbp",
+      "definition": "Abbreviation of the same team as used in the play-by-play team columns (home_team, away_team, posteam, defteam); current franchise codes LA, LAC, LV for relocated franchises. Derived by joining games-file and play-by-play home/away codes on game_id within season.",
+      "type": "text"
+    },
+    {
+      "column": "conference",
+      "definition": "Conference of the team in that season.",
+      "type": "text",
+      "coding_categories": [
+        "AFC",
+        "NFC"
+      ]
+    },
+    {
+      "column": "division",
+      "definition": "Division of the team in that season, as 'CONF Region'. Seasons 2000-2001 use the pre-2002 alignment (East, Central, West); seasons 2002-2005 use the 2002 realignment (East, North, South, West). Houston (HOU) appears from 2002.",
+      "type": "text",
+      "coding_categories": {
+        "2000-2001": [
+          "AFC Central",
+          "AFC East",
+          "AFC West",
+          "NFC Central",
+          "NFC East",
+          "NFC West"
+        ],
+        "2002-2005": [
+          "AFC East",
+          "AFC North",
+          "AFC South",
+          "AFC West",
+          "NFC East",
+          "NFC North",
+          "NFC South",
+          "NFC West"
+        ]
+      }
+    },
+    {
+      "column": "source_key",
+      "definition": "Source of the conference/division assignment: 'nfldata:data/standings.csv@<commit>' (seasons 2002-2005) or 'wikipedia:Template:<season> <division> standings@oldid=<revision>' (seasons 2000-2001). Full provenance in registry/source_registry.json.",
+      "type": "text"
+    }
+  ]
+}

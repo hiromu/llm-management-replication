@@ -1,0 +1,68 @@
+{
+ "version": "v1",
+ "status": "frozen before empirical fitting; all numeric constants are provisional and uncalibrated (no real-paper calibration exists; synthetic checks only)",
+ "data_regime": "same-data reconstruction from author-processed deposit aggregates",
+ "implementation_agreement": {
+  "rule": "Two implementations agree on a grid row when both have status ok, equal n_obs, equal sample_hash, |estimate difference| <= max(1e-8, 0.001 x mean benchmark SE) and benchmark SEs within 0.5% of each other. Descriptive outputs agree when every reported statistic is within relative 1e-6 or absolute 1e-9.",
+  "justification": "Same data and fully specified definitions leave only floating-point and solver differences; 0.001 SE is far below any substantive band.",
+  "claim_use": "A claim is scored on an agreeing pair at its origin row (A-B, A-C or B-C, in that order of preference); the third implementation, if it disagrees, goes to code audit. With no agreeing pair the claim is indeterminate: implementation_disagreement. Agreement and dispersion across the full grid are reported separately."
+ },
+ "rounding": "A printed number with d decimals is the interval [v - 0.5 x 10^-d, v + 0.5 x 10^-d]. All comparisons use the whole interval.",
+ "sign": "Assessed only when the published rounding interval excludes zero. Agreement means the reconstructed estimate is nonzero with the published sign.",
+ "magnitude": {
+  "measure": "z = distance from the reconstructed estimate to the published rounding interval (0 inside), divided by the printed published SE",
+  "bands": {"match": "z <= 0.5", "grey": "0.5 < z <= 2.0", "mismatch": "z > 2.0"},
+  "also_reported": "relative difference estimate / published - 1 and absolute difference",
+  "justification": "Same-data regime: exact reproduction is the expectation, so half an SE is a tight match band; beyond 2 SE the published 95% interval would not contain the reconstruction.",
+  "missing_se": "magnitude not audited"
+ },
+ "inference": {
+  "bands": ["p < .01", ".01 <= p < .05", ".05 <= p < .10", "p >= .10"],
+  "published_band": "from printed stars using the Table 3 legend (*** < .01, ** < .05, * < .10, none >= .10), applied to every table with stars",
+  "benchmark": {
+   "panel_linear": "CR1 cluster-robust by county (assignment unit), t with G-1 df",
+   "county_cross_section": "HC1 (assignment unit equals observation unit)",
+   "address_pair": "CR1 cluster-robust by county (assignment unit)",
+   "few_cluster_threshold": 30,
+   "few_cluster_rule": "below 30 clusters: wild cluster bootstrap with Rademacher weights and restricted residuals; no in-scope model is expected to fall below it",
+   "threshold_justification": "provisional, from the cluster-robust inference literature (Cameron, Gelbach and Miller 2008; MacKinnon and Webb 2017)"
+  },
+  "native": "Table 4, Table 5 Panel B and Figure 5 state HC robust errors (native = HC1); Figure 4 states county clustering (native = CR1). Tables 3, 5A, 6 and 7 do not state the method: native unknown, both HC1 and CR1 are reported.",
+  "band_change": "difference in band index, positive = weaker than published. A positive significance claim is not failed by stronger significance. For a published nonsignificant estimate, a reconstruction with p < .05 is a two-band contradiction.",
+  "adjacent_band": "never sufficient for discrepant status"
+ },
+ "n_obs": {"match": "equal", "near": "relative difference <= 0.5%", "mismatch": "> 0.5%",
+  "use": "N mismatch prevents a consistent outcome and gives indeterminate: sample_reconstruction, or indeterminate: inconsistent_targets where a forensic record shows the printed N is internally inconsistent"},
+ "regression_claim_outcome": {
+  "precedence": ["not_attemptable", "indeterminate:implementation_disagreement", "discrepant_candidate", "indeterminate", "fragile_inference", "consistent"],
+  "consistent": "origin: sign agrees (or not assessable), magnitude match, benchmark band equal to or stronger than published, N match or near",
+  "fragile_inference": "origin: sign agrees and magnitude match, but the benchmark band is weaker than published by one band or more while the HC1 band (or native band where stated) is not weaker",
+  "discrepant_candidate": "origin fails at least one of: sign opposite; benchmark band weaker by two or more bands (or two-band contradiction of nonsignificance); magnitude mismatch. AND no uncertain-branch row for the claim passes all of sign agreement, band within one, magnitude z <= 2.0. Becomes discrepant only after adversarial review; otherwise indeterminate with the review's reason.",
+  "indeterminate": "everything else, with sub-codes: magnitude_grey_zone, label_sensitive (origin fails but an uncertain branch passes), sample_reconstruction, inconsistent_targets, unavailable_criterion, failed_fit",
+  "specification_fragility": "No genuinely equivalent alternatives exist in the frozen grid (all alternatives are uncertain or non-equivalent), so specification fragility is not assessed for any claim.",
+  "label_sensitivity_report": "For each claim, the share of uncertain-branch rows that keep the published sign and benchmark p < .05, the median and range of estimates, and the published estimate's position. If treating uncertain rows as equivalent would yield fragile (share < 0.8 for a claim published significant at .05), the claim is flagged label_sensitive and both readings are reported."
+ },
+ "special_claims": {
+  "placebo": "Table 5 Panel A columns 3-4. Sign and magnitude are not audited (the draw differs). Consistent if the benchmark p >= .10; a benchmark p < .05 is a two-band contradiction. The 200-draw distribution (share with p < .05 and quantiles) is reported.",
+  "distance_nuisance": "Table 6 Distance rows. Magnitude is compared under kilometres (origin) and miles (coefficient x 1.609344); the unit is unstated, so a match under either is consistent and a mismatch under both is assessed as usual."
+ },
+ "descriptive_claims": {
+  "table1": "Per row: treated mean, control mean, difference compared by relative deviation r = distance to rounding interval / |published|; match r = 0, near r <= 0.01, moderate r <= 0.10, mismatch r > 0.10. Printed p compared by band. Row consistent if all three values are match or near and p in the same band; discrepant_candidate if a mean is mismatch at the origin and under every uncertain reading of the row's variable; otherwise indeterminate: measurement.",
+  "table2": "Per row: mean and median compared as above; SD, min and max reported. Row consistent if mean and median are match or near; discrepant_candidate if the mean is mismatch at origin and every uncertain reading; otherwise indeterminate: measurement.",
+  "counts": "Figures 1-2 county counts: exact match consistent; within 1% indeterminate: near; otherwise discrepant_candidate."
+ },
+ "plot_points": {
+  "point_rule": "A reconstructed point matches a reading when it lies within the reading interval widened on each side by half its width; with two readers the union of their widened intervals is used.",
+  "series_outcome": "consistent if at least 80% of read points match; otherwise indeterminate: plot_reading. Plot readings never yield a discrepant outcome.",
+  "figure3": "not audited: no numeric targets"
+ },
+ "paper_level": {
+  "paper_focal_claims": ["T3|(3)", "T3|(4)", "T3|(5)", "T3|(6)", "T4|(3)", "T4|(4)", "T4|(5)", "T4|(6)", "T6|(1) Treat"],
+  "basis": "The abstract and introduction state the main findings as lower follow-on contributions and contributor activity (difference-in-differences and cross-sectional) and lower long-term quality (D01 p.1-2). Both readers tier these focal; total contributions (T3/T4 columns 1-2) and the Table 7 mechanism tests stay focal at claim level but are not paper-focal.",
+  "rule": "1) If any paper-focal claim is indeterminate or not attemptable, the paper is indeterminate (scoring instructions). 2) Else if at least half of the paper-focal claims are discrepant after review, not reproduced. 3) Else if any paper-focal claim is discrepant or fragile, or any other tier has a discrepant claim, partially reproduced. 4) Else if all paper-focal claims are consistent, fully reproduced. Fragile-inference focal claims with the rest consistent are reported as 'consistent with fragile inference' and not mapped.",
+  "justification": "Avoids a worst-cell rule across nine focal estimates while keeping the instruction that indeterminate focal evidence makes the paper indeterminate."
+ },
+ "alpha": "0.05 two-sided (D01 p.12 'not statistically significant at the 95% level'); hypothesized direction negative for activity outcomes and positive for the error score",
+ "budget": "grid: one full run per implementation, at most 6 hours wall each; influence: implementation A for all deletions, implementation C for a fixed 50-county subset per model; failures retained",
+ "calibration": "uncalibrated; no planted-error, null-data or post-cutoff arms were run beyond synthetic recovery checks of the implementations"
+}

@@ -1,0 +1,3137 @@
+[
+ {
+  "unit": "T3|(1)",
+  "kind": "regression",
+  "tier": "focal",
+  "opus_claim": "C_T3_1",
+  "astra_claim": "T3C1",
+  "origin_spec": "S00004",
+  "uncertain_specs": [
+   "S00121"
+  ],
+  "term": "post_treat",
+  "published": {
+   "value": "-0.471",
+   "se": "0.0466",
+   "stars": "***",
+   "n_obs": "121173",
+   "reader_targets": [
+    "T0145"
+   ]
+  },
+  "paper_focal": false
+ },
+ {
+  "unit": "T3|(2)",
+  "kind": "regression",
+  "tier": "focal",
+  "opus_claim": "C_T3_2",
+  "astra_claim": "T3C2",
+  "origin_spec": "S00005",
+  "uncertain_specs": [
+   "S00122",
+   "S00123"
+  ],
+  "term": "post_treat",
+  "published": {
+   "value": "-0.472",
+   "se": "0.0403",
+   "stars": "***",
+   "n_obs": "121173",
+   "reader_targets": [
+    "T0147"
+   ]
+  },
+  "paper_focal": false
+ },
+ {
+  "unit": "T3|(3)",
+  "kind": "regression",
+  "tier": "focal",
+  "opus_claim": "C_T3_3",
+  "astra_claim": "T3C3",
+  "origin_spec": "S00008",
+  "uncertain_specs": [
+   "S00134",
+   "S00135",
+   "S00136",
+   "S00137",
+   "S00643",
+   "S00644",
+   "S00645"
+  ],
+  "term": "post_treat",
+  "published": {
+   "value": "-0.141",
+   "se": "0.0484",
+   "stars": "***",
+   "n_obs": "121173",
+   "reader_targets": [
+    "T0150"
+   ]
+  },
+  "paper_focal": true
+ },
+ {
+  "unit": "T3|(4)",
+  "kind": "regression",
+  "tier": "focal",
+  "opus_claim": "C_T3_4",
+  "astra_claim": "T3C4",
+  "origin_spec": "S00009",
+  "uncertain_specs": [
+   "S00138",
+   "S00139",
+   "S00140",
+   "S00141",
+   "S00142",
+   "S00646",
+   "S00647",
+   "S00648",
+   "S00649",
+   "S00650",
+   "S00651",
+   "S00652",
+   "S00653",
+   "S00654",
+   "S00655"
+  ],
+  "term": "post_treat",
+  "published": {
+   "value": "-0.152",
+   "se": "0.0448",
+   "stars": "***",
+   "n_obs": "121173",
+   "reader_targets": [
+    "T0152"
+   ]
+  },
+  "paper_focal": true
+ },
+ {
+  "unit": "T3|(5)",
+  "kind": "regression",
+  "tier": "focal",
+  "opus_claim": "C_T3_5",
+  "astra_claim": "T3C5",
+  "origin_spec": "S00012",
+  "uncertain_specs": [
+   "S00159"
+  ],
+  "term": "post_treat",
+  "published": {
+   "value": "-0.0557",
+   "se": "0.0171",
+   "stars": "***",
+   "n_obs": "121173",
+   "reader_targets": [
+    "T0155"
+   ]
+  },
+  "paper_focal": true
+ },
+ {
+  "unit": "T3|(6)",
+  "kind": "regression",
+  "tier": "focal",
+  "opus_claim": "C_T3_6",
+  "astra_claim": "T3C6",
+  "origin_spec": "S00013",
+  "uncertain_specs": [
+   "S00160",
+   "S00161",
+   "S00830"
+  ],
+  "term": "post_treat",
+  "published": {
+   "value": "-0.0556",
+   "se": "0.0143",
+   "stars": "***",
+   "n_obs": "121173",
+   "reader_targets": [
+    "T0157"
+   ]
+  },
+  "paper_focal": true
+ },
+ {
+  "unit": "T4|(1)",
+  "kind": "regression",
+  "tier": "focal",
+  "opus_claim": "C_T4_1",
+  "astra_claim": "T4C1",
+  "origin_spec": "S00006",
+  "uncertain_specs": [
+   "S00124",
+   "S00125",
+   "S00126",
+   "S00127",
+   "S00128"
+  ],
+  "term": "treat",
+  "published": {
+   "value": "-0.609",
+   "se": "0.0442",
+   "stars": "***",
+   "n_obs": "3107",
+   "reader_targets": [
+    "T0164"
+   ]
+  },
+  "paper_focal": false
+ },
+ {
+  "unit": "T4|(2)",
+  "kind": "regression",
+  "tier": "focal",
+  "opus_claim": "C_T4_2",
+  "astra_claim": "T4C2",
+  "origin_spec": "S00007",
+  "uncertain_specs": [
+   "S00129",
+   "S00130",
+   "S00131",
+   "S00132",
+   "S00133"
+  ],
+  "term": "treat",
+  "published": {
+   "value": "-0.934",
+   "se": "0.0521",
+   "stars": "***",
+   "n_obs": "3107",
+   "reader_targets": [
+    "T0166"
+   ]
+  },
+  "paper_focal": false
+ },
+ {
+  "unit": "T4|(3)",
+  "kind": "regression",
+  "tier": "focal",
+  "opus_claim": "C_T4_3",
+  "astra_claim": "T4C3",
+  "origin_spec": "S00010",
+  "uncertain_specs": [
+   "S00143",
+   "S00144",
+   "S00145",
+   "S00146",
+   "S00147",
+   "S00148",
+   "S00149",
+   "S00150",
+   "S00656",
+   "S00657",
+   "S00658",
+   "S00659",
+   "S00660",
+   "S00661",
+   "S00662",
+   "S00663",
+   "S00664",
+   "S00665",
+   "S00666",
+   "S00667",
+   "S00668",
+   "S00669",
+   "S00670",
+   "S00671",
+   "S00672",
+   "S00673",
+   "S00674",
+   "S00675",
+   "S00676",
+   "S00677",
+   "S00678",
+   "S00679",
+   "S00680",
+   "S00681",
+   "S00682",
+   "S00683",
+   "S00684",
+   "S00685",
+   "S00686",
+   "S00687",
+   "S00688",
+   "S00689",
+   "S00690",
+   "S00691",
+   "S00692",
+   "S00693",
+   "S00694",
+   "S00695",
+   "S00696",
+   "S00697",
+   "S00698",
+   "S00699",
+   "S00700",
+   "S00701",
+   "S00702",
+   "S00703",
+   "S00704",
+   "S00705",
+   "S00706",
+   "S00707",
+   "S00708",
+   "S00709",
+   "S00710",
+   "S00711",
+   "S00712",
+   "S00713",
+   "S00714",
+   "S00715",
+   "S00716",
+   "S00717",
+   "S00718",
+   "S00719",
+   "S00720",
+   "S00721",
+   "S00722",
+   "S00723",
+   "S00724",
+   "S00725",
+   "S00726",
+   "S00727",
+   "S00728",
+   "S00729",
+   "S00730",
+   "S00731",
+   "S00732",
+   "S00733",
+   "S00734",
+   "S00735",
+   "S00736",
+   "S00737",
+   "S00738",
+   "S00739",
+   "S00740",
+   "S00741",
+   "S00742"
+  ],
+  "term": "treat",
+  "published": {
+   "value": "-0.193",
+   "se": "0.0604",
+   "stars": "***",
+   "n_obs": "3107",
+   "reader_targets": [
+    "T0168"
+   ]
+  },
+  "paper_focal": true
+ },
+ {
+  "unit": "T4|(4)",
+  "kind": "regression",
+  "tier": "focal",
+  "opus_claim": "C_T4_4",
+  "astra_claim": "T4C4",
+  "origin_spec": "S00011",
+  "uncertain_specs": [
+   "S00151",
+   "S00152",
+   "S00153",
+   "S00154",
+   "S00155",
+   "S00156",
+   "S00157",
+   "S00158",
+   "S00743",
+   "S00744",
+   "S00745",
+   "S00746",
+   "S00747",
+   "S00748",
+   "S00749",
+   "S00750",
+   "S00751",
+   "S00752",
+   "S00753",
+   "S00754",
+   "S00755",
+   "S00756",
+   "S00757",
+   "S00758",
+   "S00759",
+   "S00760",
+   "S00761",
+   "S00762",
+   "S00763",
+   "S00764",
+   "S00765",
+   "S00766",
+   "S00767",
+   "S00768",
+   "S00769",
+   "S00770",
+   "S00771",
+   "S00772",
+   "S00773",
+   "S00774",
+   "S00775",
+   "S00776",
+   "S00777",
+   "S00778",
+   "S00779",
+   "S00780",
+   "S00781",
+   "S00782",
+   "S00783",
+   "S00784",
+   "S00785",
+   "S00786",
+   "S00787",
+   "S00788",
+   "S00789",
+   "S00790",
+   "S00791",
+   "S00792",
+   "S00793",
+   "S00794",
+   "S00795",
+   "S00796",
+   "S00797",
+   "S00798",
+   "S00799",
+   "S00800",
+   "S00801",
+   "S00802",
+   "S00803",
+   "S00804",
+   "S00805",
+   "S00806",
+   "S00807",
+   "S00808",
+   "S00809",
+   "S00810",
+   "S00811",
+   "S00812",
+   "S00813",
+   "S00814",
+   "S00815",
+   "S00816",
+   "S00817",
+   "S00818",
+   "S00819",
+   "S00820",
+   "S00821",
+   "S00822",
+   "S00823",
+   "S00824",
+   "S00825",
+   "S00826",
+   "S00827",
+   "S00828",
+   "S00829"
+  ],
+  "term": "treat",
+  "published": {
+   "value": "-0.405",
+   "se": "0.0657",
+   "stars": "***",
+   "n_obs": "3107",
+   "reader_targets": [
+    "T0171"
+   ]
+  },
+  "paper_focal": true
+ },
+ {
+  "unit": "T4|(5)",
+  "kind": "regression",
+  "tier": "focal",
+  "opus_claim": "C_T4_5",
+  "astra_claim": "T4C5",
+  "origin_spec": "S00014",
+  "uncertain_specs": [
+   "S00162",
+   "S00163",
+   "S00164",
+   "S00165",
+   "S00166",
+   "S00831",
+   "S00832",
+   "S00833",
+   "S00834",
+   "S00835",
+   "S00836",
+   "S00837",
+   "S00838",
+   "S00839",
+   "S00840",
+   "S00841",
+   "S00842",
+   "S00843",
+   "S00844",
+   "S00845",
+   "S00846",
+   "S00847",
+   "S00848"
+  ],
+  "term": "treat",
+  "published": {
+   "value": "-0.128",
+   "se": "0.0166",
+   "stars": "***",
+   "n_obs": "3107",
+   "reader_targets": [
+    "T0174"
+   ]
+  },
+  "paper_focal": true
+ },
+ {
+  "unit": "T4|(6)",
+  "kind": "regression",
+  "tier": "focal",
+  "opus_claim": "C_T4_6",
+  "astra_claim": "T4C6",
+  "origin_spec": "S00015",
+  "uncertain_specs": [
+   "S00167",
+   "S00168",
+   "S00169",
+   "S00170",
+   "S00171",
+   "S00849",
+   "S00850",
+   "S00851",
+   "S00852",
+   "S00853",
+   "S00854",
+   "S00855",
+   "S00856",
+   "S00857",
+   "S00858",
+   "S00859",
+   "S00860",
+   "S00861",
+   "S00862",
+   "S00863",
+   "S00864",
+   "S00865",
+   "S00866"
+  ],
+  "term": "treat",
+  "published": {
+   "value": "-0.283",
+   "se": "0.0186",
+   "stars": "***",
+   "n_obs": "3107",
+   "reader_targets": [
+    "T0177"
+   ]
+  },
+  "paper_focal": true
+ },
+ {
+  "unit": "T5A|(1)",
+  "kind": "regression",
+  "tier": "robustness",
+  "opus_claim": "C_T5A_1",
+  "astra_claim": "T5AC1",
+  "origin_spec": "S00016",
+  "uncertain_specs": [
+   "S00172",
+   "S00173",
+   "S00174",
+   "S00175",
+   "S00176"
+  ],
+  "term": "post_treat",
+  "published": {
+   "value": "-0.187",
+   "se": "0.0469",
+   "stars": "***",
+   "n_obs": "121173",
+   "reader_targets": [
+    "T0182"
+   ]
+  },
+  "uncertain_specs_extra": [
+   "S00017",
+   "S00177",
+   "S00178",
+   "S00179",
+   "S00180"
+  ],
+  "paper_focal": false
+ },
+ {
+  "unit": "T5A|(2)",
+  "kind": "regression",
+  "tier": "robustness",
+  "opus_claim": "C_T5A_2",
+  "astra_claim": "T5AC2",
+  "origin_spec": "S00030",
+  "uncertain_specs": [
+   "S00257",
+   "S00258"
+  ],
+  "term": "post_treat",
+  "published": {
+   "value": "-0.0917",
+   "se": "0.0144",
+   "stars": "***",
+   "n_obs": "121173",
+   "reader_targets": [
+    "T0184"
+   ]
+  },
+  "uncertain_specs_extra": [
+   "S00031",
+   "S00259"
+  ],
+  "paper_focal": false
+ },
+ {
+  "unit": "T5A|(3)",
+  "kind": "placebo",
+  "tier": "identification_or_inference_diagnostic",
+  "opus_claim": "C_T5A_3",
+  "astra_claim": "T5AC3",
+  "origin_spec": "S00022",
+  "uncertain_specs": [
+   "S00201",
+   "S00202",
+   "S00203",
+   "S00204",
+   "S00205"
+  ],
+  "term": "post_treat",
+  "published": {
+   "value": "0.00783",
+   "se": "0.0483",
+   "stars": "",
+   "n_obs": "121173",
+   "reader_targets": [
+    "T0186"
+   ]
+  },
+  "uncertain_specs_extra": [
+   "S00023",
+   "S00206",
+   "S00207",
+   "S00208",
+   "S00209",
+   "S00024"
+  ],
+  "paper_focal": false
+ },
+ {
+  "unit": "T5A|(4)",
+  "kind": "placebo",
+  "tier": "identification_or_inference_diagnostic",
+  "opus_claim": "C_T5A_4",
+  "astra_claim": "T5AC4",
+  "origin_spec": "S00036",
+  "uncertain_specs": [
+   "S00268",
+   "S00269"
+  ],
+  "term": "post_treat",
+  "published": {
+   "value": "-0.0218",
+   "se": "0.0174",
+   "stars": "",
+   "n_obs": "121173",
+   "reader_targets": [
+    "T0188"
+   ]
+  },
+  "uncertain_specs_extra": [
+   "S00037",
+   "S00270",
+   "S00038"
+  ],
+  "paper_focal": false
+ },
+ {
+  "unit": "T5A|(5)",
+  "kind": "regression",
+  "tier": "robustness",
+  "opus_claim": "C_T5A_5",
+  "astra_claim": "T5AC5",
+  "origin_spec": "S00018",
+  "uncertain_specs": [
+   "S00181",
+   "S00182",
+   "S00183",
+   "S00184",
+   "S00185",
+   "S00186"
+  ],
+  "term": "post_treat",
+  "published": {
+   "value": "-0.135",
+   "se": "0.0563",
+   "stars": "**",
+   "n_obs": "86502",
+   "reader_targets": [
+    "T0190"
+   ]
+  },
+  "uncertain_specs_extra": [
+   "S00019",
+   "S00187",
+   "S00188",
+   "S00189",
+   "S00190",
+   "S00191"
+  ],
+  "paper_focal": false
+ },
+ {
+  "unit": "T5A|(6)",
+  "kind": "regression",
+  "tier": "robustness",
+  "opus_claim": "C_T5A_6",
+  "astra_claim": "T5AC6",
+  "origin_spec": "S00032",
+  "uncertain_specs": [
+   "S00260",
+   "S00261",
+   "S00262"
+  ],
+  "term": "post_treat",
+  "published": {
+   "value": "-0.282",
+   "se": "0.0634",
+   "stars": "***",
+   "n_obs": "70980",
+   "reader_targets": [
+    "T0192"
+   ]
+  },
+  "uncertain_specs_extra": [
+   "S00033",
+   "S00263",
+   "S00264"
+  ],
+  "paper_focal": false
+ },
+ {
+  "unit": "T5A|(7)",
+  "kind": "regression",
+  "tier": "robustness",
+  "opus_claim": "C_T5A_7",
+  "astra_claim": "T5AC7",
+  "origin_spec": "S00020",
+  "uncertain_specs": [
+   "S00192",
+   "S00193",
+   "S00194",
+   "S00195",
+   "S00196"
+  ],
+  "term": "post_treat",
+  "published": {
+   "value": "-0.0335",
+   "se": "0.0194",
+   "stars": "*",
+   "n_obs": "86502",
+   "reader_targets": [
+    "T0194"
+   ]
+  },
+  "uncertain_specs_extra": [
+   "S00021",
+   "S00197",
+   "S00198",
+   "S00199",
+   "S00200"
+  ],
+  "paper_focal": false
+ },
+ {
+  "unit": "T5A|(8)",
+  "kind": "regression",
+  "tier": "robustness",
+  "opus_claim": "C_T5A_8",
+  "astra_claim": "T5AC8",
+  "origin_spec": "S00034",
+  "uncertain_specs": [
+   "S00265",
+   "S00266"
+  ],
+  "term": "post_treat",
+  "published": {
+   "value": "-0.0795",
+   "se": "0.0227",
+   "stars": "***",
+   "n_obs": "70980",
+   "reader_targets": [
+    "T0196"
+   ]
+  },
+  "uncertain_specs_extra": [
+   "S00035",
+   "S00267"
+  ],
+  "paper_focal": false
+ },
+ {
+  "unit": "T5B|(1)",
+  "kind": "regression",
+  "tier": "robustness",
+  "opus_claim": "C_T5B_1",
+  "astra_claim": "T5BC1",
+  "origin_spec": "S00026",
+  "uncertain_specs": [
+   "S00219",
+   "S00220",
+   "S00221",
+   "S00222",
+   "S00223",
+   "S00224",
+   "S00225",
+   "S00226",
+   "S00227",
+   "S00228"
+  ],
+  "term": "treat",
+  "published": {
+   "value": "-0.183",
+   "se": "0.0704",
+   "stars": "***",
+   "n_obs": "2218",
+   "reader_targets": [
+    "T0198"
+   ]
+  },
+  "paper_focal": false
+ },
+ {
+  "unit": "T5B|(2)",
+  "kind": "regression",
+  "tier": "robustness",
+  "opus_claim": "C_T5B_2",
+  "astra_claim": "T5BC2",
+  "origin_spec": "S00027",
+  "uncertain_specs": [
+   "S00229",
+   "S00230",
+   "S00231",
+   "S00232",
+   "S00233",
+   "S00234",
+   "S00235",
+   "S00236",
+   "S00237",
+   "S00238"
+  ],
+  "term": "treat",
+  "published": {
+   "value": "-0.412",
+   "se": "0.0761",
+   "stars": "***",
+   "n_obs": "2218",
+   "reader_targets": [
+    "T0200"
+   ]
+  },
+  "paper_focal": false
+ },
+ {
+  "unit": "T5B|(3)",
+  "kind": "regression",
+  "tier": "robustness",
+  "opus_claim": "C_T5B_3",
+  "astra_claim": "T5BC3",
+  "origin_spec": "S00040",
+  "uncertain_specs": [
+   "S00274",
+   "S00275",
+   "S00276",
+   "S00277",
+   "S00278",
+   "S00279",
+   "S00280"
+  ],
+  "term": "treat",
+  "published": {
+   "value": "-0.0815",
+   "se": "0.0183",
+   "stars": "***",
+   "n_obs": "2218",
+   "reader_targets": [
+    "T0202"
+   ]
+  },
+  "paper_focal": false
+ },
+ {
+  "unit": "T5B|(4)",
+  "kind": "regression",
+  "tier": "robustness",
+  "opus_claim": "C_T5B_4",
+  "astra_claim": "T5BC4",
+  "origin_spec": "S00041",
+  "uncertain_specs": [
+   "S00281",
+   "S00282",
+   "S00283",
+   "S00284",
+   "S00285",
+   "S00286",
+   "S00287"
+  ],
+  "term": "treat",
+  "published": {
+   "value": "-0.200",
+   "se": "0.0210",
+   "stars": "***",
+   "n_obs": "2218",
+   "reader_targets": [
+    "T0204"
+   ]
+  },
+  "paper_focal": false
+ },
+ {
+  "unit": "T5B|(5)",
+  "kind": "regression",
+  "tier": "robustness",
+  "opus_claim": "C_T5B_5",
+  "astra_claim": "T5BC5",
+  "origin_spec": "S00028",
+  "uncertain_specs": [
+   "S00239",
+   "S00240",
+   "S00241",
+   "S00242",
+   "S00243",
+   "S00244",
+   "S00245",
+   "S00246",
+   "S00247"
+  ],
+  "term": "treat",
+  "published": {
+   "value": "-0.265",
+   "se": "0.0780",
+   "stars": "***",
+   "n_obs": "1820",
+   "reader_targets": [
+    "T0206"
+   ]
+  },
+  "paper_focal": false
+ },
+ {
+  "unit": "T5B|(6)",
+  "kind": "regression",
+  "tier": "robustness",
+  "opus_claim": "C_T5B_6",
+  "astra_claim": "T5BC6",
+  "origin_spec": "S00029",
+  "uncertain_specs": [
+   "S00248",
+   "S00249",
+   "S00250",
+   "S00251",
+   "S00252",
+   "S00253",
+   "S00254",
+   "S00255",
+   "S00256"
+  ],
+  "term": "treat",
+  "published": {
+   "value": "-0.535",
+   "se": "0.0849",
+   "stars": "***",
+   "n_obs": "1820",
+   "reader_targets": [
+    "T0208"
+   ]
+  },
+  "paper_focal": false
+ },
+ {
+  "unit": "T5B|(7)",
+  "kind": "regression",
+  "tier": "robustness",
+  "opus_claim": "C_T5B_7",
+  "astra_claim": "T5BC7",
+  "origin_spec": "S00042",
+  "uncertain_specs": [
+   "S00288",
+   "S00289",
+   "S00290",
+   "S00291",
+   "S00292",
+   "S00293"
+  ],
+  "term": "treat",
+  "published": {
+   "value": "-0.121",
+   "se": "0.0216",
+   "stars": "***",
+   "n_obs": "1820",
+   "reader_targets": [
+    "T0210"
+   ]
+  },
+  "paper_focal": false
+ },
+ {
+  "unit": "T5B|(8)",
+  "kind": "regression",
+  "tier": "robustness",
+  "opus_claim": "C_T5B_8",
+  "astra_claim": "T5BC8",
+  "origin_spec": "S00043",
+  "uncertain_specs": [
+   "S00294",
+   "S00295",
+   "S00296",
+   "S00297",
+   "S00298",
+   "S00299"
+  ],
+  "term": "treat",
+  "published": {
+   "value": "-0.291",
+   "se": "0.0245",
+   "stars": "***",
+   "n_obs": "1820",
+   "reader_targets": [
+    "T0212"
+   ]
+  },
+  "paper_focal": false
+ },
+ {
+  "unit": "T6|(1) Treat",
+  "kind": "regression",
+  "tier": "focal",
+  "opus_claim": "C_T6_1",
+  "astra_claim": "T6C1",
+  "origin_spec": "S00044",
+  "uncertain_specs": [
+   "S00300",
+   "S00301",
+   "S00302",
+   "S00303",
+   "S00304",
+   "S00305",
+   "S00867",
+   "S00868",
+   "S00869",
+   "S00870",
+   "S00871",
+   "S00872",
+   "S00873",
+   "S00874",
+   "S00875",
+   "S00876",
+   "S00877",
+   "S00878",
+   "S00879",
+   "S00880",
+   "S00881",
+   "S00882",
+   "S00883",
+   "S00884",
+   "S00885",
+   "S00886",
+   "S00887",
+   "S00888",
+   "S00889",
+   "S00890",
+   "S00891",
+   "S00892",
+   "S00893",
+   "S00894",
+   "S00895"
+  ],
+  "term": "treat",
+  "published": {
+   "value": "0.126",
+   "se": "0.0708",
+   "stars": "*",
+   "n_obs": "81007",
+   "reader_targets": [
+    "T0216"
+   ]
+  },
+  "paper_focal": true
+ },
+ {
+  "unit": "T6|(1) Distance",
+  "kind": "regression_nuisance_unit",
+  "tier": "nuisance",
+  "opus_claim": "C_T6_dist_1",
+  "astra_claim": "T6C1D",
+  "origin_spec": "S00044",
+  "uncertain_specs": [
+   "S00300",
+   "S00301",
+   "S00302",
+   "S00303",
+   "S00304",
+   "S00305",
+   "S00867",
+   "S00868",
+   "S00869",
+   "S00870",
+   "S00871",
+   "S00872",
+   "S00873",
+   "S00874",
+   "S00875",
+   "S00876",
+   "S00877",
+   "S00878",
+   "S00879",
+   "S00880",
+   "S00881",
+   "S00882",
+   "S00883",
+   "S00884",
+   "S00885",
+   "S00886",
+   "S00887",
+   "S00888",
+   "S00889",
+   "S00890",
+   "S00891",
+   "S00892",
+   "S00893",
+   "S00894",
+   "S00895"
+  ],
+  "term": "dist_km",
+  "published": {
+   "value": "0.0340",
+   "se": "0.00262",
+   "stars": "***",
+   "n_obs": "81007",
+   "reader_targets": [
+    "T0219"
+   ]
+  },
+  "unit_readings": {
+   "km": 1.0,
+   "miles": 1.609344
+  },
+  "paper_focal": false
+ },
+ {
+  "unit": "T6|(2) Treat",
+  "kind": "regression",
+  "tier": "uncertain:focal|robustness",
+  "opus_claim": "C_T6_2",
+  "astra_claim": "T6C2",
+  "origin_spec": "S00045",
+  "uncertain_specs": [
+   "S00306",
+   "S00307",
+   "S00308",
+   "S00309",
+   "S00310",
+   "S00311",
+   "S00312",
+   "S00313"
+  ],
+  "term": "treat",
+  "published": {
+   "value": "0.149",
+   "se": "0.0800",
+   "stars": "*",
+   "n_obs": "58715",
+   "reader_targets": [
+    "T0220"
+   ]
+  },
+  "paper_focal": false
+ },
+ {
+  "unit": "T6|(2) Distance",
+  "kind": "regression_nuisance_unit",
+  "tier": "nuisance",
+  "opus_claim": "C_T6_dist_2",
+  "astra_claim": "T6C2D",
+  "origin_spec": "S00045",
+  "uncertain_specs": [
+   "S00306",
+   "S00307",
+   "S00308",
+   "S00309",
+   "S00310",
+   "S00311",
+   "S00312",
+   "S00313"
+  ],
+  "term": "dist_km",
+  "published": {
+   "value": "0.0339",
+   "se": "0.00292",
+   "stars": "***",
+   "n_obs": "58715",
+   "reader_targets": [
+    "T0223"
+   ]
+  },
+  "unit_readings": {
+   "km": 1.0,
+   "miles": 1.609344
+  },
+  "paper_focal": false
+ },
+ {
+  "unit": "T6|(3) Treat",
+  "kind": "regression",
+  "tier": "uncertain:focal|robustness",
+  "opus_claim": "C_T6_3",
+  "astra_claim": "T6C3",
+  "origin_spec": "S00046",
+  "uncertain_specs": [
+   "S00314",
+   "S00315",
+   "S00316",
+   "S00317",
+   "S00318",
+   "S00319",
+   "S00320"
+  ],
+  "term": "treat",
+  "published": {
+   "value": "0.297",
+   "se": "0.0915",
+   "stars": "***",
+   "n_obs": "49095",
+   "reader_targets": [
+    "T0224"
+   ]
+  },
+  "paper_focal": false
+ },
+ {
+  "unit": "T6|(3) Distance",
+  "kind": "regression_nuisance_unit",
+  "tier": "nuisance",
+  "opus_claim": "C_T6_dist_3",
+  "astra_claim": "T6C3D",
+  "origin_spec": "S00046",
+  "uncertain_specs": [
+   "S00314",
+   "S00315",
+   "S00316",
+   "S00317",
+   "S00318",
+   "S00319",
+   "S00320"
+  ],
+  "term": "dist_km",
+  "published": {
+   "value": "0.0376",
+   "se": "0.00320",
+   "stars": "***",
+   "n_obs": "49095",
+   "reader_targets": [
+    "T0227"
+   ]
+  },
+  "unit_readings": {
+   "km": 1.0,
+   "miles": 1.609344
+  },
+  "paper_focal": false
+ },
+ {
+  "unit": "T7|(1)",
+  "kind": "regression",
+  "tier": "focal",
+  "opus_claim": "C_T7_1",
+  "astra_claim": "T7C1",
+  "origin_spec": "S00047",
+  "uncertain_specs": [
+   "S00321",
+   "S00322",
+   "S00323",
+   "S00324",
+   "S00325",
+   "S00326"
+  ],
+  "term": "post_treat",
+  "published": {
+   "value": "0.131",
+   "se": "0.0391",
+   "stars": "***",
+   "n_obs": "121173",
+   "reader_targets": [
+    "T0229"
+   ]
+  },
+  "paper_focal": false
+ },
+ {
+  "unit": "T7|(2)",
+  "kind": "regression",
+  "tier": "focal",
+  "opus_claim": "C_T7_2",
+  "astra_claim": "T7C2",
+  "origin_spec": "S00048",
+  "uncertain_specs": [
+   "S00327",
+   "S00328",
+   "S00329",
+   "S00330",
+   "S00331"
+  ],
+  "term": "post_treat",
+  "published": {
+   "value": "-0.227",
+   "se": "0.0497",
+   "stars": "***",
+   "n_obs": "121173",
+   "reader_targets": [
+    "T0232"
+   ]
+  },
+  "paper_focal": false
+ },
+ {
+  "unit": "T7|(3)",
+  "kind": "regression",
+  "tier": "focal",
+  "opus_claim": "C_T7_3",
+  "astra_claim": "T7C3",
+  "origin_spec": "S00049",
+  "uncertain_specs": [
+   "S00332",
+   "S00333"
+  ],
+  "term": "post_treat",
+  "published": {
+   "value": "-0.00281",
+   "se": "0.00280",
+   "stars": "",
+   "n_obs": "121173",
+   "reader_targets": [
+    "T0235"
+   ]
+  },
+  "paper_focal": false
+ },
+ {
+  "unit": "T7|(4)",
+  "kind": "regression",
+  "tier": "focal",
+  "opus_claim": "C_T7_4",
+  "astra_claim": "T7C4",
+  "origin_spec": "S00050",
+  "uncertain_specs": [
+   "S00334",
+   "S00335"
+  ],
+  "term": "post_treat",
+  "published": {
+   "value": "-0.0586",
+   "se": "0.0127",
+   "stars": "***",
+   "n_obs": "121173",
+   "reader_targets": [
+    "T0237"
+   ]
+  },
+  "paper_focal": false
+ },
+ {
+  "unit": "T7|(5)",
+  "kind": "regression",
+  "tier": "focal",
+  "opus_claim": "C_T7_5",
+  "astra_claim": "T7C5",
+  "origin_spec": "S00051",
+  "uncertain_specs": [
+   "S00336",
+   "S00337"
+  ],
+  "term": "post_treat",
+  "published": {
+   "value": "-0.00847",
+   "se": "0.00574",
+   "stars": "",
+   "n_obs": "121173",
+   "reader_targets": [
+    "T0239"
+   ]
+  },
+  "paper_focal": false
+ },
+ {
+  "unit": "T7|(6)",
+  "kind": "regression",
+  "tier": "focal",
+  "opus_claim": "C_T7_6",
+  "astra_claim": "T7C6",
+  "origin_spec": "S00052",
+  "uncertain_specs": [
+   "S00338",
+   "S00339",
+   "S00340"
+  ],
+  "term": "post_treat",
+  "published": {
+   "value": "-0.0357",
+   "se": "0.0173",
+   "stars": "**",
+   "n_obs": "121173",
+   "reader_targets": [
+    "T0241"
+   ]
+  },
+  "paper_focal": false
+ },
+ {
+  "unit": "T7|(7)",
+  "kind": "regression",
+  "tier": "focal",
+  "opus_claim": "C_T7_7",
+  "astra_claim": "T7C7",
+  "origin_spec": "S00053",
+  "uncertain_specs": [
+   "S00341",
+   "S00342"
+  ],
+  "term": "post_treat",
+  "published": {
+   "value": "-0.161",
+   "se": "0.0369",
+   "stars": "***",
+   "n_obs": "121173",
+   "reader_targets": [
+    "T0243"
+   ]
+  },
+  "paper_focal": false
+ },
+ {
+  "unit": "T1|Contributions",
+  "kind": "descriptive_group",
+  "tier": "descriptive",
+  "opus_claim": "C_T1_contrib",
+  "astra_claim": "T1R1",
+  "origin_spec": "S00001",
+  "uncertain_specs": [
+   "S00113",
+   "S00114",
+   "S00115"
+  ],
+  "term": "total",
+  "published": {
+   "mean_treated": "2375.5",
+   "mean_control": "3593.3",
+   "difference": "-1217.7",
+   "p": "0.00",
+   "n_treated_header": "1851",
+   "n_control_header": "1242"
+  },
+  "paper_focal": false
+ },
+ {
+  "unit": "T1|Follow-on Contributions",
+  "kind": "descriptive_group",
+  "tier": "descriptive",
+  "opus_claim": "C_T1_followon",
+  "astra_claim": "T1R2",
+  "origin_spec": "S00001",
+  "uncertain_specs": [
+   "S00113",
+   "S00114",
+   "S00115"
+  ],
+  "term": "followon",
+  "published": {
+   "mean_treated": "457.9",
+   "mean_control": "635.5",
+   "difference": "-177.6",
+   "p": "0.05",
+   "n_treated_header": "1851",
+   "n_control_header": "1242"
+  },
+  "paper_focal": false
+ },
+ {
+  "unit": "T1|Contributors",
+  "kind": "descriptive_group",
+  "tier": "descriptive",
+  "opus_claim": "C_T1_contributors",
+  "astra_claim": "T1R3",
+  "origin_spec": "S00001",
+  "uncertain_specs": [
+   "S00113",
+   "S00114",
+   "S00115"
+  ],
+  "term": "contributors",
+  "published": {
+   "mean_treated": "7.482",
+   "mean_control": "7.966",
+   "difference": "-0.484",
+   "p": "0.26",
+   "n_treated_header": "1851",
+   "n_control_header": "1242"
+  },
+  "paper_focal": false
+ },
+ {
+  "unit": "T1|Error-Score",
+  "kind": "descriptive_group",
+  "tier": "descriptive",
+  "opus_claim": "C_T1_error",
+  "astra_claim": "T1R4",
+  "origin_spec": "S00001",
+  "uncertain_specs": [
+   "S00113",
+   "S00114",
+   "S00115"
+  ],
+  "term": "err_mean",
+  "published": {
+   "mean_treated": "1830.2",
+   "mean_control": "2046.7",
+   "difference": "-216.5",
+   "p": "0.09",
+   "n_treated_header": "1851",
+   "n_control_header": "1242"
+  },
+  "paper_focal": false
+ },
+ {
+  "unit": "T1|Owner-Contributions",
+  "kind": "descriptive_group",
+  "tier": "descriptive",
+  "opus_claim": "C_T1_owner",
+  "astra_claim": "T1R5",
+  "origin_spec": "S00001",
+  "uncertain_specs": [
+   "S00113",
+   "S00114",
+   "S00115"
+  ],
+  "term": "owner",
+  "published": {
+   "mean_treated": "149.6",
+   "mean_control": "203.6",
+   "difference": "-54.08",
+   "p": "0.21",
+   "n_treated_header": "1851",
+   "n_control_header": "1242"
+  },
+  "paper_focal": false
+ },
+ {
+  "unit": "T1|D Population",
+  "kind": "descriptive_group",
+  "tier": "identification_or_inference_diagnostic",
+  "opus_claim": "C_T1_balance",
+  "astra_claim": "T1R6",
+  "origin_spec": "S00001",
+  "uncertain_specs": [
+   "S00113",
+   "S00114",
+   "S00115"
+  ],
+  "term": "d_population",
+  "published": {
+   "mean_treated": "7324.3",
+   "mean_control": "6756.5",
+   "difference": "567.8",
+   "p": "0.62",
+   "n_treated_header": "1851",
+   "n_control_header": "1242"
+  },
+  "paper_focal": false
+ },
+ {
+  "unit": "T1|D Households",
+  "kind": "descriptive_group",
+  "tier": "identification_or_inference_diagnostic",
+  "opus_claim": "C_T1_balance",
+  "astra_claim": "T1R7",
+  "origin_spec": "S00001",
+  "uncertain_specs": [
+   "S00113",
+   "S00114",
+   "S00115"
+  ],
+  "term": "d_households",
+  "published": {
+   "mean_treated": "2186.4",
+   "mean_control": "1899.8",
+   "difference": "286.6",
+   "p": "0.42",
+   "n_treated_header": "1851",
+   "n_control_header": "1242"
+  },
+  "paper_focal": false
+ },
+ {
+  "unit": "T1|D Unemployed Pop.",
+  "kind": "descriptive_group",
+  "tier": "identification_or_inference_diagnostic",
+  "opus_claim": "C_T1_balance",
+  "astra_claim": "T1R8",
+  "origin_spec": "S00001",
+  "uncertain_specs": [
+   "S00113",
+   "S00114",
+   "S00115"
+  ],
+  "term": "d_unemploymentrate",
+  "published": {
+   "mean_treated": "-646.1",
+   "mean_control": "-543.6",
+   "difference": "-102.5",
+   "p": "0.27",
+   "n_treated_header": "1851",
+   "n_control_header": "1242"
+  },
+  "paper_focal": false
+ },
+ {
+  "unit": "T1|D Educ. Population",
+  "kind": "descriptive_group",
+  "tier": "identification_or_inference_diagnostic",
+  "opus_claim": "C_T1_balance",
+  "astra_claim": "T1R9",
+  "origin_spec": "S00001",
+  "uncertain_specs": [
+   "S00113",
+   "S00114",
+   "S00115"
+  ],
+  "term": "d_popeduc",
+  "published": {
+   "mean_treated": "1995.9",
+   "mean_control": "1884.8",
+   "difference": "111.0",
+   "p": "0.68",
+   "n_treated_header": "1851",
+   "n_control_header": "1242"
+  },
+  "paper_focal": false
+ },
+ {
+  "unit": "T1|D Male Population (18-45)",
+  "kind": "descriptive_group",
+  "tier": "identification_or_inference_diagnostic",
+  "opus_claim": "C_T1_balance",
+  "astra_claim": "T1R10",
+  "origin_spec": "S00001",
+  "uncertain_specs": [
+   "S00113",
+   "S00114",
+   "S00115"
+  ],
+  "term": "d_popyoungmales|d_popmales",
+  "published": {
+   "mean_treated": "555.3",
+   "mean_control": "410.5",
+   "difference": "144.8",
+   "p": "0.42",
+   "n_treated_header": "1851",
+   "n_control_header": "1242"
+  },
+  "paper_focal": false
+ },
+ {
+  "unit": "T1|D Income per Capita",
+  "kind": "descriptive_group",
+  "tier": "identification_or_inference_diagnostic",
+  "opus_claim": "C_T1_income",
+  "astra_claim": "T1R11",
+  "origin_spec": "S00001",
+  "uncertain_specs": [
+   "S00113",
+   "S00114",
+   "S00115"
+  ],
+  "term": "d_income_percapita",
+  "published": {
+   "mean_treated": "3152.7",
+   "mean_control": "2773.7",
+   "difference": "379.0",
+   "p": "0.01",
+   "n_treated_header": "1851",
+   "n_control_header": "1242"
+  },
+  "paper_focal": false
+ },
+ {
+  "unit": "T2|Total Contributions",
+  "kind": "descriptive_summary",
+  "tier": "descriptive",
+  "opus_claim": "C_T2_median",
+  "astra_claim": "T2R1",
+  "origin_spec": "S00002",
+  "uncertain_specs": [
+   "S00116",
+   "S00117",
+   "S00118",
+   "S00119",
+   "S00120"
+  ],
+  "term": "total",
+  "published": {
+   "mean": "2867.80",
+   "sd": "28510.38",
+   "median": "69.00",
+   "min": "0.00",
+   "max": "3625156.00"
+  },
+  "paper_focal": false
+ },
+ {
+  "unit": "T2|Total Follow-on Contributions",
+  "kind": "descriptive_summary",
+  "tier": "descriptive",
+  "opus_claim": "C_T2_median",
+  "astra_claim": "T2R2",
+  "origin_spec": "S00002",
+  "uncertain_specs": [
+   "S00116",
+   "S00117",
+   "S00118",
+   "S00119",
+   "S00120"
+  ],
+  "term": "followon",
+  "published": {
+   "mean": "529.68",
+   "sd": "13416.84",
+   "median": "11.00",
+   "min": "0.00",
+   "max": "3625156.00"
+  },
+  "paper_focal": false
+ },
+ {
+  "unit": "T2|Contributors",
+  "kind": "descriptive_summary",
+  "tier": "descriptive",
+  "opus_claim": "C_T2_median",
+  "astra_claim": "T2R3",
+  "origin_spec": "S00002",
+  "uncertain_specs": [
+   "S00116",
+   "S00117",
+   "S00118",
+   "S00119",
+   "S00120"
+  ],
+  "term": "contributors",
+  "published": {
+   "mean": "7.68",
+   "sd": "46.12",
+   "median": "4.00",
+   "min": "0.00",
+   "max": "8535.00"
+  },
+  "paper_focal": false
+ },
+ {
+  "unit": "T2|Distant Follow-on",
+  "kind": "descriptive_summary",
+  "tier": "descriptive",
+  "opus_claim": "C_T2_other",
+  "astra_claim": "T2R4",
+  "origin_spec": "S00002",
+  "uncertain_specs": [
+   "S00116",
+   "S00117",
+   "S00118",
+   "S00119",
+   "S00120"
+  ],
+  "term": "distant",
+  "published": {
+   "mean": "120.21",
+   "sd": "3612.47",
+   "median": "0.00",
+   "min": "0.00",
+   "max": "422200.00"
+  },
+  "paper_focal": false
+ },
+ {
+  "unit": "T2|Incremental Follow-On",
+  "kind": "descriptive_summary",
+  "tier": "descriptive",
+  "opus_claim": "C_T2_other",
+  "astra_claim": "T2R5",
+  "origin_spec": "S00002",
+  "uncertain_specs": [
+   "S00116",
+   "S00117",
+   "S00118",
+   "S00119",
+   "S00120"
+  ],
+  "term": "incremental",
+  "published": {
+   "mean": "366.00",
+   "sd": "12551.49",
+   "median": "2.00",
+   "min": "0.00",
+   "max": "3625156.00"
+  },
+  "paper_focal": false
+ },
+ {
+  "unit": "T2|New Contributors",
+  "kind": "descriptive_summary",
+  "tier": "descriptive",
+  "opus_claim": "C_T2_other",
+  "astra_claim": "T2R6",
+  "origin_spec": "S00002",
+  "uncertain_specs": [
+   "S00116",
+   "S00117",
+   "S00118",
+   "S00119",
+   "S00120"
+  ],
+  "term": "new",
+  "published": {
+   "mean": "4.77",
+   "sd": "45.36",
+   "median": "2.00",
+   "min": "0.00",
+   "max": "8532.00"
+  },
+  "paper_focal": false
+ },
+ {
+  "unit": "T2|Old Contributors",
+  "kind": "descriptive_summary",
+  "tier": "descriptive",
+  "opus_claim": "C_T2_other",
+  "astra_claim": "T2R7",
+  "origin_spec": "S00002",
+  "uncertain_specs": [
+   "S00116",
+   "S00117",
+   "S00118",
+   "S00119",
+   "S00120"
+  ],
+  "term": "old",
+  "published": {
+   "mean": "0.10",
+   "sd": "1.14",
+   "median": "0.00",
+   "min": "0.00",
+   "max": "293.00"
+  },
+  "paper_focal": false
+ },
+ {
+  "unit": "T2|Low Ownership Contributions",
+  "kind": "descriptive_summary",
+  "tier": "descriptive",
+  "opus_claim": "C_T2_other",
+  "astra_claim": "T2R8",
+  "origin_spec": "S00002",
+  "uncertain_specs": [
+   "S00116",
+   "S00117",
+   "S00118",
+   "S00119",
+   "S00120"
+  ],
+  "term": "low_own",
+  "published": {
+   "mean": "2.00",
+   "sd": "87.47",
+   "median": "0.00",
+   "min": "0.00",
+   "max": "20595.00"
+  },
+  "paper_focal": false
+ },
+ {
+  "unit": "T2|High Ownership Contributions",
+  "kind": "descriptive_summary",
+  "tier": "descriptive",
+  "opus_claim": "C_T2_other",
+  "astra_claim": "T2R9",
+  "origin_spec": "S00002",
+  "uncertain_specs": [
+   "S00116",
+   "S00117",
+   "S00118",
+   "S00119",
+   "S00120"
+  ],
+  "term": "high_own",
+  "published": {
+   "mean": "123.52",
+   "sd": "6411.82",
+   "median": "0.00",
+   "min": "0.00",
+   "max": "1268382.00"
+  },
+  "paper_focal": false
+ },
+ {
+  "unit": "T2|Owner-Contributions",
+  "kind": "descriptive_summary",
+  "tier": "descriptive",
+  "opus_claim": "C_T2_owner",
+  "astra_claim": "T2R10",
+  "origin_spec": "S00002",
+  "uncertain_specs": [
+   "S00116",
+   "S00117",
+   "S00118",
+   "S00119",
+   "S00120"
+  ],
+  "term": "owner",
+  "published": {
+   "mean": "171.42",
+   "sd": "5729.41",
+   "median": "1.00",
+   "min": "0.00",
+   "max": "1695215.00"
+  },
+  "paper_focal": false
+ },
+ {
+  "unit": "T2|Treat",
+  "kind": "descriptive_summary",
+  "tier": "descriptive",
+  "opus_claim": "C_T2_other",
+  "astra_claim": "T2R11",
+  "origin_spec": "S00002",
+  "uncertain_specs": [
+   "S00116",
+   "S00117",
+   "S00118",
+   "S00119",
+   "S00120"
+  ],
+  "term": "treat",
+  "published": {
+   "mean": "0.60",
+   "sd": "0.49",
+   "median": "1.00",
+   "min": "0.00",
+   "max": "1.00"
+  },
+  "paper_focal": false
+ },
+ {
+  "unit": "T2|Post",
+  "kind": "descriptive_summary",
+  "tier": "descriptive",
+  "opus_claim": "C_T2_other",
+  "astra_claim": "T2R12",
+  "origin_spec": "S00002",
+  "uncertain_specs": [
+   "S00116",
+   "S00117",
+   "S00118",
+   "S00119",
+   "S00120"
+  ],
+  "term": "post",
+  "published": {
+   "mean": "0.72",
+   "sd": "0.45",
+   "median": "1.00",
+   "min": "0.00",
+   "max": "1.00"
+  },
+  "paper_focal": false
+ },
+ {
+  "unit": "T2|Year",
+  "kind": "descriptive_summary",
+  "tier": "descriptive",
+  "opus_claim": "C_T2_other",
+  "astra_claim": "T2R13",
+  "origin_spec": "S00002",
+  "uncertain_specs": [
+   "S00116",
+   "S00117",
+   "S00118",
+   "S00119",
+   "S00120"
+  ],
+  "term": "year",
+  "published": {
+   "mean": "2009.62",
+   "sd": "2.82",
+   "median": "2010.00",
+   "min": "2005.00",
+   "max": "2014.00"
+  },
+  "paper_focal": false
+ },
+ {
+  "unit": "T2|Quarter",
+  "kind": "descriptive_summary",
+  "tier": "descriptive",
+  "opus_claim": "C_T2_other",
+  "astra_claim": "T2R14",
+  "origin_spec": "S00002",
+  "uncertain_specs": [
+   "S00116",
+   "S00117",
+   "S00118",
+   "S00119",
+   "S00120"
+  ],
+  "term": "qidx",
+  "published": {
+   "mean": "200.00",
+   "sd": "11.25",
+   "median": "200.00",
+   "min": "181.00",
+   "max": "219.00"
+  },
+  "paper_focal": false
+ },
+ {
+  "unit": "T2|Population",
+  "kind": "descriptive_summary",
+  "tier": "descriptive",
+  "opus_claim": "C_T2_other",
+  "astra_claim": "T2R15",
+  "origin_spec": "S00002",
+  "uncertain_specs": [
+   "S00116",
+   "S00117",
+   "S00118",
+   "S00119",
+   "S00120"
+  ],
+  "term": "population",
+  "published": {
+   "mean": "100029.21",
+   "sd": "320590.11",
+   "median": "25905.00",
+   "min": "41.00",
+   "max": "10230943.00"
+  },
+  "paper_focal": false
+ },
+ {
+  "unit": "T2|Households",
+  "kind": "descriptive_summary",
+  "tier": "descriptive",
+  "opus_claim": "C_T2_other",
+  "astra_claim": "T2R16",
+  "origin_spec": "S00002",
+  "uncertain_specs": [
+   "S00116",
+   "S00117",
+   "S00118",
+   "S00119",
+   "S00120"
+  ],
+  "term": "households",
+  "published": {
+   "mean": "37143.93",
+   "sd": "112520.17",
+   "median": "9880.00",
+   "min": "22.00",
+   "max": "3325103.00"
+  },
+  "paper_focal": false
+ },
+ {
+  "unit": "T2|Population Density",
+  "kind": "descriptive_summary",
+  "tier": "descriptive",
+  "opus_claim": "C_T2_other",
+  "astra_claim": "T2R17",
+  "origin_spec": "S00002",
+  "uncertain_specs": [
+   "S00116",
+   "S00117",
+   "S00118",
+   "S00119",
+   "S00120"
+  ],
+  "term": "popdensity",
+  "published": {
+   "mean": "265.36",
+   "sd": "1771.88",
+   "median": "45.36",
+   "min": "0.06",
+   "max": "72839.69"
+  },
+  "paper_focal": false
+ },
+ {
+  "unit": "T2|Per-Capita Income",
+  "kind": "descriptive_summary",
+  "tier": "descriptive",
+  "opus_claim": "C_T2_other",
+  "astra_claim": "T2R18",
+  "origin_spec": "S00002",
+  "uncertain_specs": [
+   "S00116",
+   "S00117",
+   "S00118",
+   "S00119",
+   "S00120"
+  ],
+  "term": "income_percapita",
+  "published": {
+   "mean": "23765.17",
+   "sd": "5854.17",
+   "median": "22966.00",
+   "min": "1601.00",
+   "max": "82817.00"
+  },
+  "paper_focal": false
+ },
+ {
+  "unit": "F1|a",
+  "kind": "count",
+  "tier": "uncertain:descriptive|identification_or_inference_diagnostic",
+  "opus_claim": "C_F1_a",
+  "astra_claim": "F1A",
+  "origin_spec": "S00003",
+  "uncertain_specs": [],
+  "term": "full",
+  "published": {
+   "treated": "1851",
+   "control": "1256",
+   "all": "3107"
+  },
+  "paper_focal": false
+ },
+ {
+  "unit": "F2|a",
+  "kind": "count",
+  "tier": "uncertain:descriptive|identification_or_inference_diagnostic",
+  "opus_claim": "C_F2_a",
+  "astra_claim": "F2A",
+  "origin_spec": "S00003",
+  "uncertain_specs": [],
+  "term": "boundary_B1",
+  "published": {
+   "treated": "1096",
+   "control": "724",
+   "all": "1820"
+  },
+  "paper_focal": false
+ },
+ {
+  "unit": "F2|b",
+  "kind": "count",
+  "tier": "uncertain:descriptive|identification_or_inference_diagnostic",
+  "opus_claim": "C_F2_b",
+  "astra_claim": "F2B",
+  "origin_spec": "S00003",
+  "uncertain_specs": [],
+  "term": "timing",
+  "published": {
+   "treated": "1228",
+   "control": "990",
+   "all": "2218"
+  },
+  "paper_focal": false
+ },
+ {
+  "unit": "F4|follow-on",
+  "kind": "plot_points",
+  "tier": "identification_or_inference_diagnostic",
+  "opus_claim": "C_F4_fo",
+  "astra_claim": "F4F",
+  "origin_spec": "S00055",
+  "uncertain_specs": [
+   "S00346",
+   "S00347",
+   "S00348",
+   "S00349"
+  ],
+  "term": "treat_x_year",
+  "published": {
+   "2005": [
+    {
+     "reader": "opus",
+     "value": "0.124",
+     "interval": [
+      0.112,
+      0.135
+     ],
+     "target_id": "T0260"
+    },
+    {
+     "reader": "astra",
+     "value": "0.125",
+     "interval": [
+      0.11,
+      0.14
+     ],
+     "target_id": "X0262"
+    }
+   ],
+   "2006": [
+    {
+     "reader": "opus",
+     "value": "0.123",
+     "interval": [
+      0.112,
+      0.135
+     ],
+     "target_id": "T0261"
+    },
+    {
+     "reader": "astra",
+     "value": "0.125",
+     "interval": [
+      0.11,
+      0.14
+     ],
+     "target_id": "X0263"
+    }
+   ],
+   "2007": [
+    {
+     "reader": "opus",
+     "value": "0.000",
+     "interval": [
+      -0.004,
+      0.004
+     ],
+     "target_id": "T0262"
+    }
+   ],
+   "2008": [
+    {
+     "reader": "opus",
+     "value": "-0.031",
+     "interval": [
+      -0.04,
+      -0.022
+     ],
+     "target_id": "T0263"
+    }
+   ],
+   "2009": [
+    {
+     "reader": "opus",
+     "value": "-0.016",
+     "interval": [
+      -0.025,
+      -0.008
+     ],
+     "target_id": "T0264"
+    }
+   ],
+   "2010": [
+    {
+     "reader": "opus",
+     "value": "0.043",
+     "interval": [
+      0.034,
+      0.052
+     ],
+     "target_id": "T0265"
+    }
+   ],
+   "2011": [
+    {
+     "reader": "opus",
+     "value": "-0.055",
+     "interval": [
+      -0.064,
+      -0.046
+     ],
+     "target_id": "T0266"
+    }
+   ],
+   "2012": [
+    {
+     "reader": "opus",
+     "value": "-0.097",
+     "interval": [
+      -0.106,
+      -0.088
+     ],
+     "target_id": "T0267"
+    }
+   ],
+   "2013": [
+    {
+     "reader": "opus",
+     "value": "-0.148",
+     "interval": [
+      -0.157,
+      -0.139
+     ],
+     "target_id": "T0268"
+    }
+   ],
+   "2014": [
+    {
+     "reader": "opus",
+     "value": "-0.233",
+     "interval": [
+      -0.242,
+      -0.224
+     ],
+     "target_id": "T0269"
+    },
+    {
+     "reader": "astra",
+     "value": "-0.23",
+     "interval": [
+      -0.245,
+      -0.215
+     ],
+     "target_id": "X0264"
+    }
+   ]
+  },
+  "paper_focal": false
+ },
+ {
+  "unit": "F4|contributors",
+  "kind": "plot_points",
+  "tier": "identification_or_inference_diagnostic",
+  "opus_claim": "C_F4_users",
+  "astra_claim": "F4U",
+  "origin_spec": "S00056",
+  "uncertain_specs": [
+   "S00350"
+  ],
+  "term": "treat_x_year",
+  "published": {
+   "2005": [
+    {
+     "reader": "opus",
+     "value": "-0.004",
+     "interval": [
+      -0.009,
+      0.0
+     ],
+     "target_id": "T0275"
+    }
+   ],
+   "2006": [
+    {
+     "reader": "opus",
+     "value": "0.000",
+     "interval": [
+      -0.004,
+      0.004
+     ],
+     "target_id": "T0276"
+    }
+   ],
+   "2007": [
+    {
+     "reader": "opus",
+     "value": "0.000",
+     "interval": [
+      -0.003,
+      0.003
+     ],
+     "target_id": "T0277"
+    }
+   ],
+   "2008": [
+    {
+     "reader": "opus",
+     "value": "-0.013",
+     "interval": [
+      -0.018,
+      -0.007
+     ],
+     "target_id": "T0278"
+    }
+   ],
+   "2009": [
+    {
+     "reader": "opus",
+     "value": "-0.033",
+     "interval": [
+      -0.039,
+      -0.028
+     ],
+     "target_id": "T0279"
+    }
+   ],
+   "2010": [
+    {
+     "reader": "opus",
+     "value": "-0.023",
+     "interval": [
+      -0.029,
+      -0.018
+     ],
+     "target_id": "T0280"
+    }
+   ],
+   "2011": [
+    {
+     "reader": "opus",
+     "value": "-0.023",
+     "interval": [
+      -0.029,
+      -0.018
+     ],
+     "target_id": "T0281"
+    }
+   ],
+   "2012": [
+    {
+     "reader": "opus",
+     "value": "-0.036",
+     "interval": [
+      -0.042,
+      -0.031
+     ],
+     "target_id": "T0282"
+    }
+   ],
+   "2013": [
+    {
+     "reader": "opus",
+     "value": "-0.057",
+     "interval": [
+      -0.063,
+      -0.052
+     ],
+     "target_id": "T0283"
+    }
+   ],
+   "2014": [
+    {
+     "reader": "opus",
+     "value": "-0.252",
+     "interval": [
+      -0.26,
+      -0.244
+     ],
+     "target_id": "T0284"
+    },
+    {
+     "reader": "astra",
+     "value": "-0.255",
+     "interval": [
+      -0.27,
+      -0.24
+     ],
+     "target_id": "X0265"
+    }
+   ]
+  },
+  "paper_focal": false
+ },
+ {
+  "unit": "F5|follow-on",
+  "kind": "plot_points",
+  "tier": "identification_or_inference_diagnostic",
+  "opus_claim": "C_F5",
+  "astra_claim": "F5",
+  "origin_spec": "S00066",
+  "uncertain_specs": [
+   "S00423",
+   "S00424",
+   "S00425",
+   "S00426",
+   "S00427",
+   "S00428",
+   "S00429",
+   "S00430"
+  ],
+  "term": "treat_by_year",
+  "published": {
+   "2005": [
+    {
+     "reader": "opus",
+     "value": "-0.002",
+     "interval": [
+      -0.007,
+      0.003
+     ],
+     "target_id": "T0285"
+    }
+   ],
+   "2006": [
+    {
+     "reader": "opus",
+     "value": "-0.004",
+     "interval": [
+      -0.009,
+      0.001
+     ],
+     "target_id": "T0286"
+    }
+   ],
+   "2007": [
+    {
+     "reader": "opus",
+     "value": "-0.120",
+     "interval": [
+      -0.126,
+      -0.114
+     ],
+     "target_id": "T0287"
+    }
+   ],
+   "2008": [
+    {
+     "reader": "opus",
+     "value": "-0.152",
+     "interval": [
+      -0.158,
+      -0.146
+     ],
+     "target_id": "T0288"
+    }
+   ],
+   "2009": [
+    {
+     "reader": "opus",
+     "value": "-0.145",
+     "interval": [
+      -0.151,
+      -0.139
+     ],
+     "target_id": "T0289"
+    }
+   ],
+   "2010": [
+    {
+     "reader": "opus",
+     "value": "-0.083",
+     "interval": [
+      -0.089,
+      -0.077
+     ],
+     "target_id": "T0290"
+    }
+   ],
+   "2011": [
+    {
+     "reader": "opus",
+     "value": "-0.185",
+     "interval": [
+      -0.191,
+      -0.179
+     ],
+     "target_id": "T0291"
+    }
+   ],
+   "2012": [
+    {
+     "reader": "opus",
+     "value": "-0.213",
+     "interval": [
+      -0.219,
+      -0.207
+     ],
+     "target_id": "T0292"
+    }
+   ],
+   "2013": [
+    {
+     "reader": "opus",
+     "value": "-0.268",
+     "interval": [
+      -0.274,
+      -0.262
+     ],
+     "target_id": "T0293"
+    }
+   ],
+   "2014": [
+    {
+     "reader": "opus",
+     "value": "-0.350",
+     "interval": [
+      -0.356,
+      -0.344
+     ],
+     "target_id": "T0294"
+    },
+    {
+     "reader": "astra",
+     "value": "-0.35",
+     "interval": [
+      -0.37,
+      -0.33
+     ],
+     "target_id": "X0266"
+    }
+   ]
+  },
+  "origin_specs_by_point": {
+   "2005": "S00057",
+   "2006": "S00058",
+   "2007": "S00059",
+   "2008": "S00060",
+   "2009": "S00061",
+   "2010": "S00062",
+   "2011": "S00063",
+   "2012": "S00064",
+   "2013": "S00065",
+   "2014": "S00066"
+  },
+  "paper_focal": false
+ },
+ {
+  "unit": "F6|a follow-on",
+  "kind": "plot_points",
+  "tier": "uncertain:descriptive|robustness",
+  "opus_claim": "C_F6_a",
+  "astra_claim": "F6AF",
+  "origin_spec": "S00067",
+  "uncertain_specs": [
+   "S00431",
+   "S00432",
+   "S00433",
+   "S00434",
+   "S00435"
+  ],
+  "term": "treat_by_decile",
+  "published": {
+   "1": [
+    {
+     "reader": "opus",
+     "value": "-0.380",
+     "interval": [
+      -0.405,
+      -0.355
+     ],
+     "target_id": "T0299"
+    }
+   ],
+   "2": [
+    {
+     "reader": "opus",
+     "value": "-0.241",
+     "interval": [
+      -0.265,
+      -0.215
+     ],
+     "target_id": "T0300"
+    }
+   ],
+   "3": [
+    {
+     "reader": "opus",
+     "value": "-0.080",
+     "interval": [
+      -0.105,
+      -0.055
+     ],
+     "target_id": "T0301"
+    }
+   ],
+   "4": [
+    {
+     "reader": "opus",
+     "value": "-0.011",
+     "interval": [
+      -0.035,
+      0.015
+     ],
+     "target_id": "T0302"
+    }
+   ],
+   "5": [
+    {
+     "reader": "opus",
+     "value": "-0.325",
+     "interval": [
+      -0.35,
+      -0.3
+     ],
+     "target_id": "T0303"
+    }
+   ],
+   "6": [
+    {
+     "reader": "opus",
+     "value": "-0.303",
+     "interval": [
+      -0.328,
+      -0.278
+     ],
+     "target_id": "T0304"
+    }
+   ],
+   "7": [
+    {
+     "reader": "opus",
+     "value": "-0.449",
+     "interval": [
+      -0.475,
+      -0.425
+     ],
+     "target_id": "T0305"
+    }
+   ],
+   "8": [
+    {
+     "reader": "opus",
+     "value": "-0.259",
+     "interval": [
+      -0.285,
+      -0.235
+     ],
+     "target_id": "T0306"
+    }
+   ],
+   "9": [
+    {
+     "reader": "opus",
+     "value": "0.047",
+     "interval": [
+      0.025,
+      0.07
+     ],
+     "target_id": "T0307"
+    },
+    {
+     "reader": "astra",
+     "value": "0.05",
+     "interval": [
+      0.02,
+      0.08
+     ],
+     "target_id": "X0267"
+    }
+   ],
+   "10": [
+    {
+     "reader": "opus",
+     "value": "1.077",
+     "interval": [
+      1.05,
+      1.105
+     ],
+     "target_id": "T0308"
+    },
+    {
+     "reader": "astra",
+     "value": "1.08",
+     "interval": [
+      1.04,
+      1.12
+     ],
+     "target_id": "X0268"
+    }
+   ]
+  },
+  "origin_specs_by_point": {
+   "1": "S00067",
+   "2": "S00069",
+   "3": "S00071",
+   "4": "S00073",
+   "5": "S00075",
+   "6": "S00077",
+   "7": "S00079",
+   "8": "S00081",
+   "9": "S00083",
+   "10": "S00085"
+  },
+  "alt_estimator_specs_by_point": {
+   "1": "S00068",
+   "2": "S00070",
+   "3": "S00072",
+   "4": "S00074",
+   "5": "S00076",
+   "6": "S00078",
+   "7": "S00080",
+   "8": "S00082",
+   "9": "S00084",
+   "10": "S00086"
+  },
+  "paper_focal": false
+ },
+ {
+  "unit": "F6|a contributors",
+  "kind": "plot_points",
+  "tier": "uncertain:descriptive|robustness",
+  "opus_claim": "C_F6_a",
+  "astra_claim": "F6AU",
+  "origin_spec": "S00087",
+  "uncertain_specs": [
+   "S00561",
+   "S00562"
+  ],
+  "term": "treat_by_decile",
+  "published": {
+   "1": [
+    {
+     "reader": "opus",
+     "value": "-0.286",
+     "interval": [
+      -0.296,
+      -0.276
+     ],
+     "target_id": "T0309"
+    }
+   ],
+   "2": [
+    {
+     "reader": "opus",
+     "value": "-0.222",
+     "interval": [
+      -0.232,
+      -0.212
+     ],
+     "target_id": "T0310"
+    }
+   ],
+   "3": [
+    {
+     "reader": "opus",
+     "value": "-0.182",
+     "interval": [
+      -0.192,
+      -0.172
+     ],
+     "target_id": "T0311"
+    }
+   ],
+   "4": [
+    {
+     "reader": "opus",
+     "value": "-0.185",
+     "interval": [
+      -0.195,
+      -0.175
+     ],
+     "target_id": "T0312"
+    }
+   ],
+   "5": [
+    {
+     "reader": "opus",
+     "value": "-0.128",
+     "interval": [
+      -0.138,
+      -0.118
+     ],
+     "target_id": "T0313"
+    }
+   ],
+   "6": [
+    {
+     "reader": "opus",
+     "value": "-0.102",
+     "interval": [
+      -0.112,
+      -0.092
+     ],
+     "target_id": "T0314"
+    }
+   ],
+   "7": [
+    {
+     "reader": "opus",
+     "value": "-0.057",
+     "interval": [
+      -0.067,
+      -0.047
+     ],
+     "target_id": "T0315"
+    }
+   ],
+   "8": [
+    {
+     "reader": "opus",
+     "value": "0.040",
+     "interval": [
+      0.03,
+      0.05
+     ],
+     "target_id": "T0316"
+    },
+    {
+     "reader": "astra",
+     "value": "0.04",
+     "interval": [
+      0.02,
+      0.06
+     ],
+     "target_id": "X0269"
+    }
+   ],
+   "9": [
+    {
+     "reader": "opus",
+     "value": "0.234",
+     "interval": [
+      0.224,
+      0.244
+     ],
+     "target_id": "T0317"
+    }
+   ],
+   "10": [
+    {
+     "reader": "opus",
+     "value": "0.521",
+     "interval": [
+      0.511,
+      0.531
+     ],
+     "target_id": "T0318"
+    },
+    {
+     "reader": "astra",
+     "value": "0.52",
+     "interval": [
+      0.5,
+      0.54
+     ],
+     "target_id": "X0270"
+    }
+   ]
+  },
+  "origin_specs_by_point": {
+   "1": "S00087",
+   "2": "S00089",
+   "3": "S00091",
+   "4": "S00093",
+   "5": "S00095",
+   "6": "S00097",
+   "7": "S00099",
+   "8": "S00101",
+   "9": "S00103",
+   "10": "S00105"
+  },
+  "alt_estimator_specs_by_point": {
+   "1": "S00088",
+   "2": "S00090",
+   "3": "S00092",
+   "4": "S00094",
+   "5": "S00096",
+   "6": "S00098",
+   "7": "S00100",
+   "8": "S00102",
+   "9": "S00104",
+   "10": "S00106"
+  },
+  "paper_focal": false
+ },
+ {
+  "unit": "F6|b",
+  "kind": "plot_points",
+  "tier": "uncertain:descriptive|robustness",
+  "opus_claim": "C_F6_b",
+  "astra_claim": "F6B",
+  "origin_spec": "S00107",
+  "uncertain_specs": [
+   "S00631",
+   "S00632"
+  ],
+  "term": "post_treat_by_pct",
+  "published": {
+   "10": [
+    {
+     "reader": "opus",
+     "value": "-0.0590",
+     "interval": [
+      -0.0605,
+      -0.0575
+     ],
+     "target_id": "T0321"
+    },
+    {
+     "reader": "astra",
+     "value": "-0.059",
+     "interval": [
+      -0.062,
+      -0.056
+     ],
+     "target_id": "X0271"
+    }
+   ],
+   "25": [
+    {
+     "reader": "opus",
+     "value": "-0.0279",
+     "interval": [
+      -0.0295,
+      -0.0263
+     ],
+     "target_id": "T0322"
+    },
+    {
+     "reader": "astra",
+     "value": "-0.028",
+     "interval": [
+      -0.031,
+      -0.025
+     ],
+     "target_id": "X0272"
+    }
+   ],
+   "50": [
+    {
+     "reader": "opus",
+     "value": "-0.0262",
+     "interval": [
+      -0.0278,
+      -0.0246
+     ],
+     "target_id": "T0323"
+    },
+    {
+     "reader": "astra",
+     "value": "-0.026",
+     "interval": [
+      -0.029,
+      -0.023
+     ],
+     "target_id": "X0273"
+    }
+   ],
+   "75": [
+    {
+     "reader": "opus",
+     "value": "-0.0402",
+     "interval": [
+      -0.0418,
+      -0.0386
+     ],
+     "target_id": "T0324"
+    },
+    {
+     "reader": "astra",
+     "value": "-0.040",
+     "interval": [
+      -0.043,
+      -0.037
+     ],
+     "target_id": "X0274"
+    }
+   ],
+   "90": [
+    {
+     "reader": "opus",
+     "value": "-0.0267",
+     "interval": [
+      -0.0283,
+      -0.0251
+     ],
+     "target_id": "T0325"
+    },
+    {
+     "reader": "astra",
+     "value": "-0.027",
+     "interval": [
+      -0.03,
+      -0.024
+     ],
+     "target_id": "X0275"
+    }
+   ],
+   "99": [
+    {
+     "reader": "opus",
+     "value": "-0.0030",
+     "interval": [
+      -0.0045,
+      -0.0015
+     ],
+     "target_id": "T0326"
+    },
+    {
+     "reader": "astra",
+     "value": "-0.003",
+     "interval": [
+      -0.006,
+      0.0
+     ],
+     "target_id": "X0276"
+    }
+   ]
+  },
+  "origin_specs_by_point": {
+   "10": "S00107",
+   "25": "S00108",
+   "50": "S00109",
+   "75": "S00110",
+   "90": "S00111",
+   "99": "S00112"
+  },
+  "paper_focal": false
+ },
+ {
+  "unit": "F1|b",
+  "kind": "not_audited",
+  "tier": "descriptive",
+  "opus_claim": "C_F1_b",
+  "astra_claim": "F1B",
+  "origin_spec": "S00003",
+  "uncertain_specs": [],
+  "term": null,
+  "published": null,
+  "reason": "illustrative image pair, not reproducible from deposited data",
+  "paper_focal": false
+ },
+ {
+  "unit": "F3|a(i)",
+  "kind": "not_audited",
+  "tier": "descriptive",
+  "opus_claim": "C_F3_a",
+  "astra_claim": "F3AI",
+  "origin_spec": null,
+  "uncertain_specs": [],
+  "term": null,
+  "published": null,
+  "reason": "no numeric target in either reader's sealed targets",
+  "paper_focal": false
+ },
+ {
+  "unit": "F3|a(ii)",
+  "kind": "not_audited",
+  "tier": "descriptive",
+  "opus_claim": "C_F3_a",
+  "astra_claim": "F3AII",
+  "origin_spec": null,
+  "uncertain_specs": [],
+  "term": null,
+  "published": null,
+  "reason": "no numeric target in either reader's sealed targets",
+  "paper_focal": false
+ },
+ {
+  "unit": "F3|b(i)",
+  "kind": "not_audited",
+  "tier": "descriptive",
+  "opus_claim": "C_F3_b",
+  "astra_claim": "F3BI",
+  "origin_spec": null,
+  "uncertain_specs": [],
+  "term": null,
+  "published": null,
+  "reason": "no numeric target in either reader's sealed targets",
+  "paper_focal": false
+ },
+ {
+  "unit": "F3|b(ii)",
+  "kind": "not_audited",
+  "tier": "descriptive",
+  "opus_claim": "C_F3_b",
+  "astra_claim": "F3BII",
+  "origin_spec": null,
+  "uncertain_specs": [],
+  "term": null,
+  "published": null,
+  "reason": "no numeric target in either reader's sealed targets",
+  "paper_focal": false
+ }
+]

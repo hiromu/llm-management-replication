@@ -1,0 +1,63 @@
+{
+  "rule": "../../scoring_rules_common_v1.json",
+  "status": "post hoc",
+  "study_rule_paper": "indeterminate",
+  "paper": {
+    "common": "not reproduced (unverified)",
+    "lenient": "not reproduced (unverified)"
+  },
+  "claims": {
+    "common": {
+      "H1": "consistent",
+      "H2": "candidate",
+      "H3": "candidate"
+    },
+    "lenient": {
+      "H1": "consistent",
+      "H2": "candidate",
+      "H3": "candidate"
+    }
+  },
+  "terms_by_table": {
+    "common": {
+      "Table 1": {
+        "consistent": 43,
+        "indeterminate": 6,
+        "candidate": 10,
+        "total": 59
+      },
+      "Table 2": {
+        "consistent": 40,
+        "indeterminate": 73,
+        "candidate": 27,
+        "total": 140
+      },
+      "Table A3": {
+        "consistent": 58,
+        "indeterminate": 11,
+        "candidate": 12,
+        "total": 81
+      }
+    },
+    "lenient": {
+      "Table 1": {
+        "consistent": 43,
+        "indeterminate": 7,
+        "candidate": 9,
+        "total": 59
+      },
+      "Table 2": {
+        "consistent": 92,
+        "indeterminate": 27,
+        "candidate": 21,
+        "total": 140
+      },
+      "Table A3": {
+        "consistent": 61,
+        "indeterminate": 11,
+        "candidate": 9,
+        "total": 81
+      }
+    }
+  }
+}

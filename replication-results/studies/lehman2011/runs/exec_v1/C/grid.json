@@ -1,0 +1,46 @@
+{
+  "grid_version": "v1",
+  "paper_id": "P01",
+  "models": ["M1", "M2", "M3"],
+  "origin": {"U1": 0, "U2": 0, "U3": 0, "U4": 0, "U5": 0, "U6": 0, "U7": 0, "U8": 0},
+  "axes": {
+    "U1": {"what": "decision rows", "levels": {"0": "origin: play_type in {punt, field_goal, run, pass}", "1": "also include play_type == 'no_play' rows classified by provider flags (see manifest S3b)"}, "label_of_nonorigin": "uncertain"},
+    "U2": {"what": "kneel/spike rows", "levels": {"0": "origin: excluded", "1": "include play_type in {qb_kneel, qb_spike} with risk_taking = 0"}, "label_of_nonorigin": "uncertain"},
+    "U3": {"what": "terminal two-minute boundary", "levels": {"0": "origin: keep game_seconds_remaining > 120", "1": "keep game_seconds_remaining >= 120"}, "label_of_nonorigin": "uncertain"},
+    "U4": {"what": "minutes remaining measurement", "levels": {"0": "origin: game_seconds_remaining / 60", "1": "floor(game_seconds_remaining / 60)"}, "label_of_nonorigin": "uncertain"},
+    "U5": {"what": "same_conference coding", "levels": {"0": "origin: nested (1 for every same-conference opponent, including same-division)", "1": "exclusive (1 only for same-conference opponents outside the division)"}, "label_of_nonorigin": "uncertain"},
+    "U6": {"what": "home field in neutral-site games", "levels": {"0": "origin: posteam_type == 'home'", "1": "home_field = 0 for both teams when games.location == 'Neutral'"}, "label_of_nonorigin": "uncertain"},
+    "U7": {"what": "fixed-effects estimator", "levels": {"0": "origin: conditional logit (exact conditional likelihood) grouped by offensive team, season dummies as regressors", "1": "unconditional logit by ML with offensive-team dummies and season dummies", "2": "conditional logit grouped by offensive team x season, no season dummies"}, "label_of_nonorigin": "uncertain"},
+    "U8": {"what": "below_indicator in M1", "applies_to": ["M1"], "levels": {"0": "origin: not included", "1": "included"}, "label_of_nonorigin": "uncertain"}
+  },
+  "marginal_effect_variants": {
+    "applies_to": ["M2", "M3"],
+    "ME0": "origin: analytic derivative of p = invlogit(xb) with group effect set to 0 (no intercept), regressors other than the performance terms at estimation-sample means; at d = 0 use the below branch (indicator = 1)",
+    "U9a": "uncertain: as ME0 but p averaged over the estimated team effects from the U7=1 unconditional fit (mean over teams of the derivative at each team's intercept), computed from the U7=1 fit with the same sample",
+    "U9b": "uncertain: finite difference p(d+1) - p(d) instead of the derivative, otherwise as ME0",
+    "U10a": "uncertain: at d = 0 use the above branch (indicator = 0, slope of the above piece)",
+    "N3": "non-equivalent: average marginal effect over the estimation sample (each observation's own regressors, d and minutes replaced by the evaluation values), group effect 0"
+  },
+  "non_equivalent_runs": {
+    "N1": "random-effects logit by offensive team (normal random intercept, ML, adaptive quadrature or Laplace with stated settings), season dummies, origin sample, M1-M3",
+    "N2": "replace minutes_remaining everywhere (main effect and the three interactions) by quarters_remaining = 5 - qtr; origin otherwise; M1-M3",
+    "N4": "cluster-robust SE by offensive team (32 clusters) for the origin fits, reported as an inference alternative"
+  },
+  "algebraic_checks": {
+    "K1": "M3 with elapsed minutes (60 - minutes_remaining) in place of minutes_remaining in the main effect and the interactions: log-likelihood must equal the origin M3 log-likelihood",
+    "K2": "M2 with home_field complemented (1 - home_field): log-likelihood must equal the origin M2 log-likelihood and the coefficient must change sign only"
+  },
+  "unavailable": {
+    "spread_based_reference_point": "construction not documented (lookback, reset rule); not executed",
+    "field_goal_range_submodels": "range cutoff and treatment of the third choice not documented; not executed"
+  },
+  "compute_order": [
+    "1 origin M1, M2, M3 (+ ME0, U9a, U9b, U10a, N3 for M2/M3; benchmark inference; tests)",
+    "2 individual deviations: each non-origin level of U1..U7 alone (M1-M3), U8=1 (M1 only); ME0 for M2/M3",
+    "3 full crossing U1 x U2 x U3 x U4 x U5 x U6 x U7 (2^6 x 3 = 192 combinations) for M1, M2, M3 with U8=0; ME0 for M2/M3; steps 1-2 combinations reappear and are flagged duplicate_of",
+    "4 non-equivalent runs N1, N2, N4",
+    "5 algebraic checks K1, K2",
+    "6 influence deletions (manifest section 9)"
+  ],
+  "benchmark_inference": "cluster-robust sandwich by game_id (CR1 small-sample factor G/(G-1) x (N-1)/(N-K)) computed on every U7=1 (unconditional dummy-variable logit) fit, for coefficients and, by the delta method, for marginal effects. For U7=0 and U7=2 fits the benchmark columns are left empty; the scorer pairs them with the U7=1 fit sharing all other levels. N4 uses the same construction clustered by offensive team."
+}

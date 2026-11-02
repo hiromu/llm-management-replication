@@ -1,0 +1,623 @@
+[
+ {
+  "axis": "Full-sample county universe",
+  "category": "sample_construction",
+  "analysis_ids": [
+   "A01",
+   "A02",
+   "A06",
+   "A07",
+   "A10",
+   "A11",
+   "A12",
+   "A13",
+   "A17",
+   "A18",
+   "A19",
+   "A08",
+   "A09",
+   "A14",
+   "A15",
+   "A16"
+  ],
+  "levels": [
+   {
+    "level_id": "U1",
+    "description": "All non-Massachusetts counties into which TIGER was imported (county_lookup universe)",
+    "label": "equivalent",
+    "source_locator": "D01 p.5 (journal p.4912); Sec 2.2.2-2.2.3; D01 p.12 (journal p.4919); Table 2 note",
+    "rationale": "Closest-described origin: stated universe and balanced-panel note."
+   },
+   {
+    "level_id": "U2",
+    "description": "Smaller universe implied by Table 1 group sizes and Sec 2.4.5 observation count (some counties dropped for an unstated reason)",
+    "label": "non_equivalent",
+    "source_locator": "D01 p.8 (journal p.4915); Table 1 header Ns; D01 p.11 (journal p.4918); Sec 2.4.5 observation count",
+    "rationale": "Published counts conflict with the stated universe; dropping rule unstated so sample differs."
+   }
+  ],
+  "origin_level": "U1"
+ },
+ {
+  "axis": "Panel balancing / zero-fill",
+  "category": "sample_construction",
+  "analysis_ids": [
+   "A02",
+   "A05",
+   "A06",
+   "A07",
+   "A10",
+   "A11",
+   "A12",
+   "A13",
+   "A17",
+   "A18",
+   "A19"
+  ],
+  "levels": [
+   {
+    "level_id": "Z1",
+    "description": "Fill county-quarters absent from quarterly.csv with zero outcomes to form a balanced panel",
+    "label": "equivalent",
+    "source_locator": "D01 p.12 (journal p.4919); Table 2 note 'balanced panel'",
+    "rationale": "Origin: note describes a balanced panel."
+   },
+   {
+    "level_id": "Z2",
+    "description": "Use only county-quarters present in quarterly.csv",
+    "label": "non_equivalent",
+    "source_locator": "D51 (file structure unknown); methodological: unbalanced panel changes N and the zero mass",
+    "rationale": "Only differs if the file omits zero rows; changes estimation sample."
+   }
+  ],
+  "origin_level": "Z1"
+ },
+ {
+  "axis": "Log transformation of count outcomes",
+  "category": "variable_coding",
+  "analysis_ids": [
+   "A06",
+   "A07",
+   "A10",
+   "A11",
+   "A12",
+   "A13",
+   "A17",
+   "A18",
+   "A19",
+   "A08",
+   "A09",
+   "A14",
+   "A15",
+   "A16"
+  ],
+  "levels": [
+   {
+    "level_id": "G1",
+    "description": "ln(Y+1) for all observations",
+    "label": "equivalent",
+    "source_locator": "D01 p.15 (journal p.4922); cross-sectional equation Ln(Y_i+1)",
+    "rationale": "Origin for cross-section; explicit equation."
+   },
+   {
+    "level_id": "G2",
+    "description": "ln(Y) for Y>0 and ln(1)=0 for Y=0 (add one only to zeros, literal reading of Table 3 note)",
+    "label": "uncertain",
+    "source_locator": "D01 p.14 (journal p.4921); Table 3 note 'one added to the dependent variable for all zero values'",
+    "rationale": "Literal reading differs from ln(Y+1) for positive counts; which the panel models used is ambiguous."
+   }
+  ],
+  "origin_level": "G1"
+ },
+ {
+  "axis": "Post-period start",
+  "category": "variable_coding",
+  "analysis_ids": [
+   "A06",
+   "A10",
+   "A11",
+   "A12",
+   "A13",
+   "A17",
+   "A18",
+   "A19"
+  ],
+  "levels": [
+   {
+    "level_id": "P1",
+    "description": "Post = 1 from 2008Q1 (quarters after December 2007)",
+    "label": "equivalent",
+    "source_locator": "D01 p.13 (journal p.4920); D01 p.5 (journal p.4912); full TIGER map assumed present from Q1 2008",
+    "rationale": "Explicit definition."
+   },
+   {
+    "level_id": "P2",
+    "description": "Post = 1 from 2007Q4 (seeding quarter marked by vertical line)",
+    "label": "non_equivalent",
+    "source_locator": "D01 p.12 (journal p.4919); Sec 3.1 'seeded in 2007, quarter 4'; D01 p.13 (journal p.4920); Figure 3 vertical line",
+    "rationale": "Article also dates seeding to 2007Q4; one-quarter shift changes treatment timing."
+   }
+  ],
+  "origin_level": "P1"
+ },
+ {
+  "axis": "Boundary sample rule",
+  "category": "sample_construction",
+  "analysis_ids": [
+   "A04",
+   "A12",
+   "A14",
+   "A16"
+  ],
+  "levels": [
+   {
+    "level_id": "B1",
+    "description": "Keep any county (treated or control) bordering at least one county of opposite status; drop counties surrounded only by same-status counties",
+    "label": "equivalent",
+    "source_locator": "D01 p.8 (journal p.4915); Sec 2.3.3",
+    "rationale": "Main description; consistent with both treated and control counts in boundary sample."
+   },
+   {
+    "level_id": "B2",
+    "description": "Keep treated counties bordering at least one control county (and controls per unstated rule)",
+    "label": "non_equivalent",
+    "source_locator": "D01 p.2 (journal p.4909); Introduction",
+    "rationale": "Introduction describes only treated-side restriction."
+   },
+   {
+    "level_id": "B3",
+    "description": "Contiguity from a different adjacency definition (e.g., rook vs queen) instead of deposited boundary-counties.csv",
+    "label": "uncertain",
+    "source_locator": "D03 boundary-counties.csv (author calculation); D01 p.8 (journal p.4915); 'using a GIS algorithm'",
+    "rationale": "Algorithm unstated; deposited list is the closest source."
+   }
+  ],
+  "origin_level": "B1"
+ },
+ {
+  "axis": "Timing sample date column",
+  "category": "sample_construction",
+  "analysis_ids": [
+   "A04",
+   "A13",
+   "A15",
+   "A16"
+  ],
+  "levels": [
+   {
+    "level_id": "S1",
+    "description": "Scheduled southbound delivery year ('Sch SB Delivery') in {2005, 2006}",
+    "label": "equivalent",
+    "source_locator": "D01 p.8 (journal p.4915); Sec 2.3.3 'scheduled to be sent to the Harris Corporation'",
+    "rationale": "Closest match to described scheduling date (inferred column)."
+   },
+   {
+    "level_id": "S2",
+    "description": "'SB Selected' date year in {2005, 2006}",
+    "label": "uncertain",
+    "source_locator": "D54 columns; D01 p.9 (journal p.4916); Figure 2 note 'schedule of counties to be updated ... by month'",
+    "rationale": "Column semantics undocumented; could encode selection rather than scheduled delivery."
+   }
+  ],
+  "origin_level": "S1"
+ },
+ {
+  "axis": "Sample assignment of Table 5 Panel B columns",
+  "category": "sample_construction",
+  "analysis_ids": [
+   "A14",
+   "A15"
+  ],
+  "levels": [
+   {
+    "level_id": "K1",
+    "description": "Columns (1)-(4) estimated on boundary sample, (5)-(8) on timing sample as labelled",
+    "label": "equivalent",
+    "source_locator": "D01 p.17 (journal p.4924); Table 5 headers and note",
+    "rationale": "Labels and note agree; endnote 29 refers to boundary contributor estimates in cols (3)-(4)."
+   },
+   {
+    "level_id": "K2",
+    "description": "Samples swapped relative to labels (matching printed N rows to text county counts)",
+    "label": "non_equivalent",
+    "source_locator": "D01 p.17 (journal p.4924); Table 5 Panel B N row; D01 p.8 (journal p.4915); Sec 2.3.3 county counts",
+    "rationale": "Printed N per column matches the other sample's text count."
+   }
+  ],
+  "origin_level": "K1"
+ },
+ {
+  "axis": "Follow-on contribution column construction",
+  "category": "variable_coding",
+  "analysis_ids": [
+   "A01",
+   "A02",
+   "A05",
+   "A06",
+   "A07",
+   "A08",
+   "A09",
+   "A10",
+   "A11",
+   "A12",
+   "A13",
+   "A14",
+   "A15",
+   "A18"
+  ],
+  "levels": [
+   {
+    "level_id": "F1",
+    "description": "Sum of street-tag, building and amenity tag columns (totaltagh + totaltagb + totaltaga, or their v2 variants)",
+    "label": "equivalent",
+    "source_locator": "D01 p.10 (journal p.4917); Sec 2.4.1 (a)-(c)",
+    "rationale": "Definition lists three components; column mapping inferred."
+   },
+   {
+    "level_id": "F2",
+    "description": "Use only v2 (existing-object) tag columns",
+    "label": "uncertain",
+    "source_locator": "D01 p.10 (journal p.4917); 'added a tag to existing streets'",
+    "rationale": "Streets component refers to existing objects; buildings/amenities 'created or modified'."
+   },
+   {
+    "level_id": "F3",
+    "description": "Use version-count columns (totalversion2/3/4plus) as modifications",
+    "label": "uncertain",
+    "source_locator": "D51 columns",
+    "rationale": "Alternative deposited measure of modifications; no explicit article basis beyond 'follow-on' meaning edits to existing objects."
+   }
+  ],
+  "origin_level": "F1"
+ },
+ {
+  "axis": "Distant follow-on definition",
+  "category": "variable_coding",
+  "analysis_ids": [
+   "A02",
+   "A17"
+  ],
+  "levels": [
+   {
+    "level_id": "D1",
+    "description": "Buildings only",
+    "label": "equivalent",
+    "source_locator": "D01 p.10 (journal p.4917); Sec 2.4.1 'Distant Follow-on information contains knowledge that is related to buildings'",
+    "rationale": "Data-section definition; consistent with endnote 20 non-exhaustive categories."
+   },
+   {
+    "level_id": "D2",
+    "description": "Buildings plus amenities/points of interest (all non-street follow-on)",
+    "label": "non_equivalent",
+    "source_locator": "D01 p.19 (journal p.4926); Table 7 note 'do not modify the street information'; D01 p.22 (journal p.4929); Sec 4.3 'new amenities, restaurants'",
+    "rationale": "Later sections describe broader content."
+   }
+  ],
+  "origin_level": "D1"
+ },
+ {
+  "axis": "Low-ownership measure",
+  "category": "variable_coding",
+  "analysis_ids": [
+   "A02",
+   "A17"
+  ],
+  "levels": [
+   {
+    "level_id": "O1",
+    "description": "Old-contributor contributions outside 0.1-degree box but within 0.5 degree (totaloldfocused5 minus totaloldfocused1, inferred)",
+    "label": "equivalent",
+    "source_locator": "D01 p.10 (journal p.4917); Sec 2.4.1; D01 p.25 (journal p.4932); endnote 21",
+    "rationale": "Combines the 0.1 classification with the 0.5-degree exclusion."
+   },
+   {
+    "level_id": "O2",
+    "description": "totaloldfocused5 as-is",
+    "label": "uncertain",
+    "source_locator": "D51 column names",
+    "rationale": "Column meaning undocumented."
+   }
+  ],
+  "origin_level": "O1"
+ },
+ {
+  "axis": "Cross-sectional contributor aggregation",
+  "category": "variable_coding",
+  "analysis_ids": [
+   "A08",
+   "A14",
+   "A15"
+  ],
+  "levels": [
+   {
+    "level_id": "C1",
+    "description": "Sum of quarterly unique-contributor counts over the period",
+    "label": "equivalent",
+    "source_locator": "D01 p.15 (journal p.4922); Table 4 note 'cumulative total of contributions or users'",
+    "rationale": "Only construction feasible from deposited county-quarter file."
+   },
+   {
+    "level_id": "C2",
+    "description": "Number of distinct users over the period",
+    "label": "non_equivalent",
+    "source_locator": "D01 p.15 (journal p.4922); Table 4 note",
+    "rationale": "'Cumulative total of users' could mean distinct users; not reconstructible from D51 (unavailable)."
+   }
+  ],
+  "origin_level": "C1"
+ },
+ {
+  "axis": "Quartile fixed-effect variables",
+  "category": "fixed_effects_or_clustering",
+  "analysis_ids": [
+   "A08",
+   "A09",
+   "A14",
+   "A15",
+   "A16"
+  ],
+  "levels": [
+   {
+    "level_id": "Q1",
+    "description": "Quartiles of population density, household income, per-capita income",
+    "label": "equivalent",
+    "source_locator": "D01 p.15 (journal p.4922); Sec 3.3.1; D01 p.18 (journal p.4925); Sec 3.5",
+    "rationale": "Main-text definition."
+   },
+   {
+    "level_id": "Q2",
+    "description": "Quartiles of population, household income, per-capita income",
+    "label": "non_equivalent",
+    "source_locator": "D02 p.11; Table D.3 note; D02 p.12; Table D.4 note",
+    "rationale": "Appendix notes for the same baseline models name population."
+   },
+   {
+    "level_id": "Q3",
+    "description": "Quartiles of population density only",
+    "label": "non_equivalent",
+    "source_locator": "D02 p.5; Appendix B regression description",
+    "rationale": "Appendix B describes density groups only (for a related cross-sectional model)."
+   }
+  ],
+  "origin_level": "Q1"
+ },
+ {
+  "axis": "Quartile cutoffs in subsamples",
+  "category": "fixed_effects_or_clustering",
+  "analysis_ids": [
+   "A14",
+   "A15",
+   "A16"
+  ],
+  "levels": [
+   {
+    "level_id": "R1",
+    "description": "Quartiles computed on the full county universe",
+    "label": "uncertain",
+    "source_locator": "D01 p.17 (journal p.4924); 'same specification as in Table 4'",
+    "rationale": "Unstated; full-sample cutoffs keep FE definitions identical."
+   },
+   {
+    "level_id": "R2",
+    "description": "Quartiles recomputed within each subsample",
+    "label": "uncertain",
+    "source_locator": "D01 p.17 (journal p.4924)",
+    "rationale": "Unstated alternative."
+   }
+  ],
+  "origin_level": "R1"
+ },
+ {
+  "axis": "Diff-Time-Trends specification",
+  "category": "fixed_effects_or_clustering",
+  "analysis_ids": [
+   "A10"
+  ],
+  "levels": [
+   {
+    "level_id": "T1",
+    "description": "Population-density quartile x quarter fixed effects (replace quarter FE)",
+    "label": "equivalent",
+    "source_locator": "D01 p.17 (journal p.4924); Sec 3.4.2 'effects at the county-group/quarter level'",
+    "rationale": "Text gives explicit count construction of group x quarter effects."
+   },
+   {
+    "level_id": "T2",
+    "description": "Quarter FE plus density-group-specific linear time trends",
+    "label": "non_equivalent",
+    "source_locator": "D01 p.17 (journal p.4924); Table 5 note 'county-group specific time trends'; table row Quarter FE Yes",
+    "rationale": "Note wording describes trends, not group x quarter dummies."
+   }
+  ],
+  "origin_level": "T1"
+ },
+ {
+  "axis": "Standard errors for panel DiD models",
+  "category": "fixed_effects_or_clustering",
+  "analysis_ids": [
+   "A06",
+   "A10",
+   "A11",
+   "A12",
+   "A13",
+   "A17"
+  ],
+  "levels": [
+   {
+    "level_id": "E1",
+    "description": "Clustered by county",
+    "label": "uncertain",
+    "source_locator": "D01 p.15 (journal p.4922); Figure 4 note (event study)",
+    "rationale": "Only stated SE method for panel models; treatment assigned at county level (Bertrand, Duflo & Mullainathan 2004 basis)."
+   },
+   {
+    "level_id": "E2",
+    "description": "Heteroskedasticity-robust (unclustered)",
+    "label": "non_equivalent",
+    "source_locator": "D01 p.15 (journal p.4922); Table 4 note (cross-section)",
+    "rationale": "Used for cross-section; would understate SE with serial correlation."
+   }
+  ],
+  "origin_level": "E1"
+ },
+ {
+  "axis": "Standard errors for address-pair quality model",
+  "category": "fixed_effects_or_clustering",
+  "analysis_ids": [
+   "A16"
+  ],
+  "levels": [
+   {
+    "level_id": "H1",
+    "description": "Heteroskedasticity-robust as in baseline cross-section",
+    "label": "uncertain",
+    "source_locator": "D01 p.18 (journal p.4925); Table 6 note 'similar specification as the baseline cross-sectional'",
+    "rationale": "Closest described."
+   },
+   {
+    "level_id": "H2",
+    "description": "Clustered by county (treatment level; pairs nested in counties)",
+    "label": "non_equivalent",
+    "source_locator": "Methodological: Moulton (1990); Cameron & Miller (2015)",
+    "rationale": "Point estimates identical, SEs differ."
+   }
+  ],
+  "origin_level": "H1"
+ },
+ {
+  "axis": "Quality outcome level",
+  "category": "variable_coding",
+  "analysis_ids": [
+   "A16"
+  ],
+  "levels": [
+   {
+    "level_id": "W1",
+    "description": "Pair-level ln|OSRM - Google| with distance_ij control",
+    "label": "equivalent",
+    "source_locator": "D01 p.18 (journal p.4925); Table 6 note",
+    "rationale": "Table note specifies pair level."
+   },
+   {
+    "level_id": "W2",
+    "description": "County average of logged error",
+    "label": "non_equivalent",
+    "source_locator": "D01 p.11 (journal p.4918); Sec 2.4.3 'average logged error at the county level'",
+    "rationale": "Different unit and N."
+   },
+   {
+    "level_id": "W3",
+    "description": "ln(|OSRM - Google| + 1) to keep zero differences",
+    "label": "uncertain",
+    "source_locator": "Methodological convention; D01 p.15 (journal p.4922); log(Y+1) used elsewhere",
+    "rationale": "Zero-difference handling unstated."
+   }
+  ],
+  "origin_level": "W1"
+ },
+ {
+  "axis": "Placebo assignment",
+  "category": "other",
+  "analysis_ids": [
+   "A11"
+  ],
+  "levels": [
+   {
+    "level_id": "PL1",
+    "description": "Single random permutation of county treat labels (preserving treated share)",
+    "label": "uncertain",
+    "source_locator": "D01 p.17 (journal p.4924); Table 5 note 'assigned to the treatment group randomly'",
+    "rationale": "Mechanism, share, seed and number of draws unstated."
+   },
+   {
+    "level_id": "PL2",
+    "description": "Independent Bernoulli draw per county",
+    "label": "uncertain",
+    "source_locator": "D01 p.17 (journal p.4924)",
+    "rationale": "Equally consistent with text."
+   }
+  ],
+  "origin_level": "PL1"
+ },
+ {
+  "axis": "Controls in Table 5 Panel A",
+  "category": "other",
+  "analysis_ids": [
+   "A10",
+   "A11",
+   "A12",
+   "A13"
+  ],
+  "levels": [
+   {
+    "level_id": "X1",
+    "description": "Include Table 3 time-varying controls (as cols 2/4/6)",
+    "label": "uncertain",
+    "source_locator": "D01 p.16 (journal p.4923); 'estimating the baseline specification'; D01 p.17 (journal p.4924); note 'similar to that in Table 3'",
+    "rationale": "Baseline interpretation in text uses controlled columns."
+   },
+   {
+    "level_id": "X2",
+    "description": "No controls (as cols 1/3/5)",
+    "label": "uncertain",
+    "source_locator": "D01 p.17 (journal p.4924); no Controls row in Panel A",
+    "rationale": "Table 3 has both variants."
+   }
+  ],
+  "origin_level": "X1"
+ },
+ {
+  "axis": "Time-varying control vintage",
+  "category": "variable_coding",
+  "analysis_ids": [
+   "A01",
+   "A06",
+   "A10",
+   "A11",
+   "A12",
+   "A13",
+   "A17"
+  ],
+  "levels": [
+   {
+    "level_id": "V1",
+    "description": "Match ACS row by acsyear = calendar year; carry nearest available year to years without ACS data",
+    "label": "uncertain",
+    "source_locator": "D03 (ACS 2005-2011)",
+    "rationale": "Deposit coverage shorter than panel."
+   },
+   {
+    "level_id": "V2",
+    "description": "Use ACS 5-year estimates 2009-2014 per article",
+    "label": "non_equivalent",
+    "source_locator": "D01 p.11 (journal p.4918); Sec 2.4.4",
+    "rationale": "Not available in deposit per D03; vintage fallback needed."
+   }
+  ],
+  "origin_level": "V1"
+ },
+ {
+  "axis": "Figure 6(a) estimator",
+  "category": "estimator",
+  "analysis_ids": [
+   "A18"
+  ],
+  "levels": [
+   {
+    "level_id": "M1",
+    "description": "Panel DiD (Post x Treat, county and quarter FE) within each density decile",
+    "label": "uncertain",
+    "source_locator": "D01 p.19 (journal p.4926); Sec 3.6 'effects of seeding ... separately for counties based on the decile'",
+    "rationale": "Section 3.6 follows Table 7 panel models; unstated."
+   },
+   {
+    "level_id": "M2",
+    "description": "Cross-sectional Treat regression within each decile",
+    "label": "uncertain",
+    "source_locator": "D01 p.19 (journal p.4926)",
+    "rationale": "Also consistent with text."
+   }
+  ],
+  "origin_level": "M1"
+ }
+]

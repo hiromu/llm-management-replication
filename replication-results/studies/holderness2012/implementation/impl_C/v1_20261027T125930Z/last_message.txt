@@ -1,0 +1,3 @@
+Completed [run.py](/var/folders/7q/9m3zdcp550d685wgsq9kvf6r0000gn/T/role_im_eJLPkj/run.py) and [NOTES.md](/var/folders/7q/9m3zdcp550d685wgsq9kvf6r0000gn/T/role_im_eJLPkj/NOTES.md).
+
+All required synthetic checks and integration tests passed. Only S000 T4 was fitted on real data; all eight models converged. Results are in `results/`, validation logs in `tests/`. The full empirical grid was not run.

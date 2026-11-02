@@ -1,0 +1,23 @@
+{
+ "frozen_utc": "2026-10-31T08:05:22.030586+00:00",
+ "manifest/implementer_manifest_v1.md": "e1a8374cf7ca2e462143509edf7d8ed861fcb6de32706fbd39ee231a417468d9",
+ "prompts_frozen/implementer_prompt.md": "ab605be6accb22802f31fb216290bd9dcd996038addac5c2c476e1a0a086119e",
+ "prompts_frozen/checker_prompt.md": "156b75f35e68614dbc89c31156f0816bd29821dff592d019b6b4b30d152ef7d4",
+ "prompts_frozen/fix_prompt.md": "2801fe1cfae3f480677713e8df677edc2996c04471b47be94d1f045d7efabae4",
+ "code/run_role.py": "13d6de3ed90602d40ebcfc11d4c8fcb4d50bfcc47a9cc8446dd0227bbad37706",
+ "code/run_role_v1_readers.py": "96dd52f6adf54024c4cae5edfb1675bce368bbe4f0707143b83fdd4db0081001",
+ "code/run_implementers.py": "5648c8cb9e1b3634c0249c6923e07ca43c78ad2be7a4f837832fb639ce2a7cca",
+ "code/make_synthetic.py": "7a33876f0ab5663319e323220bb214b513f3679be4946e88635fcd79173d9749",
+ "data/derived/implementer_bundle/dataset_1.csv": "6463fd52a63c30d58c4cc0217081893228598c91aaf6b2a1b7798d06a1681ea1",
+ "data/derived/implementer_bundle/dataset_2.csv": "5b9a1a6aa74913e8fc35d2fa6d599b59ac37f286dc600830cf7c86b2987f92ef",
+ "data/derived/implementer_bundle/dataset_3.csv": "0536c927c245262e5514626c942c0edf78e994e272932274c36364c135685251",
+ "data/derived/implementer_bundle/dataset_4.csv": "1086ffc68812a7f58c57be377bbfba1572344a7d4f4cbc2b73eb63396da042e3",
+ "data/derived/implementer_bundle/dictionary_1.csv": "ba2f1c1b8eca145ff4311856ae83d2f721752cd7ed76e10c6116a66d2ecb2af0",
+ "data/derived/implementer_bundle/dictionary_2.csv": "79fd25df43323d452e10f45d460036a819e95d11279239657e4f079f55be88db",
+ "data/derived/implementer_bundle/dictionary_3.csv": "b792711389f23fa6945c851df4fb9972c84bfbfceb9746f6769b53fa2f306186",
+ "data/derived/implementer_bundle/dictionary_4.csv": "1f53e576a8f599a8a9331065e153a2cacc7eb1bf54e28a6326550d5ba229a1f0",
+ "data/derived/synthetic/dataset_1.csv": "2b53d6fc5220d4793e77608328abe667b54e3c674ac2af0a7e65da62f355dd61",
+ "data/derived/synthetic/dataset_2.csv": "3c5967c281e866397e3c188f7df969238c0cc51cbf07480809ea78d46edabd9d",
+ "data/derived/synthetic/dataset_3.csv": "70cf8d045f2a883894dada8b453c1dc44d1e2244c91a6ee74ca4f440ff10b57e",
+ "data/derived/synthetic/dataset_4.csv": "1924ff0aaf426916f4af4efc284f44eb88a44fc5390f6721e4d6138efbdbe823"
+}

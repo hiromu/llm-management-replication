@@ -1,0 +1,15 @@
+stage: sample
+start: 2026-10-27T22:40:23+0900
+end: 2026-10-27T22:40:31+0900
+elapsed_minutes: 0.1
+cores (influence-loop socket workers; --cores, default auto = min(8, detectCores()/2)): 8 (detectCores = 16)
+R: R version 4.6.1 (2026-06-24)
+platform: aarch64-apple-darwin25.6.0
+OS: Darwin 25.6.0 arm64
+survival: 3.8.12
+nanoparquet: 0.5.2
+stats/tools: 4.6.1
+BLAS: /opt/homebrew/Cellar/openblas/0.3.34/lib/libopenblasp-r0.3.34.dylib
+LAPACK: 3.12.1
+language: R
+seed for synthetic data: 20261027 (base R default RNG, Mersenne-Twister)

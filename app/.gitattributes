@@ -1,0 +1,3 @@
+# Keep evidence hashes valid and store the directly used SQLite file as a binary.
+data/** -text -whitespace
+data/console.sqlite3 binary

@@ -1,0 +1,722 @@
+{
+ "created_utc": "2026-10-28T02:07:48Z",
+ "software": {
+  "python": "3.13.4",
+  "pyreadstat": "1.3.3",
+  "pandas": "2.2.3",
+  "numpy": "2.4.2",
+  "R": "R version 4.6.1 (2026-06-24)",
+  "haven": "2.5.5"
+ },
+ "method": "Each file was read by R haven (user_na=TRUE and user_na=FALSE) and by pyreadstat (read_por; read_sav with user_missing=True and default). Dimensions, variable names/order, variable labels, value labels and every numeric cell were compared exactly (doubles dumped from R at %.17g and parsed with correctly rounded float()). NaN==NaN treated as equal.",
+ "user_missing_handling": {
+  "haven_read_por_read_sav_user_na_FALSE": "declared user-missing codes become NA (default).",
+  "haven_user_na_TRUE": "declared user-missing codes kept as values; declared set stored in na_values/na_range attributes (class haven_labelled_spss).",
+  "pyreadstat_read_sav_default": "declared user-missing codes become NaN.",
+  "pyreadstat_read_sav_user_missing_True": "declared user-missing codes kept; declared set in metadata.missing_ranges.",
+  "pyreadstat_read_por": "no user_missing option; declared user-missing codes always become NaN and metadata.missing_ranges is empty for .por files."
+ },
+ "all_pass": true,
+ "files": [
+  {
+   "key": "1976_DS0001",
+   "source": "data/supplied/ICPSR_07927/DS0001/07927-0001-Data.por",
+   "format": "SPSS portable (.por)",
+   "source_sha256": "4acb76976dd525a341533208da482ffa5ee7eaef97933e4bbcedef8bf2305164",
+   "dimensions": {
+    "pyreadstat": [
+     3347,
+     603
+    ],
+    "haven": [
+     3347,
+     603
+    ],
+    "equal": true
+   },
+   "variable_names_identical_and_same_order": true,
+   "nonnumeric_columns": [],
+   "cells_compared": 2018241,
+   "default_mode_mismatched_cells": 0,
+   "default_mode_mismatch_by_variable": {},
+   "raw_mode_mismatched_cells": null,
+   "raw_mode_note": "pyreadstat.read_por has no user_missing option; raw declared-missing codes are only available from haven read_por(user_na=TRUE). Raw codes were verified indirectly: every cell where haven raw and haven default differ holds a code inside that variable's declared missing set, and pyreadstat equals haven default on every cell.",
+   "declared_user_missing_codes_present_in_data": true,
+   "user_missing_cells_outside_declared_set": {},
+   "declared_missing_spec_mismatch_variables": "not comparable: pyreadstat.read_por does not expose declared missing values",
+   "variable_label_mismatch_variables": [],
+   "value_label_mismatch_variables": [],
+   "extract": {
+    "path": "data/derived/extracts/1976_DS0001.csv.gz",
+    "sha256": "95cc2eded0be09c03693c071a4c8d6ea82eda226e2bebe5a809a125f9d58940b",
+    "roundtrip_equal_to_haven_raw": true
+   },
+   "pass": true
+  },
+  {
+   "key": "1976_DS0002",
+   "source": "data/supplied/ICPSR_07927/DS0002/07927-0002-Data.por",
+   "format": "SPSS portable (.por)",
+   "source_sha256": "ec37298adc9bba1a06452815f20ae71f3502158e51f9a3988a1b7b2f0e1f9281",
+   "dimensions": {
+    "pyreadstat": [
+     3353,
+     316
+    ],
+    "haven": [
+     3353,
+     316
+    ],
+    "equal": true
+   },
+   "variable_names_identical_and_same_order": true,
+   "nonnumeric_columns": [],
+   "cells_compared": 1059548,
+   "default_mode_mismatched_cells": 0,
+   "default_mode_mismatch_by_variable": {},
+   "raw_mode_mismatched_cells": null,
+   "raw_mode_note": "pyreadstat.read_por has no user_missing option; raw declared-missing codes are only available from haven read_por(user_na=TRUE). Raw codes were verified indirectly: every cell where haven raw and haven default differ holds a code inside that variable's declared missing set, and pyreadstat equals haven default on every cell.",
+   "declared_user_missing_codes_present_in_data": true,
+   "user_missing_cells_outside_declared_set": {},
+   "declared_missing_spec_mismatch_variables": "not comparable: pyreadstat.read_por does not expose declared missing values",
+   "variable_label_mismatch_variables": [],
+   "value_label_mismatch_variables": [],
+   "extract": {
+    "path": "data/derived/extracts/1976_DS0002.csv.gz",
+    "sha256": "a0cfbffa50f65790210bd9bfb28aa12148f3312b90cf4a3ceb2891d0f464f25f",
+    "roundtrip_equal_to_haven_raw": true
+   },
+   "pass": true
+  },
+  {
+   "key": "1976_DS0003",
+   "source": "data/supplied/ICPSR_07927/DS0003/07927-0003-Data.por",
+   "format": "SPSS portable (.por)",
+   "source_sha256": "f4227693718c17fb5caf4fae9105dd7dc0baec35e44b0fe91c071fd33d60919e",
+   "dimensions": {
+    "pyreadstat": [
+     3314,
+     305
+    ],
+    "haven": [
+     3314,
+     305
+    ],
+    "equal": true
+   },
+   "variable_names_identical_and_same_order": true,
+   "nonnumeric_columns": [],
+   "cells_compared": 1010770,
+   "default_mode_mismatched_cells": 0,
+   "default_mode_mismatch_by_variable": {},
+   "raw_mode_mismatched_cells": null,
+   "raw_mode_note": "pyreadstat.read_por has no user_missing option; raw declared-missing codes are only available from haven read_por(user_na=TRUE). Raw codes were verified indirectly: every cell where haven raw and haven default differ holds a code inside that variable's declared missing set, and pyreadstat equals haven default on every cell.",
+   "declared_user_missing_codes_present_in_data": true,
+   "user_missing_cells_outside_declared_set": {},
+   "declared_missing_spec_mismatch_variables": "not comparable: pyreadstat.read_por does not expose declared missing values",
+   "variable_label_mismatch_variables": [],
+   "value_label_mismatch_variables": [],
+   "extract": {
+    "path": "data/derived/extracts/1976_DS0003.csv.gz",
+    "sha256": "cb74b1087b2b84a457946563bca92d059e6585ea0ca24d0a2a8f6605e380f032",
+    "roundtrip_equal_to_haven_raw": true
+   },
+   "pass": true
+  },
+  {
+   "key": "1976_DS0004",
+   "source": "data/supplied/ICPSR_07927/DS0004/07927-0004-Data.por",
+   "format": "SPSS portable (.por)",
+   "source_sha256": "864f70df9701d599af9b394887e938fe3deb002989cab3af70dce71c0fd382b9",
+   "dimensions": {
+    "pyreadstat": [
+     3341,
+     272
+    ],
+    "haven": [
+     3341,
+     272
+    ],
+    "equal": true
+   },
+   "variable_names_identical_and_same_order": true,
+   "nonnumeric_columns": [],
+   "cells_compared": 908752,
+   "default_mode_mismatched_cells": 0,
+   "default_mode_mismatch_by_variable": {},
+   "raw_mode_mismatched_cells": null,
+   "raw_mode_note": "pyreadstat.read_por has no user_missing option; raw declared-missing codes are only available from haven read_por(user_na=TRUE). Raw codes were verified indirectly: every cell where haven raw and haven default differ holds a code inside that variable's declared missing set, and pyreadstat equals haven default on every cell.",
+   "declared_user_missing_codes_present_in_data": true,
+   "user_missing_cells_outside_declared_set": {},
+   "declared_missing_spec_mismatch_variables": "not comparable: pyreadstat.read_por does not expose declared missing values",
+   "variable_label_mismatch_variables": [],
+   "value_label_mismatch_variables": [],
+   "extract": {
+    "path": "data/derived/extracts/1976_DS0004.csv.gz",
+    "sha256": "dadeb62624cad15f69a261f77664ccd66bd628adc1be567d3bd8343e64eb639a",
+    "roundtrip_equal_to_haven_raw": true
+   },
+   "pass": true
+  },
+  {
+   "key": "1976_DS0005",
+   "source": "data/supplied/ICPSR_07927/DS0005/07927-0005-Data.por",
+   "format": "SPSS portable (.por)",
+   "source_sha256": "7f01426b8a5e5550b2bee1a88ae4d56f25b9b6601ad85d503acf15e71a8626c9",
+   "dimensions": {
+    "pyreadstat": [
+     3322,
+     280
+    ],
+    "haven": [
+     3322,
+     280
+    ],
+    "equal": true
+   },
+   "variable_names_identical_and_same_order": true,
+   "nonnumeric_columns": [],
+   "cells_compared": 930160,
+   "default_mode_mismatched_cells": 0,
+   "default_mode_mismatch_by_variable": {},
+   "raw_mode_mismatched_cells": null,
+   "raw_mode_note": "pyreadstat.read_por has no user_missing option; raw declared-missing codes are only available from haven read_por(user_na=TRUE). Raw codes were verified indirectly: every cell where haven raw and haven default differ holds a code inside that variable's declared missing set, and pyreadstat equals haven default on every cell.",
+   "declared_user_missing_codes_present_in_data": true,
+   "user_missing_cells_outside_declared_set": {},
+   "declared_missing_spec_mismatch_variables": "not comparable: pyreadstat.read_por does not expose declared missing values",
+   "variable_label_mismatch_variables": [],
+   "value_label_mismatch_variables": [],
+   "extract": {
+    "path": "data/derived/extracts/1976_DS0005.csv.gz",
+    "sha256": "9a9bb180bed216e473c3049691ad4bf2677fb4adc1e96b57dc44f687bebd7b3b",
+    "roundtrip_equal_to_haven_raw": true
+   },
+   "pass": true
+  },
+  {
+   "key": "1976_DS0006",
+   "source": "data/supplied/ICPSR_07927/DS0006/07927-0006-Data.por",
+   "format": "SPSS portable (.por)",
+   "source_sha256": "8d9b79eeb48ce5a46a224a5eeb78792f5b0ec8518e6236ffd2df7d56bcd02bbb",
+   "dimensions": {
+    "pyreadstat": [
+     16677,
+     116
+    ],
+    "haven": [
+     16677,
+     116
+    ],
+    "equal": true
+   },
+   "variable_names_identical_and_same_order": true,
+   "nonnumeric_columns": [],
+   "cells_compared": 1934532,
+   "default_mode_mismatched_cells": 0,
+   "default_mode_mismatch_by_variable": {},
+   "raw_mode_mismatched_cells": null,
+   "raw_mode_note": "pyreadstat.read_por has no user_missing option; raw declared-missing codes are only available from haven read_por(user_na=TRUE). Raw codes were verified indirectly: every cell where haven raw and haven default differ holds a code inside that variable's declared missing set, and pyreadstat equals haven default on every cell.",
+   "declared_user_missing_codes_present_in_data": true,
+   "user_missing_cells_outside_declared_set": {},
+   "declared_missing_spec_mismatch_variables": "not comparable: pyreadstat.read_por does not expose declared missing values",
+   "variable_label_mismatch_variables": [],
+   "value_label_mismatch_variables": [],
+   "extract": {
+    "path": "data/derived/extracts/1976_DS0006.csv.gz",
+    "sha256": "4d96e3d7048ed91b7c53febd65bed2ec09c8f8763bc09e5d38a054b813c49849",
+    "roundtrip_equal_to_haven_raw": true
+   },
+   "pass": true
+  },
+  {
+   "key": "1991_DS0001",
+   "source": "data/supplied/ICPSR_09871/DS0001/09871-0001-Data.por",
+   "format": "SPSS portable (.por)",
+   "source_sha256": "2ff9fa98fc66c6f32f4856a37b1b79dbd4ab25cc08e4be06869568c7c646fd8d",
+   "dimensions": {
+    "pyreadstat": [
+     15483,
+     111
+    ],
+    "haven": [
+     15483,
+     111
+    ],
+    "equal": true
+   },
+   "variable_names_identical_and_same_order": true,
+   "nonnumeric_columns": [],
+   "cells_compared": 1718613,
+   "default_mode_mismatched_cells": 0,
+   "default_mode_mismatch_by_variable": {},
+   "raw_mode_mismatched_cells": null,
+   "raw_mode_note": "pyreadstat.read_por has no user_missing option; raw declared-missing codes are only available from haven read_por(user_na=TRUE). Raw codes were verified indirectly: every cell where haven raw and haven default differ holds a code inside that variable's declared missing set, and pyreadstat equals haven default on every cell.",
+   "declared_user_missing_codes_present_in_data": true,
+   "user_missing_cells_outside_declared_set": {},
+   "declared_missing_spec_mismatch_variables": "not comparable: pyreadstat.read_por does not expose declared missing values",
+   "variable_label_mismatch_variables": [],
+   "value_label_mismatch_variables": [],
+   "extract": {
+    "path": "data/derived/extracts/1991_DS0001.csv.gz",
+    "sha256": "f1e18fca3f44a2e58d6d77a72b4090c7b6f504be93cecc7af13b0f736595fe1e",
+    "roundtrip_equal_to_haven_raw": true
+   },
+   "pass": true
+  },
+  {
+   "key": "1991_DS0002",
+   "source": "data/supplied/ICPSR_09871/DS0002/09871-0002-Data.por",
+   "format": "SPSS portable (.por)",
+   "source_sha256": "eb2d7836f486a10614ad825b8b2ced3d64c04fb6e526807009b953f8bf68e309",
+   "dimensions": {
+    "pyreadstat": [
+     2584,
+     585
+    ],
+    "haven": [
+     2584,
+     585
+    ],
+    "equal": true
+   },
+   "variable_names_identical_and_same_order": true,
+   "nonnumeric_columns": [],
+   "cells_compared": 1511640,
+   "default_mode_mismatched_cells": 0,
+   "default_mode_mismatch_by_variable": {},
+   "raw_mode_mismatched_cells": null,
+   "raw_mode_note": "pyreadstat.read_por has no user_missing option; raw declared-missing codes are only available from haven read_por(user_na=TRUE). Raw codes were verified indirectly: every cell where haven raw and haven default differ holds a code inside that variable's declared missing set, and pyreadstat equals haven default on every cell.",
+   "declared_user_missing_codes_present_in_data": true,
+   "user_missing_cells_outside_declared_set": {},
+   "declared_missing_spec_mismatch_variables": "not comparable: pyreadstat.read_por does not expose declared missing values",
+   "variable_label_mismatch_variables": [],
+   "value_label_mismatch_variables": [],
+   "extract": {
+    "path": "data/derived/extracts/1991_DS0002.csv.gz",
+    "sha256": "58032139c84986aef8571469cea49e5fb1c721be28676dae6dfee84e8fdd05eb",
+    "roundtrip_equal_to_haven_raw": true
+   },
+   "pass": true
+  },
+  {
+   "key": "1991_DS0003",
+   "source": "data/supplied/ICPSR_09871/DS0003/09871-0003-Data.por",
+   "format": "SPSS portable (.por)",
+   "source_sha256": "a4e667a8f8153d49719333639cca743d1919fe9022f45113ed3f866626830f10",
+   "dimensions": {
+    "pyreadstat": [
+     2560,
+     329
+    ],
+    "haven": [
+     2560,
+     329
+    ],
+    "equal": true
+   },
+   "variable_names_identical_and_same_order": true,
+   "nonnumeric_columns": [],
+   "cells_compared": 842240,
+   "default_mode_mismatched_cells": 0,
+   "default_mode_mismatch_by_variable": {},
+   "raw_mode_mismatched_cells": null,
+   "raw_mode_note": "pyreadstat.read_por has no user_missing option; raw declared-missing codes are only available from haven read_por(user_na=TRUE). Raw codes were verified indirectly: every cell where haven raw and haven default differ holds a code inside that variable's declared missing set, and pyreadstat equals haven default on every cell.",
+   "declared_user_missing_codes_present_in_data": true,
+   "user_missing_cells_outside_declared_set": {},
+   "declared_missing_spec_mismatch_variables": "not comparable: pyreadstat.read_por does not expose declared missing values",
+   "variable_label_mismatch_variables": [],
+   "value_label_mismatch_variables": [],
+   "extract": {
+    "path": "data/derived/extracts/1991_DS0003.csv.gz",
+    "sha256": "383a7d99caa75644c7ade359e9ff02f9a99a7dc8be22be7096c65ae1205366a0",
+    "roundtrip_equal_to_haven_raw": true
+   },
+   "pass": true
+  },
+  {
+   "key": "1991_DS0004",
+   "source": "data/supplied/ICPSR_09871/DS0004/09871-0004-Data.por",
+   "format": "SPSS portable (.por)",
+   "source_sha256": "aeb535b17476b468ba2bbbd7007564d013e569268578ae5134c04438b2480119",
+   "dimensions": {
+    "pyreadstat": [
+     2585,
+     363
+    ],
+    "haven": [
+     2585,
+     363
+    ],
+    "equal": true
+   },
+   "variable_names_identical_and_same_order": true,
+   "nonnumeric_columns": [],
+   "cells_compared": 938355,
+   "default_mode_mismatched_cells": 0,
+   "default_mode_mismatch_by_variable": {},
+   "raw_mode_mismatched_cells": null,
+   "raw_mode_note": "pyreadstat.read_por has no user_missing option; raw declared-missing codes are only available from haven read_por(user_na=TRUE). Raw codes were verified indirectly: every cell where haven raw and haven default differ holds a code inside that variable's declared missing set, and pyreadstat equals haven default on every cell.",
+   "declared_user_missing_codes_present_in_data": true,
+   "user_missing_cells_outside_declared_set": {},
+   "declared_missing_spec_mismatch_variables": "not comparable: pyreadstat.read_por does not expose declared missing values",
+   "variable_label_mismatch_variables": [],
+   "value_label_mismatch_variables": [],
+   "extract": {
+    "path": "data/derived/extracts/1991_DS0004.csv.gz",
+    "sha256": "c2fea10e349770137a272380f6cc2d51bad0f11968bb3d15a473516cbd9ab923",
+    "roundtrip_equal_to_haven_raw": true
+   },
+   "pass": true
+  },
+  {
+   "key": "1991_DS0005",
+   "source": "data/supplied/ICPSR_09871/DS0005/09871-0005-Data.por",
+   "format": "SPSS portable (.por)",
+   "source_sha256": "930aa08a388cda67cc8561adab093c1ab30ca70e156146c6da44b9d5abf528cf",
+   "dimensions": {
+    "pyreadstat": [
+     2556,
+     294
+    ],
+    "haven": [
+     2556,
+     294
+    ],
+    "equal": true
+   },
+   "variable_names_identical_and_same_order": true,
+   "nonnumeric_columns": [],
+   "cells_compared": 751464,
+   "default_mode_mismatched_cells": 0,
+   "default_mode_mismatch_by_variable": {},
+   "raw_mode_mismatched_cells": null,
+   "raw_mode_note": "pyreadstat.read_por has no user_missing option; raw declared-missing codes are only available from haven read_por(user_na=TRUE). Raw codes were verified indirectly: every cell where haven raw and haven default differ holds a code inside that variable's declared missing set, and pyreadstat equals haven default on every cell.",
+   "declared_user_missing_codes_present_in_data": true,
+   "user_missing_cells_outside_declared_set": {},
+   "declared_missing_spec_mismatch_variables": "not comparable: pyreadstat.read_por does not expose declared missing values",
+   "variable_label_mismatch_variables": [],
+   "value_label_mismatch_variables": [],
+   "extract": {
+    "path": "data/derived/extracts/1991_DS0005.csv.gz",
+    "sha256": "87ff608e85c166bd19733b61f279ae2c40715b62199157c23ce1d35f3ae26a4f",
+    "roundtrip_equal_to_haven_raw": true
+   },
+   "pass": true
+  },
+  {
+   "key": "1991_DS0006",
+   "source": "data/supplied/ICPSR_09871/DS0006/09871-0006-Data.por",
+   "format": "SPSS portable (.por)",
+   "source_sha256": "b0d8b2874255d443a1ee836046a311e5237982ef030a051e78102d55885e78e7",
+   "dimensions": {
+    "pyreadstat": [
+     2593,
+     320
+    ],
+    "haven": [
+     2593,
+     320
+    ],
+    "equal": true
+   },
+   "variable_names_identical_and_same_order": true,
+   "nonnumeric_columns": [],
+   "cells_compared": 829760,
+   "default_mode_mismatched_cells": 0,
+   "default_mode_mismatch_by_variable": {},
+   "raw_mode_mismatched_cells": null,
+   "raw_mode_note": "pyreadstat.read_por has no user_missing option; raw declared-missing codes are only available from haven read_por(user_na=TRUE). Raw codes were verified indirectly: every cell where haven raw and haven default differ holds a code inside that variable's declared missing set, and pyreadstat equals haven default on every cell.",
+   "declared_user_missing_codes_present_in_data": true,
+   "user_missing_cells_outside_declared_set": {},
+   "declared_missing_spec_mismatch_variables": "not comparable: pyreadstat.read_por does not expose declared missing values",
+   "variable_label_mismatch_variables": [],
+   "value_label_mismatch_variables": [],
+   "extract": {
+    "path": "data/derived/extracts/1991_DS0006.csv.gz",
+    "sha256": "a50d57f454e4e5c579eb246a8468e654161ed4b131670950117575b1c4f0bc57",
+    "roundtrip_equal_to_haven_raw": true
+   },
+   "pass": true
+  },
+  {
+   "key": "1991_DS0007",
+   "source": "data/supplied/ICPSR_09871/DS0007/09871-0007-Data.por",
+   "format": "SPSS portable (.por)",
+   "source_sha256": "8088a7a7676fd8be05048cd9cf4fbceab78b177f389ed2b9608891f28f474c20",
+   "dimensions": {
+    "pyreadstat": [
+     2605,
+     372
+    ],
+    "haven": [
+     2605,
+     372
+    ],
+    "equal": true
+   },
+   "variable_names_identical_and_same_order": true,
+   "nonnumeric_columns": [],
+   "cells_compared": 969060,
+   "default_mode_mismatched_cells": 0,
+   "default_mode_mismatch_by_variable": {},
+   "raw_mode_mismatched_cells": null,
+   "raw_mode_note": "pyreadstat.read_por has no user_missing option; raw declared-missing codes are only available from haven read_por(user_na=TRUE). Raw codes were verified indirectly: every cell where haven raw and haven default differ holds a code inside that variable's declared missing set, and pyreadstat equals haven default on every cell.",
+   "declared_user_missing_codes_present_in_data": true,
+   "user_missing_cells_outside_declared_set": {},
+   "declared_missing_spec_mismatch_variables": "not comparable: pyreadstat.read_por does not expose declared missing values",
+   "variable_label_mismatch_variables": [],
+   "value_label_mismatch_variables": [],
+   "extract": {
+    "path": "data/derived/extracts/1991_DS0007.csv.gz",
+    "sha256": "dfbc62de5ba806eef87d5a5b26d5790ba581c9acb950dc00580e31b493b58e44",
+    "roundtrip_equal_to_haven_raw": true
+   },
+   "pass": true
+  },
+  {
+   "key": "2006_DS0001",
+   "source": "data/supplied/ICPSR_20022/DS0001/20022-0001-Data.sav",
+   "format": "SPSS system (.sav)",
+   "source_sha256": "7c04cf470d20c21fb896a9ef25ca42dd1458bcd23e6477ef12d0822e38559680",
+   "dimensions": {
+    "pyreadstat": [
+     14814,
+     185
+    ],
+    "haven": [
+     14814,
+     185
+    ],
+    "equal": true
+   },
+   "variable_names_identical_and_same_order": true,
+   "nonnumeric_columns": [],
+   "cells_compared": 2740590,
+   "default_mode_mismatched_cells": 0,
+   "default_mode_mismatch_by_variable": {},
+   "raw_mode_mismatched_cells": 0,
+   "raw_mode_mismatch_by_variable": {},
+   "declared_user_missing_codes_present_in_data": true,
+   "user_missing_cells_outside_declared_set": {},
+   "declared_missing_spec_mismatch_variables": [],
+   "variable_label_mismatch_variables": [],
+   "value_label_mismatch_variables": [],
+   "extract": {
+    "path": "data/derived/extracts/2006_DS0001.csv.gz",
+    "sha256": "c0e8eebd06abd79a1c54d1fc9f016246387db9d8c3ff94a7f44099fbea5e0376",
+    "roundtrip_equal_to_haven_raw": true
+   },
+   "pass": true
+  },
+  {
+   "key": "2006_DS0002",
+   "source": "data/supplied/ICPSR_20022/DS0002/20022-0002-Data.sav",
+   "format": "SPSS system (.sav)",
+   "source_sha256": "8d979b940eba3cbe8e2f2e99d88020080af2f84ef712d900a05e39de31a4c95f",
+   "dimensions": {
+    "pyreadstat": [
+     2475,
+     618
+    ],
+    "haven": [
+     2475,
+     618
+    ],
+    "equal": true
+   },
+   "variable_names_identical_and_same_order": true,
+   "nonnumeric_columns": [],
+   "cells_compared": 1529550,
+   "default_mode_mismatched_cells": 0,
+   "default_mode_mismatch_by_variable": {},
+   "raw_mode_mismatched_cells": 0,
+   "raw_mode_mismatch_by_variable": {},
+   "declared_user_missing_codes_present_in_data": true,
+   "user_missing_cells_outside_declared_set": {},
+   "declared_missing_spec_mismatch_variables": [],
+   "variable_label_mismatch_variables": [],
+   "value_label_mismatch_variables": [],
+   "extract": {
+    "path": "data/derived/extracts/2006_DS0002.csv.gz",
+    "sha256": "f681a86d78f1221f9e8cbd5aed4e86bb97306c9f0ce7b4ab8e72b8ab5e3253cb",
+    "roundtrip_equal_to_haven_raw": true
+   },
+   "pass": true
+  },
+  {
+   "key": "2006_DS0003",
+   "source": "data/supplied/ICPSR_20022/DS0003/20022-0003-Data.sav",
+   "format": "SPSS system (.sav)",
+   "source_sha256": "a3ad90ec07fd23cac321b9fc617e54612b64dad55388516e6bc31005e7a22cd7",
+   "dimensions": {
+    "pyreadstat": [
+     2460,
+     332
+    ],
+    "haven": [
+     2460,
+     332
+    ],
+    "equal": true
+   },
+   "variable_names_identical_and_same_order": true,
+   "nonnumeric_columns": [],
+   "cells_compared": 816720,
+   "default_mode_mismatched_cells": 0,
+   "default_mode_mismatch_by_variable": {},
+   "raw_mode_mismatched_cells": 0,
+   "raw_mode_mismatch_by_variable": {},
+   "declared_user_missing_codes_present_in_data": true,
+   "user_missing_cells_outside_declared_set": {},
+   "declared_missing_spec_mismatch_variables": [],
+   "variable_label_mismatch_variables": [],
+   "value_label_mismatch_variables": [],
+   "extract": {
+    "path": "data/derived/extracts/2006_DS0003.csv.gz",
+    "sha256": "2b4f6132ee69d410e5b7c3011b01ea70adc2ac416e13b12a44f6fd3877e20468",
+    "roundtrip_equal_to_haven_raw": true
+   },
+   "pass": true
+  },
+  {
+   "key": "2006_DS0004",
+   "source": "data/supplied/ICPSR_20022/DS0004/20022-0004-Data.sav",
+   "format": "SPSS system (.sav)",
+   "source_sha256": "ca1aa3537f59e2d7e32ea3d88a6f2a1eefcb2104bc00fd570261b4f179cc477d",
+   "dimensions": {
+    "pyreadstat": [
+     2456,
+     357
+    ],
+    "haven": [
+     2456,
+     357
+    ],
+    "equal": true
+   },
+   "variable_names_identical_and_same_order": true,
+   "nonnumeric_columns": [],
+   "cells_compared": 876792,
+   "default_mode_mismatched_cells": 0,
+   "default_mode_mismatch_by_variable": {},
+   "raw_mode_mismatched_cells": 0,
+   "raw_mode_mismatch_by_variable": {},
+   "declared_user_missing_codes_present_in_data": true,
+   "user_missing_cells_outside_declared_set": {},
+   "declared_missing_spec_mismatch_variables": [],
+   "variable_label_mismatch_variables": [],
+   "value_label_mismatch_variables": [],
+   "extract": {
+    "path": "data/derived/extracts/2006_DS0004.csv.gz",
+    "sha256": "f9eae8b40e2415cc82e9652af31687c1f02dacc05e7f695307e26e6e98bcae51",
+    "roundtrip_equal_to_haven_raw": true
+   },
+   "pass": true
+  },
+  {
+   "key": "2006_DS0005",
+   "source": "data/supplied/ICPSR_20022/DS0005/20022-0005-Data.sav",
+   "format": "SPSS system (.sav)",
+   "source_sha256": "8be19c9c5a430d0cb38eaa5ad3b78370b099d46b43d81296070c3e0396923ac2",
+   "dimensions": {
+    "pyreadstat": [
+     2461,
+     270
+    ],
+    "haven": [
+     2461,
+     270
+    ],
+    "equal": true
+   },
+   "variable_names_identical_and_same_order": true,
+   "nonnumeric_columns": [],
+   "cells_compared": 664470,
+   "default_mode_mismatched_cells": 0,
+   "default_mode_mismatch_by_variable": {},
+   "raw_mode_mismatched_cells": 0,
+   "raw_mode_mismatch_by_variable": {},
+   "declared_user_missing_codes_present_in_data": true,
+   "user_missing_cells_outside_declared_set": {},
+   "declared_missing_spec_mismatch_variables": [],
+   "variable_label_mismatch_variables": [],
+   "value_label_mismatch_variables": [],
+   "extract": {
+    "path": "data/derived/extracts/2006_DS0005.csv.gz",
+    "sha256": "427e20b074d73cd0941d032593c2a167b3ef5f9e36c6eb92f60ca213f11d4218",
+    "roundtrip_equal_to_haven_raw": true
+   },
+   "pass": true
+  },
+  {
+   "key": "2006_DS0006",
+   "source": "data/supplied/ICPSR_20022/DS0006/20022-0006-Data.sav",
+   "format": "SPSS system (.sav)",
+   "source_sha256": "c0a7942c75e0f28f22706ee1a927e756c4f9c52cbf8f43ab64b47e34aa17f87c",
+   "dimensions": {
+    "pyreadstat": [
+     2479,
+     327
+    ],
+    "haven": [
+     2479,
+     327
+    ],
+    "equal": true
+   },
+   "variable_names_identical_and_same_order": true,
+   "nonnumeric_columns": [],
+   "cells_compared": 810633,
+   "default_mode_mismatched_cells": 0,
+   "default_mode_mismatch_by_variable": {},
+   "raw_mode_mismatched_cells": 0,
+   "raw_mode_mismatch_by_variable": {},
+   "declared_user_missing_codes_present_in_data": true,
+   "user_missing_cells_outside_declared_set": {},
+   "declared_missing_spec_mismatch_variables": [],
+   "variable_label_mismatch_variables": [],
+   "value_label_mismatch_variables": [],
+   "extract": {
+    "path": "data/derived/extracts/2006_DS0006.csv.gz",
+    "sha256": "2e03640ff223f80c259a1080699743ea08f15f11be77370ae1fecec45cc6166d",
+    "roundtrip_equal_to_haven_raw": true
+   },
+   "pass": true
+  },
+  {
+   "key": "2006_DS0007",
+   "source": "data/supplied/ICPSR_20022/DS0007/20022-0007-Data.sav",
+   "format": "SPSS system (.sav)",
+   "source_sha256": "fe90e66bffcc8dfb2a2ae5f537524de11b3a4feeeef9de0c20c81799235dd95e",
+   "dimensions": {
+    "pyreadstat": [
+     2483,
+     332
+    ],
+    "haven": [
+     2483,
+     332
+    ],
+    "equal": true
+   },
+   "variable_names_identical_and_same_order": true,
+   "nonnumeric_columns": [],
+   "cells_compared": 824356,
+   "default_mode_mismatched_cells": 0,
+   "default_mode_mismatch_by_variable": {},
+   "raw_mode_mismatched_cells": 0,
+   "raw_mode_mismatch_by_variable": {},
+   "declared_user_missing_codes_present_in_data": true,
+   "user_missing_cells_outside_declared_set": {},
+   "declared_missing_spec_mismatch_variables": [],
+   "variable_label_mismatch_variables": [],
+   "value_label_mismatch_variables": [],
+   "extract": {
+    "path": "data/derived/extracts/2006_DS0007.csv.gz",
+    "sha256": "80d418b5a8b4c0ed36f5611f311786c13a954847e365fff95cbd5e27558b37ad",
+    "roundtrip_equal_to_haven_raw": true
+   },
+   "pass": true
+  }
+ ]
+}

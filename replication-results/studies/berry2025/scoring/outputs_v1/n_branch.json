@@ -1,0 +1,39 @@
+{
+ "1": {
+  "published_n": 530.0,
+  "by_level": {
+   "D1_key": 530.0,
+   "D1_none": 530.0
+  },
+  "scoring_sample": "D1_key",
+  "code": "origin"
+ },
+ "2": {
+  "published_n": 186.0,
+  "by_level": {
+   "D2_any": 186.0,
+   "D2_both": 186.0,
+   "D2_none": 186.0
+  },
+  "scoring_sample": "D2_any",
+  "code": "origin"
+ },
+ "3": {
+  "published_n": 286.0,
+  "by_level": {
+   "D3_all": 286.0,
+   "D3_comp": 286.0,
+   "D3_none": 286.0
+  },
+  "scoring_sample": "D3_all",
+  "code": "origin"
+ },
+ "4": {
+  "published_n": 50.0,
+  "by_level": {
+   "D4_loyal": 50.0
+  },
+  "scoring_sample": "D4_loyal",
+  "code": "origin"
+ }
+}

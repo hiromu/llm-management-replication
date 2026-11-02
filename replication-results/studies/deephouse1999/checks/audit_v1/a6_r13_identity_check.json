@@ -1,0 +1,19 @@
+{
+ "n_records": 10684,
+ "impl_A": {
+  "records_all_items_present": 1145,
+  "share_present": 0.1072,
+  "exact_identity_share(|diff|<=1)": 0.8603,
+  "median_abs_diff_thousand_usd": 0.0
+ },
+ "impl_B_C": {
+  "records_all_items_present": 1145,
+  "share_present": 0.1072,
+  "exact_identity_share(|diff|<=1)": 0.469,
+  "median_abs_diff_thousand_usd": 18.0
+ },
+ "RCFD2080_eq_RCFD1563_share": 0.9415,
+ "RCFD2080_eq_RCFD1563_minus_1545_share": 0.5223,
+ "records_without_1563": 9539,
+ "records_without_1563_identity_res_eq_2165+2107+2080_share": 0.8722
+}

@@ -1,0 +1,328 @@
+{
+  "paper_id": "P01",
+  "data_sources": [
+    {
+      "source_key": "S1 nflverse play-by-play, one file per season, seasons 2000 through 2005 (data_description/source_descriptions.md, section S1; columns in data_description/data_dictionary.md)",
+      "role": "Supplies every play with down, distance, field position, game clock, quarter, possession team, home/away status of the possession team, pre-play scores, play type and outcome flags, season, week and season_type. This is the unit-level file from which the fourth-down decision sample and all play-level variables are built.",
+      "fallback_if_unavailable": "No substitute play-by-play source was acquired. If a season file is unavailable the study cannot be built for that season; record the gap. Two regular-season games from the 2000 season listed in the schedule have no play-by-play rows in this provider (source_descriptions.md, S1 coverage gap); they cannot be recovered and must be documented as missing from the replication sample."
+    },
+    {
+      "source_key": "S2 nflverse schedules/games file (games.parquet / games.csv), seasons 2000 through 2005",
+      "role": "Supplies game-level attributes: game_type, week, home_team, away_team, div_game (same-division indicator), location (Home/Neutral), season. Joins to S1 on game_id (or old_game_id).",
+      "fallback_if_unavailable": "week, home_team, away_team and season_type can be taken from S1 directly. div_game has no substitute in S1; if S2 were unavailable the division indicator would have to be derived from a hand-built division membership table by season (see conference derivation below)."
+    },
+    {
+      "source_key": "Derived: conference (and, if needed, division) membership table by season, built from team identity",
+      "role": "Needed for the same-conference control. No conference field exists in S1 or S2 (source_descriptions.md, 'Not acquired'). Membership must be derived from franchise identity using the league alignment in force each season: the alignment changed between the 2001 and 2002 seasons, and one expansion franchise (Houston) first appears in 2002. Conference membership of existing franchises did not change in these seasons; only divisions were reorganised in 2002.",
+      "fallback_if_unavailable": "If the implementer cannot construct conference membership from documented league alignment, record the same-conference control as unavailable and report models with and without it as a documented deviation (this is a deviation, not an equivalent specification)."
+    }
+  ],
+  "unit_of_observation": "One fourth-down play (decision) by the team in possession (posteam) in a regular-season game. Each row of the analysis file is one fourth-down play on which the offense punted, attempted a field goal, or ran an offensive play (run or pass).",
+  "sample_steps": [
+    {
+      "step": 1,
+      "rule": "Load S1 play-by-play for seasons 2000, 2001, 2002, 2003, 2004 and 2005 and stack them. Keep only regular-season games: season_type == 'REG' (equivalently S2 game_type == 'REG'). Postseason games are excluded by the paper; preseason games are not present in the source.",
+      "variables_used": ["season", "season_type", "game_id"],
+      "source": {"doc": "D01", "pdf_page": 8, "where": "Data paragraph ('all regular season games played during the 2000-2005 seasons'); endnote 1 on PDF page 15"},
+      "certainty": "explicit"
+    },
+    {
+      "step": 2,
+      "rule": "Keep rows with down == 4 (fourth-down plays). Rows with missing down (kickoffs, extra points, timeouts, end-of-quarter markers) are excluded.",
+      "variables_used": ["down"],
+      "source": {"doc": "D01", "pdf_page": 8, "where": "Data paragraph ('fourth-down decisions'); Risk Taking variable definition, right column"},
+      "certainty": "explicit"
+    },
+    {
+      "step": 3,
+      "rule": "Keep only rows in which the offense made one of the three fourth-down choices: play_type in {'punt', 'field_goal', 'run', 'pass'}. Exclude play_type 'no_play' (timeouts and plays nullified by penalty), 'qb_kneel', 'qb_spike', empty/missing play_type, and any other code. The paper defines the decision as punt, field-goal attempt or conversion attempt and says nothing about penalties, kneel-downs, spikes or fakes; this rule is the closest reading. A fake punt or fake field goal that is recorded as a run or pass counts as a conversion attempt under this rule.",
+      "variables_used": ["play_type", "punt_attempt", "field_goal_attempt", "rush_attempt", "pass_attempt"],
+      "source": {"doc": "D01", "pdf_page": 8, "where": "Risk Taking paragraph: binary variable '0 = ... team punted or attempted a field goal on the fourth down; 1 = ... the team attempted a fourth-down conversion'"},
+      "certainty": "inferred"
+    },
+    {
+      "step": 4,
+      "rule": "Exclude overtime plays: keep qtr <= 4 (equivalently game_half != 'Overtime').",
+      "variables_used": ["qtr", "game_half"],
+      "source": {"doc": "D01", "pdf_page": 15, "where": "Endnote 2 ('Fourth-down decisions that occurred during overtime periods were also excluded')"},
+      "certainty": "explicit"
+    },
+    {
+      "step": 5,
+      "rule": "Exclude the last two minutes of each game: drop plays with game_seconds_remaining <= 120 (i.e. keep plays with strictly more than two minutes of regulation time remaining at the snap). The paper motivates this by the two-minute warning at the end of the fourth quarter and says 'the last two minutes of each game' were removed; it does not say whether a play at exactly 2:00 is kept, and it does not remove the last two minutes of the first half. Because exclusion of overtime (step 4) already restricts to regulation, this is equivalent to dropping fourth-quarter plays with quarter_seconds_remaining <= 120.",
+      "variables_used": ["game_seconds_remaining", "qtr", "quarter_seconds_remaining"],
+      "source": {"doc": "D01", "pdf_page": 16, "where": "Endnote 3 (begins PDF page 15, continues at the top of PDF page 16)"},
+      "certainty": "inferred"
+    },
+    {
+      "step": 6,
+      "rule": "Join S2 on game_id to attach game_type, week, div_game, location, home_team and away_team. Derive conference membership of posteam and defteam for the game's season from the derived membership table. Note that S1 team columns use current franchise abbreviations (LA, LAC, LV) while game_id and S2 use the abbreviations of the time (STL, SD, OAK); map abbreviations before any team comparison.",
+      "variables_used": ["game_id", "posteam", "defteam", "home_team", "away_team", "div_game", "location", "week", "season"],
+      "source": {"doc": "D01", "pdf_page": 9, "where": "Control Variables paragraph, items (b), (c), (d)"},
+      "certainty": "inferred"
+    },
+    {
+      "step": 7,
+      "rule": "Keep rows with non-missing values on every model variable listed under 'variables' (dependent variable, both score fields, game clock, ydstogo, yardline_100, posteam, posteam_type, week, season, division and conference indicators). The paper does not describe any missing-data handling; this is listwise deletion as performed by default by the stated software. Report how many rows are dropped at this step.",
+      "variables_used": ["risk_taking", "posteam_score", "defteam_score", "game_seconds_remaining", "ydstogo", "yardline_100", "posteam", "posteam_type", "week", "season"],
+      "source": {"doc": "D01", "pdf_page": 9, "where": "Data Analysis Model paragraph (no missing-data rule stated)"},
+      "certainty": "unclear"
+    },
+    {
+      "step": 8,
+      "rule": "Define the panel (fixed-effect group) as the possession team (posteam, franchise identity constant across seasons) and the season as the year dimension. All franchises that appear in the regular-season data for these seasons form the team groups; the expansion franchise that first appears in 2002 is a group with fewer seasons.",
+      "variables_used": ["posteam", "season"],
+      "source": {"doc": "D01", "pdf_page": 9, "where": "Data Analysis Model paragraph ('Fixed-effect estimations were used to account for the unobservable heterogeneity between the ... teams and also to account for any potential within-year effects over the six years of data')"},
+      "certainty": "inferred"
+    }
+  ],
+  "variables": [
+    {
+      "name": "risk_taking",
+      "role": "dependent",
+      "definition": "Binary indicator of the offense's fourth-down choice: 1 if the offense attempted a fourth-down conversion (an ordinary run or pass play from scrimmage, including sacks and scrambles); 0 if the offense punted or attempted a field goal.",
+      "registry_columns": ["play_type", "rush_attempt", "pass_attempt", "punt_attempt", "field_goal_attempt"],
+      "coding": "risk_taking = 1 if play_type in {'run','pass'}; = 0 if play_type in {'punt','field_goal'}; rows with other play_type values are not in the sample (sample step 3).",
+      "source": {"doc": "D01", "pdf_page": 8, "where": "Variables, Risk Taking paragraph"},
+      "certainty": "explicit"
+    },
+    {
+      "name": "performance",
+      "role": "focal",
+      "definition": "Offense's score minus opponent's score at the time of the play, minus one point; i.e. the distance of the offense's current score from the aspiration level, where the aspiration level is defined as one point more than the opponent's score. Scores are those at the start of the play (before the play's outcome). Example in the paper: offense with six points and opponent with nine gives performance of minus four.",
+      "registry_columns": ["posteam_score", "defteam_score", "score_differential"],
+      "coding": "performance = posteam_score - defteam_score - 1 (= score_differential - 1). A tied score therefore gives performance = -1; leading by exactly one point gives performance = 0, which the paper treats as 'at the aspiration level' and assigns to the at-or-below branch.",
+      "source": {"doc": "D01", "pdf_page": 9, "where": "Variables, Performance paragraph (definition and worked example); Table 4 Notes on PDF page 11 ('the aspiration level is one point ahead of the opponent's score')"},
+      "certainty": "explicit"
+    },
+    {
+      "name": "perf_below",
+      "role": "focal",
+      "definition": "Spline piece for performance at or below the aspiration level: equals performance when performance <= 0 and 0 when performance > 0. Takes non-positive values.",
+      "registry_columns": ["posteam_score", "defteam_score"],
+      "coding": "perf_below = min(performance, 0)",
+      "source": {"doc": "D01", "pdf_page": 9, "where": "Variables, Performance paragraph, right column ('Performance at or below the aspiration level (P <= AL) equals 0 when performance is above the aspiration level and equals performance minus aspiration when performance is at or below it')"},
+      "certainty": "explicit"
+    },
+    {
+      "name": "perf_below_sq",
+      "role": "focal",
+      "definition": "Square of the at-or-below spline piece, to allow curvature below the aspiration level. Zero when performance > 0.",
+      "registry_columns": ["posteam_score", "defteam_score"],
+      "coding": "perf_below_sq = perf_below ^ 2 (non-negative; not centred)",
+      "source": {"doc": "D01", "pdf_page": 9, "where": "Variables, Performance paragraph ('Also included was a squared term (for performance at or below the aspiration, P^2 <= AL)')"},
+      "certainty": "explicit"
+    },
+    {
+      "name": "perf_above",
+      "role": "focal",
+      "definition": "Spline piece for performance above the aspiration level: equals performance when performance > 0 and 0 otherwise. Takes non-negative values.",
+      "registry_columns": ["posteam_score", "defteam_score"],
+      "coding": "perf_above = max(performance, 0)",
+      "source": {"doc": "D01", "pdf_page": 9, "where": "Variables, Performance paragraph ('Performance above the aspiration level (P > AL) equals 0 when performance is at or below the aspiration level and equals performance minus aspiration when performance is above it')"},
+      "certainty": "explicit"
+    },
+    {
+      "name": "below_indicator",
+      "role": "focal",
+      "definition": "Indicator that performance is at or below the aspiration level, included so that the two spline pieces need not meet at the aspiration level.",
+      "registry_columns": ["posteam_score", "defteam_score"],
+      "coding": "below_indicator = 1 if performance <= 0, else 0",
+      "source": {"doc": "D01", "pdf_page": 9, "where": "Variables, Performance paragraph ('An indicator variable (1 if P <= AL and 0 if P > AL) was also included in each model')"},
+      "certainty": "explicit"
+    },
+    {
+      "name": "minutes_remaining",
+      "role": "moderator",
+      "definition": "Deadline proximity: regulation game time remaining at the time of the play, expressed in minutes. The paper says 'the number of minutes and seconds remaining to play the game at the time of each play' and treats the game as 60 minutes of four 15-minute quarters. Larger values mean a more distant deadline. After sample step 5 the variable lies strictly above two minutes and at most sixty.",
+      "registry_columns": ["game_seconds_remaining", "qtr", "quarter_seconds_remaining", "time"],
+      "coding": "minutes_remaining = game_seconds_remaining / 60, kept as a continuous (fractional) quantity. Whether the authors used fractional minutes or truncated to whole minutes is not stated; fractional minutes is the origin reading (see open_questions and the specification space).",
+      "source": {"doc": "D01", "pdf_page": 9, "where": "Variables, Deadline Proximity paragraph"},
+      "certainty": "inferred"
+    },
+    {
+      "name": "perf_below_x_min",
+      "role": "interaction",
+      "definition": "Product of perf_below and minutes_remaining.",
+      "registry_columns": ["posteam_score", "defteam_score", "game_seconds_remaining"],
+      "coding": "perf_below * minutes_remaining (uncentred)",
+      "source": {"doc": "D01", "pdf_page": 11, "where": "Results text, right column ('interaction terms were created between minutes remaining and each of the three performance variables'); Table 5 Model 3 row labels"},
+      "certainty": "explicit"
+    },
+    {
+      "name": "perf_below_sq_x_min",
+      "role": "interaction",
+      "definition": "Product of perf_below_sq and minutes_remaining.",
+      "registry_columns": ["posteam_score", "defteam_score", "game_seconds_remaining"],
+      "coding": "perf_below_sq * minutes_remaining (uncentred)",
+      "source": {"doc": "D01", "pdf_page": 11, "where": "Results text, right column; Table 5 Model 3 row labels"},
+      "certainty": "explicit"
+    },
+    {
+      "name": "perf_above_x_min",
+      "role": "interaction",
+      "definition": "Product of perf_above and minutes_remaining. The indicator variable is NOT interacted with minutes remaining (only the three performance variables are).",
+      "registry_columns": ["posteam_score", "defteam_score", "game_seconds_remaining"],
+      "coding": "perf_above * minutes_remaining (uncentred)",
+      "source": {"doc": "D01", "pdf_page": 11, "where": "Results text, right column ('each of the three performance variables (i.e., P <= AL, P^2 <= AL, P > AL)'); Table 5 Model 3 row labels"},
+      "certainty": "explicit"
+    },
+    {
+      "name": "total_points",
+      "role": "control",
+      "definition": "Total number of points held by the offensive (possession) team at the time of the play (its own score before the play), not the combined score of both teams.",
+      "registry_columns": ["posteam_score"],
+      "coding": "total_points = posteam_score",
+      "source": {"doc": "D01", "pdf_page": 9, "where": "Control Variables paragraph, item (a) ('the total number of points held by the offensive team')"},
+      "certainty": "explicit"
+    },
+    {
+      "name": "yards_to_go_first_down",
+      "role": "control",
+      "definition": "Yards needed for a first down at the snap (in goal-to-go situations the yards to the goal line, as recorded by the provider).",
+      "registry_columns": ["ydstogo"],
+      "coding": "yards_to_go_first_down = ydstogo (integer yards)",
+      "source": {"doc": "D01", "pdf_page": 9, "where": "Variables section, left column ('yards to go for first down'); Control Variables paragraph"},
+      "certainty": "explicit"
+    },
+    {
+      "name": "yards_to_go_touchdown",
+      "role": "control",
+      "definition": "Field location: yards from the line of scrimmage to the opponent's end zone at the snap.",
+      "registry_columns": ["yardline_100"],
+      "coding": "yards_to_go_touchdown = yardline_100 (integer yards, from the possession team's perspective)",
+      "source": {"doc": "D01", "pdf_page": 9, "where": "Variables section, left column ('yards to go for touchdown (i.e., field location)'); Control Variables paragraph"},
+      "certainty": "explicit"
+    },
+    {
+      "name": "same_division",
+      "role": "control",
+      "definition": "Indicator that the opponent is in the same division as the offense in that season's league alignment.",
+      "registry_columns": ["div_game"],
+      "coding": "same_division = div_game from S2 (1/0). Division membership follows the alignment of the season in which the game was played.",
+      "source": {"doc": "D01", "pdf_page": 9, "where": "Control Variables paragraph, item (b) ('whether the opponent is in the same division or conference')"},
+      "certainty": "explicit"
+    },
+    {
+      "name": "same_conference",
+      "role": "control",
+      "definition": "Indicator that the opponent is in the same conference as the offense in that season. Origin coding is the natural nested definition (all same-conference opponents, including same-division opponents, are coded 1). The paper lists 'same division' and 'same conference' as two separate controls without saying whether the conference indicator excludes division games; see open_questions and the specification space.",
+      "registry_columns": ["posteam", "defteam", "season"],
+      "coding": "same_conference = 1 if conference(posteam, season) == conference(defteam, season), else 0, using the derived membership table.",
+      "source": {"doc": "D01", "pdf_page": 9, "where": "Control Variables paragraph, item (b); Table 1 row labels (8) and (9) on PDF page 10"},
+      "certainty": "unclear"
+    },
+    {
+      "name": "home_field",
+      "role": "control",
+      "definition": "Indicator that the offense is playing in its own stadium (is the home team).",
+      "registry_columns": ["posteam_type", "home_team", "posteam", "location"],
+      "coding": "home_field = 1 if posteam_type == 'home', else 0. The paper does not discuss neutral-site games; origin coding uses the provider's designated home team regardless of S2 location.",
+      "source": {"doc": "D01", "pdf_page": 9, "where": "Control Variables paragraph, item (c)"},
+      "certainty": "explicit"
+    },
+    {
+      "name": "week_of_season",
+      "role": "control",
+      "definition": "Week of the game within the regular season, entered as a single continuous (linear) regressor.",
+      "registry_columns": ["week"],
+      "coding": "week_of_season = week (integer regular-season week as coded by the provider)",
+      "source": {"doc": "D01", "pdf_page": 9, "where": "Control Variables paragraph, item (d); Table 5 reports a single odds ratio for 'Week of season', implying a linear term"},
+      "certainty": "explicit"
+    },
+    {
+      "name": "team_fe",
+      "role": "fixed_effect",
+      "definition": "Fixed effect for the possession team (franchise identity, constant across seasons).",
+      "registry_columns": ["posteam"],
+      "coding": "Panel/group identifier for the conditional fixed-effects logit (see models). Not entered as dummies in the origin specification.",
+      "source": {"doc": "D01", "pdf_page": 9, "where": "Data Analysis Model paragraph; Table 5 Notes on PDF page 11 ('Team-level and year-level fixed effects were included')"},
+      "certainty": "inferred"
+    },
+    {
+      "name": "year_fe",
+      "role": "fixed_effect",
+      "definition": "Season (year) fixed effects, entered as a set of season indicator variables with one season omitted.",
+      "registry_columns": ["season"],
+      "coding": "One dummy per season except a reference season. Reference season not stated (software default drops the first).",
+      "source": {"doc": "D01", "pdf_page": 9, "where": "Data Analysis Model paragraph; Table 5 Notes. The reported degrees of freedom per model equal the number of listed regressors plus the number of seasons minus one, which is consistent with season dummies entered as regressors and team effects conditioned out rather than entered as dummies."},
+      "certainty": "inferred"
+    }
+  ],
+  "models": [
+    {
+      "model_id": "M1",
+      "label_in_paper": "Model 1 of Table 5 (controls-only 'null' model)",
+      "dependent": "risk_taking",
+      "regressors": ["total_points", "yards_to_go_first_down", "yards_to_go_touchdown", "same_division", "same_conference", "home_field", "week_of_season", "minutes_remaining"],
+      "fixed_effects": ["team_fe (conditioned out, group = posteam)", "year_fe (season dummies)"],
+      "estimator": "conditional (fixed-effects) logit by maximum likelihood, grouped by possession team; Stata xtlogit with the fixed-effects option",
+      "link": "logit",
+      "covariance": "not stated; software default for this estimator is the conventional ML (observed-information) covariance; no clustering is mentioned",
+      "cluster_variable": null,
+      "software_as_stated": "Stata, xtlogit function (version not stated)",
+      "software_defaults_relevant": "Conditional logit conditions on each group's total number of ones, so groups with no variation in the outcome are dropped and no group intercepts or constant are estimated; odds ratios are exp(coefficient) and their standard errors are delta-method (odds ratio times coefficient SE); the reported LR chi-square is twice the difference between the fitted and the no-regressor conditional log-likelihoods, with degrees of freedom equal to the number of regressors including season dummies.",
+      "missing_data_rule": "Listwise deletion of rows with any missing model variable (not stated in the paper; software default).",
+      "post_estimation": "Report odds ratios with standard errors, the model log-likelihood, the LR chi-square and its degrees of freedom. No marginal effects are computed from this model.",
+      "source": {"doc": "D01", "pdf_page": 11, "where": "Table 5, Model 1; Data Analysis Model paragraph on PDF page 9; Results text on PDF page 10 ('Model 1 is the null model with only control variables')"}
+    },
+    {
+      "model_id": "M2",
+      "label_in_paper": "Model 2 of Table 5 (main effects of the performance spline)",
+      "dependent": "risk_taking",
+      "regressors": ["total_points", "yards_to_go_first_down", "yards_to_go_touchdown", "same_division", "same_conference", "home_field", "week_of_season", "minutes_remaining", "perf_below", "perf_below_sq", "perf_above", "below_indicator"],
+      "fixed_effects": ["team_fe (conditioned out, group = posteam)", "year_fe (season dummies)"],
+      "estimator": "conditional (fixed-effects) logit by maximum likelihood, grouped by possession team; Stata xtlogit with the fixed-effects option",
+      "link": "logit",
+      "covariance": "not stated; software default conventional ML covariance; no clustering mentioned",
+      "cluster_variable": null,
+      "software_as_stated": "Stata, xtlogit function (version not stated)",
+      "software_defaults_relevant": "As M1. The likelihood-ratio test of M2 against M1 is twice the difference in their log-likelihoods with degrees of freedom equal to the number of added regressors (four).",
+      "missing_data_rule": "Listwise deletion (software default); the same estimation sample as M1 is expected.",
+      "post_estimation": "(a) Likelihood-ratio test of M2 versus M1. (b) A chi-square test that the below-aspiration performance terms and the above-aspiration performance term differ from each other; the paper does not specify the test form (origin reading: a Wald test of equality of the perf_below and perf_above coefficients; report the form used). (c) Game-level marginal effects of performance on the probability of a conversion attempt, evaluated at performance-minus-aspiration values of -42, -28, -14, 0, 14, 28 and 42 (seven points in 14-point steps), with all control variables, including minutes_remaining, held at their sample means. The marginal effect is the derivative of the predicted probability with respect to a one-point increase in performance, using the spline structure: for performance at or below zero the derivative of the linear predictor is beta_below + 2 * beta_below_sq * performance, and for performance above zero it is beta_above; the value at exactly zero is on the at-or-below branch (below_indicator = 1). Report delta-method standard errors. How the team fixed effect enters the predicted probability is not stated (origin: linear predictor evaluated with the group effect set to zero, which is the software's default prediction after a conditional logit; see open_questions).",
+      "source": {"doc": "D01", "pdf_page": 11, "where": "Table 5, Model 2; Table 6 'All quarters' row and Notes on PDF page 12; Results text on PDF pages 10 and 12"}
+    },
+    {
+      "model_id": "M3",
+      "label_in_paper": "Model 3 of Table 5 (spline terms interacted with minutes remaining)",
+      "dependent": "risk_taking",
+      "regressors": ["total_points", "yards_to_go_first_down", "yards_to_go_touchdown", "same_division", "same_conference", "home_field", "week_of_season", "minutes_remaining", "perf_below", "perf_below_sq", "perf_above", "below_indicator", "perf_below_x_min", "perf_below_sq_x_min", "perf_above_x_min"],
+      "fixed_effects": ["team_fe (conditioned out, group = posteam)", "year_fe (season dummies)"],
+      "estimator": "conditional (fixed-effects) logit by maximum likelihood, grouped by possession team; Stata xtlogit with the fixed-effects option",
+      "link": "logit",
+      "covariance": "not stated; software default conventional ML covariance; no clustering mentioned",
+      "cluster_variable": null,
+      "software_as_stated": "Stata, xtlogit function (version not stated)",
+      "software_defaults_relevant": "As M1. The likelihood-ratio test of M3 against M2 has degrees of freedom equal to the number of added interaction terms (three). Interaction terms are plain products of uncentred variables.",
+      "missing_data_rule": "Listwise deletion (software default); same estimation sample as M1 and M2 expected.",
+      "post_estimation": "(a) Likelihood-ratio test of M3 versus M2. (b) Marginal effects of performance by quarter: evaluate the derivative of the predicted probability with respect to performance at performance-minus-aspiration values of -42, -28, -14, 0, 14, 28 and 42, separately with minutes_remaining fixed at the midpoint of each quarter (53 minutes for the first quarter, 38 for the second, 23 for the third, 8 for the fourth), with all control variables held at their sample means. With interactions, the derivative of the linear predictor is (beta_below + beta_below_x_min * minutes) + 2 * (beta_below_sq + beta_below_sq_x_min * minutes) * performance for performance at or below zero, and (beta_above + beta_above_x_min * minutes) for performance above zero; the value at zero is on the at-or-below branch. Report delta-method standard errors. (c) Also produce the full marginal-effect curves across the performance range at the four quarter midpoints (the paper's Figure 2) and a predicted-probability surface over the full ranges of performance and minutes remaining (the paper's Figure 3), controls at means. (d) Express selected effects as the change for a seven-point change in performance (seven times the marginal effect at the evaluation point), as the paper does in its text.",
+      "source": {"doc": "D01", "pdf_page": 11, "where": "Table 5, Model 3; Table 6 quarter rows and Notes, Figure 2 Notes on PDF page 12; Figure 3 Notes on PDF page 13; Results text PDF pages 11-13"}
+    }
+  ],
+  "inference": {
+    "observation_unit": "Fourth-down play (one decision by the possession team).",
+    "sampling_unit": "Census of all qualifying fourth-down plays in all regular-season games of six consecutive seasons; no sampling.",
+    "assignment_unit_of_focal_variables": "Play-level game state: performance (score difference) and minutes remaining vary within game and within team-game; both teams in a game contribute plays.",
+    "clusters": "None used by the paper. Plays are nested in team-games and games (two teams per game), but no clustering is mentioned. Team heterogeneity is handled by the conditional fixed effect, season heterogeneity by season dummies.",
+    "native_se_method": "Not stated. The stated software and estimator (Stata xtlogit, fixed effects) report conventional maximum-likelihood standard errors by default, with odds-ratio standard errors by the delta method. Marginal-effect standard errors in the paper are not described; delta method is the default for the cited approach.",
+    "test_tail_and_direction": "Not stated. Significance is marked with a three-level star key (0.1, 0.05, 0.01) that is symmetric and consistent with two-tailed tests; the text uses the 0.01 level when describing results. Hypotheses are directional (signs of spline coefficients and of their interactions with minutes remaining), so direction is judged by sign and the star by the two-tailed p-value.",
+    "alpha": "Star key: p < 0.1 (+), p < 0.05 (*), p < 0.01 (**). The text describes effects as significant at p < 0.01."
+  },
+  "estimation_order": ["M1", "M2", "M3"],
+  "open_questions": [
+    "Which fourth-down rows count as decisions: the paper does not say how plays nullified by penalty (no_play), kneel-downs, spikes, aborted plays or fakes were treated. Origin: keep punt, field_goal, run and pass play types only.",
+    "Boundary of the two-minute exclusion: whether a play snapped at exactly 2:00 remaining is dropped. Origin: drop plays with 120 seconds or less remaining.",
+    "Order of exclusions: the paper's count of removed last-two-minute plays equals the difference between its original and final sample sizes, which implies overtime plays were already absent from the 'original' set (or were counted together); the implementer should apply both exclusions and report counts at each step.",
+    "Minutes remaining as fractional minutes (seconds divided by 60) or whole minutes: not stated. Origin: fractional.",
+    "Same-conference indicator: nested (all same-conference opponents including same-division) or exclusive of same-division games: not stated. Origin: nested. The paper's descriptive statistics for these two indicators are difficult to reconcile with either coding, so implementers should report the sample means of both indicators and document the coding used.",
+    "Conference and division membership for seasons before the 2002 realignment must be derived from league history; the schedules file's div_game covers the division indicator but there is no conference field.",
+    "Neutral-site games: how home-field was coded when neither team was at home is not stated. Origin: provider's designated home team.",
+    "Two regular-season games from the 2000 season have no play-by-play rows in the public source; the replication sample will be smaller than the paper's by those games' fourth-down plays. Record the number of games and plays available.",
+    "Fixed-effects implementation: the paper names the Stata panel-logit command and 'fixed-effect estimations' for teams and years. Origin: conditional logit with team as the group and season dummies as regressors, which matches the reported degrees-of-freedom pattern. Whether the authors instead used team-season groups, or unconditional dummies, is not stated.",
+    "Standard-error type is not stated; origin: conventional ML standard errors (no clustering).",
+    "Marginal effects: the paper cites a methods article for marginal-effect analysis but does not state (i) whether effects are analytic derivatives or finite one-point differences, (ii) how the team fixed effect enters the predicted probability after a conditional logit, (iii) whether the 'All quarters' effects hold minutes remaining at its mean, or (iv) how standard errors were obtained. Origin: analytic derivative, group effect set to zero, minutes at the sample mean for the game-level row, delta-method standard errors.",
+    "The chi-square test that the below- and above-aspiration terms differ is not specified (Wald versus likelihood-ratio; which parameters are compared). Report the test used.",
+    "Whether team groups whose outcome never varies (if any) are dropped is a property of the conditional logit; report the number of groups used.",
+    "Stata version is not stated; default tolerance and optimisation settings may differ slightly across versions but should not affect reported precision."
+  ]
+}

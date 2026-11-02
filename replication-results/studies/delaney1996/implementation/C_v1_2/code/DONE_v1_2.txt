@@ -1,0 +1,27 @@
+PAPER_K7 grid implementation, repair round v1.2 complete (2026-10-28).
+
+Inputs applied: spec_amendment_v1_1.md (A1-A10, unchanged) and checker_items.md (3 items). All three
+checker items were fixed; none was judged mistaken.
+
+Changes:
+- code/paperk7/regression.py (item 1, A5/A10): an all-zero or collinear non-dummy column is reported as
+  such whatever the row count; the residual-df check is made only in fit_linear, after the permitted
+  industry-dummy drops. Applies to reported models, restricted models and influence refits.
+- code/paperk7/pipeline.py (item 2, A6): a failed origin model gives exactly one influence row per record
+  of its estimation sample (term NA, status failed, reason in note); an empty sample gives no rows (the
+  failure is in run_info.json). A failed deletion refit is likewise one row per deletion.
+- code/paperk7/pipeline.py (item 3, spec 6 / A6): n, k and n_industry_dummies are written for failed
+  models whenever the dummies were resolved (e.g. no residual df after the drops); NA only when the
+  design could not be built or resolved. The failures entries carry the same counts.
+- code/run_grid.py: implementation_version v1.2; run_info.json states the influence-row and
+  failed-model-count conventions.
+
+Tests: 93 tests in 6 files, all passing (code/dev_out/test_log_v1_2.txt). New code/tests/test_v1_2.py
+(18 tests) covers the three checker items, HC3 with a leverage-one row through the pipeline (OLS and
+WLS) and copy-rule validity up to the STAFF index; three v1.1/influence tests that asserted the old
+behaviour were updated.
+
+Full grid on synthetic data/survey.csv: code/dev_out/v1_2/ (all six output files; 38 specs; 32 recorded
+failures, all the D05 empty-sample artefact; log code/dev_out/v1_2_log.txt). Results not interpreted.
+
+README: code/README.md, section "v1.2 changes" lists every amendment item and checker item.

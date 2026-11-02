@@ -1,0 +1,62 @@
+{
+  "paper_id": "P-OPAQUE-01",
+  "note": "Published counts kept outside implementer-visible files. Evaluate by code against the implementer's constructed sample.",
+  "published_counts": [
+    {
+      "count_id": "N_obs",
+      "description": "Analysis observations (bank-years), 1985-92, after accounting for foundings, mergers, failures, lagged dependent variables and deletion of one outlier.",
+      "value": 960,
+      "unit": "bank-year",
+      "source": "DOC01 p9 Sample and data ('there were 960 observations in the period 1985-92'); DOC01 p12 Table 1 note (n = 960); DOC01 p12 Table 2 note a (n = 960)"
+    },
+    {
+      "count_id": "N_banks",
+      "description": "Number of independent (separately chartered) banks in the Twin Cities during the study period as stated by the article. Ambiguous whether this is the count at one date or the union over 1985-92; the article says 'There were 159 independent banks in the Twin Cities because Minnesota historically limited bank branches.'",
+      "value": 159,
+      "unit": "bank",
+      "source": "DOC01 p9 Sample and data"
+    },
+    {
+      "count_id": "N_years",
+      "description": "Years in the analysis window.",
+      "value": 8,
+      "unit": "year (1985 through 1992)",
+      "source": "DOC01 p9 Sample and data ('from 1985 to 1992')"
+    },
+    {
+      "count_id": "N_deleted_outliers",
+      "description": "Observations deleted as outliers: Norwest Bank Minneapolis, N.A., 1987.",
+      "value": 1,
+      "unit": "bank-year",
+      "source": "DOC01 p9 ('the deletion of one outlying value'); DOC01 p11 Analysis (outlier paragraph)"
+    },
+    {
+      "count_id": "df_resid_model2",
+      "description": "Residual degrees of freedom implied by the printed F-test for Model 2 vs Model 1 (d.f. = 1,954), consistent with 960 observations and 6 estimated parameters.",
+      "value": 954,
+      "unit": "degrees of freedom",
+      "source": "DOC01 p12 Results text ('F = 30.4, d.f. = 1,954')"
+    },
+    {
+      "count_id": "df_resid_model3",
+      "description": "Residual degrees of freedom implied by the printed F-tests for Model 3 (d.f. = 2,953 and 1,953), consistent with 960 observations and 7 estimated parameters.",
+      "value": 953,
+      "unit": "degrees of freedom",
+      "source": "DOC01 p13 Results text ('F = 84.4, d.f. = 2,953'; 'F = 134.1, d.f. = 1,953')"
+    },
+    {
+      "count_id": "N_strategy_variables",
+      "description": "Number of asset-strategy proportions summed in the strategic deviation index.",
+      "value": 11,
+      "unit": "asset categories",
+      "source": "DOC01 p9 Independent variable; DOC01 p10 equation (sum a = 1 to 11)"
+    },
+    {
+      "count_id": "implied_mean_banks_per_year",
+      "description": "Derived, not printed: 960 observations / 8 years = 120 bank-years per year on average. For code evaluation only.",
+      "value": 120,
+      "unit": "bank-years per year (derived)",
+      "source": "derived from DOC01 p9 counts"
+    }
+  ]
+}

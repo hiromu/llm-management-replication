@@ -1,0 +1,25 @@
+PASS Synthetic moments equal known population moments
+PASS M1 converges with expected df
+PASS M2 converges with expected df
+PASS M3 converges with expected df
+PASS M4 converges with expected df
+PASS M5 converges with expected df
+PASS M4 recovers known loadings intercepts latent means and variances
+PASS M4 zero population discrepancy and custom Wishart chi-square
+PASS All 15 standardized contrasts recover truth
+PASS Contrast SE includes parameter covariance
+PASS CHK1 M4 converges
+PASS CHK1 identification invariant d_eq
+PASS CHK2 M4 converges
+PASS CHK2 identification invariant d_eq
+PASS S05 M4 converges
+PASS S05 exact loading averages and intercept sums
+PASS Warm-start deletion agrees with cold refit
+PASS S01 normalized weighted covariance divisor n-1
+PASS S02 covariance divisor n
+PASS Weight validity includes dictionary missing codes
+PASS S02 M4 supported and converges
+PASS S06 M4 supported and converges
+PASS S06 reports finite sandwich SE and scaled statistic
+PASS S06 raw-data normalization agrees with explicit divisor-n discrepancy
+PASS S04 M4 supported and converges

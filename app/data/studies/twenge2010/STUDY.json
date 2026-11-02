@@ -1,0 +1,51 @@
+{
+  "study_id": "twenge2010",
+  "paper_id": "JOM_2010_Twenge",
+  "citation": "Twenge, J. M., Campbell, S. M., Hoffman, B. R., and Lance, C. E. (2010). Generational Differences in Work Values: Leisure and Extrinsic Values Increasing, Social and Intrinsic Values Decreasing. Journal of Management, 36(5), 1117-1142.",
+  "journal": "Journal of Management",
+  "doi": "10.1177/0149206309352246",
+  "paper_path_from_project_root": "papers/journal_collection/JOM/JOM_2010_Twenge.pdf",
+  "paper_sha256": "b556175cc775fe710cca7f8e83c571c4fe8b4bb7ebb7a0878939e6eb36f0042e",
+  "status": "completed_indeterminate",
+  "data_policy": "Use the user-supplied ICPSR 7927, 9871 and 20022 bundles (Monitoring the Future, 1976, 1991, 2006), downloaded from ICPSR by the user (a human) and saved in this study's data/supplied/, after independent validation. Agents do not download from or log in to ICPSR. Acquire all other empirical inputs afresh from permitted original sources. No printed article data or focal-author replication packages. Published results are sealed comparison targets or publication diagnostics only.",
+  "supplied_source_ids": [
+    "icpsr07927",
+    "icpsr09871",
+    "icpsr20022"
+  ],
+  "supplied_sources_inventory_from_study": "data/supplied/supplied_sources.json",
+  "supplied_bundle_paths_from_study": [
+    "data/supplied/ICPSR_07927",
+    "data/supplied/ICPSR_09871",
+    "data/supplied/ICPSR_20022"
+  ],
+  "supplied_source_status": "source_data_present_integrity_verified",
+  "supplied_source_acquisition": "downloaded from ICPSR by the user by hand; byte-identical copies of ../Replication_management_v4_codex/studies/twenge2010/data/raw/ICPSR_*; stored inside the study they belong to",
+  "supplied_source_file_count": 42,
+  "supplied_empirical_data_file_count": 20,
+  "reader_runs": 2,
+  "model_fits": "36 specification runs (12 specs x 3 implementations) + 7,807 leave-one-out refits (A) + 200 cross-check refits (C)",
+  "research_authorized": true,
+  "session_scope": "twenge2010 only; other papers require a separate session",
+  "public_source_eligibility": "eligible: user-supplied ICPSR bundles validated; no other source needed",
+  "author_package_availability": "none_found_after_documented_search (sources/eligibility_check.json)",
+  "supplement_catalog_from_project_root": "papers/supplements/catalog.json",
+  "supplements": [],
+  "local_supplement_status": "no_local_match",
+  "external_supplement_availability": "none found after documented search (sources/supplement_search.json)",
+  "prepared_utc": "2026-10-28T01:48:50Z",
+  "research_authorized_utc": "2026-10-28T01:57:40Z (session start message)",
+  "outcome": {
+    "paper": "indeterminate (indeterminate focal evidence)",
+    "focal_rq": {
+      "RQ1_leisure": "consistent",
+      "RQ2_extrinsic": "consistent",
+      "RQ3_intrinsic": "indeterminate",
+      "RQ4_altruistic": "indeterminate",
+      "RQ5_social": "consistent"
+    },
+    "lower_tier": "27/29 item claims consistent, 2 indeterminate (inconsistent targets); diagnostics: 3 consistent, 5 indeterminate, 1 discrepant_provisional unconfirmed (security alpha), partial-invariance decision indeterminate after adversarial review"
+  },
+  "report": "reports/replication_report.md",
+  "completed_utc": "2026-10-28"
+}

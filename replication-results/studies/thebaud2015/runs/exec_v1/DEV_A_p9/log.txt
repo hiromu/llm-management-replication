@@ -1,0 +1,24 @@
+04:20:49 - reading inputs from data/derived 
+04:20:54 - gem_extract rows: 713933; country_year rows: 264 
+04:20:54 - run U04: preparing data 
+04:40:59 - run U04 model M3: status=ok n=342956 (1201.4s) 
+04:40:59 - run U06: preparing data 
+05:01:16 - run U06 model M3: status=ok n=342885 (1215.1s) 
+05:01:16 - run U07: preparing data 
+05:04:39 - run U07 model M4: status=ok n=23517 (201.2s) 
+boundary (singular) fit: see help('isSingular')
+05:04:44 - run U07 model M5: status=ok n=25402 (4.7s) 
+05:09:10 - run U07 model M6: status=ok n=22642 (266.2s) 
+05:15:26 - run U07 model M7: status=ok n=24883 (376.2s) 
+05:17:30 - run U07 model M8: status=ok n=15370 (123.9s) 
+05:17:30 - run U08: preparing data 
+05:21:06 - run U08 model M4: status=ok n=31520 (215.0s) 
+boundary (singular) fit: see help('isSingular')
+05:21:10 - run U08 model M5: status=ok n=33626 (3.9s) 
+05:29:06 - run U08 model M6: status=ok n=29961 (475.3s) 
+05:36:21 - run U08 model M7: status=ok n=32890 (435.5s) 
+05:41:38 - run U08 model M8: status=ok n=19944 (316.7s) 
+05:41:38 - done: 322 result rows written to runs/exec_v1/DEV_A_p9 
+real 4849.82
+user 3252.71
+sys 38.84

@@ -1,0 +1,606 @@
+{
+ "tier_units": [
+  {
+   "unit": "latent contrast leisure 1976-1991",
+   "fable": "focal",
+   "astra": "focal",
+   "fable_claim": "C03",
+   "astra_claim": "C02"
+  },
+  {
+   "unit": "latent contrast leisure 1991-2006",
+   "fable": "focal",
+   "astra": "focal",
+   "fable_claim": "C01",
+   "astra_claim": "C03"
+  },
+  {
+   "unit": "latent contrast leisure 1976-2006",
+   "fable": "focal",
+   "astra": "focal",
+   "fable_claim": "C02",
+   "astra_claim": "C04"
+  },
+  {
+   "unit": "latent contrast extrinsic 1976-1991",
+   "fable": "focal",
+   "astra": "focal",
+   "fable_claim": "C04",
+   "astra_claim": "C06"
+  },
+  {
+   "unit": "latent contrast extrinsic 1991-2006",
+   "fable": "focal",
+   "astra": "focal",
+   "fable_claim": "C05",
+   "astra_claim": "C07"
+  },
+  {
+   "unit": "latent contrast extrinsic 1976-2006",
+   "fable": "focal",
+   "astra": "focal",
+   "fable_claim": "C06",
+   "astra_claim": "C08"
+  },
+  {
+   "unit": "latent contrast intrinsic 1976-1991",
+   "fable": "focal",
+   "astra": "focal",
+   "fable_claim": "C07",
+   "astra_claim": "C10"
+  },
+  {
+   "unit": "latent contrast intrinsic 1991-2006",
+   "fable": "focal",
+   "astra": "focal",
+   "fable_claim": "C08",
+   "astra_claim": "C11"
+  },
+  {
+   "unit": "latent contrast intrinsic 1976-2006",
+   "fable": "focal",
+   "astra": "focal",
+   "fable_claim": "C09",
+   "astra_claim": "C12"
+  },
+  {
+   "unit": "latent contrast altruistic 1976-1991",
+   "fable": "focal",
+   "astra": "focal",
+   "fable_claim": "C10",
+   "astra_claim": "C14"
+  },
+  {
+   "unit": "latent contrast altruistic 1991-2006",
+   "fable": "focal",
+   "astra": "focal",
+   "fable_claim": "C10",
+   "astra_claim": "C15"
+  },
+  {
+   "unit": "latent contrast altruistic 1976-2006",
+   "fable": "focal",
+   "astra": "focal",
+   "fable_claim": "C10",
+   "astra_claim": "C16"
+  },
+  {
+   "unit": "latent contrast social 1976-1991",
+   "fable": "focal",
+   "astra": "focal",
+   "fable_claim": "C13",
+   "astra_claim": "C18"
+  },
+  {
+   "unit": "latent contrast social 1991-2006",
+   "fable": "focal",
+   "astra": "focal",
+   "fable_claim": "C11",
+   "astra_claim": "C19"
+  },
+  {
+   "unit": "latent contrast social 1976-2006",
+   "fable": "focal",
+   "astra": "focal",
+   "fable_claim": "C12",
+   "astra_claim": "C20"
+  },
+  {
+   "unit": "Form 3 two-factor CFA fit",
+   "fable": "identification_inference_diagnostic",
+   "astra": "identification_inference_diagnostic",
+   "fable_claim": "C19",
+   "astra_claim": "C50"
+  },
+  {
+   "unit": "Seven-factor Form 4 CFA fit",
+   "fable": "identification_inference_diagnostic",
+   "astra": "identification_inference_diagnostic",
+   "fable_claim": "C20",
+   "astra_claim": "C51"
+  },
+  {
+   "unit": "Security/influence alphas, scales dropped",
+   "fable": "identification_inference_diagnostic",
+   "astra": "identification_inference_diagnostic",
+   "fable_claim": "C21",
+   "astra_claim": "C52"
+  },
+  {
+   "unit": "Five-factor 19-item CFA adopted",
+   "fable": "identification_inference_diagnostic",
+   "astra": "identification_inference_diagnostic",
+   "fable_claim": "C22",
+   "astra_claim": "C53"
+  },
+  {
+   "unit": "Configural invariance",
+   "fable": "identification_inference_diagnostic",
+   "astra": "identification_inference_diagnostic",
+   "fable_claim": "C15",
+   "astra_claim": "C54"
+  },
+  {
+   "unit": "Metric invariance",
+   "fable": "identification_inference_diagnostic",
+   "astra": "identification_inference_diagnostic",
+   "fable_claim": "C16",
+   "astra_claim": "C55"
+  },
+  {
+   "unit": "Full scalar invariance rejected",
+   "fable": "identification_inference_diagnostic",
+   "astra": "identification_inference_diagnostic",
+   "fable_claim": "C17",
+   "astra_claim": "C56"
+  },
+  {
+   "unit": "Partial scalar invariance accepted",
+   "fable": "identification_inference_diagnostic",
+   "astra": "identification_inference_diagnostic",
+   "fable_claim": "C18",
+   "astra_claim": "C57"
+  },
+  {
+   "unit": "Equal latent means rejected",
+   "fable": "identification_inference_diagnostic",
+   "astra": "identification_inference_diagnostic",
+   "fable_claim": "C14",
+   "astra_claim": "C58"
+  },
+  {
+   "unit": "item row 01 per-item claim",
+   "fable": "descriptive",
+   "astra": "descriptive"
+  },
+  {
+   "unit": "item row 02 per-item claim",
+   "fable": "descriptive",
+   "astra": "descriptive"
+  },
+  {
+   "unit": "item row 03 per-item claim",
+   "fable": "descriptive",
+   "astra": "descriptive"
+  },
+  {
+   "unit": "item row 04 per-item claim",
+   "fable": "descriptive",
+   "astra": "descriptive"
+  },
+  {
+   "unit": "item row 05 per-item claim",
+   "fable": "descriptive",
+   "astra": "descriptive"
+  },
+  {
+   "unit": "item row 06 per-item claim",
+   "fable": "descriptive",
+   "astra": "descriptive"
+  },
+  {
+   "unit": "item row 07 per-item claim",
+   "fable": "descriptive",
+   "astra": "descriptive"
+  },
+  {
+   "unit": "item row 08 per-item claim",
+   "fable": "descriptive",
+   "astra": "descriptive"
+  },
+  {
+   "unit": "item row 09 per-item claim",
+   "fable": "descriptive",
+   "astra": "descriptive"
+  },
+  {
+   "unit": "item row 10 per-item claim",
+   "fable": "descriptive",
+   "astra": "descriptive"
+  },
+  {
+   "unit": "item row 11 per-item claim",
+   "fable": "descriptive",
+   "astra": "descriptive"
+  },
+  {
+   "unit": "item row 12 per-item claim",
+   "fable": "descriptive",
+   "astra": "descriptive"
+  },
+  {
+   "unit": "item row 13 per-item claim",
+   "fable": "descriptive",
+   "astra": "descriptive"
+  },
+  {
+   "unit": "item row 14 per-item claim",
+   "fable": "descriptive",
+   "astra": "descriptive"
+  },
+  {
+   "unit": "item row 15 per-item claim",
+   "fable": "descriptive",
+   "astra": "descriptive"
+  },
+  {
+   "unit": "item row 16 per-item claim",
+   "fable": "descriptive",
+   "astra": "descriptive"
+  },
+  {
+   "unit": "item row 17 per-item claim",
+   "fable": "descriptive",
+   "astra": "descriptive"
+  },
+  {
+   "unit": "item row 18 per-item claim",
+   "fable": "descriptive",
+   "astra": "descriptive"
+  },
+  {
+   "unit": "item row 19 per-item claim",
+   "fable": "descriptive",
+   "astra": "descriptive"
+  },
+  {
+   "unit": "item row 20 per-item claim",
+   "fable": "descriptive",
+   "astra": "descriptive"
+  },
+  {
+   "unit": "item row 21 per-item claim",
+   "fable": "descriptive",
+   "astra": "descriptive"
+  },
+  {
+   "unit": "item row 22 per-item claim",
+   "fable": "descriptive",
+   "astra": "descriptive"
+  },
+  {
+   "unit": "item row 23 per-item claim",
+   "fable": "descriptive",
+   "astra": "descriptive"
+  },
+  {
+   "unit": "item row 24 per-item claim",
+   "fable": "descriptive",
+   "astra": "descriptive"
+  },
+  {
+   "unit": "item row 25 per-item claim",
+   "fable": "descriptive",
+   "astra": "descriptive"
+  },
+  {
+   "unit": "item row 26 per-item claim",
+   "fable": "descriptive",
+   "astra": "descriptive"
+  },
+  {
+   "unit": "item row 27 per-item claim",
+   "fable": "descriptive",
+   "astra": "descriptive"
+  },
+  {
+   "unit": "item row 28 per-item claim",
+   "fable": "descriptive",
+   "astra": "descriptive"
+  },
+  {
+   "unit": "item row 29 per-item claim",
+   "fable": "descriptive",
+   "astra": "descriptive"
+  },
+  {
+   "unit": "work centrality / willingness-to-work summary",
+   "fable": "descriptive",
+   "astra": "focal",
+   "fable_claim": "Form 3 item claims",
+   "astra_claim": "C64"
+  }
+ ],
+ "spec_units": [
+  {
+   "unit": "Missing data: available cases per item; complete cases on model items per year for CFA",
+   "fable": "origin",
+   "astra": "origin",
+   "fable_locator": "F AX01.L0",
+   "astra_locator": "A AX01.L0"
+  },
+  {
+   "unit": "Missing data: listwise on all form items for every output",
+   "fable": "uncertain",
+   "astra": "uncertain",
+   "fable_locator": "F AX01.L1",
+   "astra_locator": "A AX01.L1"
+  },
+  {
+   "unit": "Missing data: FIML for CFA",
+   "fable": "uncertain",
+   "astra": "uncertain",
+   "fable_locator": "F AX01.L2",
+   "astra_locator": "A AX01.L2"
+  },
+  {
+   "unit": "Weighting: unweighted",
+   "fable": "origin",
+   "astra": "uncertain",
+   "fable_locator": "F AX02.L0",
+   "astra_locator": "A AX06.L1"
+  },
+  {
+   "unit": "Weighting: public V5 (normalized in CFA)",
+   "fable": "uncertain",
+   "astra": "origin",
+   "fable_locator": "F AX02.L1",
+   "astra_locator": "A AX06.L0"
+  },
+  {
+   "unit": "d denominator: equal-weight pooled latent SD",
+   "fable": "origin",
+   "astra": "origin",
+   "fable_locator": "F AX03.L0",
+   "astra_locator": "A AX09.L0"
+  },
+  {
+   "unit": "d denominator: df-weighted pooled latent SD",
+   "fable": "equivalent",
+   "astra": "uncertain",
+   "fable_locator": "F AX03.L1",
+   "astra_locator": "A AX09.L1"
+  },
+  {
+   "unit": "d standardizer: model-implied latent SD",
+   "fable": "origin",
+   "astra": "origin",
+   "fable_locator": "F AX04.L0",
+   "astra_locator": "A AX09.L0"
+  },
+  {
+   "unit": "Identification: marker item, loading 1, intercept 0, latent means free in all groups",
+   "fable": "origin",
+   "astra": "origin",
+   "fable_locator": "F AX05.L0",
+   "astra_locator": "A AX04.L0"
+  },
+  {
+   "unit": "Identification: reference-group / factor-variance normalization transformed back",
+   "fable": "uncertain",
+   "astra": "equivalent",
+   "fable_locator": "F AX05.L1",
+   "astra_locator": "A AX04.L1"
+  },
+  {
+   "unit": "Estimator: normal-theory ML on means and covariances",
+   "fable": "origin",
+   "astra": "origin",
+   "fable_locator": "F AX06.L0",
+   "astra_locator": "A AX08.L0"
+  },
+  {
+   "unit": "Item test: Student pooled-variance t, two-sided",
+   "fable": "origin",
+   "astra": "origin",
+   "fable_locator": "F AX07.L0",
+   "astra_locator": "A AX10.L0"
+  },
+  {
+   "unit": "Item test: Welch t",
+   "fable": "equivalent",
+   "astra": "uncertain",
+   "fable_locator": "F AX07.L1",
+   "astra_locator": "A AX10.L1"
+  },
+  {
+   "unit": "Seven-factor model: security={V4239,V4241}, influence={V4237,V4247}",
+   "fable": "origin",
+   "astra": "origin",
+   "fable_locator": "F AX08.L0",
+   "astra_locator": "A AX12.L0"
+  },
+  {
+   "unit": "Form 4 items: native 1-4 coding, no fifth category",
+   "fable": "origin",
+   "astra": "origin",
+   "fable_locator": "F manifest V001-V023 coding",
+   "astra_locator": "A AX02.L0"
+  },
+  {
+   "unit": "Form 3 centrality = V3222-V3225 + V3227; V3226 single-indicator stability",
+   "fable": "origin",
+   "astra": "origin",
+   "fable_locator": "F AX09.L0",
+   "astra_locator": "A manifest constructs"
+  },
+  {
+   "unit": "Partial scalar: intercepts of V4238,V4240,V4231,V4229,V4230,V4228 free across groups",
+   "fable": "origin",
+   "astra": "origin",
+   "fable_locator": "F E03",
+   "astra_locator": "A AX05.L0"
+  },
+  {
+   "unit": "Inference: model-based, no clustering (no public cluster IDs)",
+   "fable": "origin",
+   "astra": "origin",
+   "fable_locator": "F inference.json",
+   "astra_locator": "A AX07.L0"
+  }
+ ],
+ "single_reader_levels": [
+  {
+   "level": "Hedges' g correction",
+   "reader": "fable",
+   "reader_label": "equivalent",
+   "locator": "F AX03.L2",
+   "reconciled_status": "uncertain (single reader)"
+  },
+  {
+   "level": "Glass delta, earlier-year SD",
+   "reader": "fable",
+   "reader_label": "uncertain",
+   "locator": "F AX03.L3",
+   "reconciled_status": "uncertain"
+  },
+  {
+   "level": "Observed SD of unit-weighted item mean as standardizer",
+   "reader": "fable",
+   "reader_label": "uncertain",
+   "locator": "F AX04.L1",
+   "reconciled_status": "uncertain (Astra advises against without documented conversion)"
+  },
+  {
+   "level": "Effects-coding identification",
+   "reader": "fable",
+   "reader_label": "uncertain",
+   "locator": "F AX05.L2",
+   "reconciled_status": "uncertain"
+  },
+  {
+   "level": "ML with Satorra-Bentler / robust SEs",
+   "reader": "fable",
+   "reader_label": "uncertain",
+   "locator": "F AX06.L1",
+   "reconciled_status": "uncertain (inference only)"
+  },
+  {
+   "level": "Ordinal WLS/DWLS",
+   "reader": "fable",
+   "reader_label": "non_equivalent",
+   "locator": "F AX06.L2",
+   "reconciled_status": "non_equivalent, not run (wider space off)"
+  },
+  {
+   "level": "Design-weighted item t with nominal n",
+   "reader": "fable",
+   "reader_label": "uncertain",
+   "locator": "F AX07.L2",
+   "reconciled_status": "uncertain (runs within weighted co-origin)"
+  },
+  {
+   "level": "Alternative security/influence partitions",
+   "reader": "fable",
+   "reader_label": "uncertain",
+   "locator": "F AX08.L1",
+   "reconciled_status": "uncertain (diagnostic tier)"
+  },
+  {
+   "level": "Centrality = V3222-V3226, V3227 excluded",
+   "reader": "fable",
+   "reader_label": "uncertain",
+   "locator": "F AX09.L1",
+   "reconciled_status": "uncertain (diagnostic tier)"
+  },
+  {
+   "level": "Five-category Form 4 instrument",
+   "reader": "astra",
+   "reader_label": "non_equivalent",
+   "locator": "A AX02.L1",
+   "reconciled_status": "unavailable: requires an undocumented transformation"
+  },
+  {
+   "level": "Native-coded centrality indicators with signed loadings",
+   "reader": "astra",
+   "reader_label": "equivalent",
+   "locator": "A AX03.L1",
+   "reconciled_status": "check (mathematical re-expression)"
+  },
+  {
+   "level": "Original group-specific intercept release pattern",
+   "reader": "astra",
+   "reader_label": "uncertain",
+   "locator": "A AX05.L1",
+   "reconciled_status": "unavailable: no executable pattern documented"
+  },
+  {
+   "level": "Actual school/PSU design-based covariance",
+   "reader": "astra",
+   "reader_label": "uncertain",
+   "locator": "A AX07.L1",
+   "reconciled_status": "unavailable: identifiers absent from public files"
+  },
+  {
+   "level": "Raw-data ML on the same complete cases",
+   "reader": "astra",
+   "reader_label": "equivalent",
+   "locator": "A AX08.L1",
+   "reconciled_status": "check (mathematical re-expression)"
+  },
+  {
+   "level": "Nested equality-constrained LR test per latent pair",
+   "reader": "astra",
+   "reader_label": "uncertain",
+   "locator": "A AX11.L1",
+   "reconciled_status": "uncertain (inference only)"
+  },
+  {
+   "level": "Wald test of latent contrast at .05, no multiplicity adjustment",
+   "reader": "astra",
+   "reader_label": "origin",
+   "locator": "A AX11.L0",
+   "reconciled_status": "origin for reporting native inference (Fable gives CIs only; structural)"
+  },
+  {
+   "level": "Weighted variance convention for item summaries",
+   "reader": "astra",
+   "reader_label": "origin",
+   "locator": "A AX13.L0",
+   "reconciled_status": "part of weighted co-origin"
+  },
+  {
+   "level": "Survey linearization with actual design",
+   "reader": "astra",
+   "reader_label": "uncertain",
+   "locator": "A AX13.L1",
+   "reconciled_status": "unavailable"
+  },
+  {
+   "level": "Raw covariance alpha",
+   "reader": "astra",
+   "reader_label": "origin",
+   "locator": "A AX14.L0",
+   "reconciled_status": "origin (Fable E02 standard alpha)"
+  },
+  {
+   "level": "Standardized alpha",
+   "reader": "astra",
+   "reader_label": "uncertain",
+   "locator": "A AX14.L1",
+   "reconciled_status": "uncertain (no targets)"
+  }
+ ],
+ "transcription_mismatches": {
+  "only_fable": [],
+  "only_astra": [
+   [
+    "Table 2",
+    "14",
+    "",
+    "",
+    12
+   ]
+  ]
+ }
+}

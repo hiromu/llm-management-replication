@@ -1,0 +1,62 @@
+{
+  "study_id": "thebaud2015",
+  "paper_id": "ASQ_2015_Thebaud",
+  "citation": "Thébaud, Sarah (2015). Business as Plan B: Institutional Foundations of Gender Inequality in Entrepreneurship across 24 Industrialized Countries. Administrative Science Quarterly, 60(4), 671–711.",
+  "journal": "Administrative Science Quarterly",
+  "doi": "10.1177/0001839215591627",
+  "paper_path_from_project_root": "papers/journal_collection/ASQ/ASQ_2015_Thebaud.pdf",
+  "paper_sha256": "65b9354449e0f46108a5ec81b46fc00e9bf43fcce113f49585f40e5625d60b07",
+  "status": "completed_session_deliverables; fully verified discrepancy withheld (no family-independent adversarial review)",
+  "data_policy": "Use the user-supplied ICPSR 20320 bundle, downloaded from ICPSR by the user (a human) and saved in this study's data/supplied/ICPSR_20320/, after independent validation. Agents do not download from or log in to ICPSR. Acquire all other empirical inputs afresh from permitted original sources. No printed article/supplement data or focal-author replication packages. Published results are sealed comparison targets or publication diagnostics.",
+  "supplied_source_ids": [
+    "icpsr20320"
+  ],
+  "supplied_sources_inventory_from_study": "data/supplied/supplied_sources.json",
+  "supplied_bundle_path_from_study": "data/supplied/ICPSR_20320",
+  "supplied_source_status": "source_data_present_integrity_verified",
+  "supplied_source_acquisition": "downloaded_by_user_by_hand",
+  "reader_runs": 0,
+  "model_fits": 0,
+  "research_authorized": true,
+  "session_scope": "thebaud2015 only; other papers require a separate session",
+  "public_source_eligibility": "to_be_verified_in_new_session",
+  "author_package_availability": "to_be_verified_in_new_session",
+  "supplement_catalog_from_project_root": "papers/supplements/catalog.json",
+  "supplements": [
+    {
+      "supplement_id": "ASQ_2015_Thebaud_S1",
+      "path_from_project_root": "papers/supplements/ASQ/ASQ_2015_Thebaud_S1.pdf",
+      "sha256": "5f6590b995f551e25f5de4dc6d5ae27827884023899a1236d19d202511f0c866",
+      "preparation": "copied_without_code_removal"
+    }
+  ],
+  "local_supplement_status": "available_pending_identity_and_completeness_check",
+  "external_supplement_availability": "to_be_verified_after_research_authorization",
+  "research_authorized_utc": "2026-10-27T14:30:44+00:00",
+  "coordinator_session": {
+    "ccd_session_id": "local_05c24e8e-e5c7-460b-9141-bbcfdfd2a454",
+    "transcript_id": "70a385e9-abe5-4440-ac25-10dd29d6dc33",
+    "model": "claude-opus-5-5",
+    "effort": "high",
+    "fast_mode": "off"
+  },
+  "status_detail": {
+    "updated_utc": "2026-10-28T04:45Z",
+    "paper_outcome": "indeterminate",
+    "hypotheses": {
+      "H1": "consistent",
+      "H2": "discrepant_candidate (fully verified claim withheld)",
+      "H3": "indeterminate:incomplete_coverage"
+    },
+    "reports": [
+      "reports/replication_report.md",
+      "reports/technical_supplement.md",
+      "reports/figure/",
+      "reports/exports/"
+    ],
+    "implementations": "A and B agree (276/276); C stopped at user direction before output",
+    "outstanding": [
+      "no family-independent adversarial reviewer available"
+    ]
+  }
+}

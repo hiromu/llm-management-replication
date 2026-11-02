@@ -1,0 +1,186 @@
+{
+  "origin": {
+    "description": "Closest-described specification: manifest models M1-M3 (stage 1) and M4-M8 (stage 2) with the origin levels of every axis below; variables as defined in manifest.json.",
+    "model_ids": ["M1", "M2", "M3", "M4", "M5", "M6", "M7", "M8"],
+    "variable_definitions": "manifest.json 'variables' with origin constructions: entrepreneurial_activity from screening items; employed-only sample (GEMWORK 1-2); ages 18-54; unweighted; survey-level variables z-scored across analytic survey-years; paid leave lagged one year; part-time common definition; new_technology = OMNEWT_5 codes 1 or 2; plan_b_motivation = OMREASON code 2 only; random intercept and female slope at both levels with unstructured covariance; adaptive quadrature."
+  },
+  "axes": [
+    {
+      "axis_id": "A1",
+      "decision": "Labour-force restriction for the stage 1 sample",
+      "priority": 1,
+      "levels": [
+        {"level_id": "A1.0", "description": "Employed only: GEMWORK in {1, 2} (full- or part-time)", "is_origin": true, "label": "equivalent", "rationale": "Footnote 2 contrasts the analytic sample with 'individuals who are not employed'; the supplement's full-sample model adds a 'not employed' control.", "basis": "MAIN p.10 fn 2; S1 p.3 Table A3 note †"},
+        {"level_id": "A1.1", "description": "Employed plus unemployed job-seekers (GEMWORK 1, 2 and 6 'not working: other')", "is_origin": false, "label": "uncertain", "rationale": "Literal reading of 'in the labor force' would include the unemployed, but GEMWORK code 6 mixes unemployed with other non-working persons and the article's footnote points to employment.", "basis": "MAIN p.10 text vs fn 2; GEMWORK code list in sources/icpsr20320_gem_aps.md"},
+        {"level_id": "A1.2", "description": "Full sample including not employed, with a not-employed control", "is_origin": false, "label": "non_equivalent", "rationale": "This is the supplement's separately reported robustness model (A3M2), not an interchangeable origin specification.", "basis": "S1 p.3 Table A3 Model 2"}
+      ]
+    },
+    {
+      "axis_id": "A2",
+      "decision": "Age bounds",
+      "priority": 1,
+      "levels": [
+        {"level_id": "A2.0", "description": "GEMAGE 18 to 54 inclusive", "is_origin": true, "label": "equivalent", "rationale": "GEM samples adults 18 and older; 'over 18' read as the survey's lower bound.", "basis": "MAIN p.10; sources/icpsr20320_gem_aps.md (unit: adults 18 and older)"},
+        {"level_id": "A2.1", "description": "GEMAGE 19 to 54 inclusive", "is_origin": false, "label": "uncertain", "rationale": "Literal reading of 'over 18'; changes a small age slice only.", "basis": "MAIN p.10 wording"}
+      ]
+    },
+    {
+      "axis_id": "A3",
+      "decision": "Country-year inclusion",
+      "priority": 1,
+      "levels": [
+        {"level_id": "A3.0", "description": "Use exactly the country-years listed in the supplement's survey-year column", "is_origin": true, "label": "equivalent", "rationale": "The realized sample is documented; implementers should reproduce it where the registered file allows.", "basis": "S1 p.1 Table A1 'Survey years'"},
+        {"level_id": "A3.1", "description": "All 2001-2008 country-years in the registered file for the 24 countries, dropping only those with no responses on required items", "is_origin": false, "label": "uncertain", "rationale": "The article states only the year range; some exclusions in the realized list have no stated rule, so a rule-based reconstruction may add or lose a few surveys.", "basis": "MAIN p.10; sources/icpsr20320_gem_aps.md coverage table"}
+      ]
+    },
+    {
+      "axis_id": "A4",
+      "decision": "Treatment of 'don't know' on screening items used in the outcome",
+      "priority": 2,
+      "levels": [
+        {"level_id": "A4.0", "description": "Treat codes 8 and 9 as missing (listwise deletion)", "is_origin": true, "label": "equivalent", "rationale": "Standard practice; the article does not say otherwise.", "basis": "MAIN p.11 (silent); methodological default"},
+        {"level_id": "A4.1", "description": "Treat 'don't know' as 'no' (GEM pre-2002 convention)", "is_origin": false, "label": "uncertain", "rationale": "The harmonizer notes this convention for early years; it changes the denominator marginally.", "basis": "sources/icpsr20320_gem_aps.md harmonization note"}
+      ]
+    },
+    {
+      "axis_id": "A5",
+      "decision": "Construction of the entrepreneurial-activity outcome",
+      "priority": 2,
+      "levels": [
+        {"level_id": "A5.0", "description": "Screening items: BSTART = 1 and no wages paid for more than three months, OR OWNMGE = 1", "is_origin": true, "label": "equivalent", "rationale": "Matches the article's verbatim definitions of nascent entrepreneur and established owner.", "basis": "MAIN p.11 text and fn 3"},
+        {"level_id": "A5.1", "description": "GEM transformed indicators: SUBOANWT = 1 or OMBABYBT = 1 or OMESTBBT = 1", "is_origin": false, "label": "uncertain", "rationale": "The transforms add ownership and activity conditions not stated in the article; plausible if the author used GEM's standard variables.", "basis": "sources/icpsr20320_gem_aps.md SUBOANWT/OMBABYBT/OMESTBBT definitions; MAIN p.11"},
+        {"level_id": "A5.2", "description": "Nascent entrepreneurship only (TEA-style early stage)", "is_origin": false, "label": "non_equivalent", "rationale": "A distinct reported outcome (supplement Model 1), not an interchangeable specification.", "basis": "S1 p.3 Table A3 Model 1; MAIN p.11"}
+      ]
+    },
+    {
+      "axis_id": "A6",
+      "decision": "Definition of the established-owner subsample for Table 2",
+      "priority": 1,
+      "levels": [
+        {"level_id": "A6.0", "description": "All current owner-managers (OWNMGE = 1) with owner-module data", "is_origin": true, "label": "equivalent", "rationale": "The article defines established owner by the screening item alone.", "basis": "MAIN p.11; MAIN p.14 'Analyzing Gender Gaps among Established Business Owners'"},
+        {"level_id": "A6.1", "description": "Owner-managers whose business has paid wages for more than 42 months (OMESTBBT = 1)", "is_origin": false, "label": "uncertain", "rationale": "GEM's standard meaning of 'established'; would exclude new (baby) businesses and reduce the subsample.", "basis": "sources/icpsr20320_gem_aps.md OMESTBBT; MAIN p.11 wording"}
+      ]
+    },
+    {
+      "axis_id": "A7",
+      "decision": "Coding of Plan-B motivation",
+      "priority": 2,
+      "levels": [
+        {"level_id": "A7.0", "description": "OMREASON = 2 ('no better choices for work') -> 1; all other substantive answers -> 0", "is_origin": true, "label": "equivalent", "rationale": "Matches the article's quoted response category.", "basis": "MAIN p.14"},
+        {"level_id": "A7.1", "description": "OMWHY = -1 ('best choice') -> 1", "is_origin": false, "label": "equivalent", "rationale": "OMWHY is the harmonizer's recode of OMREASON; its 'best choice' category corresponds to the same response.", "basis": "sources/icpsr20320_gem_aps.md OMWHY definition"},
+        {"level_id": "A7.2", "description": "OMREASON in {2, 3} (including the mixed 'work choice and opportunity' answer) -> 1", "is_origin": false, "label": "uncertain", "rationale": "The article does not mention the mixed category; including it broadens the outcome.", "basis": "MAIN p.14 (silent on mixed answers)"}
+      ]
+    },
+    {
+      "axis_id": "A8",
+      "decision": "Coding of the new-technology outcome",
+      "priority": 2,
+      "levels": [
+        {"level_id": "A8.0", "description": "OMNEWT_5 in {1 'less than a year', 2 'one to five years'} -> 1; 3 -> 0", "is_origin": true, "label": "equivalent", "rationale": "Article wording: technologies 'less than five years old'.", "basis": "MAIN p.14-15"},
+        {"level_id": "A8.1", "description": "OMNEWT_5 = 1 only -> 1", "is_origin": false, "label": "non_equivalent", "rationale": "Contradicts the stated five-year threshold.", "basis": "MAIN p.14-15; OMNEWT_5 codes in sources/icpsr20320_gem_aps.md"}
+      ]
+    },
+    {
+      "axis_id": "A9",
+      "decision": "Business-age transformation at zero years",
+      "priority": 2,
+      "levels": [
+        {"level_id": "A9.0", "description": "log(years since first payment + 1)", "is_origin": true, "label": "uncertain", "rationale": "Parallels the +1 adjustment the article states for business size; not stated for business age.", "basis": "MAIN p.14-15"},
+        {"level_id": "A9.1", "description": "log(years), dropping businesses with zero completed years", "is_origin": false, "label": "uncertain", "rationale": "Literal reading; drops the youngest businesses.", "basis": "MAIN p.15"}
+      ]
+    },
+    {
+      "axis_id": "A10",
+      "decision": "Women's part-time employment measure",
+      "priority": 2,
+      "levels": [
+        {"level_id": "A10.0", "description": "OECD common definition (under 30 usual hours), women part-time as percent of women's total employment", "is_origin": true, "label": "equivalent", "rationale": "The cross-nationally comparable series the OECD labour force statistics present by default.", "basis": "MAIN p.12 (OECD 2012b); sources/oecd_sources.md oecd_ftpt"},
+        {"level_id": "A10.1", "description": "National definitions of part-time", "is_origin": false, "label": "uncertain", "rationale": "Also published by the OECD; the article does not say which definition it used.", "basis": "sources/oecd_sources.md oecd_ftpt"},
+        {"level_id": "A10.2", "description": "Common definition restricted to employees (ICSE93_1)", "is_origin": false, "label": "uncertain", "rationale": "The supplement note says 'female employees'; Japan lacks this series.", "basis": "S1 p.1 Table A1 note ‡; sources/oecd_sources.md"}
+      ]
+    },
+    {
+      "axis_id": "A11",
+      "decision": "Standardization and squared-term construction for survey-level variables",
+      "priority": 2,
+      "levels": [
+        {"level_id": "A11.0", "description": "z-score each survey-level variable across the analytic country-years; squared paid leave = square of the standardized variable", "is_origin": true, "label": "equivalent", "rationale": "Simplest reading of 'all survey-level variables are standardized'.", "basis": "MAIN p.14"},
+        {"level_id": "A11.1", "description": "z-score across the 24 country means, then merge", "is_origin": false, "label": "uncertain", "rationale": "Changes scale and centering only; coefficients per SD would differ.", "basis": "MAIN p.14 (silent)"},
+        {"level_id": "A11.2", "description": "Standardize the raw squared paid-leave term separately", "is_origin": false, "label": "uncertain", "rationale": "Alternative reading; rescales the quadratic term.", "basis": "MAIN p.12, p.14 (silent)"}
+      ]
+    },
+    {
+      "axis_id": "A12",
+      "decision": "Lag of paid-leave policy changes",
+      "priority": 2,
+      "levels": [
+        {"level_id": "A12.0", "description": "Changes lagged one year", "is_origin": true, "label": "equivalent", "rationale": "Stated choice.", "basis": "MAIN p.12 fn 8"},
+        {"level_id": "A12.1", "description": "No lag", "is_origin": false, "label": "equivalent", "rationale": "Author reports very similar results.", "basis": "MAIN p.12 fn 8"},
+        {"level_id": "A12.2", "description": "Two-year lag", "is_origin": false, "label": "equivalent", "rationale": "Author reports very similar results.", "basis": "MAIN p.12 fn 8"}
+      ]
+    },
+    {
+      "axis_id": "A13",
+      "decision": "Childcare spending for years without a published value",
+      "priority": 2,
+      "levels": [
+        {"level_id": "A13.0", "description": "Linear interpolation between 2005 and 2007 and carry nearest value to 2001-2004 and 2008", "is_origin": true, "label": "uncertain", "rationale": "The article says missing years were imputed but not how.", "basis": "MAIN p.12 fn 9"},
+        {"level_id": "A13.1", "description": "Use the registered annual OECD PF3.1 series directly for every year", "is_origin": false, "label": "uncertain", "rationale": "Sourced fallback with a broader definition (childcare plus pre-primary) and later vintage.", "basis": "sources/oecd_sources.md oecd_family_database PF3_1"}
+      ]
+    },
+    {
+      "axis_id": "A14",
+      "decision": "Random-effects covariance structure",
+      "priority": 3,
+      "levels": [
+        {"level_id": "A14.0", "description": "Unstructured: intercept-slope covariance estimated at each level", "is_origin": true, "label": "uncertain", "rationale": "Article silent; the implied parameter counts from printed log likelihood and AIC are consistent with six variance-covariance parameters (see forensic F06).", "basis": "MAIN p.15; forensic_observations F06"},
+        {"level_id": "A14.1", "description": "Independent random intercept and slope at each level", "is_origin": false, "label": "uncertain", "rationale": "Common software default when covariance is not requested; two fewer parameters.", "basis": "Rabe-Hesketh and Skrondal 2012 (cited MAIN p.15) describe both structures"}
+      ]
+    },
+    {
+      "axis_id": "A15",
+      "decision": "Survey weights",
+      "priority": 3,
+      "levels": [
+        {"level_id": "A15.0", "description": "Unweighted", "is_origin": true, "label": "equivalent", "rationale": "No weights mentioned anywhere in the article; multilevel logit software of the period had limited weight support.", "basis": "MAIN p.15 (silent)"},
+        {"level_id": "A15.1", "description": "Weighted with WEIGHT_L (18-64 recentred weight)", "is_origin": false, "label": "uncertain", "rationale": "GEM documentation recommends weights; the article does not use or mention them.", "basis": "sources/icpsr20320_gem_aps.md 'Notes for use'"}
+      ]
+    },
+    {
+      "axis_id": "A16",
+      "decision": "Likelihood approximation for the mixed logit",
+      "priority": 4,
+      "levels": [
+        {"level_id": "A16.0", "description": "Adaptive Gauss-Hermite quadrature (software default number of points)", "is_origin": true, "label": "equivalent", "rationale": "Default for the cited software approach.", "basis": "Rabe-Hesketh and Skrondal 2012, cited MAIN p.15"},
+        {"level_id": "A16.1", "description": "Adaptive quadrature with more integration points", "is_origin": false, "label": "equivalent", "rationale": "Increases accuracy without changing the estimand.", "basis": "Rabe-Hesketh and Skrondal 2012"},
+        {"level_id": "A16.2", "description": "Laplace approximation", "is_origin": false, "label": "uncertain", "rationale": "Can bias variance components and slopes for binary outcomes with random slopes.", "basis": "Rabe-Hesketh and Skrondal 2012; Raudenbush and Bryk 2002 (cited MAIN p.15)"}
+      ]
+    },
+    {
+      "axis_id": "A17",
+      "decision": "Social-status variable for 2001-2002 surveys (item absent in registered files)",
+      "priority": 2,
+      "levels": [
+        {"level_id": "A17.0", "description": "Impute each country's 2001-2002 survey-level status from its earliest available survey year (2003 or 2004)", "is_origin": true, "label": "uncertain", "rationale": "Keeps the article's sample intact; the article's own handling is unknown.", "basis": "MAIN p.13-14; sources/icpsr20320_gem_aps.md coverage note"},
+        {"level_id": "A17.1", "description": "Drop 2001-2002 surveys from all models", "is_origin": false, "label": "non_equivalent", "rationale": "Changes the sample substantially; year dummies for 2001-2002 disappear.", "basis": "MAIN p.10 sample definition"}
+      ]
+    },
+    {
+      "axis_id": "A18",
+      "decision": "High-growth aspiration threshold",
+      "priority": 2,
+      "levels": [
+        {"level_id": "A18.0", "description": "(OMYR5JOB - OMNOWJOB) > 5", "is_origin": true, "label": "equivalent", "rationale": "Article: 'expected to hire more than five additional employees in the next five years'.", "basis": "MAIN p.14"},
+        {"level_id": "A18.1", "description": "OMYR5JOB > 5 (total expected jobs rather than additional)", "is_origin": false, "label": "uncertain", "rationale": "A common GEM operationalization, but the article says 'additional'.", "basis": "MAIN p.14 (citing Kelley et al. 2012)"}
+      ]
+    }
+  ],
+  "compatibility": [
+    {"crossing": "A1.2 with any stage 2 axis", "reason": "A1.2 is the supplement's full-sample robustness model for stage 1 only."},
+    {"crossing": "A5.2 with A6", "reason": "Nascent-only outcome has no established-owner stage."},
+    {"crossing": "A17.1 with A3.0", "reason": "Dropping 2001-2002 surveys contradicts reproducing the listed survey-years."},
+    {"crossing": "A13.1 with A13.0", "reason": "Mutually exclusive sources for the same variable."},
+    {"crossing": "A10.2 for Japan", "reason": "Common-definition employee series absent for Japan; must fall back to A10.0 or A10.1 for that country."}
+  ],
+  "notes": "Explicitly listed controls (age, age squared, postsecondary, year dummies, sole owner, business age, six country-level controls) are held fixed within the equivalent set. Distinct outcomes (Models 4-8; supplement Model 1) are not interchangeable. No alternatives were added beyond those with an article or methodological basis."
+}

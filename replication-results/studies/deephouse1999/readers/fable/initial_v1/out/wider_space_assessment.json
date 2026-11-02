@@ -1,0 +1,42 @@
+{
+  "paper_id": "P-OPAQUE-01",
+  "note": "Descriptive assessment of the documented design choices. Never a replication verdict. 'default' = the choice most analysts would make without thinking; 'common' = one of several routinely used choices; 'rare' = seldom seen. 'justified' = the article gives an explicit reason; 'unjustified' = no reason given (not necessarily wrong).",
+  "structural_counts": {
+    "axes": 22,
+    "levels_total": 57,
+    "levels_by_label": {"origin": 22, "equivalent": 2, "uncertain": 22, "non_equivalent": 11},
+    "axes_by_priority_group": {"sample_construction": 5, "variable_coding": 13, "fixed_effects_clustering": 2, "estimator": 2},
+    "equivalent_set_size": "origin plus 2 equivalent levels (V9.b, E1.b)",
+    "sensitivity_set_size": "22 uncertain levels across 15 axes"
+  },
+  "per_axis": [
+    {"axis_id": "S1", "origin_choice": "Full metropolitan area under the regulator's market definition", "default_common_rare": "common", "justified_unjustified": "justified", "note": "DOC01 p4 and p9 cite bank regulators' use of metropolitan areas as markets."},
+    {"axis_id": "S2", "origin_choice": "All commercial-bank charters", "default_common_rare": "default", "justified_unjustified": "justified", "note": "Commercial banks chosen as a structurated field with strong competition (DOC01 p4-5)."},
+    {"axis_id": "S3", "origin_choice": "Acquirers retained, absorbed banks exit", "default_common_rare": "common", "justified_unjustified": "justified", "note": "DOC01 p9 says acquisition effects are incorporated in the strategic position measure."},
+    {"axis_id": "S4", "origin_choice": "Entry at first year with a valid lag; no annualization", "default_common_rare": "common", "justified_unjustified": "unjustified", "note": "Only the lag mechanism is stated (DOC01 p9)."},
+    {"axis_id": "S5", "origin_choice": "Delete one named outlier identified by studentized deleted residuals", "default_common_rare": "common", "justified_unjustified": "justified", "note": "Diagnostic statistic, magnitude, and a substantive explanation (consolidation of affiliates) are given (DOC01 p11); deleting a single named observation from a population is somewhat unusual."},
+    {"axis_id": "V1", "origin_choice": "Year-end balance sheets", "default_common_rare": "default", "justified_unjustified": "unjustified", "note": "Not stated; default annual snapshot."},
+    {"axis_id": "V2", "origin_choice": "All market banks as reference population", "default_common_rare": "common", "justified_unjustified": "justified", "note": "Demeaning by market-year is justified as controlling for market and macro factors (DOC01 p9)."},
+    {"axis_id": "V3", "origin_choice": "RC-K average assets", "default_common_rare": "common", "justified_unjustified": "justified", "note": "Window-dressing argument and regulatory practice (DOC01 p9)."},
+    {"axis_id": "V4", "origin_choice": "Net income", "default_common_rare": "default", "justified_unjustified": "justified", "note": "ROA described as a common bank performance measure with citations (DOC01 p9)."},
+    {"axis_id": "V5", "origin_choice": "C&I loans excluding acceptances", "default_common_rare": "common", "justified_unjustified": "unjustified", "note": "Item mapping not stated."},
+    {"axis_id": "V6", "origin_choice": "Residual other loans and leases", "default_common_rare": "common", "justified_unjustified": "unjustified", "note": "Item mapping not stated."},
+    {"axis_id": "V7", "origin_choice": "Sum of remaining balance-sheet lines", "default_common_rare": "common", "justified_unjustified": "unjustified", "note": "Item mapping not stated."},
+    {"axis_id": "V8", "origin_choice": "Agricultural production loans", "default_common_rare": "default", "justified_unjustified": "unjustified", "note": "Item mapping not stated."},
+    {"axis_id": "V9", "origin_choice": "n-1 standard deviation", "default_common_rare": "default", "justified_unjustified": "unjustified", "note": "Software default; immaterial."},
+    {"axis_id": "V10", "origin_choice": "Domestic deposits", "default_common_rare": "common", "justified_unjustified": "justified", "note": "Deposit market share with banking-literature citations (DOC01 p10); item not stated."},
+    {"axis_id": "V11", "origin_choice": "Commercial-bank denominator", "default_common_rare": "common", "justified_unjustified": "unjustified", "note": "Follows the population definition; not discussed."},
+    {"axis_id": "V12", "origin_choice": "National CPI-U annual average", "default_common_rare": "default", "justified_unjustified": "unjustified", "note": "Deflator not named (DOC01 p10)."},
+    {"axis_id": "V13", "origin_choice": "Commercial-bank market deposits", "default_common_rare": "common", "justified_unjustified": "justified", "note": "Follows a cited banking study (DOC01 p10) but the aggregate is not described."},
+    {"axis_id": "F1", "origin_choice": "No fixed effects", "default_common_rare": "common", "justified_unjustified": "justified", "note": "Year effects argued to be handled by within-year demeaning of the outcome (DOC01 p9); common for 1990s strategy research, less so today."},
+    {"axis_id": "F2", "origin_choice": "Conventional WLS SEs", "default_common_rare": "common", "justified_unjustified": "justified", "note": "Heteroscedasticity addressed by weighting; autocorrelation tested and judged absent (DOC01 p11). No clustering, which is standard for the period and rare today."},
+    {"axis_id": "E1", "origin_choice": "Raw market-share weights", "default_common_rare": "default", "justified_unjustified": "justified", "note": "Weight scale is immaterial for coefficients."},
+    {"axis_id": "E2", "origin_choice": "WLS with weights proportional to market share", "default_common_rare": "rare", "justified_unjustified": "justified", "note": "Weighting by a regressor (market share) chosen from a residual plot is an unusual but explicitly argued choice (DOC01 p11). It gives large banks most of the weight, which interacts with the outlier deletion of the largest bank's 1987 observation."}
+  ],
+  "overall_design": {
+    "default_common_rare": "common",
+    "justified_unjustified": "justified",
+    "unusualness_rating": 3,
+    "rationale": "A single-market population panel with a within-year demeaned outcome, a summed absolute z-score index and a quadratic term is a conventional 1990s strategy-research design. Three features raise unusualness: (1) WLS with weights equal to deposit market share, so that estimates are dominated by the largest banks; (2) deletion of one named observation of the largest bank, with the deletion reported to have mainly strengthened control variables; (3) a lagged dependent variable in a pooled panel with no fixed effects or clustered inference. None is rare for the period and each is argued in the text, but together they make the focal estimates sensitive to a handful of large-bank observations and to undocumented item mappings for the 11 asset categories."
+  }
+}

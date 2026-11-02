@@ -1,0 +1,2 @@
+- Files written to --out (four files listed): write_outputs writes an extra unmet.md into --out and also into the script's own directory (analysis.py:737-746).
+- Leave-one-out / samples.csv ("number rows from 1 in file order and use that number as unit_id everywhere"): dataset 1 uses the part_uid string (or a synthetic string when part_uid is missing) as unit_id and deleted_unit instead of a row number (analysis.py:126-131, 773-774, 104-115).

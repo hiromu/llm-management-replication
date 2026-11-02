@@ -1,0 +1,12 @@
+Completed PAPER_K7 repair round v1.1 in R (/opt/homebrew/bin/Rscript).
+
+Updated code/run_grid.R for all amendment items A1-A10 and checker item 1.
+Updated synthetic tests, including leverage-one OLS/WLS HC3 and copy-rule validity.
+Unit/numerical/integration tests: 339 checks passed.
+Full grid: all 38 frozen specifications completed into code/dev_out/v1_1/.
+Output validation: 8306 checks passed.
+Outputs: 912 models, 63573 coefficient rows, 304 nested tests, 29499 sample rows, 18030 influence rows.
+888 models succeeded. 24 D05 models and 8 nested tests have recorded no-complete-case failures.
+No supplied-data influence deletion failed; no HC3 warnings remain.
+README.md includes a v1.1 changes section covering each amendment and checker item.
+Input checksums verified unchanged. No network, package installation, grid changes, added specifications, or synthetic-result interpretation.

@@ -1,0 +1,66 @@
+{
+  "study_id": "nagaraj2021",
+  "stage": "prepared_not_run",
+  "requested": "By the user on 2026-11-01, for time: Opus 5.5 fast mode and GPT-6 Astra Ultrafast, both High effort, for reading and implementation.",
+  "coordinator": {
+    "platform": "Claude Code",
+    "provider": "Anthropic",
+    "model": "claude-opus-5-5",
+    "effort": "high",
+    "fast_mode": false,
+    "auto_memory": false,
+    "settings_file": "studies/nagaraj2021/.claude/settings.json",
+    "context": "fresh separate session for nagaraj2021 only",
+    "actual_run": null
+  },
+  "readers": [
+    {
+      "role": "reader_a",
+      "provider": "Anthropic",
+      "model": "claude-opus-5-5",
+      "effort": "high",
+      "processing_mode": "fast",
+      "output": "readers/opus",
+      "actual_run": null,
+      "launch_settings": {
+        "fastMode": true,
+        "autoMemoryEnabled": false
+      }
+    },
+    {
+      "role": "reader_b",
+      "provider": "OpenAI",
+      "model": "gpt-6-astra",
+      "effort": "high",
+      "processing_mode": "ultrafast",
+      "output": "readers/astra",
+      "actual_run": null,
+      "launch_settings": {
+        "model_reasoning_effort": "high",
+        "service_tier": "ultrafast"
+      }
+    }
+  ],
+  "implementer_design": {
+    "A": "claude-opus-5-5, High effort, fast mode, R",
+    "B": "gpt-6-astra, High effort, Ultrafast, R",
+    "C": "gpt-6-astra, High effort, Ultrafast, Python",
+    "checkers": "the family other than the implementer's, with that family's settings above",
+    "probes": "each reader's model with the same settings",
+    "exact_assignments": "record actual models and settings in a frozen role record before implementation"
+  },
+  "policy": "No silent substitution of model or effort. Speed is part of the request: Claude roles run with fastMode true, Codex roles with service_tier ultrafast. If a requested speed is refused or falls back, continue at the next available speed (Ultrafast, then fast, then default; fast mode, then standard), with the same model and effort, and record the fallback for that role. Verify actual model, effort and speed where observable: Claude JSON output and Codex event service_tier. The coordinator and reader_a run the same model, claude-opus-5-5, in separate contexts; the coordinator does not read independently, and the overlap is recorded.",
+  "execution_scope": {
+    "mode": "one_paper_per_separate_session",
+    "batch_papers": false,
+    "automatic_next_paper": false,
+    "shared_read_only": [
+      "instructions/",
+      "prompts/",
+      "config/"
+    ],
+    "working_directory": "studies/nagaraj2021/",
+    "stop_after": "nagaraj2021 deliverables"
+  },
+  "isolation": "Readers, memorization probes, implementers and pre-execution checkers run as separate claude or codex CLI processes from neutral staging directories, never as coordinator subagents, because subagents can inherit the project's CLAUDE.md files."
+}

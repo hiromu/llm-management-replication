@@ -1,0 +1,10 @@
+{
+  "frozen_utc": "2026-10-27",
+  "manifest": "frozen_v1/manifest.md (target-free, identity-free; opaque id P-R7M2)",
+  "grid": "frozen_v1/grid.json (21 specs: origin S000 with all families; S001-S019 one-at-a-time uncertain deviations on T4; S020 friends definition on R_friends)",
+  "budget": "origin all families; uncertain branches one at a time on T4 only (no full crossing of uncertain axes); influence leave-one-camp-out on T4 origin only: all camps by implementation A, first 20 camps per model by B and C as cross-check",
+  "scoring_rules": "sealed/scoring/scoring_rules_v1.json (sha256 355008f1c517544307220ffcb1ea47b62141d6789af0634da8cfa96a8428f485)",
+  "influence_unit": "camp. Justification: camps are the fixed-effect and clustering unit of the design and the unit at which living conditions varied; single-observation deletion over about 100,000 binary outcomes is uninformative for a probit and computationally infeasible.",
+  "leakage_scan": {"terms": "author names, journal, publisher, JSTOR, published N values, table labels, pseudo R2 values", "hits": ["manifest line 46: constant 1.319 in the Sameness formula"], "review": "1.319 is a design constant of the measure, stated by the method and needed to compute it; reviewed false positive, retained."},
+  "unavailable": ["pay-grade Steepness and pay interactions (no pay table)", "Hanley-McNeil (1983) correlation table (DeLong used as uncertain fallback)", "entry date for captured cohorts (report month used)"]
+}

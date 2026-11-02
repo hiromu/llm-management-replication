@@ -1,0 +1,5 @@
+# Independent reader assignment
+
+Read the assigned main article and every permitted supplement in the frozen publication packet, the workflow reader-stage rules, the coordinator's frozen output schema, and newly prepared source descriptions and summary-free dictionaries. Produce the claim map, sealed targets, target-free manifest, sourced specification axes/labels, documentation assessment and limitations required by those rules.
+
+Do not access raw registry data, other readers, prior studies, results or scoring criteria. Do not fit models. Published-table forensic calculations, if requested, remain separate from raw-data estimation and are sealed with targets. Source every interpretation with document/supplement ID and PDF page/table references. Identify publication contradictions, missing appendices and redaction gaps. Do not reconstruct removed author code or infer that no local supplement means none exists. Do not invent alternatives to meet a quota or silently correct article values using memory. Preserve your first complete response and ask the coordinator about missing inputs without contacting another reader.

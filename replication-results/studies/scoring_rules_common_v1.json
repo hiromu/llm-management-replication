@@ -1,0 +1,56 @@
+{
+  "version": "common_v1",
+  "written": "2026-10-28",
+  "status": "post hoc. Written after every study's results were known. It does not replace any study's frozen scoring rules; those remain each study's protocol outcome.",
+  "purpose": "Score the six studies' existing estimates with one rule so their outcomes can be compared. No estimate is refitted.",
+  "scorer": "score_common.py",
+  "scope": {
+    "rescored": "Coefficient-level targets with a published value and a reconstructed value.",
+    "not_rescored": "Fit and invariance diagnostics, F tests, text-only robustness statements and other targets without a published coefficient. Their study-rule outcomes stand."
+  },
+  "term_rules": {
+    "magnitude": {
+      "statistic": "Distance from the reconstructed estimate to the published rounding interval, divided by the published SE (upper rounding bound). Taken from each study's scoring output.",
+      "consistent": "<= 1.5",
+      "grey": "> 1.5 and <= 3.0",
+      "mismatch": "> 3.0",
+      "no_published_se": "Use an SE derived from printed quantities when the study derived one (Twenge). Otherwise magnitude is not audited and the term is decided by sign and inference (Holderness)."
+    },
+    "sign": {
+      "applies_when": "The published estimate is significant at p < .10.",
+      "mismatch": "Opposite sign and the reconstructed estimate has p < .10.",
+      "grey": "Opposite sign and the reconstructed estimate has p >= .10.",
+      "odds_ratios": "Compare the sign of log(OR)."
+    },
+    "inference": {
+      "p_value": "Native (model-based) p of the reconstructed estimate.",
+      "bands": ["p < .01", ".01 <= p < .05", ".05 <= p < .10", "p >= .10"],
+      "published_band": "From the paper's star legend as transcribed by each study, or from the upper rounding bound of a printed p value. When the legend allows two bands, use the weaker.",
+      "one_tailed_papers": "Delaney and Huselid (1996) print one-tailed stars. Both the published and the rebuilt bands are then one-tailed in the hypothesized direction, as computed by the study.",
+      "mismatch": "Reconstructed band two or more steps weaker than published.",
+      "grey": "One step weaker.",
+      "not_a_failure": "Equal or stronger significance, including a reconstruction that becomes significant where the paper reports nonsignificance."
+    },
+    "sample_size": {
+      "statistic": "|N_rec - N_pub| / N_pub for the model.",
+      "rule": "Above 0.15, every term of that model is indeterminate (sample not rebuilt). At or below 0.15 the N gap is reported only."
+    },
+    "inconsistent_targets": "If the paper prints contradictory values for a target (for example table against text), the term is indeterminate.",
+    "missing_estimate": "A term an implementation failed to estimate is indeterminate.",
+    "term_outcome": "Any mismatch: candidate. Otherwise any grey: indeterminate. Otherwise: consistent.",
+    "reader_origins": "When the readers' interpretations produced more than one origin specification, the term outcome must be the same at every origin; otherwise it is indeterminate (label-sensitive)."
+  },
+  "discrepancy": "A candidate becomes discrepant only after an adversarial review by a model family independent of every implementer and a human confirmation. No study has such a review, so every candidate is unverified and formally indeterminate.",
+  "claim_rule": "Consistent if every focal term of the claim is consistent. Candidate if any focal term is a candidate. Otherwise indeterminate.",
+  "paper_rule": {
+    "consistent": "Every focal claim consistent and no lower-tier candidate.",
+    "partially_reproduced": "Every focal claim consistent and at least one lower-tier candidate.",
+    "not_reproduced_unverified": "At least one focal claim is a candidate. Formally indeterminate until a candidate is verified.",
+    "indeterminate": "Otherwise."
+  },
+  "focal_structure": "Each study's focal claims and their terms, as fixed by its readers before results. The mapping is listed in score_common.py.",
+  "sensitivity_variant": {
+    "name": "lenient",
+    "changes": "Magnitude bands 2.0 and 4.0. An N gap above 0.15 blocks a candidate (it becomes indeterminate) but not a consistent outcome."
+  }
+}

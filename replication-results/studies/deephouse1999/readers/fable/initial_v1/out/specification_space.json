@@ -1,0 +1,244 @@
+{
+  "paper_id": "P-OPAQUE-01",
+  "origin": {
+    "description": "Closest-described specification: pooled WLS on bank-years 1985-1992 of commercial banks in the full Minneapolis-St. Paul MN-WI metropolitan area (1983 OMB county definition), year-end balance sheets, market population = all market banks in the year, RC-K average assets, net income, C&I loans excluding acceptances, residual 'other loans and leases', summed remaining balance-sheet lines as 'other assets', n-1 standard deviations, domestic deposits for market share, national CPI-U annual average deflator, acquirers retained, named outlier deleted, no fixed effects, conventional WLS SEs, weights = raw market share, nested F tests from weighted SSE.",
+    "axis_levels": {
+      "S1": "S1.a", "S2": "S2.a", "S3": "S3.a", "S4": "S4.a", "S5": "S5.a",
+      "V1": "V1.a", "V2": "V2.a", "V3": "V3.a", "V4": "V4.a", "V5": "V5.a", "V6": "V6.a", "V7": "V7.a", "V8": "V8.a", "V9": "V9.a", "V10": "V10.a", "V11": "V11.a", "V12": "V12.a", "V13": "V13.a",
+      "F1": "F1.a", "F2": "F2.a",
+      "E1": "E1.a", "E2": "E2.a"
+    },
+    "fixed_by_article_not_axes": [
+      "Control list in each model (market share, total expense ratio, real market growth, lagged relative ROA) is explicit and may not be altered within the equivalent set (DOC01 p11 Model 3 equation; p12 Table 2).",
+      "Model hierarchy M1 (controls), M2 (+ linear SD), M3 (+ SD squared) (DOC01 p11 Analysis).",
+      "Outcome and lag multiplied by 100 (DOC01 p11 Results).",
+      "11 named asset categories as proportions of total assets; absolute z-score sum (DOC01 p9-10).",
+      "Weights proportional to market share (variance inversely proportional to market share) (DOC01 p11)."
+    ]
+  },
+  "axes": [
+    {
+      "axis_id": "S1",
+      "decision": "Geographic boundary of the Twin Cities banking market.",
+      "priority_group": "sample_construction",
+      "levels": [
+        {"level_id": "S1.a", "description": "All counties of metropolitan area 5120 (Minneapolis-St. Paul, MN-WI) under the OMB definition of 1983-06-27, applied to every year; bank located by RSSD9210+RSSD9150.", "codeable_rule": "county_fips5 in msa_minneapolis_stpaul_counties_by_vintage.csv[definition_vintage ~ 1983, area_code == '5120'].county_fips5", "label": "origin", "basis": "DOC01 p9 ('Minneapolis-St. Paul ... metropolitan area'); DOC01 p4 ('markets were defined by bank regulators as metropolitan areas'); source descriptions section 5 (no change to area 5120 in 1984-1990 notes)", "rationale": "The regulator's market definition is the metropolitan area; the 1983 definition was in force through the study period."},
+        {"level_id": "S1.b", "description": "Provider MSA code RSSD9180 == 5120 on each quarterly file.", "codeable_rule": "RSSD9180 == 5120 at the Q4 record of year t", "label": "uncertain", "basis": "data dictionary RSSD9180 ('definition vintage ... not stated on the file')", "rationale": "Should coincide with S1.a if the provider used the 1983 definition; the vintage is unknown so coincidence cannot be assumed."},
+        {"level_id": "S1.c", "description": "Minnesota counties of area 5120 only (exclude the Wisconsin county/counties).", "codeable_rule": "S1.a and RSSD9210 == 27", "label": "uncertain", "basis": "DOC01 p9 wording 'Minneapolis-St. Paul, Minnesota, United States, metropolitan area' and 'Minnesota historically limited bank branches'", "rationale": "The article's references to Minnesota law could indicate a Minnesota-only population, but the metropolitan area includes Wisconsin counties; the effect is a few banks."}
+      ]
+    },
+    {
+      "axis_id": "S2",
+      "decision": "Which chartered entities count as commercial banks.",
+      "priority_group": "sample_construction",
+      "levels": [
+        {"level_id": "S2.a", "description": "All entities with commercial bank charter (RSSD9048 == 200) at the bank reporting level (CALL8786 in {1,2}).", "codeable_rule": "RSSD9048 == 200 and CALL8786 in (1, 2)", "label": "origin", "basis": "DOC01 p9 ('a population of commercial banks')", "rationale": "Plain reading of 'commercial banks'."},
+        {"level_id": "S2.b", "description": "S2.a excluding special-purpose institutions flagged by RSSD9425 (bankers' banks, credit-card banks, trust-only banks).", "codeable_rule": "S2.a and (RSSD9425 is missing or RSSD9425 indicates no special purpose)", "label": "uncertain", "basis": "DOC01 p4 ('Banks in a single market offer similar products to similar customers') and the market-competition framing; data dictionary RSSD9425", "rationale": "Special-purpose banks do not compete in the local market as described, but the article does not say they were excluded."},
+        {"level_id": "S2.c", "description": "Include state savings banks that file Call Reports (RSSD9048 == 300).", "codeable_rule": "RSSD9048 in (200, 300)", "label": "non_equivalent", "basis": "DOC01 p4 explicitly distinguishes commercial banks from savings banks", "rationale": "Changes the population definition stated in the article."}
+      ]
+    },
+    {
+      "axis_id": "S3",
+      "decision": "Treatment of banks involved in mergers and acquisitions.",
+      "priority_group": "sample_construction",
+      "levels": [
+        {"level_id": "S3.a", "description": "Acquirers retained in all years; absorbed banks contribute until their last year-end report; no merger-year exclusion.", "codeable_rule": "no filter beyond data availability and the lag requirement", "label": "origin", "basis": "DOC01 p9 ('Many acquisitions subsequently occurred, the effects of which are incorporated in the measurement of strategic position')", "rationale": "The article states that acquisition effects are absorbed into the strategic position measure, implying acquirers stay in."},
+        {"level_id": "S3.b", "description": "Drop the acquiring bank's observation in the year of a merger (and the following year because the lag is then affected).", "codeable_rule": "drop (i,t) if fdic_structure_events shows ACQ_CERT == CERT(i) with a merger/absorption CHANGECODE in year t; drop (i,t+1) as well", "label": "uncertain", "basis": "DOC01 p9 ('After accounting for foundings, mergers, failures ...'); panel-construction practice in banking studies that treat merged entities as new units", "rationale": "'Accounting for mergers' could mean this, but the sentence about acquisitions points the other way."}
+      ]
+    },
+    {
+      "axis_id": "S4",
+      "decision": "Treatment of newly chartered banks and partial-year income.",
+      "priority_group": "sample_construction",
+      "levels": [
+        {"level_id": "S4.a", "description": "A new bank enters at the first year with a valid lagged outcome; partial-year income in its charter year is used as reported (not annualized) when forming the lag.", "codeable_rule": "keep (i,t) if relative_roa_{i,t-1} exists; no annualization", "label": "origin", "basis": "DOC01 p9 ('foundings ... the use of lagged dependent variables')", "rationale": "The only stated mechanism is the lag requirement."},
+        {"level_id": "S4.b", "description": "Additionally require the bank to have a full-year report in t-1 (charter date before January 1 of t-1, from RSSD9950 or ESTYMD).", "codeable_rule": "keep (i,t) if S4.a and opening date < Jan 1 of year t-1", "label": "uncertain", "basis": "bank-performance literature on de novo bank ROA (partial-year and start-up distortions); not in DOC01", "rationale": "Avoids a distorted lag for de novos but is not described."},
+        {"level_id": "S4.c", "description": "Annualize partial-year income (multiply by 12 / months in operation) before forming ROA for the charter year.", "codeable_rule": "roa = (RIAD4340 * 12 / months_operating) / avg_assets for the charter year", "label": "uncertain", "basis": "regulatory ROA practice (annualized ratios in FDIC data: data dictionary ROA field is 'annualized')", "rationale": "Regulatory practice annualizes; the article cites regulatory practice only for the average-asset denominator."}
+      ]
+    },
+    {
+      "axis_id": "S5",
+      "decision": "Outlier handling.",
+      "priority_group": "sample_construction",
+      "levels": [
+        {"level_id": "S5.a", "description": "Delete the single named bank-year (Norwest Bank Minneapolis, N.A., 1987).", "codeable_rule": "drop the 1987 observation of the matched RSSD9001", "label": "origin", "basis": "DOC01 p11 Analysis (outlier paragraph)", "rationale": "The deleted observation is named."},
+        {"level_id": "S5.b", "description": "Delete the observation with the largest studentized deleted residual from the WLS fits of all three models, if it is the same observation in all three and exceeds the second largest by a wide margin; otherwise delete nothing.", "codeable_rule": "compute RSTUDENT for M1-M3 on the pre-deletion sample; drop argmax if common across models", "label": "uncertain", "basis": "DOC01 p11 ('This outlier was identified by examining studentized deleted residuals from the weighted least-squares estimates ... It had the highest studentized deleted residual in all three models')", "rationale": "Reproduces the article's identification procedure; may or may not select the same bank-year in replication data."},
+        {"level_id": "S5.c", "description": "No outlier deletion.", "codeable_rule": "no deletion", "label": "non_equivalent", "basis": "DOC01 p11 ('The principal effect ... was to improve the significance of the control variables')", "rationale": "Sensitivity only; the article reports estimates after deletion."}
+      ]
+    },
+    {
+      "axis_id": "V1",
+      "decision": "Balance-sheet timing for asset shares and deposits.",
+      "priority_group": "variable_coding",
+      "levels": [
+        {"level_id": "V1.a", "description": "Year-end (December, Q4) report of year t.", "codeable_rule": "quarter == 'YYYYQ4'", "label": "origin", "basis": "DOC01 p9-10 ('In a given year, each asset strategy ...'); annual bank-year unit", "rationale": "Default annual snapshot; the article mentions window dressing only for the ROA denominator."},
+        {"level_id": "V1.b", "description": "Average of the four quarterly shares (Q1-Q4) of year t; deposits averaged likewise.", "codeable_rule": "mean over quarters of item/RCFD2170", "label": "uncertain", "basis": "DOC01 p9 (window-dressing rationale for using averages); Schedule RC-K averages exist for some items", "rationale": "Same rationale the article gives for average assets could apply, but it is not stated for strategies."}
+      ]
+    },
+    {
+      "axis_id": "V2",
+      "decision": "Reference population for market means, standard deviations, market-average ROA and market totals.",
+      "priority_group": "variable_coding",
+      "levels": [
+        {"level_id": "V2.a", "description": "All commercial banks in the market in year t (before lag and outlier attrition), unweighted.", "codeable_rule": "population M_t as in sample_steps S5", "label": "origin", "basis": "DOC01 p9 ('the average ROA of all Twin Cities' banks'); DOC01 p10 ('for Twin Cities' banks')", "rationale": "'All' banks, not 'sample' banks."},
+        {"level_id": "V2.b", "description": "Only banks in the final regression sample in year t, unweighted.", "codeable_rule": "population = estimation sample in year t", "label": "uncertain", "basis": "DOC01 p12 Table 1 (relative ROA mean printed as 0.000 at three decimals, which holds exactly only under V2.b but approximately under V2.a)", "rationale": "Cannot be distinguished from the text; the descriptive mean does not discriminate at the printed precision."},
+        {"level_id": "V2.c", "description": "Asset- or deposit-weighted market-average ROA.", "codeable_rule": "mean of roa weighted by avg_assets over M_t", "label": "non_equivalent", "basis": "DOC01 p9 'average ROA of all ... banks' (unweighted reading); industry-aggregate ROA conventions in regulatory reports", "rationale": "A different construct (aggregate market ROA) from the bank-average stated."}
+      ]
+    },
+    {
+      "axis_id": "V3",
+      "decision": "Average assets (ROA and expense-ratio denominator).",
+      "priority_group": "variable_coding",
+      "levels": [
+        {"level_id": "V3.a", "description": "Mean of Schedule RC-K quarterly average total assets (RCFD3368) over the four quarters of year t.", "codeable_rule": "mean(RCFD3368 over Q1..Q4 of t)", "label": "origin", "basis": "DOC01 p9 ('consistent with bank regulatory practice'); call_item_candidates.json note on 3368", "rationale": "Regulatory average-asset ratios are built from RC-K quarterly averages."},
+        {"level_id": "V3.b", "description": "Mean of five quarter-end total assets (RCFD2170 at Q4 of t-1 through Q4 of t).", "codeable_rule": "mean(RCFD2170 at Q4 t-1, Q1..Q4 t)", "label": "uncertain", "basis": "call_item_candidates.json ('Annual average assets may alternatively be formed from end-of-period total assets (2170)')", "rationale": "Common substitute; differs slightly from V3.a."},
+        {"level_id": "V3.c", "description": "Mean of beginning- and end-of-year total assets.", "codeable_rule": "(RCFD2170 at Q4 t-1 + RCFD2170 at Q4 t)/2", "label": "uncertain", "basis": "general accounting-ratio practice", "rationale": "Simplest average; most exposed to year-end window dressing, which the article says it wanted to avoid."},
+        {"level_id": "V3.d", "description": "FDIC-computed ROA field (annualized net income / average assets) from the FDIC financials file.", "codeable_rule": "ROA from fdic_financials_core_mnwi_1984q1_1994q4.csv at REPDTE = December of t", "label": "uncertain", "basis": "source descriptions section 3 (FDIC derivations may differ from Call Report items)", "rationale": "Regulatory-practice ratio, but the derivation is the FDIC's and not the article's."}
+      ]
+    },
+    {
+      "axis_id": "V4",
+      "decision": "Income measure for ROA.",
+      "priority_group": "variable_coding",
+      "levels": [
+        {"level_id": "V4.a", "description": "Net income (RIAD4340).", "codeable_rule": "RIAD4340 at Q4 of t", "label": "origin", "basis": "DOC01 p9 ('the ratio of net income to average assets')", "rationale": "Plain reading."},
+        {"level_id": "V4.b", "description": "Income before extraordinary items (RIAD4300).", "codeable_rule": "RIAD4300 at Q4 of t", "label": "uncertain", "basis": "Schedule RI structure (RIAD4340 = RIAD4300 + RIAD4320); bank-performance studies sometimes exclude extraordinary items", "rationale": "Differs only for bank-years with extraordinary items."}
+      ]
+    },
+    {
+      "axis_id": "V5",
+      "decision": "Commercial loans item.",
+      "priority_group": "variable_coding",
+      "levels": [
+        {"level_id": "V5.a", "description": "Commercial and industrial loans excluding acceptances of other banks (RCFD1766).", "codeable_rule": "RCFD1766 / RCFD2170", "label": "origin", "basis": "source descriptions (1766 is the post-1984 Schedule RC-C 'Commercial and industrial loans' item); DOC01 p9 ('1985 was the first year because regulators instituted a major revision in the Call Reports in 1984')", "rationale": "The item introduced by the 1984 revision the article refers to."},
+        {"level_id": "V5.b", "description": "Commercial and industrial loans including acceptances of other banks (RCFD1600).", "codeable_rule": "RCFD1600 / RCFD2170", "label": "uncertain", "basis": "call_item_candidates.json (1600 = 1755 + 1766)", "rationale": "Older total; differs only for banks holding acceptances."}
+      ]
+    },
+    {
+      "axis_id": "V6",
+      "decision": "Other loans and leases item.",
+      "priority_group": "variable_coding",
+      "levels": [
+        {"level_id": "V6.a", "description": "Residual: gross total loans and leases (RCFD1400) minus the four named loan categories.", "codeable_rule": "(RCFD1400 - commercial - RCFD1410 - RCFD1975 - RCFD1590) / RCFD2170", "label": "origin", "basis": "DOC01 p9 category list (five loan categories partition total loans and leases)", "rationale": "Guarantees the five loan categories sum to total loans and leases regardless of form-specific components."},
+        {"level_id": "V6.b", "description": "Explicit sum of components: loans to depository institutions (RCFD1505 + RCFD1517 + RCFD1510 or form equivalents), loans for purchasing securities (RCFD1545), loans to foreign governments (RCFD2081), obligations of states and political subdivisions (RCFD2107), all other loans (RCFD1563 or RCFD2080), lease financing receivables (RCFD2165), acceptances of other banks (RCFD1755 if commercial = RCFD1766).", "codeable_rule": "sum of the listed items / RCFD2170, missing components treated as 0 when not collected", "label": "uncertain", "basis": "Schedule RC-C component structure (data dictionary other_loans_and_leases_and_loan_totals)", "rationale": "Equal to V6.a when all components are reported; may differ on small-bank forms with fewer items."}
+      ]
+    },
+    {
+      "axis_id": "V7",
+      "decision": "Other assets item.",
+      "priority_group": "variable_coding",
+      "levels": [
+        {"level_id": "V7.a", "description": "Sum of the remaining Schedule RC asset lines: other real estate owned (RCFD2150) + investments in unconsolidated subsidiaries (RCFD2130) + customers' liability on acceptances (RCFD2155) + intangible assets (RCFD2143) + other assets (RCFD2160).", "codeable_rule": "(RCFD2150 + RCFD2130 + RCFD2155 + RCFD2143 + RCFD2160) / RCFD2170, missing treated as 0 when not collected", "label": "origin", "basis": "DOC01 p9 (11 categories read as an exhaustive balance-sheet partition); Schedule RC line structure 1984-1993 (data dictionary other_assets concept)", "rationale": "Makes the 11 categories exhaust gross assets."},
+        {"level_id": "V7.b", "description": "Schedule RC 'Other assets' line only (RCFD2160).", "codeable_rule": "RCFD2160 / RCFD2170", "label": "uncertain", "basis": "literal line name 'Other assets' on Schedule RC", "rationale": "Literal reading; leaves OREO, acceptances, intangibles and subsidiaries unassigned."},
+        {"level_id": "V7.c", "description": "Residual: total assets minus the other ten categories.", "codeable_rule": "(RCFD2170 - sum of categories 1-10) / RCFD2170", "label": "uncertain", "basis": "partition logic", "rationale": "Equals V7.a minus the allowance for loan losses (RCFD3123) and unearned income (RCFD2123), because loan categories are gross; may be negative for some banks."}
+      ]
+    },
+    {
+      "axis_id": "V8",
+      "decision": "Agriculture loans item.",
+      "priority_group": "variable_coding",
+      "levels": [
+        {"level_id": "V8.a", "description": "Loans to finance agricultural production and other loans to farmers (RCFD1590).", "codeable_rule": "RCFD1590 / RCFD2170", "label": "origin", "basis": "Schedule RC-C item named 'agricultural' (data dictionary agricultural_loans concept)", "rationale": "The only non-real-estate agricultural loan line."},
+        {"level_id": "V8.b", "description": "RCFD1590 plus loans secured by farmland (RCON1420).", "codeable_rule": "(RCFD1590 + RCON1420) / RCFD2170", "label": "non_equivalent", "basis": "call_item_candidates.json (1420 also relevant to an agricultural-lending concept)", "rationale": "Double counts farmland loans already inside real estate loans (RCFD1410), so the categories no longer partition loans."}
+      ]
+    },
+    {
+      "axis_id": "V9",
+      "decision": "Standard deviation denominator in the z-scores.",
+      "priority_group": "variable_coding",
+      "levels": [
+        {"level_id": "V9.a", "description": "Sample SD (n-1).", "codeable_rule": "sd with ddof = 1 over M_t", "label": "origin", "basis": "default of common statistical software; DOC01 p10 gives no formula", "rationale": "Default."},
+        {"level_id": "V9.b", "description": "Population SD (n).", "codeable_rule": "sd with ddof = 0 over M_t", "label": "equivalent", "basis": "methodological: rescales every z-score by sqrt((n_t-1)/n_t), about 0.996 for roughly 120 banks per year, nearly constant across years", "rationale": "Changes the focal regressor by a near-constant factor of under one percent; inference and signs unaffected."}
+      ]
+    },
+    {
+      "axis_id": "V10",
+      "decision": "Deposit item for market share.",
+      "priority_group": "variable_coding",
+      "levels": [
+        {"level_id": "V10.a", "description": "Total deposits in domestic offices (RCON2200).", "codeable_rule": "RCON2200 at Q4 of t", "label": "origin", "basis": "DOC01 p10 (market share of deposits in a local market, citing bank market-structure studies)", "rationale": "Local-market deposits are domestic; identical to RCFD2200 for banks without foreign offices."},
+        {"level_id": "V10.b", "description": "Total deposits consolidated (RCFD2200, includes foreign offices).", "codeable_rule": "RCFD2200 at Q4 of t", "label": "uncertain", "basis": "data dictionary deposits concept (2200 = total deposits)", "rationale": "Differs only for the few banks with foreign offices, which are also the largest and most influential in a share-weighted regression."}
+      ]
+    },
+    {
+      "axis_id": "V11",
+      "decision": "Denominator population for market share.",
+      "priority_group": "variable_coding",
+      "levels": [
+        {"level_id": "V11.a", "description": "Sum of deposits over commercial banks in the market population M_t.", "codeable_rule": "sum RCON2200 over M_t at Q4 of t", "label": "origin", "basis": "DOC01 p9 (population of commercial banks in the market)", "rationale": "The market is defined as commercial banks."},
+        {"level_id": "V11.b", "description": "Sum of deposits over all FDIC-insured institutions in the market counties including savings institutions (FDIC financials DEP).", "codeable_rule": "sum DEP over fdic_financials rows with STCNTY in the area county list at December of t", "label": "non_equivalent", "basis": "bank market-structure literature that includes thrifts in local deposit markets; source descriptions section 3", "rationale": "Changes the share scale and the weights; not the article's population."}
+      ]
+    },
+    {
+      "axis_id": "V12",
+      "decision": "Deflator and averaging convention for real market deposits.",
+      "priority_group": "variable_coding",
+      "levels": [
+        {"level_id": "V12.a", "description": "National CPI-U all items, NSA, annual average (CPIAUCNS / CUUR0000SA0).", "codeable_rule": "P_t = annual-average value of CPIAUCNS for year t", "label": "origin", "basis": "DOC01 p10 ('real total market deposits'; no deflator named); most common deflator choice", "rationale": "Default in the absence of a stated deflator; NSA CPI is unrevised."},
+        {"level_id": "V12.b", "description": "National CPI-U, December-to-December (matches year-end deposit timing).", "codeable_rule": "P_t = CPIAUCNS value for December of t", "label": "uncertain", "basis": "timing alignment with year-end stocks", "rationale": "Equally defensible; differs by the within-year inflation path."},
+        {"level_id": "V12.c", "description": "Minneapolis-St. Paul area CPI-U, annual (CUUSA211SA0).", "codeable_rule": "P_t = CUUSA211SA0 annual value for year t", "label": "uncertain", "basis": "single-market design (DOC01 p9); source descriptions section 4 (area series available annually from 1984)", "rationale": "Locally appropriate but the article does not say it used a local index."},
+        {"level_id": "V12.d", "description": "GDP implicit price deflator, annual (A191RD3A086NBEA, current vintage).", "codeable_rule": "P_t = annual GDP deflator for year t", "label": "uncertain", "basis": "source descriptions section 4", "rationale": "Alternative deflator used in banking studies; revised over vintages."}
+      ]
+    },
+    {
+      "axis_id": "V13",
+      "decision": "Deposit aggregate for market growth.",
+      "priority_group": "variable_coding",
+      "levels": [
+        {"level_id": "V13.a", "description": "Total deposits of all commercial banks in M_t at year-end (same aggregate as the market-share denominator).", "codeable_rule": "D_t = sum RCON2200 over M_t at Q4 of t", "label": "origin", "basis": "DOC01 p10 ('total market deposits'); consistency with V11.a", "rationale": "Single definition of the market."},
+        {"level_id": "V13.b", "description": "Total deposits of all FDIC-insured institutions in the market counties (including savings institutions).", "codeable_rule": "D_t = sum DEP over FDIC financial rows in area counties at December of t", "label": "uncertain", "basis": "DOC01 p10 (cites a banking study of market growth whose aggregate is not described); source descriptions section 3", "rationale": "Market resources may include thrift deposits; eight annual values only, so the choice matters for one regressor."}
+      ]
+    },
+    {
+      "axis_id": "F1",
+      "decision": "Fixed effects.",
+      "priority_group": "fixed_effects_clustering",
+      "levels": [
+        {"level_id": "F1.a", "description": "None (pooled).", "codeable_rule": "no dummies", "label": "origin", "basis": "DOC01 p11 Model 3 equation; DOC01 p9 (year effects absorbed by relative ROA)", "rationale": "As specified."},
+        {"level_id": "F1.b", "description": "Year dummies added.", "codeable_rule": "add indicator for each year 1986-1992", "label": "non_equivalent", "basis": "panel-data practice; the market-growth control is collinear with year dummies (one value per year)", "rationale": "Would absorb real market growth entirely; changes the model."},
+        {"level_id": "F1.c", "description": "Bank fixed effects.", "codeable_rule": "within-bank demeaning or bank dummies", "label": "non_equivalent", "basis": "panel-data practice; dynamic-panel bias with a lagged dependent variable", "rationale": "Different estimand; not described."}
+      ]
+    },
+    {
+      "axis_id": "F2",
+      "decision": "Covariance estimator.",
+      "priority_group": "fixed_effects_clustering",
+      "levels": [
+        {"level_id": "F2.a", "description": "Conventional WLS standard errors.", "codeable_rule": "sigma^2 (X'WX)^-1", "label": "origin", "basis": "DOC01 p11-12", "rationale": "As reported."},
+        {"level_id": "F2.b", "description": "Standard errors clustered by bank (RSSD9001).", "codeable_rule": "cluster-robust sandwich with bank clusters on the weighted regression", "label": "non_equivalent", "basis": "methodological literature on serially correlated panel errors; DOC01 p11 treats within-bank autocorrelation as a tested assumption rather than correcting for it", "rationale": "Changes inference only; useful sensitivity."},
+        {"level_id": "F2.c", "description": "Heteroscedasticity-robust (HC1) standard errors on the weighted regression.", "codeable_rule": "HC1 sandwich", "label": "non_equivalent", "basis": "methodological literature", "rationale": "Changes inference only."}
+      ]
+    },
+    {
+      "axis_id": "E1",
+      "decision": "Scale of the WLS weights.",
+      "priority_group": "estimator",
+      "levels": [
+        {"level_id": "E1.a", "description": "Weights equal the raw market-share proportion.", "codeable_rule": "w = market_share", "label": "origin", "basis": "DOC01 p11 (variance inversely proportional to market share)", "rationale": "Direct reading."},
+        {"level_id": "E1.b", "description": "Weights normalized to mean one within the estimation sample.", "codeable_rule": "w = market_share / mean(market_share)", "label": "equivalent", "basis": "WLS algebra: coefficients, standard errors and F ratios are invariant to a constant rescaling of weights; only the printed SSE scale changes", "rationale": "Equivalent for all coefficient and test targets; SSE targets not comparable under this level."}
+      ]
+    },
+    {
+      "axis_id": "E2",
+      "decision": "Estimator.",
+      "priority_group": "estimator",
+      "levels": [
+        {"level_id": "E2.a", "description": "WLS with w = market_share, no autocorrelation correction.", "codeable_rule": "as manifest", "label": "origin", "basis": "DOC01 p11", "rationale": "As reported."},
+        {"level_id": "E2.b", "description": "Unweighted OLS.", "codeable_rule": "w = 1", "label": "non_equivalent", "basis": "DOC01 p11 (OLS used only for residual diagnostics before choosing WLS)", "rationale": "Different estimator; sensitivity only."},
+        {"level_id": "E2.c", "description": "WLS with a first-order autoregressive error correction within bank (Prais-Winsten or Cochrane-Orcutt on the panel).", "codeable_rule": "AR(1) GLS by bank on weighted data", "label": "non_equivalent", "basis": "DOC01 p11 (AR(1) assumed as the alternative hypothesis, tested with Durbin h, found not significant, so not applied)", "rationale": "The article explicitly did not apply it."}
+      ]
+    }
+  ],
+  "compatible_crossings": [
+    "V2 (reference population) applies jointly to the market-average ROA, the strategic deviation means/SDs, the market-share denominator and the market deposit total; choose one level for all four.",
+    "V1 (timing) applies jointly to asset shares and deposits.",
+    "V11.b and V13.b should be chosen together (both use FDIC all-institution deposits); V11.a pairs with V13.a or V13.b.",
+    "V3 (average assets) applies to both ROA and the total expense ratio denominators.",
+    "V6.b requires V5.a (acceptances assigned to 'other loans') or V5.b (acceptances inside commercial loans, so omit RCFD1755 from V6.b); do not count acceptances twice.",
+    "V7.c cannot be combined with V6.b if components overlap; V7.c is a pure residual and must be used with V6.a.",
+    "E1.b must not be used when comparing SSE or delta-SSE targets; it may be used for coefficients, SEs and F tests.",
+    "S5.b replaces S5.a only if the identified observation differs; report both. S5.c is a sensitivity run, never the origin.",
+    "F1.b cannot be combined with the real_market_growth control (perfect collinearity); if F1.b is run, drop real_market_growth and label the run non-equivalent.",
+    "All non_equivalent levels are excluded from the equivalent set; the equivalent set consists of the origin plus V9.b and E1.b. Uncertain levels form the sensitivity set."
+  ]
+}

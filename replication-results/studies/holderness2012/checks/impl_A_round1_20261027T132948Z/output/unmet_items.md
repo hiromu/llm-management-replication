@@ -1,0 +1,25 @@
+1. **String handling — manifest lines 7–8 and 12.** The NUL-safe reader replaces every non-ASCII byte with `?`, although the specified cleaning removes only NUL characters and leading/trailing spaces. This changes field values and can collapse distinct linkage keys or codes. Code: `code/run.R:160–175`, especially line 172.
+
+2. **String cleaning before code comparisons — manifest lines 12, 20 and 57.** Defined camp codes are extracted without cleaning, and crosswalk confidence values are compared without cleaning. Consequently, padded codes in the code list or quoted, padded confidence values can fail the required comparisons. Code: `code/run.R:207–211`, `code/run.R:254–258`, `code/run.R:315` and `code/run.R:373`.
+
+3. **Coordinate parameter `nara_degree` — manifest line 57; grid S019.** Crosswalk coordinates are used whenever parsing produces `NA`, including when coordinate text is present but invalid. The manifest permits this fallback when the text is absent. Code: `code/run.R:320–325`.
+
+4. **Duplicate linkage, `dup_serial = "combine"` — manifest lines 59–63 and 67; grid S018.** Card layout is applied separately to each duplicate before combination, and only the four resulting covariate fields are combined. The original record fields, including `CARD_NUM`, are not combined field by field. Duplicates with different card layouts can therefore produce different linked covariates from those specified. Code: `code/run.R:244–248` and `code/run.R:336–339`.
+
+5. **Missing indicators for interaction regressors — manifest lines 52, 85 and 95.** Interaction products are formed after their components have been replaced by zero. A product with a missing component therefore receives zero without its own missing indicator, even when that indicator would vary in the estimation sample. Code: `code/run.R:569–582`, especially line 581.
+
+6. **Required model terms and fixed effects — manifest lines 52, 71, 73 and 100.** The collinearity pass removes nonconstant missing indicators and other required regressors from the design and output; it can also merge additional camp dummies into the reference camp. These omissions exceed the specified omission of constant missing indicators and one reference-camp dummy. Code: `code/run.R:734–756` and `code/run.R:797–801`.
+
+7. **Marginal effects for binary regressors — manifest line 71.** Camp dummy terms are never added to the binary-regressor set. Their reported marginal effects use the continuous derivative rather than a discrete change, and their delta-method standard errors consequently use the continuous-effect gradient. Code: `code/run.R:501`, `code/run.R:579–589`, `code/run.R:655`, `code/run.R:761` and `code/run.R:675–688`.
+
+8. **Complete-case robustness sample — manifest line 87.** `cc_filter(g)` returns a closure without forcing its `gtype` argument. That argument remains a promise referring to the shared loop variable `g`, which is `"camp"` when the filters are later evaluated. The captured-cohort complete-case models therefore also require nonmissing distance, although distance is required only for camp models. Code: `code/run.R:519–522`, `code/run.R:531–532` and `code/run.R:806`.
+
+9. **AAF group membership — manifest lines 31–32 and 91.** Hierarchy measures and group sizes for `R_aaf` are computed over the unrestricted regression sample before the AAF filter is applied. They include members outside the AAF estimation sample, although the AAF specification does not provide the pre-subsetting exception expressly given to other robustness families. Code: `code/run.R:424–435`, `code/run.R:543–544`, `code/run.R:833` and `code/run.R:853`.
+
+10. **Friends count with `friends_def = "incl_self"` — manifest lines 31 and 94.** The count adds one when the observation is not a group member, including observations excluded from membership because their rank is missing. This counts a nonmember despite the requirement to count group members with the same unit; a row with no such members can receive `friends = log(1) = 0`. Code: `code/run.R:477–489`, especially line 484.
+
+11. **Influence runs after a failed base fit — manifest lines 96 and 100.** An estimation frame is retained for influence analysis only after the base T4 fit succeeds. If that fit fails, the code skips all camp deletions and emits one failure row with no deleted camp, rather than attempting and recording each required leave-one-camp-out fit. Code: `code/run.R:857–859` and `code/run.R:909–916`.
+
+12. **Estimation-row output for failed fits — manifest line 100.** Sample-ID files are written only on the successful-fit path. A failed fit produces a results row but no file containing its already determined estimation rows. Code: `code/run.R:853–855`, `code/run.R:865` and `code/run.R:870–873`.
+
+13. **Required family computation order — manifest line 84; grid lines 3 and 29–45.** `T5ROC` is excluded from the family execution loop and runs only after `T6` and every robustness family. The grid requires it immediately after `T5`, before `T6`. Code: `code/run.R:849–879`.

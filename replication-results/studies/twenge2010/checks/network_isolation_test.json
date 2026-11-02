@@ -1,0 +1,3 @@
+{"tested_utc": "2026-10-28", "profile": "(version 1)(allow default)(deny network*)", "tool": "macOS sandbox-exec",
+ "results": {"curl https://cloud.r-project.org": "blocked", "Rscript readLines(url(...))": "blocked (error caught)", "python urllib": "blocked (URLError)"},
+ "use": "all frozen empirical executions by the coordinator run under this profile; file-system access is not restricted by this profile"}

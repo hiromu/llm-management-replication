@@ -1,0 +1,36 @@
+{
+  "packet_version": "v1",
+  "frozen_utc": "2026-10-27T12:08:59Z",
+  "documents": [
+    {
+      "doc_id": "D1",
+      "role": "main article",
+      "file": "packet/D1_main_article.pdf",
+      "sha256": "57d70148a9f57247cb0a26f58ef497bc750c3193b7f5f91297bacf272e0fdbb4",
+      "identity_checks": {
+        "title": "Hierarchies and the Survival of Prisoners of War During World War II",
+        "journal": "Management Science 58(10):1873-1886, October 2012",
+        "doi": "10.1287/mnsc.1120.1532",
+        "source": "JSTOR stable 41686887 scan; matches STUDY.json sha256"
+      },
+      "version": "published version (JSTOR scan with OCR); PDF page 1 is a JSTOR cover page",
+      "derived_files": {
+        "page_images": "packet/D1_pages/page-01..15.png (pdftoppm 150 dpi)",
+        "ocr_text": "packet/D1_text_layout.txt (pdftotext -layout)"
+      },
+      "redactions": "none"
+    }
+  ],
+  "supplements": [],
+  "supplement_search": "No e-companion, online appendix, supplement or correction found after documented search on 2026-10-27; no local catalog match.",
+  "known_gaps": [
+    "The article reports several analyses only in text or as 'reported in previous versions of the paper' (e.g. Germany/Japan separate, Air Force subsample, robustness tests). Earlier working-paper versions exist but are excluded from the packet because they are not part of the published record.",
+    "OCR text of tables is scrambled; page images are authoritative."
+  ],
+  "excluded": [
+    {
+      "item": "working-paper versions (AEA 2009, SSRN 1345420, accepted manuscript)",
+      "reason": "not the published record"
+    }
+  ]
+}

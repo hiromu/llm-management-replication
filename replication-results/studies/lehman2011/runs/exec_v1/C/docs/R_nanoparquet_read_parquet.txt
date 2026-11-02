@@ -1,0 +1,45 @@
+_R_e_a_d _a _P_a_r_q_u_e_t _f_i_l_e _i_n_t_o _a _d_a_t_a _f_r_a_m_e
+
+_D_e_s_c_r_i_p_t_i_o_n:
+
+     Converts the contents of the named Parquet file to a R data frame.
+
+_U_s_a_g_e:
+
+     read_parquet(file, col_select = NULL, options = parquet_options())
+     
+_A_r_g_u_m_e_n_t_s:
+
+    file: Path to a Parquet file. It may also be an R connection, in
+          which case it first reads all data from the connection,
+          writes it into a temporary file, then reads the temporary
+          file, and deletes it. The connection might be open, it which
+          case it must be a binary connection. If it is not open, then
+          'read_parquet()' will open it and also close it in the end.
+
+col_select: Columns to read. It can be a numeric vector of column
+          indices, or a character vector of column names. It is an
+          error to select the same column multiple times. The order of
+          the columns in the result is the same as the order in
+          'col_select'.
+
+ options: Nanoparquet options, see 'parquet_options()'.
+
+_V_a_l_u_e:
+
+     A 'data.frame' with the file's contents.
+
+_S_e_e _A_l_s_o:
+
+     See 'write_parquet()' to write Parquet files, nanoparquet-types
+     for the R <-> Parquet type mapping. See 'read_parquet_info()', for
+     general information, 'read_parquet_schema()' for information about
+     the columns, and 'read_parquet_metadata()' for the complete
+     metadata.
+
+_E_x_a_m_p_l_e_s:
+
+     file_name <- system.file("extdata/userdata1.parquet", package = "nanoparquet")
+     parquet_df <- nanoparquet::read_parquet(file_name)
+     print(str(parquet_df))
+     

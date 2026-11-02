@@ -1,0 +1,23 @@
+{
+ "claims": 84,
+ "outcomes": {
+  "indeterminate": 41,
+  "discrepant_candidate": 20,
+  "consistent": 17,
+  "not_audited": 5,
+  "fragile_inference": 1
+ },
+ "paper_focal_outcomes": {
+  "T3|(3)": "fragile_inference (benchmark band weaker by 1; HC1 band not weaker)",
+  "T3|(4)": "indeterminate (magnitude_grey_zone)",
+  "T3|(5)": "consistent (origin sign, magnitude, inference and N criteria met)",
+  "T3|(6)": "indeterminate (magnitude_grey_zone)",
+  "T4|(3)": "indeterminate (label_sensitive)",
+  "T4|(4)": "indeterminate (magnitude_grey_zone)",
+  "T4|(5)": "indeterminate (sample_reconstruction; inconsistent_targets)",
+  "T4|(6)": "indeterminate (magnitude_grey_zone)",
+  "T6|(1) Treat": "discrepant_candidate (sign;magnitude)"
+ },
+ "paper_level_pre_review": "indeterminate",
+ "note": "discrepant_candidate outcomes require adversarial review before becoming discrepant; paper level is recomputed after review"
+}

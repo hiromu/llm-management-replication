@@ -1,0 +1,24 @@
+{
+  "version": "v1",
+  "frozen_before_execution": true,
+  "design": "degraded: the article names Stata (xtlogit), but Stata is not installed in this environment. A and B therefore use R, the default stated in workflow.md when Stata is unavailable, and C uses Python. The exact conditional likelihood in R survival::clogit and statsmodels ConditionalLogit is the same likelihood as Stata xtlogit, fe.",
+  "implementers": {
+    "A": {"family": "Anthropic", "model": "claude-fable-5-1", "effort": "high", "speed": "standard, fast mode off", "language": "R", "cli": "claude -p --safe-mode", "game_deletion": true},
+    "B": {"family": "OpenAI", "model": "gpt-6-astra", "effort": "high", "service_tier": "default, fast mode off", "language": "R", "cli": "codex exec --ignore-user-config, sandbox workspace-write", "game_deletion": false},
+    "C": {"family": "OpenAI", "model": "gpt-6-astra", "effort": "high", "service_tier": "default, fast mode off", "language": "Python", "cli": "codex exec --ignore-user-config, sandbox workspace-write", "game_deletion": true}
+  },
+  "checkers": {
+    "for_A": {"model": "gpt-6-astra", "cli": "codex exec, sandbox read-only"},
+    "for_B": {"model": "claude-fable-5-1", "cli": "claude -p --safe-mode, tools Read/Glob/Grep only"},
+    "for_C": {"model": "claude-fable-5-1", "cli": "claude -p --safe-mode, tools Read/Glob/Grep only"},
+    "input": "manifest.md, grid.json and the code directory only",
+    "output": "a bare list of unmet manifest items"
+  },
+  "isolation": {
+    "A": "Claude CLI with tools Read/Write/Edit/Glob/Grep and Bash restricted to Rscript, the venv python, and ls/head/wc/cat/mkdir. No WebFetch/WebSearch. A network block for Rscript is not enforced; it rests on instructions and must be disclosed.",
+    "B_C": "codex workspace-write sandbox: network disabled and writes confined to the staging directory and temp.",
+    "all": "neutral staging directory role_<random>; no paper identity, targets, scoring rules or other implementations in the inputs"
+  },
+  "independence_limit": "Both available model families implement, so no independent family remains for the adversarial review. Any discrepancy is therefore withheld as not fully verified (workflow.md section 6).",
+  "budget": "one main run per implementer; up to 3 checker/repair rounds; every code version preserved"
+}

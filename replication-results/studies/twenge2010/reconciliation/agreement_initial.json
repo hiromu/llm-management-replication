@@ -1,0 +1,213 @@
+{
+ "computed_utc": "2026-10-28T02:52:02Z",
+ "stage": "initial outputs, before any clarification (none requested)",
+ "tier": {
+  "n_units": 54,
+  "agree": 53,
+  "pa": 0.9814814814814815,
+  "pe": 0.14784807956104254,
+  "gwet_ac1": 0.9782685245736708,
+  "categories": [
+   "focal",
+   "identification_inference_diagnostic",
+   "robustness",
+   "descriptive",
+   "nuisance_control"
+  ]
+ },
+ "spec_labels": {
+  "n_units": 18,
+  "agree": 13,
+  "pa": 0.7222222222222222,
+  "pe": 0.16203703703703703,
+  "gwet_ac1": 0.6685082872928175,
+  "categories": [
+   "origin",
+   "equivalent",
+   "uncertain",
+   "non_equivalent"
+  ]
+ },
+ "structure": {
+  "item_source_mapping": {
+   "units": 29,
+   "agree": 29,
+   "note": "identical source variable per item, years 1976/1991/2006, forms 3/4"
+  },
+  "factor_membership": {
+   "units": 29,
+   "agree": 29,
+   "note": "five final factors, security, influence, centrality, stability identical"
+  },
+  "freed_intercepts": {
+   "units": 19,
+   "agree": 19,
+   "note": "same six items flagged"
+  },
+  "altruistic_marker": {
+   "units": 1,
+   "agree": 0,
+   "note": "Fable: first-listed item V4229 as marker with intercept fixed 0 in every group, while its own E03 frees V4229's intercept per footnote a (internally infeasible); Astra: unflagged V4235. Both readers' rationales require a non-freed marker."
+  }
+ },
+ "structure_ac1_note": "Item mapping, factor membership and freed intercepts agree in every unit; with a single observed category AC1 reduces to 1.0 only if a category set is imposed; reported as raw agreement 77/77 instead.",
+ "transcription": {
+  "fable_cells": 519,
+  "astra_cells": 531,
+  "matched": 519,
+  "agreement_over_max": 0.9774011299435028,
+  "rule": "multiset of (table, page, digits of group/comparison [Table 1 only; Table 2 group labels are free text], numeric printed string)"
+ },
+ "structural_extras": {
+  "fable_only_levels": [
+   [
+    "Hedges' g correction",
+    "fable",
+    "equivalent",
+    "F AX03.L2",
+    "uncertain (single reader)"
+   ],
+   [
+    "Glass delta, earlier-year SD",
+    "fable",
+    "uncertain",
+    "F AX03.L3",
+    "uncertain"
+   ],
+   [
+    "Observed SD of unit-weighted item mean as standardizer",
+    "fable",
+    "uncertain",
+    "F AX04.L1",
+    "uncertain (Astra advises against without documented conversion)"
+   ],
+   [
+    "Effects-coding identification",
+    "fable",
+    "uncertain",
+    "F AX05.L2",
+    "uncertain"
+   ],
+   [
+    "ML with Satorra-Bentler / robust SEs",
+    "fable",
+    "uncertain",
+    "F AX06.L1",
+    "uncertain (inference only)"
+   ],
+   [
+    "Ordinal WLS/DWLS",
+    "fable",
+    "non_equivalent",
+    "F AX06.L2",
+    "non_equivalent, not run (wider space off)"
+   ],
+   [
+    "Design-weighted item t with nominal n",
+    "fable",
+    "uncertain",
+    "F AX07.L2",
+    "uncertain (runs within weighted co-origin)"
+   ],
+   [
+    "Alternative security/influence partitions",
+    "fable",
+    "uncertain",
+    "F AX08.L1",
+    "uncertain (diagnostic tier)"
+   ],
+   [
+    "Centrality = V3222-V3226, V3227 excluded",
+    "fable",
+    "uncertain",
+    "F AX09.L1",
+    "uncertain (diagnostic tier)"
+   ]
+  ],
+  "astra_only_levels": [
+   [
+    "Five-category Form 4 instrument",
+    "astra",
+    "non_equivalent",
+    "A AX02.L1",
+    "unavailable: requires an undocumented transformation"
+   ],
+   [
+    "Native-coded centrality indicators with signed loadings",
+    "astra",
+    "equivalent",
+    "A AX03.L1",
+    "check (mathematical re-expression)"
+   ],
+   [
+    "Original group-specific intercept release pattern",
+    "astra",
+    "uncertain",
+    "A AX05.L1",
+    "unavailable: no executable pattern documented"
+   ],
+   [
+    "Actual school/PSU design-based covariance",
+    "astra",
+    "uncertain",
+    "A AX07.L1",
+    "unavailable: identifiers absent from public files"
+   ],
+   [
+    "Raw-data ML on the same complete cases",
+    "astra",
+    "equivalent",
+    "A AX08.L1",
+    "check (mathematical re-expression)"
+   ],
+   [
+    "Nested equality-constrained LR test per latent pair",
+    "astra",
+    "uncertain",
+    "A AX11.L1",
+    "uncertain (inference only)"
+   ],
+   [
+    "Wald test of latent contrast at .05, no multiplicity adjustment",
+    "astra",
+    "origin",
+    "A AX11.L0",
+    "origin for reporting native inference (Fable gives CIs only; structural)"
+   ],
+   [
+    "Weighted variance convention for item summaries",
+    "astra",
+    "origin",
+    "A AX13.L0",
+    "part of weighted co-origin"
+   ],
+   [
+    "Survey linearization with actual design",
+    "astra",
+    "uncertain",
+    "A AX13.L1",
+    "unavailable"
+   ],
+   [
+    "Raw covariance alpha",
+    "astra",
+    "origin",
+    "A AX14.L0",
+    "origin (Fable E02 standard alpha)"
+   ],
+   [
+    "Standardized alpha",
+    "astra",
+    "uncertain",
+    "A AX14.L1",
+    "uncertain (no targets)"
+   ]
+  ],
+  "astra_only_claims": [
+   "C01, C05, C09, C13, C17 research-question umbrella claims (focal, direction 'other')",
+   "C59 comparability inference (diagnostic)",
+   "C67 time-lag design interpretation (diagnostic)"
+  ],
+  "claim_granularity": "Fable groups the three altruistic contrasts in one claim (C10); Astra has one claim per contrast."
+ }
+}

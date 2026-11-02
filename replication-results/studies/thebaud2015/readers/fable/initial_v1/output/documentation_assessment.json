@@ -1,0 +1,64 @@
+{
+  "choices": [
+    {"choice": "Restrict to 24 high-income, high-human-development countries", "assessment": "common", "justified": "yes", "locator": "MAIN p.10"},
+    {"choice": "Restrict to employed respondents (exclude not employed)", "assessment": "common", "justified": "yes", "locator": "MAIN p.10 fn 2"},
+    {"choice": "Age window 'over 18 and under 55'", "assessment": "rare", "justified": "no", "locator": "MAIN p.10 (upper bound of 55 not explained; GEM convention is 18-64)"},
+    {"choice": "Pool nascent entrepreneurs and all current business owners into one outcome", "assessment": "rare", "justified": "yes", "locator": "MAIN p.11"},
+    {"choice": "Exclude perception variables from main models because of the 2003-2008 skip pattern", "assessment": "rare", "justified": "yes", "locator": "MAIN p.11 fn 5"},
+    {"choice": "Three-level random-intercept, random-female-slope logit (individuals in surveys in countries)", "assessment": "common", "justified": "yes", "locator": "MAIN p.15"},
+    {"choice": "Cross-level interactions of gender with three separate policy measures rather than an index", "assessment": "common", "justified": "yes", "locator": "MAIN p.13 fn 10"},
+    {"choice": "Quadratic term for paid leave", "assessment": "common", "justified": "yes", "locator": "MAIN p.12"},
+    {"choice": "Author-built FTE paid-leave database with one-year lag of policy changes", "assessment": "rare", "justified": "partly", "locator": "MAIN p.12 fn 6-8 (sources listed; construction not fully documented)"},
+    {"choice": "Impute childcare spending for years without published values", "assessment": "common", "justified": "partly", "locator": "MAIN p.12 fn 9 (method unstated)"},
+    {"choice": "Standardize all survey-level variables", "assessment": "common", "justified": "yes", "locator": "MAIN p.14"},
+    {"choice": "Grand-mean center continuous individual-level variables", "assessment": "common", "justified": "yes", "locator": "MAIN p.11 fn 4; MAIN p.15 fn 15"},
+    {"choice": "Six country-level controls (GDP index, unemployment, EPL, social status, women managers, fertility)", "assessment": "common", "justified": "yes", "locator": "MAIN p.13-14"},
+    {"choice": "Survey-year dummies", "assessment": "default", "justified": "partly", "locator": "MAIN p.19 Table 1 (not discussed in text)"},
+    {"choice": "Log-odds rather than odds ratios", "assessment": "default", "justified": "yes", "locator": "MAIN p.15 fn 16"},
+    {"choice": "Linear mixed model for log business size", "assessment": "common", "justified": "yes", "locator": "MAIN p.15"},
+    {"choice": "Four separate growth-orientation outcomes rather than a composite", "assessment": "common", "justified": "yes", "locator": "MAIN p.14"},
+    {"choice": "Exclude industry controls because of missing data", "assessment": "common", "justified": "yes", "locator": "MAIN p.32"},
+    {"choice": "No survey weights", "assessment": "default", "justified": "no", "locator": "unstated"},
+    {"choice": "Model-based SEs from the mixed model, no additional clustering", "assessment": "default", "justified": "partly", "locator": "MAIN p.15 (implicit)"},
+    {"choice": "Per-country logits with average marginal effects as descriptive stage", "assessment": "common", "justified": "yes", "locator": "MAIN p.15-17"}
+  ],
+  "structural_counts": {
+    "n_models": 11,
+    "n_outcomes": 7,
+    "n_country_level_predictors": 9,
+    "n_interactions": 4,
+    "n_controls": 19,
+    "notes": "n_models counts Table 1 (3), Table 2 (5) and S1 Table A3 (3). n_outcomes: entrepreneurial activity, nascent entrepreneurship, Plan-B motivation, business size, high-growth aspirations, new product, new technology. n_country_level_predictors counts distinct variables (3 work-family measures plus 6 controls; the paid-leave square is a term of the same variable). n_controls counts distinct control variables across models: age, age squared, postsecondary, 7 year dummies, sole owner, business age, not employed, 3 perception variables, plus the 6 country-level controls are listed under country-level predictors."
+  },
+  "unusualness_rating": "low",
+  "unusualness_reasoning": "A standard cross-national multilevel design with random slopes and cross-level interactions; the only uncommon choices are the pooled nascent-plus-owner outcome, the 18-54 age window and the author-built leave series.",
+  "documentation_scores": {
+    "specificity": {"score": 3, "reason": "Variables are defined in words with sources named, but survey-item codes, the labour-force operationalization, the 'established owner' operationalization, the imputation method for childcare, weighting, software and integration method are not given."},
+    "precision": {"score": 3, "reason": "Coefficients and SEs are printed to two (sometimes three) decimals; tables carry several typographical problems (negative SE cell, blank cell, inconsistent AIC in the supplement) and no exact p values."},
+    "exhaustiveness": {"score": 3, "reason": "The supplement reports three alternative specifications and descriptives, but many robustness checks are described only in footnotes without tables, the unconditional models for fn 17 are not shown, and the realized survey list is documented only in S1."}
+  },
+  "wider_space": [
+    {"choice": "Use GEM ages 18-64 instead of 18-54", "assessment": "common", "note": "Standard GEM working-age window; outside the equivalent set because the article states 55 as the cutoff."},
+    {"choice": "Two-level model (individuals in country-years) with country fixed effects", "assessment": "common", "note": "Would absorb country-level main effects; cross-level interactions still identified."},
+    {"choice": "Cluster-robust SEs at the country level", "assessment": "common", "note": "Not used by the article."},
+    {"choice": "Include all country-years available in the registered file for 2001-2008", "assessment": "common", "note": "See spec_space A3.1."},
+    {"choice": "Alternative institutional controls from fn 11 (Doing Business start-up index, union density, service-sector size)", "assessment": "common", "note": "Reported by the author as similar; not tabulated."},
+    {"choice": "Women's labour force participation or other women's-status indicators in place of percent women managers (fn 12)", "assessment": "common", "note": "Author reports similar results and weaker fit."},
+    {"choice": "Enrolment in formal childcare instead of spending (fn 9)", "assessment": "common", "note": "Available for only 17 countries per the article."},
+    {"choice": "Weighted estimation with WEIGHT_L", "assessment": "common", "note": "See spec_space A15.1."},
+    {"choice": "Odds-ratio reporting", "assessment": "default", "note": "Same model; fn 16."}
+  ],
+  "unavailable_source_fallbacks": [
+    {"item": "FTE paid-leave weeks for mothers, annual 2001-2008", "fallback": "Anchor on CEPR 2008 FTE values (21 countries); for the eight countries with policy changes (Denmark, Germany, Ireland, New Zealand, Portugal, Sweden, Switzerland, United Kingdom) back-cast pre-change values from OECD PF2.5 weeks and ILO payment rates; Czech Republic, Iceland and Poland from ILO 2009/2011 pages and PF2.5 weeks times legislated payment rate; apply the one-year lag.", "basis": "MAIN p.12 fn 6-8; sources/leave_policy_documents.md; sources/oecd_sources.md PF2_5"},
+    {"item": "Childcare services spending (% GDP), 2012 Family Database vintage", "fallback": "OECD PF3.1 time series (childcare plus pre-primary, current vintage) for every year; secondary alternative SOCX TP521 ECEC. Record as a vintage and definition change.", "basis": "MAIN p.12 fn 9; sources/oecd_sources.md"},
+    {"item": "Women's part-time incidence, 2012 vintage", "fallback": "Current oecd_ftpt common-definition series; Japan employee series absent, use total employment for Japan.", "basis": "sources/oecd_sources.md oecd_ftpt"},
+    {"item": "HDR GDP index by survey year", "fallback": "Read the GDP index from HDR 2004-2009 tables and assign each report to survey year = report year minus two (HDR 2009 for 2007 and 2008); if any gap remains, compute the index from WDI GDP per capita PPP with the HDR formula.", "basis": "sources/undp_worldbank_gem_sources.md (GDP index formula and reference-year note)"},
+    {"item": "Percent women among legislators, senior officials and managers", "fallback": "HDR 2004-2009 gender empowerment tables with the same year mapping; carry the HDR 2009 value to 2008 because HDR 2010 drops the indicator.", "basis": "sources/undp_worldbank_gem_sources.md"},
+    {"item": "Harmonised unemployment rate for Switzerland (all years) and Iceland 2001-2002", "fallback": "oecd_lfs_indicators UNE_RATE, total 15-64, for the missing country-years.", "basis": "sources/oecd_sources.md"},
+    {"item": "Overall EPL index", "fallback": "Unweighted mean of version-1 EPL_R and EPL_T by country-year; Iceland: carry the 2008 value back to 2002-2007.", "basis": "sources/oecd_sources.md oecd_epl"},
+    {"item": "Social status item for 2001-2002 surveys", "fallback": "Country-level imputation from the earliest available survey year (spec_space A17.0); flag to coordinator.", "basis": "sources/icpsr20320_gem_aps.md; sources/undp_worldbank_gem_sources.md"},
+    {"item": "Work status and education for France 2003", "fallback": "No source; the country-year cannot be filtered on employment or education and must be either excluded or retained unfiltered. Flag to coordinator.", "basis": "sources/icpsr20320_gem_aps.md"},
+    {"item": "ISSP 2002 gender ideology; Charles and Bradley 2009 field segregation", "fallback": "Not needed for the origin; these are unreported alternative indicators (fn 12). No fallback.", "basis": "MAIN p.14 fn 12; sources/undp_worldbank_gem_sources.md"},
+    {"item": "Doing Business start-up index for 2001-2002", "fallback": "Not needed for the origin (fn 11 robustness only); DB2004 refers to 2003 conditions, no earlier coverage.", "basis": "sources/undp_worldbank_gem_sources.md"}
+  ]
+}

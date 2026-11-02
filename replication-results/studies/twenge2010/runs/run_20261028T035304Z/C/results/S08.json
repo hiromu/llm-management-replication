@@ -1,0 +1,318 @@
+{
+  "spec_id": "S08",
+  "status": "ok",
+  "reason": null,
+  "software": {
+    "python": "3.13.4",
+    "numpy": "2.4.2",
+    "scipy": "1.16.3",
+    "pandas": "2.2.3",
+    "statsmodels": "0.14.6",
+    "semopy": "2.3.11",
+    "numdifftools": "0.9.42"
+  },
+  "rows_read_per_file": {
+    "y1976_f3": 3314,
+    "y1991_f3": 2585,
+    "y2006_f3": 2456,
+    "y1976_f4": 3341,
+    "y1991_f4": 2556,
+    "y2006_f4": 2461
+  },
+  "defaults": {
+    "estimator": "custom normal-theory maximum likelihood; scipy.optimize L-BFGS-B plus Fisher scoring refinement",
+    "optimizer": {
+      "ftol": 1e-13,
+      "gtol": 1e-08,
+      "maxiter": 12000,
+      "maxls": 60,
+      "maxcor": 40,
+      "maximum_fisher_refinements": 200
+    },
+    "normalization": "n-1",
+    "standard_errors": "expected normal information with c_g multipliers",
+    "variance_constraints": "unbounded covariance and residual parameters; implied covariance must be positive definite; inadmissibility reported",
+    "V4_hash_format": "numeric ascending order, integral values in decimal without .0, UTF-8 newline separators, no terminal newline",
+    "nonfinite_output": "JSON null; model errors and inadmissibility reported separately",
+    "weighted_model_covariance": "normalize sample weights to n, then divide weighted cross products by n-1",
+    "FIML_saturated": "unrestricted MVN EM; maximum 20000 iterations; maximum absolute moment change <1e-10",
+    "FIML_SRMR": "unrestricted saturated normal ML covariance from EM; nominal group n weighting",
+    "FIML_d_obs": "unit-weighted scores require all items in a factor; SD skips undefined scores (pandas-style skipna default); those sample hashes are reported",
+    "fit_index_conventions": "manifest formulas; mean residuals excluded from SRMR; ordinary unscaled indices and differences",
+    "confidence_interval_multiplier": 1.96
+  },
+  "deviations": [],
+  "alpha": {
+    "C1": {
+      "1976": {
+        "alpha": 0.49982383589085827,
+        "items": [
+          "V3224",
+          "V3225",
+          "V3222",
+          "V3223",
+          "V3226"
+        ],
+        "sample": {
+          "year": 1976,
+          "n": 3237,
+          "V4_sha256": "5c25cc8ed7a1f19f81b2c658fe42367ef7978f474be729eb958e777880f534c0"
+        }
+      },
+      "1991": {
+        "alpha": 0.53649505873939,
+        "items": [
+          "V3224",
+          "V3225",
+          "V3222",
+          "V3223",
+          "V3226"
+        ],
+        "sample": {
+          "year": 1991,
+          "n": 2539,
+          "V4_sha256": "5b785ada8bfe0fe7246b8c5e5117ec631837351d62f20e80baebf5947771d4e1"
+        }
+      },
+      "2006": {
+        "alpha": 0.48735285617352936,
+        "items": [
+          "V3224",
+          "V3225",
+          "V3222",
+          "V3223",
+          "V3226"
+        ],
+        "sample": {
+          "year": 2006,
+          "n": 2403,
+          "V4_sha256": "0daf268f8f68a219f110468009530de9e5e93d3a2b01a2c40e724d2ddd9947ae"
+        }
+      }
+    }
+  },
+  "single_group": {
+    "Form3_one_factor": {
+      "1976": {
+        "model_id": "single",
+        "convergence": {
+          "status": "ok",
+          "converged": true,
+          "optimizer_success": true,
+          "message": "CONVERGENCE: RELATIVE REDUCTION OF F <= FACTR*EPSMCH",
+          "iterations": 22,
+          "fisher_refinements": 1,
+          "max_abs_gradient_per_c": 2.692476810105526e-09,
+          "seconds": 0.0018961669993586838
+        },
+        "free_parameters": 15,
+        "sample_moments": 20,
+        "samples": [
+          {
+            "year": 1976,
+            "n": 3237,
+            "V4_sha256": "5c25cc8ed7a1f19f81b2c658fe42367ef7978f474be729eb958e777880f534c0"
+          }
+        ],
+        "chi_square": 216.38030557175446,
+        "df": 5,
+        "p": 8.856584657131813e-45,
+        "RMSEA": 0.11429915035035478,
+        "CFI": 0.8024654177233221,
+        "TLI": 0.6049308354466444,
+        "SRMR": 0.056030108076293945,
+        "baseline": {
+          "chi_square": 1080.0926548430066,
+          "df": 10
+        },
+        "parameters": {
+          "1976": {
+            "loadings": {
+              "V3224": 1.0,
+              "V3225": 0.6833049771982563,
+              "V3222": 0.933077371089716,
+              "V3223": 0.8464476643773496,
+              "V3226": 0.6821314391114284
+            },
+            "intercepts": {
+              "V3224": 3.9400679641643497,
+              "V3225": 4.39697250540624,
+              "V3222": 2.6314488724127276,
+              "V3223": 3.7859128822984243,
+              "V3226": 3.4358974358974357
+            },
+            "factor_means": {
+              "C1": 0.0
+            },
+            "factor_covariance": [
+              [
+                0.39849769533868534
+              ]
+            ],
+            "factor_order": [
+              "C1"
+            ],
+            "residual_variances": {
+              "V3224": 0.9421615089406543,
+              "V3225": 0.5762662068482893,
+              "V3222": 1.8691604464334333,
+              "V3223": 1.6683304212742651,
+              "V3226": 1.8361935038739514
+            },
+            "SRMR": 0.056030108076293945
+          }
+        },
+        "robust": null,
+        "admissible": true,
+        "admissibility_warnings": []
+      },
+      "1991": {
+        "model_id": "single",
+        "convergence": {
+          "status": "ok",
+          "converged": true,
+          "optimizer_success": true,
+          "message": "CONVERGENCE: RELATIVE REDUCTION OF F <= FACTR*EPSMCH",
+          "iterations": 20,
+          "fisher_refinements": 1,
+          "max_abs_gradient_per_c": 2.5997042296665995e-09,
+          "seconds": 0.0017089169996324927
+        },
+        "free_parameters": 15,
+        "sample_moments": 20,
+        "samples": [
+          {
+            "year": 1991,
+            "n": 2539,
+            "V4_sha256": "5b785ada8bfe0fe7246b8c5e5117ec631837351d62f20e80baebf5947771d4e1"
+          }
+        ],
+        "chi_square": 284.6811725048101,
+        "df": 5,
+        "p": 1.9642389228257327e-59,
+        "RMSEA": 0.1484570426055868,
+        "CFI": 0.7504956416816206,
+        "TLI": 0.5009912833632412,
+        "SRMR": 0.06989220346539066,
+        "baseline": {
+          "chi_square": 1130.9470423275077,
+          "df": 10
+        },
+        "parameters": {
+          "1991": {
+            "loadings": {
+              "V3224": 1.0,
+              "V3225": 0.7485306459340725,
+              "V3222": 0.9360815247452979,
+              "V3223": 0.939089867516922,
+              "V3226": 0.6454069140114866
+            },
+            "intercepts": {
+              "V3224": 3.800708940527767,
+              "V3225": 4.363922804253643,
+              "V3222": 2.531705395825128,
+              "V3223": 3.586057502953919,
+              "V3226": 3.6167782591571487
+            },
+            "factor_means": {
+              "C1": 0.0
+            },
+            "factor_covariance": [
+              [
+                0.4090919946284346
+              ]
+            ],
+            "factor_order": [
+              "C1"
+            ],
+            "residual_variances": {
+              "V3224": 0.9310020652246542,
+              "V3225": 0.5295474861514552,
+              "V3222": 1.632155341223652,
+              "V3223": 1.648661110967458,
+              "V3226": 1.7863008298210648
+            },
+            "SRMR": 0.06989220346539066
+          }
+        },
+        "robust": null,
+        "admissible": true,
+        "admissibility_warnings": []
+      },
+      "2006": {
+        "model_id": "single",
+        "convergence": {
+          "status": "ok",
+          "converged": true,
+          "optimizer_success": true,
+          "message": "CONVERGENCE: RELATIVE REDUCTION OF F <= FACTR*EPSMCH",
+          "iterations": 48,
+          "fisher_refinements": 1,
+          "max_abs_gradient_per_c": 2.173407787076087e-09,
+          "seconds": 0.003995500010205433
+        },
+        "free_parameters": 15,
+        "sample_moments": 20,
+        "samples": [
+          {
+            "year": 2006,
+            "n": 2403,
+            "V4_sha256": "0daf268f8f68a219f110468009530de9e5e93d3a2b01a2c40e724d2ddd9947ae"
+          }
+        ],
+        "chi_square": 343.17169149707115,
+        "df": 5,
+        "p": 5.165246342714846e-72,
+        "RMSEA": 0.16780199551854538,
+        "CFI": 0.6417793001116523,
+        "TLI": 0.28355860022330476,
+        "SRMR": 0.09160368200268917,
+        "baseline": {
+          "chi_square": 954.031686617983,
+          "df": 10
+        },
+        "parameters": {
+          "2006": {
+            "loadings": {
+              "V3224": 1.0,
+              "V3225": 0.9154605561389725,
+              "V3222": 2.757014719662897,
+              "V3223": 3.4436875622166094,
+              "V3226": 0.6986918983808675
+            },
+            "intercepts": {
+              "V3224": 3.6375364128173118,
+              "V3225": 4.202663337494799,
+              "V3222": 2.5576362879733665,
+              "V3223": 3.2571785268414484,
+              "V3226": 3.6013316687473993
+            },
+            "factor_means": {
+              "C1": 0.0
+            },
+            "factor_covariance": [
+              [
+                0.07604227223887983
+              ]
+            ],
+            "factor_order": [
+              "C1"
+            ],
+            "residual_variances": {
+              "V3224": 1.136819599353042,
+              "V3225": 0.8206606427863612,
+              "V3222": 1.1983322470472093,
+              "V3223": 1.062855238102496,
+              "V3226": 1.652335426178384
+            },
+            "SRMR": 0.09160368200268917
+          }
+        },
+        "robust": null,
+        "admissible": true,
+        "admissibility_warnings": []
+      }
+    }
+  },
+  "seconds": 0.07524524998734705
+}

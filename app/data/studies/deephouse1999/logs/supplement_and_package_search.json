@@ -1,0 +1,25 @@
+{
+  "study_id": "deephouse1999",
+  "searched_utc": "2026-10-27T11:35:00Z",
+  "local_catalog": {"file": "papers/supplements/catalog.json", "paper_id": "SMJ_1999_Deephouse", "matches": 0},
+  "publisher_page": {
+    "url": "https://sms.onlinelibrary.wiley.com/doi/10.1002/(SICI)1097-0266(199902)20:2%3C147::AID-SMJ11%3E3.0.CO;2-Q",
+    "method": "built-in browser page text (direct curl/WebFetch returned HTTP 403)",
+    "sections_listed": ["Abstract", "References", "Citing Literature", "Download PDF"],
+    "supporting_information_section": "absent",
+    "erratum_or_correction_link": "absent"
+  },
+  "crossref": {"doi": "10.1002/(sici)1097-0266(199902)20:2<147::aid-smj11>3.0.co;2-q", "update-to": null, "updated-by": null, "works_filtered_by_updates": 0},
+  "article_internal": {"appendix": "none found in text extraction", "note": "Article states estimates with the 11 asset-strategy controls are 'available from the author' (p.156-157); this is an on-request statement, not a public package."},
+  "web_searches": [
+    "Deephouse 1999 \"To be different, or to be the same\" Strategic Management Journal supporting information OR erratum OR replication data",
+    "Deephouse strategic balance Twin Cities banks dataset replication code github OR dataverse OR openICPSR"
+  ],
+  "author_package_found": false,
+  "third_party_items_found_not_consulted": [
+    {"item": "Sage Figshare collection for Huang, Gong & Yu (2021), 'Strategic similarity and firm performance: Multiple replications of Deephouse (1999)', Strategic Organization", "url": "https://sage.figshare.com/collections/Strategic_similarity_and_firm_performance_Multiple_replications_of_Deephouse_1999_/4793652", "classification": "third-party replication using different (Chinese manufacturing) data; not an author-provided package for the focal article; not opened or used, per the rule against consulting prior replication work"}
+  ],
+  "supplement_status": "not found after documented search",
+  "package_eligibility": "meets selection criterion: no publicly available author-provided replication data or code package found",
+  "publication_packet_supplements": []
+}

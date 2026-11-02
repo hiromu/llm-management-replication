@@ -1,0 +1,48 @@
+M4_common_U09_U14 N=27289
+                            label model     n            term    estimate
+female          M4_common_U09_U14    M4 27289          female  0.06907297
+female:leave    M4_common_U09_U14    M4 27289    female:leave  0.05356054
+female:leave_sq M4_common_U09_U14    M4 27289 female:leave_sq -0.05440917
+female:parttime M4_common_U09_U14    M4 27289 female:parttime -0.02106234
+                        se          p    loglik singular cpu_seconds warnings
+female          0.02882946 0.01657887 -16693.42     TRUE     101.777         
+female:leave    0.08045921 0.50561211 -16693.42     TRUE     101.777         
+female:leave_sq 0.08004662 0.49668272 -16693.42     TRUE     101.777         
+female:parttime 0.03178895 0.50760723 -16693.42     TRUE     101.777         
+completed M4_common_U09_U14 CPU=101.777
+M4_common_U09_U14_nochildcare N=27289
+                                        label model     n            term
+female          M4_common_U09_U14_nochildcare    M4 27289          female
+female:leave    M4_common_U09_U14_nochildcare    M4 27289    female:leave
+female:leave_sq M4_common_U09_U14_nochildcare    M4 27289 female:leave_sq
+female:parttime M4_common_U09_U14_nochildcare    M4 27289 female:parttime
+                   estimate         se           p    loglik singular
+female           0.07573645 0.02858180 0.008053622 -16698.52    FALSE
+female:leave     0.04298936 0.08045144 0.593098247 -16698.52    FALSE
+female:leave_sq -0.05291751 0.08035924 0.510209331 -16698.52    FALSE
+female:parttime -0.02989242 0.03148654 0.342431723 -16698.52    FALSE
+                cpu_seconds warnings
+female               42.029         
+female:leave         42.029         
+female:leave_sq      42.029         
+female:parttime      42.029         
+completed M4_common_U09_U14_nochildcare CPU=42.029
+M4_common_U09_U14_altleave N=27333
+                                     label model     n            term
+female          M4_common_U09_U14_altleave    M4 27333          female
+female:leave    M4_common_U09_U14_altleave    M4 27333    female:leave
+female:leave_sq M4_common_U09_U14_altleave    M4 27333 female:leave_sq
+female:parttime M4_common_U09_U14_altleave    M4 27333 female:parttime
+                   estimate         se          p    loglik singular
+female           0.06722956 0.02909397 0.02084541 -16718.77    FALSE
+female:leave     0.04685156 0.08092812 0.56263767 -16718.77    FALSE
+female:leave_sq -0.05778720 0.07970349 0.46843533 -16718.77    FALSE
+female:parttime -0.02458887 0.03227204 0.44610486 -16718.77    FALSE
+                cpu_seconds warnings
+female               56.048         
+female:leave         56.048         
+female:leave_sq      56.048         
+female:parttime      56.048         
+completed M4_common_U09_U14_altleave CPU=56.048
+Error: unexpected string constant in "sq','"
+Execution halted

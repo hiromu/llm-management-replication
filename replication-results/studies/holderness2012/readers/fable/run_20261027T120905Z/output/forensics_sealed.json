@@ -1,0 +1,134 @@
+{
+  "paper_id": "P-R7M2",
+  "scope_note": "All calculations below use only numbers printed in D1. They are sealed publication diagnostics, not analyses of registry data, and do not constitute replication verdicts.",
+  "observations": [
+    {
+      "id": "F01",
+      "type": "transformation",
+      "description": "Table 3 Steepness values recomputed from the printed group compositions with the printed ordered-Gini formula (rank values privates=1 ... generals=9, warrant officers=4): Group C 0.3454, D 0.3588, E 0.2984, F 0.1405, A and B exactly 0. All match the printed 0.35, 0.36, 0.30, 0.14, 0.00, 0.00. This also confirms the rank ordering used (warrant officers between sergeants and lieutenants).",
+      "rounding_interval_check": "Each recomputed value lies inside the half-unit rounding interval of the printed two-decimal value.",
+      "severity": "none",
+      "locators": [{"doc_id": "D1", "pdf_page": 7, "journal_page": 1878, "section": "4.1.2", "table": "Table 3", "column": "A-F", "row": "Steepness of the Hierarchy", "quote": null}, {"doc_id": "D1", "pdf_page": 6, "journal_page": 1877, "section": "4.1.1", "table": null, "column": null, "row": null, "quote": null}]
+    },
+    {
+      "id": "F02",
+      "type": "transformation",
+      "description": "Table 3 Sameness values recomputed using Group C's per-1,000 composition as the population fractions and the printed constant 1.319: Group A 0.0189 (printed 0.02), B 0.7088 (0.71), C 1.000 (1.00), F 0.6221 (0.62) match; Group D recomputes to 0.9567 (printed 0.95) and Group E to 0.8447 (printed 0.85). The sum (1 - p_generals)^2 + sum of other p_r^2 using Group C fractions is 1.3201, versus the printed constant 1.319.",
+      "rounding_interval_check": "D: 0.9567 is outside [0.945, 0.955) by 0.002; E: 0.8447 is outside [0.845, 0.855) by 0.0003. The constant 1.3201 vs 1.319 differs by 0.0011. All three gaps are consistent with the true population fractions having more precision than the per-1,000 rounding of Group C; not an internal contradiction.",
+      "severity": "minor",
+      "locators": [{"doc_id": "D1", "pdf_page": 7, "journal_page": 1878, "section": "4.1.2", "table": "Table 3", "column": "A-F", "row": "Sameness of the Hierarchy", "quote": null}, {"doc_id": "D1", "pdf_page": 7, "journal_page": 1878, "section": "4.1.2", "table": null, "column": null, "row": null, "quote": "We use 1.319 to scale the sum of the squared deviations"}]
+    },
+    {
+      "id": "F03",
+      "type": "n_df",
+      "description": "Table 4 reports one observation count (100,464) for all eight columns although four columns include a dummy per camp (perfect-prediction camps would normally be dropped by the probit routine) and four do not. Table 6, described as the same specifications plus an officer interaction, reports 102,334 observations, 1,870 more than Table 4. Both are below the Table 1 total of 122,765, a reduction of 22,301 (Table 4) that is not explained anywhere in the text.",
+      "rounding_interval_check": "Not applicable (integer counts).",
+      "severity": "notable",
+      "locators": [{"doc_id": "D1", "pdf_page": 9, "journal_page": 1880, "section": "4.4", "table": "Table 4", "column": null, "row": "Notes", "quote": "There are 100,464 observations."}, {"doc_id": "D1", "pdf_page": 13, "journal_page": 1884, "section": "6.1", "table": "Table 6", "column": null, "row": "Notes", "quote": "There are 102,334 observations."}, {"doc_id": "D1", "pdf_page": 6, "journal_page": 1877, "section": "3", "table": "Table 1", "column": "All POWs", "row": "Total POWs", "quote": null}]
+    },
+    {
+      "id": "F04",
+      "type": "table_identity",
+      "description": "Table 1 component sums: camps 188 + 92 = 280; captured cohorts 1,276 + 662 = 1,938; total POWs 93,666 + 29,099 = 122,765. All identities hold.",
+      "rounding_interval_check": "Exact.",
+      "severity": "none",
+      "locators": [{"doc_id": "D1", "pdf_page": 6, "journal_page": 1877, "section": "3", "table": "Table 1", "column": "All POWs; Germany; Japan", "row": "Number of camps; Number of captured cohorts; Total POWs", "quote": null}]
+    },
+    {
+      "id": "F05",
+      "type": "table_identity",
+      "description": "Table 1 mean POWs per camp times number of camps: 377 x 280 = 105,560 (all), 406 x 188 = 76,328 (Germany), 318 x 92 = 29,256 (Japan). The all-POW and German products fall well below the totals (122,765; 93,666), implying roughly 17,000 POWs without a camp code (consistent with the note that observations vary by item and with the lower regression N). The Japanese product exceeds the Japanese total (29,099) by 157.",
+      "rounding_interval_check": "With the mean rounded from [317.5, 318.5), the Japanese product lies in [29,210, 29,302), still above 29,099 by at least 111 (0.4%). Outside the rounding interval; minor, possibly because camp counts and totals are computed on different item-specific samples.",
+      "severity": "minor",
+      "locators": [{"doc_id": "D1", "pdf_page": 6, "journal_page": 1877, "section": "3", "table": "Table 1", "column": "Japan", "row": "POWs per camp; Number of camps; Total POWs", "quote": null}, {"doc_id": "D1", "pdf_page": 6, "journal_page": 1877, "section": "3", "table": "Table 1", "column": null, "row": "Notes", "quote": "Number of observations varies with the data item."}]
+    },
+    {
+      "id": "F06",
+      "type": "table_identity",
+      "description": "Table 1 mean POWs per captured cohort times number of cohorts: 53 x 1,938 = 102,714 (all; interval [101,745, 103,683)), 57 x 1,276 = 72,732 (Germany), 44 x 662 = 29,128 (Japan; interval [28,797, 29,459) contains 29,099). The all-POW product is close to the Table 6 observation count (102,334) and about 2% above the Table 4 count (100,464), consistent with the regression sample being the set of POWs with a usable camp and month.",
+      "rounding_interval_check": "Japan consistent within rounding; all-POW product within rounding of 102,334 (Table 6) but not of 100,464 (Table 4).",
+      "severity": "minor",
+      "locators": [{"doc_id": "D1", "pdf_page": 6, "journal_page": 1877, "section": "3", "table": "Table 1", "column": "All POWs; Germany; Japan", "row": "POWs per captured cohort; Number of captured cohorts", "quote": null}]
+    },
+    {
+      "id": "F07",
+      "type": "table_identity",
+      "description": "Death-rate ratio: Table 1 Japan 36% / Germany 3% = 12, matching the text's '12 times'. Pooled death rate implied by 3% of 93,666 plus 36% of 29,099 is about 10.8% (printed 10); using the text's 2,402 German deaths (2.56%) the pooled rate is 10.5%, which rounds to 10 or 11 depending on the unrounded Japanese rate.",
+      "rounding_interval_check": "Pooled rate consistent with the printed 10 within the rounding of the component rates.",
+      "severity": "none",
+      "locators": [{"doc_id": "D1", "pdf_page": 6, "journal_page": 1877, "section": "3", "table": "Table 1", "column": "All POWs; Germany; Japan", "row": "Death rate (%)", "quote": null}, {"doc_id": "D1", "pdf_page": 4, "journal_page": 1875, "section": "2.1", "table": null, "column": null, "row": null, "quote": "The number of deaths, 2,402"}]
+    },
+    {
+      "id": "F08",
+      "type": "text_table_mismatch",
+      "description": "Section 4.5 refers to 'Panel C' of Table 5 for the ROC results, but Table 5 contains only Panel A and Panel B; the ROC p-values are in Panel B.",
+      "rounding_interval_check": "Not applicable.",
+      "severity": "minor",
+      "locators": [{"doc_id": "D1", "pdf_page": 9, "journal_page": 1880, "section": "4.5", "table": null, "column": null, "row": null, "quote": "Panel C shows that when the measures are calculated at the camp level both have incremental information"}, {"doc_id": "D1", "pdf_page": 9, "journal_page": 1880, "section": "4.5", "table": "Table 5", "column": null, "row": "Panel B", "quote": null}]
+    },
+    {
+      "id": "F09",
+      "type": "text_table_mismatch",
+      "description": "Text statements about Table 5 check out against the printed values: in Panel A only one index is significant at 5% in three columns (captured simple: Steepness 0.01; captured complex: Sameness 0.01; camp complex: Sameness 0.05) and neither in one (camp simple: 0.35, 0.95), i.e. Steepness once and Sameness twice; Panel B camp columns all (0.00); captured simple Sameness (0.00) vs Steepness (0.13); captured complex Steepness (0.04) vs Sameness (0.50).",
+      "rounding_interval_check": "Consistent (the 0.05 case counts as significant only at the boundary).",
+      "severity": "none",
+      "locators": [{"doc_id": "D1", "pdf_page": 9, "journal_page": 1880, "section": "4.5", "table": "Table 5", "column": null, "row": null, "quote": "Steepness is significant once and Sameness twice."}]
+    },
+    {
+      "id": "F10",
+      "type": "text_table_mismatch",
+      "description": "Text claims about Table 4 check out: all eight hierarchy effects are negative; p-values 0.00, 0.00, 0.06, 0.10, 0.01, 0.00, 0.01, 0.00 are 'at least marginally significant' at 10%; captured p-values (0.00, 0.00, 0.01, 0.00) are as small or smaller than camp p-values (0.06, 0.10, 0.01, 0.00) while captured effects (-0.06, -0.11, -0.03, -0.07) are closer to zero than camp effects (-0.33, -0.18, -0.23, -0.18).",
+      "rounding_interval_check": "Not applicable.",
+      "severity": "none",
+      "locators": [{"doc_id": "D1", "pdf_page": 8, "journal_page": 1879, "section": "4.4", "table": null, "column": null, "row": null, "quote": "The hierarchy coefficients in all Table 4 specifications are negative and at least marginally significant."}, {"doc_id": "D1", "pdf_page": 9, "journal_page": 1880, "section": "4.4", "table": "Table 4", "column": null, "row": "Hierarchy", "quote": null}]
+    },
+    {
+      "id": "F11",
+      "type": "text_table_mismatch",
+      "description": "Text on Table 6 ('interactive term in all instances is negative and in several specifications it is significant') checks out: Officer x Hierarchy effects -0.02, -0.04, -0.13, -0.18, -0.05, -0.04, -0.06, -0.08 with p 0.59, 0.20, 0.14, 0.00, 0.07, 0.05, 0.32, 0.02 (three at 5%, four at 10%). Section 6.2 says the size interaction (unreported) is '(highly) significant only with the regressions involving the Sameness of a prisoner's captured cohort'; cannot be checked.",
+      "rounding_interval_check": "Not applicable.",
+      "severity": "none",
+      "locators": [{"doc_id": "D1", "pdf_page": 12, "journal_page": 1883, "section": "6.1", "table": null, "column": null, "row": null, "quote": "this interactive term in all instances is negative and in several specifications it is significant"}, {"doc_id": "D1", "pdf_page": 13, "journal_page": 1884, "section": "6.1", "table": "Table 6", "column": null, "row": "Officer x Hierarchy", "quote": null}]
+    },
+    {
+      "id": "F12",
+      "type": "text_table_mismatch",
+      "description": "Introduction states prisoners in the most hierarchical groups were '20% less likely to survive' than those in the least hierarchical groups, while section 4.4 derives a six-percentage-point (81% vs 87%) difference between top and bottom Steepness quartiles from the second Table 4 regression. The 20% figure is not derivable from any printed table and its basis (relative vs absolute, which index, which extreme groups) is not stated.",
+      "rounding_interval_check": "Not applicable.",
+      "severity": "notable",
+      "locators": [{"doc_id": "D1", "pdf_page": 3, "journal_page": 1874, "section": "1", "table": null, "column": null, "row": null, "quote": "Prisoners in the most hierarchical groups were 20% less likely to survive than those in the least hierarchical groups."}, {"doc_id": "D1", "pdf_page": 8, "journal_page": 1879, "section": "4.4", "table": null, "column": null, "row": null, "quote": "(81% versus 87%)"}]
+    },
+    {
+      "id": "F13",
+      "type": "n_df",
+      "description": "Exclusion arithmetic: 'approximately 129,000' records minus 779 civilians, 2,132 neutral, 3,204 unidentified and 269 unknown-status equals about 122,616 versus the Table 1 total 122,765 (difference 149, 0.1%), within the imprecision of 'approximately 129,000'. Overlaps among exclusion categories are not stated.",
+      "rounding_interval_check": "Consistent given the approximate starting count.",
+      "severity": "none",
+      "locators": [{"doc_id": "D1", "pdf_page": 5, "journal_page": 1876, "section": "3", "table": null, "column": null, "row": null, "quote": "approximately 129,000 American POWs"}, {"doc_id": "D1", "pdf_page": 6, "journal_page": 1877, "section": "3", "table": null, "column": null, "row": null, "quote": "civilians (779), those detained by neutral powers (2,132) or by unidentified powers (3,204)"}]
+    },
+    {
+      "id": "F14",
+      "type": "coef_se_p_consistency",
+      "description": "No standard errors or test statistics are printed anywhere (p-values only), so coefficient/SE/t consistency cannot be checked. Several 'Men in hierarchy squared' effects print as -0.00 or 0.00 with p-values from 0.11 to 0.97; the sign is informative but the magnitude is below printed precision (consistent with the regressor being (ln n /10)^2, a small number).",
+      "rounding_interval_check": "Not applicable.",
+      "severity": "none",
+      "locators": [{"doc_id": "D1", "pdf_page": 9, "journal_page": 1880, "section": "4.4", "table": "Table 4", "column": null, "row": "Men in hierarchy squared", "quote": null}, {"doc_id": "D1", "pdf_page": 13, "journal_page": 1884, "section": "6.1", "table": "Table 6", "column": null, "row": "Men in hierarchy squared", "quote": null}]
+    },
+    {
+      "id": "F15",
+      "type": "table_identity",
+      "description": "Control-variable effects are nearly identical across the Steepness and Sameness complex columns and between Table 4 and Table 6 (e.g. Age -0.08/-0.10, Education -0.02, Dependents 0.02, Height -0.03/-0.02, Japan -0.22/-0.24 vs -0.23/-0.23), as expected if the same sample and controls are used; Table 6 pseudo R2 values are 0.01-0.02 higher than Table 4's in every column, consistent with added regressors but also with the different reported N.",
+      "rounding_interval_check": "Not applicable.",
+      "severity": "none",
+      "locators": [{"doc_id": "D1", "pdf_page": 9, "journal_page": 1880, "section": "4.4", "table": "Table 4", "column": null, "row": "Pseudo R2", "quote": null}, {"doc_id": "D1", "pdf_page": 13, "journal_page": 1884, "section": "6.1", "table": "Table 6", "column": null, "row": "Pseudo R2", "quote": null}]
+    },
+    {
+      "id": "F16",
+      "type": "other",
+      "description": "Text says 46% of POWs are privates (section 5.3.2); Table 3 Group C, described as matching the POW rank distribution, has 469 privates per 1,000 (46.9%). Consistent.",
+      "rounding_interval_check": "46.9% rounds to 47, printed 'Forty-six'; a truncation rather than rounding, or the two statistics use slightly different samples. Minor.",
+      "severity": "minor",
+      "locators": [{"doc_id": "D1", "pdf_page": 11, "journal_page": 1882, "section": "5.3.2", "table": null, "column": null, "row": null, "quote": "(Forty-six percent of the POWs are privates.)"}, {"doc_id": "D1", "pdf_page": 7, "journal_page": 1878, "section": "4.1.2", "table": "Table 3", "column": "C", "row": "Privates", "quote": null}]
+    }
+  ]
+}

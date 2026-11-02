@@ -1,0 +1,23 @@
+{
+  "origin_fits": {
+    "A": 11,
+    "B": 11,
+    "C": "terminated by user before saving estimates; M1-M8 sample counts match A and B"
+  },
+  "deviation_fits_A": 113,
+  "uncertain_substantive": 84,
+  "uncertain_algebraic_reexpression": 18,
+  "uncertain_realized_duplicate": 5,
+  "non_equivalent_fits": 6,
+  "non_equivalent_reexpression": 1,
+  "equivalent_fits": 0,
+  "deviation_nonconverged": 6,
+  "deviation_failed": 0,
+  "influence_refits": 137,
+  "influence_failed": 0,
+  "influence_nonconverged": 6,
+  "influence_singular": 34,
+  "unavailable": [
+    "U21 (survey weights): weighted three-level mixed models not supported by the executed routines"
+  ]
+}

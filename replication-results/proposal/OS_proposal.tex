@@ -1,0 +1,170 @@
+
+
+\documentclass[12pt]{article}
+\usepackage[margin=1in]{geometry}
+\usepackage[T1]{fontenc}
+\usepackage{newtxtext,newtxmath}
+\usepackage{microtype}
+\usepackage{setspace}
+\onehalfspacing
+\usepackage{graphicx,booktabs,array,enumitem,rotating,titlesec,caption}
+\usepackage[authoryear,round]{natbib}
+\bibpunct{(}{)}{,}{a}{}{,}
+\def\BIBand{and}
+\def\bibfont{\small}
+\setlength{\bibsep}{4pt}
+\setlength{\bibhang}{24pt}
+\usepackage[hidelinks]{hyperref}
+\usepackage{tikz}
+\usetikzlibrary{positioning,arrows.meta,calc}
+
+\titleformat{\section}{\large\bfseries}{\thesection.}{0.6em}{}
+\titlespacing*{\section}{0pt}{12pt}{4pt}
+\titleformat{\subsection}{\normalsize\bfseries}{\thesubsection.}{0.6em}{}
+\titlespacing*{\subsection}{0pt}{8pt}{2pt}
+\setlength{\parskip}{0pt}
+\setlist[enumerate]{leftmargin=*,itemsep=2pt,topsep=2pt}
+\captionsetup{labelfont=bf,labelsep=quad,font=small,justification=raggedright,singlelinecheck=false}
+\captionsetup[table]{position=above,skip=4pt}
+\newcolumntype{L}[1]{>{\raggedright\arraybackslash}p{#1}}
+\newcommand{\tabnote}[1]{\par\vspace{3pt}\footnotesize\noindent\textit{Note.} #1\par}
+
+\title{\vspace{-2em}Codifying the Research Routine: Reproducing Organizational Research with Partitioned AI Agents\vspace{-1.5em}}
+\author{}
+\date{}
+
+\begin{document}
+\thispagestyle{empty}
+{\singlespacing\centering\Large\bfseries
+Codifying the Research Routine: Reproducing Organizational Research with Partitioned AI Agents\par}
+\vspace{10pt}
+\section{Introduction}\label{sec:intro}
+
+The growing use of AI in scientific writing raises concerns about whether peer review can keep pace. For example, submissions to Organization Science rose by 42\%, with much of the increase concentrated among manuscripts classified as heavily AI-written \citep{gartenberg2026}. Checking empirical findings requires obtaining data, interpreting variable definitions, writing code, and investigating discrepancies, placing a substantial burden on reviewers. AI-assisted checking could help, provided it is accurate, open to inspection, and fair to the authors.
+
+Such checking depends on whether articles describe empirical procedures in enough detail for others to reproduce the findings, connecting our study to research on tacit and explicit knowledge \citep{polanyi1966,nonaka1994}. When authors share their code and data, rerunning the analysis often reproduces the reported results \citep{fisar2024}, and AI agents can now execute such replication packages at scale \citep{schwartz2026}. Without the original code, however, success rates fall. Researchers writing new code from the methods sections reproduced only 45\% of 29 strategy findings despite access to original data and consultation with the original authors \citep{delios2022}.  Among 39 articles published from 2009 to 2018 across four management journals, 34 shared neither data nor code (\citealp{miske2026}, Table S4). AI reconstruction could help assess whether articles provide sufficient methodological detail to meet journal requirements for replication. Organization Science's transparency policy provides one example of such a requirement \citep{orgsci2025transparency}.
+
+We built an AI tool that rebuilds an article's analysis from its written methods and its public or deposited data, with reading and coding assigned to separate agents. Of six public-data pilots, one was consistent with the published findings, one was partially reproduced, and four were indeterminate, three of them partly because the article left a sample or data-cleaning rule unstated. In Stage 2, we will run the tool on about 100 randomly sampled eligible studies and at least 10 studies with deposited code, classify each barrier by research stage, test whether supplying unwritten conventions resolves it, and compare AI-assisted with independent human reconstructions on a subset.
+
+\section{Methods}\label{sec:methods}
+The workflow has three steps (Figure~\ref{fig:tool}); Supplement S2 gives the full protocol.\footnote{The implementation is included in the accompanying repository.}
+
+\textit{Step 1. Read and specify.} Two reader agents from different AI model families independently extract the article's methods, central claims, and reported results. In our exercise, the reader agents use Codex and Claude. A coordinator agent logs where the two readings differ, writes the analysis instructions and comparison rules, and strips out every published estimate.
+
+\textit{Step 2. Write and check code.} Three implementer agents write independent scripts from the instructions and raw data so that disagreements can reveal implementation errors \citep{sah1986,csaszar2012}. To check agreement across both AI model families and programming languages while limiting cost, two implementations use different model families in the same language, and two use the same model family in different languages. In most of our exercise, these combinations are Codex/Python, Codex/R, and Claude/R. A checker agent verifies compliance with the instructions before the scripts run offline. No agent in this step sees the published numbers, following the principle of information hiding \citep{baldwin2000}.
+
+\textit{Step 3. Compare and review.} A fixed script checks whether the implementations agree and compares their estimates against the published numbers under the Step 1 rules, classifying each central claim as consistent, partially reproduced, not reproduced, or indeterminate. A human auditor then reviews all saved instructions, scripts, logs, and unstated choices on an intuitive interface.\footnote{The demo video is available in the supplemental files.}
+
+\begin{figure}[t]
+\centering
+\begin{tikzpicture}[
+  font=\footnotesize\linespread{1}\selectfont,
+  every node/.append style={font=\footnotesize\linespread{1}\selectfont},
+  person/.style={draw=black, very thick, fill=white, rounded corners=1pt, align=left, inner sep=5pt},
+  agent/.style={draw=blue!50!black, fill=blue!7, rounded corners=4pt, align=left, inner sep=5pt, text width=3.85cm, minimum height=3.1cm},
+  script/.style={draw=black!60, fill=black!8, rounded corners=4pt, align=left, inner sep=5pt, text width=3.45cm, minimum height=3.1cm},
+  arr/.style={-{Stealth[length=2.2mm]}, thick},
+  sealed/.style={-{Stealth[length=2.2mm]}, thick, dashed, red!60!black},
+  lab/.style={font=\scriptsize, align=center, fill=white, inner sep=1pt}
+]
+\node[agent] (read) {\textbf{Step 1. Read and specify}\\[2pt]
+Two reader agents extract methods, claims, and results. A coordinator logs disagreements and writes analysis instructions without published estimates.};
+\node[agent, right=1.7cm of read] (code) {\textbf{Step 2. Write and check code}\\[2pt]
+Three implementers spanning two model families and two programming languages write separate scripts from the instructions and raw data. A checker verifies each script before offline execution.};
+\node[script, right=1.7cm of code] (comp) {\textbf{Step 3. Compare}\\[2pt]
+A fixed script checks agreement across implementations and compares estimates with published values under Step 1 rules.};
+\node[person, text width=14.6cm, above=1.0cm of code] (res) {\textbf{Researcher (person).} Places the article in a project folder and supplies data requiring registration or manual download.};
+\node[person, text width=14.6cm, below=1.35cm of code] (rev) {\textbf{Auditor (person).} Inspects saved instructions, code, outputs, and open choices to confirm the outcome (consistent, partially reproduced, not reproduced, or indeterminate).};
+\draw[arr] (res.south -| read.north) -- node[lab]{article} (read.north);
+\draw[arr] (res.south -| code.north) -- node[lab]{raw data} (code.north);
+\draw[arr] (read.east) -- node[lab, above=1pt]{instructions,\\no estimates} (code.west);
+\draw[arr] (code.east) -- node[lab, above=1pt]{estimates} (comp.west);
+\coordinate (sealedlevel) at ($(code.south)+(0,-0.45)$);
+\draw[sealed] (read.south)
+  -- (read.south |- sealedlevel)
+  -- node[lab, below=2pt]
+     {published estimates for comparison}
+     (comp.south |- sealedlevel)
+  -- (comp.south);
+\draw[arr] ([xshift=1.2cm]comp.south) -- ([xshift=1.2cm]comp.south |- rev.north) node[lab, midway, right=2pt]{comparison and\\open choices};
+\end{tikzpicture}
+\caption{Overview of the agentic workflow and human supervision}
+\label{fig:tool}
+\tabnote{People (white) start and audit each run; AI agents (blue) read and code; a fixed script (gray) compares outputs. Published estimates (dashed line) never reach the coding agents.}
+\end{figure}
+
+\section{Proof of Concept and Plan for the Full Paper}\label{sec:poc}
+
+\subsection{Systematic Review}
+
+We conducted a two-part systematic review of the 11,051 research articles published between 1990 and journal-specific cutoff dates in Academy of Management Journal, Administrative Science Quarterly, Journal of Management, Management Science, Organization Science, and Strategic Management Journal. First, AI agents read each title and abstract and, using fixed codebooks, inferred the article's likely data sources from the named sources or research setting. A script flagged an article only if the agent rated every core source as likely obtainable and a text search found no posted-data statement; this yielded 776 articles. Second, agents read the flagged articles in full and checked these predictions under the rules in Supplement S1, retaining studies with obtainable core data and no reported replication package. After removing simulation papers, 277 empirical candidates remain. In Stage 2, we will code a random sample of about 100 unflagged articles as a first check on how many eligible articles the screen misses. Supplement S1 details the screening rules, exclusions, and data requirements.
+
+\subsection{Pilot Studies}
+
+We tested the workflow on six public-data studies selected for feasibility, one per journal, published between 1996 and 2015. Under study-specific comparison rules, one study was consistent with published findings, one was partially reproduced, and four were indeterminate (Supplement Table S3.3). Supplement Sections S5--S10 summarize the six studies, S12 provides the numerical comparisons, and the GitHub repository provides scripts and execution logs. Four ethical rules govern our work: human verification of every study report before release;  an opportunity for original authors to respond; aggregate reporting of the main sample, with study-level reports in the supplements and repository; and the comparison rules fixed before empirical execution and published with each report. The last rule matters because people rated by criteria they cannot see or predict either experiment to raise the score or withdraw \citep{rahman2021}.
+
+In the one consistent case (\citealp{lehman2011}), the implementers used public National Football League play-by-play records to estimate fourth-down decisions and matched the main interaction. However, the predicted effects in the paper's Table 6 matched in only 8 of 35 cells when team effects were set to zero versus 28 of 35 when averaged across teams, so the article leaves the calculation unstated.
+
+The four indeterminate cases show how the tool pinpoints codification gaps when it cannot reach a firm assessment. In \citet{deephouse1999}, unstated filters for commercial banks and market areas yielded 1,260 bank-years in our reconstruction against 960 in the article. In \citet{delaney1996}, our samples of 361 and 239 establishments fell short of the published 590 and 373 largely because of undocumented missing-data rules, including survey skip patterns for firms without outside hires. In \citet{twenge2010}, the 1976--1991 intrinsic-values contrast appears as $-0.05$ in Table 1 but $+0.05$ in the text. These results do not show that a claim is wrong. They identify points where an outside reader must infer what was done, and where author clarification could help.
+
+We also tested two papers using author-provided, processed data, keeping author code sealed until scoring (Supplements S13--S14). For \citet{berry2025}, all 22 focal claims were consistent under the frozen rules, although inspecting the author script revealed that it did not implement the bootstrap intervals described in the article. For \citet{nagaraj2021}, we supplemented the deposited data with independently downloaded Census TIGER/Line county boundaries for mapping. Both cases revealed discrepancies between the written methods and the authors' code. These findings identify points requiring clarification and human verification, rather than establish that the published conclusions are incorrect.
+
+\subsection{A Framework for Aggregating Outcomes}
+
+Reporting only reproduction rates would obscure what the tool learns about knowledge codification. We therefore classify every barrier we encounter, even in consistent studies, by research stage (Table~\ref{tab:framework}), adapting \citet{aguinis2018}. Classifying barriers by stage tests where tacit knowledge sits in empirical work. We expect barriers to cluster in sample construction and data cleaning, which, like other technical work, follow local routines that insiders rarely write down \citep{barley1996,bechky2003}, while model equations use standardized notation. Indeterminacy in three of the four pilot cases can be traced at least in part to these stages (Supplement Section S3), but six cases cannot test the expectation. For each barrier, we log whether external documentation or author input resolves it, and whether doing so alters the estimate's sign, significance, or substantive conclusion. Pooled across studies, these omissions form a versioned list of unwritten conventions by dataset and method. To avoid masking the gaps we aim to measure, we keep this list out of the initial article-only run. Only after that run is scored may the coordinator apply a listed convention to an open choice, logging each application. Comparing outcomes across the two passes measures how much of a research routine is omitted from the text but shared as a convention in the field.
+
+\begin{table}[t]
+\caption{Framework for Classifying Barriers to Reproduction}
+\label{tab:framework}
+\small
+\begin{tabular}{@{}L{2.6cm}L{5.6cm}L{6.2cm}@{}}
+\toprule
+Stage & Barrier & Example from the six studies\\
+\midrule
+Data access & Data unavailable, restricted, or revised since publication & Some country policy measures could not be verified \citep{thebaud2015}\\[2pt]
+Design & Sample construction not fully described & Filters behind 960 bank-years \citep{deephouse1999}\\[2pt]
+Measurement & Variable construction or missing-data rules not described & Three undocumented missing-data rules \citep{delaney1996}\\[2pt]
+Analysis & Estimation or derived quantities not specified & Calculation of predicted effects \citep{lehman2011}\\[2pt]
+Reporting & Numbers conflict within the article, or uncertainty is not reported & Table and text disagree \citep{twenge2010}; no reported uncertainty \citep{holderness2012}\\[2pt]
+Reconstruction & Our implementations disagree or misread the method & One reader's proposed specification was logged but not executed
+\citep{delaney1996}\\
+\bottomrule
+\end{tabular}
+\tabnote{Design, measurement, analysis, and reporting follow \citet{aguinis2018}. Data access and reconstruction separate barriers in the article from barriers in the data or our pipeline.}
+\end{table}
+
+The deliverables are a public repository with the tool and protocol, the benchmark of evaluated studies with their logs, the convention list, and a short article. Between January and May 2027, we will:
+\begin{enumerate}
+\item apply the preregistered protocol to a random sample of about 100 eligible studies, logging data access, reconstruction attempts, and exclusions;
+\item classify every identified barriers under Table~\ref{tab:framework}, analyze how barriers vary by journal, period, method, and dataset, compile the versioned convention list, and run the second pass that applies listed conventions to open choices;
+\item test the tool on at least 10 further studies whose authors deposited experimental or survey data and code on repositories such as the Open Science Framework, keeping the authors' code sealed until scoring and then classifying each difference between our code and theirs by whether the article states it, as in Supplement S13;
+\item compare AI-assisted and independent human reconstructions on a subset of papers, tracking researcher hours to see which tasks require human judgment.
+\end{enumerate}
+The six pilot runs took 2.4 to 11 hours of wall-clock time (Supplement S2). Scaling up require human audit time and access to registration-gated data.
+
+\section{Possible Limitations and How We Plan to Address Them}\label{sec:limits}
+
+\textit{Agreement is not correctness.} Because all implementers work from the same instructions, a reader misinterpretation in Step 1 can propagate to every script; agreement alone does not establish correctness.
+In \citet{delaney1996}, the two R implementations from different model families agreed to 12 decimal places, and the Python implementation to 11, even though the sample definition remained unresolved. In Stage 2, comparing our runs against independent human reconstructions will estimate how often reader errors occur, and we will report both the count of open choices and the spread across implementations for every study.
+
+\textit{The published analysis may be wrong.} The tool tests results reproducibility rather than inferential reproducibility \citep{aguinis2018}, that is, whether the described method and data yield the published numbers, not whether the specification is valid.
+
+\textit{Prior exposure to results.} Withholding published tables cannot erase pre-training memorization. Before reading the PDFs, the reader models recalled headline figures such as $d = 0.57$ in \citet{twenge2010} and $N = 590$ in \citet{delaney1996}. In Stage 2, we will enforce strict file isolation, test whether implementers can identify the source article from the sanitized instructions, and compare articles published before versus after each model's training cutoff.
+
+\textit{Scope and related systems.} Our findings concern quantitative studies using public or deposited data. We focus on organizational research without replication packages, reconstructing analyses from article methods and datasets from raw public sources. The deposited-data cases are deliberate exceptions (Supplements S13--S14). Supplement S2 compares other AI tools for reproducing published analyses.
+
+\textit{Execution risks.} Publisher or data licenses may restrict commercial model use and proprietary models change as providers retune them \citep{bail2024}. Our pilot studies used proprietary models. In Stage 2, we will assess the feasibility of a fully local configuration using open-weight models, which would allow unpublished manuscripts and data to remain within the user's computing environment.
+
+
+
+\section{Conclusion}\label{sec:conclusion}
+
+Our tool assesses whether articles describe empirical procedures in enough detail to reproduce their findings and identifies choices left unstated. Authors could run the tool before submission and share audit reports, allowing reviewers to request targeted clarifications without uploading manuscripts to AI services \citep{orgsci2025ai}. We will release the tool, protocol, and convention list so that future studies can assess the tool's performance as models evolve.
+
+\medskip
+\noindent\textbf{Disclosure of AI use.} The tool uses AI coding agents. The authors also used AI assistants to check sources and to draft and edit text.
+
+\bibliographystyle{informs2014}
+\bibliography{references}
+
+\end{document}

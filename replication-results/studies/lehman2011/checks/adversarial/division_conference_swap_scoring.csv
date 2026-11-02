@@ -1,0 +1,13 @@
+model,reconstructed_var,reading,pub_row,pub_or,pub_se,rec_logor,rec_or,p_native,sign,inference,delta_se,magnitude,outcome
+M1,same_division,as_printed,same_division,0.969,0.054,0.10905,1.1152,0.0658,mismatch,consistent,2.488,grey,discrepant_candidate
+M1,same_division,swapped,same_conference,1.008,0.05,0.10905,1.1152,0.0658,ok,consistent,2.007,grey,grey
+M1,same_conference,as_printed,same_conference,1.008,0.05,-0.08776,0.916,0.1934,mismatch,consistent,1.9,grey,discrepant_candidate
+M1,same_conference,swapped,same_division,0.969,0.054,-0.08776,0.916,0.1934,ok,consistent,0.991,consistent,consistent
+M2,same_division,as_printed,same_division,1.025,0.059,0.09112,1.0954,0.1355,ok,consistent,1.135,consistent,consistent
+M2,same_division,swapped,same_conference,0.997,0.051,0.09112,1.0954,0.1355,mismatch,consistent,1.812,grey,discrepant_candidate
+M2,same_conference,as_printed,same_conference,0.997,0.051,-0.02311,0.9772,0.7404,ok,consistent,0.379,consistent,consistent
+M2,same_conference,swapped,same_division,1.025,0.059,-0.02311,0.9772,0.7404,mismatch,consistent,0.815,consistent,discrepant_candidate
+M3,same_division,as_printed,same_division,1.046,0.062,0.09957,1.1047,0.1121,ok,consistent,0.905,consistent,consistent
+M3,same_division,swapped,same_conference,0.999,0.052,0.09957,1.1047,0.1121,mismatch,consistent,1.903,grey,discrepant_candidate
+M3,same_conference,as_printed,same_conference,0.999,0.052,-0.00275,0.9973,0.9695,ok,consistent,0.024,consistent,consistent
+M3,same_conference,swapped,same_division,1.046,0.062,-0.00275,0.9973,0.9695,mismatch,consistent,0.79,consistent,discrepant_candidate

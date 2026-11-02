@@ -1,0 +1,17 @@
+PAPER_K7 v1.2 repair round complete (R, 2026-10-28).
+- code/k7_lib.R and code/run_grid.R updated for checker_items.md items 1-3 (all accepted and changed):
+  1. fit_model(): no early exit on n; pivoted QR runs first, aliased/all-zero industry dummies are
+     recorded and dropped before any failure, collinear non-industry terms are named as the reason,
+     the residual-df check comes last (A5/A6).
+  2. Restricted-model refits in nested tests keep their dropped dummies on success and failure:
+     new column restricted_dropped_columns in nested_tests.csv and in run_info.json failure entries
+     (model failure entries also carry dropped_columns) (A6).
+  3. influence_loo(): a failed original model with an empty estimation sample yields no influence
+     row and no failure entry; one failed row per record otherwise; a placeholder row only when the
+     sample is unknown (whole-spec failure) (A6).
+- Tests: 293 passed, 0 failed (code/dev_out/test_results.txt), including HC3 with one and two
+  leverage-one rows (OLS and WLS) and the copy-rule validity rule at all three staff_coding levels.
+- Full grid on synthetic data: code/dev_out/v1_2/ (38 specs; 888/912 models ok; D05 fails with the
+  recorded reason, empty sample on the permuted file; no non-finite HC3; only IND_ dummies ever
+  dropped; restricted_dropped_columns filled for the D04 nested tests). Log: code/dev_out/v1_2_run_log.txt.
+- README.md section "v1.2 changes" lists every checker item and every amendment item.

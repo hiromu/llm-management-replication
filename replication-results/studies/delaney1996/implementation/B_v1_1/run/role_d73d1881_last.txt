@@ -1,0 +1,7 @@
+Completed the v1.1 repairs in R, including all amendment and checker items.
+
+- 339 regression checks and 8,306 output checks passed.
+- All 38 specifications ran into `code/dev_out/v1_1/`; 24 D05 model failures were recorded due to empty complete-case samples.
+- Updated `code/README.md` and created `code/DONE_v1_1.txt`.
+
+Inputs and grid remain unchanged. No synthetic results were interpreted.

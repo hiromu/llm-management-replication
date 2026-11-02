@@ -1,0 +1,534 @@
+[
+  {
+    "axis": "Analysis population: full versus explicitly described restricted samples",
+    "category": "sample_construction",
+    "analysis_ids": [
+      "A_T3_C1",
+      "A_T3_C2",
+      "A_T3_C3",
+      "A_T3_C4",
+      "A_T3_C5",
+      "A_T3_C6",
+      "A_T5_A_C1",
+      "A_T5_A_C2",
+      "A_T5_A_C3",
+      "A_T5_A_C4",
+      "A_T5_A_C5",
+      "A_T5_A_C6",
+      "A_T5_A_C7",
+      "A_T5_A_C8",
+      "A_T7_C1",
+      "A_T7_C2",
+      "A_T7_C3",
+      "A_T7_C4",
+      "A_T7_C5",
+      "A_T7_C6",
+      "A_T7_C7",
+      "A_T4_C1",
+      "A_T4_C2",
+      "A_T4_C3",
+      "A_T4_C4",
+      "A_T4_C5",
+      "A_T4_C6",
+      "A_T5_B_C1",
+      "A_T5_B_C2",
+      "A_T5_B_C3",
+      "A_T5_B_C4",
+      "A_T5_B_C5",
+      "A_T5_B_C6",
+      "A_T5_B_C7",
+      "A_T5_B_C8",
+      "A_F5",
+      "A_T6_C1",
+      "A_T6_C2",
+      "A_T6_C3"
+    ],
+    "levels": [
+      {
+        "level_id": "full",
+        "description": "All eligible TIGER-import counties, excluding Massachusetts",
+        "label": "equivalent",
+        "source_locator": "D01, PDF p. 5, §2.2.2",
+        "rationale": "Closest-described full-sample origin; other restrictions change the population."
+      },
+      {
+        "level_id": "boundary",
+        "description": "Keep counties adjacent to at least one county of opposite treatment status",
+        "label": "non_equivalent",
+        "source_locator": "D01, PDF p. 8–9, 17, §2.3.3, Figure 2(a), Table 5",
+        "rationale": "Published restriction designed to address geographic clustering; different population."
+      },
+      {
+        "level_id": "timing",
+        "description": "Keep counties scheduled for updates in calendar 2005 or 2006",
+        "label": "non_equivalent",
+        "source_locator": "D01, PDF p. 8–9, 17, §2.3.3, Figure 2(b), Table 5",
+        "rationale": "Published restriction designed to address early/late scheduling; different population."
+      }
+    ],
+    "origin_level": "full"
+  },
+  {
+    "axis": "Boundary rule asymmetry in prose",
+    "category": "sample_construction",
+    "analysis_ids": [
+      "A_F2_A",
+      "A_T5_A_C5",
+      "A_T5_A_C6",
+      "A_T5_B_C1",
+      "A_T5_B_C2",
+      "A_T5_B_C3",
+      "A_T5_B_C4",
+      "A_T6_C2"
+    ],
+    "levels": [
+      {
+        "level_id": "symmetric",
+        "description": "Require opposite-status adjacency for both treated and control counties",
+        "label": "equivalent",
+        "source_locator": "D01, PDF p. 8, §2.3.3",
+        "rationale": "Detailed construction says counties neighboring the opposite treatment status."
+      },
+      {
+        "level_id": "treated_only",
+        "description": "Restrict treated counties to those bordering a control; control retention rule remains unstated",
+        "label": "uncertain",
+        "source_locator": "D01, PDF p. 2, Introduction",
+        "rationale": "Introduction describes treated counties only; cannot determine whether this is shorthand for the symmetric definition."
+      }
+    ],
+    "origin_level": "symmetric"
+  },
+  {
+    "axis": "ACS vintage and annual-to-panel alignment",
+    "category": "sample_construction",
+    "analysis_ids": [
+      "A_T1",
+      "A_T2",
+      "A_T3_C1",
+      "A_T3_C2",
+      "A_T3_C3",
+      "A_T3_C4",
+      "A_T3_C5",
+      "A_T3_C6",
+      "A_T5_A_C1",
+      "A_T5_A_C2",
+      "A_T5_A_C3",
+      "A_T5_A_C4",
+      "A_T5_A_C5",
+      "A_T5_A_C6",
+      "A_T5_A_C7",
+      "A_T5_A_C8",
+      "A_T7_C1",
+      "A_T7_C2",
+      "A_T7_C3",
+      "A_T7_C4",
+      "A_T7_C5",
+      "A_T7_C6",
+      "A_T7_C7",
+      "A_T4_C1",
+      "A_T4_C2",
+      "A_T4_C3",
+      "A_T4_C4",
+      "A_T4_C5",
+      "A_T4_C6",
+      "A_T5_B_C1",
+      "A_T5_B_C2",
+      "A_T5_B_C3",
+      "A_T5_B_C4",
+      "A_T5_B_C5",
+      "A_T5_B_C6",
+      "A_T5_B_C7",
+      "A_T5_B_C8",
+      "A_F5",
+      "A_T6_C1",
+      "A_T6_C2",
+      "A_T6_C3"
+    ],
+    "levels": [
+      {
+        "level_id": "deposit_years",
+        "description": "Use ACS five-year records for the 2005–2011 years described by D03; extension outside that range unstated",
+        "label": "uncertain",
+        "source_locator": "D03; D41 (unpaginated)",
+        "rationale": "Closest local source description; it does not cover all main-text endpoints."
+      },
+      {
+        "level_id": "article_years",
+        "description": "Use ACS five-year estimates 2009–2014 as described in §2.4.4; earlier endpoints remain unresolved",
+        "label": "uncertain",
+        "source_locator": "D01, PDF p. 11, §2.4.4",
+        "rationale": "Documented conflicting source window, not a license to fabricate missing years."
+      }
+    ],
+    "origin_level": "deposit_years"
+  },
+  {
+    "axis": "Zero handling for activity log outcomes",
+    "category": "variable_coding",
+    "analysis_ids": [
+      "A_T3_C1",
+      "A_T3_C2",
+      "A_T3_C3",
+      "A_T3_C4",
+      "A_T3_C5",
+      "A_T3_C6",
+      "A_T5_A_C1",
+      "A_T5_A_C2",
+      "A_T5_A_C3",
+      "A_T5_A_C4",
+      "A_T5_A_C5",
+      "A_T5_A_C6",
+      "A_T5_A_C7",
+      "A_T5_A_C8",
+      "A_T7_C1",
+      "A_T7_C2",
+      "A_T7_C3",
+      "A_T7_C4",
+      "A_T7_C5",
+      "A_T7_C6",
+      "A_T7_C7",
+      "A_T4_C1",
+      "A_T4_C2",
+      "A_T4_C3",
+      "A_T4_C4",
+      "A_T4_C5",
+      "A_T4_C6",
+      "A_T5_B_C1",
+      "A_T5_B_C2",
+      "A_T5_B_C3",
+      "A_T5_B_C4",
+      "A_T5_B_C5",
+      "A_T5_B_C6",
+      "A_T5_B_C7",
+      "A_T5_B_C8",
+      "A_F5",
+      "A_F3_A_I",
+      "A_F3_A_II",
+      "A_F3_B_I",
+      "A_F3_B_II",
+      "A_F4_F",
+      "A_F4_U",
+      "A_F6_AF",
+      "A_F6_AU",
+      "A_F6_B"
+    ],
+    "levels": [
+      {
+        "level_id": "log1p",
+        "description": "Use ln(Y+1) for every nonnegative count",
+        "label": "equivalent",
+        "source_locator": "D01, PDF p. 15, §3.3.1 equation",
+        "rationale": "Explicit cross-sectional equation; closest fully specified common transform, applicability to DD remains uncertain."
+      },
+      {
+        "level_id": "zero_only",
+        "description": "Replace Y=0 with 1, leave positive Y unchanged, then log",
+        "label": "uncertain",
+        "source_locator": "D01, PDF p. 14, Table 3 note",
+        "rationale": "Literal reading of adding one for all zero values differs from ln(Y+1); not numerically equivalent."
+      }
+    ],
+    "origin_level": "log1p"
+  },
+  {
+    "axis": "Cumulative contributor aggregation",
+    "category": "variable_coding",
+    "analysis_ids": [
+      "A_T4_C5",
+      "A_T4_C6",
+      "A_T5_B_C3",
+      "A_T5_B_C4",
+      "A_T5_B_C7",
+      "A_T5_B_C8",
+      "A_F4_U"
+    ],
+    "levels": [
+      {
+        "level_id": "unique_period",
+        "description": "Count distinct user IDs within the analysis period and county",
+        "label": "equivalent",
+        "source_locator": "D01, PDF p. 10, §2.4.1",
+        "rationale": "Direct conceptual definition; cannot reconstruct from quarterly distinct-user totals alone."
+      },
+      {
+        "level_id": "sum_quarter_counts",
+        "description": "Sum quarterly contributor counts over the analysis window",
+        "label": "uncertain",
+        "source_locator": "D01, PDF p. 15, §3.3.1 and Table 4 note; D51 (unpaginated)",
+        "rationale": "Text also says sum total across all quarters; repeated people can be counted multiple times, so estimand differs."
+      }
+    ],
+    "origin_level": "unique_period"
+  },
+  {
+    "axis": "Distant follow-on information category",
+    "category": "variable_coding",
+    "analysis_ids": [
+      "A_T7_C1",
+      "A_T2"
+    ],
+    "levels": [
+      {
+        "level_id": "buildings",
+        "description": "Distant follow-on consists of building-related information",
+        "label": "equivalent",
+        "source_locator": "D01, PDF p. 10, §2.4.1",
+        "rationale": "Most explicit variable definition."
+      },
+      {
+        "level_id": "nonstreet",
+        "description": "Distant follow-on includes amenities, parks and restaurants as well as buildings",
+        "label": "uncertain",
+        "source_locator": "D01, PDF p. 19, 22, Table 7 note and §4.3",
+        "rationale": "Interpretive examples broaden the definition; exact tags and relation to deposited fields unresolved."
+      }
+    ],
+    "origin_level": "buildings"
+  },
+  {
+    "axis": "Routing-error observational level",
+    "category": "sample_construction",
+    "analysis_ids": [
+      "A_T6_C1",
+      "A_T6_C2",
+      "A_T6_C3"
+    ],
+    "levels": [
+      {
+        "level_id": "pair",
+        "description": "Estimate at county-address-pair level using log absolute route-length error",
+        "label": "equivalent",
+        "source_locator": "D01, PDF p. 18, Table 6 note",
+        "rationale": "Explicit regression unit in the in-scope table."
+      },
+      {
+        "level_id": "county_mean_log",
+        "description": "Average logged errors to county level before the cross-sectional regression",
+        "label": "non_equivalent",
+        "source_locator": "D01, PDF p. 11, §2.4.3",
+        "rationale": "Explicit earlier definition changes unit, implicit county weighting, and potentially the estimand."
+      }
+    ],
+    "origin_level": "pair"
+  },
+  {
+    "axis": "Routing-error transform language",
+    "category": "variable_coding",
+    "analysis_ids": [
+      "A_T6_C1",
+      "A_T6_C2",
+      "A_T6_C3"
+    ],
+    "levels": [
+      {
+        "level_id": "log_abs_difference",
+        "description": "ln(abs(OSRM distance − Google distance))",
+        "label": "equivalent",
+        "source_locator": "D01, PDF p. 10–11, §2.4.3",
+        "rationale": "Detailed definition specifies absolute difference first, then log."
+      },
+      {
+        "level_id": "difference_of_logs",
+        "description": "Interpret §3.5 log-difference as a difference of logged route distances",
+        "label": "uncertain",
+        "source_locator": "D01, PDF p. 18, §3.5",
+        "rationale": "Sourced linguistic ambiguity only; sign/absolute value and zero handling are not specified by this phrase, so it is not an executable equivalent."
+      }
+    ],
+    "origin_level": "log_abs_difference"
+  },
+  {
+    "axis": "New-contributor commitment group definition",
+    "category": "variable_coding",
+    "analysis_ids": [
+      "A_F6_B"
+    ],
+    "levels": [
+      {
+        "level_id": "threshold",
+        "description": "Counts of new contributors who meet a minimum lifetime-activity percentile threshold",
+        "label": "equivalent",
+        "source_locator": "D01, PDF p. 19, §3.6",
+        "rationale": "Text explicitly describes a minimum number of contributions."
+      },
+      {
+        "level_id": "percentile_types",
+        "description": "Separate contributor types associated with each labeled percentile, potentially disjoint groups",
+        "label": "uncertain",
+        "source_locator": "D01, PDF p. 20, Figure 6(b) note",
+        "rationale": "Figure note says classified by percentile but does not define bins; not executable without further documentation."
+      }
+    ],
+    "origin_level": "threshold"
+  },
+  {
+    "axis": "Cross-sectional first quartile-FE dimension",
+    "category": "fixed_effects_or_clustering",
+    "analysis_ids": [
+      "A_T4_C1",
+      "A_T4_C2",
+      "A_T4_C3",
+      "A_T4_C4",
+      "A_T4_C5",
+      "A_T4_C6",
+      "A_T5_B_C1",
+      "A_T5_B_C2",
+      "A_T5_B_C3",
+      "A_T5_B_C4",
+      "A_T5_B_C5",
+      "A_T5_B_C6",
+      "A_T5_B_C7",
+      "A_T5_B_C8",
+      "A_F5",
+      "A_T6_C1",
+      "A_T6_C2",
+      "A_T6_C3"
+    ],
+    "levels": [
+      {
+        "level_id": "density",
+        "description": "Use population density, household income and per-capita income quartiles",
+        "label": "equivalent",
+        "source_locator": "D01, PDF p. 15–16, 18, §3.3.1, Figure 5 note, Table 6 discussion",
+        "rationale": "Repeated main-text definition."
+      },
+      {
+        "level_id": "population",
+        "description": "Use population, household income and per-capita income quantiles",
+        "label": "uncertain",
+        "source_locator": "D02, PDF p. 11, Table D.3 note",
+        "rationale": "Supplement calls these the cross-sectional quantile effects but names population instead of density."
+      }
+    ],
+    "origin_level": "density"
+  },
+  {
+    "axis": "Common versus population-group time effects",
+    "category": "fixed_effects_or_clustering",
+    "analysis_ids": [
+      "A_T3_C1",
+      "A_T3_C2",
+      "A_T3_C3",
+      "A_T3_C4",
+      "A_T3_C5",
+      "A_T3_C6",
+      "A_T5_A_C1",
+      "A_T5_A_C2",
+      "A_T5_A_C3",
+      "A_T5_A_C4",
+      "A_T5_A_C5",
+      "A_T5_A_C6",
+      "A_T5_A_C7",
+      "A_T5_A_C8",
+      "A_T7_C1",
+      "A_T7_C2",
+      "A_T7_C3",
+      "A_T7_C4",
+      "A_T7_C5",
+      "A_T7_C6",
+      "A_T7_C7"
+    ],
+    "levels": [
+      {
+        "level_id": "common_quarter",
+        "description": "County FE and common calendar-quarter FE",
+        "label": "equivalent",
+        "source_locator": "D01, PDF p. 14, Table 3",
+        "rationale": "Baseline time-effects design."
+      },
+      {
+        "level_id": "density_group_quarter",
+        "description": "County FE and fully interacted density-quartile × quarter FE",
+        "label": "non_equivalent",
+        "source_locator": "D01, PDF p. 17, §3.4.2 and Table 5(A)",
+        "rationale": "Explicitly reported differential-time robustness; changes residualization and identifying comparison."
+      }
+    ],
+    "origin_level": "common_quarter"
+  },
+  {
+    "axis": "Unit and estimator for baseline activity effect",
+    "category": "estimator",
+    "analysis_ids": [
+      "A_T3_C1",
+      "A_T3_C2",
+      "A_T3_C3",
+      "A_T3_C4",
+      "A_T3_C5",
+      "A_T3_C6",
+      "A_T5_A_C1",
+      "A_T5_A_C2",
+      "A_T5_A_C3",
+      "A_T5_A_C4",
+      "A_T5_A_C5",
+      "A_T5_A_C6",
+      "A_T5_A_C7",
+      "A_T5_A_C8",
+      "A_T7_C1",
+      "A_T7_C2",
+      "A_T7_C3",
+      "A_T7_C4",
+      "A_T7_C5",
+      "A_T7_C6",
+      "A_T7_C7",
+      "A_T4_C1",
+      "A_T4_C2",
+      "A_T4_C3",
+      "A_T4_C4",
+      "A_T4_C5",
+      "A_T4_C6",
+      "A_T5_B_C1",
+      "A_T5_B_C2",
+      "A_T5_B_C3",
+      "A_T5_B_C4",
+      "A_T5_B_C5",
+      "A_T5_B_C6",
+      "A_T5_B_C7",
+      "A_T5_B_C8",
+      "A_F5"
+    ],
+    "levels": [
+      {
+        "level_id": "dd",
+        "description": "County-quarter difference-in-differences with county and quarter fixed effects",
+        "label": "equivalent",
+        "source_locator": "D01, PDF p. 12–14, §3.2.1 and Table 3",
+        "rationale": "Baseline within-county change comparison."
+      },
+      {
+        "level_id": "cross_section",
+        "description": "County cross-section with controls and covariate quartile effects",
+        "label": "non_equivalent",
+        "source_locator": "D01, PDF p. 14–15, §3.3.1 and Table 4",
+        "rationale": "Explicit complementary identification strategy; county fixed effects cannot be retained and time aggregation differs."
+      }
+    ],
+    "origin_level": "dd"
+  },
+  {
+    "axis": "Placebo assignment versus historical assignment",
+    "category": "other",
+    "analysis_ids": [
+      "A_T5_A_C3",
+      "A_T5_A_C4"
+    ],
+    "levels": [
+      {
+        "level_id": "random",
+        "description": "Assign treatment randomly at county level; draw mechanism and seed unstated",
+        "label": "equivalent",
+        "source_locator": "D01, PDF p. 17, §3.4.2 and Table 5(A)",
+        "rationale": "Published placebo design; no invented number of draws or seed."
+      },
+      {
+        "level_id": "historical",
+        "description": "Use county treatment status from the TIGER completion map",
+        "label": "non_equivalent",
+        "source_locator": "D01, PDF p. 10, 17, §2.4.2 and Table 5 note",
+        "rationale": "Actual-treatment baseline is a different test, not an interchangeable placebo realization."
+      }
+    ],
+    "origin_level": "random"
+  }
+]

@@ -1,0 +1,1710 @@
+{
+  "created_utc": "2026-10-27T11:43:25Z",
+  "study_root_relative_paths": true,
+  "download_script": "data/scripts/download.sh",
+  "download_log": "data/raw/download_log.tsv",
+  "release_metadata": {
+    "pbp": {
+      "tag": "pbp",
+      "release_published_at": "2022-01-28T02:12:09Z",
+      "html_url": "https://github.com/nflverse/nflverse-data/releases/tag/pbp",
+      "api_snapshot": "data/raw/nflverse/pbp_release_20261027T113315Z/release_api_pbp.json"
+    },
+    "schedules": {
+      "tag": "schedules",
+      "release_published_at": "2025-10-01T11:19:34Z",
+      "html_url": "https://github.com/nflverse/nflverse-data/releases/tag/schedules",
+      "api_snapshot": "data/raw/nflverse/schedules_release_20261027T113315Z/release_api_schedules.json"
+    }
+  },
+  "vintage_notes": [
+    "The pbp release assets are rebuilt per season at different times. Downloaded 2000 files were last updated 2025-07-16 (nflfastR 5.1.0.9001), 2001-2002 on 2026-08-13 (nflfastR 5.2.0.9015) and 2003-2005 on 2025-04-30 (nflfastR 5.0.0.9005), per asset updated_at and the metadata embedded in the parquet files.",
+    "GitHub publishes sha256 digests only for assets uploaded after it began recording them; 2003-2005 pbp assets carry none, so integrity for those rests on the local sha256 recorded here.",
+    "The 2022-07-28 zip assets are an older vintage with different row counts; they were downloaded only as a cross-check and are not analysis inputs.",
+    "Two regular-season 2000 games in the schedules file (2000_03_SD_KC, 2000_06_BUF_MIA) have no rows in play_by_play_2000 (also absent in the 2022 vintage)."
+  ],
+  "files": [
+    {
+      "file": "data/raw/nflverse/pbp_release_20261027T113315Z/release_api_pbp.json",
+      "url": "https://api.github.com/repos/nflverse/nflverse-data/releases/tags/pbp",
+      "acquired_utc": "2026-10-27T11:33:15Z",
+      "bytes": 288580,
+      "sha256": "4da38d5490cafeb934ea451f492679d64146622b5d3b00c93429f8f3cc39f539",
+      "format": "JSON",
+      "role": "pbp_meta",
+      "provider": "nflverse (nflverse/nflverse-data GitHub releases)",
+      "release_tag": "pbp",
+      "licence": "CC-BY-4.0 (GitHub repository licence of nflverse/nflverse-data, recorded in data/raw/nflverse/dictionaries_20261027T113315Z/nflverse-data_license_api.json). Public download, no account or payment. Underlying play data originate from NFL Game Center feeds as processed by nflfastR."
+    },
+    {
+      "file": "data/raw/nflverse/pbp_release_20261027T113315Z/play_by_play_2000.parquet",
+      "url": "https://github.com/nflverse/nflverse-data/releases/download/pbp/play_by_play_2000.parquet",
+      "acquired_utc": "2026-10-27T11:33:15Z",
+      "bytes": 13404971,
+      "sha256": "595c3b0eefeb91afd6f08c629669823b31e63c34304c98faed09adf4fbd54706",
+      "format": "Apache Parquet",
+      "role": "pbp",
+      "provider": "nflverse (nflverse/nflverse-data GitHub releases)",
+      "release_tag": "pbp",
+      "licence": "CC-BY-4.0 (GitHub repository licence of nflverse/nflverse-data, recorded in data/raw/nflverse/dictionaries_20261027T113315Z/nflverse-data_license_api.json). Public download, no account or payment. Underlying play data originate from NFL Game Center feeds as processed by nflfastR.",
+      "asset_updated_at": "2025-07-16T14:29:04Z",
+      "asset_created_at": "2025-07-16T14:28:51Z",
+      "asset_size_api": 13404971,
+      "asset_digest_api": "sha256:595c3b0eefeb91afd6f08c629669823b31e63c34304c98faed09adf4fbd54706",
+      "sha256_matches_api_digest": true,
+      "rows": 45491,
+      "columns": 372,
+      "seasons_covered": [
+        2000
+      ],
+      "season_types_present": [
+        "POST",
+        "REG"
+      ],
+      "embedded_metadata": {
+        "nflfastR_version": "5.1.0.9001",
+        "nflverse_timestamp": "2025-07-16 10:28:16 EDT"
+      }
+    },
+    {
+      "file": "data/raw/nflverse/pbp_release_20261027T113315Z/play_by_play_2000.csv.gz",
+      "url": "https://github.com/nflverse/nflverse-data/releases/download/pbp/play_by_play_2000.csv.gz",
+      "acquired_utc": "2026-10-27T11:33:16Z",
+      "bytes": 12972701,
+      "sha256": "18804cf9e8299adbbb6cdaca479aa2b33f3a76f4389afe5ccdc654b12477d7e8",
+      "format": "gzip-compressed CSV",
+      "role": "pbp",
+      "provider": "nflverse (nflverse/nflverse-data GitHub releases)",
+      "release_tag": "pbp",
+      "licence": "CC-BY-4.0 (GitHub repository licence of nflverse/nflverse-data, recorded in data/raw/nflverse/dictionaries_20261027T113315Z/nflverse-data_license_api.json). Public download, no account or payment. Underlying play data originate from NFL Game Center feeds as processed by nflfastR.",
+      "asset_updated_at": "2025-07-16T14:29:04Z",
+      "asset_created_at": "2025-07-16T14:28:51Z",
+      "asset_size_api": 12972701,
+      "asset_digest_api": "sha256:18804cf9e8299adbbb6cdaca479aa2b33f3a76f4389afe5ccdc654b12477d7e8",
+      "sha256_matches_api_digest": true,
+      "rows": 45491,
+      "columns": 372,
+      "seasons_covered": [
+        2000
+      ]
+    },
+    {
+      "file": "data/raw/nflverse/pbp_release_20261027T113315Z/play_by_play_2001.parquet",
+      "url": "https://github.com/nflverse/nflverse-data/releases/download/pbp/play_by_play_2001.parquet",
+      "acquired_utc": "2026-10-27T11:33:17Z",
+      "bytes": 14007738,
+      "sha256": "43f0eea9f76de070a09382a5f3438b0ddb509c9ca48ac98dee77639e35724bca",
+      "format": "Apache Parquet",
+      "role": "pbp",
+      "provider": "nflverse (nflverse/nflverse-data GitHub releases)",
+      "release_tag": "pbp",
+      "licence": "CC-BY-4.0 (GitHub repository licence of nflverse/nflverse-data, recorded in data/raw/nflverse/dictionaries_20261027T113315Z/nflverse-data_license_api.json). Public download, no account or payment. Underlying play data originate from NFL Game Center feeds as processed by nflfastR.",
+      "asset_updated_at": "2026-08-13T12:38:45Z",
+      "asset_created_at": "2026-08-13T12:38:44Z",
+      "asset_size_api": 14007738,
+      "asset_digest_api": "sha256:43f0eea9f76de070a09382a5f3438b0ddb509c9ca48ac98dee77639e35724bca",
+      "sha256_matches_api_digest": true,
+      "rows": 44969,
+      "columns": 372,
+      "seasons_covered": [
+        2001
+      ],
+      "season_types_present": [
+        "POST",
+        "REG"
+      ],
+      "embedded_metadata": {
+        "nflfastR_version": "5.2.0.9015",
+        "nflverse_timestamp": "2026-08-13 08:38:37 EDT"
+      }
+    },
+    {
+      "file": "data/raw/nflverse/pbp_release_20261027T113315Z/play_by_play_2001.csv.gz",
+      "url": "https://github.com/nflverse/nflverse-data/releases/download/pbp/play_by_play_2001.csv.gz",
+      "acquired_utc": "2026-10-27T11:33:18Z",
+      "bytes": 13890995,
+      "sha256": "1fff9e1d0ef3ebac86767b8ca6a093e058f1dcb236eb064acbaf05f055cb13ac",
+      "format": "gzip-compressed CSV",
+      "role": "pbp",
+      "provider": "nflverse (nflverse/nflverse-data GitHub releases)",
+      "release_tag": "pbp",
+      "licence": "CC-BY-4.0 (GitHub repository licence of nflverse/nflverse-data, recorded in data/raw/nflverse/dictionaries_20261027T113315Z/nflverse-data_license_api.json). Public download, no account or payment. Underlying play data originate from NFL Game Center feeds as processed by nflfastR.",
+      "asset_updated_at": "2026-08-13T12:38:45Z",
+      "asset_created_at": "2026-08-13T12:38:44Z",
+      "asset_size_api": 13890995,
+      "asset_digest_api": "sha256:1fff9e1d0ef3ebac86767b8ca6a093e058f1dcb236eb064acbaf05f055cb13ac",
+      "sha256_matches_api_digest": true,
+      "rows": 44969,
+      "columns": 372,
+      "seasons_covered": [
+        2001
+      ]
+    },
+    {
+      "file": "data/raw/nflverse/pbp_release_20261027T113315Z/play_by_play_2002.parquet",
+      "url": "https://github.com/nflverse/nflverse-data/releases/download/pbp/play_by_play_2002.parquet",
+      "acquired_utc": "2026-10-27T11:33:19Z",
+      "bytes": 14742308,
+      "sha256": "4930befb7ce6597fa149d53e56565eb1377bad778a04fec1e6c21b0537c4aa17",
+      "format": "Apache Parquet",
+      "role": "pbp",
+      "provider": "nflverse (nflverse/nflverse-data GitHub releases)",
+      "release_tag": "pbp",
+      "licence": "CC-BY-4.0 (GitHub repository licence of nflverse/nflverse-data, recorded in data/raw/nflverse/dictionaries_20261027T113315Z/nflverse-data_license_api.json). Public download, no account or payment. Underlying play data originate from NFL Game Center feeds as processed by nflfastR.",
+      "asset_updated_at": "2026-08-13T12:39:26Z",
+      "asset_created_at": "2026-08-13T12:39:25Z",
+      "asset_size_api": 14742308,
+      "asset_digest_api": "sha256:4930befb7ce6597fa149d53e56565eb1377bad778a04fec1e6c21b0537c4aa17",
+      "sha256_matches_api_digest": true,
+      "rows": 47355,
+      "columns": 372,
+      "seasons_covered": [
+        2002
+      ],
+      "season_types_present": [
+        "POST",
+        "REG"
+      ],
+      "embedded_metadata": {
+        "nflfastR_version": "5.2.0.9015",
+        "nflverse_timestamp": "2026-08-13 08:39:16 EDT"
+      }
+    },
+    {
+      "file": "data/raw/nflverse/pbp_release_20261027T113315Z/play_by_play_2002.csv.gz",
+      "url": "https://github.com/nflverse/nflverse-data/releases/download/pbp/play_by_play_2002.csv.gz",
+      "acquired_utc": "2026-10-27T11:33:20Z",
+      "bytes": 14608544,
+      "sha256": "c3d103466b90987ada09561d9b56b482a39db8cb1eaf6513654b6d97c81da94f",
+      "format": "gzip-compressed CSV",
+      "role": "pbp",
+      "provider": "nflverse (nflverse/nflverse-data GitHub releases)",
+      "release_tag": "pbp",
+      "licence": "CC-BY-4.0 (GitHub repository licence of nflverse/nflverse-data, recorded in data/raw/nflverse/dictionaries_20261027T113315Z/nflverse-data_license_api.json). Public download, no account or payment. Underlying play data originate from NFL Game Center feeds as processed by nflfastR.",
+      "asset_updated_at": "2026-08-13T12:39:26Z",
+      "asset_created_at": "2026-08-13T12:39:25Z",
+      "asset_size_api": 14608544,
+      "asset_digest_api": "sha256:c3d103466b90987ada09561d9b56b482a39db8cb1eaf6513654b6d97c81da94f",
+      "sha256_matches_api_digest": true,
+      "rows": 47355,
+      "columns": 372,
+      "seasons_covered": [
+        2002
+      ]
+    },
+    {
+      "file": "data/raw/nflverse/pbp_release_20261027T113315Z/play_by_play_2003.parquet",
+      "url": "https://github.com/nflverse/nflverse-data/releases/download/pbp/play_by_play_2003.parquet",
+      "acquired_utc": "2026-10-27T11:33:22Z",
+      "bytes": 14620361,
+      "sha256": "a5bc20c69eee0c18364bea7fa1d3c2817941c8d9026058c694ab1ee73a2d279d",
+      "format": "Apache Parquet",
+      "role": "pbp",
+      "provider": "nflverse (nflverse/nflverse-data GitHub releases)",
+      "release_tag": "pbp",
+      "licence": "CC-BY-4.0 (GitHub repository licence of nflverse/nflverse-data, recorded in data/raw/nflverse/dictionaries_20261027T113315Z/nflverse-data_license_api.json). Public download, no account or payment. Underlying play data originate from NFL Game Center feeds as processed by nflfastR.",
+      "asset_updated_at": "2025-04-30T06:35:51Z",
+      "asset_created_at": "2025-04-30T06:35:50Z",
+      "asset_size_api": 14620361,
+      "asset_digest_api": null,
+      "sha256_matches_api_digest": "no digest published",
+      "rows": 46811,
+      "columns": 372,
+      "seasons_covered": [
+        2003
+      ],
+      "season_types_present": [
+        "POST",
+        "REG"
+      ],
+      "embedded_metadata": {
+        "nflfastR_version": "5.0.0.9005",
+        "nflverse_timestamp": "2025-04-30 02:35:19 EDT"
+      }
+    },
+    {
+      "file": "data/raw/nflverse/pbp_release_20261027T113315Z/play_by_play_2003.csv.gz",
+      "url": "https://github.com/nflverse/nflverse-data/releases/download/pbp/play_by_play_2003.csv.gz",
+      "acquired_utc": "2026-10-27T11:33:23Z",
+      "bytes": 14381489,
+      "sha256": "7a06c96ebefa19434c6a28cad8b17f11d9451a425eb6422ea6267777963d7f46",
+      "format": "gzip-compressed CSV",
+      "role": "pbp",
+      "provider": "nflverse (nflverse/nflverse-data GitHub releases)",
+      "release_tag": "pbp",
+      "licence": "CC-BY-4.0 (GitHub repository licence of nflverse/nflverse-data, recorded in data/raw/nflverse/dictionaries_20261027T113315Z/nflverse-data_license_api.json). Public download, no account or payment. Underlying play data originate from NFL Game Center feeds as processed by nflfastR.",
+      "asset_updated_at": "2025-04-30T06:35:51Z",
+      "asset_created_at": "2025-04-30T06:35:50Z",
+      "asset_size_api": 14381489,
+      "asset_digest_api": null,
+      "sha256_matches_api_digest": "no digest published",
+      "rows": 46811,
+      "columns": 372,
+      "seasons_covered": [
+        2003
+      ]
+    },
+    {
+      "file": "data/raw/nflverse/pbp_release_20261027T113315Z/play_by_play_2004.parquet",
+      "url": "https://github.com/nflverse/nflverse-data/releases/download/pbp/play_by_play_2004.parquet",
+      "acquired_utc": "2026-10-27T11:33:24Z",
+      "bytes": 14568240,
+      "sha256": "94658bc15788eda63a8cdba0d8f1c8aa9253fb5baa9c0d07b9c2e35e75ae6a03",
+      "format": "Apache Parquet",
+      "role": "pbp",
+      "provider": "nflverse (nflverse/nflverse-data GitHub releases)",
+      "release_tag": "pbp",
+      "licence": "CC-BY-4.0 (GitHub repository licence of nflverse/nflverse-data, recorded in data/raw/nflverse/dictionaries_20261027T113315Z/nflverse-data_license_api.json). Public download, no account or payment. Underlying play data originate from NFL Game Center feeds as processed by nflfastR.",
+      "asset_updated_at": "2025-04-30T06:37:54Z",
+      "asset_created_at": "2025-04-30T06:37:52Z",
+      "asset_size_api": 14568240,
+      "asset_digest_api": null,
+      "sha256_matches_api_digest": "no digest published",
+      "rows": 46705,
+      "columns": 372,
+      "seasons_covered": [
+        2004
+      ],
+      "season_types_present": [
+        "POST",
+        "REG"
+      ],
+      "embedded_metadata": {
+        "nflfastR_version": "5.0.0.9005",
+        "nflverse_timestamp": "2025-04-30 02:37:22 EDT"
+      }
+    },
+    {
+      "file": "data/raw/nflverse/pbp_release_20261027T113315Z/play_by_play_2004.csv.gz",
+      "url": "https://github.com/nflverse/nflverse-data/releases/download/pbp/play_by_play_2004.csv.gz",
+      "acquired_utc": "2026-10-27T11:33:25Z",
+      "bytes": 14348591,
+      "sha256": "b2cf1feb6bf97e9e2295597e6eca8d0ff1a466c1cc91166eb03a668c48a13bcb",
+      "format": "gzip-compressed CSV",
+      "role": "pbp",
+      "provider": "nflverse (nflverse/nflverse-data GitHub releases)",
+      "release_tag": "pbp",
+      "licence": "CC-BY-4.0 (GitHub repository licence of nflverse/nflverse-data, recorded in data/raw/nflverse/dictionaries_20261027T113315Z/nflverse-data_license_api.json). Public download, no account or payment. Underlying play data originate from NFL Game Center feeds as processed by nflfastR.",
+      "asset_updated_at": "2025-04-30T06:37:54Z",
+      "asset_created_at": "2025-04-30T06:37:52Z",
+      "asset_size_api": 14348591,
+      "asset_digest_api": null,
+      "sha256_matches_api_digest": "no digest published",
+      "rows": 46705,
+      "columns": 372,
+      "seasons_covered": [
+        2004
+      ]
+    },
+    {
+      "file": "data/raw/nflverse/pbp_release_20261027T113315Z/play_by_play_2005.parquet",
+      "url": "https://github.com/nflverse/nflverse-data/releases/download/pbp/play_by_play_2005.parquet",
+      "acquired_utc": "2026-10-27T11:33:26Z",
+      "bytes": 14612857,
+      "sha256": "1b93d868e286fc556192e642ec09ff76b29880b441674dcb0f3b51fb0064df92",
+      "format": "Apache Parquet",
+      "role": "pbp",
+      "provider": "nflverse (nflverse/nflverse-data GitHub releases)",
+      "release_tag": "pbp",
+      "licence": "CC-BY-4.0 (GitHub repository licence of nflverse/nflverse-data, recorded in data/raw/nflverse/dictionaries_20261027T113315Z/nflverse-data_license_api.json). Public download, no account or payment. Underlying play data originate from NFL Game Center feeds as processed by nflfastR.",
+      "asset_updated_at": "2025-04-30T06:38:09Z",
+      "asset_created_at": "2025-04-30T06:38:09Z",
+      "asset_size_api": 14612857,
+      "asset_digest_api": null,
+      "sha256_matches_api_digest": "no digest published",
+      "rows": 46823,
+      "columns": 372,
+      "seasons_covered": [
+        2005
+      ],
+      "season_types_present": [
+        "POST",
+        "REG"
+      ],
+      "embedded_metadata": {
+        "nflfastR_version": "5.0.0.9005",
+        "nflverse_timestamp": "2025-04-30 02:37:40 EDT"
+      }
+    },
+    {
+      "file": "data/raw/nflverse/pbp_release_20261027T113315Z/play_by_play_2005.csv.gz",
+      "url": "https://github.com/nflverse/nflverse-data/releases/download/pbp/play_by_play_2005.csv.gz",
+      "acquired_utc": "2026-10-27T11:33:28Z",
+      "bytes": 14373053,
+      "sha256": "3f8e09c236cfa6fb189166ae39ecc84d704f10727e3852c5fb9b589ce71310be",
+      "format": "gzip-compressed CSV",
+      "role": "pbp",
+      "provider": "nflverse (nflverse/nflverse-data GitHub releases)",
+      "release_tag": "pbp",
+      "licence": "CC-BY-4.0 (GitHub repository licence of nflverse/nflverse-data, recorded in data/raw/nflverse/dictionaries_20261027T113315Z/nflverse-data_license_api.json). Public download, no account or payment. Underlying play data originate from NFL Game Center feeds as processed by nflfastR.",
+      "asset_updated_at": "2025-04-30T06:38:09Z",
+      "asset_created_at": "2025-04-30T06:38:09Z",
+      "asset_size_api": 14373053,
+      "asset_digest_api": null,
+      "sha256_matches_api_digest": "no digest published",
+      "rows": 46823,
+      "columns": 372,
+      "seasons_covered": [
+        2005
+      ]
+    },
+    {
+      "file": "data/raw/nflverse/pbp_release_20261027T113315Z/timestamp.json",
+      "url": "https://github.com/nflverse/nflverse-data/releases/download/pbp/timestamp.json",
+      "acquired_utc": "2026-10-27T11:33:29Z",
+      "bytes": 43,
+      "sha256": "1e8f51acc41985f31a5217583eb25afbbe5aef9a633439a8be30419cb30c6baf",
+      "format": "JSON",
+      "role": "pbp_meta",
+      "provider": "nflverse (nflverse/nflverse-data GitHub releases)",
+      "release_tag": "pbp",
+      "licence": "CC-BY-4.0 (GitHub repository licence of nflverse/nflverse-data, recorded in data/raw/nflverse/dictionaries_20261027T113315Z/nflverse-data_license_api.json). Public download, no account or payment. Underlying play data originate from NFL Game Center feeds as processed by nflfastR.",
+      "asset_updated_at": "2026-10-27T10:51:06Z",
+      "asset_created_at": "2026-10-27T10:51:06Z",
+      "asset_size_api": 43,
+      "asset_digest_api": "sha256:1e8f51acc41985f31a5217583eb25afbbe5aef9a633439a8be30419cb30c6baf",
+      "sha256_matches_api_digest": true,
+      "content": {
+        "last_updated": "2026-10-27 06:51:03 EDT"
+      }
+    },
+    {
+      "file": "data/raw/nflverse/pbp_release_zip2022_20261027T113315Z/play_by_play_2000.zip",
+      "url": "https://github.com/nflverse/nflverse-data/releases/download/pbp/play_by_play_2000.zip",
+      "acquired_utc": "2026-10-27T11:33:30Z",
+      "bytes": 12434799,
+      "sha256": "7de2495c2a10964c9d89baa3acefe4fac2c09c36137c39dfc376b499267d9232",
+      "format": "ZIP archive containing one CSV",
+      "role": "pbp_zip_xcheck",
+      "provider": "nflverse (nflverse/nflverse-data GitHub releases)",
+      "release_tag": "pbp",
+      "licence": "CC-BY-4.0 (GitHub repository licence of nflverse/nflverse-data, recorded in data/raw/nflverse/dictionaries_20261027T113315Z/nflverse-data_license_api.json). Public download, no account or payment. Underlying play data originate from NFL Game Center feeds as processed by nflfastR.",
+      "asset_updated_at": "2022-07-28T22:12:04Z",
+      "asset_created_at": "2022-07-28T22:12:04Z",
+      "asset_size_api": 12434799,
+      "asset_digest_api": null,
+      "sha256_matches_api_digest": "no digest published",
+      "rows": 45492,
+      "columns": 372,
+      "seasons_covered": [
+        2000
+      ],
+      "zip_member": "data/play_by_play_2000.csv",
+      "zip_member_timestamp": "2022-07-28T19:01:32",
+      "note": "Older vintage (asset last updated 2022-07-28) kept only as a cross-check; not the analysis input."
+    },
+    {
+      "file": "data/raw/nflverse/pbp_release_zip2022_20261027T113315Z/play_by_play_2001.zip",
+      "url": "https://github.com/nflverse/nflverse-data/releases/download/pbp/play_by_play_2001.zip",
+      "acquired_utc": "2026-10-27T11:33:31Z",
+      "bytes": 13375516,
+      "sha256": "7af8ed15ebfb866db260e2e5613764a4060648829497bbc31841492cdb895b01",
+      "format": "ZIP archive containing one CSV",
+      "role": "pbp_zip_xcheck",
+      "provider": "nflverse (nflverse/nflverse-data GitHub releases)",
+      "release_tag": "pbp",
+      "licence": "CC-BY-4.0 (GitHub repository licence of nflverse/nflverse-data, recorded in data/raw/nflverse/dictionaries_20261027T113315Z/nflverse-data_license_api.json). Public download, no account or payment. Underlying play data originate from NFL Game Center feeds as processed by nflfastR.",
+      "asset_updated_at": "2022-07-28T22:12:15Z",
+      "asset_created_at": "2022-07-28T22:12:14Z",
+      "asset_size_api": 13375516,
+      "asset_digest_api": null,
+      "sha256_matches_api_digest": "no digest published",
+      "rows": 45694,
+      "columns": 372,
+      "seasons_covered": [
+        2001
+      ],
+      "zip_member": "data/play_by_play_2001.csv",
+      "zip_member_timestamp": "2022-07-28T19:09:16",
+      "note": "Older vintage (asset last updated 2022-07-28) kept only as a cross-check; not the analysis input."
+    },
+    {
+      "file": "data/raw/nflverse/pbp_release_zip2022_20261027T113315Z/play_by_play_2002.zip",
+      "url": "https://github.com/nflverse/nflverse-data/releases/download/pbp/play_by_play_2002.zip",
+      "acquired_utc": "2026-10-27T11:33:33Z",
+      "bytes": 14060590,
+      "sha256": "43537f6316100824458aa9bf0d234eaa4d470e63c26f371f25ef56f2334f96e5",
+      "format": "ZIP archive containing one CSV",
+      "role": "pbp_zip_xcheck",
+      "provider": "nflverse (nflverse/nflverse-data GitHub releases)",
+      "release_tag": "pbp",
+      "licence": "CC-BY-4.0 (GitHub repository licence of nflverse/nflverse-data, recorded in data/raw/nflverse/dictionaries_20261027T113315Z/nflverse-data_license_api.json). Public download, no account or payment. Underlying play data originate from NFL Game Center feeds as processed by nflfastR.",
+      "asset_updated_at": "2022-07-28T22:12:28Z",
+      "asset_created_at": "2022-07-28T22:12:27Z",
+      "asset_size_api": 14060590,
+      "asset_digest_api": null,
+      "sha256_matches_api_digest": "no digest published",
+      "rows": 48085,
+      "columns": 372,
+      "seasons_covered": [
+        2002
+      ],
+      "zip_member": "data/play_by_play_2002.csv",
+      "zip_member_timestamp": "2022-07-28T19:17:18",
+      "note": "Older vintage (asset last updated 2022-07-28) kept only as a cross-check; not the analysis input."
+    },
+    {
+      "file": "data/raw/nflverse/pbp_release_zip2022_20261027T113315Z/play_by_play_2003.zip",
+      "url": "https://github.com/nflverse/nflverse-data/releases/download/pbp/play_by_play_2003.zip",
+      "acquired_utc": "2026-10-27T11:33:34Z",
+      "bytes": 13922213,
+      "sha256": "7b8972bcd855177322c725a4e4f53c7278436b406820e83015eb08887411e5b4",
+      "format": "ZIP archive containing one CSV",
+      "role": "pbp_zip_xcheck",
+      "provider": "nflverse (nflverse/nflverse-data GitHub releases)",
+      "release_tag": "pbp",
+      "licence": "CC-BY-4.0 (GitHub repository licence of nflverse/nflverse-data, recorded in data/raw/nflverse/dictionaries_20261027T113315Z/nflverse-data_license_api.json). Public download, no account or payment. Underlying play data originate from NFL Game Center feeds as processed by nflfastR.",
+      "asset_updated_at": "2022-07-28T22:12:46Z",
+      "asset_created_at": "2022-07-28T22:12:45Z",
+      "asset_size_api": 13922213,
+      "asset_digest_api": null,
+      "sha256_matches_api_digest": "no digest published",
+      "rows": 47602,
+      "columns": 372,
+      "seasons_covered": [
+        2003
+      ],
+      "zip_member": "data/play_by_play_2003.csv",
+      "zip_member_timestamp": "2022-07-28T19:25:00",
+      "note": "Older vintage (asset last updated 2022-07-28) kept only as a cross-check; not the analysis input."
+    },
+    {
+      "file": "data/raw/nflverse/pbp_release_zip2022_20261027T113315Z/play_by_play_2004.zip",
+      "url": "https://github.com/nflverse/nflverse-data/releases/download/pbp/play_by_play_2004.zip",
+      "acquired_utc": "2026-10-27T11:33:35Z",
+      "bytes": 13884616,
+      "sha256": "b37bdc7cb4e95267bfd9974af946a632fa060a34a4620faa72c02418428244ab",
+      "format": "ZIP archive containing one CSV",
+      "role": "pbp_zip_xcheck",
+      "provider": "nflverse (nflverse/nflverse-data GitHub releases)",
+      "release_tag": "pbp",
+      "licence": "CC-BY-4.0 (GitHub repository licence of nflverse/nflverse-data, recorded in data/raw/nflverse/dictionaries_20261027T113315Z/nflverse-data_license_api.json). Public download, no account or payment. Underlying play data originate from NFL Game Center feeds as processed by nflfastR.",
+      "asset_updated_at": "2022-07-28T22:13:00Z",
+      "asset_created_at": "2022-07-28T22:12:59Z",
+      "asset_size_api": 13884616,
+      "asset_digest_api": null,
+      "sha256_matches_api_digest": "no digest published",
+      "rows": 47470,
+      "columns": 372,
+      "seasons_covered": [
+        2004
+      ],
+      "zip_member": "data/play_by_play_2004.csv",
+      "zip_member_timestamp": "2022-07-28T19:32:44",
+      "note": "Older vintage (asset last updated 2022-07-28) kept only as a cross-check; not the analysis input."
+    },
+    {
+      "file": "data/raw/nflverse/pbp_release_zip2022_20261027T113315Z/play_by_play_2005.zip",
+      "url": "https://github.com/nflverse/nflverse-data/releases/download/pbp/play_by_play_2005.zip",
+      "acquired_utc": "2026-10-27T11:33:36Z",
+      "bytes": 13793179,
+      "sha256": "3c98cb3547e1dbd4e33a70d943bf9b590f0dab5050ffa5524d92396f88444c70",
+      "format": "ZIP archive containing one CSV",
+      "role": "pbp_zip_xcheck",
+      "provider": "nflverse (nflverse/nflverse-data GitHub releases)",
+      "release_tag": "pbp",
+      "licence": "CC-BY-4.0 (GitHub repository licence of nflverse/nflverse-data, recorded in data/raw/nflverse/dictionaries_20261027T113315Z/nflverse-data_license_api.json). Public download, no account or payment. Underlying play data originate from NFL Game Center feeds as processed by nflfastR.",
+      "asset_updated_at": "2022-07-28T22:13:13Z",
+      "asset_created_at": "2022-07-28T22:13:12Z",
+      "asset_size_api": 13793179,
+      "asset_digest_api": null,
+      "sha256_matches_api_digest": "no digest published",
+      "rows": 47611,
+      "columns": 372,
+      "seasons_covered": [
+        2005
+      ],
+      "zip_member": "data/play_by_play_2005.csv",
+      "zip_member_timestamp": "2022-07-28T19:40:28",
+      "note": "Older vintage (asset last updated 2022-07-28) kept only as a cross-check; not the analysis input."
+    },
+    {
+      "file": "data/raw/nflverse/schedules_release_20261027T113315Z/release_api_schedules.json",
+      "url": "https://api.github.com/repos/nflverse/nflverse-data/releases/tags/schedules",
+      "acquired_utc": "2026-10-27T11:33:39Z",
+      "bytes": 13058,
+      "sha256": "8194bbefac44c48f8e4be5bb55e522e12463eca68ba7dadfd7e15008324e48a5",
+      "format": "JSON",
+      "role": "sched_meta",
+      "provider": "nflverse (nflverse/nflverse-data GitHub releases)",
+      "release_tag": "schedules",
+      "licence": "CC-BY-4.0 (GitHub repository licence of nflverse/nflverse-data, recorded in data/raw/nflverse/dictionaries_20261027T113315Z/nflverse-data_license_api.json). Public download, no account or payment. Underlying play data originate from NFL Game Center feeds as processed by nflfastR."
+    },
+    {
+      "file": "data/raw/nflverse/schedules_release_20261027T113315Z/games.parquet",
+      "url": "https://github.com/nflverse/nflverse-data/releases/download/schedules/games.parquet",
+      "acquired_utc": "2026-10-27T11:33:39Z",
+      "bytes": 522726,
+      "sha256": "202eee92b7d75c02db25d838d6b89aa21804f9336e95518d5264a7395200a943",
+      "format": "Apache Parquet",
+      "role": "schedules",
+      "provider": "nflverse (nflverse/nflverse-data GitHub releases)",
+      "release_tag": "schedules",
+      "licence": "CC-BY-4.0 (GitHub repository licence of nflverse/nflverse-data, recorded in data/raw/nflverse/dictionaries_20261027T113315Z/nflverse-data_license_api.json). Public download, no account or payment. Underlying play data originate from NFL Game Center feeds as processed by nflfastR.",
+      "asset_updated_at": "2026-10-27T09:35:24Z",
+      "asset_created_at": "2026-10-27T09:35:23Z",
+      "asset_size_api": 522726,
+      "asset_digest_api": "sha256:202eee92b7d75c02db25d838d6b89aa21804f9336e95518d5264a7395200a943",
+      "sha256_matches_api_digest": true,
+      "rows": 7548,
+      "columns": 46,
+      "seasons_covered": "1999-2026",
+      "embedded_metadata": {
+        "nflverse_timestamp": "2026-10-27 05:35:21 EDT"
+      }
+    },
+    {
+      "file": "data/raw/nflverse/schedules_release_20261027T113315Z/games.csv",
+      "url": "https://github.com/nflverse/nflverse-data/releases/download/schedules/games.csv",
+      "acquired_utc": "2026-10-27T11:33:39Z",
+      "bytes": 2186544,
+      "sha256": "ca9ef455b4652a75dc63a8ba63897de18899d966d7d6836bd3ce362d4fc7a2b7",
+      "format": "CSV",
+      "role": "schedules",
+      "provider": "nflverse (nflverse/nflverse-data GitHub releases)",
+      "release_tag": "schedules",
+      "licence": "CC-BY-4.0 (GitHub repository licence of nflverse/nflverse-data, recorded in data/raw/nflverse/dictionaries_20261027T113315Z/nflverse-data_license_api.json). Public download, no account or payment. Underlying play data originate from NFL Game Center feeds as processed by nflfastR.",
+      "asset_updated_at": "2026-10-27T09:35:24Z",
+      "asset_created_at": "2026-10-27T09:35:23Z",
+      "asset_size_api": 2186544,
+      "asset_digest_api": "sha256:ca9ef455b4652a75dc63a8ba63897de18899d966d7d6836bd3ce362d4fc7a2b7",
+      "sha256_matches_api_digest": true,
+      "rows": 7548,
+      "columns": 46,
+      "seasons_covered": "1999-2026"
+    },
+    {
+      "file": "data/raw/nflverse/schedules_release_20261027T113315Z/timestamp.json",
+      "url": "https://github.com/nflverse/nflverse-data/releases/download/schedules/timestamp.json",
+      "acquired_utc": "2026-10-27T11:33:40Z",
+      "bytes": 43,
+      "sha256": "7b59e5a12e8ebf2c7684e10d3bfd7415a3dac5681bf6caf924590448255742cd",
+      "format": "JSON",
+      "role": "schedules",
+      "provider": "nflverse (nflverse/nflverse-data GitHub releases)",
+      "release_tag": "schedules",
+      "licence": "CC-BY-4.0 (GitHub repository licence of nflverse/nflverse-data, recorded in data/raw/nflverse/dictionaries_20261027T113315Z/nflverse-data_license_api.json). Public download, no account or payment. Underlying play data originate from NFL Game Center feeds as processed by nflfastR.",
+      "asset_updated_at": "2026-10-27T09:35:25Z",
+      "asset_created_at": "2026-10-27T09:35:25Z",
+      "asset_size_api": 43,
+      "asset_digest_api": "sha256:7b59e5a12e8ebf2c7684e10d3bfd7415a3dac5681bf6caf924590448255742cd",
+      "sha256_matches_api_digest": true,
+      "content": {
+        "last_updated": "2026-10-27 05:35:22 EDT"
+      }
+    },
+    {
+      "file": "data/raw/nfldata/games_csv_20261027T113315Z/games.csv",
+      "url": "https://raw.githubusercontent.com/nflverse/nfldata/20cdb994b1342f5504065ac75859a02be1f4f905/data/games.csv",
+      "acquired_utc": "2026-10-27T11:33:40Z",
+      "bytes": 2186549,
+      "sha256": "7c7a77f342fc4927adbd84ec2b94997b587cfbf9db4496c02e163cf1483b686f",
+      "format": "CSV",
+      "role": "nfldata_games",
+      "provider": "nflverse/nfldata GitHub repository (Lee Sharpe)",
+      "release_tag": null,
+      "vintage": "commit 20cdb994b1342f5504065ac75859a02be1f4f905",
+      "licence": "No licence file declared in nflverse/nfldata (GitHub licence API returns none). Publicly accessible repository, no account or payment; used only as a cross-check copy of the schedules data.",
+      "rows": 7548,
+      "columns": 46,
+      "seasons_covered": "1999-2026"
+    },
+    {
+      "file": "data/raw/nfldata/games_csv_20261027T113315Z/README.md",
+      "url": "https://raw.githubusercontent.com/nflverse/nfldata/20cdb994b1342f5504065ac75859a02be1f4f905/README.md",
+      "acquired_utc": "2026-10-27T11:33:41Z",
+      "bytes": 1017,
+      "sha256": "42035b4ee0e548389ef91509bc672a861b43c6226a7317507d41536816c9f88a",
+      "format": "Markdown",
+      "role": "nfldata_readme",
+      "provider": "nflverse/nfldata GitHub repository (Lee Sharpe)",
+      "release_tag": null,
+      "vintage": "commit 20cdb994b1342f5504065ac75859a02be1f4f905",
+      "licence": "No licence file declared in nflverse/nfldata (GitHub licence API returns none). Publicly accessible repository, no account or payment; used only as a cross-check copy of the schedules data."
+    },
+    {
+      "file": "data/raw/nflverse/dictionaries_20261027T113315Z/nflreadr_dictionary_pbp.csv",
+      "url": "https://raw.githubusercontent.com/nflverse/nflreadr/23f915a5be30415aeaa0c5c80cd23b2c69cda122/data-raw/dictionary_pbp.csv",
+      "acquired_utc": "2026-10-27T11:33:41Z",
+      "bytes": 39127,
+      "sha256": "137f3c1ae4794e2a1a4bc55ac543d807d36c6c3c24c8088e0489dd7a5c156f33",
+      "format": "CSV",
+      "role": "dict",
+      "provider": "nflverse/nflreadr",
+      "licence": "MIT licence (package repository LICENSE.md, downloaded alongside). Public, no account or payment.",
+      "vintage": "commit 23f915a5be30415aeaa0c5c80cd23b2c69cda122",
+      "rows": 372,
+      "columns": 3,
+      "seasons_covered": "not applicable (dictionary)"
+    },
+    {
+      "file": "data/raw/nflverse/dictionaries_20261027T113315Z/nflreadr_dictionary_schedules.csv",
+      "url": "https://raw.githubusercontent.com/nflverse/nflreadr/23f915a5be30415aeaa0c5c80cd23b2c69cda122/data-raw/dictionary_schedules.csv",
+      "acquired_utc": "2026-10-27T11:33:41Z",
+      "bytes": 4516,
+      "sha256": "f07a07a0b569b2526c2e3944d6da4f0d0b479cd1ead22fcff7a2fc164e0cf0f4",
+      "format": "CSV",
+      "role": "dict",
+      "provider": "nflverse/nflreadr",
+      "licence": "MIT licence (package repository LICENSE.md, downloaded alongside). Public, no account or payment.",
+      "vintage": "commit 23f915a5be30415aeaa0c5c80cd23b2c69cda122",
+      "rows": 45,
+      "columns": 3,
+      "seasons_covered": "not applicable (dictionary)"
+    },
+    {
+      "file": "data/raw/nflverse/dictionaries_20261027T113315Z/nflfastR_field_descriptions.rda",
+      "url": "https://raw.githubusercontent.com/nflverse/nflfastR/701bbf38bc1c030ff9f1f4825a23191287d3903c/data/field_descriptions.rda",
+      "acquired_utc": "2026-10-27T11:33:42Z",
+      "bytes": 7578,
+      "sha256": "be3116dcbcc02ab98190618ae1f6e143f1dcf30447a6fdcc2460f62b9f01d374",
+      "format": "R data (.rda)",
+      "role": "dict",
+      "provider": "nflverse/nflfastR",
+      "licence": "MIT licence (package repository LICENSE.md, downloaded alongside). Public, no account or payment.",
+      "vintage": "commit 701bbf38bc1c030ff9f1f4825a23191287d3903c"
+    },
+    {
+      "file": "data/raw/nflverse/dictionaries_20261027T113315Z/nflreadr_dictionary_pbp.html",
+      "url": "https://nflreadr.nflverse.com/articles/dictionary_pbp.html",
+      "acquired_utc": "2026-10-27T11:33:42Z",
+      "bytes": 47668,
+      "sha256": "6fa8d6c22a8a1b635322d8af9d7cb69fcb2d4c3b5acee0dbf2d94bf40d5e29cc",
+      "format": "HTML",
+      "role": "dict_html",
+      "provider": "nflverse/nflreadr",
+      "licence": "Package documentation website (pkgdown), public; content MIT-licensed package documentation.",
+      "vintage": "live website, retrieved at acquired_utc"
+    },
+    {
+      "file": "data/raw/nflverse/dictionaries_20261027T113315Z/nflreadr_dictionary_schedules.html",
+      "url": "https://nflreadr.nflverse.com/articles/dictionary_schedules.html",
+      "acquired_utc": "2026-10-27T11:33:43Z",
+      "bytes": 13406,
+      "sha256": "892f91fe148168b261bdab5534d2b1aef219b11610353cf372ca5045956cef26",
+      "format": "HTML",
+      "role": "dict_html",
+      "provider": "nflverse/nflreadr",
+      "licence": "Package documentation website (pkgdown), public; content MIT-licensed package documentation.",
+      "vintage": "live website, retrieved at acquired_utc"
+    },
+    {
+      "file": "data/raw/nflverse/dictionaries_20261027T113315Z/nflreadr_LICENSE.md",
+      "url": "https://raw.githubusercontent.com/nflverse/nflreadr/23f915a5be30415aeaa0c5c80cd23b2c69cda122/LICENSE.md",
+      "acquired_utc": "2026-10-27T11:33:43Z",
+      "bytes": 1075,
+      "sha256": "7ea91fb135ea11fe49ea83044fd8add1252f16c05eefd17bfe9488f30db77fca",
+      "format": "Markdown",
+      "role": "licence",
+      "provider": "nflverse/nflreadr",
+      "licence": "MIT licence (package repository LICENSE.md, downloaded alongside). Public, no account or payment.",
+      "vintage": "commit 23f915a5be30415aeaa0c5c80cd23b2c69cda122"
+    },
+    {
+      "file": "data/raw/nflverse/dictionaries_20261027T113315Z/nflfastR_LICENSE.md",
+      "url": "https://raw.githubusercontent.com/nflverse/nflfastR/701bbf38bc1c030ff9f1f4825a23191287d3903c/LICENSE.md",
+      "acquired_utc": "2026-10-27T11:33:43Z",
+      "bytes": 1086,
+      "sha256": "c4c1517a557e81d9bebb5ab316fafe92c39b54531edce402a13e832e8c0b6db4",
+      "format": "Markdown",
+      "role": "licence",
+      "provider": "nflverse/nflfastR",
+      "licence": "MIT licence (package repository LICENSE.md, downloaded alongside). Public, no account or payment.",
+      "vintage": "commit 701bbf38bc1c030ff9f1f4825a23191287d3903c"
+    },
+    {
+      "file": "data/raw/nflverse/dictionaries_20261027T113315Z/nflverse-data_license_api.json",
+      "url": "https://api.github.com/repos/nflverse/nflverse-data/license",
+      "acquired_utc": "2026-10-27T11:33:43Z",
+      "bytes": 26797,
+      "sha256": "33ab47798aeb668089b37097e42a1f3a25a8af2f7cb2ccf4539c57651faed8ed",
+      "format": "JSON",
+      "role": "licence",
+      "provider": "nflverse/nflverse-data repository metadata",
+      "licence": "Repository metadata (public).",
+      "vintage": "branch master / API at acquired_utc"
+    },
+    {
+      "file": "data/raw/nflverse/dictionaries_20261027T113315Z/nflverse-data_README.md",
+      "url": "https://raw.githubusercontent.com/nflverse/nflverse-data/master/README.md",
+      "acquired_utc": "2026-10-27T11:33:44Z",
+      "bytes": 699,
+      "sha256": "a343c9cb9dbf2cef3e98cc51bab6568e8425f35f46a3d1f64c06da5169e3984c",
+      "format": "Markdown",
+      "role": "licence",
+      "provider": "nflverse/nflverse-data repository metadata",
+      "licence": "Repository metadata (public).",
+      "vintage": "branch master / API at acquired_utc"
+    },
+    {
+      "file": "data/raw/nfldata/standings_csv_20261027T121608Z/standings.csv",
+      "url": "https://raw.githubusercontent.com/nflverse/nfldata/20cdb994b1342f5504065ac75859a02be1f4f905/data/standings.csv",
+      "acquired_utc": "2026-10-27T12:16:08Z",
+      "bytes": 56900,
+      "sha256": "d47f95e79df02baa50b987f79055e3e709ccbf756e41ae2a4b5593bc027a280d",
+      "role": "nfldata_standings",
+      "acquisition": "team alignment follow-up (data/scripts/download_alignment.sh, download_alignment_templates.sh)",
+      "provider": "nflverse/nfldata GitHub repository (Lee Sharpe)",
+      "release_tag": null,
+      "vintage": "commit 20cdb994b1342f5504065ac75859a02be1f4f905",
+      "licence": "No licence file declared in nflverse/nfldata (GitHub licence API returns none). Publicly accessible repository, no account or payment.",
+      "format": "CSV",
+      "rows": 800,
+      "columns": 16,
+      "seasons_covered": "2002-2026",
+      "note": "Season-specific conf/division per team from 2002 onward (no 2000-2001 rows). Only season, conf, division and team are used; the file also holds season outcome columns, which are not used."
+    },
+    {
+      "file": "data/raw/nfldata/standings_csv_20261027T121608Z/teams.csv",
+      "url": "https://raw.githubusercontent.com/nflverse/nfldata/20cdb994b1342f5504065ac75859a02be1f4f905/data/teams.csv",
+      "acquired_utc": "2026-10-27T12:16:08Z",
+      "bytes": 90927,
+      "sha256": "b7cfab98e6ac35c684432f6ace65d6065b0b89b90e3a2e91116a69ae38e04d42",
+      "role": "nfldata_teams",
+      "acquisition": "team alignment follow-up (data/scripts/download_alignment.sh, download_alignment_templates.sh)",
+      "provider": "nflverse/nfldata GitHub repository (Lee Sharpe)",
+      "release_tag": null,
+      "vintage": "commit 20cdb994b1342f5504065ac75859a02be1f4f905",
+      "licence": "No licence file declared in nflverse/nfldata (GitHub licence API returns none). Publicly accessible repository, no account or payment.",
+      "format": "CSV",
+      "rows": 800,
+      "columns": 18,
+      "seasons_covered": "2002-2026",
+      "note": "Team identifiers and full names by season from 2002; used only to map Wikipedia team names to abbreviations."
+    },
+    {
+      "file": "data/raw/wikipedia/nfl_season_wikitext_20261027T121608Z/revisions_api.json",
+      "url": "https://en.wikipedia.org/w/api.php?action=query&prop=revisions&rvprop=ids|timestamp|size|sha1&format=json&titles=2000_NFL_season|2001_NFL_season|2002_NFL_season|2003_NFL_season|2004_NFL_season|2005_NFL_season",
+      "acquired_utc": "2026-10-27T12:16:08Z",
+      "bytes": 1657,
+      "sha256": "abcfd42e573eff081419bb28497e1828260ce99b227ccf09ceeab9c810881f36",
+      "role": "wiki_meta",
+      "acquisition": "team alignment follow-up (data/scripts/download_alignment.sh, download_alignment_templates.sh)",
+      "provider": "English Wikipedia",
+      "licence": "Wikipedia text, CC BY-SA 4.0 (and GFDL). Retrieved as raw wikitext of a pinned revision via index.php?action=raw and the MediaWiki API, which Wikimedia permits for low-volume automated access with a User-Agent; no account.",
+      "vintage": "API response at acquired_utc (lists the pinned revision ids, timestamps, sizes, sha1)",
+      "format": "JSON"
+    },
+    {
+      "file": "data/raw/wikipedia/nfl_season_wikitext_20261027T121608Z/2000_NFL_season_rev1379216480.wikitext",
+      "url": "https://en.wikipedia.org/w/index.php?oldid=1379216480&action=raw",
+      "acquired_utc": "2026-10-27T12:16:08Z",
+      "bytes": 22012,
+      "sha256": "3b199b174b1bf1332926b0fe7f3bd50f59baf7498306db01d6e05936a293eaf3",
+      "role": "wiki_season",
+      "acquisition": "team alignment follow-up (data/scripts/download_alignment.sh, download_alignment_templates.sh)",
+      "provider": "English Wikipedia",
+      "licence": "Wikipedia text, CC BY-SA 4.0 (and GFDL). Retrieved as raw wikitext of a pinned revision via index.php?action=raw and the MediaWiki API, which Wikimedia permits for low-volume automated access with a User-Agent; no account.",
+      "vintage": "revision oldid=1379216480",
+      "format": "MediaWiki wikitext",
+      "seasons_covered": [
+        2000
+      ],
+      "page": "2000 NFL season",
+      "note": "Season article; holds only transclusions of the division standings templates, which were fetched separately."
+    },
+    {
+      "file": "data/raw/wikipedia/nfl_season_wikitext_20261027T121608Z/2001_NFL_season_rev1382104372.wikitext",
+      "url": "https://en.wikipedia.org/w/index.php?oldid=1382104372&action=raw",
+      "acquired_utc": "2026-10-27T12:16:09Z",
+      "bytes": 38017,
+      "sha256": "6bd3af81dcf9997dbb1f95ed55c2239d2e269709503f54ea1b87486d7def4d92",
+      "role": "wiki_season",
+      "acquisition": "team alignment follow-up (data/scripts/download_alignment.sh, download_alignment_templates.sh)",
+      "provider": "English Wikipedia",
+      "licence": "Wikipedia text, CC BY-SA 4.0 (and GFDL). Retrieved as raw wikitext of a pinned revision via index.php?action=raw and the MediaWiki API, which Wikimedia permits for low-volume automated access with a User-Agent; no account.",
+      "vintage": "revision oldid=1382104372",
+      "format": "MediaWiki wikitext",
+      "seasons_covered": [
+        2001
+      ],
+      "page": "2001 NFL season",
+      "note": "Season article; holds only transclusions of the division standings templates, which were fetched separately."
+    },
+    {
+      "file": "data/raw/wikipedia/nfl_season_wikitext_20261027T121608Z/2002_NFL_season_rev1379216401.wikitext",
+      "url": "https://en.wikipedia.org/w/index.php?oldid=1379216401&action=raw",
+      "acquired_utc": "2026-10-27T12:16:09Z",
+      "bytes": 35355,
+      "sha256": "1bc1812c8cd2206ff3976b767b4e59bcf33e4e227158fb3e3e487418d8fa07d0",
+      "role": "wiki_season",
+      "acquisition": "team alignment follow-up (data/scripts/download_alignment.sh, download_alignment_templates.sh)",
+      "provider": "English Wikipedia",
+      "licence": "Wikipedia text, CC BY-SA 4.0 (and GFDL). Retrieved as raw wikitext of a pinned revision via index.php?action=raw and the MediaWiki API, which Wikimedia permits for low-volume automated access with a User-Agent; no account.",
+      "vintage": "revision oldid=1379216401",
+      "format": "MediaWiki wikitext",
+      "seasons_covered": [
+        2002
+      ],
+      "page": "2002 NFL season",
+      "note": "Season article; holds only transclusions of the division standings templates, which were fetched separately."
+    },
+    {
+      "file": "data/raw/wikipedia/nfl_season_wikitext_20261027T121608Z/2003_NFL_season_rev1380867130.wikitext",
+      "url": "https://en.wikipedia.org/w/index.php?oldid=1380867130&action=raw",
+      "acquired_utc": "2026-10-27T12:16:10Z",
+      "bytes": 20059,
+      "sha256": "c35ffb2c69d0bd022ad4917917262e05b3e8e634e68e42cfd52771dec804effe",
+      "role": "wiki_season",
+      "acquisition": "team alignment follow-up (data/scripts/download_alignment.sh, download_alignment_templates.sh)",
+      "provider": "English Wikipedia",
+      "licence": "Wikipedia text, CC BY-SA 4.0 (and GFDL). Retrieved as raw wikitext of a pinned revision via index.php?action=raw and the MediaWiki API, which Wikimedia permits for low-volume automated access with a User-Agent; no account.",
+      "vintage": "revision oldid=1380867130",
+      "format": "MediaWiki wikitext",
+      "seasons_covered": [
+        2003
+      ],
+      "page": "2003 NFL season",
+      "note": "Season article; holds only transclusions of the division standings templates, which were fetched separately."
+    },
+    {
+      "file": "data/raw/wikipedia/nfl_season_wikitext_20261027T121608Z/2004_NFL_season_rev1379216361.wikitext",
+      "url": "https://en.wikipedia.org/w/index.php?oldid=1379216361&action=raw",
+      "acquired_utc": "2026-10-27T12:16:11Z",
+      "bytes": 27456,
+      "sha256": "83f396b8c270007fe746ee5383003745a319752f0fd867e0fb87ad62c9ff1892",
+      "role": "wiki_season",
+      "acquisition": "team alignment follow-up (data/scripts/download_alignment.sh, download_alignment_templates.sh)",
+      "provider": "English Wikipedia",
+      "licence": "Wikipedia text, CC BY-SA 4.0 (and GFDL). Retrieved as raw wikitext of a pinned revision via index.php?action=raw and the MediaWiki API, which Wikimedia permits for low-volume automated access with a User-Agent; no account.",
+      "vintage": "revision oldid=1379216361",
+      "format": "MediaWiki wikitext",
+      "seasons_covered": [
+        2004
+      ],
+      "page": "2004 NFL season",
+      "note": "Season article; holds only transclusions of the division standings templates, which were fetched separately."
+    },
+    {
+      "file": "data/raw/wikipedia/nfl_season_wikitext_20261027T121608Z/2005_NFL_season_rev1380949269.wikitext",
+      "url": "https://en.wikipedia.org/w/index.php?oldid=1380949269&action=raw",
+      "acquired_utc": "2026-10-27T12:16:11Z",
+      "bytes": 35705,
+      "sha256": "34b08c53ce840258f2f8c77f8aeedc2f625c9b6334bce8e6e6b8430d39e6f073",
+      "role": "wiki_season",
+      "acquisition": "team alignment follow-up (data/scripts/download_alignment.sh, download_alignment_templates.sh)",
+      "provider": "English Wikipedia",
+      "licence": "Wikipedia text, CC BY-SA 4.0 (and GFDL). Retrieved as raw wikitext of a pinned revision via index.php?action=raw and the MediaWiki API, which Wikimedia permits for low-volume automated access with a User-Agent; no account.",
+      "vintage": "revision oldid=1380949269",
+      "format": "MediaWiki wikitext",
+      "seasons_covered": [
+        2005
+      ],
+      "page": "2005 NFL season",
+      "note": "Season article; holds only transclusions of the division standings templates, which were fetched separately."
+    },
+    {
+      "file": "data/raw/wikipedia/nfl_division_standings_templates_20261027T121639Z/revisions_api.json",
+      "url": "https://en.wikipedia.org/w/api.php?action=query&prop=revisions&rvprop=ids|timestamp|size|sha1&format=json&titles=Template:2000_AFC_East_standings|Template:2000_AFC_Central_standings|Template:2000_AFC_West_standings|Template:2000_NFC_East_standings|Template:2000_NFC_Central_standings|Template:2000_NFC_West_standings|Template:2001_AFC_East_standings|Template:2001_AFC_Central_standings|Template:2001_AFC_West_standings|Template:2001_NFC_East_standings|Template:2001_NFC_Central_standings|Template:2001_NFC_West_standings|Template:2002_AFC_East_standings|Template:2002_AFC_North_standings|Template:2002_AFC_South_standings|Template:2002_AFC_West_standings|Template:2002_NFC_East_standings|Template:2002_NFC_North_standings|Template:2002_NFC_South_standings|Template:2002_NFC_West_standings|Template:2003_AFC_East_standings|Template:2003_AFC_North_standings|Template:2003_AFC_South_standings|Template:2003_AFC_West_standings|Template:2003_NFC_East_standings|Template:2003_NFC_North_standings|Template:2003_NFC_South_standings|Template:2003_NFC_West_standings|Template:2004_AFC_East_standings|Template:2004_AFC_North_standings|Template:2004_AFC_South_standings|Template:2004_AFC_West_standings|Template:2004_NFC_East_standings|Template:2004_NFC_North_standings|Template:2004_NFC_South_standings|Template:2004_NFC_West_standings|Template:2005_AFC_East_standings|Template:2005_AFC_North_standings|Template:2005_AFC_South_standings|Template:2005_AFC_West_standings|Template:2005_NFC_East_standings|Template:2005_NFC_North_standings|Template:2005_NFC_South_standings|Template:2005_NFC_West_standings",
+      "acquired_utc": "2026-10-27T12:16:40Z",
+      "bytes": 14219,
+      "sha256": "3d32905fa2ed0c2288b62d80a1181e23ae4ffcfc622b4ea6c60f8d5a54244468",
+      "role": "wiki_tmpl_meta",
+      "acquisition": "team alignment follow-up (data/scripts/download_alignment.sh, download_alignment_templates.sh)",
+      "provider": "English Wikipedia",
+      "licence": "Wikipedia text, CC BY-SA 4.0 (and GFDL). Retrieved as raw wikitext of a pinned revision via index.php?action=raw and the MediaWiki API, which Wikimedia permits for low-volume automated access with a User-Agent; no account.",
+      "vintage": "API response at acquired_utc (lists the pinned revision ids, timestamps, sizes, sha1)",
+      "format": "JSON"
+    },
+    {
+      "file": "data/raw/wikipedia/nfl_division_standings_templates_20261027T121639Z/2000_AFC_Central_standings_rev1313162337.wikitext",
+      "url": "https://en.wikipedia.org/w/index.php?oldid=1313162337&action=raw",
+      "acquired_utc": "2026-10-27T12:16:41Z",
+      "bytes": 1500,
+      "sha256": "ca33fdf80cd75821f97ae641f0c2d8d0e3526566483b88395862b74d4397733b",
+      "role": "wiki_tmpl",
+      "acquisition": "team alignment follow-up (data/scripts/download_alignment.sh, download_alignment_templates.sh)",
+      "provider": "English Wikipedia",
+      "licence": "Wikipedia text, CC BY-SA 4.0 (and GFDL). Retrieved as raw wikitext of a pinned revision via index.php?action=raw and the MediaWiki API, which Wikimedia permits for low-volume automated access with a User-Agent; no account.",
+      "vintage": "revision oldid=1313162337",
+      "format": "MediaWiki wikitext",
+      "seasons_covered": [
+        2000
+      ],
+      "page": "Template:2000 AFC Central standings"
+    },
+    {
+      "file": "data/raw/wikipedia/nfl_division_standings_templates_20261027T121639Z/2000_AFC_East_standings_rev1312824742.wikitext",
+      "url": "https://en.wikipedia.org/w/index.php?oldid=1312824742&action=raw",
+      "acquired_utc": "2026-10-27T12:16:42Z",
+      "bytes": 1467,
+      "sha256": "af56a7c7768ad59eafaca43fcdd4036b30375a866458cf1fcad1c4ed429b6254",
+      "role": "wiki_tmpl",
+      "acquisition": "team alignment follow-up (data/scripts/download_alignment.sh, download_alignment_templates.sh)",
+      "provider": "English Wikipedia",
+      "licence": "Wikipedia text, CC BY-SA 4.0 (and GFDL). Retrieved as raw wikitext of a pinned revision via index.php?action=raw and the MediaWiki API, which Wikimedia permits for low-volume automated access with a User-Agent; no account.",
+      "vintage": "revision oldid=1312824742",
+      "format": "MediaWiki wikitext",
+      "seasons_covered": [
+        2000
+      ],
+      "page": "Template:2000 AFC East standings"
+    },
+    {
+      "file": "data/raw/wikipedia/nfl_division_standings_templates_20261027T121639Z/2000_AFC_West_standings_rev1313162338.wikitext",
+      "url": "https://en.wikipedia.org/w/index.php?oldid=1313162338&action=raw",
+      "acquired_utc": "2026-10-27T12:16:43Z",
+      "bytes": 1395,
+      "sha256": "bcec181ed993a470b49221840040e6499f0c1556e8ec04a337956ff4eb7edb41",
+      "role": "wiki_tmpl",
+      "acquisition": "team alignment follow-up (data/scripts/download_alignment.sh, download_alignment_templates.sh)",
+      "provider": "English Wikipedia",
+      "licence": "Wikipedia text, CC BY-SA 4.0 (and GFDL). Retrieved as raw wikitext of a pinned revision via index.php?action=raw and the MediaWiki API, which Wikimedia permits for low-volume automated access with a User-Agent; no account.",
+      "vintage": "revision oldid=1313162338",
+      "format": "MediaWiki wikitext",
+      "seasons_covered": [
+        2000
+      ],
+      "page": "Template:2000 AFC West standings"
+    },
+    {
+      "file": "data/raw/wikipedia/nfl_division_standings_templates_20261027T121639Z/2000_NFC_Central_standings_rev1313162331.wikitext",
+      "url": "https://en.wikipedia.org/w/index.php?oldid=1313162331&action=raw",
+      "acquired_utc": "2026-10-27T12:16:44Z",
+      "bytes": 1406,
+      "sha256": "9e899f8202166cc3d5df93ea0fe1f10364d254de66f9b8e21e696e8e00eda69f",
+      "role": "wiki_tmpl",
+      "acquisition": "team alignment follow-up (data/scripts/download_alignment.sh, download_alignment_templates.sh)",
+      "provider": "English Wikipedia",
+      "licence": "Wikipedia text, CC BY-SA 4.0 (and GFDL). Retrieved as raw wikitext of a pinned revision via index.php?action=raw and the MediaWiki API, which Wikimedia permits for low-volume automated access with a User-Agent; no account.",
+      "vintage": "revision oldid=1313162331",
+      "format": "MediaWiki wikitext",
+      "seasons_covered": [
+        2000
+      ],
+      "page": "Template:2000 NFC Central standings"
+    },
+    {
+      "file": "data/raw/wikipedia/nfl_division_standings_templates_20261027T121639Z/2000_NFC_East_standings_rev1312828553.wikitext",
+      "url": "https://en.wikipedia.org/w/index.php?oldid=1312828553&action=raw",
+      "acquired_utc": "2026-10-27T12:16:45Z",
+      "bytes": 1436,
+      "sha256": "aa0b70f17b35dcbe27d20ca0459a52aa7c8f1bd3379e5f880d063f5071ac520b",
+      "role": "wiki_tmpl",
+      "acquisition": "team alignment follow-up (data/scripts/download_alignment.sh, download_alignment_templates.sh)",
+      "provider": "English Wikipedia",
+      "licence": "Wikipedia text, CC BY-SA 4.0 (and GFDL). Retrieved as raw wikitext of a pinned revision via index.php?action=raw and the MediaWiki API, which Wikimedia permits for low-volume automated access with a User-Agent; no account.",
+      "vintage": "revision oldid=1312828553",
+      "format": "MediaWiki wikitext",
+      "seasons_covered": [
+        2000
+      ],
+      "page": "Template:2000 NFC East standings"
+    },
+    {
+      "file": "data/raw/wikipedia/nfl_division_standings_templates_20261027T121639Z/2000_NFC_West_standings_rev1312826589.wikitext",
+      "url": "https://en.wikipedia.org/w/index.php?oldid=1312826589&action=raw",
+      "acquired_utc": "2026-10-27T12:16:46Z",
+      "bytes": 1433,
+      "sha256": "f14d21af4b5db63a1ae6f4c451dacf0b3500220d39f926bc07def24cacdb6a4b",
+      "role": "wiki_tmpl",
+      "acquisition": "team alignment follow-up (data/scripts/download_alignment.sh, download_alignment_templates.sh)",
+      "provider": "English Wikipedia",
+      "licence": "Wikipedia text, CC BY-SA 4.0 (and GFDL). Retrieved as raw wikitext of a pinned revision via index.php?action=raw and the MediaWiki API, which Wikimedia permits for low-volume automated access with a User-Agent; no account.",
+      "vintage": "revision oldid=1312826589",
+      "format": "MediaWiki wikitext",
+      "seasons_covered": [
+        2000
+      ],
+      "page": "Template:2000 NFC West standings"
+    },
+    {
+      "file": "data/raw/wikipedia/nfl_division_standings_templates_20261027T121639Z/2001_AFC_Central_standings_rev1313162322.wikitext",
+      "url": "https://en.wikipedia.org/w/index.php?oldid=1313162322&action=raw",
+      "acquired_utc": "2026-10-27T12:16:47Z",
+      "bytes": 1472,
+      "sha256": "7c5094a6d705aeb9bb24a989a20dcde717f51e1ce334e8e8d0d3e3a8f668917b",
+      "role": "wiki_tmpl",
+      "acquisition": "team alignment follow-up (data/scripts/download_alignment.sh, download_alignment_templates.sh)",
+      "provider": "English Wikipedia",
+      "licence": "Wikipedia text, CC BY-SA 4.0 (and GFDL). Retrieved as raw wikitext of a pinned revision via index.php?action=raw and the MediaWiki API, which Wikimedia permits for low-volume automated access with a User-Agent; no account.",
+      "vintage": "revision oldid=1313162322",
+      "format": "MediaWiki wikitext",
+      "seasons_covered": [
+        2001
+      ],
+      "page": "Template:2001 AFC Central standings"
+    },
+    {
+      "file": "data/raw/wikipedia/nfl_division_standings_templates_20261027T121639Z/2001_AFC_East_standings_rev1312824740.wikitext",
+      "url": "https://en.wikipedia.org/w/index.php?oldid=1312824740&action=raw",
+      "acquired_utc": "2026-10-27T12:16:48Z",
+      "bytes": 1447,
+      "sha256": "11654b900e6e398fd31a281ea68f73f3a22524bfac780b6a7ca30a1a9de4b397",
+      "role": "wiki_tmpl",
+      "acquisition": "team alignment follow-up (data/scripts/download_alignment.sh, download_alignment_templates.sh)",
+      "provider": "English Wikipedia",
+      "licence": "Wikipedia text, CC BY-SA 4.0 (and GFDL). Retrieved as raw wikitext of a pinned revision via index.php?action=raw and the MediaWiki API, which Wikimedia permits for low-volume automated access with a User-Agent; no account.",
+      "vintage": "revision oldid=1312824740",
+      "format": "MediaWiki wikitext",
+      "seasons_covered": [
+        2001
+      ],
+      "page": "Template:2001 AFC East standings"
+    },
+    {
+      "file": "data/raw/wikipedia/nfl_division_standings_templates_20261027T121639Z/2001_AFC_West_standings_rev1313162325.wikitext",
+      "url": "https://en.wikipedia.org/w/index.php?oldid=1313162325&action=raw",
+      "acquired_utc": "2026-10-27T12:16:49Z",
+      "bytes": 1317,
+      "sha256": "df7c1d82ad586b9730ab7180eaa35866a3502973eb4caf83babe19dfd6b40b61",
+      "role": "wiki_tmpl",
+      "acquisition": "team alignment follow-up (data/scripts/download_alignment.sh, download_alignment_templates.sh)",
+      "provider": "English Wikipedia",
+      "licence": "Wikipedia text, CC BY-SA 4.0 (and GFDL). Retrieved as raw wikitext of a pinned revision via index.php?action=raw and the MediaWiki API, which Wikimedia permits for low-volume automated access with a User-Agent; no account.",
+      "vintage": "revision oldid=1313162325",
+      "format": "MediaWiki wikitext",
+      "seasons_covered": [
+        2001
+      ],
+      "page": "Template:2001 AFC West standings"
+    },
+    {
+      "file": "data/raw/wikipedia/nfl_division_standings_templates_20261027T121639Z/2001_NFC_Central_standings_rev1312829205.wikitext",
+      "url": "https://en.wikipedia.org/w/index.php?oldid=1312829205&action=raw",
+      "acquired_utc": "2026-10-27T12:16:50Z",
+      "bytes": 1490,
+      "sha256": "1060462526d93a89014e4332def6cd532fa90b2f2a3ede288dce6091dad0c409",
+      "role": "wiki_tmpl",
+      "acquisition": "team alignment follow-up (data/scripts/download_alignment.sh, download_alignment_templates.sh)",
+      "provider": "English Wikipedia",
+      "licence": "Wikipedia text, CC BY-SA 4.0 (and GFDL). Retrieved as raw wikitext of a pinned revision via index.php?action=raw and the MediaWiki API, which Wikimedia permits for low-volume automated access with a User-Agent; no account.",
+      "vintage": "revision oldid=1312829205",
+      "format": "MediaWiki wikitext",
+      "seasons_covered": [
+        2001
+      ],
+      "page": "Template:2001 NFC Central standings"
+    },
+    {
+      "file": "data/raw/wikipedia/nfl_division_standings_templates_20261027T121639Z/2001_NFC_East_standings_rev1312828552.wikitext",
+      "url": "https://en.wikipedia.org/w/index.php?oldid=1312828552&action=raw",
+      "acquired_utc": "2026-10-27T12:16:51Z",
+      "bytes": 1359,
+      "sha256": "0202e3f2b6564ef3402f9e08026031107a194892006f7a2ac54893f4e0feb224",
+      "role": "wiki_tmpl",
+      "acquisition": "team alignment follow-up (data/scripts/download_alignment.sh, download_alignment_templates.sh)",
+      "provider": "English Wikipedia",
+      "licence": "Wikipedia text, CC BY-SA 4.0 (and GFDL). Retrieved as raw wikitext of a pinned revision via index.php?action=raw and the MediaWiki API, which Wikimedia permits for low-volume automated access with a User-Agent; no account.",
+      "vintage": "revision oldid=1312828552",
+      "format": "MediaWiki wikitext",
+      "seasons_covered": [
+        2001
+      ],
+      "page": "Template:2001 NFC East standings"
+    },
+    {
+      "file": "data/raw/wikipedia/nfl_division_standings_templates_20261027T121639Z/2001_NFC_West_standings_rev1312826585.wikitext",
+      "url": "https://en.wikipedia.org/w/index.php?oldid=1312826585&action=raw",
+      "acquired_utc": "2026-10-27T12:16:52Z",
+      "bytes": 1433,
+      "sha256": "192714795249f45c0ced8e1056ff62176a4c305984d84fd65a6adab3eb76dcd1",
+      "role": "wiki_tmpl",
+      "acquisition": "team alignment follow-up (data/scripts/download_alignment.sh, download_alignment_templates.sh)",
+      "provider": "English Wikipedia",
+      "licence": "Wikipedia text, CC BY-SA 4.0 (and GFDL). Retrieved as raw wikitext of a pinned revision via index.php?action=raw and the MediaWiki API, which Wikimedia permits for low-volume automated access with a User-Agent; no account.",
+      "vintage": "revision oldid=1312826585",
+      "format": "MediaWiki wikitext",
+      "seasons_covered": [
+        2001
+      ],
+      "page": "Template:2001 NFC West standings"
+    },
+    {
+      "file": "data/raw/wikipedia/nfl_division_standings_templates_20261027T121639Z/2002_AFC_East_standings_rev1312824739.wikitext",
+      "url": "https://en.wikipedia.org/w/index.php?oldid=1312824739&action=raw",
+      "acquired_utc": "2026-10-27T12:16:53Z",
+      "bytes": 1549,
+      "sha256": "c6fb216d19fdff2856d586cdf15da0ca6faac4296e1b4954442521ff35ee43cf",
+      "role": "wiki_tmpl",
+      "acquisition": "team alignment follow-up (data/scripts/download_alignment.sh, download_alignment_templates.sh)",
+      "provider": "English Wikipedia",
+      "licence": "Wikipedia text, CC BY-SA 4.0 (and GFDL). Retrieved as raw wikitext of a pinned revision via index.php?action=raw and the MediaWiki API, which Wikimedia permits for low-volume automated access with a User-Agent; no account.",
+      "vintage": "revision oldid=1312824739",
+      "format": "MediaWiki wikitext",
+      "seasons_covered": [
+        2002
+      ],
+      "page": "Template:2002 AFC East standings"
+    },
+    {
+      "file": "data/raw/wikipedia/nfl_division_standings_templates_20261027T121639Z/2002_AFC_North_standings_rev1312825186.wikitext",
+      "url": "https://en.wikipedia.org/w/index.php?oldid=1312825186&action=raw",
+      "acquired_utc": "2026-10-27T12:16:54Z",
+      "bytes": 1620,
+      "sha256": "8d3600d737e07387cbf13e5abd4d8fe972f32dcb36579e8e3cd699ffa0f12176",
+      "role": "wiki_tmpl",
+      "acquisition": "team alignment follow-up (data/scripts/download_alignment.sh, download_alignment_templates.sh)",
+      "provider": "English Wikipedia",
+      "licence": "Wikipedia text, CC BY-SA 4.0 (and GFDL). Retrieved as raw wikitext of a pinned revision via index.php?action=raw and the MediaWiki API, which Wikimedia permits for low-volume automated access with a User-Agent; no account.",
+      "vintage": "revision oldid=1312825186",
+      "format": "MediaWiki wikitext",
+      "seasons_covered": [
+        2002
+      ],
+      "page": "Template:2002 AFC North standings"
+    },
+    {
+      "file": "data/raw/wikipedia/nfl_division_standings_templates_20261027T121639Z/2002_AFC_South_standings_rev1312825327.wikitext",
+      "url": "https://en.wikipedia.org/w/index.php?oldid=1312825327&action=raw",
+      "acquired_utc": "2026-10-27T12:16:56Z",
+      "bytes": 1620,
+      "sha256": "56866f5e774587afa78b9fd88853b1dda07bba41bdab078f7b7ce8bbc4019bbd",
+      "role": "wiki_tmpl",
+      "acquisition": "team alignment follow-up (data/scripts/download_alignment.sh, download_alignment_templates.sh)",
+      "provider": "English Wikipedia",
+      "licence": "Wikipedia text, CC BY-SA 4.0 (and GFDL). Retrieved as raw wikitext of a pinned revision via index.php?action=raw and the MediaWiki API, which Wikimedia permits for low-volume automated access with a User-Agent; no account.",
+      "vintage": "revision oldid=1312825327",
+      "format": "MediaWiki wikitext",
+      "seasons_covered": [
+        2002
+      ],
+      "page": "Template:2002 AFC South standings"
+    },
+    {
+      "file": "data/raw/wikipedia/nfl_division_standings_templates_20261027T121639Z/2002_AFC_West_standings_rev1312825796.wikitext",
+      "url": "https://en.wikipedia.org/w/index.php?oldid=1312825796&action=raw",
+      "acquired_utc": "2026-10-27T12:16:57Z",
+      "bytes": 1560,
+      "sha256": "98955d0c530738528bb4cb2e03db0241c0eb4c3f56f6041e5d14256bbe510faa",
+      "role": "wiki_tmpl",
+      "acquisition": "team alignment follow-up (data/scripts/download_alignment.sh, download_alignment_templates.sh)",
+      "provider": "English Wikipedia",
+      "licence": "Wikipedia text, CC BY-SA 4.0 (and GFDL). Retrieved as raw wikitext of a pinned revision via index.php?action=raw and the MediaWiki API, which Wikimedia permits for low-volume automated access with a User-Agent; no account.",
+      "vintage": "revision oldid=1312825796",
+      "format": "MediaWiki wikitext",
+      "seasons_covered": [
+        2002
+      ],
+      "page": "Template:2002 AFC West standings"
+    },
+    {
+      "file": "data/raw/wikipedia/nfl_division_standings_templates_20261027T121639Z/2002_NFC_East_standings_rev1312828551.wikitext",
+      "url": "https://en.wikipedia.org/w/index.php?oldid=1312828551&action=raw",
+      "acquired_utc": "2026-10-27T12:16:58Z",
+      "bytes": 1615,
+      "sha256": "0acc76c221deac565f41fc2318f6d5743a8d1afbed49a6dc25e9cead72e0412a",
+      "role": "wiki_tmpl",
+      "acquisition": "team alignment follow-up (data/scripts/download_alignment.sh, download_alignment_templates.sh)",
+      "provider": "English Wikipedia",
+      "licence": "Wikipedia text, CC BY-SA 4.0 (and GFDL). Retrieved as raw wikitext of a pinned revision via index.php?action=raw and the MediaWiki API, which Wikimedia permits for low-volume automated access with a User-Agent; no account.",
+      "vintage": "revision oldid=1312828551",
+      "format": "MediaWiki wikitext",
+      "seasons_covered": [
+        2002
+      ],
+      "page": "Template:2002 NFC East standings"
+    },
+    {
+      "file": "data/raw/wikipedia/nfl_division_standings_templates_20261027T121639Z/2002_NFC_North_standings_rev1312826363.wikitext",
+      "url": "https://en.wikipedia.org/w/index.php?oldid=1312826363&action=raw",
+      "acquired_utc": "2026-10-27T12:16:59Z",
+      "bytes": 1554,
+      "sha256": "77c1d8f278fee1005928e3573a9565bad7cec634dce08806a436756694db485f",
+      "role": "wiki_tmpl",
+      "acquisition": "team alignment follow-up (data/scripts/download_alignment.sh, download_alignment_templates.sh)",
+      "provider": "English Wikipedia",
+      "licence": "Wikipedia text, CC BY-SA 4.0 (and GFDL). Retrieved as raw wikitext of a pinned revision via index.php?action=raw and the MediaWiki API, which Wikimedia permits for low-volume automated access with a User-Agent; no account.",
+      "vintage": "revision oldid=1312826363",
+      "format": "MediaWiki wikitext",
+      "seasons_covered": [
+        2002
+      ],
+      "page": "Template:2002 NFC North standings"
+    },
+    {
+      "file": "data/raw/wikipedia/nfl_division_standings_templates_20261027T121639Z/2002_NFC_South_standings_rev1312825060.wikitext",
+      "url": "https://en.wikipedia.org/w/index.php?oldid=1312825060&action=raw",
+      "acquired_utc": "2026-10-27T12:17:00Z",
+      "bytes": 1640,
+      "sha256": "5291322bf3c1dd8892d707cadf8bb8c3be2e1a64ae7256d54ef65c5ac7226f0b",
+      "role": "wiki_tmpl",
+      "acquisition": "team alignment follow-up (data/scripts/download_alignment.sh, download_alignment_templates.sh)",
+      "provider": "English Wikipedia",
+      "licence": "Wikipedia text, CC BY-SA 4.0 (and GFDL). Retrieved as raw wikitext of a pinned revision via index.php?action=raw and the MediaWiki API, which Wikimedia permits for low-volume automated access with a User-Agent; no account.",
+      "vintage": "revision oldid=1312825060",
+      "format": "MediaWiki wikitext",
+      "seasons_covered": [
+        2002
+      ],
+      "page": "Template:2002 NFC South standings"
+    },
+    {
+      "file": "data/raw/wikipedia/nfl_division_standings_templates_20261027T121639Z/2002_NFC_West_standings_rev1312826406.wikitext",
+      "url": "https://en.wikipedia.org/w/index.php?oldid=1312826406&action=raw",
+      "acquired_utc": "2026-10-27T12:17:01Z",
+      "bytes": 1563,
+      "sha256": "51411575321ea1bfc85e86ce4ff339ece9f573fff2a2f8672d89aaee5de64a36",
+      "role": "wiki_tmpl",
+      "acquisition": "team alignment follow-up (data/scripts/download_alignment.sh, download_alignment_templates.sh)",
+      "provider": "English Wikipedia",
+      "licence": "Wikipedia text, CC BY-SA 4.0 (and GFDL). Retrieved as raw wikitext of a pinned revision via index.php?action=raw and the MediaWiki API, which Wikimedia permits for low-volume automated access with a User-Agent; no account.",
+      "vintage": "revision oldid=1312826406",
+      "format": "MediaWiki wikitext",
+      "seasons_covered": [
+        2002
+      ],
+      "page": "Template:2002 NFC West standings"
+    },
+    {
+      "file": "data/raw/wikipedia/nfl_division_standings_templates_20261027T121639Z/2003_AFC_East_standings_rev1312824616.wikitext",
+      "url": "https://en.wikipedia.org/w/index.php?oldid=1312824616&action=raw",
+      "acquired_utc": "2026-10-27T12:17:02Z",
+      "bytes": 1555,
+      "sha256": "b620458483dae8cd3f03341dccdbe649e61cfc04b5b6d5d26fbb54eed42c7c15",
+      "role": "wiki_tmpl",
+      "acquisition": "team alignment follow-up (data/scripts/download_alignment.sh, download_alignment_templates.sh)",
+      "provider": "English Wikipedia",
+      "licence": "Wikipedia text, CC BY-SA 4.0 (and GFDL). Retrieved as raw wikitext of a pinned revision via index.php?action=raw and the MediaWiki API, which Wikimedia permits for low-volume automated access with a User-Agent; no account.",
+      "vintage": "revision oldid=1312824616",
+      "format": "MediaWiki wikitext",
+      "seasons_covered": [
+        2003
+      ],
+      "page": "Template:2003 AFC East standings"
+    },
+    {
+      "file": "data/raw/wikipedia/nfl_division_standings_templates_20261027T121639Z/2003_AFC_North_standings_rev1312825183.wikitext",
+      "url": "https://en.wikipedia.org/w/index.php?oldid=1312825183&action=raw",
+      "acquired_utc": "2026-10-27T12:17:03Z",
+      "bytes": 1572,
+      "sha256": "42dea75611327163de3f47357106c5e1de7eaf7013ffde3fcba3e5369b59c532",
+      "role": "wiki_tmpl",
+      "acquisition": "team alignment follow-up (data/scripts/download_alignment.sh, download_alignment_templates.sh)",
+      "provider": "English Wikipedia",
+      "licence": "Wikipedia text, CC BY-SA 4.0 (and GFDL). Retrieved as raw wikitext of a pinned revision via index.php?action=raw and the MediaWiki API, which Wikimedia permits for low-volume automated access with a User-Agent; no account.",
+      "vintage": "revision oldid=1312825183",
+      "format": "MediaWiki wikitext",
+      "seasons_covered": [
+        2003
+      ],
+      "page": "Template:2003 AFC North standings"
+    },
+    {
+      "file": "data/raw/wikipedia/nfl_division_standings_templates_20261027T121639Z/2003_AFC_South_standings_rev1312825326.wikitext",
+      "url": "https://en.wikipedia.org/w/index.php?oldid=1312825326&action=raw",
+      "acquired_utc": "2026-10-27T12:17:04Z",
+      "bytes": 1619,
+      "sha256": "3a5a72d86e83fcf6de25a671b1514878e337d4fbcc6c6857d5b14885d027f725",
+      "role": "wiki_tmpl",
+      "acquisition": "team alignment follow-up (data/scripts/download_alignment.sh, download_alignment_templates.sh)",
+      "provider": "English Wikipedia",
+      "licence": "Wikipedia text, CC BY-SA 4.0 (and GFDL). Retrieved as raw wikitext of a pinned revision via index.php?action=raw and the MediaWiki API, which Wikimedia permits for low-volume automated access with a User-Agent; no account.",
+      "vintage": "revision oldid=1312825326",
+      "format": "MediaWiki wikitext",
+      "seasons_covered": [
+        2003
+      ],
+      "page": "Template:2003 AFC South standings"
+    },
+    {
+      "file": "data/raw/wikipedia/nfl_division_standings_templates_20261027T121639Z/2003_AFC_West_standings_rev1312825793.wikitext",
+      "url": "https://en.wikipedia.org/w/index.php?oldid=1312825793&action=raw",
+      "acquired_utc": "2026-10-27T12:17:05Z",
+      "bytes": 1613,
+      "sha256": "997a8169df11aa1d46f3a944862e49ecd3c1325c1a9c5ec4867c8e41f203f6de",
+      "role": "wiki_tmpl",
+      "acquisition": "team alignment follow-up (data/scripts/download_alignment.sh, download_alignment_templates.sh)",
+      "provider": "English Wikipedia",
+      "licence": "Wikipedia text, CC BY-SA 4.0 (and GFDL). Retrieved as raw wikitext of a pinned revision via index.php?action=raw and the MediaWiki API, which Wikimedia permits for low-volume automated access with a User-Agent; no account.",
+      "vintage": "revision oldid=1312825793",
+      "format": "MediaWiki wikitext",
+      "seasons_covered": [
+        2003
+      ],
+      "page": "Template:2003 AFC West standings"
+    },
+    {
+      "file": "data/raw/wikipedia/nfl_division_standings_templates_20261027T121639Z/2003_NFC_East_standings_rev1312828549.wikitext",
+      "url": "https://en.wikipedia.org/w/index.php?oldid=1312828549&action=raw",
+      "acquired_utc": "2026-10-27T12:17:06Z",
+      "bytes": 1615,
+      "sha256": "70d3fb3bb699bf0cb1d1e06cf04ff7f0e0513b62a0475365924a77464663ba56",
+      "role": "wiki_tmpl",
+      "acquisition": "team alignment follow-up (data/scripts/download_alignment.sh, download_alignment_templates.sh)",
+      "provider": "English Wikipedia",
+      "licence": "Wikipedia text, CC BY-SA 4.0 (and GFDL). Retrieved as raw wikitext of a pinned revision via index.php?action=raw and the MediaWiki API, which Wikimedia permits for low-volume automated access with a User-Agent; no account.",
+      "vintage": "revision oldid=1312828549",
+      "format": "MediaWiki wikitext",
+      "seasons_covered": [
+        2003
+      ],
+      "page": "Template:2003 NFC East standings"
+    },
+    {
+      "file": "data/raw/wikipedia/nfl_division_standings_templates_20261027T121639Z/2003_NFC_North_standings_rev1312826362.wikitext",
+      "url": "https://en.wikipedia.org/w/index.php?oldid=1312826362&action=raw",
+      "acquired_utc": "2026-10-27T12:17:07Z",
+      "bytes": 1552,
+      "sha256": "dfdcefd479ea29d32d15837be15eba1f46e53968a984844a6ed4d93f99b099e1",
+      "role": "wiki_tmpl",
+      "acquisition": "team alignment follow-up (data/scripts/download_alignment.sh, download_alignment_templates.sh)",
+      "provider": "English Wikipedia",
+      "licence": "Wikipedia text, CC BY-SA 4.0 (and GFDL). Retrieved as raw wikitext of a pinned revision via index.php?action=raw and the MediaWiki API, which Wikimedia permits for low-volume automated access with a User-Agent; no account.",
+      "vintage": "revision oldid=1312826362",
+      "format": "MediaWiki wikitext",
+      "seasons_covered": [
+        2003
+      ],
+      "page": "Template:2003 NFC North standings"
+    },
+    {
+      "file": "data/raw/wikipedia/nfl_division_standings_templates_20261027T121639Z/2003_NFC_South_standings_rev1312824602.wikitext",
+      "url": "https://en.wikipedia.org/w/index.php?oldid=1312824602&action=raw",
+      "acquired_utc": "2026-10-27T12:17:08Z",
+      "bytes": 1571,
+      "sha256": "dd2492b1f7a78240446688b113fc9171ffcfee3a1e338d1ab6f2bb830e44777a",
+      "role": "wiki_tmpl",
+      "acquisition": "team alignment follow-up (data/scripts/download_alignment.sh, download_alignment_templates.sh)",
+      "provider": "English Wikipedia",
+      "licence": "Wikipedia text, CC BY-SA 4.0 (and GFDL). Retrieved as raw wikitext of a pinned revision via index.php?action=raw and the MediaWiki API, which Wikimedia permits for low-volume automated access with a User-Agent; no account.",
+      "vintage": "revision oldid=1312824602",
+      "format": "MediaWiki wikitext",
+      "seasons_covered": [
+        2003
+      ],
+      "page": "Template:2003 NFC South standings"
+    },
+    {
+      "file": "data/raw/wikipedia/nfl_division_standings_templates_20261027T121639Z/2003_NFC_West_standings_rev1312826510.wikitext",
+      "url": "https://en.wikipedia.org/w/index.php?oldid=1312826510&action=raw",
+      "acquired_utc": "2026-10-27T12:17:09Z",
+      "bytes": 1611,
+      "sha256": "6a27620eb7875430a682fa1e7911775a05befd2d400c62b4ecc144f15c4782c1",
+      "role": "wiki_tmpl",
+      "acquisition": "team alignment follow-up (data/scripts/download_alignment.sh, download_alignment_templates.sh)",
+      "provider": "English Wikipedia",
+      "licence": "Wikipedia text, CC BY-SA 4.0 (and GFDL). Retrieved as raw wikitext of a pinned revision via index.php?action=raw and the MediaWiki API, which Wikimedia permits for low-volume automated access with a User-Agent; no account.",
+      "vintage": "revision oldid=1312826510",
+      "format": "MediaWiki wikitext",
+      "seasons_covered": [
+        2003
+      ],
+      "page": "Template:2003 NFC West standings"
+    },
+    {
+      "file": "data/raw/wikipedia/nfl_division_standings_templates_20261027T121639Z/2004_AFC_East_standings_rev1312821213.wikitext",
+      "url": "https://en.wikipedia.org/w/index.php?oldid=1312821213&action=raw",
+      "acquired_utc": "2026-10-27T12:17:10Z",
+      "bytes": 1598,
+      "sha256": "efd0898c9b90165baa4f9c9a343348e3502036eb41412d40de1382ecbb887e3d",
+      "role": "wiki_tmpl",
+      "acquisition": "team alignment follow-up (data/scripts/download_alignment.sh, download_alignment_templates.sh)",
+      "provider": "English Wikipedia",
+      "licence": "Wikipedia text, CC BY-SA 4.0 (and GFDL). Retrieved as raw wikitext of a pinned revision via index.php?action=raw and the MediaWiki API, which Wikimedia permits for low-volume automated access with a User-Agent; no account.",
+      "vintage": "revision oldid=1312821213",
+      "format": "MediaWiki wikitext",
+      "seasons_covered": [
+        2004
+      ],
+      "page": "Template:2004 AFC East standings"
+    },
+    {
+      "file": "data/raw/wikipedia/nfl_division_standings_templates_20261027T121639Z/2004_AFC_North_standings_rev1312821221.wikitext",
+      "url": "https://en.wikipedia.org/w/index.php?oldid=1312821221&action=raw",
+      "acquired_utc": "2026-10-27T12:17:11Z",
+      "bytes": 1570,
+      "sha256": "6d14bb70cc117907d8e092e8ab28f1168919a16fbd51d59b755f8786776c54d8",
+      "role": "wiki_tmpl",
+      "acquisition": "team alignment follow-up (data/scripts/download_alignment.sh, download_alignment_templates.sh)",
+      "provider": "English Wikipedia",
+      "licence": "Wikipedia text, CC BY-SA 4.0 (and GFDL). Retrieved as raw wikitext of a pinned revision via index.php?action=raw and the MediaWiki API, which Wikimedia permits for low-volume automated access with a User-Agent; no account.",
+      "vintage": "revision oldid=1312821221",
+      "format": "MediaWiki wikitext",
+      "seasons_covered": [
+        2004
+      ],
+      "page": "Template:2004 AFC North standings"
+    },
+    {
+      "file": "data/raw/wikipedia/nfl_division_standings_templates_20261027T121639Z/2004_AFC_South_standings_rev1312821234.wikitext",
+      "url": "https://en.wikipedia.org/w/index.php?oldid=1312821234&action=raw",
+      "acquired_utc": "2026-10-27T12:17:12Z",
+      "bytes": 1564,
+      "sha256": "74c253a9e9e999aa7f8ad3146cf86af45dc1663546f8cd404a056d78b68b4f5f",
+      "role": "wiki_tmpl",
+      "acquisition": "team alignment follow-up (data/scripts/download_alignment.sh, download_alignment_templates.sh)",
+      "provider": "English Wikipedia",
+      "licence": "Wikipedia text, CC BY-SA 4.0 (and GFDL). Retrieved as raw wikitext of a pinned revision via index.php?action=raw and the MediaWiki API, which Wikimedia permits for low-volume automated access with a User-Agent; no account.",
+      "vintage": "revision oldid=1312821234",
+      "format": "MediaWiki wikitext",
+      "seasons_covered": [
+        2004
+      ],
+      "page": "Template:2004 AFC South standings"
+    },
+    {
+      "file": "data/raw/wikipedia/nfl_division_standings_templates_20261027T121639Z/2004_AFC_West_standings_rev1312821238.wikitext",
+      "url": "https://en.wikipedia.org/w/index.php?oldid=1312821238&action=raw",
+      "acquired_utc": "2026-10-27T12:17:13Z",
+      "bytes": 1606,
+      "sha256": "71498cb06ff294393d62e488080a302c692163da106dc8e7afdaa2cb3c7f450d",
+      "role": "wiki_tmpl",
+      "acquisition": "team alignment follow-up (data/scripts/download_alignment.sh, download_alignment_templates.sh)",
+      "provider": "English Wikipedia",
+      "licence": "Wikipedia text, CC BY-SA 4.0 (and GFDL). Retrieved as raw wikitext of a pinned revision via index.php?action=raw and the MediaWiki API, which Wikimedia permits for low-volume automated access with a User-Agent; no account.",
+      "vintage": "revision oldid=1312821238",
+      "format": "MediaWiki wikitext",
+      "seasons_covered": [
+        2004
+      ],
+      "page": "Template:2004 AFC West standings"
+    },
+    {
+      "file": "data/raw/wikipedia/nfl_division_standings_templates_20261027T121639Z/2004_NFC_East_standings_rev1312821244.wikitext",
+      "url": "https://en.wikipedia.org/w/index.php?oldid=1312821244&action=raw",
+      "acquired_utc": "2026-10-27T12:17:14Z",
+      "bytes": 1564,
+      "sha256": "781e17f1c7eaf3c1fce881d7aaba18d17d52bdd693e3f9d7bbae721ab8d86d9b",
+      "role": "wiki_tmpl",
+      "acquisition": "team alignment follow-up (data/scripts/download_alignment.sh, download_alignment_templates.sh)",
+      "provider": "English Wikipedia",
+      "licence": "Wikipedia text, CC BY-SA 4.0 (and GFDL). Retrieved as raw wikitext of a pinned revision via index.php?action=raw and the MediaWiki API, which Wikimedia permits for low-volume automated access with a User-Agent; no account.",
+      "vintage": "revision oldid=1312821244",
+      "format": "MediaWiki wikitext",
+      "seasons_covered": [
+        2004
+      ],
+      "page": "Template:2004 NFC East standings"
+    },
+    {
+      "file": "data/raw/wikipedia/nfl_division_standings_templates_20261027T121639Z/2004_NFC_North_standings_rev1312821248.wikitext",
+      "url": "https://en.wikipedia.org/w/index.php?oldid=1312821248&action=raw",
+      "acquired_utc": "2026-10-27T12:17:15Z",
+      "bytes": 1596,
+      "sha256": "0303270afd210718b4ef3129a7ec776863b27712224ed5dd0c15d5f35d7669ee",
+      "role": "wiki_tmpl",
+      "acquisition": "team alignment follow-up (data/scripts/download_alignment.sh, download_alignment_templates.sh)",
+      "provider": "English Wikipedia",
+      "licence": "Wikipedia text, CC BY-SA 4.0 (and GFDL). Retrieved as raw wikitext of a pinned revision via index.php?action=raw and the MediaWiki API, which Wikimedia permits for low-volume automated access with a User-Agent; no account.",
+      "vintage": "revision oldid=1312821248",
+      "format": "MediaWiki wikitext",
+      "seasons_covered": [
+        2004
+      ],
+      "page": "Template:2004 NFC North standings"
+    },
+    {
+      "file": "data/raw/wikipedia/nfl_division_standings_templates_20261027T121639Z/2004_NFC_South_standings_rev1324244521.wikitext",
+      "url": "https://en.wikipedia.org/w/index.php?oldid=1324244521&action=raw",
+      "acquired_utc": "2026-10-27T12:17:16Z",
+      "bytes": 1567,
+      "sha256": "18e56a7a81f1f3e89d3a51775ede70c9a930f0f134df48f210d5d00fdff8084d",
+      "role": "wiki_tmpl",
+      "acquisition": "team alignment follow-up (data/scripts/download_alignment.sh, download_alignment_templates.sh)",
+      "provider": "English Wikipedia",
+      "licence": "Wikipedia text, CC BY-SA 4.0 (and GFDL). Retrieved as raw wikitext of a pinned revision via index.php?action=raw and the MediaWiki API, which Wikimedia permits for low-volume automated access with a User-Agent; no account.",
+      "vintage": "revision oldid=1324244521",
+      "format": "MediaWiki wikitext",
+      "seasons_covered": [
+        2004
+      ],
+      "page": "Template:2004 NFC South standings"
+    },
+    {
+      "file": "data/raw/wikipedia/nfl_division_standings_templates_20261027T121639Z/2004_NFC_West_standings_rev1312821181.wikitext",
+      "url": "https://en.wikipedia.org/w/index.php?oldid=1312821181&action=raw",
+      "acquired_utc": "2026-10-27T12:17:17Z",
+      "bytes": 1608,
+      "sha256": "c9764a90bf571b241aca98d970944306339780ece3b59aaa470d2e5cd8b2d1cd",
+      "role": "wiki_tmpl",
+      "acquisition": "team alignment follow-up (data/scripts/download_alignment.sh, download_alignment_templates.sh)",
+      "provider": "English Wikipedia",
+      "licence": "Wikipedia text, CC BY-SA 4.0 (and GFDL). Retrieved as raw wikitext of a pinned revision via index.php?action=raw and the MediaWiki API, which Wikimedia permits for low-volume automated access with a User-Agent; no account.",
+      "vintage": "revision oldid=1312821181",
+      "format": "MediaWiki wikitext",
+      "seasons_covered": [
+        2004
+      ],
+      "page": "Template:2004 NFC West standings"
+    },
+    {
+      "file": "data/raw/wikipedia/nfl_division_standings_templates_20261027T121639Z/2005_AFC_East_standings_rev1312824738.wikitext",
+      "url": "https://en.wikipedia.org/w/index.php?oldid=1312824738&action=raw",
+      "acquired_utc": "2026-10-27T12:17:18Z",
+      "bytes": 1552,
+      "sha256": "d292cd400295a00a5eeec3d60fb3e89b13ccfa80dee9090ce9b7f7e79a9a19e5",
+      "role": "wiki_tmpl",
+      "acquisition": "team alignment follow-up (data/scripts/download_alignment.sh, download_alignment_templates.sh)",
+      "provider": "English Wikipedia",
+      "licence": "Wikipedia text, CC BY-SA 4.0 (and GFDL). Retrieved as raw wikitext of a pinned revision via index.php?action=raw and the MediaWiki API, which Wikimedia permits for low-volume automated access with a User-Agent; no account.",
+      "vintage": "revision oldid=1312824738",
+      "format": "MediaWiki wikitext",
+      "seasons_covered": [
+        2005
+      ],
+      "page": "Template:2005 AFC East standings"
+    },
+    {
+      "file": "data/raw/wikipedia/nfl_division_standings_templates_20261027T121639Z/2005_AFC_North_standings_rev1312825179.wikitext",
+      "url": "https://en.wikipedia.org/w/index.php?oldid=1312825179&action=raw",
+      "acquired_utc": "2026-10-27T12:17:19Z",
+      "bytes": 1621,
+      "sha256": "c83a1a899aea16f5ccc61386263d5efc9156f977e5d9f7c91788b30341dd75da",
+      "role": "wiki_tmpl",
+      "acquisition": "team alignment follow-up (data/scripts/download_alignment.sh, download_alignment_templates.sh)",
+      "provider": "English Wikipedia",
+      "licence": "Wikipedia text, CC BY-SA 4.0 (and GFDL). Retrieved as raw wikitext of a pinned revision via index.php?action=raw and the MediaWiki API, which Wikimedia permits for low-volume automated access with a User-Agent; no account.",
+      "vintage": "revision oldid=1312825179",
+      "format": "MediaWiki wikitext",
+      "seasons_covered": [
+        2005
+      ],
+      "page": "Template:2005 AFC North standings"
+    },
+    {
+      "file": "data/raw/wikipedia/nfl_division_standings_templates_20261027T121639Z/2005_AFC_South_standings_rev1312825322.wikitext",
+      "url": "https://en.wikipedia.org/w/index.php?oldid=1312825322&action=raw",
+      "acquired_utc": "2026-10-27T12:17:20Z",
+      "bytes": 1618,
+      "sha256": "26632988a66f07dfb56c4bffe4f0b89c1803eb6fb96e9fd817980f0341463ad5",
+      "role": "wiki_tmpl",
+      "acquisition": "team alignment follow-up (data/scripts/download_alignment.sh, download_alignment_templates.sh)",
+      "provider": "English Wikipedia",
+      "licence": "Wikipedia text, CC BY-SA 4.0 (and GFDL). Retrieved as raw wikitext of a pinned revision via index.php?action=raw and the MediaWiki API, which Wikimedia permits for low-volume automated access with a User-Agent; no account.",
+      "vintage": "revision oldid=1312825322",
+      "format": "MediaWiki wikitext",
+      "seasons_covered": [
+        2005
+      ],
+      "page": "Template:2005 AFC South standings"
+    },
+    {
+      "file": "data/raw/wikipedia/nfl_division_standings_templates_20261027T121639Z/2005_AFC_West_standings_rev1376256956.wikitext",
+      "url": "https://en.wikipedia.org/w/index.php?oldid=1376256956&action=raw",
+      "acquired_utc": "2026-10-27T12:17:21Z",
+      "bytes": 1561,
+      "sha256": "f684ddff8a9458c2f94fde267a13e082016f9dc45a8b75908727d92531f2998c",
+      "role": "wiki_tmpl",
+      "acquisition": "team alignment follow-up (data/scripts/download_alignment.sh, download_alignment_templates.sh)",
+      "provider": "English Wikipedia",
+      "licence": "Wikipedia text, CC BY-SA 4.0 (and GFDL). Retrieved as raw wikitext of a pinned revision via index.php?action=raw and the MediaWiki API, which Wikimedia permits for low-volume automated access with a User-Agent; no account.",
+      "vintage": "revision oldid=1376256956",
+      "format": "MediaWiki wikitext",
+      "seasons_covered": [
+        2005
+      ],
+      "page": "Template:2005 AFC West standings"
+    },
+    {
+      "file": "data/raw/wikipedia/nfl_division_standings_templates_20261027T121639Z/2005_NFC_East_standings_rev1312828547.wikitext",
+      "url": "https://en.wikipedia.org/w/index.php?oldid=1312828547&action=raw",
+      "acquired_utc": "2026-10-27T12:17:22Z",
+      "bytes": 1613,
+      "sha256": "973df8c64121458d879bd9c9ae731bd12ff67d2bdfe3b5e3af20fb9743472cb9",
+      "role": "wiki_tmpl",
+      "acquisition": "team alignment follow-up (data/scripts/download_alignment.sh, download_alignment_templates.sh)",
+      "provider": "English Wikipedia",
+      "licence": "Wikipedia text, CC BY-SA 4.0 (and GFDL). Retrieved as raw wikitext of a pinned revision via index.php?action=raw and the MediaWiki API, which Wikimedia permits for low-volume automated access with a User-Agent; no account.",
+      "vintage": "revision oldid=1312828547",
+      "format": "MediaWiki wikitext",
+      "seasons_covered": [
+        2005
+      ],
+      "page": "Template:2005 NFC East standings"
+    },
+    {
+      "file": "data/raw/wikipedia/nfl_division_standings_templates_20261027T121639Z/2005_NFC_North_standings_rev1312826360.wikitext",
+      "url": "https://en.wikipedia.org/w/index.php?oldid=1312826360&action=raw",
+      "acquired_utc": "2026-10-27T12:17:23Z",
+      "bytes": 1552,
+      "sha256": "0a69a468224e20c5e8ecbdef74a0010058d5e1bed60ccc84d63b041ee3fd21d0",
+      "role": "wiki_tmpl",
+      "acquisition": "team alignment follow-up (data/scripts/download_alignment.sh, download_alignment_templates.sh)",
+      "provider": "English Wikipedia",
+      "licence": "Wikipedia text, CC BY-SA 4.0 (and GFDL). Retrieved as raw wikitext of a pinned revision via index.php?action=raw and the MediaWiki API, which Wikimedia permits for low-volume automated access with a User-Agent; no account.",
+      "vintage": "revision oldid=1312826360",
+      "format": "MediaWiki wikitext",
+      "seasons_covered": [
+        2005
+      ],
+      "page": "Template:2005 NFC North standings"
+    },
+    {
+      "file": "data/raw/wikipedia/nfl_division_standings_templates_20261027T121639Z/2005_NFC_South_standings_rev1312824600.wikitext",
+      "url": "https://en.wikipedia.org/w/index.php?oldid=1312824600&action=raw",
+      "acquired_utc": "2026-10-27T12:17:24Z",
+      "bytes": 1620,
+      "sha256": "b93540e900e40c57362513f686afa83799d2e7dbdc7338b876c7eba74c3a6abe",
+      "role": "wiki_tmpl",
+      "acquisition": "team alignment follow-up (data/scripts/download_alignment.sh, download_alignment_templates.sh)",
+      "provider": "English Wikipedia",
+      "licence": "Wikipedia text, CC BY-SA 4.0 (and GFDL). Retrieved as raw wikitext of a pinned revision via index.php?action=raw and the MediaWiki API, which Wikimedia permits for low-volume automated access with a User-Agent; no account.",
+      "vintage": "revision oldid=1312824600",
+      "format": "MediaWiki wikitext",
+      "seasons_covered": [
+        2005
+      ],
+      "page": "Template:2005 NFC South standings"
+    },
+    {
+      "file": "data/raw/wikipedia/nfl_division_standings_templates_20261027T121639Z/2005_NFC_West_standings_rev1331002591.wikitext",
+      "url": "https://en.wikipedia.org/w/index.php?oldid=1331002591&action=raw",
+      "acquired_utc": "2026-10-27T12:17:25Z",
+      "bytes": 1564,
+      "sha256": "7d1d0f841c954553a46e202170d8edbf2c707e6066991e8c833258e0f17964fc",
+      "role": "wiki_tmpl",
+      "acquisition": "team alignment follow-up (data/scripts/download_alignment.sh, download_alignment_templates.sh)",
+      "provider": "English Wikipedia",
+      "licence": "Wikipedia text, CC BY-SA 4.0 (and GFDL). Retrieved as raw wikitext of a pinned revision via index.php?action=raw and the MediaWiki API, which Wikimedia permits for low-volume automated access with a User-Agent; no account.",
+      "vintage": "revision oldid=1331002591",
+      "format": "MediaWiki wikitext",
+      "seasons_covered": [
+        2005
+      ],
+      "page": "Template:2005 NFC West standings"
+    },
+    {
+      "file": "data/raw/wikipedia/nfl_division_standings_templates_20261027T121639Z/template_revids.tsv",
+      "url": null,
+      "provider": "derived from the saved MediaWiki API response in the same directory",
+      "bytes": 1964,
+      "sha256": "c7ab4c98f5afc8dafd4604a5243ea46afce0616be40035f1e18ffabf4a1da29a",
+      "format": "TSV (revid, title)",
+      "acquisition": "team alignment follow-up",
+      "licence": "n/a (list of revision ids)"
+    }
+  ],
+  "derived_files": [
+    {
+      "file": "data/derived/dictionary_sources/nflfastR_field_descriptions.csv",
+      "derived_from": "data/raw/nflverse/dictionaries_20261027T113315Z/nflfastR_field_descriptions.rda",
+      "script": "data/scripts/export_field_descriptions.R",
+      "bytes": 34284,
+      "sha256": "aeb622902b8a77343eb2cd7fccb076cbce8bacd174ac9c7c1c0e88d4165af62c",
+      "rows": 372,
+      "columns": 2
+    }
+  ],
+  "failed_attempts": [
+    {
+      "url": "https://raw.githubusercontent.com/nflverse/nfldata/20cdb994b1342f5504065ac75859a02be1f4f905/data/games.md",
+      "attempt_utc": "2026-10-27T11:33:40Z",
+      "http_code": "404",
+      "curl_exit": "56",
+      "intended_path": "data/raw/nfldata/games_csv_20261027T113315Z/games.md",
+      "outcome": "not acquired; no file kept"
+    },
+    {
+      "url": "https://api.github.com/repos/nflverse/nflfastR-data",
+      "attempt_utc": "2026-10-27, pre-download survey before 11:33Z (exact time not logged)",
+      "outcome": "Repository moved permanently to nflverse/nflverse-pbp, which holds build code rather than data files; no older-vintage season files obtained from it."
+    }
+  ],
+  "sources_considered_not_used": [
+    {
+      "source": "Pro-Football-Reference play-by-play pages",
+      "reason": "Site terms restrict automated scraping; not accessed."
+    },
+    {
+      "source": "nflverse/nflfastR-raw (raw Game Center JSON per game)",
+      "reason": "Upstream raw feed files exist publicly but were not downloaded in this acquisition; available for a later raw-level cross-check if needed."
+    }
+  ],
+  "alignment_acquisition": {
+    "appended_utc": "2026-10-27T12:19:14Z",
+    "download_log": "data/raw/download_log_alignment.tsv",
+    "entries_appended": 55,
+    "note": "Sources for registry/team_season_alignment.csv. No nflverse dataset found with season-specific conf/division for 2000-2001: nfldata standings.csv and teams.csv begin in 2002; the nflverse-data 'teams' release (teams_colors_logos) carries current divisions only. 2002-2005 alignment taken from nfldata standings.csv; 2000-2001 from Wikipedia division standings templates; Wikipedia also cross-checks 2002-2005."
+  }
+}

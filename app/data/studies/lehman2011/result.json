@@ -1,0 +1,4550 @@
+{
+  "schema_version": 1,
+  "study": {
+    "short": "Lehman et al.",
+    "year": 2011,
+    "journal": "Organization Science",
+    "code": "ORSC",
+    "title": "Performance, deadlines & risk-taking",
+    "topic": "NFL fourth-down decisions",
+    "outcome": "consistent",
+    "summary": "All four focal hypotheses are consistent. Secondary predicted effects depend on how team effects are averaged; specification fragility was not assessed.",
+    "sample": "21,540 plays rebuilt · 22,603 published",
+    "blocker": "Two 2000 games are unavailable; secondary predicted effects depend on calculation choices.",
+    "id": "lehman2011",
+    "citation": "Lehman, D. W., Hahn, J., Ramanujam, R., and Alge, B. J. (2011). The Dynamics of the Performance–Risk Relationship Within a Performance Period: The Moderating Role of Deadline Proximity. Organization Science, 22(6), 1613–1630.",
+    "doi": "10.1287/orsc.1100.0626",
+    "paper_outcomes": {
+      "study": "consistent",
+      "common": "partially reproduced",
+      "lenient": "partially reproduced"
+    },
+    "tables": [
+      "Table 5",
+      "Table 6"
+    ],
+    "claims": {
+      "common": {
+        "H1B": "consistent",
+        "H1A": "consistent",
+        "H3": "consistent",
+        "H2": "consistent"
+      },
+      "lenient": {
+        "H1B": "consistent",
+        "H1A": "consistent",
+        "H3": "consistent",
+        "H2": "consistent"
+      }
+    },
+    "provenance": "studies/lehman2011/scoring/common_v1/terms.csv",
+    "stages": [
+      {
+        "name": "Sources",
+        "available": true,
+        "path": "studies/lehman2011/registry"
+      },
+      {
+        "name": "Read",
+        "available": true,
+        "path": "studies/lehman2011/readers"
+      },
+      {
+        "name": "Reconcile",
+        "available": true,
+        "path": "studies/lehman2011/reconciliation"
+      },
+      {
+        "name": "Implement",
+        "available": true,
+        "path": "studies/lehman2011/implementation"
+      },
+      {
+        "name": "Score",
+        "available": true,
+        "path": "studies/lehman2011/scoring"
+      },
+      {
+        "name": "Review",
+        "available": true,
+        "path": "studies/lehman2011/checks"
+      }
+    ]
+  },
+  "terms": [
+    {
+      "table": "Table 5",
+      "tier": "lower",
+      "claim": "",
+      "term": "T5|M1|home_field",
+      "origins": "O",
+      "published": "1.019",
+      "published_se": "0.049",
+      "reconstructed": "0.004002472567361",
+      "distance_se": "0.295",
+      "n_gap": "-0.047",
+      "v1_outcome": "consistent",
+      "common": "consistent",
+      "lenient": "consistent",
+      "id": "lehman2011:0",
+      "outcomes": {
+        "study": "consistent",
+        "common": "consistent",
+        "lenient": "consistent"
+      },
+      "published_values": [
+        1.019
+      ],
+      "reconstructed_values": [
+        1.0040104931578484
+      ],
+      "summary_published": "1.02",
+      "summary_reconstructed": "0.004",
+      "comparison_source": "studies/lehman2011/runs/score_v1/target_comparisons_all_cells.csv",
+      "comparison_source_rows": [
+        2
+      ],
+      "distances": [
+        0.295
+      ],
+      "sample_gap": [
+        -0.047
+      ],
+      "scale": "odds ratio",
+      "source": "studies/lehman2011/scoring/common_v1/terms.csv",
+      "source_row": 2
+    },
+    {
+      "table": "Table 5",
+      "tier": "lower",
+      "claim": "",
+      "term": "T5|M1|minutes_remaining",
+      "origins": "O",
+      "published": "0.946",
+      "published_se": "0.002",
+      "reconstructed": "-0.0572698079185527",
+      "distance_se": "0.465",
+      "n_gap": "-0.047",
+      "v1_outcome": "consistent",
+      "common": "consistent",
+      "lenient": "consistent",
+      "id": "lehman2011:1",
+      "outcomes": {
+        "study": "consistent",
+        "common": "consistent",
+        "lenient": "consistent"
+      },
+      "published_values": [
+        0.946
+      ],
+      "reconstructed_values": [
+        0.9443392447851812
+      ],
+      "summary_published": "0.946",
+      "summary_reconstructed": "-0.0573",
+      "comparison_source": "studies/lehman2011/runs/score_v1/target_comparisons_all_cells.csv",
+      "comparison_source_rows": [
+        3
+      ],
+      "distances": [
+        0.465
+      ],
+      "sample_gap": [
+        -0.047
+      ],
+      "scale": "odds ratio",
+      "source": "studies/lehman2011/scoring/common_v1/terms.csv",
+      "source_row": 3
+    },
+    {
+      "table": "Table 5",
+      "tier": "lower",
+      "claim": "",
+      "term": "T5|M1|same_conference",
+      "origins": "O",
+      "published": "1.008",
+      "published_se": "0.05",
+      "reconstructed": "-0.0877582119812911",
+      "distance_se": "1.9",
+      "n_gap": "-0.047",
+      "v1_outcome": "discrepant_candidate",
+      "common": "indeterminate",
+      "lenient": "consistent",
+      "id": "lehman2011:2",
+      "outcomes": {
+        "study": "candidate",
+        "common": "indeterminate",
+        "lenient": "consistent"
+      },
+      "published_values": [
+        1.008
+      ],
+      "reconstructed_values": [
+        0.9159823235018297
+      ],
+      "summary_published": "1.01",
+      "summary_reconstructed": "-0.0878",
+      "comparison_source": "studies/lehman2011/runs/score_v1/target_comparisons_all_cells.csv",
+      "comparison_source_rows": [
+        4
+      ],
+      "distances": [
+        1.9
+      ],
+      "sample_gap": [
+        -0.047
+      ],
+      "scale": "odds ratio",
+      "source": "studies/lehman2011/scoring/common_v1/terms.csv",
+      "source_row": 4
+    },
+    {
+      "table": "Table 5",
+      "tier": "lower",
+      "claim": "",
+      "term": "T5|M1|same_division",
+      "origins": "O",
+      "published": "0.969",
+      "published_se": "0.054",
+      "reconstructed": "0.109051356870752",
+      "distance_se": "2.49",
+      "n_gap": "-0.047",
+      "v1_outcome": "discrepant_candidate",
+      "common": "indeterminate",
+      "lenient": "indeterminate",
+      "id": "lehman2011:3",
+      "outcomes": {
+        "study": "candidate",
+        "common": "indeterminate",
+        "lenient": "indeterminate"
+      },
+      "published_values": [
+        0.969
+      ],
+      "reconstructed_values": [
+        1.1152196230608031
+      ],
+      "summary_published": "0.969",
+      "summary_reconstructed": "0.109",
+      "comparison_source": "studies/lehman2011/runs/score_v1/target_comparisons_all_cells.csv",
+      "comparison_source_rows": [
+        5
+      ],
+      "distances": [
+        2.49
+      ],
+      "sample_gap": [
+        -0.047
+      ],
+      "scale": "odds ratio",
+      "source": "studies/lehman2011/scoring/common_v1/terms.csv",
+      "source_row": 5
+    },
+    {
+      "table": "Table 5",
+      "tier": "lower",
+      "claim": "",
+      "term": "T5|M1|total_points",
+      "origins": "O",
+      "published": "0.941",
+      "published_se": "0.003",
+      "reconstructed": "-0.0619743662501188",
+      "distance_se": "0.169",
+      "n_gap": "-0.047",
+      "v1_outcome": "consistent",
+      "common": "consistent",
+      "lenient": "consistent",
+      "id": "lehman2011:4",
+      "outcomes": {
+        "study": "consistent",
+        "common": "consistent",
+        "lenient": "consistent"
+      },
+      "published_values": [
+        0.941
+      ],
+      "reconstructed_values": [
+        0.9399069798227226
+      ],
+      "summary_published": "0.941",
+      "summary_reconstructed": "-0.062",
+      "comparison_source": "studies/lehman2011/runs/score_v1/target_comparisons_all_cells.csv",
+      "comparison_source_rows": [
+        6
+      ],
+      "distances": [
+        0.169
+      ],
+      "sample_gap": [
+        -0.047
+      ],
+      "scale": "odds ratio",
+      "source": "studies/lehman2011/scoring/common_v1/terms.csv",
+      "source_row": 6
+    },
+    {
+      "table": "Table 5",
+      "tier": "lower",
+      "claim": "",
+      "term": "T5|M1|week",
+      "origins": "O",
+      "published": "1.02",
+      "published_se": "0.005",
+      "reconstructed": "0.0204940950937764",
+      "distance_se": "0.0373",
+      "n_gap": "-0.047",
+      "v1_outcome": "consistent",
+      "common": "consistent",
+      "lenient": "consistent",
+      "id": "lehman2011:5",
+      "outcomes": {
+        "study": "consistent",
+        "common": "consistent",
+        "lenient": "consistent"
+      },
+      "published_values": [
+        1.02
+      ],
+      "reconstructed_values": [
+        1.0207055410548966
+      ],
+      "summary_published": "1.02",
+      "summary_reconstructed": "0.0205",
+      "comparison_source": "studies/lehman2011/runs/score_v1/target_comparisons_all_cells.csv",
+      "comparison_source_rows": [
+        7
+      ],
+      "distances": [
+        0.0373
+      ],
+      "sample_gap": [
+        -0.047
+      ],
+      "scale": "odds ratio",
+      "source": "studies/lehman2011/scoring/common_v1/terms.csv",
+      "source_row": 7
+    },
+    {
+      "table": "Table 5",
+      "tier": "lower",
+      "claim": "",
+      "term": "T5|M1|yards_first_down",
+      "origins": "O",
+      "published": "0.826",
+      "published_se": "0.006",
+      "reconstructed": "-0.205311944223703",
+      "distance_se": "1.72",
+      "n_gap": "-0.047",
+      "v1_outcome": "grey",
+      "common": "indeterminate",
+      "lenient": "consistent",
+      "id": "lehman2011:6",
+      "outcomes": {
+        "study": "indeterminate",
+        "common": "indeterminate",
+        "lenient": "consistent"
+      },
+      "published_values": [
+        0.826
+      ],
+      "reconstructed_values": [
+        0.8143932315189225
+      ],
+      "summary_published": "0.826",
+      "summary_reconstructed": "-0.205",
+      "comparison_source": "studies/lehman2011/runs/score_v1/target_comparisons_all_cells.csv",
+      "comparison_source_rows": [
+        8
+      ],
+      "distances": [
+        1.72
+      ],
+      "sample_gap": [
+        -0.047
+      ],
+      "scale": "odds ratio",
+      "source": "studies/lehman2011/scoring/common_v1/terms.csv",
+      "source_row": 8
+    },
+    {
+      "table": "Table 5",
+      "tier": "lower",
+      "claim": "",
+      "term": "T5|M1|yards_touchdown",
+      "origins": "O",
+      "published": "0.976",
+      "published_se": "0.001",
+      "reconstructed": "-0.0268218295723974",
+      "distance_se": "1.31",
+      "n_gap": "-0.047",
+      "v1_outcome": "consistent",
+      "common": "consistent",
+      "lenient": "consistent",
+      "id": "lehman2011:7",
+      "outcomes": {
+        "study": "consistent",
+        "common": "consistent",
+        "lenient": "consistent"
+      },
+      "published_values": [
+        0.976
+      ],
+      "reconstructed_values": [
+        0.9735346811633995
+      ],
+      "summary_published": "0.976",
+      "summary_reconstructed": "-0.0268",
+      "comparison_source": "studies/lehman2011/runs/score_v1/target_comparisons_all_cells.csv",
+      "comparison_source_rows": [
+        9
+      ],
+      "distances": [
+        1.31
+      ],
+      "sample_gap": [
+        -0.047
+      ],
+      "scale": "odds ratio",
+      "source": "studies/lehman2011/scoring/common_v1/terms.csv",
+      "source_row": 9
+    },
+    {
+      "table": "Table 5",
+      "tier": "lower",
+      "claim": "",
+      "term": "T5|M2|below_indicator",
+      "origins": "O",
+      "published": "1.12",
+      "published_se": "0.11",
+      "reconstructed": "0.169461308764579",
+      "distance_se": "0.564",
+      "n_gap": "-0.047",
+      "v1_outcome": "consistent",
+      "common": "consistent",
+      "lenient": "consistent",
+      "id": "lehman2011:8",
+      "outcomes": {
+        "study": "consistent",
+        "common": "consistent",
+        "lenient": "consistent"
+      },
+      "published_values": [
+        1.12
+      ],
+      "reconstructed_values": [
+        1.1846665099355485
+      ],
+      "summary_published": "1.12",
+      "summary_reconstructed": "0.169",
+      "comparison_source": "studies/lehman2011/runs/score_v1/target_comparisons_all_cells.csv",
+      "comparison_source_rows": [
+        10
+      ],
+      "distances": [
+        0.564
+      ],
+      "sample_gap": [
+        -0.047
+      ],
+      "scale": "odds ratio",
+      "source": "studies/lehman2011/scoring/common_v1/terms.csv",
+      "source_row": 10
+    },
+    {
+      "table": "Table 5",
+      "tier": "lower",
+      "claim": "",
+      "term": "T5|M2|home_field",
+      "origins": "O",
+      "published": "1.177",
+      "published_se": "0.059",
+      "reconstructed": "0.130802029329624",
+      "distance_se": "0.628",
+      "n_gap": "-0.047",
+      "v1_outcome": "consistent",
+      "common": "indeterminate",
+      "lenient": "indeterminate",
+      "id": "lehman2011:9",
+      "outcomes": {
+        "study": "consistent",
+        "common": "indeterminate",
+        "lenient": "indeterminate"
+      },
+      "published_values": [
+        1.177
+      ],
+      "reconstructed_values": [
+        1.1397421234636718
+      ],
+      "summary_published": "1.18",
+      "summary_reconstructed": "0.131",
+      "comparison_source": "studies/lehman2011/runs/score_v1/target_comparisons_all_cells.csv",
+      "comparison_source_rows": [
+        11
+      ],
+      "distances": [
+        0.628
+      ],
+      "sample_gap": [
+        -0.047
+      ],
+      "scale": "odds ratio",
+      "source": "studies/lehman2011/scoring/common_v1/terms.csv",
+      "source_row": 11
+    },
+    {
+      "table": "Table 5",
+      "tier": "lower",
+      "claim": "",
+      "term": "T5|M2|minutes_remaining",
+      "origins": "O",
+      "published": "0.975",
+      "published_se": "0.002",
+      "reconstructed": "-0.0271087803015791",
+      "distance_se": "0.498",
+      "n_gap": "-0.047",
+      "v1_outcome": "consistent",
+      "common": "consistent",
+      "lenient": "consistent",
+      "id": "lehman2011:10",
+      "outcomes": {
+        "study": "consistent",
+        "common": "consistent",
+        "lenient": "consistent"
+      },
+      "published_values": [
+        0.975
+      ],
+      "reconstructed_values": [
+        0.9732553647536963
+      ],
+      "summary_published": "0.975",
+      "summary_reconstructed": "-0.0271",
+      "comparison_source": "studies/lehman2011/runs/score_v1/target_comparisons_all_cells.csv",
+      "comparison_source_rows": [
+        12
+      ],
+      "distances": [
+        0.498
+      ],
+      "sample_gap": [
+        -0.047
+      ],
+      "scale": "odds ratio",
+      "source": "studies/lehman2011/scoring/common_v1/terms.csv",
+      "source_row": 12
+    },
+    {
+      "table": "Table 5",
+      "tier": "focal",
+      "claim": "H1B",
+      "term": "T5|M2|perf_above",
+      "origins": "O",
+      "published": "0.994",
+      "published_se": "0.007",
+      "reconstructed": "-0.0075986250385827",
+      "distance_se": "0.143",
+      "n_gap": "-0.047",
+      "v1_outcome": "consistent",
+      "common": "consistent",
+      "lenient": "consistent",
+      "id": "lehman2011:11",
+      "outcomes": {
+        "study": "consistent",
+        "common": "consistent",
+        "lenient": "consistent"
+      },
+      "published_values": [
+        0.994
+      ],
+      "reconstructed_values": [
+        0.9924301715283885
+      ],
+      "summary_published": "0.994",
+      "summary_reconstructed": "-0.0076",
+      "comparison_source": "studies/lehman2011/runs/score_v1/target_comparisons_all_cells.csv",
+      "comparison_source_rows": [
+        13
+      ],
+      "distances": [
+        0.143
+      ],
+      "sample_gap": [
+        -0.047
+      ],
+      "scale": "odds ratio",
+      "source": "studies/lehman2011/scoring/common_v1/terms.csv",
+      "source_row": 13
+    },
+    {
+      "table": "Table 5",
+      "tier": "focal",
+      "claim": "H1A",
+      "term": "T5|M2|perf_below",
+      "origins": "O",
+      "published": "0.883",
+      "published_se": "0.008",
+      "reconstructed": "-0.121950810834799",
+      "distance_se": "0.199",
+      "n_gap": "-0.047",
+      "v1_outcome": "consistent",
+      "common": "consistent",
+      "lenient": "consistent",
+      "id": "lehman2011:12",
+      "outcomes": {
+        "study": "consistent",
+        "common": "consistent",
+        "lenient": "consistent"
+      },
+      "published_values": [
+        0.883
+      ],
+      "reconstructed_values": [
+        0.8851919092828113
+      ],
+      "summary_published": "0.883",
+      "summary_reconstructed": "-0.122",
+      "comparison_source": "studies/lehman2011/runs/score_v1/target_comparisons_all_cells.csv",
+      "comparison_source_rows": [
+        14
+      ],
+      "distances": [
+        0.199
+      ],
+      "sample_gap": [
+        -0.047
+      ],
+      "scale": "odds ratio",
+      "source": "studies/lehman2011/scoring/common_v1/terms.csv",
+      "source_row": 14
+    },
+    {
+      "table": "Table 5",
+      "tier": "focal",
+      "claim": "H1A",
+      "term": "T5|M2|perf_below_sq",
+      "origins": "O",
+      "published": "0.999",
+      "published_se": "0",
+      "reconstructed": "-0.0011602144674412",
+      "distance_se": "0",
+      "n_gap": "-0.047",
+      "v1_outcome": "consistent",
+      "common": "consistent",
+      "lenient": "consistent",
+      "id": "lehman2011:13",
+      "outcomes": {
+        "study": "consistent",
+        "common": "consistent",
+        "lenient": "consistent"
+      },
+      "published_values": [
+        0.999
+      ],
+      "reconstructed_values": [
+        0.9988404583211459
+      ],
+      "summary_published": "0.999",
+      "summary_reconstructed": "-0.00116",
+      "comparison_source": "studies/lehman2011/runs/score_v1/target_comparisons_all_cells.csv",
+      "comparison_source_rows": [
+        15
+      ],
+      "distances": [
+        0.0
+      ],
+      "sample_gap": [
+        -0.047
+      ],
+      "scale": "odds ratio",
+      "source": "studies/lehman2011/scoring/common_v1/terms.csv",
+      "source_row": 15
+    },
+    {
+      "table": "Table 5",
+      "tier": "lower",
+      "claim": "",
+      "term": "T5|M2|same_conference",
+      "origins": "O",
+      "published": "0.997",
+      "published_se": "0.051",
+      "reconstructed": "-0.0231121264344182",
+      "distance_se": "0.379",
+      "n_gap": "-0.047",
+      "v1_outcome": "consistent",
+      "common": "consistent",
+      "lenient": "consistent",
+      "id": "lehman2011:14",
+      "outcomes": {
+        "study": "consistent",
+        "common": "consistent",
+        "lenient": "consistent"
+      },
+      "published_values": [
+        0.997
+      ],
+      "reconstructed_values": [
+        0.977152912958488
+      ],
+      "summary_published": "0.997",
+      "summary_reconstructed": "-0.0231",
+      "comparison_source": "studies/lehman2011/runs/score_v1/target_comparisons_all_cells.csv",
+      "comparison_source_rows": [
+        16
+      ],
+      "distances": [
+        0.379
+      ],
+      "sample_gap": [
+        -0.047
+      ],
+      "scale": "odds ratio",
+      "source": "studies/lehman2011/scoring/common_v1/terms.csv",
+      "source_row": 16
+    },
+    {
+      "table": "Table 5",
+      "tier": "lower",
+      "claim": "",
+      "term": "T5|M2|same_division",
+      "origins": "O",
+      "published": "1.025",
+      "published_se": "0.059",
+      "reconstructed": "0.0911214186077815",
+      "distance_se": "1.14",
+      "n_gap": "-0.047",
+      "v1_outcome": "consistent",
+      "common": "consistent",
+      "lenient": "consistent",
+      "id": "lehman2011:15",
+      "outcomes": {
+        "study": "consistent",
+        "common": "consistent",
+        "lenient": "consistent"
+      },
+      "published_values": [
+        1.025
+      ],
+      "reconstructed_values": [
+        1.0954019993700466
+      ],
+      "summary_published": "1.02",
+      "summary_reconstructed": "0.0911",
+      "comparison_source": "studies/lehman2011/runs/score_v1/target_comparisons_all_cells.csv",
+      "comparison_source_rows": [
+        17
+      ],
+      "distances": [
+        1.14
+      ],
+      "sample_gap": [
+        -0.047
+      ],
+      "scale": "odds ratio",
+      "source": "studies/lehman2011/scoring/common_v1/terms.csv",
+      "source_row": 17
+    },
+    {
+      "table": "Table 5",
+      "tier": "lower",
+      "claim": "",
+      "term": "T5|M2|total_points",
+      "origins": "O",
+      "published": "1.007",
+      "published_se": "0.005",
+      "reconstructed": "0.0084041390475113",
+      "distance_se": "0.171",
+      "n_gap": "-0.047",
+      "v1_outcome": "consistent",
+      "common": "consistent",
+      "lenient": "consistent",
+      "id": "lehman2011:16",
+      "outcomes": {
+        "study": "consistent",
+        "common": "consistent",
+        "lenient": "consistent"
+      },
+      "published_values": [
+        1.007
+      ],
+      "reconstructed_values": [
+        1.0084395529623793
+      ],
+      "summary_published": "1.01",
+      "summary_reconstructed": "0.0084",
+      "comparison_source": "studies/lehman2011/runs/score_v1/target_comparisons_all_cells.csv",
+      "comparison_source_rows": [
+        18
+      ],
+      "distances": [
+        0.171
+      ],
+      "sample_gap": [
+        -0.047
+      ],
+      "scale": "odds ratio",
+      "source": "studies/lehman2011/scoring/common_v1/terms.csv",
+      "source_row": 18
+    },
+    {
+      "table": "Table 5",
+      "tier": "lower",
+      "claim": "",
+      "term": "T5|M2|week",
+      "origins": "O",
+      "published": "1.023",
+      "published_se": "0.005",
+      "reconstructed": "0.0229777886090281",
+      "distance_se": "0",
+      "n_gap": "-0.047",
+      "v1_outcome": "consistent",
+      "common": "consistent",
+      "lenient": "consistent",
+      "id": "lehman2011:17",
+      "outcomes": {
+        "study": "consistent",
+        "common": "consistent",
+        "lenient": "consistent"
+      },
+      "published_values": [
+        1.023
+      ],
+      "reconstructed_values": [
+        1.0232438116264495
+      ],
+      "summary_published": "1.02",
+      "summary_reconstructed": "0.023",
+      "comparison_source": "studies/lehman2011/runs/score_v1/target_comparisons_all_cells.csv",
+      "comparison_source_rows": [
+        19
+      ],
+      "distances": [
+        0.0
+      ],
+      "sample_gap": [
+        -0.047
+      ],
+      "scale": "odds ratio",
+      "source": "studies/lehman2011/scoring/common_v1/terms.csv",
+      "source_row": 19
+    },
+    {
+      "table": "Table 5",
+      "tier": "lower",
+      "claim": "",
+      "term": "T5|M2|yards_first_down",
+      "origins": "O",
+      "published": "0.813",
+      "published_se": "0.006",
+      "reconstructed": "-0.221677091975125",
+      "distance_se": "1.75",
+      "n_gap": "-0.047",
+      "v1_outcome": "grey",
+      "common": "indeterminate",
+      "lenient": "consistent",
+      "id": "lehman2011:18",
+      "outcomes": {
+        "study": "indeterminate",
+        "common": "indeterminate",
+        "lenient": "consistent"
+      },
+      "published_values": [
+        0.813
+      ],
+      "reconstructed_values": [
+        0.8011740280931027
+      ],
+      "summary_published": "0.813",
+      "summary_reconstructed": "-0.222",
+      "comparison_source": "studies/lehman2011/runs/score_v1/target_comparisons_all_cells.csv",
+      "comparison_source_rows": [
+        20
+      ],
+      "distances": [
+        1.75
+      ],
+      "sample_gap": [
+        -0.047
+      ],
+      "scale": "odds ratio",
+      "source": "studies/lehman2011/scoring/common_v1/terms.csv",
+      "source_row": 20
+    },
+    {
+      "table": "Table 5",
+      "tier": "lower",
+      "claim": "",
+      "term": "T5|M2|yards_touchdown",
+      "origins": "O",
+      "published": "0.973",
+      "published_se": "0.001",
+      "reconstructed": "-0.0297973763748175",
+      "distance_se": "1.24",
+      "n_gap": "-0.047",
+      "v1_outcome": "consistent",
+      "common": "consistent",
+      "lenient": "consistent",
+      "id": "lehman2011:19",
+      "outcomes": {
+        "study": "consistent",
+        "common": "consistent",
+        "lenient": "consistent"
+      },
+      "published_values": [
+        0.973
+      ],
+      "reconstructed_values": [
+        0.9706421886633713
+      ],
+      "summary_published": "0.973",
+      "summary_reconstructed": "-0.0298",
+      "comparison_source": "studies/lehman2011/runs/score_v1/target_comparisons_all_cells.csv",
+      "comparison_source_rows": [
+        21
+      ],
+      "distances": [
+        1.24
+      ],
+      "sample_gap": [
+        -0.047
+      ],
+      "scale": "odds ratio",
+      "source": "studies/lehman2011/scoring/common_v1/terms.csv",
+      "source_row": 21
+    },
+    {
+      "table": "Table 5",
+      "tier": "lower",
+      "claim": "",
+      "term": "T5|M3|below_indicator",
+      "origins": "O",
+      "published": "0.857",
+      "published_se": "0.092",
+      "reconstructed": "-0.154472458238207",
+      "distance_se": "0",
+      "n_gap": "-0.047",
+      "v1_outcome": "consistent",
+      "common": "consistent",
+      "lenient": "consistent",
+      "id": "lehman2011:20",
+      "outcomes": {
+        "study": "consistent",
+        "common": "consistent",
+        "lenient": "consistent"
+      },
+      "published_values": [
+        0.857
+      ],
+      "reconstructed_values": [
+        0.8568670914464329
+      ],
+      "summary_published": "0.857",
+      "summary_reconstructed": "-0.154",
+      "comparison_source": "studies/lehman2011/runs/score_v1/target_comparisons_all_cells.csv",
+      "comparison_source_rows": [
+        22
+      ],
+      "distances": [
+        0.0
+      ],
+      "sample_gap": [
+        -0.047
+      ],
+      "scale": "odds ratio",
+      "source": "studies/lehman2011/scoring/common_v1/terms.csv",
+      "source_row": 22
+    },
+    {
+      "table": "Table 5",
+      "tier": "lower",
+      "claim": "",
+      "term": "T5|M3|home_field",
+      "origins": "O",
+      "published": "1.167",
+      "published_se": "0.06",
+      "reconstructed": "0.113584380585429",
+      "distance_se": "0.779",
+      "n_gap": "-0.047",
+      "v1_outcome": "consistent",
+      "common": "indeterminate",
+      "lenient": "indeterminate",
+      "id": "lehman2011:21",
+      "outcomes": {
+        "study": "consistent",
+        "common": "indeterminate",
+        "lenient": "indeterminate"
+      },
+      "published_values": [
+        1.167
+      ],
+      "reconstructed_values": [
+        1.1202864153277998
+      ],
+      "summary_published": "1.17",
+      "summary_reconstructed": "0.114",
+      "comparison_source": "studies/lehman2011/runs/score_v1/target_comparisons_all_cells.csv",
+      "comparison_source_rows": [
+        23
+      ],
+      "distances": [
+        0.779
+      ],
+      "sample_gap": [
+        -0.047
+      ],
+      "scale": "odds ratio",
+      "source": "studies/lehman2011/scoring/common_v1/terms.csv",
+      "source_row": 23
+    },
+    {
+      "table": "Table 5",
+      "tier": "lower",
+      "claim": "",
+      "term": "T5|M3|minutes_remaining",
+      "origins": "O",
+      "published": "1.019",
+      "published_se": "0.003",
+      "reconstructed": "0.0187797304302669",
+      "distance_se": "0",
+      "n_gap": "-0.047",
+      "v1_outcome": "consistent",
+      "common": "consistent",
+      "lenient": "consistent",
+      "id": "lehman2011:22",
+      "outcomes": {
+        "study": "consistent",
+        "common": "consistent",
+        "lenient": "consistent"
+      },
+      "published_values": [
+        1.019
+      ],
+      "reconstructed_values": [
+        1.0189571786370477
+      ],
+      "summary_published": "1.02",
+      "summary_reconstructed": "0.0188",
+      "comparison_source": "studies/lehman2011/runs/score_v1/target_comparisons_all_cells.csv",
+      "comparison_source_rows": [
+        24
+      ],
+      "distances": [
+        0.0
+      ],
+      "sample_gap": [
+        -0.047
+      ],
+      "scale": "odds ratio",
+      "source": "studies/lehman2011/scoring/common_v1/terms.csv",
+      "source_row": 24
+    },
+    {
+      "table": "Table 5",
+      "tier": "lower",
+      "claim": "",
+      "term": "T5|M3|perf_above",
+      "origins": "O",
+      "published": "1.038",
+      "published_se": "0.01",
+      "reconstructed": "0.0374278814930026",
+      "distance_se": "0",
+      "n_gap": "-0.047",
+      "v1_outcome": "consistent",
+      "common": "consistent",
+      "lenient": "consistent",
+      "id": "lehman2011:23",
+      "outcomes": {
+        "study": "consistent",
+        "common": "consistent",
+        "lenient": "consistent"
+      },
+      "published_values": [
+        1.038
+      ],
+      "reconstructed_values": [
+        1.0381371254824951
+      ],
+      "summary_published": "1.04",
+      "summary_reconstructed": "0.0374",
+      "comparison_source": "studies/lehman2011/runs/score_v1/target_comparisons_all_cells.csv",
+      "comparison_source_rows": [
+        25
+      ],
+      "distances": [
+        0.0
+      ],
+      "sample_gap": [
+        -0.047
+      ],
+      "scale": "odds ratio",
+      "source": "studies/lehman2011/scoring/common_v1/terms.csv",
+      "source_row": 25
+    },
+    {
+      "table": "Table 5",
+      "tier": "focal",
+      "claim": "H3",
+      "term": "T5|M3|perf_above_x_min",
+      "origins": "O",
+      "published": "0.998",
+      "published_se": "0",
+      "reconstructed": "-0.0021287447286988",
+      "distance_se": "0",
+      "n_gap": "-0.047",
+      "v1_outcome": "consistent",
+      "common": "consistent",
+      "lenient": "consistent",
+      "id": "lehman2011:24",
+      "outcomes": {
+        "study": "consistent",
+        "common": "consistent",
+        "lenient": "consistent"
+      },
+      "published_values": [
+        0.998
+      ],
+      "reconstructed_values": [
+        0.9978735194414627
+      ],
+      "summary_published": "0.998",
+      "summary_reconstructed": "-0.00213",
+      "comparison_source": "studies/lehman2011/runs/score_v1/target_comparisons_all_cells.csv",
+      "comparison_source_rows": [
+        26
+      ],
+      "distances": [
+        0.0
+      ],
+      "sample_gap": [
+        -0.047
+      ],
+      "scale": "odds ratio",
+      "source": "studies/lehman2011/scoring/common_v1/terms.csv",
+      "source_row": 26
+    },
+    {
+      "table": "Table 5",
+      "tier": "lower",
+      "claim": "",
+      "term": "T5|M3|perf_below",
+      "origins": "O",
+      "published": "0.669",
+      "published_se": "0.012",
+      "reconstructed": "-0.408206671793274",
+      "distance_se": "0.293",
+      "n_gap": "-0.047",
+      "v1_outcome": "consistent",
+      "common": "consistent",
+      "lenient": "consistent",
+      "id": "lehman2011:25",
+      "outcomes": {
+        "study": "consistent",
+        "common": "consistent",
+        "lenient": "consistent"
+      },
+      "published_values": [
+        0.669
+      ],
+      "reconstructed_values": [
+        0.6648414606457459
+      ],
+      "summary_published": "0.669",
+      "summary_reconstructed": "-0.408",
+      "comparison_source": "studies/lehman2011/runs/score_v1/target_comparisons_all_cells.csv",
+      "comparison_source_rows": [
+        27
+      ],
+      "distances": [
+        0.293
+      ],
+      "sample_gap": [
+        -0.047
+      ],
+      "scale": "odds ratio",
+      "source": "studies/lehman2011/scoring/common_v1/terms.csv",
+      "source_row": 27
+    },
+    {
+      "table": "Table 5",
+      "tier": "lower",
+      "claim": "",
+      "term": "T5|M3|perf_below_sq",
+      "origins": "O",
+      "published": "0.993",
+      "published_se": "0.001",
+      "reconstructed": "-0.007750913737078",
+      "distance_se": "0.147",
+      "n_gap": "-0.047",
+      "v1_outcome": "consistent",
+      "common": "consistent",
+      "lenient": "consistent",
+      "id": "lehman2011:26",
+      "outcomes": {
+        "study": "consistent",
+        "common": "consistent",
+        "lenient": "consistent"
+      },
+      "published_values": [
+        0.993
+      ],
+      "reconstructed_values": [
+        0.9922790471367795
+      ],
+      "summary_published": "0.993",
+      "summary_reconstructed": "-0.00775",
+      "comparison_source": "studies/lehman2011/runs/score_v1/target_comparisons_all_cells.csv",
+      "comparison_source_rows": [
+        28
+      ],
+      "distances": [
+        0.147
+      ],
+      "sample_gap": [
+        -0.047
+      ],
+      "scale": "odds ratio",
+      "source": "studies/lehman2011/scoring/common_v1/terms.csv",
+      "source_row": 28
+    },
+    {
+      "table": "Table 5",
+      "tier": "focal",
+      "claim": "H2",
+      "term": "T5|M3|perf_below_sq_x_min",
+      "origins": "O",
+      "published": "1.0",
+      "published_se": "0",
+      "reconstructed": "0.0002323725807816",
+      "distance_se": "0",
+      "n_gap": "-0.047",
+      "v1_outcome": "consistent",
+      "common": "consistent",
+      "lenient": "consistent",
+      "id": "lehman2011:27",
+      "outcomes": {
+        "study": "consistent",
+        "common": "consistent",
+        "lenient": "consistent"
+      },
+      "published_values": [
+        1.0
+      ],
+      "reconstructed_values": [
+        1.000232399581381
+      ],
+      "summary_published": "1",
+      "summary_reconstructed": "0.000232",
+      "comparison_source": "studies/lehman2011/runs/score_v1/target_comparisons_all_cells.csv",
+      "comparison_source_rows": [
+        29
+      ],
+      "distances": [
+        0.0
+      ],
+      "sample_gap": [
+        -0.047
+      ],
+      "scale": "odds ratio",
+      "source": "studies/lehman2011/scoring/common_v1/terms.csv",
+      "source_row": 29
+    },
+    {
+      "table": "Table 5",
+      "tier": "focal",
+      "claim": "H2",
+      "term": "T5|M3|perf_below_x_min",
+      "origins": "O",
+      "published": "1.011",
+      "published_se": "0.001",
+      "reconstructed": "0.0108550749087842",
+      "distance_se": "0",
+      "n_gap": "-0.047",
+      "v1_outcome": "consistent",
+      "common": "consistent",
+      "lenient": "consistent",
+      "id": "lehman2011:28",
+      "outcomes": {
+        "study": "consistent",
+        "common": "consistent",
+        "lenient": "consistent"
+      },
+      "published_values": [
+        1.011
+      ],
+      "reconstructed_values": [
+        1.0109142049945783
+      ],
+      "summary_published": "1.01",
+      "summary_reconstructed": "0.0109",
+      "comparison_source": "studies/lehman2011/runs/score_v1/target_comparisons_all_cells.csv",
+      "comparison_source_rows": [
+        30
+      ],
+      "distances": [
+        0.0
+      ],
+      "sample_gap": [
+        -0.047
+      ],
+      "scale": "odds ratio",
+      "source": "studies/lehman2011/scoring/common_v1/terms.csv",
+      "source_row": 30
+    },
+    {
+      "table": "Table 5",
+      "tier": "lower",
+      "claim": "",
+      "term": "T5|M3|same_conference",
+      "origins": "O",
+      "published": "0.999",
+      "published_se": "0.052",
+      "reconstructed": "-0.0027466301948274",
+      "distance_se": "0.0237",
+      "n_gap": "-0.047",
+      "v1_outcome": "consistent",
+      "common": "consistent",
+      "lenient": "consistent",
+      "id": "lehman2011:29",
+      "outcomes": {
+        "study": "consistent",
+        "common": "consistent",
+        "lenient": "consistent"
+      },
+      "published_values": [
+        0.999
+      ],
+      "reconstructed_values": [
+        0.9972571383428368
+      ],
+      "summary_published": "0.999",
+      "summary_reconstructed": "-0.00275",
+      "comparison_source": "studies/lehman2011/runs/score_v1/target_comparisons_all_cells.csv",
+      "comparison_source_rows": [
+        31
+      ],
+      "distances": [
+        0.0237
+      ],
+      "sample_gap": [
+        -0.047
+      ],
+      "scale": "odds ratio",
+      "source": "studies/lehman2011/scoring/common_v1/terms.csv",
+      "source_row": 31
+    },
+    {
+      "table": "Table 5",
+      "tier": "lower",
+      "claim": "",
+      "term": "T5|M3|same_division",
+      "origins": "O",
+      "published": "1.046",
+      "published_se": "0.062",
+      "reconstructed": "0.0995661646100795",
+      "distance_se": "0.905",
+      "n_gap": "-0.047",
+      "v1_outcome": "consistent",
+      "common": "consistent",
+      "lenient": "consistent",
+      "id": "lehman2011:30",
+      "outcomes": {
+        "study": "consistent",
+        "common": "consistent",
+        "lenient": "consistent"
+      },
+      "published_values": [
+        1.046
+      ],
+      "reconstructed_values": [
+        1.1046915598082843
+      ],
+      "summary_published": "1.05",
+      "summary_reconstructed": "0.0996",
+      "comparison_source": "studies/lehman2011/runs/score_v1/target_comparisons_all_cells.csv",
+      "comparison_source_rows": [
+        32
+      ],
+      "distances": [
+        0.905
+      ],
+      "sample_gap": [
+        -0.047
+      ],
+      "scale": "odds ratio",
+      "source": "studies/lehman2011/scoring/common_v1/terms.csv",
+      "source_row": 32
+    },
+    {
+      "table": "Table 5",
+      "tier": "lower",
+      "claim": "",
+      "term": "T5|M3|total_points",
+      "origins": "O",
+      "published": "1.014",
+      "published_se": "0.005",
+      "reconstructed": "0.0149585882430919",
+      "distance_se": "0.104",
+      "n_gap": "-0.047",
+      "v1_outcome": "consistent",
+      "common": "consistent",
+      "lenient": "consistent",
+      "id": "lehman2011:31",
+      "outcomes": {
+        "study": "consistent",
+        "common": "consistent",
+        "lenient": "consistent"
+      },
+      "published_values": [
+        1.014
+      ],
+      "reconstructed_values": [
+        1.0150710278706667
+      ],
+      "summary_published": "1.01",
+      "summary_reconstructed": "0.015",
+      "comparison_source": "studies/lehman2011/runs/score_v1/target_comparisons_all_cells.csv",
+      "comparison_source_rows": [
+        33
+      ],
+      "distances": [
+        0.104
+      ],
+      "sample_gap": [
+        -0.047
+      ],
+      "scale": "odds ratio",
+      "source": "studies/lehman2011/scoring/common_v1/terms.csv",
+      "source_row": 33
+    },
+    {
+      "table": "Table 5",
+      "tier": "lower",
+      "claim": "",
+      "term": "T5|M3|week",
+      "origins": "O",
+      "published": "1.026",
+      "published_se": "0.005",
+      "reconstructed": "0.0264059721657826",
+      "distance_se": "0.0468",
+      "n_gap": "-0.047",
+      "v1_outcome": "consistent",
+      "common": "consistent",
+      "lenient": "consistent",
+      "id": "lehman2011:32",
+      "outcomes": {
+        "study": "consistent",
+        "common": "consistent",
+        "lenient": "consistent"
+      },
+      "published_values": [
+        1.026
+      ],
+      "reconstructed_values": [
+        1.026757698919942
+      ],
+      "summary_published": "1.03",
+      "summary_reconstructed": "0.0264",
+      "comparison_source": "studies/lehman2011/runs/score_v1/target_comparisons_all_cells.csv",
+      "comparison_source_rows": [
+        34
+      ],
+      "distances": [
+        0.0468
+      ],
+      "sample_gap": [
+        -0.047
+      ],
+      "scale": "odds ratio",
+      "source": "studies/lehman2011/scoring/common_v1/terms.csv",
+      "source_row": 34
+    },
+    {
+      "table": "Table 5",
+      "tier": "lower",
+      "claim": "",
+      "term": "T5|M3|yards_first_down",
+      "origins": "O",
+      "published": "0.801",
+      "published_se": "0.006",
+      "reconstructed": "-0.238114762262811",
+      "distance_se": "1.92",
+      "n_gap": "-0.047",
+      "v1_outcome": "grey",
+      "common": "indeterminate",
+      "lenient": "consistent",
+      "id": "lehman2011:33",
+      "outcomes": {
+        "study": "indeterminate",
+        "common": "indeterminate",
+        "lenient": "consistent"
+      },
+      "published_values": [
+        0.801
+      ],
+      "reconstructed_values": [
+        0.7881122403596516
+      ],
+      "summary_published": "0.801",
+      "summary_reconstructed": "-0.238",
+      "comparison_source": "studies/lehman2011/runs/score_v1/target_comparisons_all_cells.csv",
+      "comparison_source_rows": [
+        35
+      ],
+      "distances": [
+        1.92
+      ],
+      "sample_gap": [
+        -0.047
+      ],
+      "scale": "odds ratio",
+      "source": "studies/lehman2011/scoring/common_v1/terms.csv",
+      "source_row": 35
+    },
+    {
+      "table": "Table 5",
+      "tier": "lower",
+      "claim": "",
+      "term": "T5|M3|yards_touchdown",
+      "origins": "O",
+      "published": "0.972",
+      "published_se": "0.001",
+      "reconstructed": "-0.0307700347832905",
+      "distance_se": "1.2",
+      "n_gap": "-0.047",
+      "v1_outcome": "consistent",
+      "common": "consistent",
+      "lenient": "consistent",
+      "id": "lehman2011:34",
+      "outcomes": {
+        "study": "consistent",
+        "common": "consistent",
+        "lenient": "consistent"
+      },
+      "published_values": [
+        0.972
+      ],
+      "reconstructed_values": [
+        0.9696985443731216
+      ],
+      "summary_published": "0.972",
+      "summary_reconstructed": "-0.0308",
+      "comparison_source": "studies/lehman2011/runs/score_v1/target_comparisons_all_cells.csv",
+      "comparison_source_rows": [
+        36
+      ],
+      "distances": [
+        1.2
+      ],
+      "sample_gap": [
+        -0.047
+      ],
+      "scale": "odds ratio",
+      "source": "studies/lehman2011/scoring/common_v1/terms.csv",
+      "source_row": 36
+    },
+    {
+      "table": "Table 6",
+      "tier": "lower",
+      "claim": "",
+      "term": "T6|all|gap-14",
+      "origins": "O",
+      "published": "-0.0039",
+      "published_se": "0.0005",
+      "reconstructed": "-0.0096076484826462",
+      "distance_se": "10.3",
+      "n_gap": "-0.047",
+      "v1_outcome": "discrepant_candidate",
+      "common": "candidate",
+      "lenient": "candidate",
+      "id": "lehman2011:35",
+      "outcomes": {
+        "study": "candidate",
+        "common": "candidate",
+        "lenient": "candidate"
+      },
+      "published_values": [
+        -0.0039
+      ],
+      "reconstructed_values": [
+        -0.0096076484826462
+      ],
+      "summary_published": "-0.0039",
+      "summary_reconstructed": "-0.00961",
+      "comparison_source": "studies/lehman2011/runs/score_v1/target_comparisons_all_cells.csv",
+      "comparison_source_rows": [
+        37
+      ],
+      "distances": [
+        10.3
+      ],
+      "sample_gap": [
+        -0.047
+      ],
+      "scale": "reported scale",
+      "source": "studies/lehman2011/scoring/common_v1/terms.csv",
+      "source_row": 37
+    },
+    {
+      "table": "Table 6",
+      "tier": "lower",
+      "claim": "",
+      "term": "T6|all|gap-28",
+      "origins": "O",
+      "published": "-0.0044",
+      "published_se": "0.0028",
+      "reconstructed": "-0.0114835157585074",
+      "distance_se": "2.47",
+      "n_gap": "-0.047",
+      "v1_outcome": "discrepant_candidate",
+      "common": "indeterminate",
+      "lenient": "indeterminate",
+      "id": "lehman2011:36",
+      "outcomes": {
+        "study": "candidate",
+        "common": "indeterminate",
+        "lenient": "indeterminate"
+      },
+      "published_values": [
+        -0.0044
+      ],
+      "reconstructed_values": [
+        -0.0114835157585074
+      ],
+      "summary_published": "-0.0044",
+      "summary_reconstructed": "-0.0115",
+      "comparison_source": "studies/lehman2011/runs/score_v1/target_comparisons_all_cells.csv",
+      "comparison_source_rows": [
+        38
+      ],
+      "distances": [
+        2.47
+      ],
+      "sample_gap": [
+        -0.047
+      ],
+      "scale": "reported scale",
+      "source": "studies/lehman2011/scoring/common_v1/terms.csv",
+      "source_row": 38
+    },
+    {
+      "table": "Table 6",
+      "tier": "lower",
+      "claim": "",
+      "term": "T6|all|gap-42",
+      "origins": "O",
+      "published": "-0.0026",
+      "published_se": "0.0062",
+      "reconstructed": "-0.0059130575117738",
+      "distance_se": "0.522",
+      "n_gap": "-0.047",
+      "v1_outcome": "consistent",
+      "common": "consistent",
+      "lenient": "consistent",
+      "id": "lehman2011:37",
+      "outcomes": {
+        "study": "consistent",
+        "common": "consistent",
+        "lenient": "consistent"
+      },
+      "published_values": [
+        -0.0026
+      ],
+      "reconstructed_values": [
+        -0.0059130575117738
+      ],
+      "summary_published": "-0.0026",
+      "summary_reconstructed": "-0.00591",
+      "comparison_source": "studies/lehman2011/runs/score_v1/target_comparisons_all_cells.csv",
+      "comparison_source_rows": [
+        39
+      ],
+      "distances": [
+        0.522
+      ],
+      "sample_gap": [
+        -0.047
+      ],
+      "scale": "reported scale",
+      "source": "studies/lehman2011/scoring/common_v1/terms.csv",
+      "source_row": 39
+    },
+    {
+      "table": "Table 6",
+      "tier": "lower",
+      "claim": "",
+      "term": "T6|all|gap0",
+      "origins": "O",
+      "published": "-0.0022",
+      "published_se": "0.0003",
+      "reconstructed": "-0.0036363189873904",
+      "distance_se": "3.96",
+      "n_gap": "-0.047",
+      "v1_outcome": "discrepant_candidate",
+      "common": "candidate",
+      "lenient": "indeterminate",
+      "id": "lehman2011:38",
+      "outcomes": {
+        "study": "candidate",
+        "common": "candidate",
+        "lenient": "indeterminate"
+      },
+      "published_values": [
+        -0.0022
+      ],
+      "reconstructed_values": [
+        -0.0036363189873904
+      ],
+      "summary_published": "-0.0022",
+      "summary_reconstructed": "-0.00364",
+      "comparison_source": "studies/lehman2011/runs/score_v1/target_comparisons_all_cells.csv",
+      "comparison_source_rows": [
+        40
+      ],
+      "distances": [
+        3.96
+      ],
+      "sample_gap": [
+        -0.047
+      ],
+      "scale": "reported scale",
+      "source": "studies/lehman2011/scoring/common_v1/terms.csv",
+      "source_row": 40
+    },
+    {
+      "table": "Table 6",
+      "tier": "lower",
+      "claim": "",
+      "term": "T6|all|gap14",
+      "origins": "O",
+      "published": "-0.0006",
+      "published_se": "0.0002",
+      "reconstructed": "-0.000174534511593",
+      "distance_se": "1.5",
+      "n_gap": "-0.047",
+      "v1_outcome": "discrepant_candidate",
+      "common": "candidate",
+      "lenient": "candidate",
+      "id": "lehman2011:39",
+      "outcomes": {
+        "study": "candidate",
+        "common": "candidate",
+        "lenient": "candidate"
+      },
+      "published_values": [
+        -0.0006
+      ],
+      "reconstructed_values": [
+        -0.000174534511593
+      ],
+      "summary_published": "-0.0006",
+      "summary_reconstructed": "-0.000175",
+      "comparison_source": "studies/lehman2011/runs/score_v1/target_comparisons_all_cells.csv",
+      "comparison_source_rows": [
+        41
+      ],
+      "distances": [
+        1.5
+      ],
+      "sample_gap": [
+        -0.047
+      ],
+      "scale": "reported scale",
+      "source": "studies/lehman2011/scoring/common_v1/terms.csv",
+      "source_row": 41
+    },
+    {
+      "table": "Table 6",
+      "tier": "lower",
+      "claim": "",
+      "term": "T6|all|gap28",
+      "origins": "O",
+      "published": "-0.0004",
+      "published_se": "0.0001",
+      "reconstructed": "-0.0001576685542167",
+      "distance_se": "1.28",
+      "n_gap": "-0.047",
+      "v1_outcome": "discrepant_candidate",
+      "common": "candidate",
+      "lenient": "candidate",
+      "id": "lehman2011:40",
+      "outcomes": {
+        "study": "candidate",
+        "common": "candidate",
+        "lenient": "candidate"
+      },
+      "published_values": [
+        -0.0004
+      ],
+      "reconstructed_values": [
+        -0.0001576685542167
+      ],
+      "summary_published": "-0.0004",
+      "summary_reconstructed": "-0.000158",
+      "comparison_source": "studies/lehman2011/runs/score_v1/target_comparisons_all_cells.csv",
+      "comparison_source_rows": [
+        42
+      ],
+      "distances": [
+        1.28
+      ],
+      "sample_gap": [
+        -0.047
+      ],
+      "scale": "reported scale",
+      "source": "studies/lehman2011/scoring/common_v1/terms.csv",
+      "source_row": 42
+    },
+    {
+      "table": "Table 6",
+      "tier": "lower",
+      "claim": "",
+      "term": "T6|all|gap42",
+      "origins": "O",
+      "published": "-0.0003",
+      "published_se": "0",
+      "reconstructed": "-0.0001423654891007",
+      "distance_se": "2.15",
+      "n_gap": "-0.047",
+      "v1_outcome": "discrepant_candidate",
+      "common": "candidate",
+      "lenient": "candidate",
+      "id": "lehman2011:41",
+      "outcomes": {
+        "study": "candidate",
+        "common": "candidate",
+        "lenient": "candidate"
+      },
+      "published_values": [
+        -0.0003
+      ],
+      "reconstructed_values": [
+        -0.0001423654891007
+      ],
+      "summary_published": "-0.0003",
+      "summary_reconstructed": "-0.000142",
+      "comparison_source": "studies/lehman2011/runs/score_v1/target_comparisons_all_cells.csv",
+      "comparison_source_rows": [
+        43
+      ],
+      "distances": [
+        2.15
+      ],
+      "sample_gap": [
+        -0.047
+      ],
+      "scale": "reported scale",
+      "source": "studies/lehman2011/scoring/common_v1/terms.csv",
+      "source_row": 43
+    },
+    {
+      "table": "Table 6",
+      "tier": "lower",
+      "claim": "",
+      "term": "T6|q1|gap-14",
+      "origins": "O",
+      "published": "0.0004",
+      "published_se": "0.0001",
+      "reconstructed": "0.0011339716042729",
+      "distance_se": "4.56",
+      "n_gap": "-0.047",
+      "v1_outcome": "discrepant_candidate",
+      "common": "candidate",
+      "lenient": "candidate",
+      "id": "lehman2011:42",
+      "outcomes": {
+        "study": "candidate",
+        "common": "candidate",
+        "lenient": "candidate"
+      },
+      "published_values": [
+        0.0004
+      ],
+      "reconstructed_values": [
+        0.0011339716042729
+      ],
+      "summary_published": "0.0004",
+      "summary_reconstructed": "0.00113",
+      "comparison_source": "studies/lehman2011/runs/score_v1/target_comparisons_all_cells.csv",
+      "comparison_source_rows": [
+        44
+      ],
+      "distances": [
+        4.56
+      ],
+      "sample_gap": [
+        -0.047
+      ],
+      "scale": "reported scale",
+      "source": "studies/lehman2011/scoring/common_v1/terms.csv",
+      "source_row": 44
+    },
+    {
+      "table": "Table 6",
+      "tier": "lower",
+      "claim": "",
+      "term": "T6|q1|gap-28",
+      "origins": "O",
+      "published": "-0.0011",
+      "published_se": "0.0009",
+      "reconstructed": "-0.0035184428649522",
+      "distance_se": "2.49",
+      "n_gap": "-0.047",
+      "v1_outcome": "grey",
+      "common": "indeterminate",
+      "lenient": "indeterminate",
+      "id": "lehman2011:43",
+      "outcomes": {
+        "study": "indeterminate",
+        "common": "indeterminate",
+        "lenient": "indeterminate"
+      },
+      "published_values": [
+        -0.0011
+      ],
+      "reconstructed_values": [
+        -0.0035184428649522
+      ],
+      "summary_published": "-0.0011",
+      "summary_reconstructed": "-0.00352",
+      "comparison_source": "studies/lehman2011/runs/score_v1/target_comparisons_all_cells.csv",
+      "comparison_source_rows": [
+        45
+      ],
+      "distances": [
+        2.49
+      ],
+      "sample_gap": [
+        -0.047
+      ],
+      "scale": "reported scale",
+      "source": "studies/lehman2011/scoring/common_v1/terms.csv",
+      "source_row": 45
+    },
+    {
+      "table": "Table 6",
+      "tier": "lower",
+      "claim": "",
+      "term": "T6|q1|gap-42",
+      "origins": "O",
+      "published": "-0.0163",
+      "published_se": "0.0213",
+      "reconstructed": "-0.0424054071466994",
+      "distance_se": "1.22",
+      "n_gap": "-0.047",
+      "v1_outcome": "consistent",
+      "common": "consistent",
+      "lenient": "consistent",
+      "id": "lehman2011:44",
+      "outcomes": {
+        "study": "consistent",
+        "common": "consistent",
+        "lenient": "consistent"
+      },
+      "published_values": [
+        -0.0163
+      ],
+      "reconstructed_values": [
+        -0.0424054071466994
+      ],
+      "summary_published": "-0.0163",
+      "summary_reconstructed": "-0.0424",
+      "comparison_source": "studies/lehman2011/runs/score_v1/target_comparisons_all_cells.csv",
+      "comparison_source_rows": [
+        46
+      ],
+      "distances": [
+        1.22
+      ],
+      "sample_gap": [
+        -0.047
+      ],
+      "scale": "reported scale",
+      "source": "studies/lehman2011/scoring/common_v1/terms.csv",
+      "source_row": 46
+    },
+    {
+      "table": "Table 6",
+      "tier": "lower",
+      "claim": "",
+      "term": "T6|q1|gap0",
+      "origins": "O",
+      "published": "0.0066",
+      "published_se": "0.0014",
+      "reconstructed": "0.0170141872307185",
+      "distance_se": "7.15",
+      "n_gap": "-0.047",
+      "v1_outcome": "discrepant_candidate",
+      "common": "candidate",
+      "lenient": "candidate",
+      "id": "lehman2011:45",
+      "outcomes": {
+        "study": "candidate",
+        "common": "candidate",
+        "lenient": "candidate"
+      },
+      "published_values": [
+        0.0066
+      ],
+      "reconstructed_values": [
+        0.0170141872307185
+      ],
+      "summary_published": "0.0066",
+      "summary_reconstructed": "0.017",
+      "comparison_source": "studies/lehman2011/runs/score_v1/target_comparisons_all_cells.csv",
+      "comparison_source_rows": [
+        47
+      ],
+      "distances": [
+        7.15
+      ],
+      "sample_gap": [
+        -0.047
+      ],
+      "scale": "reported scale",
+      "source": "studies/lehman2011/scoring/common_v1/terms.csv",
+      "source_row": 47
+    },
+    {
+      "table": "Table 6",
+      "tier": "lower",
+      "claim": "",
+      "term": "T6|q1|gap14",
+      "origins": "O",
+      "published": "-0.0013",
+      "published_se": "0.0002",
+      "reconstructed": "-0.003591621594962",
+      "distance_se": "8.97",
+      "n_gap": "-0.047",
+      "v1_outcome": "discrepant_candidate",
+      "common": "candidate",
+      "lenient": "candidate",
+      "id": "lehman2011:46",
+      "outcomes": {
+        "study": "candidate",
+        "common": "candidate",
+        "lenient": "candidate"
+      },
+      "published_values": [
+        -0.0013
+      ],
+      "reconstructed_values": [
+        -0.003591621594962
+      ],
+      "summary_published": "-0.0013",
+      "summary_reconstructed": "-0.00359",
+      "comparison_source": "studies/lehman2011/runs/score_v1/target_comparisons_all_cells.csv",
+      "comparison_source_rows": [
+        48
+      ],
+      "distances": [
+        8.97
+      ],
+      "sample_gap": [
+        -0.047
+      ],
+      "scale": "reported scale",
+      "source": "studies/lehman2011/scoring/common_v1/terms.csv",
+      "source_row": 48
+    },
+    {
+      "table": "Table 6",
+      "tier": "lower",
+      "claim": "",
+      "term": "T6|q1|gap28",
+      "origins": "O",
+      "published": "-0.0005",
+      "published_se": "0.0001",
+      "reconstructed": "-0.0013358352247651",
+      "distance_se": "5.24",
+      "n_gap": "-0.047",
+      "v1_outcome": "discrepant_candidate",
+      "common": "candidate",
+      "lenient": "candidate",
+      "id": "lehman2011:47",
+      "outcomes": {
+        "study": "candidate",
+        "common": "candidate",
+        "lenient": "candidate"
+      },
+      "published_values": [
+        -0.0005
+      ],
+      "reconstructed_values": [
+        -0.0013358352247651
+      ],
+      "summary_published": "-0.0005",
+      "summary_reconstructed": "-0.00134",
+      "comparison_source": "studies/lehman2011/runs/score_v1/target_comparisons_all_cells.csv",
+      "comparison_source_rows": [
+        49
+      ],
+      "distances": [
+        5.24
+      ],
+      "sample_gap": [
+        -0.047
+      ],
+      "scale": "reported scale",
+      "source": "studies/lehman2011/scoring/common_v1/terms.csv",
+      "source_row": 49
+    },
+    {
+      "table": "Table 6",
+      "tier": "lower",
+      "claim": "",
+      "term": "T6|q1|gap42",
+      "origins": "O",
+      "published": "-0.0002",
+      "published_se": "0.0001",
+      "reconstructed": "-0.0004760112358866",
+      "distance_se": "1.51",
+      "n_gap": "-0.047",
+      "v1_outcome": "grey",
+      "common": "indeterminate",
+      "lenient": "indeterminate",
+      "id": "lehman2011:48",
+      "outcomes": {
+        "study": "indeterminate",
+        "common": "indeterminate",
+        "lenient": "indeterminate"
+      },
+      "published_values": [
+        -0.0002
+      ],
+      "reconstructed_values": [
+        -0.0004760112358866
+      ],
+      "summary_published": "-0.0002",
+      "summary_reconstructed": "-0.000476",
+      "comparison_source": "studies/lehman2011/runs/score_v1/target_comparisons_all_cells.csv",
+      "comparison_source_rows": [
+        50
+      ],
+      "distances": [
+        1.51
+      ],
+      "sample_gap": [
+        -0.047
+      ],
+      "scale": "reported scale",
+      "source": "studies/lehman2011/scoring/common_v1/terms.csv",
+      "source_row": 50
+    },
+    {
+      "table": "Table 6",
+      "tier": "lower",
+      "claim": "",
+      "term": "T6|q2|gap-14",
+      "origins": "O",
+      "published": "-0.0009",
+      "published_se": "0.0003",
+      "reconstructed": "-0.0023845203092166",
+      "distance_se": "4.1",
+      "n_gap": "-0.047",
+      "v1_outcome": "discrepant_candidate",
+      "common": "candidate",
+      "lenient": "candidate",
+      "id": "lehman2011:49",
+      "outcomes": {
+        "study": "candidate",
+        "common": "candidate",
+        "lenient": "candidate"
+      },
+      "published_values": [
+        -0.0009
+      ],
+      "reconstructed_values": [
+        -0.0023845203092166
+      ],
+      "summary_published": "-0.0009",
+      "summary_reconstructed": "-0.00238",
+      "comparison_source": "studies/lehman2011/runs/score_v1/target_comparisons_all_cells.csv",
+      "comparison_source_rows": [
+        51
+      ],
+      "distances": [
+        4.1
+      ],
+      "sample_gap": [
+        -0.047
+      ],
+      "scale": "reported scale",
+      "source": "studies/lehman2011/scoring/common_v1/terms.csv",
+      "source_row": 51
+    },
+    {
+      "table": "Table 6",
+      "tier": "lower",
+      "claim": "",
+      "term": "T6|q2|gap-28",
+      "origins": "O",
+      "published": "-0.0031",
+      "published_se": "0.0022",
+      "reconstructed": "-0.0078700900726712",
+      "distance_se": "2.1",
+      "n_gap": "-0.047",
+      "v1_outcome": "grey",
+      "common": "indeterminate",
+      "lenient": "indeterminate",
+      "id": "lehman2011:50",
+      "outcomes": {
+        "study": "indeterminate",
+        "common": "indeterminate",
+        "lenient": "indeterminate"
+      },
+      "published_values": [
+        -0.0031
+      ],
+      "reconstructed_values": [
+        -0.0078700900726712
+      ],
+      "summary_published": "-0.0031",
+      "summary_reconstructed": "-0.00787",
+      "comparison_source": "studies/lehman2011/runs/score_v1/target_comparisons_all_cells.csv",
+      "comparison_source_rows": [
+        52
+      ],
+      "distances": [
+        2.1
+      ],
+      "sample_gap": [
+        -0.047
+      ],
+      "scale": "reported scale",
+      "source": "studies/lehman2011/scoring/common_v1/terms.csv",
+      "source_row": 52
+    },
+    {
+      "table": "Table 6",
+      "tier": "lower",
+      "claim": "",
+      "term": "T6|q2|gap-42",
+      "origins": "O",
+      "published": "-0.0099",
+      "published_se": "0.0111",
+      "reconstructed": "-0.0197710969491782",
+      "distance_se": "0.881",
+      "n_gap": "-0.047",
+      "v1_outcome": "consistent",
+      "common": "consistent",
+      "lenient": "consistent",
+      "id": "lehman2011:51",
+      "outcomes": {
+        "study": "consistent",
+        "common": "consistent",
+        "lenient": "consistent"
+      },
+      "published_values": [
+        -0.0099
+      ],
+      "reconstructed_values": [
+        -0.0197710969491782
+      ],
+      "summary_published": "-0.0099",
+      "summary_reconstructed": "-0.0198",
+      "comparison_source": "studies/lehman2011/runs/score_v1/target_comparisons_all_cells.csv",
+      "comparison_source_rows": [
+        53
+      ],
+      "distances": [
+        0.881
+      ],
+      "sample_gap": [
+        -0.047
+      ],
+      "scale": "reported scale",
+      "source": "studies/lehman2011/scoring/common_v1/terms.csv",
+      "source_row": 53
+    },
+    {
+      "table": "Table 6",
+      "tier": "lower",
+      "claim": "",
+      "term": "T6|q2|gap0",
+      "origins": "O",
+      "published": "0.0001",
+      "published_se": "0.0005",
+      "reconstructed": "0.0003486738800366",
+      "distance_se": "0.361",
+      "n_gap": "-0.047",
+      "v1_outcome": "consistent",
+      "common": "consistent",
+      "lenient": "consistent",
+      "id": "lehman2011:52",
+      "outcomes": {
+        "study": "consistent",
+        "common": "consistent",
+        "lenient": "consistent"
+      },
+      "published_values": [
+        0.0001
+      ],
+      "reconstructed_values": [
+        0.0003486738800366
+      ],
+      "summary_published": "0.0001",
+      "summary_reconstructed": "0.000349",
+      "comparison_source": "studies/lehman2011/runs/score_v1/target_comparisons_all_cells.csv",
+      "comparison_source_rows": [
+        54
+      ],
+      "distances": [
+        0.361
+      ],
+      "sample_gap": [
+        -0.047
+      ],
+      "scale": "reported scale",
+      "source": "studies/lehman2011/scoring/common_v1/terms.csv",
+      "source_row": 54
+    },
+    {
+      "table": "Table 6",
+      "tier": "lower",
+      "claim": "",
+      "term": "T6|q2|gap14",
+      "origins": "O",
+      "published": "-0.0009",
+      "published_se": "0.0002",
+      "reconstructed": "-0.0023993183794145",
+      "distance_se": "5.8",
+      "n_gap": "-0.047",
+      "v1_outcome": "discrepant_candidate",
+      "common": "candidate",
+      "lenient": "candidate",
+      "id": "lehman2011:53",
+      "outcomes": {
+        "study": "candidate",
+        "common": "candidate",
+        "lenient": "candidate"
+      },
+      "published_values": [
+        -0.0009
+      ],
+      "reconstructed_values": [
+        -0.0023993183794145
+      ],
+      "summary_published": "-0.0009",
+      "summary_reconstructed": "-0.0024",
+      "comparison_source": "studies/lehman2011/runs/score_v1/target_comparisons_all_cells.csv",
+      "comparison_source_rows": [
+        55
+      ],
+      "distances": [
+        5.8
+      ],
+      "sample_gap": [
+        -0.047
+      ],
+      "scale": "reported scale",
+      "source": "studies/lehman2011/scoring/common_v1/terms.csv",
+      "source_row": 55
+    },
+    {
+      "table": "Table 6",
+      "tier": "lower",
+      "claim": "",
+      "term": "T6|q2|gap28",
+      "origins": "O",
+      "published": "-0.0005",
+      "published_se": "0",
+      "reconstructed": "-0.001378328011326",
+      "distance_se": "16.6",
+      "n_gap": "-0.047",
+      "v1_outcome": "discrepant_candidate",
+      "common": "candidate",
+      "lenient": "candidate",
+      "id": "lehman2011:54",
+      "outcomes": {
+        "study": "candidate",
+        "common": "candidate",
+        "lenient": "candidate"
+      },
+      "published_values": [
+        -0.0005
+      ],
+      "reconstructed_values": [
+        -0.001378328011326
+      ],
+      "summary_published": "-0.0005",
+      "summary_reconstructed": "-0.00138",
+      "comparison_source": "studies/lehman2011/runs/score_v1/target_comparisons_all_cells.csv",
+      "comparison_source_rows": [
+        56
+      ],
+      "distances": [
+        16.6
+      ],
+      "sample_gap": [
+        -0.047
+      ],
+      "scale": "reported scale",
+      "source": "studies/lehman2011/scoring/common_v1/terms.csv",
+      "source_row": 56
+    },
+    {
+      "table": "Table 6",
+      "tier": "lower",
+      "claim": "",
+      "term": "T6|q2|gap42",
+      "origins": "O",
+      "published": "-0.0003",
+      "published_se": "0.0001",
+      "reconstructed": "-0.0007729703905049",
+      "distance_se": "2.82",
+      "n_gap": "-0.047",
+      "v1_outcome": "grey",
+      "common": "indeterminate",
+      "lenient": "indeterminate",
+      "id": "lehman2011:55",
+      "outcomes": {
+        "study": "indeterminate",
+        "common": "indeterminate",
+        "lenient": "indeterminate"
+      },
+      "published_values": [
+        -0.0003
+      ],
+      "reconstructed_values": [
+        -0.0007729703905049
+      ],
+      "summary_published": "-0.0003",
+      "summary_reconstructed": "-0.000773",
+      "comparison_source": "studies/lehman2011/runs/score_v1/target_comparisons_all_cells.csv",
+      "comparison_source_rows": [
+        57
+      ],
+      "distances": [
+        2.82
+      ],
+      "sample_gap": [
+        -0.047
+      ],
+      "scale": "reported scale",
+      "source": "studies/lehman2011/scoring/common_v1/terms.csv",
+      "source_row": 57
+    },
+    {
+      "table": "Table 6",
+      "tier": "lower",
+      "claim": "",
+      "term": "T6|q3|gap-14",
+      "origins": "O",
+      "published": "-0.0098",
+      "published_se": "0.0008",
+      "reconstructed": "-0.019079968712753",
+      "distance_se": "10.9",
+      "n_gap": "-0.047",
+      "v1_outcome": "discrepant_candidate",
+      "common": "candidate",
+      "lenient": "candidate",
+      "id": "lehman2011:56",
+      "outcomes": {
+        "study": "candidate",
+        "common": "candidate",
+        "lenient": "candidate"
+      },
+      "published_values": [
+        -0.0098
+      ],
+      "reconstructed_values": [
+        -0.019079968712753
+      ],
+      "summary_published": "-0.0098",
+      "summary_reconstructed": "-0.0191",
+      "comparison_source": "studies/lehman2011/runs/score_v1/target_comparisons_all_cells.csv",
+      "comparison_source_rows": [
+        58
+      ],
+      "distances": [
+        10.9
+      ],
+      "sample_gap": [
+        -0.047
+      ],
+      "scale": "reported scale",
+      "source": "studies/lehman2011/scoring/common_v1/terms.csv",
+      "source_row": 58
+    },
+    {
+      "table": "Table 6",
+      "tier": "lower",
+      "claim": "",
+      "term": "T6|q3|gap-28",
+      "origins": "O",
+      "published": "-0.0047",
+      "published_se": "0.0028",
+      "reconstructed": "-0.0059422981680241",
+      "distance_se": "0.418",
+      "n_gap": "-0.047",
+      "v1_outcome": "consistent",
+      "common": "indeterminate",
+      "lenient": "indeterminate",
+      "id": "lehman2011:57",
+      "outcomes": {
+        "study": "consistent",
+        "common": "indeterminate",
+        "lenient": "indeterminate"
+      },
+      "published_values": [
+        -0.0047
+      ],
+      "reconstructed_values": [
+        -0.0059422981680241
+      ],
+      "summary_published": "-0.0047",
+      "summary_reconstructed": "-0.00594",
+      "comparison_source": "studies/lehman2011/runs/score_v1/target_comparisons_all_cells.csv",
+      "comparison_source_rows": [
+        59
+      ],
+      "distances": [
+        0.418
+      ],
+      "sample_gap": [
+        -0.047
+      ],
+      "scale": "reported scale",
+      "source": "studies/lehman2011/scoring/common_v1/terms.csv",
+      "source_row": 59
+    },
+    {
+      "table": "Table 6",
+      "tier": "lower",
+      "claim": "",
+      "term": "T6|q3|gap-42",
+      "origins": "O",
+      "published": "0.0068",
+      "published_se": "0.0031",
+      "reconstructed": "0.0108008064461085",
+      "distance_se": "1.25",
+      "n_gap": "-0.047",
+      "v1_outcome": "consistent",
+      "common": "indeterminate",
+      "lenient": "indeterminate",
+      "id": "lehman2011:58",
+      "outcomes": {
+        "study": "consistent",
+        "common": "indeterminate",
+        "lenient": "indeterminate"
+      },
+      "published_values": [
+        0.0068
+      ],
+      "reconstructed_values": [
+        0.0108008064461085
+      ],
+      "summary_published": "0.0068",
+      "summary_reconstructed": "0.0108",
+      "comparison_source": "studies/lehman2011/runs/score_v1/target_comparisons_all_cells.csv",
+      "comparison_source_rows": [
+        60
+      ],
+      "distances": [
+        1.25
+      ],
+      "sample_gap": [
+        -0.047
+      ],
+      "scale": "reported scale",
+      "source": "studies/lehman2011/scoring/common_v1/terms.csv",
+      "source_row": 60
+    },
+    {
+      "table": "Table 6",
+      "tier": "lower",
+      "claim": "",
+      "term": "T6|q3|gap0",
+      "origins": "O",
+      "published": "-0.0036",
+      "published_se": "0.0002",
+      "reconstructed": "-0.0101720657050694",
+      "distance_se": "26.1",
+      "n_gap": "-0.047",
+      "v1_outcome": "discrepant_candidate",
+      "common": "candidate",
+      "lenient": "candidate",
+      "id": "lehman2011:59",
+      "outcomes": {
+        "study": "candidate",
+        "common": "candidate",
+        "lenient": "candidate"
+      },
+      "published_values": [
+        -0.0036
+      ],
+      "reconstructed_values": [
+        -0.0101720657050694
+      ],
+      "summary_published": "-0.0036",
+      "summary_reconstructed": "-0.0102",
+      "comparison_source": "studies/lehman2011/runs/score_v1/target_comparisons_all_cells.csv",
+      "comparison_source_rows": [
+        61
+      ],
+      "distances": [
+        26.1
+      ],
+      "sample_gap": [
+        -0.047
+      ],
+      "scale": "reported scale",
+      "source": "studies/lehman2011/scoring/common_v1/terms.csv",
+      "source_row": 61
+    },
+    {
+      "table": "Table 6",
+      "tier": "lower",
+      "claim": "",
+      "term": "T6|q3|gap14",
+      "origins": "O",
+      "published": "-0.0003",
+      "published_se": "0.0002",
+      "reconstructed": "-0.0007355331015141",
+      "distance_se": "1.54",
+      "n_gap": "-0.047",
+      "v1_outcome": "grey",
+      "common": "indeterminate",
+      "lenient": "consistent",
+      "id": "lehman2011:60",
+      "outcomes": {
+        "study": "indeterminate",
+        "common": "indeterminate",
+        "lenient": "consistent"
+      },
+      "published_values": [
+        -0.0003
+      ],
+      "reconstructed_values": [
+        -0.0007355331015141
+      ],
+      "summary_published": "-0.0003",
+      "summary_reconstructed": "-0.000736",
+      "comparison_source": "studies/lehman2011/runs/score_v1/target_comparisons_all_cells.csv",
+      "comparison_source_rows": [
+        62
+      ],
+      "distances": [
+        1.54
+      ],
+      "sample_gap": [
+        -0.047
+      ],
+      "scale": "reported scale",
+      "source": "studies/lehman2011/scoring/common_v1/terms.csv",
+      "source_row": 62
+    },
+    {
+      "table": "Table 6",
+      "tier": "lower",
+      "claim": "",
+      "term": "T6|q3|gap28",
+      "origins": "O",
+      "published": "-0.0002",
+      "published_se": "0.0001",
+      "reconstructed": "-0.0006388380316454",
+      "distance_se": "2.59",
+      "n_gap": "-0.047",
+      "v1_outcome": "grey",
+      "common": "indeterminate",
+      "lenient": "indeterminate",
+      "id": "lehman2011:61",
+      "outcomes": {
+        "study": "indeterminate",
+        "common": "indeterminate",
+        "lenient": "indeterminate"
+      },
+      "published_values": [
+        -0.0002
+      ],
+      "reconstructed_values": [
+        -0.0006388380316454
+      ],
+      "summary_published": "-0.0002",
+      "summary_reconstructed": "-0.000639",
+      "comparison_source": "studies/lehman2011/runs/score_v1/target_comparisons_all_cells.csv",
+      "comparison_source_rows": [
+        63
+      ],
+      "distances": [
+        2.59
+      ],
+      "sample_gap": [
+        -0.047
+      ],
+      "scale": "reported scale",
+      "source": "studies/lehman2011/scoring/common_v1/terms.csv",
+      "source_row": 63
+    },
+    {
+      "table": "Table 6",
+      "tier": "lower",
+      "claim": "",
+      "term": "T6|q3|gap42",
+      "origins": "O",
+      "published": "-0.0002",
+      "published_se": "0.0001",
+      "reconstructed": "-0.0005532522031791",
+      "distance_se": "2.02",
+      "n_gap": "-0.047",
+      "v1_outcome": "grey",
+      "common": "indeterminate",
+      "lenient": "indeterminate",
+      "id": "lehman2011:62",
+      "outcomes": {
+        "study": "indeterminate",
+        "common": "indeterminate",
+        "lenient": "indeterminate"
+      },
+      "published_values": [
+        -0.0002
+      ],
+      "reconstructed_values": [
+        -0.0005532522031791
+      ],
+      "summary_published": "-0.0002",
+      "summary_reconstructed": "-0.000553",
+      "comparison_source": "studies/lehman2011/runs/score_v1/target_comparisons_all_cells.csv",
+      "comparison_source_rows": [
+        64
+      ],
+      "distances": [
+        2.02
+      ],
+      "sample_gap": [
+        -0.047
+      ],
+      "scale": "reported scale",
+      "source": "studies/lehman2011/scoring/common_v1/terms.csv",
+      "source_row": 64
+    },
+    {
+      "table": "Table 6",
+      "tier": "lower",
+      "claim": "",
+      "term": "T6|q4|gap-14",
+      "origins": "O",
+      "published": "-0.0352",
+      "published_se": "0.0016",
+      "reconstructed": "-0.0371085072664417",
+      "distance_se": "1.13",
+      "n_gap": "-0.047",
+      "v1_outcome": "consistent",
+      "common": "consistent",
+      "lenient": "consistent",
+      "id": "lehman2011:63",
+      "outcomes": {
+        "study": "consistent",
+        "common": "consistent",
+        "lenient": "consistent"
+      },
+      "published_values": [
+        -0.0352
+      ],
+      "reconstructed_values": [
+        -0.0371085072664417
+      ],
+      "summary_published": "-0.0352",
+      "summary_reconstructed": "-0.0371",
+      "comparison_source": "studies/lehman2011/runs/score_v1/target_comparisons_all_cells.csv",
+      "comparison_source_rows": [
+        65
+      ],
+      "distances": [
+        1.13
+      ],
+      "sample_gap": [
+        -0.047
+      ],
+      "scale": "reported scale",
+      "source": "studies/lehman2011/scoring/common_v1/terms.csv",
+      "source_row": 65
+    },
+    {
+      "table": "Table 6",
+      "tier": "lower",
+      "claim": "",
+      "term": "T6|q4|gap-28",
+      "origins": "O",
+      "published": "0.0002",
+      "published_se": "0.0026",
+      "reconstructed": "0.0012851143689163",
+      "distance_se": "0.391",
+      "n_gap": "-0.047",
+      "v1_outcome": "consistent",
+      "common": "consistent",
+      "lenient": "consistent",
+      "id": "lehman2011:64",
+      "outcomes": {
+        "study": "consistent",
+        "common": "consistent",
+        "lenient": "consistent"
+      },
+      "published_values": [
+        0.0002
+      ],
+      "reconstructed_values": [
+        0.0012851143689163
+      ],
+      "summary_published": "0.0002",
+      "summary_reconstructed": "0.00129",
+      "comparison_source": "studies/lehman2011/runs/score_v1/target_comparisons_all_cells.csv",
+      "comparison_source_rows": [
+        66
+      ],
+      "distances": [
+        0.391
+      ],
+      "sample_gap": [
+        -0.047
+      ],
+      "scale": "reported scale",
+      "source": "studies/lehman2011/scoring/common_v1/terms.csv",
+      "source_row": 66
+    },
+    {
+      "table": "Table 6",
+      "tier": "lower",
+      "claim": "",
+      "term": "T6|q4|gap-42",
+      "origins": "O",
+      "published": "0.0353",
+      "published_se": "0.002",
+      "reconstructed": "0.0428741520886498",
+      "distance_se": "3.67",
+      "n_gap": "-0.047",
+      "v1_outcome": "discrepant_candidate",
+      "common": "candidate",
+      "lenient": "indeterminate",
+      "id": "lehman2011:65",
+      "outcomes": {
+        "study": "candidate",
+        "common": "candidate",
+        "lenient": "indeterminate"
+      },
+      "published_values": [
+        0.0353
+      ],
+      "reconstructed_values": [
+        0.0428741520886498
+      ],
+      "summary_published": "0.0353",
+      "summary_reconstructed": "0.0429",
+      "comparison_source": "studies/lehman2011/runs/score_v1/target_comparisons_all_cells.csv",
+      "comparison_source_rows": [
+        67
+      ],
+      "distances": [
+        3.67
+      ],
+      "sample_gap": [
+        -0.047
+      ],
+      "scale": "reported scale",
+      "source": "studies/lehman2011/scoring/common_v1/terms.csv",
+      "source_row": 67
+    },
+    {
+      "table": "Table 6",
+      "tier": "lower",
+      "claim": "",
+      "term": "T6|q4|gap0",
+      "origins": "O",
+      "published": "-0.0055",
+      "published_se": "0.0004",
+      "reconstructed": "-0.0160972296360969",
+      "distance_se": "23.4",
+      "n_gap": "-0.047",
+      "v1_outcome": "discrepant_candidate",
+      "common": "candidate",
+      "lenient": "candidate",
+      "id": "lehman2011:66",
+      "outcomes": {
+        "study": "candidate",
+        "common": "candidate",
+        "lenient": "candidate"
+      },
+      "published_values": [
+        -0.0055
+      ],
+      "reconstructed_values": [
+        -0.0160972296360969
+      ],
+      "summary_published": "-0.0055",
+      "summary_reconstructed": "-0.0161",
+      "comparison_source": "studies/lehman2011/runs/score_v1/target_comparisons_all_cells.csv",
+      "comparison_source_rows": [
+        68
+      ],
+      "distances": [
+        23.4
+      ],
+      "sample_gap": [
+        -0.047
+      ],
+      "scale": "reported scale",
+      "source": "studies/lehman2011/scoring/common_v1/terms.csv",
+      "source_row": 68
+    },
+    {
+      "table": "Table 6",
+      "tier": "lower",
+      "claim": "",
+      "term": "T6|q4|gap14",
+      "origins": "O",
+      "published": "0.0005",
+      "published_se": "0.0002",
+      "reconstructed": "0.0014976720424788",
+      "distance_se": "3.79",
+      "n_gap": "-0.047",
+      "v1_outcome": "discrepant_candidate",
+      "common": "candidate",
+      "lenient": "indeterminate",
+      "id": "lehman2011:67",
+      "outcomes": {
+        "study": "candidate",
+        "common": "candidate",
+        "lenient": "indeterminate"
+      },
+      "published_values": [
+        0.0005
+      ],
+      "reconstructed_values": [
+        0.0014976720424788
+      ],
+      "summary_published": "0.0005",
+      "summary_reconstructed": "0.0015",
+      "comparison_source": "studies/lehman2011/runs/score_v1/target_comparisons_all_cells.csv",
+      "comparison_source_rows": [
+        69
+      ],
+      "distances": [
+        3.79
+      ],
+      "sample_gap": [
+        -0.047
+      ],
+      "scale": "reported scale",
+      "source": "studies/lehman2011/scoring/common_v1/terms.csv",
+      "source_row": 69
+    },
+    {
+      "table": "Table 6",
+      "tier": "lower",
+      "claim": "",
+      "term": "T6|q4|gap28",
+      "origins": "O",
+      "published": "0.0006",
+      "published_se": "0.0004",
+      "reconstructed": "0.0018915987289867",
+      "distance_se": "2.76",
+      "n_gap": "-0.047",
+      "v1_outcome": "grey",
+      "common": "indeterminate",
+      "lenient": "indeterminate",
+      "id": "lehman2011:68",
+      "outcomes": {
+        "study": "indeterminate",
+        "common": "indeterminate",
+        "lenient": "indeterminate"
+      },
+      "published_values": [
+        0.0006
+      ],
+      "reconstructed_values": [
+        0.0018915987289867
+      ],
+      "summary_published": "0.0006",
+      "summary_reconstructed": "0.00189",
+      "comparison_source": "studies/lehman2011/runs/score_v1/target_comparisons_all_cells.csv",
+      "comparison_source_rows": [
+        70
+      ],
+      "distances": [
+        2.76
+      ],
+      "sample_gap": [
+        -0.047
+      ],
+      "scale": "reported scale",
+      "source": "studies/lehman2011/scoring/common_v1/terms.csv",
+      "source_row": 70
+    },
+    {
+      "table": "Table 6",
+      "tier": "lower",
+      "claim": "",
+      "term": "T6|q4|gap42",
+      "origins": "O",
+      "published": "0.0008",
+      "published_se": "0.0006",
+      "reconstructed": "0.0023531672932306",
+      "distance_se": "2.31",
+      "n_gap": "-0.047",
+      "v1_outcome": "grey",
+      "common": "indeterminate",
+      "lenient": "indeterminate",
+      "id": "lehman2011:69",
+      "outcomes": {
+        "study": "indeterminate",
+        "common": "indeterminate",
+        "lenient": "indeterminate"
+      },
+      "published_values": [
+        0.0008
+      ],
+      "reconstructed_values": [
+        0.0023531672932306
+      ],
+      "summary_published": "0.0008",
+      "summary_reconstructed": "0.00235",
+      "comparison_source": "studies/lehman2011/runs/score_v1/target_comparisons_all_cells.csv",
+      "comparison_source_rows": [
+        71
+      ],
+      "distances": [
+        2.31
+      ],
+      "sample_gap": [
+        -0.047
+      ],
+      "scale": "reported scale",
+      "source": "studies/lehman2011/scoring/common_v1/terms.csv",
+      "source_row": 71
+    }
+  ],
+  "displays": [
+    {
+      "id": "table_1",
+      "kind": "table",
+      "title": "Table 5",
+      "subtitle": "1–18 / 35 estimates",
+      "row_label": "Estimate",
+      "columns": [
+        "Reconstruction"
+      ],
+      "rows": [
+        {
+          "label": "Model 1 · home field",
+          "term": "T5|M1|home_field",
+          "cells": [
+            {
+              "estimate": 1.0040104931578484,
+              "published": 1.019,
+              "se": null,
+              "published_se": 0.049,
+              "source_row": 2,
+              "saved_outcome": "consistent",
+              "scale": "odds ratio",
+              "delta": -0.014989506842151501,
+              "distance_se": 0.30590830290105103,
+              "distance_band": "close"
+            }
+          ]
+        },
+        {
+          "label": "Model 1 · minutes remaining",
+          "term": "T5|M1|minutes_remaining",
+          "cells": [
+            {
+              "estimate": 0.9443392447851812,
+              "published": 0.946,
+              "se": null,
+              "published_se": 0.002,
+              "source_row": 3,
+              "saved_outcome": "consistent",
+              "scale": "odds ratio",
+              "delta": -0.0016607552148187876,
+              "distance_se": 0.8303776074093938,
+              "distance_band": "close"
+            }
+          ]
+        },
+        {
+          "label": "Model 1 · same conference",
+          "term": "T5|M1|same_conference",
+          "cells": [
+            {
+              "estimate": 0.9159823235018297,
+              "published": 1.008,
+              "se": null,
+              "published_se": 0.05,
+              "source_row": 4,
+              "saved_outcome": "discrepant_candidate",
+              "scale": "odds ratio",
+              "delta": -0.09201767649817028,
+              "distance_se": 1.8403535299634055,
+              "distance_band": "moderate"
+            }
+          ]
+        },
+        {
+          "label": "Model 1 · same division",
+          "term": "T5|M1|same_division",
+          "cells": [
+            {
+              "estimate": 1.1152196230608031,
+              "published": 0.969,
+              "se": null,
+              "published_se": 0.054,
+              "source_row": 5,
+              "saved_outcome": "discrepant_candidate",
+              "scale": "odds ratio",
+              "delta": 0.14621962306080316,
+              "distance_se": 2.7077707974222807,
+              "distance_band": "large"
+            }
+          ]
+        },
+        {
+          "label": "Model 1 · total points",
+          "term": "T5|M1|total_points",
+          "cells": [
+            {
+              "estimate": 0.9399069798227226,
+              "published": 0.941,
+              "se": null,
+              "published_se": 0.003,
+              "source_row": 6,
+              "saved_outcome": "consistent",
+              "scale": "odds ratio",
+              "delta": -0.001093020177277304,
+              "distance_se": 0.36434005909243466,
+              "distance_band": "close"
+            }
+          ]
+        },
+        {
+          "label": "Model 1 · week",
+          "term": "T5|M1|week",
+          "cells": [
+            {
+              "estimate": 1.0207055410548966,
+              "published": 1.02,
+              "se": null,
+              "published_se": 0.005,
+              "source_row": 7,
+              "saved_outcome": "consistent",
+              "scale": "odds ratio",
+              "delta": 0.000705541054896619,
+              "distance_se": 0.1411082109793238,
+              "distance_band": "close"
+            }
+          ]
+        },
+        {
+          "label": "Model 1 · yards first down",
+          "term": "T5|M1|yards_first_down",
+          "cells": [
+            {
+              "estimate": 0.8143932315189225,
+              "published": 0.826,
+              "se": null,
+              "published_se": 0.006,
+              "source_row": 8,
+              "saved_outcome": "grey",
+              "scale": "odds ratio",
+              "delta": -0.011606768481077445,
+              "distance_se": 1.9344614135129075,
+              "distance_band": "moderate"
+            }
+          ]
+        },
+        {
+          "label": "Model 1 · yards touchdown",
+          "term": "T5|M1|yards_touchdown",
+          "cells": [
+            {
+              "estimate": 0.9735346811633995,
+              "published": 0.976,
+              "se": null,
+              "published_se": 0.001,
+              "source_row": 9,
+              "saved_outcome": "consistent",
+              "scale": "odds ratio",
+              "delta": -0.002465318836600505,
+              "distance_se": 2.465318836600505,
+              "distance_band": "large"
+            }
+          ]
+        },
+        {
+          "label": "Model 2 · below indicator",
+          "term": "T5|M2|below_indicator",
+          "cells": [
+            {
+              "estimate": 1.1846665099355485,
+              "published": 1.12,
+              "se": null,
+              "published_se": 0.11,
+              "source_row": 10,
+              "saved_outcome": "consistent",
+              "scale": "odds ratio",
+              "delta": 0.06466650993554834,
+              "distance_se": 0.5878773630504395,
+              "distance_band": "close"
+            }
+          ]
+        },
+        {
+          "label": "Model 2 · home field",
+          "term": "T5|M2|home_field",
+          "cells": [
+            {
+              "estimate": 1.1397421234636718,
+              "published": 1.177,
+              "se": null,
+              "published_se": 0.059,
+              "source_row": 11,
+              "saved_outcome": "consistent",
+              "scale": "odds ratio",
+              "delta": -0.03725787653632828,
+              "distance_se": 0.6314894328191235,
+              "distance_band": "close"
+            }
+          ]
+        },
+        {
+          "label": "Model 2 · minutes remaining",
+          "term": "T5|M2|minutes_remaining",
+          "cells": [
+            {
+              "estimate": 0.9732553647536963,
+              "published": 0.975,
+              "se": null,
+              "published_se": 0.002,
+              "source_row": 12,
+              "saved_outcome": "consistent",
+              "scale": "odds ratio",
+              "delta": -0.0017446352463036385,
+              "distance_se": 0.8723176231518193,
+              "distance_band": "close"
+            }
+          ]
+        },
+        {
+          "label": "Model 2 · perf above",
+          "term": "T5|M2|perf_above",
+          "cells": [
+            {
+              "estimate": 0.9924301715283885,
+              "published": 0.994,
+              "se": null,
+              "published_se": 0.007,
+              "source_row": 13,
+              "saved_outcome": "consistent",
+              "scale": "odds ratio",
+              "delta": -0.0015698284716114674,
+              "distance_se": 0.22426121023020962,
+              "distance_band": "close"
+            }
+          ]
+        },
+        {
+          "label": "Model 2 · perf below",
+          "term": "T5|M2|perf_below",
+          "cells": [
+            {
+              "estimate": 0.8851919092828113,
+              "published": 0.883,
+              "se": null,
+              "published_se": 0.008,
+              "source_row": 14,
+              "saved_outcome": "consistent",
+              "scale": "odds ratio",
+              "delta": 0.002191909282811322,
+              "distance_se": 0.2739886603514152,
+              "distance_band": "close"
+            }
+          ]
+        },
+        {
+          "label": "Model 2 · perf below sq",
+          "term": "T5|M2|perf_below_sq",
+          "cells": [
+            {
+              "estimate": 0.9988404583211459,
+              "published": 0.999,
+              "se": null,
+              "published_se": 0.0,
+              "source_row": 15,
+              "saved_outcome": "consistent",
+              "scale": "odds ratio",
+              "delta": -0.00015954167885412485,
+              "distance_se": null,
+              "distance_band": "unavailable"
+            }
+          ]
+        },
+        {
+          "label": "Model 2 · same conference",
+          "term": "T5|M2|same_conference",
+          "cells": [
+            {
+              "estimate": 0.977152912958488,
+              "published": 0.997,
+              "se": null,
+              "published_se": 0.051,
+              "source_row": 16,
+              "saved_outcome": "consistent",
+              "scale": "odds ratio",
+              "delta": -0.019847087041511946,
+              "distance_se": 0.38915856944141075,
+              "distance_band": "close"
+            }
+          ]
+        },
+        {
+          "label": "Model 2 · same division",
+          "term": "T5|M2|same_division",
+          "cells": [
+            {
+              "estimate": 1.0954019993700466,
+              "published": 1.025,
+              "se": null,
+              "published_se": 0.059,
+              "source_row": 17,
+              "saved_outcome": "consistent",
+              "scale": "odds ratio",
+              "delta": 0.07040199937004665,
+              "distance_se": 1.1932542266109603,
+              "distance_band": "moderate"
+            }
+          ]
+        },
+        {
+          "label": "Model 2 · total points",
+          "term": "T5|M2|total_points",
+          "cells": [
+            {
+              "estimate": 1.0084395529623793,
+              "published": 1.007,
+              "se": null,
+              "published_se": 0.005,
+              "source_row": 18,
+              "saved_outcome": "consistent",
+              "scale": "odds ratio",
+              "delta": 0.001439552962379409,
+              "distance_se": 0.2879105924758818,
+              "distance_band": "close"
+            }
+          ]
+        },
+        {
+          "label": "Model 2 · week",
+          "term": "T5|M2|week",
+          "cells": [
+            {
+              "estimate": 1.0232438116264495,
+              "published": 1.023,
+              "se": null,
+              "published_se": 0.005,
+              "source_row": 19,
+              "saved_outcome": "consistent",
+              "scale": "odds ratio",
+              "delta": 0.00024381162644959709,
+              "distance_se": 0.04876232528991942,
+              "distance_band": "close"
+            }
+          ]
+        }
+      ],
+      "source": {
+        "path": "studies/lehman2011/scoring/common_v1/terms.csv",
+        "sha256": "96c1f1edcd2ee543020d2ac496a3c7b0654c4fc0b8e310a4dd089b17f39ecd55"
+      },
+      "note": "Saved estimates on their reported display scale; Unavailable reconstructed SEs remain missing. Multiple origins remain separate. Descriptive cell distances do not replace the saved scoring rules.",
+      "original": {
+        "sha256": "93278fe5f7ad8a54cb4808305f6b8725ae968944fd6e9cda75e8089047e6c8d3",
+        "page": 11,
+        "y": 0,
+        "locator_source": "studies/lehman2011/sealed/targets_reconciled_v1.json"
+      },
+      "agreement": {
+        "within_one_se": 12,
+        "compared": 17
+      },
+      "sample": [],
+      "published_sample": null
+    },
+    {
+      "id": "table_2",
+      "kind": "table",
+      "title": "Table 5",
+      "subtitle": "19–35 / 35 estimates",
+      "row_label": "Estimate",
+      "columns": [
+        "Reconstruction"
+      ],
+      "rows": [
+        {
+          "label": "Model 2 · yards first down",
+          "term": "T5|M2|yards_first_down",
+          "cells": [
+            {
+              "estimate": 0.8011740280931027,
+              "published": 0.813,
+              "se": null,
+              "published_se": 0.006,
+              "source_row": 20,
+              "saved_outcome": "grey",
+              "scale": "odds ratio",
+              "delta": -0.01182597190689727,
+              "distance_se": 1.9709953178162116,
+              "distance_band": "moderate"
+            }
+          ]
+        },
+        {
+          "label": "Model 2 · yards touchdown",
+          "term": "T5|M2|yards_touchdown",
+          "cells": [
+            {
+              "estimate": 0.9706421886633713,
+              "published": 0.973,
+              "se": null,
+              "published_se": 0.001,
+              "source_row": 21,
+              "saved_outcome": "consistent",
+              "scale": "odds ratio",
+              "delta": -0.0023578113366287123,
+              "distance_se": 2.3578113366287123,
+              "distance_band": "large"
+            }
+          ]
+        },
+        {
+          "label": "Model 3 · below indicator",
+          "term": "T5|M3|below_indicator",
+          "cells": [
+            {
+              "estimate": 0.8568670914464329,
+              "published": 0.857,
+              "se": null,
+              "published_se": 0.092,
+              "source_row": 22,
+              "saved_outcome": "consistent",
+              "scale": "odds ratio",
+              "delta": -0.0001329085535670682,
+              "distance_se": 0.0014446581909463936,
+              "distance_band": "close"
+            }
+          ]
+        },
+        {
+          "label": "Model 3 · home field",
+          "term": "T5|M3|home_field",
+          "cells": [
+            {
+              "estimate": 1.1202864153277998,
+              "published": 1.167,
+              "se": null,
+              "published_se": 0.06,
+              "source_row": 23,
+              "saved_outcome": "consistent",
+              "scale": "odds ratio",
+              "delta": -0.046713584672200215,
+              "distance_se": 0.7785597445366703,
+              "distance_band": "close"
+            }
+          ]
+        },
+        {
+          "label": "Model 3 · minutes remaining",
+          "term": "T5|M3|minutes_remaining",
+          "cells": [
+            {
+              "estimate": 1.0189571786370477,
+              "published": 1.019,
+              "se": null,
+              "published_se": 0.003,
+              "source_row": 24,
+              "saved_outcome": "consistent",
+              "scale": "odds ratio",
+              "delta": -4.282136295219452e-05,
+              "distance_se": 0.014273787650731506,
+              "distance_band": "close"
+            }
+          ]
+        },
+        {
+          "label": "Model 3 · perf above",
+          "term": "T5|M3|perf_above",
+          "cells": [
+            {
+              "estimate": 1.0381371254824951,
+              "published": 1.038,
+              "se": null,
+              "published_se": 0.01,
+              "source_row": 25,
+              "saved_outcome": "consistent",
+              "scale": "odds ratio",
+              "delta": 0.00013712548249511514,
+              "distance_se": 0.013712548249511514,
+              "distance_band": "close"
+            }
+          ]
+        },
+        {
+          "label": "Model 3 · perf above x min",
+          "term": "T5|M3|perf_above_x_min",
+          "cells": [
+            {
+              "estimate": 0.9978735194414627,
+              "published": 0.998,
+              "se": null,
+              "published_se": 0.0,
+              "source_row": 26,
+              "saved_outcome": "consistent",
+              "scale": "odds ratio",
+              "delta": -0.00012648055853725637,
+              "distance_se": null,
+              "distance_band": "unavailable"
+            }
+          ]
+        },
+        {
+          "label": "Model 3 · perf below",
+          "term": "T5|M3|perf_below",
+          "cells": [
+            {
+              "estimate": 0.6648414606457459,
+              "published": 0.669,
+              "se": null,
+              "published_se": 0.012,
+              "source_row": 27,
+              "saved_outcome": "consistent",
+              "scale": "odds ratio",
+              "delta": -0.004158539354254143,
+              "distance_se": 0.3465449461878452,
+              "distance_band": "close"
+            }
+          ]
+        },
+        {
+          "label": "Model 3 · perf below sq",
+          "term": "T5|M3|perf_below_sq",
+          "cells": [
+            {
+              "estimate": 0.9922790471367795,
+              "published": 0.993,
+              "se": null,
+              "published_se": 0.001,
+              "source_row": 28,
+              "saved_outcome": "consistent",
+              "scale": "odds ratio",
+              "delta": -0.000720952863220492,
+              "distance_se": 0.720952863220492,
+              "distance_band": "close"
+            }
+          ]
+        },
+        {
+          "label": "Model 3 · perf below sq x min",
+          "term": "T5|M3|perf_below_sq_x_min",
+          "cells": [
+            {
+              "estimate": 1.000232399581381,
+              "published": 1.0,
+              "se": null,
+              "published_se": 0.0,
+              "source_row": 29,
+              "saved_outcome": "consistent",
+              "scale": "odds ratio",
+              "delta": 0.00023239958138110417,
+              "distance_se": null,
+              "distance_band": "unavailable"
+            }
+          ]
+        },
+        {
+          "label": "Model 3 · perf below x min",
+          "term": "T5|M3|perf_below_x_min",
+          "cells": [
+            {
+              "estimate": 1.0109142049945783,
+              "published": 1.011,
+              "se": null,
+              "published_se": 0.001,
+              "source_row": 30,
+              "saved_outcome": "consistent",
+              "scale": "odds ratio",
+              "delta": -8.579500542160723e-05,
+              "distance_se": 0.08579500542160723,
+              "distance_band": "close"
+            }
+          ]
+        },
+        {
+          "label": "Model 3 · same conference",
+          "term": "T5|M3|same_conference",
+          "cells": [
+            {
+              "estimate": 0.9972571383428368,
+              "published": 0.999,
+              "se": null,
+              "published_se": 0.052,
+              "source_row": 31,
+              "saved_outcome": "consistent",
+              "scale": "odds ratio",
+              "delta": -0.0017428616571631972,
+              "distance_se": 0.03351657033006149,
+              "distance_band": "close"
+            }
+          ]
+        },
+        {
+          "label": "Model 3 · same division",
+          "term": "T5|M3|same_division",
+          "cells": [
+            {
+              "estimate": 1.1046915598082843,
+              "published": 1.046,
+              "se": null,
+              "published_se": 0.062,
+              "source_row": 32,
+              "saved_outcome": "consistent",
+              "scale": "odds ratio",
+              "delta": 0.05869155980828422,
+              "distance_se": 0.946638061423939,
+              "distance_band": "close"
+            }
+          ]
+        },
+        {
+          "label": "Model 3 · total points",
+          "term": "T5|M3|total_points",
+          "cells": [
+            {
+              "estimate": 1.0150710278706667,
+              "published": 1.014,
+              "se": null,
+              "published_se": 0.005,
+              "source_row": 33,
+              "saved_outcome": "consistent",
+              "scale": "odds ratio",
+              "delta": 0.0010710278706667076,
+              "distance_se": 0.21420557413334151,
+              "distance_band": "close"
+            }
+          ]
+        },
+        {
+          "label": "Model 3 · week",
+          "term": "T5|M3|week",
+          "cells": [
+            {
+              "estimate": 1.026757698919942,
+              "published": 1.026,
+              "se": null,
+              "published_se": 0.005,
+              "source_row": 34,
+              "saved_outcome": "consistent",
+              "scale": "odds ratio",
+              "delta": 0.0007576989199420403,
+              "distance_se": 0.15153978398840806,
+              "distance_band": "close"
+            }
+          ]
+        },
+        {
+          "label": "Model 3 · yards first down",
+          "term": "T5|M3|yards_first_down",
+          "cells": [
+            {
+              "estimate": 0.7881122403596516,
+              "published": 0.801,
+              "se": null,
+              "published_se": 0.006,
+              "source_row": 35,
+              "saved_outcome": "grey",
+              "scale": "odds ratio",
+              "delta": -0.012887759640348495,
+              "distance_se": 2.1479599400580827,
+              "distance_band": "large"
+            }
+          ]
+        },
+        {
+          "label": "Model 3 · yards touchdown",
+          "term": "T5|M3|yards_touchdown",
+          "cells": [
+            {
+              "estimate": 0.9696985443731216,
+              "published": 0.972,
+              "se": null,
+              "published_se": 0.001,
+              "source_row": 36,
+              "saved_outcome": "consistent",
+              "scale": "odds ratio",
+              "delta": -0.002301455626878335,
+              "distance_se": 2.301455626878335,
+              "distance_band": "large"
+            }
+          ]
+        }
+      ],
+      "source": {
+        "path": "studies/lehman2011/scoring/common_v1/terms.csv",
+        "sha256": "96c1f1edcd2ee543020d2ac496a3c7b0654c4fc0b8e310a4dd089b17f39ecd55"
+      },
+      "note": "Saved estimates on their reported display scale; Unavailable reconstructed SEs remain missing. Multiple origins remain separate. Descriptive cell distances do not replace the saved scoring rules.",
+      "original": {
+        "sha256": "93278fe5f7ad8a54cb4808305f6b8725ae968944fd6e9cda75e8089047e6c8d3",
+        "page": 11,
+        "y": 0,
+        "locator_source": "studies/lehman2011/sealed/targets_reconciled_v1.json"
+      },
+      "agreement": {
+        "within_one_se": 11,
+        "compared": 15
+      },
+      "sample": [],
+      "published_sample": null
+    },
+    {
+      "id": "table_3",
+      "kind": "table",
+      "title": "Table 6",
+      "subtitle": "1–18 / 35 estimates",
+      "row_label": "Estimate",
+      "columns": [
+        "Reconstruction"
+      ],
+      "rows": [
+        {
+          "label": "T6|all|gap-14",
+          "term": "T6|all|gap-14",
+          "cells": [
+            {
+              "estimate": -0.0096076484826462,
+              "published": -0.0039,
+              "se": null,
+              "published_se": 0.0005,
+              "source_row": 37,
+              "saved_outcome": "discrepant_candidate",
+              "scale": "reported scale",
+              "delta": -0.005707648482646201,
+              "distance_se": 11.415296965292402,
+              "distance_band": "large"
+            }
+          ]
+        },
+        {
+          "label": "T6|all|gap-28",
+          "term": "T6|all|gap-28",
+          "cells": [
+            {
+              "estimate": -0.0114835157585074,
+              "published": -0.0044,
+              "se": null,
+              "published_se": 0.0028,
+              "source_row": 38,
+              "saved_outcome": "discrepant_candidate",
+              "scale": "reported scale",
+              "delta": -0.0070835157585074,
+              "distance_se": 2.529827056609786,
+              "distance_band": "large"
+            }
+          ]
+        },
+        {
+          "label": "T6|all|gap-42",
+          "term": "T6|all|gap-42",
+          "cells": [
+            {
+              "estimate": -0.0059130575117738,
+              "published": -0.0026,
+              "se": null,
+              "published_se": 0.0062,
+              "source_row": 39,
+              "saved_outcome": "consistent",
+              "scale": "reported scale",
+              "delta": -0.0033130575117738,
+              "distance_se": 0.5343641148022258,
+              "distance_band": "close"
+            }
+          ]
+        },
+        {
+          "label": "T6|all|gap0",
+          "term": "T6|all|gap0",
+          "cells": [
+            {
+              "estimate": -0.0036363189873904,
+              "published": -0.0022,
+              "se": null,
+              "published_se": 0.0003,
+              "source_row": 40,
+              "saved_outcome": "discrepant_candidate",
+              "scale": "reported scale",
+              "delta": -0.0014363189873903997,
+              "distance_se": 4.787729957968,
+              "distance_band": "large"
+            }
+          ]
+        },
+        {
+          "label": "T6|all|gap14",
+          "term": "T6|all|gap14",
+          "cells": [
+            {
+              "estimate": -0.000174534511593,
+              "published": -0.0006,
+              "se": null,
+              "published_se": 0.0002,
+              "source_row": 41,
+              "saved_outcome": "discrepant_candidate",
+              "scale": "reported scale",
+              "delta": 0.00042546548840699994,
+              "distance_se": 2.1273274420349995,
+              "distance_band": "large"
+            }
+          ]
+        },
+        {
+          "label": "T6|all|gap28",
+          "term": "T6|all|gap28",
+          "cells": [
+            {
+              "estimate": -0.0001576685542167,
+              "published": -0.0004,
+              "se": null,
+              "published_se": 0.0001,
+              "source_row": 42,
+              "saved_outcome": "discrepant_candidate",
+              "scale": "reported scale",
+              "delta": 0.0002423314457833,
+              "distance_se": 2.423314457833,
+              "distance_band": "large"
+            }
+          ]
+        },
+        {
+          "label": "T6|all|gap42",
+          "term": "T6|all|gap42",
+          "cells": [
+            {
+              "estimate": -0.0001423654891007,
+              "published": -0.0003,
+              "se": null,
+              "published_se": 0.0,
+              "source_row": 43,
+              "saved_outcome": "discrepant_candidate",
+              "scale": "reported scale",
+              "delta": 0.00015763451089929997,
+              "distance_se": null,
+              "distance_band": "unavailable"
+            }
+          ]
+        },
+        {
+          "label": "T6|q1|gap-14",
+          "term": "T6|q1|gap-14",
+          "cells": [
+            {
+              "estimate": 0.0011339716042729,
+              "published": 0.0004,
+              "se": null,
+              "published_se": 0.0001,
+              "source_row": 44,
+              "saved_outcome": "discrepant_candidate",
+              "scale": "reported scale",
+              "delta": 0.0007339716042729001,
+              "distance_se": 7.339716042729001,
+              "distance_band": "large"
+            }
+          ]
+        },
+        {
+          "label": "T6|q1|gap-28",
+          "term": "T6|q1|gap-28",
+          "cells": [
+            {
+              "estimate": -0.0035184428649522,
+              "published": -0.0011,
+              "se": null,
+              "published_se": 0.0009,
+              "source_row": 45,
+              "saved_outcome": "grey",
+              "scale": "reported scale",
+              "delta": -0.0024184428649522,
+              "distance_se": 2.6871587388357776,
+              "distance_band": "large"
+            }
+          ]
+        },
+        {
+          "label": "T6|q1|gap-42",
+          "term": "T6|q1|gap-42",
+          "cells": [
+            {
+              "estimate": -0.0424054071466994,
+              "published": -0.0163,
+              "se": null,
+              "published_se": 0.0213,
+              "source_row": 46,
+              "saved_outcome": "consistent",
+              "scale": "reported scale",
+              "delta": -0.026105407146699403,
+              "distance_se": 1.2256059693286105,
+              "distance_band": "moderate"
+            }
+          ]
+        },
+        {
+          "label": "T6|q1|gap0",
+          "term": "T6|q1|gap0",
+          "cells": [
+            {
+              "estimate": 0.0170141872307185,
+              "published": 0.0066,
+              "se": null,
+              "published_se": 0.0014,
+              "source_row": 47,
+              "saved_outcome": "discrepant_candidate",
+              "scale": "reported scale",
+              "delta": 0.0104141872307185,
+              "distance_se": 7.438705164798929,
+              "distance_band": "large"
+            }
+          ]
+        },
+        {
+          "label": "T6|q1|gap14",
+          "term": "T6|q1|gap14",
+          "cells": [
+            {
+              "estimate": -0.003591621594962,
+              "published": -0.0013,
+              "se": null,
+              "published_se": 0.0002,
+              "source_row": 48,
+              "saved_outcome": "discrepant_candidate",
+              "scale": "reported scale",
+              "delta": -0.002291621594962,
+              "distance_se": 11.45810797481,
+              "distance_band": "large"
+            }
+          ]
+        },
+        {
+          "label": "T6|q1|gap28",
+          "term": "T6|q1|gap28",
+          "cells": [
+            {
+              "estimate": -0.0013358352247651,
+              "published": -0.0005,
+              "se": null,
+              "published_se": 0.0001,
+              "source_row": 49,
+              "saved_outcome": "discrepant_candidate",
+              "scale": "reported scale",
+              "delta": -0.0008358352247651,
+              "distance_se": 8.358352247651,
+              "distance_band": "large"
+            }
+          ]
+        },
+        {
+          "label": "T6|q1|gap42",
+          "term": "T6|q1|gap42",
+          "cells": [
+            {
+              "estimate": -0.0004760112358866,
+              "published": -0.0002,
+              "se": null,
+              "published_se": 0.0001,
+              "source_row": 50,
+              "saved_outcome": "grey",
+              "scale": "reported scale",
+              "delta": -0.0002760112358866,
+              "distance_se": 2.760112358866,
+              "distance_band": "large"
+            }
+          ]
+        },
+        {
+          "label": "T6|q2|gap-14",
+          "term": "T6|q2|gap-14",
+          "cells": [
+            {
+              "estimate": -0.0023845203092166,
+              "published": -0.0009,
+              "se": null,
+              "published_se": 0.0003,
+              "source_row": 51,
+              "saved_outcome": "discrepant_candidate",
+              "scale": "reported scale",
+              "delta": -0.0014845203092166,
+              "distance_se": 4.9484010307220005,
+              "distance_band": "large"
+            }
+          ]
+        },
+        {
+          "label": "T6|q2|gap-28",
+          "term": "T6|q2|gap-28",
+          "cells": [
+            {
+              "estimate": -0.0078700900726712,
+              "published": -0.0031,
+              "se": null,
+              "published_se": 0.0022,
+              "source_row": 52,
+              "saved_outcome": "grey",
+              "scale": "reported scale",
+              "delta": -0.0047700900726712,
+              "distance_se": 2.168222760305091,
+              "distance_band": "large"
+            }
+          ]
+        },
+        {
+          "label": "T6|q2|gap-42",
+          "term": "T6|q2|gap-42",
+          "cells": [
+            {
+              "estimate": -0.0197710969491782,
+              "published": -0.0099,
+              "se": null,
+              "published_se": 0.0111,
+              "source_row": 53,
+              "saved_outcome": "consistent",
+              "scale": "reported scale",
+              "delta": -0.009871096949178199,
+              "distance_se": 0.8892880134394774,
+              "distance_band": "close"
+            }
+          ]
+        },
+        {
+          "label": "T6|q2|gap0",
+          "term": "T6|q2|gap0",
+          "cells": [
+            {
+              "estimate": 0.0003486738800366,
+              "published": 0.0001,
+              "se": null,
+              "published_se": 0.0005,
+              "source_row": 54,
+              "saved_outcome": "consistent",
+              "scale": "reported scale",
+              "delta": 0.0002486738800366,
+              "distance_se": 0.4973477600732,
+              "distance_band": "close"
+            }
+          ]
+        }
+      ],
+      "source": {
+        "path": "studies/lehman2011/scoring/common_v1/terms.csv",
+        "sha256": "96c1f1edcd2ee543020d2ac496a3c7b0654c4fc0b8e310a4dd089b17f39ecd55"
+      },
+      "note": "Saved estimates on their reported display scale; Unavailable reconstructed SEs remain missing. Multiple origins remain separate. Descriptive cell distances do not replace the saved scoring rules.",
+      "original": {
+        "sha256": "93278fe5f7ad8a54cb4808305f6b8725ae968944fd6e9cda75e8089047e6c8d3",
+        "page": 12,
+        "y": 0,
+        "locator_source": "studies/lehman2011/sealed/targets_reconciled_v1.json"
+      },
+      "agreement": {
+        "within_one_se": 3,
+        "compared": 17
+      },
+      "sample": [],
+      "published_sample": null
+    },
+    {
+      "id": "table_4",
+      "kind": "table",
+      "title": "Table 6",
+      "subtitle": "19–35 / 35 estimates",
+      "row_label": "Estimate",
+      "columns": [
+        "Reconstruction"
+      ],
+      "rows": [
+        {
+          "label": "T6|q2|gap14",
+          "term": "T6|q2|gap14",
+          "cells": [
+            {
+              "estimate": -0.0023993183794145,
+              "published": -0.0009,
+              "se": null,
+              "published_se": 0.0002,
+              "source_row": 55,
+              "saved_outcome": "discrepant_candidate",
+              "scale": "reported scale",
+              "delta": -0.0014993183794145,
+              "distance_se": 7.496591897072499,
+              "distance_band": "large"
+            }
+          ]
+        },
+        {
+          "label": "T6|q2|gap28",
+          "term": "T6|q2|gap28",
+          "cells": [
+            {
+              "estimate": -0.001378328011326,
+              "published": -0.0005,
+              "se": null,
+              "published_se": 0.0,
+              "source_row": 56,
+              "saved_outcome": "discrepant_candidate",
+              "scale": "reported scale",
+              "delta": -0.0008783280113260001,
+              "distance_se": null,
+              "distance_band": "unavailable"
+            }
+          ]
+        },
+        {
+          "label": "T6|q2|gap42",
+          "term": "T6|q2|gap42",
+          "cells": [
+            {
+              "estimate": -0.0007729703905049,
+              "published": -0.0003,
+              "se": null,
+              "published_se": 0.0001,
+              "source_row": 57,
+              "saved_outcome": "grey",
+              "scale": "reported scale",
+              "delta": -0.00047297039050490003,
+              "distance_se": 4.729703905049,
+              "distance_band": "large"
+            }
+          ]
+        },
+        {
+          "label": "T6|q3|gap-14",
+          "term": "T6|q3|gap-14",
+          "cells": [
+            {
+              "estimate": -0.019079968712753,
+              "published": -0.0098,
+              "se": null,
+              "published_se": 0.0008,
+              "source_row": 58,
+              "saved_outcome": "discrepant_candidate",
+              "scale": "reported scale",
+              "delta": -0.009279968712753002,
+              "distance_se": 11.599960890941253,
+              "distance_band": "large"
+            }
+          ]
+        },
+        {
+          "label": "T6|q3|gap-28",
+          "term": "T6|q3|gap-28",
+          "cells": [
+            {
+              "estimate": -0.0059422981680241,
+              "published": -0.0047,
+              "se": null,
+              "published_se": 0.0028,
+              "source_row": 59,
+              "saved_outcome": "consistent",
+              "scale": "reported scale",
+              "delta": -0.0012422981680241,
+              "distance_se": 0.4436779171514643,
+              "distance_band": "close"
+            }
+          ]
+        },
+        {
+          "label": "T6|q3|gap-42",
+          "term": "T6|q3|gap-42",
+          "cells": [
+            {
+              "estimate": 0.0108008064461085,
+              "published": 0.0068,
+              "se": null,
+              "published_se": 0.0031,
+              "source_row": 60,
+              "saved_outcome": "consistent",
+              "scale": "reported scale",
+              "delta": 0.004000806446108501,
+              "distance_se": 1.2905827245511294,
+              "distance_band": "moderate"
+            }
+          ]
+        },
+        {
+          "label": "T6|q3|gap0",
+          "term": "T6|q3|gap0",
+          "cells": [
+            {
+              "estimate": -0.0101720657050694,
+              "published": -0.0036,
+              "se": null,
+              "published_se": 0.0002,
+              "source_row": 61,
+              "saved_outcome": "discrepant_candidate",
+              "scale": "reported scale",
+              "delta": -0.0065720657050694,
+              "distance_se": 32.860328525347,
+              "distance_band": "large"
+            }
+          ]
+        },
+        {
+          "label": "T6|q3|gap14",
+          "term": "T6|q3|gap14",
+          "cells": [
+            {
+              "estimate": -0.0007355331015141,
+              "published": -0.0003,
+              "se": null,
+              "published_se": 0.0002,
+              "source_row": 62,
+              "saved_outcome": "grey",
+              "scale": "reported scale",
+              "delta": -0.0004355331015141,
+              "distance_se": 2.1776655075705,
+              "distance_band": "large"
+            }
+          ]
+        },
+        {
+          "label": "T6|q3|gap28",
+          "term": "T6|q3|gap28",
+          "cells": [
+            {
+              "estimate": -0.0006388380316454,
+              "published": -0.0002,
+              "se": null,
+              "published_se": 0.0001,
+              "source_row": 63,
+              "saved_outcome": "grey",
+              "scale": "reported scale",
+              "delta": -0.00043883803164540005,
+              "distance_se": 4.3883803164540005,
+              "distance_band": "large"
+            }
+          ]
+        },
+        {
+          "label": "T6|q3|gap42",
+          "term": "T6|q3|gap42",
+          "cells": [
+            {
+              "estimate": -0.0005532522031791,
+              "published": -0.0002,
+              "se": null,
+              "published_se": 0.0001,
+              "source_row": 64,
+              "saved_outcome": "grey",
+              "scale": "reported scale",
+              "delta": -0.00035325220317910004,
+              "distance_se": 3.532522031791,
+              "distance_band": "large"
+            }
+          ]
+        },
+        {
+          "label": "T6|q4|gap-14",
+          "term": "T6|q4|gap-14",
+          "cells": [
+            {
+              "estimate": -0.0371085072664417,
+              "published": -0.0352,
+              "se": null,
+              "published_se": 0.0016,
+              "source_row": 65,
+              "saved_outcome": "consistent",
+              "scale": "reported scale",
+              "delta": -0.0019085072664416988,
+              "distance_se": 1.1928170415260617,
+              "distance_band": "moderate"
+            }
+          ]
+        },
+        {
+          "label": "T6|q4|gap-28",
+          "term": "T6|q4|gap-28",
+          "cells": [
+            {
+              "estimate": 0.0012851143689163,
+              "published": 0.0002,
+              "se": null,
+              "published_se": 0.0026,
+              "source_row": 66,
+              "saved_outcome": "consistent",
+              "scale": "reported scale",
+              "delta": 0.0010851143689163,
+              "distance_se": 0.4173516803524231,
+              "distance_band": "close"
+            }
+          ]
+        },
+        {
+          "label": "T6|q4|gap-42",
+          "term": "T6|q4|gap-42",
+          "cells": [
+            {
+              "estimate": 0.0428741520886498,
+              "published": 0.0353,
+              "se": null,
+              "published_se": 0.002,
+              "source_row": 67,
+              "saved_outcome": "discrepant_candidate",
+              "scale": "reported scale",
+              "delta": 0.0075741520886498034,
+              "distance_se": 3.787076044324902,
+              "distance_band": "large"
+            }
+          ]
+        },
+        {
+          "label": "T6|q4|gap0",
+          "term": "T6|q4|gap0",
+          "cells": [
+            {
+              "estimate": -0.0160972296360969,
+              "published": -0.0055,
+              "se": null,
+              "published_se": 0.0004,
+              "source_row": 68,
+              "saved_outcome": "discrepant_candidate",
+              "scale": "reported scale",
+              "delta": -0.010597229636096899,
+              "distance_se": 26.493074090242246,
+              "distance_band": "large"
+            }
+          ]
+        },
+        {
+          "label": "T6|q4|gap14",
+          "term": "T6|q4|gap14",
+          "cells": [
+            {
+              "estimate": 0.0014976720424788,
+              "published": 0.0005,
+              "se": null,
+              "published_se": 0.0002,
+              "source_row": 69,
+              "saved_outcome": "discrepant_candidate",
+              "scale": "reported scale",
+              "delta": 0.0009976720424788,
+              "distance_se": 4.988360212393999,
+              "distance_band": "large"
+            }
+          ]
+        },
+        {
+          "label": "T6|q4|gap28",
+          "term": "T6|q4|gap28",
+          "cells": [
+            {
+              "estimate": 0.0018915987289867,
+              "published": 0.0006,
+              "se": null,
+              "published_se": 0.0004,
+              "source_row": 70,
+              "saved_outcome": "grey",
+              "scale": "reported scale",
+              "delta": 0.0012915987289867001,
+              "distance_se": 3.2289968224667502,
+              "distance_band": "large"
+            }
+          ]
+        },
+        {
+          "label": "T6|q4|gap42",
+          "term": "T6|q4|gap42",
+          "cells": [
+            {
+              "estimate": 0.0023531672932306,
+              "published": 0.0008,
+              "se": null,
+              "published_se": 0.0006,
+              "source_row": 71,
+              "saved_outcome": "grey",
+              "scale": "reported scale",
+              "delta": 0.0015531672932306002,
+              "distance_se": 2.5886121553843338,
+              "distance_band": "large"
+            }
+          ]
+        }
+      ],
+      "source": {
+        "path": "studies/lehman2011/scoring/common_v1/terms.csv",
+        "sha256": "96c1f1edcd2ee543020d2ac496a3c7b0654c4fc0b8e310a4dd089b17f39ecd55"
+      },
+      "note": "Saved estimates on their reported display scale; Unavailable reconstructed SEs remain missing. Multiple origins remain separate. Descriptive cell distances do not replace the saved scoring rules.",
+      "original": {
+        "sha256": "93278fe5f7ad8a54cb4808305f6b8725ae968944fd6e9cda75e8089047e6c8d3",
+        "page": 12,
+        "y": 0,
+        "locator_source": "studies/lehman2011/sealed/targets_reconciled_v1.json"
+      },
+      "agreement": {
+        "within_one_se": 2,
+        "compared": 16
+      },
+      "sample": [],
+      "published_sample": null
+    },
+    {
+      "id": "reconstruction_diagnostics",
+      "kind": "figure",
+      "title": "Reconstruction & influence",
+      "asset": "studies/lehman2011/reports/figure_reconstruction_influence.png",
+      "source": {
+        "path": "studies/lehman2011/reports/figure_reconstruction_influence.png",
+        "sha256": "8d7f80c54fd0e45b94107de6d911636216aa2e41354131a217fa76bba56a8dc4"
+      },
+      "note": "Archived reconstruction diagnostic; not a reconstruction of an original article figure."
+    }
+  ],
+  "report": "# Replication report: Lehman, Hahn, Ramanujam and Alge (2011)\n\nStudy lehman2011. Article: \"The Dynamics of the Performance–Risk Relationship Within a Performance Period: The Moderating Role of Deadline Proximity\", Organization Science 22(6): 1613-1630, doi:10.1287/orsc.1100.0626. Coordinator session 854f82b1-fa2c-409c-9663-ea33f56d31cd, 27-28 October 2026.\n\n## Findings and scope\n\nAll four focal hypotheses (H1A, H1B, H2, H3) are classified consistent under the frozen protocol. The reconstruction used independently acquired public NFL play-by-play data.\n\n- The focal Table 5 coefficients reproduce closely. The Model 3 interactions between performance and minutes remaining, which carry the article's central moderation claim, fall inside the published rounding intervals. Each has the same sign and the same p < 0.01 star band.\n- Three independent implementations agree to about 1e-8, in R twice and in Python once. Two model families wrote them.\n- All 191 uncertain-branch specifications classify every primary focal coefficient as consistent.\n- No game, team or season deletion changes the sign or the 0.05 significance status of any focal coefficient.\n- The game-clustered benchmark inference flags no case of fragile inference.\n\nThe paper-level outcome under the frozen aggregation rule is consistent. The comparability mapping is \"partially reproduced\". The mapping rests on two lower-tier cells.\n\n- The two cells are the Model 1 same-division and same-conference controls. Both are nonsignificant in the article and in the reconstruction, and they are flagged only by the sign rule on odds ratios near 1.\n- The adversarial review did not overturn them (verdict uncertain), and it found strong evidence that the article's Table 1 swaps these two labels.\n- The accepted ruling confirms the mapping only. It does not make these cells fully verified discrepancies, because no independent model family was available for the adversarial review.\n- Specification fragility was not assessed, because no alternative was labelled equivalent by both readers. This is not a claim of robustness.\n\nScope and limits:\n\n- Public-source reconstruction. The article does not name its data source. We used the nflverse play-by-play releases (CC-BY-4.0), which are later builds of the NFL feed. Our analysis sample has 21,540 plays against the published 22,603, 4.7% fewer, which falls in the frozen \"moderate\" N band.\n  - The difference arises before the two-minute exclusion: 22,766 regulation fourth-down decision plays against the published 23,965.\n  - Two 2000 games are missing from the public play-by-play.\n  - We cannot tell how much of the gap reflects the source vintage and how much reflects play-classification rules the article does not document.\n- Secondary evidence is label-sensitive. The Table 6 marginal effects depend on how predicted probabilities are set after the fixed-effects logit.\n  - Under the frozen origin convention (group effect set to zero), 8 of 35 cells are consistent and 18 are discrepancy candidates. All signs match, but the magnitudes are about 2-3 times larger.\n  - Under the prespecified uncertain variant U9a (averaged over estimated team effects), 28 of 35 are consistent.\n  - These are secondary targets and do not change claim outcomes.\n- Discrepancy verification is incomplete. No model family independent of both implementation families was available for the adversarial review. No discrepant verdict is claimed.\n\n## What was reconstructed and from which public sources\n\n| Element | Status | Source |\n|---|---|---|\n| Fourth-down plays, scores, clock, field position, play type, 2000-2005 | acquired | nflverse-data release \"pbp\", play_by_play_2000-2005 (parquet and csv.gz), acquired 2026-10-27; three build vintages (nflfastR 5.0-5.2); sha256 in registry/source_registry.json |\n| Game metadata: week, home team, venue, division-game flag | acquired | nflverse release \"schedules\" games.parquet, cross-checked with nflverse/nfldata games.csv (commit 20cdb994) |\n| Season-specific conference and division of each team | constructed | nflverse/nfldata standings.csv (2002-2005) and 44 pinned English Wikipedia standings templates (2000-2001, CC BY-SA 4.0); agrees with the games file's div_game on all 1,520 games; registry/team_season_alignment.csv |\n| Two 2000 regular-season games (2000_03_SD_KC, 2000_06_BUF_MIA) | unavailable | listed in the schedule but absent from both play-by-play vintages |\n| Spread-based alternative reference point; field-goal-range submodels (narrative robustness in the article) | not attemptable | construction not documented in the article |\n\nAll samples and variables were built by the implementers from the raw files, following a target-free manifest. No printed article data were used as inputs.\n\n## Published versus reconstructed focal estimates\n\nThe models are conditional (fixed-effects) logits grouped by offensive team, with season dummies. Odds ratios are shown with the published SE in parentheses. The reconstructed p is two-sided, with conventional ML standard errors. The benchmark is a game-clustered sandwich on the matched dummy-variable logit.\n\n| Claim | Term | Published OR | Reconstructed OR | p (native) | p (benchmark) | Distance in published SEs | Outcome |\n|---|---|---|---|---|---|---|---|\n| H1A | M2 perf ≤ aspiration | 0.883** (0.008) | 0.885 | 3.4e-33 | 8.1e-32 | 0.20 | consistent |\n| H1A | M2 perf² ≤ aspiration | 0.999** (0.000) | 0.9988 | 1.6e-4 | 3.6e-4 | 0.00 | consistent |\n| H1B | M2 perf > aspiration | 0.994 (0.007) | 0.992 | 0.33 | 0.38 | 0.14 | consistent |\n| H2 | M3 perf ≤ asp. × minutes | 1.011** (0.001) | 1.0109 | 2.4e-57 | 2.4e-50 | 0.00 | consistent |\n| H2 | M3 perf² ≤ asp. × minutes | 1.000** (0.000) | 1.0002 | 7.0e-16 | 2.3e-15 | 0.00 | consistent |\n| H3 | M3 perf > asp. × minutes | 0.998** (0.000) | 0.9979 | 3.3e-6 | 1.9e-5 | 0.00 | consistent |\n\nN: the published N is 22,603 in every model; ours is 21,540 in every model. The published star key is +p<0.10, *p<0.05, **p<0.01, with the tail not stated; the frozen rule uses two-sided tests. Printed SEs of 0.000 are low resolution, so the magnitude check uses the upper rounding bound. H1B's published coefficient is nonsignificant, and the article reports H1B unsupported at the game level; the reconstruction agrees.\n\nClaim-level and paper-level outcomes are recorded separately in reports/data/claim_and_paper_records.json. Each claim's secondary marginal-effect shares are given in the technical supplement.\n\n## One worked example: H2\n\n1. Article. Table 5, Model 3 (PDF p.11) prints the odds ratio for \"Performance (≤ aspiration) × Minutes remaining\" as 1.011** (0.001). The text (PDF p.12) tests H2 with that model and with marginal effects by quarter.\n2. Readers. Both readers marked H2 focal. Both transcribed 1.011, 0.001 and **. Both defined performance as own score minus (opponent score + 1), split at zero, with minutes as regulation seconds remaining divided by 60 (PDF pp.8-9).\n3. Frozen specification. The manifest defines perf_below = min(d, 0), minutes = game_seconds_remaining/60, and perf_below_x_min = perf_below × minutes. The origin estimator is the exact conditional logit by offensive team with season dummies. Sample: regular-season fourth-down punts, field goals, runs and passes in regulation, with more than 120 seconds remaining.\n4. Execution. All three implementations returned 0.010855 (SE 0.000681, p = 2.4e-57) on the same 21,540-play sample.\n5. Scoring. The published interval [1.0105, 1.0115] maps to [0.010445, 0.011434] on the log-odds scale. The estimate lies inside it, so the magnitude distance is 0. Both bands are p < 0.01, and the signs agree. The target is consistent, as are the other H2 primary target and all 191 uncertain branches, so H2 is consistent.\n\n## Specifications fitted and influence refits\n\n| Item | Count | Notes |\n|---|---|---|\n| Grid fits per implementation | 604 (A and B), 621 (C, including auxiliary benchmark fits) | 577 distinct model settings: 3 models × (1 origin + 8 single-axis deviations + 183 further crossings) + 1 M1-only deviation; 27 grid rows repeat earlier cells and are flagged duplicate_of |\n| Distinct realised samples | 8 | the sample depends only on U1-U3 |\n| Equivalent set | 0 | no level labelled equivalent by both readers, so fragility not assessed |\n| Uncertain set | 191 non-origin cells per model | U1-U7 crossings; plus U8 for M1 |\n| Non-equivalent runs | 9 fits (N1, N2, N4 × M1-M3), plus N3 average marginal effects | reported separately, not scored |\n| Algebraic checks | 2 | K1: elapsed-minutes reparameterisation; K2: complemented home indicator; both identical to machine precision |\n| Influence refits | 1,518 games, 32 teams and 6 seasons, each × M2 and M3 | game deletions in A and C, team and season in A, B and C; 11 benchmark failures in A (season 2000 deletion), none in C |\n\nEquivalent, uncertain and non-equivalent alternatives are listed with their sources in the technical supplement. The duplicates and algebraic checks are not counted as alternatives.\n\n## Figure: public-source reconstruction and influence checks\n\n![Reconstruction and influence checks](figure_reconstruction_influence.png)\n\nRows: the focal performance terms of Models 2 and 3 in Table 5, in a fixed order registered before results. Left panel: logit coefficients divided by the published log-scale SE (upper rounding bound); null = 0. The published ln(odds ratio) is a cross and the reconstructed origin coefficient a dot. The thick line is the minimum-to-maximum range across all 1,518 leave-one-game-out refits; the thin line is the range across the 32 leave-one-team-out refits. Right panel: the reconstructed two-sided native p on a log scale, the game-deletion p range, the published star band shaded, and a 0.05 reference line; no p value underflowed.\n\nN = 21,540 regular-season regulation fourth-down plays, 2000-2005, excluding the final two minutes. Missingness is complete-case; no rows were lost. Data are nflverse public play-by-play and schedules, with an independently built team-alignment table. Implementers built the measurements from a target-free manifest.\n\nDeletion ranges are influence ranges, not confidence intervals. Deletions are a separate diagnostic and are not part of the equivalent-specification set.\n\nWhat the figure supports: the focal coefficients sit at or near the published values, and no single game, team or season drives their sign or significance. What it cannot establish: equivalence across untested reasonable analyses, the source of the 4.7% sample gap, or any fragility verdict. Data and plotting code: figure_reconstruction_influence.csv and make_figure.py.\n\n## Readers, reconciliation and executed configurations\n\n- Readers. Reader A was Claude Fable 5.1 (claude-fable-5-1, high effort, standard speed, fast mode off, claude CLI 2.1.270 --safe-mode, file tools only, 46 turns, reported cost $12.20). Reader B was GPT-6 Astra (gpt-6-astra requested, reasoning effort high, service tier default, fast mode off, codex-cli 0.164.0, workspace-write sandbox).\n  - The codex output does not report the served model, effort or tier, so Reader B's settings are requested, not observed.\n  - The coordinator, also Anthropic, did not read independently; the shared family with Reader A is recorded.\n- Memorization probes. Neither model recalled any numerical result. Fable misremembered the dependent variable, and Astra recalled the fourth-down design (sealed/memorization/summary.json).\n- Initial agreement, before any clarification; no clarification round was needed:\n\n  | Measure | Agreement | Gwet's AC1 |\n  |---|---|---|\n  | Claim tier | 11/12 | 0.90 |\n  | Claim type | 12/12 | 1.00 |\n  | Manifest certainty | 20/25 | 0.72 |\n  | Equivalence label | 2/4 | 0.26 |\n  | Focal target transcription | 81/81 (value, SE and stars) | – |\n\n- Disagreements. Two equivalence labels became uncertain: keeping a snap at exactly 2:00, and the unconditional dummy-variable logit. The first-quarter \"unexpected finding\" tier became uncertain. Every one-reader alternative was retained as a union.\n- Coordinator decisions. The origin for predicted probabilities was taken from the stated software: Stata's pu0, the fixed-effect-zero prediction that margins supports after xtlogit, fe. The adversarial review notes that pu0 is the supported prediction rather than the default, which is pc1, and that the published values behave more like U9a. The game-clustered benchmark is computed on the paired dummy-variable logit, an adaptation declared before execution.\n- Implementations:\n\n  | Implementation | Model | Language | Check rounds | Final checker result |\n  |---|---|---|---|---|\n  | A | Fable 5.1 | R | 3 | 4 residual items after the budget, none affecting estimates (checks/A/residual_unmet_items.md) |\n  | B | Astra | R | 1 | no unmet items |\n  | C | Astra | Python | 2 | no unmet items |\n\n  The article's language is Stata, which was unavailable, so R was used: a degraded design declared before execution. Agreement: every pair agrees on samples (8 hashes), on all origin coefficients, SEs and marginal effects, and on every grid cell they share, with a maximum coefficient difference of 4.5e-8.\n- Execution. Frozen code ran under macOS sandbox-exec with network denied (B and C), or with localhost only for A's socket cluster. Both profiles were tested to block DNS and direct-IP traffic. Implementer network isolation during coding rested on the sandbox for codex and on tool restrictions and instructions for the Claude implementer.\n\n## Supplements\n\n- Packet. D01, the supplied article PDF (sha256 93278fe5…c8d3; 19 pages, where page 19 is a database copyright notice), with a page-level text extraction. No supplements were included.\n- Search. A documented search (logs/supplement_search.json) found no e-companion, online appendix, erratum or correction. The Crossref relations are empty, and the archived INFORMS page of 2023-11-18 shows no supplemental material.\n- Gaps. The live INFORMS page was blocked by a bot check, so a supplement added after November 2023 cannot be ruled out entirely.\n- Excluded. A different copy of the article on a Purdue server was excluded.\n- Package. No author replication package was found (logs/package_availability.json).\n- Contradictions within the article, all recorded as publication diagnostics, not verdicts:\n  - Printed incremental LR chi-squares do not match the printed log-likelihoods.\n  - One chi-square is reported for two tests.\n  - A Table 4 cell is off by exactly 100.\n  - Table 1 appears to swap the same-division and same-conference labels.\n  - Methods prose places the threshold indicator in every model, but Table 5 omits it from Model 1.\n\n## Remaining limitations\n\n- Source vintage and play classification explain an unknown share of the sample gap. Counts by step are in reports/data/n_branch_evaluation.json.\n- The scoring constants are provisional and uncalibrated on real papers. The scorer passed 8 synthetic rule tests. It was patched twice for mechanical input handling:\n  - v1.1, before any target comparison: deduplicating repeated rows and harmonising season-dummy names.\n  - v1.2, after the first pass: mapping the \"minutes remaining\" target label to the manifest term. This turned three nonfocal targets from not assessable to consistent. Both patches are logged with hashes in reconciliation/FROZEN_v1.sha256.\n- The adversarial reviewer was an Anthropic model in a fresh context, not an independent family.\n\nDetails: technical_supplement.md, reports/data/, reconciliation/, checks/ and runs/.\n",
+  "metadata": {
+    "study_id": "lehman2011",
+    "citation": "Lehman, D. W., Hahn, J., Ramanujam, R., and Alge, B. J. (2011). The Dynamics of the Performance–Risk Relationship Within a Performance Period: The Moderating Role of Deadline Proximity. Organization Science, 22(6), 1613–1630.",
+    "journal": "Organization Science",
+    "paper_path_from_project_root": "papers/journal_collection/ORSC/ORSC_2011_Lehman.pdf",
+    "paper_sha256": "93278fe5f7ad8a54cb4808305f6b8725ae968944fd6e9cda75e8089047e6c8d3",
+    "status": "completed",
+    "data_policy": "All empirical inputs must be newly acquired from publicly available source datasets or public primary records and independently constructed. No printed article data or author-provided replication packages. Published results may be extracted only as sealed comparison targets or publication diagnostics.",
+    "reader_runs": 2,
+    "model_fits": "604/604/621 grid fits (A/B/C) + non-equivalent runs + influence refits; see reports/technical_supplement.md",
+    "session_scope": "lehman2011 only; other papers require a separate session",
+    "public_source_eligibility": "eligible: nflverse play-by-play and schedules 2000-2005 (two 2000 games missing)",
+    "author_package_availability": "no_package_found_after_documented_search (logs/package_availability.json)",
+    "doi": "10.1287/orsc.1100.0626",
+    "paper_id": "ORSC_2011_Lehman",
+    "supplement_catalog_from_project_root": "papers/supplements/catalog.json",
+    "supplements": [],
+    "local_supplement_status": "no_local_match",
+    "external_supplement_availability": "not_found_after_documented_search (logs/supplement_search.json); live INFORMS page blocked",
+    "coordinator_session_id": "854f82b1-fa2c-409c-9663-ea33f56d31cd",
+    "outcome_summary": {
+      "claims": {
+        "H1A": "consistent",
+        "H1B": "consistent",
+        "H2": "consistent",
+        "H3": "consistent"
+      },
+      "paper": "consistent (all four focal claims consistent); comparability mapping 'partially reproduced'; driven by two nonsignificant lower-tier Model 1 cells with adversarial verdict uncertain",
+      "fragility": "not assessed (empty equivalent set)",
+      "N": "21,540 reconstructed vs 22,603 published (-4.7%, moderate)"
+    },
+    "reports": [
+      "reports/replication_report.md",
+      "reports/technical_supplement.md",
+      "reports/figure_reconstruction_influence.svg",
+      "reports/figure_reconstruction_influence.png",
+      "reports/figure_reconstruction_influence.csv"
+    ],
+    "completed_utc": "2026-10-27T15:25:42+00:00"
+  },
+  "paper_record": {
+    "rule": "../../scoring_rules_common_v1.json",
+    "status": "post hoc",
+    "study_rule_paper": "consistent (comparability mapping: partially reproduced)",
+    "paper": {
+      "common": "partially reproduced",
+      "lenient": "partially reproduced"
+    },
+    "claims": {
+      "common": {
+        "H1B": "consistent",
+        "H1A": "consistent",
+        "H3": "consistent",
+        "H2": "consistent"
+      },
+      "lenient": {
+        "H1B": "consistent",
+        "H1A": "consistent",
+        "H3": "consistent",
+        "H2": "consistent"
+      }
+    },
+    "terms_by_table": {
+      "common": {
+        "Table 5": {
+          "consistent": 28,
+          "indeterminate": 7,
+          "candidate": 0,
+          "total": 35
+        },
+        "Table 6": {
+          "consistent": 6,
+          "indeterminate": 12,
+          "candidate": 17,
+          "total": 35
+        }
+      },
+      "lenient": {
+        "Table 5": {
+          "consistent": 32,
+          "indeterminate": 3,
+          "candidate": 0,
+          "total": 35
+        },
+        "Table 6": {
+          "consistent": 7,
+          "indeterminate": 14,
+          "candidate": 14,
+          "total": 35
+        }
+      }
+    }
+  },
+  "execution": {
+    "status": "completed",
+    "source": "archived execution; no new fitting"
+  },
+  "blockers": [],
+  "issues": {
+    "calculation": {
+      "title": "Averaging team effects",
+      "text": "Secondary predicted effects depend on how team effects are handled. The article leaves this calculation choice open.",
+      "values": [
+        [
+          "Team effects set to zero",
+          "8 / 35"
+        ],
+        [
+          "Averaged across teams",
+          "28 / 35"
+        ]
+      ],
+      "measure": "Matching cells · Table 6",
+      "pages": "3–4",
+      "page": 3,
+      "source": "Historical research review; original PDF not distributed"
+    }
+  },
+  "provenance": {
+    "kind": "archive",
+    "adapter_version": 4,
+    "sources": [
+      {
+        "path": "studies/lehman2011/STUDY.json",
+        "sha256": "13a7d9cf332d2b907fb77f790cb8e447101df7a7febfe09049b6ae643c44502d"
+      },
+      {
+        "path": "studies/lehman2011/reports/replication_report.md",
+        "sha256": "9933432c95d1c5d5d112dd5161f2338b88b3aceee6db1655a09b10e02a6e3f49"
+      },
+      {
+        "path": "studies/lehman2011/runs/score_v1/target_comparisons_all_cells.csv",
+        "sha256": "f5e54297ab1e9707383e2423b963341c02936e098eb959bce3df11a1892a98f9"
+      },
+      {
+        "path": "studies/lehman2011/scoring/common_v1/terms.csv",
+        "sha256": "96c1f1edcd2ee543020d2ac496a3c7b0654c4fc0b8e310a4dd089b17f39ecd55"
+      },
+      {
+        "path": "studies/lehman2011/sealed/targets_reconciled_v1.json",
+        "sha256": "6cf870102730e7bb0926ad5bde5c3a936497b18f181f341a431838ede2a9e652"
+      }
+    ]
+  }
+}

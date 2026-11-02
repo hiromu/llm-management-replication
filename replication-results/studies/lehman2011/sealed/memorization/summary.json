@@ -1,0 +1,21 @@
+{
+  "probe_prompt": "readers/common/memorization_probe_prompt.md (title and authors only; no journal, year or DOI)",
+  "sealed_from_readers": true,
+  "fable": {
+    "model_reported": "claude-fable-5-1 (modelUsage key)",
+    "effort_requested": "high (--effort high); not echoed in output",
+    "speed_reported": "usage.speed = standard; fast_mode_state = off",
+    "tools": "none (--tools \"\")",
+    "coordinator_summary": "Identified journal and year correctly but gave wrong pages. Recalled NFL play-by-play setting with high confidence. Recalled the dependent variable incorrectly, as a pass-versus-run play call rather than the paper's fourth-down choice. Recalled performance as score differential and deadline proximity as time remaining. Recalled no specific sample sizes, seasons or numerical results."
+  },
+  "astra": {
+    "model_reported": "not reported in codex exec --json events; requested -m gpt-6-astra",
+    "effort_requested": "high via -c model_reasoning_effort=\"high\"; not echoed",
+    "speed_requested": "service_tier=\"default\", features.fast_mode=false; not echoed",
+    "input_tokens": 15440,
+    "agents_md_loading": "not determinable from output; ~/.codex/AGENTS.md may have loaded (input token count does not distinguish)",
+    "coordinator_summary": "Identified journal and year. Recalled NFL setting and fourth-down go-for-it decisions with medium confidence, score-relative performance and time-remaining deadline proximity. Explicitly did not recall seasons, sample sizes, estimator, controls or any numerical result."
+  },
+  "memorization_evidence": "Low for numerical targets in both models: neither recalled any coefficient, N or table value. Astra had partial design recall (fourth-down decisions); Fable's design recall was partly wrong.",
+  "verification_limits": "Codex CLI output does not report the served model, effort or service tier; these remain requested-not-observed for Reader B."
+}

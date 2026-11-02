@@ -1,0 +1,186 @@
+{
+  "study_id": "lehman2011",
+  "doi": "10.1287/orsc.1100.0626",
+  "recorded_by": "documentary-source role (coordinator subagent, Claude Opus 5.5); study lehman2011; DOI 10.1287/orsc.1100.0626",
+  "search_window_utc": [
+    "2026-10-27T11:31:20Z",
+    "2026-10-27T11:37:22Z"
+  ],
+  "searches": [
+    {
+      "where": "Harvard Dataverse search API",
+      "query_or_url": "https://dataverse.harvard.edu/api/search?q=\"deadline proximity\"",
+      "utc": "2026-10-27T11:33:45Z",
+      "outcome": "HTTP 200, 0 results."
+    },
+    {
+      "where": "Harvard Dataverse search API",
+      "query_or_url": "https://dataverse.harvard.edu/api/search?q=\"10.1287/orsc.1100.0626\"",
+      "utc": "2026-10-27T11:33:47Z",
+      "outcome": "HTTP 200, 0 results."
+    },
+    {
+      "where": "Harvard Dataverse search API",
+      "query_or_url": "https://dataverse.harvard.edu/api/search?q=\"fourth down\"&per_page=50",
+      "utc": "2026-10-27T11:34:22Z",
+      "outcome": "HTTP 200, 0 results. (Unquoted 'fourth down Lehman' returned 48 unrelated keyword matches, none about NFL or these authors.)"
+    },
+    {
+      "where": "Harvard Dataverse search API",
+      "query_or_url": "https://dataverse.harvard.edu/api/search?q=authorName:\"Lehman, David\"",
+      "utc": "2026-10-27T11:34:22Z",
+      "outcome": "HTTP 200, 0 results. (Unquoted author-surname query returned 430 unrelated keyword hits.)"
+    },
+    {
+      "where": "Zenodo records API",
+      "query_or_url": "https://zenodo.org/api/records?q=\"deadline proximity\" ; q=\"10.1287/orsc.1100.0626\" ; q=\"fourth down\" Lehman",
+      "utc": "2026-10-27T11:33:49Z",
+      "outcome": "HTTP 200. 'deadline proximity': 2 unrelated records (a 'Deadline Proximity Activation Theory' preprint and a study-scheduling paper). DOI query: 0. Author/topic query: unrelated keyword matches only."
+    },
+    {
+      "where": "figshare articles search API",
+      "query_or_url": "POST https://api.figshare.com/v2/articles/search search_for = \"deadline proximity\" ; \"fourth down\" Lehman ; \"performance-risk relationship\"",
+      "utc": "2026-10-27T11:33:53Z",
+      "outcome": "HTTP 200. 1, 10 and 0 hits respectively; none related (e.g., CMU 'Time and Attention', chemistry SI files)."
+    },
+    {
+      "where": "OSF (via SHARE index-card-search API)",
+      "query_or_url": "https://share.osf.io/api/v3/index-card-search?cardSearchText=\"deadline proximity\" ; cardSearchText=\"fourth down\" Lehman",
+      "utc": "2026-10-27T11:33:56Z",
+      "outcome": "HTTP 200, 0 results for both."
+    },
+    {
+      "where": "GitHub repository search API",
+      "query_or_url": "https://api.github.com/search/repositories?q=\"deadline proximity\" ; q=orsc.1100.0626 ; q=lehman fourth down risk ; q=\"performance-risk\" deadline",
+      "utc": "2026-10-27T11:33:57Z",
+      "outcome": "HTTP 200. 6 unrelated task-scheduling repos for 'deadline proximity'; 0 for the other three queries."
+    },
+    {
+      "where": "DataCite DOI search API (indexes Dataverse, Zenodo, figshare, OSF, Mendeley Data, ICPSR DOIs)",
+      "query_or_url": "https://api.datacite.org/dois?query=\"deadline proximity\" ; query=relatedIdentifiers.relatedIdentifier:\"10.1287/orsc.1100.0626\" ; query=\"fourth down\" AND creators.name:Lehman*",
+      "utc": "2026-10-27T11:34:01Z",
+      "outcome": "HTTP 200. 13 unrelated 'deadline proximity' hits (Zenodo/arXiv scheduling papers); 0 records related to this DOI; 0 for fourth-down + Lehman."
+    },
+    {
+      "where": "Crossref works API, datasets",
+      "query_or_url": "https://api.crossref.org/works?query.bibliographic=deadline proximity fourth down&filter=type:dataset",
+      "utc": "2026-10-27T11:34:07Z",
+      "outcome": "HTTP 200; top hits unrelated (e.g., CRAN nfl4th package by other authors). No dataset by these authors."
+    },
+    {
+      "where": "Crossref work record for the article",
+      "query_or_url": "https://api.crossref.org/works/10.1287/orsc.1100.0626",
+      "utc": "2026-10-27T11:30:58Z",
+      "outcome": "relation field empty: no is-supplemented-by / has-related-material links to any dataset or code."
+    },
+    {
+      "where": "Mendeley Data",
+      "query_or_url": "https://data.mendeley.com/research-data/?search=deadline proximity ; https://data.mendeley.com/api/research-data/search?search=\"deadline proximity\"",
+      "utc": "2026-10-27T11:37:22Z",
+      "outcome": "HTML page is JavaScript-rendered (only the echoed query text present); JSON endpoint returned 10 recent unrelated records, apparently ignoring the query. Uninformative; covered indirectly by DataCite (Mendeley Data DOIs are DataCite DOIs), which found nothing."
+    },
+    {
+      "where": "openICPSR search page",
+      "query_or_url": "https://www.openicpsr.org/openicpsr/search/studies?start=0&ARCHIVE=openicpsr&q=deadline proximity",
+      "utc": "2026-10-27T11:34:10Z",
+      "outcome": "HTTP 500 (server error). Covered indirectly by DataCite (openICPSR DOIs are DataCite DOIs), which found nothing."
+    },
+    {
+      "where": "ICPSR search page",
+      "query_or_url": "https://www.icpsr.umich.edu/web/ICPSR/search/studies?q=deadline proximity fourth down",
+      "utc": "2026-10-27T11:34:12Z",
+      "outcome": "HTTP 200 but results are JavaScript-rendered; static HTML contains only the echoed query, no study by these authors. Covered indirectly by DataCite search."
+    },
+    {
+      "where": "INFORMS PubsOnline article page (journal page)",
+      "query_or_url": "https://pubsonline.informs.org/doi/10.1287/orsc.1100.0626 (live: Cloudflare 403); Wayback 20231118010755 capture",
+      "utc": "2026-10-27T11:32:19Z",
+      "outcome": "Archived landing page has no supplemental material, data or code link. Live page blocked by bot-check."
+    },
+    {
+      "where": "Supplied article text",
+      "query_or_url": "sources/text/ORSC_2011_Lehman.layout.txt grep for supplement / available from / available upon / data availability",
+      "utc": "2026-10-27T11:32:40Z",
+      "outcome": "No data-availability or code-availability statement; no pointer to any repository."
+    },
+    {
+      "where": "Web search",
+      "query_or_url": "Lehman Hahn Ramanujam Alge fourth down NFL replication data code dataverse OR osf OR github",
+      "utc": "2026-10-27T11:33:10Z",
+      "outcome": "No package by these authors. Only unrelated third-party NFL tools (nflverse/nfl4th, NFLSimulatoR)."
+    },
+    {
+      "where": "Web search",
+      "query_or_url": "\"Lehman\" \"Hahn\" \"Ramanujam\" \"Alge\" \"going for it\" NFL data replication files",
+      "utc": "2026-10-27T11:35:40Z",
+      "outcome": "No relevant results."
+    },
+    {
+      "where": "Web search (author pages / CVs)",
+      "query_or_url": "David W. Lehman Darden faculty CV \"deadline proximity\" ; \"David W. Lehman\" University of Virginia ... ; \"David Lehman\" McIntire ... ; \"David W. Lehman\" professor organizational learning risk authenticity university profile ; Bradley J. Alge Purdue CV ; Rangaraj Ramanujam Vanderbilt CV ; \"Jungpil Hahn\" NUS School of Computing faculty profile",
+      "utc": "2026-10-27T11:34:30Z",
+      "outcome": "Located current faculty pages for all four authors (below). No data/code package mentioned in any result."
+    },
+    {
+      "where": "David W. Lehman faculty page, UVA McIntire School of Commerce",
+      "query_or_url": "https://www.commerce.virginia.edu/faculty/dwl5w (also /faculty/lehman)",
+      "utc": "2026-10-27T11:36:26Z",
+      "outcome": "HTTP 200. No mention of the paper's data, replication, Dataverse/OSF/GitHub; only outbound research link is Google Scholar profile (not fetched; Scholar blocks automated access). Old Darden URL guess returned 404 (11:35:02Z)."
+    },
+    {
+      "where": "Jungpil Hahn faculty page, NUS Computing (DISA)",
+      "query_or_url": "https://www.comp.nus.edu.sg/disa/people/jungpil/",
+      "utc": "2026-10-27T11:36:06Z",
+      "outcome": "HTTP 200. Publication list cites the paper (listed under a working-title variant 'Performance Periods and the Dynamics of the Performance-Risk Relationship', ORSC 22(6) 1613-1630) with no data or code link. about.me/jungpil (11:36:08Z): no package. Guessed URL comp.nus.edu.sg/cs/people/jungpil/ returned 404."
+    },
+    {
+      "where": "Rangaraj Ramanujam faculty page, Vanderbilt Owen",
+      "query_or_url": "https://business.vanderbilt.edu/team-bio/rangaraj-ramanujam",
+      "utc": "2026-10-27T11:34:59Z",
+      "outcome": "HTTP 200. No data/code/replication mention. Vanderbilt Business news story https://blogs.owen.vanderbilt.edu/vanderbiltbusiness/going-for-it/ (11:35:16Z) describes the study; no data or code link."
+    },
+    {
+      "where": "Bradley J. Alge faculty page, Purdue Daniels School of Business",
+      "query_or_url": "https://business.purdue.edu/directory/bio.php?username=balge",
+      "utc": "2026-10-27T11:35:03Z",
+      "outcome": "HTTP 200. No CV link, no data/code/replication mention. (A Purdue 'DownloadCv' result from web search turned out to be another faculty member's CV, not Alge's.)"
+    },
+    {
+      "where": "Strategic Management Society profile of David Lehman",
+      "query_or_url": "https://www.strategicmanagement.net/person/david-lehman/",
+      "utc": "2026-10-27T11:36:07Z",
+      "outcome": "Blocked: HTTP 403."
+    }
+  ],
+  "packages_found": [],
+  "unavailable_or_blocked": [
+    {
+      "what": "Live INFORMS PubsOnline article page",
+      "reason": "Cloudflare bot-check HTTP 403; not bypassed.",
+      "mitigation": "Wayback capture from 2023-11-18 inspected."
+    },
+    {
+      "what": "openICPSR search",
+      "reason": "HTTP 500 server error.",
+      "mitigation": "DataCite DOI search covers openICPSR deposits."
+    },
+    {
+      "what": "ICPSR and Mendeley Data web search UIs",
+      "reason": "Results rendered client-side by JavaScript; static fetch uninformative. Mendeley JSON endpoint ignored the query.",
+      "mitigation": "DataCite DOI search covers ICPSR and Mendeley Data deposits."
+    },
+    {
+      "what": "Google Scholar profile of D. W. Lehman",
+      "reason": "Not fetched; Scholar blocks automated access.",
+      "mitigation": "Faculty pages and repository APIs searched directly."
+    },
+    {
+      "what": "strategicmanagement.net profile",
+      "reason": "HTTP 403.",
+      "mitigation": "Same bio text available on the UVA faculty page."
+    }
+  ],
+  "evidence": "No author-provided replication data or code package was found. Searches of Harvard Dataverse, Zenodo, figshare, OSF/SHARE, GitHub, DataCite (which indexes Dataverse, Zenodo, figshare, OSF, Mendeley Data and ICPSR/openICPSR DOIs) and Crossref returned nothing tied to this article, its DOI or its authors. The Crossref record has no related-material relations. The archived INFORMS landing page (Nov 2023) has no supplemental, data or code link, and the article text has no data-availability statement. The current faculty pages of all four authors (UVA McIntire, NUS Computing, Vanderbilt Owen, Purdue Daniels) have no package links. Residual limits: the live INFORMS page was Cloudflare-blocked, openICPSR returned HTTP 500, and the ICPSR and Mendeley Data web interfaces could not be read statically.",
+  "timing_note": "utc values for web-search rows are approximate (within about one minute); API and curl rows carry the logged timestamps.",
+  "conclusion": "no_package_found_after_documented_search"
+}

@@ -1,0 +1,20 @@
+Loading required package: Matrix
+                           label     n outcome_mean     loglik converged
+1     M4_common_U09_U14_altleave 27333   0.32261369 -16718.769      TRUE
+2  M4_common_U09_U14_nochildcare 27289   0.32269413 -16698.518      TRUE
+3              M4_common_U09_U14 27289   0.32269413 -16693.418      TRUE
+4          M4_common_U09_U18_U14 27263   0.32256171 -16669.757      TRUE
+5              M4_common_U18_U14 27263   0.17668635 -12204.952      TRUE
+6 M6_common_U14_altleave_default 27333   0.09944024  -7967.015      TRUE
+7          M6_common_U14_default 27289   0.09952728  -7957.863      TRUE
+8  M6_FAULT_missing1_U14_default 34856   0.22323273 -17347.044      TRUE
+  singular cpu_seconds   optimizer messages
+1    FALSE      56.048      bobyqa         
+2    FALSE      42.029      bobyqa         
+3     TRUE     101.777      bobyqa         
+4     TRUE      43.040      bobyqa         
+5     TRUE      77.875      bobyqa         
+6    FALSE     200.402 Nelder_Mead         
+7    FALSE     279.079 Nelder_Mead         
+8    FALSE     188.385 Nelder_Mead         
+Total successful fit CPU seconds: 988.635 

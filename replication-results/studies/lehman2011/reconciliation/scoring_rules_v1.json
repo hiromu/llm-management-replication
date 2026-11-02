@@ -1,0 +1,87 @@
+{
+  "version": "v1",
+  "status": "frozen before empirical fitting; constants provisional and uncalibrated on real papers",
+  "data_regime": "different_vintage: independently acquired nflverse play-by-play (2025-2026 builds) versus an unnamed source used by the authors; the realised sample can differ from the published one",
+  "implementation_agreement": {
+    "compare_first": "sample hash, N, and origin estimates of all three implementations, before any target comparison",
+    "pair_agrees_if": {
+      "sample_hash": "identical",
+      "coefficient": "|a-b| <= max(1e-4*|a|, 1e-5)",
+      "se_native": "|a-b| <= 1e-3*|a| + 1e-7",
+      "loglik": "|a-b| <= 1e-3",
+      "marginal_effect": "|a-b| <= max(1e-3*|a|, 1e-7)"
+    },
+    "scope": "origin M1-M3 coefficients, SEs, LL and ME0 margins; grid cells compared for dispersion only",
+    "rule": "two of three agreeing permits scoring on that pair (the lowest implementation letter of the pair supplies values); the third goes to code audit; no agreeing pair gives indeterminate/implementation_disagreement"
+  },
+  "rounding": {
+    "odds_ratio": "printed to 3 decimals: interval [v-0.0005, v+0.0005], mapped to the log-odds interval [ln(lo), ln(hi)]",
+    "odds_ratio_se": "printed to 3 decimals; log-scale SE upper bound = (s+0.0005)/lo, where lo is the lower end of the OR interval; a printed 0.000 uses 0.0005/lo and is flagged low_resolution",
+    "marginal_effect": "printed to 4 decimals: interval [v-0.00005, v+0.00005]; SE upper bound s+0.00005; printed 0.0000 flagged low_resolution",
+    "se_scale_assumption": "Table 5 parenthesised values are treated as delta-method SEs of the odds ratio (both readers' reading; not stated in the article)"
+  },
+  "sign": {
+    "assessable_if": "the published interval excludes the null (OR 1 / log-odds 0; ME 0)",
+    "mismatch_if": "assessable and the reconstructed point estimate lies strictly on the other side of the null"
+  },
+  "inference": {
+    "published_band_from_stars": {"**": 1, "*": 2, "+": 3, "none": 4},
+    "bands": {"1": "p<.01", "2": ".01<=p<.05", "3": ".05<=p<.10", "4": "p>=.10"},
+    "tail": "two-sided (article does not state the tail; the stated software reports two-sided tests by default)",
+    "reconstructed_band": "from the native two-sided p",
+    "consistent_if": "band difference <= 1, or the reconstructed band is stronger than a published significant band (published band 1-3)",
+    "discrepant_candidate_if": "band difference >= 2 in the weakening direction for a published significant target, or >= 2 in either direction for a published nonsignificant target (band 4)",
+    "benchmark": "cluster-robust by game on the paired U7=1 fit (grid.json); fragile_inference if native inference is consistent but the benchmark band is >= 2 bands weaker than the published band"
+  },
+  "magnitude": {
+    "statistic": "delta_se = distance from the reconstructed estimate to the published rounding interval (0 inside), divided by the published SE upper bound on the same scale",
+    "relative_effect": "reported alongside: (reconstructed - published)/|published|",
+    "bands_different_vintage": {"consistent": "delta_se <= 1.5", "grey": "1.5 < delta_se <= 3", "discrepant_candidate": "delta_se > 3"},
+    "bands_same_data_not_applicable_here": {"consistent": "<= 1", "grey": "1-2", "discrepant_candidate": "> 2"},
+    "missing_se": "magnitude not audited"
+  },
+  "N": {
+    "published": "sealed_N_branch (both readers agree)",
+    "evaluated_by_code": "relative difference of the origin N from the published analysis N, and step-wise flow comparisons",
+    "bands": {"close": "<= 2%", "moderate": "2-5%", "large": "> 5%"},
+    "effect": "N is not itself a claim criterion; if large, any non-consistent target outcome becomes indeterminate/source_vintage instead of discrepant_candidate"
+  },
+  "target_outcome": {
+    "precedence": "discrepant_candidate > grey(indeterminate) > consistent",
+    "consistent": "sign ok or not assessable, inference consistent, magnitude consistent or not audited (if magnitude is not audited, outcome is consistent_partial_criteria)",
+    "grey": "no discrepant criterion and magnitude grey",
+    "discrepant_candidate": "any of sign mismatch, inference discrepant_candidate, magnitude discrepant_candidate"
+  },
+  "claims": {
+    "focal": {
+      "H1A": {"primary": ["T5|M2|perf_below", "T5|M2|perf_below_sq"], "secondary": "T6|all|gap-42..gap0"},
+      "H1B": {"primary": ["T5|M2|perf_above"], "secondary": "T6|all|gap14..gap42"},
+      "H2": {"primary": ["T5|M3|perf_below_x_min", "T5|M3|perf_below_sq_x_min"], "secondary": "T6|q1..q4|gap-42..gap0"},
+      "H3": {"primary": ["T5|M3|perf_above_x_min"], "secondary": "T6|q1..q4|gap14..gap42"}
+    },
+    "claim_rule": [
+      "implementation disagreement at origin -> indeterminate/implementation_disagreement",
+      "all primary targets consistent (native) -> consistent; if any primary target is fragile_inference -> fragile_inference",
+      "any primary target discrepant_candidate at origin -> check every uncertain branch (individual deviations and crossings): if the claim's primary targets are all consistent in any uncertain branch -> indeterminate/label_sensitive; otherwise discrepant_candidate (requires adversarial review before a final discrepant verdict; withheld as fully verified because no independent model family is available)",
+      "otherwise (grey) -> indeterminate/source_vintage",
+      "large N difference converts discrepant_candidate to indeterminate/source_vintage"
+    ],
+    "secondary_reporting": "Table 6 marginal effects are scored target by target with the same criteria and reported as shares (consistent / grey / discrepant_candidate / not assessable) qualifying the claim; they do not change the claim outcome",
+    "fragile": "not assessed: the substantive equivalent set is empty after reconciliation",
+    "nonfocal": "nuisance-control odds ratios (Table 5) are scored target by target and reported; fit statistics (LL, LR chi2) are publication diagnostics only because the realised samples differ and the printed incremental chi-squares are internally inconsistent"
+  },
+  "paper_aggregation": {
+    "focal_structure": "four focal hypotheses H1A, H1B, H2, H3 (both readers mark all four focal); H2 and H3 carry the article's central moderation claim (title and abstract)",
+    "rule": [
+      "any focal claim indeterminate or not attemptable -> paper indeterminate (with that claim's sub-code)",
+      "all four consistent -> paper consistent; fully reproduced if no lower-tier target is discrepant_candidate, otherwise partially reproduced",
+      "H2 or H3 discrepant (after adversarial review) -> not reproduced",
+      "only H1A and/or H1B discrepant -> partially reproduced",
+      "fragile_inference on any focal claim with the rest consistent -> fragile inference (reported as such, not mapped to the reproduced categories)",
+      "unconfirmed discrepant candidates keep the paper at indeterminate/pending_confirmation"
+    ]
+  },
+  "influence": "reported as ranges; never enter the claim outcome",
+  "compute_budget": "grid.json in full; influence per decisions_v1.md",
+  "calibration_status": "provisional; scorer is to be tested on synthetic cases (planted errors, unreachable targets, null data) before scoring; no real-paper calibration exists in this session"
+}

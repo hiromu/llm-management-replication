@@ -1,0 +1,1164 @@
+{
+  "origin_description": {
+    "description": "M01–M08 are the eight separate-measure probits in Table 4. Captured models use camp indicators and captured clustering; camp models use a Japan indicator and camp clustering. Controlled models add exactly the stated covariates, missing flags and size quadratic. M09–M12 add both measures and paired ROC comparisons; M13–M20 add officer main effect and officer-by-hierarchy product. M21–M29 are explicitly described ancillary families with missing numerical tables. D01/D02 are descriptive/illustrative and not regression alternatives.",
+    "locators": [
+      {
+        "doc_id": "D1",
+        "pdf_page": 7,
+        "journal_page": null,
+        "section": "Table 2",
+        "table": "2",
+        "column": null,
+        "row": null,
+        "quote": null
+      },
+      {
+        "doc_id": "D1",
+        "pdf_page": 8,
+        "journal_page": null,
+        "section": "4.3; 4.4",
+        "table": null,
+        "column": null,
+        "row": null,
+        "quote": null
+      },
+      {
+        "doc_id": "D1",
+        "pdf_page": 9,
+        "journal_page": null,
+        "section": "4.4; 4.5",
+        "table": "4; 5",
+        "column": null,
+        "row": null,
+        "quote": null
+      },
+      {
+        "doc_id": "D1",
+        "pdf_page": 13,
+        "journal_page": null,
+        "section": "6.1",
+        "table": "6",
+        "column": null,
+        "row": null,
+        "quote": null
+      }
+    ]
+  },
+  "axes": [
+    {
+      "axis_id": "A01",
+      "decision": "Which event date defines the captured cohort?",
+      "priority": "sample_construction",
+      "levels": [
+        {
+          "level_id": "A01L0",
+          "description": "Same camp and actual entry year-month",
+          "is_origin": true,
+          "label": "equivalent",
+          "rationale": "This is the literal documented origin, but actual camp-entry dates are unavailable.",
+          "basis": "article",
+          "basis_citation_or_locator": {
+            "locator": {
+              "doc_id": "D1",
+              "pdf_page": 7,
+              "journal_page": null,
+              "section": "Table 2; 4.2",
+              "table": null,
+              "column": null,
+              "row": null,
+              "quote": null
+            },
+            "source_mapping_note": "nara_pow_rg389 DATE_REPORTED_* are report dates; no camp-entry field exists."
+          }
+        },
+        {
+          "level_id": "A01L1",
+          "description": "Same camp and DATE_REPORTED year-month",
+          "is_origin": false,
+          "label": "uncertain",
+          "rationale": "The supplied report date is the closest available proxy; the article alternates capture and entry language. It cannot be assumed to measure entry without validation.",
+          "basis": "article",
+          "basis_citation_or_locator": {
+            "locator": {
+              "doc_id": "D1",
+              "pdf_page": 7,
+              "journal_page": null,
+              "section": "Table 2; 4.2",
+              "table": null,
+              "column": null,
+              "row": null,
+              "quote": null
+            },
+            "source_mapping_note": "nara_pow_rg389 DATE_REPORTED_* are report dates; no camp-entry field exists."
+          }
+        }
+      ]
+    },
+    {
+      "axis_id": "A02",
+      "decision": "Which prisoners contribute to group composition and size?",
+      "priority": "sample_construction",
+      "levels": [
+        {
+          "level_id": "A02L0",
+          "description": "Selected known-fate military POW population, before covariate complete-case deletion",
+          "is_origin": true,
+          "label": "uncertain",
+          "rationale": "Closest to stated retention of POWs lacking enlistment information; rank and camp missingness remain unresolved.",
+          "basis": "article",
+          "basis_citation_or_locator": {
+            "locator": {
+              "doc_id": "D1",
+              "pdf_page": 5,
+              "journal_page": null,
+              "section": "3",
+              "table": null,
+              "column": null,
+              "row": null,
+              "quote": null
+            },
+            "source_mapping_note": null
+          }
+        },
+        {
+          "level_id": "A02L1",
+          "description": "Composition only among eventual model-eligible complete records",
+          "is_origin": false,
+          "label": "uncertain",
+          "rationale": "The article does not specify construction order. This may change the measured hierarchy, so it is not established equivalent.",
+          "basis": "article",
+          "basis_citation_or_locator": {
+            "locator": {
+              "doc_id": "D1",
+              "pdf_page": 5,
+              "journal_page": null,
+              "section": "3",
+              "table": null,
+              "column": null,
+              "row": null,
+              "quote": null
+            },
+            "source_mapping_note": null
+          }
+        }
+      ]
+    },
+    {
+      "axis_id": "A03",
+      "decision": "Reference population for sameness shares",
+      "priority": "variable_coding",
+      "levels": [
+        {
+          "level_id": "A03L0",
+          "description": "Eligible POW population pooled across powers, before model-specific covariate exclusions",
+          "is_origin": true,
+          "label": "uncertain",
+          "rationale": "The footnote specifies POW population rather than all troops, but does not define exact sample stage.",
+          "basis": "article",
+          "basis_citation_or_locator": {
+            "locator": {
+              "doc_id": "D1",
+              "pdf_page": 6,
+              "journal_page": null,
+              "section": "4.1.2 footnote 9",
+              "table": null,
+              "column": null,
+              "row": null,
+              "quote": null
+            },
+            "source_mapping_note": null
+          }
+        },
+        {
+          "level_id": "A03L1",
+          "description": "Each model estimation population",
+          "is_origin": false,
+          "label": "uncertain",
+          "rationale": "Possible reading of population in a sample-based calculation; changes benchmark and needs a documented choice. Never use numerical agreement to choose.",
+          "basis": "article",
+          "basis_citation_or_locator": {
+            "locator": {
+              "doc_id": "D1",
+              "pdf_page": 6,
+              "journal_page": null,
+              "section": "4.1.2 footnote 9",
+              "table": null,
+              "column": null,
+              "row": null,
+              "quote": null
+            },
+            "source_mapping_note": null
+          }
+        }
+      ]
+    },
+    {
+      "axis_id": "A04",
+      "decision": "Whether to reconstruct hierarchies in restricted-sample analyses",
+      "priority": "sample_construction",
+      "levels": [
+        {
+          "level_id": "A04L0",
+          "description": "Restrict outcomes but keep parent-population group composition and reference shares",
+          "is_origin": true,
+          "label": "uncertain",
+          "rationale": "The article says repeat analyses on subsets without specifying when hierarchy is constructed. This retains the environment to which selected men were exposed.",
+          "basis": "article",
+          "basis_citation_or_locator": {
+            "locator": {
+              "doc_id": "D1",
+              "pdf_page": 11,
+              "journal_page": null,
+              "section": "5.3.3; 5.4",
+              "table": null,
+              "column": null,
+              "row": null,
+              "quote": null
+            },
+            "source_mapping_note": null
+          }
+        },
+        {
+          "level_id": "A04L1",
+          "description": "Recompute group hierarchy within the restricted subgroup",
+          "is_origin": false,
+          "label": "uncertain",
+          "rationale": "Also consistent with running analyses on subsets; changes exposure. Friends-only hierarchy is explicitly reconstructed in section 5.2, unlike these checks.",
+          "basis": "article",
+          "basis_citation_or_locator": {
+            "locator": {
+              "doc_id": "D1",
+              "pdf_page": 11,
+              "journal_page": null,
+              "section": "5.3.3; 5.4",
+              "table": null,
+              "column": null,
+              "row": null,
+              "quote": null
+            },
+            "source_mapping_note": null
+          }
+        }
+      ]
+    },
+    {
+      "axis_id": "A05",
+      "decision": "Missing covariates versus complete-case robustness",
+      "priority": "sample_construction",
+      "levels": [
+        {
+          "level_id": "A05L0",
+          "description": "Zero-fill included independent variables and add missing indicators",
+          "is_origin": true,
+          "label": "equivalent",
+          "rationale": "Explicit origin; scope and transformation ordering still require adjudication.",
+          "basis": "article",
+          "basis_citation_or_locator": {
+            "locator": {
+              "doc_id": "D1",
+              "pdf_page": 5,
+              "journal_page": null,
+              "section": "3",
+              "table": null,
+              "column": null,
+              "row": null,
+              "quote": null
+            },
+            "source_mapping_note": null
+          }
+        },
+        {
+          "level_id": "A05L1",
+          "description": "Complete-case controlled regressions",
+          "is_origin": false,
+          "label": "non_equivalent",
+          "rationale": "Explicitly described robustness sample; changes analyzed population and missing-data assumption.",
+          "basis": "article",
+          "basis_citation_or_locator": {
+            "locator": {
+              "doc_id": "D1",
+              "pdf_page": 5,
+              "journal_page": null,
+              "section": "3",
+              "table": null,
+              "column": null,
+              "row": null,
+              "quote": null
+            },
+            "source_mapping_note": null
+          }
+        }
+      ]
+    },
+    {
+      "axis_id": "A06",
+      "decision": "Minimum cohort size",
+      "priority": "sample_construction",
+      "levels": [
+        {
+          "level_id": "A06L0",
+          "description": "No minimum beyond constructible nonempty group",
+          "is_origin": true,
+          "label": "equivalent",
+          "rationale": "Closest-described primary analysis; does not imply undocumented group-quality filters.",
+          "basis": "article",
+          "basis_citation_or_locator": {
+            "locator": {
+              "doc_id": "D1",
+              "pdf_page": 11,
+              "journal_page": null,
+              "section": "5.3.3",
+              "table": null,
+              "column": null,
+              "row": null,
+              "quote": null
+            },
+            "source_mapping_note": null
+          }
+        },
+        {
+          "level_id": "A06L1",
+          "description": "At least 50 men",
+          "is_origin": false,
+          "label": "non_equivalent",
+          "rationale": "Explicit restricted-sample robustness; changes population.",
+          "basis": "article",
+          "basis_citation_or_locator": {
+            "locator": {
+              "doc_id": "D1",
+              "pdf_page": 11,
+              "journal_page": null,
+              "section": "5.3.3",
+              "table": null,
+              "column": null,
+              "row": null,
+              "quote": null
+            },
+            "source_mapping_note": null
+          }
+        },
+        {
+          "level_id": "A06L2",
+          "description": "At least 100 men",
+          "is_origin": false,
+          "label": "non_equivalent",
+          "rationale": "Explicit stricter restricted-sample robustness; changes population.",
+          "basis": "article",
+          "basis_citation_or_locator": {
+            "locator": {
+              "doc_id": "D1",
+              "pdf_page": 11,
+              "journal_page": null,
+              "section": "5.3.3",
+              "table": null,
+              "column": null,
+              "row": null,
+              "quote": null
+            },
+            "source_mapping_note": null
+          }
+        }
+      ]
+    },
+    {
+      "axis_id": "A07",
+      "decision": "Treatment of reported execution category",
+      "priority": "sample_construction",
+      "levels": [
+        {
+          "level_id": "A07L0",
+          "description": "Retain STA=4 deaths in primary survival analysis",
+          "is_origin": true,
+          "label": "equivalent",
+          "rationale": "Survival definition includes captivity deaths.",
+          "basis": "article",
+          "basis_citation_or_locator": {
+            "locator": {
+              "doc_id": "D1",
+              "pdf_page": 11,
+              "journal_page": null,
+              "section": "5.3.3",
+              "table": null,
+              "column": null,
+              "row": null,
+              "quote": null
+            },
+            "source_mapping_note": "pow_STA_cl1280.csv; D1 p.7 Table 2 includes hell-ship deaths."
+          }
+        },
+        {
+          "level_id": "A07L1",
+          "description": "Exclude STA=4 records",
+          "is_origin": false,
+          "label": "non_equivalent",
+          "rationale": "Named robustness check; source bundles several death mechanisms, so this is broader than pure execution.",
+          "basis": "article",
+          "basis_citation_or_locator": {
+            "locator": {
+              "doc_id": "D1",
+              "pdf_page": 11,
+              "journal_page": null,
+              "section": "5.3.3",
+              "table": null,
+              "column": null,
+              "row": null,
+              "quote": null
+            },
+            "source_mapping_note": "pow_STA_cl1280.csv; D1 p.7 Table 2 includes hell-ship deaths."
+          }
+        }
+      ]
+    },
+    {
+      "axis_id": "A08",
+      "decision": "Known rank meanings versus unresolved detailed grades",
+      "priority": "variable_coding",
+      "levels": [
+        {
+          "level_id": "A08L0",
+          "description": "Use the nine printed categories; detailed-grade mappings that cannot be justified remain unresolved",
+          "is_origin": true,
+          "label": "uncertain",
+          "rationale": "Article gives category ordering but no exhaustive grade-to-category map.",
+          "basis": "article",
+          "basis_citation_or_locator": {
+            "locator": {
+              "doc_id": "D1",
+              "pdf_page": 6,
+              "journal_page": null,
+              "section": "4.1.1",
+              "table": null,
+              "column": null,
+              "row": null,
+              "quote": null
+            },
+            "source_mapping_note": "GRADE_ALPHA/GRADE_CODE meanings and SERVICE_CODE; no bare ordinal interpretation of raw numeric codes."
+          }
+        },
+        {
+          "level_id": "A08L1",
+          "description": "Collapse detailed grades by their documented semantic parent categories, retaining only service-concordant classifications",
+          "is_origin": false,
+          "label": "uncertain",
+          "rationale": "Provides a defensible operational candidate, but choices for technicians, cadets and naval equivalents remain nontrivial; source dictionaries do not establish author practice.",
+          "basis": "article",
+          "basis_citation_or_locator": {
+            "locator": {
+              "doc_id": "D1",
+              "pdf_page": 6,
+              "journal_page": null,
+              "section": "4.1.1",
+              "table": null,
+              "column": null,
+              "row": null,
+              "quote": null
+            },
+            "source_mapping_note": "GRADE_ALPHA/GRADE_CODE meanings and SERVICE_CODE; no bare ordinal interpretation of raw numeric codes."
+          }
+        }
+      ]
+    },
+    {
+      "axis_id": "A09",
+      "decision": "Postgraduate education code as years",
+      "priority": "variable_coding",
+      "levels": [
+        {
+          "level_id": "A09L0",
+          "description": "Codes 0–8 map to years; code 9 remains unresolved/missing",
+          "is_origin": true,
+          "label": "uncertain",
+          "rationale": "Literal years beyond eighth grade cannot be recovered for unspecified postgraduate study.",
+          "basis": "article",
+          "basis_citation_or_locator": {
+            "locator": {
+              "doc_id": "D1",
+              "pdf_page": 7,
+              "journal_page": null,
+              "section": "Table 2",
+              "table": null,
+              "column": null,
+              "row": null,
+              "quote": null
+            },
+            "source_mapping_note": "asnf_EDUCATION_cl2058.csv: 9=Post-graduate, without a year count."
+          }
+        },
+        {
+          "level_id": "A09L1",
+          "description": "Treat code 9 as nine years beyond eighth grade",
+          "is_origin": false,
+          "label": "uncertain",
+          "rationale": "A conventional ordinal interpretation of the code labels but not an exact duration documented by the article; needs explicit approval in reconciliation.",
+          "basis": "article",
+          "basis_citation_or_locator": {
+            "locator": {
+              "doc_id": "D1",
+              "pdf_page": 7,
+              "journal_page": null,
+              "section": "Table 2",
+              "table": null,
+              "column": null,
+              "row": null,
+              "quote": null
+            },
+            "source_mapping_note": "asnf_EDUCATION_cl2058.csv: 9=Post-graduate, without a year count."
+          }
+        }
+      ]
+    },
+    {
+      "axis_id": "A10",
+      "decision": "Married status and dependents",
+      "priority": "variable_coding",
+      "levels": [
+        {
+          "level_id": "A10L0",
+          "description": "Treat married code 2 as having dependents",
+          "is_origin": true,
+          "label": "uncertain",
+          "rationale": "Candidate closest to prose connecting the dependent effect with marriage; not an explicit mapping.",
+          "basis": "article",
+          "basis_citation_or_locator": {
+            "locator": {
+              "doc_id": "D1",
+              "pdf_page": 7,
+              "journal_page": null,
+              "section": "Table 2",
+              "table": null,
+              "column": null,
+              "row": null,
+              "quote": null
+            },
+            "source_mapping_note": "asnf_MARITAL_STATUS_cl2081.csv; D1 p.8 section 4.4."
+          }
+        },
+        {
+          "level_id": "A10L1",
+          "description": "Treat code 2 as unknown dependency and apply missing-indicator method",
+          "is_origin": false,
+          "label": "uncertain",
+          "rationale": "Source meaning gives marriage but no explicit dependency qualifier; avoids inventing that fact but may differ from author coding.",
+          "basis": "article",
+          "basis_citation_or_locator": {
+            "locator": {
+              "doc_id": "D1",
+              "pdf_page": 7,
+              "journal_page": null,
+              "section": "Table 2",
+              "table": null,
+              "column": null,
+              "row": null,
+              "quote": null
+            },
+            "source_mapping_note": "asnf_MARITAL_STATUS_cl2081.csv; D1 p.8 section 4.4."
+          }
+        }
+      ]
+    },
+    {
+      "axis_id": "A11",
+      "decision": "Scale of squared log-size regressor",
+      "priority": "variable_coding",
+      "levels": [
+        {
+          "level_id": "A11L0",
+          "description": "Square the scaled log, (ln n/10)^2",
+          "is_origin": true,
+          "label": "uncertain",
+          "rationale": "Closest conventional construction from the explicitly scaled linear variable; square scaling not stated.",
+          "basis": "article",
+          "basis_citation_or_locator": {
+            "locator": {
+              "doc_id": "D1",
+              "pdf_page": 8,
+              "journal_page": null,
+              "section": "4.3",
+              "table": null,
+              "column": null,
+              "row": null,
+              "quote": null
+            },
+            "source_mapping_note": null
+          }
+        },
+        {
+          "level_id": "A11L1",
+          "description": "Square first and then divide by 10",
+          "is_origin": false,
+          "label": "equivalent",
+          "rationale": "Same quadratic model span under deterministic coefficient/unit conversion, provided missingness is identical. Raw displayed effects differ by a known scale factor and must be mapped before comparison. This equivalence is mathematical, not evidence of author implementation.",
+          "basis": "article",
+          "basis_citation_or_locator": {
+            "locator": {
+              "doc_id": "D1",
+              "pdf_page": 8,
+              "journal_page": null,
+              "section": "4.3",
+              "table": null,
+              "column": null,
+              "row": null,
+              "quote": null
+            },
+            "source_mapping_note": null
+          }
+        }
+      ]
+    },
+    {
+      "axis_id": "A12",
+      "decision": "Alternative measurement of hierarchy",
+      "priority": "variable_coding",
+      "levels": [
+        {
+          "level_id": "A12L0",
+          "description": "Original ordered-rank Gini and squared-share sameness as separate core model families",
+          "is_origin": true,
+          "label": "equivalent",
+          "rationale": "Explicit core definitions, not interchangeable variables within one model.",
+          "basis": "article",
+          "basis_citation_or_locator": {
+            "locator": {
+              "doc_id": "D1",
+              "pdf_page": 10,
+              "journal_page": null,
+              "section": "5.3.1; 5.3.2",
+              "table": null,
+              "column": null,
+              "row": null,
+              "quote": null
+            },
+            "source_mapping_note": null
+          }
+        },
+        {
+          "level_id": "A12L1",
+          "description": "Pay-based Gini",
+          "is_origin": false,
+          "label": "non_equivalent",
+          "rationale": "Named robustness measure; different rank distances and unavailable historical pay input.",
+          "basis": "article",
+          "basis_citation_or_locator": {
+            "locator": {
+              "doc_id": "D1",
+              "pdf_page": 10,
+              "journal_page": null,
+              "section": "5.3.1; 5.3.2",
+              "table": null,
+              "column": null,
+              "row": null,
+              "quote": null
+            },
+            "source_mapping_note": null
+          }
+        },
+        {
+          "level_id": "A12L2",
+          "description": "Ratio-based sameness",
+          "is_origin": false,
+          "label": "non_equivalent",
+          "rationale": "Named formula weights relative rank imbalance differently.",
+          "basis": "article",
+          "basis_citation_or_locator": {
+            "locator": {
+              "doc_id": "D1",
+              "pdf_page": 10,
+              "journal_page": null,
+              "section": "5.3.1; 5.3.2",
+              "table": null,
+              "column": null,
+              "row": null,
+              "quote": null
+            },
+            "source_mapping_note": null
+          }
+        },
+        {
+          "level_id": "A12L3",
+          "description": "Absolute-deviation sameness",
+          "is_origin": false,
+          "label": "non_equivalent",
+          "rationale": "Named alternative loss function; normalization not documented.",
+          "basis": "article",
+          "basis_citation_or_locator": {
+            "locator": {
+              "doc_id": "D1",
+              "pdf_page": 10,
+              "journal_page": null,
+              "section": "5.3.1; 5.3.2",
+              "table": null,
+              "column": null,
+              "row": null,
+              "quote": null
+            },
+            "source_mapping_note": null
+          }
+        },
+        {
+          "level_id": "A12L4",
+          "description": "Distinct rank count or rank sum, with full controls",
+          "is_origin": false,
+          "label": "non_equivalent",
+          "rationale": "Named measures mechanically related to size; article restricts them to controlled models.",
+          "basis": "article",
+          "basis_citation_or_locator": {
+            "locator": {
+              "doc_id": "D1",
+              "pdf_page": 10,
+              "journal_page": null,
+              "section": "5.3.1; 5.3.2",
+              "table": null,
+              "column": null,
+              "row": null,
+              "quote": null
+            },
+            "source_mapping_note": null
+          }
+        },
+        {
+          "level_id": "A12L5",
+          "description": "Share ranked above private",
+          "is_origin": false,
+          "label": "non_equivalent",
+          "rationale": "Named administrative-intensity check measures another construct.",
+          "basis": "article",
+          "basis_citation_or_locator": {
+            "locator": {
+              "doc_id": "D1",
+              "pdf_page": 10,
+              "journal_page": null,
+              "section": "5.3.1; 5.3.2",
+              "table": null,
+              "column": null,
+              "row": null,
+              "quote": null
+            },
+            "source_mapping_note": null
+          }
+        }
+      ]
+    },
+    {
+      "axis_id": "A13",
+      "decision": "Camp versus captured cohort analysis",
+      "priority": "other",
+      "levels": [
+        {
+          "level_id": "A13L0",
+          "description": "Retain separately named captured and camp model families",
+          "is_origin": true,
+          "label": "equivalent",
+          "rationale": "These represent different social environments and require separate reporting.",
+          "basis": "article",
+          "basis_citation_or_locator": {
+            "locator": {
+              "doc_id": "D1",
+              "pdf_page": 8,
+              "journal_page": null,
+              "section": "4.2; 4.3",
+              "table": null,
+              "column": null,
+              "row": null,
+              "quote": null
+            },
+            "source_mapping_note": null
+          }
+        },
+        {
+          "level_id": "A13L1",
+          "description": "Replace a captured-cohort specification with a camp-cohort specification",
+          "is_origin": false,
+          "label": "non_equivalent",
+          "rationale": "Changes exposure, available fixed effects and clustering. It is not an equivalent implementation alternative for the same model.",
+          "basis": "article",
+          "basis_citation_or_locator": {
+            "locator": {
+              "doc_id": "D1",
+              "pdf_page": 8,
+              "journal_page": null,
+              "section": "4.2; 4.3",
+              "table": null,
+              "column": null,
+              "row": null,
+              "quote": null
+            },
+            "source_mapping_note": null
+          }
+        }
+      ]
+    },
+    {
+      "axis_id": "A14",
+      "decision": "Clustering in captured-cohort models",
+      "priority": "fixed_effects_clustering",
+      "levels": [
+        {
+          "level_id": "A14L0",
+          "description": "Cluster by captured cohort for captured models, camp for camp models",
+          "is_origin": true,
+          "label": "equivalent",
+          "rationale": "Explicit article instruction.",
+          "basis": "article",
+          "basis_citation_or_locator": {
+            "locator": {
+              "doc_id": "D1",
+              "pdf_page": 8,
+              "journal_page": null,
+              "section": "4.3; 4.4",
+              "table": null,
+              "column": null,
+              "row": null,
+              "quote": null
+            },
+            "source_mapping_note": null
+          }
+        },
+        {
+          "level_id": "A14L1",
+          "description": "Cluster captured-cohort models by camp",
+          "is_origin": false,
+          "label": "uncertain",
+          "rationale": "The article recognizes camp-level heterogeneity shared across captured groups. A broader dependence check has an article basis, but differs from native inference and cannot be silently substituted.",
+          "basis": "article",
+          "basis_citation_or_locator": {
+            "locator": {
+              "doc_id": "D1",
+              "pdf_page": 8,
+              "journal_page": null,
+              "section": "4.3; 4.4",
+              "table": null,
+              "column": null,
+              "row": null,
+              "quote": null
+            },
+            "source_mapping_note": null
+          }
+        }
+      ]
+    },
+    {
+      "axis_id": "A15",
+      "decision": "Geographic distance proxy and ambiguous camps",
+      "priority": "variable_coding",
+      "levels": [
+        {
+          "level_id": "A15L0",
+          "description": "Great-circle/geodesic kilometers using a declared capital point and reviewed camp crosswalk point",
+          "is_origin": true,
+          "label": "uncertain",
+          "rationale": "Follows kilometers to capital, but coordinates and formula are not stated.",
+          "basis": "article",
+          "basis_citation_or_locator": {
+            "locator": {
+              "doc_id": "D1",
+              "pdf_page": 7,
+              "journal_page": null,
+              "section": "Table 2",
+              "table": null,
+              "column": null,
+              "row": null,
+              "quote": null
+            },
+            "source_mapping_note": "sources/camp_location_crosswalk_schema.md; coordinates of capitals are not supplied, so both levels need independent inputs before execution."
+          }
+        },
+        {
+          "level_id": "A15L1",
+          "description": "Use NARA whole-degree camp locations for otherwise resolvable camps, with same capital and formula",
+          "is_origin": false,
+          "label": "uncertain",
+          "rationale": "Available coarse source locations are a different measurement approximation; article supplies no geocoding vintage or precision.",
+          "basis": "article",
+          "basis_citation_or_locator": {
+            "locator": {
+              "doc_id": "D1",
+              "pdf_page": 7,
+              "journal_page": null,
+              "section": "Table 2",
+              "table": null,
+              "column": null,
+              "row": null,
+              "quote": null
+            },
+            "source_mapping_note": "sources/camp_location_crosswalk_schema.md; coordinates of capitals are not supplied, so both levels need independent inputs before execution."
+          }
+        }
+      ]
+    },
+    {
+      "axis_id": "A16",
+      "decision": "Zero-friend logarithms",
+      "priority": "variable_coding",
+      "levels": [
+        {
+          "level_id": "A16L0",
+          "description": "Log of other members; zero-friend logarithms missing, accompanied by a missing indicator if applying the stated convention",
+          "is_origin": true,
+          "label": "uncertain",
+          "rationale": "Literal logarithm is undefined at zero; interaction with the general missingness method is undocumented.",
+          "basis": "article",
+          "basis_citation_or_locator": {
+            "locator": {
+              "doc_id": "D1",
+              "pdf_page": 10,
+              "journal_page": null,
+              "section": "5.2",
+              "table": null,
+              "column": null,
+              "row": null,
+              "quote": null
+            },
+            "source_mapping_note": null
+          }
+        },
+        {
+          "level_id": "A16L1",
+          "description": "Log of one plus other members",
+          "is_origin": false,
+          "label": "non_equivalent",
+          "rationale": "Resolves zero by including self in the count but changes the named regressor. It is a declared sensitivity motivated by the undefined zero case, not an equivalent recoding.",
+          "basis": "article",
+          "basis_citation_or_locator": {
+            "locator": {
+              "doc_id": "D1",
+              "pdf_page": 10,
+              "journal_page": null,
+              "section": "5.2",
+              "table": null,
+              "column": null,
+              "row": null,
+              "quote": null
+            },
+            "source_mapping_note": null
+          }
+        }
+      ]
+    },
+    {
+      "axis_id": "A17",
+      "decision": "Reported officer interaction versus interaction in survival probability",
+      "priority": "estimator",
+      "levels": [
+        {
+          "level_id": "A17L0",
+          "description": "Treat officer-by-hierarchy as a continuous product regressor and report its slope at means",
+          "is_origin": true,
+          "label": "uncertain",
+          "rationale": "Closest reading of the table note, but software convention is unspecified.",
+          "basis": "article",
+          "basis_citation_or_locator": {
+            "locator": {
+              "doc_id": "D1",
+              "pdf_page": 13,
+              "journal_page": null,
+              "section": "Table 6 notes",
+              "table": null,
+              "column": null,
+              "row": null,
+              "quote": null
+            },
+            "source_mapping_note": null
+          }
+        },
+        {
+          "level_id": "A17L1",
+          "description": "Compute the difference in hierarchy probability derivatives between officer=1 and officer=0 at the same remaining covariates",
+          "is_origin": false,
+          "label": "non_equivalent",
+          "rationale": "Directly addresses the officer-survival question in section 6.1 but is a different nonlinear estimand from the marginal effect of an independently varied product. Report separately, not as a replacement target.",
+          "basis": "article",
+          "basis_citation_or_locator": {
+            "locator": {
+              "doc_id": "D1",
+              "pdf_page": 13,
+              "journal_page": null,
+              "section": "Table 6 notes",
+              "table": null,
+              "column": null,
+              "row": null,
+              "quote": null
+            },
+            "source_mapping_note": null
+          }
+        }
+      ]
+    }
+  ],
+  "incompatible_crossings": [
+    {
+      "description": "Camp-level hierarchy cannot be estimated alongside unrestricted camp fixed effects; those are constant within camp. Captured models retain camp fixed effects.",
+      "locators": [
+        {
+          "doc_id": "D1",
+          "pdf_page": 8,
+          "journal_page": null,
+          "section": "4.3",
+          "table": null,
+          "column": null,
+          "row": null,
+          "quote": null
+        }
+      ]
+    },
+    {
+      "description": "Rank count and rank sum replacements only cross controlled specifications containing cohort size, per article; do not cross them with simple models as equivalents.",
+      "locators": [
+        {
+          "doc_id": "D1",
+          "pdf_page": 11,
+          "journal_page": null,
+          "section": "5.3.2",
+          "table": null,
+          "column": null,
+          "row": null,
+          "quote": null
+        }
+      ]
+    },
+    {
+      "description": "Do not vary control lists within the equivalent set. Country-specific models omit constant power indicator only as a collinearity necessity.",
+      "locators": [
+        {
+          "doc_id": "D1",
+          "pdf_page": 8,
+          "journal_page": null,
+          "section": "4.3",
+          "table": null,
+          "column": null,
+          "row": null,
+          "quote": null
+        },
+        {
+          "doc_id": "D1",
+          "pdf_page": 10,
+          "journal_page": null,
+          "section": "5.1",
+          "table": null,
+          "column": null,
+          "row": null,
+          "quote": null
+        }
+      ]
+    },
+    {
+      "description": "Complete-case and missing-indicator approaches are distinct sample regimes, not simultaneous choices for the same missing record. Group reference and composition choices must remain internally consistent.",
+      "locators": [
+        {
+          "doc_id": "D1",
+          "pdf_page": 5,
+          "journal_page": null,
+          "section": "3",
+          "table": null,
+          "column": null,
+          "row": null,
+          "quote": null
+        },
+        {
+          "doc_id": "D1",
+          "pdf_page": 11,
+          "journal_page": null,
+          "section": "5.3.3",
+          "table": null,
+          "column": null,
+          "row": null,
+          "quote": null
+        }
+      ]
+    },
+    {
+      "description": "The two cohort definitions and alternative hierarchy constructs retain separate scientific estimands. Executed is descriptive/restriction coding, not an interchangeable survival outcome.",
+      "locators": [
+        {
+          "doc_id": "D1",
+          "pdf_page": 7,
+          "journal_page": null,
+          "section": "Table 2",
+          "table": "2",
+          "column": null,
+          "row": null,
+          "quote": null
+        },
+        {
+          "doc_id": "D1",
+          "pdf_page": 10,
+          "journal_page": null,
+          "section": "5.3.1",
+          "table": null,
+          "column": null,
+          "row": null,
+          "quote": null
+        },
+        {
+          "doc_id": "D1",
+          "pdf_page": 11,
+          "journal_page": null,
+          "section": "5.3.3",
+          "table": null,
+          "column": null,
+          "row": null,
+          "quote": null
+        }
+      ]
+    },
+    {
+      "description": "No pay-based or exact entry-date model is executable without missing documentary inputs. Missing coordinates block distance-dependent exact reconstruction; do not fill from numerical targets.",
+      "locators": [
+        {
+          "doc_id": "D1",
+          "pdf_page": 7,
+          "journal_page": null,
+          "section": "Table 2",
+          "table": "2",
+          "column": null,
+          "row": null,
+          "quote": null
+        },
+        {
+          "doc_id": "D1",
+          "pdf_page": 10,
+          "journal_page": null,
+          "section": "5.3.1",
+          "table": null,
+          "column": null,
+          "row": null,
+          "quote": null
+        }
+      ]
+    }
+  ],
+  "notes": {
+    "description": "Wider grid OFF: this reader identifies decisions, not permission to execute their Cartesian product. Origins marked uncertain identify missing implementation detail rather than confirmed alternatives. No logit, arbitrary control deletion, winsorization, random-effects, or unexplained specification-count quota is introduced. Article is the basis throughout; locally supplied field metadata explains feasibility. Bibliographic methodological papers were not supplied and were not independently consulted.",
+    "locators": [
+      {
+        "doc_id": "D1",
+        "pdf_page": 8,
+        "journal_page": null,
+        "section": "4.3; 4.4",
+        "table": null,
+        "column": null,
+        "row": null,
+        "quote": null
+      },
+      {
+        "doc_id": "D1",
+        "pdf_page": 10,
+        "journal_page": null,
+        "section": "5.3",
+        "table": null,
+        "column": null,
+        "row": null,
+        "quote": null
+      },
+      {
+        "doc_id": "D1",
+        "pdf_page": 11,
+        "journal_page": null,
+        "section": "5.3",
+        "table": null,
+        "column": null,
+        "row": null,
+        "quote": null
+      }
+    ]
+  }
+}

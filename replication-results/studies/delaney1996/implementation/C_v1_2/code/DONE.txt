@@ -1,0 +1,8 @@
+PAPER_K7 grid implementation complete (2026-10-28).
+
+Deliverables:
+- code/run_grid.py (entry point) with package code/paperk7/ (coding.py, pipeline.py, regression.py)
+- code/tests/ (test_regression.py, test_coding.py, test_influence.py, test_pipeline_checks.py): 47 tests, all passing
+- code/dev_out/full_grid/: full grid on synthetic data/survey.csv, all 38 specs, all six output files
+- code/dev_out/full_grid_log.txt, code/dev_out/test_log.txt
+- code/README.md: how to run, all interpretations, limitations (HC3 undefined with leverage-1 rows), test results

@@ -1,0 +1,35 @@
+{
+  "study_id": "lehman2011",
+  "paper_id": "ORSC_2011_Lehman",
+  "coordinator_session_id": "854f82b1-fa2c-409c-9663-ea33f56d31cd",
+  "checked_local": "2026-10-27",
+  "stage": "readiness_checked_research_not_authorized",
+  "coordinator": {
+    "platform": "Claude Code (desktop app, Code tab)",
+    "requested": {"model": "claude-opus-5-5", "effort": "high", "fast_mode": false},
+    "observed_model": "claude-opus-5-5 (from system context)",
+    "observed_effort": "high per .claude/settings.json; /status not runnable from this app session, so not directly observed",
+    "observed_fast_mode": "off per settings; not toggled",
+    "instruction_files_loaded": ["CLAUDE.md (project root)", "studies/lehman2011/CLAUDE.md"],
+    "global_claude_md": "~/.claude/CLAUDE.md exists; excluded by claudeMdExcludes and not present in coordinator context",
+    "other_loaded_context": "Desktop app system context (tool catalog, account email context); /memory not runnable here"
+  },
+  "article": {
+    "path": "papers/journal_collection/ORSC/ORSC_2011_Lehman.pdf",
+    "sha256_expected": "93278fe5f7ad8a54cb4808305f6b8725ae968944fd6e9cda75e8089047e6c8d3",
+    "sha256_observed": "93278fe5f7ad8a54cb4808305f6b8725ae968944fd6e9cda75e8089047e6c8d3",
+    "match": true
+  },
+  "local_supplements": "no entry for ORSC_2011_Lehman in papers/supplements/catalog.json; external search pending authorization",
+  "cli": {
+    "claude": {"path": "~/.local/bin/claude", "version": "2.1.270", "flags_present": ["--safe-mode", "--model", "--effort", "--settings", "--no-session-persistence", "--tools", "--allowed-tools"]},
+    "codex": {"path": "~/.local/bin/codex", "version": "codex-cli 0.164.0", "flags_present": ["exec", "--ephemeral", "--ignore-user-config", "--skip-git-repo-check", "-C", "-m", "-c", "-s"]},
+    "model_access_verified": false,
+    "note": "Model availability (claude-fable-5-1, gpt-6-astra), effort and speed are verified only at launch; no connectivity or reader call made."
+  },
+  "codex_user_config_risk": "~/.codex/config.toml sets model_reasoning_effort=medium and service_tier=ultrafast; launches must use --ignore-user-config plus explicit -c overrides (effort high, service_tier default, fast_mode off) and verify reported settings.",
+  "codex_global_agents_md": "~/.codex/AGENTS.md exists (Python path, Markdown math, Gmail read-only rules); whether it loads under --ignore-user-config to be recorded at launch.",
+  "software": {"python": "~/.venv/bin/python 3.13.4", "pandas": "2.2.3", "numpy": "2.4.2", "statsmodels": "0.14.6", "scipy": "1.16.3", "matplotlib": "3.10.8", "R": "/opt/homebrew/bin/Rscript 4.6.1", "stata": "not installed"},
+  "study_folder_state": "working directories empty; only STUDY.json, README.md, CLAUDE.md, chat_log.md (session hook log) present",
+  "research_started": false
+}
